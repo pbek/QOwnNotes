@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QListWidgetItem>
 #include <QSettings>
+#include <QTimer>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -15,11 +16,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // TODO: make notes path selectable
+    this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes.bak";
+
     readSettings();
     setupMainSplitter();
+    buildNotesIndex();
     loadNoteDirectoryList();
 
-    ui->centralWidget->layout()->addWidget( this->mainSplitter );
+    QTimer *timer = new QTimer( this );
+    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( checkForNoteChanges() ) );
+    timer->start( 1000 );
+
+    QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
+    QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
 }
 
 MainWindow::~MainWindow()
@@ -35,7 +45,6 @@ MainWindow::~MainWindow()
 void MainWindow::setupMainSplitter()
 {
     this->mainSplitter = new QSplitter;
-    connect( this->mainSplitter, SIGNAL( splitterMoved( int, int ) ), this, SLOT( on_mainSplitter_splitterMoved( int, int ) ) );
 
     this->mainSplitter->addWidget(ui->notesListWidget);
     this->mainSplitter->addWidget(ui->noteTextEdit);
@@ -44,12 +53,12 @@ void MainWindow::setupMainSplitter()
     QSettings settings("PBE", "QNotes");
     QByteArray state = settings.value( "mainSplitterSizes" ).toByteArray();
     this->mainSplitter->restoreState( state );
+
+    this->ui->centralWidget->layout()->addWidget( this->mainSplitter );
 }
 
 void MainWindow::loadNoteDirectoryList()
 {
-    // TODO: make notes path selectable
-    this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes";
     QDir notesDir( this->notesPath );
 
     // only show text files
@@ -59,7 +68,34 @@ void MainWindow::loadNoteDirectoryList()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
+    this->ui->noteTextEdit->blockSignals( true );
+    this->ui->notesListWidget->blockSignals( true );
+
+//    while( this->ui->notesListWidget->count()>0 )
+//    {
+//      this->ui->notesListWidget->takeItem(0);
+//    }
+
+    this->ui->notesListWidget->clear();
+
     this->ui->notesListWidget->addItems( files );
+    this->ui->noteTextEdit->blockSignals( false );
+    this->ui->notesListWidget->blockSignals( false );
+
+    // watch the notes directory for changes
+    this->noteDirectoryWatcher.addPath( this->notesPath );
+
+    // watch all the notes for changes
+    Q_FOREACH( QString fileName, files )
+    {
+        this->noteDirectoryWatcher.addPath( fullNoteFilePath( fileName ) );
+    }
+
+//    QStringList directoryList = this->noteDirectoryWatcher.directories();
+
+//    Q_FOREACH(QString directory, directoryList)
+//        qDebug() << "Directory name" << directory <<"\n";
+
 }
 
 void MainWindow::loadNote( QString &fileName )
@@ -99,6 +135,63 @@ void MainWindow::readSettings()
     restoreState(settings.value("MainWindow/windowState").toByteArray());
 }
 
+void MainWindow::notesWereModified( const QString& str )
+{
+    qDebug() << "notesWereModified: " << str;
+    Q_UNUSED(str);
+//    QMessageBox::information(this,"Directory Modified", "Your Directory is modified");
+
+    // reaload the notes directory list
+    this->loadNoteDirectoryList();
+}
+
+void MainWindow::checkForNoteChanges()
+{
+//    qDebug() << "checkForNoteChanges";
+}
+
+void MainWindow::buildNotesIndex()
+{
+    QDir notesDir( this->notesPath );
+
+    // only show text files
+    QStringList filters;
+    filters << "*.txt";
+
+    // show newest entry first
+    QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
+
+    this->notesTextHash.clear();
+    this->notesNameHash.clear();
+
+    Q_FOREACH( QString fileName, files )
+    {
+        // fetching the content of the file
+        QFile file( fullNoteFilePath( fileName ) );
+        if ( file.open( QIODevice::ReadOnly ) )
+        {
+            QTextStream in( &file );
+
+            // qDebug() << file.size() << in.readAll();
+            QString noteText = in.readAll();
+            file.close();
+
+            this->notesTextHash.insert( fileName, noteText );
+        }
+
+        // create a nicer name by removing ".txt"
+        QString base = fileName;
+        base.chop( 4 );
+        this->notesNameHash.insert( fileName, base );
+    }
+}
+
+QString MainWindow::fullNoteFilePath( QString fileName )
+{
+    return this->notesPath + QDir::separator() + fileName;
+}
+
+
 
 /*!
  * Internal events
@@ -106,10 +199,11 @@ void MainWindow::readSettings()
 
 void MainWindow::closeEvent(QCloseEvent *event)
  {
-    QSettings settings("PBE", "QNotes");
-    settings.setValue("MainWindow/geometry", saveGeometry());
-    settings.setValue("MainWindow/windowState", saveState());
-    QMainWindow::closeEvent(event);
+    QSettings settings( "PBE", "QNotes" );
+    settings.setValue( "MainWindow/geometry", saveGeometry() );
+    settings.setValue( "MainWindow/windowState", saveState() );
+    settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
+    QMainWindow::closeEvent( event );
  }
 
 
@@ -120,8 +214,9 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
 void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
+    Q_UNUSED(previous);
     qDebug() << "currentItemChanged " << current->text();
-    QString fileName = this->notesPath + QDir::separator() + current->text();
+    QString fileName = fullNoteFilePath( current->text() );
     loadNote( fileName );
 }
 
@@ -129,15 +224,8 @@ void MainWindow::on_noteTextEdit_textChanged()
 {
     // TODO: don't save after every text change, use a delay of one second to save
     qDebug() << "textChanged";
-    QString fileName = this->notesPath + QDir::separator() + this->ui->notesListWidget->currentItem()->text();
+    QString fileName = fullNoteFilePath( this->ui->notesListWidget->currentItem()->text() );
     QString text = this->ui->noteTextEdit->toPlainText();
     storeNote( fileName, text );
 }
 
-void MainWindow::on_mainSplitter_splitterMoved ( int pos, int index )
-{
-    qDebug() << "on_mainSplitter_splitterMoved";
-
-    QSettings settings("PBE", "QNotes");
-    settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
-}
