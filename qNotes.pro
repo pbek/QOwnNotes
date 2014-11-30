@@ -14,9 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    datastorage.cpp
+    note.cpp
 
 HEADERS  += mainwindow.h \
-    datastorage.h
+    note.h
 
 FORMS    += mainwindow.ui
