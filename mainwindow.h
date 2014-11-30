@@ -33,8 +33,6 @@ private:
     QSplitter *mainSplitter;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
-    QHash<QString,QString> notesTextHash;
-    QHash<QString,QString> notesNameHash;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

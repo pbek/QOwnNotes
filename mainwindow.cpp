@@ -8,6 +8,7 @@
 #include <QListWidgetItem>
 #include <QSettings>
 #include <QTimer>
+#include "datastorage.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -15,6 +16,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
+    DataStorage::createConnection();
 
     // TODO: make notes path selectable
     this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes.bak";
@@ -59,34 +63,25 @@ void MainWindow::setupMainSplitter()
 
 void MainWindow::loadNoteDirectoryList()
 {
-    QDir notesDir( this->notesPath );
-
-    // only show text files
-    QStringList filters;
-    filters << "*.txt";
-
-    // show newest entry first
-    QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
-
     this->ui->noteTextEdit->blockSignals( true );
     this->ui->notesListWidget->blockSignals( true );
 
-//    while( this->ui->notesListWidget->count()>0 )
-//    {
-//      this->ui->notesListWidget->takeItem(0);
-//    }
-
     this->ui->notesListWidget->clear();
 
-    this->ui->notesListWidget->addItems( files );
+
+    QStringList nameList = DataStorage::fetchNoteNames();
+    this->ui->notesListWidget->addItems( nameList );
+
     this->ui->noteTextEdit->blockSignals( false );
     this->ui->notesListWidget->blockSignals( false );
 
     // watch the notes directory for changes
     this->noteDirectoryWatcher.addPath( this->notesPath );
 
+    QStringList fileNameList = DataStorage::fetchNoteFileNames();
+
     // watch all the notes for changes
-    Q_FOREACH( QString fileName, files )
+    Q_FOREACH( QString fileName, fileNameList )
     {
         this->noteDirectoryWatcher.addPath( fullNoteFilePath( fileName ) );
     }
@@ -161,9 +156,6 @@ void MainWindow::buildNotesIndex()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
-    this->notesTextHash.clear();
-    this->notesNameHash.clear();
-
     Q_FOREACH( QString fileName, files )
     {
         // fetching the content of the file
@@ -176,13 +168,13 @@ void MainWindow::buildNotesIndex()
             QString noteText = in.readAll();
             file.close();
 
-            this->notesTextHash.insert( fileName, noteText );
-        }
+            // create a nicer name by removing ".txt"
+            QString base = fileName;
+            base.chop( 4 );
 
-        // create a nicer name by removing ".txt"
-        QString base = fileName;
-        base.chop( 4 );
-        this->notesNameHash.insert( fileName, base );
+            // store note
+            DataStorage::addNote( base, fileName, noteText );
+        }
     }
 }
 
@@ -216,6 +208,9 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 {
     Q_UNUSED(previous);
     qDebug() << "currentItemChanged " << current->text();
+
+    int id = this->ui->notesListWidget->currentIndex() + 1;
+
     QString fileName = fullNoteFilePath( current->text() );
     loadNote( fileName );
 }
