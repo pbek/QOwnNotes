@@ -37,10 +37,8 @@ private:
     void setupMainSplitter();
     void loadNoteDirectoryList();
     void loadNote( QString &fileName );
-    void storeNote( QString &fileName, QString &text );
     void readSettings();
     void buildNotesIndex();
-    QString fullNoteFilePath( QString fileName );
 };
 
 #endif // MAINWINDOW_H

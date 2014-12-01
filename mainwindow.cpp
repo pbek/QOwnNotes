@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // TODO: make notes path selectable
     this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes.bak";
+    QSettings settings( "PBE", "QNotes" );
+    settings.setValue( "General/notesPath", this->notesPath );
 
     readSettings();
     setupMainSplitter();
@@ -85,7 +87,7 @@ void MainWindow::loadNoteDirectoryList()
     // watch all the notes for changes
     Q_FOREACH( QString fileName, fileNameList )
     {
-        this->noteDirectoryWatcher.addPath( fullNoteFilePath( fileName ) );
+        this->noteDirectoryWatcher.addPath( Note::fullNoteFilePath( fileName ) );
     }
 
 //    QStringList directoryList = this->noteDirectoryWatcher.directories();
@@ -115,16 +117,6 @@ void MainWindow::loadNote( QString &fileName )
     this->ui->noteTextEdit->blockSignals( false );
 }
 
-void MainWindow::storeNote( QString &fileName, QString &text )
-{
-    QFile file( fileName );
-    file.open( QIODevice::WriteOnly | QIODevice::Text );
-    QTextStream out( &file );
-    out << text;
-    file.flush();
-    file.close();
-}
-
 void MainWindow::readSettings()
 {
     QSettings settings("PBE", "QNotes");
@@ -152,12 +144,14 @@ void MainWindow::notesWereModified( const QString& str )
 
 void MainWindow::checkForNoteChanges()
 {
+    Note::storeDirtyNotesToDisk();
 //    qDebug() << "checkForNoteChanges";
 }
 
 void MainWindow::buildNotesIndex()
 {
     QDir notesDir( this->notesPath );
+//    qDebug() << this->notesPath;
 
     // only show text files
     QStringList filters;
@@ -169,7 +163,7 @@ void MainWindow::buildNotesIndex()
     Q_FOREACH( QString fileName, files )
     {
         // fetching the content of the file
-        QFile file( fullNoteFilePath( fileName ) );
+        QFile file( Note::fullNoteFilePath( fileName ) );
         if ( file.open( QIODevice::ReadOnly ) )
         {
             QTextStream in( &file );
@@ -184,13 +178,9 @@ void MainWindow::buildNotesIndex()
 
             // store note
             Note::addNote( base, fileName, noteText );
+            qDebug() << fileName;
         }
     }
-}
-
-QString MainWindow::fullNoteFilePath( QString fileName )
-{
-    return this->notesPath + QDir::separator() + fileName;
 }
 
 
@@ -225,7 +215,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     Note note = Note::fetch( id );
     qDebug() << "fileName: " << note.getFileName();
 
-    QString fileName = fullNoteFilePath( note.getFileName() );
+    QString fileName = Note::fullNoteFilePath( note.getFileName() );
     loadNote( fileName );
 }
 
@@ -240,8 +230,10 @@ void MainWindow::on_noteTextEdit_textChanged()
     Note note = Note::fetch( id );
     qDebug() << "fileName: " << note.getFileName();
 
-    QString fileName = fullNoteFilePath( note.getFileName() );
     QString text = this->ui->noteTextEdit->toPlainText();
-    storeNote( fileName, text );
+    note.storeNewText( text );
+
+//    QString fileName = fullNoteFilePath( note.getFileName() );
+//    storeNote( fileName, text );
 }
 

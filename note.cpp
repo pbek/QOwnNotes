@@ -5,7 +5,10 @@
 #include <QSqlRecord>
 #include <QMessageBox>
 #include <QApplication>
-
+#include <QFile>
+#include <QSettings>
+#include <QDir>
+#include <QSqlError>
 
 
 Note::Note()
@@ -53,6 +56,7 @@ bool Note::createConnection()
     QSqlQuery query;
     query.exec("create table note (id integer primary key, "
             "name varchar(255), file_name varchar(255), note_text text,"
+            "has_dirty_data integer default 0,"
             "created datetime default current_timestamp,"
             "modified datetime default current_timestamp)");
 //    qDebug() << query.exec("insert into note (id, name) VALUES (NULL, 'test')");
@@ -102,12 +106,18 @@ Note Note::noteFromQuery( QSqlQuery query )
     QString name = query.value("name").toString();
     QString fileName = query.value("file_name").toString();
     QString noteText = query.value("note_text").toString();
+    bool hasDirtyData = query.value("has_dirty_data").toInt() == 1;
+    QDateTime created = query.value("created").toDateTime();
+    QDateTime modified = query.value("modified").toDateTime();
 
     Note note;
     note.id = id;
     note.name = name;
     note.fileName = fileName;
     note.noteText = noteText;
+    note.hasDirtyData = hasDirtyData;
+    note.created = created;
+    note.modified = modified;
 
     return note;
 }
@@ -184,3 +194,72 @@ QStringList Note::fetchNoteFileNames()
     return list;
 }
 
+bool Note::storeNewText( QString text ) {
+    this->noteText = text;
+    this->hasDirtyData = true;
+
+    return this->store();
+}
+
+bool Note::store() {
+    QSqlQuery query;
+    query.prepare( "UPDATE note SET name = :name, file_name = :file_name, note_text = :note_text, has_dirty_data = :has_dirty_data, modified = :modified WHERE id = :id" );
+
+    query.bindValue( ":id", this->id );
+    query.bindValue( ":name", this->name );
+    query.bindValue( ":file_name", this->fileName );
+    query.bindValue( ":note_text", this->noteText );
+    query.bindValue( ":has_dirty_data", this->hasDirtyData ? 1 : 0 );
+    query.bindValue( ":modified", QDateTime::currentDateTime() );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+bool Note::storeNoteTextFileToDisk() {
+
+    QFile file( fullNoteFilePath( this->fileName ) );
+    file.open( QIODevice::WriteOnly | QIODevice::Text );
+    QTextStream out( &file );
+    out << this->noteText;
+    file.flush();
+    file.close();
+
+    this->hasDirtyData = false;
+    this->store();
+}
+
+QString Note::fullNoteFilePath( QString fileName )
+{
+    QSettings settings( "PBE", "QNotes" );
+    QString notesPath = settings.value( "General/notesPath" ).toString();
+
+    return notesPath + QDir::separator() + fileName;
+}
+
+bool Note::storeDirtyNotesToDisk() {
+    QSqlQuery query;
+    Note note;
+
+    query.prepare( "SELECT * FROM note WHERE has_dirty_data = 1" );
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            note = noteFromQuery( query );
+            note.storeNoteTextFileToDisk();
+//            qDebug() << note.getName();
+        }
+    }
+}

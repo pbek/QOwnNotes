@@ -9,6 +9,12 @@ class Note
 {
 public:
     explicit Note();
+
+    int getId();
+    QString getName();
+    QString getFileName();
+    QString getNoteText();
+
     static bool createConnection();
     static bool addNote( QString name, QString fileName, QString text );
     static Note fetch( int id );
@@ -17,17 +23,18 @@ public:
     static QStringList fetchNoteNames();
     static QStringList fetchNoteFileNames();
     static Note noteFromQuery( QSqlQuery query );
-
-    int getId();
-    QString getName();
-    QString getFileName();
-    QString getNoteText();
+    bool store();
+    bool storeNewText(QString text);
+    bool storeNoteTextFileToDisk();
+    static QString fullNoteFilePath(QString fileName);
+    static bool storeDirtyNotesToDisk();
 
 private:
     int id;
     QString name;
     QString fileName;
     QString noteText;
+    bool hasDirtyData;
     QDateTime created;
     QDateTime modified;
 
