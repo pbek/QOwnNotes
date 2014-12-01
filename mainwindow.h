@@ -6,6 +6,7 @@
 #include <QSplitter>
 #include <QFileSystemWatcher>
 #include <QHash>
+#include <note.h>
 
 namespace Ui {
 class MainWindow;
@@ -33,6 +34,7 @@ private:
     QSplitter *mainSplitter;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
+    Note currentNote;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

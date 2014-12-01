@@ -28,6 +28,7 @@ public:
     bool storeNoteTextFileToDisk();
     static QString fullNoteFilePath(QString fileName);
     static bool storeDirtyNotesToDisk();
+    bool updateNoteTextFromDisk();
 
 private:
     int id;

@@ -59,9 +59,6 @@ bool Note::createConnection()
             "has_dirty_data integer default 0,"
             "created datetime default current_timestamp,"
             "modified datetime default current_timestamp)");
-//    qDebug() << query.exec("insert into note (id, name) VALUES (NULL, 'test')");
-//    qDebug() << query.exec("insert into note (name) VALUES ('test2')");
-//    qDebug() << query.exec("insert into note (name) VALUES ('test3')");
 
     return true;
 }
@@ -79,24 +76,42 @@ bool Note::addNote( QString name, QString fileName, QString text )
 Note Note::fetch( int id )
 {
     QSqlQuery query;
+    Note note;
+
     query.prepare( "SELECT * FROM note WHERE id = :id" );
     query.bindValue( ":id", id );
-    qDebug() << query.exec();
-    query.first();
 
-    Note note = noteFromQuery( query );
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        query.first();
+        note = noteFromQuery( query );
+    }
+
     return note;
 }
 
 Note Note::fetchByFileName( QString fileName )
 {
     QSqlQuery query;
+    Note note;
+
     query.prepare( "SELECT * FROM note WHERE file_name = :file_name" );
     query.bindValue( ":file_name", fileName );
-    qDebug() << query.exec();
-    query.first();
 
-    Note note = noteFromQuery( query );
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        query.first();
+        note = noteFromQuery( query );
+    }
+
     return note;
 }
 
@@ -135,8 +150,7 @@ QList<Note> Note::fetchAll()
     query.prepare( "SELECT * FROM note" );
     if( !query.exec() )
     {
-//        qDebug() << query.lastError().text();
-        qDebug() << "error executing query";
+        qDebug() << __func__ << ": " << query.lastError();
     }
     else
     {
@@ -158,8 +172,7 @@ QStringList Note::fetchNoteNames()
     query.prepare( "SELECT * FROM note" );
     if( !query.exec() )
     {
-//        qDebug() << query.lastError().text();
-        qDebug() << "error fetching notes";
+        qDebug() << __func__ << ": " << query.lastError();
     }
     else
     {
@@ -180,8 +193,7 @@ QStringList Note::fetchNoteFileNames()
     query.prepare( "SELECT * FROM note" );
     if( !query.exec() )
     {
-//        qDebug() << query.lastError().text();
-        qDebug() << "error fetching notes";
+        qDebug() << __func__ << ": " << query.lastError();
     }
     else
     {
@@ -226,14 +238,35 @@ bool Note::store() {
 bool Note::storeNoteTextFileToDisk() {
 
     QFile file( fullNoteFilePath( this->fileName ) );
-    file.open( QIODevice::WriteOnly | QIODevice::Text );
+    if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
+    {
+        qDebug() << file.errorString();
+        return false;
+    }
+
     QTextStream out( &file );
     out << this->noteText;
     file.flush();
     file.close();
 
     this->hasDirtyData = false;
-    this->store();
+    return this->store();
+}
+
+bool Note::updateNoteTextFromDisk() {
+    QFile file( fullNoteFilePath( this->fileName ) );
+
+    if ( !file.open( QIODevice::ReadOnly ) )
+    {
+        qDebug() << file.errorString();
+        return false;
+    }
+
+    QTextStream in( &file );
+    this->noteText = in.readAll();
+    file.close();
+
+    return true;
 }
 
 QString Note::fullNoteFilePath( QString fileName )

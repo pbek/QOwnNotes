@@ -32,9 +32,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QList<Note> noteList = Note::fetchAll();
 
-    QTimer *timer = new QTimer( this );
-    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( checkForNoteChanges() ) );
-    timer->start( 1000 );
+//    QTimer *timer = new QTimer( this );
+//    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( checkForNoteChanges() ) );
+//    timer->start( 1000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -133,13 +133,23 @@ void MainWindow::notesWereModified( const QString& str )
 
     Note note = Note::fetchByFileName( fi.fileName() );
 
-    // reload the notes directory list
-    this->loadNoteDirectoryList();
+    // load note from disk if current note was changed
+    if ( note.getFileName() == this->currentNote.getFileName() ) {
+        qDebug() << "Current note was changed!";
+        note.updateNoteTextFromDisk();
 
-    // restore old selected row
-    this->ui->notesListWidget->blockSignals( true );
-    this->ui->notesListWidget->setCurrentRow( note.getId() - 1 );
-    this->ui->notesListWidget->blockSignals( false );
+        this->ui->noteTextEdit->blockSignals( true );
+        this->ui->noteTextEdit->setText( note.getNoteText() );
+        this->ui->noteTextEdit->blockSignals( false );
+    }
+
+//    // reload the notes directory list
+//    this->loadNoteDirectoryList();
+
+//    // restore old selected row
+//    this->ui->notesListWidget->blockSignals( true );
+//    this->ui->notesListWidget->setCurrentRow( note.getId() - 1 );
+//    this->ui->notesListWidget->blockSignals( false );
 }
 
 void MainWindow::checkForNoteChanges()
@@ -178,7 +188,7 @@ void MainWindow::buildNotesIndex()
 
             // store note
             Note::addNote( base, fileName, noteText );
-            qDebug() << fileName;
+//            qDebug() << fileName;
         }
     }
 }
@@ -210,13 +220,16 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     qDebug() << "currentItemChanged " << current->text();
 
     int id = this->ui->notesListWidget->currentIndex().row() + 1;
-    qDebug() << "id: " << id;
 
     Note note = Note::fetch( id );
-    qDebug() << "fileName: " << note.getFileName();
+    this->currentNote = note;
 
-    QString fileName = Note::fullNoteFilePath( note.getFileName() );
-    loadNote( fileName );
+    this->ui->noteTextEdit->blockSignals( true );
+    this->ui->noteTextEdit->setText( note.getNoteText() );
+    this->ui->noteTextEdit->blockSignals( false );
+
+//    QString fileName = Note::fullNoteFilePath( note.getFileName() );
+//    loadNote( fileName );
 }
 
 void MainWindow::on_noteTextEdit_textChanged()
@@ -224,14 +237,15 @@ void MainWindow::on_noteTextEdit_textChanged()
     // TODO: don't save after every text change, use a delay of one second to save
     qDebug() << "textChanged";
 
-    int id = this->ui->notesListWidget->currentIndex().row() + 1;
-    qDebug() << "id: " << id;
-
-    Note note = Note::fetch( id );
-    qDebug() << "fileName: " << note.getFileName();
+//    int id = this->ui->notesListWidget->currentIndex().row() + 1;
+//    Note note = Note::fetch( id );
 
     QString text = this->ui->noteTextEdit->toPlainText();
-    note.storeNewText( text );
+
+    this->noteDirectoryWatcher.blockSignals( true );
+    this->currentNote.storeNewText( text );
+    this->currentNote.storeNoteTextFileToDisk();
+    this->noteDirectoryWatcher.blockSignals( false );
 
 //    QString fileName = fullNoteFilePath( note.getFileName() );
 //    storeNote( fileName, text );
