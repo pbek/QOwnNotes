@@ -26,6 +26,8 @@ protected:
 private slots:
     void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
     void on_noteTextEdit_textChanged();
+    void on_action_Quit_triggered();
+
     void notesWereModified( const QString& str );
     void storeUpdatedNotesToDisk();
 

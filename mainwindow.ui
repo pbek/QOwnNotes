@@ -51,6 +51,7 @@ p, li { white-space: pre-wrap; }
      <string>&amp;Note</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="action_Quit"/>
    </widget>
    <addaction name="menuQNotes"/>
   </widget>
@@ -80,6 +81,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="action_Quit">
+   <property name="text">
+    <string>&amp;Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
  </widget>

@@ -267,3 +267,8 @@ void MainWindow::on_noteTextEdit_textChanged()
 //    storeNote( fileName, text );
 }
 
+
+void MainWindow::on_action_Quit_triggered()
+{
+    QApplication::quit();
+}
