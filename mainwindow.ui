@@ -77,7 +77,10 @@ p, li { white-space: pre-wrap; }
   </widget>
   <action name="action_New">
    <property name="text">
-    <string>&amp;New</string>
+    <string>&amp;New note</string>
+   </property>
+   <property name="toolTip">
+    <string>Create a new note</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+N</string>
