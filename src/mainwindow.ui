@@ -48,9 +48,10 @@ p, li { white-space: pre-wrap; }
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
     <property name="title">
-     <string>&amp;Note</string>
+     <string>&amp;File</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="action_Quit"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
@@ -92,6 +93,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionSet_ownCloud_Folder">
+   <property name="text">
+    <string>Set ownCloud &amp;Folder</string>
    </property>
   </action>
  </widget>

@@ -8,6 +8,7 @@
 #include <QListWidgetItem>
 #include <QSettings>
 #include <QTimer>
+#include <QMessageBox>
 #include "note.h"
 
 
@@ -19,11 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
     Note::createConnection();
-
-    // TODO: make notes path selectable
-    this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes.bak";
-    QSettings settings( "PBE", "QOwnNotes" );
-    settings.setValue( "General/notesPath", this->notesPath );
 
     readSettings();
     setupMainSplitter();
@@ -125,6 +121,14 @@ void MainWindow::readSettings()
     QSettings settings("PBE", "QOwnNotes");
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
+
+    this->notesPath = settings.value("General/notesPath").toString();
+
+    // let us select a folder if we haven't find one in the settings
+    if ( this->notesPath == "" )
+    {
+        selectOwnCloudFolder();
+    }
 }
 
 void MainWindow::notesWereModified( const QString& str )
@@ -211,6 +215,38 @@ void MainWindow::buildNotesIndex()
     }
 }
 
+QString MainWindow::selectOwnCloudFolder() {
+    QString path = this->notesPath;
+
+    if ( path == "" )
+    {
+        path = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes";
+    }
+
+    QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud folder" ),
+                                                 path,
+                                                 QFileDialog::ShowDirsOnly );
+
+    if ( dir != "" )
+    {
+        this->notesPath = dir;
+        QSettings settings( "PBE", "QOwnNotes" );
+        settings.setValue( "General/notesPath", dir );
+    }
+    else
+    {
+        if ( this->notesPath == "" )
+        {
+            QMessageBox messageBox;
+            messageBox.setText( tr( "You have to select the ownCloud notes folder to make this software work!" ) );
+            messageBox.exec();
+
+            QApplication::quit();
+        }
+    }
+
+    return this->notesPath;
+}
 
 
 /*!
@@ -254,7 +290,6 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 
 void MainWindow::on_noteTextEdit_textChanged()
 {
-    // TODO: don't save after every text change, use a delay of one second to save
     qDebug() << "textChanged";
 
 //    int id = this->ui->notesListWidget->currentIndex().row() + 1;
@@ -271,4 +306,11 @@ void MainWindow::on_noteTextEdit_textChanged()
 void MainWindow::on_action_Quit_triggered()
 {
     QApplication::quit();
+}
+
+void MainWindow::on_actionSet_ownCloud_Folder_triggered()
+{
+    selectOwnCloudFolder();
+
+    // TODO: reload files if folder was changed
 }

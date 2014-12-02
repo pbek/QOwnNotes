@@ -6,7 +6,9 @@
 #include <QSplitter>
 #include <QFileSystemWatcher>
 #include <QHash>
+#include <QFileDialog>
 #include <note.h>
+
 
 namespace Ui {
 class MainWindow;
@@ -31,6 +33,8 @@ private slots:
     void notesWereModified( const QString& str );
     void storeUpdatedNotesToDisk();
 
+    void on_actionSet_ownCloud_Folder_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -43,6 +47,7 @@ private:
     void loadNote( QString &fileName );
     void readSettings();
     void buildNotesIndex();
+    QString selectOwnCloudFolder();
 };
 
 #endif // MAINWINDOW_H
