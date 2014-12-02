@@ -67,17 +67,18 @@ void MainWindow::setupMainSplitter()
 
 void MainWindow::loadNoteDirectoryList()
 {
-    this->ui->noteTextEdit->blockSignals( true );
-    this->ui->notesListWidget->blockSignals( true );
+    {
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
 
-    this->ui->notesListWidget->clear();
+        {
+            const QSignalBlocker blocker2( this->ui->notesListWidget );
 
+            this->ui->notesListWidget->clear();
 
-    QStringList nameList = Note::fetchNoteNames();
-    this->ui->notesListWidget->addItems( nameList );
-
-    this->ui->noteTextEdit->blockSignals( false );
-    this->ui->notesListWidget->blockSignals( false );
+            QStringList nameList = Note::fetchNoteNames();
+            this->ui->notesListWidget->addItems( nameList );
+        }
+    }
 
     // watch the notes directory for changes
     this->noteDirectoryWatcher.addPath( this->notesPath );
@@ -112,9 +113,10 @@ void MainWindow::loadNote( QString &fileName )
     file.close();
 
     // we don't want a "textChange()" fired up
-    this->ui->noteTextEdit->blockSignals( true );
-    this->ui->noteTextEdit->setText( noteText );
-    this->ui->noteTextEdit->blockSignals( false );
+    {
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+        this->ui->noteTextEdit->setText( noteText );
+    }
 }
 
 void MainWindow::readSettings()
@@ -138,9 +140,10 @@ void MainWindow::notesWereModified( const QString& str )
         qDebug() << "Current note was changed!";
         note.updateNoteTextFromDisk();
 
-        this->ui->noteTextEdit->blockSignals( true );
-        this->ui->noteTextEdit->setText( note.getNoteText() );
-        this->ui->noteTextEdit->blockSignals( false );
+        {
+            const QSignalBlocker blocker( this->ui->noteTextEdit );
+            this->ui->noteTextEdit->setText( note.getNoteText() );
+        }
     }
 
 //    // reload the notes directory list
@@ -224,9 +227,11 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     Note note = Note::fetch( id );
     this->currentNote = note;
 
-    this->ui->noteTextEdit->blockSignals( true );
-    this->ui->noteTextEdit->setText( note.getNoteText() );
-    this->ui->noteTextEdit->blockSignals( false );
+    {
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+        // no signals here
+        this->ui->noteTextEdit->setText( note.getNoteText() );
+    }
 
 //    QString fileName = Note::fullNoteFilePath( note.getFileName() );
 //    loadNote( fileName );
@@ -242,10 +247,20 @@ void MainWindow::on_noteTextEdit_textChanged()
 
     QString text = this->ui->noteTextEdit->toPlainText();
 
-    this->noteDirectoryWatcher.blockSignals( true );
-    this->currentNote.storeNewText( text );
-    this->currentNote.storeNoteTextFileToDisk();
-    this->noteDirectoryWatcher.blockSignals( false );
+    // BUG: this signal is not blocked somehow!
+//    qDebug() << "blocking";
+
+    {
+        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+        // no signals here
+        this->currentNote.storeNewText( text );
+        this->currentNote.storeNoteTextFileToDisk();
+    }
+//    this->noteDirectoryWatcher.blockSignals( true );
+//    this->currentNote.storeNewText( text );
+//    this->currentNote.storeNoteTextFileToDisk();
+//    qDebug() << "unblocking";
+//    this->noteDirectoryWatcher.blockSignals( false );
 
 //    QString fileName = fullNoteFilePath( note.getFileName() );
 //    storeNote( fileName, text );
