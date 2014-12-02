@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
     QCoreApplication::setOrganizationDomain("PBE");
     QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QNotes");
+    QCoreApplication::setApplicationName("QOwnNotes");
     QCoreApplication::setApplicationVersion("0.1");
 
     MainWindow w;

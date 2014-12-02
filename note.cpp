@@ -142,11 +142,6 @@ QList<Note> Note::fetchAll()
     QSqlQuery query;
     QList<Note> noteList;
 
-    int id;
-    QString name;
-    QString fileName;
-    QString noteText;
-
     query.prepare( "SELECT * FROM note" );
     if( !query.exec() )
     {
@@ -253,6 +248,10 @@ bool Note::storeNoteTextFileToDisk() {
     return this->store();
 }
 
+//QString Note::generateFilename() {
+
+//}
+
 bool Note::updateNoteTextFromDisk() {
     QFile file( fullNoteFilePath( this->fileName ) );
 
@@ -271,7 +270,7 @@ bool Note::updateNoteTextFromDisk() {
 
 QString Note::fullNoteFilePath( QString fileName )
 {
-    QSettings settings( "PBE", "QNotes" );
+    QSettings settings( "PBE", "QOwnNotes" );
     QString notesPath = settings.value( "General/notesPath" ).toString();
 
     return notesPath + QDir::separator() + fileName;
@@ -285,6 +284,7 @@ bool Note::storeDirtyNotesToDisk() {
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
+        return false;
     }
     else
     {
@@ -294,5 +294,7 @@ bool Note::storeDirtyNotesToDisk() {
             note.storeNoteTextFileToDisk();
 //            qDebug() << note.getName();
         }
+
+        return true;
     }
 }

@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>QNotes</string>
+   <string>QOwnNotes</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -46,14 +46,14 @@ p, li { white-space: pre-wrap; }
      <height>27</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuQNotes">
+   <widget class="QMenu" name="menuQOwnNotes">
     <property name="title">
      <string>&amp;Note</string>
     </property>
     <addaction name="action_New"/>
     <addaction name="action_Quit"/>
    </widget>
-   <addaction name="menuQNotes"/>
+   <addaction name="menuQOwnNotes"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

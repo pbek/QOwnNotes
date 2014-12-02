@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // TODO: make notes path selectable
     this->notesPath = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes.bak";
-    QSettings settings( "PBE", "QNotes" );
+    QSettings settings( "PBE", "QOwnNotes" );
     settings.setValue( "General/notesPath", this->notesPath );
 
     readSettings();
@@ -59,7 +59,7 @@ void MainWindow::setupMainSplitter()
     this->mainSplitter->addWidget(ui->noteTextEdit);
 
     // restore splitter sizes
-    QSettings settings("PBE", "QNotes");
+    QSettings settings("PBE", "QOwnNotes");
     QByteArray state = settings.value( "mainSplitterSizes" ).toByteArray();
     this->mainSplitter->restoreState( state );
 
@@ -122,7 +122,7 @@ void MainWindow::loadNote( QString &fileName )
 
 void MainWindow::readSettings()
 {
-    QSettings settings("PBE", "QNotes");
+    QSettings settings("PBE", "QOwnNotes");
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
 }
@@ -219,7 +219,7 @@ void MainWindow::buildNotesIndex()
 
 void MainWindow::closeEvent(QCloseEvent *event)
  {
-    QSettings settings( "PBE", "QNotes" );
+    QSettings settings( "PBE", "QOwnNotes" );
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
