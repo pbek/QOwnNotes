@@ -32,9 +32,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QList<Note> noteList = Note::fetchAll();
 
-//    QTimer *timer = new QTimer( this );
-//    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( checkForNoteChanges() ) );
-//    timer->start( 1000 );
+    QTimer *timer = new QTimer( this );
+    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
+    timer->start( 1000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -42,6 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    storeUpdatedNotesToDisk();
     delete ui;
 }
 
@@ -155,10 +156,24 @@ void MainWindow::notesWereModified( const QString& str )
 //    this->ui->notesListWidget->blockSignals( false );
 }
 
-void MainWindow::checkForNoteChanges()
+void MainWindow::storeUpdatedNotesToDisk()
 {
-    Note::storeDirtyNotesToDisk();
-//    qDebug() << "checkForNoteChanges";
+    //    qDebug() << "checkForNoteChanges";
+    {
+        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+        // For some reason this->noteDirectoryWatcher gets an event from this.
+        // I didn't find an other solution than to wait yet.
+        // All flushing and syncing didn't help
+        Note::storeDirtyNotesToDisk();
+
+        // wait 100ms before the block on this->noteDirectoryWatcher is opened
+        {
+            QTime dieTime= QTime::currentTime().addMSecs( 100 );
+            while( QTime::currentTime() < dieTime )
+            QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
+        }
+    }
 }
 
 void MainWindow::buildNotesIndex()
@@ -189,7 +204,7 @@ void MainWindow::buildNotesIndex()
             QString base = fileName;
             base.chop( 4 );
 
-            // store note
+            // store note in sqlite
             Note::addNote( base, fileName, noteText );
 //            qDebug() << fileName;
         }
@@ -246,21 +261,7 @@ void MainWindow::on_noteTextEdit_textChanged()
 //    Note note = Note::fetch( id );
 
     QString text = this->ui->noteTextEdit->toPlainText();
-
-    // BUG: this signal is not blocked somehow!
-//    qDebug() << "blocking";
-
-    {
-        const QSignalBlocker blocker( this->noteDirectoryWatcher );
-        // no signals here
-        this->currentNote.storeNewText( text );
-        this->currentNote.storeNoteTextFileToDisk();
-    }
-//    this->noteDirectoryWatcher.blockSignals( true );
-//    this->currentNote.storeNewText( text );
-//    this->currentNote.storeNoteTextFileToDisk();
-//    qDebug() << "unblocking";
-//    this->noteDirectoryWatcher.blockSignals( false );
+    this->currentNote.storeNewText( text );
 
 //    QString fileName = fullNoteFilePath( note.getFileName() );
 //    storeNote( fileName, text );
