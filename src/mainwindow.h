@@ -7,6 +7,7 @@
 #include <QFileSystemWatcher>
 #include <QHash>
 #include <QFileDialog>
+#include <QEvent>
 #include <note.h>
 
 
@@ -24,16 +25,17 @@ public:
 
 protected:
     void closeEvent(QCloseEvent *event);
+    bool eventFilter(QObject *obj, QEvent *event);
 
 private slots:
     void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
     void on_noteTextEdit_textChanged();
     void on_action_Quit_triggered();
-
     void notesWereModified( const QString& str );
     void storeUpdatedNotesToDisk();
-
     void on_actionSet_ownCloud_Folder_triggered();
+    void on_searchLineEdit_textChanged(const QString &arg1);
+    void on_action_Find_note_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -41,6 +43,7 @@ private:
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
+    int firstVisibleNoteListRow;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

@@ -9,6 +9,7 @@
 #include <QSettings>
 #include <QTimer>
 #include <QMessageBox>
+#include <QKeyEvent>
 #include "note.h"
 
 
@@ -18,8 +19,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-
     Note::createConnection();
+
+    this->firstVisibleNoteListRow = 0;
 
     readSettings();
     setupMainSplitter();
@@ -34,6 +36,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
+    ui->searchLineEdit->installEventFilter(this);
+    ui->notesListWidget->setCurrentRow( 0 );
 }
 
 MainWindow::~MainWindow()
@@ -59,7 +63,7 @@ void MainWindow::setupMainSplitter()
     QByteArray state = settings.value( "mainSplitterSizes" ).toByteArray();
     this->mainSplitter->restoreState( state );
 
-    this->ui->centralWidget->layout()->addWidget( this->mainSplitter );
+    this->ui->gridLayout->layout()->addWidget( this->mainSplitter );
 }
 
 void MainWindow::loadNoteDirectoryList()
@@ -196,22 +200,8 @@ void MainWindow::buildNotesIndex()
     {
         // fetching the content of the file
         QFile file( Note::fullNoteFilePath( fileName ) );
-        if ( file.open( QIODevice::ReadOnly ) )
-        {
-            QTextStream in( &file );
-
-            // qDebug() << file.size() << in.readAll();
-            QString noteText = in.readAll();
-            file.close();
-
-            // create a nicer name by removing ".txt"
-            QString base = fileName;
-            base.chop( 4 );
-
-            // store note in sqlite
-            Note::addNote( base, fileName, noteText );
-//            qDebug() << fileName;
-        }
+        Note note;
+        note.createFromFile( file );
     }
 }
 
@@ -262,6 +252,36 @@ void MainWindow::closeEvent(QCloseEvent *event)
     QMainWindow::closeEvent( event );
  }
 
+//
+// Event filters on the MainWindow
+//
+bool MainWindow::eventFilter(QObject* obj, QEvent *event)
+{
+    if ( obj == ui->searchLineEdit )
+    {
+        if ( event->type() == QEvent::KeyPress )
+        {
+            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+            // set focus to the notes list when Key_Down or Key_Tab are pressed in the search line edit
+            if ( ( keyEvent->key() == Qt::Key_Down ) || ( keyEvent->key() == Qt::Key_Tab ) )
+            {
+                // choose an other selected item if current item is invisible
+                QListWidgetItem *item = ui->notesListWidget->currentItem();
+                if ( ( item != NULL ) && ui->notesListWidget->currentItem()->isHidden() )
+                {
+                    ui->notesListWidget->setCurrentRow( this->firstVisibleNoteListRow );
+                }
+
+                // give the keyboard focus to the notes list widget
+                ui->notesListWidget->setFocus();
+                return true;
+            }
+        }
+        return false;
+    }
+    return QMainWindow::eventFilter(obj, event);
+}
 
 
  /*!
@@ -313,4 +333,47 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered()
     selectOwnCloudFolder();
 
     // TODO: reload files if folder was changed
+}
+
+void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
+{
+    // search notes when at least 2 characters were entered
+    if ( arg1.count() >= 2 )
+    {
+        QList<QString> noteNameList = Note::searchAsNameList( arg1 );
+        this->firstVisibleNoteListRow = -1;
+
+        for(int i = 0; i < this->ui->notesListWidget->count(); ++i)
+        {
+            QListWidgetItem* item = this->ui->notesListWidget->item(i);
+            if ( noteNameList.indexOf( item->text() ) < 0 )
+            {
+                item->setHidden( true );
+            }
+            else
+            {
+                if ( this->firstVisibleNoteListRow < 0 ) this->firstVisibleNoteListRow = i;
+                item->setHidden( false );
+            }
+        }
+    }
+    // show all items otherwise
+    else
+    {
+        this->firstVisibleNoteListRow = 0;
+
+        for(int i = 0; i < this->ui->notesListWidget->count(); ++i)
+        {
+            QListWidgetItem* item = this->ui->notesListWidget->item(i);
+            item->setHidden( false );
+        }
+    }
+}
+
+//
+// set focus on search line edit if Ctrl + F was pressed
+//
+void MainWindow::on_action_Find_note_triggered()
+{
+    this->ui->searchLineEdit->setFocus();
 }

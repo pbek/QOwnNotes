@@ -3,6 +3,7 @@
 
 #include <QDateTime>
 #include <QSqlQuery>
+#include <QFile>
 
 
 class Note
@@ -20,6 +21,8 @@ public:
     static Note fetch( int id );
     static Note fetchByFileName( QString fileName );
     static QList<Note> fetchAll();
+    static QList<Note> search(QString text);
+    static QList<QString> searchAsNameList(QString text);
     static QStringList fetchNoteNames();
     static QStringList fetchNoteFileNames();
     static Note noteFromQuery( QSqlQuery query );
@@ -29,6 +32,8 @@ public:
     static QString fullNoteFilePath(QString fileName);
     static bool storeDirtyNotesToDisk();
     bool updateNoteTextFromDisk();
+    friend QDebug operator<<(QDebug dbg, const Note &note);
+    bool createFromFile(QFile &file);
 
 private:
     int id;
@@ -36,6 +41,8 @@ private:
     QString fileName;
     QString noteText;
     bool hasDirtyData;
+    QDateTime fileCreated;
+    QDateTime fileLastModified;
     QDateTime created;
     QDateTime modified;
 

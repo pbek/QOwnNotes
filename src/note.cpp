@@ -13,9 +13,7 @@
 
 Note::Note()
 {
-    this->name = name;
-    this->fileName = fileName;
-    this->noteText = noteText;
+    this->id = 0;
 }
 
 int Note::getId()
@@ -57,6 +55,8 @@ bool Note::createConnection()
     query.exec("create table note (id integer primary key, "
             "name varchar(255), file_name varchar(255), note_text text,"
             "has_dirty_data integer default 0,"
+            "file_last_modified datetime,"
+            "file_created datetime,"
             "created datetime default current_timestamp,"
             "modified datetime default current_timestamp)");
 
@@ -122,6 +122,8 @@ Note Note::noteFromQuery( QSqlQuery query )
     QString fileName = query.value("file_name").toString();
     QString noteText = query.value("note_text").toString();
     bool hasDirtyData = query.value("has_dirty_data").toInt() == 1;
+    QDateTime fileCreated = query.value("file_created").toDateTime();
+    QDateTime fileLastModified = query.value("file_last_modified").toDateTime();
     QDateTime created = query.value("created").toDateTime();
     QDateTime modified = query.value("modified").toDateTime();
 
@@ -131,6 +133,8 @@ Note Note::noteFromQuery( QSqlQuery query )
     note.fileName = fileName;
     note.noteText = noteText;
     note.hasDirtyData = hasDirtyData;
+    note.fileCreated = fileCreated;
+    note.fileLastModified = fileLastModified;
     note.created = created;
     note.modified = modified;
 
@@ -142,7 +146,7 @@ QList<Note> Note::fetchAll()
     QSqlQuery query;
     QList<Note> noteList;
 
-    query.prepare( "SELECT * FROM note" );
+    query.prepare( "SELECT * FROM note ORDER BY file_last_modified DESC" );
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
@@ -159,12 +163,59 @@ QList<Note> Note::fetchAll()
     return noteList;
 }
 
+QList<Note> Note::search( QString text )
+{
+    QSqlQuery query;
+    QList<Note> noteList;
+
+    query.prepare( "SELECT * FROM note WHERE note_text LIKE :text ORDER BY file_last_modified DESC" );
+    query.bindValue( ":text", "%" + text + "%"  );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            Note note = noteFromQuery( query );
+            noteList.append( note );
+        }
+    }
+
+    return noteList;
+}
+
+QList<QString> Note::searchAsNameList( QString text )
+{
+    QSqlQuery query;
+    QList<QString> nameList;
+
+    query.prepare( "SELECT name FROM note WHERE note_text LIKE :text ORDER BY file_last_modified DESC" );
+    query.bindValue( ":text", "%" + text + "%"  );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            nameList.append( query.value("name").toString() );
+        }
+    }
+
+    return nameList;
+}
+
 QStringList Note::fetchNoteNames()
 {
     QSqlQuery query;
     QStringList list;
 
-    query.prepare( "SELECT * FROM note" );
+    query.prepare( "SELECT name FROM note ORDER BY file_last_modified DESC" );
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
@@ -185,7 +236,7 @@ QStringList Note::fetchNoteFileNames()
     QSqlQuery query;
     QStringList list;
 
-    query.prepare( "SELECT * FROM note" );
+    query.prepare( "SELECT file_name FROM note ORDER BY file_last_modified DESC" );
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
@@ -208,16 +259,36 @@ bool Note::storeNewText( QString text ) {
     return this->store();
 }
 
+//
+// inserts or updates a note object in the database
+//
 bool Note::store() {
     QSqlQuery query;
-    query.prepare( "UPDATE note SET name = :name, file_name = :file_name, note_text = :note_text, has_dirty_data = :has_dirty_data, modified = :modified WHERE id = :id" );
 
-    query.bindValue( ":id", this->id );
+    if ( this->id > 0 )
+    {
+        query.prepare( "UPDATE note SET "
+                       "name = :name, file_name = :file_name, note_text = :note_text, has_dirty_data = :has_dirty_data, "
+                       "file_last_modified = :file_last_modified, file_created = :file_created, modified = :modified "
+                       "WHERE id = :id" );
+        query.bindValue( ":id", this->id );
+    }
+    else
+    {
+        query.prepare( "INSERT INTO note"
+                       "( name, file_name, note_text, has_dirty_data, file_last_modified, file_created, modified ) "
+                       "VALUES ( :name, :file_name, :note_text, :has_dirty_data, :file_last_modified, :file_created, :modified )");
+    }
+
+    QDateTime modified = QDateTime::currentDateTime();
+
     query.bindValue( ":name", this->name );
     query.bindValue( ":file_name", this->fileName );
     query.bindValue( ":note_text", this->noteText );
     query.bindValue( ":has_dirty_data", this->hasDirtyData ? 1 : 0 );
-    query.bindValue( ":modified", QDateTime::currentDateTime() );
+    query.bindValue( ":file_created", this->fileCreated );
+    query.bindValue( ":file_last_modified", this->fileLastModified );
+    query.bindValue( ":modified", modified );
 
     if( !query.exec() )
     {
@@ -226,6 +297,8 @@ bool Note::store() {
     }
     else
     {
+        this->id = query.lastInsertId().toInt();
+        this->modified = modified;
         return true;
     }
 }
@@ -297,4 +370,37 @@ bool Note::storeDirtyNotesToDisk() {
 
         return true;
     }
+}
+
+bool Note::createFromFile( QFile &file ) {
+    if ( file.open( QIODevice::ReadOnly ) )
+    {
+        QTextStream in( &file );
+
+        // qDebug() << file.size() << in.readAll();
+        QString noteText = in.readAll();
+        file.close();
+
+        QFileInfo fileInfo;
+        fileInfo.setFile( file );
+
+        // create a nicer name by removing ".txt"
+        // TODO: make sure name is ownNote conform
+        QString name = fileInfo.fileName();
+        name.chop( 4 );
+
+        this->name = name;
+        this->fileName = fileInfo.fileName();
+        this->noteText = noteText;
+        this->fileCreated = fileInfo.created();
+        this->fileLastModified = fileInfo.lastModified();
+        this->store();
+    }
+
+}
+
+QDebug operator<<(QDebug dbg, const Note &note)
+{
+    dbg.nospace() << note.name << "<" << note.id << ">";
+    return dbg.space();
 }

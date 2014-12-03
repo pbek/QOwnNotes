@@ -22,18 +22,31 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <widget class="QListWidget" name="notesListWidget"/>
-    </item>
-    <item>
-     <widget class="QTextEdit" name="noteTextEdit">
-      <property name="html">
-       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+     <layout class="QGridLayout" name="gridLayout">
+      <property name="rightMargin">
+       <number>11</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>6</number>
+      </property>
+      <item row="1" column="1">
+       <widget class="QTextEdit" name="noteTextEdit">
+        <property name="html">
+         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans Sans-Book'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-     </widget>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QListWidget" name="notesListWidget"/>
+      </item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLineEdit" name="searchLineEdit"/>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -51,7 +64,10 @@ p, li { white-space: pre-wrap; }
      <string>&amp;File</string>
     </property>
     <addaction name="action_New"/>
+    <addaction name="action_Find_note"/>
+    <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
+    <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
@@ -98,6 +114,14 @@ p, li { white-space: pre-wrap; }
   <action name="actionSet_ownCloud_Folder">
    <property name="text">
     <string>Set ownCloud &amp;Folder</string>
+   </property>
+  </action>
+  <action name="action_Find_note">
+   <property name="text">
+    <string>&amp;Find note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
    </property>
   </action>
  </widget>
