@@ -148,11 +148,24 @@ void MainWindow::notesWereModified( const QString& str )
     // load note from disk if current note was changed
     if ( note.getFileName() == this->currentNote.getFileName() ) {
         qDebug() << "Current note was changed!";
-        note.updateNoteTextFromDisk();
 
+        switch( QMessageBox::information( this, "Note was changed!",
+                                          "Note was changed outside of this application!\n"
+                                          "Reload note from disk?",
+                                          "&Reload", "&Cancel", QString::null,
+                                          0, 1 ) )
         {
-            const QSignalBlocker blocker( this->ui->noteTextEdit );
-            this->ui->noteTextEdit->setText( note.getNoteText() );
+            case 0:
+                note.updateNoteTextFromDisk();
+
+                {
+                    const QSignalBlocker blocker( this->ui->noteTextEdit );
+                    this->ui->noteTextEdit->setText( note.getNoteText() );
+                }
+                break;
+            case 1:
+            default:
+                break;
         }
     }
 }
