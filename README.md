@@ -14,10 +14,10 @@ This application is still under heavy development, so I constantly will come up 
 - notes can be viewed
 - sub-string searching of notes is possible
 - notes can be edited
+- new notes can be created
 - can be operated with keyboard
 
 ## Upcoming features
-- creating notes
 - removing notes
 - renaming notes
 - reloading notes if changed from the outside

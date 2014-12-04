@@ -14,6 +14,7 @@
 Note::Note()
 {
     this->id = 0;
+    this->hasDirtyData = false;
 }
 
 int Note::getId()
@@ -34,6 +35,16 @@ QString Note::getFileName()
 QString Note::getNoteText()
 {
     return this->noteText;
+}
+
+void Note::setName(QString text)
+{
+    this->name = text;
+}
+
+void Note::setNoteText(QString text)
+{
+    this->noteText = text;
 }
 
 bool Note::createConnection()
@@ -87,8 +98,10 @@ Note Note::fetch( int id )
     }
     else
     {
-        query.first();
-        note = noteFromQuery( query );
+        if ( query.first() )
+        {
+            note = noteFromQuery( query );
+        }
     }
 
     return note;
@@ -108,8 +121,33 @@ Note Note::fetchByFileName( QString fileName )
     }
     else
     {
-        query.first();
-        note = noteFromQuery( query );
+        if ( query.first() )
+        {
+            note = noteFromQuery( query );
+        }
+    }
+
+    return note;
+}
+
+Note Note::fetchByName( QString name )
+{
+    QSqlQuery query;
+    Note note;
+
+    query.prepare( "SELECT * FROM note WHERE name = :name" );
+    query.bindValue( ":name", name );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        if ( query.first() )
+        {
+            note = noteFromQuery( query );
+        }
     }
 
     return note;
@@ -265,6 +303,11 @@ bool Note::storeNewText( QString text ) {
 bool Note::store() {
     QSqlQuery query;
 
+    if ( this->fileName == "" )
+    {
+        this->fileName = this->name + ".txt";
+    }
+
     if ( this->id > 0 )
     {
         query.prepare( "UPDATE note SET "
@@ -306,6 +349,8 @@ bool Note::store() {
 bool Note::storeNoteTextFileToDisk() {
 
     QFile file( fullNoteFilePath( this->fileName ) );
+    qDebug() << "storing note file: "  << this;
+
     if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
     {
         qDebug() << file.errorString();
@@ -359,13 +404,13 @@ bool Note::storeDirtyNotesToDisk() {
         qDebug() << __func__ << ": " << query.lastError();
         return false;
     }
-    else
+    else if ( query.first() )
     {
         for( int r=0; query.next(); r++ )
         {
             note = noteFromQuery( query );
             note.storeNoteTextFileToDisk();
-//            qDebug() << note.getName();
+            qDebug() << "stored note: " << note;
         }
 
         return true;
@@ -397,6 +442,25 @@ bool Note::createFromFile( QFile &file ) {
         this->store();
     }
 
+}
+
+//
+// deletes all notes in the database
+//
+bool Note::deleteAll() {
+    QSqlQuery query;
+
+    // no truncate in sqlite
+    query.prepare( "DELETE FROM note" );
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+        return false;
+    }
+    else
+    {
+        return true;
+    }
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

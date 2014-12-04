@@ -36,6 +36,7 @@ private slots:
     void on_actionSet_ownCloud_Folder_triggered();
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_action_Find_note_triggered();
+    void on_searchLineEdit_returnPressed();
 
 private:
     Ui::MainWindow *ui;
@@ -51,6 +52,9 @@ private:
     void readSettings();
     void buildNotesIndex();
     QString selectOwnCloudFolder();
+    void setCurrentNote(Note note);
+    void handlePressed();
+    void focusNoteTextEdit();
 };
 
 #endif // MAINWINDOW_H

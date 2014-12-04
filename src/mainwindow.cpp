@@ -37,6 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     ui->searchLineEdit->installEventFilter(this);
+    ui->notesListWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
 }
 
@@ -196,6 +197,10 @@ void MainWindow::buildNotesIndex()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
+    // delete all notes in the database first
+    Note::deleteAll();
+
+    // create all notes from the files
     Q_FOREACH( QString fileName, files )
     {
         // fetching the content of the file
@@ -238,19 +243,53 @@ QString MainWindow::selectOwnCloudFolder() {
     return this->notesPath;
 }
 
+void MainWindow::setCurrentNote( Note note )
+{
+    this->currentNote = note;
+    QString name = note.getName();
+
+    // find and set the current item
+    QList<QListWidgetItem*> items = this->ui->notesListWidget->findItems( name, Qt::MatchExactly );
+    if ( items.count() > 0 )
+    {
+        const QSignalBlocker blocker( this->ui->notesListWidget );
+
+        this->ui->notesListWidget->setCurrentItem( items[0] );
+    }
+
+    // update the text of the text edit
+    {
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+
+        this->ui->noteTextEdit->setText( note.getNoteText() );
+    }
+}
+
+void MainWindow::focusNoteTextEdit()
+{
+    // move the cursor to the 2nd line
+    QTextCursor tmpCursor = ui->noteTextEdit->textCursor();
+    tmpCursor.movePosition( QTextCursor::Start, QTextCursor::MoveAnchor );
+    tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
+    ui->noteTextEdit->setTextCursor( tmpCursor );
+
+    // focus note text edit
+    ui->noteTextEdit->setFocus();
+}
+
 
 /*!
  * Internal events
  */
 
 void MainWindow::closeEvent(QCloseEvent *event)
- {
+{
     QSettings settings( "PBE", "QOwnNotes" );
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
     QMainWindow::closeEvent( event );
- }
+}
 
 //
 // Event filters on the MainWindow
@@ -263,12 +302,12 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         {
             QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 
-            // set focus to the notes list when Key_Down or Key_Tab are pressed in the search line edit
+            // set focus to the notes list if Key_Down or Key_Tab were pressed in the search line edit
             if ( ( keyEvent->key() == Qt::Key_Down ) || ( keyEvent->key() == Qt::Key_Tab ) )
             {
                 // choose an other selected item if current item is invisible
                 QListWidgetItem *item = ui->notesListWidget->currentItem();
-                if ( ( item != NULL ) && ui->notesListWidget->currentItem()->isHidden() )
+                if ( ( item != NULL ) && ui->notesListWidget->currentItem()->isHidden() && ( this->firstVisibleNoteListRow >= 0 ) )
                 {
                     ui->notesListWidget->setCurrentRow( this->firstVisibleNoteListRow );
                 }
@@ -280,6 +319,22 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         }
         return false;
     }
+    else if ( obj == ui->notesListWidget )
+    {
+        if ( event->type() == QEvent::KeyPress )
+        {
+            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+            // set focus to the note text edit if Key_Return or Key_Tab were pressed in the notes list
+            if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Tab ) )
+            {
+                focusNoteTextEdit();
+                return true;
+            }
+        }
+        return false;
+    }
+
     return QMainWindow::eventFilter(obj, event);
 }
 
@@ -296,13 +351,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     int id = this->ui->notesListWidget->currentIndex().row() + 1;
 
     Note note = Note::fetch( id );
-    this->currentNote = note;
-
-    {
-        const QSignalBlocker blocker( this->ui->noteTextEdit );
-        // no signals here
-        this->ui->noteTextEdit->setText( note.getNoteText() );
-    }
+    setCurrentNote( note );
 
 //    QString fileName = Note::fullNoteFilePath( note.getFileName() );
 //    loadNote( fileName );
@@ -310,7 +359,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 
 void MainWindow::on_noteTextEdit_textChanged()
 {
-    qDebug() << "textChanged";
+//    qDebug() << "textChanged";
 
 //    int id = this->ui->notesListWidget->currentIndex().row() + 1;
 //    Note note = Note::fetch( id );
@@ -376,4 +425,52 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 void MainWindow::on_action_Find_note_triggered()
 {
     this->ui->searchLineEdit->setFocus();
+}
+
+//
+// jump to found note or create a new one if not found
+//
+void MainWindow::on_searchLineEdit_returnPressed()
+{
+    QString text = this->ui->searchLineEdit->text();
+    text = text.trimmed();
+
+    // first let us search for the entered text
+    Note note = Note::fetchByName( text );
+
+    // if we can't find a note we create a new one
+    if ( note.getId() == 0 )
+    {
+        note = Note();
+        note.setName( text );
+        note.setNoteText( text + "\n" );
+        note.store();
+
+        // store the note to disk
+        {
+            const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+            note.storeNoteTextFileToDisk();
+        }
+
+        buildNotesIndex();
+        loadNoteDirectoryList();
+
+//        // create a new widget item for the note list
+//        QListWidgetItem* widgetItem = new QListWidgetItem();
+//        widgetItem->setText( text );
+
+//        // insert the note at the top of the note list
+//        {
+//            const QSignalBlocker blocker( this->ui->notesListWidget );
+
+//            ui->notesListWidget->insertItem( 0, widgetItem );
+//        }
+    }
+
+    // jump to the found or created note
+    setCurrentNote( note );
+
+    // focus the note text edit and set the cursor correctly
+    focusNoteTextEdit();
 }

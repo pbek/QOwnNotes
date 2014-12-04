@@ -15,11 +15,14 @@ public:
     QString getName();
     QString getFileName();
     QString getNoteText();
+    void setName( QString text );
+    void setNoteText(QString text);
 
     static bool createConnection();
     static bool addNote( QString name, QString fileName, QString text );
     static Note fetch( int id );
     static Note fetchByFileName( QString fileName );
+    static Note fetchByName(QString name);
     static QList<Note> fetchAll();
     static QList<Note> search(QString text);
     static QList<QString> searchAsNameList(QString text);
@@ -34,6 +37,7 @@ public:
     bool updateNoteTextFromDisk();
     friend QDebug operator<<(QDebug dbg, const Note &note);
     bool createFromFile(QFile &file);
+    static bool deleteAll();
 
 private:
     int id;
