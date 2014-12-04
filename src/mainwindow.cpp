@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
     timer->start( 1000 );
 
-    QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
+    QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
@@ -155,15 +155,22 @@ void MainWindow::notesWereModified( const QString& str )
             this->ui->noteTextEdit->setText( note.getNoteText() );
         }
     }
-
-//    // reload the notes directory list
-//    this->loadNoteDirectoryList();
-
-//    // restore old selected row
-//    this->ui->notesListWidget->blockSignals( true );
-//    this->ui->notesListWidget->setCurrentRow( note.getId() - 1 );
-//    this->ui->notesListWidget->blockSignals( false );
 }
+
+void MainWindow::notesDirectoryWasModified( const QString& str )
+{
+    qDebug() << "notesDirectoryWasModified: " << str;
+
+    Note note = this->currentNote;
+
+    // rebuild and reload the notes directory list
+    buildNotesIndex();
+    loadNoteDirectoryList();
+
+    // restore old selected row (but don't update the note text)
+    setCurrentNote( note, false );
+}
+
 
 void MainWindow::storeUpdatedNotesToDisk()
 {
@@ -245,6 +252,11 @@ QString MainWindow::selectOwnCloudFolder() {
 
 void MainWindow::setCurrentNote( Note note )
 {
+    setCurrentNote( note, true );
+}
+
+void MainWindow::setCurrentNote( Note note, bool updateNoteText )
+{
     this->currentNote = note;
     QString name = note.getName();
 
@@ -258,6 +270,7 @@ void MainWindow::setCurrentNote( Note note )
     }
 
     // update the text of the text edit
+    if ( updateNoteText )
     {
         const QSignalBlocker blocker( this->ui->noteTextEdit );
 

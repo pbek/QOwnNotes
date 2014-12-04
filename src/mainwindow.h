@@ -31,6 +31,7 @@ private slots:
     void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
     void on_noteTextEdit_textChanged();
     void on_action_Quit_triggered();
+    void notesDirectoryWasModified( const QString &str );
     void notesWereModified( const QString& str );
     void storeUpdatedNotesToDisk();
     void on_actionSet_ownCloud_Folder_triggered();
@@ -53,6 +54,7 @@ private:
     void buildNotesIndex();
     QString selectOwnCloudFolder();
     void setCurrentNote(Note note);
+    void setCurrentNote(Note note, bool updateNoteText);
     void handlePressed();
     void focusNoteTextEdit();
 };
