@@ -6,7 +6,7 @@ The notes are stored as plain text files and are synced with ownCloud's file syn
 
 I like the concept of having notes accessible in plain text files, like it is done in the ownCloud note app, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need QOwnNotes was born.
 
-This application is still under heavy development, so I constantly will come up with new feat
+This application is still under heavy development, so I constantly will come up with new features.
 
 ## Current features
 - list of notes is showed, sorted my modification date descending
