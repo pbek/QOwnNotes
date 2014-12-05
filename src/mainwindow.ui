@@ -21,6 +21,9 @@
     </sizepolicy>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetMaximumSize</enum>
+    </property>
     <item>
      <layout class="QGridLayout" name="gridLayout">
       <property name="rightMargin">
@@ -113,7 +116,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSet_ownCloud_Folder">
    <property name="text">
-    <string>Set ownCloud &amp;Folder</string>
+    <string>Set ownCloud folder</string>
    </property>
   </action>
   <action name="action_Find_note">
