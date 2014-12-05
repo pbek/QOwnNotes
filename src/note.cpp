@@ -349,6 +349,8 @@ bool Note::store() {
 bool Note::storeNoteTextFileToDisk() {
 
     QFile file( fullNoteFilePath( this->fileName ) );
+    bool fileExists = this->fileExists();
+
     qDebug() << "storing note file: "  << this;
 
     if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
@@ -363,6 +365,12 @@ bool Note::storeNoteTextFileToDisk() {
     file.close();
 
     this->hasDirtyData = false;
+    this->fileLastModified = QDateTime::currentDateTime();
+
+    if ( !fileExists ) {
+        this->fileCreated = this->fileLastModified;
+    }
+
     return this->store();
 }
 
@@ -397,6 +405,7 @@ QString Note::fullNoteFilePath( QString fileName )
 bool Note::storeDirtyNotesToDisk() {
     QSqlQuery query;
     Note note;
+//    qDebug() << "storeDirtyNotesToDisk";
 
     query.prepare( "SELECT * FROM note WHERE has_dirty_data = 1" );
     if( !query.exec() )
@@ -461,6 +470,30 @@ bool Note::deleteAll() {
     {
         return true;
     }
+}
+
+//
+// checks if file of note exists in the filesystem
+//
+bool Note::fileExists() {
+    QFile file( fullNoteFilePath( this->fileName ) );
+    return file.exists();
+}
+
+//
+// checks if the current note still exists in the database
+//
+bool Note::exists() {
+    Note note = Note::fetch( this->id );
+    return note.id > 0;
+}
+
+bool Note::refetch() {
+    Note note = Note::fetchByFileName( this->fileName );
+    // TODO: does this work?
+    *this = note;
+    qDebug() << __func__ << " - 'this': " << this;
+    return this->id > 0;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

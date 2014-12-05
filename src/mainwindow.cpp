@@ -141,31 +141,68 @@ void MainWindow::notesWereModified( const QString& str )
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi( str );
-    qDebug() << fi.fileName();
-
     Note note = Note::fetchByFileName( fi.fileName() );
 
     // load note from disk if current note was changed
     if ( note.getFileName() == this->currentNote.getFileName() ) {
-        qDebug() << "Current note was changed!";
-
-        switch( QMessageBox::information( this, "Note was changed!",
-                                          "Note was changed outside of this application!\n"
-                                          "Reload note from disk?",
-                                          "&Reload", "&Cancel", QString::null,
-                                          0, 1 ) )
+        if ( note.fileExists() )
         {
-            case 0:
-                note.updateNoteTextFromDisk();
+            qDebug() << "Current note was modified externaly!";
 
-                {
-                    const QSignalBlocker blocker( this->ui->noteTextEdit );
-                    this->ui->noteTextEdit->setText( note.getNoteText() );
-                }
-                break;
-            case 1:
-            default:
-                break;
+            switch( QMessageBox::information( this, "Note was modified externaly!",
+                                              "The current note was modified outside of this application!\n"
+                                              "Reload current note from disk?",
+                                              "&Reload", "&Cancel", QString::null,
+                                              0, 1 ) )
+            {
+                case 0:
+                    note.updateNoteTextFromDisk();
+
+                    {
+                        const QSignalBlocker blocker( this->ui->noteTextEdit );
+                        this->ui->noteTextEdit->setText( note.getNoteText() );
+                    }
+                    break;
+                case 1:
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            qDebug() << "Current note was removed externaly!";
+
+            switch( QMessageBox::information( this, "Note was removed externaly!",
+                                              "Current note was removed outside of this application!\n"
+                                              "Restore current note?",
+                                              "&Restore", "&Cancel", QString::null,
+                                              0, 1 ) )
+            {
+                case 0:
+                    {
+                        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+                        QString text = this->ui->noteTextEdit->toPlainText();
+                        note.storeNewText( text );
+
+                        // store note to disk again
+                        note.storeNoteTextFileToDisk();
+
+                        // rebuild and reload the notes directory list
+                        buildNotesIndex();
+                        loadNoteDirectoryList();
+
+                        // fetch note new (because all the IDs have changed after the buildNotesIndex()
+                        note.refetch();
+
+                        // restore old selected row (but don't update the note text)
+                        setCurrentNote( note, false );
+                    }
+                    break;
+                case 1:
+                default:
+                    break;
+            }
         }
     }
 }
@@ -180,14 +217,21 @@ void MainWindow::notesDirectoryWasModified( const QString& str )
     buildNotesIndex();
     loadNoteDirectoryList();
 
+    // fetch note new (because all the IDs have changed after the buildNotesIndex()
+    note.refetch();
+
+    // also update the text of the text edit if current note has changed
+    bool updateNoteText = !note.exists();
+    qDebug() << "updateNoteText: " << updateNoteText;
+
     // restore old selected row (but don't update the note text)
-    setCurrentNote( note, false );
+    setCurrentNote( note, updateNoteText );
 }
 
 
 void MainWindow::storeUpdatedNotesToDisk()
 {
-    //    qDebug() << "checkForNoteChanges";
+//        qDebug() << "checkForNoteChanges";
     {
         const QSignalBlocker blocker( this->noteDirectoryWatcher );
 
@@ -385,16 +429,12 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 
 void MainWindow::on_noteTextEdit_textChanged()
 {
-//    qDebug() << "textChanged";
-
-//    int id = this->ui->notesListWidget->currentIndex().row() + 1;
-//    Note note = Note::fetch( id );
+//    qDebug() << "noteTextChanged";
 
     QString text = this->ui->noteTextEdit->toPlainText();
     this->currentNote.storeNewText( text );
 
-//    QString fileName = fullNoteFilePath( note.getFileName() );
-//    storeNote( fileName, text );
+    qDebug() << __func__ << ": " << this->currentNote;
 }
 
 
@@ -481,6 +521,9 @@ void MainWindow::on_searchLineEdit_returnPressed()
 
         buildNotesIndex();
         loadNoteDirectoryList();
+
+        // fetch note new (because all the IDs have changed after the buildNotesIndex()
+        note.refetch();
 
 //        // create a new widget item for the note list
 //        QListWidgetItem* widgetItem = new QListWidgetItem();

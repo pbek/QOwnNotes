@@ -38,6 +38,9 @@ public:
     friend QDebug operator<<(QDebug dbg, const Note &note);
     bool createFromFile(QFile &file);
     static bool deleteAll();
+    bool fileExists();
+    bool exists();
+    bool refetch();
 
 private:
     int id;
