@@ -56,7 +56,7 @@ private:
     QDateTime fileLastModified;
     QDateTime created;
     QDateTime modified;
-
+    void handleNoteTextFileName();
 signals:
 
 public slots:

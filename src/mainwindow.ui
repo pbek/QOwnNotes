@@ -136,6 +136,11 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+R</string>
    </property>
   </action>
+  <action name="actionRename_note">
+   <property name="text">
+    <string>Rename note</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

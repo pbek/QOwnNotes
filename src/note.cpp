@@ -392,6 +392,8 @@ bool Note::store() {
 
 bool Note::storeNoteTextFileToDisk() {
 
+    handleNoteTextFileName();
+
     QFile file( fullNoteFilePath( this->fileName ) );
     bool fileExists = this->fileExists();
 
@@ -416,6 +418,27 @@ bool Note::storeNoteTextFileToDisk() {
     }
 
     return this->store();
+}
+
+void Note::handleNoteTextFileName() {
+    QStringList lines = this->noteText.split( QRegExp("[\r\n]"), QString::SkipEmptyParts );
+    QString name = lines[0];
+
+    if ( name != this->name )
+    {
+        QString fileName = name + ".txt";
+
+        // check if note with this filename already exists
+        Note note = Note::fetchByFileName( "fileName" );
+        if ( note.id > 0 )
+        {
+            // TODO: find new filename for the note
+        }
+
+        // TODO: store new name and filename, store note file, remove old note file
+    }
+
+    qDebug() << __func__ << " - 'name': " << name;
 }
 
 //QString Note::generateFilename() {

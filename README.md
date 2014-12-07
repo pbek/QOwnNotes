@@ -10,7 +10,7 @@ This application is still under heavy development, so I constantly will come up 
 
 ## Current features
 - notes can be created, edited, viewed and removed
-- list of notes is showed, sorted my modification date descending
+- list of notes is showed, sorted by modification date (descending)
 - a notes folder can be chosen
 - sub-string searching of notes is possible
 - can be operated with keyboard
