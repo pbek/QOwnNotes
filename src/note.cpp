@@ -109,8 +109,14 @@ Note Note::fetch( int id )
 
 Note Note::fetchByFileName( QString fileName )
 {
-    QSqlQuery query;
     Note note;
+    note.fillByFileName( fileName );
+    return note;
+}
+
+bool Note::fillByFileName( QString fileName )
+{
+    QSqlQuery query;
 
     query.prepare( "SELECT * FROM note WHERE file_name = :file_name" );
     query.bindValue( ":file_name", fileName );
@@ -123,11 +129,12 @@ Note Note::fetchByFileName( QString fileName )
     {
         if ( query.first() )
         {
-            note = noteFromQuery( query );
+            this->fillFromQuery( query );
+            return true;
         }
     }
 
-    return note;
+    return false;
 }
 
 Note Note::fetchByName( QString name )
@@ -155,6 +162,13 @@ Note Note::fetchByName( QString name )
 
 Note Note::noteFromQuery( QSqlQuery query )
 {
+    Note note;
+    note.fillFromQuery( query );
+    return note;
+}
+
+bool Note::fillFromQuery( QSqlQuery query )
+{
     int id = query.value("id").toInt();
     QString name = query.value("name").toString();
     QString fileName = query.value("file_name").toString();
@@ -165,18 +179,17 @@ Note Note::noteFromQuery( QSqlQuery query )
     QDateTime created = query.value("created").toDateTime();
     QDateTime modified = query.value("modified").toDateTime();
 
-    Note note;
-    note.id = id;
-    note.name = name;
-    note.fileName = fileName;
-    note.noteText = noteText;
-    note.hasDirtyData = hasDirtyData;
-    note.fileCreated = fileCreated;
-    note.fileLastModified = fileLastModified;
-    note.created = created;
-    note.modified = modified;
+    this->id = id;
+    this->name = name;
+    this->fileName = fileName;
+    this->noteText = noteText;
+    this->hasDirtyData = hasDirtyData;
+    this->fileCreated = fileCreated;
+    this->fileLastModified = fileLastModified;
+    this->created = created;
+    this->modified = modified;
 
-    return note;
+    return true;
 }
 
 QList<Note> Note::fetchAll()
@@ -489,11 +502,7 @@ bool Note::exists() {
 }
 
 bool Note::refetch() {
-    Note note = Note::fetchByFileName( this->fileName );
-    // TODO: does this work?
-    *this = note;
-    qDebug() << __func__ << " - 'this': " << this;
-    return this->id > 0;
+    return this->fillByFileName( this->fileName );
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

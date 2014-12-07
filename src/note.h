@@ -41,7 +41,8 @@ public:
     bool fileExists();
     bool exists();
     bool refetch();
-
+    bool fillFromQuery(QSqlQuery query);
+    bool fillByFileName(QString fileName);
 private:
     int id;
     QString name;
