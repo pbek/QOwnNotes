@@ -205,27 +205,30 @@ void MainWindow::notesWereModified( const QString& str )
             }
         }
     }
+    else
+    {
+        qDebug() << "other note was changed: " << str;
+
+        // rebuild and reload the notes directory list
+        buildNotesIndex();
+        loadNoteDirectoryList();
+    }
 }
 
 void MainWindow::notesDirectoryWasModified( const QString& str )
 {
     qDebug() << "notesDirectoryWasModified: " << str;
 
-    Note note = this->currentNote;
-
     // rebuild and reload the notes directory list
     buildNotesIndex();
     loadNoteDirectoryList();
 
-    // fetch note new (because all the IDs have changed after the buildNotesIndex()
-    note.refetch();
-
     // also update the text of the text edit if current note has changed
-    bool updateNoteText = !note.exists();
+    bool updateNoteText = !this->currentNote.exists();
     qDebug() << "updateNoteText: " << updateNoteText;
 
     // restore old selected row (but don't update the note text)
-    setCurrentNote( note, updateNoteText );
+    setCurrentNote( this->currentNote, updateNoteText );
 }
 
 
@@ -238,10 +241,13 @@ void MainWindow::storeUpdatedNotesToDisk()
         // For some reason this->noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
         // All flushing and syncing didn't help
-        Note::storeDirtyNotesToDisk();
+        int count = Note::storeDirtyNotesToDisk();
 
         // wait 100ms before the block on this->noteDirectoryWatcher is opened
+        if ( count > 0 )
         {
+            qDebug() << __func__ << " - 'count': " << count;
+
             QTime dieTime= QTime::currentTime().addMSecs( 100 );
             while( QTime::currentTime() < dieTime )
             QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
@@ -251,6 +257,9 @@ void MainWindow::storeUpdatedNotesToDisk()
 
 void MainWindow::buildNotesIndex()
 {
+    // make sure we destroy nothing
+    this->storeUpdatedNotesToDisk();
+
     QDir notesDir( this->notesPath );
 //    qDebug() << this->notesPath;
 
@@ -272,6 +281,9 @@ void MainWindow::buildNotesIndex()
         Note note;
         note.createFromFile( file );
     }
+
+    // refetch current note (because all the IDs have changed after the buildNotesIndex()
+    this->currentNote.refetch();
 }
 
 QString MainWindow::selectOwnCloudFolder() {
@@ -434,7 +446,20 @@ void MainWindow::on_noteTextEdit_textChanged()
     QString text = this->ui->noteTextEdit->toPlainText();
     this->currentNote.storeNewText( text );
 
+    this->currentNote.refetch();
+
     qDebug() << __func__ << ": " << this->currentNote;
+
+
+
+
+//    Note note = this->currentNote
+
+//    {
+//        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+//        this->currentNote.storeNoteTextFileToDisk();
+//    }
 }
 
 

@@ -37,6 +37,11 @@ QString Note::getNoteText()
     return this->noteText;
 }
 
+bool Note::getHasDirtyData()
+{
+    return this->hasDirtyData;
+}
+
 void Note::setName(QString text)
 {
     this->name = text;
@@ -346,17 +351,20 @@ bool Note::store() {
     query.bindValue( ":file_last_modified", this->fileLastModified );
     query.bindValue( ":modified", modified );
 
+    // on error
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
         return false;
     }
-    else
+    // on insert
+    else if ( this->id == 0 )
     {
         this->id = query.lastInsertId().toInt();
-        this->modified = modified;
-        return true;
     }
+
+    this->modified = modified;
+    return true;
 }
 
 bool Note::storeNoteTextFileToDisk() {
@@ -364,7 +372,7 @@ bool Note::storeNoteTextFileToDisk() {
     QFile file( fullNoteFilePath( this->fileName ) );
     bool fileExists = this->fileExists();
 
-    qDebug() << "storing note file: "  << this;
+    qDebug() << "storing note file: "  << this->fileName;
 
     if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
     {
@@ -415,7 +423,7 @@ QString Note::fullNoteFilePath( QString fileName )
     return notesPath + QDir::separator() + fileName;
 }
 
-bool Note::storeDirtyNotesToDisk() {
+int Note::storeDirtyNotesToDisk() {
     QSqlQuery query;
     Note note;
 //    qDebug() << "storeDirtyNotesToDisk";
@@ -424,18 +432,20 @@ bool Note::storeDirtyNotesToDisk() {
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
-        return false;
+        return 0;
     }
-    else if ( query.first() )
+    else
     {
+        int count = 0;
         for( int r=0; query.next(); r++ )
         {
             note = noteFromQuery( query );
             note.storeNoteTextFileToDisk();
             qDebug() << "stored note: " << note;
+            count++;
         }
 
-        return true;
+        return count;
     }
 }
 
@@ -501,12 +511,15 @@ bool Note::exists() {
     return note.id > 0;
 }
 
+//
+// reloads the current Note (by fileName)
+//
 bool Note::refetch() {
     return this->fillByFileName( this->fileName );
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)
 {
-    dbg.nospace() << note.name << "<" << note.id << ">";
+    dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name << " <fileName>" << note.fileName << " <hasDityData>" << note.hasDirtyData;
     return dbg.space();
 }

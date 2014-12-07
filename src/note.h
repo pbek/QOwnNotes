@@ -15,6 +15,7 @@ public:
     QString getName();
     QString getFileName();
     QString getNoteText();
+    bool getHasDirtyData();
     void setName( QString text );
     void setNoteText(QString text);
 
@@ -33,7 +34,7 @@ public:
     bool storeNewText(QString text);
     bool storeNoteTextFileToDisk();
     static QString fullNoteFilePath(QString fileName);
-    static bool storeDirtyNotesToDisk();
+    static int storeDirtyNotesToDisk();
     bool updateNoteTextFromDisk();
     friend QDebug operator<<(QDebug dbg, const Note &note);
     bool createFromFile(QFile &file);
