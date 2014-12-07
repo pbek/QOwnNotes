@@ -39,6 +39,8 @@ private slots:
     void on_action_Find_note_triggered();
     void on_searchLineEdit_returnPressed();
 
+    void on_action_Remove_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -57,6 +59,7 @@ private:
     void setCurrentNote(Note note, bool updateNoteText);
     void handlePressed();
     void focusNoteTextEdit();
+    void removeCurrentNote();
 };
 
 #endif // MAINWINDOW_H

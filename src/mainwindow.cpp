@@ -359,6 +359,23 @@ void MainWindow::focusNoteTextEdit()
     ui->noteTextEdit->setFocus();
 }
 
+void MainWindow::removeCurrentNote()
+{
+    switch( QMessageBox::information( this, "Remove current note",
+                                      "Remove current note?\n" + this->currentNote.getName(),
+                                      "&Remove", "&Cancel", QString::null,
+                                      0, 1 ) )
+    {
+        case 0:
+            this->currentNote.remove( true );
+            loadNoteDirectoryList();
+            break;
+        case 1:
+        default:
+            break;
+    }
+}
+
 
 /*!
  * Internal events
@@ -411,6 +428,11 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Tab ) )
             {
                 focusNoteTextEdit();
+                return true;
+            }
+            else if ( ( keyEvent->key() == Qt::Key_Delete ) )
+            {
+                removeCurrentNote();
                 return true;
             }
         }
@@ -567,4 +589,9 @@ void MainWindow::on_searchLineEdit_returnPressed()
 
     // focus the note text edit and set the cursor correctly
     focusNoteTextEdit();
+}
+
+void MainWindow::on_action_Remove_note_triggered()
+{
+    removeCurrentNote();
 }

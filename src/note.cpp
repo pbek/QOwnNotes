@@ -142,6 +142,29 @@ bool Note::fillByFileName( QString fileName )
     return false;
 }
 
+bool Note::remove( bool withFile )
+{
+    QSqlQuery query;
+
+    query.prepare( "DELETE FROM note WHERE id = :id" );
+    query.bindValue( ":id", this->id );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+        return false;
+    }
+    else
+    {
+        if ( withFile )
+        {
+            this->removeFile();
+        }
+
+        return true;
+    }
+}
+
 Note Note::fetchByName( QString name )
 {
     QSqlQuery query;
@@ -516,6 +539,19 @@ bool Note::exists() {
 //
 bool Note::refetch() {
     return this->fillByFileName( this->fileName );
+}
+
+//
+// remove the file of the note
+//
+bool Note::removeFile() {
+    if ( this->fileExists() )
+    {
+        QFile file( fullNoteFilePath( this->fileName ) );
+        return file.remove();
+    }
+
+    return false;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

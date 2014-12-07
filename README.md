@@ -9,16 +9,13 @@ I like the concept of having notes accessible in plain text files, like it is do
 This application is still under heavy development, so I constantly will come up with new features.
 
 ## Current features
+- notes can be created, edited, viewed and removed
 - list of notes is showed, sorted my modification date descending
 - a notes folder can be chosen
-- notes can be viewed
 - sub-string searching of notes is possible
-- notes can be edited
-- new notes can be created
 - can be operated with keyboard
+- external changes of note files are watched (notes or note list are reloaded)
 
 ## Upcoming features
-- removing notes
 - renaming notes
-- reloading notes if changed from the outside
 - and much more...

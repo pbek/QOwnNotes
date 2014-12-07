@@ -68,6 +68,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="action_New"/>
     <addaction name="action_Find_note"/>
+    <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="separator"/>
@@ -125,6 +126,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_Remove_note">
+   <property name="text">
+    <string>&amp;Remove note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
  </widget>
