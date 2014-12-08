@@ -17,6 +17,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QCoreApplication::setOrganizationDomain("PBE");
+    QCoreApplication::setOrganizationName("PBE");
+    QCoreApplication::setApplicationName("QOwnNotes");
+    QCoreApplication::setApplicationVersion("0.1");
+
     ui->setupUi(this);
 
     Note::createConnection();
@@ -60,7 +65,7 @@ void MainWindow::setupMainSplitter()
     this->mainSplitter->addWidget(ui->noteTextEdit);
 
     // restore splitter sizes
-    QSettings settings("PBE", "QOwnNotes");
+    QSettings settings;
     QByteArray state = settings.value( "mainSplitterSizes" ).toByteArray();
     this->mainSplitter->restoreState( state );
 
@@ -123,7 +128,7 @@ void MainWindow::loadNote( QString &fileName )
 
 void MainWindow::readSettings()
 {
-    QSettings settings("PBE", "QOwnNotes");
+    QSettings settings;
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
 
@@ -301,7 +306,7 @@ QString MainWindow::selectOwnCloudFolder() {
     if ( dir != "" )
     {
         this->notesPath = dir;
-        QSettings settings( "PBE", "QOwnNotes" );
+        QSettings settings;
         settings.setValue( "General/notesPath", dir );
     }
     else
@@ -312,6 +317,7 @@ QString MainWindow::selectOwnCloudFolder() {
             messageBox.setText( tr( "You have to select the ownCloud notes folder to make this software work!" ) );
             messageBox.exec();
 
+            // TODO: this does not seem to work
             QApplication::quit();
         }
     }
@@ -383,7 +389,7 @@ void MainWindow::removeCurrentNote()
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    QSettings settings( "PBE", "QOwnNotes" );
+    QSettings settings;
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );

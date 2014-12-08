@@ -480,7 +480,7 @@ bool Note::updateNoteTextFromDisk() {
 
 QString Note::fullNoteFilePath( QString fileName )
 {
-    QSettings settings( "PBE", "QOwnNotes" );
+    QSettings settings;
     QString notesPath = settings.value( "General/notesPath" ).toString();
 
     return notesPath + QDir::separator() + fileName;
