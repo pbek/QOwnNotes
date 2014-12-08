@@ -158,7 +158,7 @@ bool Note::remove( bool withFile )
     {
         if ( withFile )
         {
-            this->removeFile();
+            this->removeNoteFile();
         }
 
         return true;
@@ -392,7 +392,8 @@ bool Note::store() {
 
 bool Note::storeNoteTextFileToDisk() {
 
-    handleNoteTextFileName();
+    // checks if filename has to be changed (and changes it if needed)
+    // handleNoteTextFileName();
 
     QFile file( fullNoteFilePath( this->fileName ) );
     bool fileExists = this->fileExists();
@@ -420,25 +421,41 @@ bool Note::storeNoteTextFileToDisk() {
     return this->store();
 }
 
+//
+// checks if filename has to be changed
+// generates a new name and file name and removes the old file (the new file is not stored to a note text file!)
+//
 void Note::handleNoteTextFileName() {
     QStringList lines = this->noteText.split( QRegExp("[\r\n]"), QString::SkipEmptyParts );
     QString name = lines[0];
 
+    // check if name has changed
     if ( name != this->name )
     {
         QString fileName = name + ".txt";
 
         // check if note with this filename already exists
-        Note note = Note::fetchByFileName( "fileName" );
+        Note note = Note::fetchByFileName( fileName );
         if ( note.id > 0 )
         {
-            // TODO: find new filename for the note
+            // find new filename for the note (not very safe yet)
+            QDateTime currentDateTime = QDateTime::currentDateTime();
+            name = name + " " + currentDateTime.toString( Qt::ISODate );
         }
 
-        // TODO: store new name and filename, store note file, remove old note file
+        // remove old note file
+        this->removeNoteFile();
+
+        // TODO: update note text (UI has to be updated too then!)
+
+        // store new name and filename
+        this->name = name;
+        this->fileName = name + ".txt";
+        this->store();
     }
 
     qDebug() << __func__ << " - 'name': " << name;
+    qDebug() << __func__ << " - 'this': " << this;
 }
 
 //QString Note::generateFilename() {
@@ -567,7 +584,7 @@ bool Note::refetch() {
 //
 // remove the file of the note
 //
-bool Note::removeFile() {
+bool Note::removeNoteFile() {
     if ( this->fileExists() )
     {
         QFile file( fullNoteFilePath( this->fileName ) );

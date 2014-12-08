@@ -44,7 +44,7 @@ public:
     bool refetch();
     bool fillFromQuery(QSqlQuery query);
     bool fillByFileName(QString fileName);
-    bool removeFile();
+    bool removeNoteFile();
     bool remove(bool withFile);
 private:
     int id;
