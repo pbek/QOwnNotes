@@ -10,7 +10,6 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QKeyEvent>
-#include "note.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -39,6 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
     buildNotesIndex();
     loadNoteDirectoryList();
 
+    // look if we need to save something every 2 sec
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
     timer->start( 2000 );
@@ -48,6 +48,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
+
+    // setup markdown highlighting
+    highlighter = new HGMarkdownHighlighter( ui->noteTextEdit->document(), 1000 );
 }
 
 MainWindow::~MainWindow()

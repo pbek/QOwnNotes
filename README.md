@@ -15,6 +15,7 @@ This application is still under heavy development, so I constantly will come up 
 - sub-string searching of notes is possible
 - can be operated with keyboard
 - external changes of note files are watched (notes or note list are reloaded)
+- markdown highlighting of notes
 
 ## Upcoming features
 - renaming notes

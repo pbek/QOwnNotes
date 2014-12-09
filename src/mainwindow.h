@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QEvent>
 #include <note.h>
+#include "libraries/peg-markdown-highlight/example_qt/qthighlight/highlighter.h"
 
 
 namespace Ui {
@@ -48,6 +49,7 @@ private:
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
     int firstVisibleNoteListRow;
+    HGMarkdownHighlighter *highlighter;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();
