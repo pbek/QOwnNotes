@@ -33,8 +33,6 @@ MainWindow::MainWindow(QWidget *parent) :
     buildNotesIndex();
     loadNoteDirectoryList();
 
-    QList<Note> noteList = Note::fetchAll();
-
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
     timer->start( 1000 );
@@ -313,12 +311,20 @@ QString MainWindow::selectOwnCloudFolder() {
     {
         if ( this->notesPath == "" )
         {
-            QMessageBox messageBox;
-            messageBox.setText( tr( "You have to select the ownCloud notes folder to make this software work!" ) );
-            messageBox.exec();
-
-            // TODO: this does not seem to work
-            QApplication::quit();
+            switch( QMessageBox::information( this, "No folder was selected",
+                                              "You have to select your ownCloud notes folder to make this software work!",
+                                              "&Retry", "&Exit", QString::null,
+                                              0, 1 ) )
+            {
+                case 0:
+                    selectOwnCloudFolder();
+                    break;
+                case 1:
+                default:
+                    // No other way to quit the application worked
+                    QTimer::singleShot( 50, this, SLOT( on_action_Quit_triggered() ) );
+                    break;
+            }
         }
     }
 
