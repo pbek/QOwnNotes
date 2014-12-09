@@ -60,6 +60,7 @@ private:
     void handlePressed();
     void focusNoteTextEdit();
     void removeCurrentNote();
+    void waitMsecs(int msecs);
 };
 
 #endif // MAINWINDOW_H

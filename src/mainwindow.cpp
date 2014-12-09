@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    timer->start( 1000 );
+    timer->start( 2000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -174,6 +174,13 @@ void MainWindow::notesWereModified( const QString& str )
                     break;
                 case 1:
                 default:
+                    {
+                        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+                        note.storeNoteTextFileToDisk();
+
+                        // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+                        waitMsecs( 100 );
+                    }
                     break;
             }
         }
@@ -252,16 +259,20 @@ void MainWindow::storeUpdatedNotesToDisk()
         // All flushing and syncing didn't help
         int count = Note::storeDirtyNotesToDisk();
 
-        // wait 100ms before the block on this->noteDirectoryWatcher is opened
         if ( count > 0 )
         {
             qDebug() << __func__ << " - 'count': " << count;
 
-            QTime dieTime= QTime::currentTime().addMSecs( 100 );
-            while( QTime::currentTime() < dieTime )
-            QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
+            // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+            waitMsecs( 100 );
         }
     }
+}
+
+void MainWindow::waitMsecs( int msecs ) {
+    QTime dieTime= QTime::currentTime().addMSecs( msecs );
+    while( QTime::currentTime() < dieTime )
+    QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
 }
 
 void MainWindow::buildNotesIndex()
