@@ -1,3 +1,3 @@
 [submodule "src/libraries/peg-markdown-highlight"]
 	path = src/libraries/peg-markdown-highlight
-	url = ../../vojto/peg-markdown-highlight.git
+	url = https://github.com/ali-rantakari/peg-markdown-highlight.git
