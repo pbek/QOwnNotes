@@ -17,10 +17,16 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    QCoreApplication::setOrganizationDomain("PBE");
-    QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QOwnNotes");
-    QCoreApplication::setApplicationVersion("0.1");
+    QString appNameAdd = "";
+
+    #ifdef QT_DEBUG
+      appNameAdd = "Debug";
+    #endif
+
+    QCoreApplication::setOrganizationDomain( "PBE" );
+    QCoreApplication::setOrganizationName( "PBE" );
+    QCoreApplication::setApplicationName( "QOwnNotes" + appNameAdd );
+    QCoreApplication::setApplicationVersion( "0.1" );
 
     ui->setupUi(this);
 
