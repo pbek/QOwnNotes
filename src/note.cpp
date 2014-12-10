@@ -393,7 +393,7 @@ bool Note::store() {
 bool Note::storeNoteTextFileToDisk() {
 
     // checks if filename has to be changed (and changes it if needed)
-    // handleNoteTextFileName();
+    handleNoteTextFileName();
 
     QFile file( fullNoteFilePath( this->fileName ) );
     bool fileExists = this->fileExists();
@@ -423,11 +423,11 @@ bool Note::storeNoteTextFileToDisk() {
 
 //
 // checks if filename has to be changed
-// generates a new name and file name and removes the old file (the new file is not stored to a note text file!)
+// generates a new name and filename and removes the old file (the new file is not stored to a note text file!)
 //
 void Note::handleNoteTextFileName() {
-    QStringList lines = this->noteText.split( QRegExp("[\r\n]"), QString::SkipEmptyParts );
-    QString name = lines[0];
+    QStringList noteTextLines = this->noteText.split( QRegExp( "\n|\r\n" ) );
+    QString name = noteTextLines[0];
 
     // check if name has changed
     if ( name != this->name )
@@ -444,9 +444,13 @@ void Note::handleNoteTextFileName() {
         }
 
         // remove old note file
+        // TODO: note doesn't seem to be removed very often
         this->removeNoteFile();
 
-        // TODO: update note text (UI has to be updated too then!)
+        // update first line of note text
+        // TODO: UI has to be updated too then!
+        noteTextLines[0] = name;
+        this->noteText = noteTextLines.join( "\n" );
 
         // store new name and filename
         this->name = name;
@@ -457,10 +461,6 @@ void Note::handleNoteTextFileName() {
     qDebug() << __func__ << " - 'name': " << name;
     qDebug() << __func__ << " - 'this': " << this;
 }
-
-//QString Note::generateFilename() {
-
-//}
 
 bool Note::updateNoteTextFromDisk() {
     QFile file( fullNoteFilePath( this->fileName ) );
@@ -588,6 +588,8 @@ bool Note::removeNoteFile() {
     if ( this->fileExists() )
     {
         QFile file( fullNoteFilePath( this->fileName ) );
+        qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
+        qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();
     }
 
