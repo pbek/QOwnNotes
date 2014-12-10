@@ -426,7 +426,7 @@ bool Note::storeNoteTextFileToDisk() {
 // generates a new name and filename and removes the old file (the new file is not stored to a note text file!)
 //
 void Note::handleNoteTextFileName() {
-    QStringList noteTextLines = this->noteText.split( QRegExp( "\n|\r\n" ) );
+    QStringList noteTextLines = this->noteText.split( QRegExp( "(\\r\\n)|(\\n\\r)|\\r|\\n" ), QString::SkipEmptyParts );
     QString name = noteTextLines[0];
 
     // check if name has changed
@@ -440,7 +440,7 @@ void Note::handleNoteTextFileName() {
         {
             // find new filename for the note (not very safe yet)
             QDateTime currentDateTime = QDateTime::currentDateTime();
-            name = name + " " + currentDateTime.toString( Qt::ISODate );
+            name = name + " " + currentDateTime.toString( Qt::ISODate ).replace( ":", "_" );
         }
 
         // remove old note file
