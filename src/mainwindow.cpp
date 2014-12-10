@@ -268,6 +268,8 @@ void MainWindow::storeUpdatedNotesToDisk()
 
             // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
             waitMsecs( 100 );
+
+            loadNoteDirectoryList();
         }
     }
 }
@@ -281,7 +283,7 @@ void MainWindow::waitMsecs( int msecs ) {
 void MainWindow::buildNotesIndex()
 {
     // make sure we destroy nothing
-    this->storeUpdatedNotesToDisk();
+    storeUpdatedNotesToDisk();
 
     QDir notesDir( this->notesPath );
 //    qDebug() << this->notesPath;
@@ -484,9 +486,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     Q_UNUSED(previous);
     qDebug() << "currentItemChanged " << current->text();
 
-    int id = this->ui->notesListWidget->currentIndex().row() + 1;
-
-    Note note = Note::fetch( id );
+    Note note = Note::fetchByName( current->text() );
     setCurrentNote( note );
 
 //    QString fileName = Note::fullNoteFilePath( note.getFileName() );
