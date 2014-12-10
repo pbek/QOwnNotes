@@ -503,23 +503,18 @@ void MainWindow::on_noteTextEdit_textChanged()
 {
 //    qDebug() << "noteTextChanged";
 
+    this->currentNote.updateNoteTextFromDisk();
+    QString noteTextFromDisk = this->currentNote.getNoteText();
+
     QString text = this->ui->noteTextEdit->toPlainText();
-    this->currentNote.storeNewText( text );
 
-    this->currentNote.refetch();
+    if ( text != noteTextFromDisk )
+    {
+        this->currentNote.storeNewText( text );
+        this->currentNote.refetch();
 
-    qDebug() << __func__ << ": " << this->currentNote;
-
-
-
-
-//    Note note = this->currentNote
-
-//    {
-//        const QSignalBlocker blocker( this->noteDirectoryWatcher );
-
-//        this->currentNote.storeNoteTextFileToDisk();
-//    }
+        qDebug() << __func__ << ": " << this->currentNote;
+    }
 }
 
 
