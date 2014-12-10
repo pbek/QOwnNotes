@@ -9,7 +9,7 @@
 #include <QFileDialog>
 #include <QEvent>
 #include <note.h>
-#include "libraries/peg-markdown-highlight/highlighter.h"
+#include "libraries/markdown-highlight/highlighter.h"
 
 
 namespace Ui {
