@@ -15,13 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     note.cpp \
-    libraries/peg-markdown-highlight/example_qt/qthighlight/pmh_parser.c \
-    libraries/peg-markdown-highlight/example_qt/qthighlight/highlighter.cpp
+    libraries/peg-markdown-highlight/pmh_parser.c \
+    libraries/peg-markdown-highlight/highlighter.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
-    libraries/peg-markdown-highlight/example_qt/qthighlight/pmh_parser.h \
-    libraries/peg-markdown-highlight/example_qt/qthighlight/pmh_definitions.h \
-    libraries/peg-markdown-highlight/example_qt/qthighlight/highlighter.h
+    libraries/peg-markdown-highlight/pmh_parser.h \
+    libraries/peg-markdown-highlight/pmh_definitions.h \
+    libraries/peg-markdown-highlight/highlighter.h
 
 FORMS    += mainwindow.ui
