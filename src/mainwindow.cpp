@@ -41,7 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // look if we need to save something every 2 sec
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    timer->start( 2000 );
+    timer->start( 5000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
