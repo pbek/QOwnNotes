@@ -51,6 +51,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // setup markdown highlighting
     highlighter = new HGMarkdownHighlighter( ui->noteTextEdit->document(), 1000 );
+
+    // set the tab stop to the width of 4 spaces in the editor
+    const int tabStop = 4;
+    QFont font = ui->noteTextEdit->font();
+    QFontMetrics metrics(font);
+    ui->noteTextEdit->setTabStopWidth( tabStop * metrics.width( ' ' ) );
 }
 
 MainWindow::~MainWindow()
