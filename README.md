@@ -1,24 +1,29 @@
 # QOwnNotes
  
-QOwnNotes is a note editor, written in Qt 5, that works together with the notes application of [ownCloud](http://owncloud.org/).
+QOwnNotes is a note editor, written in Qt 5, that works together with the notes application of [ownCloud](http://owncloud.org/). So far it works in Linux, Mac OS and Windows.
 
 The notes are stored as plain text files and are synced with ownCloud's file sync functionality. Of course other software, like Dropbox can be used too.
 
-I like the concept of having notes accessible in plain text files, like it is done in the ownCloud note app, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need QOwnNotes was born.
+I like the concept of having notes accessible in plain text files, like it is done in the ownCloud notes app, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need QOwnNotes was born.
 
-This application is still under heavy development, so I constantly will come up with new features.
+This application is still under heavy development, so I constantly will come up with new features and fixes.
 
 ## Current features
 - notes can be created, edited, viewed and removed
 - list of notes is showed, sorted by modification date (descending)
 - a notes folder can be chosen
 - sub-string searching of notes is possible
-- can be operated with keyboard
+- application can be operated with keyboard
 - external changes of note files are watched (notes or note list are reloaded)
 - markdown highlighting of notes
+- notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
 ## Upcoming features
-- renaming notes
+- desktop icon :)
+- clickable links
+- search-result highlighting in note text
+- spell checker
+- changing of editor fonts
 - and much more...
 
 ## Disclaimer
