@@ -66,7 +66,6 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="action_New"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
@@ -96,17 +95,6 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </attribute>
   </widget>
-  <action name="action_New">
-   <property name="text">
-    <string>&amp;New note</string>
-   </property>
-   <property name="toolTip">
-    <string>Create a new note</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+N</string>
-   </property>
-  </action>
   <action name="action_Quit">
    <property name="text">
     <string>&amp;Quit</string>
