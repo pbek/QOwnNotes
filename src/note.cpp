@@ -427,7 +427,12 @@ bool Note::storeNoteTextFileToDisk() {
 //
 void Note::handleNoteTextFileName() {
     QStringList noteTextLines = this->noteText.split( QRegExp( "(\\r\\n)|(\\n\\r)|\\r|\\n" ), QString::SkipEmptyParts );
+    // do nothing if there is no text
+    if ( noteTextLines.count() == 0 ) return;
+
     QString name = noteTextLines[0];
+    // do nothing if the first line is empty
+    if ( name == "" ) return;
 
     // check if name has changed
     if ( name != this->name )
