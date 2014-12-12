@@ -525,9 +525,16 @@ void MainWindow::on_action_Quit_triggered()
 
 void MainWindow::on_actionSet_ownCloud_Folder_triggered()
 {
+    QString oldPath = this->notesPath;
     selectOwnCloudFolder();
 
-    // TODO: reload files if folder was changed
+    // reload notes if notes folder was changed
+    if ( oldPath != this->notesPath )
+    {
+        buildNotesIndex();
+        loadNoteDirectoryList();
+        this->ui->noteTextEdit->clear();
+    }
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
