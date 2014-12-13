@@ -8,6 +8,9 @@ I like the concept of having notes accessible in plain text files, like it is do
 
 This application is still under heavy development, so I constantly will come up with new features and fixes.
 
+## Screenshot
+![Screenhot](screenshot.png)
+
 ## Current features
 - notes can be created, edited, viewed and removed
 - list of notes is showed, sorted by modification date (descending)
@@ -17,6 +20,10 @@ This application is still under heavy development, so I constantly will come up 
 - external changes of note files are watched (notes or note list are reloaded)
 - markdown highlighting of notes
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
+
+# Binaries
+So far I hosted a deb file for Linux of Sourceforge:  
+<https://sourceforge.net/projects/qownnotes/>
 
 ## Upcoming features
 - desktop icon :)
