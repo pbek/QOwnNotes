@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>QOwnNotes</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../icons/icon.svg</normaloff>../icons/icon.svg</iconset>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
@@ -105,7 +109,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSet_ownCloud_Folder">
    <property name="text">
-    <string>Set ownCloud folder</string>
+    <string>&amp;Set ownCloud folder</string>
    </property>
   </action>
   <action name="action_Find_note">
