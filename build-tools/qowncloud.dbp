@@ -14,8 +14,9 @@ Description: QOwnNotes is a note editor, that works together with the notes appl
 <</CTRL>>
 <<FILES>>
 1
-/home/omega/Code/_internal/build-QOwnNotes-Desktop-Release/QOwnNotes* -> QOwnNotes -> /opt/QOwnNotes
-/home/omega/Code/_internal/build-QOwnNotes-Desktop-Release/QOwnNotes -> icon.svg -> /opt/QOwnNotes
+/home/omega/Code/_internal/QOwnNotes/icons/icon.png -> icon.png -> /opt/QOwnNotes
+/home/omega/Code/_internal/QOwnNotes/build-QOwnNotes-Desktop-Release/QOwnNotes* -> QOwnNotes -> /opt/QOwnNotes
+/home/omega/Code/_internal/QOwnNotes/icons/icon.svg -> icon.svg -> /opt/QOwnNotes
 <</FILES>>
 <<SCRIPTS>>
 <<PREINST>>
@@ -25,6 +26,7 @@ Description: QOwnNotes is a note editor, that works together with the notes appl
 1
 #! /bin/bash -e
 
+chmod a+x /opt/QOwnNotes/QOwnNotes
 ln -fs "/opt/QOwnNotes/QOwnNotes" "/usr/bin/QOwnNotes"
 <</POSTINST>>
 <<PRERM>>
@@ -56,7 +58,7 @@ Name=QOwnNotes
 Version=1.0
 Exec=/opt/QOwnNotes/QOwnNotes
 Comment=
-Icon=/opt/QOwnNotes/icon.svg
+Icon=/opt/QOwnNotes/icon.png
 Type=Application
 Terminal=false
 StartupNotify=true
