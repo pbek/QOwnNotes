@@ -21,8 +21,8 @@ This application is still under heavy development, so I constantly will come up 
 - markdown highlighting of notes
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
-# Binaries
-So far I hosted a deb file for Linux on Sourceforge:  
+## Binaries
+So far I hosted a deb file for Linux and a MacOS-version on Sourceforge:  
 <https://sourceforge.net/projects/qownnotes/>
 
 ## Upcoming features
