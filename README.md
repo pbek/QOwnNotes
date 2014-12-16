@@ -15,20 +15,23 @@ This application is still under heavy development, so I constantly will come up 
 - notes can be created, edited, viewed and removed
 - list of notes is showed, sorted by modification date (descending)
 - a notes folder can be chosen
-- sub-string searching of notes is possible
-- application can be operated with keyboard
+- sub-string searching of notes is possible and search results are highlighted in the notes
+- application can be operated with keyboard shortcuts.
 - external changes of note files are watched (notes or note list are reloaded)
 - markdown highlighting of notes
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
 ## Binaries
-So far I hosted a deb file for Linux, a MacOS-app and a Windows-App on Sourceforge:  
-<https://sourceforge.net/projects/qownnotes/files>
+So far I hosted a deb file for Linux, a MacOS-app and a Windows-App on [Sourceforge](https://sourceforge.net/projects/qownnotes/files).
 
-Although you need to have Qt 5 installed to make them work! Grab it from this webpage: [Download Qt](http://www.qt.io/download-open-source)
+Although the binaries will not always have the latest features and you need to have Qt 5 installed to make them work. Grab it from this webpage: [Download Qt](http://www.qt.io/download-open-source)
 
 ## Building QOwnNotes
-To build the source code yourself just download [Qt Creator](http://www.qt.io/download-open-source) and open the project file `src/QOwnNotes.pro`.
+To get the most current features build the source code yourself by e.g. downloading [Qt Creator](http://www.qt.io/download-open-source), opening the project file `src/QOwnNotes.pro` and clicking on *Build / Build Project QOwnNotes*.
+
+Feedback on any troubles are welcome!
+
+Also feel free to contribute to this project or make suggestions!
 
 ## Disclaimer
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
