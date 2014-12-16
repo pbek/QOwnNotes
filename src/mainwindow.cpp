@@ -486,6 +486,41 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
     return QMainWindow::eventFilter(obj, event);
 }
 
+/**
+ * highlights all occurrences of str in the note text edit
+ */
+void MainWindow::searchInNoteTextEdit( QString &str )
+{
+    QList<QTextEdit::ExtraSelection> extraSelections;
+
+    ui->noteTextEdit->moveCursor( QTextCursor::Start );
+    QColor color = QColor( 0, 180, 0, 100 );
+
+    while( ui->noteTextEdit->find( str ) )
+    {
+        QTextEdit::ExtraSelection extra;
+        extra.format.setBackground( color );
+
+        extra.cursor = ui->noteTextEdit->textCursor();
+        extraSelections.append( extra );
+    }
+
+    ui->noteTextEdit->setExtraSelections( extraSelections );
+}
+
+/**
+ * highlights all occurrences of tje search line text in the note text edit
+ */
+void MainWindow::searchForSearchLineTextInNoteTextEdit()
+{
+    QString searchString = ui->searchLineEdit->text();
+
+    if ( searchString != "" )
+    {
+        searchInNoteTextEdit( searchString );
+    }
+}
+
 
  /*!
   * Slots implementation
@@ -499,8 +534,8 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     Note note = Note::fetchByName( current->text() );
     setCurrentNote( note );
 
-//    QString fileName = Note::fullNoteFilePath( note.getFileName() );
-//    loadNote( fileName );
+    // let's highlight the text from the search line edit
+    searchForSearchLineTextInNoteTextEdit();
 }
 
 void MainWindow::on_noteTextEdit_textChanged()
@@ -562,6 +597,9 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
                 item->setHidden( false );
             }
         }
+
+        // let's highlight the text from the search line edit
+        searchForSearchLineTextInNoteTextEdit();
     }
     // show all items otherwise
     else
