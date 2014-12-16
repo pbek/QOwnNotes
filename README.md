@@ -25,10 +25,10 @@ This application is still under heavy development, so I constantly will come up 
 So far I hosted a deb file for Linux, a MacOS-app and a Windows-App on Sourceforge:  
 <https://sourceforge.net/projects/qownnotes/files>
 
-Although you need to have Qt 5 installed to make them work!
+Although you need to have Qt 5 installed to make them work! Grab it from this webpage: [Download Qt](http://www.qt.io/download-open-source)
 
 ## Building QOwnNotes
-To build the source code yourself just download [Qt Creator](http://www.qt.io/download-open-source/#section-6) and open the project file `src/QOwnNotes.pro`.
+To build the source code yourself just download [Qt Creator](http://www.qt.io/download-open-source) and open the project file `src/QOwnNotes.pro`.
 
 ## Disclaimer
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
