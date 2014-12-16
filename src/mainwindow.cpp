@@ -493,16 +493,19 @@ void MainWindow::searchInNoteTextEdit( QString &str )
 {
     QList<QTextEdit::ExtraSelection> extraSelections;
 
-    ui->noteTextEdit->moveCursor( QTextCursor::Start );
-    QColor color = QColor( 0, 180, 0, 100 );
-
-    while( ui->noteTextEdit->find( str ) )
+    if ( str.count() >= 2 )
     {
-        QTextEdit::ExtraSelection extra;
-        extra.format.setBackground( color );
+        ui->noteTextEdit->moveCursor( QTextCursor::Start );
+        QColor color = QColor( 0, 180, 0, 100 );
 
-        extra.cursor = ui->noteTextEdit->textCursor();
-        extraSelections.append( extra );
+        while( ui->noteTextEdit->find( str ) )
+        {
+            QTextEdit::ExtraSelection extra;
+            extra.format.setBackground( color );
+
+            extra.cursor = ui->noteTextEdit->textCursor();
+            extraSelections.append( extra );
+        }
     }
 
     ui->noteTextEdit->setExtraSelections( extraSelections );
@@ -514,11 +517,7 @@ void MainWindow::searchInNoteTextEdit( QString &str )
 void MainWindow::searchForSearchLineTextInNoteTextEdit()
 {
     QString searchString = ui->searchLineEdit->text();
-
-    if ( searchString != "" )
-    {
-        searchInNoteTextEdit( searchString );
-    }
+    searchInNoteTextEdit( searchString );
 }
 
 
@@ -597,9 +596,6 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
                 item->setHidden( false );
             }
         }
-
-        // let's highlight the text from the search line edit
-        searchForSearchLineTextInNoteTextEdit();
     }
     // show all items otherwise
     else
@@ -612,6 +608,9 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
             item->setHidden( false );
         }
     }
+
+    // let's highlight the text from the search line edit
+    searchForSearchLineTextInNoteTextEdit();
 }
 
 //
