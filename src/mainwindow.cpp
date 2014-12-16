@@ -38,7 +38,7 @@ MainWindow::MainWindow(QWidget *parent) :
     buildNotesIndex();
     loadNoteDirectoryList();
 
-    // look if we need to save something every 2 sec
+    // look if we need to save something every 5 sec
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
     timer->start( 5000 );
@@ -186,6 +186,7 @@ void MainWindow::notesWereModified( const QString& str )
                     {
                         const QSignalBlocker blocker( this->noteDirectoryWatcher );
                         note.storeNoteTextFileToDisk();
+                        this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
                         // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
                         waitMsecs( 100 );
@@ -212,6 +213,7 @@ void MainWindow::notesWereModified( const QString& str )
 
                         // store note to disk again
                         note.storeNoteTextFileToDisk();
+                        this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
                         // rebuild and reload the notes directory list
                         buildNotesIndex();
@@ -271,6 +273,8 @@ void MainWindow::storeUpdatedNotesToDisk()
         if ( count > 0 )
         {
             qDebug() << __func__ << " - 'count': " << count;
+
+            this->ui->statusBar->showMessage( tr("stored %1 note(s) to disk").arg( count ), 1000 );
 
             // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
             waitMsecs( 100 );
@@ -604,6 +608,7 @@ void MainWindow::on_searchLineEdit_returnPressed()
             const QSignalBlocker blocker( this->noteDirectoryWatcher );
 
             note.storeNoteTextFileToDisk();
+            this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
         }
 
         buildNotesIndex();
