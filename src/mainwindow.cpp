@@ -10,6 +10,8 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QKeyEvent>
+#include "libraries/diff_match_patch/diff_match_patch.h"
+#include "notediffdialog.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -69,6 +71,27 @@ MainWindow::~MainWindow()
 /*!
  * Methods
  */
+
+bool MainWindow::openNoteDiffDialog( Note changedNote )
+{
+    QString text1 = this->ui->noteTextEdit->toPlainText();
+
+    changedNote.updateNoteTextFromDisk();
+    QString text2 = changedNote.getNoteText();
+
+//    qDebug() << __func__ << " - 'text1': " << text1;
+//    qDebug() << __func__ << " - 'text2': " << text2;
+    diff_match_patch *diff = new diff_match_patch();
+    QList<Diff> diffList = diff->diff_main( text1, text2 );
+
+    QString html = diff->diff_prettyHtml( diffList );
+//    qDebug() << __func__ << " - 'html': " << html;
+
+    NoteDiffDialog *dialog = new NoteDiffDialog( this, html );
+
+    // true means we should load current note from disk
+    return dialog->exec();
+}
 
 void MainWindow::setupMainSplitter()
 {
@@ -167,31 +190,24 @@ void MainWindow::notesWereModified( const QString& str )
         {
             qDebug() << "Current note was modified externaly!";
 
-            switch( QMessageBox::information( this, "Note was modified externaly!",
-                                              "The current note was modified outside of this application!\n"
-                                              "Reload current note from disk?",
-                                              "&Reload", "&Cancel", QString::null,
-                                              0, 1 ) )
+            bool updateNoteFromDisk = openNoteDiffDialog( note );
+            if ( updateNoteFromDisk )
             {
-                case 0:
-                    note.updateNoteTextFromDisk();
+                note.updateNoteTextFromDisk();
 
-                    {
-                        const QSignalBlocker blocker( this->ui->noteTextEdit );
-                        this->ui->noteTextEdit->setText( note.getNoteText() );
-                    }
-                    break;
-                case 1:
-                default:
-                    {
-                        const QSignalBlocker blocker( this->noteDirectoryWatcher );
-                        note.storeNoteTextFileToDisk();
-                        this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
+                {
+                    const QSignalBlocker blocker( this->ui->noteTextEdit );
+                    this->ui->noteTextEdit->setText( note.getNoteText() );
+                }
+            }
+            else
+            {
+                const QSignalBlocker blocker( this->noteDirectoryWatcher );
+                note.storeNoteTextFileToDisk();
+                this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
-                        // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
-                        waitMsecs( 100 );
-                    }
-                    break;
+                // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+                waitMsecs( 100 );
             }
         }
         else

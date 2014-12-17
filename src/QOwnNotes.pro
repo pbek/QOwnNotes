@@ -16,12 +16,17 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     note.cpp \
     libraries/markdown-highlight/pmh_parser.c \
-    libraries/markdown-highlight/highlighter.cpp
+    libraries/markdown-highlight/highlighter.cpp \
+    libraries/diff_match_patch/diff_match_patch.cpp \
+    notediffdialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
     libraries/markdown-highlight/pmh_parser.h \
     libraries/markdown-highlight/pmh_definitions.h \
-    libraries/markdown-highlight/highlighter.h
+    libraries/markdown-highlight/highlighter.h \
+    libraries/diff_match_patch/diff_match_patch.h \
+    notediffdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    notediffdialog.ui
