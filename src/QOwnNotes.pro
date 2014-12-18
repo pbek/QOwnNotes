@@ -22,6 +22,7 @@ SOURCES += main.cpp\
 
 HEADERS  += mainwindow.h \
     note.h \
+    build_number.h \
     libraries/markdown-highlight/pmh_parser.h \
     libraries/markdown-highlight/pmh_definitions.h \
     libraries/markdown-highlight/highlighter.h \

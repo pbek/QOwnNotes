@@ -12,6 +12,7 @@
 #include <QKeyEvent>
 #include "libraries/diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
+#include "build_number.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -30,6 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setApplicationVersion( "0.1" );
 
     ui->setupUi(this);
+    this->setWindowTitle( "QOwnNotes - build " + QString::number( BUILD ) );
 
     Note::createConnection();
 
