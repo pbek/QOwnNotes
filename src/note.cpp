@@ -392,8 +392,8 @@ bool Note::store() {
 
 bool Note::storeNoteTextFileToDisk() {
 
-    // checks if filename has to be changed (and changes it if needed)
-    handleNoteTextFileName();
+    // checks if filename has to be changed (and change it if needed)
+    this->handleNoteTextFileName();
 
     QFile file( fullNoteFilePath( this->fileName ) );
     bool fileExists = this->fileExists();
@@ -437,6 +437,7 @@ void Note::handleNoteTextFileName() {
     // check if name has changed
     if ( name != this->name )
     {
+        qDebug() << __func__ << " - 'name' was changed: " << name;
         QString fileName = name + ".txt";
 
         // check if note with this filename already exists
@@ -464,7 +465,7 @@ void Note::handleNoteTextFileName() {
     }
 
     qDebug() << __func__ << " - 'name': " << name;
-    qDebug() << __func__ << " - 'this': " << this;
+    qDebug() << __func__ << " - 'this->id': " << this->id;
 }
 
 bool Note::updateNoteTextFromDisk() {
@@ -491,7 +492,7 @@ QString Note::fullNoteFilePath( QString fileName )
     return notesPath + QDir::separator() + fileName;
 }
 
-int Note::storeDirtyNotesToDisk() {
+int Note::storeDirtyNotesToDisk( Note &currentNote ) {
     QSqlQuery query;
     Note note;
 //    qDebug() << "storeDirtyNotesToDisk";
@@ -508,7 +509,17 @@ int Note::storeDirtyNotesToDisk() {
         for( int r=0; query.next(); r++ )
         {
             note = noteFromQuery( query );
+            QString oldFileName = note.getFileName();
             note.storeNoteTextFileToDisk();
+            QString newFileName = note.getFileName();
+
+            // reassign currentNote if filename of currentNote has changed
+            if ( ( oldFileName == currentNote.getFileName() ) && ( oldFileName != newFileName ) )
+            {
+                currentNote = note;
+                qDebug() << "filename of currentNote has changed to: " << newFileName;
+            }
+
             qDebug() << "stored note: " << note;
             count++;
         }

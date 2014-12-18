@@ -206,6 +206,9 @@ void MainWindow::notesWereModified( const QString& str )
                 note.storeNoteTextFileToDisk();
                 this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
+                // just to make sure everything is uptodate
+                this->currentNote.refetch();
+
                 // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
                 waitMsecs( 100 );
             }
@@ -284,7 +287,8 @@ void MainWindow::storeUpdatedNotesToDisk()
         // For some reason this->noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
         // All flushing and syncing didn't help
-        int count = Note::storeDirtyNotesToDisk();
+        int count = Note::storeDirtyNotesToDisk( this->currentNote );
+//        qDebug() << __func__ << " - 'this->currentNote': " << this->currentNote;
 
         if ( count > 0 )
         {
@@ -296,6 +300,9 @@ void MainWindow::storeUpdatedNotesToDisk()
             waitMsecs( 100 );
 
             loadNoteDirectoryList();
+
+            // just to make sure everything is uptodate
+            this->currentNote.refetch();
         }
     }
 }
@@ -557,8 +564,10 @@ void MainWindow::on_noteTextEdit_textChanged()
 {
 //    qDebug() << "noteTextChanged";
 
-    this->currentNote.updateNoteTextFromDisk();
-    QString noteTextFromDisk = this->currentNote.getNoteText();
+    Note note = this->currentNote;
+//    qDebug() << __func__ << " - 'this->getFilename()': " << note.getFileName();
+    note.updateNoteTextFromDisk();
+    QString noteTextFromDisk = note.getNoteText();
 
     QString text = this->ui->noteTextEdit->toPlainText();
 
@@ -567,7 +576,7 @@ void MainWindow::on_noteTextEdit_textChanged()
         this->currentNote.storeNewText( text );
         this->currentNote.refetch();
 
-        qDebug() << __func__ << ": " << this->currentNote;
+        // qDebug() << __func__ << ": " << this->currentNote;
     }
 }
 

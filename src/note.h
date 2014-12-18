@@ -34,7 +34,7 @@ public:
     bool storeNewText(QString text);
     bool storeNoteTextFileToDisk();
     static QString fullNoteFilePath(QString fileName);
-    static int storeDirtyNotesToDisk();
+    static int storeDirtyNotesToDisk( Note &currentNote );
     bool updateNoteTextFromDisk();
     friend QDebug operator<<(QDebug dbg, const Note &note);
     bool createFromFile(QFile &file);
