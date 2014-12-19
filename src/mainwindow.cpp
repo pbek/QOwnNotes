@@ -74,7 +74,7 @@ MainWindow::~MainWindow()
  * Methods
  */
 
-bool MainWindow::openNoteDiffDialog( Note &changedNote )
+int MainWindow::openNoteDiffDialog( Note changedNote )
 {
     QString text1 = this->ui->noteTextEdit->toPlainText();
 
@@ -92,8 +92,10 @@ bool MainWindow::openNoteDiffDialog( Note &changedNote )
 
     NoteDiffDialog *dialog = new NoteDiffDialog( this, html );
 
-    // true means we should load current note from disk
-    return dialog->exec();
+    dialog->exec();
+
+    int result = dialog->resultActionRole();
+    return result;
 }
 
 void MainWindow::setupMainSplitter()
@@ -193,28 +195,41 @@ void MainWindow::notesWereModified( const QString& str )
         {
             qDebug() << "Current note was modified externaly!";
 
-            bool updateNoteFromDisk = openNoteDiffDialog( note );
-            if ( updateNoteFromDisk )
+            int result = openNoteDiffDialog( note );
+//            qDebug() << __func__ << " - 'result': " << result;
+            switch( result )
             {
-                note.updateNoteTextFromDisk();
+                // overwrite file with local changes
+                case NoteDiffDialog::Overwrite:
+                    {
+                        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+                        note.storeNoteTextFileToDisk();
+                        this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
-                {
-                    const QSignalBlocker blocker( this->ui->noteTextEdit );
-                    this->ui->noteTextEdit->setText( note.getNoteText() );
-                }
+                        // just to make sure everything is uptodate
+                        this->currentNote.refetch();
+
+                        // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+                        waitMsecs( 100 );
+                    }
+                    break;
+
+                // reload note file from disk
+                case NoteDiffDialog::Reload:
+                    note.updateNoteTextFromDisk();
+
+                    {
+                        const QSignalBlocker blocker( this->ui->noteTextEdit );
+                        this->ui->noteTextEdit->setText( note.getNoteText() );
+                    }
+                    break;
+
+                case NoteDiffDialog::Cancel:
+                case NoteDiffDialog::Ignore:
+                default:
+                    // do nothing
+                    break;
             }
-//            else
-//            {
-//                const QSignalBlocker blocker( this->noteDirectoryWatcher );
-//                note.storeNoteTextFileToDisk();
-//                this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
-
-//                // just to make sure everything is uptodate
-//                this->currentNote.refetch();
-
-//                // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
-//                waitMsecs( 100 );
-//            }
         }
         else
         {
