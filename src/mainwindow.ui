@@ -51,7 +51,22 @@ p, li { white-space: pre-wrap; }
        <widget class="QListWidget" name="notesListWidget"/>
       </item>
       <item row="0" column="0" colspan="2">
-       <widget class="QLineEdit" name="searchLineEdit"/>
+       <widget class="QLineEdit" name="searchLineEdit">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 2px 5px 2px 25px;
+	background-image: url(:/images/search.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+}
+</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

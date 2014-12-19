@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = QOwnNotes
 TEMPLATE = app
-ICON = ../icons/icon.png
+ICON = images/icon.png
 
 SOURCES += main.cpp\
         mainwindow.cpp \
@@ -31,3 +31,6 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui
+
+RESOURCES += \
+    images.qrc
