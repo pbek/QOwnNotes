@@ -74,7 +74,7 @@ MainWindow::~MainWindow()
  * Methods
  */
 
-bool MainWindow::openNoteDiffDialog( Note changedNote )
+bool MainWindow::openNoteDiffDialog( Note &changedNote )
 {
     QString text1 = this->ui->noteTextEdit->toPlainText();
 
@@ -83,6 +83,7 @@ bool MainWindow::openNoteDiffDialog( Note changedNote )
 
 //    qDebug() << __func__ << " - 'text1': " << text1;
 //    qDebug() << __func__ << " - 'text2': " << text2;
+
     diff_match_patch *diff = new diff_match_patch();
     QList<Diff> diffList = diff->diff_main( text1, text2 );
 
@@ -202,18 +203,18 @@ void MainWindow::notesWereModified( const QString& str )
                     this->ui->noteTextEdit->setText( note.getNoteText() );
                 }
             }
-            else
-            {
-                const QSignalBlocker blocker( this->noteDirectoryWatcher );
-                note.storeNoteTextFileToDisk();
-                this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
+//            else
+//            {
+//                const QSignalBlocker blocker( this->noteDirectoryWatcher );
+//                note.storeNoteTextFileToDisk();
+//                this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
-                // just to make sure everything is uptodate
-                this->currentNote.refetch();
+//                // just to make sure everything is uptodate
+//                this->currentNote.refetch();
 
-                // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
-                waitMsecs( 100 );
-            }
+//                // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+//                waitMsecs( 100 );
+//            }
         }
         else
         {

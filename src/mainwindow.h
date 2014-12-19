@@ -65,7 +65,7 @@ private:
     void waitMsecs(int msecs);
     void searchInNoteTextEdit(QString &str);
     void searchForSearchLineTextInNoteTextEdit();
-    bool openNoteDiffDialog(Note changedNote);
+    bool openNoteDiffDialog(Note &changedNote);
 };
 
 #endif // MAINWINDOW_H

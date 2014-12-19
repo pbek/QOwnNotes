@@ -9,6 +9,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
+//#include "libraries/diff_match_patch/diff_match_patch.h"
 
 
 Note::Note()
@@ -406,8 +407,20 @@ bool Note::storeNoteTextFileToDisk() {
         return false;
     }
 
+    // transform all types of newline to \n (maybe the ownCloud-sync works better then)
+    QString text = this->noteText;
+    text.replace( QRegExp( "(\\r\\n)|(\\n\\r)|\\r|\\n" ), "\n" );
+
+//    diff_match_patch *diff = new diff_match_patch();
+//    QList<Diff> diffList = diff->diff_main( this->noteText, text );
+
+//    QString html = diff->diff_prettyHtml( diffList );
+//    diff->diff_cleanupSemantic( diffList );
+//    qDebug() << __func__ << " - 'diffList': " << diffList[0].toString();
+//    qDebug() << __func__ << " - 'html': " << html;
+
     QTextStream out( &file );
-    out << this->noteText;
+    out << text;
     file.flush();
     file.close();
 
@@ -480,6 +493,9 @@ bool Note::updateNoteTextFromDisk() {
     QTextStream in( &file );
     this->noteText = in.readAll();
     file.close();
+
+    // strangly it sometimes gets null
+    if ( this->noteText.isNull() ) this->noteText = "";
 
     return true;
 }
