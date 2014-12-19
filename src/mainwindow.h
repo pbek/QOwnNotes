@@ -10,6 +10,7 @@
 #include <QEvent>
 #include <note.h>
 #include "libraries/markdown-highlight/highlighter.h"
+#include "notediffdialog.h"
 
 
 namespace Ui {
@@ -50,6 +51,7 @@ private:
     Note currentNote;
     int firstVisibleNoteListRow;
     HGMarkdownHighlighter *highlighter;
+    NoteDiffDialog *noteDiffDialog;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

@@ -41,6 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMainSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
+    this->noteDiffDialog = new NoteDiffDialog();
 
     // look if we need to save something every 5 sec
     QTimer *timer = new QTimer( this );
@@ -76,6 +77,11 @@ MainWindow::~MainWindow()
 
 int MainWindow::openNoteDiffDialog( Note changedNote )
 {
+    if ( this->noteDiffDialog->isVisible() )
+    {
+        this->noteDiffDialog->hide();
+    }
+
     QString text1 = this->ui->noteTextEdit->toPlainText();
 
     changedNote.updateNoteTextFromDisk();
@@ -90,11 +96,10 @@ int MainWindow::openNoteDiffDialog( Note changedNote )
     QString html = diff->diff_prettyHtml( diffList );
 //    qDebug() << __func__ << " - 'html': " << html;
 
-    NoteDiffDialog *dialog = new NoteDiffDialog( this, html );
+    this->noteDiffDialog = new NoteDiffDialog( this, html );
+    this->noteDiffDialog->exec();
 
-    dialog->exec();
-
-    int result = dialog->resultActionRole();
+    int result = this->noteDiffDialog->resultActionRole();
     return result;
 }
 
