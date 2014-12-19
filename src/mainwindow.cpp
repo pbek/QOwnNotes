@@ -79,7 +79,7 @@ int MainWindow::openNoteDiffDialog( Note changedNote )
 {
     if ( this->noteDiffDialog->isVisible() )
     {
-        this->noteDiffDialog->hide();
+        this->noteDiffDialog->close();
     }
 
     QString text1 = this->ui->noteTextEdit->toPlainText();
