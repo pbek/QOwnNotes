@@ -40,7 +40,7 @@
        <widget class="QTextEdit" name="noteTextEdit">
         <property name="styleSheet">
          <string notr="true">* {
-	border: 1px solid gray;
+/*	border: 1px solid inherit;*/
 }
 </string>
         </property>
@@ -57,7 +57,7 @@ p, li { white-space: pre-wrap; }
        <widget class="QListWidget" name="notesListWidget">
         <property name="styleSheet">
          <string notr="true">QListWidget {
-	border: 1px solid gray;
+/*	border: 1px solid gray;*/
 }
 </string>
         </property>
@@ -70,12 +70,13 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="styleSheet">
          <string notr="true">QLineEdit {
-	border: 1px solid gray;
+	border: 1px solid lightgray;
 	border-radius: 5px;
 	padding: 2px 5px 2px 25px;
 	background-image: url(:/images/search.png);
 	background-repeat: no-repeat;
 	background-position: center left;
+	margin-right: 6px;
 }
 </string>
         </property>
