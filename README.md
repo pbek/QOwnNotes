@@ -8,7 +8,7 @@ I like the concept of having notes accessible in plain text files, like it is do
 
 This application is still under development, so there will be added new features constantly.
 
-Visit the project page her: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes)
+Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes)
 
 ## Screenshot
 ![Screenhot](screenshot.png)
