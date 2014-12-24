@@ -43,10 +43,10 @@ MainWindow::MainWindow(QWidget *parent) :
     loadNoteDirectoryList();
     this->noteDiffDialog = new NoteDiffDialog();
 
-    // look if we need to save something every 5 sec
+    // look if we need to save something every 8 sec
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    timer->start( 5000 );
+    timer->start( 8000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
