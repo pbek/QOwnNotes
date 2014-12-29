@@ -439,9 +439,10 @@ void MainWindow::setCurrentNote( Note note, bool updateNoteText )
 
 void MainWindow::focusNoteTextEdit()
 {
-    // move the cursor to the 2nd line
+    // move the cursor to the 3nd line
     QTextCursor tmpCursor = ui->noteTextEdit->textCursor();
     tmpCursor.movePosition( QTextCursor::Start, QTextCursor::MoveAnchor );
+    tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
     tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
     ui->noteTextEdit->setTextCursor( tmpCursor );
 
@@ -685,7 +686,7 @@ void MainWindow::on_searchLineEdit_returnPressed()
     {
         note = Note();
         note.setName( text );
-        note.setNoteText( text + "\n" );
+        note.setNoteText( text + "\n# " + text + "\n" );
         note.store();
 
         // store the note to disk
