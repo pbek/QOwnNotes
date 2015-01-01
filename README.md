@@ -13,10 +13,10 @@ Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOw
 ## Screenshot
 ![Screenhot](screenshot.png)
 
-## Current features
+## Features
+- a notes folder can be chosen
 - notes can be created, edited, viewed and removed
 - list of notes is showed, sorted by modification date (descending)
-- a notes folder can be chosen
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with keyboard shortcuts.
 - external changes of note files are watched (notes or note list are reloaded)
@@ -26,6 +26,12 @@ Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOw
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
+
+Alternatively you can also checkout the code directly from the git repository:
+
+```shell
+git clone https://github.com/pbek/QOwnNotes.git -b develop
+```
 
 Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and clicking on *Build / Build Project QOwnNotes*.
 
