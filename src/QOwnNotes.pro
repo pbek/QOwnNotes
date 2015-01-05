@@ -11,6 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns
+RC_FILE = QOwnNotes.rc
 
 SOURCES += main.cpp\
         mainwindow.cpp \
