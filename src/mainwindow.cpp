@@ -684,9 +684,17 @@ void MainWindow::on_searchLineEdit_returnPressed()
     // if we can't find a note we create a new one
     if ( note.getId() == 0 )
     {
+        // create a headline in new notes by adding "=====" as second line
+        QString noteText = text + "\n";
+        for ( int i = 0; i < text.length(); i++ )
+        {
+            noteText.append( "=" );
+        }
+        noteText.append( "\n\n" );
+
         note = Note();
         note.setName( text );
-        note.setNoteText( text + "\n# " + text + "\n" );
+        note.setNoteText( noteText );
         note.store();
 
         // store the note to disk
