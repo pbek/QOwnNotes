@@ -40,11 +40,9 @@ Please feel free to contribute source code to this project, make suggestions or 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ## Binaries
-So far I created a deb package for **Linux**, and a **Mac OS X** and **Windows** build. You can get them here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes).
+Currently there are created a deb packages for **Linux**, and DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes).
 
-Although the binaries will **not always have the latest features** and you need to have **Qt 5 installed** to make them work. Grab Qt from their webpage: [Download Qt](http://www.qt.io/download-open-source)
-
-And I still have to get some desktop icons into the Windows and OS X applications. ;)
+Although if you always want the latest features, grab the source code and compile it yourself.
 
 ## Disclaimer
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
