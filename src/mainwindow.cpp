@@ -198,10 +198,22 @@ void MainWindow::notesWereModified( const QString& str )
     if ( note.getFileName() == this->currentNote.getFileName() ) {
         if ( note.fileExists() )
         {
+            // fetch current text
+            QString text1 = this->ui->noteTextEdit->toPlainText();
+
+            // fetch text of note from disk
+            note.updateNoteTextFromDisk();
+            QString text2 = note.getNoteText();
+
+            // skip dialog if texts are equal
+            if ( text1 == text2 )
+            {
+                return;
+            }
+
             qDebug() << "Current note was modified externaly!";
 
             int result = openNoteDiffDialog( note );
-//            qDebug() << __func__ << " - 'result': " << result;
             switch( result )
             {
                 // overwrite file with local changes
