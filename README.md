@@ -1,6 +1,6 @@
 # QOwnNotes
  
-[QOwnNotes](http://www.bekerle.com/QOwnNotes) is a **note editor**, written in Qt 5, that works together with the **notes application** of [ownCloud](http://owncloud.org/). So far it works in Linux, Mac OS and Windows.
+[QOwnNotes](http://www.bekerle.com/QOwnNotes) is a **notepad**  for **Linux**, **Mac OS X** and **Windows** (it's written in **Qt 5.4**), that works together with the **notes application** of [ownCloud](http://owncloud.org/).
 
 The notes are stored as **plain text files** and are **synced with ownCloud's file sync** functionality. Of course other software, like [Dropbox](https://www.dropbox.com) can be used too.
 
