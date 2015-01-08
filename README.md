@@ -2,16 +2,18 @@
  
 [QOwnNotes](http://www.bekerle.com/QOwnNotes) is a **notepad**  for **Linux**, **Mac OS X** and **Windows** (it's written in **Qt 5.4**), that works together with the **notes application** of [ownCloud](http://owncloud.org/).
 
+So you are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
+
 The notes are stored as **plain text files** and are **synced with ownCloud's file sync** functionality. Of course other software, like [Dropbox](https://www.dropbox.com) can be used too.
 
-I like the concept of having notes accessible in plain text files, like it is done in the **ownCloud notes app**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
-
-This application is still under development, so there will be added new features constantly.
+I like the concept of having notes accessible in plain text files, like it is done in the **ownCloud notes app**, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
 
 Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes)
 
 ## Screenshot
 ![Screenhot](screenshot.png)
+
+You can visit the [QOwnNotes project page](http://www.bekerle.com/QOwnNotes) for more **screenshots**.
 
 ## Features
 - a notes folder can be chosen
@@ -20,9 +22,9 @@ Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOw
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with keyboard shortcuts.
 - external changes of note files are watched (notes or note list are reloaded)
+- differences between current note and externally changed note are showed in a dialog
 - markdown highlighting of notes
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
-- showing differences between current note and externally changed note
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
