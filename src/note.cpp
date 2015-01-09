@@ -420,6 +420,7 @@ bool Note::storeNoteTextFileToDisk() {
 //    qDebug() << __func__ << " - 'html': " << html;
 
     QTextStream out( &file );
+    out.setCodec("UTF-8");
     out << text;
     file.flush();
     file.close();
@@ -491,6 +492,7 @@ bool Note::updateNoteTextFromDisk() {
     }
 
     QTextStream in( &file );
+    in.setCodec("UTF-8");
     this->noteText = in.readAll();
     file.close();
 
@@ -548,6 +550,7 @@ bool Note::createFromFile( QFile &file ) {
     if ( file.open( QIODevice::ReadOnly ) )
     {
         QTextStream in( &file );
+        in.setCodec("UTF-8");
 
         // qDebug() << file.size() << in.readAll();
         QString noteText = in.readAll();

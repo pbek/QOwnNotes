@@ -160,6 +160,7 @@ void MainWindow::loadNote( QString &fileName )
     }
 
     QTextStream in( &file );
+    in.setCodec("UTF-8");
 
     // qDebug() << file.size() << in.readAll();
     QString noteText = in.readAll();
