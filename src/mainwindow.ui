@@ -14,8 +14,8 @@
    <string>QOwnNotes</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../icons/icon.svg</normaloff>../icons/icon.svg</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/images/icon.png</normaloff>:/images/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
@@ -164,6 +164,8 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
