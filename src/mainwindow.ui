@@ -106,7 +106,14 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
+   <widget class="QMenu" name="menu_Help">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout_QOwnNotes"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
+   <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -160,6 +167,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionRename_note">
    <property name="text">
     <string>Rename note</string>
+   </property>
+  </action>
+  <action name="actionAbout_QOwnNotes">
+   <property name="text">
+    <string>About &amp;QOwnNotes...</string>
    </property>
   </action>
  </widget>

@@ -43,6 +43,8 @@ private slots:
 
     void on_action_Remove_note_triggered();
 
+    void on_actionAbout_QOwnNotes_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     libraries/markdown-highlight/pmh_parser.c \
     libraries/markdown-highlight/highlighter.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
-    notediffdialog.cpp
+    notediffdialog.cpp \
+    aboutdialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -28,10 +29,13 @@ HEADERS  += mainwindow.h \
     libraries/markdown-highlight/pmh_definitions.h \
     libraries/markdown-highlight/highlighter.h \
     libraries/diff_match_patch/diff_match_patch.h \
-    notediffdialog.h
+    notediffdialog.h \
+    aboutdialog.h
 
 FORMS    += mainwindow.ui \
-    notediffdialog.ui
+    notediffdialog.ui \
+    aboutdialog.ui
 
 RESOURCES += \
-    images.qrc
+    images.qrc \
+    texts.qrc

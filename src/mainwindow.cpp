@@ -13,6 +13,7 @@
 #include "libraries/diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
+#include "aboutdialog.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -746,4 +747,10 @@ void MainWindow::on_searchLineEdit_returnPressed()
 void MainWindow::on_action_Remove_note_triggered()
 {
     removeCurrentNote();
+}
+
+void MainWindow::on_actionAbout_QOwnNotes_triggered()
+{
+    AboutDialog *dialog = new AboutDialog( this );
+    dialog->exec();
 }
