@@ -763,7 +763,8 @@ void MainWindow::on_action_Note_note_triggered()
 {
     QDateTime currentDate = QDateTime::currentDateTime();
 
-    QString text = "Note " + currentDate.toString( Qt::ISODate );
+    // replacing ":" with "_" for Windows systems
+    QString text = "Note " + currentDate.toString( Qt::ISODate ).replace( ":", "_" );
     this->ui->searchLineEdit->setText( text );
     on_searchLineEdit_returnPressed();
 }
