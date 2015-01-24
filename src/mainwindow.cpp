@@ -453,9 +453,10 @@ void MainWindow::setCurrentNote( Note note, bool updateNoteText )
 
 void MainWindow::focusNoteTextEdit()
 {
-    // move the cursor to the 3nd line
+    // move the cursor to the 4nd line
     QTextCursor tmpCursor = ui->noteTextEdit->textCursor();
     tmpCursor.movePosition( QTextCursor::Start, QTextCursor::MoveAnchor );
+    tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
     tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
     tmpCursor.movePosition( QTextCursor::Down, QTextCursor::MoveAnchor );
     ui->noteTextEdit->setTextCursor( tmpCursor );
@@ -753,4 +754,16 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered()
 {
     AboutDialog *dialog = new AboutDialog( this );
     dialog->exec();
+}
+
+//
+// hotkey to create new note with date in name
+//
+void MainWindow::on_action_Note_note_triggered()
+{
+    QDateTime currentDate = QDateTime::currentDateTime();
+
+    QString text = "Note " + currentDate.toString( Qt::ISODate );
+    this->ui->searchLineEdit->setText( text );
+    on_searchLineEdit_returnPressed();
 }

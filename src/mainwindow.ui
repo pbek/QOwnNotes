@@ -100,8 +100,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
     <property name="title">
-     <string>&amp;File</string>
+     <string>&amp;Note</string>
     </property>
+    <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
     <addaction name="separator"/>
@@ -175,6 +176,14 @@ p, li { white-space: pre-wrap; }
   <action name="actionAbout_QOwnNotes">
    <property name="text">
     <string>About &amp;QOwnNotes...</string>
+   </property>
+  </action>
+  <action name="action_Note_note">
+   <property name="text">
+    <string>&amp;New note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
  </widget>
