@@ -10,7 +10,7 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QKeyEvent>
-#include "libraries/diff_match_patch/diff_match_patch.h"
+#include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
 #include "aboutdialog.h"

@@ -9,7 +9,6 @@
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
-//#include "libraries/diff_match_patch/diff_match_patch.h"
 
 
 Note::Note()

@@ -13,6 +13,8 @@ TEMPLATE = app
 ICON = QOwnNotes.icns
 RC_FILE = QOwnNotes.rc
 
+INCLUDEPATH += $$PWD/libraries
+
 SOURCES += main.cpp\
         mainwindow.cpp \
     note.cpp \
