@@ -46,6 +46,7 @@ public:
     bool fillByFileName(QString fileName);
     bool removeNoteFile();
     bool remove(bool withFile);
+    QString toMarkdownHtml();
 private:
     int id;
     QString name;

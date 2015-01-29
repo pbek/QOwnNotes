@@ -47,6 +47,8 @@ private slots:
 
     void on_action_Note_note_triggered();
 
+    void on_actionToggleEditMode_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -56,10 +58,10 @@ private:
     int firstVisibleNoteListRow;
     HGMarkdownHighlighter *highlighter;
     NoteDiffDialog *noteDiffDialog;
+    bool noteTextEditIsInEditMode = false;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();
-    void loadNote( QString &fileName );
     void readSettings();
     void buildNotesIndex();
     QString selectOwnCloudFolder();
@@ -72,6 +74,8 @@ private:
     void searchInNoteTextEdit(QString &str);
     void searchForSearchLineTextInNoteTextEdit();
     int openNoteDiffDialog(Note changedNote);
+    void setNoteTextEditMode(bool isInEditMode);
+    void setNoteTextFromNote(Note note);
 };
 
 #endif // MAINWINDOW_H

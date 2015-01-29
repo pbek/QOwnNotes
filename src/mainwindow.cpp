@@ -63,6 +63,9 @@ MainWindow::MainWindow(QWidget *parent) :
     QFont font = ui->noteTextEdit->font();
     QFontMetrics metrics(font);
     ui->noteTextEdit->setTabStopWidth( tabStop * metrics.width( ' ' ) );
+
+    // set the edit mode for the note text edit
+    this->setNoteTextEditMode( true );
 }
 
 MainWindow::~MainWindow()
@@ -152,28 +155,6 @@ void MainWindow::loadNoteDirectoryList()
 
 }
 
-void MainWindow::loadNote( QString &fileName )
-{
-    QFile file( fileName );
-    if ( !file.open( QIODevice::ReadOnly ) )
-    {
-        QMessageBox::information(0, "error", file.errorString());
-    }
-
-    QTextStream in( &file );
-    in.setCodec("UTF-8");
-
-    // qDebug() << file.size() << in.readAll();
-    QString noteText = in.readAll();
-    file.close();
-
-    // we don't want a "textChange()" fired up
-    {
-        const QSignalBlocker blocker( this->ui->noteTextEdit );
-        this->ui->noteTextEdit->setText( noteText );
-    }
-}
-
 void MainWindow::readSettings()
 {
     QSettings settings;
@@ -239,7 +220,7 @@ void MainWindow::notesWereModified( const QString& str )
 
                     {
                         const QSignalBlocker blocker( this->ui->noteTextEdit );
-                        this->ui->noteTextEdit->setText( note.getNoteText() );
+                        this->setNoteTextFromNote( note );
                     }
                     break;
 
@@ -446,8 +427,7 @@ void MainWindow::setCurrentNote( Note note, bool updateNoteText )
     if ( updateNoteText )
     {
         const QSignalBlocker blocker( this->ui->noteTextEdit );
-
-        this->ui->noteTextEdit->setText( note.getNoteText() );
+        this->setNoteTextFromNote( note );
     }
 }
 
@@ -582,10 +562,40 @@ void MainWindow::searchForSearchLineTextInNoteTextEdit()
     searchInNoteTextEdit( searchString );
 }
 
+/**
+ * switch edit mode for noteTextEdit on or off
+ */
+void MainWindow::setNoteTextEditMode( bool isInEditMode )
+{
+    this->noteTextEditIsInEditMode = isInEditMode;
+    this->ui->noteTextEdit->setReadOnly( !isInEditMode );
+    this->ui->actionToggleEditMode->setChecked( isInEditMode );
+    this->ui->actionToggleEditMode->setToolTip( "Toogle edit mode - currently " + QString( isInEditMode ? "editing" : "viewing" ) );
 
- /*!
-  * Slots implementation
-  */
+    if ( this->currentNote.exists() )
+    {
+        this->setCurrentNote( this->currentNote, true );
+    }
+}
+
+/**
+ * set the right note text according to whether noteText is in edit mode or not
+ */
+void MainWindow::setNoteTextFromNote( Note note )
+{
+    if ( this->noteTextEditIsInEditMode )
+    {
+        this->ui->noteTextEdit->setText( note.getNoteText() );
+    }
+    else
+    {
+        this->ui->noteTextEdit->setHtml( note.toMarkdownHtml() );
+    }
+}
+
+/*!
+ * Slots implementation
+ */
 
 void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
@@ -741,6 +751,9 @@ void MainWindow::on_searchLineEdit_returnPressed()
     // jump to the found or created note
     setCurrentNote( note );
 
+    // go into edit mode
+    setNoteTextEditMode( true );
+
     // focus the note text edit and set the cursor correctly
     focusNoteTextEdit();
 }
@@ -767,4 +780,9 @@ void MainWindow::on_action_Note_note_triggered()
     QString text = "Note " + currentDate.toString( Qt::ISODate ).replace( ":", "_" );
     this->ui->searchLineEdit->setText( text );
     on_searchLineEdit_returnPressed();
+}
+
+void MainWindow::on_actionToggleEditMode_triggered()
+{
+//    this->setNoteTextEditMode( this->ui->actionToggleEditMode->isChecked() );
 }

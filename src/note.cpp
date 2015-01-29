@@ -9,6 +9,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
+#include "hoedown/html.h"
 
 
 Note::Note()
@@ -628,6 +629,26 @@ bool Note::removeNoteFile() {
     }
 
     return false;
+}
+
+//
+// return html rendered markdown of note text
+//
+QString Note::toMarkdownHtml() {
+    hoedown_renderer *renderer = hoedown_html_renderer_new( HOEDOWN_HTML_USE_XHTML, 0 );
+    hoedown_document *document = hoedown_document_new(renderer, HOEDOWN_EXT_AUTOLINK, 16);
+
+    QString str = this->getNoteText();
+
+    int length = str.length();
+    unsigned char *sequence = NULL;
+    sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
+
+    // estimating two times the string length as buffer size
+    hoedown_buffer *html = hoedown_buffer_new( length * 2 );
+    hoedown_document_render( document, html, sequence, length );
+
+    return QString::fromLocal8Bit( (char*) html->data );
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)
