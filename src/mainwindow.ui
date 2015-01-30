@@ -116,7 +116,7 @@ p, li { white-space: pre-wrap; }
 	background-image: url(:/images/search.png);
 	background-repeat: no-repeat;
 	background-position: center left;
-	margin-right: 6px;
+	margin-right: 12px;
 }
 </string>
         </property>
