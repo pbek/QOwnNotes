@@ -635,10 +635,10 @@ bool Note::removeNoteFile() {
 // return html rendered markdown of note text
 //
 QString Note::toMarkdownHtml() {
-    hoedown_renderer *renderer = hoedown_html_renderer_new( HOEDOWN_HTML_USE_XHTML, 0 );
-    hoedown_document *document = hoedown_document_new(renderer, HOEDOWN_EXT_AUTOLINK, 16);
+    hoedown_renderer *renderer = hoedown_html_renderer_new( HOEDOWN_HTML_USE_XHTML, 16 );
+    hoedown_document *document = hoedown_document_new(renderer, (hoedown_extensions) HOEDOWN_EXT_SPAN, 16);
 
-    QString str = this->getNoteText();
+    QString str = this->noteText;
 
     int length = str.length();
     unsigned char *sequence = NULL;
@@ -646,9 +646,21 @@ QString Note::toMarkdownHtml() {
 
     // estimating two times the string length as buffer size
     hoedown_buffer *html = hoedown_buffer_new( length * 2 );
+
+    // render markdown html
     hoedown_document_render( document, html, sequence, length );
 
-    return QString::fromLocal8Bit( (char*) html->data );
+    // get markdown html
+    QString result = QString::fromLocal8Bit( (char*) html->data, html->size );
+
+    /* Cleanup */
+    free(sequence);
+    hoedown_buffer_free(html);
+
+    hoedown_document_free(document);
+    hoedown_html_renderer_free(renderer);
+
+    return result;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

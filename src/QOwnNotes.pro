@@ -56,4 +56,5 @@ FORMS    += mainwindow.ui \
 
 RESOURCES += \
     images.qrc \
-    texts.qrc
+    texts.qrc \
+    breeze.qrc

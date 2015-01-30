@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setOrganizationDomain( "PBE" );
     QCoreApplication::setOrganizationName( "PBE" );
     QCoreApplication::setApplicationName( "QOwnNotes" + appNameAdd );
-    QCoreApplication::setApplicationVersion( "0.1" );
+    QCoreApplication::setApplicationVersion( "0." + QString::number( BUILD ) );
 
     ui->setupUi(this);
     this->setWindowTitle( "QOwnNotes - build " + QString::number( BUILD ) );
@@ -112,7 +112,7 @@ void MainWindow::setupMainSplitter()
     this->mainSplitter = new QSplitter;
 
     this->mainSplitter->addWidget(ui->notesListWidget);
-    this->mainSplitter->addWidget(ui->noteTextEdit);
+    this->mainSplitter->addWidget(ui->noteTabWidget);
 
     // restore splitter sizes
     QSettings settings;
@@ -203,11 +203,13 @@ void MainWindow::notesWereModified( const QString& str )
                 case NoteDiffDialog::Overwrite:
                     {
                         const QSignalBlocker blocker( this->noteDirectoryWatcher );
-                        note.storeNoteTextFileToDisk();
+                        this->currentNote.store();
+                        this->currentNote.storeNoteTextFileToDisk();
                         this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
 
                         // just to make sure everything is uptodate
-                        this->currentNote.refetch();
+//                        this->currentNote = note;
+//                        this->setNoteTextFromNote( &note, true );
 
                         // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
                         waitMsecs( 100 );
@@ -217,10 +219,12 @@ void MainWindow::notesWereModified( const QString& str )
                 // reload note file from disk
                 case NoteDiffDialog::Reload:
                     note.updateNoteTextFromDisk();
+                    note.store();
+                    this->currentNote = note;
 
                     {
                         const QSignalBlocker blocker( this->ui->noteTextEdit );
-                        this->setNoteTextFromNote( note );
+                        this->setNoteTextFromNote( &note );
                     }
                     break;
 
@@ -427,7 +431,7 @@ void MainWindow::setCurrentNote( Note note, bool updateNoteText )
     if ( updateNoteText )
     {
         const QSignalBlocker blocker( this->ui->noteTextEdit );
-        this->setNoteTextFromNote( note );
+        this->setNoteTextFromNote( &note );
     }
 }
 
@@ -513,6 +517,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             // set focus to the note text edit if Key_Return or Key_Tab were pressed in the notes list
             if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Tab ) )
             {
+                setNoteTextEditMode( true );
                 focusNoteTextEdit();
                 return true;
             }
@@ -534,10 +539,12 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
 void MainWindow::searchInNoteTextEdit( QString &str )
 {
     QList<QTextEdit::ExtraSelection> extraSelections;
+    QList<QTextEdit::ExtraSelection> extraSelections2;
 
     if ( str.count() >= 2 )
     {
         ui->noteTextEdit->moveCursor( QTextCursor::Start );
+        ui->noteTextView->moveCursor( QTextCursor::Start );
         QColor color = QColor( 0, 180, 0, 100 );
 
         while( ui->noteTextEdit->find( str ) )
@@ -548,9 +555,19 @@ void MainWindow::searchInNoteTextEdit( QString &str )
             extra.cursor = ui->noteTextEdit->textCursor();
             extraSelections.append( extra );
         }
+
+        while( ui->noteTextView->find( str ) )
+        {
+            QTextEdit::ExtraSelection extra;
+            extra.format.setBackground( color );
+
+            extra.cursor = ui->noteTextView->textCursor();
+            extraSelections2.append( extra );
+        }
     }
 
     ui->noteTextEdit->setExtraSelections( extraSelections );
+    ui->noteTextView->setExtraSelections( extraSelections2 );
 }
 
 /**
@@ -568,9 +585,13 @@ void MainWindow::searchForSearchLineTextInNoteTextEdit()
 void MainWindow::setNoteTextEditMode( bool isInEditMode )
 {
     this->noteTextEditIsInEditMode = isInEditMode;
-    this->ui->noteTextEdit->setReadOnly( !isInEditMode );
     this->ui->actionToggleEditMode->setChecked( isInEditMode );
     this->ui->actionToggleEditMode->setToolTip( "Toogle edit mode - currently " + QString( isInEditMode ? "editing" : "viewing" ) );
+
+    {
+        const QSignalBlocker blocker( this->ui->noteTabWidget );
+        this->ui->noteTabWidget->setCurrentIndex( isInEditMode ? 0 : 1 );
+    }
 
     if ( this->currentNote.exists() )
     {
@@ -581,16 +602,22 @@ void MainWindow::setNoteTextEditMode( bool isInEditMode )
 /**
  * set the right note text according to whether noteText is in edit mode or not
  */
-void MainWindow::setNoteTextFromNote( Note note )
+void MainWindow::setNoteTextFromNote( Note *note )
 {
-    if ( this->noteTextEditIsInEditMode )
+    setNoteTextFromNote( note, false );
+}
+
+/**
+ * set the right note text according to whether noteText is in edit mode or not
+ */
+void MainWindow::setNoteTextFromNote( Note *note, bool updateNoteTextViewOnly )
+{
+    if ( !updateNoteTextViewOnly )
     {
-        this->ui->noteTextEdit->setText( note.getNoteText() );
+        this->ui->noteTextEdit->setText( note->getNoteText() );
     }
-    else
-    {
-        this->ui->noteTextEdit->setHtml( note.toMarkdownHtml() );
-    }
+
+    this->ui->noteTextView->setHtml( note->toMarkdownHtml() );
 }
 
 /*!
@@ -646,6 +673,7 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered()
         buildNotesIndex();
         loadNoteDirectoryList();
         this->ui->noteTextEdit->clear();
+        this->ui->noteTextView->clear();
     }
 }
 
@@ -777,12 +805,18 @@ void MainWindow::on_action_Note_note_triggered()
     QDateTime currentDate = QDateTime::currentDateTime();
 
     // replacing ":" with "_" for Windows systems
-    QString text = "Note " + currentDate.toString( Qt::ISODate ).replace( ":", "_" );
+    QString text = "Note " + currentDate.toString( Qt::ISODate ).replace( ":", "." );
     this->ui->searchLineEdit->setText( text );
     on_searchLineEdit_returnPressed();
 }
 
 void MainWindow::on_actionToggleEditMode_triggered()
 {
-//    this->setNoteTextEditMode( this->ui->actionToggleEditMode->isChecked() );
+    this->setNoteTextEditMode( this->ui->actionToggleEditMode->isChecked() );
+}
+
+void MainWindow::on_noteTabWidget_currentChanged(int index)
+{
+    this->setNoteTextEditMode( index == 0 );
+    qDebug() << __func__ << " - 'index': " << index;
 }

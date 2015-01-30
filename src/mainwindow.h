@@ -49,6 +49,8 @@ private slots:
 
     void on_actionToggleEditMode_triggered();
 
+    void on_noteTabWidget_currentChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -75,7 +77,8 @@ private:
     void searchForSearchLineTextInNoteTextEdit();
     int openNoteDiffDialog(Note changedNote);
     void setNoteTextEditMode(bool isInEditMode);
-    void setNoteTextFromNote(Note note);
+    void setNoteTextFromNote(Note *note);
+    void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
 };
 
 #endif // MAINWINDOW_H

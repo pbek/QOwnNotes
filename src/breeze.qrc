@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/breeze/document-edit.svg</file>
+        <file>images/breeze/document-new.svg</file>
+        <file>images/breeze/edit-delete.svg</file>
+        <file>images/breeze/edit-find.svg</file>
+        <file>images/breeze/folder-sync.svg</file>
+        <file>images/breeze/help-about.svg</file>
+        <file>images/breeze/lc_setdocumentproperties.svg</file>
+        <file>images/breeze/system-shutdown.svg</file>
+    </qresource>
+</RCC>

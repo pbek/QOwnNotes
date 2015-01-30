@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1123</width>
-    <height>846</height>
+    <width>1024</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -37,23 +37,60 @@
        <number>6</number>
       </property>
       <item row="1" column="1">
-       <widget class="QTextEdit" name="noteTextEdit">
-        <property name="styleSheet">
-         <string notr="true">* {
+       <widget class="QTabWidget" name="noteTabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="editTab">
+         <attribute name="title">
+          <string>Edit</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QTextEdit" name="noteTextEdit">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">* {
 /*	border: 1px solid inherit;*/
 }
 </string>
-        </property>
-        <property name="html">
-         <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+            </property>
+            <property name="html">
+             <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-        <property name="acceptRichText">
-         <bool>false</bool>
-        </property>
+            </property>
+            <property name="acceptRichText">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="viewTab">
+         <attribute name="title">
+          <string>Markdown</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <item row="0" column="0">
+           <widget class="QTextEdit" name="noteTextView">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+            <property name="acceptRichText">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </widget>
       </item>
       <item row="1" column="0">
@@ -66,7 +103,7 @@ p, li { white-space: pre-wrap; }
         </property>
        </widget>
       </item>
-      <item row="0" column="0" colspan="2">
+      <item row="0" column="0" colspan="3">
        <widget class="QLineEdit" name="searchLineEdit">
         <property name="toolTip">
          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -94,7 +131,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1123</width>
+     <width>1024</width>
      <height>34</height>
     </rect>
    </property>
@@ -105,6 +142,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
+    <addaction name="actionToggleEditMode"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="separator"/>
@@ -124,12 +162,17 @@ p, li { white-space: pre-wrap; }
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
+   <addaction name="action_Note_note"/>
    <addaction name="actionToggleEditMode"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/system-shutdown.svg</normaloff>:/images/breeze/system-shutdown.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Quit</string>
    </property>
@@ -138,11 +181,19 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionSet_ownCloud_Folder">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/folder-sync.svg</normaloff>:/images/breeze/folder-sync.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Set ownCloud folder</string>
    </property>
   </action>
   <action name="action_Find_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/edit-find.svg</normaloff>:/images/breeze/edit-find.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Find note</string>
    </property>
@@ -151,6 +202,10 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Remove_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/edit-delete.svg</normaloff>:/images/breeze/edit-delete.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Remove note</string>
    </property>
@@ -164,11 +219,19 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionAbout_QOwnNotes">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/help-about.svg</normaloff>:/images/breeze/help-about.svg</iconset>
+   </property>
    <property name="text">
     <string>About &amp;QOwnNotes...</string>
    </property>
   </action>
   <action name="action_Note_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-new.svg</normaloff>:/images/breeze/document-new.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;New note</string>
    </property>
@@ -181,7 +244,8 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="edit"/>
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-edit.svg</normaloff>:/images/breeze/document-edit.svg</iconset>
    </property>
    <property name="text">
     <string>Toggle Edit Mode</string>
@@ -197,6 +261,7 @@ p, li { white-space: pre-wrap; }
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="images.qrc"/>
+  <include location="breeze.qrc"/>
  </resources>
  <connections/>
 </ui>

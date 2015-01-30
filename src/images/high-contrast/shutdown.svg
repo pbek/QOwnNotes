@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg3304" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" sodipodi:docname="system-shutdown.svg" height="48px" sodipodi:version="0.32" width="48px" xmlns:cc="http://web.resource.org/cc/" xmlns:dc="http://purl.org/dc/elements/1.1/" sodipodi:docbase="/home/luca" xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd">
+ <sodipodi:namedview id="base" bordercolor="#666666" pagecolor="#ffffff" showgrid="true" borderopacity="1.0"/>
+ <metadata id="metadata3309">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1">
+  <path id="path3312" sodipodi:rx="20.929504" sodipodi:ry="20.929504" style="fill-rule:evenodd;stroke:#fff;stroke-width:3" sodipodi:type="arc" d="m44.93 23.937a20.93 20.93 0 1 1 -41.86 0 20.93 20.93 0 1 1 41.86 0z" transform="matrix(1.0253 0 0 1.0252 -.60161 -.54568)" sodipodi:cy="23.937336" sodipodi:cx="24.000000"/>
+  <path id="path4040" sodipodi:nodetypes="cc" style="stroke:#fff;stroke-width:6;fill:none" d="m24 9.0052v16.992"/>
+  <path id="path6224" sodipodi:nodetypes="czz" style="stroke-linejoin:round;stroke:#fff;stroke-width:6;fill:none" d="m18.063 13.872c-9.2784-0.389-12.217 22.193 5.812 22.193 18.091 0 15.43-22.707 6.203-21.942"/>
+ </g>
+</svg>
