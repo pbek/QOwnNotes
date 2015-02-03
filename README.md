@@ -23,7 +23,7 @@ You can visit the [QOwnNotes project page](http://www.bekerle.com/QOwnNotes) for
 - application can be operated with keyboard shortcuts.
 - external changes of note files are watched (notes or note list are reloaded)
 - differences between current note and externally changed note are showed in a dialog
-- markdown highlighting of notes
+- markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
 ## Building QOwnNotes
