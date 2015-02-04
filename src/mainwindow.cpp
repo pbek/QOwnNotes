@@ -588,14 +588,22 @@ void MainWindow::setNoteTextEditMode( bool isInEditMode )
     this->ui->actionToggleEditMode->setChecked( isInEditMode );
     this->ui->actionToggleEditMode->setToolTip( "Toogle edit mode - currently " + QString( isInEditMode ? "editing" : "viewing" ) );
 
+    // set the tab index
     {
         const QSignalBlocker blocker( this->ui->noteTabWidget );
         this->ui->noteTabWidget->setCurrentIndex( isInEditMode ? 0 : 1 );
     }
 
+    // make sure the current note is set
     if ( this->currentNote.exists() )
     {
         this->setCurrentNote( this->currentNote, true );
+    }
+
+    // restore search after switching between modes
+    if ( ui->searchLineEdit->text() != "" )
+    {
+        searchForSearchLineTextInNoteTextEdit();
     }
 }
 
@@ -818,5 +826,4 @@ void MainWindow::on_actionToggleEditMode_triggered()
 void MainWindow::on_noteTabWidget_currentChanged(int index)
 {
     this->setNoteTextEditMode( index == 0 );
-    qDebug() << __func__ << " - 'index': " << index;
 }
