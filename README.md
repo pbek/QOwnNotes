@@ -1,6 +1,6 @@
 # QOwnNotes
  
-[QOwnNotes](http://www.bekerle.com/QOwnNotes) is a **notepad**  for **Linux**, **Mac OS X** and **Windows** (it's written in **Qt 5.4**), that works together with the **notes application** of [ownCloud](http://owncloud.org/).
+[QOwnNotes](http://www.bekerle.com/QOwnNotes) is the **open source notepad**  for **Linux**, **Mac OS X** and **Windows**, that works together with the **notes application** of [**ownCloud**](http://owncloud.org/).
 
 So you are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
 
