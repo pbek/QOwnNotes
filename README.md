@@ -37,6 +37,14 @@ git clone https://github.com/pbek/QOwnNotes.git -b develop
 
 Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and clicking on *Build / Build Project QOwnNotes*.
 
+Or you can build it at the command line:
+
+```shell
+cd QOwnNotes/src
+qmake QOwnNotes.pro -r -spec linux-g++-64
+make
+```
+
 Please feel free to contribute source code to this project, make suggestions or report troubles!
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
