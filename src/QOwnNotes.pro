@@ -44,7 +44,6 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/buffer.h \
     libraries/hoedown/document.h \
     libraries/hoedown/escape.h \
-    libraries/hoedown/html_blocks.h \
     libraries/hoedown/stack.h \
     libraries/hoedown/version.h \
     notediffdialog.h \

@@ -60,7 +60,7 @@ private:
     int firstVisibleNoteListRow;
     HGMarkdownHighlighter *highlighter;
     NoteDiffDialog *noteDiffDialog;
-    bool noteTextEditIsInEditMode = false;
+    bool noteTextEditIsInEditMode;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

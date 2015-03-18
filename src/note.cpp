@@ -546,7 +546,7 @@ int Note::storeDirtyNotesToDisk( Note &currentNote ) {
     }
 }
 
-bool Note::createFromFile( QFile &file ) {
+void Note::createFromFile( QFile &file ) {
     if ( file.open( QIODevice::ReadOnly ) )
     {
         QTextStream in( &file );

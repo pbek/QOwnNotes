@@ -37,7 +37,7 @@ public:
     static int storeDirtyNotesToDisk( Note &currentNote );
     bool updateNoteTextFromDisk();
     friend QDebug operator<<(QDebug dbg, const Note &note);
-    bool createFromFile(QFile &file);
+    void createFromFile(QFile &file);
     static bool deleteAll();
     bool fileExists();
     bool exists();
