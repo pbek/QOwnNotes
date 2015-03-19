@@ -60,9 +60,9 @@ RESOURCES += \
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0
-    message("DEBUG!")
+    message("Currently in DEBUG mode.")
 } else {
     DEFINES += QT_NO_DEBUG
     DEFINES += QT_NO_DEBUG_OUTPUT
-    message("RELEASE!")
+    message("Currently in RELEASE mode.")
 }
