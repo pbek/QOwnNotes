@@ -67,6 +67,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // set the edit mode for the note text edit
     this->setNoteTextEditMode( true );
 
+    // set our signal mapper
+    this->signalMapper = new QSignalMapper(this);
+
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu();
 }
@@ -98,23 +101,22 @@ void MainWindow::loadRecentNoteFolderListMenu()
     }
 
     this->ui->menuRecentNoteFolders->clear();
-    QSignalMapper* signalMapper = new QSignalMapper(this);
 
     Q_FOREACH( QString noteFolder, recentNoteFolders )
     {
         QAction *action = this->ui->menuRecentNoteFolders->addAction( noteFolder );
         // QObject::connect( action, SIGNAL( triggered() ), this, SLOT( setNoteFolder( noteFolder ) ) );
-        QObject::connect( action, SIGNAL( triggered() ), this, SLOT( map() ) );
+        QObject::connect( action, SIGNAL( triggered() ), signalMapper, SLOT( map() ) );
 
         signalMapper->setMapping( action, noteFolder );
-        QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( setNoteFolder( const QString & ) ) );
+        QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
     }
 }
 
 /*
  * Set a new note folder
  */
-void MainWindow::setNoteFolder( const QString& folderName )
+void MainWindow::changeNoteFolder( const QString &folderName )
 {
     QString oldPath = this->notesPath;
 
@@ -124,6 +126,9 @@ void MainWindow::setNoteFolder( const QString& folderName )
         this->notesPath = folderName;
         QSettings settings;
         settings.setValue( "General/notesPath", folderName );
+
+        // update the recent note folder list
+        storeRecentNoteFolder( folderName );
 
         buildNotesIndex();
         loadNoteDirectoryList();

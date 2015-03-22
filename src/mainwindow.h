@@ -41,16 +41,12 @@ private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_action_Find_note_triggered();
     void on_searchLineEdit_returnPressed();
-
     void on_action_Remove_note_triggered();
-
     void on_actionAbout_QOwnNotes_triggered();
-
     void on_action_Note_note_triggered();
-
     void on_actionToggleEditMode_triggered();
-
     void on_noteTabWidget_currentChanged(int index);
+    void changeNoteFolder(const QString &folderName);
 
 private:
     Ui::MainWindow *ui;
@@ -83,7 +79,6 @@ private:
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
     void loadRecentNoteFolderListMenu();
     void storeRecentNoteFolder(const QString &folderName);
-    void setNoteFolder(const QString &folderName);
 };
 
 #endif // MAINWINDOW_H
