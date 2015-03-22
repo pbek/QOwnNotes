@@ -142,12 +142,18 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;Note</string>
     </property>
+    <widget class="QMenu" name="menuRecentNoteFolders">
+     <property name="title">
+      <string>Recent note folders</string>
+     </property>
+    </widget>
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
     <addaction name="actionToggleEditMode"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
+    <addaction name="menuRecentNoteFolders"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
@@ -189,7 +195,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/breeze/folder-sync.svg</normaloff>:/images/breeze/folder-sync.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Set ownCloud folder</string>
+    <string>&amp;Set ownCloud note folder</string>
    </property>
   </action>
   <action name="action_Find_note">
@@ -263,8 +269,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

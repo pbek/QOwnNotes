@@ -8,6 +8,7 @@
 #include <QHash>
 #include <QFileDialog>
 #include <QEvent>
+#include <QSignalMapper>
 #include <note.h>
 #include "markdown-highlight/highlighter.h"
 #include "notediffdialog.h"
@@ -61,6 +62,7 @@ private:
     HGMarkdownHighlighter *highlighter;
     NoteDiffDialog *noteDiffDialog;
     bool noteTextEditIsInEditMode;
+    QSignalMapper *signalMapper;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();
@@ -79,6 +81,9 @@ private:
     void setNoteTextEditMode(bool isInEditMode);
     void setNoteTextFromNote(Note *note);
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
+    void loadRecentNoteFolderListMenu();
+    void storeRecentNoteFolder(const QString &folderName);
+    void setNoteFolder(const QString &folderName);
 };
 
 #endif // MAINWINDOW_H

@@ -66,6 +66,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // set the edit mode for the note text edit
     this->setNoteTextEditMode( true );
+
+    // load the recent note folder list in the menu
+    this->loadRecentNoteFolderListMenu();
 }
 
 MainWindow::~MainWindow()
@@ -78,6 +81,72 @@ MainWindow::~MainWindow()
 /*!
  * Methods
  */
+
+/*
+ * Loads the menu entries for the recent note folders
+ */
+void MainWindow::loadRecentNoteFolderListMenu()
+{
+    QSettings settings;
+    QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
+
+    // if there is no folder yet, add the current
+    if ( recentNoteFolders.length() == 0 )
+    {
+        recentNoteFolders.append( this->notesPath );
+        settings.setValue( "recentNoteFolders", recentNoteFolders );
+    }
+
+    this->ui->menuRecentNoteFolders->clear();
+    QSignalMapper* signalMapper = new QSignalMapper(this);
+
+    Q_FOREACH( QString noteFolder, recentNoteFolders )
+    {
+        QAction *action = this->ui->menuRecentNoteFolders->addAction( noteFolder );
+        // QObject::connect( action, SIGNAL( triggered() ), this, SLOT( setNoteFolder( noteFolder ) ) );
+        QObject::connect( action, SIGNAL( triggered() ), this, SLOT( map() ) );
+
+        signalMapper->setMapping( action, noteFolder );
+        QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( setNoteFolder( const QString & ) ) );
+    }
+}
+
+/*
+ * Set a new note folder
+ */
+void MainWindow::setNoteFolder( const QString& folderName )
+{
+    QString oldPath = this->notesPath;
+
+    // reload notes if notes folder was changed
+    if ( oldPath != folderName )
+    {
+        this->notesPath = folderName;
+        QSettings settings;
+        settings.setValue( "General/notesPath", folderName );
+
+        buildNotesIndex();
+        loadNoteDirectoryList();
+        this->ui->noteTextEdit->clear();
+        this->ui->noteTextView->clear();
+    }
+}
+
+/*
+ * Stores a new recent note folder
+ */
+void MainWindow::storeRecentNoteFolder( const QString& folderName )
+{
+    QSettings settings;
+    QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
+
+    recentNoteFolders.removeAll( folderName );
+    recentNoteFolders.prepend( folderName );
+    settings.setValue( "recentNoteFolders", recentNoteFolders );
+
+    // reload menu
+    loadRecentNoteFolderListMenu();
+}
 
 int MainWindow::openNoteDiffDialog( Note changedNote )
 {
@@ -383,6 +452,9 @@ QString MainWindow::selectOwnCloudFolder() {
         this->notesPath = dir;
         QSettings settings;
         settings.setValue( "General/notesPath", dir );
+
+        // stores folder to recent note folders
+        storeRecentNoteFolder( dir );
     }
     else
     {
