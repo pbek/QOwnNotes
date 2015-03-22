@@ -51,7 +51,8 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ## Minimum software requirements
 - A desktop operating system, that supports [QT](http://www.qt.io/)
-- QT 5.3
+- QT 5.3+
+- gcc 4.8+
 
 ## Binaries
 Currently there are created a deb packages for **Linux**, and DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes).
