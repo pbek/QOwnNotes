@@ -44,10 +44,10 @@ MainWindow::MainWindow(QWidget *parent) :
     loadNoteDirectoryList();
     this->noteDiffDialog = new NoteDiffDialog();
 
-    // look if we need to save something every 8 sec
+    // look if we need to save something every 10 sec
     QTimer *timer = new QTimer( this );
     QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    timer->start( 8000 );
+    timer->start( 10000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -100,14 +100,31 @@ void MainWindow::loadRecentNoteFolderListMenu()
         settings.setValue( "recentNoteFolders", recentNoteFolders );
     }
 
+    int maxItems = 15;
+    // remove items if there are too many
+    if ( recentNoteFolders.length() > maxItems )
+    {
+        // remove an item as long as there are too many of them
+        do
+        {
+            recentNoteFolders.removeAt( maxItems );
+        }
+        while ( recentNoteFolders.length() > maxItems );
+
+        settings.setValue( "recentNoteFolders", recentNoteFolders );
+    }
+
+    // clear menu list
     this->ui->menuRecentNoteFolders->clear();
 
+    // populate menu list
     Q_FOREACH( QString noteFolder, recentNoteFolders )
     {
+        // add a menu entry
         QAction *action = this->ui->menuRecentNoteFolders->addAction( noteFolder );
-        // QObject::connect( action, SIGNAL( triggered() ), this, SLOT( setNoteFolder( noteFolder ) ) );
         QObject::connect( action, SIGNAL( triggered() ), signalMapper, SLOT( map() ) );
 
+        // add an parameter to changeNoteFolder with the signal mapper
         signalMapper->setMapping( action, noteFolder );
         QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
     }
@@ -123,7 +140,13 @@ void MainWindow::changeNoteFolder( const QString &folderName )
     // reload notes if notes folder was changed
     if ( oldPath != folderName )
     {
+        // store everything before changing folder
+        storeUpdatedNotesToDisk();
+
+        // change notes path
         this->notesPath = folderName;
+
+        // store notesPath setting
         QSettings settings;
         settings.setValue( "General/notesPath", folderName );
 
@@ -132,7 +155,17 @@ void MainWindow::changeNoteFolder( const QString &folderName )
 
         buildNotesIndex();
         loadNoteDirectoryList();
-        this->ui->noteTextEdit->clear();
+
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+        {
+            this->ui->noteTextEdit->clear();
+        }
+
+        const QSignalBlocker blocker2( this->ui->searchLineEdit );
+        {
+            this->ui->searchLineEdit->clear();
+        }
+
         this->ui->noteTextView->clear();
     }
 }
@@ -448,6 +481,7 @@ QString MainWindow::selectOwnCloudFolder() {
         path = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes";
     }
 
+    // TODO: We sometimes seem to get a "QCoreApplication::postEvent: Unexpected null receiver" here
     QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud folder" ),
                                                  path,
                                                  QFileDialog::ShowDirsOnly );
@@ -757,7 +791,12 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered()
     {
         buildNotesIndex();
         loadNoteDirectoryList();
-        this->ui->noteTextEdit->clear();
+
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+        {
+            this->ui->noteTextEdit->clear();
+        }
+
         this->ui->noteTextView->clear();
     }
 }
