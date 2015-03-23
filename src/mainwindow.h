@@ -48,6 +48,8 @@ private slots:
     void on_noteTabWidget_currentChanged(int index);
     void changeNoteFolder(const QString &folderName);
 
+    void on_noteTextView_anchorClicked(const QUrl &arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -663,6 +663,10 @@ QString Note::toMarkdownHtml() {
     return result;
 }
 
+bool Note::isFetched() {
+    return ( this->id > 0 );
+}
+
 QDebug operator<<(QDebug dbg, const Note &note)
 {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name << " <fileName>" << note.fileName << " <hasDityData>" << note.hasDirtyData;

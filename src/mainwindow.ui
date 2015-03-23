@@ -90,6 +90,9 @@ p, li { white-space: pre-wrap; }
             <property name="openExternalLinks">
              <bool>true</bool>
             </property>
+            <property name="openLinks">
+             <bool>false</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -144,7 +147,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QMenu" name="menuRecentNoteFolders">
      <property name="title">
-      <string>Recent note folders</string>
+      <string>R&amp;ecent note folders</string>
      </property>
     </widget>
     <addaction name="action_Note_note"/>

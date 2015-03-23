@@ -47,6 +47,7 @@ public:
     bool removeNoteFile();
     bool remove(bool withFile);
     QString toMarkdownHtml();
+    bool isFetched();
 private:
     int id;
     QString name;

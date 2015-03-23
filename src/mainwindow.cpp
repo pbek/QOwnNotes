@@ -10,6 +10,7 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QKeyEvent>
+#include <QDesktopServices>
 #include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
@@ -942,4 +943,61 @@ void MainWindow::on_actionToggleEditMode_triggered()
 void MainWindow::on_noteTabWidget_currentChanged(int index)
 {
     this->setNoteTextEditMode( index == 0 );
+}
+
+/*
+ * Handles urls in the noteTextView
+ *
+ * examples:
+ * - <note://MyNote> opens the note "MyNote"
+ * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
+ * - <http://www.bekerle.com/QOwnNotes> opens the webpage
+ * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
+ */
+void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
+{
+    if ( url.scheme() == "note" )
+    {
+        QString fileName = url.host() + ".txt";
+
+        // this makes it possible to search for filenames containing spaces
+        // instead of spaces a "-" has to be used in the note link
+        // example: note://my-note-with-spaces-in-the-name
+        fileName = fileName.replace( "-", "?" );
+
+        // we need to search for the case sensitive filename, we only get it lowercase by QUrl
+        QDir currentDir = QDir( this->notesPath );
+        QStringList files;
+
+        // search for files with that name
+        files = currentDir.entryList( QStringList( fileName ), QDir::Files | QDir::NoSymLinks );
+
+        // did we find files?
+        if ( files.length() > 0 )
+        {
+            // take the first found file
+            fileName = files.at( 0 );
+
+            // does the file name has more than 4 character (something.txt)?
+            if ( fileName.length() > 4 )
+            {
+                // truncate the last for characters (.txt)
+                fileName = fileName.left( fileName.length() - 4 );
+
+                // try to fetch note
+                Note note = Note::fetchByName( fileName );
+
+                // does this note really exist?
+                if ( note.isFetched() )
+                {
+                    // set current note
+                    setCurrentNote( note );
+                }
+            }
+        }
+    }
+    else
+    {
+        QDesktopServices::openUrl( url );
+    }
 }
