@@ -951,7 +951,7 @@ void MainWindow::on_noteTabWidget_currentChanged(int index)
  * examples:
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
- * - <http://www.bekerle.com/QOwnNotes> opens the webpage
+ * - <http://www.qownnotes.org> opens the webpage
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
