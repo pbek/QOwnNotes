@@ -18,3 +18,4 @@ script:
   - qmake -qt=qt5 -project
   - qmake -qt=qt5 QOwnNotes.pro
   - make
+
