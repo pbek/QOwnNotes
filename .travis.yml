@@ -19,7 +19,7 @@ before_install:
 script:
   - cd src
   - /opt/qt54/bin/qt54-env.sh
-  - qmake -qt=qt5 -v
-  - qmake -qt=qt5 -project
-  - qmake -qt=qt5 QOwnNotes.pro
+  - qmake -v
+  - qmake -project
+  - qmake QOwnNotes.pro
   - make
