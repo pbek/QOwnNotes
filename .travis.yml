@@ -18,6 +18,7 @@ before_install:
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install qt5; fi
 script:
   - cd src
+  - cat /opt/qt54/bin/qt54-env.sh
   - /opt/qt54/bin/qt54-env.sh
   - qmake -v
   - qmake -project
