@@ -6,16 +6,20 @@ language: cpp
 
 before_install:
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then lsb_release -a; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
+  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt541/ubuntu; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
+  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
+  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qt54creator; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt54creator; fi
+
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update; fi
   - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install qt5; fi
 script:
   - cd src
+  - /opt/qt54/bin/qt54-env.sh
   - qmake -qt=qt5 -v
   - qmake -qt=qt5 -project
   - qmake -qt=qt5 QOwnNotes.pro
   - make
-
