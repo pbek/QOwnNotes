@@ -5,10 +5,11 @@ os:
 language: cpp
 
 before_install:
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then lsb_release -a; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt5-default qttools5-dev-tools; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
+  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
 
 script:
   - cd src
