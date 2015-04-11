@@ -846,6 +846,7 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1)
 void MainWindow::on_action_Find_note_triggered()
 {
     this->ui->searchLineEdit->setFocus();
+    this->ui->searchLineEdit->selectAll();
 }
 
 //
