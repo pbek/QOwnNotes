@@ -642,10 +642,15 @@ QString Note::toMarkdownHtml() {
 
     int length = str.length();
     unsigned char *sequence = NULL;
-    sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
 
-    // estimating two times the string length as buffer size (adding one byte for empty files)
-    hoedown_buffer *html = hoedown_buffer_new( length * 2 + 1 );
+#ifdef Q_OS_WIN32
+    sequence = (unsigned char*)qstrdup( str.toLocal8Bit().constData() );
+#else
+    sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
+#endif
+
+    // estimating two times the string length as buffer size (adding some bytes for empty files)
+    hoedown_buffer *html = hoedown_buffer_new( length * 2 + 10 );
 
     // render markdown html
     hoedown_document_render( document, html, sequence, length );
