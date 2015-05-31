@@ -459,7 +459,7 @@ tag_length(uint8_t *data, size_t size, hoedown_autolink_type *autolink)
 static void
 parse_inline(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t size)
 {
-	size_t i = 0, end = 0;
+	size_t i = 0, end = 0, consumed = 0;
 	hoedown_buffer work = { 0, 0, 0, 0, NULL, NULL, NULL };
 	uint8_t *active_char = doc->active_char;
 
@@ -483,12 +483,13 @@ parse_inline(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t si
 		if (end >= size) break;
 		i = end;
 
-		end = markdown_char_ptrs[ (int)active_char[data[end]] ](ob, doc, data + i, i, size - i);
+		end = markdown_char_ptrs[ (int)active_char[data[end]] ](ob, doc, data + i, i - consumed, size - i);
 		if (!end) /* no action from the callback */
 			end = i + 1;
 		else {
 			i += end;
 			end = i;
+			consumed = i;
 		}
 	}
 }
@@ -2224,7 +2225,15 @@ parse_table_row(
 		cell_start = i;
 
 		len = find_emph_char(data + i, size - i, '|');
-		i += len ? len : size - i;
+
+		/* Two possibilities for len == 0:
+		   1) No more pipe char found in the current line.
+		   2) The next pipe is right after the current one, i.e. empty cell.
+		   For case 1, we skip to the end of line; for case 2 we just continue.
+		*/
+		if (len == 0 && i < size && data[i] != '|')
+			len = size - i;
+		i += len;
 
 		cell_end = i - 1;
 
@@ -2751,6 +2760,10 @@ hoedown_document_new(
 
 	memset(doc->active_char, 0x0, 256);
 
+	if (extensions & HOEDOWN_EXT_UNDERLINE && doc->md.underline) {
+		doc->active_char['_'] = MD_CHAR_EMPHASIS;
+	}
+
 	if (doc->md.emphasis || doc->md.double_emphasis || doc->md.triple_emphasis) {
 		doc->active_char['*'] = MD_CHAR_EMPHASIS;
 		doc->active_char['_'] = MD_CHAR_EMPHASIS;
@@ -2766,7 +2779,7 @@ hoedown_document_new(
 	if (doc->md.linebreak)
 		doc->active_char['\n'] = MD_CHAR_LINEBREAK;
 
-	if (doc->md.image || doc->md.link)
+	if (doc->md.image || doc->md.link || doc->md.footnotes || doc->md.footnote_ref)
 		doc->active_char['['] = MD_CHAR_LINK;
 
 	doc->active_char['<'] = MD_CHAR_LANGLE;
