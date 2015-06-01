@@ -640,23 +640,16 @@ QString Note::toMarkdownHtml() {
 
     QString str = this->noteText;
 
-    int length = str.length();
-    unsigned char *sequence = NULL;
+    unsigned char *sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
+    int length = strlen( (char*) sequence );
 
-#ifdef Q_OS_WIN32
-    sequence = (unsigned char*)qstrdup( str.toLocal8Bit().constData() );
-#else
-    sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
-#endif
-
-    // estimating two times the string length as buffer size (adding some bytes for empty files)
-    hoedown_buffer *html = hoedown_buffer_new( length * 2 + 10 );
+    hoedown_buffer *html = hoedown_buffer_new( length );
 
     // render markdown html
     hoedown_document_render( document, html, sequence, length );
 
     // get markdown html
-    QString result = QString::fromLocal8Bit( (char*) html->data, html->size );
+    QString result = QString::fromUtf8( (char*) html->data, html->size );
 
     /* Cleanup */
     free(sequence);
