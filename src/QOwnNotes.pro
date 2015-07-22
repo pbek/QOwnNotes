@@ -46,7 +46,6 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/escape.h \
     libraries/hoedown/stack.h \
     libraries/hoedown/version.h \
-    libraries/hoedown/pool.h \
     notediffdialog.h \
     aboutdialog.h
 
