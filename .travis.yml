@@ -28,9 +28,8 @@ install:
 script:
   - /opt/qt54/bin/qt54-env.sh 
   -    cd src
-    && /opt/qt54/bin/qmake -v
     && /opt/qt54/bin/qmake -project
-    && /opt/qt54/bin/qmake QOwnNotes.pro
+    && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
     && make
 
 notifications:
