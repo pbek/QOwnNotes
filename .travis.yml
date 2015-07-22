@@ -1,26 +1,39 @@
+language: cpp
+
 os:
   - linux
   - osx
 
-language: cpp
+env:
+  - CONFIG=Release
+  - CONFIG=Debug
 
-before_install:
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then lsb_release -a; fi
-  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo add-apt-repository --yes ppa:beineri/opt-qt541/ubuntu; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get update -qq; fi
-  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
-  #- if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev qt5-default qttools5-dev-tools; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then apt-cache policy qt54creator; fi
-  - if [ "$TRAVIS_OS_NAME" = "linux" ]; then sudo apt-get install qt54creator; fi
+install:
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+      && sudo apt-add-repository -y ppa:beineri/opt-qt541
+      && sudo apt-get -qq update
+      && sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt5-qmake
+      && export CXX="g++-4.8"
+      && export CC="gcc-4.8"
+      ;
+    else
+         brew update
+      && brew unlink cmake
+      && brew install cmake
+      && brew install qt5
+      && brew install qt5-qmake
+      && chmod -R 755 /usr/local/opt/qt5/*
+      ;
+    fi
 
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew update; fi
-  - if [ "$TRAVIS_OS_NAME" = "osx" ]; then brew install qt5; fi
 script:
-  - cd src
-  - cat /opt/qt54/bin/qt54-env.sh
-  - /opt/qt54/bin/qt54-env.sh
-  - qmake -v
-  - qmake -project
-  - qmake QOwnNotes.pro
-  - make
+  -    cd src
+    && qmake -v
+    && qmake -project
+    && qmake QOwnNotes.pro
+    && make
+
+notifications:
+  email:
+    - patrizio@bekerle.com
