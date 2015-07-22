@@ -1,8 +1,8 @@
 # AppVeyor build configuration
 os: unstable
 install:
-#  - set QTDIR=C:\Qt\Qt5.3.2\5.3\mingw482_32
-  - set QTDIR=C:\Qt\5.4\mingw491_32
+#  - set QTDIR=C:\Qt\5.4\mingw491_32
+  - set QTDIR=C:\Qt\5.5\msvc2013_64
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
 build_script:
   - cd src
