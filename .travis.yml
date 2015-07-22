@@ -5,8 +5,8 @@ os:
   - osx
 
 env:
-  - CONFIG=Release
-  - CONFIG=Debug
+  - CONFIG=release
+  - CONFIG=debug
 
 install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
