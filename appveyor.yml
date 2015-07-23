@@ -15,7 +15,6 @@ build_script:
   - mingw32-make
   - copy release\QOwnNotes.exe ..\appveyor\QOwnNotes
 
-#artifacts:
+artifacts:
   # pushing entire folder as a zip archive
-#  - path: appveyor\QOwnNotes
-
+  - path: appveyor\QOwnNotes
