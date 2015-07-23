@@ -25,3 +25,5 @@ deploy:
     artifact: appveyor\QOwnNotes
     draft: false
     prerelease: false
+    auth_token:
+      secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
