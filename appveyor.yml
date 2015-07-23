@@ -8,4 +8,5 @@ build_script:
  # - configure.bat -platform win32-g++
   - qmake QOwnNotes.pro -r -spec win32-g++
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
-  - C:\Qt\Tools\mingw492_32\bin\mingw32-make.exe
+  - mingw32-make -v
+  - mingw32-make
