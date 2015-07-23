@@ -8,5 +8,4 @@ build_script:
   - cd src
  # - configure.bat -platform win32-g++
   - qmake QOwnNotes.pro
- # - mingw32-make
-  - make
+  - mingw32-make
