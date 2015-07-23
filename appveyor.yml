@@ -2,11 +2,11 @@
 os: unstable
 install:
   - set QTDIR=C:\Qt\5.4\mingw491_32
-  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw492_32\bin;C:\MinGW\bin
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\mingw492_32\bin
 build_script:
-  - copy appveyor\qopenglversionfunctions.h C:\Qt\5.4\mingw491_32\include\QtGui
+  # using a header file without MemoryBarrier, that causes the build to fail
+  - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
   - cd src
- # - configure.bat -platform win32-g++
   - qmake QOwnNotes.pro -r -spec win32-g++
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make -v

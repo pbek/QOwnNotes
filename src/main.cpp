@@ -6,10 +6,6 @@
 #include <QVBoxLayout>
 #include <QListView>
 
-// Windows always needs this to ensure that APIENTRY gets defined
-#if defined(Q_OS_WIN)
-# undef MemoryBarrier
-#endif
 
 int main(int argc, char *argv[])
 {
