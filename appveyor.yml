@@ -1,11 +1,11 @@
 # AppVeyor build configuration
 os: unstable
 install:
-#  - set QTDIR=C:\Qt\5.4\mingw491_32
-  - set QTDIR=C:\Qt\5.4\msvc2013_64_opengl
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set QTDIR=C:\Qt\5.4\mingw491_32
+  - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw492_32\bin;C:\MinGW\bin
 build_script:
   - cd src
  # - configure.bat -platform win32-g++
-  - qmake QOwnNotes.pro
-  - mingw32-make
+  - qmake QOwnNotes.pro -r -spec win32-g++
+#  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
+  - C:\Qt\Tools\mingw492_32\bin\mingw32-make.exe
