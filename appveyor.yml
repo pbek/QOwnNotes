@@ -4,6 +4,7 @@ install:
   - set QTDIR=C:\Qt\5.4\mingw491_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\Qt\Tools\mingw492_32\bin;C:\MinGW\bin
 build_script:
+  - copy appveyor\qopenglversionfunctions.h C:\Qt\5.4\mingw491_32\include\QtGui
   - cd src
  # - configure.bat -platform win32-g++
   - qmake QOwnNotes.pro -r -spec win32-g++
