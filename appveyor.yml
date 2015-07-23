@@ -18,3 +18,4 @@ build_script:
 artifacts:
   # pushing entire folder as a zip archive
   - path: appveyor\QOwnNotes
+
