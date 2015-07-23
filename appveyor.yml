@@ -1,8 +1,10 @@
 # AppVeyor build configuration
 os: unstable
+
 install:
   - set QTDIR=C:\Qt\5.4\mingw491_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+
 build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
@@ -11,3 +13,8 @@ build_script:
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make -v
   - mingw32-make
+  - copy release\QOwnNotes.exe ..\appveyor\QOwnNotes
+
+artifacts:
+  # pushing entire folder as a zip archive
+  - path: appveyor\QOwnNotes
