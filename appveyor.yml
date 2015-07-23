@@ -18,11 +18,12 @@ build_script:
 artifacts:
   # pushing entire folder as a zip archive
   - path: appveyor\QOwnNotes
+    name: qownnotes_package
 
 deploy:
   # Deploy to GitHub Releases
   - provider: GitHub
-    artifact: appveyor\QOwnNotes
+    artifact: qownnotes_package
     draft: false
     prerelease: false
     auth_token:
