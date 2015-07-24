@@ -41,7 +41,7 @@ before_deploy:
   #
   - cd ../travis
   - dpkg-deb -x QOwnNotes.deb build
-  - mv ../QOwnNotes build/opt/QOwnNotes/
+  - mv ../src/QOwnNotes build/opt/QOwnNotes/
   - sed -i 's/%TRAVIS_BUILD_NUMBER%/'"$$TRAVIS_BUILD_NUMBER"'/g' build/DEBIAN/control
   - dpkg -b build QOwnNotes.deb
   #
@@ -57,7 +57,7 @@ deploy:
   provider: releases
   api_key:
     secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-  file: travis/QOwnNotes.deb
+  file: QOwnNotes.deb
   skip_cleanup: true
   on:
     repo: pbek/QOwnNotes
