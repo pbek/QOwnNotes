@@ -42,7 +42,7 @@ before_deploy:
   - cd ../travis
   - dpkg-deb -x QOwnNotes.deb build
   - mv ../src/QOwnNotes build/opt/QOwnNotes/
-  - sed -i 's/%TRAVIS_BUILD_NUMBER%/'"$$TRAVIS_BUILD_NUMBER"'/g' build/DEBIAN/control
+  - sed -i 's/TRAVIS_BUILD_NUMBER/'"$TRAVIS_BUILD_NUMBER"'/g' build/DEBIAN/control
   - dpkg -b build QOwnNotes.deb
   #
   # add a tag

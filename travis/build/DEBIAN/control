@@ -1,5 +1,5 @@
 Package: QOwnNotes
-Version: 0.%TRAVIS_BUILD_NUMBER%
+Version: 0.TRAVIS_BUILD_NUMBER
 Installed-Size: 568
 Source: https://github.com/pbek/QOwnNotes
 Maintainer: Patrizio Bekerle <patrizio@bekerle.com>
