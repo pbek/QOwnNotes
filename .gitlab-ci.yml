@@ -1,0 +1,10 @@
+job1:
+  type: build
+  script:
+    - cd src
+    - qmake
+    - make
+  only:
+    - develop
+#    - master
+    
