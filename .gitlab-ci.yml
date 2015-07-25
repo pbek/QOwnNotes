@@ -1,8 +1,11 @@
 job1:
   type: build
   script:
+    - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
+    - export QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
-    - qmake
+    - qmake -project
+    - qmake QOwnNotes.pro
     - make
   only:
     - develop
