@@ -1,7 +1,6 @@
-job1:
+build_job:
   type: build
   script:
-    - export
     - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
     - export QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
@@ -10,9 +9,15 @@ job1:
     - qmake -project
     - qmake QOwnNotes.pro -r -spec macx-clang CONFIG+=x86_64
     - make
-    - rm QOwnNotes.dmg
+  only:
+    - develop
+    - master
+
+deployment_job:
+  type: deploy
+  script:
+    - cd src
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
   only:
     - develop
 #    - master
-    
