@@ -4,9 +4,11 @@ job1:
     - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
     - export QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
+    - echo "#define BUILD ""$CI_BUILD_ID" > build_number.h
     - qmake -project
     - qmake QOwnNotes.pro
     - make
+    - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
   only:
     - develop
 #    - master
