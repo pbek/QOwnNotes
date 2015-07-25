@@ -14,8 +14,8 @@ build_script:
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make -v
   - mingw32-make
-  - rmdir ..\appveyor\QOwnNotes /s
-  - md ..\appveyor\QOwnNotes
+  - deltree ..\appveyor\QOwnNotes\*.* /y
+#  - md ..\appveyor\QOwnNotes
   - copy release\QOwnNotes.exe ..\appveyor\QOwnNotes
   - cd ..\appveyor\QOwnNotes
   - windeployqt QOwnNotes.exe
