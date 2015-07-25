@@ -31,6 +31,7 @@ install:
 script:
   - /opt/qt54/bin/qt54-env.sh 
   - cd src
+  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - /opt/qt54/bin/qmake -project
   - /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
