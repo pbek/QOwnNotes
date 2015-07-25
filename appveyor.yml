@@ -18,7 +18,7 @@ build_script:
 #  - md ..\appveyor\QOwnNotes
   - copy release\QOwnNotes.exe ..\appveyor\QOwnNotes
   - cd ..\appveyor\QOwnNotes
-  - windeployqt QOwnNotes.exe
+  - windeployqt --release QOwnNotes.exe
 
 artifacts:
   # pushing entire folder as a zip archive
