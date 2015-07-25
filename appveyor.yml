@@ -9,7 +9,7 @@ build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
   - cd src
-  - echo "#define BUILD {build}" > build_number.h
+  - "echo #define BUILD {build} > build_number.h"
   - qmake QOwnNotes.pro -r -spec win32-g++
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
   - mingw32-make -v
