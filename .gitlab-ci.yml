@@ -1,9 +1,12 @@
-build_job:
-  type: build
-  script:
+# https://ci.gitlab.com/lint
+before_script:
     - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
     - export QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
+
+build_job:
+  type: build
+  script:
     # http://doc.gitlab.com/ci/variables/README.html
     - echo "#define BUILD ""$CI_BUILD_ID" > build_number.h
     - qmake -project
@@ -16,7 +19,6 @@ build_job:
 deployment_job:
   type: deploy
   script:
-    - cd src
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
   only:
     - develop
