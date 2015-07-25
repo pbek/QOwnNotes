@@ -1,13 +1,16 @@
 job1:
   type: build
   script:
+    - export
     - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
     - export QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
+    # http://doc.gitlab.com/ci/variables/README.html
     - echo "#define BUILD ""$CI_BUILD_ID" > build_number.h
     - qmake -project
-    - qmake QOwnNotes.pro
+    - qmake QOwnNotes.pro -r -spec macx-clang CONFIG+=x86_64
     - make
+    - rm QOwnNotes.dmg
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
   only:
     - develop
