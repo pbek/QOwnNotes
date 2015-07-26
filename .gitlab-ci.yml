@@ -21,6 +21,13 @@ deployment_job:
   type: deploy
   script:
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
+    - "API_JSON=$(printf '{"tag_name": "v%s","target_commitish": "master","name": "v%s","body": "Release of version %s for OS X","draft": false,"prerelease": false}' $CI_BUILD_ID $CI_BUILD_ID $CI_BUILD_ID)"
+    # $GITHUB_ACCESS_TOKEN is set as a secret variable
+    # https://ci.gitlab.com/projects/5070/variables
+    # https://github.com/settings/tokens
+    - curl --data "$API_JSON" https://api.github.com/repos/pbek/testrepo/releases?access_token=$GITHUB_ACCESS_TOKEN
+#    - curl -H "Authorization: token $GITHUB_ACCESS_TOKEN" -H "Accept: application/vnd.github.manifold-preview" -H "Content-Type: application/x-apple-diskimage" --data-binary @QOwnNotes.dmg "https://uploads.github.com/repos/pbek/testrepo/releases/1587043/assets?name=QOwnNotes.dmg"
+
   only:
     - develop
 #    - master
