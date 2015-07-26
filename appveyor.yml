@@ -22,6 +22,7 @@ build_script:
   - copy release\QOwnNotes.exe ..\%RELEASE_PATH%
   - cd ..\%RELEASE_PATH%
   # fetching dependencies of QT app
+  # http://doc.qt.io/qt-5/windows-deployment.html
   - windeployqt --release QOwnNotes.exe
   # this dll was missed by windeployqt
   - copy ..\libwinpthread-1.dll . /y
