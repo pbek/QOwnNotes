@@ -4,8 +4,8 @@
 #
 
 before_script:
-    - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
-    - export QTDIR="/Applications/Qt/5.4/clang_64"
+    - PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
+    - QTDIR="/Applications/Qt/5.4/clang_64"
     - cd src
     # http://doc.gitlab.com/ci/variables/README.html
     - echo "#define BUILD ""$CI_BUILD_ID" > build_number.h
@@ -25,10 +25,10 @@ deployment_job:
   type: deploy
   script:
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
-    - export RELEASE_JSON_FILE="../src/gitlab-ci/github-release.json"
+    - RELEASE_JSON_FILE="../gitlab-ci/github-release.json"
     - cat $RELEASE_JSON_FILE
     - sed -i 's/CI_BUILD_ID/'"$CI_BUILD_ID"'/g' $RELEASE_JSON_FILE
-    - export API_JSON=$(cat $RELEASE_JSON_FILE)
+    - API_JSON=$(cat $RELEASE_JSON_FILE)
     # $GITHUB_ACCESS_TOKEN is set as a secret variable
     # https://ci.gitlab.com/projects/5070/variables
     # https://github.com/settings/tokens
