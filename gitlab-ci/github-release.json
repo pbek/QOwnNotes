@@ -1,0 +1,8 @@
+{
+    "tag_name": "macosx-bCI_BUILD_ID",
+    "target_commitish": "master",
+    "name": "macosx-bCI_BUILD_ID",
+    "body": "Release of build CI_BUILD_ID for Mac OS X",
+    "draft": false,
+    "prerelease": false
+}

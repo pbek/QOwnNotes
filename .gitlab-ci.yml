@@ -25,8 +25,9 @@ deployment_job:
   type: deploy
   script:
     - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
-#    - "API_JSON=$(printf '{"tag_name": "v%s","target_commitish": "master","name": "v%s","body": "Release of version %s for OS X","draft": false,"prerelease": false}' $CI_BUILD_ID $CI_BUILD_ID $CI_BUILD_ID)"
-    - "API_JSON=$(printf '{'tag_name': 'v%s','target_commitish': 'master','name': 'v%s','body': 'Release of version %s for OS X','draft': false,'prerelease': false}' $CI_BUILD_ID $CI_BUILD_ID $CI_BUILD_ID)"
+    - RELEASE_JSON_FILE="../src/gitlab-ci/github-release.json"
+    - sed -i 's/CI_BUILD_ID/'"$CI_BUILD_ID"'/g' $RELEASE_JSON_FILE
+    - API_JSON=$(cat $RELEASE_JSON_FILE)
     # $GITHUB_ACCESS_TOKEN is set as a secret variable
     # https://ci.gitlab.com/projects/5070/variables
     # https://github.com/settings/tokens
