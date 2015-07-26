@@ -30,7 +30,7 @@ build_script:
 
 artifacts:
   # pushing entire folder as a zip archive
-  - path: %RELEASE_PATH%
+  - path: appveyor\release
     name: QOwnNotes
 
 deploy:
