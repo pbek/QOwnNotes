@@ -5,25 +5,32 @@ os: unstable
 install:
   - set QTDIR=C:\Qt\5.4\mingw491_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set RELEASE_PATH=appveyor\release
 
 build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
   - cd src
+  # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"
   - qmake QOwnNotes.pro -r -spec win32-g++
 #  - qmake QOwnNotes.pro -r -spec win32-g++ "CONFIG+=debug"
-  - mingw32-make -v
   - mingw32-make
-  - rd /s /q ..\appveyor\QOwnNotes
-  - md ..\appveyor\QOwnNotes
-  - copy release\QOwnNotes.exe ..\appveyor\QOwnNotes
-  - cd ..\appveyor\QOwnNotes
+  # creating the release path
+  - md ..\%RELEASE_PATH%
+  # copy the binary to our release path
+  - copy release\QOwnNotes.exe ..\%RELEASE_PATH%
+  - cd ..\%RELEASE_PATH%
+  # fetching dependencies of QT app
   - windeployqt --release QOwnNotes.exe
+  # this dll was missed by windeployqt
+  - copy ..\libwinpthread-1.dll . /y
+  # this dll didn't work when released by windeployqt
+  - copy ..\libstdc++-6.dll . /y
 
 artifacts:
   # pushing entire folder as a zip archive
-  - path: appveyor\QOwnNotes
+  - path: %RELEASE_PATH%
     name: QOwnNotes
 
 deploy:
