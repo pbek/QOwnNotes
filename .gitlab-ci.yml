@@ -1,4 +1,8 @@
+#
+# GitLab CI configuration for QOwnNotes
 # https://ci.gitlab.com/lint
+#
+
 before_script:
     - export PATH="/Applications/Qt/5.4/clang_64/bin:$PATH"
     - export QTDIR="/Applications/Qt/5.4/clang_64"
