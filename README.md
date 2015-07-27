@@ -4,7 +4,7 @@
 [![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 
-[QOwnNotes](http://www.bekerle.com/QOwnNotes) is the **open source notepad**  for **Linux**, **Mac OS X** and **Windows**, that works together with the **notes application** of [**ownCloud**](http://owncloud.org/).
+[QOwnNotes](http://www.qownnotes.org) is the **open source notepad**  for **Linux**, **Mac OS X** and **Windows**, that works together with the default **notes application** of [**ownCloud**](http://owncloud.org/).
 
 So you are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
 
@@ -12,12 +12,12 @@ The notes are stored as **plain text files** and are **synced with ownCloud's fi
 
 I like the concept of having notes accessible in plain text files, like it is done in the **ownCloud notes app**, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
 
-Visit the project page here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes)
+Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
 
 ## Screenshot
 ![Screenhot](screenshot.png)
 
-You can visit the [QOwnNotes project page](http://www.bekerle.com/QOwnNotes) for more **screenshots**.
+You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
 
 ## Features
 - a notes folder can be chosen
@@ -59,7 +59,7 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 - gcc 4.8+
 
 ## Binaries
-Currently there are created a deb packages for **Linux**, and DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them here: [QOwnNotes project page](http://www.bekerle.com/QOwnNotes).
+Currently there are created a deb packages for **Linux**, and DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them here: [QOwnNotes project page](http://www.qownnotes.org).
 
 Although if you always want the latest features, grab the source code and compile it yourself.
 
