@@ -1,8 +1,8 @@
 # QOwnNotes
- 
+
 [![Build Status Linux](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
+[![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
-[![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070?ref=develop)
 
 [QOwnNotes](http://www.bekerle.com/QOwnNotes) is the **open source notepad**  for **Linux**, **Mac OS X** and **Windows**, that works together with the **notes application** of [**ownCloud**](http://owncloud.org/).
 
