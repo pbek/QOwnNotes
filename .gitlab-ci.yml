@@ -37,7 +37,7 @@ deployment_job:
     - echo $RELEASE_ID
     # check if $RELEASE_ID is greater than 0, fail build if not
     - if [[ ! $i -gt 0 ]]; then exit 1; fi
-    export $GITHUB_ACCESS_TOKEN
+    - export $GITHUB_ACCESS_TOKEN
     # deploy QOwnNotes.dmg to GitHub Releases
     - ../gitlab-ci/deploy-file.sh
 
