@@ -35,10 +35,10 @@ deployment_job:
     # https://github.com/settings/tokens
     - RELEASE_ID=$(curl --data "$API_JSON" https://api.github.com/repos/pbek/testrepo/releases?access_token=$GITHUB_ACCESS_TOKEN | python -c 'import sys, json; print json.load(sys.stdin)["id"]')
     - echo $RELEASE_ID
-    # fail
-    - exit 1;
-    - echo no fail
-#    - curl -H "Authorization: token $GITHUB_ACCESS_TOKEN" -H "Accept: application/vnd.github.manifold-preview" -H "Content-Type: application/x-apple-diskimage" --data-binary @QOwnNotes.dmg "https://uploads.github.com/repos/pbek/testrepo/releases/1587043/assets?name=QOwnNotes.dmg"
+    # check if $RELEASE_ID is greater than 0, fail build if not
+    - if [[ ! $i -gt 0 ]]; then exit 1; fi
+    # deploy QOwnNotes.dmg
+    - curl -H "Authorization: token $GITHUB_ACCESS_TOKEN" -H "Accept: application/vnd.github.manifold-preview" -H "Content-Type: application/x-apple-diskimage" --data-binary @QOwnNotes.dmg "https://uploads.github.com/repos/pbek/testrepo/releases/$RELEASE_ID/assets?name=QOwnNotes.dmg"
 
   only:
     - develop
