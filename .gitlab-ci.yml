@@ -29,10 +29,12 @@ deployment_job:
     - cat $RELEASE_JSON_FILE
     - sed -i -e 's/CI_BUILD_ID/'"$CI_BUILD_ID"'/g' $RELEASE_JSON_FILE
     - API_JSON=$(cat $RELEASE_JSON_FILE)
+    # creating the GitHub release
     # $GITHUB_ACCESS_TOKEN is set as a secret variable
     # https://ci.gitlab.com/projects/5070/variables
     # https://github.com/settings/tokens
-    - curl --data "$API_JSON" https://api.github.com/repos/pbek/testrepo/releases?access_token=$GITHUB_ACCESS_TOKEN
+    - RELEASE_ID=$(curl --data "$API_JSON" https://api.github.com/repos/pbek/testrepo/releases?access_token=$GITHUB_ACCESS_TOKEN | python -c 'import sys, json; print json.load(sys.stdin)["id"]')
+    - echo $RELEASE_ID
 #    - curl -H "Authorization: token $GITHUB_ACCESS_TOKEN" -H "Accept: application/vnd.github.manifold-preview" -H "Content-Type: application/x-apple-diskimage" --data-binary @QOwnNotes.dmg "https://uploads.github.com/repos/pbek/testrepo/releases/1587043/assets?name=QOwnNotes.dmg"
 
   only:
