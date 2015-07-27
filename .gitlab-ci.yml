@@ -36,7 +36,7 @@ deployment_job:
     - export RELEASE_ID=$(curl --data "$API_JSON" https://api.github.com/repos/pbek/testrepo/releases?access_token=$GITHUB_ACCESS_TOKEN | python -c 'import sys, json; print json.load(sys.stdin)["id"]')
     - echo $RELEASE_ID
     # check if $RELEASE_ID is greater than 0, fail build if not
-    - if [[ ! $i -gt 0 ]]; then exit 1; fi
+    - if [[ ! $RELEASE_ID -gt 0 ]]; then exit 1; fi
     - export $GITHUB_ACCESS_TOKEN
     # deploy QOwnNotes.dmg to GitHub Releases
     - ../gitlab-ci/deploy-file.sh
