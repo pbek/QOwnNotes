@@ -440,7 +440,9 @@ bool Note::storeNoteTextFileToDisk() {
 // generates a new name and filename and removes the old file (the new file is not stored to a note text file!)
 //
 void Note::handleNoteTextFileName() {
-    QStringList noteTextLines = this->noteText.split( QRegExp( "(\\r\\n)|(\\n\\r)|\\r|\\n" ), QString::SkipEmptyParts );
+    // split the text into a string list
+    QStringList noteTextLines = this->noteText.split( QRegExp( "(\\r\\n)|(\\n\\r)|\\r|\\n" ) );
+
     // do nothing if there is no text
     if ( noteTextLines.count() == 0 ) return;
 
