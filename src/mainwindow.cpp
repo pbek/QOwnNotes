@@ -14,6 +14,7 @@
 #include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
+#include "version.h"
 #include "aboutdialog.h"
 
 
@@ -30,10 +31,10 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setOrganizationDomain( "PBE" );
     QCoreApplication::setOrganizationName( "PBE" );
     QCoreApplication::setApplicationName( "QOwnNotes" + appNameAdd );
-    QCoreApplication::setApplicationVersion( "0." + QString::number( BUILD ) );
+    QCoreApplication::setApplicationVersion( "version " + QString( VERSION ) + " - build " + QString::number( BUILD ) );
 
     ui->setupUi(this);
-    this->setWindowTitle( "QOwnNotes - build " + QString::number( BUILD ) );
+    this->setWindowTitle( "QOwnNotes - version " + QString( VERSION ) + " - build " + QString::number( BUILD ) );
 
     Note::createConnection();
 

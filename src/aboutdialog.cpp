@@ -1,6 +1,7 @@
 #include "aboutdialog.h"
 #include "ui_aboutdialog.h"
 #include "build_number.h"
+#include "version.h"
 #include <QFile>
 #include <QDate>
 #include <QTextStream>
@@ -22,6 +23,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
         // fill in the variables
         html = html.replace( "BUILD_NUMBER", QString::number( BUILD ) );
         html = html.replace( "BUILD_DATE", __DATE__ );
+        html = html.replace( "VERSION", QString( VERSION ) );
         html = html.replace( "CURRENT_YEAR", QString::number( date.year() ) );
 
         // put the html to the text browser in the about dialog
