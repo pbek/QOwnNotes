@@ -16,6 +16,7 @@
 #include "build_number.h"
 #include "version.h"
 #include "aboutdialog.h"
+#include "updateservice.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -74,6 +75,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu();
+
+    UpdateService *updateService = new UpdateService(this);
+    updateService->checkForUpdates();
 }
 
 MainWindow::~MainWindow()

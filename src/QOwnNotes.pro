@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql svg
+QT       += core gui sql svg network script
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,7 +30,8 @@ SOURCES += main.cpp\
     libraries/hoedown/stack.c \
     libraries/hoedown/version.c \
     notediffdialog.cpp \
-    aboutdialog.cpp
+    aboutdialog.cpp \
+    updateservice.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -48,7 +49,8 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/stack.h \
     libraries/hoedown/version.h \
     notediffdialog.h \
-    aboutdialog.h
+    aboutdialog.h \
+    updateservice.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
