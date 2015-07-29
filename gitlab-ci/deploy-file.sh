@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 #
-# deploy QOwnNotes.dmg to GitHub Releases
+# Deploys QOwnNotes.dmg to the QOwnNotes GitHub releases page
+#
 # execute: ./deploy-file.sh $RELEASE_ID $GITHUB_ACCESS_TOKEN
 #
 
