@@ -27,8 +27,10 @@ class UpdateService : public QObject
 public:
     explicit UpdateService(QObject *parent = 0);
     bool checkForUpdates();
+    bool checkForUpdates(bool isManual);
 private:
     QObject *parent;
+    bool isManual;
 private slots:
     void onResult(QNetworkReply *reply);
 };
