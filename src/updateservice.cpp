@@ -20,7 +20,14 @@ bool UpdateService::checkForUpdates()
     QObject::connect(manager, SIGNAL(finished(QNetworkReply*)),
             this, SLOT(onResult(QNetworkReply*)));
 
-    QUrl url("https://www.qownnotes.org/api/v1/last_release/QOwnNotes/" + QString( PLATFORM ) + ".json?b=" + QString::number( BUILD ) + "&v=" + QString( VERSION ) + "&d=" + __DATE__ + " " + __TIME__ );
+    QString protocol = QString("https");
+
+#ifdef Q_OS_MAC
+    // https doesn't work on MacOS X right now
+    protocol = "http";
+#endif
+
+    QUrl url(protocol + "://www.qownnotes.org/api/v1/last_release/QOwnNotes/" + QString( PLATFORM ) + ".json?b=" + QString::number( BUILD ) + "&v=" + QString( VERSION ) + "&d=" + __DATE__ + " " + __TIME__ );
 
 //    qDebug() << __func__ << " - 'url': " << url;
 
