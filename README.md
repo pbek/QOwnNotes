@@ -4,7 +4,7 @@
 [![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 
-[QOwnNotes](http://www.qownnotes.org) is the **open source notepad**  for **Linux**, **Mac OS X** and **Windows**, that works together with the default **notes application** of [**ownCloud**](http://owncloud.org/).
+[QOwnNotes](http://www.qownnotes.org) is the **open source notepad**  for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default **notes application** of [**ownCloud**](http://owncloud.org/).
 
 So you are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
 
@@ -20,7 +20,7 @@ Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
 You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
 
 ## Features
-- a notes folder can be chosen
+- one or many notes folders can be chosen
 - notes can be created, edited, viewed and removed
 - list of notes is showed, sorted by modification date (descending)
 - sub-string searching of notes is possible and search results are highlighted in the notes
@@ -45,11 +45,11 @@ Or you can build it at the command line:
 
 ```shell
 cd QOwnNotes/src
-qmake QOwnNotes.pro -r -spec linux-g++-64
+qmake QOwnNotes.pro -r
 make
 ```
 
-Please feel free to contribute source code to this project, make suggestions or report troubles!
+Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)!
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
@@ -59,9 +59,7 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 - gcc 4.8+
 
 ## Binaries
-Currently there are created a deb packages for **Linux**, and DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them here: [QOwnNotes project page](http://www.qownnotes.org).
-
-Although if you always want the latest features, grab the source code and compile it yourself.
+Currently there are deb packages for **GNU/Linux**, DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them on the [QOwnNotes project page](http://www.qownnotes.org) or on the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases).
 
 ## Disclaimer
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
