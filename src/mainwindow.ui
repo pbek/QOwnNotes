@@ -138,7 +138,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>34</height>
+     <height>43</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -164,6 +164,7 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;Help</string>
     </property>
+    <addaction name="actionCheck_for_updates"/>
     <addaction name="actionAbout_QOwnNotes"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
@@ -267,6 +268,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionCheck_for_updates">
+   <property name="text">
+    <string>Check for &amp;updates</string>
    </property>
   </action>
  </widget>

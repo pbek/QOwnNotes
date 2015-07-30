@@ -1,6 +1,10 @@
  
 # QOwnNotes Changelog
 
+## 0.31
+- inplemented an update service to check if a new version of QOwnNotes is available
+- update check will be performed on start of the application and can be performed manually in the menu
+
 ## 0.30
 - help screen improvements
 - added version number to build number

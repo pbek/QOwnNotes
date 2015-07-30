@@ -12,6 +12,7 @@
 #include <note.h>
 #include "markdown-highlight/highlighter.h"
 #include "notediffdialog.h"
+#include "updateservice.h"
 
 
 namespace Ui {
@@ -50,6 +51,8 @@ private slots:
 
     void on_noteTextView_anchorClicked(const QUrl &arg1);
 
+    void on_actionCheck_for_updates_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -61,6 +64,7 @@ private:
     NoteDiffDialog *noteDiffDialog;
     bool noteTextEditIsInEditMode;
     QSignalMapper *signalMapper;
+    UpdateService *updateService;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

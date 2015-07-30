@@ -31,7 +31,8 @@ SOURCES += main.cpp\
     libraries/hoedown/version.c \
     notediffdialog.cpp \
     aboutdialog.cpp \
-    updateservice.cpp
+    updateservice.cpp \
+    updatedialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -50,11 +51,13 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/version.h \
     notediffdialog.h \
     aboutdialog.h \
-    updateservice.h
+    updateservice.h \
+    updatedialog.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
-    aboutdialog.ui
+    aboutdialog.ui \
+    updatedialog.ui
 
 RESOURCES += \
     images.qrc \

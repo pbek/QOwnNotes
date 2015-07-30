@@ -16,7 +16,6 @@
 #include "build_number.h"
 #include "version.h"
 #include "aboutdialog.h"
-#include "updateservice.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -76,8 +75,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu();
 
-    UpdateService *updateService = new UpdateService(this);
-    updateService->checkForUpdates();
+    this->updateService = new UpdateService(this);
+    this->updateService->checkForUpdates();
 }
 
 MainWindow::~MainWindow()
@@ -130,7 +129,7 @@ void MainWindow::loadRecentNoteFolderListMenu()
         QAction *action = this->ui->menuRecentNoteFolders->addAction( noteFolder );
         QObject::connect( action, SIGNAL( triggered() ), signalMapper, SLOT( map() ) );
 
-        // add an parameter to changeNoteFolder with the signal mapper
+        // add a parameter to changeNoteFolder with the signal mapper
         signalMapper->setMapping( action, noteFolder );
         QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
     }
@@ -1006,4 +1005,12 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
     {
         QDesktopServices::openUrl( url );
     }
+}
+
+/*
+ * Manually check for updates
+ */
+void MainWindow::on_actionCheck_for_updates_triggered()
+{
+    this->updateService->checkForUpdates( true );
 }
