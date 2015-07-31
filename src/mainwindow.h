@@ -53,6 +53,8 @@ private slots:
 
     void on_actionCheck_for_updates_triggered();
 
+    void on_actionReport_problems_or_ideas_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

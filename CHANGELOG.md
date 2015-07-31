@@ -1,6 +1,9 @@
  
 # QOwnNotes Changelog
 
+## Develop
+- added a help menu entry to report problems or ideas
+
 ## 0.31
 - implemented an update service to check if a new version of QOwnNotes is available
 - the update check will be performed automatically at the start of the application and can be performed manually in the menu

@@ -1014,3 +1014,11 @@ void MainWindow::on_actionCheck_for_updates_triggered()
 {
     this->updateService->checkForUpdates( true );
 }
+
+/*
+ * Open the issue page
+ */
+void MainWindow::on_actionReport_problems_or_ideas_triggered()
+{
+    QDesktopServices::openUrl ( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
+}
