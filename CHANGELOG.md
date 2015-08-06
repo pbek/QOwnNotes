@@ -1,8 +1,10 @@
  
 # QOwnNotes Changelog
 
-## Develop
+## 0.32
 - added a help menu entry to report problems or ideas
+- fixed problems with file dialogs by using the QT file dialog
+- fixed the crash that can happen on the first start of the application after choosing the notes directory
 
 ## 0.31
 - implemented an update service to check if a new version of QOwnNotes is available
