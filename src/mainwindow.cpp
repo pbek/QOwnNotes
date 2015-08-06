@@ -40,6 +40,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->firstVisibleNoteListRow = 0;
 
+    // set our signal mapper
+    this->signalMapper = new QSignalMapper(this);
+
     readSettings();
     setupMainSplitter();
     buildNotesIndex();
@@ -68,9 +71,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // set the edit mode for the note text edit
     this->setNoteTextEditMode( true );
-
-    // set our signal mapper
-    this->signalMapper = new QSignalMapper(this);
 
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu();
@@ -486,10 +486,11 @@ QString MainWindow::selectOwnCloudFolder() {
         path = QDir::homePath() + QDir::separator() + "ownCloud" + QDir::separator() + "Notes";
     }
 
-    // TODO: We sometimes seem to get a "QCoreApplication::postEvent: Unexpected null receiver" here
+    // TODO: We sometimes seem to get a "QCoreApplication::postEvent: Unexpected null receiver" here.
+    // We got problems with the native dialog, so we are using QFileDialog::DontUseNativeDialog now.
     QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud folder" ),
                                                  path,
-                                                 QFileDialog::ShowDirsOnly );
+                                                 QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog );
 
     if ( dir != "" )
     {
@@ -1013,4 +1014,12 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
 void MainWindow::on_actionCheck_for_updates_triggered()
 {
     this->updateService->checkForUpdates( true );
+}
+
+/*
+ * Open the issue page
+ */
+void MainWindow::on_actionReport_problems_or_ideas_triggered()
+{
+    QDesktopServices::openUrl ( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
 }

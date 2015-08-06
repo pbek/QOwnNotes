@@ -165,6 +165,7 @@ p, li { white-space: pre-wrap; }
      <string>&amp;Help</string>
     </property>
     <addaction name="actionCheck_for_updates"/>
+    <addaction name="actionReport_problems_or_ideas"/>
     <addaction name="actionAbout_QOwnNotes"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
@@ -273,6 +274,11 @@ p, li { white-space: pre-wrap; }
   <action name="actionCheck_for_updates">
    <property name="text">
     <string>Check for &amp;updates</string>
+   </property>
+  </action>
+  <action name="actionReport_problems_or_ideas">
+   <property name="text">
+    <string>Report &amp;problems or ideas</string>
    </property>
   </action>
  </widget>
