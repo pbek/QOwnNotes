@@ -61,8 +61,8 @@
              <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="acceptRichText">
              <bool>false</bool>
@@ -138,7 +138,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1024</width>
-     <height>43</height>
+     <height>31</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -150,10 +150,18 @@ p, li { white-space: pre-wrap; }
       <string>R&amp;ecent note folders</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuSort_by">
+     <property name="title">
+      <string>Sort by</string>
+     </property>
+     <addaction name="actionAlphabetical"/>
+     <addaction name="actionBy_date"/>
+    </widget>
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
     <addaction name="actionToggleEditMode"/>
+    <addaction name="menuSort_by"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
@@ -279,6 +287,28 @@ p, li { white-space: pre-wrap; }
   <action name="actionReport_problems_or_ideas">
    <property name="text">
     <string>Report &amp;problems or ideas</string>
+   </property>
+  </action>
+  <action name="actionAlphabetical">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Alphabetical</string>
+   </property>
+   <property name="toolTip">
+    <string>Sort alphabetical</string>
+   </property>
+  </action>
+  <action name="actionBy_date">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>By date</string>
+   </property>
+   <property name="toolTip">
+    <string>Sort by date</string>
    </property>
   </action>
  </widget>

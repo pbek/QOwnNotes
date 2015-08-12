@@ -77,6 +77,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates();
+
 }
 
 MainWindow::~MainWindow()
@@ -1022,4 +1023,22 @@ void MainWindow::on_actionCheck_for_updates_triggered()
 void MainWindow::on_actionReport_problems_or_ideas_triggered()
 {
     QDesktopServices::openUrl ( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
+}
+
+void MainWindow::on_actionAlphabetical_triggered(bool checked)
+{
+    if (checked)
+    {
+        ui->notesListWidget->sortItems(Qt::AscendingOrder);
+        ui->actionBy_date->setChecked(false);
+    }
+}
+
+void MainWindow::on_actionBy_date_triggered(bool checked)
+{
+    if (checked)
+    {
+        loadNoteDirectoryList();
+        ui->actionAlphabetical->setChecked(false);
+    }
 }

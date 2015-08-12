@@ -55,6 +55,10 @@ private slots:
 
     void on_actionReport_problems_or_ideas_triggered();
 
+    void on_actionAlphabetical_triggered(bool checked);
+
+    void on_actionBy_date_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
