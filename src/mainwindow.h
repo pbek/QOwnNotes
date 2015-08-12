@@ -71,6 +71,7 @@ private:
     bool noteTextEditIsInEditMode;
     QSignalMapper *signalMapper;
     UpdateService *updateService;
+    bool sortAlphabetically;
 
     void setupMainSplitter();
     void loadNoteDirectoryList();

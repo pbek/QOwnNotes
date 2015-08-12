@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QKeyEvent>
 #include <QDesktopServices>
+#include <QActionGroup>
 #include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
@@ -35,6 +36,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     this->setWindowTitle( "QOwnNotes - version " + QString( VERSION ) + " - build " + QString::number( BUILD ) );
+    QActionGroup *sorting = new QActionGroup(this);
+    sorting->addAction(ui->actionAlphabetical);
+    sorting->addAction(ui->actionBy_date);
+    sorting->setExclusive(true);
+    //by default sort by date
+    ui->actionBy_date->setChecked(true);
+    sortAlphabetically = false;
 
     Note::createConnection();
 
@@ -259,6 +267,12 @@ void MainWindow::loadNoteDirectoryList()
     Q_FOREACH( QString fileName, fileNameList )
     {
         this->noteDirectoryWatcher.addPath( Note::fullNoteFilePath( fileName ) );
+    }
+
+    // sort alphabetically again in neccessery
+    if (sortAlphabetically)
+    {
+        ui->notesListWidget->sortItems(Qt::AscendingOrder);
     }
 
 //    QStringList directoryList = this->noteDirectoryWatcher.directories();
@@ -1029,8 +1043,8 @@ void MainWindow::on_actionAlphabetical_triggered(bool checked)
 {
     if (checked)
     {
+        sortAlphabetically = true;
         ui->notesListWidget->sortItems(Qt::AscendingOrder);
-        ui->actionBy_date->setChecked(false);
     }
 }
 
@@ -1038,7 +1052,7 @@ void MainWindow::on_actionBy_date_triggered(bool checked)
 {
     if (checked)
     {
+        sortAlphabetically = false;
         loadNoteDirectoryList();
-        ui->actionAlphabetical->setChecked(false);
     }
 }
