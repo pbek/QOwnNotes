@@ -165,6 +165,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
+    <addaction name="actionShow_system_tray"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
@@ -309,6 +310,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Sort by date</string>
+   </property>
+  </action>
+  <action name="actionShow_system_tray">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show system tray</string>
    </property>
   </action>
  </widget>

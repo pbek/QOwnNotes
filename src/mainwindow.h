@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QEvent>
 #include <QSignalMapper>
+#include <QSystemTrayIcon>
 #include <note.h>
 #include "markdown-highlight/highlighter.h"
 #include "notediffdialog.h"
@@ -48,16 +49,14 @@ private slots:
     void on_actionToggleEditMode_triggered();
     void on_noteTabWidget_currentChanged(int index);
     void changeNoteFolder(const QString &folderName);
-
     void on_noteTextView_anchorClicked(const QUrl &arg1);
-
     void on_actionCheck_for_updates_triggered();
-
     void on_actionReport_problems_or_ideas_triggered();
-
     void on_actionAlphabetical_triggered(bool checked);
-
     void on_actionBy_date_triggered(bool checked);
+    void systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason);
+
+    void on_actionShow_system_tray_triggered(bool checked);
 
 private:
     Ui::MainWindow *ui;
@@ -72,8 +71,11 @@ private:
     QSignalMapper *signalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
+    bool showSystemTray;
+    QSystemTrayIcon  *trayIcon;
 
     void setupMainSplitter();
+    void createSystemTrayIcon();
     void loadNoteDirectoryList();
     void readSettings();
     void buildNotesIndex();
