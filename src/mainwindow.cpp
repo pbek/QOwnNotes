@@ -11,6 +11,8 @@
 #include <QMessageBox>
 #include <QKeyEvent>
 #include <QDesktopServices>
+#include <QActionGroup>
+#include <QSystemTrayIcon>
 #include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
@@ -35,6 +37,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     this->setWindowTitle( "QOwnNotes - version " + QString( VERSION ) + " - build " + QString::number( BUILD ) );
+    QActionGroup *sorting = new QActionGroup( this );
+    sorting->addAction( ui->actionAlphabetical );
+    sorting->addAction( ui->actionBy_date );
+    sorting->setExclusive( true );
 
     Note::createConnection();
 
@@ -44,6 +50,11 @@ MainWindow::MainWindow(QWidget *parent) :
     this->signalMapper = new QSignalMapper(this);
 
     readSettings();
+    //set sorting
+    ui->actionBy_date->setChecked( !sortAlphabetically );
+    ui->actionAlphabetical->setChecked( sortAlphabetically );
+
+    createSystemTrayIcon();
     setupMainSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
@@ -77,6 +88,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates();
+
 }
 
 MainWindow::~MainWindow()
@@ -234,6 +246,18 @@ void MainWindow::setupMainSplitter()
     this->ui->gridLayout->layout()->addWidget( this->mainSplitter );
 }
 
+void MainWindow::createSystemTrayIcon()
+{
+    trayIcon = new QSystemTrayIcon( this );
+    trayIcon->setIcon( QIcon( ":/images/icon.png" ) );
+    connect( trayIcon, SIGNAL( activated(QSystemTrayIcon::ActivationReason ) ),
+            this, SLOT( systemTrayIconClicked( QSystemTrayIcon::ActivationReason ) ) );
+    if (showSystemTray)
+    {
+        trayIcon->show();
+    }
+}
+
 void MainWindow::loadNoteDirectoryList()
 {
     {
@@ -260,6 +284,12 @@ void MainWindow::loadNoteDirectoryList()
         this->noteDirectoryWatcher.addPath( Note::fullNoteFilePath( fileName ) );
     }
 
+    // sort alphabetically again in neccessery
+    if ( sortAlphabetically )
+    {
+        ui->notesListWidget->sortItems( Qt::AscendingOrder );
+    }
+
 //    QStringList directoryList = this->noteDirectoryWatcher.directories();
 
 //    Q_FOREACH(QString directory, directoryList)
@@ -270,6 +300,8 @@ void MainWindow::loadNoteDirectoryList()
 void MainWindow::readSettings()
 {
     QSettings settings;
+    sortAlphabetically = settings.value( "SortingModeAlphabetically", QVariant( false ) ).toBool();
+    showSystemTray = settings.value( "ShowSystemTray", QVariant( false ) ).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
 
@@ -388,10 +420,12 @@ void MainWindow::notesWereModified( const QString& str )
     else
     {
         qDebug() << "other note was changed: " << str;
+       // setCurrentNote(this->currentNote  , false);
 
         // rebuild and reload the notes directory list
         buildNotesIndex();
         loadNoteDirectoryList();
+        setCurrentNote(this->currentNote, false);
     }
 }
 
@@ -594,6 +628,9 @@ void MainWindow::closeEvent(QCloseEvent *event)
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
+    settings.setValue( "SortingModeAlphabetically", sortAlphabetically);
+    settings.setValue( "ShowSystemTray", showSystemTray);
+
     QMainWindow::closeEvent( event );
 }
 
@@ -1022,4 +1059,50 @@ void MainWindow::on_actionCheck_for_updates_triggered()
 void MainWindow::on_actionReport_problems_or_ideas_triggered()
 {
     QDesktopServices::openUrl ( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
+}
+
+void MainWindow::on_actionAlphabetical_triggered(bool checked)
+{
+    if ( checked )
+    {
+        sortAlphabetically = true;
+        ui->notesListWidget->sortItems( Qt::AscendingOrder );
+    }
+}
+
+void MainWindow::on_actionBy_date_triggered(bool checked)
+{
+    if ( checked )
+    {
+        sortAlphabetically = false;
+        loadNoteDirectoryList();
+    }
+}
+
+void MainWindow::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason)
+{
+    if ( reason == QSystemTrayIcon::Trigger )
+    {
+        if (this->isVisible())
+        {
+            this->hide();
+        }
+        else
+        {
+            this->show();
+        }
+    }
+}
+
+void MainWindow::on_actionShow_system_tray_triggered(bool checked)
+{
+    showSystemTray = checked;
+    if ( checked )
+    {
+        trayIcon->show();
+    }
+    else
+    {
+        trayIcon->hide();
+    }
 }
