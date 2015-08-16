@@ -1,6 +1,11 @@
  
 # QOwnNotes Changelog
 
+## 0.33
+- fixed a bug where quitting the app didn't store the settings
+- sorting support (thank you pmarki)
+- system tray support (thank you pmarki)
+
 ## 0.32
 - added a help menu entry to report problems or ideas
 - fixed problems with file dialogs by using the QT file dialog
