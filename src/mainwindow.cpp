@@ -50,9 +50,12 @@ MainWindow::MainWindow(QWidget *parent) :
     this->signalMapper = new QSignalMapper(this);
 
     readSettings();
-    //set sorting
+    // set sorting
     ui->actionBy_date->setChecked( !sortAlphabetically );
     ui->actionAlphabetical->setChecked( sortAlphabetically );
+
+    // set the show system tray checkbox
+    ui->actionShow_system_tray->setChecked( showSystemTray );
 
     createSystemTrayIcon();
     setupMainSplitter();
@@ -617,12 +620,7 @@ void MainWindow::removeCurrentNote()
     }
 }
 
-
-/*!
- * Internal events
- */
-
-void MainWindow::closeEvent(QCloseEvent *event)
+void MainWindow::storeSettings()
 {
     QSettings settings;
     settings.setValue( "MainWindow/geometry", saveGeometry() );
@@ -630,7 +628,16 @@ void MainWindow::closeEvent(QCloseEvent *event)
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
     settings.setValue( "SortingModeAlphabetically", sortAlphabetically);
     settings.setValue( "ShowSystemTray", showSystemTray);
+}
 
+
+/*!
+ * Internal events
+ */
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    storeSettings();
     QMainWindow::closeEvent( event );
 }
 
@@ -821,6 +828,7 @@ void MainWindow::on_noteTextEdit_textChanged()
 
 void MainWindow::on_action_Quit_triggered()
 {
+    storeSettings();
     QApplication::quit();
 }
 

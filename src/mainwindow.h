@@ -94,6 +94,7 @@ private:
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
     void loadRecentNoteFolderListMenu();
     void storeRecentNoteFolder(const QString &folderName);
+    void storeSettings();
 };
 
 #endif // MAINWINDOW_H
