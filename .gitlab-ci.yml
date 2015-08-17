@@ -31,7 +31,7 @@ build_job:
 deployment_job:
   type: deploy
   script:
-    - $QTDIR/bin/macdeployqt QOwnNotes.app -dmg
+    - ../gitlab-ci/create-dmg.sh
     - RELEASE_JSON_FILE="../gitlab-ci/github-release.json"
     - cat $RELEASE_JSON_FILE
     - sed -i -e 's/CI_BUILD_ID/'"$CI_BUILD_ID"'/g' $RELEASE_JSON_FILE
