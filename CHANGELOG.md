@@ -1,6 +1,10 @@
  
 # QOwnNotes Changelog
 
+## current
+- fixed a text
+- OSX: QOwnNotes.dmg is now compressed and includes a symbolic link to the *Applications* folder
+
 ## 0.33
 - fixed a bug where quitting the app didn't store the settings
 - sorting support (thank you pmarki)
