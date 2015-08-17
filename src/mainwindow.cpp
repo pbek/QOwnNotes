@@ -54,7 +54,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionBy_date->setChecked( !sortAlphabetically );
     ui->actionAlphabetical->setChecked( sortAlphabetically );
 
-    // set the show system tray checkbox
+    // set the show in system tray checkbox
     ui->actionShow_system_tray->setChecked( showSystemTray );
 
     createSystemTrayIcon();

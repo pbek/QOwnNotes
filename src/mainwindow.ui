@@ -317,7 +317,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show system tray</string>
+    <string>Sh&amp;ow in system tray</string>
    </property>
   </action>
  </widget>
