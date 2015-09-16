@@ -14,7 +14,7 @@ class SettingsDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SettingsDialog(QWidget *parent = 0, SimpleCrypt crypto = SimpleCrypt());
+    explicit SettingsDialog(SimpleCrypt *crypto, QWidget *parent = 0);
     ~SettingsDialog();
 
 private slots:
@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::SettingsDialog *ui;
-    SimpleCrypt crypto;
+    SimpleCrypt *crypto;
     void readSettings();
     void setupCrypto();
     void storeSettings();

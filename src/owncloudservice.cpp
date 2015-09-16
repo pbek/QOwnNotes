@@ -2,8 +2,9 @@
 #include <QSettings>
 #include <QDebug>
 
-OwnCloudService::OwnCloudService(QObject *parent, SimpleCrypt crypto) : QObject(parent)
+OwnCloudService::OwnCloudService(SimpleCrypt *crypto, QObject *parent) : QObject(parent)
 {
+    this->crypto = crypto;
     readSettings();
 }
 
@@ -14,8 +15,7 @@ void OwnCloudService::readSettings()
     userName = settings.value( "ownCloud/userName" ).toString();
 
     // TODO: check why password cannot be decrypted
-    password = crypto.decryptToString( settings.value( "ownCloud/password" ).toString() );
-    qDebug() << settings.value( "ownCloud/password" ).toString();
+    password = crypto->decryptToString( settings.value( "ownCloud/password" ).toString() );
 }
 
 void OwnCloudService::connect()

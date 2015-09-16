@@ -1136,6 +1136,6 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked)
 void MainWindow::on_action_Settings_triggered()
 {
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog( this, crypto );
+    SettingsDialog *dialog = new SettingsDialog( &crypto, this );
     dialog->exec();
 }

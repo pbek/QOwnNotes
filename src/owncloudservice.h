@@ -8,13 +8,13 @@ class OwnCloudService : public QObject
 {
     Q_OBJECT
 public:
-    explicit OwnCloudService(QObject *parent = 0, SimpleCrypt crypto = SimpleCrypt());
+    explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void connect();
 private:
     QString serverName;
     QString userName;
     QString password;
-    SimpleCrypt crypto;
+    SimpleCrypt *crypto;
     void readSettings();
 signals:
 

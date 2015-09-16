@@ -4,7 +4,7 @@
 #include <QSettings>
 #include <QDebug>
 
-SettingsDialog::SettingsDialog(QWidget *parent, SimpleCrypt crypto) :
+SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SettingsDialog)
 {
@@ -23,7 +23,7 @@ void SettingsDialog::on_connectButton_clicked()
 {
     storeSettings();
 
-    OwnCloudService *ownCloud = new OwnCloudService( this, crypto );
+    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
     ownCloud->connect();
 }
 
@@ -32,7 +32,7 @@ void SettingsDialog::storeSettings()
     QSettings settings;
     settings.setValue( "ownCloud/serverName", ui->serverNameEdit->text() );
     settings.setValue( "ownCloud/userName", ui->userNameEdit->text() );
-    settings.setValue( "ownCloud/password", crypto.encryptToString( ui->passwordEdit->text() ) );
+    settings.setValue( "ownCloud/password", crypto->encryptToString( ui->passwordEdit->text() ) );
 }
 
 void SettingsDialog::readSettings()
@@ -40,7 +40,7 @@ void SettingsDialog::readSettings()
     QSettings settings;
     ui->serverNameEdit->setText( settings.value( "ownCloud/serverName" ).toString() );
     ui->userNameEdit->setText( settings.value( "ownCloud/userName" ).toString() );
-    ui->passwordEdit->setText( crypto.decryptToString( settings.value( "ownCloud/password" ).toString() ) );
+    ui->passwordEdit->setText( crypto->decryptToString( settings.value( "ownCloud/password" ).toString() ) );
 }
 
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
