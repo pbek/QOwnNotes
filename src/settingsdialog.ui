@@ -54,14 +54,20 @@
            <property name="flat">
             <bool>false</bool>
            </property>
-           <widget class="QLineEdit" name="serverNameEdit">
+           <widget class="QLineEdit" name="serverUrlEdit">
             <property name="geometry">
              <rect>
               <x>150</x>
               <y>50</y>
-              <width>291</width>
+              <width>331</width>
               <height>31</height>
              </rect>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="text">
+             <string>https://</string>
             </property>
            </widget>
            <widget class="QLabel" name="label_3">
@@ -90,7 +96,7 @@
              </rect>
             </property>
             <property name="text">
-             <string>https://</string>
+             <string>url:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -101,7 +107,7 @@
              <rect>
               <x>150</x>
               <y>90</y>
-              <width>291</width>
+              <width>331</width>
               <height>31</height>
              </rect>
             </property>
@@ -127,7 +133,7 @@
              <rect>
               <x>150</x>
               <y>130</y>
-              <width>291</width>
+              <width>331</width>
               <height>31</height>
              </rect>
             </property>
@@ -135,7 +141,7 @@
            <widget class="QPushButton" name="connectButton">
             <property name="geometry">
              <rect>
-              <x>450</x>
+              <x>490</x>
               <y>50</y>
               <width>161</width>
               <height>111</height>

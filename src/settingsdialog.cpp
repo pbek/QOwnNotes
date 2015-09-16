@@ -30,7 +30,7 @@ void SettingsDialog::on_connectButton_clicked()
 void SettingsDialog::storeSettings()
 {
     QSettings settings;
-    settings.setValue( "ownCloud/serverName", ui->serverNameEdit->text() );
+    settings.setValue( "ownCloud/serverUrl", ui->serverUrlEdit->text() );
     settings.setValue( "ownCloud/userName", ui->userNameEdit->text() );
     settings.setValue( "ownCloud/password", crypto->encryptToString( ui->passwordEdit->text() ) );
 }
@@ -38,7 +38,7 @@ void SettingsDialog::storeSettings()
 void SettingsDialog::readSettings()
 {
     QSettings settings;
-    ui->serverNameEdit->setText( settings.value( "ownCloud/serverName" ).toString() );
+    ui->serverUrlEdit->setText( settings.value( "ownCloud/serverUrl" ).toString() );
     ui->userNameEdit->setText( settings.value( "ownCloud/userName" ).toString() );
     ui->passwordEdit->setText( crypto->decryptToString( settings.value( "ownCloud/password" ).toString() ) );
 }
