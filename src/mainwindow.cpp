@@ -171,7 +171,7 @@ void MainWindow::changeNoteFolder( const QString &folderName )
 
         // store notesPath setting
         QSettings settings;
-        settings.setValue( "General/notesPath", folderName );
+        settings.setValue( "notesPath", folderName );
 
         // update the recent note folder list
         storeRecentNoteFolder( folderName );
@@ -311,7 +311,19 @@ void MainWindow::readSettings()
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
 
-    this->notesPath = settings.value("General/notesPath").toString();
+    // check legacy setting
+    this->notesPath = settings.value( "General/notesPath" ).toString();
+
+    // remove old setting if we found one and store new one
+    if ( this->notesPath != "" )
+    {
+        settings.setValue( "notesPath", this->notesPath );
+        settings.remove( "General/notesPath" );
+    }
+    else
+    {
+        this->notesPath = settings.value("notesPath").toString();
+    }
 
     // let us select a folder if we haven't find one in the settings
     if ( this->notesPath == "" )
@@ -536,7 +548,7 @@ QString MainWindow::selectOwnCloudFolder() {
     {
         this->notesPath = dir;
         QSettings settings;
-        settings.setValue( "General/notesPath", dir );
+        settings.setValue( "notesPath", dir );
 
         // stores folder to recent note folders
         storeRecentNoteFolder( dir );
@@ -795,13 +807,13 @@ void MainWindow::setNoteTextFromNote( Note *note, bool updateNoteTextViewOnly )
 void MainWindow::setupCrypto()
 {
     QSettings settings;
-    qint64 cryptoKey = settings.value( "general/cryptoKey" ).toUInt();
+    qint64 cryptoKey = settings.value( "cryptoKey" ).toUInt();
 
     // generate a key if we don't have one
     if ( cryptoKey == 0 )
     {
         cryptoKey = qrand();
-        settings.setValue( "general/cryptoKey", cryptoKey );
+        settings.setValue( "cryptoKey", cryptoKey );
     }
 
     this->crypto = SimpleCrypt( cryptoKey );
