@@ -14,6 +14,7 @@
 #include "markdown-highlight/highlighter.h"
 #include "notediffdialog.h"
 #include "updateservice.h"
+#include "libraries/simplecrypt/simplecrypt.h"
 
 
 namespace Ui {
@@ -58,6 +59,8 @@ private slots:
 
     void on_actionShow_system_tray_triggered(bool checked);
 
+    void on_action_Settings_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -73,6 +76,7 @@ private:
     bool sortAlphabetically;
     bool showSystemTray;
     QSystemTrayIcon  *trayIcon;
+    SimpleCrypt crypto;
 
     void setupMainSplitter();
     void createSystemTrayIcon();
@@ -95,6 +99,7 @@ private:
     void loadRecentNoteFolderListMenu();
     void storeRecentNoteFolder(const QString &folderName);
     void storeSettings();
+    void setupCrypto();
 };
 
 #endif // MAINWINDOW_H

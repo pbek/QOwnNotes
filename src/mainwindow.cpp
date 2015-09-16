@@ -18,6 +18,7 @@
 #include "build_number.h"
 #include "version.h"
 #include "aboutdialog.h"
+#include "settingsdialog.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -50,6 +51,8 @@ MainWindow::MainWindow(QWidget *parent) :
     this->signalMapper = new QSignalMapper(this);
 
     readSettings();
+    setupCrypto();
+
     // set sorting
     ui->actionBy_date->setChecked( !sortAlphabetically );
     ui->actionAlphabetical->setChecked( sortAlphabetically );
@@ -626,8 +629,8 @@ void MainWindow::storeSettings()
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
-    settings.setValue( "SortingModeAlphabetically", sortAlphabetically);
-    settings.setValue( "ShowSystemTray", showSystemTray);
+    settings.setValue( "SortingModeAlphabetically", sortAlphabetically );
+    settings.setValue( "ShowSystemTray", showSystemTray );
 }
 
 
@@ -787,6 +790,21 @@ void MainWindow::setNoteTextFromNote( Note *note, bool updateNoteTextViewOnly )
     }
 
     this->ui->noteTextView->setHtml( note->toMarkdownHtml() );
+}
+
+void MainWindow::setupCrypto()
+{
+    QSettings settings;
+    qint64 cryptoKey = settings.value( "general/cryptoKey" ).toUInt();
+
+    // generate a key if we don't have one
+    if ( cryptoKey == 0 )
+    {
+        cryptoKey = qrand();
+        settings.setValue( "general/cryptoKey", cryptoKey );
+    }
+
+    this->crypto = SimpleCrypt( cryptoKey );
 }
 
 /*!
@@ -1113,4 +1131,11 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked)
     {
         trayIcon->hide();
     }
+}
+
+void MainWindow::on_action_Settings_triggered()
+{
+    // open the settings dialog
+    SettingsDialog *dialog = new SettingsDialog( this, crypto );
+    dialog->exec();
 }
