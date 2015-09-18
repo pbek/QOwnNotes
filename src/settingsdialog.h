@@ -16,7 +16,7 @@ class SettingsDialog : public QDialog
 public:
     explicit SettingsDialog(SimpleCrypt *crypto, QWidget *parent = 0);
     ~SettingsDialog();
-
+    void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion);
 private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);

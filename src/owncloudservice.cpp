@@ -1,9 +1,11 @@
 #include "owncloudservice.h"
+#include "settingsdialog.h"
 #include <QSettings>
 #include <QDebug>
 #include <QUrlQuery>
+#include <QScriptEngine>
 
-const QString OwnCloudService::rootPath = "/index.php/apps/qownnotes-api/api/v1/";
+const QString OwnCloudService::rootPath = "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";
 
 OwnCloudService::OwnCloudService(SimpleCrypt *crypto, QObject *parent) : QObject(parent)
@@ -24,7 +26,8 @@ void OwnCloudService::readSettings()
     networkManager = new QNetworkAccessManager();
     busy = false;
 
-    versionListPath = rootPath + "versions";
+    versionListPath = rootPath + "note/versions";
+    appInfoPath = rootPath + "note/app_info";
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
 
     QObject::connect( networkManager, SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)), this, SLOT(slotAuthenticationRequired(QNetworkReply*,QAuthenticator*)) );
@@ -43,20 +46,24 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 {
     qDebug() << "Reply from " << reply->url().path();
 
-    if ( reply->url().path().endsWith( capabilitiesPath ) )
+    // this only should called from the settings dialog
+    if ( reply->url().path().endsWith( appInfoPath ) )
     {
-        qDebug() << "Reply from capabilities";
-        QByteArray arr = reply->readAll();
-        QString string = QString( arr );
-        qDebug() << string;
+        qDebug() << "Reply from app info";
+        QString data = QString( reply->readAll() );
+        qDebug() << data;
+
+        // check if everything is all right and call the callback method
+        checkAppInfo( data );
+
         return;
     }
     else if ( reply->url().path().endsWith( versionListPath ) )
     {
         qDebug() << "Reply from version list";
         QByteArray arr = reply->readAll();
-        QString string = QString( arr );
-        qDebug() << string;
+        QString data = QString( arr );
+        qDebug() << data;
         return;
     }
 
@@ -64,9 +71,31 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
     emit(busyChanged(busy));
 }
 
-
-void OwnCloudService::connect()
+void OwnCloudService::checkAppInfo( QString data )
 {
+    // we have to add [], so the string can be parsed as JSON
+    data = QString("[") + data + QString("]");
+
+    QScriptEngine engine;
+    QScriptValue result = engine.evaluate(data);
+
+    // get the information if versioning is available
+    bool appIsValid = result.property(0).property("versioning").toBool();
+
+    QString appVersion = result.property(0).property("app_version").toString();
+    QString serverVersion = result.property(0).property("server_version").toString();
+
+    // call callback in settings dialog
+    settingsDialog->connectTestCallback( appIsValid, appVersion, serverVersion );
+}
+
+/**
+ * @brief OwnCloudService::connectionTest
+ */
+void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
+{
+    settingsDialog = dialog;
+
     qDebug() << serverUrl;
     qDebug() << userName;
     qDebug() << password;
@@ -76,7 +105,9 @@ void OwnCloudService::connect()
         busy = true;
         emit(busyChanged(busy));
 
-        QUrl url( serverUrl + capabilitiesPath );
+        QUrl url( serverUrl + appInfoPath );
+//        QUrl url( serverUrl + versionListPath );
+
         url.setUserName( userName );
         url.setPassword( password );
 
