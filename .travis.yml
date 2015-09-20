@@ -2,7 +2,7 @@ language: cpp
 
 os:
   - linux
-  - osx
+#  - osx
 
 env:
   global:
@@ -12,6 +12,7 @@ env:
     - CONFIG=debug
 
 install:
+  - lsb_release -a
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
       && sudo apt-add-repository -y ppa:beineri/opt-qt541
