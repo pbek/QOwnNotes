@@ -28,7 +28,6 @@ SettingsDialog::~SettingsDialog()
 void SettingsDialog::on_connectButton_clicked()
 {
     storeSettings();
-
     ui->connectionTestLabel->hide();
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
     ownCloud->settingsConnectionTest( this );

@@ -125,6 +125,36 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     }
 }
 
+/**
+ * @brief OwnCloudService::loadVersions
+ */
+void OwnCloudService::loadVersions( QString fileName )
+{
+    if ( !busy )
+    {
+        busy = true;
+        emit(busyChanged(busy));
+
+        QUrl url( serverUrl + versionListPath );
+
+        url.setUserName( userName );
+        url.setPassword( password );
+
+        QUrlQuery q;
+        q.addQueryItem( "format", format );
+        q.addQueryItem( "file_name", fileName );
+        url.setQuery( q );
+
+        qDebug() << url;
+
+        QNetworkRequest r(url);
+        addAuthHeader(&r);
+
+        QNetworkReply *reply = networkManager->get(r);
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+    }
+}
+
 void OwnCloudService::addAuthHeader(QNetworkRequest *r)
 {
     if (r)

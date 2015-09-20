@@ -61,6 +61,8 @@ private slots:
 
     void on_action_Settings_triggered();
 
+    void on_actionShow_versions_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

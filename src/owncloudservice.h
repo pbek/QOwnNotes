@@ -17,6 +17,7 @@ public:
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void settingsConnectionTest( SettingsDialog *dialog );
     bool isBusy();
+    void loadVersions(QString fileName);
 private:
     QString serverUrl;
     QString userName;

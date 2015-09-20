@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "owncloudservice.h"
 #include "ui_mainwindow.h"
 #include <QSplitter>
 #include <QDebug>
@@ -1150,4 +1151,10 @@ void MainWindow::on_action_Settings_triggered()
     // open the settings dialog
     SettingsDialog *dialog = new SettingsDialog( &crypto, this );
     dialog->exec();
+}
+
+void MainWindow::on_actionShow_versions_triggered()
+{
+    OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
+    ownCloud->loadVersions( this->currentNote.getFileName() );
 }

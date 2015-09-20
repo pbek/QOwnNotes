@@ -160,6 +160,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
+    <addaction name="actionShow_versions"/>
     <addaction name="actionToggleEditMode"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
@@ -283,6 +284,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionCheck_for_updates">
+   <property name="icon">
+    <iconset theme="system-software-update"/>
+   </property>
    <property name="text">
     <string>Check for &amp;updates</string>
    </property>
@@ -323,8 +327,19 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Settings">
+   <property name="icon">
+    <iconset theme="emblem-system"/>
+   </property>
    <property name="text">
     <string>&amp;Settings</string>
+   </property>
+  </action>
+  <action name="actionShow_versions">
+   <property name="icon">
+    <iconset theme="document-open-recent"/>
+   </property>
+   <property name="text">
+    <string>Show note &amp;versions</string>
    </property>
   </action>
  </widget>
