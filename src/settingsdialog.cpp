@@ -2,6 +2,7 @@
 #include "settingsdialog.h"
 #include "ui_settingsdialog.h"
 #include <QSettings>
+#include <QFileDialog>
 #include <QDebug>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
@@ -39,6 +40,7 @@ void SettingsDialog::storeSettings()
     settings.setValue( "ownCloud/serverUrl", ui->serverUrlEdit->text() );
     settings.setValue( "ownCloud/userName", ui->userNameEdit->text() );
     settings.setValue( "ownCloud/password", crypto->encryptToString( ui->passwordEdit->text() ) );
+    settings.setValue( "ownCloud/localOwnCloudPath", ui->localOwnCloudPathEdit->text() );
 }
 
 void SettingsDialog::readSettings()
@@ -47,6 +49,7 @@ void SettingsDialog::readSettings()
     ui->serverUrlEdit->setText( settings.value( "ownCloud/serverUrl" ).toString() );
     ui->userNameEdit->setText( settings.value( "ownCloud/userName" ).toString() );
     ui->passwordEdit->setText( crypto->decryptToString( settings.value( "ownCloud/password" ).toString() ) );
+    ui->localOwnCloudPathEdit->setText( settings.value( "ownCloud/localOwnCloudPath" ).toString() );
 }
 
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
@@ -80,4 +83,23 @@ void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, Q
 
     ui->connectionTestLabel->adjustSize();
     ui->connectionTestLabel->show();
+}
+
+/**
+ * select the local ownCloud directory
+ */
+void SettingsDialog::on_localOwnCloudDirectoryButton_clicked()
+{
+    QString path = ui->localOwnCloudPathEdit->text();
+
+    if ( path == "" )
+    {
+        path = QDir::homePath() + QDir::separator() + "ownCloud";
+    }
+
+    QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud base directory" ),
+                                                 path,
+                                                 QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog );
+
+    ui->localOwnCloudPathEdit->setText( dir );
 }

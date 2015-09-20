@@ -17,11 +17,12 @@ public:
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void settingsConnectionTest( SettingsDialog *dialog );
     bool isBusy();
-    void loadVersions(QString fileName);
+    void loadVersions(QString notesPath, QString fileName);
 private:
     QString serverUrl;
     QString userName;
     QString password;
+    QString localOwnCloudPath;
     SimpleCrypt *crypto;
     QNetworkAccessManager *networkManager;
     static const QString rootPath;
@@ -34,7 +35,8 @@ private:
     bool busy;
     void readSettings();
     void addAuthHeader(QNetworkRequest *r);
-
+    QString getServerNotesPath(QString notesPath);
+    void handleVersionsLoading(QString data);
 signals:
     void busyChanged(bool busy);
 

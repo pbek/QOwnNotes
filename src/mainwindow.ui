@@ -192,6 +192,7 @@ p, li { white-space: pre-wrap; }
    </attribute>
    <addaction name="action_Note_note"/>
    <addaction name="actionToggleEditMode"/>
+   <addaction name="actionShow_versions"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
@@ -339,7 +340,7 @@ p, li { white-space: pre-wrap; }
     <iconset theme="document-open-recent"/>
    </property>
    <property name="text">
-    <string>Show note &amp;versions</string>
+    <string>Show note &amp;version</string>
    </property>
   </action>
  </widget>

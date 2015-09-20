@@ -1156,5 +1156,5 @@ void MainWindow::on_action_Settings_triggered()
 void MainWindow::on_actionShow_versions_triggered()
 {
     OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
-    ownCloud->loadVersions( this->currentNote.getFileName() );
+    ownCloud->loadVersions( this->notesPath, this->currentNote.getFileName() );
 }
