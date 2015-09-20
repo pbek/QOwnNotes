@@ -232,7 +232,7 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we get any data at all
     if ( data == "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server!" );
+        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
         return;
     }
 
@@ -252,11 +252,20 @@ void OwnCloudService::handleVersionsLoading( QString data )
         return;
     }
 
+    // get the versions
     QScriptValue versions = result.property(0).property("versions");
-    qDebug() << versions.toString();
 
+    // check if we got no usefull data
+    if ( versions.toString() == "" )
+    {
+        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
+        return;
+    }
+
+    // init the iterator for the verions
     QScriptValueIterator versionsIterator( versions );
 
+    // iterate over the versions
     while ( versionsIterator.hasNext() ) {
         versionsIterator.next();
         qDebug() << versionsIterator.name() << ": " << versionsIterator.value().property( "version" ).toString() << " - " << versionsIterator.value().property( "humanReadableTimestamp" ).toString();
