@@ -268,6 +268,6 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // iterate over the versions
     while ( versionsIterator.hasNext() ) {
         versionsIterator.next();
-        qDebug() << versionsIterator.name() << ": " << versionsIterator.value().property( "version" ).toString() << " - " << versionsIterator.value().property( "humanReadableTimestamp" ).toString();
+        qDebug() << versionsIterator.name() << ": " << versionsIterator.value().property( "timestamp" ).toString() << " - " << versionsIterator.value().property( "humanReadableTimestamp" ).toString() << " - " << versionsIterator.value().property( "diffHtml" ).toString();
     }
 }
