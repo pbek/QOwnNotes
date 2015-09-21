@@ -6,6 +6,7 @@
 #include <QNetworkReply>
 #include <QObject>
 #include "libraries/simplecrypt/simplecrypt.h"
+#include "mainwindow.h"
 #include "settingsdialog.h"
 
 class OwnCloudService : public QObject
@@ -17,7 +18,7 @@ public:
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void settingsConnectionTest( SettingsDialog *dialog );
     bool isBusy();
-    void loadVersions(QString notesPath, QString fileName);
+    void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
 private:
     QString serverUrl;
     QString userName;
@@ -25,6 +26,7 @@ private:
     QString localOwnCloudPath;
     SimpleCrypt *crypto;
     QNetworkAccessManager *networkManager;
+    MainWindow *mainWindow;
     static const QString rootPath;
     static const QString format;
     QString versionListPath;

@@ -28,6 +28,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void setCurrentNoteText(QString text);
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -56,11 +57,8 @@ private slots:
     void on_actionAlphabetical_triggered(bool checked);
     void on_actionBy_date_triggered(bool checked);
     void systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason);
-
     void on_actionShow_system_tray_triggered(bool checked);
-
     void on_action_Settings_triggered();
-
     void on_actionShow_versions_triggered();
 
 private:

@@ -1,5 +1,7 @@
+#include "mainwindow.h"
 #include "owncloudservice.h"
 #include "settingsdialog.h"
+#include "versiondialog.h"
 #include <QSettings>
 #include <QDebug>
 #include <QUrlQuery>
@@ -133,8 +135,10 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
 /**
  * @brief OwnCloudService::loadVersions
  */
-void OwnCloudService::loadVersions( QString notesPath, QString fileName )
+void OwnCloudService::loadVersions( QString notesPath, QString fileName, MainWindow *mainWindow )
 {
+    this->mainWindow = mainWindow;
+
     if ( !busy )
     {
         busy = true;
@@ -258,16 +262,10 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we got no usefull data
     if ( versions.toString() == "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
+        QMessageBox::information( 0, "no other version", "There were no other versions on the server for this note." );
         return;
     }
 
-    // init the iterator for the verions
-    QScriptValueIterator versionsIterator( versions );
-
-    // iterate over the versions
-    while ( versionsIterator.hasNext() ) {
-        versionsIterator.next();
-        qDebug() << versionsIterator.name() << ": " << versionsIterator.value().property( "timestamp" ).toString() << " - " << versionsIterator.value().property( "humanReadableTimestamp" ).toString() << " - " << versionsIterator.value().property( "diffHtml" ).toString();
-    }
+    VersionDialog *dialog = new VersionDialog( versions, mainWindow );
+    dialog->exec();
 }

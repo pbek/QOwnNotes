@@ -286,7 +286,9 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCheck_for_updates">
    <property name="icon">
-    <iconset theme="system-software-update"/>
+    <iconset theme="system-software-update">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>Check for &amp;updates</string>
@@ -329,7 +331,9 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Settings">
    <property name="icon">
-    <iconset theme="emblem-system"/>
+    <iconset theme="emblem-system">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
     <string>&amp;Settings</string>
@@ -337,10 +341,12 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionShow_versions">
    <property name="icon">
-    <iconset theme="document-open-recent"/>
+    <iconset theme="document-open-recent">
+     <normaloff/>
+    </iconset>
    </property>
    <property name="text">
-    <string>Show note &amp;version</string>
+    <string>Show note &amp;versions</string>
    </property>
   </action>
  </widget>

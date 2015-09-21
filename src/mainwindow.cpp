@@ -820,6 +820,21 @@ void MainWindow::setupCrypto()
     this->crypto = SimpleCrypt( cryptoKey );
 }
 
+/**
+ * Sets the text of the current note.
+ * This is a public callback function for the version dialog.
+ *
+ * @brief MainWindow::setCurrentNoteText
+ * @param text
+ */
+void MainWindow::setCurrentNoteText( QString text )
+{
+    currentNote.setNoteText( text );
+    ui->noteTextEdit->setText( text );
+    this->ui->noteTextView->setHtml( currentNote.toMarkdownHtml() );
+}
+
+
 /*!
  * Slots implementation
  */
@@ -1156,5 +1171,5 @@ void MainWindow::on_action_Settings_triggered()
 void MainWindow::on_actionShow_versions_triggered()
 {
     OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
-    ownCloud->loadVersions( this->notesPath, this->currentNote.getFileName() );
+    ownCloud->loadVersions( this->notesPath, this->currentNote.getFileName(), this );
 }
