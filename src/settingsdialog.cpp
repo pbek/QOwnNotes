@@ -80,7 +80,7 @@ void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
  * @param appVersion
  * @param serverVersion
  */
-void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, QString serverVersion )
+void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage )
 {
     if ( appIsValid )
     {
@@ -90,7 +90,7 @@ void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, Q
     else
     {
         ui->connectionTestLabel->setStyleSheet( "color: red;" );
-        ui->connectionTestLabel->setText( "There was an error connecting to the ownCloud Server! You also need to have the QOwnNotesAPI app installed and enabled!" );
+        ui->connectionTestLabel->setText( "There was an error connecting to the ownCloud Server!\nYou also need to have the QOwnNotesAPI app installed and enabled!\n\nConnection error message: " + connectionErrorMessage );
     }
 
     ui->connectionTestLabel->adjustSize();

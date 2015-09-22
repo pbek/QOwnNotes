@@ -48,17 +48,16 @@ void OwnCloudService::slotAuthenticationRequired( QNetworkReply* reply, QAuthent
 
 void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 {
-    // qDebug() << "Reply from " << reply->url().path();
+    qDebug() << "Reply from " << reply->url().path();
+    qDebug() << reply->errorString();
 
     // this only should called from the settings dialog
     if ( reply->url().path().endsWith( appInfoPath ) )
     {
-        // qDebug() << "Reply from app info";
-        QString data = QString( reply->readAll() );
-        // qDebug() << data;
+        qDebug() << "Reply from app info";
 
         // check if everything is all right and call the callback method
-        checkAppInfo( data );
+        checkAppInfo( reply );
 
         return;
     }
@@ -78,8 +77,11 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
     emit(busyChanged(busy));
 }
 
-void OwnCloudService::checkAppInfo( QString data )
+void OwnCloudService::checkAppInfo( QNetworkReply* reply )
 {
+    QString data = QString( reply->readAll() );
+    // qDebug() << data;
+
     // we have to add [], so the string can be parsed as JSON
     data = QString("[") + data + QString("]");
 
@@ -93,7 +95,7 @@ void OwnCloudService::checkAppInfo( QString data )
     QString serverVersion = result.property(0).property("server_version").toString();
 
     // call callback in settings dialog
-    settingsDialog->connectTestCallback( appIsValid, appVersion, serverVersion );
+    settingsDialog->connectTestCallback( appIsValid, appVersion, serverVersion, reply->errorString() );
 }
 
 /**

@@ -33,7 +33,7 @@ private:
     QString appInfoPath;
     QString capabilitiesPath;
     SettingsDialog *settingsDialog;
-    void checkAppInfo(QString string);
+    void checkAppInfo(QNetworkReply *reply);
     bool busy;
     void readSettings();
     void addAuthHeader(QNetworkRequest *r);
