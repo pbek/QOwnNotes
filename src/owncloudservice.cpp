@@ -49,7 +49,7 @@ void OwnCloudService::slotAuthenticationRequired( QNetworkReply* reply, QAuthent
 void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 {
     qDebug() << "Reply from " << reply->url().path();
-    qDebug() << reply->errorString();
+    // qDebug() << reply->errorString();
 
     // this only should called from the settings dialog
     if ( reply->url().path().endsWith( appInfoPath ) )
