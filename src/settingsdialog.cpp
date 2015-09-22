@@ -24,6 +24,15 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->installInfotextBrowser->setHtml(  html );
 #endif
 
+    // add information text for Windows users to install OpenSSL
+#ifdef Q_OS_WIN32
+    QString html = ui->installInfotextBrowser->toHtml();
+    html += "<p>If your ownCloud server uses SSL (https) you also need to install <a href='https://www.openssl.org'>OpenSSL</a> into your system directory.</p>";
+    html += "<p>You can find binary packages of OpenSSL <a href='http://slproweb.com/products/Win32OpenSSL.html'>here</a>.</p>";
+    ui->installInfotextBrowser->setHtml( html );
+    ui->installInfotextBrowser->setFixedHeight( 600 );
+#endif
+
     this->crypto = crypto;
     readSettings();
 }
