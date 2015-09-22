@@ -1,7 +1,9 @@
  
 # QOwnNotes Changelog
 
-## current
+## 0.34
+- old versions of your notes can now be restored from your ownCloud server
+- introduced a settings page
 - fixed a text
 - OSX: QOwnNotes.dmg is now compressed and includes a symbolic link to the *Applications* folder
 
