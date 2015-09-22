@@ -12,6 +12,17 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->setupUi(this);
     ui->passwordEdit->setEchoMode( QLineEdit::Password );
     ui->connectionTestLabel->hide();
+
+#ifdef Q_OS_MAC
+    QString styleSheet = ui->installInfotextBrowser->styleSheet();
+    styleSheet = styleSheet.replace( "font-size: 9pt;", "font-size: 18pt;" );
+    ui->installInfotextBrowser->setStyleSheet( styleSheet );
+
+    QString html = ui->installInfotextBrowser->toHtml();
+    html = html.replace( "font-size:9pt", "font-size:18pt;" );
+    ui->installInfotextBrowser->setHtml(  html );
+#endif
+
     this->crypto = crypto;
     readSettings();
 }

@@ -8,5 +8,6 @@
         <file>images/breeze/help-about.svg</file>
         <file>images/breeze/lc_setdocumentproperties.svg</file>
         <file>images/breeze/system-shutdown.svg</file>
+        <file>images/breeze/appointment-new.svg</file>
     </qresource>
 </RCC>

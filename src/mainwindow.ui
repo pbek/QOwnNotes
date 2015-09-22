@@ -341,9 +341,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionShow_versions">
    <property name="icon">
-    <iconset theme="document-open-recent">
-     <normaloff/>
-    </iconset>
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/appointment-new.svg</normaloff>:/images/breeze/appointment-new.svg</iconset>
    </property>
    <property name="text">
     <string>Show note &amp;versions</string>
@@ -352,8 +351,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
