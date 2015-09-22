@@ -1,6 +1,10 @@
  
 # QOwnNotes Changelog
 
+## current
+- added more detailed network connection error messages
+- fixed a problem with Windows 8.1
+
 ## 0.34
 - old versions of your notes can now be restored from your ownCloud server
 - introduced a settings page
