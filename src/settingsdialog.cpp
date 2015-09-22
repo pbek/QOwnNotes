@@ -13,6 +13,7 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->passwordEdit->setEchoMode( QLineEdit::Password );
     ui->connectionTestLabel->hide();
 
+    // increase font size for OSX
 #ifdef Q_OS_MAC
     QString styleSheet = ui->installInfotextBrowser->styleSheet();
     styleSheet = styleSheet.replace( "font-size: 9pt;", "font-size: 13pt;" );
