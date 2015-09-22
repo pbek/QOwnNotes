@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Versions on your ownCloud server</string>
+   <string>Note versions on your ownCloud server</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0">

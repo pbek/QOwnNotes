@@ -48,14 +48,14 @@ void OwnCloudService::slotAuthenticationRequired( QNetworkReply* reply, QAuthent
 
 void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 {
-    qDebug() << "Reply from " << reply->url().path();
+    // qDebug() << "Reply from " << reply->url().path();
 
     // this only should called from the settings dialog
     if ( reply->url().path().endsWith( appInfoPath ) )
     {
-        qDebug() << "Reply from app info";
+        // qDebug() << "Reply from app info";
         QString data = QString( reply->readAll() );
-        qDebug() << data;
+        // qDebug() << data;
 
         // check if everything is all right and call the callback method
         checkAppInfo( data );
@@ -64,10 +64,10 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
     }
     else if ( reply->url().path().endsWith( versionListPath ) )
     {
-        qDebug() << "Reply from version list";
+        // qDebug() << "Reply from version list";
         QByteArray arr = reply->readAll();
         QString data = QString( arr );
-        qDebug() << data;
+        // qDebug() << data;
 
         // handle the versions loading
         handleVersionsLoading( data );
@@ -103,9 +103,9 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
 {
     settingsDialog = dialog;
 
-    qDebug() << serverUrl;
-    qDebug() << userName;
-    qDebug() << password;
+    // qDebug() << serverUrl;
+    // qDebug() << userName;
+    // qDebug() << password;
 
     if ( !busy )
     {
@@ -113,8 +113,6 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
         emit(busyChanged(busy));
 
         QUrl url( serverUrl + appInfoPath );
-//        QUrl url( serverUrl + versionListPath );
-
         url.setUserName( userName );
         url.setPassword( password );
 
@@ -122,7 +120,7 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
         q.addQueryItem("format", format);
         url.setQuery(q);
 
-        qDebug() << url;
+        // qDebug() << url;
 
         QNetworkRequest r(url);
         addAuthHeader(&r);
@@ -155,7 +153,7 @@ void OwnCloudService::loadVersions( QString notesPath, QString fileName, MainWin
         q.addQueryItem( "file_name", serverNotesPath + fileName );
         url.setQuery( q );
 
-        qDebug() << url;
+        // qDebug() << url;
 
         QNetworkRequest r(url);
         addAuthHeader(&r);
@@ -178,7 +176,6 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r)
 
 bool OwnCloudService::isBusy()
 {
-    qDebug() << "Busy: " << busy;
     return busy;
 }
 
