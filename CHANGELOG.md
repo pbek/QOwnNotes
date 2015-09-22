@@ -1,7 +1,8 @@
  
 # QOwnNotes Changelog
 
-## current
+## 0.35
+- added information text for Windows users to install OpenSSL
 - added more detailed network connection error messages
 - fixed a problem with Windows 8.1
 
