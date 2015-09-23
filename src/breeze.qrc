@@ -9,5 +9,6 @@
         <file>images/breeze/lc_setdocumentproperties.svg</file>
         <file>images/breeze/system-shutdown.svg</file>
         <file>images/breeze/appointment-new.svg</file>
+        <file>images/breeze/trash-empty.svg</file>
     </qresource>
 </RCC>

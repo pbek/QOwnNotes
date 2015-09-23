@@ -29,7 +29,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void setCurrentNoteText(QString text);
-
+    void createNewNote(QString name, QString text);
 protected:
     void closeEvent(QCloseEvent *event);
     bool eventFilter(QObject *obj, QEvent *event);
@@ -60,6 +60,8 @@ private slots:
     void on_actionShow_system_tray_triggered(bool checked);
     void on_action_Settings_triggered();
     void on_actionShow_versions_triggered();
+
+    void on_actionShow_trash_triggered();
 
 private:
     Ui::MainWindow *ui;

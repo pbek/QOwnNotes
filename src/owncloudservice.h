@@ -19,6 +19,7 @@ public:
     void settingsConnectionTest( SettingsDialog *dialog );
     bool isBusy();
     void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
+    void loadTrash(QString notesPath, MainWindow *mainWindow);
 private:
     QString serverUrl;
     QString userName;
@@ -30,6 +31,7 @@ private:
     static const QString rootPath;
     static const QString format;
     QString versionListPath;
+    QString trashListPath;
     QString appInfoPath;
     QString capabilitiesPath;
     SettingsDialog *settingsDialog;
@@ -39,6 +41,7 @@ private:
     void addAuthHeader(QNetworkRequest *r);
     QString getServerNotesPath(QString notesPath);
     void handleVersionsLoading(QString data);
+    void handleTrashedLoading(QString data);
 signals:
     void busyChanged(bool busy);
 

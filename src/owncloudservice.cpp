@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "owncloudservice.h"
 #include "settingsdialog.h"
+#include "trashdialog.h"
 #include "versiondialog.h"
 #include <QSettings>
 #include <QDebug>
@@ -31,6 +32,7 @@ void OwnCloudService::readSettings()
     busy = false;
 
     versionListPath = rootPath + "note/versions";
+    trashListPath = rootPath + "note/trashed";
     appInfoPath = rootPath + "note/app_info";
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
 
@@ -63,13 +65,24 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
     }
     else if ( reply->url().path().endsWith( versionListPath ) )
     {
-        // qDebug() << "Reply from version list";
+        qDebug() << "Reply from version list";
         QByteArray arr = reply->readAll();
         QString data = QString( arr );
         // qDebug() << data;
 
         // handle the versions loading
         handleVersionsLoading( data );
+        return;
+    }
+    else if ( reply->url().path().endsWith( trashListPath ) )
+    {
+        qDebug() << "Reply from trash list";
+        QByteArray arr = reply->readAll();
+        QString data = QString( arr );
+        qDebug() << data;
+
+        // handle the versions loading
+        handleTrashedLoading( data );
         return;
     }
 
@@ -156,6 +169,39 @@ void OwnCloudService::loadVersions( QString notesPath, QString fileName, MainWin
         url.setQuery( q );
 
         // qDebug() << url;
+
+        QNetworkRequest r(url);
+        addAuthHeader(&r);
+
+        QNetworkReply *reply = networkManager->get(r);
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+    }
+}
+
+/**
+ * @brief OwnCloudService::loadTrash
+ */
+void OwnCloudService::loadTrash( QString notesPath, MainWindow *mainWindow )
+{
+    this->mainWindow = mainWindow;
+
+    if ( !busy )
+    {
+        busy = true;
+        emit(busyChanged(busy));
+
+        QUrl url( serverUrl + trashListPath );
+        QString serverNotesPath = getServerNotesPath( notesPath );
+
+        url.setUserName( userName );
+        url.setPassword( password );
+
+        QUrlQuery q;
+        q.addQueryItem( "format", format );
+        q.addQueryItem( "dir", serverNotesPath );
+        url.setQuery( q );
+
+        qDebug() << url;
 
         QNetworkRequest r(url);
         addAuthHeader(&r);
@@ -261,10 +307,55 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we got no usefull data
     if ( versions.toString() == "" )
     {
-        QMessageBox::information( 0, "no other version", "There were no other versions on the server for this note." );
+        QMessageBox::information( 0, "no other version", "There are no other versions on the server for this note." );
         return;
     }
 
     VersionDialog *dialog = new VersionDialog( versions, mainWindow );
+    dialog->exec();
+}
+
+/**
+ * Handles the loading of trashed notes
+ *
+ * @brief OwnCloudService::handleTrashedLoading
+ * @param data
+ */
+void OwnCloudService::handleTrashedLoading( QString data )
+{
+    // check if we get any data at all
+    if ( data == "" )
+    {
+        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
+        return;
+    }
+
+    // we have to add [], so the string can be parsed as JSON
+    data = QString("[") + data + QString("]");
+
+    QScriptEngine engine;
+    QScriptValue result = engine.evaluate(data);
+
+    // get a possible error messages
+    QString message = result.property(0).property("message").toString();
+
+    // check if we got an error message
+    if ( message != "" )
+    {
+        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: " + message );
+        return;
+    }
+
+    // get the versions
+    QScriptValue notes = result.property(0).property("notes");
+
+    // check if we got no usefull data
+    if ( notes.toString() == "" )
+    {
+        QMessageBox::information( 0, "no other version", "There are no trashed notes on the server." );
+        return;
+    }
+
+    TrashDialog *dialog = new TrashDialog( notes, mainWindow );
     dialog->exec();
 }

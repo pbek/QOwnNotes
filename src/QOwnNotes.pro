@@ -36,7 +36,8 @@ SOURCES += main.cpp\
     settingsdialog.cpp \
     libraries/simplecrypt/simplecrypt.cpp \
     owncloudservice.cpp \
-    versiondialog.cpp
+    versiondialog.cpp \
+    trashdialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -60,14 +61,16 @@ HEADERS  += mainwindow.h \
     settingsdialog.h \
     libraries/simplecrypt/simplecrypt.h \
     owncloudservice.h \
-    versiondialog.h
+    versiondialog.h \
+    trashdialog.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
     aboutdialog.ui \
     updatedialog.ui \
     settingsdialog.ui \
-    versiondialog.ui
+    versiondialog.ui \
+    trashdialog.ui
 
 RESOURCES += \
     images.qrc \

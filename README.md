@@ -24,6 +24,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - notes can be created, edited, viewed and removed
 - list of notes is shown
 - older versions of your notes can be restored from your ownCloud server
+- trashed notes can be restored from your ownCloud server
 - sub-string searching of notes is possible and search results are highlighted in the notes
 - application can be operated with keyboard shortcuts.
 - external changes of note files are watched (notes or note list are reloaded)

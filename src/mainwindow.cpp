@@ -834,6 +834,34 @@ void MainWindow::setCurrentNoteText( QString text )
     this->ui->noteTextView->setHtml( currentNote.toMarkdownHtml() );
 }
 
+/**
+ * Creates a new note (to restore a trashed note)
+ * This is a public callback function for the trash dialog.
+ *
+ * @brief MainWindow::createNewNote
+ * @param name
+ * @param text
+ */
+void MainWindow::createNewNote( QString name, QString text )
+{
+    QDateTime currentDate = QDateTime::currentDateTime();
+    name.append( " " + currentDate.toString( Qt::ISODate ).replace( ":", "." ) );
+
+    QString preText = name + "\n";
+
+    for ( int i = 0; i < name.length(); i++ )
+    {
+        preText.append( "=" );
+    }
+
+    preText.append( "\n\n" );
+    text.prepend( preText );
+
+    ui->searchLineEdit->setText( name );
+    on_searchLineEdit_returnPressed();
+    ui->noteTextEdit->setText( text );
+}
+
 
 /*!
  * Slots implementation
@@ -1172,4 +1200,10 @@ void MainWindow::on_actionShow_versions_triggered()
 {
     OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
     ownCloud->loadVersions( this->notesPath, this->currentNote.getFileName(), this );
+}
+
+void MainWindow::on_actionShow_trash_triggered()
+{
+    OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
+    ownCloud->loadTrash( this->notesPath, this );
 }

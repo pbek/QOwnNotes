@@ -193,6 +193,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Note_note"/>
    <addaction name="actionToggleEditMode"/>
    <addaction name="actionShow_versions"/>
+   <addaction name="actionShow_trash"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
@@ -346,6 +347,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Show note &amp;versions</string>
+   </property>
+   <property name="toolTip">
+    <string>Show note versions on server</string>
+   </property>
+  </action>
+  <action name="actionShow_trash">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/trash-empty.svg</normaloff>:/images/breeze/trash-empty.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show &amp;trash</string>
+   </property>
+   <property name="toolTip">
+    <string>Show trashed notes on server</string>
    </property>
   </action>
  </widget>
