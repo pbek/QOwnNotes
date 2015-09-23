@@ -3,7 +3,7 @@
 
 ## 0.37
 - trashed notes can now be viewed and restored from your ownCloud server
-	- please install QOwnNotesAPI v0.3 for trash support
+    - please install QOwnNotesAPI v0.3 for trash support
 
 ## 0.36
 - fixed a problem with the OSX build
