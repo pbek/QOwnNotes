@@ -49,7 +49,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
     // iterate over the trashs
     while ( notesIterator.hasNext() ) {
         notesIterator.next();
-        qDebug() << notesIterator.value().property( "timestamp" ).toString() << " - " << notesIterator.value().property( "dateString" ).toString() << " - " << notesIterator.value().property( "noteName" ).toString();
+        // qDebug() << notesIterator.value().property( "timestamp" ).toString() << " - " << notesIterator.value().property( "dateString" ).toString() << " - " << notesIterator.value().property( "noteName" ).toString();
 
         itemName = notesIterator.value().property( "noteName" ).toString();
         dateString = notesIterator.value().property( "dateString" ).toString();

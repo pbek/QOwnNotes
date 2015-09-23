@@ -79,9 +79,9 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
         qDebug() << "Reply from trash list";
         QByteArray arr = reply->readAll();
         QString data = QString( arr );
-        qDebug() << data;
+        // qDebug() << data;
 
-        // handle the versions loading
+        // handle the loading of trashed notes
         handleTrashedLoading( data );
         return;
     }
@@ -201,7 +201,7 @@ void OwnCloudService::loadTrash( QString notesPath, MainWindow *mainWindow )
         q.addQueryItem( "dir", serverNotesPath );
         url.setQuery( q );
 
-        qDebug() << url;
+        // qDebug() << url;
 
         QNetworkRequest r(url);
         addAuthHeader(&r);
