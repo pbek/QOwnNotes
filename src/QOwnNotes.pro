@@ -75,7 +75,8 @@ FORMS    += mainwindow.ui \
 RESOURCES += \
     images.qrc \
     texts.qrc \
-    breeze.qrc
+    breeze.qrc \
+    demonotes.qrc
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0

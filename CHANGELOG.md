@@ -1,6 +1,9 @@
  
 # QOwnNotes Changelog
 
+## current
+- you will now start with some demo notes if your notes directory is emptry
+
 ## 0.37
 - trashed notes can now be viewed and restored from your ownCloud server
     - please install QOwnNotesAPI v0.3 for trash support

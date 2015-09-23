@@ -515,6 +515,27 @@ void MainWindow::buildNotesIndex()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
+    // add some notes if there aren't any
+    if ( files.count() == 0 )
+    {
+        qDebug() << "No notes! We will add some...";
+        QStringList filenames;
+        QString filename;
+        filenames.append( "Welcome to QOwnNotes.txt" );
+        filenames.append( "GitHub Flavored Markdown.txt" );
+        filenames.append( "Markdown Showcase.txt" );
+
+        // copy note files to the notes path
+        for ( int i = 0; i < filenames.size(); ++i )
+        {
+            filename = filenames.at( i );
+            QFile::copy( ":/demonotes/" + filename, this->notesPath + "/" + filename );
+        }
+
+        // fetch all files again
+        files = notesDir.entryList( filters, QDir::Files, QDir::Time );
+    }
+
     // delete all notes in the database first
     Note::deleteAll();
 
