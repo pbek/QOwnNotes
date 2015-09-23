@@ -10,7 +10,11 @@
 
 int main(int argc, char *argv[])
 {
+    // fixing some troubles in Windows 8.1
+#ifdef Q_OS_WIN32
     QCoreApplication::addLibraryPath("./");
+#endif
+
     QApplication a(argc, argv);
 
     MainWindow w;

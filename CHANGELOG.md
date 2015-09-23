@@ -1,6 +1,9 @@
  
 # QOwnNotes Changelog
 
+## 0.36
+- fixed a problem with the OSX build
+
 ## 0.35
 - added information text for Windows users to install OpenSSL
 - added more detailed network connection error messages
