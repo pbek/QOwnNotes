@@ -1235,5 +1235,5 @@ void MainWindow::on_actionShow_trash_triggered()
 void MainWindow::updateCheckTimerTimeout()
 {
     qDebug() << "updateCheck";
-    this->updateService->checkForUpdates( UpdateService::Automatic );
+    this->updateService->checkForUpdates( UpdateService::Periodic );
 }

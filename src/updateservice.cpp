@@ -99,7 +99,7 @@ void UpdateService::onResult(QNetworkReply* reply)
             {
                 showUpdateDialog = false;
             }
-            else if( this->updateMode == UpdateService::Automatic )
+            else if( this->updateMode == UpdateService::Periodic )
             {
                 QWidget *widget = QApplication::activeWindow();
 

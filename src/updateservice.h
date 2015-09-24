@@ -27,7 +27,7 @@ public:
     enum UpdateMode {
         AppStart = 1,
         Manual,
-        Automatic
+        Periodic
     };
     Q_ENUMS(UpdateMode)
 
