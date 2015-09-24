@@ -2,7 +2,7 @@
 # QOwnNotes Changelog
 
 ## 0.38
-- you will now start with some demo notes if your notes directory is emptry
+- you will now start with some demo notes if your notes directory is empty
 - settings dialog improvements
 - added some icons and made some minor layout changes
 
