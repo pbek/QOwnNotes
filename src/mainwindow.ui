@@ -161,6 +161,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Find_note"/>
     <addaction name="action_Remove_note"/>
     <addaction name="actionShow_versions"/>
+    <addaction name="actionShow_trash"/>
     <addaction name="actionToggleEditMode"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
@@ -191,6 +192,7 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </attribute>
    <addaction name="action_Note_note"/>
+   <addaction name="action_Remove_note"/>
    <addaction name="actionToggleEditMode"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
@@ -287,15 +289,18 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCheck_for_updates">
    <property name="icon">
-    <iconset theme="system-software-update">
-     <normaloff/>
-    </iconset>
+    <iconset theme="system-software-update" resource="breeze.qrc">
+     <normaloff>:/images/breeze/svn-update.svg</normaloff>:/images/breeze/svn-update.svg</iconset>
    </property>
    <property name="text">
     <string>Check for &amp;updates</string>
    </property>
   </action>
   <action name="actionReport_problems_or_ideas">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/tools-report-bug.svg</normaloff>:/images/breeze/tools-report-bug.svg</iconset>
+   </property>
    <property name="text">
     <string>Report &amp;problems or ideas</string>
    </property>
@@ -332,9 +337,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Settings">
    <property name="icon">
-    <iconset theme="emblem-system">
-     <normaloff/>
-    </iconset>
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/configure.svg</normaloff>:/images/breeze/configure.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Settings</string>
@@ -367,8 +371,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="breeze.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -191,9 +191,8 @@
                  <string>set local ownCloud path</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="folder-open">
-                  <normaloff/>
-                 </iconset>
+                 <iconset resource="breeze.qrc">
+                  <normaloff>:/images/breeze/folder-sync.svg</normaloff>:/images/breeze/folder-sync.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -212,9 +211,8 @@
                  <string>connect to ownCloud server</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="network-wired">
-                  <normaloff/>
-                 </iconset>
+                 <iconset resource="breeze.qrc">
+                  <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -248,8 +246,8 @@
                <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.Helvetica Neue DeskInterface'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;Please install the latest version of &lt;/span&gt;&lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt; (at least 0.3) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least 0.3) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
               <property name="openExternalLinks">
                <bool>true</bool>
@@ -298,7 +296,9 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="breeze.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

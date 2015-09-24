@@ -10,5 +10,12 @@
         <file>images/breeze/system-shutdown.svg</file>
         <file>images/breeze/appointment-new.svg</file>
         <file>images/breeze/trash-empty.svg</file>
+        <file>images/breeze/network-connect.svg</file>
+        <file>images/breeze/configure.svg</file>
+        <file>images/breeze/svn-update.svg</file>
+        <file>images/breeze/tools-report-bug.svg</file>
+        <file>images/breeze/edit-download.svg</file>
+        <file>images/breeze/dialog-cancel.svg</file>
+        <file>images/breeze/document-open-recent.svg</file>
     </qresource>
 </RCC>

@@ -16,21 +16,15 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
     QPushButton *button;
     ui->buttonBox->clear();
 
-    QIcon restoreIcon;
-    restoreIcon.setThemeName( "view-restore" );
-
-    QIcon cancelIcon;
-    cancelIcon.setThemeName( "application-exit" );
-
     button = new QPushButton( tr( "&Restore selected note" ) );
     button->setProperty( "ActionRole", Restore );
     button->setDefault( false );
-    button->setIcon( restoreIcon );
+    button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
     button = new QPushButton( tr( "&Cancel" ) );
     button->setProperty( "ActionRole", Cancel );
-    button->setIcon( cancelIcon );
+    button->setIcon( QIcon( ":/images/breeze/dialog-cancel.svg" ) );
     button->setDefault( true );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
