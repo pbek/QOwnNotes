@@ -30,7 +30,6 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     html += "<p>If your ownCloud server uses SSL (https) you also need to install <a href='https://www.openssl.org'>OpenSSL</a> into your system directory.</p>";
     html += "<p>You can find binary packages of OpenSSL <a href='http://slproweb.com/products/Win32OpenSSL.html'>here</a>.</p>";
     ui->installInfotextBrowser->setHtml( html );
-    ui->installInfotextBrowser->setFixedHeight( 600 );
 #endif
 
     this->crypto = crypto;
@@ -98,6 +97,9 @@ void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, Q
     }
     else
     {
+        // hide password
+        connectionErrorMessage.replace( ui->passwordEdit->text(), "***" );
+
         ui->connectionTestLabel->setStyleSheet( "color: red;" );
         ui->connectionTestLabel->setText( "There was an error connecting to the ownCloud Server!\nYou also need to have the QOwnNotesAPI app installed and enabled!\n\nConnection error message: " + connectionErrorMessage );
     }
@@ -122,5 +124,8 @@ void SettingsDialog::on_localOwnCloudDirectoryButton_clicked()
                                                  path,
                                                  QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog );
 
-    ui->localOwnCloudPathEdit->setText( dir );
+    if ( dir != "" )
+    {
+        ui->localOwnCloudPathEdit->setText( dir );
+    }
 }
