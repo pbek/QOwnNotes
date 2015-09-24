@@ -94,8 +94,12 @@ MainWindow::MainWindow(QWidget *parent) :
     this->loadRecentNoteFolderListMenu();
 
     this->updateService = new UpdateService(this);
-    this->updateService->checkForUpdates();
+    this->updateService->checkForUpdates( UpdateService::AppStart );
 
+    QTimer *updateCheckTimer = new QTimer(this);
+    connect( updateCheckTimer, SIGNAL( timeout() ), this, SLOT( updateCheckTimerTimeout() ) );
+    // update check every 6h
+    updateCheckTimer->start( 21600000 );
 }
 
 MainWindow::~MainWindow()
@@ -561,10 +565,9 @@ QString MainWindow::selectOwnCloudFolder() {
     }
 
     // TODO: We sometimes seem to get a "QCoreApplication::postEvent: Unexpected null receiver" here.
-    // We got problems with the native dialog, so we are using QFileDialog::DontUseNativeDialog now.
     QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud folder" ),
                                                  path,
-                                                 QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog );
+                                                 QFileDialog::ShowDirsOnly );
 
     if ( dir != "" )
     {
@@ -1153,7 +1156,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
  */
 void MainWindow::on_actionCheck_for_updates_triggered()
 {
-    this->updateService->checkForUpdates( true );
+    this->updateService->checkForUpdates( UpdateService::Manual );
 }
 
 /*
@@ -1227,4 +1230,10 @@ void MainWindow::on_actionShow_trash_triggered()
 {
     OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
     ownCloud->loadTrash( this->notesPath, this );
+}
+
+void MainWindow::updateCheckTimerTimeout()
+{
+    qDebug() << "updateCheck";
+    this->updateService->checkForUpdates( UpdateService::Automatic );
 }

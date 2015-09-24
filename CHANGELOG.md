@@ -1,5 +1,10 @@
- 
 # QOwnNotes Changelog
+
+## 0.39
+- turned on native file dialogs again
+- some text changes and svg image fixes
+- added an automatic update check every 6h
+- you now are able to skip an update version number, no more update notifications as long there is no new update
 
 ## 0.38
 - you will now start with some demo notes if your notes directory is empty

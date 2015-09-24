@@ -8,6 +8,9 @@
 #include <QScriptValueIterator>
 #include <QMessageBox>
 #include <QLibraryInfo>
+#include <QUrlQuery>
+#include <QSettings>
+#include <QApplication>
 #include "build_number.h"
 #include "updatedialog.h"
 #include "version.h"
@@ -17,14 +20,9 @@ UpdateService::UpdateService(QObject *parent) : QObject(parent)
     this->parent = parent;
 }
 
-bool UpdateService::checkForUpdates()
+bool UpdateService::checkForUpdates( UpdateMode updateMode )
 {
-    this->checkForUpdates( false );
-}
-
-bool UpdateService::checkForUpdates( bool isManual )
-{
-    this->isManual = isManual;
+    this->updateMode = updateMode;
 
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     connect(manager, SIGNAL(finished(QNetworkReply*)),
@@ -38,12 +36,16 @@ bool UpdateService::checkForUpdates( bool isManual )
     isDebug = true;
 #endif
 
-    // there are troubles with https on different platforms, we are using http everywhere for now
-    QUrl url( "http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" + QString( PLATFORM ) + ".json" +
-                "?b=" + QString::number( BUILD ) +
-                "&v=" + QString( VERSION ) +
-                "&d=" + __DATE__ + " " + __TIME__ +
-                "&debug=" + ( isDebug ? "1" : "0" ) );
+    // there are troubles with https by default on different platforms, so we are using http everywhere for now
+    QUrl url( "http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" + QString( PLATFORM ) + ".json" );
+
+    QUrlQuery q;
+    q.addQueryItem( "b", QString::number( BUILD ) );
+    q.addQueryItem( "v", QString( VERSION ) );
+    q.addQueryItem( "d", QString( __DATE__ ) + " " + QString( __TIME__ ) );
+    q.addQueryItem( "um", QString::number( updateMode ) );
+    q.addQueryItem( "debug", QString::number( isDebug ) );
+    url.setQuery( q );
 
 //    qDebug() << __func__ << " - 'url': " << url;
 
@@ -52,7 +54,7 @@ bool UpdateService::checkForUpdates( bool isManual )
 
 void UpdateService::onResult(QNetworkReply* reply)
 {
-    if (reply->error() != QNetworkReply::NoError)
+    if ( reply->error() != QNetworkReply::NoError )
     {
         return;
     }
@@ -87,12 +89,36 @@ void UpdateService::onResult(QNetworkReply* reply)
         QString changesText = result.property("0").property("changes").toString();
 //        qDebug() << changesText;
 
-        // open the update dialog
-        UpdateDialog *dialog = new UpdateDialog( 0, changesText, releaseUrl, releaseVersionString, releaseBuildNumber );
-        dialog->exec();
+        bool showUpdateDialog = true;
+        if ( this->updateMode != UpdateService::Manual )
+        {
+            QSettings settings;
+            QString skipVersion = settings.value( "skipVersion" ).toString();
 
+            if ( releaseVersionString == skipVersion )
+            {
+                showUpdateDialog = false;
+            }
+            else if( this->updateMode == UpdateService::Automatic )
+            {
+                QWidget *widget = QApplication::activeWindow();
+
+                // only load the update dialog if the active window is the MainWindow
+                if ( QString( widget->metaObject()->className() ) != "MainWindow" )
+                {
+                    showUpdateDialog = false;
+                }
+            }
+        }
+
+        if ( showUpdateDialog )
+        {
+            // open the update dialog
+            UpdateDialog *dialog = new UpdateDialog( 0, changesText, releaseUrl, releaseVersionString, releaseBuildNumber );
+            dialog->exec();
+        }
     }
-    else if( this->isManual )
+    else if ( this->updateMode == UpdateService::Manual )
     {
         QMessageBox::information( 0, "No updates", "There are no updates available.\n" + QString( VERSION ) + " is the latest version." );
     }

@@ -122,7 +122,7 @@ void SettingsDialog::on_localOwnCloudDirectoryButton_clicked()
 
     QString dir = QFileDialog::getExistingDirectory( this, tr( "Select ownCloud base directory" ),
                                                  path,
-                                                 QFileDialog::ShowDirsOnly | QFileDialog::DontUseNativeDialog );
+                                                 QFileDialog::ShowDirsOnly );
 
     if ( dir != "" )
     {

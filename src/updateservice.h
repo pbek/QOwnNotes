@@ -19,18 +19,23 @@
     #define PLATFORM "other"
 #endif
 
-
 class UpdateService : public QObject
 {
     Q_OBJECT
 
 public:
+    enum UpdateMode {
+        AppStart = 1,
+        Manual,
+        Automatic
+    };
+    Q_ENUMS(UpdateMode)
+
     explicit UpdateService(QObject *parent = 0);
-    bool checkForUpdates();
-    bool checkForUpdates(bool isManual);
+    bool checkForUpdates(UpdateMode updateMode = AppStart);
 private:
     QObject *parent;
-    bool isManual;
+    UpdateMode updateMode;
 private slots:
     void onResult(QNetworkReply *reply);
 };

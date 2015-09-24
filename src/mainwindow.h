@@ -60,9 +60,8 @@ private slots:
     void on_actionShow_system_tray_triggered(bool checked);
     void on_action_Settings_triggered();
     void on_actionShow_versions_triggered();
-
     void on_actionShow_trash_triggered();
-
+    void updateCheckTimerTimeout();
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

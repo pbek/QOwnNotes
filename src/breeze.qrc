@@ -17,5 +17,6 @@
         <file>images/breeze/edit-download.svg</file>
         <file>images/breeze/dialog-cancel.svg</file>
         <file>images/breeze/document-open-recent.svg</file>
+        <file>images/breeze/media-skip-forward.svg</file>
     </qresource>
 </RCC>

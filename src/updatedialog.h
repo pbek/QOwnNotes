@@ -1,6 +1,7 @@
 #ifndef UPDATEDIALOG_H
 #define UPDATEDIALOG_H
 
+#include <QAbstractButton>
 #include <QDialog>
 
 namespace Ui {
@@ -16,10 +17,18 @@ public:
     ~UpdateDialog();
 
 private slots:
-    void downloadRelease();
+    void dialogButtonClicked(QAbstractButton *button);
 private:
     Ui::UpdateDialog *ui;
     QString *releaseUrl;
+    QString releaseVersionString;
+
+    enum ButtonRole {
+        Unset,  // nothing was selected
+        Download,
+        Skip,
+        Cancel
+    };
 };
 
 #endif // UPDATEDIALOG_H
