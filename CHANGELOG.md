@@ -3,6 +3,7 @@
 
 ## current
 - you will now start with some demo notes if your notes directory is emptry
+- settings dialog improvements
 
 ## 0.37
 - trashed notes can now be viewed and restored from your ownCloud server
