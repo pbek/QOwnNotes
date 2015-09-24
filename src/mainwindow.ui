@@ -24,17 +24,20 @@
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
+   <layout class="QGridLayout" name="gridLayout_4">
     <property name="sizeConstraint">
      <enum>QLayout::SetMaximumSize</enum>
     </property>
-    <item>
+    <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
       <property name="rightMargin">
-       <number>11</number>
+       <number>0</number>
       </property>
       <property name="horizontalSpacing">
-       <number>6</number>
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>2</number>
       </property>
       <item row="1" column="1">
        <widget class="QTabWidget" name="noteTabWidget">
@@ -122,7 +125,7 @@ p, li { white-space: pre-wrap; }
 	background-image: url(:/images/search.png);
 	background-repeat: no-repeat;
 	background-position: center left;
-	margin-right: 12px;
+	margin-right: 0px;
 }
 </string>
         </property>
@@ -241,11 +244,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+R</string>
-   </property>
-  </action>
-  <action name="actionRename_note">
-   <property name="text">
-    <string>Rename note</string>
    </property>
   </action>
   <action name="actionAbout_QOwnNotes">
