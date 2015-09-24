@@ -1,10 +1,10 @@
  
 # QOwnNotes Changelog
 
-## current
+## 0.38
 - you will now start with some demo notes if your notes directory is emptry
 - settings dialog improvements
-- added more icons
+- added some icons and made some minor layout changes
 
 ## 0.37
 - trashed notes can now be viewed and restored from your ownCloud server
