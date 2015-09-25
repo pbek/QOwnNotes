@@ -98,8 +98,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     QTimer *updateCheckTimer = new QTimer(this);
     connect( updateCheckTimer, SIGNAL( timeout() ), this, SLOT( updateCheckTimerTimeout() ) );
-    // update check every 6h
-    updateCheckTimer->start( 21600000 );
+    // update check every 2h
+    updateCheckTimer->start( 7200000 );
 }
 
 MainWindow::~MainWindow()
