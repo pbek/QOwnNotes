@@ -22,7 +22,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesText, QString release
 
     button = new QPushButton( tr( "&Download latest" ) );
     button->setProperty( "ActionRole", Download );
-    button->setDefault( false );
+    button->setDefault( true );
     button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
@@ -35,7 +35,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesText, QString release
     button = new QPushButton( tr( "&Cancel" ) );
     button->setProperty( "ActionRole", Cancel );
     button->setIcon( QIcon( ":/images/breeze/dialog-cancel.svg" ) );
-    button->setDefault( true );
+    button->setDefault( false );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
     connect( this->ui->buttonBox, SIGNAL( clicked( QAbstractButton* ) ), SLOT( dialogButtonClicked( QAbstractButton* ) ) );
