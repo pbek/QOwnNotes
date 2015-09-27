@@ -2,6 +2,7 @@
 
 ## current
 - you now are able to select multiple notes and remove them or copy or move them to a recent note folder
+- fixed a possible crash with empty note files
 
 ## 0.39
 - turned on native file dialogs again

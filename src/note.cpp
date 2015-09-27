@@ -694,6 +694,12 @@ QString Note::toMarkdownHtml() {
     unsigned char *sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
     int length = strlen( (char*) sequence );
 
+    // return an empty string if the note is empty
+    if ( length == 0 )
+    {
+        return "";
+    }
+
     hoedown_buffer *html = hoedown_buffer_new( length );
 
     // render markdown html
