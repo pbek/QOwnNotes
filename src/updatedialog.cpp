@@ -39,7 +39,6 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesText, QString release
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
     connect( this->ui->buttonBox, SIGNAL( clicked( QAbstractButton* ) ), SLOT( dialogButtonClicked( QAbstractButton* ) ) );
-
 }
 
 UpdateDialog::~UpdateDialog()

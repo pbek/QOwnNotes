@@ -166,6 +166,55 @@ bool Note::remove( bool withFile )
     }
 }
 
+/**
+ * @brief Copies a note to an other path
+ *
+ * @param destinationPath
+ * @return bool
+ */
+bool Note::copy( QString destinationPath )
+{
+    QDir d;
+    if ( this->fileExists() && ( d.exists( destinationPath ) ) )
+    {
+        QFile file( fullNoteFilePath( this->fileName ) );
+        QString destinationFileName = destinationPath + QDir::separator() + this->fileName;
+
+        if ( d.exists( destinationFileName ) )
+        {
+            qDebug() << destinationFileName << "already exists!";
+
+            // find a new filename for the note
+            QDateTime currentDateTime = QDateTime::currentDateTime();
+            destinationFileName = destinationPath + QDir::separator() + this->name + " " + currentDateTime.toString( Qt::ISODate ).replace( ":", "_" ) + ".txt";
+
+            qDebug() << "New file name:" << destinationFileName;
+        }
+
+        return file.copy( destinationFileName );
+    }
+
+    return false;
+}
+
+/**
+ * @brief Moves a note to an other path
+ *
+ * @param destinationPath
+ * @return bool
+ */
+bool Note::move( QString destinationPath )
+{
+    bool result = copy( destinationPath );
+
+    if ( result )
+    {
+        return remove( true );
+    }
+
+    return false;
+}
+
 Note Note::fetchByName( QString name )
 {
     QSqlQuery query;

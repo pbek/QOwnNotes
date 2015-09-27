@@ -104,11 +104,17 @@ p, li { white-space: pre-wrap; }
       </item>
       <item row="1" column="0">
        <widget class="QListWidget" name="notesListWidget">
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
         <property name="styleSheet">
          <string notr="true">QListWidget {
 /*	border: 1px solid gray;*/
 }
 </string>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::ExtendedSelection</enum>
         </property>
        </widget>
       </item>

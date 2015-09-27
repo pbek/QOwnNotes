@@ -48,6 +48,8 @@ public:
     bool remove(bool withFile);
     QString toMarkdownHtml();
     bool isFetched();
+    bool copy(QString destinationPath);
+    bool move(QString destinationPath);
 private:
     int id;
     QString name;

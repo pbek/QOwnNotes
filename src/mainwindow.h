@@ -62,6 +62,8 @@ private slots:
     void on_actionShow_versions_triggered();
     void on_actionShow_trash_triggered();
     void updateCheckTimerTimeout();
+    void on_notesListWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -85,8 +87,7 @@ private:
     void readSettings();
     void buildNotesIndex();
     QString selectOwnCloudFolder();
-    void setCurrentNote(Note note);
-    void setCurrentNote(Note note, bool updateNoteText);
+    void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true);
     void handlePressed();
     void focusNoteTextEdit();
     void removeCurrentNote();
@@ -101,6 +102,9 @@ private:
     void storeRecentNoteFolder(const QString &folderName);
     void storeSettings();
     void setupCrypto();
+    void removeSelectedNotes();
+    void moveSelectedNotesToFolder(QString destinationFolder);
+    void copySelectedNotesToFolder(QString destinationFolder);
 };
 
 #endif // MAINWINDOW_H

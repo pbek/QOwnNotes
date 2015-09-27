@@ -602,23 +602,21 @@ QString MainWindow::selectOwnCloudFolder() {
     return this->notesPath;
 }
 
-void MainWindow::setCurrentNote( Note note )
-{
-    setCurrentNote( note, true );
-}
-
-void MainWindow::setCurrentNote( Note note, bool updateNoteText )
+void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote )
 {
     this->currentNote = note;
     QString name = note.getName();
 
     // find and set the current item
-    QList<QListWidgetItem*> items = this->ui->notesListWidget->findItems( name, Qt::MatchExactly );
-    if ( items.count() > 0 )
+    if ( updateSelectedNote )
     {
-        const QSignalBlocker blocker( this->ui->notesListWidget );
+        QList<QListWidgetItem*> items = this->ui->notesListWidget->findItems( name, Qt::MatchExactly );
+        if ( items.count() > 0 )
+        {
+            const QSignalBlocker blocker( this->ui->notesListWidget );
 
-        this->ui->notesListWidget->setCurrentItem( items[0] );
+            this->ui->notesListWidget->setCurrentItem( items[0] );
+        }
     }
 
     // update the text of the text edit
@@ -897,7 +895,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     qDebug() << "currentItemChanged " << current->text();
 
     Note note = Note::fetchByName( current->text() );
-    setCurrentNote( note );
+    setCurrentNote( note, true, false );
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
@@ -1237,3 +1235,153 @@ void MainWindow::updateCheckTimerTimeout()
     qDebug() << "updateCheck";
     this->updateService->checkForUpdates( UpdateService::Periodic );
 }
+
+void MainWindow::on_notesListWidget_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->notesListWidget->mapToGlobal( pos );
+    QMenu noteMenu;
+    QMenu *moveDestinationMenu;
+    QMenu *copyDestinationMenu;
+    QSettings settings;
+    QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
+
+    // show copy and move menu only if there are more than 1 recent note folders
+    if ( recentNoteFolders.size() > 1 )
+    {
+        moveDestinationMenu = noteMenu.addMenu( "&Move notes to..." );
+        copyDestinationMenu = noteMenu.addMenu( "&Copy notes to..." );
+
+        // add actions for the recent note folders
+        Q_FOREACH( QString noteFolder, recentNoteFolders )
+        {
+            if ( noteFolder != this->notesPath )
+            {
+                moveDestinationMenu->addAction( noteFolder );
+                copyDestinationMenu->addAction( noteFolder );
+            }
+        }
+    }
+
+    QAction* removeAction = noteMenu.addAction( "&Remove notes" );
+
+    QAction* selectedItem = noteMenu.exec( globalPos );
+    if ( selectedItem )
+    {
+        // move notes
+        if ( selectedItem->parent() == moveDestinationMenu )
+        {
+            QString destinationFolder = selectedItem->text();
+            moveSelectedNotesToFolder( destinationFolder );
+        }
+        // copy notes
+        else if ( selectedItem->parent() == copyDestinationMenu )
+        {
+            QString destinationFolder = selectedItem->text();
+            copySelectedNotesToFolder( destinationFolder );
+        }
+        // remove notes
+        else if ( selectedItem == removeAction )
+        {
+            removeSelectedNotes();
+        }
+    }
+}
+
+/**
+ * @brief Removes selected notes after a confirmation
+ */
+void MainWindow::removeSelectedNotes()
+{
+    int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if ( QMessageBox::information( this, "Remove selected notes",
+                                      "Remove " + QString::number( selectedItemsCount ) + " selected note(s)?\n\nIf the trash is enabled on your ownCloud server you should be able to restore them from there.",
+                                      "&Remove", "&Cancel", QString::null,
+                                      0, 1 ) == 0 )
+    {
+        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+        Q_FOREACH( QListWidgetItem* item, ui->notesListWidget->selectedItems() )
+        {
+            QString name = item->text();
+            Note note = Note::fetchByName( name );
+            note.remove( true );
+            qDebug() << "Removed note " << name;
+        }
+
+        loadNoteDirectoryList();
+    }
+}
+
+/**
+ * @brief Moves selected notes after a confirmation
+ * @param destinationFolder
+ */
+void MainWindow::moveSelectedNotesToFolder( QString destinationFolder )
+{
+    int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if ( QMessageBox::information( this, "Move selected notes",
+                                      "Move " + QString::number( selectedItemsCount ) + " selected note(s) to '" + destinationFolder + "'?",
+                                      "&Move", "&Cancel", QString::null,
+                                      0, 1 ) == 0 )
+    {
+        const QSignalBlocker blocker( this->noteDirectoryWatcher );
+
+        Q_FOREACH( QListWidgetItem* item, ui->notesListWidget->selectedItems() )
+        {
+            QString name = item->text();
+            Note note = Note::fetchByName( name );
+
+            // move note
+            bool result = note.move( destinationFolder );
+            if ( result )
+            {
+                qDebug() << "Note was moved:" << note.getName();
+            }
+            else
+            {
+                qDebug() << "Could not move note:" << note.getName();
+            }
+        }
+
+        loadNoteDirectoryList();
+    }
+}
+
+/**
+ * @brief Copies selected notes after a confirmation
+ * @param destinationFolder
+ */
+void MainWindow::copySelectedNotesToFolder( QString destinationFolder )
+{
+    int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if ( QMessageBox::information( this, "Copy selected notes",
+                                      "Copy " + QString::number( selectedItemsCount ) + " selected note(s) to '" + destinationFolder + "'?",
+                                      "&Copy", "&Cancel", QString::null,
+                                      0, 1 ) == 0 )
+    {
+        int copyCount = 0;
+        Q_FOREACH( QListWidgetItem* item, ui->notesListWidget->selectedItems() )
+        {
+            QString name = item->text();
+            Note note = Note::fetchByName( name );
+
+            // copy note
+            bool result = note.copy( destinationFolder );
+            if ( result )
+            {
+                copyCount++;
+                qDebug() << "Note was copied:" << note.getName();
+            }
+            else
+            {
+                qDebug() << "Could not copy note:" << note.getName();
+            }
+        }
+
+        QMessageBox::information( this, "Done", QString::number( copyCount ) + " note(s) were copied to '" + destinationFolder + "'." );
+    }
+}
+
