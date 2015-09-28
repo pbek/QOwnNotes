@@ -56,7 +56,16 @@ void SettingsDialog::on_connectButton_clicked()
 void SettingsDialog::storeSettings()
 {
     QSettings settings;
-    settings.setValue( "ownCloud/serverUrl", ui->serverUrlEdit->text() );
+    QString url = QString( ui->serverUrlEdit->text() );
+
+    // remove trailing "/" of the server url
+    if ( url.endsWith( "/" ) )
+    {
+        url.chop( 1 );
+        ui->serverUrlEdit->setText( url );
+    }
+
+    settings.setValue( "ownCloud/serverUrl", url );
     settings.setValue( "ownCloud/userName", ui->userNameEdit->text() );
     settings.setValue( "ownCloud/password", crypto->encryptToString( ui->passwordEdit->text() ) );
     settings.setValue( "ownCloud/localOwnCloudPath", ui->localOwnCloudPathEdit->text() );
