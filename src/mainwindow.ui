@@ -168,16 +168,13 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
-    <addaction name="action_Remove_note"/>
-    <addaction name="actionShow_versions"/>
     <addaction name="actionShow_trash"/>
-    <addaction name="actionToggleEditMode"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
-    <addaction name="actionShow_system_tray"/>
     <addaction name="separator"/>
+    <addaction name="actionShow_system_tray"/>
     <addaction name="action_Settings"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
@@ -188,9 +185,22 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionReport_problems_or_ideas"/>
+    <addaction name="separator"/>
     <addaction name="actionAbout_QOwnNotes"/>
    </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="action_Remove_note"/>
+    <addaction name="actionShow_versions"/>
+    <addaction name="separator"/>
+    <addaction name="actionToggleEditMode"/>
+    <addaction name="separator"/>
+    <addaction name="actionSelect_all_notes"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
+   <addaction name="menuEdit"/>
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -246,7 +256,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/breeze/edit-delete.svg</normaloff>:/images/breeze/edit-delete.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Remove note</string>
+    <string>&amp;Remove current note</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+R</string>
@@ -370,6 +380,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Show trashed notes on server</string>
+   </property>
+  </action>
+  <action name="actionSelect_all_notes">
+   <property name="text">
+    <string>Select &amp;all notes</string>
    </property>
   </action>
  </widget>

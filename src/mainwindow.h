@@ -63,6 +63,7 @@ private slots:
     void on_actionShow_trash_triggered();
     void updateCheckTimerTimeout();
     void on_notesListWidget_customContextMenuRequested(const QPoint &pos);
+    void on_actionSelect_all_notes_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -105,6 +106,7 @@ private:
     void removeSelectedNotes();
     void moveSelectedNotesToFolder(QString destinationFolder);
     void copySelectedNotesToFolder(QString destinationFolder);
+    void selectAllNotes();
 };
 
 #endif // MAINWINDOW_H

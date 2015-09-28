@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## current
+- some menu restructuring
+- added the ability to select all notes
+
 ## 0.40
 - you now are able to select multiple notes and remove them or copy/move them to a recent note folder
 - fixed a possible crash with empty note files
