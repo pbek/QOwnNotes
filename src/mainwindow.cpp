@@ -878,18 +878,24 @@ void MainWindow::setCurrentNoteText( QString text )
  */
 void MainWindow::createNewNote( QString name, QString text )
 {
-    QDateTime currentDate = QDateTime::currentDateTime();
-    name.append( " " + currentDate.toString( Qt::ISODate ).replace( ":", "." ) );
+    QFile* f = new QFile( this->notesPath + QDir::separator() + name + ".txt" );
 
-    QString preText = name + "\n";
-
-    for ( int i = 0; i < name.length(); i++ )
+    // change the name and headline if note exists
+    if ( f->exists() )
     {
-        preText.append( "=" );
-    }
+        QDateTime currentDate = QDateTime::currentDateTime();
+        name.append( " " + currentDate.toString( Qt::ISODate ).replace( ":", "." ) );
 
-    preText.append( "\n\n" );
-    text.prepend( preText );
+        QString preText = name + "\n";
+
+        for ( int i = 0; i < name.length(); i++ )
+        {
+            preText.append( "=" );
+        }
+
+        preText.append( "\n\n" );
+        text.prepend( preText );
+    }
 
     ui->searchLineEdit->setText( name );
     on_searchLineEdit_returnPressed();
