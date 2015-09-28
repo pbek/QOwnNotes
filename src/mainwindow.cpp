@@ -323,7 +323,7 @@ void MainWindow::readSettings()
     // check legacy setting
     this->notesPath = settings.value( "General/notesPath" ).toString();
 
-    // remove old setting if we found one and store new one
+    // migration: remove old setting if we found one and store new one
     if ( this->notesPath != "" )
     {
         settings.setValue( "notesPath", this->notesPath );
@@ -338,6 +338,17 @@ void MainWindow::readSettings()
     if ( this->notesPath == "" )
     {
         selectOwnCloudNotesFolder();
+    }
+
+    // migration: remove notes path from recent note folders
+    if ( this->notesPath != "" )
+    {
+        QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
+        if ( recentNoteFolders.contains( this->notesPath ) )
+        {
+            recentNoteFolders.removeAll( this->notesPath );
+            settings.setValue( "recentNoteFolders", recentNoteFolders );
+        }
     }
 }
 
