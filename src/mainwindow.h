@@ -87,7 +87,7 @@ private:
     void loadNoteDirectoryList();
     void readSettings();
     void buildNotesIndex();
-    QString selectOwnCloudFolder();
+    QString selectOwnCloudNotesFolder();
     void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true);
     void handlePressed();
     void focusNoteTextEdit();
@@ -100,13 +100,14 @@ private:
     void setNoteTextFromNote(Note *note);
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
     void loadRecentNoteFolderListMenu();
-    void storeRecentNoteFolder(const QString &folderName);
+    void storeRecentNoteFolder(QString addFolderName, QString removeFolderName);
     void storeSettings();
     void setupCrypto();
     void removeSelectedNotes();
     void moveSelectedNotesToFolder(QString destinationFolder);
     void copySelectedNotesToFolder(QString destinationFolder);
     void selectAllNotes();
+    void updateCurrentFolderTooltip();
 };
 
 #endif // MAINWINDOW_H

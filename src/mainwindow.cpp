@@ -100,6 +100,9 @@ MainWindow::MainWindow(QWidget *parent) :
     connect( updateCheckTimer, SIGNAL( timeout() ), this, SLOT( updateCheckTimerTimeout() ) );
     // update check every 2h
     updateCheckTimer->start( 7200000 );
+
+    // update the current folder tooltip
+    updateCurrentFolderTooltip();
 }
 
 MainWindow::~MainWindow()
@@ -120,13 +123,6 @@ void MainWindow::loadRecentNoteFolderListMenu()
 {
     QSettings settings;
     QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
-
-    // if there is no folder yet, add the current
-    if ( recentNoteFolders.length() == 0 )
-    {
-        recentNoteFolders.append( this->notesPath );
-        settings.setValue( "recentNoteFolders", recentNoteFolders );
-    }
 
     int maxItems = 15;
     // remove items if there are too many
@@ -171,15 +167,15 @@ void MainWindow::changeNoteFolder( const QString &folderName )
         // store everything before changing folder
         storeUpdatedNotesToDisk();
 
+        // update the recent note folder list
+        storeRecentNoteFolder( this->notesPath, folderName );
+
         // change notes path
         this->notesPath = folderName;
 
         // store notesPath setting
         QSettings settings;
         settings.setValue( "notesPath", folderName );
-
-        // update the recent note folder list
-        storeRecentNoteFolder( folderName );
 
         buildNotesIndex();
         loadNoteDirectoryList();
@@ -195,19 +191,28 @@ void MainWindow::changeNoteFolder( const QString &folderName )
         }
 
         this->ui->noteTextView->clear();
+
+        // update the current folder tooltip
+        updateCurrentFolderTooltip();
     }
 }
 
 /*
- * Stores a new recent note folder
+ * Adds and removes a folder from the recent note folders
  */
-void MainWindow::storeRecentNoteFolder( const QString& folderName )
+void MainWindow::storeRecentNoteFolder( QString addFolderName, QString removeFolderName )
 {
     QSettings settings;
     QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
 
-    recentNoteFolders.removeAll( folderName );
-    recentNoteFolders.prepend( folderName );
+    recentNoteFolders.removeAll( addFolderName );
+    recentNoteFolders.removeAll( removeFolderName );
+
+    if ( addFolderName != removeFolderName )
+    {
+        recentNoteFolders.prepend( addFolderName );
+    }
+
     settings.setValue( "recentNoteFolders", recentNoteFolders );
 
     // reload menu
@@ -333,7 +338,7 @@ void MainWindow::readSettings()
     // let us select a folder if we haven't find one in the settings
     if ( this->notesPath == "" )
     {
-        selectOwnCloudFolder();
+        selectOwnCloudNotesFolder();
     }
 }
 
@@ -556,7 +561,7 @@ void MainWindow::buildNotesIndex()
     this->currentNote.refetch();
 }
 
-QString MainWindow::selectOwnCloudFolder() {
+QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
     if ( path == "" )
@@ -569,14 +574,22 @@ QString MainWindow::selectOwnCloudFolder() {
                                                  path,
                                                  QFileDialog::ShowDirsOnly );
 
-    if ( dir != "" )
+    QDir d = QDir( dir );
+
+    if ( d.exists() )
     {
+        // lets remove trailing slashes
+        dir = d.path();
+
+        // update the recent note folder list
+        storeRecentNoteFolder( this->notesPath, dir );
+
         this->notesPath = dir;
         QSettings settings;
         settings.setValue( "notesPath", dir );
 
-        // stores folder to recent note folders
-        storeRecentNoteFolder( dir );
+        // update the current folder tooltip
+        updateCurrentFolderTooltip();
     }
     else
     {
@@ -588,7 +601,7 @@ QString MainWindow::selectOwnCloudFolder() {
                                               0, 1 ) )
             {
                 case 0:
-                    selectOwnCloudFolder();
+                    selectOwnCloudNotesFolder();
                     break;
                 case 1:
                 default:
@@ -990,10 +1003,21 @@ void MainWindow::copySelectedNotesToFolder( QString destinationFolder )
     }
 }
 
+/**
+ * @brief Updates the current folder tooltip
+ */
+void MainWindow::updateCurrentFolderTooltip()
+{
+    ui->actionSet_ownCloud_Folder->setStatusTip( "Current notes folder: " + this->notesPath );
+    ui->actionSet_ownCloud_Folder->setToolTip( "Set the notes folder. Current notes folder: " + this->notesPath );
+}
+
 
 /**
  *
+ *
  * Slots implementations
+ *
  *
  */
 
@@ -1039,7 +1063,7 @@ void MainWindow::on_action_Quit_triggered()
 void MainWindow::on_actionSet_ownCloud_Folder_triggered()
 {
     QString oldPath = this->notesPath;
-    selectOwnCloudFolder();
+    selectOwnCloudNotesFolder();
 
     // reload notes if notes folder was changed
     if ( oldPath != this->notesPath )
@@ -1353,8 +1377,8 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(const QPoint &pos
     QSettings settings;
     QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
 
-    // show copy and move menu only if there are more than 1 recent note folders
-    if ( recentNoteFolders.size() > 1 )
+    // show copy and move menu entries only if there is at least one notes folder
+    if ( recentNoteFolders.size() > 0 )
     {
         moveDestinationMenu = noteMenu.addMenu( "&Move notes to..." );
         copyDestinationMenu = noteMenu.addMenu( "&Copy notes to..." );

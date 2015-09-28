@@ -156,7 +156,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QMenu" name="menuRecentNoteFolders">
      <property name="title">
-      <string>R&amp;ecent note folders</string>
+      <string>R&amp;ecent notes folders</string>
      </property>
     </widget>
     <widget class="QMenu" name="menuSort_by">
@@ -235,7 +235,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/breeze/folder-sync.svg</normaloff>:/images/breeze/folder-sync.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Set ownCloud note folder</string>
+    <string>&amp;Set notes folder</string>
    </property>
   </action>
   <action name="action_Find_note">
