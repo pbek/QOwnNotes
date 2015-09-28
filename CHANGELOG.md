@@ -4,6 +4,7 @@
 - some menu restructuring
 - added the ability to select all notes
 - the current notes folder isn't shown in the recent notes folders any more
+- some message box text styling
 
 ## 0.40
 - you now are able to select multiple notes and remove them or copy/move them to a recent note folder

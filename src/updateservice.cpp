@@ -120,6 +120,6 @@ void UpdateService::onResult(QNetworkReply* reply)
     }
     else if ( this->updateMode == UpdateService::Manual )
     {
-        QMessageBox::information( 0, "No updates", "There are no updates available.\n" + QString( VERSION ) + " is the latest version." );
+        QMessageBox::information( 0, "No updates", "There are no updates available.<br /><strong>" + QString( VERSION ) + "</strong> is the latest version." );
     }
 }

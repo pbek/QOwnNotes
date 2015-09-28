@@ -9,7 +9,6 @@
 #include <QListWidgetItem>
 #include <QSettings>
 #include <QTimer>
-#include <QMessageBox>
 #include <QKeyEvent>
 #include <QDesktopServices>
 #include <QActionGroup>
@@ -657,7 +656,7 @@ void MainWindow::focusNoteTextEdit()
 void MainWindow::removeCurrentNote()
 {
     switch( QMessageBox::information( this, "Remove current note",
-                                      "Remove current note?\n" + this->currentNote.getName(),
+                                      "Remove current note: <strong>" + this->currentNote.getName() + "</strong>?",
                                       "&Remove", "&Cancel", QString::null,
                                       0, 1 ) )
     {
@@ -905,7 +904,7 @@ void MainWindow::removeSelectedNotes()
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
     if ( QMessageBox::information( this, "Remove selected notes",
-                                      "Remove " + QString::number( selectedItemsCount ) + " selected note(s)?\n\nIf the trash is enabled on your ownCloud server you should be able to restore them from there.",
+                                      "Remove <strong>" + QString::number( selectedItemsCount ) + "</strong> selected note(s)?\n\nIf the trash is enabled on your ownCloud server you should be able to restore them from there.",
                                       "&Remove", "&Cancel", QString::null,
                                       0, 1 ) == 0 )
     {
@@ -940,7 +939,7 @@ void MainWindow::moveSelectedNotesToFolder( QString destinationFolder )
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
     if ( QMessageBox::information( this, "Move selected notes",
-                                      "Move " + QString::number( selectedItemsCount ) + " selected note(s) to '" + destinationFolder + "'?",
+                                      "Move " + QString::number( selectedItemsCount ) + " selected note(s) to <strong>" + destinationFolder + "</strong>?",
                                       "&Move", "&Cancel", QString::null,
                                       0, 1 ) == 0 )
     {
@@ -976,7 +975,7 @@ void MainWindow::copySelectedNotesToFolder( QString destinationFolder )
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
     if ( QMessageBox::information( this, "Copy selected notes",
-                                      "Copy " + QString::number( selectedItemsCount ) + " selected note(s) to '" + destinationFolder + "'?",
+                                      "Copy " + QString::number( selectedItemsCount ) + " selected note(s) to <strong>" + destinationFolder + "</strong>?",
                                       "&Copy", "&Cancel", QString::null,
                                       0, 1 ) == 0 )
     {
@@ -999,7 +998,7 @@ void MainWindow::copySelectedNotesToFolder( QString destinationFolder )
             }
         }
 
-        QMessageBox::information( this, "Done", QString::number( copyCount ) + " note(s) were copied to '" + destinationFolder + "'." );
+        QMessageBox::information( this, "Done", QString::number( copyCount ) + " note(s) were copied to <strong>" + destinationFolder + "</strong>." );
     }
 }
 

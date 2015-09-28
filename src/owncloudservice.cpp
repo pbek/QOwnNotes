@@ -297,7 +297,7 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we got an error message
     if ( message != "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: " + message );
+        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: <strong>" + message + "</strong>" );
         return;
     }
 
@@ -342,7 +342,7 @@ void OwnCloudService::handleTrashedLoading( QString data )
     // check if we got an error message
     if ( message != "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: " + message );
+        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: <strong>" + message + "</strong>" );
         return;
     }
 

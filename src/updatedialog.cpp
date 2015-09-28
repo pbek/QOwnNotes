@@ -2,7 +2,6 @@
 #include "ui_updatedialog.h"
 #include <QDesktopServices>
 #include <QUrl>
-#include <QMessageBox>
 #include <QPushButton>
 #include <QDebug>
 #include <QSettings>
@@ -55,7 +54,6 @@ void UpdateDialog::dialogButtonClicked( QAbstractButton *button )
     case Download:
         // download the new release
         QDesktopServices::openUrl ( QUrl( this->releaseUrl->toUtf8() ) );
-        // QMessageBox::information( 0, "Browser opened", "A browser window should habe been opened to download the new version!" );
         break;
     case Skip:
         QSettings settings;
