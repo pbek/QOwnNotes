@@ -34,6 +34,7 @@ private:
     QString trashListPath;
     QString appInfoPath;
     QString capabilitiesPath;
+    QString ownCloudTestPath;
     SettingsDialog *settingsDialog;
     void checkAppInfo(QNetworkReply *reply);
     bool busy;

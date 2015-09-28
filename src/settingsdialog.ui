@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1056</width>
-    <height>696</height>
+    <height>794</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -219,6 +219,91 @@
                 </property>
                </widget>
               </item>
+              <item row="8" column="1">
+               <widget class="QLabel" name="check1Label">
+                <property name="text">
+                 <string>connection to web server</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QLabel" name="check2Label">
+                <property name="text">
+                 <string>ownCloud server detected</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="1">
+               <widget class="QLabel" name="check4Label">
+                <property name="text">
+                 <string>connection to QOwnNotesAPI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="1">
+               <widget class="QLabel" name="check3Label">
+                <property name="text">
+                 <string>username and password correct</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QLabel" name="check5Label">
+                <property name="text">
+                 <string>ownCloud path set</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="ok1Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="ok2Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="ok3Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QLabel" name="ok4Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QLabel" name="ok5Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
              </layout>
             </item>
             <item row="0" column="2">
@@ -299,6 +384,16 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>serverUrlEdit</tabstop>
+  <tabstop>userNameEdit</tabstop>
+  <tabstop>passwordEdit</tabstop>
+  <tabstop>localOwnCloudPathEdit</tabstop>
+  <tabstop>localOwnCloudDirectoryButton</tabstop>
+  <tabstop>connectButton</tabstop>
+  <tabstop>installInfotextBrowser</tabstop>
+ </tabstops>
  <resources>
   <include location="breeze.qrc"/>
  </resources>
@@ -310,8 +405,8 @@ p, li { white-space: pre-wrap; }
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>263</x>
-     <y>680</y>
+     <x>278</x>
+     <y>778</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -326,8 +421,8 @@ p, li { white-space: pre-wrap; }
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>331</x>
-     <y>680</y>
+     <x>346</x>
+     <y>778</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

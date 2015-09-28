@@ -35,6 +35,7 @@ void OwnCloudService::readSettings()
     trashListPath = rootPath + "note/trashed";
     appInfoPath = rootPath + "note/app_info";
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
+    ownCloudTestPath = "/ocs/v1.php";
 
     QObject::connect( networkManager, SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)), this, SLOT(slotAuthenticationRequired(QNetworkReply*,QAuthenticator*)) );
     QObject::connect( networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slotReplyFinished(QNetworkReply*)) );
@@ -42,10 +43,12 @@ void OwnCloudService::readSettings()
 
 void OwnCloudService::slotAuthenticationRequired( QNetworkReply* reply, QAuthenticator* authenticator )
 {
-    // TODO: output error message
-    qDebug() << "Asked to authenticate";
-    authenticator->setUser(userName);
-    authenticator->setPassword(password);
+    qDebug() << "Username and/or password incorrect";
+
+    settingsDialog->setOKLabelData( 3, "incorrect", SettingsDialog::Failure );
+    settingsDialog->setOKLabelData( 4, "not connected", SettingsDialog::Failure );
+
+    reply->abort();
 }
 
 void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
@@ -63,27 +66,74 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
         return;
     }
-    else if ( reply->url().path().endsWith( versionListPath ) )
+    else
     {
-        qDebug() << "Reply from version list";
         QByteArray arr = reply->readAll();
         QString data = QString( arr );
-        // qDebug() << data;
 
-        // handle the versions loading
-        handleVersionsLoading( data );
-        return;
-    }
-    else if ( reply->url().path().endsWith( trashListPath ) )
-    {
-        qDebug() << "Reply from trash list";
-        QByteArray arr = reply->readAll();
-        QString data = QString( arr );
-        // qDebug() << data;
+        if ( reply->url().path().endsWith( versionListPath ) )
+        {
+            qDebug() << "Reply from version list";
+            // qDebug() << data;
 
-        // handle the loading of trashed notes
-        handleTrashedLoading( data );
-        return;
+            // handle the versions loading
+            handleVersionsLoading( data );
+            return;
+        }
+        else if ( reply->url().path().endsWith( trashListPath ) )
+        {
+            qDebug() << "Reply from trash list";
+            // qDebug() << data;
+
+            // handle the loading of trashed notes
+            handleTrashedLoading( data );
+            return;
+        }
+        else if ( reply->url().path().endsWith( capabilitiesPath ) )
+        {
+            qDebug() << "Reply from capabilites page";
+
+            if ( data.startsWith( "<?xml version=" ) )
+            {
+                settingsDialog->setOKLabelData( 3, "correct", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 3, "not correct", SettingsDialog::Failure );
+            }
+
+            return;
+        }
+        else if ( reply->url().path().endsWith( ownCloudTestPath ) )
+        {
+            qDebug() << "Reply from ownCloud test page";
+
+            if ( data.startsWith( "<?xml version=" ) )
+            {
+                settingsDialog->setOKLabelData( 2, "detected", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 2, "not detected", SettingsDialog::Failure );
+            }
+
+            return;
+        }
+        else if ( reply->url().path() == "" )
+        {
+            qDebug() << "Reply from main server url";
+
+            if ( data != "" )
+            {
+                settingsDialog->setOKLabelData( 1, "connected", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 1, "not found", SettingsDialog::Failure );
+            }
+
+            return;
+        }
     }
 
     busy = false;
@@ -107,6 +157,15 @@ void OwnCloudService::checkAppInfo( QNetworkReply* reply )
     QString appVersion = result.property(0).property("app_version").toString();
     QString serverVersion = result.property(0).property("server_version").toString();
 
+    if ( serverVersion != "" )
+    {
+        settingsDialog->setOKLabelData( 4, "connected", SettingsDialog::OK );
+    }
+    else
+    {
+        settingsDialog->setOKLabelData( 4, "not connected", SettingsDialog::Failure );
+    }
+
     // call callback in settings dialog
     settingsDialog->connectTestCallback( appIsValid, appVersion, serverVersion, reply->errorString() );
 }
@@ -125,23 +184,60 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     if ( !busy )
     {
         busy = true;
-        emit(busyChanged(busy));
+        emit( busyChanged( busy ) );
 
-        QUrl url( serverUrl + appInfoPath );
-        url.setUserName( userName );
-        url.setPassword( password );
+        QUrl url( serverUrl );
+        QNetworkRequest r( url );
+
+        // direct server url request without auth header
+        QNetworkReply *reply = networkManager->get( r );
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 
         QUrlQuery q;
-        q.addQueryItem("format", format);
+        q.addQueryItem( "format", format );
         url.setQuery(q);
 
-        // qDebug() << url;
-
-        QNetworkRequest r(url);
         addAuthHeader(&r);
 
-        QNetworkReply *reply = networkManager->get(r);
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+        url.setUrl( serverUrl + appInfoPath );
+        r.setUrl( url );
+        reply = networkManager->get(r);
+
+        url.setUrl( serverUrl + capabilitiesPath );
+        r.setUrl( url );
+        reply = networkManager->get(r);
+
+        url.setUrl( serverUrl + ownCloudTestPath );
+        r.setUrl( url );
+        reply = networkManager->get(r);
+    }
+
+    QSettings settings;
+    QString notesPath = settings.value( "notesPath" ).toString();
+    QString localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
+
+    QDir d = QDir( localOwnCloudPath );
+    if ( d.exists() )
+    {
+        if ( notesPath.startsWith( localOwnCloudPath ) )
+        {
+            if ( notesPath != localOwnCloudPath )
+            {
+                settingsDialog->setOKLabelData( 5, "ok", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 5, "note path and ownCloud path are equal", SettingsDialog::Warning );
+            }
+        }
+        else
+        {
+            settingsDialog->setOKLabelData( 5, "note path not in ownCloud path", SettingsDialog::Failure );
+        }
+    }
+    else
+    {
+        settingsDialog->setOKLabelData( 5, "does not exist", SettingsDialog::Failure );
     }
 }
 

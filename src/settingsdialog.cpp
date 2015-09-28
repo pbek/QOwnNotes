@@ -12,6 +12,11 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->setupUi(this);
     ui->connectionTestLabel->hide();
 
+    for ( int i = 0; i <= 5; i++ )
+    {
+        setOKLabelData( i, "unknown", SettingsDialog::Unknown );
+    }
+
     // increase font size for OSX
 #ifdef Q_OS_MAC
     QString styleSheet = ui->installInfotextBrowser->styleSheet();
@@ -114,6 +119,60 @@ void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, Q
 
     ui->connectionTestLabel->adjustSize();
     ui->connectionTestLabel->show();
+}
+
+/**
+ * @brief set text and color of an ok-label
+ * @param number
+ * @param text
+ * @param color
+ */
+void SettingsDialog::setOKLabelData( int number, QString text, OKLabelStatus status )
+{
+    QLabel *label;
+
+    switch( number )
+    {
+    case 1:
+        label = ui->ok1Label;
+        break;
+    case 2:
+        label = ui->ok2Label;
+        break;
+    case 3:
+        label = ui->ok3Label;
+        break;
+    case 4:
+        label = ui->ok4Label;
+        break;
+    case 5:
+        label = ui->ok5Label;
+        break;
+    default:
+        return;
+    }
+
+    QString color;
+    switch( status )
+    {
+    case Unknown:
+        color = "gray";
+        break;
+    case OK:
+        color = "green";
+        break;
+    case Warning:
+        color = "orange";
+        break;
+    case Failure:
+        color = "red";
+        break;
+    default:
+        color = "white";
+    }
+
+    label->setText( text );
+    label->setStyleSheet( "color: " + color );
 }
 
 /**

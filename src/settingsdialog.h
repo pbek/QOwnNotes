@@ -14,9 +14,17 @@ class SettingsDialog : public QDialog
     Q_OBJECT
 
 public:
+    enum OKLabelStatus {
+        Unknown,
+        Warning,
+        OK,
+        Failure,
+    };
+
     explicit SettingsDialog(SimpleCrypt *crypto, QWidget *parent = 0);
     ~SettingsDialog();
     void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage);
+    void setOKLabelData(int number, QString text, OKLabelStatus status);
 private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);

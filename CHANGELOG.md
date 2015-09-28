@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## current
+- added an interactive ownCloud server connection troubleshooting helper to the settings page
 - some menu restructuring
 - added the ability to select all notes
 - the current notes folder isn't shown in the recent notes folders any more
