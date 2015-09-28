@@ -10,7 +10,6 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui(new Ui::SettingsDialog)
 {
     ui->setupUi(this);
-    ui->passwordEdit->setEchoMode( QLineEdit::Password );
     ui->connectionTestLabel->hide();
 
     // increase font size for OSX
