@@ -13,10 +13,12 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault( true );
 
-    for ( int i = 0; i <= 5; i++ )
+    for ( int i = 0; i <= 7; i++ )
     {
         setOKLabelData( i, "unknown", SettingsDialog::Unknown );
     }
+
+    QString html = ui->installInfotextBrowser->toHtml();
 
     // increase font size for OSX
 #ifdef Q_OS_MAC
@@ -24,18 +26,17 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     styleSheet = styleSheet.replace( "font-size: 9pt;", "font-size: 13pt;" );
     ui->installInfotextBrowser->setStyleSheet( styleSheet );
 
-    QString html = ui->installInfotextBrowser->toHtml();
     html = html.replace( "font-size:9pt", "font-size:13pt;" );
-    ui->installInfotextBrowser->setHtml(  html );
 #endif
 
     // add information text for Windows users to install OpenSSL
 #ifdef Q_OS_WIN32
-    QString html = ui->installInfotextBrowser->toHtml();
     html += "<p>If your ownCloud server uses SSL (https) you also need to install <a href='https://www.openssl.org'>OpenSSL</a> into your system directory.</p>";
     html += "<p>You can find binary packages of OpenSSL <a href='http://slproweb.com/products/Win32OpenSSL.html'>here</a>.</p>";
-    ui->installInfotextBrowser->setHtml( html );
 #endif
+
+    html = html.replace( "QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION );
+    ui->installInfotextBrowser->setHtml( html );
 
     this->crypto = crypto;
     readSettings();
@@ -162,6 +163,12 @@ void SettingsDialog::setOKLabelData( int number, QString text, OKLabelStatus sta
         break;
     case 5:
         label = ui->ok5Label;
+        break;
+    case 6:
+        label = ui->ok6Label;
+        break;
+    case 7:
+        label = ui->ok7Label;
         break;
     default:
         return;

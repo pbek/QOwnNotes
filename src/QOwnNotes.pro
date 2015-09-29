@@ -37,7 +37,8 @@ SOURCES += main.cpp\
     libraries/simplecrypt/simplecrypt.cpp \
     owncloudservice.cpp \
     versiondialog.cpp \
-    trashdialog.cpp
+    trashdialog.cpp \
+    libraries/versionnumber/versionnumber.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -62,7 +63,8 @@ HEADERS  += mainwindow.h \
     libraries/simplecrypt/simplecrypt.h \
     owncloudservice.h \
     versiondialog.h \
-    trashdialog.h
+    trashdialog.h \
+    libraries/versionnumber/versionnumber.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

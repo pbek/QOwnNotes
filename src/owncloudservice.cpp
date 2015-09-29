@@ -10,6 +10,7 @@
 #include <QDir>
 #include <QMessageBox>
 #include <QScriptValueIterator>
+#include "libraries/versionnumber/versionnumber.h"
 
 const QString OwnCloudService::rootPath = "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";
@@ -95,7 +96,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             if ( data.startsWith( "<?xml version=" ) )
             {
-                settingsDialog->setOKLabelData( 3, "correct", SettingsDialog::OK );
+                settingsDialog->setOKLabelData( 3, "ok", SettingsDialog::OK );
             }
             else
             {
@@ -110,7 +111,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             if ( data.startsWith( "<?xml version=" ) )
             {
-                settingsDialog->setOKLabelData( 2, "detected", SettingsDialog::OK );
+                settingsDialog->setOKLabelData( 2, "ok", SettingsDialog::OK );
             }
             else
             {
@@ -125,7 +126,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             if ( data != "" )
             {
-                settingsDialog->setOKLabelData( 1, "connected", SettingsDialog::OK );
+                settingsDialog->setOKLabelData( 1, "ok", SettingsDialog::OK );
             }
             else
             {
@@ -151,15 +152,53 @@ void OwnCloudService::checkAppInfo( QNetworkReply* reply )
     QScriptEngine engine;
     QScriptValue result = engine.evaluate(data);
 
-    // get the information if versioning is available
     bool appIsValid = result.property(0).property("versioning").toBool();
 
     QString appVersion = result.property(0).property("app_version").toString();
     QString serverVersion = result.property(0).property("server_version").toString();
 
+    // reset to "unknown" in case we can't test if versions and trash app are enabled
+    settingsDialog->setOKLabelData( 6, "unknown", SettingsDialog::Unknown );
+    settingsDialog->setOKLabelData( 7, "unknown", SettingsDialog::Unknown );
+
     if ( serverVersion != "" )
     {
-        settingsDialog->setOKLabelData( 4, "connected", SettingsDialog::OK );
+        VersionNumber serverAppVersion = VersionNumber( appVersion );
+        VersionNumber minAppVersion = VersionNumber( QOWNNOTESAPI_MIN_VERSION );
+
+        if ( minAppVersion > serverAppVersion )
+        {
+            settingsDialog->setOKLabelData( 4, "version " + appVersion + " too low", SettingsDialog::Warning );
+        }
+        else
+        {
+            settingsDialog->setOKLabelData( 4, "ok", SettingsDialog::OK );
+        }
+
+        // check if versions and trash app are enabled after QOwnNotesAPI v0.3.1
+        if ( serverAppVersion >= VersionNumber( "0.3.1" ) )
+        {
+            bool versionsAppEnabled = result.property(0).property("versions_app").toBool();
+            bool trashAppEnabled = result.property(0).property("trash_app").toBool();
+
+            if ( versionsAppEnabled )
+            {
+                settingsDialog->setOKLabelData( 6, "ok", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 6, "not enabled", SettingsDialog::Failure );
+            }
+
+            if ( trashAppEnabled )
+            {
+                settingsDialog->setOKLabelData( 7, "ok", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 7, "not enabled", SettingsDialog::Failure );
+            }
+        }
     }
     else
     {

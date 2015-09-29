@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 0.42
-- improvements in the settings connection troubleshooter
+- improvements and fixes in the settings connection troubleshooter
+- minimum QOwnNotesAPI version is now detected
+- detection for ownCloud core apps "Versions" and "Deleted files" (needs QOwnNotesAPI v0.3.1)
 
 ## 0.41
 - added an interactive ownCloud server connection troubleshooting helper and other improvements to the settings page
