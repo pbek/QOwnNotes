@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## current
+## 0.41
 - added an interactive ownCloud server connection troubleshooting helper and other improvements to the settings page
 - added a better connection error handling
 - some menu restructuring
