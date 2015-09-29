@@ -1320,7 +1320,7 @@ void MainWindow::on_actionCheck_for_updates_triggered()
  */
 void MainWindow::on_actionReport_problems_or_ideas_triggered()
 {
-    QDesktopServices::openUrl ( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
+    QDesktopServices::openUrl( QUrl( "https://github.com/pbek/QOwnNotes/issues" ) );
 }
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked)

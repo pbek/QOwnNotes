@@ -18,5 +18,6 @@
         <file>images/breeze/dialog-cancel.svg</file>
         <file>images/breeze/document-open-recent.svg</file>
         <file>images/breeze/media-skip-forward.svg</file>
+        <file>images/breeze/application-x-mswinurl.svg</file>
     </qresource>
 </RCC>

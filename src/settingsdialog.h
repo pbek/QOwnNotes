@@ -29,6 +29,7 @@ private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);
     void on_localOwnCloudDirectoryButton_clicked();
+    void on_ownCloudServerAppPageButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;

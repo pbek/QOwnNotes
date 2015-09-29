@@ -4,6 +4,7 @@
 #include <QSettings>
 #include <QFileDialog>
 #include <QDebug>
+#include <QDesktopServices>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     QDialog(parent),
@@ -217,4 +218,9 @@ void SettingsDialog::on_localOwnCloudDirectoryButton_clicked()
     {
         ui->localOwnCloudPathEdit->setText( dir );
     }
+}
+
+void SettingsDialog::on_ownCloudServerAppPageButton_clicked()
+{
+    QDesktopServices::openUrl( QUrl( ui->serverUrlEdit->text() + "/index.php/settings/apps" ) );
 }
