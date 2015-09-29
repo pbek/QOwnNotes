@@ -213,31 +213,39 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     }
 
     QSettings settings;
-    QString notesPath = settings.value( "notesPath" ).toString();
     QString localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
 
-    QDir d = QDir( localOwnCloudPath );
-    if ( d.exists() )
+    if ( localOwnCloudPath != "" )
     {
-        if ( notesPath.startsWith( localOwnCloudPath ) )
+        QDir d = QDir( localOwnCloudPath );
+        if ( d.exists() )
         {
-            if ( notesPath != localOwnCloudPath )
+            QString notesPath = settings.value( "notesPath" ).toString();
+
+            if ( notesPath.startsWith( localOwnCloudPath ) )
             {
-                settingsDialog->setOKLabelData( 5, "ok", SettingsDialog::OK );
+                if ( notesPath != localOwnCloudPath )
+                {
+                    settingsDialog->setOKLabelData( 5, "ok", SettingsDialog::OK );
+                }
+                else
+                {
+                    settingsDialog->setOKLabelData( 5, "note path and ownCloud path are equal", SettingsDialog::Warning );
+                }
             }
             else
             {
-                settingsDialog->setOKLabelData( 5, "note path and ownCloud path are equal", SettingsDialog::Warning );
+                settingsDialog->setOKLabelData( 5, "note path not in ownCloud path", SettingsDialog::Failure );
             }
         }
         else
         {
-            settingsDialog->setOKLabelData( 5, "note path not in ownCloud path", SettingsDialog::Failure );
+            settingsDialog->setOKLabelData( 5, "does not exist", SettingsDialog::Failure );
         }
     }
     else
     {
-        settingsDialog->setOKLabelData( 5, "does not exist", SettingsDialog::Failure );
+        settingsDialog->setOKLabelData( 5, "empty", SettingsDialog::Failure );
     }
 }
 
