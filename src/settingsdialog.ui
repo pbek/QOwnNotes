@@ -440,7 +440,7 @@ p, li { white-space: pre-wrap; }
                 </property>
                 <property name="icon">
                  <iconset resource="breeze.qrc">
-                  <normaloff>:/images/breeze/application-x-mswinurl.svg</normaloff>:/images/breeze/application-x-mswinurl.svg</iconset>
+                  <normaloff>:/images/breeze/text-html.svg</normaloff>:/images/breeze/text-html.svg</iconset>
                 </property>
                </widget>
               </item>
