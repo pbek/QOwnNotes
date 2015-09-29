@@ -1,12 +1,13 @@
 # QOwnNotes Changelog
 
 ## current
-- added an interactive ownCloud server connection troubleshooting helper to the settings page
+- added an interactive ownCloud server connection troubleshooting helper and other improvements to the settings page
+- added a better connection error handling
 - some menu restructuring
 - added the ability to select all notes
 - the current notes folder isn't shown in the recent notes folders any more
 - some message box text styling
-- notes are now restored from trash with their original name if the name is not taken
+- notes are now restored from trash with their original name if their names are not taken
 
 ## 0.40
 - you now are able to select multiple notes and remove them or copy/move them to a recent note folder

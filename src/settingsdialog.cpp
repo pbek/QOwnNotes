@@ -38,6 +38,12 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
 
     this->crypto = crypto;
     readSettings();
+
+    if ( ui->serverUrlEdit->text() != "" )
+    {
+        // start a connection test
+        startConnectionTest();
+    }
 }
 
 SettingsDialog::~SettingsDialog()
@@ -46,16 +52,24 @@ SettingsDialog::~SettingsDialog()
 }
 
 /**
- * Starts a connection test
- *
+ * @brief Starts a connection test
+ */
+void SettingsDialog::startConnectionTest()
+{
+    ui->connectionTestLabel->hide();
+    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+    ownCloud->settingsConnectionTest( this );
+}
+
+/**
  * @brief SettingsDialog::on_connectButton_clicked
  */
 void SettingsDialog::on_connectButton_clicked()
 {
     storeSettings();
-    ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
-    ownCloud->settingsConnectionTest( this );
+
+    // start a connection test
+    startConnectionTest();
 }
 
 void SettingsDialog::storeSettings()

@@ -36,6 +36,7 @@ private:
     void readSettings();
     void setupCrypto();
     void storeSettings();
+    void startConnectionTest();
 };
 
 #endif // SETTINGSDIALOG_H

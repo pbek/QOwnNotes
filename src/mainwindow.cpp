@@ -1028,6 +1028,16 @@ void MainWindow::updateCurrentFolderTooltip()
     ui->actionSet_ownCloud_Folder->setToolTip( "Set the notes folder. Current notes folder: " + this->notesPath );
 }
 
+/**
+ * @brief Opens the settings dialog
+ */
+void MainWindow::openSettingsDialog()
+{
+    // open the settings dialog
+    SettingsDialog *dialog = new SettingsDialog( &crypto, this );
+    dialog->exec();
+}
+
 
 /**
  *
@@ -1362,8 +1372,7 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked)
 void MainWindow::on_action_Settings_triggered()
 {
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog( &crypto, this );
-    dialog->exec();
+    openSettingsDialog();
 }
 
 void MainWindow::on_actionShow_versions_triggered()

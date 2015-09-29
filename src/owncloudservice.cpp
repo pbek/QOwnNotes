@@ -393,7 +393,31 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we got an error message
     if ( message != "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: <strong>" + message + "</strong>" );
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "ownCloud server error: <strong>" + message + "</strong><br />Please check your configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
+        return;
+    }
+
+    // get the filename to check if everything is all right
+    QScriptValue fileName = result.property(0).property("file_name");
+
+    // check if we got no usefull data
+    if ( fileName.toString() == "" )
+    {
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "QOwnNotes was unable to connect to your ownCloud server! Please check the configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
         return;
     }
 
@@ -438,7 +462,31 @@ void OwnCloudService::handleTrashedLoading( QString data )
     // check if we got an error message
     if ( message != "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "ownCloud server error: <strong>" + message + "</strong>" );
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "ownCloud server error: <strong>" + message + "</strong><br />Please check your configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
+        return;
+    }
+
+    // get the directory to check if everything is all right
+    QString directory = result.property(0).property("directory").toString();
+
+    // check if we got no usefull data
+    if ( directory == "" )
+    {
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "QOwnNotes was unable to connect to your ownCloud server! Please check the configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
         return;
     }
 

@@ -30,6 +30,7 @@ public:
     ~MainWindow();
     void setCurrentNoteText(QString text);
     void createNewNote(QString name, QString text);
+    void openSettingsDialog();
 protected:
     void closeEvent(QCloseEvent *event);
     bool eventFilter(QObject *obj, QEvent *event);
