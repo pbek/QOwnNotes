@@ -11,6 +11,7 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
 {
     ui->setupUi(this);
     ui->connectionTestLabel->hide();
+    ui->connectButton->setDefault( true );
 
     for ( int i = 0; i <= 5; i++ )
     {
