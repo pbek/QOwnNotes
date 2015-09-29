@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.42.1
+- fixed a missing svg
+
 ## 0.42
 - improvements and fixes in the settings connection troubleshooter
 - minimum QOwnNotesAPI version is now detected
