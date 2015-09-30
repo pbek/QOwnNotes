@@ -4,6 +4,7 @@
 - fixed a bug when the ownCloud path and the notes path are the same
 - added write permissions to the demo notes
 - note editing is now disallowed if note file is readonly
+- updating to QOwnNotesAPI v0.3.2 is suggested, because it contains an imporant bugfix for the trashed notes api
 
 ## 0.42.1
 - fixed a missing svg

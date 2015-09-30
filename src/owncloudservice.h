@@ -9,7 +9,7 @@
 #include "mainwindow.h"
 #include "settingsdialog.h"
 
-#define QOWNNOTESAPI_MIN_VERSION "0.3.1"
+#define QOWNNOTESAPI_MIN_VERSION "0.3.2"
 
 class OwnCloudService : public QObject
 {
