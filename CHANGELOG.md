@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.43
+- fixed a bug when the ownCloud path and the notes path are the same
+
 ## 0.42.1
 - fixed a missing svg
 

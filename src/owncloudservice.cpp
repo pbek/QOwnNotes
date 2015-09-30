@@ -397,16 +397,23 @@ QString OwnCloudService::getServerNotesPath( QString notesPath )
         // translate the directory separators to "/"
         serverNotesPath = serverNotesPath.split( QDir::separator() ).join( "/" );
 
-        // add a leading "/"
-        if ( serverNotesPath.at( 0 ) != '/' )
+        if ( serverNotesPath == "" )
         {
-            serverNotesPath.prepend( "/" );
+            serverNotesPath = "/";
         }
-
-        // add a trailing "/"
-        if ( serverNotesPath.at( serverNotesPath.size() - 1 ) != '/' )
+        else
         {
-            serverNotesPath.append( "/" );
+            // add a leading "/"
+            if ( serverNotesPath.at( 0 ) != '/' )
+            {
+                serverNotesPath.prepend( "/" );
+            }
+
+            // add a trailing "/"
+            if ( serverNotesPath.at( serverNotesPath.size() - 1 ) != '/' )
+            {
+                serverNotesPath.append( "/" );
+            }
         }
     }
 
