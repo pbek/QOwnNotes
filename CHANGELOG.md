@@ -2,6 +2,7 @@
 
 ## 0.43
 - fixed a bug when the ownCloud path and the notes path are the same
+- added write permissions to the demo notes
 
 ## 0.42.1
 - fixed a missing svg

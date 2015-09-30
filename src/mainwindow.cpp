@@ -540,6 +540,8 @@ void MainWindow::buildNotesIndex()
         qDebug() << "No notes! We will add some...";
         QStringList filenames;
         QString filename;
+        QString destinationFile;
+
         filenames.append( "Welcome to QOwnNotes.txt" );
         filenames.append( "GitHub Flavored Markdown.txt" );
         filenames.append( "Markdown Showcase.txt" );
@@ -548,7 +550,10 @@ void MainWindow::buildNotesIndex()
         for ( int i = 0; i < filenames.size(); ++i )
         {
             filename = filenames.at( i );
-            QFile::copy( ":/demonotes/" + filename, this->notesPath + "/" + filename );
+            destinationFile = this->notesPath + "/" + filename;
+            QFile::copy( ":/demonotes/" + filename, destinationFile );
+            // set read/write permissions for the owner and user
+            QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
         }
 
         // fetch all files again
