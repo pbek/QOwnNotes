@@ -16,8 +16,14 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
     QPushButton *button;
     ui->buttonBox->clear();
 
-    button = new QPushButton( tr( "&Restore selected note" ) );
-    button->setProperty( "ActionRole", Restore );
+    button = new QPushButton( tr( "&Restore selected note on server" ) );
+    button->setProperty( "ActionRole", RestoreOnServer );
+    button->setDefault( false );
+    button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );
+    ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
+
+    button = new QPushButton( tr( "&Download selected note" ) );
+    button->setProperty( "ActionRole", Download );
     button->setDefault( false );
     button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
@@ -34,8 +40,10 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
     QString itemName;
     QString dateString;
     QString data;
+    int timestamp;
     ui->trashListWidget->clear();
     dataList = new QStringList();
+    timestampList = new QList<int>;
 
     // init the iterator for the verions
     QScriptValueIterator notesIterator( notes );
@@ -48,6 +56,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
         itemName = notesIterator.value().property( "noteName" ).toString();
         dateString = notesIterator.value().property( "dateString" ).toString();
         data = notesIterator.value().property( "data" ).toString();
+        timestamp = notesIterator.value().property( "timestamp" ).toInteger();
 
         if ( itemName == "" ) {
             continue;
@@ -58,6 +67,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
         item->setToolTip( dateString );
         ui->trashListWidget->addItem( item );
         dataList->append( data );
+        timestampList->append( timestamp );
     }
 
     ui->trashListWidget->setCurrentRow( 0 );
@@ -100,12 +110,25 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow)
 void TrashDialog::dialogButtonClicked( QAbstractButton *button )
 {
     int actionRole = button->property("ActionRole").toInt();
+    QString name = ui->trashListWidget->currentItem()->text();
 
-    if ( actionRole == Restore )
+    switch( actionRole )
     {
-        QString name = ui->trashListWidget->currentItem()->text();
-        QString text = dataList->value( ui->trashListWidget->currentRow() );
-        mainWindow->createNewNote( name, text );
+        case Download:
+        {
+            QString text = dataList->value( ui->trashListWidget->currentRow() );
+            mainWindow->createNewNote( name, text );
+            break;
+        }
+
+        case RestoreOnServer:
+        {
+            int timestamp = this->timestampList->value( ui->trashListWidget->currentRow() );
+            qDebug() << name << timestamp;
+
+            mainWindow->restoreTrashedNoteOnServer( name + ".txt", timestamp );
+            break;
+        }
     }
 
     this->close();

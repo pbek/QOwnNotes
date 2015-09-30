@@ -923,6 +923,19 @@ void MainWindow::createNewNote( QString name, QString text )
 }
 
 /**
+ * @brief Restores a trashed note on the server.
+ * @param name
+ * @param text
+ *
+ * This is a public callback function for the trash dialog.
+ */
+void MainWindow::restoreTrashedNoteOnServer( QString fileName, int timestamp )
+{
+    OwnCloudService *ownCloud = new OwnCloudService( &this->crypto, this );
+    ownCloud->restoreTrashedNoteOnServer( this->notesPath, fileName, timestamp, this );
+}
+
+/**
  * @brief Removes selected notes after a confirmation
  */
 void MainWindow::removeSelectedNotes()

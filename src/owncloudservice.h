@@ -22,6 +22,7 @@ public:
     bool isBusy();
     void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
     void loadTrash(QString notesPath, MainWindow *mainWindow);
+    void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
 private:
     QString serverUrl;
     QString userName;
@@ -37,6 +38,7 @@ private:
     QString appInfoPath;
     QString capabilitiesPath;
     QString ownCloudTestPath;
+    QString restoreTrashedNotePath;
     SettingsDialog *settingsDialog;
     void checkAppInfo(QNetworkReply *reply);
     bool busy;

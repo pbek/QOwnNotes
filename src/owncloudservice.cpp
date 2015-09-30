@@ -37,6 +37,7 @@ void OwnCloudService::readSettings()
     appInfoPath = rootPath + "note/app_info";
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
     ownCloudTestPath = "/ocs/v1.php";
+    restoreTrashedNotePath = rootPath + "note/restore_trashed";
 
     QObject::connect( networkManager, SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)), this, SLOT(slotAuthenticationRequired(QNetworkReply*,QAuthenticator*)) );
     QObject::connect( networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slotReplyFinished(QNetworkReply*)) );
@@ -117,6 +118,13 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
             {
                 settingsDialog->setOKLabelData( 2, "not detected", SettingsDialog::Failure );
             }
+
+            return;
+        }
+        else if ( reply->url().path().endsWith( restoreTrashedNotePath ) )
+        {
+            qDebug() << "Reply from ownCloud restore trashed note page";
+            qDebug() << data;
 
             return;
         }
@@ -285,6 +293,40 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     else
     {
         settingsDialog->setOKLabelData( 5, "empty", SettingsDialog::Failure );
+    }
+}
+
+/**
+ * @brief Restores a note on the server
+ */
+void OwnCloudService::restoreTrashedNoteOnServer( QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow )
+{
+    this->mainWindow = mainWindow;
+
+    if ( !busy )
+    {
+        busy = true;
+        emit(busyChanged(busy));
+
+        QUrl url( serverUrl + restoreTrashedNotePath );
+        QString serverNotesPath = getServerNotesPath( notesPath );
+
+        url.setUserName( userName );
+        url.setPassword( password );
+
+        QUrlQuery q;
+        q.addQueryItem( "format", format );
+        q.addQueryItem( "file_name", serverNotesPath + fileName );
+        q.addQueryItem( "timestamp", QString::number( timestamp ) );
+        url.setQuery( q );
+
+        qDebug() << url;
+
+        QNetworkRequest r(url);
+        addAuthHeader(&r);
+
+        QNetworkReply *reply = networkManager->get(r);
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
     }
 }
 

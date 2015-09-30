@@ -31,6 +31,7 @@ public:
     void setCurrentNoteText(QString text);
     void createNewNote(QString name, QString text);
     void openSettingsDialog();
+    void restoreTrashedNoteOnServer(QString fileName, int timestamp);
 protected:
     void closeEvent(QCloseEvent *event);
     bool eventFilter(QObject *obj, QEvent *event);

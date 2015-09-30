@@ -27,13 +27,15 @@ private slots:
 private:
     enum ButtonRole {
         Unset,  // nothing was selected
-        Restore,
+        Download,
+        RestoreOnServer,
         Cancel
     };
 
     Ui::TrashDialog *ui;
     QSplitter *trashSplitter;
     QStringList *dataList;
+    QList<int> *timestampList;
     MainWindow *mainWindow;
     void setupMainSplitter();
 };
