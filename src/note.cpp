@@ -452,6 +452,7 @@ bool Note::storeNoteTextFileToDisk() {
 
     if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
     {
+//        QMessageBox::critical( 0, "Can not store note!", "Can not store note <strong>" + this->name + "</strong><br /><br />" + file.errorString() );
         qDebug() << file.errorString();
         return false;
     }
