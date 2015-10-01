@@ -675,6 +675,9 @@ void MainWindow::focusNoteTextEdit()
 
 void MainWindow::removeCurrentNote()
 {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+
     switch( QMessageBox::information( this, "Remove current note",
                                       "Remove current note: <strong>" + this->currentNote.getName() + "</strong>?",
                                       "&Remove", "&Cancel", QString::null,
@@ -940,6 +943,9 @@ void MainWindow::restoreTrashedNoteOnServer( QString fileName, int timestamp )
  */
 void MainWindow::removeSelectedNotes()
 {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
     if ( QMessageBox::information( this, "Remove selected notes",
@@ -975,6 +981,9 @@ void MainWindow::selectAllNotes()
  */
 void MainWindow::moveSelectedNotesToFolder( QString destinationFolder )
 {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
     if ( QMessageBox::information( this, "Move selected notes",
@@ -1110,6 +1119,9 @@ void MainWindow::on_action_Quit_triggered()
 
 void MainWindow::on_actionSet_ownCloud_Folder_triggered()
 {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+
     QString oldPath = this->notesPath;
     selectOwnCloudNotesFolder();
 

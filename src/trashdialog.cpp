@@ -17,12 +17,14 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
     ui->buttonBox->clear();
 
     button = new QPushButton( tr( "&Restore selected note on server" ) );
+    button->setToolTip( "<h3>Slower, but with note versions</h3><p>The note will be restored on your ownCloud server with all versions.</p><p>You will have to wait until it is synced to QOwnNotes by ownCloud sync.</p>" );
     button->setProperty( "ActionRole", RestoreOnServer );
     button->setDefault( false );
-    button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );
+    button->setIcon( QIcon( ":/images/breeze/view-restore.svg" ) );
     ui->buttonBox->addButton( button, QDialogButtonBox::ActionRole );
 
     button = new QPushButton( tr( "&Download selected note" ) );
+    button->setToolTip( "<h3>Faster, but without versions</h3><p>The note will be created with the text from the preview.</p><p>The note versions on your ownCloud server will not be restored and the note will remain in the trash.</p><p>You can always restore the note and it's version later.</p>" );
     button->setProperty( "ActionRole", Download );
     button->setDefault( false );
     button->setIcon( QIcon( ":/images/breeze/edit-download.svg" ) );

@@ -1,10 +1,12 @@
 # QOwnNotes Changelog
 
 ## 0.43
+- added functionality restore a trashed note directly on the ownCloud server, restoring the note's versions with it. (needs QOwnNotesAPI v0.4)
+- updating to QOwnNotesAPI v0.4 is suggested, because it also contains two imporant bugfixes for the trashed notes api
 - fixed a bug when the ownCloud path and the notes path are the same
 - added write permissions to the demo notes
 - note editing is now disallowed if note file is readonly
-- updating to QOwnNotesAPI v0.3.2 is suggested, because it contains an imporant bugfix for the trashed notes api
+- some improvements on storing notes to disk
 
 ## 0.42.1
 - fixed a missing svg

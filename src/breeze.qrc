@@ -19,5 +19,6 @@
         <file>images/breeze/document-open-recent.svg</file>
         <file>images/breeze/media-skip-forward.svg</file>
         <file>images/breeze/text-html.svg</file>
+        <file>images/breeze/view-restore.svg</file>
     </qresource>
 </RCC>
