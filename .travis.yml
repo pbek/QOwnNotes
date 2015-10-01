@@ -66,3 +66,7 @@ deploy:
     branch: master
     tags: false
     condition: $CONFIG = release
+
+notifications:
+  email:
+    - $NOTIFICATION_EMAIL
