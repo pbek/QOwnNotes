@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1091</width>
+    <width>1149</width>
     <height>783</height>
    </rect>
   </property>
@@ -249,7 +249,7 @@
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to set your ownCloud directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>set local &amp;ownCloud path</string>
+                 <string>select main ownCloud sync folder</string>
                 </property>
                 <property name="icon">
                  <iconset resource="breeze.qrc">
@@ -260,7 +260,7 @@
               <item row="5" column="0">
                <widget class="QLabel" name="label_6">
                 <property name="text">
-                 <string>local ownCloud path:</string>
+                 <string>main ownCloud sync folder:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.44
+- some settings text changes
+
 ## 0.43
 - added functionality to restore a trashed note directly on the ownCloud server, restoring the note's versions with it. (needs QOwnNotesAPI v0.4)
 - updating to QOwnNotesAPI v0.4 is suggested, because it also contains two important bugfixes for the trashed notes api
