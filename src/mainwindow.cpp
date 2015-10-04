@@ -534,6 +534,8 @@ void MainWindow::buildNotesIndex()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
+    bool isSetCurrentNote = false;
+
     // add some notes if there aren't any
     if ( files.count() == 0 )
     {
@@ -558,6 +560,9 @@ void MainWindow::buildNotesIndex()
 
         // fetch all files again
         files = notesDir.entryList( filters, QDir::Files, QDir::Time );
+
+        // jump to the welcome note in the note selector in 500ms
+        QTimer::singleShot( 500, this, SLOT( jumpToWelcomeNote() ) );
     }
 
     // delete all notes in the database first
@@ -574,6 +579,15 @@ void MainWindow::buildNotesIndex()
 
     // refetch current note (because all the IDs have changed after the buildNotesIndex()
     this->currentNote.refetch();
+}
+
+/**
+ * @brief Jumps to the welcome note in the note selector
+ */
+void MainWindow::jumpToWelcomeNote()
+{
+    // jump to the 3rd note, assuming that it is the welcome note
+    this->ui->notesListWidget->setCurrentRow( 2 );
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {

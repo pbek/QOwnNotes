@@ -66,7 +66,7 @@ private slots:
     void updateCheckTimerTimeout();
     void on_notesListWidget_customContextMenuRequested(const QPoint &pos);
     void on_actionSelect_all_notes_triggered();
-
+    void jumpToWelcomeNote();
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
