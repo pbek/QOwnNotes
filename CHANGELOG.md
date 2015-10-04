@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.45
+- making sure the welcome note is selected after it was created
+
 ## 0.44
 - added more explanations in the settings dialog
 - added a check if the notes path was found on the server in the settings dialog (needs QOwnNotesAPI v0.4.1)
