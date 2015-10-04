@@ -161,7 +161,6 @@ void OwnCloudService::checkAppInfo( QNetworkReply* reply )
     QScriptValue result = engine.evaluate(data);
 
     bool appIsValid = result.property(0).property("versioning").toBool();
-
     QString appVersion = result.property(0).property("app_version").toString();
     QString serverVersion = result.property(0).property("server_version").toString();
 
@@ -207,6 +206,21 @@ void OwnCloudService::checkAppInfo( QNetworkReply* reply )
                 settingsDialog->setOKLabelData( 7, "not enabled", SettingsDialog::Failure );
             }
         }
+
+        // check if notes path was found after QOwnNotesAPI v0.4.1
+        if ( serverAppVersion >= VersionNumber( "0.4.1" ) )
+        {
+            bool notesPathExists = result.property(0).property("notes_path_exists").toBool();
+
+            if ( notesPathExists )
+            {
+                settingsDialog->setOKLabelData( 8, "ok", SettingsDialog::OK );
+            }
+            else
+            {
+                settingsDialog->setOKLabelData( 8, "not found", SettingsDialog::Failure );
+            }
+        }
     }
     else
     {
@@ -228,6 +242,9 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     // qDebug() << userName;
     // qDebug() << password;
 
+    QSettings settings;
+    QString notesPath = settings.value("notesPath").toString();
+
     if ( !busy )
     {
         busy = true;
@@ -246,10 +263,6 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
 
         addAuthHeader(&r);
 
-        url.setUrl( serverUrl + appInfoPath );
-        r.setUrl( url );
-        reply = networkManager->get(r);
-
         url.setUrl( serverUrl + capabilitiesPath );
         r.setUrl( url );
         reply = networkManager->get(r);
@@ -257,9 +270,15 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
         url.setUrl( serverUrl + ownCloudTestPath );
         r.setUrl( url );
         reply = networkManager->get(r);
+
+        url.setUrl( serverUrl + appInfoPath );
+        QString serverNotesPath = getServerNotesPath( notesPath );
+        q.addQueryItem( "notes_path", serverNotesPath );
+        url.setQuery(q);
+        r.setUrl( url );
+        reply = networkManager->get(r);
     }
 
-    QSettings settings;
     QString localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
 
     if ( localOwnCloudPath != "" )
@@ -267,8 +286,6 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
         QDir d = QDir( localOwnCloudPath );
         if ( d.exists() )
         {
-            QString notesPath = settings.value( "notesPath" ).toString();
-
             if ( notesPath.startsWith( localOwnCloudPath ) )
             {
                 if ( notesPath != localOwnCloudPath )

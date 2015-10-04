@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 0.44
-- some settings text changes
+- added more explanations in the settings dialog
+- added a check if the notes path was found on the server in the settings dialog (needs QOwnNotesAPI v0.4.1)
 
 ## 0.43
 - added functionality to restore a trashed note directly on the ownCloud server, restoring the note's versions with it. (needs QOwnNotesAPI v0.4)

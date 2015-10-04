@@ -14,7 +14,7 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault( true );
 
-    for ( int i = 0; i <= 7; i++ )
+    for ( int i = 0; i <= 8; i++ )
     {
         setOKLabelData( i, "unknown", SettingsDialog::Unknown );
     }
@@ -170,6 +170,9 @@ void SettingsDialog::setOKLabelData( int number, QString text, OKLabelStatus sta
         break;
     case 7:
         label = ui->ok7Label;
+        break;
+    case 8:
+        label = ui->ok8Label;
         break;
     default:
         return;
