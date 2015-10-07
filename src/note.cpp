@@ -316,12 +316,13 @@ QList<Note> Note::search( QString text )
     return noteList;
 }
 
-QList<QString> Note::searchAsNameList( QString text )
+QList<QString> Note::searchAsNameList( QString text, bool searchInName )
 {
     QSqlQuery query;
     QList<QString> nameList;
+    QString searchField = searchInName ? "name" : "note_text";
 
-    query.prepare( "SELECT name FROM note WHERE note_text LIKE :text ORDER BY file_last_modified DESC" );
+    query.prepare( "SELECT name FROM note WHERE " + searchField + " LIKE :text ORDER BY file_last_modified DESC" );
     query.bindValue( ":text", "%" + text + "%"  );
 
     if( !query.exec() )
@@ -721,6 +722,17 @@ QString Note::toMarkdownHtml() {
 
 bool Note::isFetched() {
     return ( this->id > 0 );
+}
+
+/**
+ * @brief Generates a text that can be used in a link
+ * @param text
+ * @return
+ */
+QString Note::generateTextForLink( QString text )
+{
+    text.replace( " ", "_" ).replace( "-", "_" ).replace( "?", "_" ).replace( "#", "_" );
+    return text;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

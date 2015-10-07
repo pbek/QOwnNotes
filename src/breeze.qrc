@@ -20,5 +20,7 @@
         <file>images/breeze/media-skip-forward.svg</file>
         <file>images/breeze/text-html.svg</file>
         <file>images/breeze/view-restore.svg</file>
+        <file>images/breeze/insert-link.svg</file>
+        <file>images/breeze/text-frame-link.svg</file>
     </qresource>
 </RCC>

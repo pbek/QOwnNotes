@@ -26,7 +26,7 @@ public:
     static Note fetchByName(QString name);
     static QList<Note> fetchAll();
     static QList<Note> search(QString text);
-    static QList<QString> searchAsNameList(QString text);
+    static QList<QString> searchAsNameList(QString text, bool searchInName = false);
     static QStringList fetchNoteNames();
     static QStringList fetchNoteFileNames();
     static Note noteFromQuery( QSqlQuery query );
@@ -50,6 +50,7 @@ public:
     bool isFetched();
     bool copy(QString destinationPath);
     bool move(QString destinationPath);
+    static QString generateTextForLink(QString text);
 private:
     int id;
     QString name;

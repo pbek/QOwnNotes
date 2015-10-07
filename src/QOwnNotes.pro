@@ -38,7 +38,8 @@ SOURCES += main.cpp\
     owncloudservice.cpp \
     versiondialog.cpp \
     trashdialog.cpp \
-    libraries/versionnumber/versionnumber.cpp
+    libraries/versionnumber/versionnumber.cpp \
+    notesearchdialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -64,7 +65,8 @@ HEADERS  += mainwindow.h \
     owncloudservice.h \
     versiondialog.h \
     trashdialog.h \
-    libraries/versionnumber/versionnumber.h
+    libraries/versionnumber/versionnumber.h \
+    notesearchdialog.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
@@ -72,7 +74,8 @@ FORMS    += mainwindow.ui \
     updatedialog.ui \
     settingsdialog.ui \
     versiondialog.ui \
-    trashdialog.ui
+    trashdialog.ui \
+    notesearchdialog.ui
 
 RESOURCES += \
     images.qrc \

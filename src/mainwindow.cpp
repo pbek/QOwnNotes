@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "notesearchdialog.h"
 #include "owncloudservice.h"
 #include "ui_mainwindow.h"
 #include <QSplitter>
@@ -1083,6 +1084,36 @@ void MainWindow::openSettingsDialog()
     dialog->exec();
 }
 
+/**
+ * @brief Handles the linking of text
+ */
+void MainWindow::handleTextNoteLinking()
+{
+    NoteSearchDialog *dialog = new NoteSearchDialog( "Search for a note to link to", this );
+    dialog->exec();
+    if ( dialog->result() == QDialog::Accepted  )
+    {
+        QString noteName = dialog->getSelectedNoteName();
+        QString noteNameForLink = Note::generateTextForLink( noteName );
+
+        if ( noteName != "" )
+        {
+            QString selectedText = ui->noteTextEdit->textCursor().selectedText();
+            QString newText;
+
+            if ( selectedText != "" )
+            {
+                newText = "[" + selectedText + "](note://" + noteNameForLink + ")";
+            }
+            else
+            {
+                newText = "<note://" + noteNameForLink + ">";
+            }
+            ui->noteTextEdit->textCursor().insertText( newText );
+        }
+    }
+}
+
 
 /**
  *
@@ -1316,7 +1347,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
         // this makes it possible to search for filenames containing spaces
         // instead of spaces a "-" has to be used in the note link
         // example: note://my-note-with-spaces-in-the-name
-        fileName = fileName.replace( "-", "?" );
+        fileName = fileName.replace( "-", "?" ).replace( "_", "?" );
 
         // we need to search for the case sensitive filename, we only get it lowercase by QUrl
         QDir currentDir = QDir( this->notesPath );
@@ -1502,4 +1533,36 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(const QPoint &pos
 void MainWindow::on_actionSelect_all_notes_triggered()
 {
     selectAllNotes();
+}
+
+/**
+ * @brief create the additional menu entries for the note text edit field
+ * @param pos
+ */
+void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->notesListWidget->mapToGlobal( pos );
+    QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
+
+    menu->addSeparator();
+
+    QString linkTextActionName = ui->noteTextEdit->textCursor().selectedText() != "" ? "&Link selected text to note" : "Insert &link note";
+    QAction* linkTextAction = menu->addAction( linkTextActionName );
+    linkTextAction->setShortcut( tr( "Ctrl+L" ) );
+
+    QAction* selectedItem = menu->exec( globalPos );
+    if ( selectedItem )
+    {
+        if ( selectedItem == linkTextAction )
+        {
+            // handle the linking of text with a note
+            handleTextNoteLinking();
+        }
+    }
+}
+
+void MainWindow::on_actionInsert_Link_to_note_triggered()
+{
+    // handle the linking of text with a note
+    handleTextNoteLinking();
 }

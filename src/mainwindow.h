@@ -67,6 +67,10 @@ private slots:
     void on_notesListWidget_customContextMenuRequested(const QPoint &pos);
     void on_actionSelect_all_notes_triggered();
     void jumpToWelcomeNote();
+    void on_noteTextEdit_customContextMenuRequested(const QPoint &pos);
+
+    void on_actionInsert_Link_to_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -110,6 +114,7 @@ private:
     void copySelectedNotesToFolder(QString destinationFolder);
     void selectAllNotes();
     void updateCurrentFolderTooltip();
+    void handleTextNoteLinking();
 };
 
 #endif // MAINWINDOW_H

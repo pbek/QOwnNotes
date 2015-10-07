@@ -2,6 +2,8 @@
 
 ## 0.45
 - making sure the welcome note is selected after it was created
+- added the ability to link the selected text to a note or create a link to a note at the current cursor position in markdown
+- there is a new dialog to search for notes to link to
 
 ## 0.44
 - added more explanations in the settings dialog
