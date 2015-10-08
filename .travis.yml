@@ -52,15 +52,20 @@ script:
     fi
 
 before_deploy:
-  #
-  # create debian package
-  #
-  - VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
-  - cd ../travis
-  - dpkg-deb -x QOwnNotes.deb build
-  - mv ../src/QOwnNotes build/opt/QOwnNotes/
-  - sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
-  - dpkg -b build QOwnNotes.deb
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         # create debian package
+         VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
+      && cd ../travis
+      && dpkg-deb -x QOwnNotes.deb build
+      && mv ../src/QOwnNotes build/opt/QOwnNotes/
+      && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
+      && dpkg -b build QOwnNotes.deb
+      ;
+    else
+         # create OSX disk image
+         ../travis/create-dmg.sh
+      ;
+    fi
   #
   # add a tag
   #
