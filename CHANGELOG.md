@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.46
+- improved some error messages
+
 ## 0.45
 - making sure the welcome note is selected after it was created
 - added the ability to link the selected text to a note or create a link to a note at the current cursor position in markdown

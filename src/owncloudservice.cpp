@@ -490,7 +490,14 @@ void OwnCloudService::handleVersionsLoading( QString data )
     // check if we get any data at all
     if ( data == "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "Cannot connect to the ownCloud server!<br />Please check your configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
         return;
     }
 
@@ -559,7 +566,14 @@ void OwnCloudService::handleTrashedLoading( QString data )
     // check if we get any data at all
     if ( data == "" )
     {
-        QMessageBox::critical( 0, "ownCloud server connection error!", "Cannot connect to the ownCloud server! Please check your ownCloud server configuration." );
+        if ( QMessageBox::critical( 0, "ownCloud server connection error!",
+                                          "Cannot connect to the ownCloud server!<br />Please check your configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            mainWindow->openSettingsDialog();
+        }
+
         return;
     }
 
