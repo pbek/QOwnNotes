@@ -23,7 +23,7 @@ install:
       ;
     else
          brew update
-      && brew install qt5 qmake
+      && brew install qt5
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
     fi
