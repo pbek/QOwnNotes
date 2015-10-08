@@ -43,7 +43,6 @@ script:
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && qmake -project
       && qmake QOwnNotes.pro CONFIG+=$CONFIG
-      # move this to before_deploy later
       && ../travis/create-dmg.sh
       ;
     fi
