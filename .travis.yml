@@ -2,7 +2,7 @@ language: cpp
 
 os:
   - linux
-#  - osx
+  - osx
 
 env:
   global:
@@ -12,9 +12,9 @@ env:
     - CONFIG=debug
 
 install:
-  - lsb_release -a
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+         lsb_release -a
+      && sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
       && sudo apt-add-repository -y ppa:beineri/opt-qt541
       && sudo apt-get -qq update
       && sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt54script
@@ -24,48 +24,77 @@ install:
     else
          brew update
       && brew install qt5
-      && brew install qt5-qmake
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
     fi
 
 script:
-  - /opt/qt54/bin/qt54-env.sh 
-  - cd src
-  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
-  - /opt/qt54/bin/qmake -project
-  - /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         /opt/qt54/bin/qt54-env.sh 
+      && cd src
+      && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
+      && /opt/qt54/bin/qmake -project
+      && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
+      ;
+    else
+         QTDIR="/usr/local/opt/qt5"
+      && PATH="$QTDIR/bin:$PATH"
+      && cd src
+      && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
+      && qmake -project
+      && qmake QOwnNotes.pro CONFIG+=$CONFIG
+      ;
+    fi
   - make
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
+         ../travis/create-dmg.sh
+      ;
+    fi
 
 before_deploy:
-  #
-  # create debian package
-  #
-  - cd ../travis
-  - dpkg-deb -x QOwnNotes.deb build
-  - mv ../src/QOwnNotes build/opt/QOwnNotes/
-  - sed -i 's/TRAVIS_BUILD_NUMBER/'"$TRAVIS_BUILD_NUMBER"'/g' build/DEBIAN/control
-  - dpkg -b build QOwnNotes.deb
+  # create debian package for linux and a disk image for OSX
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
+      && cd ../travis
+      && dpkg-deb -x QOwnNotes.deb build
+      && mv ../src/QOwnNotes build/opt/QOwnNotes/
+      && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
+      && dpkg -b build QOwnNotes.deb
+      ;
+    else
+         ../travis/create-dmg.sh
+      ;
+    fi
   #
   # add a tag
   #
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER
+  - export GIT_TAG=${TRAVIS_OS_NAME}-b$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags
 
 deploy:
-  provider: releases
-  api_key:
-    secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-  file: QOwnNotes.deb
-  skip_cleanup: true
-  on:
-    repo: pbek/QOwnNotes
-    branch: master
-    tags: false
-    condition: $CONFIG = release
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes.deb
+    skip_cleanup: true
+    on:
+        repo: pbek/QOwnNotes
+        branch: master
+        tags: false
+        condition: $CONFIG = release && ${TRAVIS_OS_NAME} = linux
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes.dmg
+    skip_cleanup: true
+    on:
+        repo: pbek/QOwnNotes
+        branch: master
+        tags: false
+        condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
 
 notifications:
   email:
