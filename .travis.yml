@@ -29,11 +29,21 @@ install:
     fi
 
 script:
-  - /opt/qt54/bin/qt54-env.sh 
-  - cd src
-  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
-  - /opt/qt54/bin/qmake -project
-  - /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         /opt/qt54/bin/qt54-env.sh 
+      && cd src
+      && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
+      && /opt/qt54/bin/qmake -project
+      && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
+      ;
+    else
+         /usr/local/opt/qt5/bin/qt55-env.sh 
+      && cd src
+      && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
+      && qmake -project
+      && qmake QOwnNotes.pro CONFIG+=$CONFIG
+      ;
+    fi
   - make
 
 before_deploy:
