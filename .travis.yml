@@ -12,9 +12,9 @@ env:
     - CONFIG=debug
 
 install:
-  - lsb_release -a
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+         lsb_release -a
+      && sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
       && sudo apt-add-repository -y ppa:beineri/opt-qt541
       && sudo apt-get -qq update
       && sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt54script
