@@ -52,8 +52,8 @@ script:
     fi
 
 before_deploy:
+  # create debian package for linux and a disk image for OSX
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         # create debian package
          VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
       && cd ../travis
       && dpkg-deb -x QOwnNotes.deb build
@@ -62,7 +62,6 @@ before_deploy:
       && dpkg -b build QOwnNotes.deb
       ;
     else
-         # create OSX disk image
          ../travis/create-dmg.sh
       ;
     fi
