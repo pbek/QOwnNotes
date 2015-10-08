@@ -216,10 +216,16 @@ p, li { white-space: pre-wrap; }
     <bool>false</bool>
    </attribute>
    <addaction name="action_Note_note"/>
+   <addaction name="action_Find_note"/>
    <addaction name="action_Remove_note"/>
    <addaction name="actionToggleEditMode"/>
+   <addaction name="separator"/>
+   <addaction name="actionInsert_Link_to_note"/>
+   <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
+   <addaction name="separator"/>
+   <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
@@ -232,6 +238,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+Q</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
    </property>
   </action>
   <action name="actionSet_ownCloud_Folder">
@@ -274,6 +283,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>About &amp;QOwnNotes...</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
    </property>
   </action>
   <action name="action_Note_note">
@@ -362,6 +374,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>&amp;Settings</string>
    </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
   </action>
   <action name="actionShow_versions">
    <property name="icon">
@@ -410,8 +425,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
