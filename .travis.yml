@@ -37,7 +37,8 @@ script:
       && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         /usr/local/opt/qt5/bin/qt55-env.sh 
+         ls -hal /usr/local/opt/qt5/bin/
+      && /usr/local/opt/qt5/bin/qt5-env.sh 
       && cd src
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && qmake -project
