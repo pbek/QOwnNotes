@@ -44,7 +44,7 @@ script:
       && qmake -project
       && qmake QOwnNotes.pro CONFIG+=$CONFIG
       # move this to before_deploy later
-      && ../travis/create-dmg.sh 
+      && ../travis/create-dmg.sh
       ;
     fi
   - make
