@@ -2,6 +2,7 @@
 
 ## 0.46
 - improved some error messages
+- added some more items to the main menu (so that Ubunutu's unity deskop recognizes their shortcuts)
 
 ## 0.45
 - making sure the welcome note is selected after it was created
