@@ -32,15 +32,13 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          /opt/qt54/bin/qt54-env.sh 
       && cd src
-      && VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
-      && echo $VERSION_NUMBER
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && /opt/qt54/bin/qmake -project
       && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         ls -hal /usr/local/opt/qt5/bin/
-      && /usr/local/opt/qt5/bin/qt5-env.sh 
+         QTDIR="/usr/local/opt/qt5"
+      && PATH="$QTDIR/bin:$PATH"
       && cd src
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && qmake -project
@@ -54,11 +52,10 @@ before_deploy:
   # create debian package
   #
   - VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
-  - echo $VERSION_NUMBER
   - cd ../travis
   - dpkg-deb -x QOwnNotes.deb build
   - mv ../src/QOwnNotes build/opt/QOwnNotes/
-  - sed -i 's/TRAVIS_BUILD_NUMBER/'"$TRAVIS_BUILD_NUMBER"'/g' build/DEBIAN/control
+  - sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
   - dpkg -b build QOwnNotes.deb
   #
   # add a tag
