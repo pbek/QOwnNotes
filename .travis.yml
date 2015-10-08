@@ -43,6 +43,8 @@ script:
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && qmake -project
       && qmake QOwnNotes.pro CONFIG+=$CONFIG
+      # move this to before_deploy later
+      && ../travis/create-dmg.sh
       ;
     fi
   - make
@@ -62,21 +64,31 @@ before_deploy:
   #
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER
+  - export GIT_TAG=${TRAVIS_OS_NAME}-b$TRAVIS_BUILD_NUMBER
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags
 
 deploy:
-  provider: releases
-  api_key:
-    secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-  file: QOwnNotes.deb
-  skip_cleanup: true
-  on:
-    repo: pbek/QOwnNotes
-    branch: master
-    tags: false
-    condition: $CONFIG = release
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes.deb
+    skip_cleanup: true
+    on:
+        repo: pbek/QOwnNotes
+        branch: master
+        tags: false
+        condition: $CONFIG = release && ${TRAVIS_OS_NAME} = linux
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes.dmg
+    skip_cleanup: true
+    on:
+        repo: pbek/QOwnNotes
+        branch: master
+        tags: false
+        condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
 
 notifications:
   email:
