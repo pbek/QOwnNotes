@@ -43,10 +43,13 @@ script:
       && echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
       && qmake -project
       && qmake QOwnNotes.pro CONFIG+=$CONFIG
-      && ../travis/create-dmg.sh
       ;
     fi
   - make
+  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
+         ../travis/create-dmg.sh
+      ;
+    fi
 
 before_deploy:
   #
