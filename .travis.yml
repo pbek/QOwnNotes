@@ -46,10 +46,6 @@ script:
       ;
     fi
   - make
-  - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-         ../travis/create-dmg.sh
-      ;
-    fi
 
 before_deploy:
   # create debian package for linux and a disk image for OSX
@@ -70,7 +66,13 @@ before_deploy:
   #
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - export GIT_TAG=${TRAVIS_OS_NAME}-b$TRAVIS_BUILD_NUMBER
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER
+      ;
+    else
+         export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER
+      ;
+    fi
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
   - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags
 
