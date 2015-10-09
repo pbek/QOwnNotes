@@ -32,7 +32,9 @@ script:
   - cd src
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         /opt/qt54/bin/qt54-env.sh 
+         QTDIR="/opt/qt54"
+      && PATH="$QTDIR/bin:$PATH"
+      && qt54-env.sh 
       ;
     else
          QTDIR="/usr/local/opt/qt5"
