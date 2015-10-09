@@ -35,7 +35,7 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          QTDIR="/opt/qt54"
       && PATH="$QTDIR/bin:$PATH"
-      && cat qt54-env.sh
+      && cat $QTDIR/bin/qt54-env.sh
       && qt54-env.sh 
       ;
     else
