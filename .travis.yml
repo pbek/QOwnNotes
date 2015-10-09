@@ -33,16 +33,14 @@ script:
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          /opt/qt54/bin/qt54-env.sh 
-      && /opt/qt54/bin/qmake -project
-      && /opt/qt54/bin/qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
          QTDIR="/usr/local/opt/qt5"
       && PATH="$QTDIR/bin:$PATH"
-      && qmake -project
-      && qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     fi
+  - qmake -project
+  - qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
 
 before_deploy:
