@@ -49,7 +49,7 @@ script:
          qmake QOwnNotes.pro -r -spec macx-clang CONFIG+=x86_64 CONFIG+=$CONFIG
       ;
     fi
-- make
+  - make
 
 before_deploy:
   # create debian package for linux and a disk image for OSX
