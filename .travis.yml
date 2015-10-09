@@ -35,12 +35,13 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          QTDIR="/opt/qt54"
       && PATH="$QTDIR/bin:$PATH"
-      && cat $QTDIR/bin/qt54-env.sh
       && qt54-env.sh 
       ;
     else
          QTDIR="/usr/local/opt/qt5"
       && PATH="$QTDIR/bin:$PATH"
+      && LDFLAGS=-L/usr/local/opt/qt5/lib
+      && CPPFLAGS=-I/usr/local/opt/qt5/include
       ;
     fi
   - qmake -project
@@ -48,7 +49,7 @@ script:
          qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         qmake QOwnNotes.pro CONFIG+=$CONFIG LDFLAGS+=-L/usr/local/opt/qt5/lib LDFLAGS+=-L/usr/local/opt/qt5/lib
+         qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     fi
   - make
