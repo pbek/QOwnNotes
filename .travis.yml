@@ -97,5 +97,8 @@ deploy:
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
 
 notifications:
-  email:
+  recipients:
     - $NOTIFICATION_EMAIL
+  email:
+    on_success: change
+    on_failure: change
