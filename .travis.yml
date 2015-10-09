@@ -23,9 +23,7 @@ install:
       ;
     else
          brew update > /dev/null
-      && brew tap homebrew/versions
       && brew install qt5
-      && brew switch qt5 5.4.2
       && ls -hal /usr/local/opt/qt5/bin
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
@@ -37,6 +35,7 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          QTDIR="/opt/qt54"
       && PATH="$QTDIR/bin:$PATH"
+      && cat qt54-env.sh
       && qt54-env.sh 
       ;
     else
@@ -49,7 +48,7 @@ script:
          qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         qmake QOwnNotes.pro CONFIG+=$CONFIG
+         qmake QOwnNotes.pro CONFIG+=$CONFIG LDFLAGS+=-L/usr/local/opt/qt5/lib LDFLAGS+=-L/usr/local/opt/qt5/lib
       ;
     fi
   - make
