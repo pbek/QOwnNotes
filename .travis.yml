@@ -40,8 +40,8 @@ script:
     else
          QTDIR="/usr/local/opt/qt5"
       && PATH="$QTDIR/bin:$PATH"
-      && LDFLAGS=-L/usr/local/opt/qt5/lib
-      && CPPFLAGS=-I/usr/local/opt/qt5/include
+      && LDFLAGS=-L$QTDIR/lib
+      && CPPFLAGS=-I$QTDIR/include
       ;
     fi
   - qmake -project
