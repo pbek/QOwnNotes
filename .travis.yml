@@ -39,6 +39,8 @@ script:
     else
          QTDIR="/usr/local/opt/qt5"
       && PATH="$QTDIR/bin:$PATH"
+      && LDFLAGS=-L$QTDIR/lib
+      && CPPFLAGS=-I$QTDIR/include
       ;
     fi
   - qmake -project
@@ -46,7 +48,7 @@ script:
          qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         qmake QOwnNotes.pro -r -spec macx-clang CONFIG+=x86_64 CONFIG+=$CONFIG
+         qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     fi
   - make
