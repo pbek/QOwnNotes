@@ -24,6 +24,8 @@ install:
     else
          brew update > /dev/null
       && brew install qt5
+      && brew switch qt5 5.4.2
+      && ls -hal /usr/local/opt/qt5/bin
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
     fi
@@ -46,7 +48,7 @@ script:
          qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     else
-         qmake QOwnNotes.pro -r -spec macx-clang CONFIG+=x86_64 CONFIG+=$CONFIG
+         qmake QOwnNotes.pro CONFIG+=$CONFIG
       ;
     fi
   - make
