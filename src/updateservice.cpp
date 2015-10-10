@@ -20,7 +20,7 @@ UpdateService::UpdateService(QObject *parent) : QObject(parent)
     this->parent = parent;
 }
 
-bool UpdateService::checkForUpdates( UpdateMode updateMode )
+void UpdateService::checkForUpdates( UpdateMode updateMode )
 {
     this->updateMode = updateMode;
 

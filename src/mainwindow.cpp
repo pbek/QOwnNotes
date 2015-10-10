@@ -535,8 +535,6 @@ void MainWindow::buildNotesIndex()
     // show newest entry first
     QStringList files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
-    bool isSetCurrentNote = false;
-
     // add some notes if there aren't any
     if ( files.count() == 0 )
     {

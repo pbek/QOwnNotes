@@ -182,6 +182,7 @@ void MainWindow::on_searchLineEdit_returnPressed()
 
 void NoteSearchDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
 {
+    Q_UNUSED( index );
     this->close();
     this->setResult( QDialog::Accepted );
 }

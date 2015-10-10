@@ -32,7 +32,7 @@ public:
     Q_ENUMS(UpdateMode)
 
     explicit UpdateService(QObject *parent = 0);
-    bool checkForUpdates(UpdateMode updateMode = AppStart);
+    void checkForUpdates(UpdateMode updateMode = AppStart);
 private:
     QObject *parent;
     UpdateMode updateMode;
