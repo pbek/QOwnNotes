@@ -24,7 +24,7 @@ install:
     else
          brew update > /dev/null
       && cd `brew --prefix`
-      && echo "We are using QT 5.4.2 because, we had troubles with the QT 5.5 brew."
+      && echo "We are using QT 5.4.2, because we had troubles with the QT 5.5 brew."
       && git checkout 00e46351980ad915424aad9316abffc19936809c Library/Formula/qt5.rb
       && cd -
       && brew install qt5
