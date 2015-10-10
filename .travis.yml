@@ -23,7 +23,7 @@ install:
       ;
     else
          brew update > /dev/null
-      && brew versions qt5
+      && brew help
       && brew install qt5
       && ls -hal /usr/local/opt/qt5/bin
       && chmod -R 755 /usr/local/opt/qt5/*
