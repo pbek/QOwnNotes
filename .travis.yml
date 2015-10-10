@@ -54,9 +54,7 @@ script:
     fi
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-         cd ..
-      && find .
-      && otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
+         otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
       ;
     fi
 
