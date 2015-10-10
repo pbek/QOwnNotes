@@ -51,7 +51,8 @@ script:
   - qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-         sed -i 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+         cat QOwnNotes.app/Contents/Info.plist
+      && sed -i 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
       && cat QOwnNotes.app/Contents/Info.plist
       ;
     fi
