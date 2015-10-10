@@ -7,7 +7,7 @@
 
 ## 0.46
 - improved some error messages
-- added some more items to the main menu (so that Ubunutu's unity deskop recognizes the shortcuts)
+- added some more items to the main menu (so that Ubuntu's unity desktop recognizes the shortcuts)
 
 ## 0.45
 - making sure the welcome note is selected after it was created
@@ -23,7 +23,7 @@
 - updating to QOwnNotesAPI v0.4 is suggested, because it also contains two important bugfixes for the trashed notes api
 - fixed a bug when the ownCloud path and the notes path are the same
 - added write permissions to the demo notes
-- note editing is now disallowed if note file is readonly
+- note editing is now disallowed if note file is read only
 - some improvements on storing notes to disk
 
 ## 0.42.1
