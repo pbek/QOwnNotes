@@ -55,6 +55,8 @@ script:
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
          otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
+      && macdeployqt ./QOwnNotes.app
+      && otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
       ;
     fi
 
