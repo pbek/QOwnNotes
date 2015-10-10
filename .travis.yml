@@ -55,8 +55,7 @@ script:
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
          ../travis/create-dmg.sh
-      && ls -hal QOwnNotes.app
-      && find QOwnNotes.app
+      && find .
       && ./QOwnNotes.app/Contents/MacOS/QOwnNotes
       ;
     fi
