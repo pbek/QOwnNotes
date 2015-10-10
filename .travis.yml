@@ -51,7 +51,7 @@ script:
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
          cat QOwnNotes.app/Contents/Info.plist
-      && sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' ./QOwnNotes.app/Contents/Info.plist
+      && sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
       && cat QOwnNotes.app/Contents/Info.plist
       ;
     fi
@@ -67,7 +67,7 @@ before_deploy:
       && dpkg -b build QOwnNotes.deb
       ;
     else
-         sed -i 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+         sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
       && ../travis/create-dmg.sh
       ;
     fi
