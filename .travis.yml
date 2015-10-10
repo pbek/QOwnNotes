@@ -24,10 +24,10 @@ install:
     else
          brew update > /dev/null
       && brew help
-      && brew doctor
-      && brew info qt5
+      && cd `brew --prefix`
+      && git checkout HASH Library/Formula/qt5.rb  # use output of "brew versions"
       && brew install qt5
-      && brew list qt5
+      && brew switch qt5 5.4.2
       && ls -hal /usr/local/opt/qt5/bin
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
