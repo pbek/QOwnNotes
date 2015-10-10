@@ -23,11 +23,7 @@ install:
       ;
     else
          brew update > /dev/null
-#      && brew help
-#      && cd `brew --prefix`
-#      && git checkout 00e46351980ad915424aad9316abffc19936809c Library/Formula/qt5.rb
       && brew install qt5
-#      && ls -hal /usr/local/opt/qt5/bin
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
     fi
