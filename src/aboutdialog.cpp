@@ -21,6 +21,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
         QDate date = QDate::currentDate();
 
         // fill in the variables
+        html = html.replace( "QT_VERSION_STR", QString( QT_VERSION_STR ) );
         html = html.replace( "BUILD_NUMBER", QString::number( BUILD ) );
         html = html.replace( "BUILD_DATE", __DATE__ );
         html = html.replace( "VERSION", QString( VERSION ) );
