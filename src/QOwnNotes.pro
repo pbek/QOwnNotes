@@ -81,7 +81,9 @@ RESOURCES += \
     images.qrc \
     texts.qrc \
     breeze.qrc \
-    demonotes.qrc
+    demonotes.qrc \
+    high-contrast.qrc \
+    ubuntu-mobile.qrc
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0

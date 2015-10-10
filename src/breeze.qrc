@@ -22,5 +22,7 @@
         <file>images/breeze/view-restore.svg</file>
         <file>images/breeze/insert-link.svg</file>
         <file>images/breeze/text-frame-link.svg</file>
+        <file>images/breeze/window-close.svg</file>
+        <file>images/breeze/face-smile.svg</file>
     </qresource>
 </RCC>

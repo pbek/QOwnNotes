@@ -39,6 +39,25 @@
       <property name="verticalSpacing">
        <number>5</number>
       </property>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLineEdit" name="searchLineEdit">
+        <property name="toolTip">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLineEdit {
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	padding: 2px 5px 2px 25px;
+	background-image: url(:/images/search.png);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+        </property>
+       </widget>
+      </item>
       <item row="1" column="1">
        <widget class="QTabWidget" name="noteTabWidget">
         <property name="currentIndex">
@@ -73,6 +92,86 @@ p, li { white-space: pre-wrap; }
             <property name="acceptRichText">
              <bool>false</bool>
             </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QWidget" name="searchInNoteWidget" native="true">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>50</height>
+             </size>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>5</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="searchInNoteCloseButton">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="breeze.qrc">
+                 <normaloff>:/images/breeze/window-close.svg</normaloff>:/images/breeze/window-close.svg</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>18</width>
+                 <height>18</height>
+                </size>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="searchInNoteLabel">
+               <property name="text">
+                <string>Find:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="searchInNoteEdit"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="searchInNoteButton">
+               <property name="text">
+                <string>&amp;Find</string>
+               </property>
+               <property name="icon">
+                <iconset resource="ubuntu-mobile.qrc">
+                 <normaloff>:/images/ubuntu-mobile/find.svg</normaloff>:/images/ubuntu-mobile/find.svg</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
          </layout>
@@ -118,25 +217,6 @@ p, li { white-space: pre-wrap; }
         </property>
         <property name="selectionMode">
          <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0" colspan="3">
-       <widget class="QLineEdit" name="searchLineEdit">
-        <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit {
-	border: 1px solid lightgray;
-	border-radius: 5px;
-	padding: 2px 5px 2px 25px;
-	background-image: url(:/images/search.png);
-	background-repeat: no-repeat;
-	background-position: center left;
-	margin-right: 0px;
-}
-</string>
         </property>
        </widget>
       </item>
@@ -195,6 +275,7 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="action_Find_text_in_note"/>
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
@@ -220,6 +301,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Remove_note"/>
    <addaction name="actionToggleEditMode"/>
    <addaction name="separator"/>
+   <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
@@ -261,7 +343,7 @@ p, li { white-space: pre-wrap; }
     <string>&amp;Find note</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+F</string>
+    <string>Ctrl+Shift+F</string>
    </property>
   </action>
   <action name="action_Remove_note">
@@ -330,10 +412,10 @@ p, li { white-space: pre-wrap; }
   <action name="actionReport_problems_or_ideas">
    <property name="icon">
     <iconset resource="breeze.qrc">
-     <normaloff>:/images/breeze/tools-report-bug.svg</normaloff>:/images/breeze/tools-report-bug.svg</iconset>
+     <normaloff>:/images/breeze/face-smile.svg</normaloff>:/images/breeze/face-smile.svg</iconset>
    </property>
    <property name="text">
-    <string>Report &amp;problems or ideas</string>
+    <string>Report &amp;issues or ideas</string>
    </property>
   </action>
   <action name="actionAlphabetical">
@@ -422,11 +504,27 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+L</string>
    </property>
   </action>
+  <action name="action_Find_text_in_note">
+   <property name="icon">
+    <iconset resource="ubuntu-mobile.qrc">
+     <normaloff>:/images/ubuntu-mobile/find.svg</normaloff>:/images/ubuntu-mobile/find.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Find in current note</string>
+   </property>
+   <property name="toolTip">
+    <string>Find text in current note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+F</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="breeze.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze.qrc"/>
+  <include location="ubuntu-mobile.qrc"/>
  </resources>
  <connections/>
 </ui>

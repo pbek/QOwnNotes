@@ -44,6 +44,8 @@ MainWindow::MainWindow(QWidget *parent) :
     sorting->addAction( ui->actionBy_date );
     sorting->setExclusive( true );
 
+    ui->searchInNoteWidget->hide();
+
     Note::createConnection();
 
     this->firstVisibleNoteListRow = 0;
@@ -76,6 +78,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
+    ui->searchInNoteWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
 
     // setup markdown highlighting
@@ -776,6 +779,26 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         }
         return false;
     }
+    else if ( obj == ui->searchInNoteWidget )
+    {
+        if ( event->type() == QEvent::KeyPress )
+        {
+            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+            if ( keyEvent->key() == Qt::Key_Escape )
+            {
+                closeSearchInNoteWidget();
+                return true;
+            }
+            else if ( keyEvent->key() == Qt::Key_Return )
+            {
+                doSearchInNote();
+                return true;
+            }
+
+        }
+        return false;
+    }
 
     return QMainWindow::eventFilter(obj, event);
 }
@@ -1112,6 +1135,23 @@ void MainWindow::handleTextNoteLinking()
     }
 }
 
+void MainWindow::closeSearchInNoteWidget()
+{
+    ui->searchInNoteWidget->hide();
+    ui->noteTextEdit->setFocus();
+}
+
+void MainWindow::doSearchInNote()
+{
+    bool found = ui->noteTextEdit->find( ui->searchInNoteEdit->text() );
+
+    // start at the top if not found
+    if ( !found )
+    {
+        ui->noteTextEdit->moveCursor( QTextCursor::Start );
+        ui->noteTextEdit->find( ui->searchInNoteEdit->text() );
+    }
+}
 
 /**
  *
@@ -1563,4 +1603,25 @@ void MainWindow::on_actionInsert_Link_to_note_triggered()
 {
     // handle the linking of text with a note
     handleTextNoteLinking();
+}
+
+void MainWindow::on_action_Find_text_in_note_triggered()
+{
+    ui->searchInNoteEdit->setFocus();
+    ui->searchInNoteWidget->show();
+
+    if ( ui->noteTabWidget->currentIndex() != 0 )
+    {
+        this->setNoteTextEditMode( true );
+    }
+}
+
+void MainWindow::on_searchInNoteCloseButton_clicked()
+{
+    closeSearchInNoteWidget();
+}
+
+void MainWindow::on_searchInNoteButton_clicked()
+{
+    doSearchInNote();
 }

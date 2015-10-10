@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/ubuntu-mobile/find.svg</file>
+    </qresource>
+</RCC>

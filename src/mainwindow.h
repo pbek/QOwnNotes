@@ -71,6 +71,12 @@ private slots:
 
     void on_actionInsert_Link_to_note_triggered();
 
+    void on_action_Find_text_in_note_triggered();
+
+    void on_searchInNoteCloseButton_clicked();
+
+    void on_searchInNoteButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -115,6 +121,8 @@ private:
     void selectAllNotes();
     void updateCurrentFolderTooltip();
     void handleTextNoteLinking();
+    void closeSearchInNoteWidget();
+    void doSearchInNote();
 };
 
 #endif // MAINWINDOW_H
