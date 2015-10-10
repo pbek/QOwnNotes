@@ -61,33 +61,27 @@ void UpdateService::onResult(QNetworkReply* reply)
 
     // we have to add [], so the string can be parsed as JSON
     QString data = QString("[") + (QString) reply->readAll() + QString("]");
-//    qDebug() << data;
 
     QScriptEngine engine;
     QScriptValue result = engine.evaluate(data);
 
     // get the information if we sould update our app
     QScriptValue shouldUpdate = result.property("0").property("should_update");
-//    qDebug() << shouldUpdate.toBool();
 
     // check if we should update our app
     if ( shouldUpdate.toBool() )
     {
         // get the release url
         QString releaseUrl = result.property("0").property("release").property("assets").property("0").property("browser_download_url").toString();
-//        qDebug() << releaseUrl;
 
         // get the release version string
         QString releaseVersionString = result.property("0").property("release_version_string").toString();
-//        qDebug() << releaseVersionString;
 
         // get the release build number
         int releaseBuildNumber = result.property("0").property("release_build_number").toInteger();
-//        qDebug() << releaseBuildNumber;
 
         // get the changes text
         QString changesText = result.property("0").property("changes").toString();
-//        qDebug() << changesText;
 
         bool showUpdateDialog = true;
         if ( this->updateMode != UpdateService::Manual )
