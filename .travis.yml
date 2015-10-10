@@ -25,7 +25,7 @@ install:
          brew update > /dev/null
       && brew help
       && cd `brew --prefix`
-      && git checkout HASH Library/Formula/qt5.rb
+      && git checkout a76656df28ed843aafafde3241170695ea446033 Library/Formula/qt5.rb
       && brew install qt5
       && brew switch qt5 5.4.2
       && ls -hal /usr/local/opt/qt5/bin
