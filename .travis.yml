@@ -24,6 +24,7 @@ install:
     else
          brew update > /dev/null
       && cd `brew --prefix`
+      && echo "We are using QT 5.4.2, because we had troubles with the current 4ea4fd83963d1c1eb1e6fc024be9719f8010748f QT 5.5 brew. The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
       && git checkout 00e46351980ad915424aad9316abffc19936809c Library/Formula/qt5.rb
       && cd -
       && brew install qt5
@@ -47,19 +48,11 @@ script:
       ;
     fi
   - qmake -project
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         qmake QOwnNotes.pro CONFIG+=$CONFIG
-      ;
-    else
-         qmake QOwnNotes.pro CONFIG+=$CONFIG
-      ;
-    fi
+  - qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
-         otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
-      && macdeployqt ./QOwnNotes.app
-      && otool -L ./QOwnNotes.app/Contents/MacOS/QOwnNotes
-      && ./QOwnNotes.app/Contents/MacOS/QOwnNotes
+         sed -i 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+      && cat QOwnNotes.app/Contents/Info.plist
       ;
     fi
 
@@ -74,7 +67,8 @@ before_deploy:
       && dpkg -b build QOwnNotes.deb
       ;
     else
-         ../travis/create-dmg.sh
+         sed -i 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+      && ../travis/create-dmg.sh
       ;
     fi
   #

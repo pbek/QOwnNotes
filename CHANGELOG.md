@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.47
+- OSX builds are finally made on Travis CI too
+
 ## 0.46
 - improved some error messages
 - added some more items to the main menu (so that Ubunutu's unity deskop recognizes the shortcuts)
