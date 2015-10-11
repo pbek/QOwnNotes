@@ -324,6 +324,7 @@ void MainWindow::readSettings()
     showSystemTray = settings.value( "ShowSystemTray", QVariant( false ) ).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
+    ui->menuBar->restoreGeometry(settings.value("MainWindow/menuBarGeometry").toByteArray());
 
     // check legacy setting
     this->notesPath = settings.value( "General/notesPath" ).toString();
@@ -716,6 +717,7 @@ void MainWindow::storeSettings()
     settings.setValue( "MainWindow/geometry", saveGeometry() );
     settings.setValue( "MainWindow/windowState", saveState() );
     settings.setValue( "mainSplitterSizes", this->mainSplitter->saveState() );
+    settings.setValue( "MainWindow/menuBarGeometry", ui->menuBar->saveGeometry() );
     settings.setValue( "SortingModeAlphabetically", sortAlphabetically );
     settings.setValue( "ShowSystemTray", showSystemTray );
 }

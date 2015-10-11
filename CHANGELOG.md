@@ -3,6 +3,7 @@
 ## 0.49
 - added some markdown view styling
 - more improvements in the current note search feature
+- the position of the menu bar will now be stored and will be restored when the application starts
 
 ## 0.48
 - lots of improvements in the current note search feature
