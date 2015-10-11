@@ -790,12 +790,16 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 closeSearchInNoteWidget();
                 return true;
             }
-            else if ( keyEvent->key() == Qt::Key_Return )
+            else if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Down ) )
             {
                 doSearchInNote();
                 return true;
             }
-
+            else if ( keyEvent->key() == Qt::Key_Up )
+            {
+                doSearchInNote( false );
+                return true;
+            }
         }
         return false;
     }
@@ -1141,16 +1145,32 @@ void MainWindow::closeSearchInNoteWidget()
     ui->noteTextEdit->setFocus();
 }
 
-void MainWindow::doSearchInNote()
+/**
+ * @brief Searches for text in the current note
+ */
+void MainWindow::doSearchInNote( bool searchDown )
 {
-    bool found = ui->noteTextEdit->find( ui->searchInNoteEdit->text() );
+    QString text = ui->searchInNoteEdit->text();
+
+    if ( text == "" )
+    {
+        ui->searchInNoteEdit->setStyleSheet( "* { background: none; }" );
+        return;
+    }
+
+    QTextDocument::FindFlag options = searchDown ? QTextDocument::FindFlag (0) : QTextDocument::FindBackward;
+    bool found = ui->noteTextEdit->find( text, options );
 
     // start at the top if not found
     if ( !found )
     {
-        ui->noteTextEdit->moveCursor( QTextCursor::Start );
-        ui->noteTextEdit->find( ui->searchInNoteEdit->text() );
+        ui->noteTextEdit->moveCursor( searchDown ? QTextCursor::Start : QTextCursor::End );
+        found = ui->noteTextEdit->find( text, options );
     }
+
+    // add a background color according if we found the text or not
+    QString colorCode = found ? "#D5FAE2" : "#FAE9EB";
+    ui->searchInNoteEdit->setStyleSheet( "* { background: " + colorCode + "; }" );
 }
 
 /**
@@ -1171,6 +1191,12 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
+
+    // also do a "in note search" if the widget is visible
+    if ( ui->searchInNoteWidget->isVisible() )
+    {
+        doSearchInNote();
+    }
 }
 
 void MainWindow::on_noteTextEdit_textChanged()
@@ -1608,12 +1634,16 @@ void MainWindow::on_actionInsert_Link_to_note_triggered()
 void MainWindow::on_action_Find_text_in_note_triggered()
 {
     ui->searchInNoteEdit->setFocus();
+    ui->searchInNoteEdit->selectAll();
     ui->searchInNoteWidget->show();
 
+    // if we are not in edit mode go into edit mode
     if ( ui->noteTabWidget->currentIndex() != 0 )
     {
         this->setNoteTextEditMode( true );
     }
+
+    doSearchInNote();
 }
 
 void MainWindow::on_searchInNoteCloseButton_clicked()
@@ -1621,7 +1651,18 @@ void MainWindow::on_searchInNoteCloseButton_clicked()
     closeSearchInNoteWidget();
 }
 
-void MainWindow::on_searchInNoteButton_clicked()
+void MainWindow::on_searchInNoteDownButton_clicked()
 {
     doSearchInNote();
+}
+
+void MainWindow::on_searchInNoteEdit_textChanged(const QString &arg1)
+{
+    Q_UNUSED( arg1 );
+    doSearchInNote();
+}
+
+void MainWindow::on_searchInNoteUpButton_clicked()
+{
+    doSearchInNote( false );
 }

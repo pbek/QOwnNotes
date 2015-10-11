@@ -132,6 +132,9 @@ p, li { white-space: pre-wrap; }
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
+               <property name="toolTip">
+                <string>close search</string>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -161,13 +164,36 @@ p, li { white-space: pre-wrap; }
               <widget class="QLineEdit" name="searchInNoteEdit"/>
              </item>
              <item>
-              <widget class="QPushButton" name="searchInNoteButton">
+              <widget class="QPushButton" name="searchInNoteDownButton">
+               <property name="toolTip">
+                <string>search forward</string>
+               </property>
                <property name="text">
-                <string>&amp;Find</string>
+                <string/>
                </property>
                <property name="icon">
-                <iconset resource="ubuntu-mobile.qrc">
-                 <normaloff>:/images/ubuntu-mobile/find.svg</normaloff>:/images/ubuntu-mobile/find.svg</iconset>
+                <iconset resource="breeze.qrc">
+                 <normaloff>:/images/breeze/go-bottom.svg</normaloff>:/images/breeze/go-bottom.svg</iconset>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="searchInNoteUpButton">
+               <property name="toolTip">
+                <string>search backward</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset resource="breeze.qrc">
+                 <normaloff>:/images/breeze/go-top.svg</normaloff>:/images/breeze/go-top.svg</iconset>
+               </property>
+               <property name="flat">
+                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -509,8 +535,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Find_text_in_note">
    <property name="icon">
-    <iconset resource="ubuntu-mobile.qrc">
-     <normaloff>:/images/ubuntu-mobile/find.svg</normaloff>:/images/ubuntu-mobile/find.svg</iconset>
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/edit-find-in-note.svg</normaloff>:/images/breeze/edit-find-in-note.svg</iconset>
    </property>
    <property name="text">
     <string>&amp;Find in current note</string>
@@ -525,9 +551,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze.qrc"/>
-  <include location="ubuntu-mobile.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

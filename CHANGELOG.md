@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.48
+- lots of improvements in the current note search feature
+- added more shortcuts
+
 ## 0.47
 - added the ability to search in the current note
 - OSX builds are finally made on Travis CI too
