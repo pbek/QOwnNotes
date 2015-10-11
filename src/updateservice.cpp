@@ -80,8 +80,8 @@ void UpdateService::onResult(QNetworkReply* reply)
         // get the release build number
         int releaseBuildNumber = result.property("0").property("release_build_number").toInteger();
 
-        // get the changes text
-        QString changesText = result.property("0").property("changes").toString();
+        // get the changes html
+        QString changesHtml = result.property("0").property("changes_html").toString();
 
         bool showUpdateDialog = true;
         if ( this->updateMode != UpdateService::Manual )
@@ -108,7 +108,7 @@ void UpdateService::onResult(QNetworkReply* reply)
         if ( showUpdateDialog )
         {
             // open the update dialog
-            UpdateDialog *dialog = new UpdateDialog( 0, changesText, releaseUrl, releaseVersionString, releaseBuildNumber );
+            UpdateDialog *dialog = new UpdateDialog( 0, changesHtml, releaseUrl, releaseVersionString, releaseBuildNumber );
             dialog->exec();
         }
     }

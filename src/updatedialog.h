@@ -13,7 +13,7 @@ class UpdateDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit UpdateDialog(QWidget *parent = 0, QString changesText = "", QString releaseUrl = "", QString releaseVersionString = "", int releaseBuildNumber = 0);
+    explicit UpdateDialog(QWidget *parent = 0, QString changesHtml = "", QString releaseUrl = "", QString releaseVersionString = "", int releaseBuildNumber = 0);
     ~UpdateDialog();
 
 private slots:

@@ -6,12 +6,12 @@
 #include <QDebug>
 #include <QSettings>
 
-UpdateDialog::UpdateDialog(QWidget *parent, QString changesText, QString releaseUrl, QString releaseVersionString, int releaseBuildNumber) :
+UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml, QString releaseUrl, QString releaseVersionString, int releaseBuildNumber) :
     QDialog(parent),
     ui(new Ui::UpdateDialog)
 {
     ui->setupUi(this);
-    ui->changeLogEdit->setText( changesText );
+    ui->changeLogEdit->setHtml( changesHtml );
     ui->versionLabel->setText( "Version " + releaseVersionString + " - build " + QString::number( releaseBuildNumber ) );
     this->releaseVersionString = releaseVersionString;
     this->releaseUrl = &releaseUrl;
