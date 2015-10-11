@@ -37,8 +37,17 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="changeLogEdit">
+      <widget class="QTextBrowser" name="changeLogEdit">
        <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="textInteractionFlags">
+        <set>Qt::TextBrowserInteraction</set>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
+       </property>
+       <property name="openLinks">
         <bool>true</bool>
        </property>
       </widget>
