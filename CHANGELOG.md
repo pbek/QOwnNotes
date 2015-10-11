@@ -4,6 +4,7 @@
 - added some markdown view styling
 - more improvements in the current note search feature
 - the position of the menu bar will now be stored and will be restored when the application starts
+- about dialog styling changes and link fixup
 
 ## 0.48
 - lots of improvements in the current note search feature
