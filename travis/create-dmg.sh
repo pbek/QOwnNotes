@@ -6,7 +6,8 @@
 
 QTDIR="/usr/local/opt/qt5"
 APP=QOwnNotes
-TEMPDIR=$APP-tmp
+# this directory name will also be shown in the title when the DMG is mounted
+TEMPDIR=$APP
 SIGNATURE="Patrizio Bekerle"
 NAME=`uname`
 
