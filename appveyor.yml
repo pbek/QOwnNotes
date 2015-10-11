@@ -1,6 +1,7 @@
 # AppVeyor build configuration
 # http://www.appveyor.com/docs/build-configuration
 os: unstable
+skip_tags: true
 
 install:
   - set QTDIR=C:\Qt\5.4\mingw491_32
