@@ -408,6 +408,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Check for &amp;updates</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+U</string>
+   </property>
   </action>
   <action name="actionReport_problems_or_ideas">
    <property name="icon">
