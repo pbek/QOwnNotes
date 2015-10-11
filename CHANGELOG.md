@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.49
+- added some markdown view styling
+- more improvements in the current note search feature
+
 ## 0.48
 - lots of improvements in the current note search feature
 - added more shortcuts

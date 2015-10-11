@@ -79,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
     ui->searchInNoteWidget->installEventFilter(this);
+    ui->noteTextEdit->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
 
     // setup markdown highlighting
@@ -798,6 +799,20 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             else if ( keyEvent->key() == Qt::Key_Up )
             {
                 doSearchInNote( false );
+                return true;
+            }
+        }
+        return false;
+    }
+    else if ( obj == ui->noteTextEdit )
+    {
+        if ( event->type() == QEvent::KeyPress )
+        {
+            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+            if ( ( keyEvent->key() == Qt::Key_Escape ) && ui->searchInNoteWidget->isVisible() )
+            {
+                closeSearchInNoteWidget();
                 return true;
             }
         }
