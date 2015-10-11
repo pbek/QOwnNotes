@@ -736,12 +736,12 @@ void MainWindow::closeEvent(QCloseEvent *event)
 //
 bool MainWindow::eventFilter(QObject* obj, QEvent *event)
 {
-    if ( obj == ui->searchLineEdit )
+    if ( event->type() == QEvent::KeyPress )
     {
-        if ( event->type() == QEvent::KeyPress )
-        {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+        QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 
+        if ( obj == ui->searchLineEdit )
+        {
             // set focus to the notes list if Key_Down or Key_Tab were pressed in the search line edit
             if ( ( keyEvent->key() == Qt::Key_Down ) || ( keyEvent->key() == Qt::Key_Tab ) )
             {
@@ -756,15 +756,10 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 ui->notesListWidget->setFocus();
                 return true;
             }
+            return false;
         }
-        return false;
-    }
-    else if ( obj == ui->notesListWidget )
-    {
-        if ( event->type() == QEvent::KeyPress )
+        else if ( obj == ui->notesListWidget )
         {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-
             // set focus to the note text edit if Key_Return or Key_Tab were pressed in the notes list
             if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Tab ) )
             {
@@ -777,18 +772,18 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 removeCurrentNote();
                 return true;
             }
+            return false;
         }
-        return false;
-    }
-    else if ( obj == ui->searchInNoteWidget )
-    {
-        if ( event->type() == QEvent::KeyPress )
+        else if ( obj == ui->searchInNoteWidget )
         {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-
             if ( keyEvent->key() == Qt::Key_Escape )
             {
                 closeSearchInNoteWidget();
+                return true;
+            }
+            else if ( ( keyEvent->modifiers().testFlag( Qt::ShiftModifier ) && ( keyEvent->key() == Qt::Key_Return ) ) || ( keyEvent->key() == Qt::Key_Up ) )
+            {
+                doSearchInNote( false );
                 return true;
             }
             else if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Down ) )
@@ -796,17 +791,9 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 doSearchInNote();
                 return true;
             }
-            else if ( keyEvent->key() == Qt::Key_Up )
-            {
-                doSearchInNote( false );
-                return true;
-            }
+            return false;
         }
-        return false;
-    }
-    else if ( obj == ui->noteTextEdit )
-    {
-        if ( event->type() == QEvent::KeyPress )
+        else if ( obj == ui->noteTextEdit )
         {
             QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 
@@ -815,8 +802,8 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 closeSearchInNoteWidget();
                 return true;
             }
+            return false;
         }
-        return false;
     }
 
     return QMainWindow::eventFilter(obj, event);
