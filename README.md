@@ -1,18 +1,26 @@
-# QOwnNotes
+# [QOwnNotes](http://www.qownnotes.org "QOwnNotes Offical Site") 
+
+[Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) | 
+[Issues](https://github.com/pbek/QOwnNotes/issues) | 
+[Releases](https://github.com/pbek/QOwnNotes/releases)
+[Screenshots](http://www.qownnotes.org) |
+[ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
 [![Build Status Linux](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
 [![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 
-[QOwnNotes](http://www.qownnotes.org) is the **open source notepad**  for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default **notes application** of [**ownCloud**](http://owncloud.org/).
+[QOwnNotes](http://www.qownnotes.org) is the **open source notepad** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default **notes application** of [**ownCloud**](http://owncloud.org/).
 
-So you are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
+You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
 
 The notes are stored as **plain text files** and are **synced with ownCloud's file sync** functionality. Of course other software, like [Dropbox](https://www.dropbox.com) can be used too.
 
 I like the concept of having notes accessible in plain text files, like it is done in the **ownCloud notes app**, to gain a maximum of **freedom**, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need **QOwnNotes** was born.
 
 Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
+
+To get more features with ownCloud like versioning and trash access you might also want to install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your ownCloud server.
 
 ## Screenshot
 ![Screenhot](screenshot.png)
