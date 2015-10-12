@@ -717,7 +717,7 @@ QString Note::toMarkdownHtml() {
     hoedown_document_free(document);
     hoedown_html_renderer_free(renderer);
 
-    result = "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; } a { color: #FFA64C; text-decoration: none; }</style></head><body>" + result + "</body></html>";
+    result = "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; } a { color: #FF9137; text-decoration: none; }</style></head><body>" + result + "</body></html>";
 
     return result;
 }
