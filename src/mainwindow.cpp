@@ -381,13 +381,6 @@ void MainWindow::notesWereModified( const QString& str )
     if ( note.getFileName() == this->currentNote.getFileName() ) {
         if ( note.fileExists() )
         {
-            // updating the current note text straight away if we didn't change it since the last store
-            if ( !note.getHasDirtyData() )
-            {
-                updateNoteTextFromDisk( note );
-                return;
-            }
-
             // fetch current text
             QString text1 = this->ui->noteTextEdit->toPlainText();
 
@@ -398,6 +391,13 @@ void MainWindow::notesWereModified( const QString& str )
             // skip dialog if texts are equal
             if ( text1 == text2 )
             {
+                return;
+            }
+
+            // reloading the current note text straight away if we didn't change it since the last store
+            if ( !note.getHasDirtyData() )
+            {
+                updateNoteTextFromDisk( note );
                 return;
             }
 
