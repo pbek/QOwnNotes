@@ -358,6 +358,18 @@ void MainWindow::readSettings()
     }
 }
 
+void MainWindow::updateNoteTextFromDisk( Note note )
+{
+    note.updateNoteTextFromDisk();
+    note.store();
+    this->currentNote = note;
+
+    {
+        const QSignalBlocker blocker( this->ui->noteTextEdit );
+        this->setNoteTextFromNote( &note );
+    }
+}
+
 void MainWindow::notesWereModified( const QString& str )
 {
     qDebug() << "notesWereModified: " << str;
@@ -369,6 +381,13 @@ void MainWindow::notesWereModified( const QString& str )
     if ( note.getFileName() == this->currentNote.getFileName() ) {
         if ( note.fileExists() )
         {
+            // updating the current note text straight away if we didn't change it since the last store
+            if ( !note.getHasDirtyData() )
+            {
+                updateNoteTextFromDisk( note );
+                return;
+            }
+
             // fetch current text
             QString text1 = this->ui->noteTextEdit->toPlainText();
 
@@ -406,14 +425,7 @@ void MainWindow::notesWereModified( const QString& str )
 
                 // reload note file from disk
                 case NoteDiffDialog::Reload:
-                    note.updateNoteTextFromDisk();
-                    note.store();
-                    this->currentNote = note;
-
-                    {
-                        const QSignalBlocker blocker( this->ui->noteTextEdit );
-                        this->setNoteTextFromNote( &note );
-                    }
+                    updateNoteTextFromDisk( note );
                     break;
 
                 case NoteDiffDialog::Cancel:

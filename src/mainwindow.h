@@ -121,6 +121,7 @@ private:
     void handleTextNoteLinking();
     void closeSearchInNoteWidget();
     void doSearchInNote(bool searchDown = true);
+    void updateNoteTextFromDisk(Note note);
 };
 
 #endif // MAINWINDOW_H
