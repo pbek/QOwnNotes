@@ -91,6 +91,10 @@ private:
     bool showSystemTray;
     QSystemTrayIcon  *trayIcon;
     SimpleCrypt crypto;
+    QDateTime currentNoteLastEdited;
+    bool notifyAllExternalModifications;
+    int noteSaveIntervalTime;
+    QTimer *noteSaveTimer;
 
     void setupMainSplitter();
     void createSystemTrayIcon();

@@ -69,10 +69,10 @@ MainWindow::MainWindow(QWidget *parent) :
     loadNoteDirectoryList();
     this->noteDiffDialog = new NoteDiffDialog();
 
-    // look if we need to save something every 10 sec
-    QTimer *timer = new QTimer( this );
-    QObject::connect( timer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    timer->start( 10000 );
+    // look if we need to save something every 10 sec (default)
+    this->noteSaveTimer = new QTimer( this );
+    QObject::connect( this->noteSaveTimer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
+    this->noteSaveTimer->start( this->noteSaveIntervalTime );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -325,6 +325,15 @@ void MainWindow::readSettings()
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(settings.value("MainWindow/menuBarGeometry").toByteArray());
+    this->notifyAllExternalModifications = settings.value( "notifyAllExternalModifications" ).toBool();
+    this->noteSaveIntervalTime = settings.value( "noteSaveIntervalTime" ).toInt();
+
+    // default value is 10 seconds
+    if ( this->noteSaveIntervalTime == 0 )
+    {
+        this->noteSaveIntervalTime = 10;
+        settings.setValue( "noteSaveIntervalTime", this->noteSaveIntervalTime );
+    }
 
     // check legacy setting
     this->notesPath = settings.value( "General/notesPath" ).toString();
@@ -394,11 +403,17 @@ void MainWindow::notesWereModified( const QString& str )
                 return;
             }
 
-            // reloading the current note text straight away if we didn't change it since the last store
-            if ( !note.getHasDirtyData() )
+            // if we don't want to get notifications at all external modifications check if we really need one
+            if ( !this->notifyAllExternalModifications )
             {
-                updateNoteTextFromDisk( note );
-                return;
+                bool isCurrentNoteNotEditedForAWhile = this->currentNoteLastEdited.addSecs( 60 ) < QDateTime::currentDateTime();
+
+                // reloading the current note text straight away if we didn't change it for a minute
+                if ( !this->currentNote.getHasDirtyData() && isCurrentNoteNotEditedForAWhile )
+                {
+                    updateNoteTextFromDisk( note );
+                    return;
+                }
             }
 
             qDebug() << "Current note was modified externaly!";
@@ -1122,7 +1137,19 @@ void MainWindow::openSettingsDialog()
 {
     // open the settings dialog
     SettingsDialog *dialog = new SettingsDialog( &crypto, this );
-    dialog->exec();
+    int dialogResult = dialog->exec();
+
+    if ( dialogResult == QDialog::Accepted )
+    {
+        // read the settings again
+        readSettings();
+
+        // reset the note save timer
+        this->noteSaveTimer->stop();
+        this->noteSaveTimer->start( this->noteSaveIntervalTime );
+
+        qDebug() << "settings dialog done" << dialogResult;
+    }
 }
 
 /**
@@ -1230,6 +1257,7 @@ void MainWindow::on_noteTextEdit_textChanged()
     {
         this->currentNote.storeNewText( text );
         this->currentNote.refetch();
+        this->currentNoteLastEdited = QDateTime::currentDateTime();
 
         // qDebug() << __func__ << ": " << this->currentNote;
     }

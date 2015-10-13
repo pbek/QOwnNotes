@@ -13,6 +13,8 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->setupUi(this);
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault( true );
+    ui->noteSaveIntervalTime->setToolTip( ui->noteSaveIntervalTimeLabel->toolTip() );
+    ui->tabWidget->setCurrentIndex( 0 );
 
     for ( int i = 0; i <= 8; i++ )
     {
@@ -91,6 +93,8 @@ void SettingsDialog::storeSettings()
     settings.setValue( "ownCloud/userName", ui->userNameEdit->text() );
     settings.setValue( "ownCloud/password", crypto->encryptToString( ui->passwordEdit->text() ) );
     settings.setValue( "ownCloud/localOwnCloudPath", ui->localOwnCloudPathEdit->text() );
+    settings.setValue( "notifyAllExternalModifications", ui->notifyAllExternalModificationsCheckBox->isChecked() );
+    settings.setValue( "noteSaveIntervalTime", ui->noteSaveIntervalTime->value() );
 }
 
 void SettingsDialog::readSettings()
@@ -100,6 +104,8 @@ void SettingsDialog::readSettings()
     ui->userNameEdit->setText( settings.value( "ownCloud/userName" ).toString() );
     ui->passwordEdit->setText( crypto->decryptToString( settings.value( "ownCloud/password" ).toString() ) );
     ui->localOwnCloudPathEdit->setText( settings.value( "ownCloud/localOwnCloudPath" ).toString() );
+    ui->notifyAllExternalModificationsCheckBox->setChecked( settings.value( "notifyAllExternalModifications" ).toBool() );
+    ui->noteSaveIntervalTime->setValue( settings.value( "noteSaveIntervalTime" ).toInt() );
 }
 
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)

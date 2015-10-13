@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 0.50
+- the link color in the markdown view was a bit darkened
+- the *externally modified* dialog isn't shown any more by default when the current note wasn't edited for a minute
+    - this behaviour can be changed in the settings dialog
+    - feel free to contact me if you have thoughts on that
+- you are now able to set the note save interval time in the settings dialog
+    - default is still 10 seconds
+
 ## 0.49
 - added some markdown view styling
 - more improvements in the current note search feature
