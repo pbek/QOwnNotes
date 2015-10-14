@@ -72,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // look if we need to save something every 10 sec (default)
     this->noteSaveTimer = new QTimer( this );
     QObject::connect( this->noteSaveTimer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
-    this->noteSaveTimer->start( this->noteSaveIntervalTime );
+    this->noteSaveTimer->start( this->noteSaveIntervalTime * 1000 );
 
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
@@ -342,15 +342,9 @@ void MainWindow::readSettings()
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(settings.value("MainWindow/menuBarGeometry").toByteArray());
-    this->notifyAllExternalModifications = settings.value( "notifyAllExternalModifications" ).toBool();
-    this->noteSaveIntervalTime = settings.value( "noteSaveIntervalTime" ).toInt();
 
-    // default value is 10 seconds
-    if ( this->noteSaveIntervalTime == 0 )
-    {
-        this->noteSaveIntervalTime = 10;
-        settings.setValue( "noteSaveIntervalTime", this->noteSaveIntervalTime );
-    }
+    // read all relevant settings, that can be set in the settings dialog
+    readSettingsFromSettingsDialog();
 
     // check legacy setting
     this->notesPath = settings.value( "General/notesPath" ).toString();
@@ -381,6 +375,23 @@ void MainWindow::readSettings()
             recentNoteFolders.removeAll( this->notesPath );
             settings.setValue( "recentNoteFolders", recentNoteFolders );
         }
+    }
+}
+
+/**
+ * @brief Reads all relevant settings, that can be set in the settings dialog
+ */
+void MainWindow::readSettingsFromSettingsDialog()
+{
+    QSettings settings;
+    this->notifyAllExternalModifications = settings.value( "notifyAllExternalModifications" ).toBool();
+    this->noteSaveIntervalTime = settings.value( "noteSaveIntervalTime" ).toInt();
+
+    // default value is 10 seconds
+    if ( this->noteSaveIntervalTime == 0 )
+    {
+        this->noteSaveIntervalTime = 10;
+        settings.setValue( "noteSaveIntervalTime", this->noteSaveIntervalTime );
     }
 }
 
@@ -1159,14 +1170,12 @@ void MainWindow::openSettingsDialog()
 
     if ( dialogResult == QDialog::Accepted )
     {
-        // read the settings again
-        readSettings();
+        // read all relevant settings, that can be set in the settings dialog
+        readSettingsFromSettingsDialog();
 
         // reset the note save timer
         this->noteSaveTimer->stop();
-        this->noteSaveTimer->start( this->noteSaveIntervalTime );
-
-        qDebug() << "settings dialog done" << dialogResult;
+        this->noteSaveTimer->start( this->noteSaveIntervalTime * 1000 );
     }
 }
 

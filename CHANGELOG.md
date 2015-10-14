@@ -2,6 +2,8 @@
 
 ## 0.51
 - fixed the flickering in the note list, that could happen when you edit the current note
+- fixed a redraw error that could happen after storing the settings in the settings dialog
+- fixed the note storing interval time (it was set far too low in version 0.50)
 
 ## 0.50
 - the link color in the markdown view was a bit darkened
