@@ -45,6 +45,7 @@ public:
     HGMarkdownHighlighter(QTextDocument *parent = 0, int aWaitInterval = 2000);
     void setStyles(QVector<HighlightingStyle> &styles);
     int waitInterval;
+    void parse();
 
 protected:
 
@@ -63,7 +64,6 @@ private:
 
     void clearFormatting();
     void highlight();
-    void parse();
     void setDefaultStyles();
 };
 

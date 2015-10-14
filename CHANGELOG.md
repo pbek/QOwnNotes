@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.52
+- notes will now be parsed for markdown highlighting immediately after a note was selected instead of waiting up to 1 second
+
 ## 0.51
 - fixed the flickering in the note list, that could happen when you edit the current note
 - fixed a redraw error that could happen after storing the settings in the settings dialog

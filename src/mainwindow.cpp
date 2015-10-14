@@ -44,6 +44,9 @@ MainWindow::MainWindow(QWidget *parent) :
     sorting->addAction( ui->actionBy_date );
     sorting->setExclusive( true );
 
+    // setup markdown highlighting
+    highlighter = new HGMarkdownHighlighter( ui->noteTextEdit->document(), 1000 );
+
     ui->searchInNoteWidget->hide();
 
     Note::createConnection();
@@ -81,9 +84,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->searchInNoteWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
-
-    // setup markdown highlighting
-    highlighter = new HGMarkdownHighlighter( ui->noteTextEdit->document(), 1000 );
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -1258,6 +1258,9 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 
     Note note = Note::fetchByName( current->text() );
     setCurrentNote( note, true, false );
+
+    // parse the current note for markdown highlighting
+    highlighter->parse();
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
