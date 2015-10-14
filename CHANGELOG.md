@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.51
+- fixed the flickering in the note list, that could happen when you edit the current note
+
 ## 0.50
 - the link color in the markdown view was a bit darkened
 - the *externally modified* dialog isn't shown any more by default when the current note wasn't edited for a minute

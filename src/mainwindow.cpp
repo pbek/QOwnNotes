@@ -317,6 +317,23 @@ void MainWindow::loadNoteDirectoryList()
 
 }
 
+/**
+ * @brief makes the current note the first item in the note list without reloading the whole list
+ */
+void MainWindow::makeCurrentNoteFirstInNoteList()
+{
+    QString name = this->currentNote.getName();
+    QList<QListWidgetItem*> items = this->ui->notesListWidget->findItems( name, Qt::MatchExactly );
+    if ( items.count() > 0 )
+    {
+        const QSignalBlocker blocker( this->ui->notesListWidget );
+
+        ui->notesListWidget->takeItem( ui->notesListWidget->row( items[0] ) );
+        ui->notesListWidget->insertItem( 0, items[0] );
+        this->ui->notesListWidget->setCurrentItem( items[0] );
+    }
+}
+
 void MainWindow::readSettings()
 {
     QSettings settings;
@@ -525,7 +542,7 @@ void MainWindow::storeUpdatedNotesToDisk()
 
         // For some reason this->noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
-        // All flushing and syncing didn't help
+        // All flushing and syncing didn't help.
         int count = Note::storeDirtyNotesToDisk( this->currentNote );
 //        qDebug() << __func__ << " - 'this->currentNote': " << this->currentNote;
 
@@ -538,10 +555,11 @@ void MainWindow::storeUpdatedNotesToDisk()
             // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
             waitMsecs( 100 );
 
-            loadNoteDirectoryList();
-
             // just to make sure everything is uptodate
             this->currentNote.refetch();
+
+            // makes the current note the first item in the note list without reloading the whole list
+            makeCurrentNoteFirstInNoteList();
         }
     }
 }

@@ -126,6 +126,7 @@ private:
     void closeSearchInNoteWidget();
     void doSearchInNote(bool searchDown = true);
     void updateNoteTextFromDisk(Note note);
+    void makeCurrentNoteFirstInNoteList();
 };
 
 #endif // MAINWINDOW_H
