@@ -858,13 +858,46 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         }
         else if ( obj == ui->noteTextEdit )
         {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-
             if ( ( keyEvent->key() == Qt::Key_Escape ) && ui->searchInNoteWidget->isVisible() )
             {
                 closeSearchInNoteWidget();
                 return true;
             }
+            return false;
+        }
+    }
+    else if(event->type() == QEvent::InputMethodQuery)
+    {
+        QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+
+        if ( obj == ui->noteTextEdit )
+        {
+            Qt::MouseButton button = mouseEvent->button();
+            if ( button == 23 && QGuiApplication::keyboardModifiers() == Qt::ExtraButton24 )
+            {
+                qDebug()<<QGuiApplication::keyboardModifiers();
+                QTextCursor c = ui->noteTextEdit->textCursor();
+                int clickedPosition = c.position();
+                qDebug()<<clickedPosition;
+
+                c.movePosition( QTextCursor::StartOfBlock );
+                int positionFromStart = clickedPosition - c.position();
+                c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
+                qDebug()<<positionFromStart;
+
+//                on_noteTextView_anchorClicked();
+
+                QString selectedText = c.selectedText();
+                qDebug()<<selectedText;
+
+//                ui->noteTextEdit->setTextCursor( c );
+            }
+
+//            if ( ( mouseEvent->button() == Qt::Key_Escape ) && ui->searchInNoteWidget->isVisible() )
+//            {
+//                closeSearchInNoteWidget();
+//                return true;
+//            }
             return false;
         }
     }
