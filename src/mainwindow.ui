@@ -186,7 +186,7 @@ p, li { white-space: pre-wrap; }
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
+                <iconset resource="breeze.qrc">
                  <normaloff>:/images/breeze/go-top.svg</normaloff>:/images/breeze/go-top.svg</iconset>
                </property>
                <property name="flat">
@@ -308,6 +308,8 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="action_DuplicateText"/>
+    <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="separator"/>
@@ -542,7 +544,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Find_text_in_note">
    <property name="icon">
-    <iconset>
+    <iconset resource="breeze.qrc">
      <normaloff>:/images/breeze/edit-find-in-note.svg</normaloff>:/images/breeze/edit-find-in-note.svg</iconset>
    </property>
    <property name="text">
@@ -553,6 +555,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+F</string>
+   </property>
+  </action>
+  <action name="action_DuplicateText">
+   <property name="text">
+    <string>&amp;Duplicate text</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
   </action>
  </widget>

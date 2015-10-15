@@ -14,6 +14,7 @@
 #include <QDesktopServices>
 #include <QActionGroup>
 #include <QSystemTrayIcon>
+#include <QShortcut>
 #include "diff_match_patch/diff_match_patch.h"
 #include "notediffdialog.h"
 #include "build_number.h"
@@ -107,6 +108,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
+
+    // add shortcuts for "duplicate text"
+//    QShortcut* shortcut = new QShortcut( QKeySequence( Qt::CTRL + Qt::Key_D ), this, SLOT( on_action_DuplicateText_triggered() ) );
+    QShortcut* shortcut = new QShortcut( QKeySequence( Qt::CTRL + Qt::ALT + Qt::Key_Down ), this, SLOT( on_action_DuplicateText_triggered() ) );
 }
 
 MainWindow::~MainWindow()
@@ -1739,4 +1744,46 @@ void MainWindow::on_searchInNoteEdit_textChanged(const QString &arg1)
 void MainWindow::on_searchInNoteUpButton_clicked()
 {
     doSearchInNote( false );
+}
+
+void MainWindow::on_action_DuplicateText_triggered()
+{
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    // duplicate line if no text was selected
+    if ( selectedText == "" )
+    {
+        int position = c.position();
+
+        // select the whole line
+        c.movePosition( QTextCursor::StartOfLine );
+        c.movePosition( QTextCursor::EndOfLine, QTextCursor::KeepAnchor );
+
+        int positionDiff = c.position() - position;
+        selectedText = "\n" + c.selectedText();
+
+        // insert text with new line at end of the selected line
+        c.setPosition( c.selectionEnd() );
+        c.insertText( selectedText );
+
+        // set the position to same position it was in the duplicated line
+        c.setPosition( c.position() - positionDiff );
+    }
+    // duplicate selected text
+    else
+    {
+        c.setPosition( c.selectionEnd() );
+        int selectionStart = c.position();
+
+        // insert selected text
+        c.insertText( selectedText );
+        int selectionEnd = c.position();
+
+        // select the inserted text
+        c.setPosition( selectionStart );
+        c.setPosition( selectionEnd, QTextCursor::KeepAnchor );
+    }
+
+    ui->noteTextEdit->setTextCursor( c );
 }

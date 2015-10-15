@@ -74,6 +74,7 @@ private slots:
     void on_searchInNoteDownButton_clicked();
     void on_searchInNoteEdit_textChanged(const QString &arg1);
     void on_searchInNoteUpButton_clicked();
+    void on_action_DuplicateText_triggered();
 
 private:
     Ui::MainWindow *ui;

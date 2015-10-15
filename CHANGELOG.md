@@ -2,6 +2,7 @@
 
 ## 0.52
 - notes will now be parsed for markdown highlighting immediately after a note was selected instead of waiting up to 1 second
+- added functionality to duplicate the selected text or the current line
 
 ## 0.51
 - fixed the flickering in the note list, that could happen when you edit the current note
