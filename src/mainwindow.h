@@ -130,6 +130,7 @@ private:
     void makeCurrentNoteFirstInNoteList();
     void readSettingsFromSettingsDialog();
     void openLinkAtCurrentNoteTextEditPosition();
+    bool indentSelectedTextInNoteTextEdit(bool reverse = false);
 };
 
 #endif // MAINWINDOW_H

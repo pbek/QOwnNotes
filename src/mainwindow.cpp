@@ -865,6 +865,11 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 closeSearchInNoteWidget();
                 return true;
             }
+            else if ( ( keyEvent->key() == Qt::Key_Tab ) || ( keyEvent->key() == Qt::Key_Backtab ) )
+            {
+                // indent selected text (if there is a text selected)
+                return indentSelectedTextInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
+            }
             return false;
         }
     }
@@ -882,6 +887,51 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
     }
 
     return QMainWindow::eventFilter(obj, event);
+}
+
+/**
+ * @brief Indents the selected text (if there is a text selected) in the noteTextEdit
+ * @return
+ */
+bool MainWindow::indentSelectedTextInNoteTextEdit( bool reverse )
+{
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    if ( selectedText != "" )
+    {
+        // we need this strange newline character we are getting in the selected text for newlines
+        QString newLine = QString::fromUtf8( QByteArray::fromHex( "e280a9" ) );
+        QString newText;
+
+        if ( reverse )
+        {
+            // unindent text
+            newText = selectedText.replace( newLine + "\t", "\n" );
+
+            // remove leading \t
+            newText.replace( QRegularExpression( "^\\t" ), "" );
+        }
+        else
+        {
+            // indent text
+            newText = selectedText.replace( newLine, "\n\t" ).prepend( "\t" );
+
+            // remove trailing \t
+            newText.replace( QRegularExpression( "\\t$" ), "" );
+        }
+
+        // insert the new text
+        c.insertText( newText );
+
+        // update the selection to the new text
+        c.setPosition( c.position() - newText.size(), QTextCursor::KeepAnchor );
+        ui->noteTextEdit->setTextCursor( c );
+
+        return true;
+    }
+
+    return false;
 }
 
 /**
@@ -1543,7 +1593,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
             // does the file name has more than 4 character (something.txt)?
             if ( fileName.length() > 4 )
             {
-                // truncate the last for characters (.txt)
+                // truncate the last four characters (.txt)
                 fileName = fileName.left( fileName.length() - 4 );
 
                 // try to fetch note
