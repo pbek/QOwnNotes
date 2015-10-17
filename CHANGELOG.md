@@ -4,6 +4,7 @@
 - notes will now be parsed for markdown highlighting immediately after a note was selected instead of waiting up to 1 second
 - added functionality to duplicate the selected text or the current line (shortcut: *Ctrl+D*)
 - it is  now (after quite some work) possible to *Ctrl+click* links to open them in the note edit mode
+- the current note name now shows up in the window title
 
 ## 0.51
 - fixed the flickering in the note list, that could happen when you edit the current note

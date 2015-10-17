@@ -714,6 +714,7 @@ void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSele
 {
     this->currentNote = note;
     QString name = note.getName();
+    this->setWindowTitle( name + " - QOwnNotes" );
 
     // set the note text edit to readonly if note file is not writeable
     QFileInfo *f = new QFileInfo( this->notesPath + QDir::separator() + note.getFileName() );
