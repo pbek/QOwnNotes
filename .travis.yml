@@ -110,7 +110,7 @@ deploy:
 
 notifications:
   recipients:
-    - $NOTIFICATION_EMAIL
+    - developer@bekerle.com
   email:
     on_success: change
     on_failure: change
