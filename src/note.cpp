@@ -9,6 +9,7 @@
 #include <QSettings>
 #include <QDir>
 #include <QSqlError>
+#include <QRegularExpression>
 #include "hoedown/html.h"
 
 
@@ -735,6 +736,68 @@ QString Note::generateTextForLink( QString text )
 {
     text.replace( " ", "_" ).replace( "-", "_" ).replace( "?", "_" ).replace( "#", "_" );
     return text;
+}
+
+/**
+ * @brief Returns a list of parsed markdown urls
+ * @param text
+ * @return parsed urls
+ */
+QStringList Note::parseMarkdownUrlsFromText( QString text )
+{
+    QStringList urls;
+
+    // match urls like this: [this url](http://mylink)
+    QRegularExpression re("\\[.*?\\]\\((.+?://.+?)\\)");
+    QRegularExpressionMatchIterator i = re.globalMatch( text );
+    while ( i.hasNext() )
+    {
+        QRegularExpressionMatch match = i.next();
+        QString url = match.captured(1);
+        urls << url;
+    }
+
+    // match urls like this: <http://mylink>
+    re = QRegularExpression("<(.+?://.+?)>");
+    i = re.globalMatch( text );
+    while ( i.hasNext() )
+    {
+        QRegularExpressionMatch match = i.next();
+        QString url = match.captured(1);
+        urls << url;
+    }
+
+    return urls;
+}
+
+/**
+ * @brief Returns the markdown url at position
+ * @param text
+ * @param position
+ * @return url string
+ */
+QString Note::getMarkdownUrlAtPosition( QString text, int position )
+{
+    QStringList urls = parseMarkdownUrlsFromText( text );
+
+    Q_FOREACH( QString url, urls )
+    {
+        int foundPositionStart = text.indexOf( url );
+
+        if ( foundPositionStart >= 0 )
+        {
+            // calculate end position of found url
+            int foundPositionEnd = foundPositionStart + url.size();
+
+            // check if position is in found string range
+            if ( ( position >= foundPositionStart ) && ( position <= foundPositionEnd ) )
+            {
+                return url;
+            }
+        }
+    }
+
+    return "";
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

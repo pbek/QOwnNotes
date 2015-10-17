@@ -129,6 +129,7 @@ private:
     void updateNoteTextFromDisk(Note note);
     void makeCurrentNoteFirstInNoteList();
     void readSettingsFromSettingsDialog();
+    void openLinkAtCurrentNoteTextEditPosition();
 };
 
 #endif // MAINWINDOW_H

@@ -874,25 +874,36 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         // track Ctrl+LeftMouseClick in the noteTextEdit
         if ( ( obj == ui->noteTextEdit->viewport() ) && ( mouseEvent->button() == Qt::LeftButton ) && ( QGuiApplication::keyboardModifiers() == Qt::ExtraButton24 ) )
         {
-            QTextCursor c = ui->noteTextEdit->textCursor();
-            int clickedPosition = c.position();
-            qDebug()<<clickedPosition;
-
-            c.movePosition( QTextCursor::StartOfBlock );
-            int positionFromStart = clickedPosition - c.position();
-            c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
-            qDebug()<<positionFromStart;
-
-//                on_noteTextView_anchorClicked();
-
-            QString selectedText = c.selectedText();
-            qDebug()<<selectedText;
-
+            // open the link (if any) at the current position in the noteTextEdit
+            openLinkAtCurrentNoteTextEditPosition();
             return false;
         }
     }
 
     return QMainWindow::eventFilter(obj, event);
+}
+
+/**
+ * @brief Opens the link (if any) at the current position in the noteTextEdit
+ */
+void MainWindow::openLinkAtCurrentNoteTextEditPosition()
+{
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    int clickedPosition = c.position();
+
+    // select the text in the clicked block and find out on which position we clicked
+    c.movePosition( QTextCursor::StartOfBlock );
+    int positionFromStart = clickedPosition - c.position();
+    c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
+
+    QString selectedText = c.selectedText();
+    // find out which url in the selected text was clicked
+    QString url = Note::getMarkdownUrlAtPosition( selectedText, positionFromStart );
+    if ( url != "" )
+    {
+        // try to open url
+        on_noteTextView_anchorClicked( QUrl( url ) );
+    }
 }
 
 /**
