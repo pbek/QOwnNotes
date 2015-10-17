@@ -868,7 +868,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             else if ( ( keyEvent->key() == Qt::Key_Tab ) || ( keyEvent->key() == Qt::Key_Backtab ) )
             {
                 // indent selected text (if there is a text selected)
-                return indentSelectedTextInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
+                return increaseSelectedTextIndentionInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
             }
             return false;
         }
@@ -890,10 +890,10 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
 }
 
 /**
- * @brief Indents the selected text (if there is a text selected) in the noteTextEdit
+ * @brief Increases (or decreases) the indention of the selected text (if there is a text selected) in the noteTextEdit
  * @return
  */
-bool MainWindow::indentSelectedTextInNoteTextEdit( bool reverse )
+bool MainWindow::increaseSelectedTextIndentionInNoteTextEdit( bool reverse )
 {
     QTextCursor c = ui->noteTextEdit->textCursor();
     QString selectedText = c.selectedText();
