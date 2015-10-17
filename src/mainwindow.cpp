@@ -84,6 +84,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->notesListWidget->installEventFilter(this);
     ui->searchInNoteWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
+    ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
 
     // set the tab stop to the width of 4 spaces in the editor
@@ -866,38 +867,27 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             return false;
         }
     }
-    else if(event->type() == QEvent::InputMethodQuery)
+    else if(event->type() == QEvent::MouseButtonRelease)
     {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
-        if ( obj == ui->noteTextEdit )
+        // track Ctrl+LeftMouseClick in the noteTextEdit
+        if ( ( obj == ui->noteTextEdit->viewport() ) && ( mouseEvent->button() == Qt::LeftButton ) && ( QGuiApplication::keyboardModifiers() == Qt::ExtraButton24 ) )
         {
-            Qt::MouseButton button = mouseEvent->button();
-            if ( button == 23 && QGuiApplication::keyboardModifiers() == Qt::ExtraButton24 )
-            {
-                qDebug()<<QGuiApplication::keyboardModifiers();
-                QTextCursor c = ui->noteTextEdit->textCursor();
-                int clickedPosition = c.position();
-                qDebug()<<clickedPosition;
+            QTextCursor c = ui->noteTextEdit->textCursor();
+            int clickedPosition = c.position();
+            qDebug()<<clickedPosition;
 
-                c.movePosition( QTextCursor::StartOfBlock );
-                int positionFromStart = clickedPosition - c.position();
-                c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
-                qDebug()<<positionFromStart;
+            c.movePosition( QTextCursor::StartOfBlock );
+            int positionFromStart = clickedPosition - c.position();
+            c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
+            qDebug()<<positionFromStart;
 
 //                on_noteTextView_anchorClicked();
 
-                QString selectedText = c.selectedText();
-                qDebug()<<selectedText;
+            QString selectedText = c.selectedText();
+            qDebug()<<selectedText;
 
-//                ui->noteTextEdit->setTextCursor( c );
-            }
-
-//            if ( ( mouseEvent->button() == Qt::Key_Escape ) && ui->searchInNoteWidget->isVisible() )
-//            {
-//                closeSearchInNoteWidget();
-//                return true;
-//            }
             return false;
         }
     }
