@@ -553,15 +553,14 @@ void MainWindow::notesDirectoryWasModified( const QString& str )
 
 void MainWindow::storeUpdatedNotesToDisk()
 {
-//        qDebug() << "checkForNoteChanges";
     {
         const QSignalBlocker blocker( this->noteDirectoryWatcher );
+        QString oldNoteName = this->currentNote.getName();
 
         // For some reason this->noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
         // All flushing and syncing didn't help.
         int count = Note::storeDirtyNotesToDisk( this->currentNote );
-//        qDebug() << __func__ << " - 'this->currentNote': " << this->currentNote;
 
         if ( count > 0 )
         {
@@ -575,8 +574,17 @@ void MainWindow::storeUpdatedNotesToDisk()
             // just to make sure everything is uptodate
             this->currentNote.refetch();
 
-            // makes the current note the first item in the note list without reloading the whole list
-            makeCurrentNoteFirstInNoteList();
+            QString newNoteName = this->currentNote.getName();
+            if ( oldNoteName == newNoteName )
+            {
+                // if note name has not changed makes the current note the first item in the note list without reloading the whole list
+                makeCurrentNoteFirstInNoteList();
+            }
+            else
+            {
+                // reload the directory list if note name has changed
+                loadNoteDirectoryList();
+            }
         }
     }
 }

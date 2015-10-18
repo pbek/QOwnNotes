@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.53
+- fixed a problem that the note list did not get reloaded after the current note was renamed
+
 ## 0.52
 - notes will now be parsed for markdown highlighting immediately after a note was selected instead of waiting up to 1 second
 - added functionality to duplicate the selected text or the current line (shortcut: *Ctrl+D*)
