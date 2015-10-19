@@ -28,7 +28,6 @@ private:
     int currentIndex;
     NoteHistoryItem currentHistoryItem;
     int lastIndex();
-    void setCurrentIndex(int index);
 
 public:
     explicit NoteHistory();

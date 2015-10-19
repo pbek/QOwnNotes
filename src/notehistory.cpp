@@ -63,11 +63,6 @@ NoteHistory::NoteHistory()
     currentIndex = 0;
 }
 
-void NoteHistory::setCurrentIndex( int index )
-{
-    currentIndex = index;
-}
-
 void NoteHistory::add( Note note, int cursorPosition )
 {
     if ( !note.exists() )
@@ -79,21 +74,28 @@ void NoteHistory::add( Note note, int cursorPosition )
 
     if ( noteHistory->contains( item ) )
     {
-//        // remove all items before the new item
-//        int position = noteHistory->indexOf( item );
-//        for ( int i = 0; i <= position; i++ )
-//        {
-//            noteHistory->removeAt( 0 );
-//        }
+        // decrease current index if we are going to remove an item before it
+        if ( noteHistory->indexOf( item ) < currentIndex )
+        {
+            currentIndex--;
+        }
 
         // remove found item
         noteHistory->removeAll( item );
     }
 
-    qDebug()<<" added to history: " << item;
+    noteHistory->prepend( item );
 
-    noteHistory->append( item );
-    setCurrentIndex( lastIndex() );
+    if ( currentIndex < lastIndex() )
+    {
+        // increase current index
+        currentIndex++;
+    }
+
+    noteHistory->move( 0, currentIndex );
+    currentIndex = noteHistory->indexOf( item );
+
+    qDebug()<<" added to history: " << item;
 }
 
 void NoteHistory::updateCursorPositionOfNote( Note note, int cursorPosition )
@@ -117,14 +119,17 @@ void NoteHistory::updateCursorPositionOfNote( Note note, int cursorPosition )
 
 bool NoteHistory::back()
 {
-    if ( ( currentIndex <= 0 ) || ( currentIndex > lastIndex() ) || isEmpty() )
+    if ( ( currentIndex < 0 ) || ( currentIndex > lastIndex() ) || isEmpty() )
     {
         return false;
     }
-
-    if ( currentIndex > 0 )
+    else if ( currentIndex == 0 )
     {
-        setCurrentIndex( currentIndex - 1 );
+        currentIndex = lastIndex();
+    }
+    else
+    {
+        currentIndex--;
     }
 
     currentHistoryItem = noteHistory->at( currentIndex );
@@ -141,14 +146,17 @@ bool NoteHistory::back()
 
 bool NoteHistory::forward()
 {
-    if ( ( currentIndex < 0 ) || ( currentIndex >= lastIndex() ) || isEmpty() )
+    if ( ( currentIndex < 0 ) || ( currentIndex > lastIndex() ) || isEmpty() )
     {
         return false;
     }
-
-    if ( currentIndex < ( lastIndex() ) )
+    else if ( currentIndex == lastIndex() )
     {
-        setCurrentIndex( currentIndex + 1 );
+        currentIndex = 0;
+    }
+    else
+    {
+        currentIndex++;
     }
 
     currentHistoryItem = noteHistory->at( currentIndex );
