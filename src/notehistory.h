@@ -26,7 +26,6 @@ class NoteHistory
 private:
     QList<NoteHistoryItem> *noteHistory;
     int currentIndex;
-    int previousIndex;
     NoteHistoryItem currentHistoryItem;
     int lastIndex();
     void setCurrentIndex(int index);
@@ -39,7 +38,7 @@ public:
     bool forward();
     bool isEmpty();
     NoteHistoryItem getCurrentHistoryItem();
-    void updateCursorPositionForPreviousItem(int cursorPosition);
+    void updateCursorPositionOfNote(Note note, int cursorPosition);
 };
 
 #endif // NOTEHISTORY_H

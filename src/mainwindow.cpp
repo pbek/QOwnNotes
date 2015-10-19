@@ -719,17 +719,19 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     return this->notesPath;
 }
 
-void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote, bool addPreviousNoteToHistory )
+void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote, bool addNoteToHistory )
 {
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    if ( addPreviousNoteToHistory && this->currentNote.exists() )
+    // update cursor position of previous note
+    if ( this->currentNote.exists() )
     {
-        this->noteHistory.add( this->currentNote, c.position() );
-        this->noteHistory.add( note );
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        this->noteHistory.updateCursorPositionOfNote( this->currentNote, c.position() );
     }
-    else
+
+    // add new note to history
+    if ( addNoteToHistory && note.exists() )
     {
-        this->noteHistory.updateCursorPositionForPreviousItem( c.position() );
+        this->noteHistory.add( note );
     }
 
     this->currentNote = note;

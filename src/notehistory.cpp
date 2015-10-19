@@ -37,8 +37,9 @@ bool NoteHistoryItem::isNoteValid()
 
 bool NoteHistoryItem::operator==(const NoteHistoryItem & item) const
 {
-    return ( ( this->cursorPosition == item.getCursorPosition() ) && ( this->noteName == item.getNoteName() ) );
+    return this->noteName == item.getNoteName();
 }
+
 void NoteHistoryItem::setCursorPosition(int value)
 {
     cursorPosition = value;
@@ -64,7 +65,6 @@ NoteHistory::NoteHistory()
 
 void NoteHistory::setCurrentIndex( int index )
 {
-    previousIndex = currentIndex;
     currentIndex = index;
 }
 
@@ -75,36 +75,44 @@ void NoteHistory::add( Note note, int cursorPosition )
         return;
     }
 
-    // if the last history item holds the current note remove it to let it get updated
-    if ( !isEmpty() )
-    {
-        NoteHistoryItem item = noteHistory->last();
+    NoteHistoryItem item( &note, cursorPosition );
 
-        if ( note.getName() == item.getNoteName() )
-        {
-            noteHistory->removeOne( item );
-        }
+    if ( noteHistory->contains( item ) )
+    {
+//        // remove all items before the new item
+//        int position = noteHistory->indexOf( item );
+//        for ( int i = 0; i <= position; i++ )
+//        {
+//            noteHistory->removeAt( 0 );
+//        }
+
+        // remove found item
+        noteHistory->removeAll( item );
     }
 
-    NoteHistoryItem item = NoteHistoryItem( &note, cursorPosition );
     qDebug()<<" added to history: " << item;
 
     noteHistory->append( item );
     setCurrentIndex( lastIndex() );
 }
 
-void NoteHistory::updateCursorPositionForPreviousItem( int cursorPosition )
+void NoteHistory::updateCursorPositionOfNote( Note note, int cursorPosition )
 {
-    if ( noteHistory->size() < 2 )
-    {
+    if ( isEmpty() ) {
         return;
     }
 
-    NoteHistoryItem item = noteHistory->at( previousIndex );
-    qDebug()<<"item: " << item;
-    item.setCursorPosition( cursorPosition );
+    NoteHistoryItem item( &note, cursorPosition );
+
+    // create history entry if it does not exist (for renamed notes)
+    if ( !noteHistory->contains( item ) )
+    {
+        add( note, cursorPosition );
+    }
+
+    int position = noteHistory->indexOf( item );
     qDebug()<<"updated item: " << item;
-    noteHistory->replace( previousIndex, item );
+    noteHistory->replace( position, item );
 }
 
 bool NoteHistory::back()
@@ -124,7 +132,7 @@ bool NoteHistory::back()
     // check if note still exists, remove item if not
     if ( !currentHistoryItem.isNoteValid() )
     {
-        noteHistory->removeOne( currentHistoryItem );
+        noteHistory->removeAll( currentHistoryItem );
         return back();
     }
 
@@ -148,7 +156,7 @@ bool NoteHistory::forward()
     // check if note still exists, remove item if not
     if ( !currentHistoryItem.isNoteValid() )
     {
-        noteHistory->removeOne( currentHistoryItem );
+        noteHistory->removeAll( currentHistoryItem );
         return forward();
     }
 
