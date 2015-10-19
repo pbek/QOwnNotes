@@ -284,6 +284,8 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="action_Note_note"/>
     <addaction name="action_Find_note"/>
+    <addaction name="action_Back_in_note_history"/>
+    <addaction name="action_Forward_in_note_history"/>
     <addaction name="actionShow_trash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
@@ -565,11 +567,27 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+D</string>
    </property>
   </action>
+  <action name="action_Back_in_note_history">
+   <property name="text">
+    <string>&amp;Back in note history</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Left</string>
+   </property>
+  </action>
+  <action name="action_Forward_in_note_history">
+   <property name="text">
+    <string>Forward in note history</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Right</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="breeze.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze.qrc"/>
  </resources>
  <connections/>
 </ui>

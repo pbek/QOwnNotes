@@ -53,6 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Note::createConnection();
 
     this->firstVisibleNoteListRow = 0;
+    this->noteHistory = NoteHistory();
 
     // set our signal mapper
     this->signalMapper = new QSignalMapper(this);
@@ -112,7 +113,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // add shortcuts for "duplicate text"
 //    QShortcut* shortcut = new QShortcut( QKeySequence( Qt::CTRL + Qt::Key_D ), this, SLOT( on_action_DuplicateText_triggered() ) );
-    QShortcut* shortcut = new QShortcut( QKeySequence( Qt::CTRL + Qt::ALT + Qt::Key_Down ), this, SLOT( on_action_DuplicateText_triggered() ) );
+    QShortcut( QKeySequence( Qt::CTRL + Qt::ALT + Qt::Key_Down ), this, SLOT( on_action_DuplicateText_triggered() ) );
 }
 
 MainWindow::~MainWindow()
@@ -718,8 +719,15 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     return this->notesPath;
 }
 
-void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote )
+void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote, bool addPreviousNoteToHistory )
 {
+    if ( addPreviousNoteToHistory )
+    {
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        this->noteHistory.add( note, c.position() );
+        qDebug()<<this->noteHistory;
+    }
+
     this->currentNote = note;
     QString name = note.getName();
     this->setWindowTitle( name + " - QOwnNotes" );
@@ -1342,12 +1350,28 @@ void MainWindow::doSearchInNote( bool searchDown )
 }
 
 /**
- *
- *
- * Slots implementations
- *
- *
+ * @brief Sets the current note from a CurrentNoteHistoryItem
+ * @param item
  */
+void MainWindow::setCurrentNoteFromHistoryItem( NoteHistoryItem item )
+{
+    qDebug()<<item;
+    qDebug()<<item.getNote();
+
+    setCurrentNote( item.getNote(), true, true, false );
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    c.setPosition( item.getCursorPosition() );
+    ui->noteTextEdit->setTextCursor( c );
+}
+
+
+// *********************************************************************************************
+// *
+// *
+// * Slot implementations
+// *
+// *
+// *********************************************************************************************
 
 void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
@@ -1879,4 +1903,20 @@ void MainWindow::on_action_DuplicateText_triggered()
     }
 
     ui->noteTextEdit->setTextCursor( c );
+}
+
+void MainWindow::on_action_Back_in_note_history_triggered()
+{
+    if ( this->noteHistory.back() )
+    {
+        setCurrentNoteFromHistoryItem( this->noteHistory.getCurrentHistoryItem() );
+    }
+}
+
+void MainWindow::on_action_Forward_in_note_history_triggered()
+{
+    if ( this->noteHistory.forward() )
+    {
+        setCurrentNoteFromHistoryItem( this->noteHistory.getCurrentHistoryItem() );
+    }
 }

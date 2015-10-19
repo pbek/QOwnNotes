@@ -12,6 +12,7 @@
 #include <QSystemTrayIcon>
 #include <note.h>
 #include "markdown-highlight/highlighter.h"
+#include "notehistory.h"
 #include "notediffdialog.h"
 #include "updateservice.h"
 #include "libraries/simplecrypt/simplecrypt.h"
@@ -75,6 +76,8 @@ private slots:
     void on_searchInNoteEdit_textChanged(const QString &arg1);
     void on_searchInNoteUpButton_clicked();
     void on_action_DuplicateText_triggered();
+    void on_action_Back_in_note_history_triggered();
+    void on_action_Forward_in_note_history_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -96,6 +99,7 @@ private:
     bool notifyAllExternalModifications;
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
+    NoteHistory noteHistory;
 
     void setupMainSplitter();
     void createSystemTrayIcon();
@@ -103,7 +107,7 @@ private:
     void readSettings();
     void buildNotesIndex();
     QString selectOwnCloudNotesFolder();
-    void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true);
+    void setCurrentNote(Note note, bool updateNoteText = true, bool updateSelectedNote = true, bool addPreviousNoteToHistory = true);
     void handlePressed();
     void focusNoteTextEdit();
     void removeCurrentNote();
@@ -131,6 +135,7 @@ private:
     void readSettingsFromSettingsDialog();
     void openLinkAtCurrentNoteTextEditPosition();
     bool increaseSelectedTextIndentionInNoteTextEdit(bool reverse = false);
+    void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
 };
 
 #endif // MAINWINDOW_H

@@ -1,5 +1,5 @@
-#ifndef DATASTORAGE_H
-#define DATASTORAGE_H
+#ifndef NOTE_H
+#define NOTE_H
 
 #include <QDateTime>
 #include <QSqlQuery>
@@ -69,4 +69,4 @@ signals:
 public slots:
 };
 
-#endif // DATASTORAGE_H
+#endif // NOTE_H
