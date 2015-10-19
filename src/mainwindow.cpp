@@ -962,6 +962,26 @@ bool MainWindow::increaseSelectedTextIndentionInNoteTextEdit( bool reverse )
 
         return true;
     }
+    // if nothing was selected but we want to reverse the indention check if there is a \t in front or after the cursor and remove it if so
+    else if ( reverse )
+    {
+        int pos = c.position();
+        // check for \t in front of cursor
+        c.setPosition( pos - 1, QTextCursor::KeepAnchor );
+        if ( c.selectedText() != "\t" )
+        {
+            // (select to) check for \t after the cursor
+            c.setPosition( pos );
+            c.setPosition( pos + 1, QTextCursor::KeepAnchor );
+        }
+
+        if ( c.selectedText() == "\t" )
+        {
+            c.removeSelectedText();
+        }
+
+        return true;
+    }
 
     return false;
 }
