@@ -14,6 +14,7 @@ public:
     Note getNote();
     bool isNoteValid();
     bool operator ==(const NoteHistoryItem &item) const;
+    void setCursorPosition(int value);
 
 private:
     QString noteName;
@@ -25,9 +26,10 @@ class NoteHistory
 private:
     QList<NoteHistoryItem> *noteHistory;
     int currentIndex;
+    int previousIndex;
     NoteHistoryItem currentHistoryItem;
-
     int lastIndex();
+    void setCurrentIndex(int index);
 
 public:
     explicit NoteHistory();
@@ -37,6 +39,7 @@ public:
     bool forward();
     bool isEmpty();
     NoteHistoryItem getCurrentHistoryItem();
+    void updateCursorPositionForPreviousItem(int cursorPosition);
 };
 
 #endif // NOTEHISTORY_H

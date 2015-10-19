@@ -721,11 +721,15 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
 void MainWindow::setCurrentNote( Note note, bool updateNoteText, bool updateSelectedNote, bool addPreviousNoteToHistory )
 {
-    if ( addPreviousNoteToHistory )
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    if ( addPreviousNoteToHistory && this->currentNote.exists() )
     {
-        QTextCursor c = ui->noteTextEdit->textCursor();
-        this->noteHistory.add( note, c.position() );
-        qDebug()<<this->noteHistory;
+        this->noteHistory.add( this->currentNote, c.position() );
+        this->noteHistory.add( note );
+    }
+    else
+    {
+        this->noteHistory.updateCursorPositionForPreviousItem( c.position() );
     }
 
     this->currentNote = note;
@@ -899,6 +903,16 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             // open the link (if any) at the current position in the noteTextEdit
             openLinkAtCurrentNoteTextEditPosition();
             return false;
+        }
+        // move back in the note history
+        else if ( ( mouseEvent->button() == Qt::BackButton ) )
+        {
+            on_action_Back_in_note_history_triggered();
+        }
+        // move forward in the note history
+        else if ( ( mouseEvent->button() == Qt::ForwardButton ) )
+        {
+            on_action_Forward_in_note_history_triggered();
         }
     }
 

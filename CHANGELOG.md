@@ -2,7 +2,7 @@
 
 ## 0.53
 - fixed a problem that the note list did not get reloaded after the current note was renamed
-- you can now jump back and forward to your last used notes
+- you can now jump back and forward to your last used notes with *Alt+left/right* and the *back* and *forward* mouse buttons
 
 ## 0.52
 - notes will now be parsed for markdown highlighting immediately after a note was selected instead of waiting up to 1 second

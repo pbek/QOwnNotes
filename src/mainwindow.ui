@@ -338,6 +338,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Remove_note"/>
    <addaction name="actionToggleEditMode"/>
    <addaction name="separator"/>
+   <addaction name="action_Back_in_note_history"/>
+   <addaction name="action_Forward_in_note_history"/>
+   <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
    <addaction name="separator"/>
@@ -568,6 +571,10 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Back_in_note_history">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/go-previous.svg</normaloff>:/images/breeze/go-previous.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Back in note history</string>
    </property>
@@ -576,6 +583,10 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Forward_in_note_history">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/go-next.svg</normaloff>:/images/breeze/go-next.svg</iconset>
+   </property>
    <property name="text">
     <string>Forward in note history</string>
    </property>

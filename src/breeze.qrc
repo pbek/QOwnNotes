@@ -27,5 +27,7 @@
         <file>images/breeze/face-smile.svg</file>
         <file>images/breeze/go-top.svg</file>
         <file>images/breeze/go-bottom.svg</file>
+        <file>images/breeze/go-previous.svg</file>
+        <file>images/breeze/go-next.svg</file>
     </qresource>
 </RCC>
