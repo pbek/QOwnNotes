@@ -1947,6 +1947,7 @@ void MainWindow::on_action_Back_in_note_history_triggered()
 {
     if ( this->noteHistory.back() )
     {
+        ui->searchLineEdit->clear();
         setCurrentNoteFromHistoryItem( this->noteHistory.getCurrentHistoryItem() );
     }
 }
@@ -1955,6 +1956,7 @@ void MainWindow::on_action_Forward_in_note_history_triggered()
 {
     if ( this->noteHistory.forward() )
     {
+        ui->searchLineEdit->clear();
         setCurrentNoteFromHistoryItem( this->noteHistory.getCurrentHistoryItem() );
     }
 }

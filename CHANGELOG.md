@@ -3,6 +3,7 @@
 ## 0.54
 - fixed a problem with canceling the notes folder selection dialog
 - the note history is now cleared when switching to an other notes directory
+- when moving forward and back in the note history the search field will be cleared so that all notes are visible
 
 ## 0.53
 - fixed a problem that the note list did not get reloaded after the current note was renamed
