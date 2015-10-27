@@ -680,7 +680,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
     QDir d = QDir( dir );
 
-    if ( d.exists() )
+    if ( d.exists() && ( dir != "" ) )
     {
         // lets remove trailing slashes
         dir = d.path();

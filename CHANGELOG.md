@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.54
+- fixed a problem with canceling the notes folder selection dialog
+
 ## 0.53
 - fixed a problem that the note list did not get reloaded after the current note was renamed
 - you can now jump back and forward to your last used notes with *Alt+left/right* and the *back* and *forward* mouse buttons
