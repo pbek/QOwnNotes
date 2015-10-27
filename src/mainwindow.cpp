@@ -205,6 +205,9 @@ void MainWindow::changeNoteFolder( const QString &folderName )
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
+
+        // clear the note history
+        this->noteHistory.clear();
     }
 }
 
@@ -602,7 +605,6 @@ void MainWindow::buildNotesIndex()
     storeUpdatedNotesToDisk();
 
     QDir notesDir( this->notesPath );
-//    qDebug() << this->notesPath;
 
     // only show text files
     QStringList filters;

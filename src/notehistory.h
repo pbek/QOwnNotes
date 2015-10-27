@@ -38,6 +38,7 @@ public:
     bool isEmpty();
     NoteHistoryItem getCurrentHistoryItem();
     void updateCursorPositionOfNote(Note note, int cursorPosition);
+    void clear();
 };
 
 #endif // NOTEHISTORY_H

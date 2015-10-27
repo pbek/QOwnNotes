@@ -186,6 +186,15 @@ bool NoteHistory::isEmpty()
     return noteHistory->size() == 0;
 }
 
+/**
+ * @brief Clears the note history
+ */
+void NoteHistory::clear()
+{
+    noteHistory->clear();
+    currentIndex = 0;
+}
+
 QDebug operator<<(QDebug dbg, const NoteHistory &history)
 {
     dbg.nospace() << "NoteHistory: <index>" << history.currentIndex << " <noteHistorySize>" << history.noteHistory->size();
