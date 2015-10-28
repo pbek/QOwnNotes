@@ -21,9 +21,9 @@ install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          lsb_release -a
       && sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-      && sudo apt-add-repository -y ppa:beineri/opt-qt542
+      && sudo apt-add-repository -y ppa:beineri/opt-qt551
       && sudo apt-get -qq update
-      && sudo apt-get -qq install g++-4.8 libc6-i386 qt54tools qt54svg qt54webkit qt54script
+      && sudo apt-get -qq install g++-4.8 libc6-i386 qt55tools qt55svg qt55script
       && export CXX="g++-4.8"
       && export CC="gcc-4.8"
       ;
@@ -42,9 +42,9 @@ script:
   - cd src
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         QTDIR="/opt/qt54"
+         QTDIR="/opt/qt55"
       && PATH="$QTDIR/bin:$PATH"
-      && qt54-env.sh 
+      && qt55-env.sh 
       ;
     else
          QTDIR="/usr/local/opt/qt5"
