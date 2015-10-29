@@ -111,9 +111,17 @@ MainWindow::MainWindow(QWidget *parent) :
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
-    // add shortcuts for "duplicate text"
-//    QShortcut* shortcut = new QShortcut( QKeySequence( Qt::CTRL + Qt::Key_D ), this, SLOT( on_action_DuplicateText_triggered() ) );
+    // try to set a shortcut specificly for Ubuntu Unity
+    ui->action_DuplicateText->setShortcut( Qt::CTRL + Qt::Key_D );
+
+    // add an other shortcut for "duplicate text"
     QShortcut( QKeySequence( Qt::CTRL + Qt::ALT + Qt::Key_Down ), this, SLOT( on_action_DuplicateText_triggered() ) );
+
+    // add some different shortcuts for the note history on the mac
+#ifdef Q_OS_MAC
+    ui->action_Back_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Left );
+    ui->action_Forward_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Right );
+#endif
 }
 
 MainWindow::~MainWindow()

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.55
+- added some different shortcuts for the note history on the mac
+- tried to fix the duplicate line shortcut for the Ubuntu Unity desktop
+
 ## 0.54
 - fixed a problem with canceling the notes folder selection dialog
 - the note history is now cleared when switching to an other notes directory
