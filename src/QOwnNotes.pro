@@ -12,6 +12,7 @@ TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns
 RC_FILE = QOwnNotes.rc
+QMAKE_MAC_SDK = macosx10.11
 
 INCLUDEPATH += $$PWD/libraries
 
