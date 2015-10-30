@@ -13,8 +13,8 @@ branches:
 env:
   global:
     - secure: Wt43koA55PGba7TsJ85f9vHyW4b/QfPh2Ywhw5+40sba5Us4Y3h+l23VyVjQbXuHfCGgC+t5+AABm1ubhL4MjCvxzS9BepjhNN92LPXoLfBRM2AHhNLWMKLLxt4T7OofjnLPw21l6cjjVrlZZojVbN4MnuG2IPUeUzoEBuA5TPE=
-    - secure: "R9aUYxOKBG5iab4eROzE6KMaqUpW46EQnEPo7No/ETsMy/KR12DGQuW9I1ezWk7gBDkwZV9mZ3JEtkvNfAr1osO0Vtz6jf6s7MStRsofNF49JJ7zD561sGiXcqOhVxrYfcUlLV3Az4IhVW61PZPDIrkJWcjlqEZuMykkIsFESN4="
-    - secure: "PY9FQ6Wk9N8zCoDhF3rvJp5rUNxqCQajHF5Z9zn28HbTgKO+qz1bMdCee/FQPM8QoqTS2z+24zPu8Ra121VVdDmrcu8zl60k6+t76M36CRN/L/4KQTqR6bDS8u5Kwi678g+0w2X3KtzogC1dUvCxVKMVioiRGJYq/6v/12XkbK4="
+    - secure: "IFVcu6+GZ3sRH9cs4VCGcLHCqZBMLy+Tv7RXBqVHWM6bPbCdlzcKN8sNEbDBYxROlHfHf0D+LgoDfLns8N6b6oq/KsqXkZDmXXAs+jpumDEAQw/MYk/C1aDVMDCKkwm2InyCnNoGgI9gPvNqxARGVA7kZQ5p5xm+s8++/Ufv5lA="
+    - secure: "AfgMs8eQ60ckWnnnWSx+T9+TC5Bsjo+jS6G1eLw4lSWX+8CsaZqLoLY8nrEkws9gbNn9Q3cvKQ+eQNMBOC0WzxtKUwjBfB/Y5cFMZfR1CEEX35b+qJ0ehY9vZNAF+qClao3jUDrGUNsuRtw4yqZFwB4Dtffjf48eTUOWwG/jmVM="
   matrix:
     - CONFIG=release
     - CONFIG=debug
