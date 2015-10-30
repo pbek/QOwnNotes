@@ -16,7 +16,7 @@ env:
     # KEY_PASSWORD
     - secure: "Mte2zY0rgIa4M4bIeSKijFAFOtFy+DahRYCUgOB60cuS4b/+HMHnfmVGMqnBKitC9KVzb5fctMt2pGPK2hdlirvfkOd9ctEaEd1qSzADJjfQUKqLReOfi1N6Ln2dYqlZoDjnYpGWwTUl/uX+KtWomYW2TCZZG/uJEeh3QYkxlJQ="
     # DEVELOPER_NAME
-    - secure: "AfgMs8eQ60ckWnnnWSx+T9+TC5Bsjo+jS6G1eLw4lSWX+8CsaZqLoLY8nrEkws9gbNn9Q3cvKQ+eQNMBOC0WzxtKUwjBfB/Y5cFMZfR1CEEX35b+qJ0ehY9vZNAF+qClao3jUDrGUNsuRtw4yqZFwB4Dtffjf48eTUOWwG/jmVM="
+    - secure: "XOai3PHPFTyAjPjp18WFoiWcxIuvD/dM/0SYAg8aDkrrPw7Ervv7g/pI/1araJFeFK1Ncy4e+9TqaTccPwAFiykHCGvgQrzcbUV/xHkAkAPCeGcFDGYi1nEdFpHfBHD3Ngm8gsfzcllpPsbLcLwE6ffYxrM1l5FAlTiEzpl7Nsw="
   matrix:
     - CONFIG=release
     - CONFIG=debug
