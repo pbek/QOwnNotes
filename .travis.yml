@@ -72,9 +72,6 @@ before_deploy:
       ;
     else
          sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
-      && ../travis/osx/add-key.sh
-      && codesign --deep --force --verify --verbose --sign "$DEVELOPER_NAME" QOwnNotes.app
-      && ../travis/osx/remove-key.sh
       && ../travis/create-dmg.sh
       ;
     fi
