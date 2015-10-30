@@ -13,7 +13,9 @@ branches:
 env:
   global:
     - secure: Wt43koA55PGba7TsJ85f9vHyW4b/QfPh2Ywhw5+40sba5Us4Y3h+l23VyVjQbXuHfCGgC+t5+AABm1ubhL4MjCvxzS9BepjhNN92LPXoLfBRM2AHhNLWMKLLxt4T7OofjnLPw21l6cjjVrlZZojVbN4MnuG2IPUeUzoEBuA5TPE=
-    - secure: "IFVcu6+GZ3sRH9cs4VCGcLHCqZBMLy+Tv7RXBqVHWM6bPbCdlzcKN8sNEbDBYxROlHfHf0D+LgoDfLns8N6b6oq/KsqXkZDmXXAs+jpumDEAQw/MYk/C1aDVMDCKkwm2InyCnNoGgI9gPvNqxARGVA7kZQ5p5xm+s8++/Ufv5lA="
+    # KEY_PASSWORD
+    - secure: "Mte2zY0rgIa4M4bIeSKijFAFOtFy+DahRYCUgOB60cuS4b/+HMHnfmVGMqnBKitC9KVzb5fctMt2pGPK2hdlirvfkOd9ctEaEd1qSzADJjfQUKqLReOfi1N6Ln2dYqlZoDjnYpGWwTUl/uX+KtWomYW2TCZZG/uJEeh3QYkxlJQ="
+    # DEVELOPER_NAME
     - secure: "AfgMs8eQ60ckWnnnWSx+T9+TC5Bsjo+jS6G1eLw4lSWX+8CsaZqLoLY8nrEkws9gbNn9Q3cvKQ+eQNMBOC0WzxtKUwjBfB/Y5cFMZfR1CEEX35b+qJ0ehY9vZNAF+qClao3jUDrGUNsuRtw4yqZFwB4Dtffjf48eTUOWwG/jmVM="
   matrix:
     - CONFIG=release
