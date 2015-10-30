@@ -13,6 +13,10 @@ branches:
 env:
   global:
     - secure: Wt43koA55PGba7TsJ85f9vHyW4b/QfPh2Ywhw5+40sba5Us4Y3h+l23VyVjQbXuHfCGgC+t5+AABm1ubhL4MjCvxzS9BepjhNN92LPXoLfBRM2AHhNLWMKLLxt4T7OofjnLPw21l6cjjVrlZZojVbN4MnuG2IPUeUzoEBuA5TPE=
+    # KEY_PASSWORD
+    - secure: "Mte2zY0rgIa4M4bIeSKijFAFOtFy+DahRYCUgOB60cuS4b/+HMHnfmVGMqnBKitC9KVzb5fctMt2pGPK2hdlirvfkOd9ctEaEd1qSzADJjfQUKqLReOfi1N6Ln2dYqlZoDjnYpGWwTUl/uX+KtWomYW2TCZZG/uJEeh3QYkxlJQ="
+    # DEVELOPER_NAME
+    - secure: "CrB159u8KEwtsiCxnwvnCumiRkGgL+9aFgI2dosUvj3PtfebcVdhzRKBt+17jLapLCQEYoml8RVszLNuYpZu8y/3DhCk4ftWMumnvKOp8CIFb/4BFKMZxyuw+HlMg5oKwY4GOopnHo4mTEM51pDHMP8rfIxCjLimVeDc0uZaaj8="
   matrix:
     - CONFIG=release
     - CONFIG=debug
@@ -68,6 +72,9 @@ before_deploy:
       ;
     else
          sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+      && ../travis/osx/add-key.sh
+      && codesign --deep --force --verify --verbose --sign "$DEVELOPER_NAME" QOwnNotes.app
+      && ../travis/osx/remove-key.sh
       && ../travis/create-dmg.sh
       ;
     fi
