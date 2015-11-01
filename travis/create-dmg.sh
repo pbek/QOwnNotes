@@ -95,11 +95,11 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-echo "Code signing disk image"
-codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
+#echo "Code signing disk image"
+#codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
 
-echo "Verifying code signed disk image"
-codesign --verify --verbose=4 ./$APP.dmg
+#echo "Verifying code signed disk image"
+#codesign --verify --verbose=4 ./$APP.dmg
 
 echo "Removing keys"
 # remove keys
