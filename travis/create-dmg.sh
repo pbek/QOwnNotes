@@ -31,8 +31,10 @@ security default-keychain -s osx-build.keychain
 security unlock-keychain -p travis osx-build.keychain
 
 # use macdeployqt to deploy the application
-echo "Calling macdeployqt and code signing application"
-$QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
+#echo "Calling macdeployqt and code signing application"
+#$QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
+echo "Calling macdeployqt"
+$QTDIR/bin/macdeployqt ./$APP.app
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     # remove keys
@@ -40,8 +42,8 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-echo "Verifying code signed app"
-codesign --verify --verbose=4 ./$APP.app
+#echo "Verifying code signed app"
+#codesign --verify --verbose=4 ./$APP.app
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist
