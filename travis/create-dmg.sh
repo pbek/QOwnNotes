@@ -40,12 +40,8 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-echo "Verifying code signing process"
+echo "Verifying code signed app"
 codesign --verify --verbose=4 ./$APP.app
-
-echo "Removing keys"
-# remove keys
-security delete-keychain osx-build.keychain 
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist
@@ -99,6 +95,13 @@ fi
 
 echo "Code signing disk image"
 codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
+
+echo "Verifying code signed disk image"
+codesign --verify --verbose=4 ./$APP.dmg
+
+echo "Removing keys"
+# remove keys
+security delete-keychain osx-build.keychain 
 
 # delete the temporary directory
 rm -Rf ./$TEMPDIR/*
