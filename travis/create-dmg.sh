@@ -16,12 +16,33 @@ if [ "$NAME" != "Darwin" ]; then
     exit 1
 fi
 
+echo "Changing bundle identifier"
+sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+# removing backup plist
+rm -f QOwnNotes.app/Contents/Info.plist-e
+
+echo "Adding keys"
+# add the keys for OSX code signing
+security create-keychain -p travis osx-build.keychain
+security import ../travis/osx/apple.cer -k ~/Library/Keychains/osx-build.keychain -T /usr/bin/codesign
+security import ../travis/osx/dist.cer -k ~/Library/Keychains/osx-build.keychain -T /usr/bin/codesign
+security import ../travis/osx/dist.p12 -k ~/Library/Keychains/osx-build.keychain -P $KEY_PASSWORD -T /usr/bin/codesign
+security default-keychain -s osx-build.keychain
+security unlock-keychain -p travis osx-build.keychain
+
+echo "Calling macdeployqt and code signing application"
 # use macdeployqt to deploy the application
 $QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
+    # remove keys
+    security delete-keychain osx-build.keychain 
     exit 1
 fi
+
+echo "Removing keys"
+# remove keys
+security delete-keychain osx-build.keychain 
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist
