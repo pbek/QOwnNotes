@@ -30,8 +30,8 @@ security import ../travis/osx/dist.p12 -k ~/Library/Keychains/osx-build.keychain
 security default-keychain -s osx-build.keychain
 security unlock-keychain -p travis osx-build.keychain
 
-echo "Calling macdeployqt and code signing application"
 # use macdeployqt to deploy the application
+echo "Calling macdeployqt and code signing application"
 $QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
@@ -96,6 +96,9 @@ if [ "$?" -ne "0" ]; then
     echo "Failed to create disk image"
     exit 1
 fi
+
+echo "Code signing disk image"
+codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
 
 # delete the temporary directory
 rm -Rf ./$TEMPDIR/*
