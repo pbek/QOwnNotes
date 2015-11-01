@@ -16,10 +16,10 @@ if [ "$NAME" != "Darwin" ]; then
     exit 1
 fi
 
-echo "Changing bundle identifier"
-sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
-# removing backup plist
-rm -f QOwnNotes.app/Contents/Info.plist-e
+#echo "Changing bundle identifier"
+#sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+## removing backup plist
+#rm -f QOwnNotes.app/Contents/Info.plist-e
 
 echo "Adding keys"
 # add the keys for OSX code signing
@@ -39,6 +39,9 @@ if [ "$?" -ne "0" ]; then
     security delete-keychain osx-build.keychain 
     exit 1
 fi
+
+echo "Verifying code signing process"
+codesign --verify --verbose=4 ./$APP.app
 
 echo "Removing keys"
 # remove keys
