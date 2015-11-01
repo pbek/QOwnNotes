@@ -61,7 +61,8 @@ script:
   - make
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
          ../travis/osx/add-key.sh
-      && codesign --deep --force --verify --verbose --sign "$DEVELOPER_NAME" QOwnNotes.app
+      && sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+      && ../travis/create-dmg.sh
       && ../travis/osx/remove-key.sh
       ;
     fi

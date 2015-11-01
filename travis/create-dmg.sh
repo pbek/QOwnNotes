@@ -17,7 +17,7 @@ if [ "$NAME" != "Darwin" ]; then
 fi
 
 # use macdeployqt to deploy the application
-$QTDIR/bin/macdeployqt ./$APP.app
+$QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     exit 1
