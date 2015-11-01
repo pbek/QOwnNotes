@@ -62,6 +62,7 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
          ../travis/osx/add-key.sh
       && sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+      && rm -f QOwnNotes.app/Contents/Info.plist-e
       && ../travis/create-dmg.sh
       && ../travis/osx/remove-key.sh
       ;
