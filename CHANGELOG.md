@@ -3,7 +3,7 @@
 ## 0.55
 - added some different shortcuts for the note history on the mac
 - tried to fix the duplicate line shortcut for the Ubuntu Unity desktop
-- the OSX package is now (not yet) code signed
+- the OSX package is now code signed (but there are still some troubles with the signature)
 
 ## 0.54
 - fixed a problem with canceling the notes folder selection dialog
