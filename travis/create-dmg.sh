@@ -31,10 +31,8 @@ security default-keychain -s osx-build.keychain
 security unlock-keychain -p travis osx-build.keychain
 
 # use macdeployqt to deploy the application
-#echo "Calling macdeployqt and code signing application"
-#$QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
-echo "Calling macdeployqt"
-$QTDIR/bin/macdeployqt ./$APP.app
+echo "Calling macdeployqt and code signing application"
+$QTDIR/bin/macdeployqt ./$APP.app -codesign="$DEVELOPER_NAME"
 if [ "$?" -ne "0" ]; then
     echo "Failed to run macdeployqt"
     # remove keys
@@ -42,8 +40,9 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-#echo "Verifying code signed app"
-#codesign --verify --verbose=4 ./$APP.app
+echo "Verifying code signed app"
+codesign --verify --verbose=4 ./$APP.app
+spctl --assess --verbose=4 --raw ./$APP.app
 
 echo "Create $TEMPDIR"
 #Create a temporary directory if one doesn't exist
@@ -95,11 +94,12 @@ if [ "$?" -ne "0" ]; then
     exit 1
 fi
 
-#echo "Code signing disk image"
-#codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
+echo "Code signing disk image"
+codesign --force --verify --verbose --sign "$DEVELOPER_NAME" ./$APP.dmg
 
-#echo "Verifying code signed disk image"
-#codesign --verify --verbose=4 ./$APP.dmg
+echo "Verifying code signed disk image"
+codesign --verify --verbose=4 ./$APP.dmg
+spctl --assess --verbose=4 --raw ./$APP.dmg
 
 echo "Removing keys"
 # remove keys
