@@ -20,11 +20,11 @@ I like the concept of having notes accessible in plain text files, like it is do
 
 Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
 
-To get more features with ownCloud like versioning and trash access you might also want to install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your ownCloud server.
+To get more features with ownCloud, like versioning and trash access, you might also want to install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your ownCloud server.
 
 To access your ownCloud notes from your mobile device you may want to get these:
-- [ownCloud Notes Android App](https://f-droid.org/app/org.aykit.MyOwnNotes)
-- [ownCloud Notes iOS App](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8)
+- [MyOwnNotes for Android](https://f-droid.org/app/org.aykit.MyOwnNotes)
+- [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8)
 
 ## Screenshot
 ![Screenhot](screenshot.png)
