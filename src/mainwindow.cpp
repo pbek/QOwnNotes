@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "notesearchdialog.h"
+#include "linkdialog.h"
 #include "owncloudservice.h"
 #include "ui_mainwindow.h"
 #include <QSplitter>
@@ -1336,7 +1336,7 @@ void MainWindow::openSettingsDialog()
  */
 void MainWindow::handleTextNoteLinking()
 {
-    NoteSearchDialog *dialog = new NoteSearchDialog( "Search for a note to link to", this );
+    LinkDialog *dialog = new LinkDialog( "Search for a note to link to", this );
     dialog->exec();
     if ( dialog->result() == QDialog::Accepted  )
     {

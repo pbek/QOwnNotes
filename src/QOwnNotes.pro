@@ -39,7 +39,7 @@ SOURCES += main.cpp\
     versiondialog.cpp \
     trashdialog.cpp \
     libraries/versionnumber/versionnumber.cpp \
-    notesearchdialog.cpp \
+    linkdialog.cpp \
     notehistory.cpp
 
 HEADERS  += mainwindow.h \
@@ -67,8 +67,8 @@ HEADERS  += mainwindow.h \
     versiondialog.h \
     trashdialog.h \
     libraries/versionnumber/versionnumber.h \
-    notesearchdialog.h \
-    notehistory.h
+    notehistory.h \
+    linkdialog.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
@@ -77,7 +77,7 @@ FORMS    += mainwindow.ui \
     settingsdialog.ui \
     versiondialog.ui \
     trashdialog.ui \
-    notesearchdialog.ui
+    linkdialog.ui
 
 RESOURCES += \
     images.qrc \

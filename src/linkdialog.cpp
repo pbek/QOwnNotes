@@ -1,12 +1,12 @@
-#include "notesearchdialog.h"
+#include "linkdialog.h"
 #include "ui_notesearchdialog.h"
 #include <QKeyEvent>
 #include <QDebug>
 #include "note.h"
 
-NoteSearchDialog::NoteSearchDialog(QString dialogTitle, QWidget *parent) :
+LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::NoteSearchDialog)
+    ui(new Ui::LinkDialog)
 {
     ui->setupUi(this);
     this->firstVisibleNoteListRow = 0;
@@ -22,12 +22,12 @@ NoteSearchDialog::NoteSearchDialog(QString dialogTitle, QWidget *parent) :
     ui->notesListWidget->setCurrentRow( 0 );
 }
 
-NoteSearchDialog::~NoteSearchDialog()
+LinkDialog::~LinkDialog()
 {
     delete ui;
 }
 
-void NoteSearchDialog::on_searchLineEdit_textChanged(const QString &arg1)
+void LinkDialog::on_searchLineEdit_textChanged(const QString &arg1)
 {
     // search notes when at least 2 characters were entered
     if ( arg1.count() >= 2 )
@@ -62,7 +62,7 @@ void NoteSearchDialog::on_searchLineEdit_textChanged(const QString &arg1)
     }
 }
 
-QString NoteSearchDialog::getSelectedNoteName()
+QString LinkDialog::getSelectedNoteName()
 {
     return ui->notesListWidget->currentRow() > -1 ? ui->notesListWidget->currentItem()->text() : "";
 }
@@ -70,7 +70,7 @@ QString NoteSearchDialog::getSelectedNoteName()
 //
 // Event filters on the NoteSearchDialog
 //
-bool NoteSearchDialog::eventFilter(QObject* obj, QEvent *event)
+bool LinkDialog::eventFilter(QObject* obj, QEvent *event)
 {
     if ( obj == ui->searchLineEdit )
     {
@@ -111,7 +111,7 @@ bool NoteSearchDialog::eventFilter(QObject* obj, QEvent *event)
         return false;
     }
 
-    return NoteSearchDialog::eventFilter(obj, event);
+    return LinkDialog::eventFilter(obj, event);
 }
 
 
@@ -180,7 +180,7 @@ void MainWindow::on_searchLineEdit_returnPressed()
 }
 */
 
-void NoteSearchDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
+void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
 {
     Q_UNUSED( index );
     this->close();

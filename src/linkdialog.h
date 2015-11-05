@@ -4,16 +4,16 @@
 #include <QDialog>
 
 namespace Ui {
-class NoteSearchDialog;
+class LinkDialog;
 }
 
-class NoteSearchDialog : public QDialog
+class LinkDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit NoteSearchDialog( QString dialogTitle = "", QWidget *parent = 0);
-    ~NoteSearchDialog();
+    explicit LinkDialog( QString dialogTitle = "", QWidget *parent = 0);
+    ~LinkDialog();
 
     QString getSelectedNoteName();
 private slots:
@@ -21,7 +21,7 @@ private slots:
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
 
 private:
-    Ui::NoteSearchDialog *ui;
+    Ui::LinkDialog *ui;
     int firstVisibleNoteListRow;
     bool eventFilter(QObject *obj, QEvent *event);
     QString selectedNoteText;
