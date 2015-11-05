@@ -16,6 +16,7 @@ public:
     ~LinkDialog();
 
     QString getSelectedNoteName();
+    QString getURL();
 private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);

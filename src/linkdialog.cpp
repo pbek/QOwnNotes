@@ -67,6 +67,11 @@ QString LinkDialog::getSelectedNoteName()
     return ui->notesListWidget->currentRow() > -1 ? ui->notesListWidget->currentItem()->text() : "";
 }
 
+QString LinkDialog::getURL()
+{
+    return ui->urlEdit->text();
+}
+
 //
 // Event filters on the NoteSearchDialog
 //
@@ -113,72 +118,6 @@ bool LinkDialog::eventFilter(QObject* obj, QEvent *event)
 
     return LinkDialog::eventFilter(obj, event);
 }
-
-
-/*
-//
-// jump to found note or create a new one if not found
-//
-void MainWindow::on_searchLineEdit_returnPressed()
-{
-    QString text = this->ui->searchLineEdit->text();
-    text = text.trimmed();
-
-    // first let us search for the entered text
-    Note note = Note::fetchByName( text );
-
-    // if we can't find a note we create a new one
-    if ( note.getId() == 0 )
-    {
-        // create a headline in new notes by adding "=====" as second line
-        QString noteText = text + "\n";
-        for ( int i = 0; i < text.length(); i++ )
-        {
-            noteText.append( "=" );
-        }
-        noteText.append( "\n\n" );
-
-        note = Note();
-        note.setName( text );
-        note.setNoteText( noteText );
-        note.store();
-
-        // store the note to disk
-        {
-            const QSignalBlocker blocker( this->noteDirectoryWatcher );
-
-            note.storeNoteTextFileToDisk();
-            this->ui->statusBar->showMessage( tr("stored current note to disk"), 1000 );
-        }
-
-        buildNotesIndex();
-        loadNoteDirectoryList();
-
-        // fetch note new (because all the IDs have changed after the buildNotesIndex()
-        note.refetch();
-
-//        // create a new widget item for the note list
-//        QListWidgetItem* widgetItem = new QListWidgetItem();
-//        widgetItem->setText( text );
-
-//        // insert the note at the top of the note list
-//        {
-//            const QSignalBlocker blocker( this->ui->notesListWidget );
-
-//            ui->notesListWidget->insertItem( 0, widgetItem );
-//        }
-    }
-
-    // jump to the found or created note
-    setCurrentNote( note );
-
-    // go into edit mode
-    setNoteTextEditMode( true );
-
-    // focus the note text edit and set the cursor correctly
-    focusNoteTextEdit();
-}
-*/
 
 void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
 {

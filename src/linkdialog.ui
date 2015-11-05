@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>493</height>
+    <width>524</width>
+    <height>531</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,7 +28,7 @@
         <string/>
        </property>
        <property name="placeholderText">
-        <string>enter URL</string>
+        <string>enter an URL to link to</string>
        </property>
       </widget>
      </item>
@@ -50,7 +50,7 @@
 </string>
        </property>
        <property name="placeholderText">
-        <string>search for a note</string>
+        <string>search for a note to link to</string>
        </property>
       </widget>
      </item>

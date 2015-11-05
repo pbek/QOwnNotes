@@ -1340,21 +1340,39 @@ void MainWindow::handleTextNoteLinking()
     dialog->exec();
     if ( dialog->result() == QDialog::Accepted  )
     {
+        QString url = dialog->getURL();
         QString noteName = dialog->getSelectedNoteName();
         QString noteNameForLink = Note::generateTextForLink( noteName );
 
-        if ( noteName != "" )
+        if ( ( noteName != "" ) || ( url != "" ) )
         {
             QString selectedText = ui->noteTextEdit->textCursor().selectedText();
             QString newText;
 
-            if ( selectedText != "" )
+            // if user has entered an url
+            if ( url != "" )
             {
-                newText = "[" + selectedText + "](note://" + noteNameForLink + ")";
+                if ( selectedText != "" )
+                {
+                    newText = "[" + selectedText + "](" + url + ")";
+                }
+                else
+                {
+                    // TODO: load title from webpage if possible
+                    newText = "<" + url + ">";
+                }
             }
+            // if user has selected a note
             else
             {
-                newText = "<note://" + noteNameForLink + ">";
+                if ( selectedText != "" )
+                {
+                    newText = "[" + selectedText + "](note://" + noteNameForLink + ")";
+                }
+                else
+                {
+                    newText = "<note://" + noteNameForLink + ">";
+                }
             }
             ui->noteTextEdit->textCursor().insertText( newText );
         }
