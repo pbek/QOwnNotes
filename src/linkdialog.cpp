@@ -1,5 +1,5 @@
 #include "linkdialog.h"
-#include "ui_notesearchdialog.h"
+#include "ui_linkdialog.h"
 #include <QKeyEvent>
 #include <QDebug>
 #include "note.h"

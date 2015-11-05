@@ -56,6 +56,9 @@
 }
 </string>
         </property>
+        <property name="placeholderText">
+         <string>search or create note</string>
+        </property>
        </widget>
       </item>
       <item row="1" column="1">
@@ -538,10 +541,10 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/images/breeze/text-frame-link.svg</normaloff>:/images/breeze/text-frame-link.svg</iconset>
    </property>
    <property name="text">
-    <string>Insert &amp;link note</string>
+    <string>Insert &amp;link</string>
    </property>
    <property name="toolTip">
-    <string>Insert Link to a note</string>
+    <string>Insert link to an url or a note</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+L</string>

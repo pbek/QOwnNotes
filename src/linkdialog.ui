@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NoteSearchDialog</class>
- <widget class="QDialog" name="NoteSearchDialog">
+ <class>LinkDialog</class>
+ <widget class="QDialog" name="LinkDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>475</height>
+    <height>493</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,22 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLineEdit" name="urlEdit">
+       <property name="statusTip">
+        <string>enter URL</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="accessibleName">
+        <string/>
+       </property>
+       <property name="placeholderText">
+        <string>enter URL</string>
+       </property>
+      </widget>
+     </item>
      <item>
       <widget class="QLineEdit" name="searchLineEdit">
        <property name="toolTip">
@@ -32,6 +48,9 @@
 	margin-right: 0px;
 }
 </string>
+       </property>
+       <property name="placeholderText">
+        <string>search for a note</string>
        </property>
       </widget>
      </item>
@@ -57,7 +76,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>NoteSearchDialog</receiver>
+   <receiver>LinkDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
@@ -73,7 +92,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>NoteSearchDialog</receiver>
+   <receiver>LinkDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">

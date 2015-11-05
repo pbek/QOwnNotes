@@ -1336,7 +1336,7 @@ void MainWindow::openSettingsDialog()
  */
 void MainWindow::handleTextNoteLinking()
 {
-    LinkDialog *dialog = new LinkDialog( "Search for a note to link to", this );
+    LinkDialog *dialog = new LinkDialog( "Link an url or note", this );
     dialog->exec();
     if ( dialog->result() == QDialog::Accepted  )
     {
