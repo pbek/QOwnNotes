@@ -601,7 +601,7 @@ p, li { white-space: pre-wrap; }
   <action name="action_Shortcuts">
    <property name="icon">
     <iconset resource="breeze.qrc">
-     <normaloff>:/images/breeze/gtk-preferences.svg</normaloff>:/images/breeze/gtk-preferences.svg</iconset>
+     <normaloff>:/images/breeze/applications-system.svg</normaloff>:/images/breeze/applications-system.svg</iconset>
    </property>
    <property name="text">
     <string>Show &amp;Shortcuts</string>
