@@ -111,11 +111,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
+    QList<QKeySequence> shortcuts;
     // try to set a shortcut specificly for Ubuntu Unity
-    ui->action_DuplicateText->setShortcut( Qt::CTRL + Qt::Key_D );
-
+    shortcuts.append( QKeySequence( "Ctrl+D" ) );
     // add an other shortcut for "duplicate text"
-    QShortcut( QKeySequence( Qt::CTRL + Qt::ALT + Qt::Key_Down ), this, SLOT( on_action_DuplicateText_triggered() ) );
+    shortcuts.append( QKeySequence( "Ctrl+Alt+Down" ) );
+
+    ui->action_DuplicateText->setShortcuts( shortcuts );
 
     // add some different shortcuts for the note history on the mac
 #ifdef Q_OS_MAC
@@ -643,6 +645,11 @@ void MainWindow::buildNotesIndex()
             QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
         }
 
+        // copy the shortcuts file and handle its file permissions for
+        destinationFile = this->notesPath + "/Important Shortcuts.txt";
+        QFile::copy( ":/shortcuts", destinationFile );
+        QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
+
         // fetch all files again
         files = notesDir.entryList( filters, QDir::Files, QDir::Time );
 
@@ -672,7 +679,7 @@ void MainWindow::buildNotesIndex()
 void MainWindow::jumpToWelcomeNote()
 {
     // jump to the 3rd note, assuming that it is the welcome note
-    this->ui->notesListWidget->setCurrentRow( 2 );
+    this->ui->notesListWidget->setCurrentRow( 3 );
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {
@@ -1985,4 +1992,9 @@ void MainWindow::on_action_Forward_in_note_history_triggered()
         ui->searchLineEdit->clear();
         setCurrentNoteFromHistoryItem( this->noteHistory.getCurrentHistoryItem() );
     }
+}
+
+void MainWindow::on_action_Shortcuts_triggered()
+{
+    QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/shortcuts/QOwnNotes" ) );
 }

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.56
+- added a shortcut list to the help menu and to the startup notes
+
 ## 0.55
 - added some different shortcuts for the note history on the mac
 - tried to fix the duplicate line shortcut for the Ubuntu Unity desktop

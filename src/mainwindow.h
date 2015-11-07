@@ -79,6 +79,8 @@ private slots:
     void on_action_Back_in_note_history_triggered();
     void on_action_Forward_in_note_history_triggered();
 
+    void on_action_Shortcuts_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

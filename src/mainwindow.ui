@@ -305,6 +305,7 @@ p, li { white-space: pre-wrap; }
      <string>&amp;Help</string>
     </property>
     <addaction name="actionCheck_for_updates"/>
+    <addaction name="action_Shortcuts"/>
     <addaction name="actionReport_problems_or_ideas"/>
     <addaction name="separator"/>
     <addaction name="actionAbout_QOwnNotes"/>
@@ -595,6 +596,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Alt+Right</string>
+   </property>
+  </action>
+  <action name="action_Shortcuts">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/gtk-preferences.svg</normaloff>:/images/breeze/gtk-preferences.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show &amp;Shortcuts</string>
    </property>
   </action>
  </widget>
