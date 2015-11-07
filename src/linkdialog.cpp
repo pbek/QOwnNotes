@@ -2,6 +2,10 @@
 #include "ui_linkdialog.h"
 #include <QKeyEvent>
 #include <QDebug>
+#include <QNetworkAccessManager>
+#include <QTimer>
+#include <QNetworkRequest>
+#include <QNetworkReply>
 #include "note.h"
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
@@ -124,4 +128,42 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
     Q_UNUSED( index );
     this->close();
     this->setResult( QDialog::Accepted );
+}
+
+/**
+ * @brief Fetches the title of a webpage
+ * @param url
+ * @return
+ */
+QString LinkDialog::getTitleForUrl( QUrl url )
+{
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 5 sec timeout for the request
+    timer.start(5000);
+
+    QNetworkReply *reply = manager->get( QNetworkRequest( url ) );
+    loop.exec();
+
+    // if we didn't get a timeout lets fetch the title of the webpage
+    if ( timer.isActive() )
+    {
+        // get the text from the network reply
+        QString html = reply->readAll();
+
+        // parse title from webpage
+        QRegularExpression regex( "<title>(.*)</title>" );
+        QRegularExpressionMatch match = regex.match( html );
+        QString title = match.captured(1);
+        return title;
+    }
+
+    // timer elapsed, no reply from network request
+    return "";
 }

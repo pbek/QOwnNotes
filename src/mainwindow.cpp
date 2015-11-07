@@ -1365,8 +1365,18 @@ void MainWindow::handleTextNoteLinking()
                 }
                 else
                 {
-                    // TODO: load title from webpage if possible
-                    newText = "<" + url + ">";
+                    // if possible fetch the title of the webpage
+                    QString title = dialog->getTitleForUrl( QUrl( url ) );
+
+                    // if we got back a tile lets use it in the link
+                    if ( title != "" )
+                    {
+                        newText = "[" + title + "](" + url + ")";
+                    }
+                    else
+                    {
+                        newText = "<" + url + ">";
+                    }
                 }
             }
             // if user has selected a note

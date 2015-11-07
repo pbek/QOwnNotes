@@ -3,6 +3,7 @@
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) | 
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
+[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
 [Screenshots](http://www.qownnotes.org) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
