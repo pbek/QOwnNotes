@@ -6,7 +6,7 @@ Important Shortcuts
 ### Globally
 
 - `Ctrl + N` creates a new note with the current date and time in the name
-- `Ctrl + Shift + F` lets you search for notes
+- `Ctrl + Shift + F` lets you search for notes (in the name of the note and its content)
 - `Ctrl + E` toggles between the edit and the markdown view mode
 - `Ctrl + R` removes the current note
 - `Ctrl + Shift + U` checks for updates
@@ -35,7 +35,7 @@ Important Shortcuts
 ### Globally
 
 - `Cmd + N` creates a new note with the current date and time in the name
-- `Cmd + Shift + F` lets you search for notes
+- `Cmd + Shift + F` lets you search for notes (in the name of the note and its content)
 - `Cmd + E` toggles between the edit and the markdown view mode
 - `Cmd + R` removes the current note
 - `Cmd + Shift + U` checks for updates
