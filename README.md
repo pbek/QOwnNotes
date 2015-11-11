@@ -4,6 +4,7 @@
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
 [Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
+[Knowledge base](http://www.qownnotes.org/Knowledge-base) |
 [Screenshots](http://www.qownnotes.org) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
