@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.57
+- `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](http://www.qownnotes.org/)`, not just on the URL alone
+
 ## 0.56
 - added a shortcut list to the help menu and to the startup notes
 - you can now also link to URLs with `Ctrl + L` (or `Cmd + L` on OSX), if possible the title of the webpage will be fetched and used as link text

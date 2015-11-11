@@ -739,35 +739,38 @@ QString Note::generateTextForLink( QString text )
 }
 
 /**
- * @brief Returns a list of parsed markdown urls
+ * @brief Returns a map of parsed markdown urls with their link texts as key
+ *
  * @param text
  * @return parsed urls
  */
-QStringList Note::parseMarkdownUrlsFromText( QString text )
+QMap<QString, QString> Note::parseMarkdownUrlsFromText( QString text )
 {
-    QStringList urls;
+    QMap<QString, QString> urlMap;
 
     // match urls like this: [this url](http://mylink)
-    QRegularExpression re("\\[.*?\\]\\((.+?://.+?)\\)");
+    QRegularExpression re("(\\[.*?\\]\\((.+?://.+?)\\))");
     QRegularExpressionMatchIterator i = re.globalMatch( text );
     while ( i.hasNext() )
     {
         QRegularExpressionMatch match = i.next();
-        QString url = match.captured(1);
-        urls << url;
+        QString linkText = match.captured(1);
+        QString url = match.captured(2);
+        urlMap[linkText] = url;
     }
 
     // match urls like this: <http://mylink>
-    re = QRegularExpression("<(.+?://.+?)>");
+    re = QRegularExpression("(<(.+?://.+?)>)");
     i = re.globalMatch( text );
     while ( i.hasNext() )
     {
         QRegularExpressionMatch match = i.next();
-        QString url = match.captured(1);
-        urls << url;
+        QString linkText = match.captured(1);
+        QString url = match.captured(2);
+        urlMap[linkText] = url;
     }
 
-    return urls;
+    return urlMap;
 }
 
 /**
@@ -778,16 +781,22 @@ QStringList Note::parseMarkdownUrlsFromText( QString text )
  */
 QString Note::getMarkdownUrlAtPosition( QString text, int position )
 {
-    QStringList urls = parseMarkdownUrlsFromText( text );
+    // get a map of parsed markdown urls with their link texts as key
+    QMap<QString, QString> urlMap = parseMarkdownUrlsFromText( text );
 
-    Q_FOREACH( QString url, urls )
+    QMapIterator<QString, QString> i( urlMap );
+    while ( i.hasNext() )
     {
-        int foundPositionStart = text.indexOf( url );
+        i.next();
+        QString linkText = i.key();
+        QString url = i.value();
+
+        int foundPositionStart = text.indexOf( linkText );
 
         if ( foundPositionStart >= 0 )
         {
-            // calculate end position of found url
-            int foundPositionEnd = foundPositionStart + url.size();
+            // calculate end position of found linkText
+            int foundPositionEnd = foundPositionStart + linkText.size();
 
             // check if position is in found string range
             if ( ( position >= foundPositionStart ) && ( position <= foundPositionEnd ) )
