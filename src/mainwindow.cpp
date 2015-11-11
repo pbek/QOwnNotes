@@ -673,14 +673,14 @@ void MainWindow::buildNotesIndex()
         for ( int i = 0; i < filenames.size(); ++i )
         {
             filename = filenames.at( i );
-            destinationFile = this->notesPath + "/" + filename;
+            destinationFile = this->notesPath + QDir::separator() + filename;
             QFile::copy( ":/demonotes/" + filename, destinationFile );
             // set read/write permissions for the owner and user
             QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
         }
 
         // copy the shortcuts file and handle its file permissions for
-        destinationFile = this->notesPath + "/Important Shortcuts.txt";
+        destinationFile = this->notesPath + QDir::separator() + "Important Shortcuts.txt";
         QFile::copy( ":/shortcuts", destinationFile );
         QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
 
