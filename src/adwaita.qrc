@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/adwaita/dialog-information-symbolic.svg</file>
+    </qresource>
+</RCC>

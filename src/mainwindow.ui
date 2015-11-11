@@ -306,6 +306,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="action_Shortcuts"/>
+    <addaction name="action_Knowledge_base"/>
     <addaction name="actionReport_problems_or_ideas"/>
     <addaction name="separator"/>
     <addaction name="actionAbout_QOwnNotes"/>
@@ -607,11 +608,21 @@ p, li { white-space: pre-wrap; }
     <string>Show &amp;Shortcuts</string>
    </property>
   </action>
+  <action name="action_Knowledge_base">
+   <property name="icon">
+    <iconset resource="adwaita.qrc">
+     <normaloff>:/images/adwaita/dialog-information-symbolic.svg</normaloff>:/images/adwaita/dialog-information-symbolic.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Knowledge base</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="images.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="adwaita.qrc"/>
  </resources>
  <connections/>
 </ui>

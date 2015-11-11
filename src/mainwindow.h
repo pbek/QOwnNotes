@@ -78,8 +78,8 @@ private slots:
     void on_action_DuplicateText_triggered();
     void on_action_Back_in_note_history_triggered();
     void on_action_Forward_in_note_history_triggered();
-
     void on_action_Shortcuts_triggered();
+    void on_action_Knowledge_base_triggered();
 
 private:
     Ui::MainWindow *ui;

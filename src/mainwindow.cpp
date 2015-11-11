@@ -2008,3 +2008,8 @@ void MainWindow::on_action_Shortcuts_triggered()
 {
     QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/shortcuts/QOwnNotes" ) );
 }
+
+void MainWindow::on_action_Knowledge_base_triggered()
+{
+    QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/Knowledge-base" ) );
+}

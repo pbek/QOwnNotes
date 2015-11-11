@@ -2,6 +2,7 @@
 
 ## 0.57
 - `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](http://www.qownnotes.org/)`, not just on the URL alone
+- added a menu entry to the new knowledge base in the help menu
 
 ## 0.56
 - added a shortcut list to the help menu and to the startup notes
