@@ -52,20 +52,20 @@ void HGMarkdownHighlighter::setStyles(QVector<HighlightingStyle> &styles)
 
 
 #define STY(type, format) styles->append((HighlightingStyle){type, format})
-void HGMarkdownHighlighter::setDefaultStyles()
+void HGMarkdownHighlighter::setDefaultStyles(int defaultFontSize)
 {
     QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
 
     QTextCharFormat headers; headers.setForeground(QBrush(QColor(0,49,110)));
     headers.setBackground(QBrush(QColor(230,230,240)));
     headers.setFontWeight(QFont::Bold);
-    headers.setFontPointSize(14);
+    headers.setFontPointSize(defaultFontSize * 1.2);
     STY(pmh_H1, headers);
 
-    headers.setFontPointSize(12);
+    headers.setFontPointSize(defaultFontSize * 1.1);
     STY(pmh_H2, headers);
 
-    headers.setFontPointSize(11);
+    headers.setFontPointSize(defaultFontSize);
     STY(pmh_H3, headers);
     STY(pmh_H4, headers);
     STY(pmh_H5, headers);

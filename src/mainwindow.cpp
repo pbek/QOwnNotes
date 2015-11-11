@@ -430,6 +430,10 @@ void MainWindow::readSettingsFromSettingsDialog()
     font.fromString( fontString );
     ui->noteTextEdit->setFont( font );
 
+    // set the default size for the highlighter
+    highlighter->setDefaultStyles( font.pointSize() );
+    highlighter->parse();
+
     // load note text view font
     fontString = settings.value("MainWindow/noteTextView.font").toString();
 

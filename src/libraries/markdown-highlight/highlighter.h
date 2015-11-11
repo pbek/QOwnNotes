@@ -46,6 +46,7 @@ public:
     void setStyles(QVector<HighlightingStyle> &styles);
     int waitInterval;
     void parse();
+    void setDefaultStyles( int defaultFontSize = 12 );
 
 protected:
 
@@ -64,7 +65,6 @@ private:
 
     void clearFormatting();
     void highlight();
-    void setDefaultStyles();
 };
 
 #endif
