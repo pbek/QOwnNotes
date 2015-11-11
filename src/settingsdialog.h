@@ -3,6 +3,7 @@
 
 #include <QAbstractButton>
 #include <QDialog>
+#include <QLabel>
 #include "libraries/simplecrypt/simplecrypt.h"
 
 namespace Ui {
@@ -30,14 +31,19 @@ private slots:
     void on_buttonBox_clicked(QAbstractButton *button);
     void on_localOwnCloudDirectoryButton_clicked();
     void on_ownCloudServerAppPageButton_clicked();
+    void on_noteTextEditButton_clicked();
+    void on_noteTextViewButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;
+    QFont noteTextEditFont;
+    QFont noteTextViewFont;
     void readSettings();
     void setupCrypto();
     void storeSettings();
     void startConnectionTest();
+    void setFontLabel(QLabel *label, QFont font);
 };
 
 #endif // SETTINGSDIALOG_H

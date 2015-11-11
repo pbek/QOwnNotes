@@ -413,6 +413,36 @@ void MainWindow::readSettingsFromSettingsDialog()
         this->noteSaveIntervalTime = 10;
         settings.setValue( "noteSaveIntervalTime", this->noteSaveIntervalTime );
     }
+
+    // load note text edit font
+    QString fontString = settings.value("MainWindow/noteTextEdit.font").toString();
+
+    // store the current font if there isn't any set yet
+    if ( fontString == "" )
+    {
+        fontString = ui->noteTextEdit->font().toString();
+        settings.setValue("MainWindow/noteTextEdit.font", fontString);
+    }
+
+    QFont font;
+
+    // set the note text edit font
+    font.fromString( fontString );
+    ui->noteTextEdit->setFont( font );
+
+    // load note text view font
+    fontString = settings.value("MainWindow/noteTextView.font").toString();
+
+    // store the current font if there isn't any set yet
+    if ( fontString == "" )
+    {
+        fontString = ui->noteTextView->font().toString();
+        settings.setValue("MainWindow/noteTextView.font", fontString);
+    }
+
+    // set the note text view font
+    font.fromString( fontString );
+    ui->noteTextView->setFont( font );
 }
 
 void MainWindow::updateNoteTextFromDisk( Note note )

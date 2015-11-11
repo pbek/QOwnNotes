@@ -5,6 +5,7 @@
 #include <QFileDialog>
 #include <QDebug>
 #include <QDesktopServices>
+#include <QFontDialog>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     QDialog(parent),
@@ -95,6 +96,8 @@ void SettingsDialog::storeSettings()
     settings.setValue( "ownCloud/localOwnCloudPath", ui->localOwnCloudPathEdit->text() );
     settings.setValue( "notifyAllExternalModifications", ui->notifyAllExternalModificationsCheckBox->isChecked() );
     settings.setValue( "noteSaveIntervalTime", ui->noteSaveIntervalTime->value() );
+    settings.setValue( "MainWindow/noteTextEdit.font", noteTextEditFont.toString() );
+    settings.setValue( "MainWindow/noteTextView.font", noteTextViewFont.toString() );
 }
 
 void SettingsDialog::readSettings()
@@ -106,6 +109,18 @@ void SettingsDialog::readSettings()
     ui->localOwnCloudPathEdit->setText( settings.value( "ownCloud/localOwnCloudPath" ).toString() );
     ui->notifyAllExternalModificationsCheckBox->setChecked( settings.value( "notifyAllExternalModifications" ).toBool() );
     ui->noteSaveIntervalTime->setValue( settings.value( "noteSaveIntervalTime" ).toInt() );
+
+    noteTextEditFont.fromString( settings.value( "MainWindow/noteTextEdit.font" ).toString() );
+    setFontLabel( ui->noteTextEditFontLabel, noteTextEditFont );
+
+    noteTextViewFont.fromString( settings.value( "MainWindow/noteTextView.font" ).toString() );
+    setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
+}
+
+void SettingsDialog::setFontLabel( QLabel *label, QFont font )
+{
+    label->setText( font.family() + " (" + QString::number( font.pointSize() ) + ")" );
+    label->setFont( font );
 }
 
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
@@ -232,4 +247,26 @@ void SettingsDialog::on_localOwnCloudDirectoryButton_clicked()
 void SettingsDialog::on_ownCloudServerAppPageButton_clicked()
 {
     QDesktopServices::openUrl( QUrl( ui->serverUrlEdit->text() + "/index.php/settings/apps" ) );
+}
+
+void SettingsDialog::on_noteTextEditButton_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont( &ok, noteTextEditFont, this);
+    if ( ok )
+    {
+        noteTextEditFont = font;
+        setFontLabel( ui->noteTextEditFontLabel, noteTextEditFont );
+    }
+}
+
+void SettingsDialog::on_noteTextViewButton_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont( &ok, noteTextViewFont, this);
+    if ( ok )
+    {
+        noteTextViewFont = font;
+        setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
+    }
 }

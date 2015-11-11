@@ -525,7 +525,7 @@ p, li { white-space: pre-wrap; }
           <rect>
            <x>20</x>
            <y>20</y>
-           <width>401</width>
+           <width>601</width>
            <height>141</height>
           </rect>
          </property>
@@ -573,6 +573,85 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
             <property name="text">
              <string>note save interval time [sec]</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>180</y>
+           <width>601</width>
+           <height>151</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Font settings</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="1">
+           <widget class="QLabel" name="noteTextEditFontLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+	background-color: white;
+}</string>
+            </property>
+            <property name="text">
+             <string>Font name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QToolButton" name="noteTextEditButton">
+            <property name="toolTip">
+             <string>set new font</string>
+            </property>
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
+            <property name="text">
+             <string>note text edit:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="noteViewEditFontHeadlineLabel">
+            <property name="text">
+             <string>note markdown view:</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="noteTextViewFontLabel">
+            <property name="styleSheet">
+             <string notr="true">QLabel {
+	background-color: white;
+}</string>
+            </property>
+            <property name="text">
+             <string>Font name</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QToolButton" name="noteTextViewButton">
+            <property name="toolTip">
+             <string>set new font</string>
+            </property>
+            <property name="text">
+             <string>...</string>
             </property>
            </widget>
           </item>
