@@ -542,7 +542,7 @@ p, li { white-space: pre-wrap; }
              <enum>Qt::LeftToRight</enum>
             </property>
             <property name="text">
-             <string>notify all external modifications</string>
+             <string>notify about all external modifications</string>
             </property>
            </widget>
           </item>
