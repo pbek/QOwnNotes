@@ -734,7 +734,9 @@ bool Note::isFetched() {
  */
 QString Note::generateTextForLink( QString text )
 {
-    text.replace( " ", "_" ).replace( "-", "_" ).replace( "?", "_" ).replace( "#", "_" );
+    // replace everything but characters and numbers with "_"
+    QRegularExpression re( "[^\\d\\w]", QRegularExpression::CaseInsensitiveOption );
+    text.replace( re, "_" );
     return text;
 }
 

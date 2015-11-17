@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.58
+- fixed a problem with linking notes with special characters in their name (everything but charactes and numbers)
+
 ## 0.57
 - `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](http://www.qownnotes.org/)`, not just on the URL alone
 - added a menu entry to the new knowledge base in the help menu
