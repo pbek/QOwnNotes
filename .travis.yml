@@ -61,7 +61,7 @@ script:
          ./../bin/tests/tests -platform minimal -txt
       ;
     else
-         ./../bin/tests/tests.app -platform minimal -txt
+         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
       ;
     fi
   - sudo pip install cpp-coveralls
