@@ -57,6 +57,8 @@ script:
     fi
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+  - ls -hal ./../bin
+  - ls -hal ./../bin/tests
   - ./../bin/tests/tests -platform minimal -txt
   - sudo pip install cpp-coveralls
   - coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
