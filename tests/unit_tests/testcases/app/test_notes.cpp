@@ -66,6 +66,7 @@ void TestNotes::testNoteCreating()
     QVERIFY( note.getId() == 1 );
     QVERIFY( note.getName() == noteName );
     QVERIFY( note.getNoteText().startsWith( noteName ) );
+    QVERIFY( false );
 }
 
 //QTEST_MAIN(TestNotes)
