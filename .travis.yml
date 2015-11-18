@@ -43,8 +43,6 @@ install:
     fi
 
 script:
-  - cd src
-  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          QTDIR="/opt/qt54"
       && PATH="$QTDIR/bin:$PATH"
@@ -57,6 +55,11 @@ script:
       && CPPFLAGS=-I$QTDIR/include
       ;
     fi
+  - cd ./tests
+  - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+  - ./../bin/tests/tests -platform minimal -txt
+  - cd ./../src
+  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
 

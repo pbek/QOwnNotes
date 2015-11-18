@@ -2,3 +2,5 @@
 build-QOwnNotes*
 build-tools
 .directory
+bin/*
+build-tests-*
