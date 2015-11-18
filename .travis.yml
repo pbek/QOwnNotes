@@ -19,7 +19,7 @@ env:
     - secure: "CrB159u8KEwtsiCxnwvnCumiRkGgL+9aFgI2dosUvj3PtfebcVdhzRKBt+17jLapLCQEYoml8RVszLNuYpZu8y/3DhCk4ftWMumnvKOp8CIFb/4BFKMZxyuw+HlMg5oKwY4GOopnHo4mTEM51pDHMP8rfIxCjLimVeDc0uZaaj8="
   matrix:
     - CONFIG=release
-    - CONFIG=debug
+    #- CONFIG=debug
 
 install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
@@ -57,12 +57,15 @@ script:
     fi
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
-  - ls -hal ./../bin
-  - ls -hal ./../bin/tests
-  - ./../bin/tests/tests -platform minimal -txt
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         ./../bin/tests/tests -platform minimal -txt
+      ;
+    else
+         ./../bin/tests/tests.app -platform minimal -txt
+      ;
+    fi
   - sudo pip install cpp-coveralls
-  - PYTHONWARNINGS="ignore:Unverified HTTPS request" coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
-  - cat coveralls.log
+  - coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
   - cd ./../src
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - qmake QOwnNotes.pro CONFIG+=$CONFIG
