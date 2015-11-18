@@ -19,7 +19,7 @@ env:
     - secure: "CrB159u8KEwtsiCxnwvnCumiRkGgL+9aFgI2dosUvj3PtfebcVdhzRKBt+17jLapLCQEYoml8RVszLNuYpZu8y/3DhCk4ftWMumnvKOp8CIFb/4BFKMZxyuw+HlMg5oKwY4GOopnHo4mTEM51pDHMP8rfIxCjLimVeDc0uZaaj8="
   matrix:
     - CONFIG=release
-    - CONFIG=debug
+    #- CONFIG=debug
 
 install:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
@@ -43,8 +43,6 @@ install:
     fi
 
 script:
-  - cd src
-  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          QTDIR="/opt/qt54"
       && PATH="$QTDIR/bin:$PATH"
@@ -57,6 +55,19 @@ script:
       && CPPFLAGS=-I$QTDIR/include
       ;
     fi
+  - cd ./tests
+  - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+         ./../bin/tests/tests -platform minimal -txt
+      && sudo pip install cpp-coveralls
+      && coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
+      ;
+    else
+         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
+      ;
+    fi
+  - cd ./../src
+  - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - qmake QOwnNotes.pro CONFIG+=$CONFIG
   - make
 

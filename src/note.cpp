@@ -10,7 +10,7 @@
 #include <QDir>
 #include <QSqlError>
 #include <QRegularExpression>
-#include "hoedown/html.h"
+#include "libraries/hoedown/html.h"
 
 
 Note::Note()
@@ -614,7 +614,7 @@ void Note::createFromFile( QFile &file ) {
         fileInfo.setFile( file );
 
         // create a nicer name by removing ".txt"
-        // TODO: make sure name is ownNote conform
+        // TODO: make sure name is ownCloud Notes conform
         QString name = fileInfo.fileName();
         name.chop( 4 );
 
