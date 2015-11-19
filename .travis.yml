@@ -60,12 +60,12 @@ script:
   - ls -hal
   - ls -hal ./../bin/tests/
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         ./../bin/tests/QOwnNotesTests -platform minimal -txt
+         ./../bin/tests/tests -platform minimal -txt
       && sudo pip install cpp-coveralls
       && coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
       ;
     else
-         ./../bin/tests/QOwnNotesTests.app/Contents/MacOS/QOwnNotesTests -platform minimal -txt
+         ./../bin/tests/tests.app/Contents/MacOS/tests -platform minimal -txt
       ;
     fi
   - cd ./../src

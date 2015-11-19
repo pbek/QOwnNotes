@@ -40,7 +40,8 @@ SOURCES += main.cpp\
     trashdialog.cpp \
     libraries/versionnumber/versionnumber.cpp \
     linkdialog.cpp \
-    notehistory.cpp
+    notehistory.cpp \
+    htmlentities.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -68,7 +69,8 @@ HEADERS  += mainwindow.h \
     trashdialog.h \
     libraries/versionnumber/versionnumber.h \
     notehistory.h \
-    linkdialog.h
+    linkdialog.h \
+    htmlentities.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

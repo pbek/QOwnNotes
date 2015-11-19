@@ -7,6 +7,7 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include "note.h"
+#include "htmlentities.h"
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     QDialog(parent),
@@ -130,6 +131,8 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index)
     this->setResult( QDialog::Accepted );
 }
 
+extern "C" size_t decode_html_entities_utf8(char *dest, const char *src);
+
 /**
  * @brief Fetches the title of a webpage
  * @param url
@@ -161,6 +164,14 @@ QString LinkDialog::getTitleForUrl( QUrl url )
         QRegularExpression regex( "<title>(.*)</title>" );
         QRegularExpressionMatch match = regex.match( html );
         QString title = match.captured(1);
+
+        // decode HTML entities
+        HTMLEntities htmlEntities;
+        title = htmlEntities.decodeHtmlEntities( title );
+
+        // replace some other characters we don't want
+        title.replace( "[", "(" ).replace( "]", ")" ).replace( "<", "(" ).replace( ">", ")" );
+
         return title;
     }
 
