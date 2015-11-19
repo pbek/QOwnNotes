@@ -57,6 +57,8 @@ script:
     fi
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
+  - ls -hal
+  - ls -hal ./../bin/tests/
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
          ./../bin/tests/QOwnNotesTests -platform minimal -txt
       && sudo pip install cpp-coveralls
