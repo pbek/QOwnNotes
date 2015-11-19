@@ -14,7 +14,7 @@ void TestNotes::initTestCase()
 
     // generate a notes path
     notesPath = QDir::tempPath() + QDir::separator() + "qownnotes_test_" + QString::number( qrand() );
-    qDebug() << "generated notesPath:" << notesPath;
+//    qDebug() << "generated notesPath:" << notesPath;
 
     // create temporary notes directory
     QDir dir;

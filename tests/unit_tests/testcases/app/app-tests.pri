@@ -6,6 +6,7 @@ INCLUDEPATH += $$APP_SRC_DIR
 HEADERS  += \
     $$PWD/test_*.h \
     $$APP_SRC_DIR/note.h \
+    $$APP_SRC_DIR/htmlentities.h \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
@@ -13,6 +14,7 @@ HEADERS  += \
 SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/note.cpp \
+    $$APP_SRC_DIR/htmlentities.cpp \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.c \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
