@@ -81,6 +81,8 @@ private slots:
     void on_action_Shortcuts_triggered();
     void on_action_Knowledge_base_triggered();
 
+    void on_actionInsert_current_time_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

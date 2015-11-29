@@ -319,6 +319,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionInsert_Link_to_note"/>
+    <addaction name="actionInsert_current_time"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
     <addaction name="actionShow_versions"/>
@@ -615,6 +616,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>&amp;Knowledge base</string>
+   </property>
+  </action>
+  <action name="actionInsert_current_time">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/resource-calendar-insert.svg</normaloff>:/images/breeze/resource-calendar-insert.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert current &amp;time</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
    </property>
   </action>
  </widget>

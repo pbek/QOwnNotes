@@ -2047,3 +2047,15 @@ void MainWindow::on_action_Knowledge_base_triggered()
 {
     QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/Knowledge-base" ) );
 }
+
+/**
+ * @brief Inserts the current date in ISO 8601 format
+ */
+void MainWindow::on_actionInsert_current_time_triggered()
+{
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    QDateTime dateTime = QDateTime::currentDateTime();
+
+    // insert the current date in ISO 8601 format
+    c.insertText( dateTime.toString( Qt::SystemLocaleShortDate ) );
+}

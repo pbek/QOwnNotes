@@ -3,6 +3,8 @@
 ## 0.58
 - fixed a problem with linking notes with special characters in their name (everything but charactes and numbers)
 - html entities from the titles of inserted links are now decoded
+- whitespaces are now trimmed from the start and end of the title of inserted links
+- added a new shortcut `Ctrl + T` to insert the current date in ISO 8601 format
 
 ## 0.57
 - `Ctrl + Click` in edit mode now works on the whole portion of links like `[QOwnNotes - cross-platform open source notepad](http://www.qownnotes.org/)`, not just on the URL alone

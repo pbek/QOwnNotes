@@ -30,5 +30,6 @@
         <file>images/breeze/go-previous.svg</file>
         <file>images/breeze/go-next.svg</file>
         <file>images/breeze/applications-system.svg</file>
+        <file>images/breeze/resource-calendar-insert.svg</file>
     </qresource>
 </RCC>

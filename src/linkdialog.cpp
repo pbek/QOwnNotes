@@ -172,7 +172,8 @@ QString LinkDialog::getTitleForUrl( QUrl url )
         // replace some other characters we don't want
         title.replace( "[", "(" ).replace( "]", ")" ).replace( "<", "(" ).replace( ">", ")" );
 
-        return title;
+        // trim whitespaces and return title
+        return title.simplified();
     }
 
     // timer elapsed, no reply from network request
