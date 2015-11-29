@@ -6,6 +6,7 @@
 #include <QTimer>
 #include <QNetworkRequest>
 #include <QNetworkReply>
+#include <QFileDialog>
 #include "note.h"
 #include "htmlentities.h"
 
@@ -178,4 +179,18 @@ QString LinkDialog::getTitleForUrl( QUrl url )
 
     // timer elapsed, no reply from network request
     return "";
+}
+
+/**
+ * @brief Selects a local file to link to
+ */
+void LinkDialog::on_fileUrlButton_clicked()
+{
+    QUrl fileUrl = QFileDialog::getOpenFileUrl( this, tr( "Select file to link to" ) );
+    QString fileUrlString = fileUrl.toString();
+
+    if ( fileUrlString != "" )
+    {
+        ui->urlEdit->setText( fileUrlString );
+    }
 }

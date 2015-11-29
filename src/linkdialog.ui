@@ -17,19 +17,50 @@
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLineEdit" name="urlEdit">
-       <property name="statusTip">
-        <string>enter URL</string>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="accessibleName">
-        <string/>
-       </property>
-       <property name="placeholderText">
-        <string>enter an URL to link to</string>
-       </property>
+      <widget class="QFrame" name="horizontalFrame">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>9</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLineEdit" name="urlEdit">
+          <property name="statusTip">
+           <string>enter URL</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="accessibleName">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string>enter an URL to link to</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QToolButton" name="fileUrlButton">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
      <item>
@@ -80,8 +111,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>262</x>
+     <y>516</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -96,8 +127,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>330</x>
+     <y>516</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

@@ -4,6 +4,7 @@
 - fixed a problem with linking notes with special characters in their name (everything but charactes and numbers)
 - html entities from the titles of inserted links are now decoded
 - whitespaces are now trimmed from the start and end of the title of inserted links
+- you can now select a local file to link to in the link dialog
 - added a new shortcut `Ctrl + T` to insert the current date in ISO 8601 format
 
 ## 0.57

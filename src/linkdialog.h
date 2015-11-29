@@ -22,6 +22,7 @@ public:
 private slots:
     void on_searchLineEdit_textChanged(const QString &arg1);
     void on_notesListWidget_doubleClicked(const QModelIndex &index);
+    void on_fileUrlButton_clicked();
 
 private:
     Ui::LinkDialog *ui;
