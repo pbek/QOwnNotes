@@ -349,6 +349,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
+   <addaction name="actionInsert_current_time"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
@@ -633,8 +634,8 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="images.qrc"/>
   <include location="adwaita.qrc"/>
  </resources>
  <connections/>

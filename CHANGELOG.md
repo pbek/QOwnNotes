@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.59
+- an *Insert current time* button was added to the toolbar so that the feature also work in Gnome on GNU/Linux
+
 ## 0.58
 - fixed a problem with linking notes with special characters in their name (everything but charactes and numbers)
 - html entities from the titles of inserted links are now decoded
