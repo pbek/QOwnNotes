@@ -314,7 +314,7 @@ smartypants_cb__ltag(hoedown_buffer *ob, struct smartypants_data *smrt, uint8_t 
 	size_t tag, i = 0;
 
 	/* This is a comment. Copy everything verbatim until --> or EOF is seen. */
-	if (i + 4 < size && memcmp(text, "<!--", 4) == 0) {
+	if (i + 4 < size && memcmp(text + i, "<!--", 4) == 0) {
 		i += 4;
 		while (i + 3 < size && memcmp(text + i, "-->",  3) != 0)
 			i++;

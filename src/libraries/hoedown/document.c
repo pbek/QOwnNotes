@@ -402,9 +402,23 @@ tag_length(uint8_t *data, size_t size, hoedown_autolink_type *autolink)
 	/* a valid tag can't be shorter than 3 chars */
 	if (size < 3) return 0;
 
-	/* begins with a '<' optionally followed by '/', followed by letter or number */
 	if (data[0] != '<') return 0;
-	i = (data[1] == '/') ? 2 : 1;
+
+        /* HTML comment, laxist form */
+        if (size > 5 && data[1] == '!' && data[2] == '-' && data[3] == '-') {
+		i = 5;
+
+		while (i < size && !(data[i - 2] == '-' && data[i - 1] == '-' && data[i] == '>'))
+			i++;
+
+		i++;
+
+		if (i <= size)
+			return i;
+        }
+
+	/* begins with a '<' optionally followed by '/', followed by letter or number */
+        i = (data[1] == '/') ? 2 : 1;
 
 	if (!isalnum(data[i]))
 		return 0;
@@ -549,7 +563,7 @@ find_emph_char(uint8_t *data, size_t size, uint8_t c)
 			}
 
 			/* not a well-formed codespan; use found matching emph char */
-			if (i >= size) return tmp_i;
+			if (bt < span_nb && i >= size) return tmp_i;
 		}
 		/* skipping a link */
 		else if (data[i] == '[') {
@@ -1008,7 +1022,11 @@ char_autolink_www(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size
 		HOEDOWN_BUFPUTSL(link_url, "http://");
 		hoedown_buffer_put(link_url, link->data, link->size);
 
-		ob->size -= rewind;
+		if (ob->size > rewind)
+			ob->size -= rewind;
+		else
+			ob->size = 0;
+
 		if (doc->md.normal_text) {
 			link_text = newbuf(doc, BUFFER_SPAN);
 			doc->md.normal_text(link_text, link, &doc->data);
@@ -1036,7 +1054,11 @@ char_autolink_email(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, si
 	link = newbuf(doc, BUFFER_SPAN);
 
 	if ((link_len = hoedown_autolink__email(&rewind, link, data, offset, size, 0)) > 0) {
-		ob->size -= rewind;
+		if (ob->size > rewind)
+			ob->size -= rewind;
+		else
+			ob->size = 0;
+
 		doc->md.autolink(ob, link, HOEDOWN_AUTOLINK_EMAIL, &doc->data);
 	}
 
@@ -1056,7 +1078,11 @@ char_autolink_url(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size
 	link = newbuf(doc, BUFFER_SPAN);
 
 	if ((link_len = hoedown_autolink__url(&rewind, link, data, offset, size, 0)) > 0) {
-		ob->size -= rewind;
+		if (ob->size > rewind)
+			ob->size -= rewind;
+		else
+			ob->size = 0;
+
 		doc->md.autolink(ob, link, HOEDOWN_AUTOLINK_NORMAL, &doc->data);
 	}
 
@@ -1187,8 +1213,10 @@ char_link(hoedown_buffer *ob, hoedown_document *doc, uint8_t *data, size_t offse
 			link_e--;
 
 		/* remove optional angle brackets around the link */
-		if (data[link_b] == '<') link_b++;
-		if (data[link_e - 1] == '>') link_e--;
+		if (data[link_b] == '<' && data[link_e - 1] == '>') {
+			link_b++;
+			link_e--;
+		}
 
 		/* building escaped link and title */
 		if (link_e > link_b) {

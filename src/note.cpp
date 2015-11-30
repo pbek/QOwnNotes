@@ -690,7 +690,8 @@ bool Note::removeNoteFile() {
 //
 QString Note::toMarkdownHtml() {
     hoedown_renderer *renderer = hoedown_html_renderer_new( HOEDOWN_HTML_USE_XHTML, 16 );
-    hoedown_document *document = hoedown_document_new(renderer, (hoedown_extensions) HOEDOWN_EXT_SPAN, 16);
+    hoedown_extensions extensions = (hoedown_extensions) ( HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN );
+    hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
     QString str = this->noteText;
 

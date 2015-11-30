@@ -2,6 +2,7 @@
 
 ## 0.59
 - an *Insert current time* button was added to the toolbar so that the feature also work in Gnome on GNU/Linux
+- the markdown view also supports tables now (for [Issue #20](https://github.com/pbek/QOwnNotes/issues/20))
 
 ## 0.58
 - fixed a problem with linking notes with special characters in their name (everything but charactes and numbers)
