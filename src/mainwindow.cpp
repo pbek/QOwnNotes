@@ -947,7 +947,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             else if ( keyEvent->key() == Qt::Key_Control )
             {
                 QWidget *viewPort = ui->noteTextEdit->viewport();
-                viewPort->setCursor(Qt::PointingHandCursor);
+                viewPort->setCursor( Qt::PointingHandCursor );
                 return false;
             }
 
@@ -970,7 +970,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             return false;
         }
     }
-    else if(event->type() == QEvent::MouseButtonRelease)
+    else if ( event->type() == QEvent::MouseButtonRelease )
     {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
@@ -993,7 +993,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
         }
     }
 
-    return QMainWindow::eventFilter(obj, event);
+    return QMainWindow::eventFilter( obj, event );
 }
 
 /**
