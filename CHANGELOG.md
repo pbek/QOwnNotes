@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.60
+- if the `Ctrl` key is pressed in the note text edit to click a link the mouse cursor is now a pointing hand
+
 ## 0.59
 - an *Insert current time* button was added to the toolbar so that the feature also works in Gnome on GNU/Linux
 - the markdown view also supports tables now (for [Issue #20](https://github.com/pbek/QOwnNotes/issues/20))

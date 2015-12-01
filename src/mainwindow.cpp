@@ -943,6 +943,30 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 // indent selected text (if there is a text selected)
                 return increaseSelectedTextIndentionInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
             }
+            // set cursor to pointing hand if control key was pressed
+            else if ( keyEvent->key() == Qt::Key_Control )
+            {
+                QWidget *viewPort = ui->noteTextEdit->viewport();
+                viewPort->setCursor(Qt::PointingHandCursor);
+                return false;
+            }
+
+            return false;
+        }
+    }
+    if ( event->type() == QEvent::KeyRelease )
+    {
+        if ( obj == ui->noteTextEdit )
+        {
+            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
+
+            // reset cursor if control key was released
+            if ( keyEvent->key() == Qt::Key_Control )
+            {
+                QWidget *viewPort = ui->noteTextEdit->viewport();
+                viewPort->setCursor( Qt::ArrowCursor );
+            }
+
             return false;
         }
     }
