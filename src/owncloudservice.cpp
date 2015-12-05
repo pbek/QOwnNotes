@@ -10,10 +10,13 @@
 #include <QDir>
 #include <QMessageBox>
 #include <QScriptValueIterator>
+#include <QDomDocument>
+#include <QDomNodeList>
 #include "libraries/versionnumber/versionnumber.h"
 
 const QString OwnCloudService::rootPath = "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";
+const QString NS_DAV("DAV:");
 
 OwnCloudService::OwnCloudService(SimpleCrypt *crypto, QObject *parent) : QObject(parent)
 {
@@ -38,6 +41,7 @@ void OwnCloudService::readSettings()
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
     ownCloudTestPath = "/ocs/v1.php";
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
+    calendarPath = "/remote.php/caldav/calendars/" + userName;
 
     QObject::connect( networkManager, SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)), this, SLOT(slotAuthenticationRequired(QNetworkReply*,QAuthenticator*)) );
     QObject::connect( networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slotReplyFinished(QNetworkReply*)) );
@@ -58,7 +62,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
     qDebug() << "Reply from " << reply->url().path();
     // qDebug() << reply->errorString();
 
-    // this only should called from the settings dialog
+    // this should only be called from the settings dialog
     if ( reply->url().path().endsWith( appInfoPath ) )
     {
         qDebug() << "Reply from app info";
@@ -125,6 +129,15 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
         {
             qDebug() << "Reply from ownCloud restore trashed note page";
             qDebug() << data;
+
+            return;
+        }
+        else if ( reply->url().path().endsWith( calendarPath ) )
+        {
+            qDebug() << "Reply from ownCloud calendar page";
+
+            QStringList calendarHrefList = parseCalendarHrefList( data );
+            settingsDialog->refreshTodoCalendarList( calendarHrefList );
 
             return;
         }
@@ -310,6 +323,37 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     else
     {
         settingsDialog->setOKLabelData( 5, "empty", SettingsDialog::Failure );
+    }
+}
+
+/**
+ * @brief Gets the calendar list from the ownCloud server for the settings dialog
+ */
+void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
+{
+    settingsDialog = dialog;
+
+    if ( !busy )
+    {
+        busy = true;
+        emit( busyChanged( busy ) );
+
+        QUrl url( serverUrl );
+        QNetworkRequest r( url );
+
+        // direct server url request without auth header
+        QNetworkReply *reply = networkManager->get( r );
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+
+        QUrlQuery q;
+        q.addQueryItem( "format", format );
+        url.setQuery(q);
+
+        addAuthHeader(&r);
+
+        url.setUrl( serverUrl + calendarPath );
+        r.setUrl( url );
+        reply = networkManager->sendCustomRequest( r, "PROPFIND" );
     }
 }
 
@@ -630,3 +674,47 @@ void OwnCloudService::handleTrashedLoading( QString data )
     TrashDialog *dialog = new TrashDialog( notes, mainWindow );
     dialog->exec();
 }
+
+QStringList OwnCloudService::parseCalendarHrefList( QString& data )
+{
+    QStringList resultList;
+    QDomDocument doc;
+    doc.setContent( data, true );
+
+    // loop all response blocks
+    QDomNodeList responseNodes = doc.elementsByTagNameNS( NS_DAV, "response" );
+    for ( int i = 0; i < responseNodes.length(); ++i )
+    {
+        QDomNode responseNode = responseNodes.at(i);
+        if ( responseNode.isElement() )
+        {
+            QDomElement elem = responseNode.toElement();
+            QDomNodeList resourceTypeNodes = elem.elementsByTagNameNS( NS_DAV, "resourcetype" );
+            if ( resourceTypeNodes.length() )
+            {
+                QDomNodeList typeNodes = resourceTypeNodes.at(0).childNodes();
+                for ( int j = 0; j < typeNodes.length(); ++j )
+                {
+                    QDomNode typeNode = typeNodes.at(j);
+                    QString typeString = typeNode.toElement().tagName();
+
+                    // did we find a calendar?
+                    if ( typeString == "calendar" )
+                    {
+                        // add the href to our result list
+                        QDomNodeList hrefNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
+                        if ( hrefNodes.length() )
+                        {
+                            const QString href = hrefNodes.at(0).toElement().text();
+                            resultList << href;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return resultList;
+}
+
+

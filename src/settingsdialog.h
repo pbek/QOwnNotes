@@ -26,6 +26,7 @@ public:
     ~SettingsDialog();
     void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage);
     void setOKLabelData(int number, QString text, OKLabelStatus status);
+    void refreshTodoCalendarList( QStringList items );
 private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);
@@ -33,6 +34,7 @@ private slots:
     void on_ownCloudServerAppPageButton_clicked();
     void on_noteTextEditButton_clicked();
     void on_noteTextViewButton_clicked();
+    void on_reloadCalendarListButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;

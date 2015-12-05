@@ -23,6 +23,7 @@ public:
     void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
     void loadTrash(QString notesPath, MainWindow *mainWindow);
     void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
+    void settingsGetCalendarList( SettingsDialog *dialog );
 private:
     QString serverUrl;
     QString userName;
@@ -39,6 +40,7 @@ private:
     QString capabilitiesPath;
     QString ownCloudTestPath;
     QString restoreTrashedNotePath;
+    QString calendarPath;
     SettingsDialog *settingsDialog;
     void checkAppInfo(QNetworkReply *reply);
     bool busy;
@@ -47,6 +49,7 @@ private:
     QString getServerNotesPath(QString notesPath);
     void handleVersionsLoading(QString data);
     void handleTrashedLoading(QString data);
+    QStringList parseCalendarHrefList(QString &data);
 signals:
     void busyChanged(bool busy);
 

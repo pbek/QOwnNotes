@@ -16,7 +16,7 @@
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">
-     <item row="1" column="0">
+     <item row="2" column="0">
       <widget class="QDialogButtonBox" name="buttonBox">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
@@ -26,7 +26,7 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="0">
+     <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
         <number>1</number>
@@ -516,6 +516,58 @@ p, li { white-space: pre-wrap; }
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="todoCalendarTab">
+        <attribute name="title">
+         <string>Todo</string>
+        </attribute>
+        <widget class="QGroupBox" name="todoCalendarGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>591</width>
+           <height>421</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Select the calendars you want to use for the TODO list</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="0">
+           <widget class="QListWidget" name="todoCalendarListWidget"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="reloadCalendarListButton">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="toolTip">
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>&amp;reload calendar list</string>
+            </property>
+            <property name="icon">
+             <iconset resource="breeze.qrc">
+              <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
        <widget class="QWidget" name="generalTab">
         <attribute name="title">
          <string>General</string>
@@ -665,7 +717,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   </layout>
  </widget>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
   <tabstop>serverUrlEdit</tabstop>
   <tabstop>userNameEdit</tabstop>
   <tabstop>passwordEdit</tabstop>

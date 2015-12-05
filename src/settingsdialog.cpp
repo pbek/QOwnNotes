@@ -270,3 +270,43 @@ void SettingsDialog::on_noteTextViewButton_clicked()
         setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
     }
 }
+
+void SettingsDialog::on_reloadCalendarListButton_clicked()
+{
+    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+    ownCloud->settingsGetCalendarList( this );
+}
+
+void SettingsDialog::refreshTodoCalendarList( QStringList items )
+{
+    // clear todo calendar list
+    ui->todoCalendarListWidget->clear();
+
+    QListIterator<QString> itr (items);
+    while ( itr.hasNext() )
+    {
+       QString urlPart = itr.next();
+       QString url = ui->serverUrlEdit->text() + urlPart;
+
+       // get the name out of the url part
+       QRegularExpression regex( "\/([^\/]*)\/$" );
+       QRegularExpressionMatch match = regex.match( urlPart );
+       QString name = match.captured(1);
+
+       // remove percent encoding
+       name = QUrl::fromPercentEncoding( name.toLatin1() );
+
+       // skip the contact birthdays calendar
+       if ( name == "contact_birthdays" ) {
+           continue;
+       }
+
+       // create the list qidget item and add it to the todo calendar list widget
+       QListWidgetItem *item = new QListWidgetItem( name );
+       item->setCheckState( Qt::Checked );
+       item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
+       item->setToolTip( url );
+       ui->todoCalendarListWidget->addItem( item );
+    }
+}
+
