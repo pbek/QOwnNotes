@@ -26,7 +26,7 @@ public:
     ~SettingsDialog();
     void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage);
     void setOKLabelData(int number, QString text, OKLabelStatus status);
-    void refreshTodoCalendarList( QStringList items );
+    void refreshTodoCalendarList(QStringList items, bool forceReadCheckedState = false);
 private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);

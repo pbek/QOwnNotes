@@ -98,6 +98,23 @@ void SettingsDialog::storeSettings()
     settings.setValue( "noteSaveIntervalTime", ui->noteSaveIntervalTime->value() );
     settings.setValue( "MainWindow/noteTextEdit.font", noteTextEditFont.toString() );
     settings.setValue( "MainWindow/noteTextView.font", noteTextViewFont.toString() );
+
+    QStringList todoCalendarUrlList;
+    QStringList todoCalendarEnabledList;
+    for ( int i = 0; i < ui->todoCalendarListWidget->count(); i++ )
+    {
+        QListWidgetItem * item = ui->todoCalendarListWidget->item( i );
+
+        todoCalendarUrlList.append( item->toolTip() );
+
+        if ( item->checkState() == Qt::Checked ) {
+            todoCalendarEnabledList.append( item->text() );
+        }
+    }
+
+    // store the todo calendar data to the settings
+    settings.setValue( "ownCloud/todoCalendarUrlList", todoCalendarUrlList );
+    settings.setValue( "ownCloud/todoCalendarEnabledList", todoCalendarEnabledList );
 }
 
 void SettingsDialog::readSettings()
@@ -115,6 +132,10 @@ void SettingsDialog::readSettings()
 
     noteTextViewFont.fromString( settings.value( "MainWindow/noteTextView.font" ).toString() );
     setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
+
+    QStringList todoCalendarUrlList = settings.value( "ownCloud/todoCalendarUrlList" ).toStringList();
+    // load the todo calendar list and set the checked state
+    refreshTodoCalendarList( todoCalendarUrlList, true );
 }
 
 void SettingsDialog::setFontLabel( QLabel *label, QFont font )
@@ -277,12 +298,18 @@ void SettingsDialog::on_reloadCalendarListButton_clicked()
     ownCloud->settingsGetCalendarList( this );
 }
 
-void SettingsDialog::refreshTodoCalendarList( QStringList items )
+void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadCheckedState )
 {
-    // clear todo calendar list
+    // we want to read the checked state from the settings if the todo calendar list was not emptry
+    bool readCheckedState = forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
+
+    // clear the todo calendar list
     ui->todoCalendarListWidget->clear();
 
-    QListIterator<QString> itr (items);
+    QSettings settings;
+    QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
+
+    QListIterator<QString> itr ( items );
     while ( itr.hasNext() )
     {
        QString urlPart = itr.next();
@@ -301,9 +328,13 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items )
            continue;
        }
 
-       // create the list qidget item and add it to the todo calendar list widget
+       // create the list widget item and add it to the todo calendar list widget
        QListWidgetItem *item = new QListWidgetItem( name );
-       item->setCheckState( Qt::Checked );
+
+       // eventually check if item was checked
+       Qt::CheckState checkedState = readCheckedState ? ( todoCalendarEnabledList.contains( name ) ? Qt::Checked : Qt::Unchecked ) : Qt::Checked;
+       item->setCheckState( checkedState );
+
        item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
        item->setToolTip( url );
        ui->todoCalendarListWidget->addItem( item );
