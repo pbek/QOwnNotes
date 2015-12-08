@@ -141,6 +141,17 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             return;
         }
+        else if ( reply->url().path().startsWith( calendarPath ) )
+        {
+            qDebug() << "Reply from ownCloud calendar todo list page";
+            qDebug() << data;
+
+            // TODO: we will have to check which reply came back in the future
+
+
+
+            return;
+        }
         else if ( reply->url().path() == "" )
         {
             qDebug() << "Reply from main server url";
@@ -340,20 +351,46 @@ void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
 
         QUrl url( serverUrl );
         QNetworkRequest r( url );
-
-        // direct server url request without auth header
-        QNetworkReply *reply = networkManager->get( r );
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-
         QUrlQuery q;
+
         q.addQueryItem( "format", format );
         url.setQuery(q);
-
         addAuthHeader(&r);
-
         url.setUrl( serverUrl + calendarPath );
         r.setUrl( url );
-        reply = networkManager->sendCustomRequest( r, "PROPFIND" );
+
+        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND" );
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+    }
+}
+
+/**
+ * @brief Gets the todo list from the ownCloud server for the todo list dialog
+ */
+void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog )
+{
+    todoDialog = dialog;
+
+    QSettings settings;
+    QString calendarUrl = settings.value( "ownCloud/todoCalendarUrlList/" + calendarName ).toString();
+
+    if ( !busy )
+    {
+        busy = true;
+        emit( busyChanged( busy ) );
+
+        QUrl url( calendarUrl );
+        QNetworkRequest r( url );
+        QUrlQuery q;
+
+        q.addQueryItem( "format", format );
+        url.setQuery(q);
+        addAuthHeader(&r);
+        url.setUrl( calendarUrl );
+        r.setUrl( url );
+
+        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND" );
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
     }
 }
 

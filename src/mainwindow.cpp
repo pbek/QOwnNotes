@@ -2087,7 +2087,7 @@ void MainWindow::on_actionInsert_current_time_triggered()
 
 void MainWindow::on_actionOpen_List_triggered()
 {
-    TodoDialog * dialog = new TodoDialog( this );
+    TodoDialog * dialog = new TodoDialog( &crypto, this );
     dialog->exec();
 }
 

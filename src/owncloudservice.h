@@ -8,6 +8,7 @@
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "mainwindow.h"
 #include "settingsdialog.h"
+#include "tododialog.h"
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.1"
 
@@ -24,6 +25,7 @@ public:
     void loadTrash(QString notesPath, MainWindow *mainWindow);
     void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
     void settingsGetCalendarList( SettingsDialog *dialog );
+    void todoGetTodoList( QString calendarName, TodoDialog *dialog );
 private:
     QString serverUrl;
     QString userName;
@@ -42,6 +44,7 @@ private:
     QString restoreTrashedNotePath;
     QString calendarPath;
     SettingsDialog *settingsDialog;
+    TodoDialog *todoDialog;
     void checkAppInfo(QNetworkReply *reply);
     bool busy;
     void readSettings();
