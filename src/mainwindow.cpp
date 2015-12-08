@@ -2,6 +2,7 @@
 #include "linkdialog.h"
 #include "owncloudservice.h"
 #include "ui_mainwindow.h"
+#include "tododialog.h"
 #include <QSplitter>
 #include <QDebug>
 #include <QDir>
@@ -2083,3 +2084,10 @@ void MainWindow::on_actionInsert_current_time_triggered()
     // insert the current date in ISO 8601 format
     c.insertText( dateTime.toString( Qt::SystemLocaleShortDate ) );
 }
+
+void MainWindow::on_actionOpen_List_triggered()
+{
+    TodoDialog * dialog = new TodoDialog( this );
+    dialog->exec();
+}
+

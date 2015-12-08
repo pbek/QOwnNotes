@@ -80,8 +80,8 @@ private slots:
     void on_action_Forward_in_note_history_triggered();
     void on_action_Shortcuts_triggered();
     void on_action_Knowledge_base_triggered();
-
     void on_actionInsert_current_time_triggered();
+    void on_actionOpen_List_triggered();
 
 private:
     Ui::MainWindow *ui;

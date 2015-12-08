@@ -41,7 +41,8 @@ SOURCES += main.cpp\
     libraries/versionnumber/versionnumber.cpp \
     linkdialog.cpp \
     notehistory.cpp \
-    htmlentities.cpp
+    htmlentities.cpp \
+    tododialog.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -70,7 +71,8 @@ HEADERS  += mainwindow.h \
     libraries/versionnumber/versionnumber.h \
     notehistory.h \
     linkdialog.h \
-    htmlentities.h
+    htmlentities.h \
+    tododialog.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
@@ -79,7 +81,8 @@ FORMS    += mainwindow.ui \
     settingsdialog.ui \
     versiondialog.ui \
     trashdialog.ui \
-    linkdialog.ui
+    linkdialog.ui \
+    tododialog.ui
 
 RESOURCES += \
     images.qrc \

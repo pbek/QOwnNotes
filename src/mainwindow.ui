@@ -328,8 +328,15 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionSelect_all_notes"/>
    </widget>
+   <widget class="QMenu" name="menuTodo">
+    <property name="title">
+     <string>Todo</string>
+    </property>
+    <addaction name="actionOpen_List"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuTodo"/>
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -631,12 +638,17 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+T</string>
    </property>
   </action>
+  <action name="actionOpen_List">
+   <property name="text">
+    <string>Open List</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
+  <include location="adwaita.qrc"/>
   <include location="breeze.qrc"/>
   <include location="images.qrc"/>
-  <include location="adwaita.qrc"/>
  </resources>
  <connections/>
 </ui>
