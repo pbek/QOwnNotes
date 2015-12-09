@@ -53,6 +53,7 @@ public:
     static QString generateTextForLink(QString text);
     static QMap<QString, QString> parseMarkdownUrlsFromText(QString text);
     static QString getMarkdownUrlAtPosition(QString text, int position);
+    static bool setupTables();
 private:
     int id;
     QString name;

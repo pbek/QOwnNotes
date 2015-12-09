@@ -53,6 +53,8 @@ private:
     void handleVersionsLoading(QString data);
     void handleTrashedLoading(QString data);
     QStringList parseCalendarHrefList(QString &data);
+    void loadTodoItems(QString &data);
+    QStringList parseTodoListICSUrls(QString &data);
 signals:
     void busyChanged(bool busy);
 

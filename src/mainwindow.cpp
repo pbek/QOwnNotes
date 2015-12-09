@@ -22,6 +22,7 @@
 #include "version.h"
 #include "aboutdialog.h"
 #include "settingsdialog.h"
+#include "calendaritem.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -52,6 +53,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->searchInNoteWidget->hide();
 
     Note::createConnection();
+    Note::setupTables();
+    CalendarItem::setupTables();
 
     this->firstVisibleNoteListRow = 0;
     this->noteHistory = NoteHistory();

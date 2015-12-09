@@ -42,7 +42,8 @@ SOURCES += main.cpp\
     linkdialog.cpp \
     notehistory.cpp \
     htmlentities.cpp \
-    tododialog.cpp
+    tododialog.cpp \
+    calendaritem.cpp
 
 HEADERS  += mainwindow.h \
     note.h \
@@ -72,7 +73,8 @@ HEADERS  += mainwindow.h \
     notehistory.h \
     linkdialog.h \
     htmlentities.h \
-    tododialog.h
+    tododialog.h \
+    calendaritem.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

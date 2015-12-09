@@ -62,21 +62,26 @@ bool Note::createConnection()
     {
         QMessageBox::critical(0, qApp->tr("Cannot open database"),
             qApp->tr("Unable to establish a database connection.\n"
-                      "This example needs SQLite support. Please read "
+                      "This application needs SQLite support. Please read "
                       "the Qt SQL driver documentation for information how "
                       "to build it.\n\n"
                       "Click Cancel to exit."), QMessageBox::Cancel);
         return false;
     }
 
+    return true;
+}
+
+bool Note::setupTables()
+{
     QSqlQuery query;
     query.exec("create table note (id integer primary key, "
-            "name varchar(255), file_name varchar(255), note_text text,"
-            "has_dirty_data integer default 0,"
-            "file_last_modified datetime,"
-            "file_created datetime,"
-            "created datetime default current_timestamp,"
-            "modified datetime default current_timestamp)");
+               "name varchar(255), file_name varchar(255), note_text text,"
+               "has_dirty_data integer default 0,"
+               "file_last_modified datetime,"
+               "file_created datetime,"
+               "created datetime default current_timestamp,"
+               "modified datetime default current_timestamp)");
 
     return true;
 }

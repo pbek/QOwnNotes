@@ -11,6 +11,7 @@
 void TestNotes::initTestCase()
 {
     Note::createConnection();
+    Note::setupTables();
 
     // generate a notes path
     notesPath = QDir::tempPath() + QDir::separator() + "qownnotes_test_" + QString::number( qrand() );

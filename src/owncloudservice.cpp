@@ -9,10 +9,10 @@
 #include <QScriptEngine>
 #include <QDir>
 #include <QMessageBox>
-#include <QScriptValueIterator>
 #include <QDomDocument>
 #include <QDomNodeList>
 #include "libraries/versionnumber/versionnumber.h"
+#include "calendaritem.h"
 
 const QString OwnCloudService::rootPath = "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";
@@ -148,7 +148,8 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             // TODO: we will have to check which reply came back in the future
 
-
+            // load the Todo items
+            loadTodoItems( data );
 
             return;
         }
@@ -754,4 +755,74 @@ QStringList OwnCloudService::parseCalendarHrefList( QString& data )
     return resultList;
 }
 
+void OwnCloudService::loadTodoItems( QString& data )
+{
+    QStringList todoListICSUrls = parseTodoListICSUrls( data );
+    qDebug() << todoListICSUrls;
 
+    CalendarItem::deleteAllByCalendar( "test" );
+
+    foreach ( QString calendarItemUrl, todoListICSUrls)
+    {
+        CalendarItem::addCalendarItemForRequest( "test", calendarItemUrl );
+
+        if ( !busy )
+        {
+            busy = true;
+            emit( busyChanged( busy ) );
+
+            QUrl url( calendarItemUrl );
+            QNetworkRequest r( url );
+
+            addAuthHeader(&r);
+            r.setUrl( url );
+
+            QNetworkReply *reply = networkManager->get( r );
+            QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+        }
+    }
+
+    qDebug()<<CalendarItem::fetchAllByCalendar( "test" );
+}
+
+/**
+ * @brief Returns a list of URLs with ics calendar items from a calendar response string
+ *
+ * @param data
+ * @return QStringList
+ */
+QStringList OwnCloudService::parseTodoListICSUrls( QString& data )
+{
+    QStringList resultList;
+    QDomDocument doc;
+    doc.setContent( data, true );
+
+    // loop all response blocks
+    QDomNodeList responseNodes = doc.elementsByTagNameNS( NS_DAV, "response" );
+    for ( int i = 0; i < responseNodes.length(); ++i )
+    {
+        QDomNode responseNode = responseNodes.at(i);
+        if ( responseNode.isElement() )
+        {
+            QDomElement elem = responseNode.toElement();
+
+            QDomNodeList contentTypeNodes = elem.elementsByTagNameNS( NS_DAV, "getcontenttype" );
+            if ( contentTypeNodes.length() )
+            {
+                const QString contentType = contentTypeNodes.at(0).toElement().text();
+
+                if ( contentType.contains( "text/calendar" ) )
+                {
+                    QDomNodeList urlPartNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
+                    if ( urlPartNodes.length() )
+                    {
+                        const QString urlPart = urlPartNodes.at(0).toElement().text();
+                        resultList << serverUrl + urlPart;
+                    }
+                }
+            }
+        }
+    }
+
+    return resultList;
+}
