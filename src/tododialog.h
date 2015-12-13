@@ -18,6 +18,7 @@ public:
     explicit TodoDialog(SimpleCrypt *crypto, QWidget *parent = 0);
     ~TodoDialog();
 
+    void reloadTodoListItems();
 private slots:
     void on_TodoDialog_finished(int result);
 
@@ -31,6 +32,7 @@ private:
     void storeSettings();
     void loadTodoListData();
     void reloadTodoList();
+    int findTodoItemRowByUID(QString uid);
 };
 
 #endif // TODODIALOG_H

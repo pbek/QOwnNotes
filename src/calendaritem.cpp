@@ -30,6 +30,11 @@ QString CalendarItem::getUrl()
     return this->url;
 }
 
+QString CalendarItem::getUid()
+{
+    return this->uid;
+}
+
 QString CalendarItem::getDescription()
 {
     return this->description;
@@ -176,7 +181,7 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
     QSqlQuery query;
     QList<CalendarItem> calendarItemList;
 
-    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY priority DESC" );
+    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY priority DESC, modified DESC" );
     query.bindValue( ":calendar", calendar );
     if( !query.exec() )
     {

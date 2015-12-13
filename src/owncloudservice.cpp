@@ -147,16 +147,22 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
             {
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 qDebug() << data;
+                // fetch the calendar item, that was already stored by loadTodoItems()
                 CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar( reply->url().toString(), calendarName );
                 if ( calItem.isFetched() )
                 {
+                    // update the item with the ics data
                     calItem.updateWithICSData( data );
+
+                    // reload the todo list items
+                    this->todoDialog->reloadTodoListItems();
                 }
                 qDebug() << __func__ << " - 'calItem': " << calItem;
             }
             else
             {
                 qDebug() << "Reply from ownCloud calendar todo list page";
+//                qDebug() << data;
 
                 // load the Todo items
                 loadTodoItems( data );
@@ -772,15 +778,12 @@ void OwnCloudService::loadTodoItems( QString& data )
     QStringList todoListICSUrls = parseTodoListICSUrls( data );
     qDebug() << todoListICSUrls;
 
-    // TODO: get real calendar string
-
     CalendarItem::deleteAllByCalendar( calendarName );
 
     foreach ( QString calendarItemUrl, todoListICSUrls)
     {
         CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl );
 
-        // does these requests work?
         //if ( !busy )
         {
             busy = true;

@@ -35,6 +35,7 @@ public:
     void setDescription(QString text);
     static bool setupTables();
     bool updateWithICSData(QString icsData);
+    QString getUid();
 private:
     int id;
     QString summary;
