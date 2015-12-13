@@ -143,13 +143,24 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
         }
         else if ( reply->url().path().startsWith( calendarPath ) )
         {
-            qDebug() << "Reply from ownCloud calendar todo list page";
-            qDebug() << data;
+            if ( reply->url().path().endsWith( ".ics" ) )
+            {
+                qDebug() << "Reply from ownCloud calendar item ics page";
+                qDebug() << data;
+                CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar( reply->url().toString(), calendarName );
+                if ( calItem.isFetched() )
+                {
+                    calItem.updateWithICSData( data );
+                }
+                qDebug() << __func__ << " - 'calItem': " << calItem;
+            }
+            else
+            {
+                qDebug() << "Reply from ownCloud calendar todo list page";
 
-            // TODO: we will have to check which reply came back in the future
-
-            // load the Todo items
-            loadTodoItems( data );
+                // load the Todo items
+                loadTodoItems( data );
+            }
 
             return;
         }
@@ -370,7 +381,8 @@ void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
  */
 void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog )
 {
-    todoDialog = dialog;
+    this->todoDialog = dialog;
+    this->calendarName = calendarName;
 
     QSettings settings;
     QString calendarUrl = settings.value( "ownCloud/todoCalendarUrlList/" + calendarName ).toString();
@@ -760,13 +772,16 @@ void OwnCloudService::loadTodoItems( QString& data )
     QStringList todoListICSUrls = parseTodoListICSUrls( data );
     qDebug() << todoListICSUrls;
 
-    CalendarItem::deleteAllByCalendar( "test" );
+    // TODO: get real calendar string
+
+    CalendarItem::deleteAllByCalendar( calendarName );
 
     foreach ( QString calendarItemUrl, todoListICSUrls)
     {
-        CalendarItem::addCalendarItemForRequest( "test", calendarItemUrl );
+        CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl );
 
-        if ( !busy )
+        // does these requests work?
+        //if ( !busy )
         {
             busy = true;
             emit( busyChanged( busy ) );
@@ -782,7 +797,7 @@ void OwnCloudService::loadTodoItems( QString& data )
         }
     }
 
-    qDebug()<<CalendarItem::fetchAllByCalendar( "test" );
+    qDebug()<<CalendarItem::fetchAllByCalendar( calendarName );
 }
 
 /**

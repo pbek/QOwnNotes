@@ -45,6 +45,7 @@ private:
     QString calendarPath;
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
+    QString calendarName;
     void checkAppInfo(QNetworkReply *reply);
     bool busy;
     void readSettings();

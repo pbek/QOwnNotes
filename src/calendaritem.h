@@ -24,7 +24,7 @@ public:
     bool fillByFileName(QString fileName);
     bool remove();
     bool isFetched();
-    CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
+    static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
     static bool addCalendarItemForRequest(QString calendar, QString url);
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
     static bool deleteAllByCalendar(QString calendar);
@@ -34,6 +34,7 @@ public:
     void setSummary(QString text);
     void setDescription(QString text);
     static bool setupTables();
+    bool updateWithICSData(QString icsData);
 private:
     int id;
     QString summary;

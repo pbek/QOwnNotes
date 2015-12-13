@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QApplication>
 #include <QSqlError>
+#include <QRegularExpression>
 
 
 CalendarItem::CalendarItem()
@@ -97,12 +98,9 @@ CalendarItem CalendarItem::fetch( int id )
     {
         qDebug() << __func__ << ": " << query.lastError();
     }
-    else
+    else if ( query.first() )
     {
-        if ( query.first() )
-        {
-            calendarItem = calendarItemFromQuery( query );
-        }
+        calendarItem.fillFromQuery( query );
     }
 
     return calendarItem;
@@ -121,12 +119,9 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar( QString url, QString calendar 
     {
         qDebug() << __func__ << ": " << query.lastError();
     }
-    else
+    else if ( query.first() )
     {
-        if ( query.first() )
-        {
-            calendarItem.fillFromQuery( query );
-        }
+        calendarItem.fillFromQuery( query );
     }
 
     return calendarItem;
@@ -160,29 +155,18 @@ CalendarItem CalendarItem::calendarItemFromQuery( QSqlQuery query )
 
 bool CalendarItem::fillFromQuery( QSqlQuery query )
 {
-    int id = query.value("id").toInt();
-    QString summary = query.value("summary").toString();
-    QString url = query.value("url").toString();
-    QString description = query.value("description").toString();
-    bool hasDirtyData = query.value("has_dirty_data").toInt() == 1;
-    int priority = query.value("priority").toInt();
-    QString uid = query.value("uid").toString();
-    QString icsData = query.value("ics_data").toString();
-    QDateTime alarmDate = query.value("alarm_date").toDateTime();
-    QDateTime created = query.value("created").toDateTime();
-    QDateTime modified = query.value("modified").toDateTime();
-
-    this->id = id;
-    this->summary = summary;
-    this->url = url;
-    this->description = description;
-    this->hasDirtyData = hasDirtyData;
-    this->priority = priority;
-    this->uid = uid;
-    this->icsData = icsData;
-    this->alarmDate = alarmDate;
-    this->created = created;
-    this->modified = modified;
+    this->id = query.value("id").toInt();
+    this->summary = query.value("summary").toString();
+    this->url = query.value("url").toString();
+    this->description = query.value("description").toString();
+    this->hasDirtyData = query.value("has_dirty_data").toInt() == 1;
+    this->priority = query.value("priority").toInt();
+    this->uid = query.value("uid").toString();
+    this->calendar = query.value("calendar").toString();
+    this->icsData = query.value("ics_data").toString();
+    this->alarmDate = query.value("alarm_date").toDateTime();
+    this->created = query.value("created").toDateTime();
+    this->modified = query.value("modified").toDateTime();
 
     return true;
 }
@@ -241,39 +225,33 @@ QList<CalendarItem> CalendarItem::search( QString text )
 bool CalendarItem::store() {
     QSqlQuery query;
 
-    if ( this->url == "" )
-    {
-        this->url = this->summary + ".txt";
-    }
-
     if ( this->id > 0 )
     {
         query.prepare( "UPDATE calendarItem SET "
                        "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, "
-                       "calendar = :calendar, uid = :uid, ics_data = :ics_data "
-                       "alarm_date = :alarm_date, priority = :priority, modified = :modified "
+                       "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
+                       "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified "
                        "WHERE id = :id" );
         query.bindValue( ":id", this->id );
     }
     else
     {
         query.prepare( "INSERT INTO calendarItem"
-                       "( summary, url, description, calendar, uid, ics_data, has_dirty_data, alarm_date, priority, modified ) "
-                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :has_dirty_data, :alarm_date, :priority, :modified )");
+                       "( summary, url, description, calendar, uid, ics_data, has_dirty_data, alarm_date, priority, created, modified ) "
+                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :has_dirty_data, :alarm_date, :priority, :created, :modified )");
     }
-
-    QDateTime modified = QDateTime::currentDateTime();
 
     query.bindValue( ":summary", this->summary );
     query.bindValue( ":url", this->url );
     query.bindValue( ":description", this->description );
+    query.bindValue( ":has_dirty_data", this->hasDirtyData ? 1 : 0 );
     query.bindValue( ":calendar", this->calendar );
     query.bindValue( ":uid", this->uid );
     query.bindValue( ":ics_data", this->icsData );
-    query.bindValue( ":has_dirty_data", this->hasDirtyData ? 1 : 0 );
-    query.bindValue( ":priority", this->priority );
     query.bindValue( ":alarm_date", this->alarmDate );
-    query.bindValue( ":modified", modified );
+    query.bindValue( ":priority", this->priority );
+    query.bindValue( ":created", this->created );
+    query.bindValue( ":modified", this->modified );
 
     // on error
     if( !query.exec() )
@@ -287,7 +265,6 @@ bool CalendarItem::store() {
         this->id = query.lastInsertId().toInt();
     }
 
-    this->modified = modified;
     return true;
 }
 
@@ -322,8 +299,42 @@ bool CalendarItem::isFetched() {
     return ( this->id > 0 );
 }
 
+bool CalendarItem::updateWithICSData( QString icsData )
+{
+    this->icsData = icsData;
+
+    QRegularExpression regex;
+    regex.setPatternOptions( QRegularExpression::MultilineOption );
+    QRegularExpressionMatch match;
+    QString dateFormat = "yyyyMMddThhmmssZ";
+
+    // set the summary
+    regex.setPattern( "^SUMMARY:(.+)$" );
+    match = regex.match( icsData );
+    this->summary = match.captured(1).trimmed();
+
+    // set the UID
+    regex.setPattern( "^UID:(.+)$" );
+    match = regex.match( icsData );
+    this->uid = match.captured(1).trimmed();
+
+    // set the created date
+    regex.setPattern( "^CREATED:(.+)$" );
+    match = regex.match( icsData );
+    this->created = QDateTime::fromString( match.captured(1).trimmed(), dateFormat );
+
+    // set the last modified date
+    regex.setPattern( "^LAST-MODIFIED:(.+)$" );
+    match = regex.match( icsData );
+    this->modified = QDateTime::fromString( match.captured(1).trimmed(), dateFormat );
+
+    // TODO: parse and set more attributes
+
+    return this->store();
+}
+
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem)
 {
-    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>" << calendarItem.summary << " <url>" << calendarItem.url << " <hasDityData>" << calendarItem.hasDirtyData;
+    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>" << calendarItem.summary << " <url>" << calendarItem.url << " <calendar>" << calendarItem.calendar;
     return dbg.space();
 }
