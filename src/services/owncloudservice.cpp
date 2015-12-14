@@ -1,8 +1,8 @@
 #include "mainwindow.h"
-#include "owncloudservice.h"
-#include "settingsdialog.h"
-#include "trashdialog.h"
-#include "versiondialog.h"
+#include "services/owncloudservice.h"
+#include "dialogs/settingsdialog.h"
+#include "dialogs/trashdialog.h"
+#include "dialogs/versiondialog.h"
 #include <QSettings>
 #include <QDebug>
 #include <QUrlQuery>
@@ -12,7 +12,7 @@
 #include <QDomDocument>
 #include <QDomNodeList>
 #include "libraries/versionnumber/versionnumber.h"
-#include "calendaritem.h"
+#include "entities/calendaritem.h"
 
 const QString OwnCloudService::rootPath = "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";

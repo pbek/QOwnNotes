@@ -1,6 +1,6 @@
-#include "calendaritem.h"
-#include "owncloudservice.h"
-#include "tododialog.h"
+#include "entities/calendaritem.h"
+#include "services/owncloudservice.h"
+#include "dialogs/tododialog.h"
 #include "ui_tododialog.h"
 
 #include <QSettings>

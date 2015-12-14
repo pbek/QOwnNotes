@@ -7,8 +7,8 @@
 #include <QObject>
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "mainwindow.h"
-#include "settingsdialog.h"
-#include "tododialog.h"
+#include "dialogs/settingsdialog.h"
+#include "dialogs/tododialog.h"
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.1"
 

@@ -7,8 +7,8 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QFileDialog>
-#include "note.h"
-#include "htmlentities.h"
+#include "entities/note.h"
+#include "helpers/htmlentities.h"
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
     QDialog(parent),

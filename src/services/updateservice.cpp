@@ -1,4 +1,4 @@
-#include "updateservice.h"
+#include "services/updateservice.h"
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
@@ -12,7 +12,7 @@
 #include <QSettings>
 #include <QApplication>
 #include "build_number.h"
-#include "updatedialog.h"
+#include "dialogs/updatedialog.h"
 #include "version.h"
 
 UpdateService::UpdateService(QObject *parent) : QObject(parent)

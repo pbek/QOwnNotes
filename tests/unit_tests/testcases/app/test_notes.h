@@ -4,7 +4,7 @@
 //#include "basetestcase.h"
 //#include "models/key-models/keyfactory.h"
 #include <QObject>
-#include "note.h"
+#include "entities/note.h"
 
 class TestNotes : public QObject
 {

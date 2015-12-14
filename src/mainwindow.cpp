@@ -1,8 +1,8 @@
 #include "mainwindow.h"
-#include "linkdialog.h"
-#include "owncloudservice.h"
+#include "dialogs/linkdialog.h"
+#include "services/owncloudservice.h"
 #include "ui_mainwindow.h"
-#include "tododialog.h"
+#include "dialogs/tododialog.h"
 #include <QSplitter>
 #include <QDebug>
 #include <QDir>
@@ -17,12 +17,12 @@
 #include <QSystemTrayIcon>
 #include <QShortcut>
 #include "diff_match_patch/diff_match_patch.h"
-#include "notediffdialog.h"
+#include "dialogs/notediffdialog.h"
 #include "build_number.h"
 #include "version.h"
-#include "aboutdialog.h"
-#include "settingsdialog.h"
-#include "calendaritem.h"
+#include "dialogs/aboutdialog.h"
+#include "dialogs/settingsdialog.h"
+#include "entities/calendaritem.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :

@@ -1,5 +1,5 @@
-#include "owncloudservice.h"
-#include "settingsdialog.h"
+#include "services/owncloudservice.h"
+#include "dialogs/settingsdialog.h"
 #include "ui_settingsdialog.h"
 #include <QSettings>
 #include <QFileDialog>

@@ -10,11 +10,11 @@
 #include <QEvent>
 #include <QSignalMapper>
 #include <QSystemTrayIcon>
-#include <note.h>
+#include <entities/note.h>
 #include "markdown-highlight/highlighter.h"
-#include "notehistory.h"
-#include "notediffdialog.h"
-#include "updateservice.h"
+#include "entities/notehistory.h"
+#include "dialogs/notediffdialog.h"
+#include "services/updateservice.h"
 #include "libraries/simplecrypt/simplecrypt.h"
 
 
