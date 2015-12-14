@@ -17,7 +17,6 @@ INCLUDEPATH += $$PWD/libraries
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    note.cpp \
     libraries/markdown-highlight/pmh_parser.c \
     libraries/markdown-highlight/highlighter.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
@@ -29,24 +28,24 @@ SOURCES += main.cpp\
     libraries/hoedown/html_blocks.c \
     libraries/hoedown/stack.c \
     libraries/hoedown/version.c \
-    notediffdialog.cpp \
-    aboutdialog.cpp \
-    updateservice.cpp \
-    updatedialog.cpp \
-    settingsdialog.cpp \
     libraries/simplecrypt/simplecrypt.cpp \
-    owncloudservice.cpp \
-    versiondialog.cpp \
-    trashdialog.cpp \
     libraries/versionnumber/versionnumber.cpp \
-    linkdialog.cpp \
-    notehistory.cpp \
     htmlentities.cpp \
-    tododialog.cpp \
-    calendaritem.cpp
+    dialogs/aboutdialog.cpp \
+    dialogs/linkdialog.cpp \
+    dialogs/notediffdialog.cpp \
+    dialogs/settingsdialog.cpp \
+    dialogs/tododialog.cpp \
+    dialogs/trashdialog.cpp \
+    dialogs/updatedialog.cpp \
+    dialogs/versiondialog.cpp \
+    entities/calendaritem.cpp \
+    entities/note.cpp \
+    entities/notehistory.cpp \
+    services/owncloudservice.cpp \
+    services/updateservice.cpp
 
 HEADERS  += mainwindow.h \
-    note.h \
     build_number.h \
     version.h \
     libraries/markdown-highlight/pmh_parser.h \
@@ -60,21 +59,22 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/escape.h \
     libraries/hoedown/stack.h \
     libraries/hoedown/version.h \
-    notediffdialog.h \
-    aboutdialog.h \
-    updateservice.h \
-    updatedialog.h \
-    settingsdialog.h \
     libraries/simplecrypt/simplecrypt.h \
-    owncloudservice.h \
-    versiondialog.h \
-    trashdialog.h \
     libraries/versionnumber/versionnumber.h \
-    notehistory.h \
-    linkdialog.h \
     htmlentities.h \
-    tododialog.h \
-    calendaritem.h
+    entities/notehistory.h \
+    entities/note.h \
+    entities/calendaritem.h \
+    dialogs/aboutdialog.h \
+    dialogs/linkdialog.h \
+    dialogs/notediffdialog.h \
+    dialogs/settingsdialog.h \
+    dialogs/tododialog.h \
+    dialogs/trashdialog.h \
+    dialogs/updatedialog.h \
+    dialogs/versiondialog.h \
+    services/owncloudservice.h \
+    services/updateservice.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
