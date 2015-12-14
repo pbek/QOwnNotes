@@ -30,7 +30,6 @@ SOURCES += main.cpp\
     libraries/hoedown/version.c \
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
-    htmlentities.cpp \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -43,7 +42,8 @@ SOURCES += main.cpp\
     entities/note.cpp \
     entities/notehistory.cpp \
     services/owncloudservice.cpp \
-    services/updateservice.cpp
+    services/updateservice.cpp \
+    helpers/htmlentities.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -61,7 +61,6 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/version.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
-    htmlentities.h \
     entities/notehistory.h \
     entities/note.h \
     entities/calendaritem.h \
@@ -74,7 +73,8 @@ HEADERS  += mainwindow.h \
     dialogs/updatedialog.h \
     dialogs/versiondialog.h \
     services/owncloudservice.h \
-    services/updateservice.h
+    services/updateservice.h \
+    helpers/htmlentities.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
