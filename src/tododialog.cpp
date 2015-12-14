@@ -75,7 +75,7 @@ void TodoDialog::reloadTodoListItems()
        QListWidgetItem *item = new QListWidgetItem( calItem.getSummary() );
        item->setWhatsThis( uid );
 
-       Qt::CheckState checkedState = true ? Qt::Checked : Qt::Unchecked;
+       Qt::CheckState checkedState = calItem.isCompleted() ? Qt::Checked : Qt::Unchecked;
        item->setCheckState( checkedState );
 
        item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );

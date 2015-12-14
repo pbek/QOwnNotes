@@ -61,6 +61,7 @@ bool CalendarItem::setupTables()
     query.exec("create table calendarItem (id integer primary key, "
             "summary varchar(255), url varchar(255), description text,"
             "has_dirty_data integer default 0,"
+            "completed integer default 0,"
             "priority integer,"
             "calendar varchar(255),"
             "uid varchar(255),"
@@ -165,6 +166,7 @@ bool CalendarItem::fillFromQuery( QSqlQuery query )
     this->url = query.value("url").toString();
     this->description = query.value("description").toString();
     this->hasDirtyData = query.value("has_dirty_data").toInt() == 1;
+    this->completed = query.value("completed").toInt() == 1;
     this->priority = query.value("priority").toInt();
     this->uid = query.value("uid").toString();
     this->calendar = query.value("calendar").toString();
@@ -233,7 +235,7 @@ bool CalendarItem::store() {
     if ( this->id > 0 )
     {
         query.prepare( "UPDATE calendarItem SET "
-                       "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, "
+                       "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, completed = :completed, "
                        "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
                        "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified "
                        "WHERE id = :id" );
@@ -242,14 +244,15 @@ bool CalendarItem::store() {
     else
     {
         query.prepare( "INSERT INTO calendarItem"
-                       "( summary, url, description, calendar, uid, ics_data, has_dirty_data, alarm_date, priority, created, modified ) "
-                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :has_dirty_data, :alarm_date, :priority, :created, :modified )");
+                       "( summary, url, description, calendar, uid, ics_data, has_dirty_data, completed, alarm_date, priority, created, modified ) "
+                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified )");
     }
 
     query.bindValue( ":summary", this->summary );
     query.bindValue( ":url", this->url );
     query.bindValue( ":description", this->description );
     query.bindValue( ":has_dirty_data", this->hasDirtyData ? 1 : 0 );
+    query.bindValue( ":completed", this->completed ? 1 : 0 );
     query.bindValue( ":calendar", this->calendar );
     query.bindValue( ":uid", this->uid );
     query.bindValue( ":ics_data", this->icsData );
@@ -304,6 +307,10 @@ bool CalendarItem::isFetched() {
     return ( this->id > 0 );
 }
 
+bool CalendarItem::isCompleted() {
+    return this->completed;
+}
+
 bool CalendarItem::updateWithICSData( QString icsData )
 {
     this->icsData = icsData;
@@ -317,6 +324,11 @@ bool CalendarItem::updateWithICSData( QString icsData )
     regex.setPattern( "^SUMMARY:(.+)$" );
     match = regex.match( icsData );
     this->summary = match.captured(1).trimmed();
+
+    // set the completed status
+    regex.setPattern( "^STATUS:COMPLETED" );
+    match = regex.match( icsData );
+    this->completed = match.hasMatch();
 
     // set the UID
     regex.setPattern( "^UID:(.+)$" );

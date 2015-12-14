@@ -24,6 +24,7 @@ public:
     bool fillByFileName(QString fileName);
     bool remove();
     bool isFetched();
+    bool isCompleted();
     static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
     static bool addCalendarItemForRequest(QString calendar, QString url);
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
@@ -46,6 +47,7 @@ private:
     QString icsData;
     int priority;
     bool hasDirtyData;
+    bool completed;
     QDateTime alarmDate;
     QDateTime created;
     QDateTime modified;
