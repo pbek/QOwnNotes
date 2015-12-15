@@ -55,7 +55,7 @@
              <number>1</number>
             </property>
             <property name="maximum">
-             <number>10</number>
+             <number>9</number>
             </property>
             <property name="pageStep">
              <number>1</number>
@@ -102,6 +102,13 @@
         </item>
         <item row="1" column="0">
          <widget class="QListWidget" name="todoList"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QCheckBox" name="showCompletedItemsCheckBox">
+          <property name="text">
+           <string>Show completed items</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

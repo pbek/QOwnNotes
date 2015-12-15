@@ -12,13 +12,27 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
     this->crypto = crypto;
 
     ui->setupUi(this);
-    setupMainSplitter();
+    setupUi();
     loadTodoListData();
 }
 
 TodoDialog::~TodoDialog()
 {
     delete ui;
+}
+
+void TodoDialog::setupUi()
+{
+    setupMainSplitter();
+
+    QSettings settings;
+
+    {
+        const QSignalBlocker blocker( this->ui->showCompletedItemsCheckBox );
+
+        bool showCompletedItems = settings.value( "TodoDialog/showCompletedItems" ).toBool();
+        ui->showCompletedItemsCheckBox->setChecked( showCompletedItems );
+    }
 }
 
 void TodoDialog::setupMainSplitter()
@@ -36,6 +50,9 @@ void TodoDialog::setupMainSplitter()
     this->ui->gridLayout->layout()->addWidget( this->mainSplitter );
 }
 
+/**
+ * @brief Loads the calendar items from the settings to the todo list selector
+ */
 void TodoDialog::loadTodoListData()
 {
     QSettings settings;
@@ -68,6 +85,15 @@ void TodoDialog::reloadTodoListItems()
         while ( itr.hasNext() )
         {
            CalendarItem calItem = itr.next();
+
+           // skip completed items if the "show completed items" ckeckbox is not checked
+           if ( !ui->showCompletedItemsCheckBox->checkState() )
+           {
+               if ( calItem.isCompleted() ) {
+                   continue;
+               }
+           }
+
            QString uid = calItem.getUid();
 
            // skip items that were not fully loaded yet
@@ -139,6 +165,7 @@ void TodoDialog::storeSettings()
     settings.setValue( "TodoDialog/geometry", saveGeometry() );
     settings.setValue( "TodoDialog/mainSplitterState", this->mainSplitter->saveState() );
 //    settings.setValue( "TodoDialog/menuBarGeometry", ui->menuBar->saveGeometry() );
+    settings.setValue( "TodoDialog/showCompletedItems", ui->showCompletedItemsCheckBox->checkState() );
 }
 
 void TodoDialog::on_TodoDialog_finished(int result)
@@ -168,4 +195,10 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
 void TodoDialog::on_prioritySlider_valueChanged(int value)
 {
     ui->prioritySlider->setToolTip( "priority: " + QString::number( value ) );
+}
+
+void TodoDialog::on_showCompletedItemsCheckBox_clicked()
+{
+    storeSettings();
+    reloadTodoList();
 }

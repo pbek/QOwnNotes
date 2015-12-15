@@ -25,8 +25,8 @@ private slots:
     void on_TodoDialog_finished(int result);
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
     void on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
-
     void on_prioritySlider_valueChanged(int value);
+    void on_showCompletedItemsCheckBox_clicked();
 
 private:
     Ui::TodoDialog *ui;
@@ -38,6 +38,7 @@ private:
     void reloadTodoList();
     int findTodoItemRowByUID(QString uid);
     void resetEditFrameControls();
+    void setupUi();
 };
 
 #endif // TODODIALOG_H

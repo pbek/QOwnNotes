@@ -2,6 +2,7 @@
 
 ## 0.61
 - only todo items (not calendar items) are now shown in your todo list
+- you can now choose to hide completed todo items
 
 ## 0.60
 - if the `Ctrl` key is pressed in the note text edit to click a link the mouse cursor is now a pointing hand
