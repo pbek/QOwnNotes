@@ -55,6 +55,7 @@ private:
     QDateTime modified;
     static QHash<QString, QString> icsDataToHash(QString icsData);
     static QString decodeICSDataLine(QString line);
+    static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
 };
 
 #endif // CALENDAR_ITEM_H

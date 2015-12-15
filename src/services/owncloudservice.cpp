@@ -152,7 +152,14 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
                 if ( calItem.isFetched() )
                 {
                     // update the item with the ics data
-                    calItem.updateWithICSData( data );
+                    bool wasUpdated = calItem.updateWithICSData( data );
+
+                    // if item wasn't updated (for example because it was no VTODO item) we will remove it
+                    if ( !wasUpdated )
+                    {
+                        calItem.remove();
+                        return;
+                    }
 
                     // reload the todo list items
                     this->todoDialog->reloadTodoListItems();

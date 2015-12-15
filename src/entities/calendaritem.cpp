@@ -343,6 +343,11 @@ bool CalendarItem::updateWithICSData( QString icsData )
     // parse and transform the ics data to a hash with the data
     QHash<QString, QString> hash = icsDataToHash( icsData );
 
+    // we only need VTODO items!
+    if ( hash["BEGIN1"] != "VTODO" ) {
+        return false;
+    }
+
     QString dateFormat = "yyyyMMddThhmmssZ";
 
     this->summary = hash.contains( "SUMMARY" ) ? hash["SUMMARY"] : "";
@@ -387,6 +392,9 @@ QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
             // set last key for multi line texts
             lastKey = match.captured(1);
 
+            // find a free key
+            lastKey = findFreeHashKey( &hash, lastKey );
+
             // add new key / value pair to the hash
             hash[lastKey] = decodeICSDataLine( match.captured(2) );
         }
@@ -406,6 +414,39 @@ QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
 
     return hash;
 }
+
+/**
+ * @brief Finds a free key in a hash
+ * @param hash
+ * @param key
+ * @param number
+ * @return
+ */
+QString CalendarItem::findFreeHashKey( QHash<QString, QString> *hash, QString key, int number )
+{
+    // give up after 1000 tries
+    if ( number >= 1000 )
+    {
+        return key;
+    }
+
+    QString newKey = key;
+
+    // if number is bigger than 0 add the number to the key
+    if ( number > 0 )
+    {
+        newKey = key + QString::number( number );
+    }
+
+    // if the key is taken find increase number and try to find a new key
+    if ( hash->value( newKey ) != "" )
+    {
+        return findFreeHashKey( hash, key, ++number );
+    }
+
+    return newKey;
+}
+
 
 /**
  * @brief Decodes an ics data line
