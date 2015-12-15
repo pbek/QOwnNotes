@@ -2,6 +2,7 @@
 #define TODODIALOG_H
 
 #include <QDialog>
+#include <QListWidgetItem>
 #include <QSplitter>
 
 #include <simplecrypt/simplecrypt.h>
@@ -19,10 +20,13 @@ public:
     ~TodoDialog();
 
     void reloadTodoListItems();
+    void clearTodoList();
 private slots:
     void on_TodoDialog_finished(int result);
-
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
+    void on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
+    void on_prioritySlider_valueChanged(int value);
 
 private:
     Ui::TodoDialog *ui;
@@ -33,6 +37,7 @@ private:
     void loadTodoListData();
     void reloadTodoList();
     int findTodoItemRowByUID(QString uid);
+    void resetEditFrameControls();
 };
 
 #endif // TODODIALOG_H

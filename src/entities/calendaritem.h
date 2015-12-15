@@ -37,6 +37,8 @@ public:
     static bool setupTables();
     bool updateWithICSData(QString icsData);
     QString getUid();
+    static CalendarItem fetchByUid(QString uid);
+    int getPriority();
 private:
     int id;
     QString summary;
@@ -51,6 +53,8 @@ private:
     QDateTime alarmDate;
     QDateTime created;
     QDateTime modified;
+    static QHash<QString, QString> icsDataToHash(QString icsData);
+    static QString decodeICSDataLine(QString line);
 };
 
 #endif // CALENDAR_ITEM_H

@@ -2,6 +2,8 @@
 
 ## 0.60
 - if the `Ctrl` key is pressed in the note text edit to click a link the mouse cursor is now a pointing hand
+- you are now able to view your **ownCloud todo lists** (ownCloud tasks) in QOwnNotes (readonly so far)
+    - you can setup which todo lists to view in the new *todo* tab in the settings dialog
 
 ## 0.59
 - an *Insert current time* button was added to the toolbar so that the feature also works in Gnome on GNU/Linux

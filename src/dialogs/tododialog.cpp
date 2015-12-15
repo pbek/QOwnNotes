@@ -59,29 +59,54 @@ void TodoDialog::reloadTodoListItems()
 {
     QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar( ui->todoListSelector->currentText() );
 
-    ui->todoList->clear();
-
-    QListIterator<CalendarItem> itr ( calendarItemList );
-    while ( itr.hasNext() )
     {
-       CalendarItem calItem = itr.next();
-       QString uid = calItem.getUid();
+        const QSignalBlocker blocker( this->ui->todoList );
 
-       // skip items that were not fully loaded yet
-       if ( uid == "" ) {
-           continue;
-       }
+        ui->todoList->clear();
 
-       QListWidgetItem *item = new QListWidgetItem( calItem.getSummary() );
-       item->setWhatsThis( uid );
+        QListIterator<CalendarItem> itr ( calendarItemList );
+        while ( itr.hasNext() )
+        {
+           CalendarItem calItem = itr.next();
+           QString uid = calItem.getUid();
 
-       Qt::CheckState checkedState = calItem.isCompleted() ? Qt::Checked : Qt::Unchecked;
-       item->setCheckState( checkedState );
+           // skip items that were not fully loaded yet
+           if ( uid == "" ) {
+               continue;
+           }
 
-       item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
+           QListWidgetItem *item = new QListWidgetItem( calItem.getSummary() );
+           item->setWhatsThis( uid );
+           item->setCheckState( calItem.isCompleted() ? Qt::Checked : Qt::Unchecked );
+           item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable );
 
-       ui->todoList->addItem( item );
+           ui->todoList->addItem( item );
+        }
     }
+
+    // set the current row of the todo list to the first row
+    if ( ui->todoList->count() > 0 )
+    {
+        ui->todoList->setCurrentRow( 0 );
+    }
+    else
+    {
+        resetEditFrameControls();
+    }
+}
+
+void TodoDialog::clearTodoList()
+{
+    const QSignalBlocker blocker( this->ui->todoList );
+    ui->todoList->clear();
+    resetEditFrameControls();
+}
+
+void TodoDialog::resetEditFrameControls()
+{
+    ui->summaryEdit->setText( "" );
+    ui->descriptionEdit->setText( "" );
+    ui->prioritySlider->setValue( 0 );
 }
 
 /**
@@ -124,4 +149,23 @@ void TodoDialog::on_TodoDialog_finished(int result)
 void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1)
 {
     reloadTodoList();
+}
+
+void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
+{
+    QString uid = current->whatsThis();
+
+    CalendarItem calItem = CalendarItem::fetchByUid( uid );
+    if ( calItem.isFetched() )
+    {
+        ui->summaryEdit->setText( calItem.getSummary() );
+        ui->summaryEdit->setCursorPosition( 0 );
+        ui->descriptionEdit->setText( calItem.getDescription() );
+        ui->prioritySlider->setValue( calItem.getPriority() );
+    }
+}
+
+void TodoDialog::on_prioritySlider_valueChanged(int value)
+{
+    ui->prioritySlider->setToolTip( "priority: " + QString::number( value ) );
 }

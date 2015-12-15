@@ -170,7 +170,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             return;
         }
-        else if ( reply->url().path() == "" )
+        else if ( reply->url().toString() == serverUrl )
         {
             qDebug() << "Reply from main server url";
 
@@ -391,7 +391,22 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
     this->calendarName = calendarName;
 
     QSettings settings;
-    QString calendarUrl = settings.value( "ownCloud/todoCalendarUrlList/" + calendarName ).toString();
+    QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
+    int index = todoCalendarEnabledList.indexOf( QRegularExpression::escape( calendarName ) );
+
+    // return if we did't find the calendar, this should not happen
+    if ( index == -1 ) {
+        return;
+    }
+
+    QStringList todoCalendarEnabledUrlList = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList();
+
+    // return if there are to few items in the url list
+    if ( todoCalendarEnabledUrlList.size() < todoCalendarEnabledList.size() ) {
+        return;
+    }
+
+    QString calendarUrl = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList().at( index );
 
     if ( !busy )
     {
@@ -779,6 +794,7 @@ void OwnCloudService::loadTodoItems( QString& data )
     qDebug() << todoListICSUrls;
 
     CalendarItem::deleteAllByCalendar( calendarName );
+    this->todoDialog->clearTodoList();
 
     foreach ( QString calendarItemUrl, todoListICSUrls)
     {

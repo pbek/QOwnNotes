@@ -101,6 +101,7 @@ void SettingsDialog::storeSettings()
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
+    QStringList todoCalendarEnabledUrlList;
     for ( int i = 0; i < ui->todoCalendarListWidget->count(); i++ )
     {
         QListWidgetItem * item = ui->todoCalendarListWidget->item( i );
@@ -109,12 +110,14 @@ void SettingsDialog::storeSettings()
 
         if ( item->checkState() == Qt::Checked ) {
             todoCalendarEnabledList.append( item->text() );
+            todoCalendarEnabledUrlList.append( item->toolTip() );
         }
     }
 
     // store the todo calendar data to the settings
     settings.setValue( "ownCloud/todoCalendarUrlList", todoCalendarUrlList );
     settings.setValue( "ownCloud/todoCalendarEnabledList", todoCalendarEnabledList );
+    settings.setValue( "ownCloud/todoCalendarEnabledUrlList", todoCalendarEnabledUrlList );
 }
 
 void SettingsDialog::readSettings()
@@ -312,32 +315,32 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
     QListIterator<QString> itr ( items );
     while ( itr.hasNext() )
     {
-       QString urlPart = itr.next();
-       QString url = ui->serverUrlEdit->text() + urlPart;
+        QString urlPart = itr.next();
+        QString url = ui->serverUrlEdit->text() + urlPart;
 
-       // get the name out of the url part
-       QRegularExpression regex( "\/([^\/]*)\/$" );
-       QRegularExpressionMatch match = regex.match( urlPart );
-       QString name = match.captured(1);
+        // get the name out of the url part
+        QRegularExpression regex( "\/([^\/]*)\/$" );
+        QRegularExpressionMatch match = regex.match( urlPart );
+        QString name = match.captured(1);
 
-       // remove percent encoding
-       name = QUrl::fromPercentEncoding( name.toLatin1() );
+        // remove percent encoding
+        name = QUrl::fromPercentEncoding( name.toLatin1() );
 
-       // skip the contact birthdays calendar
-       if ( name == "contact_birthdays" ) {
-           continue;
-       }
+        // skip the contact birthdays calendar
+        if ( name == "contact_birthdays" ) {
+            continue;
+        }
 
-       // create the list widget item and add it to the todo calendar list widget
-       QListWidgetItem *item = new QListWidgetItem( name );
+        // create the list widget item and add it to the todo calendar list widget
+        QListWidgetItem *item = new QListWidgetItem( name );
 
-       // eventually check if item was checked
-       Qt::CheckState checkedState = readCheckedState ? ( todoCalendarEnabledList.contains( name ) ? Qt::Checked : Qt::Unchecked ) : Qt::Checked;
-       item->setCheckState( checkedState );
+        // eventually check if item was checked
+        Qt::CheckState checkedState = readCheckedState ? ( todoCalendarEnabledList.contains( name ) ? Qt::Checked : Qt::Unchecked ) : Qt::Checked;
+        item->setCheckState( checkedState );
 
-       item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
-       item->setToolTip( url );
-       ui->todoCalendarListWidget->addItem( item );
+        item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
+        item->setToolTip( url );
+        ui->todoCalendarListWidget->addItem( item );
     }
 }
 

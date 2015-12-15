@@ -31,11 +31,57 @@
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="1" column="0">
-         <widget class="QTextEdit" name="descriptionEdit"/>
+        <item row="4" column="0">
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Priority</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="prioritySlider">
+            <property name="toolTip">
+             <string>Priority</string>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="accessibleName">
+             <string extracomment="Priority"/>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>10</number>
+            </property>
+            <property name="pageStep">
+             <number>1</number>
+            </property>
+            <property name="sliderPosition">
+             <number>1</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="6" column="0">
+         <widget class="QTextEdit" name="descriptionEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
         <item row="0" column="0">
          <widget class="QLineEdit" name="summaryEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
           <property name="placeholderText">
            <string>summary</string>
           </property>

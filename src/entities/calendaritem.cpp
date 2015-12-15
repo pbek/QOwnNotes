@@ -40,6 +40,11 @@ QString CalendarItem::getDescription()
     return this->description;
 }
 
+int CalendarItem::getPriority()
+{
+    return this->priority;
+}
+
 bool CalendarItem::getHasDirtyData()
 {
     return this->hasDirtyData;
@@ -133,6 +138,26 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar( QString url, QString calendar 
     return calendarItem;
 }
 
+CalendarItem CalendarItem::fetchByUid( QString uid )
+{
+    CalendarItem calendarItem;
+    QSqlQuery query;
+
+    query.prepare( "SELECT * FROM calendarItem WHERE uid = :uid" );
+    query.bindValue( ":uid", uid );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else if ( query.first() )
+    {
+        calendarItem.fillFromQuery( query );
+    }
+
+    return calendarItem;
+}
+
 bool CalendarItem::remove()
 {
     QSqlQuery query;
@@ -183,7 +208,7 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
     QSqlQuery query;
     QList<CalendarItem> calendarItemList;
 
-    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY priority DESC, modified DESC" );
+    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, priority DESC, modified DESC" );
     query.bindValue( ":calendar", calendar );
     if( !query.exec() )
     {
@@ -315,40 +340,94 @@ bool CalendarItem::updateWithICSData( QString icsData )
 {
     this->icsData = icsData;
 
-    QRegularExpression regex;
-    regex.setPatternOptions( QRegularExpression::MultilineOption );
-    QRegularExpressionMatch match;
+    // parse and transform the ics data to a hash with the data
+    QHash<QString, QString> hash = icsDataToHash( icsData );
+
     QString dateFormat = "yyyyMMddThhmmssZ";
 
-    // set the summary
-    regex.setPattern( "^SUMMARY:(.+)$" );
-    match = regex.match( icsData );
-    this->summary = match.captured(1).trimmed();
-
-    // set the completed status
-    regex.setPattern( "^STATUS:COMPLETED" );
-    match = regex.match( icsData );
-    this->completed = match.hasMatch();
-
-    // set the UID
-    regex.setPattern( "^UID:(.+)$" );
-    match = regex.match( icsData );
-    this->uid = match.captured(1).trimmed();
-
-    // set the created date
-    regex.setPattern( "^CREATED:(.+)$" );
-    match = regex.match( icsData );
-    this->created = QDateTime::fromString( match.captured(1).trimmed(), dateFormat );
-
-    // set the last modified date
-    regex.setPattern( "^LAST-MODIFIED:(.+)$" );
-    match = regex.match( icsData );
-    this->modified = QDateTime::fromString( match.captured(1).trimmed(), dateFormat );
-
-    // TODO: parse and set more attributes
+    this->summary = hash.contains( "SUMMARY" ) ? hash["SUMMARY"] : "";
+    this->completed = hash.contains( "STATUS" ) ? hash["STATUS"] == "COMPLETED" : false;
+    this->uid = hash.contains( "UID" ) ? hash["UID"] : "";
+    this->description = hash.contains( "DESCRIPTION" ) ? hash["DESCRIPTION"] : "";
+    this->priority = hash.contains( "PRIORITY" ) ? hash["PRIORITY"].toInt() : 5;
+    this->created = hash.contains( "CREATED" ) ? QDateTime::fromString( hash["CREATED"], dateFormat ) : QDateTime::currentDateTime();
+    this->modified = hash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( hash["LAST-MODIFIED"], dateFormat ) : QDateTime::currentDateTime();
 
     return this->store();
 }
+
+/**
+ * @brief Parses and transforms the ics data to a hash with the data
+ * @param icsData
+ * @return
+ */
+QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
+{
+    QHash<QString, QString> hash;
+    QRegularExpression regex;
+    QRegularExpressionMatch match;
+    QString lastKey;
+
+    QStringList iscDataLines = icsData.split( "\n" );
+
+    QListIterator<QString> i( iscDataLines );
+    while ( i.hasNext() )
+    {
+        QString line = i.next();
+
+        // mutli-line text stats with a space
+        if ( !line.startsWith( " " ) )
+        {
+            // remove the trailing \n
+            line.chop( 1 );
+            // parse key and value
+            regex.setPattern( "^([A-Z]+):(.+)$" );
+            match = regex.match( line );
+
+            // set last key for multi line texts
+            lastKey = match.captured(1);
+
+            // add new key / value pair to the hash
+            hash[lastKey] = decodeICSDataLine( match.captured(2) );
+        }
+        else
+        {
+            // remove the trailing \n
+            line.chop( 1 );
+
+            // remove leading space
+            regex.setPattern( "^ (.+)$" );
+            match = regex.match( line );
+
+            // add text to last line
+            hash[lastKey] += decodeICSDataLine( match.captured(1) );
+        }
+    }
+
+    return hash;
+}
+
+/**
+ * @brief Decodes an ics data line
+ * @param line
+ * @return
+ */
+QString CalendarItem::decodeICSDataLine( QString line )
+{
+//    qDebug() << __func__ << " - 'before line': " << line;
+
+    // replace \n with newlines
+    // we have to replace this twice, because of the first character that gets replaces in multiple \n
+    line = line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
+    line = line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
+
+    // replace \\ with "\"
+    line = line.replace( "\\\\", "\\" );
+
+//    qDebug() << __func__ << " - 'after line':  " << line;
+    return line;
+}
+
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem)
 {

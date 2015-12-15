@@ -640,15 +640,15 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionOpen_List">
    <property name="text">
-    <string>Open List</string>
+    <string>Show &amp;Todo List</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="adwaita.qrc"/>
-  <include location="breeze.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze.qrc"/>
  </resources>
  <connections/>
 </ui>
