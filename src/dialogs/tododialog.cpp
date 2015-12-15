@@ -13,7 +13,6 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
 
     ui->setupUi(this);
     setupUi();
-    loadTodoListData();
 }
 
 TodoDialog::~TodoDialog()
@@ -24,6 +23,7 @@ TodoDialog::~TodoDialog()
 void TodoDialog::setupUi()
 {
     setupMainSplitter();
+    loadTodoListData();
 
     QSettings settings;
 
@@ -33,6 +33,28 @@ void TodoDialog::setupUi()
         bool showCompletedItems = settings.value( "TodoDialog/showCompletedItems" ).toBool();
         ui->showCompletedItemsCheckBox->setChecked( showCompletedItems );
     }
+
+    {
+        const QSignalBlocker blocker( this->ui->todoListSelector );
+
+        QString todoListSelectorSelectedItem = settings.value( "TodoDialog/todoListSelectorSelectedItem" ).toString();
+        if ( todoListSelectorSelectedItem != "" )
+        {
+            QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
+
+            // search for the text in the todoCalendarEnabledList
+            int index = todoCalendarEnabledList.indexOf( todoListSelectorSelectedItem );
+
+            if ( index >= 0 )
+            {
+                // set the index of the todo list selector if we found it
+                ui->todoListSelector->setCurrentIndex( index );
+            }
+        }
+    }
+
+    // now load the todo list items
+    reloadTodoList();
 }
 
 void TodoDialog::setupMainSplitter()
@@ -55,6 +77,8 @@ void TodoDialog::setupMainSplitter()
  */
 void TodoDialog::loadTodoListData()
 {
+    const QSignalBlocker blocker( this->ui->todoListSelector );
+
     QSettings settings;
     ui->todoListSelector->clear();
     ui->todoListSelector->addItems( settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList() );
@@ -166,6 +190,7 @@ void TodoDialog::storeSettings()
     settings.setValue( "TodoDialog/mainSplitterState", this->mainSplitter->saveState() );
 //    settings.setValue( "TodoDialog/menuBarGeometry", ui->menuBar->saveGeometry() );
     settings.setValue( "TodoDialog/showCompletedItems", ui->showCompletedItemsCheckBox->checkState() );
+    settings.setValue( "TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText() );
 }
 
 void TodoDialog::on_TodoDialog_finished(int result)
