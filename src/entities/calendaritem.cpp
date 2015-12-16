@@ -351,7 +351,7 @@ bool CalendarItem::updateWithICSData( QString icsData )
     QString dateFormat = "yyyyMMddThhmmssZ";
 
     this->summary = hash.contains( "SUMMARY" ) ? hash["SUMMARY"] : "";
-    this->completed = hash.contains( "STATUS" ) ? hash["STATUS"] == "COMPLETED" : false;
+    this->completed = hash.contains( "PERCENT-COMPLETE" ) ? hash["PERCENT-COMPLETE"] == "100" : false;
     this->uid = hash.contains( "UID" ) ? hash["UID"] : "";
     this->description = hash.contains( "DESCRIPTION" ) ? hash["DESCRIPTION"] : "";
     this->priority = hash.contains( "PRIORITY" ) ? hash["PRIORITY"].toInt() : 5;
@@ -386,7 +386,7 @@ QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
             // remove the trailing \n
             line.chop( 1 );
             // parse key and value
-            regex.setPattern( "^([A-Z]+):(.+)$" );
+            regex.setPattern( "^([A-Z\\-_]+):(.+)$" );
             match = regex.match( line );
 
             // set last key for multi line texts
