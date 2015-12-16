@@ -7,6 +7,8 @@
 
 #include <simplecrypt/simplecrypt.h>
 
+#include <entities/calendaritem.h>
+
 namespace Ui {
 class TodoDialog;
 }
@@ -28,10 +30,13 @@ private slots:
     void on_prioritySlider_valueChanged(int value);
     void on_showCompletedItemsCheckBox_clicked();
 
+    void on_toolButton_clicked();
+
 private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;
     SimpleCrypt *crypto;
+    CalendarItem *currentCalendarItem;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
@@ -39,6 +44,7 @@ private:
     int findTodoItemRowByUID(QString uid);
     void resetEditFrameControls();
     void setupUi();
+    void updateCurrentCalendarItemWithFormData();
 };
 
 #endif // TODODIALOG_H

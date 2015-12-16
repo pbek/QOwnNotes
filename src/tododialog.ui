@@ -87,6 +87,13 @@
           </property>
          </widget>
         </item>
+        <item row="7" column="0">
+         <widget class="QToolButton" name="toolButton">
+          <property name="text">
+           <string>save</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
      </item>

@@ -11,6 +11,7 @@
 #include <QMessageBox>
 #include <QDomDocument>
 #include <QDomNodeList>
+#include <QBuffer>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 
@@ -135,6 +136,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
         else if ( reply->url().path().endsWith( calendarPath ) )
         {
             qDebug() << "Reply from ownCloud calendar page";
+            qDebug() << data;
 
             QStringList calendarHrefList = parseCalendarHrefList( data );
             settingsDialog->refreshTodoCalendarList( calendarHrefList );
@@ -384,7 +386,21 @@ void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
         url.setUrl( serverUrl + calendarPath );
         r.setUrl( url );
 
-        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND" );
+        // build the request body
+        QString body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+                <d:prop> \
+                   <d:resourcetype /> \
+                   <d:displayname /> \
+                   <cs:getctag /> \
+                   <c:supported-calendar-component-set /> \
+                </d:prop> \
+              </d:propfind>";
+
+        QByteArray *dataToSend = new QByteArray( body.toLatin1() );
+        r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
+        QBuffer *buffer = new QBuffer( dataToSend );
+
+        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND", buffer );
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
     }
 }
@@ -777,6 +793,7 @@ QStringList OwnCloudService::parseCalendarHrefList( QString& data )
                     QString typeString = typeNode.toElement().tagName();
 
                     // did we find a calendar?
+                    // ideally we should check the "supported-calendar-component-set" for "VTODO"
                     if ( typeString == "calendar" )
                     {
                         // add the href to our result list
@@ -785,6 +802,14 @@ QStringList OwnCloudService::parseCalendarHrefList( QString& data )
                         {
                             const QString href = hrefNodes.at(0).toElement().text();
                             resultList << href;
+                        }
+
+                        QDomNodeList displayNameNodes = elem.elementsByTagNameNS( NS_DAV, "displayname" );
+                        if ( displayNameNodes.length() )
+                        {
+                            // TODO: we want to use this displayname in the future!
+                            const QString displayName = displayNameNodes.at(0).toElement().text();
+                            qDebug() << __func__ << " - 'displayName': " << displayName;
                         }
                     }
                 }

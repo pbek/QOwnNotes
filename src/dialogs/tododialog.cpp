@@ -10,6 +10,7 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui(new Ui::TodoDialog)
 {
     this->crypto = crypto;
+    this->currentCalendarItem = new CalendarItem();
 
     ui->setupUi(this);
     setupUi();
@@ -157,6 +158,7 @@ void TodoDialog::resetEditFrameControls()
     ui->summaryEdit->setText( "" );
     ui->descriptionEdit->setText( "" );
     ui->prioritySlider->setValue( 0 );
+    currentCalendarItem = new CalendarItem();
 }
 
 /**
@@ -193,6 +195,16 @@ void TodoDialog::storeSettings()
     settings.setValue( "TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText() );
 }
 
+/**
+ * @brief updates the current calendar item with the data from the edit form
+ */
+void TodoDialog::updateCurrentCalendarItemWithFormData()
+{
+    currentCalendarItem->setSummary( ui->summaryEdit->text() );
+    currentCalendarItem->setDescription( ui->descriptionEdit->toPlainText() );
+    currentCalendarItem->store();
+}
+
 void TodoDialog::on_TodoDialog_finished(int result)
 {
     storeSettings();
@@ -226,4 +238,10 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked()
 {
     storeSettings();
     reloadTodoList();
+}
+
+void TodoDialog::on_toolButton_clicked()
+{
+    updateCurrentCalendarItemWithFormData();
+    qDebug()<< &currentCalendarItem;
 }
