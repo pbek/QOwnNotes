@@ -4,7 +4,8 @@
 - only todo items (not calendar items) are now shown in your todo lists
 - you can now choose to hide completed todo items at the todo list dialog
 - the last selected todo list is now remembered at the todo list dialog
-- improved the completed check for todo items
+- the completed check for todo items was improved
+- the note path error messages in the settings dialog are a bit more verbose now
 
 ## 0.60
 - if the `Ctrl` key is pressed in the note text edit to click a link the mouse cursor is now a pointing hand
