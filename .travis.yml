@@ -91,10 +91,10 @@ before_deploy:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER
+         export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TRAVIS_BUILD_ID
       ;
     else
-         export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER
+         export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TRAVIS_BUILD_ID
       ;
     fi
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
