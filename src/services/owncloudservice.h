@@ -32,6 +32,7 @@ public:
     void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
     void settingsGetCalendarList( SettingsDialog *dialog );
     void todoGetTodoList( QString calendarName, TodoDialog *dialog );
+    bool postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog);
 private:
     QString serverUrl;
     QString userName;

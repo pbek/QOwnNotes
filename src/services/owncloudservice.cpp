@@ -895,3 +895,10 @@ QStringList OwnCloudService::parseTodoListICSUrls( QString& data )
 
     return resultList;
 }
+
+bool OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoDialog *dialog ) {
+    this->todoDialog = dialog;
+
+    calendarItem.generateNewICSData();
+}
+

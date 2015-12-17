@@ -308,7 +308,7 @@ void SettingsDialog::on_noteTextViewButton_clicked()
 
 void SettingsDialog::on_reloadCalendarListButton_clicked()
 {
-    // we neet to store the calendar backend
+    // we need to store the calendar backend
     storeSettings();
 
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
@@ -333,7 +333,7 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
         QString url = ui->serverUrlEdit->text() + urlPart;
 
         // get the name out of the url part
-        QRegularExpression regex( "\/([^\/]*)\/$" );
+        QRegularExpression regex( "\\/([^\\/]*)\\/$" );
         QRegularExpressionMatch match = regex.match( urlPart );
         QString name = match.captured(1);
 

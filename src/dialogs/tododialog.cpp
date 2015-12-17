@@ -10,7 +10,6 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui(new Ui::TodoDialog)
 {
     this->crypto = crypto;
-    this->currentCalendarItem = new CalendarItem();
 
     ui->setupUi(this);
     setupUi();
@@ -158,7 +157,7 @@ void TodoDialog::resetEditFrameControls()
     ui->summaryEdit->setText( "" );
     ui->descriptionEdit->setText( "" );
     ui->prioritySlider->setValue( 0 );
-    currentCalendarItem = new CalendarItem();
+    currentCalendarItem = CalendarItem();
 }
 
 /**
@@ -200,9 +199,9 @@ void TodoDialog::storeSettings()
  */
 void TodoDialog::updateCurrentCalendarItemWithFormData()
 {
-    currentCalendarItem->setSummary( ui->summaryEdit->text() );
-    currentCalendarItem->setDescription( ui->descriptionEdit->toPlainText() );
-    currentCalendarItem->store();
+    currentCalendarItem.setSummary( ui->summaryEdit->text() );
+    currentCalendarItem.setDescription( ui->descriptionEdit->toPlainText() );
+    currentCalendarItem.store();
 }
 
 void TodoDialog::on_TodoDialog_finished(int result)
@@ -219,13 +218,13 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
 {
     QString uid = current->whatsThis();
 
-    CalendarItem calItem = CalendarItem::fetchByUid( uid );
-    if ( calItem.isFetched() )
+    currentCalendarItem = CalendarItem::fetchByUid( uid );
+    if ( currentCalendarItem.isFetched() )
     {
-        ui->summaryEdit->setText( calItem.getSummary() );
+        ui->summaryEdit->setText( currentCalendarItem.getSummary() );
         ui->summaryEdit->setCursorPosition( 0 );
-        ui->descriptionEdit->setText( calItem.getDescription() );
-        ui->prioritySlider->setValue( calItem.getPriority() );
+        ui->descriptionEdit->setText( currentCalendarItem.getDescription() );
+        ui->prioritySlider->setValue( currentCalendarItem.getPriority() );
     }
 }
 
@@ -243,5 +242,9 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked()
 void TodoDialog::on_toolButton_clicked()
 {
     updateCurrentCalendarItemWithFormData();
-    qDebug()<< &currentCalendarItem;
+
+    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+    ownCloud->postCalendarItemToServer( currentCalendarItem, this );
+
+    qDebug()<< currentCalendarItem;
 }

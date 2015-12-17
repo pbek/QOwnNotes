@@ -301,6 +301,12 @@ bool CalendarItem::store() {
     return true;
 }
 
+QString CalendarItem::generateNewICSData() {
+    qDebug() << __func__ << " - 'icsData': " << icsData;
+    return icsData;
+}
+
+
 //
 // deletes all calendarItems in the database
 //

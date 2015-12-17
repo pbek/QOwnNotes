@@ -39,6 +39,7 @@ public:
     QString getUid();
     static CalendarItem fetchByUid(QString uid);
     int getPriority();
+    QString generateNewICSData();
 private:
     int id;
     QString summary;

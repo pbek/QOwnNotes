@@ -36,7 +36,7 @@ private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;
     SimpleCrypt *crypto;
-    CalendarItem *currentCalendarItem;
+    CalendarItem currentCalendarItem;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
