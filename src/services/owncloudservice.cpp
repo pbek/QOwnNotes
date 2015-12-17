@@ -42,7 +42,10 @@ void OwnCloudService::readSettings()
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
     ownCloudTestPath = "/ocs/v1.php";
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
-    calendarPath = "/remote.php/caldav/calendars/" + userName;
+
+    int calendarBackend = settings.value( "ownCloud/todoCalendarBackend" ).toInt();
+    QString calendarBackendString = calendarBackend == CalendarPlus ? "calendarplus" : "caldav";
+    calendarPath = "/remote.php/" + calendarBackendString + "/calendars/" + userName;
 
     QObject::connect( networkManager, SIGNAL(authenticationRequired(QNetworkReply*,QAuthenticator*)), this, SLOT(slotAuthenticationRequired(QNetworkReply*,QAuthenticator*)) );
     QObject::connect( networkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(slotReplyFinished(QNetworkReply*)) );

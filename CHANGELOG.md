@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.62
+- you can now also use the todo items from the *Calendar Plus* and *Tasks Plus* ownCloud apps
+    - select which backend you want to use in the todo settings
+
 ## 0.61
 - only todo items (not calendar items) are now shown in your todo lists
 - you can now choose to hide completed todo items at the todo list dialog

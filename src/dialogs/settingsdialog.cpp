@@ -118,6 +118,7 @@ void SettingsDialog::storeSettings()
     settings.setValue( "ownCloud/todoCalendarUrlList", todoCalendarUrlList );
     settings.setValue( "ownCloud/todoCalendarEnabledList", todoCalendarEnabledList );
     settings.setValue( "ownCloud/todoCalendarEnabledUrlList", todoCalendarEnabledUrlList );
+    settings.setValue( "ownCloud/todoCalendarBackend", ui->calendarPlusRadioButton->isChecked() ? OwnCloudService::CalendarPlus : OwnCloudService::DefaultOwnCloudCalendar );
 }
 
 void SettingsDialog::readSettings()
@@ -135,6 +136,16 @@ void SettingsDialog::readSettings()
 
     noteTextViewFont.fromString( settings.value( "MainWindow/noteTextView.font" ).toString() );
     setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
+
+    switch( settings.value( "ownCloud/todoCalendarBackend" ).toInt() )
+    {
+    case OwnCloudService::CalendarPlus:
+        ui->calendarPlusRadioButton->setChecked( true );
+        break;
+    default:
+        ui->defaultOwnCloudCalendarRadioButton->setChecked( true );
+        break;
+    }
 
     QStringList todoCalendarUrlList = settings.value( "ownCloud/todoCalendarUrlList" ).toStringList();
     // load the todo calendar list and set the checked state
@@ -297,6 +308,9 @@ void SettingsDialog::on_noteTextViewButton_clicked()
 
 void SettingsDialog::on_reloadCalendarListButton_clicked()
 {
+    // we neet to store the calendar backend
+    storeSettings();
+
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
     ownCloud->settingsGetCalendarList( this );
 }
@@ -331,6 +345,11 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
             continue;
         }
 
+        // skip the Calendar Plus birthday calendar
+        if ( name.startsWith( "bdaycpltocal_" ) ) {
+            continue;
+        }
+
         // create the list widget item and add it to the todo calendar list widget
         QListWidgetItem *item = new QListWidgetItem( name );
 
@@ -343,4 +362,3 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
         ui->todoCalendarListWidget->addItem( item );
     }
 }
-

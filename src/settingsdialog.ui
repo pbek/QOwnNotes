@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -527,7 +527,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>20</x>
-           <y>20</y>
+           <y>170</y>
            <width>591</width>
            <height>421</height>
           </rect>
@@ -569,6 +569,48 @@ p, li { white-space: pre-wrap; }
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QGroupBox" name="calendarBackendGroupBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>591</width>
+           <height>131</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Which ownCloud calendar backend do you want to use?</string>
+         </property>
+         <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>321</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Default ownCloud calendar</string>
+          </property>
+          <property name="checked">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QRadioButton" name="calendarPlusRadioButton">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>90</y>
+            <width>291</width>
+            <height>29</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Calendar Plus</string>
+          </property>
+         </widget>
         </widget>
        </widget>
        <widget class="QWidget" name="generalTab">

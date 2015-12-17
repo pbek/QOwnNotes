@@ -18,6 +18,12 @@ class OwnCloudService : public QObject
     Q_PROPERTY(bool busy READ isBusy NOTIFY busyChanged)
 
 public:
+    enum CalendarBackend {
+        DefaultOwnCloudCalendar = 0,
+        CalendarPlus
+    };
+    Q_ENUMS(CalendarBackend)
+
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void settingsConnectionTest( SettingsDialog *dialog );
     bool isBusy();
