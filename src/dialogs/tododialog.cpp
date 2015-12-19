@@ -201,6 +201,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData()
 {
     currentCalendarItem.setSummary( ui->summaryEdit->text() );
     currentCalendarItem.setDescription( ui->descriptionEdit->toPlainText() );
+    currentCalendarItem.setPriority( ui->prioritySlider->value() );
     currentCalendarItem.store();
 }
 

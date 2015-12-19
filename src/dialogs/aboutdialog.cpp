@@ -21,11 +21,11 @@ AboutDialog::AboutDialog(QWidget *parent) :
         QDate date = QDate::currentDate();
 
         // fill in the variables
-        html = html.replace( "QT_VERSION_STR", QString( QT_VERSION_STR ) );
-        html = html.replace( "BUILD_NUMBER", QString::number( BUILD ) );
-        html = html.replace( "BUILD_DATE", __DATE__ );
-        html = html.replace( "VERSION", QString( VERSION ) );
-        html = html.replace( "CURRENT_YEAR", QString::number( date.year() ) );
+        html.replace( "QT_VERSION_STR", QString( QT_VERSION_STR ) );
+        html.replace( "BUILD_NUMBER", QString::number( BUILD ) );
+        html.replace( "BUILD_DATE", __DATE__ );
+        html.replace( "VERSION", QString( VERSION ) );
+        html.replace( "CURRENT_YEAR", QString::number( date.year() ) );
 
         // put the html to the text browser in the about dialog
         ui->textBrowser->setHtml( html );

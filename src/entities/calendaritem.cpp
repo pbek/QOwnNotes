@@ -13,6 +13,7 @@ CalendarItem::CalendarItem()
 {
     this->id = 0;
     this->hasDirtyData = false;
+    this->icsDataKeyList = new QStringList();
 }
 
 int CalendarItem::getId()
@@ -28,6 +29,11 @@ QString CalendarItem::getSummary()
 QString CalendarItem::getUrl()
 {
     return this->url;
+}
+
+QString CalendarItem::getICSData()
+{
+    return this->icsData;
 }
 
 QString CalendarItem::getUid()
@@ -58,6 +64,11 @@ void CalendarItem::setSummary(QString text)
 void CalendarItem::setDescription(QString text)
 {
     this->description = text;
+}
+
+void CalendarItem::setPriority( int value )
+{
+    this->priority = value;
 }
 
 bool CalendarItem::setupTables()
@@ -301,8 +312,44 @@ bool CalendarItem::store() {
     return true;
 }
 
+/**
+ * @brief Generates a new ICS data for a CalendarItem
+ * @return
+ */
 QString CalendarItem::generateNewICSData() {
-    qDebug() << __func__ << " - 'icsData': " << icsData;
+    qDebug() << __func__ << " - 'icsData before': " << icsData;
+
+    // generate a new icsDataHash
+    generateICSDataHash();
+
+    // update the icsDataHash
+    icsDataHash["SUMMARY"] = summary;
+    icsDataHash["DESCRIPTION"] = description;
+    qDebug() << __func__ << " - 'priority': " << priority;
+    icsDataHash["PRIORITY"] = QString::number( priority );
+
+    icsData.clear();
+    // loop through every line in the icsDataHash in the correct order
+    for ( int i = 0; i < icsDataKeyList->size(); ++i )
+    {
+        QString key = icsDataKeyList->at( i );
+        QString realKey = key;
+        // cut out the numbers at the end
+        realKey.replace( QRegularExpression( "\\d*$" ), "" );
+
+        QString line = icsDataHash.value( key );
+
+        // escape "\"s
+        line.replace( "\\", "\\\\" );
+        // convert newlines
+        line.replace( "\n", "\\n" );
+
+        // add a new ics data line
+        icsData += realKey + ":" + line + "\n";
+    }
+
+    qDebug() << __func__ << " - 'icsData after': " << icsData;
+
     return icsData;
 }
 
@@ -347,22 +394,22 @@ bool CalendarItem::updateWithICSData( QString icsData )
     this->icsData = icsData;
 
     // parse and transform the ics data to a hash with the data
-    QHash<QString, QString> hash = icsDataToHash( icsData );
+    generateICSDataHash();
 
     // we only need VTODO items!
-    if ( hash["BEGIN1"] != "VTODO" ) {
+    if ( icsDataHash["BEGIN1"] != "VTODO" ) {
         return false;
     }
 
     QString dateFormat = "yyyyMMddThhmmssZ";
 
-    this->summary = hash.contains( "SUMMARY" ) ? hash["SUMMARY"] : "";
-    this->completed = hash.contains( "PERCENT-COMPLETE" ) ? hash["PERCENT-COMPLETE"] == "100" : false;
-    this->uid = hash.contains( "UID" ) ? hash["UID"] : "";
-    this->description = hash.contains( "DESCRIPTION" ) ? hash["DESCRIPTION"] : "";
-    this->priority = hash.contains( "PRIORITY" ) ? hash["PRIORITY"].toInt() : 5;
-    this->created = hash.contains( "CREATED" ) ? QDateTime::fromString( hash["CREATED"], dateFormat ) : QDateTime::currentDateTime();
-    this->modified = hash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( hash["LAST-MODIFIED"], dateFormat ) : QDateTime::currentDateTime();
+    this->summary = icsDataHash.contains( "SUMMARY" ) ? icsDataHash["SUMMARY"] : "";
+    this->completed = icsDataHash.contains( "PERCENT-COMPLETE" ) ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
+    this->uid = icsDataHash.contains( "UID" ) ? icsDataHash["UID"] : "";
+    this->description = icsDataHash.contains( "DESCRIPTION" ) ? icsDataHash["DESCRIPTION"] : "";
+    this->priority = icsDataHash.contains( "PRIORITY" ) ? icsDataHash["PRIORITY"].toInt() : 5;
+    this->created = icsDataHash.contains( "CREATED" ) ? QDateTime::fromString( icsDataHash["CREATED"], dateFormat ) : QDateTime::currentDateTime();
+    this->modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], dateFormat ) : QDateTime::currentDateTime();
 
     return this->store();
 }
@@ -372,12 +419,12 @@ bool CalendarItem::updateWithICSData( QString icsData )
  * @param icsData
  * @return
  */
-QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
+void CalendarItem::generateICSDataHash()
 {
-    QHash<QString, QString> hash;
     QRegularExpression regex;
     QRegularExpressionMatch match;
     QString lastKey;
+    icsDataKeyList->clear();
 
     QStringList iscDataLines = icsData.split( "\n" );
 
@@ -398,11 +445,19 @@ QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
             // set last key for multi line texts
             lastKey = match.captured(1);
 
+            if ( lastKey == "" ) {
+                continue;
+            }
+
             // find a free key
-            lastKey = findFreeHashKey( &hash, lastKey );
+            lastKey = findFreeHashKey( &icsDataHash, lastKey );
 
             // add new key / value pair to the hash
-            hash[lastKey] = decodeICSDataLine( match.captured(2) );
+            icsDataHash[lastKey] = decodeICSDataLine( match.captured(2) );
+//            hash.insert( lastKey, decodeICSDataLine( match.captured(2) ) );
+
+            // add the key to the key order list
+            icsDataKeyList->append( lastKey );
         }
         else
         {
@@ -414,11 +469,9 @@ QHash<QString, QString> CalendarItem::icsDataToHash( QString icsData )
             match = regex.match( line );
 
             // add text to last line
-            hash[lastKey] += decodeICSDataLine( match.captured(1) );
+            icsDataHash[lastKey] += decodeICSDataLine( match.captured(1) );
         }
     }
-
-    return hash;
 }
 
 /**
@@ -465,11 +518,11 @@ QString CalendarItem::decodeICSDataLine( QString line )
 
     // replace \n with newlines
     // we have to replace this twice, because of the first character that gets replaces in multiple \n
-    line = line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
-    line = line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
+    line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
+    line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
 
     // replace \\ with "\"
-    line = line.replace( "\\\\", "\\" );
+    line.replace( "\\\\", "\\" );
 
 //    qDebug() << __func__ << " - 'after line':  " << line;
     return line;

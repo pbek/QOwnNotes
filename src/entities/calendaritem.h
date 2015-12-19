@@ -40,6 +40,8 @@ public:
     static CalendarItem fetchByUid(QString uid);
     int getPriority();
     QString generateNewICSData();
+    QString getICSData();
+    void setPriority(int value);
 private:
     int id;
     QString summary;
@@ -54,9 +56,11 @@ private:
     QDateTime alarmDate;
     QDateTime created;
     QDateTime modified;
-    static QHash<QString, QString> icsDataToHash(QString icsData);
+    QHash<QString, QString> icsDataHash;
+    QStringList *icsDataKeyList;
     static QString decodeICSDataLine(QString line);
     static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
+    void generateICSDataHash();
 };
 
 #endif // CALENDAR_ITEM_H

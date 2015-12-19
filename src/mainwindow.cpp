@@ -1750,7 +1750,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
         // this makes it possible to search for filenames containing spaces
         // instead of spaces a "-" has to be used in the note link
         // example: note://my-note-with-spaces-in-the-name
-        fileName = fileName.replace( "-", "?" ).replace( "_", "?" );
+        fileName.replace( "-", "?" ).replace( "_", "?" );
 
         // we need to search for the case sensitive filename, we only get it lowercase by QUrl
         QDir currentDir = QDir( this->notesPath );

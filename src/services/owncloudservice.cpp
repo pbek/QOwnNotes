@@ -900,5 +900,20 @@ bool OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoD
     this->todoDialog = dialog;
 
     calendarItem.generateNewICSData();
+
+    QUrl url( calendarItem.getUrl() );
+    QNetworkRequest r;
+    addAuthHeader(&r);
+    r.setUrl( url );
+
+    // build the request body
+    QString body = calendarItem.getICSData();
+
+    QByteArray *dataToSend = new QByteArray( body.toLatin1() );
+    r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
+    QBuffer *buffer = new QBuffer( dataToSend );
+
+    QNetworkReply *reply = networkManager->sendCustomRequest( r, "PUT", buffer );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 

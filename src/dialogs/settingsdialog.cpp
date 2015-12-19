@@ -27,10 +27,10 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     // increase font size for OSX
 #ifdef Q_OS_MAC
     QString styleSheet = ui->installInfotextBrowser->styleSheet();
-    styleSheet = styleSheet.replace( "font-size: 9pt;", "font-size: 13pt;" );
+    styleSheet.replace( "font-size: 9pt;", "font-size: 13pt;" );
     ui->installInfotextBrowser->setStyleSheet( styleSheet );
 
-    html = html.replace( "font-size:9pt", "font-size:13pt;" );
+    html.replace( "font-size:9pt", "font-size:13pt;" );
 #endif
 
     // add information text for Windows users to install OpenSSL
@@ -39,7 +39,7 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     html += "<p>You can find binary packages of OpenSSL <a href='http://slproweb.com/products/Win32OpenSSL.html'>here</a>.</p>";
 #endif
 
-    html = html.replace( "QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION );
+    html.replace( "QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION );
     ui->installInfotextBrowser->setHtml( html );
 
     this->crypto = crypto;

@@ -3,6 +3,7 @@
 ## 0.62
 - you can now also use the todo items from the *Calendar Plus* and *Tasks Plus* ownCloud apps
     - select which backend you want to use in the todo settings
+- you can now save changes on existing todo items (this functionality is in it's alpha state)
 
 ## 0.61
 - only todo items (not calendar items) are now shown in your todo lists

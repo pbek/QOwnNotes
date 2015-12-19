@@ -277,7 +277,7 @@ QString HTMLEntities::decodeHtmlEntities( QString text )
 
     while (i.hasNext()) {
         i.next();
-        text = text.replace( "&" + i.key(), i.value() );
+        text.replace( "&" + i.key(), i.value() );
     }
 
     return text;
