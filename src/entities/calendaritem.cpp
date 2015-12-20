@@ -494,7 +494,7 @@ void CalendarItem::generateICSDataHash()
             // remove the trailing \n
             line.chop( 1 );
             // parse key and value
-            regex.setPattern( "^([A-Z\\-_]+):(.+)$" );
+            regex.setPattern( "^([A-Z\\-_=;]+):(.+)$" );
             match = regex.match( line );
 
             // set last key for multi line texts
