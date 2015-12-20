@@ -737,7 +737,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
     if ( d.exists() && ( dir != "" ) )
     {
-        // lets remove trailing slashes
+        // let's remove trailing slashes
         dir = d.path();
 
         // update the recent note folder list
@@ -1430,7 +1430,7 @@ void MainWindow::handleTextNoteLinking()
                     // if possible fetch the title of the webpage
                     QString title = dialog->getTitleForUrl( QUrl( url ) );
 
-                    // if we got back a tile lets use it in the link
+                    // if we got back a tile let's use it in the link
                     if ( title != "" )
                     {
                         newText = "[" + title + "](" + url + ")";

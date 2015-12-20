@@ -4,7 +4,7 @@ Markdown Showcase
 Another header
 -------------
 
-Lets see _if the emphasis
+Let's see _if the emphasis
 
 carries over_ to __another__ paragraph.
 
