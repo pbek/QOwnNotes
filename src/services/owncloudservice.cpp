@@ -12,6 +12,8 @@
 #include <QDomDocument>
 #include <QDomNodeList>
 #include <QBuffer>
+#include <QEventLoop>
+#include <QTimer>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 
@@ -917,3 +919,45 @@ bool OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoD
     QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
+/**
+ * @brief Loads and updates the icsData of a calendar item with data from the calendar server
+ * @return
+ */
+bool OwnCloudService::updateICSDataOfCalendarItem( CalendarItem *calItem )
+{
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+
+    QUrl url( calItem->getUrl() );
+    QNetworkRequest r;
+
+    addAuthHeader(&r);
+    r.setUrl( url );
+
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    connect(manager, SIGNAL(finished(QNetworkReply*)), &loop, SLOT(quit()));
+
+    // 5 sec timeout for the request
+    timer.start(5000);
+
+    QNetworkReply *reply = manager->get( r );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+    loop.exec();
+
+    if ( timer.isActive() )
+    {
+        // get the text from the network reply
+        QString icsData = reply->readAll();
+
+        // set the new ics data
+        calItem->setICSData( icsData );
+
+        return true;
+    }
+
+    // timer elapsed, no reply from network request
+    return false;
+}

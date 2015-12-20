@@ -245,6 +245,11 @@ void TodoDialog::on_toolButton_clicked()
     updateCurrentCalendarItemWithFormData();
 
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+
+    // update the local icsData from server
+    ownCloud->updateICSDataOfCalendarItem( &currentCalendarItem );
+
+    // post the calendar item to the server
     ownCloud->postCalendarItemToServer( currentCalendarItem, this );
 
     qDebug()<< currentCalendarItem;

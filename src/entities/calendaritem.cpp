@@ -66,6 +66,11 @@ void CalendarItem::setDescription(QString text)
     this->description = text;
 }
 
+void CalendarItem::setICSData( QString text )
+{
+    this->icsData = text;
+}
+
 void CalendarItem::setPriority( int value )
 {
     this->priority = value;

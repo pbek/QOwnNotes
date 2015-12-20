@@ -42,6 +42,7 @@ public:
     QString generateNewICSData();
     QString getICSData();
     void setPriority(int value);
+    void setICSData(QString text);
 private:
     int id;
     QString summary;
