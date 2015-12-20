@@ -3,7 +3,7 @@
 ## 0.62
 - you can now also use the todo items from the *Calendar Plus* / *Tasks Plus* ownCloud apps
     - select which backend you want to use in the todo settings
-- you can now **save local changes** of existing **todo items** on you ownCloud calendar server
+- you can now **save local changes** of existing **todo items** on your ownCloud calendar server
     - this functionality is in **alpha phase**, you may not want to use it in production yet
     - please report if you have any troubles with it
 
