@@ -313,7 +313,7 @@ bool CalendarItem::store() {
 }
 
 /**
- * @brief Generates a new ICS data for a CalendarItem
+ * @brief Generates the new ICS data for the CalendarItem to send to the calendar server
  * @return
  */
 QString CalendarItem::generateNewICSData() {
@@ -325,10 +325,13 @@ QString CalendarItem::generateNewICSData() {
     // update the icsDataHash
     icsDataHash["SUMMARY"] = summary;
     icsDataHash["DESCRIPTION"] = description;
-    qDebug() << __func__ << " - 'priority': " << priority;
     icsDataHash["PRIORITY"] = QString::number( priority );
 
+    // check for new keys so that we can send them to the calendar server
+    updateICSDataKeyListFromHash();
+
     icsData.clear();
+
     // loop through every line in the icsDataHash in the correct order
     for ( int i = 0; i < icsDataKeyList->size(); ++i )
     {
@@ -353,6 +356,58 @@ QString CalendarItem::generateNewICSData() {
     return icsData;
 }
 
+/**
+ * @brief Checks if there are new entries in the icsDataHash (e.g. when we want to set a new property that wasn't there before) and updates the icsDataKeyList
+ */
+void CalendarItem::updateICSDataKeyListFromHash() {
+
+    QStringList keysToAdd;
+
+    // look for new keys
+    QHashIterator<QString, QString> i( icsDataHash );
+    while ( i.hasNext() )
+    {
+        i.next();
+        QString key = i.key();
+
+        // we found a new key
+        if ( !icsDataKeyList->contains( key ) )
+        {
+            keysToAdd.append( key );
+        }
+    }
+
+    if ( keysToAdd.size() > 0 )
+    {
+        int indexToAddKeys = -1;
+
+        // search for the index where we should add the new keys
+        for ( int i = 0; i < icsDataKeyList->size(); ++i )
+        {
+            QString key = icsDataKeyList->at( i );
+
+            if ( key.startsWith( "BEGIN" ) && ( icsDataHash.value( key ) == "VTODO" ) )
+            {
+                // we want to add our new element after the BEGIN:VTODO
+                indexToAddKeys = i + 1;
+                break;
+            }
+        }
+
+        // abort if we didn't find an index to add our new keys
+        if ( indexToAddKeys == -1 ) {
+            return;
+        }
+
+        // add the new keys
+        for ( int i = 0; i < keysToAdd.size(); ++i )
+        {
+            QString key = keysToAdd.at( i );
+
+            icsDataKeyList->insert( indexToAddKeys, key );
+        }
+    }
+}
 
 //
 // deletes all calendarItems in the database

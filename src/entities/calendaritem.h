@@ -61,6 +61,7 @@ private:
     static QString decodeICSDataLine(QString line);
     static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
     void generateICSDataHash();
+    void updateICSDataKeyListFromHash();
 };
 
 #endif // CALENDAR_ITEM_H
