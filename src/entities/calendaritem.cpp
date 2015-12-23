@@ -78,7 +78,9 @@ void CalendarItem::setPriority( int value )
 
 bool CalendarItem::setupTables()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     query.exec("create table calendarItem (id integer primary key, "
             "summary varchar(255), url varchar(255), description text,"
             "has_dirty_data integer default 0,"
@@ -102,7 +104,9 @@ bool CalendarItem::setupTables()
  */
 bool CalendarItem::addCalendarItemForRequest( QString calendar, QUrl url )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     query.prepare( "INSERT INTO calendarItem ( calendar, url ) VALUES ( :calendar, :url )" );
     query.bindValue( ":calendar", calendar );
     query.bindValue( ":url", url );
@@ -111,7 +115,9 @@ bool CalendarItem::addCalendarItemForRequest( QString calendar, QUrl url )
 
 bool CalendarItem::addCalendarItem( QString summary, QString url, QString text )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     query.prepare( "INSERT INTO calendarItem ( summary, url, description ) VALUES ( :summary, :url, :description )" );
     query.bindValue( ":summary", summary );
     query.bindValue( ":url", url );
@@ -121,7 +127,9 @@ bool CalendarItem::addCalendarItem( QString summary, QString url, QString text )
 
 CalendarItem CalendarItem::fetch( int id )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     CalendarItem calendarItem;
 
     query.prepare( "SELECT * FROM calendarItem WHERE id = :id" );
@@ -142,7 +150,8 @@ CalendarItem CalendarItem::fetch( int id )
 CalendarItem CalendarItem::fetchByUrlAndCalendar( QString url, QString calendar )
 {
     CalendarItem calendarItem;
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
 
     query.prepare( "SELECT * FROM calendarItem WHERE url = :url AND calendar = :calendar" );
     query.bindValue( ":url", url );
@@ -163,7 +172,8 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar( QString url, QString calendar 
 CalendarItem CalendarItem::fetchByUid( QString uid )
 {
     CalendarItem calendarItem;
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
 
     query.prepare( "SELECT * FROM calendarItem WHERE uid = :uid" );
     query.bindValue( ":uid", uid );
@@ -182,7 +192,8 @@ CalendarItem CalendarItem::fetchByUid( QString uid )
 
 bool CalendarItem::remove()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
 
     query.prepare( "DELETE FROM calendarItem WHERE id = :id" );
     query.bindValue( ":id", this->id );
@@ -227,7 +238,9 @@ bool CalendarItem::fillFromQuery( QSqlQuery query )
 
 QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     QList<CalendarItem> calendarItemList;
 
     query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, priority DESC, modified DESC" );
@@ -250,7 +263,9 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
 
 QList<CalendarItem> CalendarItem::search( QString text )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
     QList<CalendarItem> calendarItemList;
 
     query.prepare( "SELECT * FROM calendarItem WHERE description LIKE :text ORDER BY priority DESC" );
@@ -277,7 +292,8 @@ QList<CalendarItem> CalendarItem::search( QString text )
 // inserts or updates a CalendarItem object in the database
 //
 bool CalendarItem::store() {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
 
     if ( this->id > 0 )
     {
@@ -424,7 +440,8 @@ void CalendarItem::updateICSDataKeyListFromHash() {
 // deletes all calendarItems in the database
 //
 bool CalendarItem::deleteAllByCalendar( QString calendar ) {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
 
     query.prepare( "DELETE FROM calendarItem WHERE calendar = :calendar" );
     query.bindValue( ":calendar", calendar );

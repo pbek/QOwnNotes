@@ -10,6 +10,7 @@
 #include <QDir>
 #include <QSqlError>
 #include <QRegularExpression>
+#include <QStandardPaths>
 #include "libraries/hoedown/html.h"
 
 
@@ -56,11 +57,32 @@ void Note::setNoteText(QString text)
 
 bool Note::createConnection()
 {
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(":memory:");
-    if (!db.open())
+    QSqlDatabase dbMemory = QSqlDatabase::addDatabase( "QSQLITE", "memory" );
+    dbMemory.setDatabaseName( ":memory:" );
+
+    if ( !dbMemory.open() )
     {
-        QMessageBox::critical(0, qApp->tr("Cannot open database"),
+        QMessageBox::critical(0, qApp->tr("Cannot open memory database"),
+            qApp->tr("Unable to establish a database connection.\n"
+                      "This application needs SQLite support. Please read "
+                      "the Qt SQL driver documentation for information how "
+                      "to build it.\n\n"
+                      "Click Cancel to exit."), QMessageBox::Cancel);
+        return false;
+    }
+
+    // get the path to store the database
+    QString path = QStandardPaths::writableLocation( QStandardPaths::AppDataLocation );
+    QDir dir;
+    // create path if it doesn't exist yet
+    dir.mkpath( path );
+
+    QSqlDatabase dbDisk = QSqlDatabase::addDatabase( "QSQLITE", "disk" );
+    dbDisk.setDatabaseName( path + QDir::separator() + "QOwnNotes.sqlite" );
+
+    if ( !dbDisk.open() )
+    {
+        QMessageBox::critical(0, qApp->tr("Cannot open disk database"),
             qApp->tr("Unable to establish a database connection.\n"
                       "This application needs SQLite support. Please read "
                       "the Qt SQL driver documentation for information how "
@@ -74,7 +96,8 @@ bool Note::createConnection()
 
 bool Note::setupTables()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
     query.exec("create table note (id integer primary key, "
                "name varchar(255), file_name varchar(255), note_text text,"
                "has_dirty_data integer default 0,"
@@ -88,7 +111,9 @@ bool Note::setupTables()
 
 bool Note::addNote( QString name, QString fileName, QString text )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     query.prepare( "INSERT INTO note ( name, file_name, note_text ) VALUES ( :name, :file_name, :note_text )" );
     query.bindValue( ":name", name );
     query.bindValue( ":file_name", fileName );
@@ -98,7 +123,9 @@ bool Note::addNote( QString name, QString fileName, QString text )
 
 Note Note::fetch( int id )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     Note note;
 
     query.prepare( "SELECT * FROM note WHERE id = :id" );
@@ -128,7 +155,8 @@ Note Note::fetchByFileName( QString fileName )
 
 bool Note::fillByFileName( QString fileName )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
 
     query.prepare( "SELECT * FROM note WHERE file_name = :file_name" );
     query.bindValue( ":file_name", fileName );
@@ -151,7 +179,8 @@ bool Note::fillByFileName( QString fileName )
 
 bool Note::remove( bool withFile )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
 
     query.prepare( "DELETE FROM note WHERE id = :id" );
     query.bindValue( ":id", this->id );
@@ -223,7 +252,9 @@ bool Note::move( QString destinationPath )
 
 Note Note::fetchByName( QString name )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     Note note;
 
     query.prepare( "SELECT * FROM note WHERE name = :name" );
@@ -278,7 +309,9 @@ bool Note::fillFromQuery( QSqlQuery query )
 
 QList<Note> Note::fetchAll()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     QList<Note> noteList;
 
     query.prepare( "SELECT * FROM note ORDER BY file_last_modified DESC" );
@@ -300,7 +333,9 @@ QList<Note> Note::fetchAll()
 
 QList<Note> Note::search( QString text )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     QList<Note> noteList;
 
     query.prepare( "SELECT * FROM note WHERE note_text LIKE :text ORDER BY file_last_modified DESC" );
@@ -324,7 +359,9 @@ QList<Note> Note::search( QString text )
 
 QList<QString> Note::searchAsNameList( QString text, bool searchInName )
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     QList<QString> nameList;
     QString searchField = searchInName ? "name" : "note_text";
 
@@ -348,7 +385,9 @@ QList<QString> Note::searchAsNameList( QString text, bool searchInName )
 
 QStringList Note::fetchNoteNames()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     QStringList list;
 
     query.prepare( "SELECT name FROM note ORDER BY file_last_modified DESC" );
@@ -369,7 +408,9 @@ QStringList Note::fetchNoteNames()
 
 QStringList Note::fetchNoteFileNames()
 {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     QStringList list;
 
     query.prepare( "SELECT file_name FROM note ORDER BY file_last_modified DESC" );
@@ -399,7 +440,8 @@ bool Note::storeNewText( QString text ) {
 // inserts or updates a note object in the database
 //
 bool Note::store() {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
 
     if ( this->fileName == "" )
     {
@@ -570,7 +612,9 @@ QString Note::fullNoteFilePath( QString fileName )
 }
 
 int Note::storeDirtyNotesToDisk( Note &currentNote ) {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
+
     Note note;
 //    qDebug() << "storeDirtyNotesToDisk";
 
@@ -637,7 +681,8 @@ void Note::createFromFile( QFile &file ) {
 // deletes all notes in the database
 //
 bool Note::deleteAll() {
-    QSqlQuery query;
+    QSqlDatabase db = QSqlDatabase::database( "memory" );
+    QSqlQuery query( db );
 
     // no truncate in sqlite
     query.prepare( "DELETE FROM note" );
