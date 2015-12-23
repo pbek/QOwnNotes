@@ -310,6 +310,30 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
     return calendarItemList;
 }
 
+QList<QUrl> CalendarItem::fetchAllUrlsByCalendar( QString calendar )
+{
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+    QList<QUrl> urlList;
+
+    query.prepare( "SELECT url FROM calendarItem WHERE calendar = :calendar" );
+    query.bindValue( ":calendar", calendar );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            urlList.append( query.value("url").toString() );
+        }
+    }
+
+    return urlList;
+}
+
 QList<CalendarItem> CalendarItem::search( QString text )
 {
     QSqlDatabase db = QSqlDatabase::database( "disk" );

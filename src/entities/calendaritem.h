@@ -49,6 +49,7 @@ public:
     static CalendarItem fetchByUrl(QUrl url);
     void setLastModifiedString(QString text);
     void setETag(QString text);
+    static QList<QUrl> fetchAllUrlsByCalendar(QString calendar);
 private:
     int id;
     QString summary;

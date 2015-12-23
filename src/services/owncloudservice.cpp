@@ -828,6 +828,9 @@ void OwnCloudService::loadTodoItems( QString& data )
     QDomDocument doc;
     doc.setContent( data, true );
 
+    // fetch all urls that are currently in the calendar
+    QList<QUrl> calendarItemUrlRemoveList = CalendarItem::fetchAllUrlsByCalendar( calendarName );
+
     // loop all response blocks
     QDomNodeList responseNodes = doc.elementsByTagNameNS( NS_DAV, "response" );
     for ( int i = 0; i < responseNodes.length(); ++i )
@@ -849,7 +852,13 @@ void OwnCloudService::loadTodoItems( QString& data )
                     QDomNodeList urlPartNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
                     if ( urlPartNodes.length() )
                     {
-                        QUrl calendarItemUrl = QUrl( serverUrl + urlPartNodes.at(0).toElement().text() );
+                        QString urlPart = urlPartNodes.at(0).toElement().text();
+
+                        if ( urlPart == "" ) {
+                            continue;
+                        }
+
+                        QUrl calendarItemUrl = QUrl( serverUrl + urlPart );
 
                         // check if we have an etag
                         QDomNodeList etagNodes = elem.elementsByTagNameNS( NS_DAV, "getetag" );
@@ -890,6 +899,12 @@ void OwnCloudService::loadTodoItems( QString& data )
                                     fetchItem = true;
                                 }
 
+                                // remove the url from the list of calendar item urls to remove
+                                if ( calendarItemUrlRemoveList.contains( calendarItemUrl ) )
+                                {
+                                    calendarItemUrlRemoveList.removeAll( calendarItemUrl );
+                                }
+
                                 // fetch the calendar item
                                 if ( fetchItem )
                                 {
@@ -907,7 +922,17 @@ void OwnCloudService::loadTodoItems( QString& data )
         }
     }
 
-    // TODO: remove all not found items
+    // remove all not found items
+    for ( int i = 0; i < calendarItemUrlRemoveList.length(); ++i )
+    {
+        QUrl url = calendarItemUrlRemoveList.at( i );
+        CalendarItem calItem = CalendarItem::fetchByUrl( url );
+
+        if ( calItem.isFetched() )
+        {
+            calItem.remove();
+        }
+    }
 
     // reload the existing items
     this->todoDialog->reloadTodoListItems();
