@@ -383,15 +383,9 @@ void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
         busy = true;
         emit( busyChanged( busy ) );
 
-        QUrl url( serverUrl );
+        QUrl url( serverUrl + calendarPath );
         QNetworkRequest r( url );
-        QUrlQuery q;
-
-        q.addQueryItem( "format", format );
-        url.setQuery(q);
         addAuthHeader(&r);
-        url.setUrl( serverUrl + calendarPath );
-        r.setUrl( url );
 
         // build the request body
         QString body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
@@ -447,7 +441,27 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
         QNetworkRequest r( url );
         addAuthHeader(&r);
 
-        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND" );
+        // ownCloud needs depth to be set to 1
+        r.setRawHeader( QByteArray( "DEPTH" ), QByteArray( "1" ) );
+
+        // build the request body, we only want VTODO items
+        QString body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+                <d:prop> \
+                    <d:getetag /> \
+                    <d:getlastmodified /> \
+                </d:prop> \
+                <c:filter> \
+                    <c:comp-filter name=\"VCALENDAR\"> \
+                        <c:comp-filter name=\"VTODO\" /> \
+                    </c:comp-filter> \
+                </c:filter> \
+            </c:calendar-query>";
+
+        QByteArray *dataToSend = new QByteArray( body.toLatin1() );
+        r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
+        QBuffer *buffer = new QBuffer( dataToSend );
+
+        QNetworkReply *reply = networkManager->sendCustomRequest( r, "REPORT", buffer );
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
     }
 }
@@ -840,81 +854,71 @@ void OwnCloudService::loadTodoItems( QString& data )
         {
             QDomElement elem = responseNode.toElement();
 
-            // check if we have a content type
-            QDomNodeList contentTypeNodes = elem.elementsByTagNameNS( NS_DAV, "getcontenttype" );
-            if ( contentTypeNodes.length() )
+            // check if we have an url
+            QDomNodeList urlPartNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
+            if ( urlPartNodes.length() )
             {
-                // check if the content type is calendar
-                const QString contentType = contentTypeNodes.at(0).toElement().text();
-                if ( contentType.contains( "text/calendar" ) )
-                {
-                    // check if we have an url
-                    QDomNodeList urlPartNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
-                    if ( urlPartNodes.length() )
-                    {
-                        QString urlPart = urlPartNodes.at(0).toElement().text();
+                QString urlPart = urlPartNodes.at(0).toElement().text();
 
-                        if ( urlPart == "" ) {
-                            continue;
+                if ( urlPart == "" ) {
+                    continue;
+                }
+
+                QUrl calendarItemUrl = QUrl( serverUrl + urlPart );
+
+                // check if we have an etag
+                QDomNodeList etagNodes = elem.elementsByTagNameNS( NS_DAV, "getetag" );
+                if ( etagNodes.length() )
+                {
+                    QString etag = etagNodes.at(0).toElement().text();
+                    etag.replace( "\"", "" );
+                    qDebug() << __func__ << " - 'etag': " << etag;
+
+                    // check if we have a last modified date
+                    QDomNodeList lastModifiedNodes = elem.elementsByTagNameNS( NS_DAV, "getlastmodified" );
+                    if ( lastModifiedNodes.length() )
+                    {
+                        const QString lastModified = lastModifiedNodes.at(0).toElement().text();
+                        bool fetchItem = false;
+
+                        // try to fetch the calendar item by url
+                        CalendarItem calItem = CalendarItem::fetchByUrl( calendarItemUrl );
+                        if ( calItem.isFetched() )
+                        {
+                            // check if calendar item was modified
+                            if ( calItem.getETag() != etag )
+                            {
+                                // store etag and last modified date
+                                calItem.setETag( etag );
+                                calItem.setLastModifiedString( lastModified );
+                                calItem.store();
+
+                                // we want to update the item from server
+                                fetchItem = true;
+                            }
+                        }
+                        // calendar item was not found
+                        else
+                        {
+                            // create calendar item for fetching
+                            bool res = CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl, etag, lastModified );
+                            fetchItem = true;
                         }
 
-                        QUrl calendarItemUrl = QUrl( serverUrl + urlPart );
-
-                        // check if we have an etag
-                        QDomNodeList etagNodes = elem.elementsByTagNameNS( NS_DAV, "getetag" );
-                        if ( etagNodes.length() )
+                        // remove the url from the list of calendar item urls to remove
+                        if ( calendarItemUrlRemoveList.contains( calendarItemUrl ) )
                         {
-                            QString etag = etagNodes.at(0).toElement().text();
-                            etag.replace( "\"", "" );
-                            qDebug() << __func__ << " - 'etag': " << etag;
+                            calendarItemUrlRemoveList.removeAll( calendarItemUrl );
+                        }
 
-                            // check if we have a last modified date
-                            QDomNodeList lastModifiedNodes = elem.elementsByTagNameNS( NS_DAV, "getlastmodified" );
-                            if ( lastModifiedNodes.length() )
-                            {
-                                const QString lastModified = lastModifiedNodes.at(0).toElement().text();
-                                bool fetchItem = false;
+                        // fetch the calendar item
+                        if ( fetchItem )
+                        {
+                            QNetworkRequest r( calendarItemUrl );
+                            addAuthHeader( &r );
 
-                                // try to fetch the calendar item by url
-                                CalendarItem calItem = CalendarItem::fetchByUrl( calendarItemUrl );
-                                if ( calItem.isFetched() )
-                                {
-                                    // check if calendar item was modified
-                                    if ( calItem.getETag() != etag )
-                                    {
-                                        // store etag and last modified date
-                                        calItem.setETag( etag );
-                                        calItem.setLastModifiedString( lastModified );
-                                        calItem.store();
-
-                                        // we want to update the item from server
-                                        fetchItem = true;
-                                    }
-                                }
-                                // calendar item was not found
-                                else
-                                {
-                                    // create calendar item for fetching
-                                    bool res = CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl, etag, lastModified );
-                                    fetchItem = true;
-                                }
-
-                                // remove the url from the list of calendar item urls to remove
-                                if ( calendarItemUrlRemoveList.contains( calendarItemUrl ) )
-                                {
-                                    calendarItemUrlRemoveList.removeAll( calendarItemUrl );
-                                }
-
-                                // fetch the calendar item
-                                if ( fetchItem )
-                                {
-                                    QNetworkRequest r( calendarItemUrl );
-                                    addAuthHeader( &r );
-
-                                    QNetworkReply *reply = networkManager->get( r );
-                                    QObject::connect( reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()) );
-                                }
-                            }
+                            QNetworkReply *reply = networkManager->get( r );
+                            QObject::connect( reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()) );
                         }
                     }
                 }

@@ -3,7 +3,8 @@
 ## 0.63
 - fixed some problems with special characters in todo list names
 - the default todo item priority is now 0 (not set)
-- todo items are now only loaded from server if they were changed on the server
+- todo items are now locally stored in a sqlite database and only updated from server if they were changed on the server
+- vcalendar and vjournal items are now ignored when fetching items from the server, only vtodo items will be fetched
 
 ## 0.62
 - you can now also use the todo items from the *Calendar Plus* / *Tasks Plus* ownCloud apps
