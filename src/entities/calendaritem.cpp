@@ -94,7 +94,13 @@ bool CalendarItem::setupTables()
     return true;
 }
 
-bool CalendarItem::addCalendarItemForRequest( QString calendar, QString url )
+/**
+ * @brief CalendarItem::addCalendarItemForRequest
+ * @param calendar
+ * @param url we are using QUrl because be want special characters in the urls translated
+ * @return
+ */
+bool CalendarItem::addCalendarItemForRequest( QString calendar, QUrl url )
 {
     QSqlQuery query;
     query.prepare( "INSERT INTO calendarItem ( calendar, url ) VALUES ( :calendar, :url )" );

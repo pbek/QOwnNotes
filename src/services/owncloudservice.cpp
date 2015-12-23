@@ -150,6 +150,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
         }
         else if ( reply->url().path().startsWith( calendarPath ) )
         {
+            // check if we have a reply from a calendar item request
             if ( reply->url().path().endsWith( ".ics" ) )
             {
                 qDebug() << "Reply from ownCloud calendar item ics page";
@@ -173,6 +174,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
                 }
                 qDebug() << __func__ << " - 'calItem': " << calItem;
             }
+            // this should be the reply of a calendar item list request
             else
             {
                 qDebug() << "Reply from ownCloud calendar todo list page";
@@ -420,7 +422,7 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
 
     QSettings settings;
     QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
-    int index = todoCalendarEnabledList.indexOf( QRegularExpression::escape( calendarName ) );
+    int index = todoCalendarEnabledList.indexOf( calendarName );
 
     // return if we did't find the calendar, this should not happen
     if ( index == -1 ) {
@@ -443,13 +445,7 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
 
         QUrl url( calendarUrl );
         QNetworkRequest r( url );
-        QUrlQuery q;
-
-        q.addQueryItem( "format", format );
-        url.setQuery(q);
         addAuthHeader(&r);
-        url.setUrl( calendarUrl );
-        r.setUrl( url );
 
         QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND" );
         QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
@@ -835,7 +831,7 @@ void OwnCloudService::loadTodoItems( QString& data )
 
     foreach ( QString calendarItemUrl, todoListICSUrls)
     {
-        CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl );
+        CalendarItem::addCalendarItemForRequest( calendarName, QUrl( calendarItemUrl ) );
 
         //if ( !busy )
         {

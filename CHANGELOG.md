@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.63
+- fixed some problems with special characters in todo list names
+
 ## 0.62
 - you can now also use the todo items from the *Calendar Plus* / *Tasks Plus* ownCloud apps
     - select which backend you want to use in the todo settings

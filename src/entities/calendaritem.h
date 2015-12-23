@@ -3,6 +3,7 @@
 
 #include <QDateTime>
 #include <QSqlQuery>
+#include <QUrl>
 
 
 class CalendarItem
@@ -26,7 +27,7 @@ public:
     bool isFetched();
     bool isCompleted();
     static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
-    static bool addCalendarItemForRequest(QString calendar, QString url);
+    static bool addCalendarItemForRequest(QString calendar, QUrl url);
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
     static bool deleteAllByCalendar(QString calendar);
     QString getUrl();
