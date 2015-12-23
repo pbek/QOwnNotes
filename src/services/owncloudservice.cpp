@@ -823,44 +823,8 @@ QStringList OwnCloudService::parseCalendarHrefList( QString& data )
 
 void OwnCloudService::loadTodoItems( QString& data )
 {
-    QStringList todoListICSUrls = parseTodoListICSUrls( data );
-    qDebug() << todoListICSUrls;
-
-    CalendarItem::deleteAllByCalendar( calendarName );
     this->todoDialog->clearTodoList();
 
-    foreach ( QString calendarItemUrl, todoListICSUrls)
-    {
-        CalendarItem::addCalendarItemForRequest( calendarName, QUrl( calendarItemUrl ) );
-
-        //if ( !busy )
-        {
-            busy = true;
-            emit( busyChanged( busy ) );
-
-            QUrl url( calendarItemUrl );
-            QNetworkRequest r( url );
-
-            addAuthHeader(&r);
-            r.setUrl( url );
-
-            QNetworkReply *reply = networkManager->get( r );
-            QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-        }
-    }
-
-    qDebug()<<CalendarItem::fetchAllByCalendar( calendarName );
-}
-
-/**
- * @brief Returns a list of URLs with ics calendar items from a calendar response string
- *
- * @param data
- * @return QStringList
- */
-QStringList OwnCloudService::parseTodoListICSUrls( QString& data )
-{
-    QStringList resultList;
     QDomDocument doc;
     doc.setContent( data, true );
 
@@ -873,25 +837,82 @@ QStringList OwnCloudService::parseTodoListICSUrls( QString& data )
         {
             QDomElement elem = responseNode.toElement();
 
+            // check if we have a content type
             QDomNodeList contentTypeNodes = elem.elementsByTagNameNS( NS_DAV, "getcontenttype" );
             if ( contentTypeNodes.length() )
             {
+                // check if the content type is calendar
                 const QString contentType = contentTypeNodes.at(0).toElement().text();
-
                 if ( contentType.contains( "text/calendar" ) )
                 {
+                    // check if we have an url
                     QDomNodeList urlPartNodes = elem.elementsByTagNameNS( NS_DAV, "href" );
                     if ( urlPartNodes.length() )
                     {
-                        const QString urlPart = urlPartNodes.at(0).toElement().text();
-                        resultList << serverUrl + urlPart;
+                        QUrl calendarItemUrl = QUrl( serverUrl + urlPartNodes.at(0).toElement().text() );
+
+                        // check if we have an etag
+                        QDomNodeList etagNodes = elem.elementsByTagNameNS( NS_DAV, "getetag" );
+                        if ( etagNodes.length() )
+                        {
+                            QString etag = etagNodes.at(0).toElement().text();
+                            etag.replace( "\"", "" );
+                            qDebug() << __func__ << " - 'etag': " << etag;
+
+                            // check if we have a last modified date
+                            QDomNodeList lastModifiedNodes = elem.elementsByTagNameNS( NS_DAV, "getlastmodified" );
+                            if ( lastModifiedNodes.length() )
+                            {
+                                const QString lastModified = lastModifiedNodes.at(0).toElement().text();
+                                bool fetchItem = false;
+
+                                // try to fetch the calendar item by url
+                                CalendarItem calItem = CalendarItem::fetchByUrl( calendarItemUrl );
+                                if ( calItem.isFetched() )
+                                {
+                                    // check if calendar item was modified
+                                    if ( calItem.getETag() != etag )
+                                    {
+                                        // store etag and last modified date
+                                        calItem.setETag( etag );
+                                        calItem.setLastModifiedString( lastModified );
+                                        calItem.store();
+
+                                        // we want to update the item from server
+                                        fetchItem = true;
+                                    }
+                                }
+                                // calendar item was not found
+                                else
+                                {
+                                    // create calendar item for fetching
+                                    bool res = CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl, etag, lastModified );
+                                    fetchItem = true;
+                                }
+
+                                // fetch the calendar item
+                                if ( fetchItem )
+                                {
+                                    QNetworkRequest r( calendarItemUrl );
+                                    addAuthHeader( &r );
+
+                                    QNetworkReply *reply = networkManager->get( r );
+                                    QObject::connect( reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()) );
+                                }
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    return resultList;
+    // TODO: remove all not found items
+
+    // reload the existing items
+    this->todoDialog->reloadTodoListItems();
+
+    qDebug()<<CalendarItem::fetchAllByCalendar( calendarName );
 }
 
 bool OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoDialog *dialog ) {

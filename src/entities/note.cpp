@@ -98,13 +98,13 @@ bool Note::setupTables()
 {
     QSqlDatabase db = QSqlDatabase::database( "memory" );
     QSqlQuery query( db );
-    query.exec("create table note (id integer primary key, "
-               "name varchar(255), file_name varchar(255), note_text text,"
-               "has_dirty_data integer default 0,"
-               "file_last_modified datetime,"
-               "file_created datetime,"
-               "created datetime default current_timestamp,"
-               "modified datetime default current_timestamp)");
+    query.exec("CREATE TABLE note (id INTEGER PRIMARY KEY,"
+               "name VARCHAR(255), file_name VARCHAR(255), note_text TEXT,"
+               "has_dirty_data INTEGER DEFAULT 0,"
+               "file_last_modified DATETIME,"
+               "file_created DATETIME,"
+               "created DATETIME default current_timestamp,"
+               "modified DATETIME default current_timestamp)");
 
     return true;
 }

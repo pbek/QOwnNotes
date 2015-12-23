@@ -56,6 +56,26 @@ bool CalendarItem::getHasDirtyData()
     return this->hasDirtyData;
 }
 
+QString CalendarItem::getLastModifiedString()
+{
+    return this->lastModifiedString;
+}
+
+QString CalendarItem::getETag()
+{
+    return this->etag;
+}
+
+void CalendarItem::setLastModifiedString(QString text)
+{
+    this->lastModifiedString = text;
+}
+
+void CalendarItem::setETag(QString text)
+{
+    this->etag = text;
+}
+
 void CalendarItem::setSummary(QString text)
 {
     this->summary = text;
@@ -81,17 +101,21 @@ bool CalendarItem::setupTables()
     QSqlDatabase db = QSqlDatabase::database( "disk" );
     QSqlQuery query( db );
 
-    query.exec("create table calendarItem (id integer primary key, "
-            "summary varchar(255), url varchar(255), description text,"
-            "has_dirty_data integer default 0,"
-            "completed integer default 0,"
-            "priority integer,"
-            "calendar varchar(255),"
-            "uid varchar(255),"
-            "ics_data text,"
-            "alarm_date datetime,"
-            "created datetime default current_timestamp,"
-            "modified datetime default current_timestamp)");
+    query.exec("CREATE TABLE calendarItem (id INTEGER PRIMARY KEY,"
+            "summary VARCHAR(255), url VARCHAR(255) UNIQUE, description TEXT,"
+            "has_dirty_data INTEGER DEFAULT 0,"
+            "completed INTEGER DEFAULT 0,"
+            "priority INTEGER,"
+            "calendar VARCHAR(255),"
+            "uid VARCHAR(255),"
+            "ics_data TEXT,"
+            "alarm_date DATETIME,"
+            "etag VARCHAR(255),"
+            "last_modified_string VARCHAR(255),"
+            "created DATETIME DEFAULT current_timestamp,"
+            "modified DATETIME DEFAULT current_timestamp)");
+
+//    query.exec("CREATE UNIQUE INDEX calendarUrl ON calendarItem( calendar, url );");
 
     return true;
 }
@@ -102,14 +126,16 @@ bool CalendarItem::setupTables()
  * @param url we are using QUrl because be want special characters in the urls translated
  * @return
  */
-bool CalendarItem::addCalendarItemForRequest( QString calendar, QUrl url )
+bool CalendarItem::addCalendarItemForRequest( QString calendar, QUrl url, QString etag, QString lastModifiedString )
 {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
     QSqlQuery query( db );
 
-    query.prepare( "INSERT INTO calendarItem ( calendar, url ) VALUES ( :calendar, :url )" );
+    query.prepare( "INSERT INTO calendarItem ( calendar, url, etag, last_modified_string ) VALUES ( :calendar, :url, :etag, :last_modified_string )" );
     query.bindValue( ":calendar", calendar );
     query.bindValue( ":url", url );
+    query.bindValue( ":etag", etag );
+    query.bindValue( ":last_modified_string", lastModifiedString );
     return query.exec();
 }
 
@@ -190,6 +216,27 @@ CalendarItem CalendarItem::fetchByUid( QString uid )
     return calendarItem;
 }
 
+CalendarItem CalendarItem::fetchByUrl( QUrl url )
+{
+    CalendarItem calendarItem;
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
+    query.prepare( "SELECT * FROM calendarItem WHERE url = :url" );
+    query.bindValue( ":url", url );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else if ( query.first() )
+    {
+        calendarItem.fillFromQuery( query );
+    }
+
+    return calendarItem;
+}
+
 bool CalendarItem::remove()
 {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
@@ -229,6 +276,8 @@ bool CalendarItem::fillFromQuery( QSqlQuery query )
     this->uid = query.value("uid").toString();
     this->calendar = query.value("calendar").toString();
     this->icsData = query.value("ics_data").toString();
+    this->etag = query.value("etag").toString();
+    this->lastModifiedString = query.value("last_modified_string").toString();
     this->alarmDate = query.value("alarm_date").toDateTime();
     this->created = query.value("created").toDateTime();
     this->modified = query.value("modified").toDateTime();
@@ -300,6 +349,7 @@ bool CalendarItem::store() {
         query.prepare( "UPDATE calendarItem SET "
                        "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, completed = :completed, "
                        "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
+                       "etag = :etag, last_modified_string = :last_modified_string, "
                        "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified "
                        "WHERE id = :id" );
         query.bindValue( ":id", this->id );
@@ -307,8 +357,8 @@ bool CalendarItem::store() {
     else
     {
         query.prepare( "INSERT INTO calendarItem"
-                       "( summary, url, description, calendar, uid, ics_data, has_dirty_data, completed, alarm_date, priority, created, modified ) "
-                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified )");
+                       "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified ) "
+                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified )");
     }
 
     query.bindValue( ":summary", this->summary );
@@ -319,6 +369,8 @@ bool CalendarItem::store() {
     query.bindValue( ":calendar", this->calendar );
     query.bindValue( ":uid", this->uid );
     query.bindValue( ":ics_data", this->icsData );
+    query.bindValue( ":etag", this->etag );
+    query.bindValue( ":last_modified_string", this->lastModifiedString );
     query.bindValue( ":alarm_date", this->alarmDate );
     query.bindValue( ":priority", this->priority );
     query.bindValue( ":created", this->created );

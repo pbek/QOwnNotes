@@ -27,7 +27,7 @@ public:
     bool isFetched();
     bool isCompleted();
     static CalendarItem fetchByUrlAndCalendar(QString url, QString calendar);
-    static bool addCalendarItemForRequest(QString calendar, QUrl url);
+    static bool addCalendarItemForRequest(QString calendar, QUrl url, QString etag, QString lastModifiedString);
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
     static bool deleteAllByCalendar(QString calendar);
     QString getUrl();
@@ -44,6 +44,11 @@ public:
     QString getICSData();
     void setPriority(int value);
     void setICSData(QString text);
+    QString getETag();
+    QString getLastModifiedString();
+    static CalendarItem fetchByUrl(QUrl url);
+    void setLastModifiedString(QString text);
+    void setETag(QString text);
 private:
     int id;
     QString summary;
@@ -52,6 +57,8 @@ private:
     QString calendar;
     QString uid;
     QString icsData;
+    QString etag;
+    QString lastModifiedString;
     int priority;
     bool hasDirtyData;
     bool completed;
