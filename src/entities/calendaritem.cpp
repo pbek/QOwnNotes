@@ -473,7 +473,7 @@ bool CalendarItem::updateWithICSData( QString icsData )
     this->completed = icsDataHash.contains( "PERCENT-COMPLETE" ) ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
     this->uid = icsDataHash.contains( "UID" ) ? icsDataHash["UID"] : "";
     this->description = icsDataHash.contains( "DESCRIPTION" ) ? icsDataHash["DESCRIPTION"] : "";
-    this->priority = icsDataHash.contains( "PRIORITY" ) ? icsDataHash["PRIORITY"].toInt() : 5;
+    this->priority = icsDataHash.contains( "PRIORITY" ) ? icsDataHash["PRIORITY"].toInt() : 0;
     this->created = icsDataHash.contains( "CREATED" ) ? QDateTime::fromString( icsDataHash["CREATED"], dateFormat ) : QDateTime::currentDateTime();
     this->modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], dateFormat ) : QDateTime::currentDateTime();
 

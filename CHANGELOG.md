@@ -2,6 +2,7 @@
 
 ## 0.63
 - fixed some problems with special characters in todo list names
+- the default todo priority is now 0 (not set)
 
 ## 0.62
 - you can now also use the todo items from the *Calendar Plus* / *Tasks Plus* ownCloud apps
