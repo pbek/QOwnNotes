@@ -5,6 +5,7 @@
 - fixed a problem with `,` in todo list items
 - fixed a problem with missing todo list items
 - now a progress bar is shown while the todo list items are loaded from the server
+- note: **Merry Christmas everyone**
 
 ## 0.63
 - fixed some problems with special characters in todo list names
