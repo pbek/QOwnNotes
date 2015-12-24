@@ -122,6 +122,9 @@
         </item>
         <item row="2" column="0">
          <widget class="QProgressBar" name="todoItemLoadingProgressBar">
+          <property name="toolTip">
+           <string>Todo list items are being loaded from the server</string>
+          </property>
           <property name="value">
            <number>24</number>
           </property>
