@@ -15,7 +15,6 @@
 class OwnCloudService : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(bool busy READ isBusy NOTIFY busyChanged)
 
 public:
     enum CalendarBackend {
@@ -26,7 +25,6 @@ public:
 
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
     void settingsConnectionTest( SettingsDialog *dialog );
-    bool isBusy();
     void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
     void loadTrash(QString notesPath, MainWindow *mainWindow);
     void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
@@ -55,7 +53,6 @@ private:
     TodoDialog *todoDialog;
     QString calendarName;
     void checkAppInfo(QNetworkReply *reply);
-    bool busy;
     void readSettings();
     void addAuthHeader(QNetworkRequest *r);
     QString getServerNotesPath(QString notesPath);
@@ -65,7 +62,6 @@ private:
     void loadTodoItems(QString &data);
     QStringList parseTodoListICSUrls(QString &data);
 signals:
-    void busyChanged(bool busy);
 
 private slots:
     void slotAuthenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator );

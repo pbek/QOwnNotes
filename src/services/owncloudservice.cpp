@@ -36,7 +36,6 @@ void OwnCloudService::readSettings()
     localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
 
     networkManager = new QNetworkAccessManager();
-    busy = false;
 
     versionListPath = rootPath + "note/versions";
     trashListPath = rootPath + "note/trashed";
@@ -202,9 +201,6 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
             return;
         }
     }
-
-    busy = false;
-    emit(busyChanged(busy));
 }
 
 void OwnCloudService::checkAppInfo( QNetworkReply* reply )
@@ -303,39 +299,33 @@ void OwnCloudService::settingsConnectionTest( SettingsDialog *dialog )
     QSettings settings;
     QString notesPath = settings.value("notesPath").toString();
 
-    if ( !busy )
-    {
-        busy = true;
-        emit( busyChanged( busy ) );
+    QUrl url( serverUrl );
+    QNetworkRequest r( url );
 
-        QUrl url( serverUrl );
-        QNetworkRequest r( url );
+    // direct server url request without auth header
+    QNetworkReply *reply = networkManager->get( r );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 
-        // direct server url request without auth header
-        QNetworkReply *reply = networkManager->get( r );
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+    QUrlQuery q;
+    q.addQueryItem( "format", format );
+    url.setQuery(q);
 
-        QUrlQuery q;
-        q.addQueryItem( "format", format );
-        url.setQuery(q);
+    addAuthHeader(&r);
 
-        addAuthHeader(&r);
+    url.setUrl( serverUrl + capabilitiesPath );
+    r.setUrl( url );
+    reply = networkManager->get(r);
 
-        url.setUrl( serverUrl + capabilitiesPath );
-        r.setUrl( url );
-        reply = networkManager->get(r);
+    url.setUrl( serverUrl + ownCloudTestPath );
+    r.setUrl( url );
+    reply = networkManager->get(r);
 
-        url.setUrl( serverUrl + ownCloudTestPath );
-        r.setUrl( url );
-        reply = networkManager->get(r);
-
-        url.setUrl( serverUrl + appInfoPath );
-        QString serverNotesPath = getServerNotesPath( notesPath );
-        q.addQueryItem( "notes_path", serverNotesPath );
-        url.setQuery(q);
-        r.setUrl( url );
-        reply = networkManager->get(r);
-    }
+    url.setUrl( serverUrl + appInfoPath );
+    QString serverNotesPath = getServerNotesPath( notesPath );
+    q.addQueryItem( "notes_path", serverNotesPath );
+    url.setQuery(q);
+    r.setUrl( url );
+    reply = networkManager->get(r);
 
     QString localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
 
@@ -378,32 +368,26 @@ void OwnCloudService::settingsGetCalendarList( SettingsDialog *dialog )
 {
     settingsDialog = dialog;
 
-    if ( !busy )
-    {
-        busy = true;
-        emit( busyChanged( busy ) );
+    QUrl url( serverUrl + calendarPath );
+    QNetworkRequest r( url );
+    addAuthHeader(&r);
 
-        QUrl url( serverUrl + calendarPath );
-        QNetworkRequest r( url );
-        addAuthHeader(&r);
+    // build the request body
+    QString body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+            <d:prop> \
+               <d:resourcetype /> \
+               <d:displayname /> \
+               <cs:getctag /> \
+               <c:supported-calendar-component-set /> \
+            </d:prop> \
+          </d:propfind>";
 
-        // build the request body
-        QString body = "<d:propfind xmlns:d=\"DAV:\" xmlns:cs=\"http://sabredav.org/ns\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
-                <d:prop> \
-                   <d:resourcetype /> \
-                   <d:displayname /> \
-                   <cs:getctag /> \
-                   <c:supported-calendar-component-set /> \
-                </d:prop> \
-              </d:propfind>";
+    QByteArray *dataToSend = new QByteArray( body.toLatin1() );
+    r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
+    QBuffer *buffer = new QBuffer( dataToSend );
 
-        QByteArray *dataToSend = new QByteArray( body.toLatin1() );
-        r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
-        QBuffer *buffer = new QBuffer( dataToSend );
-
-        QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND", buffer );
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-    }
+    QNetworkReply *reply = networkManager->sendCustomRequest( r, "PROPFIND", buffer );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
 /**
@@ -432,38 +416,32 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
 
     QString calendarUrl = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList().at( index );
 
-    if ( !busy )
-    {
-        busy = true;
-        emit( busyChanged( busy ) );
+    QUrl url( calendarUrl );
+    QNetworkRequest r( url );
+    addAuthHeader(&r);
 
-        QUrl url( calendarUrl );
-        QNetworkRequest r( url );
-        addAuthHeader(&r);
+    // ownCloud needs depth to be set to 1
+    r.setRawHeader( QByteArray( "DEPTH" ), QByteArray( "1" ) );
 
-        // ownCloud needs depth to be set to 1
-        r.setRawHeader( QByteArray( "DEPTH" ), QByteArray( "1" ) );
+    // build the request body, we only want VTODO items
+    QString body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
+            <d:prop> \
+                <d:getetag /> \
+                <d:getlastmodified /> \
+            </d:prop> \
+            <c:filter> \
+                <c:comp-filter name=\"VCALENDAR\"> \
+                    <c:comp-filter name=\"VTODO\" /> \
+                </c:comp-filter> \
+            </c:filter> \
+        </c:calendar-query>";
 
-        // build the request body, we only want VTODO items
-        QString body = "<c:calendar-query xmlns:d=\"DAV:\" xmlns:c=\"urn:ietf:params:xml:ns:caldav\"> \
-                <d:prop> \
-                    <d:getetag /> \
-                    <d:getlastmodified /> \
-                </d:prop> \
-                <c:filter> \
-                    <c:comp-filter name=\"VCALENDAR\"> \
-                        <c:comp-filter name=\"VTODO\" /> \
-                    </c:comp-filter> \
-                </c:filter> \
-            </c:calendar-query>";
+    QByteArray *dataToSend = new QByteArray( body.toLatin1() );
+    r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
+    QBuffer *buffer = new QBuffer( dataToSend );
 
-        QByteArray *dataToSend = new QByteArray( body.toLatin1() );
-        r.setHeader(QNetworkRequest::ContentLengthHeader,dataToSend->size());
-        QBuffer *buffer = new QBuffer( dataToSend );
-
-        QNetworkReply *reply = networkManager->sendCustomRequest( r, "REPORT", buffer );
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-    }
+    QNetworkReply *reply = networkManager->sendCustomRequest( r, "REPORT", buffer );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
 /**
@@ -473,31 +451,25 @@ void OwnCloudService::restoreTrashedNoteOnServer( QString notesPath, QString fil
 {
     this->mainWindow = mainWindow;
 
-    if ( !busy )
-    {
-        busy = true;
-        emit(busyChanged(busy));
+    QUrl url( serverUrl + restoreTrashedNotePath );
+    QString serverNotesPath = getServerNotesPath( notesPath );
 
-        QUrl url( serverUrl + restoreTrashedNotePath );
-        QString serverNotesPath = getServerNotesPath( notesPath );
+    url.setUserName( userName );
+    url.setPassword( password );
 
-        url.setUserName( userName );
-        url.setPassword( password );
+    QUrlQuery q;
+    q.addQueryItem( "format", format );
+    q.addQueryItem( "file_name", serverNotesPath + fileName );
+    q.addQueryItem( "timestamp", QString::number( timestamp ) );
+    url.setQuery( q );
 
-        QUrlQuery q;
-        q.addQueryItem( "format", format );
-        q.addQueryItem( "file_name", serverNotesPath + fileName );
-        q.addQueryItem( "timestamp", QString::number( timestamp ) );
-        url.setQuery( q );
+    qDebug() << url;
 
-        qDebug() << url;
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
 
-        QNetworkRequest r(url);
-        addAuthHeader(&r);
-
-        QNetworkReply *reply = networkManager->get(r);
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-    }
+    QNetworkReply *reply = networkManager->get(r);
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
 /**
@@ -507,30 +479,24 @@ void OwnCloudService::loadVersions( QString notesPath, QString fileName, MainWin
 {
     this->mainWindow = mainWindow;
 
-    if ( !busy )
-    {
-        busy = true;
-        emit(busyChanged(busy));
+    QUrl url( serverUrl + versionListPath );
+    QString serverNotesPath = getServerNotesPath( notesPath );
 
-        QUrl url( serverUrl + versionListPath );
-        QString serverNotesPath = getServerNotesPath( notesPath );
+    url.setUserName( userName );
+    url.setPassword( password );
 
-        url.setUserName( userName );
-        url.setPassword( password );
+    QUrlQuery q;
+    q.addQueryItem( "format", format );
+    q.addQueryItem( "file_name", serverNotesPath + fileName );
+    url.setQuery( q );
 
-        QUrlQuery q;
-        q.addQueryItem( "format", format );
-        q.addQueryItem( "file_name", serverNotesPath + fileName );
-        url.setQuery( q );
+    // qDebug() << url;
 
-        // qDebug() << url;
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
 
-        QNetworkRequest r(url);
-        addAuthHeader(&r);
-
-        QNetworkReply *reply = networkManager->get(r);
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-    }
+    QNetworkReply *reply = networkManager->get(r);
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
 /**
@@ -540,30 +506,24 @@ void OwnCloudService::loadTrash( QString notesPath, MainWindow *mainWindow )
 {
     this->mainWindow = mainWindow;
 
-    if ( !busy )
-    {
-        busy = true;
-        emit(busyChanged(busy));
+    QUrl url( serverUrl + trashListPath );
+    QString serverNotesPath = getServerNotesPath( notesPath );
 
-        QUrl url( serverUrl + trashListPath );
-        QString serverNotesPath = getServerNotesPath( notesPath );
+    url.setUserName( userName );
+    url.setPassword( password );
 
-        url.setUserName( userName );
-        url.setPassword( password );
+    QUrlQuery q;
+    q.addQueryItem( "format", format );
+    q.addQueryItem( "dir", serverNotesPath );
+    url.setQuery( q );
 
-        QUrlQuery q;
-        q.addQueryItem( "format", format );
-        q.addQueryItem( "dir", serverNotesPath );
-        url.setQuery( q );
+    // qDebug() << url;
 
-        // qDebug() << url;
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
 
-        QNetworkRequest r(url);
-        addAuthHeader(&r);
-
-        QNetworkReply *reply = networkManager->get(r);
-        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
-    }
+    QNetworkReply *reply = networkManager->get(r);
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
 }
 
 void OwnCloudService::addAuthHeader(QNetworkRequest *r)
@@ -575,11 +535,6 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r)
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
     }
-}
-
-bool OwnCloudService::isBusy()
-{
-    return busy;
 }
 
 /**
