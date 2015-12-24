@@ -25,6 +25,8 @@ void TodoDialog::setupUi()
     setupMainSplitter();
     loadTodoListData();
 
+    ui->todoItemLoadingProgressBar->hide();
+
     QSettings settings;
 
     {
@@ -89,6 +91,8 @@ void TodoDialog::loadTodoListData()
  */
 void TodoDialog::reloadTodoList()
 {
+    ui->todoItemLoadingProgressBar->setValue( 0 );
+    ui->todoItemLoadingProgressBar->show();
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
     ownCloud->todoGetTodoList( ui->todoListSelector->currentText(), this );
 }
@@ -240,7 +244,7 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked()
     reloadTodoList();
 }
 
-void TodoDialog::on_toolButton_clicked()
+void TodoDialog::on_saveButton_clicked()
 {
     updateCurrentCalendarItemWithFormData();
 
@@ -253,4 +257,40 @@ void TodoDialog::on_toolButton_clicked()
     ownCloud->postCalendarItemToServer( currentCalendarItem, this );
 
     qDebug()<< currentCalendarItem;
+}
+
+void TodoDialog::todoItemLoadingProgressBarIncrement()
+{
+    ui->todoItemLoadingProgressBar->show();
+    int value = ui->todoItemLoadingProgressBar->value() + 1;
+
+    if ( value <= 0 ) {
+        value = 1;
+    }
+
+    ui->todoItemLoadingProgressBar->setValue( value );
+}
+
+void TodoDialog::todoItemLoadingProgressBarHide()
+{
+    ui->todoItemLoadingProgressBar->hide();
+}
+
+void TodoDialog::todoItemLoadingProgressBarSetMaximum( int value )
+{
+    ui->todoItemLoadingProgressBar->setMaximum( value );
+    todoItemLoadingProgressBarHideIfOnMaximum();
+}
+
+void TodoDialog::todoItemLoadingProgressBarHideIfOnMaximum()
+{
+    if ( ui->todoItemLoadingProgressBar->value() >= ui->todoItemLoadingProgressBar->maximum() )
+    {
+        ui->todoItemLoadingProgressBar->hide();
+    }
+}
+
+void TodoDialog::on_todoItemLoadingProgressBar_valueChanged( int value )
+{
+    todoItemLoadingProgressBarHideIfOnMaximum();
 }

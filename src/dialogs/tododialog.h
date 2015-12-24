@@ -23,14 +23,18 @@ public:
 
     void reloadTodoListItems();
     void clearTodoList();
+    void todoItemLoadingProgressBarIncrement();
+    void todoItemLoadingProgressBarSetMaximum(int value);
+    void todoItemLoadingProgressBarHide();
+    void todoItemLoadingProgressBarHideIfOnMaximum();
 private slots:
     void on_TodoDialog_finished(int result);
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
     void on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
     void on_prioritySlider_valueChanged(int value);
     void on_showCompletedItemsCheckBox_clicked();
-
-    void on_toolButton_clicked();
+    void on_saveButton_clicked();
+    void on_todoItemLoadingProgressBar_valueChanged(int value);
 
 private:
     Ui::TodoDialog *ui;

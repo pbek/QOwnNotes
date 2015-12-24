@@ -102,7 +102,7 @@ bool CalendarItem::setupTables()
     QSqlQuery query( db );
 
     query.exec("CREATE TABLE calendarItem (id INTEGER PRIMARY KEY,"
-            "summary VARCHAR(255), url VARCHAR(255) UNIQUE, description TEXT,"
+            "summary VARCHAR(255), url VARCHAR(255), description TEXT,"
             "has_dirty_data INTEGER DEFAULT 0,"
             "completed INTEGER DEFAULT 0,"
             "priority INTEGER,"
@@ -116,6 +116,7 @@ bool CalendarItem::setupTables()
             "modified DATETIME DEFAULT current_timestamp)");
 
 //    query.exec("CREATE UNIQUE INDEX calendarUrl ON calendarItem( calendar, url );");
+    query.exec("CREATE UNIQUE INDEX idxUrl ON calendarItem( url );");
 
     return true;
 }
@@ -556,9 +557,9 @@ bool CalendarItem::updateWithICSData( QString icsData )
     generateICSDataHash();
 
     // we only need VTODO items!
-    if ( icsDataHash["BEGIN1"] != "VTODO" ) {
-        return false;
-    }
+//    if ( ( icsDataHash["BEGIN1"] != "VTODO" ) && ( icsDataHash["BEGIN"] != "VTODO" ) ) {
+//        return false;
+//    }
 
     QString dateFormat = "yyyyMMddThhmmssZ";
 

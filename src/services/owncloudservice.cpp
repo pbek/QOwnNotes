@@ -154,6 +154,10 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
             {
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 qDebug() << data;
+
+                // increment the progress bar
+                this->todoDialog->todoItemLoadingProgressBarIncrement();
+
                 // fetch the calendar item, that was already stored by loadTodoItems()
                 CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar( reply->url().toString(), calendarName );
                 if ( calItem.isFetched() )
@@ -800,9 +804,15 @@ void OwnCloudService::loadTodoItems( QString& data )
     // fetch all urls that are currently in the calendar
     QList<QUrl> calendarItemUrlRemoveList = CalendarItem::fetchAllUrlsByCalendar( calendarName );
 
-    // loop all response blocks
     QDomNodeList responseNodes = doc.elementsByTagNameNS( NS_DAV, "response" );
-    for ( int i = 0; i < responseNodes.length(); ++i )
+    int responseNodesCount = responseNodes.length();
+    int requestCount = 0;
+
+    // set the preliminary maximum of the progress bar
+    this->todoDialog->todoItemLoadingProgressBarSetMaximum( responseNodesCount );
+
+    // loop all response blocks
+    for ( int i = 0; i < responseNodesCount; ++i )
     {
         QDomNode responseNode = responseNodes.at(i);
         if ( responseNode.isElement() )
@@ -874,11 +884,22 @@ void OwnCloudService::loadTodoItems( QString& data )
 
                             QNetworkReply *reply = networkManager->get( r );
                             QObject::connect( reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()) );
+
+                            requestCount++;
                         }
                     }
                 }
             }
         }
+    }
+
+    // set the real maximum of the progress bar
+    this->todoDialog->todoItemLoadingProgressBarSetMaximum( requestCount );
+
+    // hide progress bar if there were no updates
+    if ( requestCount == 0 )
+    {
+        this->todoDialog->todoItemLoadingProgressBarHide();
     }
 
     // remove all not found items
