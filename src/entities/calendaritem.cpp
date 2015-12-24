@@ -680,8 +680,11 @@ QString CalendarItem::decodeICSDataLine( QString line )
     line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
     line.replace( QRegularExpression( "([^\\\\])\\\\n" ), "\\1\n" );
 
-    // replace \\ with "\"
+    // replace "\\" with "\"
     line.replace( "\\\\", "\\" );
+
+    // replace "\," with ","
+    line.replace( "\\,", "," );
 
 //    qDebug() << __func__ << " - 'after line':  " << line;
     return line;

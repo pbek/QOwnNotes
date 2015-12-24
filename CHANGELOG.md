@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.64
+- fixed some network issues
+- fixed a problem with `,` in todo list items
+
 ## 0.63
 - fixed some problems with special characters in todo list names
 - the default todo item priority is now 0 (not set)
