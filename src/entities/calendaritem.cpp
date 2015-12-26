@@ -7,6 +7,7 @@
 #include <QApplication>
 #include <QSqlError>
 #include <QRegularExpression>
+#include <QUuid>
 
 
 CalendarItem::CalendarItem()
@@ -81,6 +82,16 @@ void CalendarItem::setSummary(QString text)
     this->summary = text;
 }
 
+void CalendarItem::setUrl(QUrl url)
+{
+    this->url = url.toString();
+}
+
+void CalendarItem::setCalendar(QString text)
+{
+    this->calendar = text;
+}
+
 void CalendarItem::setDescription(QString text)
 {
     this->description = text;
@@ -89,6 +100,11 @@ void CalendarItem::setDescription(QString text)
 void CalendarItem::setICSData( QString text )
 {
     this->icsData = text;
+}
+
+void CalendarItem::setUid( QString text )
+{
+    this->uid = text;
 }
 
 void CalendarItem::setPriority( int value )
@@ -426,13 +442,20 @@ QString CalendarItem::generateNewICSData() {
     // generate a new icsDataHash
     generateICSDataHash();
 
+    qDebug() << __func__ << " - 'icsDataHash after generateICSDataHash': " << icsDataHash;
+    qDebug() << __func__ << " - 'icsDataKeyList after generateICSDataHash': " << icsDataKeyList->join( "," );
+
     // update the icsDataHash
     icsDataHash["SUMMARY"] = summary;
     icsDataHash["DESCRIPTION"] = description;
+    icsDataHash["UID"] = uid;
     icsDataHash["PRIORITY"] = QString::number( priority );
 
     // check for new keys so that we can send them to the calendar server
     updateICSDataKeyListFromHash();
+
+    qDebug() << __func__ << " - 'icsDataHash after updateICSDataKeyListFromHash': " << icsDataHash;
+    qDebug() << __func__ << " - 'icsDataKeyList after updateICSDataKeyListFromHash': " << icsDataKeyList->join( "," );
 
     icsData.clear();
 
@@ -514,7 +537,7 @@ void CalendarItem::updateICSDataKeyListFromHash() {
 }
 
 //
-// deletes all calendarItems in the database
+// deletes all calendarItems of a calendar in the database
 //
 bool CalendarItem::deleteAllByCalendar( QString calendar ) {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
@@ -585,21 +608,31 @@ void CalendarItem::generateICSDataHash()
     QRegularExpressionMatch match;
     QString lastKey;
     icsDataKeyList->clear();
+    icsDataHash.clear();
 
     QStringList iscDataLines = icsData.split( "\n" );
+    icsData.clear();
 
     QListIterator<QString> i( iscDataLines );
     while ( i.hasNext() )
     {
         QString line = i.next();
+        line.replace( "\r", "" );
 
-        // mutli-line text stats with a space
+        if ( line == "" ) {
+            continue;
+        }
+
+        // multi-line text stats with a space
         if ( !line.startsWith( " " ) )
         {
             // remove the trailing \n
-            line.chop( 1 );
+            if ( line.endsWith( "\n" ) ) {
+                line.chop( 1 );
+            }
+
             // parse key and value
-            regex.setPattern( "^([A-Z\\-_=;]+):(.+)$" );
+            regex.setPattern( "^([A-Z\\-_=;]+):(.*)$" );
             match = regex.match( line );
 
             // set last key for multi line texts
@@ -622,7 +655,9 @@ void CalendarItem::generateICSDataHash()
         else
         {
             // remove the trailing \n
-            line.chop( 1 );
+            if ( line.endsWith( "\n" ) ) {
+                line.chop( 1 );
+            }
 
             // remove leading space
             regex.setPattern( "^ (.+)$" );
@@ -691,6 +726,30 @@ QString CalendarItem::decodeICSDataLine( QString line )
     return line;
 }
 
+CalendarItem CalendarItem::createNewTodoItem( QString summary, QString calendar )
+{
+    QUuid uuid = QUuid::createUuid();
+    QString uuidString = uuid.toString();
+    uuidString.replace( "{", "" ).replace( "}", "" );
+
+    CalendarItem calItem;
+    calItem.setSummary( summary );
+    calItem.setCalendar( calendar );
+    calItem.setUrl( QUrl( "https://cloud.bekerle.com/remote.php/caldav/calendars/test/mytest/qownnotes-" + uuidString + ".ics" ) );
+    calItem.setICSData( "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO\nEND:VCALENDAR" );
+    calItem.setUid( uuidString );
+    calItem.generateNewICSData();
+
+    qDebug() << __func__ << " - 'calItem.getUrl()': " << calItem.getUrl();
+
+    if ( calItem.store() )
+    {
+        qDebug() << __func__ << " - 'calItem': " << calItem;
+        qDebug() << __func__ << " - 'calItem.getICSData()': " << calItem.getICSData();
+    }
+
+    return calItem;
+}
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem)
 {

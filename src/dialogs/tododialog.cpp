@@ -294,3 +294,21 @@ void TodoDialog::on_todoItemLoadingProgressBar_valueChanged( int value )
 {
     todoItemLoadingProgressBarHideIfOnMaximum();
 }
+
+void TodoDialog::on_newItemEdit_returnPressed()
+{
+    CalendarItem calItem = CalendarItem::createNewTodoItem( ui->newItemEdit->text(), ui->todoListSelector->currentText() );
+
+    OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+
+    // post the calendar item to the server
+    ownCloud->postCalendarItemToServer( calItem, this );
+
+//    if ( calItem.isFetched() )
+//    {
+//        qDebug() << __func__ << " - 'calItem': " << calItem;
+//        reloadTodoListItems();
+//    }
+
+    ui->newItemEdit->clear();
+}

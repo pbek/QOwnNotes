@@ -155,6 +155,13 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 qDebug() << data;
 
+                // this will mostly happen after the PUT request to update or create a todo item
+                if ( data == "" )
+                {
+                    // reload the todo list from server
+                    this->todoDialog->reloadTodoList();
+                }
+
                 // increment the progress bar
                 this->todoDialog->todoItemLoadingProgressBarIncrement();
 
@@ -174,8 +181,9 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
                     // reload the todo list items
                     this->todoDialog->reloadTodoListItems();
+
+                    qDebug() << __func__ << " - 'calItem': " << calItem;
                 }
-                qDebug() << __func__ << " - 'calItem': " << calItem;
             }
             // this should be the reply of a calendar item list request
             else

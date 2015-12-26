@@ -103,30 +103,37 @@
      <item row="1" column="0">
       <widget class="QFrame" name="selectFrame">
        <layout class="QGridLayout" name="selectLayout">
-        <item row="0" column="0">
-         <widget class="QComboBox" name="todoListSelector">
-          <property name="toolTip">
-           <string>select your todo list</string>
-          </property>
-         </widget>
-        </item>
-        <item row="1" column="0">
+        <item row="2" column="0">
          <widget class="QListWidget" name="todoList"/>
         </item>
-        <item row="3" column="0">
+        <item row="4" column="0">
          <widget class="QCheckBox" name="showCompletedItemsCheckBox">
           <property name="text">
            <string>Show completed items</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="1" column="0">
+         <widget class="QComboBox" name="todoListSelector">
+          <property name="toolTip">
+           <string>select your todo list</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
          <widget class="QProgressBar" name="todoItemLoadingProgressBar">
           <property name="toolTip">
            <string>Todo list items are being loaded from the server</string>
           </property>
           <property name="value">
            <number>24</number>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="newItemEdit">
+          <property name="placeholderText">
+           <string>add new todo item</string>
           </property>
          </widget>
         </item>

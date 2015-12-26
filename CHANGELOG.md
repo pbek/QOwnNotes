@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.65
+- you are now able to create new todo items
+
 ## 0.64
 - fixed some network issues
 - fixed a problem with `,` in todo list items

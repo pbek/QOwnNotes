@@ -50,6 +50,10 @@ public:
     void setLastModifiedString(QString text);
     void setETag(QString text);
     static QList<QUrl> fetchAllUrlsByCalendar(QString calendar);
+    void setCalendar(QString text);
+    static CalendarItem createNewTodoItem(QString summary, QString calendar);
+    void setUrl(QUrl url);
+    void setUid(QString text);
 private:
     int id;
     QString summary;
@@ -60,7 +64,7 @@ private:
     QString icsData;
     QString etag;
     QString lastModifiedString;
-    int priority;
+    int priority = 0;
     bool hasDirtyData;
     bool completed;
     QDateTime alarmDate;

@@ -22,6 +22,7 @@ public:
     ~TodoDialog();
 
     void reloadTodoListItems();
+    void reloadTodoList();
     void clearTodoList();
     void todoItemLoadingProgressBarIncrement();
     void todoItemLoadingProgressBarSetMaximum(int value);
@@ -36,6 +37,8 @@ private slots:
     void on_saveButton_clicked();
     void on_todoItemLoadingProgressBar_valueChanged(int value);
 
+    void on_newItemEdit_returnPressed();
+
 private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;
@@ -44,7 +47,6 @@ private:
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
-    void reloadTodoList();
     int findTodoItemRowByUID(QString uid);
     void resetEditFrameControls();
     void setupUi();
