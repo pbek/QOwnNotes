@@ -462,7 +462,8 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["PRIORITY"] = QString::number( priority );
 
     QString dateFormat = "yyyyMMddThhmmssZ";
-    icsDataHash["CREATED"] = icsDataHash["LAST-MODIFIED"] = created.toUTC().toString( dateFormat );
+    icsDataHash["CREATED"] = created.toUTC().toString( dateFormat );
+    icsDataHash["LASTMODIFIED"] = modified.toUTC().toString( dateFormat );
 
     // check for new keys so that we can send them to the calendar server
     updateICSDataKeyListFromHash();
