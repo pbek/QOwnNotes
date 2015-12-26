@@ -107,6 +107,16 @@ void CalendarItem::setUid( QString text )
     this->uid = text;
 }
 
+void CalendarItem::setCreated( QDateTime dateTime )
+{
+    this->created = dateTime;
+}
+
+void CalendarItem::setModified( QDateTime dateTime )
+{
+    this->modified = dateTime;
+}
+
 void CalendarItem::setPriority( int value )
 {
     this->priority = value;
@@ -451,6 +461,9 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["UID"] = uid;
     icsDataHash["PRIORITY"] = QString::number( priority );
 
+    QString dateFormat = "yyyyMMddThhmmssZ";
+    icsDataHash["CREATED"] = icsDataHash["LAST-MODIFIED"] = created.toUTC().toString( dateFormat );
+
     // check for new keys so that we can send them to the calendar server
     updateICSDataKeyListFromHash();
 
@@ -737,9 +750,12 @@ CalendarItem CalendarItem::createNewTodoItem( QString summary, QString calendar 
     calItem.setUrl( QUrl( "https://cloud.bekerle.com/remote.php/caldav/calendars/test/mytest/qownnotes-" + uuidString + ".ics" ) );
     calItem.setICSData( "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO\nEND:VCALENDAR" );
     calItem.setUid( uuidString );
-    calItem.generateNewICSData();
 
-    qDebug() << __func__ << " - 'calItem.getUrl()': " << calItem.getUrl();
+    QDateTime dateTime = QDateTime::currentDateTime();
+    calItem.setCreated( dateTime );
+    calItem.setModified( dateTime );
+
+    calItem.generateNewICSData();
 
     if ( calItem.store() )
     {

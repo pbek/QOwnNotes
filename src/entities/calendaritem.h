@@ -54,6 +54,8 @@ public:
     static CalendarItem createNewTodoItem(QString summary, QString calendar);
     void setUrl(QUrl url);
     void setUid(QString text);
+    void setModified(QDateTime dateTime);
+    void setCreated(QDateTime dateTime);
 private:
     int id;
     QString summary;
