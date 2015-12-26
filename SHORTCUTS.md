@@ -30,6 +30,10 @@ Important Shortcuts
 - `Alt + Left` jumps back in the note history
     - `Alt + Right` jumps forward in the note history
 
+### In the Todo list
+
+- `Ctrl + S` saves the current todo item
+
 
 ## OSX
 
@@ -59,3 +63,7 @@ Important Shortcuts
     - `Shift + Tab` un-indents the selected text
 - `Cmd + Opt + Left` jumps back in the note history
     - `Cmd + Opt + Right` jumps forward in the note history
+
+### In the Todo list
+
+- `Cmd + S` saves the current todo item

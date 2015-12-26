@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>images/breeze/document-edit.svg</file>
         <file>images/breeze/document-new.svg</file>
+        <file>images/breeze/document-save.svg</file>
         <file>images/breeze/edit-delete.svg</file>
         <file>images/breeze/edit-find.svg</file>
         <file>images/breeze/edit-find-in-note.svg</file>

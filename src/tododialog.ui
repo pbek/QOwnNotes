@@ -92,8 +92,21 @@
         </item>
         <item row="7" column="0">
          <widget class="QToolButton" name="saveButton">
+          <property name="toolTip">
+           <string>Save todo item</string>
+          </property>
           <property name="text">
-           <string>save</string>
+           <string>&amp;save</string>
+          </property>
+          <property name="icon">
+           <iconset resource="breeze.qrc">
+            <normaloff>:/images/breeze/document-save.svg</normaloff>:/images/breeze/document-save.svg</iconset>
+          </property>
+          <property name="shortcut">
+           <string>Ctrl+S</string>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextBesideIcon</enum>
           </property>
          </widget>
         </item>
@@ -144,6 +157,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="breeze.qrc"/>
+ </resources>
  <connections/>
 </ui>
