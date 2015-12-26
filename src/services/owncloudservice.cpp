@@ -804,8 +804,6 @@ QStringList OwnCloudService::parseCalendarHrefList( QString& data )
 
 void OwnCloudService::loadTodoItems( QString& data )
 {
-    this->todoDialog->clearTodoList();
-
     QDomDocument doc;
     doc.setContent( data, true );
 

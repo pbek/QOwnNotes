@@ -611,7 +611,6 @@ void CalendarItem::generateICSDataHash()
     icsDataHash.clear();
 
     QStringList iscDataLines = icsData.split( "\n" );
-    icsData.clear();
 
     QListIterator<QString> i( iscDataLines );
     while ( i.hasNext() )

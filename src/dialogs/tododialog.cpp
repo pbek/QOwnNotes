@@ -141,7 +141,31 @@ void TodoDialog::reloadTodoListItems()
     // set the current row of the todo list to the first row
     if ( ui->todoList->count() > 0 )
     {
-        ui->todoList->setCurrentRow( 0 );
+        int row = -1;
+
+        // try to find a possible last created calendar item
+        if ( lastCreatedCalendarItem.isFetched() )
+        {
+            row = findTodoItemRowByUID( lastCreatedCalendarItem.getUid() );
+
+            // clear the last created calendar item if we found it in the list
+            if ( row > -1 )
+            {
+                lastCreatedCalendarItem = CalendarItem();
+            }
+        }
+
+        if ( row == -1 )
+        {
+            // try to find the currently selected calendar item
+            row = findTodoItemRowByUID( currentCalendarItem.getUid() );
+        }
+
+//        qDebug() << __func__ << " - 'currentCalendarItem.getUid()': " << currentCalendarItem.getUid();
+//        qDebug() << __func__ << " - 'currentCalendarItem.getSummary()': " << currentCalendarItem.getSummary();
+//        qDebug() << __func__ << " - 'row': " << row;
+
+        ui->todoList->setCurrentRow( row >= 0 ? row : 0 );
     }
     else
     {
@@ -298,6 +322,7 @@ void TodoDialog::on_todoItemLoadingProgressBar_valueChanged( int value )
 void TodoDialog::on_newItemEdit_returnPressed()
 {
     CalendarItem calItem = CalendarItem::createNewTodoItem( ui->newItemEdit->text(), ui->todoListSelector->currentText() );
+    lastCreatedCalendarItem = calItem;
 
     OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
 

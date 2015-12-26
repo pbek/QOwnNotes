@@ -44,6 +44,7 @@ private:
     QSplitter *mainSplitter;
     SimpleCrypt *crypto;
     CalendarItem currentCalendarItem;
+    CalendarItem lastCreatedCalendarItem;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
