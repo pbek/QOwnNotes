@@ -39,6 +39,8 @@ private slots:
     void on_newItemEdit_returnPressed();
     void on_removeButton_clicked();
 
+    void on_todoList_itemChanged(QListWidgetItem *item);
+
 private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;

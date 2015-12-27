@@ -122,6 +122,20 @@ void CalendarItem::setPriority( int value )
     this->priority = value;
 }
 
+void CalendarItem::setCompleted( bool value )
+{
+    this->completed = value;
+}
+
+void CalendarItem::updateCompleted( bool value )
+{
+    this->completed = value;
+    if ( value )
+    {
+        this->completedDate = QDateTime::currentDateTime();
+    }
+}
+
 bool CalendarItem::setupTables()
 {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
@@ -141,8 +155,8 @@ bool CalendarItem::setupTables()
             "created DATETIME DEFAULT current_timestamp,"
             "modified DATETIME DEFAULT current_timestamp)");
 
-//    query.exec("CREATE UNIQUE INDEX calendarUrl ON calendarItem( calendar, url );");
     query.exec("CREATE UNIQUE INDEX idxUrl ON calendarItem( url );");
+    query.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
 
     return true;
 }
@@ -308,6 +322,7 @@ bool CalendarItem::fillFromQuery( QSqlQuery query )
     this->alarmDate = query.value("alarm_date").toDateTime();
     this->created = query.value("created").toDateTime();
     this->modified = query.value("modified").toDateTime();
+    this->completedDate = query.value("completed_date").toDateTime();
 
     return true;
 }
@@ -401,15 +416,15 @@ bool CalendarItem::store() {
                        "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, completed = :completed, "
                        "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
                        "etag = :etag, last_modified_string = :last_modified_string, "
-                       "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified "
+                       "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified, completed_date = :completed_date "
                        "WHERE id = :id" );
         query.bindValue( ":id", this->id );
     }
     else
     {
         query.prepare( "INSERT INTO calendarItem"
-                       "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified ) "
-                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified )");
+                       "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified, completed_date ) "
+                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified, :completed_date )");
     }
 
     query.bindValue( ":summary", this->summary );
@@ -426,6 +441,7 @@ bool CalendarItem::store() {
     query.bindValue( ":priority", this->priority );
     query.bindValue( ":created", this->created );
     query.bindValue( ":modified", this->modified );
+    query.bindValue( ":completed_date", this->completedDate );
 
     // on error
     if( !query.exec() )
@@ -452,24 +468,37 @@ QString CalendarItem::generateNewICSData() {
     // generate a new icsDataHash
     generateICSDataHash();
 
-    qDebug() << __func__ << " - 'icsDataHash after generateICSDataHash': " << icsDataHash;
-    qDebug() << __func__ << " - 'icsDataKeyList after generateICSDataHash': " << icsDataKeyList->join( "," );
+//    qDebug() << __func__ << " - 'icsDataHash after generateICSDataHash': " << icsDataHash;
+//    qDebug() << __func__ << " - 'icsDataKeyList after generateICSDataHash': " << icsDataKeyList->join( "," );
 
     // update the icsDataHash
     icsDataHash["SUMMARY"] = summary;
     icsDataHash["DESCRIPTION"] = description;
     icsDataHash["UID"] = uid;
     icsDataHash["PRIORITY"] = QString::number( priority );
+    icsDataHash["PERCENT-COMPLETE"] = QString::number( completed ? 100 : 0 );
+    icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
 
     QString dateFormat = "yyyyMMddThhmmssZ";
     icsDataHash["CREATED"] = created.toUTC().toString( dateFormat );
-    icsDataHash["LASTMODIFIED"] = modified.toUTC().toString( dateFormat );
+    icsDataHash["LAST-MODIFIED"] = modified.toUTC().toString( dateFormat );
+
+    if ( completed )
+    {
+        icsDataHash["COMPLETED"] = completedDate.toUTC().toString( dateFormat );
+    }
+    else
+    {
+        // remove the "COMPLETED" ics data attribute if the todo item is not completed
+        icsDataHash.remove( "COMPLETED" );
+        icsDataKeyList->removeAll( "COMPLETED" );
+    }
 
     // check for new keys so that we can send them to the calendar server
     updateICSDataKeyListFromHash();
 
-    qDebug() << __func__ << " - 'icsDataHash after updateICSDataKeyListFromHash': " << icsDataHash;
-    qDebug() << __func__ << " - 'icsDataKeyList after updateICSDataKeyListFromHash': " << icsDataKeyList->join( "," );
+//    qDebug() << __func__ << " - 'icsDataHash after updateICSDataKeyListFromHash': " << icsDataHash;
+//    qDebug() << __func__ << " - 'icsDataKeyList after updateICSDataKeyListFromHash': " << icsDataKeyList->join( "," );
 
     icsData.clear();
 

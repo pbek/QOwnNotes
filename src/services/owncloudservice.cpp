@@ -155,6 +155,12 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 qDebug() << data;
 
+                // a workaround for a ownCloud error message
+                if ( data.indexOf( "<s:message>Unable to generate a URL for the named route \"tasksplus.page.index\" as such route does not exist.</s:message>" ) > 20 )
+                {
+                    data = "";
+                }
+
                 // this will mostly happen after the PUT request to update or create a todo item
                 if ( data == "" )
                 {

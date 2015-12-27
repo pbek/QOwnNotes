@@ -341,12 +341,12 @@ void TodoDialog::on_newItemEdit_returnPressed()
 }
 
 /**
- * @brief Removes the currently selected todo list item
+ * @brief Removes the currently selected todo list item from the ownCloud server
  */
 void TodoDialog::on_removeButton_clicked()
 {
     if ( QMessageBox::information( this, "Remove todo item",
-                                      "Remove selected todo item?\nThis cannot be undone!",
+                                      "Remove the selected todo item?\nThis cannot be undone!",
                                       "&Remove", "&Cancel", QString::null,
                                       0, 1 ) == 0 )
     {
@@ -361,5 +361,27 @@ void TodoDialog::on_removeButton_clicked()
         // remove the calendar item from the ownCloud server (this will reload the todo list as well)
         OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
         ownCloud->removeCalendarItem( calItem, this );
+    }
+}
+
+/**
+ * @brief Updates the completed state of a calendar item on the ownCloud server
+ * @param item
+ */
+void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item)
+{
+    qDebug() << __func__ << " - 'item': " << item;
+    QString uid = item->whatsThis();
+
+    CalendarItem calItem = CalendarItem::fetchByUid( uid );
+    if ( calItem.isFetched() )
+    {
+        calItem.updateCompleted( item->checkState() == Qt::Checked );
+        calItem.store();
+
+        OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+
+        // post the calendar item to the server
+        ownCloud->postCalendarItemToServer( calItem, this );
     }
 }

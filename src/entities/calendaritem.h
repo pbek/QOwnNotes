@@ -56,6 +56,8 @@ public:
     void setUid(QString text);
     void setModified(QDateTime dateTime);
     void setCreated(QDateTime dateTime);
+    void setCompleted(bool value);
+    void updateCompleted(bool value);
 private:
     int id;
     QString summary;
@@ -72,6 +74,7 @@ private:
     QDateTime alarmDate;
     QDateTime created;
     QDateTime modified;
+    QDateTime completedDate;
     QHash<QString, QString> icsDataHash;
     QStringList *icsDataKeyList;
     static QString decodeICSDataLine(QString line);

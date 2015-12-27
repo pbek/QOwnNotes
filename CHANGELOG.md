@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
 ## 0.65
-- you are now able to create new todo items
-- you are now able to delete todo items
+- you are now able to create new todo items on your ownCloud server
+- you are now able to delete todo items on your ownCloud server
+- you are now able to mark todo items as done on your ownCloud server
+- made a workaround for a server problem with *Calendar Plus* / *Tasks Plus*
 
 ## 0.64
 - fixed some network issues
