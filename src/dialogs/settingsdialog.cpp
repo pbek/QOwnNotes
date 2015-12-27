@@ -137,6 +137,8 @@ void SettingsDialog::readSettings()
     noteTextViewFont.fromString( settings.value( "MainWindow/noteTextView.font" ).toString() );
     setFontLabel( ui->noteTextViewFontLabel, noteTextViewFont );
 
+    const QSignalBlocker blocker( this->ui->defaultOwnCloudCalendarRadioButton );
+
     switch( settings.value( "ownCloud/todoCalendarBackend" ).toInt() )
     {
     case OwnCloudService::CalendarPlus:
@@ -361,4 +363,9 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
         item->setToolTip( url );
         ui->todoCalendarListWidget->addItem( item );
     }
+}
+
+void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(bool checked)
+{
+    on_reloadCalendarListButton_clicked();
 }

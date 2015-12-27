@@ -136,31 +136,6 @@ void CalendarItem::updateCompleted( bool value )
     }
 }
 
-bool CalendarItem::setupTables()
-{
-    QSqlDatabase db = QSqlDatabase::database( "disk" );
-    QSqlQuery query( db );
-
-    query.exec("CREATE TABLE calendarItem (id INTEGER PRIMARY KEY,"
-            "summary VARCHAR(255), url VARCHAR(255), description TEXT,"
-            "has_dirty_data INTEGER DEFAULT 0,"
-            "completed INTEGER DEFAULT 0,"
-            "priority INTEGER,"
-            "calendar VARCHAR(255),"
-            "uid VARCHAR(255),"
-            "ics_data TEXT,"
-            "alarm_date DATETIME,"
-            "etag VARCHAR(255),"
-            "last_modified_string VARCHAR(255),"
-            "created DATETIME DEFAULT current_timestamp,"
-            "modified DATETIME DEFAULT current_timestamp)");
-
-    query.exec("CREATE UNIQUE INDEX idxUrl ON calendarItem( url );");
-    query.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
-
-    return true;
-}
-
 /**
  * @brief CalendarItem::addCalendarItemForRequest
  * @param calendar
@@ -323,6 +298,7 @@ bool CalendarItem::fillFromQuery( QSqlQuery query )
     this->created = query.value("created").toDateTime();
     this->modified = query.value("modified").toDateTime();
     this->completedDate = query.value("completed_date").toDateTime();
+    this->sortPriority = query.value("sort_priority").toInt();
 
     return true;
 }
@@ -334,8 +310,32 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar( QString calendar )
 
     QList<CalendarItem> calendarItemList;
 
-    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, priority DESC, modified DESC" );
+    query.prepare( "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, sort_priority DESC, modified DESC" );
     query.bindValue( ":calendar", calendar );
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            CalendarItem calendarItem = calendarItemFromQuery( query );
+            calendarItemList.append( calendarItem );
+        }
+    }
+
+    return calendarItemList;
+}
+
+QList<CalendarItem> CalendarItem::fetchAll()
+{
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
+    QList<CalendarItem> calendarItemList;
+
+    query.prepare( "SELECT * FROM calendarItem" );
     if( !query.exec() )
     {
         qDebug() << __func__ << ": " << query.lastError();
@@ -383,7 +383,7 @@ QList<CalendarItem> CalendarItem::search( QString text )
 
     QList<CalendarItem> calendarItemList;
 
-    query.prepare( "SELECT * FROM calendarItem WHERE description LIKE :text ORDER BY priority DESC" );
+    query.prepare( "SELECT * FROM calendarItem WHERE description LIKE :text ORDER BY sort_priority DESC" );
     query.bindValue( ":text", "%" + text + "%"  );
 
     if( !query.exec() )
@@ -402,6 +402,31 @@ QList<CalendarItem> CalendarItem::search( QString text )
     return calendarItemList;
 }
 
+void CalendarItem::updateSortPriority() {
+    if ( priority == 0 )
+    {
+        sortPriority = 0;
+    }
+    else
+    {
+        sortPriority = ( 10 - priority ) * 10;
+    }
+}
+
+/**
+ * @brief Updates all priorities of calendar items
+ */
+void CalendarItem::updateAllSortPriorities() {
+    QList<CalendarItem> calendarItemList = fetchAll();
+
+    QListIterator<CalendarItem> itr ( calendarItemList );
+    while ( itr.hasNext() )
+    {
+       CalendarItem calItem = itr.next();
+       calItem.updateSortPriority();
+       calItem.store();
+    }
+}
 
 //
 // inserts or updates a CalendarItem object in the database
@@ -410,21 +435,23 @@ bool CalendarItem::store() {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
     QSqlQuery query( db );
 
+    this->updateSortPriority();
+
     if ( this->id > 0 )
     {
         query.prepare( "UPDATE calendarItem SET "
                        "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, completed = :completed, "
                        "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
                        "etag = :etag, last_modified_string = :last_modified_string, "
-                       "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified, completed_date = :completed_date "
+                       "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified, completed_date = :completed_date, sort_priority = :sort_priority "
                        "WHERE id = :id" );
         query.bindValue( ":id", this->id );
     }
     else
     {
         query.prepare( "INSERT INTO calendarItem"
-                       "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified, completed_date ) "
-                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified, :completed_date )");
+                       "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified, completed_date, sort_priority ) "
+                       "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified, :completed_date, :sort_priority )");
     }
 
     query.bindValue( ":summary", this->summary );
@@ -442,6 +469,7 @@ bool CalendarItem::store() {
     query.bindValue( ":created", this->created );
     query.bindValue( ":modified", this->modified );
     query.bindValue( ":completed_date", this->completedDate );
+    query.bindValue( ":sort_priority", this->sortPriority );
 
     // on error
     if( !query.exec() )

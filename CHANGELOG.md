@@ -5,6 +5,7 @@
 - you are now able to delete todo items on your ownCloud server
 - you are now able to mark todo items as done on your ownCloud server
 - made a workaround for a server problem with *Calendar Plus* / *Tasks Plus*
+- fixed the todo priorities according to [RFC2445](http://www.ietf.org/rfc/rfc2445.txt)
 
 ## 0.64
 - fixed some network issues

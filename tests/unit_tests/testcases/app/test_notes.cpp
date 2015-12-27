@@ -2,6 +2,7 @@
 #include <QtTest>
 #include <QCoreApplication>
 #include "test_notes.h"
+#include "services/databaseservice.h"
 
 
 //TestNotes::TestNotes()
@@ -10,8 +11,8 @@
 
 void TestNotes::initTestCase()
 {
-    Note::createConnection();
-    Note::setupTables();
+    DatabaseService::createConnection();
+    DatabaseService::setupTables();
 
     // generate a notes path
     notesPath = QDir::tempPath() + QDir::separator() + "qownnotes_test_" + QString::number( qrand() );

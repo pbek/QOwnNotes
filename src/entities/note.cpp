@@ -55,60 +55,6 @@ void Note::setNoteText(QString text)
     this->noteText = text;
 }
 
-bool Note::createConnection()
-{
-    QSqlDatabase dbMemory = QSqlDatabase::addDatabase( "QSQLITE", "memory" );
-    dbMemory.setDatabaseName( ":memory:" );
-
-    if ( !dbMemory.open() )
-    {
-        QMessageBox::critical(0, qApp->tr("Cannot open memory database"),
-            qApp->tr("Unable to establish a database connection.\n"
-                      "This application needs SQLite support. Please read "
-                      "the Qt SQL driver documentation for information how "
-                      "to build it.\n\n"
-                      "Click Cancel to exit."), QMessageBox::Cancel);
-        return false;
-    }
-
-    // get the path to store the database
-    QString path = QStandardPaths::writableLocation( QStandardPaths::AppDataLocation );
-    QDir dir;
-    // create path if it doesn't exist yet
-    dir.mkpath( path );
-
-    QSqlDatabase dbDisk = QSqlDatabase::addDatabase( "QSQLITE", "disk" );
-    dbDisk.setDatabaseName( path + QDir::separator() + "QOwnNotes.sqlite" );
-
-    if ( !dbDisk.open() )
-    {
-        QMessageBox::critical(0, qApp->tr("Cannot open disk database"),
-            qApp->tr("Unable to establish a database connection.\n"
-                      "This application needs SQLite support. Please read "
-                      "the Qt SQL driver documentation for information how "
-                      "to build it.\n\n"
-                      "Click Cancel to exit."), QMessageBox::Cancel);
-        return false;
-    }
-
-    return true;
-}
-
-bool Note::setupTables()
-{
-    QSqlDatabase db = QSqlDatabase::database( "memory" );
-    QSqlQuery query( db );
-    query.exec("CREATE TABLE note (id INTEGER PRIMARY KEY,"
-               "name VARCHAR(255), file_name VARCHAR(255), note_text TEXT,"
-               "has_dirty_data INTEGER DEFAULT 0,"
-               "file_last_modified DATETIME,"
-               "file_created DATETIME,"
-               "created DATETIME default current_timestamp,"
-               "modified DATETIME default current_timestamp)");
-
-    return true;
-}
-
 bool Note::addNote( QString name, QString fileName, QString text )
 {
     QSqlDatabase db = QSqlDatabase::database( "memory" );

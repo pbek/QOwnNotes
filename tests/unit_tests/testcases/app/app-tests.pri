@@ -5,7 +5,9 @@ INCLUDEPATH += $$APP_SRC_DIR
 
 HEADERS  += \
     $$PWD/test_*.h \
+    $$APP_SRC_DIR/services/databaseservice.h \
     $$APP_SRC_DIR/entities/note.h \
+    $$APP_SRC_DIR/entities/calendaritem.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
@@ -13,7 +15,9 @@ HEADERS  += \
 
 SOURCES += \
     $$PWD/test_*.cpp \
+    $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
+    $$APP_SRC_DIR/entities/calendaritem.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.c \
     $$APP_SRC_DIR/libraries/markdown-highlight/*.cpp \

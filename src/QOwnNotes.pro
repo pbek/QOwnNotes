@@ -43,7 +43,8 @@ SOURCES += main.cpp\
     entities/notehistory.cpp \
     services/owncloudservice.cpp \
     services/updateservice.cpp \
-    helpers/htmlentities.cpp
+    helpers/htmlentities.cpp \
+    services/databaseservice.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -74,7 +75,8 @@ HEADERS  += mainwindow.h \
     dialogs/versiondialog.h \
     services/owncloudservice.h \
     services/updateservice.h \
-    helpers/htmlentities.h
+    helpers/htmlentities.h \
+    services/databaseservice.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

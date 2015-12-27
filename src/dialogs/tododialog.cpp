@@ -228,9 +228,18 @@ void TodoDialog::storeSettings()
  */
 void TodoDialog::updateCurrentCalendarItemWithFormData()
 {
+    int priority = ui->prioritySlider->value();
+
+    if ( priority > 0 )
+    {
+        // 1 is the highest priority and 9 is the lowest priority
+        priority = 10 - priority;
+    }
+
+    currentCalendarItem.setPriority( priority );
+
     currentCalendarItem.setSummary( ui->summaryEdit->text() );
     currentCalendarItem.setDescription( ui->descriptionEdit->toPlainText() );
-    currentCalendarItem.setPriority( ui->prioritySlider->value() );
     currentCalendarItem.setModified( QDateTime::currentDateTime() );
     currentCalendarItem.store();
 }
@@ -255,13 +264,46 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
         ui->summaryEdit->setText( currentCalendarItem.getSummary() );
         ui->summaryEdit->setCursorPosition( 0 );
         ui->descriptionEdit->setText( currentCalendarItem.getDescription() );
-        ui->prioritySlider->setValue( currentCalendarItem.getPriority() );
+
+        int priority = currentCalendarItem.getPriority();
+
+        if ( priority > 0 )
+        {
+            // 1 is the highest priority and 9 is the lowest priority
+            priority = 10 - priority;
+        }
+
+        ui->prioritySlider->setValue( priority );
+        on_prioritySlider_valueChanged( priority );
     }
 }
 
 void TodoDialog::on_prioritySlider_valueChanged(int value)
 {
-    ui->prioritySlider->setToolTip( "priority: " + QString::number( value ) );
+    QString priorityText;
+    switch ( value )
+    {
+    case 0:
+        priorityText = "not set";
+        break;
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+        priorityText = "low";
+        break;
+    case 5:
+        priorityText = "medium";
+        break;
+    case 6:
+    case 7:
+    case 8:
+    case 9:
+        priorityText = "high";
+        break;
+    }
+
+    ui->prioritySlider->setToolTip( "priority: " + priorityText );
 }
 
 void TodoDialog::on_showCompletedItemsCheckBox_clicked()

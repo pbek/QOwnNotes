@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
+#include "services/databaseservice.h"
 #include "ui_mainwindow.h"
 #include "dialogs/tododialog.h"
 #include <QSplitter>
@@ -52,9 +53,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->searchInNoteWidget->hide();
 
-    Note::createConnection();
-    Note::setupTables();
-    CalendarItem::setupTables();
+    DatabaseService::createConnection();
+    DatabaseService::setupTables();
 
     this->firstVisibleNoteListRow = 0;
     this->noteHistory = NoteHistory();

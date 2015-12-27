@@ -19,7 +19,6 @@ public:
     void setName( QString text );
     void setNoteText(QString text);
 
-    static bool createConnection();
     static bool addNote( QString name, QString fileName, QString text );
     static Note fetch( int id );
     static Note fetchByFileName( QString fileName );
@@ -53,7 +52,6 @@ public:
     static QString generateTextForLink(QString text);
     static QMap<QString, QString> parseMarkdownUrlsFromText(QString text);
     static QString getMarkdownUrlAtPosition(QString text, int position);
-    static bool setupTables();
 private:
     int id;
     QString name;

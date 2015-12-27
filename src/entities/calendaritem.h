@@ -35,7 +35,6 @@ public:
     QString getDescription();
     void setSummary(QString text);
     void setDescription(QString text);
-    static bool setupTables();
     bool updateWithICSData(QString icsData);
     QString getUid();
     static CalendarItem fetchByUid(QString uid);
@@ -58,6 +57,8 @@ public:
     void setCreated(QDateTime dateTime);
     void setCompleted(bool value);
     void updateCompleted(bool value);
+    static QList<CalendarItem> fetchAll();
+    static void updateAllSortPriorities();
 private:
     int id;
     QString summary;
@@ -69,6 +70,7 @@ private:
     QString etag;
     QString lastModifiedString;
     int priority = 0;
+    int sortPriority = 0;
     bool hasDirtyData;
     bool completed;
     QDateTime alarmDate;
@@ -81,6 +83,7 @@ private:
     static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
+    void updateSortPriority();
 };
 
 #endif // CALENDAR_ITEM_H
