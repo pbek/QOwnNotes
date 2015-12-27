@@ -32,6 +32,7 @@ public:
     void todoGetTodoList( QString calendarName, TodoDialog *dialog );
     bool postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog);
     bool updateICSDataOfCalendarItem(CalendarItem *calItem);
+    void removeCalendarItem(CalendarItem calItem, TodoDialog *dialog);
 private:
     QString serverUrl;
     QString userName;

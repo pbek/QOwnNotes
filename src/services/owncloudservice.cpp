@@ -457,6 +457,22 @@ void OwnCloudService::todoGetTodoList( QString calendarName, TodoDialog *dialog 
 }
 
 /**
+ * @brief Removes a todo list item from the ownCloud server
+ */
+void OwnCloudService::removeCalendarItem( CalendarItem calItem, TodoDialog *dialog )
+{
+    this->todoDialog = dialog;
+    this->calendarName = calendarName;
+
+    QUrl url( calItem.getUrl() );
+    QNetworkRequest r( url );
+    addAuthHeader(&r);
+
+    QNetworkReply *reply = networkManager->sendCustomRequest( r, "DELETE" );
+    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply, SLOT(ignoreSslErrors()));
+}
+
+/**
  * @brief Restores a note on the server
  */
 void OwnCloudService::restoreTrashedNoteOnServer( QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow )

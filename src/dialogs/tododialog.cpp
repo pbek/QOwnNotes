@@ -4,6 +4,7 @@
 #include "ui_tododialog.h"
 
 #include <QSettings>
+#include <QMessageBox>
 
 TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
     QDialog(parent),
@@ -337,4 +338,28 @@ void TodoDialog::on_newItemEdit_returnPressed()
 //    }
 
     ui->newItemEdit->clear();
+}
+
+/**
+ * @brief Removes the currently selected todo list item
+ */
+void TodoDialog::on_removeButton_clicked()
+{
+    if ( QMessageBox::information( this, "Remove todo item",
+                                      "Remove selected todo item?\nThis cannot be undone!",
+                                      "&Remove", "&Cancel", QString::null,
+                                      0, 1 ) == 0 )
+    {
+        CalendarItem calItem = currentCalendarItem;
+
+        // remove the calendar item from the list widget (this will update the currentCalendarItem)
+        ui->todoList->takeItem( ui->todoList->currentRow() );
+
+        // remove the calendar item from the database
+        calItem.remove();
+
+        // remove the calendar item from the ownCloud server (this will reload the todo list as well)
+        OwnCloudService *ownCloud = new OwnCloudService( crypto, this );
+        ownCloud->removeCalendarItem( calItem, this );
+    }
 }

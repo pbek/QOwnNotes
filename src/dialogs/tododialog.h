@@ -36,8 +36,8 @@ private slots:
     void on_showCompletedItemsCheckBox_clicked();
     void on_saveButton_clicked();
     void on_todoItemLoadingProgressBar_valueChanged(int value);
-
     void on_newItemEdit_returnPressed();
+    void on_removeButton_clicked();
 
 private:
     Ui::TodoDialog *ui;

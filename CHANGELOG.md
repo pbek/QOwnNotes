@@ -2,6 +2,7 @@
 
 ## 0.65
 - you are now able to create new todo items
+- you are now able to delete todo items
 
 ## 0.64
 - fixed some network issues
