@@ -331,12 +331,17 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
     QListIterator<QString> itr ( items );
     while ( itr.hasNext() )
     {
-        QString urlPart = itr.next();
-        QString url = ui->serverUrlEdit->text() + urlPart;
+        QString url = itr.next();
+
+        // only add the server url if it wasn't already added
+        if ( !url.startsWith( ui->serverUrlEdit->text() ) )
+        {
+            url = ui->serverUrlEdit->text() + url;
+        }
 
         // get the name out of the url part
         QRegularExpression regex( "\\/([^\\/]*)\\/$" );
-        QRegularExpressionMatch match = regex.match( urlPart );
+        QRegularExpressionMatch match = regex.match( url );
         QString name = match.captured(1);
 
         // remove percent encoding
