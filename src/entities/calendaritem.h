@@ -69,8 +69,8 @@ private:
     QString icsData;
     QString etag;
     QString lastModifiedString;
-    int priority = 0;
-    int sortPriority = 0;
+    int priority;
+    int sortPriority;
     bool hasDirtyData;
     bool completed;
     QDateTime alarmDate;

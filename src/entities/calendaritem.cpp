@@ -12,9 +12,11 @@
 
 CalendarItem::CalendarItem()
 {
-    this->id = 0;
-    this->hasDirtyData = false;
-    this->icsDataKeyList = new QStringList();
+    id = 0;
+    hasDirtyData = false;
+    icsDataKeyList = new QStringList();
+    priority = 0;
+    sortPriority = 0;
 }
 
 int CalendarItem::getId()
