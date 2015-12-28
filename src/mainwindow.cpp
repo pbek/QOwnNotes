@@ -968,7 +968,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             if ( keyEvent->key() == Qt::Key_Control )
             {
                 QWidget *viewPort = ui->noteTextEdit->viewport();
-                viewPort->setCursor( Qt::ArrowCursor );
+                viewPort->setCursor( Qt::IBeamCursor );
             }
 
             return false;
