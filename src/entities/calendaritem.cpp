@@ -69,6 +69,11 @@ QString CalendarItem::getETag()
     return this->etag;
 }
 
+QDateTime CalendarItem::getAlarmDate()
+{
+    return this->alarmDate;
+}
+
 void CalendarItem::setLastModifiedString(QString text)
 {
     this->lastModifiedString = text;
@@ -508,14 +513,12 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["PRIORITY"] = QString::number( priority );
     icsDataHash["PERCENT-COMPLETE"] = QString::number( completed ? 100 : 0 );
     icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
-
-    QString dateFormat = "yyyyMMddThhmmssZ";
-    icsDataHash["CREATED"] = created.toUTC().toString( dateFormat );
-    icsDataHash["LAST-MODIFIED"] = modified.toUTC().toString( dateFormat );
+    icsDataHash["CREATED"] = created.toUTC().toString( ICS_DATETIME_FORMAT );
+    icsDataHash["LAST-MODIFIED"] = modified.toUTC().toString( ICS_DATETIME_FORMAT );
 
     if ( completed )
     {
-        icsDataHash["COMPLETED"] = completedDate.toUTC().toString( dateFormat );
+        icsDataHash["COMPLETED"] = completedDate.toUTC().toString( ICS_DATETIME_FORMAT );
     }
     else
     {
@@ -657,17 +660,51 @@ bool CalendarItem::updateWithICSData( QString icsData )
 //        return false;
 //    }
 
-    QString dateFormat = "yyyyMMddThhmmssZ";
+    summary = icsDataHash.contains( "SUMMARY" ) ? icsDataHash["SUMMARY"] : "";
+    completed = icsDataHash.contains( "PERCENT-COMPLETE" ) ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
+    uid = icsDataHash.contains( "UID" ) ? icsDataHash["UID"] : "";
+    description = icsDataHash.contains( "DESCRIPTION" ) ? icsDataHash["DESCRIPTION"] : "";
+    priority = icsDataHash.contains( "PRIORITY" ) ? icsDataHash["PRIORITY"].toInt() : 0;
+    created = icsDataHash.contains( "CREATED" ) ? QDateTime::fromString( icsDataHash["CREATED"], ICS_DATETIME_FORMAT ) : QDateTime::currentDateTime();
+    modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], ICS_DATETIME_FORMAT ) : QDateTime::currentDateTime();
 
-    this->summary = icsDataHash.contains( "SUMMARY" ) ? icsDataHash["SUMMARY"] : "";
-    this->completed = icsDataHash.contains( "PERCENT-COMPLETE" ) ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
-    this->uid = icsDataHash.contains( "UID" ) ? icsDataHash["UID"] : "";
-    this->description = icsDataHash.contains( "DESCRIPTION" ) ? icsDataHash["DESCRIPTION"] : "";
-    this->priority = icsDataHash.contains( "PRIORITY" ) ? icsDataHash["PRIORITY"].toInt() : 0;
-    this->created = icsDataHash.contains( "CREATED" ) ? QDateTime::fromString( icsDataHash["CREATED"], dateFormat ) : QDateTime::currentDateTime();
-    this->modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], dateFormat ) : QDateTime::currentDateTime();
+    QString alarmDateString = getICSDataAttributeInBlock( "VALARM", "TRIGGER;VALUE=DATE-TIME" );
+    alarmDate = ( alarmDateString != "" ) ? QDateTime::fromString( alarmDateString, ICS_DATETIME_FORMAT ) : QDateTime();
+//    qDebug() << __func__ << " - 'alarmDate': " << alarmDate;
+//    qDebug() << __func__ << " - 'alarmDate': " << alarmDate.isNull();
 
     return this->store();
+}
+
+/**
+ * @brief Seraches for an attribute in a block in the ics data
+ * @param block
+ * @param attributeName
+ * @return
+ */
+QString CalendarItem::getICSDataAttributeInBlock( QString block, QString attributeName )
+{
+    bool valarmFound = false;
+    for ( int i = 0; i < icsDataKeyList->size(); ++i )
+    {
+        QString key = icsDataKeyList->at( i );
+        QString value = icsDataHash.value( key );
+
+        if ( key.startsWith( "BEGIN" ) && ( value == block ) )
+        {
+            valarmFound = true;
+        }
+
+        if ( valarmFound )
+        {
+            if ( key == attributeName )
+            {
+                return value;
+            }
+        }
+    }
+
+    return "";
 }
 
 /**

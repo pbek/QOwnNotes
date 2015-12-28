@@ -5,6 +5,7 @@
 #include <QSqlQuery>
 #include <QUrl>
 
+#define ICS_DATETIME_FORMAT "yyyyMMddThhmmssZ"
 
 class CalendarItem
 {
@@ -59,6 +60,7 @@ public:
     void updateCompleted(bool value);
     static QList<CalendarItem> fetchAll();
     static void updateAllSortPriorities();
+    QDateTime getAlarmDate();
 private:
     int id;
     QString summary;
@@ -84,6 +86,7 @@ private:
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
     void updateSortPriority();
+    QString getICSDataAttributeInBlock(QString block, QString attributeName);
 };
 
 #endif // CALENDAR_ITEM_H

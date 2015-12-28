@@ -41,6 +41,8 @@ private slots:
 
     void on_todoList_itemChanged(QListWidgetItem *item);
 
+    void on_reminderCheckBox_clicked(bool checked);
+
 private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;

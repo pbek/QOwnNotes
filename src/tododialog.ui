@@ -31,45 +31,6 @@
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="4" column="0">
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="priorityLabel">
-            <property name="text">
-             <string>Priority</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QSlider" name="prioritySlider">
-            <property name="toolTip">
-             <string>Priority</string>
-            </property>
-            <property name="statusTip">
-             <string/>
-            </property>
-            <property name="accessibleName">
-             <string extracomment="Priority"/>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>9</number>
-            </property>
-            <property name="pageStep">
-             <number>1</number>
-            </property>
-            <property name="sliderPosition">
-             <number>1</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
         <item row="6" column="0">
          <widget class="QTextEdit" name="descriptionEdit">
           <property name="readOnly">
@@ -144,6 +105,72 @@
            </item>
           </layout>
          </widget>
+        </item>
+        <item row="1" column="0">
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="priorityLabel">
+            <property name="text">
+             <string>Priority</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSlider" name="prioritySlider">
+            <property name="toolTip">
+             <string>Priority</string>
+            </property>
+            <property name="statusTip">
+             <string/>
+            </property>
+            <property name="accessibleName">
+             <string extracomment="Priority"/>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>9</number>
+            </property>
+            <property name="pageStep">
+             <number>1</number>
+            </property>
+            <property name="sliderPosition">
+             <number>1</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="reminderLabel">
+            <property name="text">
+             <string>Reminder</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QFrame" name="reminderFrame">
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QCheckBox" name="reminderCheckBox">
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDateTimeEdit" name="reminderDateTimeEdit">
+               <property name="calendarPopup">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </item>
        </layout>
       </widget>

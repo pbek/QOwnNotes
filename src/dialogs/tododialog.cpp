@@ -14,6 +14,7 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
 
     ui->setupUi(this);
     setupUi();
+    ui->reminderDateTimeEdit->hide();
 }
 
 TodoDialog::~TodoDialog()
@@ -186,6 +187,7 @@ void TodoDialog::resetEditFrameControls()
     ui->summaryEdit->setText( "" );
     ui->descriptionEdit->setText( "" );
     ui->prioritySlider->setValue( 0 );
+    ui->reminderCheckBox->setChecked( false );
     currentCalendarItem = CalendarItem();
 }
 
@@ -218,7 +220,6 @@ void TodoDialog::storeSettings()
     QSettings settings;
     settings.setValue( "TodoDialog/geometry", saveGeometry() );
     settings.setValue( "TodoDialog/mainSplitterState", this->mainSplitter->saveState() );
-//    settings.setValue( "TodoDialog/menuBarGeometry", ui->menuBar->saveGeometry() );
     settings.setValue( "TodoDialog/showCompletedItems", ui->showCompletedItemsCheckBox->checkState() );
     settings.setValue( "TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText() );
 }
@@ -237,7 +238,6 @@ void TodoDialog::updateCurrentCalendarItemWithFormData()
     }
 
     currentCalendarItem.setPriority( priority );
-
     currentCalendarItem.setSummary( ui->summaryEdit->text() );
     currentCalendarItem.setDescription( ui->descriptionEdit->toPlainText() );
     currentCalendarItem.setModified( QDateTime::currentDateTime() );
@@ -264,6 +264,11 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
         ui->summaryEdit->setText( currentCalendarItem.getSummary() );
         ui->summaryEdit->setCursorPosition( 0 );
         ui->descriptionEdit->setText( currentCalendarItem.getDescription() );
+
+        QDateTime alarmDate = currentCalendarItem.getAlarmDate();
+        ui->reminderCheckBox->setChecked( !alarmDate.isNull() );
+        ui->reminderDateTimeEdit->setDateTime( alarmDate );
+
 
         int priority = currentCalendarItem.getPriority();
 
@@ -425,5 +430,17 @@ void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item)
 
         // post the calendar item to the server
         ownCloud->postCalendarItemToServer( calItem, this );
+    }
+}
+
+void TodoDialog::on_reminderCheckBox_clicked(bool checked)
+{
+    if ( checked )
+    {
+        ui->reminderDateTimeEdit->show();
+    }
+    else
+    {
+        ui->reminderDateTimeEdit->hide();
     }
 }
