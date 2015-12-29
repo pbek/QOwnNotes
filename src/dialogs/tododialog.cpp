@@ -232,6 +232,7 @@ void TodoDialog::updateCurrentCalendarItemWithFormData()
     currentCalendarItem.setSummary( ui->summaryEdit->text() );
     currentCalendarItem.setDescription( ui->descriptionEdit->toPlainText() );
     currentCalendarItem.setModified( QDateTime::currentDateTime() );
+    currentCalendarItem.setAlarmDate( ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime() );
     currentCalendarItem.store();
 }
 
@@ -257,8 +258,9 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
         ui->descriptionEdit->setText( currentCalendarItem.getDescription() );
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
-        ui->reminderCheckBox->setChecked( !alarmDate.isNull() );
+        ui->reminderCheckBox->setChecked( alarmDate.isValid() );
         ui->reminderDateTimeEdit->setDateTime( alarmDate );
+        on_reminderCheckBox_clicked();
 
         int priority = currentCalendarItem.getPriority();
 
@@ -423,9 +425,9 @@ void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item)
     }
 }
 
-void TodoDialog::on_reminderCheckBox_clicked(bool checked)
+void TodoDialog::on_reminderCheckBox_clicked()
 {
-    if ( checked )
+    if ( ui->reminderCheckBox->isChecked() )
     {
         ui->reminderDateTimeEdit->show();
     }

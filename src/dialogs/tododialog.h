@@ -38,10 +38,8 @@ private slots:
     void on_todoItemLoadingProgressBar_valueChanged(int value);
     void on_newItemEdit_returnPressed();
     void on_removeButton_clicked();
-
     void on_todoList_itemChanged(QListWidgetItem *item);
-
-    void on_reminderCheckBox_clicked(bool checked);
+    void on_reminderCheckBox_clicked();
 
 private:
     Ui::TodoDialog *ui;

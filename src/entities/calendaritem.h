@@ -3,6 +3,7 @@
 
 #include <QDateTime>
 #include <QSqlQuery>
+#include <QStringList>
 #include <QUrl>
 
 #define ICS_DATETIME_FORMAT "yyyyMMddThhmmssZ"
@@ -63,6 +64,7 @@ public:
     QDateTime getAlarmDate();
     static int getCurrentCalendarIndex();
     static QString getCurrentCalendarUrl();
+    void setAlarmDate(QDateTime dateTime);
 private:
     int id;
     QString summary;
@@ -82,13 +84,15 @@ private:
     QDateTime modified;
     QDateTime completedDate;
     QHash<QString, QString> icsDataHash;
-    QStringList *icsDataKeyList;
+    QStringList icsDataKeyList;
     static QString decodeICSDataLine(QString line);
     static QString findFreeHashKey(QHash<QString, QString> *hash, QString key, int number = 0 );
     void generateICSDataHash();
     void updateICSDataKeyListFromHash();
     void updateSortPriority();
     QString getICSDataAttributeInBlock(QString block, QString attributeName);
+    bool removeICSDataBlock(QString block);
+    bool addVALARMBlockToICS();
 };
 
 #endif // CALENDAR_ITEM_H

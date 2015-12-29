@@ -4,6 +4,7 @@
 - fixed a problem with storing wrong todo list urls in the settings
 - fixed the cursor after releasing the `Ctrl` key in the edit mode
 - fixed troubles with storing new todo items
+- you can now set a reminder date for todo items, this date will just be set on the server, QOwnNotes doesn't remind you (yet)
 
 ## 0.65
 - you are now able to create new todo items on your ownCloud server

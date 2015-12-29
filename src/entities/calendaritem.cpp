@@ -15,7 +15,7 @@ CalendarItem::CalendarItem()
 {
     id = 0;
     hasDirtyData = false;
-    icsDataKeyList = new QStringList();
+    icsDataKeyList = QStringList();
     priority = 0;
     sortPriority = 0;
 }
@@ -123,6 +123,11 @@ void CalendarItem::setCreated( QDateTime dateTime )
 void CalendarItem::setModified( QDateTime dateTime )
 {
     this->modified = dateTime;
+}
+
+void CalendarItem::setAlarmDate( QDateTime dateTime )
+{
+    this->alarmDate = dateTime;
 }
 
 void CalendarItem::setPriority( int value )
@@ -525,7 +530,15 @@ QString CalendarItem::generateNewICSData() {
     {
         // remove the "COMPLETED" ics data attribute if the todo item is not completed
         icsDataHash.remove( "COMPLETED" );
-        icsDataKeyList->removeAll( "COMPLETED" );
+        icsDataKeyList.removeAll( "COMPLETED" );
+    }
+
+    removeICSDataBlock( "VALARM" );
+
+    // set or remove the alarm
+    if ( alarmDate.isValid() )
+    {
+        addVALARMBlockToICS();
     }
 
     // check for new keys so that we can send them to the calendar server
@@ -537,9 +550,9 @@ QString CalendarItem::generateNewICSData() {
     icsData.clear();
 
     // loop through every line in the icsDataHash in the correct order
-    for ( int i = 0; i < icsDataKeyList->size(); ++i )
+    for ( int i = 0; i < icsDataKeyList.size(); ++i )
     {
-        QString key = icsDataKeyList->at( i );
+        QString key = icsDataKeyList.at( i );
         QString realKey = key;
         // cut out the numbers at the end
         realKey.replace( QRegularExpression( "\\d*$" ), "" );
@@ -575,7 +588,7 @@ void CalendarItem::updateICSDataKeyListFromHash() {
         QString key = i.key();
 
         // we found a new key
-        if ( !icsDataKeyList->contains( key ) )
+        if ( !icsDataKeyList.contains( key ) )
         {
             keysToAdd.append( key );
         }
@@ -586,9 +599,9 @@ void CalendarItem::updateICSDataKeyListFromHash() {
         int indexToAddKeys = -1;
 
         // search for the index where we should add the new keys
-        for ( int i = 0; i < icsDataKeyList->size(); ++i )
+        for ( int i = 0; i < icsDataKeyList.size(); ++i )
         {
-            QString key = icsDataKeyList->at( i );
+            QString key = icsDataKeyList.at( i );
 
             if ( key.startsWith( "BEGIN" ) && ( icsDataHash.value( key ) == "VTODO" ) )
             {
@@ -608,7 +621,7 @@ void CalendarItem::updateICSDataKeyListFromHash() {
         {
             QString key = keysToAdd.at( i );
 
-            icsDataKeyList->insert( indexToAddKeys, key );
+            icsDataKeyList.insert( indexToAddKeys, key );
         }
     }
 }
@@ -670,7 +683,15 @@ bool CalendarItem::updateWithICSData( QString icsData )
     modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], ICS_DATETIME_FORMAT ) : QDateTime::currentDateTime();
 
     QString alarmDateString = getICSDataAttributeInBlock( "VALARM", "TRIGGER;VALUE=DATE-TIME" );
-    alarmDate = ( alarmDateString != "" ) ? QDateTime::fromString( alarmDateString, ICS_DATETIME_FORMAT ) : QDateTime();
+    alarmDate = QDateTime();
+
+    if ( alarmDateString != "" )
+    {
+        QDateTime dateTime = QDateTime::fromString( alarmDateString, ICS_DATETIME_FORMAT );
+        // convert the UTC from the server to local time, because sqlite doesn't understand time zones
+        alarmDate = QDateTime( dateTime.date(), dateTime.time(), Qt::UTC ).toLocalTime();
+    }
+
 //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate;
 //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate.isNull();
 
@@ -678,25 +699,25 @@ bool CalendarItem::updateWithICSData( QString icsData )
 }
 
 /**
- * @brief Seraches for an attribute in a block in the ics data
+ * @brief Searches for an attribute in a block in the ics data
  * @param block
  * @param attributeName
  * @return
  */
 QString CalendarItem::getICSDataAttributeInBlock( QString block, QString attributeName )
 {
-    bool valarmFound = false;
-    for ( int i = 0; i < icsDataKeyList->size(); ++i )
+    bool blockFound = false;
+    for ( int i = 0; i < icsDataKeyList.size(); ++i )
     {
-        QString key = icsDataKeyList->at( i );
+        QString key = icsDataKeyList.at( i );
         QString value = icsDataHash.value( key );
 
         if ( key.startsWith( "BEGIN" ) && ( value == block ) )
         {
-            valarmFound = true;
+            blockFound = true;
         }
 
-        if ( valarmFound )
+        if ( blockFound )
         {
             if ( key.startsWith( attributeName ) )
             {
@@ -709,6 +730,103 @@ QString CalendarItem::getICSDataAttributeInBlock( QString block, QString attribu
 }
 
 /**
+ * @brief Removes a block in the ics data
+ * @param block
+ */
+bool CalendarItem::removeICSDataBlock( QString block )
+{
+    bool blockFound = false;
+    bool doReturn = false;
+
+    // make a copy of the data
+    QHash<QString, QString> icsDataHashCopy = icsDataHash;
+    QStringList icsDataKeyListCopy = icsDataKeyList;
+
+    for ( int i = 0; i < icsDataKeyList.size(); ++i )
+    {
+        QString key = icsDataKeyList.at( i );
+        QString value = icsDataHash.value( key );
+
+        // look for the begin block
+        if ( key.startsWith( "BEGIN" ) && ( value == block ) )
+        {
+            blockFound = true;
+        }
+
+        if ( blockFound )
+        {
+            // look for the end block
+            if ( key.startsWith( "END" ) && ( value == block ) )
+            {
+                doReturn = true;
+            }
+
+            // remove the attributes
+            icsDataHashCopy.remove( key );
+            icsDataKeyListCopy.removeOne( key );
+
+            if ( doReturn )
+            {
+                // write the data back and end
+                icsDataHash = icsDataHashCopy;
+                icsDataKeyList = icsDataKeyListCopy;
+                return true;
+            }
+        }
+    }
+
+    return false;
+}
+
+/**
+ * @brief Adds the VALARM block to the ics data
+ */
+bool CalendarItem::addVALARMBlockToICS()
+{
+    // make a copy of the data
+    QHash<QString, QString> icsDataHashCopy = icsDataHash;
+    QStringList icsDataKeyListCopy = icsDataKeyList;
+
+    for ( int i = 0; i < icsDataKeyList.size(); ++i )
+    {
+        QString key = icsDataKeyList.at( i );
+        QString value = icsDataHash.value( key );
+
+        // look for the begin block
+        if ( key.startsWith( "BEGIN" ) && ( value == "VTODO" ) )
+        {
+            QString addKey;
+            addKey = findFreeHashKey( &icsDataHashCopy, "BEGIN" );
+            icsDataHashCopy[addKey] = "VALARM";
+            icsDataKeyListCopy.insert( ++i, addKey );
+
+            addKey = findFreeHashKey( &icsDataHashCopy, "ACTION" );
+            icsDataHashCopy[addKey] = "DISPLAY";
+            icsDataKeyListCopy.insert( ++i, addKey );
+
+            addKey = findFreeHashKey( &icsDataHashCopy, "DESCRIPTION" );
+            icsDataHashCopy[addKey] = "Default Event Notification";
+            icsDataKeyListCopy.insert( ++i, addKey );
+
+            addKey = findFreeHashKey( &icsDataHashCopy, "TRIGGER;VALUE=DATE-TIME" );
+            icsDataHashCopy[addKey] = alarmDate.toUTC().toString( ICS_DATETIME_FORMAT );
+            icsDataKeyListCopy.insert( ++i, addKey );
+
+            addKey = findFreeHashKey( &icsDataHashCopy, "END" );
+            icsDataHashCopy[addKey] = "VALARM";
+            icsDataKeyListCopy.insert( ++i, addKey );
+
+            // write the data back and end
+            icsDataHash = icsDataHashCopy;
+            icsDataKeyList = icsDataKeyListCopy;
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
  * @brief Parses and transforms the ics data to a hash with the data
  * @param icsData
  * @return
@@ -718,7 +836,7 @@ void CalendarItem::generateICSDataHash()
     QRegularExpression regex;
     QRegularExpressionMatch match;
     QString lastKey;
-    icsDataKeyList->clear();
+    icsDataKeyList.clear();
     icsDataHash.clear();
 
     QStringList iscDataLines = icsData.split( "\n" );
@@ -760,7 +878,7 @@ void CalendarItem::generateICSDataHash()
 //            hash.insert( lastKey, decodeICSDataLine( match.captured(2) ) );
 
             // add the key to the key order list
-            icsDataKeyList->append( lastKey );
+            icsDataKeyList.append( lastKey );
         }
         else
         {
