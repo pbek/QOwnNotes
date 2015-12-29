@@ -61,6 +61,8 @@ public:
     static QList<CalendarItem> fetchAll();
     static void updateAllSortPriorities();
     QDateTime getAlarmDate();
+    static int getCurrentCalendarIndex();
+    static QString getCurrentCalendarUrl();
 private:
     int id;
     QString summary;

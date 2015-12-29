@@ -8,6 +8,7 @@
 #include <QSqlError>
 #include <QRegularExpression>
 #include <QUuid>
+#include <QSettings>
 
 
 CalendarItem::CalendarItem()
@@ -844,7 +845,7 @@ CalendarItem CalendarItem::createNewTodoItem( QString summary, QString calendar 
     CalendarItem calItem;
     calItem.setSummary( summary );
     calItem.setCalendar( calendar );
-    calItem.setUrl( QUrl( "https://cloud.bekerle.com/remote.php/caldav/calendars/test/mytest/qownnotes-" + uuidString + ".ics" ) );
+    calItem.setUrl( QUrl( getCurrentCalendarUrl() + "qownnotes-" + uuidString + ".ics" ) );
     calItem.setICSData( "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO\nEND:VCALENDAR" );
     calItem.setUid( uuidString );
 
@@ -861,6 +862,51 @@ CalendarItem CalendarItem::createNewTodoItem( QString summary, QString calendar 
     }
 
     return calItem;
+}
+
+/**
+ * @brief Returns the index of the currently selected todo list in the todo dialog
+ * @return
+ */
+int CalendarItem::getCurrentCalendarIndex()
+{
+    QSettings settings;
+
+    QString todoListSelectorSelectedItem = settings.value( "TodoDialog/todoListSelectorSelectedItem" ).toString();
+    if ( todoListSelectorSelectedItem != "" )
+    {
+        QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
+
+        // search for the text in the todoCalendarEnabledList
+        int index = todoCalendarEnabledList.indexOf( todoListSelectorSelectedItem );
+
+        if ( index >= 0 )
+        {
+            // return the index of the todo list selector if we found it
+            return index;
+        }
+    }
+
+    return -1;
+}
+
+/**
+ * @brief Returns the url of the currently selected todo list in the todo dialog
+ * @return
+ */
+QString CalendarItem::getCurrentCalendarUrl()
+{
+    QSettings settings;
+
+    int index = getCurrentCalendarIndex();
+
+    if ( index >= 0 )
+    {
+        QStringList todoCalendarEnabledUrlList = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList();
+        return todoCalendarEnabledUrlList[index];
+    }
+
+    return "";
 }
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem)

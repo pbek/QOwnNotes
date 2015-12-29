@@ -3,6 +3,7 @@
 ## 0.66
 - fixed a problem with storing wrong todo list urls in the settings
 - fixed the cursor after releasing the `Ctrl` key in the edit mode
+- fixed troubles with storing new todo items
 
 ## 0.65
 - you are now able to create new todo items on your ownCloud server

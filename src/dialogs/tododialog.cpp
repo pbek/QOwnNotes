@@ -38,23 +38,14 @@ void TodoDialog::setupUi()
         ui->showCompletedItemsCheckBox->setChecked( showCompletedItems );
     }
 
+    int index = CalendarItem::getCurrentCalendarIndex();
+
+    if ( index >= 0 )
     {
         const QSignalBlocker blocker( this->ui->todoListSelector );
 
-        QString todoListSelectorSelectedItem = settings.value( "TodoDialog/todoListSelectorSelectedItem" ).toString();
-        if ( todoListSelectorSelectedItem != "" )
-        {
-            QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
-
-            // search for the text in the todoCalendarEnabledList
-            int index = todoCalendarEnabledList.indexOf( todoListSelectorSelectedItem );
-
-            if ( index >= 0 )
-            {
-                // set the index of the todo list selector if we found it
-                ui->todoListSelector->setCurrentIndex( index );
-            }
-        }
+        // set the index of the todo list selector if we found it
+        ui->todoListSelector->setCurrentIndex( index );
     }
 
     // now load the todo list items
@@ -268,7 +259,6 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
         ui->reminderCheckBox->setChecked( !alarmDate.isNull() );
         ui->reminderDateTimeEdit->setDateTime( alarmDate );
-
 
         int priority = currentCalendarItem.getPriority();
 
