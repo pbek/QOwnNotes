@@ -535,7 +535,7 @@ QString CalendarItem::generateNewICSData() {
 
     removeICSDataBlock( "VALARM" );
 
-    // set or remove the alarm
+    // set the alarm if needed
     if ( alarmDate.isValid() )
     {
         addVALARMBlockToICS();
@@ -787,25 +787,33 @@ bool CalendarItem::addVALARMBlockToICS()
     QHash<QString, QString> icsDataHashCopy = icsDataHash;
     QStringList icsDataKeyListCopy = icsDataKeyList;
 
+    bool foundBegin = false;
+
     for ( int i = 0; i < icsDataKeyList.size(); ++i )
     {
         QString key = icsDataKeyList.at( i );
         QString value = icsDataHash.value( key );
 
-        // look for the begin block
+        // look for the VTODO begin block
         if ( key.startsWith( "BEGIN" ) && ( value == "VTODO" ) )
+        {
+            foundBegin = true;
+        }
+
+        // add the VALARM block at the end of the VTODO block
+        if ( foundBegin && key.startsWith( "END" ) && ( value == "VTODO" ) )
         {
             QString addKey;
             addKey = findFreeHashKey( &icsDataHashCopy, "BEGIN" );
             icsDataHashCopy[addKey] = "VALARM";
-            icsDataKeyListCopy.insert( ++i, addKey );
+            icsDataKeyListCopy.insert( i, addKey );
 
             addKey = findFreeHashKey( &icsDataHashCopy, "ACTION" );
             icsDataHashCopy[addKey] = "DISPLAY";
             icsDataKeyListCopy.insert( ++i, addKey );
 
             addKey = findFreeHashKey( &icsDataHashCopy, "DESCRIPTION" );
-            icsDataHashCopy[addKey] = "Default Event Notification";
+            icsDataHashCopy[addKey] = "Reminder";
             icsDataKeyListCopy.insert( ++i, addKey );
 
             addKey = findFreeHashKey( &icsDataHashCopy, "TRIGGER;VALUE=DATE-TIME" );
@@ -921,7 +929,7 @@ QString CalendarItem::findFreeHashKey( QHash<QString, QString> *hash, QString ke
     }
 
     // if the key is taken find increase number and try to find a new key
-    if ( hash->value( newKey ) != "" )
+    if ( hash->contains( newKey ) )
     {
         return findFreeHashKey( hash, key, ++number );
     }

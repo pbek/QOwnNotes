@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.67
+- fixed a problem with storing todo items with a reminder and an empty description
+
 ## 0.66
 - fixed a problem with storing wrong todo list urls in the settings
 - fixed the cursor after releasing the `Ctrl` key in the edit mode
