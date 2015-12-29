@@ -82,6 +82,7 @@ private slots:
     void on_action_Knowledge_base_triggered();
     void on_actionInsert_current_time_triggered();
     void on_actionOpen_List_triggered();
+    void checkTodoReminders();
 
 private:
     Ui::MainWindow *ui;
@@ -103,6 +104,7 @@ private:
     bool notifyAllExternalModifications;
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
+    QTimer *todoReminderTimer;
     NoteHistory noteHistory;
 
     void setupMainSplitter();

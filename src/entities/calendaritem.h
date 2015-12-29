@@ -65,6 +65,8 @@ public:
     static int getCurrentCalendarIndex();
     static QString getCurrentCalendarUrl();
     void setAlarmDate(QDateTime dateTime);
+    static QList<CalendarItem> fetchAllForReminderAlert();
+    static void alertTodoReminders();
 private:
     int id;
     QString summary;

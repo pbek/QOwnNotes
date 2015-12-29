@@ -3,6 +3,7 @@
 ## 0.67
 - fixed a problem with storing todo items with a reminder and an empty description
 - added a button to reinitialize the database to the settings dialog
+- now a simple alert is shown when the reminder of a todo item is due
 
 ## 0.66
 - fixed a problem with storing wrong todo list urls in the settings

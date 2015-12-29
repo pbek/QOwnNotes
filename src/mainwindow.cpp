@@ -83,6 +83,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect( this->noteSaveTimer, SIGNAL( timeout()), this, SLOT( storeUpdatedNotesToDisk() ) );
     this->noteSaveTimer->start( this->noteSaveIntervalTime * 1000 );
 
+    // check if we have a todo reminder every minute
+    this->todoReminderTimer = new QTimer( this );
+    QObject::connect( this->todoReminderTimer, SIGNAL( timeout()), this, SLOT( checkTodoReminders() ) );
+    this->todoReminderTimer->start( 60000 );
+
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( directoryChanged( QString ) ), this, SLOT( notesDirectoryWasModified( QString ) ) );
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     ui->searchLineEdit->installEventFilter(this);
@@ -602,7 +607,6 @@ void MainWindow::notesDirectoryWasModified( const QString& str )
     setCurrentNote( this->currentNote, updateNoteText );
 }
 
-
 void MainWindow::storeUpdatedNotesToDisk()
 {
     {
@@ -639,6 +643,14 @@ void MainWindow::storeUpdatedNotesToDisk()
             }
         }
     }
+}
+
+/**
+ * @brief Shows alerts for calendar items with an alarm date in the current minute
+ */
+void MainWindow::checkTodoReminders()
+{
+    CalendarItem::alertTodoReminders();
 }
 
 void MainWindow::waitMsecs( int msecs ) {

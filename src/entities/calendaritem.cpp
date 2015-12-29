@@ -365,6 +365,49 @@ QList<CalendarItem> CalendarItem::fetchAll()
     return calendarItemList;
 }
 
+/**
+ * @brief Fetches all calendar items with an alarm date in the current minute
+ * @return
+ */
+QList<CalendarItem> CalendarItem::fetchAllForReminderAlert()
+{
+    QSqlDatabase db = QSqlDatabase::database( "disk" );
+    QSqlQuery query( db );
+
+    QList<CalendarItem> calendarItemList;
+
+    QDate date = QDate::currentDate();
+    QTime time = QTime::currentTime();
+
+    QTime timeFrom = QTime();
+    timeFrom.setHMS( time.hour(), time.minute(), 0 );
+
+    QTime timeTo = QTime();
+    timeTo.setHMS( time.hour(), time.minute(), 59 );
+
+    QDateTime dateFrom = QDateTime( date, timeFrom );
+    QDateTime dateTo = QDateTime( date, timeTo );
+
+    query.prepare( "SELECT * FROM calendarItem WHERE alarm_date >= :alarm_data_from AND alarm_date <= :alarm_data_to" );
+    query.bindValue( ":alarm_data_from", dateFrom );
+    query.bindValue( ":alarm_data_to", dateTo );
+
+    if( !query.exec() )
+    {
+        qDebug() << __func__ << ": " << query.lastError();
+    }
+    else
+    {
+        for( int r=0; query.next(); r++ )
+        {
+            CalendarItem calendarItem = calendarItemFromQuery( query );
+            calendarItemList.append( calendarItem );
+        }
+    }
+
+    return calendarItemList;
+}
+
 QList<QUrl> CalendarItem::fetchAllUrlsByCalendar( QString calendar )
 {
     QSqlDatabase db = QSqlDatabase::database( "disk" );
@@ -1033,6 +1076,21 @@ QString CalendarItem::getCurrentCalendarUrl()
     }
 
     return "";
+}
+
+/**
+ * @brief Shows alerts for calendar items with an alarm date in the current minute
+ */
+void CalendarItem::alertTodoReminders()
+{
+    QList<CalendarItem> calendarItemList = fetchAllForReminderAlert();
+
+    QListIterator<CalendarItem> itr ( calendarItemList );
+    while ( itr.hasNext() )
+    {
+       CalendarItem calItem = itr.next();
+       QMessageBox::information( NULL, "Reminder", "Reminder: <strong>" + calItem.getSummary() + "</strong>" );
+    }
 }
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem)
