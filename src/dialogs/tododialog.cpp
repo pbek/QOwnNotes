@@ -425,10 +425,22 @@ void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item)
     }
 }
 
+/**
+* @brief Determines wether to show or hide the reminder date time edit
+*/
 void TodoDialog::on_reminderCheckBox_clicked()
 {
     if ( ui->reminderCheckBox->isChecked() )
     {
+        QDateTime alarmDate = currentCalendarItem.getAlarmDate();
+
+        // if no alarm date was set use the current date plus 1h
+        if ( !alarmDate.isValid() )
+        {
+            alarmDate = QDateTime::currentDateTime().addSecs( 3600 );
+        }
+
+        ui->reminderDateTimeEdit->setDateTime( alarmDate );
         ui->reminderDateTimeEdit->show();
     }
     else
