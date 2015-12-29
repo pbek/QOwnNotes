@@ -1,4 +1,5 @@
 #include "services/owncloudservice.h"
+#include "services/databaseservice.h"
 #include "dialogs/settingsdialog.h"
 #include "ui_settingsdialog.h"
 #include <QSettings>
@@ -6,6 +7,7 @@
 #include <QDebug>
 #include <QDesktopServices>
 #include <QFontDialog>
+#include <QMessageBox>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     QDialog(parent),
@@ -373,4 +375,10 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
 void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(bool checked)
 {
     on_reloadCalendarListButton_clicked();
+}
+
+void SettingsDialog::on_reinitializeDatabaseButton_clicked()
+{
+    DatabaseService::reinitializeDiskDatabase();
+    QMessageBox::information( this, "Database", "The Database was reinitialized." );
 }

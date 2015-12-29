@@ -13,7 +13,39 @@ DatabaseService::DatabaseService()
 {
 }
 
+/**
+ * @brief Returns the path to the database (on disk)
+ * @return
+ */
+QString DatabaseService::getDiskDatabasePath()
+{
+    // get the path to store the database
+    QString path = QStandardPaths::writableLocation( QStandardPaths::AppDataLocation );
+    QDir dir;
+
+    // create path if it doesn't exist yet
+    dir.mkpath( path );
+
+    return path + QDir::separator() + "QOwnNotes.sqlite";
+}
+
+bool DatabaseService::removeDiskDatabase()
+{
+    QFile file;
+    return file.remove( getDiskDatabasePath() );
+}
+
 bool DatabaseService::createConnection()
+{
+    return createMemoryConnection() && createDiskConnection();
+}
+
+bool DatabaseService::reinitializeDiskDatabase()
+{
+    return removeDiskDatabase() && createDiskConnection() && setupTables();
+}
+
+bool DatabaseService::createMemoryConnection()
 {
     QSqlDatabase dbMemory = QSqlDatabase::addDatabase( "QSQLITE", "memory" );
     dbMemory.setDatabaseName( ":memory:" );
@@ -21,31 +53,30 @@ bool DatabaseService::createConnection()
     if ( !dbMemory.open() )
     {
         QMessageBox::critical(0, qApp->tr("Cannot open memory database"),
-            qApp->tr("Unable to establish a database connection.\n"
-                      "This application needs SQLite support. Please read "
-                      "the Qt SQL driver documentation for information how "
-                      "to build it.\n\n"
-                      "Click Cancel to exit."), QMessageBox::Cancel);
+                              qApp->tr("Unable to establish a database connection.\n"
+                                       "This application needs SQLite support. Please read "
+                                       "the Qt SQL driver documentation for information how "
+                                       "to build it.\n\n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);
         return false;
     }
 
-    // get the path to store the database
-    QString path = QStandardPaths::writableLocation( QStandardPaths::AppDataLocation );
-    QDir dir;
-    // create path if it doesn't exist yet
-    dir.mkpath( path );
+    return true;
+}
 
+bool DatabaseService::createDiskConnection()
+{
     QSqlDatabase dbDisk = QSqlDatabase::addDatabase( "QSQLITE", "disk" );
-    dbDisk.setDatabaseName( path + QDir::separator() + "QOwnNotes.sqlite" );
+    dbDisk.setDatabaseName( getDiskDatabasePath() );
 
     if ( !dbDisk.open() )
     {
         QMessageBox::critical(0, qApp->tr("Cannot open disk database"),
-            qApp->tr("Unable to establish a database connection.\n"
-                      "This application needs SQLite support. Please read "
-                      "the Qt SQL driver documentation for information how "
-                      "to build it.\n\n"
-                      "Click Cancel to exit."), QMessageBox::Cancel);
+                              qApp->tr("Unable to establish a database connection.\n"
+                                       "This application needs SQLite support. Please read "
+                                       "the Qt SQL driver documentation for information how "
+                                       "to build it.\n\n"
+                                       "Click Cancel to exit."), QMessageBox::Cancel);
         return false;
     }
 

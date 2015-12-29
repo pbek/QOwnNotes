@@ -34,6 +34,7 @@ Important Shortcuts
 ### In the Todo list
 
 - `Ctrl + S` saves the current todo item
+- `Ctrl + R` removes the current todo item
 
 
 ## OSX
@@ -69,3 +70,4 @@ Important Shortcuts
 ### In the Todo list
 
 - `Cmd + S` saves the current todo item
+- `Cmd + R` removes the current todo item

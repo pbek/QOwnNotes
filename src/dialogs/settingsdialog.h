@@ -37,6 +37,8 @@ private slots:
     void on_reloadCalendarListButton_clicked();
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
 
+    void on_reinitializeDatabaseButton_clicked();
+
 private:
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;

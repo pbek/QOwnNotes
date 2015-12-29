@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -749,6 +749,38 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
             <property name="text">
              <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>350</y>
+           <width>601</width>
+           <height>148</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Database</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QPushButton" name="reinitializeDatabaseButton">
+            <property name="text">
+             <string>Reinitialize Database</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="reinitializeDatabaseLabel">
+            <property name="text">
+             <string>Do this if you have troubles with your Todo items.</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
