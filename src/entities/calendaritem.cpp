@@ -697,7 +697,7 @@ QString CalendarItem::getICSDataAttributeInBlock( QString block, QString attribu
 
         if ( valarmFound )
         {
-            if ( key == attributeName )
+            if ( key.startsWith( attributeName ) )
             {
                 return value;
             }
