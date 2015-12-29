@@ -361,6 +361,8 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
    <addaction name="separator"/>
+   <addaction name="actionOpen_List"/>
+   <addaction name="separator"/>
    <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -639,15 +641,22 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionOpen_List">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/view-calendar-tasks.svg</normaloff>:/images/breeze/view-calendar-tasks.svg</iconset>
+   </property>
    <property name="text">
     <string>Show &amp;Todo List</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+T</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="adwaita.qrc"/>
   <include location="images.qrc"/>
+  <include location="adwaita.qrc"/>
   <include location="breeze.qrc"/>
  </resources>
  <connections/>

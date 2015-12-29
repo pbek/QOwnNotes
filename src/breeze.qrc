@@ -32,5 +32,9 @@
         <file>images/breeze/go-next.svg</file>
         <file>images/breeze/applications-system.svg</file>
         <file>images/breeze/resource-calendar-insert.svg</file>
+        <file>images/breeze/view-task.svg</file>
+        <file>images/breeze/view-task-child.svg</file>
+        <file>images/breeze/view-calendar-tasks.svg</file>
+        <file>images/breeze/task-new.svg</file>
     </qresource>
 </RCC>

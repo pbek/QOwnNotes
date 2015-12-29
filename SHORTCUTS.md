@@ -10,6 +10,7 @@ Important Shortcuts
 - `Ctrl + E` toggles between the edit and the markdown view mode
 - `Ctrl + R` removes the current note
 - `Ctrl + Shift + U` checks for updates
+- `Ctrl + Shift + T` opens the todo list
 
 ### In the note list
 
@@ -44,6 +45,7 @@ Important Shortcuts
 - `Cmd + E` toggles between the edit and the markdown view mode
 - `Cmd + R` removes the current note
 - `Cmd + Shift + U` checks for updates
+- `Cmd + Shift + T` opens the todo list
 
 ### In the note list
 
