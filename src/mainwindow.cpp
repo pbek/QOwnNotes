@@ -695,10 +695,10 @@ void MainWindow::buildNotesIndex()
             QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
         }
 
-        // copy the shortcuts file and handle its file permissions for
-        destinationFile = this->notesPath + QDir::separator() + "Important Shortcuts.txt";
-        QFile::copy( ":/shortcuts", destinationFile );
-        QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
+        // copy the shortcuts file and handle its file permissions
+//        destinationFile = this->notesPath + QDir::separator() + "Important Shortcuts.txt";
+//        QFile::copy( ":/shortcuts", destinationFile );
+//        QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
 
         // fetch all files again
         files = notesDir.entryList( filters, QDir::Files, QDir::Time );

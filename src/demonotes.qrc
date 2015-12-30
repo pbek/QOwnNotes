@@ -3,6 +3,5 @@
         <file>demonotes/Welcome to QOwnNotes.txt</file>
         <file>demonotes/GitHub Flavored Markdown.txt</file>
         <file>demonotes/Markdown Showcase.txt</file>
-        <file alias="shortcuts">../SHORTCUTS.md</file>
     </qresource>
 </RCC>
