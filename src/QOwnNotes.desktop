@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QOwnNotes
+Comment=Plain text notepad that works together with ownCloud
+Exec=QOwnNotes
+Icon=QOwnNotes.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=TextEditor;
