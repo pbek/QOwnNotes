@@ -1,5 +1,6 @@
 # [QOwnNotes](http://www.qownnotes.org "QOwnNotes Offical Site") 
 
+[Installation](#installation) | 
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) | 
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
@@ -47,7 +48,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
-## Binaries
+## Installation
 Currently there are deb packages for **GNU/Linux**, DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them on the [QOwnNotes project page](http://www.qownnotes.org) or on the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases).
 
 You can also install QOwnNotes on Ubuntu Linux using the PPA:
