@@ -47,6 +47,17 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 
+## Binaries
+Currently there are deb packages for **GNU/Linux**, DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them on the [QOwnNotes project page](http://www.qownnotes.org) or on the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases).
+
+You can also install QOwnNotes on Ubuntu Linux using the PPA:
+
+```bash
+sudo add-apt-repository ppa:pbek/qownnotes
+sudo apt-get update
+sudo apt-get install qownnotes
+```
+
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
 
@@ -74,9 +85,6 @@ You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 - A desktop operating system, that supports [QT](http://www.qt.io/)
 - QT 5.3+
 - gcc 4.8+
-
-## Binaries
-Currently there are deb packages for **GNU/Linux**, DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them on the [QOwnNotes project page](http://www.qownnotes.org) or on the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases).
 
 ## Disclaimer
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
