@@ -18,6 +18,9 @@ CalendarItem::CalendarItem()
     icsDataKeyList = QStringList();
     priority = 0;
     sortPriority = 0;
+    summary = "";
+    description = "";
+    completed = false;
 }
 
 int CalendarItem::getId()

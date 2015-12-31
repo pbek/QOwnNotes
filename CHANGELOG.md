@@ -2,6 +2,7 @@
 
 ## 0.68
 - fixed a problem with creating new todo items after changing the enabled todo lists
+- fixed a problem with newly created todo items that are set to completed
 
 ## 0.67
 - fixed a problem with storing todo items with a reminder and an empty description
