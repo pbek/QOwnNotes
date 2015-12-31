@@ -66,8 +66,20 @@
            </size>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
            <item>
-            <widget class="QToolButton" name="saveButton">
+            <widget class="QPushButton" name="saveButton">
              <property name="toolTip">
               <string>Save todo item</string>
              </property>
@@ -81,13 +93,10 @@
              <property name="shortcut">
               <string>Ctrl+S</string>
              </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
-             </property>
             </widget>
            </item>
            <item>
-            <widget class="QToolButton" name="removeButton">
+            <widget class="QPushButton" name="removeButton">
              <property name="text">
               <string>&amp;remove</string>
              </property>
@@ -97,9 +106,6 @@
              </property>
              <property name="shortcut">
               <string>Ctrl+R</string>
-             </property>
-             <property name="toolButtonStyle">
-              <enum>Qt::ToolButtonTextBesideIcon</enum>
              </property>
             </widget>
            </item>
