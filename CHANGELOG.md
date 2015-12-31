@@ -5,6 +5,7 @@
 - fixed a problem with newly created todo items that are set to completed
 - fixed an other problem with storing todo items with a reminder and an empty description
 - fixed some design glitches in the todo list
+- if a todo item has no priority it now counts as medium priority
 
 ## 0.67
 - fixed a problem with storing todo items with a reminder and an empty description

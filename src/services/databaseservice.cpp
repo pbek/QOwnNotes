@@ -122,9 +122,13 @@ bool DatabaseService::setupTables()
         queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
         queryDisk.exec("ALTER TABLE calendarItem ADD sort_priority INTEGER DEFAULT 0;");
 
-        CalendarItem::updateAllSortPriorities();
-
         version = 1;
+    }
+
+    if ( version < 2 )
+    {
+        CalendarItem::updateAllSortPriorities();
+        version = 2;
     }
 
     setAppData( "database_version", QString::number( version ) );

@@ -464,7 +464,7 @@ QList<CalendarItem> CalendarItem::search( QString text )
 void CalendarItem::updateSortPriority() {
     if ( priority == 0 )
     {
-        sortPriority = 0;
+        sortPriority = 50;
     }
     else
     {
