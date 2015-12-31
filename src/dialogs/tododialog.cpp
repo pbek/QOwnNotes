@@ -14,7 +14,6 @@ TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
 
     ui->setupUi(this);
     setupUi();
-    ui->reminderDateTimeEdit->hide();
 }
 
 TodoDialog::~TodoDialog()
@@ -47,6 +46,14 @@ void TodoDialog::setupUi()
         // set the index of the todo list selector if we found it
         ui->todoListSelector->setCurrentIndex( index );
     }
+    else
+    {
+        // if we didn't find the index store the new current item
+        settings.setValue( "TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText() );
+    }
+
+    // hide the reminder date time select
+    ui->reminderDateTimeEdit->hide();
 
     // now load the todo list items
     reloadTodoList();

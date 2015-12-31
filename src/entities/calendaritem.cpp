@@ -1072,7 +1072,7 @@ QString CalendarItem::getCurrentCalendarUrl()
     if ( index >= 0 )
     {
         QStringList todoCalendarEnabledUrlList = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList();
-        return todoCalendarEnabledUrlList[index];
+        return todoCalendarEnabledUrlList.at( index );
     }
 
     return "";

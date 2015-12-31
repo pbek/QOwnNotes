@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.68
+- fixed a problem with creating new todo items after changing the enabled todo lists
+
 ## 0.67
 - fixed a problem with storing todo items with a reminder and an empty description
 - added a button to reinitialize the database to the settings dialog
