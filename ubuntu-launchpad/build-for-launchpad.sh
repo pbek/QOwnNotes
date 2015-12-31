@@ -1,12 +1,15 @@
 #!/bin/sh
 
-QOWNNOTES_VERSION=0.67.3
+# uncomment this if you want to force a version
+#QOWNNOTES_VERSION=0.67.5
+
 BRANCH=develop
 #BRANCH=master
 DISTRO=wily
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 QOWNNOTES_SRC_DIR="qownnotes_$QOWNNOTES_VERSION"
+PROJECT_PATH="/tmp/QOwnNotes-$$"
 CUR_DIR=$(pwd)
 UPLOAD="true"
 DEBUILD_ARGS=""
@@ -14,6 +17,7 @@ GPG_PUBLIC_KEY=D55B7124
 CHANGELOG_TEXT="Released $QOWNNOTES_VERSION"
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
+
 
 while test $# -gt 0
 do
@@ -28,20 +32,30 @@ done
 
 echo "Started the debian source packaging process, using latest '$BRANCH' git tree"
 
-if [ -d "QOwnNotes" ]; then
-    rm -rf QOwnNotes
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
 fi
 
 # checkout the source code
-git clone git@github.com:pbek/QOwnNotes.git
-cd QOwnNotes
-git co $BRANCH
+git clone git@github.com:pbek/QOwnNotes.git $PROJECT_PATH
+cd $PROJECT_PATH
+git checkout $BRANCH
+
+if [ -z $QOWNNOTES_VERSION ]; then
+    # get version from version.h
+    QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
+else
+    # set new version if we want to override it
+    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
+fi
 
 # rename and archive the src directory
 mv src $QOWNNOTES_SRC_DIR
 tar -czf $QOWNNOTES_SRC_DIR.orig.tar.gz $QOWNNOTES_SRC_DIR
 
 cd $QOWNNOTES_SRC_DIR
+
+echo "Using version $QOWNNOTES_VERSION..."
 
 # update the changelog file
 dch -v $QOWNNOTES_VERSION-1ubuntu1 $CHANGELOG_TEXT
