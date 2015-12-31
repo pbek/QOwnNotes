@@ -153,6 +153,18 @@
           <item row="1" column="1">
            <widget class="QFrame" name="reminderFrame">
             <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>12</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QCheckBox" name="reminderCheckBox">
                <property name="text">
