@@ -728,6 +728,12 @@ bool CalendarItem::updateWithICSData( QString icsData )
     created = icsDataHash.contains( "CREATED" ) ? QDateTime::fromString( icsDataHash["CREATED"], ICS_DATETIME_FORMAT ) : QDateTime::currentDateTime();
     modified = icsDataHash.contains( "LAST-MODIFIED" ) ? QDateTime::fromString( icsDataHash["LAST-MODIFIED"], ICS_DATETIME_FORMAT ) : QDateTime::currentDateTime();
 
+    // workaround to check if we have a alarm description, so that on empty descriptions the alarm description isn't taken
+    QString alarmDescription = getICSDataAttributeInBlock( "VALARM", "DESCRIPTION" );
+    if ( ( description != "" ) && ( alarmDescription != "" ) && ( description == alarmDescription ) ) {
+        description = "";
+    }
+
     QString alarmDateString = getICSDataAttributeInBlock( "VALARM", "TRIGGER;VALUE=DATE-TIME" );
     alarmDate = QDateTime();
 
