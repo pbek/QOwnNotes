@@ -8,7 +8,6 @@ BRANCH=develop
 DISTRO=wily
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
-QOWNNOTES_SRC_DIR="qownnotes_$QOWNNOTES_VERSION"
 PROJECT_PATH="/tmp/QOwnNotes-$$"
 CUR_DIR=$(pwd)
 UPLOAD="true"
@@ -48,6 +47,8 @@ else
     # set new version if we want to override it
     echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
 fi
+
+QOWNNOTES_SRC_DIR="qownnotes_$QOWNNOTES_VERSION"
 
 # rename and archive the src directory
 mv src $QOWNNOTES_SRC_DIR
