@@ -6,6 +6,7 @@
 - fixed an other problem with storing todo items with a reminder and an empty description
 - fixed some design glitches in the todo list
 - if a todo item has no priority it now counts as medium priority
+- added a button to reload the todo list from the server to the todo list dialog
 
 ## 0.67
 - fixed a problem with storing todo items with a reminder and an empty description

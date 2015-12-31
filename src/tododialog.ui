@@ -81,7 +81,7 @@
            <item>
             <widget class="QPushButton" name="saveButton">
              <property name="toolTip">
-              <string>Save todo item</string>
+              <string>save current todo item</string>
              </property>
              <property name="text">
               <string>&amp;save</string>
@@ -97,6 +97,9 @@
            </item>
            <item>
             <widget class="QPushButton" name="removeButton">
+             <property name="toolTip">
+              <string>remove current todo item</string>
+             </property>
              <property name="text">
               <string>&amp;remove</string>
              </property>
@@ -199,11 +202,43 @@
         <item row="2" column="0">
          <widget class="QListWidget" name="todoList"/>
         </item>
-        <item row="4" column="0">
-         <widget class="QCheckBox" name="showCompletedItemsCheckBox">
-          <property name="text">
-           <string>Show completed items</string>
-          </property>
+        <item row="5" column="0">
+         <widget class="QFrame" name="frame">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QCheckBox" name="showCompletedItemsCheckBox">
+             <property name="text">
+              <string>Show completed items</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="reloadTodoListButton">
+             <property name="toolTip">
+              <string>reload the todo list from server</string>
+             </property>
+             <property name="text">
+              <string>&amp;reload</string>
+             </property>
+             <property name="icon">
+              <iconset resource="breeze.qrc">
+               <normaloff>:/images/breeze/view-refresh.svg</normaloff>:/images/breeze/view-refresh.svg</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
         <item row="1" column="0">

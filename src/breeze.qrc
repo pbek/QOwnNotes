@@ -35,6 +35,7 @@
         <file>images/breeze/view-task.svg</file>
         <file>images/breeze/view-task-child.svg</file>
         <file>images/breeze/view-calendar-tasks.svg</file>
+        <file>images/breeze/view-refresh.svg</file>
         <file>images/breeze/task-new.svg</file>
     </qresource>
 </RCC>

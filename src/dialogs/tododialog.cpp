@@ -455,3 +455,8 @@ void TodoDialog::on_reminderCheckBox_clicked()
         ui->reminderDateTimeEdit->hide();
     }
 }
+
+void TodoDialog::on_reloadTodoListButton_clicked()
+{
+    reloadTodoList();
+}
