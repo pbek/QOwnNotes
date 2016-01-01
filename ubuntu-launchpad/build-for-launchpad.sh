@@ -86,3 +86,8 @@ cd ..
 if [ "$UPLOAD" = "true" ]; then
     dput ppa:pbek/qownnotes $QOWNNOTES_SRC_DIR-1ubuntu1_source.changes
 fi;
+
+# remove everything after we are done
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
+fi
