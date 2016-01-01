@@ -56,16 +56,14 @@ void UpdateService::checkForUpdates( UpdateMode updateMode )
 
 void UpdateService::onResult(QNetworkReply* reply)
 {
-    qDebug() << __func__ << " - 'reply->error()': " << reply->error();
-    if ( reply->error() != QNetworkReply::NoError )
+    // abort if there was an error or the release string was set
+    if ( ( reply->error() != QNetworkReply::NoError ) || !QString( RELEASE ).isEmpty() )
     {
         return;
     }
 
     // we have to add [], so the string can be parsed as JSON
     QString data = QString("[") + (QString) reply->readAll() + QString("]");
-
-    qDebug() << __func__ << " - 'data': " << data;
 
     QScriptEngine engine;
     QScriptValue result = engine.evaluate(data);

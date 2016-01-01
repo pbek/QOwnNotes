@@ -21,6 +21,7 @@
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
 #include "version.h"
+#include "release.h"
 #include "dialogs/aboutdialog.h"
 #include "dialogs/settingsdialog.h"
 #include "entities/calendaritem.h"
@@ -133,6 +134,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->action_Back_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Left );
     ui->action_Forward_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Right );
 #endif
+
+    // disable the update check menu entry if the release string was set
+    if ( !QString( RELEASE ).isEmpty() )
+    {
+        ui->actionCheck_for_updates->setVisible( false );
+        ui->actionCheck_for_updates->setEnabled( false );
+    }
 }
 
 MainWindow::~MainWindow()
