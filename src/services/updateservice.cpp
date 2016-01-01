@@ -14,6 +14,7 @@
 #include "build_number.h"
 #include "dialogs/updatedialog.h"
 #include "version.h"
+#include "release.h"
 
 UpdateService::UpdateService(QObject *parent) : QObject(parent)
 {
@@ -42,18 +43,20 @@ void UpdateService::checkForUpdates( UpdateMode updateMode )
     QUrlQuery q;
     q.addQueryItem( "b", QString::number( BUILD ) );
     q.addQueryItem( "v", QString( VERSION ) );
+    q.addQueryItem( "r", QString( RELEASE ) );
     q.addQueryItem( "d", QString( __DATE__ ) + " " + QString( __TIME__ ) );
     q.addQueryItem( "um", QString::number( updateMode ) );
     q.addQueryItem( "debug", QString::number( isDebug ) );
     url.setQuery( q );
 
-//    qDebug() << __func__ << " - 'url': " << url;
+    qDebug() << __func__ << " - 'url': " << url;
 
     manager->get(QNetworkRequest(url));
 }
 
 void UpdateService::onResult(QNetworkReply* reply)
 {
+    qDebug() << __func__ << " - 'reply->error()': " << reply->error();
     if ( reply->error() != QNetworkReply::NoError )
     {
         return;
@@ -61,6 +64,8 @@ void UpdateService::onResult(QNetworkReply* reply)
 
     // we have to add [], so the string can be parsed as JSON
     QString data = QString("[") + (QString) reply->readAll() + QString("]");
+
+    qDebug() << __func__ << " - 'data': " << data;
 
     QScriptEngine engine;
     QScriptValue result = engine.evaluate(data);

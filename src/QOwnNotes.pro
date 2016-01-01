@@ -76,7 +76,8 @@ HEADERS  += mainwindow.h \
     services/owncloudservice.h \
     services/updateservice.h \
     helpers/htmlentities.h \
-    services/databaseservice.h
+    services/databaseservice.h \
+    release.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
