@@ -29,6 +29,6 @@ include /usr/share/dpkg/default.mk
 
 export QT_SELECT=qt5
 
-#include /usr/share/cdbs/1/rules/debhelper.mk
-#include /usr/share/cdbs/1/class/makefile.mk
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/class/makefile.mk
 include /usr/share/cdbs/1/class/qmake.mk
