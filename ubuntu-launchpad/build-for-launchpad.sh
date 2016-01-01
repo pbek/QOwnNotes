@@ -1,4 +1,13 @@
 #!/bin/sh
+#
+# This is the build script for Ubuntu Launchpad
+# https://launchpad.net/~pbek/+archive/ubuntu/qownnotes
+#
+# We will need some packages to execute this locally:
+# sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs
+#
+# The GPG public key $GPG_PUBLIC_KEY also has to be in place locally
+#
 
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=0.67.5
