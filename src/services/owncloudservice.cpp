@@ -948,7 +948,7 @@ void OwnCloudService::loadTodoItems( QString& data )
     qDebug()<<CalendarItem::fetchAllByCalendar( calendarName );
 }
 
-bool OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoDialog *dialog ) {
+void OwnCloudService::postCalendarItemToServer( CalendarItem calendarItem, TodoDialog *dialog ) {
     this->todoDialog = dialog;
 
     calendarItem.generateNewICSData();
