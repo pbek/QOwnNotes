@@ -1,5 +1,8 @@
 #
-# spec file for package qownnotes
+# Spec file for package qownnotes
+#
+# Check for Linux distribution version numbers here:
+# https://en.opensuse.org/openSUSE:Build_Service_cross_distribution_howto
 #
 
 
