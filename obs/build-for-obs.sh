@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.68.2
+#QOWNNOTES_VERSION=0.68.4
 
 BRANCH=develop
 #BRANCH=master
@@ -72,6 +72,8 @@ cat $changelogPath
 
 archiveFile="$qownnotesSrcDir.tar.xz"
 
+echo "Creating archive $archiveFile..."
+
 # archive the source code
 tar -cJf $archiveFile $qownnotesSrcDir
 
@@ -90,7 +92,9 @@ cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
 cd home\:pbek\:QOwnNotes/desktop/
 
 # add all new files
-osc add *
+osc add $archiveFile
+#osc add qownnotes.bin
+#osc add qownnotes.spec
 
 echo "Commiting changes..."
 
