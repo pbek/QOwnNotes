@@ -1,3 +1,12 @@
 QOwnNotes.desktop usr/share/applications
-QOwnNotes.png usr/share/pixmaps
+images/icons/128x128/QOwnNotes.png usr/share/pixmaps
+images/icons/16x16/QOwnNotes.png usr/share/icons/hicolor/16x16/apps
+images/icons/24x24/QOwnNotes.png usr/share/icons/hicolor/24x24/apps
+images/icons/32x32/QOwnNotes.png usr/share/icons/hicolor/32x32/apps
+images/icons/48x48/QOwnNotes.png usr/share/icons/hicolor/48x48/apps
+images/icons/64x64/QOwnNotes.png usr/share/icons/hicolor/64x64/apps
+images/icons/96x96/QOwnNotes.png usr/share/icons/hicolor/96x96/apps
+images/icons/128x128/QOwnNotes.png usr/share/icons/hicolor/128x128/apps
+images/icons/256x256/QOwnNotes.png usr/share/icons/hicolor/256x256/apps
+images/icons/512x512/QOwnNotes.png usr/share/icons/hicolor/512x512/apps
 QOwnNotes usr/bin

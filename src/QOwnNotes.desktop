@@ -2,7 +2,7 @@
 Name=QOwnNotes
 Comment=Plain text notepad and todo list manager with markdown support that works together with ownCloud
 Exec=QOwnNotes
-Icon=/usr/share/pixmaps/QOwnNotes.png
+Icon=QOwnNotes
 Type=Application
 Terminal=false
 StartupNotify=true
