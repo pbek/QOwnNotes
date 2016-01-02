@@ -21,12 +21,17 @@ AboutDialog::AboutDialog(QWidget *parent) :
         QString html = istream.readAll();
         QDate date = QDate::currentDate();
 
+        QString release = QString( RELEASE );
+        if ( release.isEmpty() ) {
+            release = "generic";
+        }
+
         // fill in the variables
         html.replace( "QT_VERSION_STR", QString( QT_VERSION_STR ) );
         html.replace( "BUILD_NUMBER", QString::number( BUILD ) );
         html.replace( "BUILD_DATE", __DATE__ );
         html.replace( "VERSION", QString( VERSION ) );
-        html.replace( "RELEASE", QString( ( RELEASE == "" ) ? "generic" : RELEASE ) );
+        html.replace( "RELEASE", release );
         html.replace( "CURRENT_YEAR", QString::number( date.year() ) );
 
         // put the html to the text browser in the about dialog
