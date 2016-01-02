@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.68.4
+#QOWNNOTES_VERSION=0.68.7
 
 BRANCH=develop
 #BRANCH=master
@@ -82,14 +82,20 @@ echo "Checking out OBS repository..."
 # checkout OBS repository
 osc checkout home:pbek:QOwnNotes desktop
 
-obsRepoPath="home:pbek:QOwnNotes/desktop/"
+obsRepoPath="home:pbek:QOwnNotes/desktop"
+
+# remove other archives
+echo "Removing old archives..."
+cd $obsRepoPath
+osc rm *.xz
+cd ../..
 
 # copying new files to repository
 mv $archiveFile $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.bin $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
 
-cd home\:pbek\:QOwnNotes/desktop/
+cd $obsRepoPath
 
 # add all new files
 osc add $archiveFile
