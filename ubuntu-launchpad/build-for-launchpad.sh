@@ -11,7 +11,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.68.6
+#QOWNNOTES_VERSION=0.68.8
 
 BRANCH=develop
 #BRANCH=master
@@ -58,36 +58,37 @@ else
     echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
 fi
 
+# set release string to disable the update check
+echo "#define RELEASE \"Ubuntu Linux\"" > src/release.h
+
 changelogText="Released $QOWNNOTES_VERSION"
 
 echo "Using version $QOWNNOTES_VERSION..."
+
+qownnotesSrcDir="qownnotes_${QOWNNOTES_VERSION}"
+
+# copy the src directory
+cp -R src $qownnotesSrcDir
+
+# archive the source code
+tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
+
+changelogPath=debian/changelog
+
 
 # build for every Ubuntu release
 for ubuntuRelease in "${UBUNTU_RELEASES[@]}"
 do
     :
     echo "Building for $ubuntuRelease..."
+    cd $qownnotesSrcDir
 
     versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
-    qownnotesSrcDir="qownnotes_${QOWNNOTES_VERSION}"
-
-    # copy the src directory
-    cp -R src $qownnotesSrcDir
-
-    # set release string to disable the update check
-    echo "#define RELEASE \"Ubuntu Linux ${ubuntuRelease^}\"" > $qownnotesSrcDir/release.h
-
-    # archive the source code
-    tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
-
-    cd $qownnotesSrcDir
 
     # update the changelog file
     #dch -v $versionPart $changelogText
     #dch -r $changelogText
     
-    changelogPath=debian/changelog
-
     # create the changelog file
     echo "qownnotes ($versionPart) $ubuntuRelease; urgency=low" > $changelogPath
     echo "" >> $changelogPath
@@ -107,6 +108,6 @@ done
 
 
 # remove everything after we are done
-#if [ -d $PROJECT_PATH ]; then
-#    rm -rf $PROJECT_PATH
-#fi
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
+fi
