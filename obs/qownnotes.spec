@@ -11,8 +11,10 @@ BuildRequires:	libqt5-qtbase-devel  update-desktop-files fdupes
 
 %if 0%{?suse_version} > 1310
 BuildRequires:  libqt5-qtscript-devel libqt5-qtsvg-devel
+Requires:       libqt5-qtsvg
 %else
 BuildRequires:  libQt5Script-devel libQt5Svg-devel
+Requires:       libQt5Svg5
 %endif
 
 License:        GPL-2.0
