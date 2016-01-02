@@ -9,7 +9,7 @@
 Name:           qownnotes
 BuildRequires:	libqt5-qtbase-devel  update-desktop-files fdupes
 
-%if 0%{?suse_version} > 1310
+%if 0%{?suse_version} > 1315
 BuildRequires:  libqt5-qtscript-devel libqt5-qtsvg-devel
 Requires:       libqt5-qtsvg
 %else
