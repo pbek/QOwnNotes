@@ -83,6 +83,7 @@ private slots:
     void on_actionInsert_current_time_triggered();
     void on_actionOpen_List_triggered();
     void checkTodoReminders();
+    void on_action_Export_note_as_PDF_triggered();
 
 private:
     Ui::MainWindow *ui;

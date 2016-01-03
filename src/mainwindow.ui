@@ -292,6 +292,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_trash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
+    <addaction name="action_Export_note_as_PDF"/>
+    <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
     <addaction name="separator"/>
@@ -652,12 +654,17 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+Shift+T</string>
    </property>
   </action>
+  <action name="action_Export_note_as_PDF">
+   <property name="text">
+    <string>&amp;Export note as PDF</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
   <include location="images.qrc"/>
-  <include location="adwaita.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="adwaita.qrc"/>
  </resources>
  <connections/>
 </ui>

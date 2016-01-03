@@ -17,6 +17,7 @@
 #include <QActionGroup>
 #include <QSystemTrayIcon>
 #include <QShortcut>
+#include <QPrinter>
 #include "diff_match_patch/diff_match_patch.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
@@ -2114,3 +2115,34 @@ void MainWindow::on_actionOpen_List_triggered()
     dialog->exec();
 }
 
+
+void MainWindow::on_action_Export_note_as_PDF_triggered()
+{
+    QFileDialog dialog;
+    dialog.setFileMode( QFileDialog::AnyFile );
+    dialog.setAcceptMode( QFileDialog::AcceptSave );
+    dialog.setDirectory( QDir::homePath() );
+    dialog.setNameFilter( "PDF files (*.pdf)");
+    dialog.setWindowTitle( "Export current note as PDF" );
+    dialog.selectFile( currentNote.getName() + ".pdf" );
+    int ret = dialog.exec();
+
+    if ( ret == QDialog::Accepted )
+    {
+        QStringList fileNames = dialog.selectedFiles();
+        if ( fileNames.count() > 0 )
+        {
+            QString fileName = fileNames.at( 0 );
+
+            if (QFileInfo(fileName).suffix().isEmpty())
+            {
+                fileName.append(".pdf");
+            }
+
+            QPrinter printer( QPrinter::HighResolution );
+            printer.setOutputFormat( QPrinter::PdfFormat );
+            printer.setOutputFileName( fileName );
+            ui->noteTextView->document()->print( &printer );
+        }
+    }
+}

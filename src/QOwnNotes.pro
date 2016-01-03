@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql svg network script xml
+QT       += core gui sql svg network script xml printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 

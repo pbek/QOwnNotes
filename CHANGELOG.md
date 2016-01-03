@@ -5,6 +5,7 @@
     - take a look at the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
     - the update check for these releases have been removed from the menu and you will not get a report for new software versions, since updates are done by your operating system
     - you can always visit the [QOwnNotes changelog](http://www.qownnotes.org/changelog/QOwnNotes) to see what has changed in the versions
+- you can now export a note as PDF (for [Issue #23](https://github.com/pbek/QOwnNotes/issues/23))
 
 ## 0.68
 - fixed a problem with creating new todo items after changing the enabled todo lists
