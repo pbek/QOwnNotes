@@ -58,7 +58,7 @@ Alternatively you can also checkout the code directly from the git repository:
 git clone https://github.com/pbek/QOwnNotes.git -b develop
 ```
 
-Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and clicking on *Build / Build Project QOwnNotes*.
+Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and click on *Build / Build Project QOwnNotes*.
 
 Or you can build it directly in your terminal:
 
