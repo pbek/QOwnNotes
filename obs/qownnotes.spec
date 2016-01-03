@@ -65,7 +65,6 @@ install -D -m 0644 src/images/icons/96x96/QOwnNotes.png $RPM_BUILD_ROOT/%{_datad
 install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
 install -D -m 0644 src/images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
 install -D -m 0644 src/images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
-install -D -m 0644 src/images/icons/scalable/QOwnNotes.svg $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 
 %suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
 
@@ -89,10 +88,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
 %{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
 %{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 %{_datadir}/applications/QOwnNotes.desktop
 
-%dir %{_datadir}/icons/scalable/apps
 %dir %{_datadir}/icons/hicolor/512x512/apps
 %dir %{_datadir}/icons/hicolor/256x256/apps
 %dir %{_datadir}/icons/hicolor/128x128/apps
@@ -102,7 +99,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/icons/hicolor/32x32/apps
 %dir %{_datadir}/icons/hicolor/24x24/apps
 %dir %{_datadir}/icons/hicolor/16x16/apps
-%dir %{_datadir}/icons/scalable
 %dir %{_datadir}/icons/hicolor/512x512
 %dir %{_datadir}/icons/hicolor/256x256
 %dir %{_datadir}/icons/hicolor/128x128
