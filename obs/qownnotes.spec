@@ -79,17 +79,17 @@ rm -rf $RPM_BUILD_ROOT
 %doc LICENSE README.md CHANGELOG.md SHORTCUTS.md
 %{_bindir}/QOwnNotes
 %{_datadir}/pixmaps/QOwnNotes.png
-%{_datadir}/icons/hicolor/16x16/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/24x24/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/32x32/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/48x48/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/64x64/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/96x96/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
-%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
-%{_datadir}/applications/QOwnNotes.desktop
+#%{_datadir}/icons/hicolor/16x16/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/24x24/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/32x32/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/48x48/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/64x64/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/96x96/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
+#%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
+#%{_datadir}/applications/QOwnNotes.desktop
 
 %changelog
 
