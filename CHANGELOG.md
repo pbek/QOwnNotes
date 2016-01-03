@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.69
+- if you are using **Ubuntu Linux** or **openSUSE Linux** you can now take advantage of the brand new repositories for both distributions
+    - take a look at the [QOwnNotes installation page](http://www.qownnotes.org/installation)
+
 ## 0.68
 - fixed a problem with creating new todo items after changing the enabled todo lists
 - fixed a problem with newly created todo items that are set to completed
