@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 %{_datadir}/applications/QOwnNotes.desktop
 
+%dir %{_datadir}/icons/scalable/apps
 %dir %{_datadir}/icons/hicolor/512x512/apps
 %dir %{_datadir}/icons/hicolor/256x256/apps
 %dir %{_datadir}/icons/hicolor/128x128/apps
@@ -101,6 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/icons/hicolor/32x32/apps
 %dir %{_datadir}/icons/hicolor/24x24/apps
 %dir %{_datadir}/icons/hicolor/16x16/apps
+%dir %{_datadir}/icons/scalable
 %dir %{_datadir}/icons/hicolor/512x512
 %dir %{_datadir}/icons/hicolor/256x256
 %dir %{_datadir}/icons/hicolor/128x128
