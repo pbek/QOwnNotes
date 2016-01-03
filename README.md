@@ -1,6 +1,6 @@
 # [QOwnNotes](http://www.qownnotes.org "QOwnNotes Offical Site") 
 
-[Installation](#installation) | 
+[Installation](http://www.qownnotes.org/installation) | 
 [Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) | 
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
@@ -47,17 +47,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - differences between current note and externally changed note are showed in a dialog
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
-
-## Installation
-Currently there are deb packages for **GNU/Linux**, DMGs for **Mac OS X** and ZIP-files for **Windows**. You can get them on the [QOwnNotes project page](http://www.qownnotes.org) or on the [QOwnNotes releases page](https://github.com/pbek/QOwnNotes/releases).
-
-You can also install QOwnNotes on Ubuntu Linux using the PPA:
-
-```bash
-sudo add-apt-repository ppa:pbek/qownnotes
-sudo apt-get update
-sudo apt-get install qownnotes
-```
+- manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
