@@ -55,18 +55,17 @@ popd
 pushd build
 install -D -m 0755 QOwnNotes $RPM_BUILD_ROOT/%{_prefix}/bin/QOwnNotes
 popd
-install -D -m 0644 icons/icon.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
-install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps
-install -D -m 0644 src/images/icons/16x16/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/16x16/apps
-install -D -m 0644 src/images/icons/24x24/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/24x24/apps
-install -D -m 0644 src/images/icons/32x32/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/32x32/apps
-install -D -m 0644 src/images/icons/48x48/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/48x48/apps
-install -D -m 0644 src/images/icons/64x64/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/64x64/apps
-install -D -m 0644 src/images/icons/96x96/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/96x96/apps
-install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/128x128/apps
-install -D -m 0644 src/images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps
-install -D -m 0644 src/images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps
-install -D -m 0644 src/images/icons/scalable/QOwnNotes.svg $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/scalable/apps
+install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
+install -D -m 0644 src/images/icons/16x16/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/16x16/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/24x24/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/24x24/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/32x32/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/32x32/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/48x48/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/48x48/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/64x64/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/64x64/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/96x96/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/96x96/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
+install -D -m 0644 src/images/icons/scalable/QOwnNotes.svg $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 
 %suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
 
