@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.68.7
+#QOWNNOTES_VERSION=0.68.13
 
 BRANCH=develop
 #BRANCH=master
@@ -35,6 +35,9 @@ echo "Project path: $PROJECT_PATH"
 git clone git@github.com:pbek/QOwnNotes.git QOwnNotes
 cd QOwnNotes
 git checkout $BRANCH
+
+# remove huge .git folder
+rm -Rf .git
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
