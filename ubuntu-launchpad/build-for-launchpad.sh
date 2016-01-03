@@ -46,9 +46,8 @@ if [ -d $PROJECT_PATH ]; then
 fi
 
 # checkout the source code
-git clone git@github.com:pbek/QOwnNotes.git $PROJECT_PATH
+git clone git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH
-git checkout $BRANCH
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
