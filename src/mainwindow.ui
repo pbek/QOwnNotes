@@ -292,7 +292,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_trash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
-    <addaction name="action_Export_note_as_PDF"/>
+    <addaction name="action_Export_note_as_PDF_text"/>
+    <addaction name="action_Export_note_as_PDF_markdown"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
@@ -654,9 +655,14 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+Shift+T</string>
    </property>
   </action>
-  <action name="action_Export_note_as_PDF">
+  <action name="action_Export_note_as_PDF_markdown">
    <property name="text">
-    <string>&amp;Export note as PDF</string>
+    <string>&amp;Export note as PDF (markdown)</string>
+   </property>
+  </action>
+  <action name="action_Export_note_as_PDF_text">
+   <property name="text">
+    <string>&amp;Export note as PDF (text)</string>
    </property>
   </action>
  </widget>

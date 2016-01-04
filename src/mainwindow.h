@@ -10,6 +10,7 @@
 #include <QEvent>
 #include <QSignalMapper>
 #include <QSystemTrayIcon>
+#include <QTextEdit>
 #include <entities/note.h>
 #include "markdown-highlight/highlighter.h"
 #include "entities/notehistory.h"
@@ -83,7 +84,8 @@ private slots:
     void on_actionInsert_current_time_triggered();
     void on_actionOpen_List_triggered();
     void checkTodoReminders();
-    void on_action_Export_note_as_PDF_triggered();
+    void on_action_Export_note_as_PDF_markdown_triggered();
+    void on_action_Export_note_as_PDF_text_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -143,6 +145,7 @@ private:
     void openLinkAtCurrentNoteTextEditPosition();
     bool increaseSelectedTextIndentionInNoteTextEdit(bool reverse = false);
     void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
+    void exportNoteAsPDF(QTextEdit *textEdit);
 };
 
 #endif // MAINWINDOW_H

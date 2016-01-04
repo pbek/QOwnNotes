@@ -1528,6 +1528,42 @@ void MainWindow::setCurrentNoteFromHistoryItem( NoteHistoryItem item )
     ui->noteTextEdit->setTextCursor( c );
 }
 
+/**
+ * @brief Exports the content of a text edit widget as PDF
+ * @param textEdit
+ */
+void MainWindow::exportNoteAsPDF( QTextEdit * textEdit )
+{
+    QFileDialog dialog;
+    dialog.setFileMode( QFileDialog::AnyFile );
+    dialog.setAcceptMode( QFileDialog::AcceptSave );
+    dialog.setDirectory( QDir::homePath() );
+    dialog.setNameFilter( "PDF files (*.pdf)");
+    dialog.setWindowTitle( "Export current note as PDF" );
+    dialog.selectFile( currentNote.getName() + ".pdf" );
+    int ret = dialog.exec();
+
+    if ( ret == QDialog::Accepted )
+    {
+        QStringList fileNames = dialog.selectedFiles();
+        if ( fileNames.count() > 0 )
+        {
+            QString fileName = fileNames.at( 0 );
+
+            if (QFileInfo(fileName).suffix().isEmpty())
+            {
+                fileName.append(".pdf");
+            }
+
+            QPrinter printer( QPrinter::HighResolution );
+            printer.setOutputFormat( QPrinter::PdfFormat );
+            printer.setOutputFileName( fileName );
+            textEdit->document()->print( &printer );
+        }
+    }
+}
+
+
 
 // *********************************************************************************************
 // *
@@ -2115,34 +2151,18 @@ void MainWindow::on_actionOpen_List_triggered()
     dialog->exec();
 }
 
-
-void MainWindow::on_action_Export_note_as_PDF_triggered()
+/**
+ * @brief Exports the current note as PDF (markdown)
+ */
+void MainWindow::on_action_Export_note_as_PDF_markdown_triggered()
 {
-    QFileDialog dialog;
-    dialog.setFileMode( QFileDialog::AnyFile );
-    dialog.setAcceptMode( QFileDialog::AcceptSave );
-    dialog.setDirectory( QDir::homePath() );
-    dialog.setNameFilter( "PDF files (*.pdf)");
-    dialog.setWindowTitle( "Export current note as PDF" );
-    dialog.selectFile( currentNote.getName() + ".pdf" );
-    int ret = dialog.exec();
+    exportNoteAsPDF( ui->noteTextView );
+}
 
-    if ( ret == QDialog::Accepted )
-    {
-        QStringList fileNames = dialog.selectedFiles();
-        if ( fileNames.count() > 0 )
-        {
-            QString fileName = fileNames.at( 0 );
-
-            if (QFileInfo(fileName).suffix().isEmpty())
-            {
-                fileName.append(".pdf");
-            }
-
-            QPrinter printer( QPrinter::HighResolution );
-            printer.setOutputFormat( QPrinter::PdfFormat );
-            printer.setOutputFileName( fileName );
-            ui->noteTextView->document()->print( &printer );
-        }
-    }
+/**
+ * @brief Exports the current note as PDF (text)
+ */
+void MainWindow::on_action_Export_note_as_PDF_text_triggered()
+{
+    exportNoteAsPDF( ui->noteTextEdit );
 }
