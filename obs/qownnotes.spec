@@ -43,7 +43,6 @@ Release:        1
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source0:        %{name}-%{version}.tar.xz
 
-%debug_package
 
 %description
 QOwnNotes is the open source notepad and todo list manager, that works together with the default notes application of ownCloud.
