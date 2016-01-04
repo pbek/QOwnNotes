@@ -1,11 +1,14 @@
 # QOwnNotes Changelog
 
+## 0.70
+- tried to fix a crash that sometimes occurs on OSX after waking from sleep
+
 ## 0.69
 - if you are using **Ubuntu Linux** or **openSUSE Linux** you can now take advantage of the brand new repositories for both distributions
     - take a look at the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
     - the update check for these releases have been removed from the menu and you will not get a report for new software versions, since updates are done by your operating system
     - you can always visit the [QOwnNotes changelog](http://www.qownnotes.org/changelog/QOwnNotes) to see what has changed in the versions
-- you can now export a note as PDF (for [Issue #23](https://github.com/pbek/QOwnNotes/issues/23))
+- you can now export notes as PDF (for [Issue #23](https://github.com/pbek/QOwnNotes/issues/23))
 
 ## 0.68
 - fixed a problem with creating new todo items after changing the enabled todo lists

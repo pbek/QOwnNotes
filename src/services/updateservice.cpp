@@ -56,8 +56,8 @@ void UpdateService::checkForUpdates( UpdateMode updateMode )
 
 void UpdateService::onResult(QNetworkReply* reply)
 {
-    // abort if there was an error or the release string was set
-    if ( ( reply->error() != QNetworkReply::NoError ) || !QString( RELEASE ).isEmpty() )
+    // abort if reply was null (on OSX after waking from sleep), there was an error or the release string was set
+    if ( ( reply == NULL ) || ( reply->error() != QNetworkReply::NoError ) || !QString( RELEASE ).isEmpty() )
     {
         return;
     }
