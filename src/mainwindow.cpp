@@ -1202,7 +1202,7 @@ void MainWindow::setNoteTextFromNote( Note *note, bool updateNoteTextViewOnly )
         this->ui->noteTextEdit->setText( note->getNoteText() );
     }
 
-    this->ui->noteTextView->setHtml( note->toMarkdownHtml() );
+    this->ui->noteTextView->setHtml( note->toMarkdownHtml( notesPath ) );
 }
 
 void MainWindow::setupCrypto()
@@ -1230,8 +1230,7 @@ void MainWindow::setupCrypto()
 void MainWindow::setCurrentNoteText( QString text )
 {
     currentNote.setNoteText( text );
-    ui->noteTextEdit->setText( text );
-    this->ui->noteTextView->setHtml( currentNote.toMarkdownHtml() );
+    setNoteTextFromNote( &currentNote, false );
 }
 
 /**

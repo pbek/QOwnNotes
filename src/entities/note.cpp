@@ -681,15 +681,20 @@ bool Note::removeNoteFile() {
     return false;
 }
 
-//
-// return html rendered markdown of note text
-//
-QString Note::toMarkdownHtml() {
+/**
+ * @brief Returns html rendered markdown of the note text
+ * @param notesPath for transforming relative local urls to absolute ones
+ * @return
+ */
+QString Note::toMarkdownHtml( QString notesPath ) {
     hoedown_renderer *renderer = hoedown_html_renderer_new( HOEDOWN_HTML_USE_XHTML, 16 );
     hoedown_extensions extensions = (hoedown_extensions) ( HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN );
     hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
     QString str = this->noteText;
+
+    // parse for relative local urls and make them absolute
+    str.replace( QRegularExpression( "\\(file:\\/\\/images/(.+)\\)" ), "(file://"+ notesPath +"/images/\\1)" );
 
     unsigned char *sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
     int length = strlen( (char*) sequence );

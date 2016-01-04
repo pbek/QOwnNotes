@@ -45,7 +45,7 @@ public:
     bool fillByFileName(QString fileName);
     bool removeNoteFile();
     bool remove(bool withFile);
-    QString toMarkdownHtml();
+    QString toMarkdownHtml(QString notesPath = "");
     bool isFetched();
     bool copy(QString destinationPath);
     bool move(QString destinationPath);
