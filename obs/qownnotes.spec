@@ -9,13 +9,14 @@
 Name:           qownnotes
 BuildRequires:	libqt5-qtbase-devel update-desktop-files fdupes
 
-#%if 0%{?suse_version} > 1315
-#BuildRequires:  libqt5-qtscript-devel libqt5-qtsvg-devel
-#Requires:       libqt5-qtsvg
-#%else
+%if 0%{?suse_version}
 BuildRequires:  libQt5Script-devel libQt5Svg-devel
 Requires:       libQt5Svg5
-#%endif
+%endif
+
+%if 0%{?fedora}
+Requires:       qt5-qtsvg
+%endif
 
 License:        GPL-2.0
 Group:          System/GUI/Productivity
