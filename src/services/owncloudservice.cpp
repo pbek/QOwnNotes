@@ -894,7 +894,7 @@ void OwnCloudService::loadTodoItems( QString& data )
                         else
                         {
                             // create calendar item for fetching
-                            bool res = CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl, etag, lastModified );
+                            CalendarItem::addCalendarItemForRequest( calendarName, calendarItemUrl, etag, lastModified );
                             fetchItem = true;
                         }
 
