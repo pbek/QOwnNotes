@@ -78,7 +78,6 @@ CFLAGS=$RPM_OPT_FLAGS CCFLAGS=$CFLAGS
 
 %if 0%{?fedora}
 
-qmake-qt5 -r
 make
 
 %else
