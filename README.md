@@ -64,7 +64,7 @@ Or you can build it directly in your terminal:
 
 ```shell
 cd QOwnNotes/src
-qmake QOwnNotes.pro -r
+qmake
 make
 ```
 
