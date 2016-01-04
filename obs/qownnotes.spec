@@ -7,16 +7,31 @@
 
 
 Name:           qownnotes
-BuildRequires:  fdupes
+BuildRequires:  gcc gcc-c++ fdupes
 
 %if 0%{?suse_version}
-BuildRequires:  libqt5-qtbase-devel update-desktop-files libQt5Script-devel libQt5Svg-devel
-Requires:       libQt5Svg5
 %endif
 
-%if 0%{?fedora}
-BuildRequires:  qt5-qtbase-devel qt5-qtsvg-devel qt5-qtscript-devel
+# This is for all Fedora and CentOS 7
+%if 0%{?fedora} || 0%{?centos_version} == 700 || 0%{?rhel_version} == 700
+
+BuildRequires:  qt5-qtbase
+BuildRequires:  qt5-qtbase-devel
+BuildRequires:  qt5-qtbase-gui
+#BuildRequires:  qt5-qtwebkit-devel
+BuildRequires:  qt5-qttools qt5-qttools-devel
+BuildRequires:  qt5-qtsvg-devel
+BuildRequires:  qt5-qtscript-devel
+BuildRequires:  desktop-file-utils
 Requires:       qt5-qtsvg
+
+%else
+# This is for all SUSE
+
+BuildRequires:  libqt5-qtbase-devel libQt5Script-devel libQt5Svg-devel
+BuildRequires:  update-desktop-files 
+Requires:       libQt5Svg5
+
 %endif
 
 License:        GPL-2.0
@@ -39,6 +54,12 @@ The notes are stored as plain text files and are synced with ownCloud's file syn
 
 I like the concept of having notes accessible in plain text files, like it is done in the ownCloud notes app, to gain a maximum of freedom, but I was not able to find a decent desktop note taking tool or a text editor, that handles them well. Out of this need QOwnNotes was born.
 
+www.qownnotes.org
+
+Author
+======
+Patrizio Bekerle <patrizio@bekerle.com>
+
 
 %prep
 %setup -q 
@@ -48,6 +69,11 @@ qmake-qt5 ../src
 popd
 
 %build
+echo centos_version 0%{?centos_version}
+echo rhel_version   0%{?rhel_version}
+echo fedora 0%{?fedora}
+echo suse_version   0%{?suse_version}
+
 pushd build
 CFLAGS=$RPM_OPT_FLAGS CCFLAGS=$CFLAGS
 %make_jobs
