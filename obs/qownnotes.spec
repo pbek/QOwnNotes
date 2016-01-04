@@ -92,6 +92,12 @@ popd
 pushd build
 install -D -m 0755 QOwnNotes $RPM_BUILD_ROOT/%{_prefix}/bin/QOwnNotes
 popd
+
+# manually install desktop file for Fedora
+%if 0%{?fedora}
+install -D -m 0644 src/QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
+%endif
+
 install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/pixmaps/QOwnNotes.png
 install -D -m 0644 src/images/icons/16x16/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/16x16/apps/QOwnNotes.png
 install -D -m 0644 src/images/icons/24x24/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/24x24/apps/QOwnNotes.png
