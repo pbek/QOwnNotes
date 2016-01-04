@@ -18,6 +18,7 @@
 #include <QSystemTrayIcon>
 #include <QShortcut>
 #include <QPrinter>
+#include <QPrintDialog>
 #include "diff_match_patch/diff_match_patch.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
@@ -1529,6 +1530,24 @@ void MainWindow::setCurrentNoteFromHistoryItem( NoteHistoryItem item )
 }
 
 /**
+ * @brief Prints the content of a text edit widget
+ * @param textEdit
+ */
+void MainWindow::printNote( QTextEdit * textEdit )
+{
+    QPrinter printer;
+
+    QPrintDialog dialog( &printer, this );
+    dialog.setWindowTitle( tr( "Print note" ) );
+
+    if (dialog.exec() != QDialog::Accepted) {
+       return;
+    }
+
+    textEdit->document()->print( &printer );
+}
+
+/**
  * @brief Exports the content of a text edit widget as PDF
  * @param textEdit
  */
@@ -2165,4 +2184,20 @@ void MainWindow::on_action_Export_note_as_PDF_markdown_triggered()
 void MainWindow::on_action_Export_note_as_PDF_text_triggered()
 {
     exportNoteAsPDF( ui->noteTextEdit );
+}
+
+/**
+ * @brief Prints the current note (markdown)
+ */
+void MainWindow::on_action_Print_note_markdown_triggered()
+{
+    printNote( ui->noteTextView );
+}
+
+/**
+ * @brief Prints the current note (text)
+ */
+void MainWindow::on_action_Print_note_text_triggered()
+{
+    printNote( ui->noteTextEdit );
 }

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.71
+- you are now able to print notes (text or markdown)
+
 ## 0.70
 - beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions

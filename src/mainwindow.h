@@ -86,6 +86,8 @@ private slots:
     void checkTodoReminders();
     void on_action_Export_note_as_PDF_markdown_triggered();
     void on_action_Export_note_as_PDF_text_triggered();
+    void on_action_Print_note_markdown_triggered();
+    void on_action_Print_note_text_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -146,6 +148,7 @@ private:
     bool increaseSelectedTextIndentionInNoteTextEdit(bool reverse = false);
     void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
     void exportNoteAsPDF(QTextEdit *textEdit);
+    void printNote(QTextEdit *textEdit);
 };
 
 #endif // MAINWINDOW_H

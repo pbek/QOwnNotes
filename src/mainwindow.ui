@@ -295,6 +295,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Export_note_as_PDF_text"/>
     <addaction name="action_Export_note_as_PDF_markdown"/>
     <addaction name="separator"/>
+    <addaction name="action_Print_note_text"/>
+    <addaction name="action_Print_note_markdown"/>
+    <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
     <addaction name="separator"/>
@@ -656,13 +659,39 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Export_note_as_PDF_markdown">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/application-pdf.svg</normaloff>:/images/breeze/application-pdf.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Export note as PDF (markdown)</string>
    </property>
   </action>
   <action name="action_Export_note_as_PDF_text">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/application-pdf.svg</normaloff>:/images/breeze/application-pdf.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Export note as PDF (text)</string>
+   </property>
+  </action>
+  <action name="action_Print_note_text">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-print.svg</normaloff>:/images/breeze/document-print.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Print note (text)</string>
+   </property>
+  </action>
+  <action name="action_Print_note_markdown">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-print.svg</normaloff>:/images/breeze/document-print.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Print note (markdown)</string>
    </property>
   </action>
  </widget>
