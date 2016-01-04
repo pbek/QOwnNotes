@@ -7,14 +7,15 @@
 
 
 Name:           qownnotes
-BuildRequires:	libqt5-qtbase-devel update-desktop-files fdupes
+BuildRequires:  fdupes
 
 %if 0%{?suse_version}
-BuildRequires:  libQt5Script-devel libQt5Svg-devel
+BuildRequires:  libqt5-qtbase-devel update-desktop-files libQt5Script-devel libQt5Svg-devel
 Requires:       libQt5Svg5
 %endif
 
 %if 0%{?fedora}
+BuildRequires:  qt5-qtbase-devel qt5-qtsvg-devel qt5-qtscript-devel
 Requires:       qt5-qtsvg
 %endif
 
@@ -67,7 +68,9 @@ install -D -m 0644 src/images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_dat
 install -D -m 0644 src/images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
 install -D -m 0644 src/images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
 
+%if 0%{?suse_version}
 %suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
+%endif
 
 %fdupes $RPM_BUILD_ROOT/%{_prefix}
 
