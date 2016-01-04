@@ -2,6 +2,8 @@
 
 ## 0.70
 - tried to fix a crash that sometimes occurs on OSX after waking from sleep
+- beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
 
 ## 0.69
 - if you are using **Ubuntu Linux** or **openSUSE Linux** you can now take advantage of the brand new repositories for both distributions

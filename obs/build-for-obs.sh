@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.69.1
+#QOWNNOTES_VERSION=0.69.10
 
 BRANCH=develop
 #BRANCH=master
@@ -47,7 +47,7 @@ else
 fi
 
 # set release string to disable the update check
-echo "#define RELEASE \"openSUSE Linux\"" > src/release.h
+echo "#define RELEASE \"openSUSE Build Service\"" > src/release.h
 
 # replace version in spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec

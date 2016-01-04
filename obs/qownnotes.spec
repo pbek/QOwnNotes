@@ -1,5 +1,5 @@
 #
-# Spec file for package qownnotes
+# Spec file for package qownnotes for openSUSE Linux and Fedora Linux
 #
 # Check for Linux distribution version numbers here:
 # https://en.opensuse.org/openSUSE:Build_Service_cross_distribution_howto
@@ -9,11 +9,8 @@
 Name:           qownnotes
 BuildRequires:  gcc gcc-c++ fdupes
 
-%if 0%{?suse_version}
-%endif
-
-# This is for all Fedora and CentOS 7
-%if 0%{?fedora} || 0%{?centos_version} == 700 || 0%{?rhel_version} == 700
+# This is for all Fedora
+%if 0%{?fedora}
 
 BuildRequires:  qt5-qtbase
 BuildRequires:  qt5-qtbase-devel
