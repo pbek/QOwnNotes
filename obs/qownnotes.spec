@@ -75,7 +75,18 @@ echo suse_version   0%{?suse_version}
 
 pushd build
 CFLAGS=$RPM_OPT_FLAGS CCFLAGS=$CFLAGS
+
+%if 0%{?fedora}
+
+qmake -r
+make
+
+%else
+
 %make_jobs
+
+%endif
+
 popd
 
 %install
