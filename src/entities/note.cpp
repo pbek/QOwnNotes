@@ -693,8 +693,8 @@ QString Note::toMarkdownHtml( QString notesPath ) {
 
     QString str = this->noteText;
 
-    // parse for relative local media urls and make them absolute
-    str.replace( QRegularExpression( "\\(file:\\/\\/media/(.+)\\)" ), "(file://"+ notesPath +"/media/\\1)" );
+    // parse for relative file urls and make them absolute (for example to show images under the note path)
+    str.replace( QRegularExpression( "\\(file:\\/\\/([^\\/].+)\\)" ), "(file://"+ notesPath +"/\\1)" );
 
     unsigned char *sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
     int length = strlen( (char*) sequence );
@@ -721,6 +721,22 @@ QString Note::toMarkdownHtml( QString notesPath ) {
     hoedown_html_renderer_free(renderer);
 
     result = "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; } a { color: #FF9137; text-decoration: none; }</style></head><body>" + result + "</body></html>";
+
+    // check if width of embedded local images is too high
+    QRegularExpression re( "<img src=\"file:\\/\\/([^\"]+)\"" );
+    QRegularExpressionMatchIterator i = re.globalMatch( result );
+    while ( i.hasNext() )
+    {
+        QRegularExpressionMatch match = i.next();
+        QString fileName = match.captured(1);
+        QImage image( fileName );
+
+        // cap the image with at 980px
+        if ( image.width() > 980 )
+        {
+            result.replace( QRegularExpression( "<img src=\"file:\\/\\/" + QRegularExpression::escape( fileName ) + "\"" ), "<img width=\"980\" src=\"file://"+ fileName + "\"" );
+        }
+    }
 
     return result;
 }

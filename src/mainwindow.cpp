@@ -1863,7 +1863,12 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
     }
     else
     {
-        QDesktopServices::openUrl( url );
+        QString urlString = url.toString();
+
+        // parse for relative file urls and make them absolute
+        urlString.replace( QRegularExpression( "^file:\\/\\/([^\\/].+)$" ), "file://"+ notesPath +"/\\1" );
+
+        QDesktopServices::openUrl( QUrl( urlString ) );
     }
 }
 
@@ -2204,6 +2209,9 @@ void MainWindow::on_action_Print_note_text_triggered()
     printNote( ui->noteTextEdit );
 }
 
+/**
+ * @brief Inserts a chosen image at the current cursor position in the note text edit
+ */
 void MainWindow::on_actionInsert_image_triggered()
 {
     QFileDialog dialog;
@@ -2221,13 +2229,9 @@ void MainWindow::on_actionInsert_image_triggered()
         {
             QString fileName = fileNames.at( 0 );
 
-            qDebug() << __func__ << " - 'fileName': " << fileName;
-
             QFile file( fileName );
             if ( file.exists() )
             {
-                qDebug() << __func__ << " - 'file': " << file.fileName();
-
                 QDir mediaDir( notesPath + QDir::separator() + "media" );
 
                 // created the media folder if it doesn't exist
@@ -2247,7 +2251,7 @@ void MainWindow::on_actionInsert_image_triggered()
                 QTextCursor c = ui->noteTextEdit->textCursor();
 
                 // insert the image link
-                c.insertText( "![image](file://media/" + fileName + ")" );
+                c.insertText( "![" + fileInfo.baseName() + "](file://media/" + fileName + ")" );
             }
         }
     }

@@ -6,7 +6,8 @@
 - you can now clear the recent note folders history in the settings (for [Issue #26](https://github.com/pbek/QOwnNotes/issues/26))
 - you can now insert images in notes with `Ctrl+I`
     - the image will be copied to the `media` folder in the current notes folder
-    - the image will be shown in the markdown view
+    - the image will be shown in the markdown view (maximum width is 980px)
+    - the image is clickable in the edit view
 
 ## 0.70
 - beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**
