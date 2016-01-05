@@ -706,7 +706,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
           <item row="0" column="2">
            <widget class="QToolButton" name="noteTextEditButton">
             <property name="toolTip">
-             <string>set new font</string>
+             <string>set a new font</string>
             </property>
             <property name="text">
              <string>...</string>
@@ -748,7 +748,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
           <item row="1" column="2">
            <widget class="QToolButton" name="noteTextViewButton">
             <property name="toolTip">
-             <string>set new font</string>
+             <string>set a new font</string>
             </property>
             <property name="text">
              <string>...</string>
@@ -784,6 +784,31 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </property>
             <property name="wordWrap">
              <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>520</y>
+           <width>601</width>
+           <height>101</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Recent notes folders</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QPushButton" name="clearRecentNotesFoldersHistoryButton">
+            <property name="toolTip">
+             <string>clear the recent note folder history</string>
+            </property>
+            <property name="text">
+             <string>Clear history</string>
             </property>
            </widget>
           </item>

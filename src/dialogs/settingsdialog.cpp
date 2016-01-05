@@ -382,3 +382,14 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked()
     DatabaseService::reinitializeDiskDatabase();
     QMessageBox::information( this, "Database", "The Database was reinitialized." );
 }
+
+/**
+ * @brief Clears the recent note folder history in the settings
+ */
+void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked()
+{
+    QSettings settings;
+    settings.remove( "recentNoteFolders" );
+
+    QMessageBox::information( this, "Recent note folders history", "The history was cleared." );
+}

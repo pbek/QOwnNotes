@@ -1419,6 +1419,9 @@ void MainWindow::openSettingsDialog()
         this->noteSaveTimer->stop();
         this->noteSaveTimer->start( this->noteSaveIntervalTime * 1000 );
     }
+
+    // reload recent note folder in case we have cleared the history in the settings
+    loadRecentNoteFolderListMenu();
 }
 
 /**

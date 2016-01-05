@@ -36,8 +36,8 @@ private slots:
     void on_noteTextViewButton_clicked();
     void on_reloadCalendarListButton_clicked();
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
-
     void on_reinitializeDatabaseButton_clicked();
+    void on_clearRecentNotesFoldersHistoryButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;
