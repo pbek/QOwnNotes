@@ -26,6 +26,7 @@ Important Shortcuts
     - `Ctrl + Alt + Down` does the same
 - `Ctrl + L` opens a dialog to add a link to an other note or an URL (also works on selected text)
 - `Ctrl + T` inserts the current date in ISO 8601 format
+- `Ctrl + I` inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - `Tab` indents the selected text (also works on multiple lines)
     - `Shift + Tab` un-indents the selected text
 - `Alt + Left` jumps back in the note history
@@ -62,6 +63,7 @@ Important Shortcuts
     - `Cmd + Opt + Down` does the same
 - `Cmd + L` opens a dialog to add a link to an other note or an URL (also works on selected text)
 - `Cmd + T` inserts the current date in ISO 8601 format
+- `Cmd + I` inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - `Tab` indents the selected text (also works on multiple lines)
     - `Shift + Tab` un-indents the selected text
 - `Cmd + Opt + Left` jumps back in the note history

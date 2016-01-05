@@ -39,5 +39,6 @@
         <file>images/breeze/task-new.svg</file>
         <file>images/breeze/application-pdf.svg</file>
         <file>images/breeze/document-print.svg</file>
+        <file>images/breeze/insert-image.svg</file>
     </qresource>
 </RCC>

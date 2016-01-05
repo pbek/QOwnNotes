@@ -693,8 +693,8 @@ QString Note::toMarkdownHtml( QString notesPath ) {
 
     QString str = this->noteText;
 
-    // parse for relative local urls and make them absolute
-    str.replace( QRegularExpression( "\\(file:\\/\\/images/(.+)\\)" ), "(file://"+ notesPath +"/images/\\1)" );
+    // parse for relative local media urls and make them absolute
+    str.replace( QRegularExpression( "\\(file:\\/\\/media/(.+)\\)" ), "(file://"+ notesPath +"/media/\\1)" );
 
     unsigned char *sequence = (unsigned char*)qstrdup( str.toUtf8().constData() );
     int length = strlen( (char*) sequence );

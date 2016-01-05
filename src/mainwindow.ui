@@ -361,6 +361,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionInsert_Link_to_note"/>
+    <addaction name="actionInsert_image"/>
     <addaction name="actionInsert_current_time"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
@@ -398,6 +399,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
+   <addaction name="actionInsert_image"/>
    <addaction name="actionInsert_current_time"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
@@ -728,6 +730,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>&amp;Print note (markdown)</string>
+   </property>
+  </action>
+  <action name="actionInsert_image">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/insert-image.svg</normaloff>:/images/breeze/insert-image.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert &amp;image</string>
+   </property>
+   <property name="toolTip">
+    <string>Insert image (the image will be copied to the `media` folder in the current notes folder)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
    </property>
   </action>
  </widget>

@@ -2203,3 +2203,52 @@ void MainWindow::on_action_Print_note_text_triggered()
 {
     printNote( ui->noteTextEdit );
 }
+
+void MainWindow::on_actionInsert_image_triggered()
+{
+    QFileDialog dialog;
+    dialog.setFileMode( QFileDialog::AnyFile );
+    dialog.setAcceptMode( QFileDialog::AcceptOpen );
+    dialog.setDirectory( QDir::homePath() );
+    dialog.setNameFilter( "Image files (*.jpg *.png *.gif)");
+    dialog.setWindowTitle( "Select image to insert" );
+    int ret = dialog.exec();
+
+    if ( ret == QDialog::Accepted )
+    {
+        QStringList fileNames = dialog.selectedFiles();
+        if ( fileNames.count() > 0 )
+        {
+            QString fileName = fileNames.at( 0 );
+
+            qDebug() << __func__ << " - 'fileName': " << fileName;
+
+            QFile file( fileName );
+            if ( file.exists() )
+            {
+                qDebug() << __func__ << " - 'file': " << file.fileName();
+
+                QDir mediaDir( notesPath + QDir::separator() + "media" );
+
+                // created the media folder if it doesn't exist
+                if ( !mediaDir.exists() )
+                {
+                    mediaDir.mkpath( mediaDir.path() );
+                }
+
+                QFileInfo fileInfo( file.fileName() );
+
+                // find a random name for the new file
+                QString fileName = QString::number( qrand() ) + "." + fileInfo.suffix();
+
+                // copy the file the the media folder
+                file.copy( mediaDir.path() + QDir::separator() + fileName );
+
+                QTextCursor c = ui->noteTextEdit->textCursor();
+
+                // insert the image link
+                c.insertText( "![image](file://media/" + fileName + ")" );
+            }
+        }
+    }
+}

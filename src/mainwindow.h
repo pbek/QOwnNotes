@@ -89,6 +89,8 @@ private slots:
     void on_action_Print_note_markdown_triggered();
     void on_action_Print_note_text_triggered();
 
+    void on_actionInsert_image_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
