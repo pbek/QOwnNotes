@@ -2,6 +2,7 @@
 
 ## 0.71
 - you are now able to print notes (text or markdown)
+- reduced many margins in the main window to get more room
 
 ## 0.70
 - beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**

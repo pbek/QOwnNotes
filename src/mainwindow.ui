@@ -28,6 +28,18 @@
     <property name="sizeConstraint">
      <enum>QLayout::SetMaximumSize</enum>
     </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
       <property name="rightMargin">
@@ -71,6 +83,18 @@
           <string>Edit</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item row="0" column="0">
            <widget class="QTextEdit" name="noteTextEdit">
             <property name="enabled">
@@ -207,6 +231,18 @@ p, li { white-space: pre-wrap; }
           <string>Markdown</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item row="0" column="0">
            <widget class="QTextBrowser" name="noteTextView">
             <property name="enabled">
@@ -697,9 +733,9 @@ p, li { white-space: pre-wrap; }
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
+  <include location="adwaita.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze.qrc"/>
-  <include location="adwaita.qrc"/>
  </resources>
  <connections/>
 </ui>
