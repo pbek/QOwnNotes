@@ -815,6 +815,45 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
          </layout>
         </widget>
        </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Debug</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>Dump of Settings</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_8">
+            <item row="1" column="0">
+             <widget class="QPlainTextEdit" name="settingsDumpTextEdit">
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+              <property name="plainText">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this dump.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+              <property name="openExternalLinks">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
      </item>
     </layout>

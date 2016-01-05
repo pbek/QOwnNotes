@@ -162,12 +162,47 @@ void SettingsDialog::setFontLabel( QLabel *label, QFont font )
     label->setFont( font );
 }
 
-void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
+void SettingsDialog::outputSettings()
 {
-    if( button == ui->buttonBox->button( QDialogButtonBox::Ok ) )
+    QSettings settings;
+
+    QListIterator<QString> itr ( settings.allKeys() );
+    QString output;
+
+    // hide values of these keys
+    QStringList keyHiddenList = ( QStringList() << "cryptoKey" << "ownCloud/password" );
+
+    while ( itr.hasNext() )
     {
-        storeSettings();
+        QString key = itr.next();
+        QVariant value = settings.value( key );
+
+        output += "**" + key + "**: `";
+
+        // hide values of certain keys
+        if ( keyHiddenList.contains( key ) )
+        {
+            output += "<hidden>";
+        }
+        else
+        {
+            switch ( value.type() )
+            {
+                case QVariant::StringList:
+                    output += value.toStringList().join( ", " );
+                    break;
+                case QVariant::ByteArray:
+                    output += "<binary data>";
+                    break;
+                default:
+                    output += value.toString();
+            }
+        }
+
+        output += "`\n";
     }
+
+    ui->settingsDumpTextEdit->setPlainText( output );
 }
 
 /**
@@ -261,6 +296,74 @@ void SettingsDialog::setOKLabelData( int number, QString text, OKLabelStatus sta
     label->setStyleSheet( "color: " + color );
 }
 
+void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadCheckedState )
+{
+    // we want to read the checked state from the settings if the todo calendar list was not emptry
+    bool readCheckedState = forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
+
+    // clear the todo calendar list
+    ui->todoCalendarListWidget->clear();
+
+    QSettings settings;
+    QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
+
+    QListIterator<QString> itr ( items );
+    while ( itr.hasNext() )
+    {
+        QString url = itr.next();
+
+        // only add the server url if it wasn't already added
+        if ( !url.startsWith( ui->serverUrlEdit->text() ) )
+        {
+            url = ui->serverUrlEdit->text() + url;
+        }
+
+        // get the name out of the url part
+        QRegularExpression regex( "\\/([^\\/]*)\\/$" );
+        QRegularExpressionMatch match = regex.match( url );
+        QString name = match.captured(1);
+
+        // remove percent encoding
+        name = QUrl::fromPercentEncoding( name.toLatin1() );
+
+        // skip the contact birthdays calendar
+        if ( name == "contact_birthdays" ) {
+            continue;
+        }
+
+        // skip the Calendar Plus birthday calendar
+        if ( name.startsWith( "bdaycpltocal_" ) ) {
+            continue;
+        }
+
+        // create the list widget item and add it to the todo calendar list widget
+        QListWidgetItem *item = new QListWidgetItem( name );
+
+        // eventually check if item was checked
+        Qt::CheckState checkedState = readCheckedState ? ( todoCalendarEnabledList.contains( name ) ? Qt::Checked : Qt::Unchecked ) : Qt::Checked;
+        item->setCheckState( checkedState );
+
+        item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
+        item->setToolTip( url );
+        ui->todoCalendarListWidget->addItem( item );
+    }
+}
+
+
+/* * * * * * * * * * * * * * * *
+ *
+ * Slot implementations
+ *
+ * * * * * * * * * * * * * * * */
+
+void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button)
+{
+    if( button == ui->buttonBox->button( QDialogButtonBox::Ok ) )
+    {
+        storeSettings();
+    }
+}
+
 /**
  * select the local ownCloud directory
  */
@@ -319,59 +422,6 @@ void SettingsDialog::on_reloadCalendarListButton_clicked()
     ownCloud->settingsGetCalendarList( this );
 }
 
-void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadCheckedState )
-{
-    // we want to read the checked state from the settings if the todo calendar list was not emptry
-    bool readCheckedState = forceReadCheckedState ? true : ui->todoCalendarListWidget->count() > 0;
-
-    // clear the todo calendar list
-    ui->todoCalendarListWidget->clear();
-
-    QSettings settings;
-    QStringList todoCalendarEnabledList = settings.value( "ownCloud/todoCalendarEnabledList" ).toStringList();
-
-    QListIterator<QString> itr ( items );
-    while ( itr.hasNext() )
-    {
-        QString url = itr.next();
-
-        // only add the server url if it wasn't already added
-        if ( !url.startsWith( ui->serverUrlEdit->text() ) )
-        {
-            url = ui->serverUrlEdit->text() + url;
-        }
-
-        // get the name out of the url part
-        QRegularExpression regex( "\\/([^\\/]*)\\/$" );
-        QRegularExpressionMatch match = regex.match( url );
-        QString name = match.captured(1);
-
-        // remove percent encoding
-        name = QUrl::fromPercentEncoding( name.toLatin1() );
-
-        // skip the contact birthdays calendar
-        if ( name == "contact_birthdays" ) {
-            continue;
-        }
-
-        // skip the Calendar Plus birthday calendar
-        if ( name.startsWith( "bdaycpltocal_" ) ) {
-            continue;
-        }
-
-        // create the list widget item and add it to the todo calendar list widget
-        QListWidgetItem *item = new QListWidgetItem( name );
-
-        // eventually check if item was checked
-        Qt::CheckState checkedState = readCheckedState ? ( todoCalendarEnabledList.contains( name ) ? Qt::Checked : Qt::Unchecked ) : Qt::Checked;
-        item->setCheckState( checkedState );
-
-        item->setFlags( Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable );
-        item->setToolTip( url );
-        ui->todoCalendarListWidget->addItem( item );
-    }
-}
-
 void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(bool checked)
 {
     on_reloadCalendarListButton_clicked();
@@ -392,4 +442,12 @@ void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked()
     settings.remove( "recentNoteFolders" );
 
     QMessageBox::information( this, "Recent note folders history", "The history was cleared." );
+}
+
+void SettingsDialog::on_tabWidget_currentChanged(int index)
+{
+    if ( index == 3 )
+    {
+        outputSettings();
+    }
 }

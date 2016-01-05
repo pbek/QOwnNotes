@@ -731,7 +731,7 @@ QString Note::toMarkdownHtml( QString notesPath ) {
         QString fileName = match.captured(1);
         QImage image( fileName );
 
-        // cap the image with at 980px
+        // cap the image width at 980px
         if ( image.width() > 980 )
         {
             result.replace( QRegularExpression( "<img src=\"file:\\/\\/" + QRegularExpression::escape( fileName ) + "\"" ), "<img width=\"980\" src=\"file://"+ fileName + "\"" );

@@ -8,6 +8,7 @@
     - the image will be copied to the `media` folder in the current notes folder
     - the image will be shown in the markdown view (maximum width is 980px)
     - the image is clickable in the edit view
+- there now is a new debug tab in the settings dialog where you can find a dump of data you can use in an Issue on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues))
 
 ## 0.70
 - beside the new software repositories for **Ubuntu Linux** and **openSUSE Linux** there are now also repositories for **Fedora Linux**

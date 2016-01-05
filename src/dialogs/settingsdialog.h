@@ -38,6 +38,7 @@ private slots:
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
     void on_reinitializeDatabaseButton_clicked();
     void on_clearRecentNotesFoldersHistoryButton_clicked();
+    void on_tabWidget_currentChanged(int index);
 
 private:
     Ui::SettingsDialog *ui;
@@ -49,6 +50,7 @@ private:
     void storeSettings();
     void startConnectionTest();
     void setFontLabel(QLabel *label, QFont font);
+    void outputSettings();
 };
 
 #endif // SETTINGSDIALOG_H
