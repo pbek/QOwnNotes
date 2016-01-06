@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.72
+- fixed a crash that occured when all notes were removed
+
 ## 0.71
 - you are now able to print notes (text or markdown)
 - reduced many margins in the main window to get more room

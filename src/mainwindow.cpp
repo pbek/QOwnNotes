@@ -1597,6 +1597,12 @@ void MainWindow::exportNoteAsPDF( QTextEdit * textEdit )
 void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
     Q_UNUSED(previous);
+
+    // in case all notes were removed
+    if ( current == NULL ) {
+        return;
+    }
+
     qDebug() << "currentItemChanged " << current->text();
 
     Note note = Note::fetchByName( current->text() );
