@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 0.72
-- fixed a crash that occured when all notes were removed
-- fixed a crash that occured when all todo items were removed
+- fixed a crash that occurred when all notes were removed
+- fixed a crash that occurred when all todo items were removed
 - added a menu entry to show the changelog in the help menu
 - fixed a design glitch with the visibility of the todo reminder date selector and some other user interface elements
 - now a warning is issued if you want to open the todo lists, but haven't configured them yet
