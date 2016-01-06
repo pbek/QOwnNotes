@@ -16,7 +16,7 @@
 
 [QOwnNotes](http://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
 
-You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device** (like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
+You are able to **write down** your **thoughts** with **QOwnNotes** and **edit or search** for them later from your **mobile device**, like with [CloudNotes](http://peterandlinda.com/cloudnotes/) or the **ownCloud web-service**.
 
 The notes are stored as **plain text files** and are **synced with ownCloud's file sync** functionality. Of course other software, like [Dropbox](https://www.dropbox.com) can be used too.
 
@@ -24,7 +24,9 @@ I like the concept of having notes accessible in plain text files, like it is do
 
 Visit the project page here: [QOwnNotes project page](http://www.qownnotes.org)
 
-To get more features with ownCloud, like **versioning** and **trash** access, you might also want to install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your ownCloud server.
+To manage your **todo lists** you need [ownCloud tasks](https://apps.owncloud.com/content/show.php/Tasks?content=164356) or [Tasks++](https://apps.owncloud.com/content/show.php/Tasks+Plus?content=170561) as backend, with which you also can manage your todo lists in the **web** and on your mobile devices.
+
+To get more features for your notes with ownCloud, like **versioning** and **trash** access, you might also want to install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your ownCloud server.
 
 To access your ownCloud notes from your **mobile device** you may want to get these:
 - [MyOwnNotes for Android](https://f-droid.org/app/org.aykit.MyOwnNotes)
