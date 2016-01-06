@@ -186,6 +186,7 @@ void TodoDialog::resetEditFrameControls()
     ui->descriptionEdit->setText( "" );
     ui->prioritySlider->setValue( 0 );
     ui->reminderCheckBox->setChecked( false );
+    ui->reminderDateTimeEdit->hide();
     currentCalendarItem = CalendarItem();
 }
 
