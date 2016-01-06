@@ -91,6 +91,8 @@ private slots:
 
     void on_actionInsert_image_triggered();
 
+    void on_actionShow_changelog_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -2263,3 +2263,11 @@ void MainWindow::on_actionInsert_image_triggered()
         }
     }
 }
+
+/**
+ * @brief Opens a browser with the changelog page
+ */
+void MainWindow::on_actionShow_changelog_triggered()
+{
+    QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/changelog/QOwnNotes" ) );
+}

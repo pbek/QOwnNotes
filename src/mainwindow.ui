@@ -347,6 +347,7 @@ p, li { white-space: pre-wrap; }
      <string>&amp;Help</string>
     </property>
     <addaction name="actionCheck_for_updates"/>
+    <addaction name="actionShow_changelog"/>
     <addaction name="action_Shortcuts"/>
     <addaction name="action_Knowledge_base"/>
     <addaction name="actionReport_problems_or_ideas"/>
@@ -745,6 +746,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+I</string>
+   </property>
+  </action>
+  <action name="actionShow_changelog">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/text-x-changelog.svg</normaloff>:/images/breeze/text-x-changelog.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show &amp;changelog</string>
    </property>
   </action>
  </widget>

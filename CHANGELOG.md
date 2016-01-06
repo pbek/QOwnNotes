@@ -2,6 +2,7 @@
 
 ## 0.72
 - fixed a crash that occured when all notes were removed
+- added a menu entry to show the changelog in the help menu
 
 ## 0.71
 - you are now able to print notes (text or markdown)

@@ -40,5 +40,6 @@
         <file>images/breeze/application-pdf.svg</file>
         <file>images/breeze/document-print.svg</file>
         <file>images/breeze/insert-image.svg</file>
+        <file>images/breeze/text-x-changelog.svg</file>
     </qresource>
 </RCC>
