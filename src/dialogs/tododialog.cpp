@@ -187,6 +187,8 @@ void TodoDialog::resetEditFrameControls()
     ui->prioritySlider->setValue( 0 );
     ui->reminderCheckBox->setChecked( false );
     ui->reminderDateTimeEdit->hide();
+    ui->saveButton->setEnabled( false );
+    ui->removeButton->setEnabled( false );
     currentCalendarItem = CalendarItem();
 }
 
@@ -246,18 +248,29 @@ void TodoDialog::updateCurrentCalendarItemWithFormData()
 
 void TodoDialog::on_TodoDialog_finished(int result)
 {
+    Q_UNUSED( result );
+
     storeSettings();
 }
 
 void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1)
 {
+    Q_UNUSED( arg1 );
+
+    // store the todoListSelectorSelectedItem
+    storeSettings();
+
+    // reload the todo list items
     reloadTodoList();
 }
 
 void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
+    Q_UNUSED( previous );
+
     // in case all items were removed
     if ( current == NULL ) {
+        resetEditFrameControls();
         return;
     }
 
@@ -285,6 +298,9 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
 
         ui->prioritySlider->setValue( priority );
         on_prioritySlider_valueChanged( priority );
+
+        ui->saveButton->setEnabled( true );
+        ui->removeButton->setEnabled( true );
     }
 }
 
@@ -370,6 +386,8 @@ void TodoDialog::todoItemLoadingProgressBarHideIfOnMaximum()
 
 void TodoDialog::on_todoItemLoadingProgressBar_valueChanged( int value )
 {
+    Q_UNUSED( value );
+
     todoItemLoadingProgressBarHideIfOnMaximum();
 }
 

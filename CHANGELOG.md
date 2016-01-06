@@ -4,8 +4,9 @@
 - fixed a crash that occured when all notes were removed
 - fixed a crash that occured when all todo items were removed
 - added a menu entry to show the changelog in the help menu
-- fixed a design glitch with the visibility of the todo reminder date selector
+- fixed a design glitch with the visibility of the todo reminder date selector and some other user interface elements
 - now a warning is issued if you want to open the todo lists, but haven't configured them yet
+- fixed a bug where newly created todo list items were stored to the wrong todo list
 
 ## 0.71
 - you are now able to print notes (text or markdown)
