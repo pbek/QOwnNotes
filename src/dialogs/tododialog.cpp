@@ -255,6 +255,11 @@ void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1)
 
 void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous)
 {
+    // in case all items were removed
+    if ( current == NULL ) {
+        return;
+    }
+
     QString uid = current->whatsThis();
 
     currentCalendarItem = CalendarItem::fetchByUid( uid );
