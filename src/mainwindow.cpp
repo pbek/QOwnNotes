@@ -687,13 +687,9 @@ void MainWindow::buildNotesIndex()
     if ( files.count() == 0 )
     {
         qDebug() << "No notes! We will add some...";
-        QStringList filenames;
+        QStringList filenames = QStringList() << "Markdown Showcase.txt" << "GitHub Flavored Markdown.txt" << "Welcome to QOwnNotes.txt";
         QString filename;
         QString destinationFile;
-
-        filenames.append( "Welcome to QOwnNotes.txt" );
-        filenames.append( "GitHub Flavored Markdown.txt" );
-        filenames.append( "Markdown Showcase.txt" );
 
         // copy note files to the notes path
         for ( int i = 0; i < filenames.size(); ++i )
@@ -738,8 +734,13 @@ void MainWindow::buildNotesIndex()
  */
 void MainWindow::jumpToWelcomeNote()
 {
-    // jump to the 3rd note, assuming that it is the welcome note
-    this->ui->notesListWidget->setCurrentRow( 3 );
+    // search for the welcome note
+    QList<QListWidgetItem *> items = ui->notesListWidget->findItems( "Welcome to QOwnNotes", Qt::MatchExactly );
+    if ( items.count() > 0 )
+    {
+        // set the welcome note as current note
+        ui->notesListWidget->setCurrentItem( items.at(0) );
+    }
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {
