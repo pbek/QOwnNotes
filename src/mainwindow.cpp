@@ -2180,6 +2180,23 @@ void MainWindow::on_actionInsert_current_time_triggered()
 
 void MainWindow::on_actionOpen_List_triggered()
 {
+    QSettings settings;
+    QStringList todoCalendarEnabledUrlList = settings.value( "ownCloud/todoCalendarEnabledUrlList" ).toStringList();
+
+    // check if we have got any todo list enabled
+    if ( todoCalendarEnabledUrlList.count() == 0 )
+    {
+        if ( QMessageBox::warning( 0, "No selected todo lists!",
+                                          "You have not selected any todo lists.<br />Please check your <strong>Todo</strong> configuration in the settings!",
+                                          "Open &settings", "&Cancel", QString::null,
+                                          0, 1 ) == 0 )
+        {
+            openSettingsDialog();
+        }
+
+        return;
+    }
+
     TodoDialog * dialog = new TodoDialog( &crypto, this );
     dialog->exec();
 }
