@@ -720,7 +720,7 @@ bool CalendarItem::updateWithICSData( QString icsData )
 //        return false;
 //    }
 
-    summary = icsDataHash.contains( "SUMMARY" ) ? icsDataHash["SUMMARY"] : "";
+    summary = icsDataHash.contains( "SUMMARY" ) ? icsDataHash["SUMMARY"].trimmed() : "";
     completed = icsDataHash.contains( "PERCENT-COMPLETE" ) ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
     uid = icsDataHash.contains( "UID" ) ? icsDataHash["UID"] : "";
     description = icsDataHash.contains( "DESCRIPTION" ) ? icsDataHash["DESCRIPTION"] : "";
