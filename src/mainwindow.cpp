@@ -1024,6 +1024,7 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
 }
 
 /**
+ * REMOVE THIS
  * @brief Increases (or decreases) the indention of the selected text (if there is a text selected) in the noteTextEdit
  * @return
  */
@@ -1089,6 +1090,7 @@ bool MainWindow::increaseSelectedTextIndentionInNoteTextEdit( bool reverse )
 }
 
 /**
+ * REMOVE THIS
  * @brief Opens the link (if any) at the current position in the noteTextEdit
  */
 void MainWindow::openLinkAtCurrentNoteTextEditPosition()

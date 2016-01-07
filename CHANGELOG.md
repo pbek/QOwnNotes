@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 0.74
-- fixed an other problem with todo lists if the server url contains a path (thanks again to Dirk for the report)
+- fixed another problem with todo lists if the server url contains a path (thanks again to Dirk for the report)
 
 ## 0.73
 - fixed a bug with the todo list calendars if the server url had a path in it (a big thank you to Dirk for the report)
