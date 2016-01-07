@@ -35,6 +35,8 @@ public:
     void removeCalendarItem(CalendarItem calItem, TodoDialog *dialog);
 private:
     QString serverUrl;
+    QString serverUrlPath;
+    QString serverUrlWithoutPath;
     QString userName;
     QString password;
     QString localOwnCloudPath;

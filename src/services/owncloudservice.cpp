@@ -31,6 +31,15 @@ void OwnCloudService::readSettings()
 {
     QSettings settings;
     serverUrl = settings.value( "ownCloud/serverUrl" ).toString();
+    serverUrlPath = QUrl( serverUrl ).path();
+
+    serverUrlWithoutPath = serverUrl;
+    if ( serverUrlPath != "" )
+    {
+        // remove the path from the server url
+        serverUrlWithoutPath.replace( QRegularExpression( QRegularExpression::escape( serverUrlPath ) + "$" ), "" );
+    }
+
     userName = settings.value( "ownCloud/userName" ).toString();
     password = crypto->decryptToString( settings.value( "ownCloud/password" ).toString() );
     localOwnCloudPath = settings.value( "ownCloud/localOwnCloudPath" ).toString();
@@ -137,7 +146,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             return;
         }
-        else if ( reply->url().path().endsWith( calendarPath ) )
+        else if ( reply->url().path().endsWith( serverUrlPath + calendarPath ) )
         {
             qDebug() << "Reply from ownCloud calendar page";
             qDebug() << data;
@@ -147,7 +156,7 @@ void OwnCloudService::slotReplyFinished( QNetworkReply* reply )
 
             return;
         }
-        else if ( reply->url().path().startsWith( calendarPath ) )
+        else if ( reply->url().path().startsWith( serverUrlPath + calendarPath ) )
         {
             // check if we have a reply from a calendar item request
             if ( reply->url().path().endsWith( ".ics" ) )
@@ -857,7 +866,7 @@ void OwnCloudService::loadTodoItems( QString& data )
                     continue;
                 }
 
-                QUrl calendarItemUrl = QUrl( serverUrl + urlPart );
+                QUrl calendarItemUrl = QUrl( serverUrlWithoutPath + urlPart );
 
                 // check if we have an etag
                 QDomNodeList etagNodes = elem.elementsByTagNameNS( NS_DAV, "getetag" );
