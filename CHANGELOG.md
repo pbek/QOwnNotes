@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.75
+- added markdown highlighting to the debug information text box
+- added link clicking support, 4 characters tab stops, custom font support and block indention to all markdown highlighting editors
+
 ## 0.74
 - fixed another problem with todo lists if the server url contains a path (thanks again to Dirk for the report)
 

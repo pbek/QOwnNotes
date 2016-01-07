@@ -827,7 +827,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </property>
            <layout class="QGridLayout" name="gridLayout_8">
             <item row="1" column="0">
-             <widget class="QPlainTextEdit" name="debugInfoTextEdit">
+             <widget class="QMarkdownTextEdit" name="debugInfoTextEdit">
               <property name="font">
                <font>
                 <family>Monospace</family>
@@ -876,6 +876,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QMarkdownTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header location="global">qmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>serverUrlEdit</tabstop>
   <tabstop>userNameEdit</tabstop>
