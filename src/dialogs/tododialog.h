@@ -41,6 +41,7 @@ private slots:
     void on_todoList_itemChanged(QListWidgetItem *item);
     void on_reminderCheckBox_clicked();
     void on_reloadTodoListButton_clicked();
+    void on_summaryEdit_returnPressed();
 
 private:
     Ui::TodoDialog *ui;

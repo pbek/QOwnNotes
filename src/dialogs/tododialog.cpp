@@ -484,3 +484,14 @@ void TodoDialog::on_reloadTodoListButton_clicked()
 {
     reloadTodoList();
 }
+
+/**
+ * @brief Pressing return in the summary text line of a todo item saves it
+ */
+void TodoDialog::on_summaryEdit_returnPressed()
+{
+    // save the todo item if the save button is enabled
+    if ( ui->saveButton->isEnabled() ) {
+        on_saveButton_clicked();
+    }
+}
