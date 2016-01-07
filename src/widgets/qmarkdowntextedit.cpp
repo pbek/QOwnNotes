@@ -48,7 +48,7 @@ bool QMarkdownTextEdit::eventFilter(QObject* obj, QEvent *event)
         if ( ( keyEvent->key() == Qt::Key_Tab ) || ( keyEvent->key() == Qt::Key_Backtab ) )
         {
             // indent selected text (if there is a text selected)
-            return increaseSelectedTextIndentionInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
+            return increaseSelectedTextIndention( keyEvent->key() == Qt::Key_Backtab );
         }
         // set cursor to pointing hand if control key was pressed
         else if ( keyEvent->key() == Qt::Key_Control )
@@ -96,7 +96,7 @@ bool QMarkdownTextEdit::eventFilter(QObject* obj, QEvent *event)
  * @brief Increases (or decreases) the indention of the selected text (if there is a text selected) in the noteTextEdit
  * @return
  */
-bool QMarkdownTextEdit::increaseSelectedTextIndentionInNoteTextEdit( bool reverse )
+bool QMarkdownTextEdit::increaseSelectedTextIndention( bool reverse )
 {
     QTextCursor c = this->textCursor();
     QString selectedText = c.selectedText();
