@@ -17,7 +17,7 @@ public:
 protected:
     HGMarkdownHighlighter *highlighter;
     bool eventFilter(QObject *obj, QEvent *event);
-    bool increaseSelectedTextIndentionInNoteTextEdit(bool reverse);
+    bool increaseSelectedTextIndention(bool reverse);
     void openLinkAtCursorPosition();
 };
 
