@@ -32,7 +32,7 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="6" column="0">
-         <widget class="QTextEdit" name="descriptionEdit">
+         <widget class="QMarkdownTextEdit" name="descriptionEdit">
           <property name="readOnly">
            <bool>false</bool>
           </property>
@@ -272,6 +272,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QMarkdownTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header location="global">widgets/qmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="breeze.qrc"/>
  </resources>

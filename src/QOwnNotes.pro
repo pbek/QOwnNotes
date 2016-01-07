@@ -44,7 +44,8 @@ SOURCES += main.cpp\
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
-    services/databaseservice.cpp
+    services/databaseservice.cpp \
+    widgets/qmarkdowntextedit.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -77,7 +78,8 @@ HEADERS  += mainwindow.h \
     services/updateservice.h \
     helpers/htmlentities.h \
     services/databaseservice.h \
-    release.h
+    release.h \
+    widgets/qmarkdowntextedit.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \
