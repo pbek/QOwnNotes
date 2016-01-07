@@ -2,6 +2,7 @@
 
 ## 0.73
 - fixed a bug with the todo list calendars if the server url had a path in it (a big thank you to Dirk for the report)
+- more information was added to the debug information and you can now store it to a markdown file to help us finding problems
 
 ## 0.72
 - fixed a crash that occurred when all notes were removed

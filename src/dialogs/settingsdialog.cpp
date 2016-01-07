@@ -2,6 +2,10 @@
 #include "services/databaseservice.h"
 #include "dialogs/settingsdialog.h"
 #include "ui_settingsdialog.h"
+#include "build_number.h"
+#include "version.h"
+#include "release.h"
+#include "services/updateservice.h"
 #include <QSettings>
 #include <QFileDialog>
 #include <QDebug>
@@ -169,6 +173,39 @@ void SettingsDialog::outputSettings()
     QListIterator<QString> itr ( settings.allKeys() );
     QString output;
 
+    output += "QOwnNotes Debug Information\n";
+    output += "===========================\n";
+
+    QDateTime dateTime = QDateTime::currentDateTime();
+
+    // add infos about QOwnNotes
+    output += "\n## General Info\n\n";
+    output += prepareDebugInformationLine( "Current Date", dateTime.toString() );
+    output += prepareDebugInformationLine( "Version", QString( VERSION ) );
+    output += prepareDebugInformationLine( "Build date", QString( __DATE__ ) );
+    output += prepareDebugInformationLine( "Build number", QString::number( BUILD ) );
+    output += prepareDebugInformationLine( "Platform", QString( PLATFORM ) );
+    output += prepareDebugInformationLine( "Release", QString( RELEASE ) );
+    output += prepareDebugInformationLine( "Platform", QString( PLATFORM ) );
+    output += prepareDebugInformationLine( "Qt Version", QT_VERSION_STR );
+
+    // add infos about the server
+    output += "\n## Server Info\n\n";
+    output += prepareDebugInformationLine( "serverUrl", ui->serverUrlEdit->text() );
+    output += prepareDebugInformationLine( "appIsValid", QString( appIsValid ? "yes" : "no" ) );
+    if ( appIsValid )
+    {
+        output += prepareDebugInformationLine( "serverVersion", serverVersion );
+        output += prepareDebugInformationLine( "appVersion", appVersion );
+    }
+    else
+    {
+        output += prepareDebugInformationLine( "connectionErrorMessage", connectionErrorMessage );
+    }
+
+    // add infos about the settings
+    output += "\n## Settings\n\n";
+
     // hide values of these keys
     QStringList keyHiddenList = ( QStringList() << "cryptoKey" << "ownCloud/password" );
 
@@ -177,32 +214,39 @@ void SettingsDialog::outputSettings()
         QString key = itr.next();
         QVariant value = settings.value( key );
 
-        output += "**" + key + "**: `";
-
         // hide values of certain keys
         if ( keyHiddenList.contains( key ) )
         {
-            output += "<hidden>";
+            output += prepareDebugInformationLine( key, "<hidden>" );
         }
         else
         {
             switch ( value.type() )
             {
                 case QVariant::StringList:
-                    output += value.toStringList().join( ", " );
+                    output += prepareDebugInformationLine( key, value.toStringList().join( ", " ) );
                     break;
                 case QVariant::ByteArray:
-                    output += "<binary data>";
+                    output += prepareDebugInformationLine( key, "<binary data>" );
                     break;
                 default:
-                    output += value.toString();
+                    output += prepareDebugInformationLine( key, value.toString() );
             }
         }
-
-        output += "`\n";
     }
 
-    ui->settingsDumpTextEdit->setPlainText( output );
+    ui->debugInfoTextEdit->setPlainText( output );
+}
+
+/**
+ * @brief Prepares the debug information to output it as markdown
+ * @param headline
+ * @param data
+ */
+QString SettingsDialog::prepareDebugInformationLine( QString headline, QString data )
+{
+    data = ( data == "" ) ? "*empty*" : "`" + data + "`";
+    return "**" + headline + "**: " + data + "\n" ;
 }
 
 /**
@@ -215,6 +259,11 @@ void SettingsDialog::outputSettings()
  */
 void SettingsDialog::connectTestCallback( bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage )
 {
+    this->appIsValid = appIsValid;
+    this->appVersion = appVersion;
+    this->serverVersion = serverVersion;
+    this->connectionErrorMessage = connectionErrorMessage;
+
     if ( appIsValid )
     {
         ui->connectionTestLabel->setStyleSheet( "color: green;" );
@@ -464,5 +513,42 @@ void SettingsDialog::on_tabWidget_currentChanged(int index)
     if ( index == 3 )
     {
         outputSettings();
+    }
+}
+
+/**
+ * @brief Stores the debug information to a markdown file
+ */
+void SettingsDialog::on_saveDebugInfoButton_clicked()
+{
+    QFileDialog dialog;
+    dialog.setFileMode( QFileDialog::AnyFile );
+    dialog.setAcceptMode( QFileDialog::AcceptSave );
+    dialog.setDirectory( QDir::homePath() );
+    dialog.setNameFilter( "Markdown files (*.md)");
+    dialog.setWindowTitle( "Save debug information" );
+    dialog.selectFile( "QOwnNotes Debug Information.md" );
+    int ret = dialog.exec();
+
+    if ( ret == QDialog::Accepted )
+    {
+        QStringList fileNames = dialog.selectedFiles();
+        if ( fileNames.size() == 0 ) {
+            return;
+        }
+
+        QFile file( fileNames.at(0) );
+
+        if ( !file.open( QIODevice::WriteOnly | QIODevice::Text ) )
+        {
+            qDebug() << file.errorString();
+            return;
+        }
+
+        QTextStream out( &file );
+        out.setCodec("UTF-8");
+        out << ui->debugInfoTextEdit->toPlainText();
+        file.flush();
+        file.close();
     }
 }

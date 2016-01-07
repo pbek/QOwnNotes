@@ -39,18 +39,24 @@ private slots:
     void on_reinitializeDatabaseButton_clicked();
     void on_clearRecentNotesFoldersHistoryButton_clicked();
     void on_tabWidget_currentChanged(int index);
+    void on_saveDebugInfoButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;
     QFont noteTextEditFont;
     QFont noteTextViewFont;
+    bool appIsValid;
+    QString appVersion;
+    QString serverVersion;
+    QString connectionErrorMessage;
     void readSettings();
     void setupCrypto();
     void storeSettings();
     void startConnectionTest();
     void setFontLabel(QLabel *label, QFont font);
     void outputSettings();
+    QString prepareDebugInformationLine(QString headline, QString data);
 };
 
 #endif // SETTINGSDIALOG_H
