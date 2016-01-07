@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.73
+- fixed a bug with the todo list calendars if the server url had a path in it (a big thank you to Dirk for the report)
+
 ## 0.72
 - fixed a crash that occurred when all notes were removed
 - fixed a crash that occurred when all todo items were removed

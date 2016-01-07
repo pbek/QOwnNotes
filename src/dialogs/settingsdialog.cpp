@@ -312,10 +312,25 @@ void SettingsDialog::refreshTodoCalendarList( QStringList items, bool forceReadC
     {
         QString url = itr.next();
 
-        // only add the server url if it wasn't already added
-        if ( !url.startsWith( ui->serverUrlEdit->text() ) )
+        QUrl serverUrl( ui->serverUrlEdit->text() );
+
+        // continue if server url isn't valid
+        if ( !serverUrl.isValid() ) {
+            continue;
+        }
+
+        QString serverUrlText( serverUrl.toString() );
+        QString serverUrlPath = serverUrl.path();
+        if ( serverUrlPath != "" )
         {
-            url = ui->serverUrlEdit->text() + url;
+            // remove the path from the end because we already got it in the url
+            serverUrlText.replace( QRegularExpression( QRegularExpression::escape( serverUrlPath ) + "$" ), "" );
+        }
+
+        // only add the server url if it wasn't already added
+        if ( !url.startsWith( serverUrlText ) )
+        {
+            url = serverUrlText + url;
         }
 
         // get the name out of the url part
