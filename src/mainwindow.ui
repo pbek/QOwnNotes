@@ -96,7 +96,7 @@
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QTextEdit" name="noteTextEdit">
+           <widget class="QMarkdownTextEdit" name="noteTextEdit">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -759,9 +759,16 @@ p, li { white-space: pre-wrap; }
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QMarkdownTextEdit</class>
+   <extends>QTextEdit</extends>
+   <header>widgets/qmarkdowntextedit.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
-  <include location="adwaita.qrc"/>
   <include location="images.qrc"/>
+  <include location="adwaita.qrc"/>
   <include location="breeze.qrc"/>
  </resources>
  <connections/>

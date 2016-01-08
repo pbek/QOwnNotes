@@ -13,9 +13,10 @@ class QMarkdownTextEdit : public QTextEdit
 public:
     QMarkdownTextEdit(QWidget *parent = 0);
     void anchorClicked(const QUrl &url);
+    HGMarkdownHighlighter *highlighter();
 
 protected:
-    HGMarkdownHighlighter *highlighter;
+    HGMarkdownHighlighter *_highlighter;
     bool eventFilter(QObject *obj, QEvent *event);
     bool increaseSelectedTextIndention(bool reverse);
     void openLinkAtCursorPosition();

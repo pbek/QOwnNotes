@@ -12,7 +12,6 @@
 #include <QSystemTrayIcon>
 #include <QTextEdit>
 #include <entities/note.h>
-#include "markdown-highlight/highlighter.h"
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -100,7 +99,6 @@ private:
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
     int firstVisibleNoteListRow;
-    HGMarkdownHighlighter *highlighter;
     NoteDiffDialog *noteDiffDialog;
     bool noteTextEditIsInEditMode;
     QSignalMapper *signalMapper;

@@ -16,7 +16,7 @@ QMarkdownTextEdit::QMarkdownTextEdit(QWidget *parent)
     viewport()->installEventFilter( this );
 
     // setup the markdown highlighting
-    highlighter = new HGMarkdownHighlighter( document(), 1000 );
+    _highlighter = new HGMarkdownHighlighter( document(), 1000 );
 
     // load text edit font
     QSettings settings;
@@ -30,7 +30,7 @@ QMarkdownTextEdit::QMarkdownTextEdit(QWidget *parent)
         this->setFont( font );
 
         // set the default size for the highlighter
-        highlighter->setDefaultStyles( font.pointSize() );
+        _highlighter->setDefaultStyles( font.pointSize() );
     }
 
     // set the tab stop to the width of 4 spaces in the editor
@@ -181,7 +181,6 @@ void QMarkdownTextEdit::openLinkAtCursorPosition()
     }
 }
 
-
 /*
  * Handles clicked urls
  *
@@ -192,4 +191,9 @@ void QMarkdownTextEdit::openLinkAtCursorPosition()
 void QMarkdownTextEdit::anchorClicked(const QUrl &url)
 {
     QDesktopServices::openUrl( url );
+}
+
+HGMarkdownHighlighter *QMarkdownTextEdit::highlighter()
+{
+    return _highlighter;
 }

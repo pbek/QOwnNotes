@@ -51,9 +51,6 @@ MainWindow::MainWindow(QWidget *parent) :
     sorting->addAction( ui->actionBy_date );
     sorting->setExclusive( true );
 
-    // setup markdown highlighting
-    highlighter = new HGMarkdownHighlighter( ui->noteTextEdit->document(), 1000 );
-
     ui->searchInNoteWidget->hide();
 
     DatabaseService::createConnection();
@@ -450,8 +447,8 @@ void MainWindow::readSettingsFromSettingsDialog()
     ui->noteTextEdit->setFont( font );
 
     // set the default size for the highlighter
-    highlighter->setDefaultStyles( font.pointSize() );
-    highlighter->parse();
+    ui->noteTextEdit->highlighter()->setDefaultStyles( font.pointSize() );
+    ui->noteTextEdit->highlighter()->parse();
 
     // load note text view font
     fontString = settings.value("MainWindow/noteTextView.font").toString();
@@ -965,51 +962,14 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
                 closeSearchInNoteWidget();
                 return true;
             }
-            else if ( ( keyEvent->key() == Qt::Key_Tab ) || ( keyEvent->key() == Qt::Key_Backtab ) )
-            {
-                // indent selected text (if there is a text selected)
-                return increaseSelectedTextIndentionInNoteTextEdit( keyEvent->key() == Qt::Key_Backtab );
-            }
-            // set cursor to pointing hand if control key was pressed
-            else if ( keyEvent->key() == Qt::Key_Control )
-            {
-                QWidget *viewPort = ui->noteTextEdit->viewport();
-                viewPort->setCursor( Qt::PointingHandCursor );
-                return false;
-            }
-
-            return false;
         }
     }
-    if ( event->type() == QEvent::KeyRelease )
-    {
-        if ( obj == ui->noteTextEdit )
-        {
-            QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
-
-            // reset cursor if control key was released
-            if ( keyEvent->key() == Qt::Key_Control )
-            {
-                QWidget *viewPort = ui->noteTextEdit->viewport();
-                viewPort->setCursor( Qt::IBeamCursor );
-            }
-
-            return false;
-        }
-    }
-    else if ( event->type() == QEvent::MouseButtonRelease )
+    if ( event->type() == QEvent::MouseButtonRelease )
     {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
-        // track Ctrl+LeftMouseClick in the noteTextEdit
-        if ( ( obj == ui->noteTextEdit->viewport() ) && ( mouseEvent->button() == Qt::LeftButton ) && ( QGuiApplication::keyboardModifiers() == Qt::ExtraButton24 ) )
-        {
-            // open the link (if any) at the current position in the noteTextEdit
-            openLinkAtCurrentNoteTextEditPosition();
-            return false;
-        }
         // move back in the note history
-        else if ( ( mouseEvent->button() == Qt::BackButton ) )
+        if ( ( mouseEvent->button() == Qt::BackButton ) )
         {
             on_action_Back_in_note_history_triggered();
         }
@@ -1021,96 +981,6 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
     }
 
     return QMainWindow::eventFilter( obj, event );
-}
-
-/**
- * REMOVE THIS
- * @brief Increases (or decreases) the indention of the selected text (if there is a text selected) in the noteTextEdit
- * @return
- */
-bool MainWindow::increaseSelectedTextIndentionInNoteTextEdit( bool reverse )
-{
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    if ( selectedText != "" )
-    {
-        // we need this strange newline character we are getting in the selected text for newlines
-        QString newLine = QString::fromUtf8( QByteArray::fromHex( "e280a9" ) );
-        QString newText;
-
-        if ( reverse )
-        {
-            // unindent text
-            newText = selectedText.replace( newLine + "\t", "\n" );
-
-            // remove leading \t
-            newText.replace( QRegularExpression( "^\\t" ), "" );
-        }
-        else
-        {
-            // indent text
-            newText = selectedText.replace( newLine, "\n\t" ).prepend( "\t" );
-
-            // remove trailing \t
-            newText.replace( QRegularExpression( "\\t$" ), "" );
-        }
-
-        // insert the new text
-        c.insertText( newText );
-
-        // update the selection to the new text
-        c.setPosition( c.position() - newText.size(), QTextCursor::KeepAnchor );
-        ui->noteTextEdit->setTextCursor( c );
-
-        return true;
-    }
-    // if nothing was selected but we want to reverse the indention check if there is a \t in front or after the cursor and remove it if so
-    else if ( reverse )
-    {
-        int pos = c.position();
-        // check for \t in front of cursor
-        c.setPosition( pos - 1, QTextCursor::KeepAnchor );
-        if ( c.selectedText() != "\t" )
-        {
-            // (select to) check for \t after the cursor
-            c.setPosition( pos );
-            c.setPosition( pos + 1, QTextCursor::KeepAnchor );
-        }
-
-        if ( c.selectedText() == "\t" )
-        {
-            c.removeSelectedText();
-        }
-
-        return true;
-    }
-
-    return false;
-}
-
-/**
- * REMOVE THIS
- * @brief Opens the link (if any) at the current position in the noteTextEdit
- */
-void MainWindow::openLinkAtCurrentNoteTextEditPosition()
-{
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    int clickedPosition = c.position();
-
-    // select the text in the clicked block and find out on which position we clicked
-    c.movePosition( QTextCursor::StartOfBlock );
-    int positionFromStart = clickedPosition - c.position();
-    c.movePosition( QTextCursor::EndOfBlock, QTextCursor::KeepAnchor );
-
-    QString selectedText = c.selectedText();
-    // find out which url in the selected text was clicked
-    QString url = Note::getMarkdownUrlAtPosition( selectedText, positionFromStart );
-    if ( url != "" )
-    {
-        // try to open url
-        on_noteTextView_anchorClicked( QUrl( url ) );
-    }
 }
 
 /**
@@ -1612,7 +1482,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     setCurrentNote( note, true, false );
 
     // parse the current note for markdown highlighting
-    highlighter->parse();
+    ui->noteTextEdit->highlighter()->parse();
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
