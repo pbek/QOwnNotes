@@ -186,7 +186,6 @@ void SettingsDialog::outputSettings()
     output += prepareDebugInformationLine( "Build number", QString::number( BUILD ) );
     output += prepareDebugInformationLine( "Platform", QString( PLATFORM ) );
     output += prepareDebugInformationLine( "Release", QString( RELEASE ) );
-    output += prepareDebugInformationLine( "Platform", QString( PLATFORM ) );
     output += prepareDebugInformationLine( "Qt Version", QT_VERSION_STR );
 
     // add infos about the server
