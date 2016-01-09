@@ -27,7 +27,7 @@ QMarkdownTextEdit::QMarkdownTextEdit(QWidget *parent)
     {
         // set the note text edit font
         font.fromString( fontString );
-        this->setFont( font );
+        setFont( font );
 
         // set the default size for the highlighter
         _highlighter->setDefaultStyles( font.pointSize() );
@@ -36,7 +36,7 @@ QMarkdownTextEdit::QMarkdownTextEdit(QWidget *parent)
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
     QFontMetrics metrics( font );
-    this->setTabStopWidth( tabStop * metrics.width( ' ' ) );
+    setTabStopWidth( tabStop * metrics.width( ' ' ) );
 }
 
 bool QMarkdownTextEdit::eventFilter(QObject* obj, QEvent *event)
@@ -76,7 +76,7 @@ bool QMarkdownTextEdit::eventFilter(QObject* obj, QEvent *event)
             return false;
         }
     }
-    else if ( event->type() == QEvent::MouseButtonPress )
+    else if ( event->type() == QEvent::MouseButtonRelease )
     {
         QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
 
@@ -173,27 +173,56 @@ void QMarkdownTextEdit::openLinkAtCursorPosition()
 
     QString selectedText = c.selectedText();
     // find out which url in the selected text was clicked
-    QString url = Note::getMarkdownUrlAtPosition( selectedText, positionFromStart );
-    if ( url != "" )
+    QUrl url = Note::getMarkdownUrlAtPosition( selectedText, positionFromStart );
+    if ( url.isValid() )
     {
-        // try to open url
-        anchorClicked( QUrl( url ) );
+        qDebug() << __func__ << " - 'emit urlClicked( url )': " << url;
+        emit urlClicked( url );
+
+        // ignore some schemata
+        if ( !_ignoredClickUrlSchemata.contains( url.scheme() ) )
+        {
+            // open the url
+            openUrl( url );
+        }
     }
 }
 
-/*
+/**
  * Handles clicked urls
  *
  * examples:
  * - <http://www.qownnotes.org> opens the webpage
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
-void QMarkdownTextEdit::anchorClicked(const QUrl &url)
+void QMarkdownTextEdit::openUrl( QUrl url )
 {
-    QDesktopServices::openUrl( url );
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QString urlString = url.toString();
+    QSettings settings;
+    QString notesPath = settings.value( "notesPath" ).toString();
+
+    // parse for relative file urls and make them absolute
+    urlString.replace( QRegularExpression( "^file:\\/\\/([^\\/].+)$" ), "file://"+ notesPath +"/\\1" );
+
+    QDesktopServices::openUrl( QUrl( urlString ) );
 }
 
+/**
+ * @brief Returns the highlighter instance
+ * @return
+ */
 HGMarkdownHighlighter *QMarkdownTextEdit::highlighter()
 {
     return _highlighter;
+}
+
+/**
+ * @brief Sets url schemata that will be ignored when clicked on
+ * @param urlSchemes
+ */
+void QMarkdownTextEdit::setIgnoredClickUrlSchemata( QStringList ignoredUrlSchemata )
+{
+    _ignoredClickUrlSchemata = ignoredUrlSchemata;
 }

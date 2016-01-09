@@ -2,6 +2,7 @@
 
 ## 0.76
 - the Windows version of QOwnNotes now also includes the OpenSSL library, please report if you have any problems on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues))
+- clicking links in all text edit boxes with markdown highlighting should work in the same way now
 
 ## 0.75
 - added markdown highlighting to the debug information text box

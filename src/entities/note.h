@@ -51,7 +51,7 @@ public:
     bool move(QString destinationPath);
     static QString generateTextForLink(QString text);
     static QMap<QString, QString> parseMarkdownUrlsFromText(QString text);
-    static QString getMarkdownUrlAtPosition(QString text, int position);
+    static QUrl getMarkdownUrlAtPosition(QString text, int position);
 private:
     int id;
     QString name;

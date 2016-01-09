@@ -11,6 +11,7 @@
 #include <QSqlError>
 #include <QRegularExpression>
 #include <QStandardPaths>
+#include <QUrl>
 #include "libraries/hoedown/html.h"
 
 
@@ -799,8 +800,10 @@ QMap<QString, QString> Note::parseMarkdownUrlsFromText( QString text )
  * @param position
  * @return url string
  */
-QString Note::getMarkdownUrlAtPosition( QString text, int position )
+QUrl Note::getMarkdownUrlAtPosition( QString text, int position )
 {
+    QUrl url;
+
     // get a map of parsed markdown urls with their link texts as key
     QMap<QString, QString> urlMap = parseMarkdownUrlsFromText( text );
 
@@ -809,7 +812,7 @@ QString Note::getMarkdownUrlAtPosition( QString text, int position )
     {
         i.next();
         QString linkText = i.key();
-        QString url = i.value();
+        QString urlString = i.value();
 
         int foundPositionStart = text.indexOf( linkText );
 
@@ -821,12 +824,12 @@ QString Note::getMarkdownUrlAtPosition( QString text, int position )
             // check if position is in found string range
             if ( ( position >= foundPositionStart ) && ( position <= foundPositionEnd ) )
             {
-                return url;
+                url = QUrl( urlString );
             }
         }
     }
 
-    return "";
+    return url;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note)

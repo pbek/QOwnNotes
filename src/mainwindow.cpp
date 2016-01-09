@@ -97,6 +97,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
 
+    // ignores note clicks in QMarkdownTextEdit in the note text edit
+    ui->noteTextEdit->setIgnoredClickUrlSchemata( QStringList() << "note" );
+
+    // handle note url externally in the note text edit
+    QObject::connect( ui->noteTextEdit, SIGNAL( urlClicked( QUrl ) ), this, SLOT( openNoteUrl( QUrl ) ) );
+
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
     QFont font = ui->noteTextEdit->font();
@@ -1700,6 +1706,29 @@ void MainWindow::on_noteTabWidget_currentChanged(int index)
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
 {
+    qDebug() << __func__ << " - 'url': " << url;
+
+    if ( url.scheme() == "note" )
+    {
+        openNoteUrl( url );
+    }
+    else
+    {
+        QMarkdownTextEdit::openUrl( url );
+    }
+}
+
+/*
+ * Handles note urls
+ *
+ * examples:
+ * - <note://MyNote> opens the note "MyNote"
+ * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
+ */
+void MainWindow::openNoteUrl( QUrl url )
+{
+    qDebug() << __func__ << " - 'url': " << url;
+
     if ( url.scheme() == "note" )
     {
         QString fileName = url.host() + ".txt";
@@ -1739,15 +1768,6 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
                 }
             }
         }
-    }
-    else
-    {
-        QString urlString = url.toString();
-
-        // parse for relative file urls and make them absolute
-        urlString.replace( QRegularExpression( "^file:\\/\\/([^\\/].+)$" ), "file://"+ notesPath +"/\\1" );
-
-        QDesktopServices::openUrl( QUrl( urlString ) );
     }
 }
 

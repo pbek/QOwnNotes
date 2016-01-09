@@ -87,10 +87,9 @@ private slots:
     void on_action_Export_note_as_PDF_text_triggered();
     void on_action_Print_note_markdown_triggered();
     void on_action_Print_note_text_triggered();
-
     void on_actionInsert_image_triggered();
-
     void on_actionShow_changelog_triggered();
+    void openNoteUrl(QUrl url);
 
 private:
     Ui::MainWindow *ui;
@@ -146,8 +145,6 @@ private:
     void updateNoteTextFromDisk(Note note);
     void makeCurrentNoteFirstInNoteList();
     void readSettingsFromSettingsDialog();
-    void openLinkAtCurrentNoteTextEditPosition();
-    bool increaseSelectedTextIndentionInNoteTextEdit(bool reverse = false);
     void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
     void exportNoteAsPDF(QTextEdit *textEdit);
     void printNote(QTextEdit *textEdit);
