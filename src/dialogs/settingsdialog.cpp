@@ -104,6 +104,7 @@ void SettingsDialog::storeSettings()
     settings.setValue( "noteSaveIntervalTime", ui->noteSaveIntervalTime->value() );
     settings.setValue( "MainWindow/noteTextEdit.font", noteTextEditFont.toString() );
     settings.setValue( "MainWindow/noteTextView.font", noteTextViewFont.toString() );
+    settings.setValue( "MainWindow/mainToolBar.iconSize", QString::number( ui->toolbarIconSizeSpinBox->value() ) );
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
@@ -136,6 +137,7 @@ void SettingsDialog::readSettings()
     ui->localOwnCloudPathEdit->setText( settings.value( "ownCloud/localOwnCloudPath" ).toString() );
     ui->notifyAllExternalModificationsCheckBox->setChecked( settings.value( "notifyAllExternalModifications" ).toBool() );
     ui->noteSaveIntervalTime->setValue( settings.value( "noteSaveIntervalTime" ).toInt() );
+    ui->toolbarIconSizeSpinBox->setValue( settings.value( "MainWindow/mainToolBar.iconSize" ).toInt() );
 
     noteTextEditFont.fromString( settings.value( "MainWindow/noteTextEdit.font" ).toString() );
     setFontLabel( ui->noteTextEditFontLabel, noteTextEditFont );

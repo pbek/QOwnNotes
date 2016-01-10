@@ -469,6 +469,19 @@ void MainWindow::readSettingsFromSettingsDialog()
     // set the note text view font
     font.fromString( fontString );
     ui->noteTextView->setFont( font );
+
+    // set the main toolbar icon size
+    int toolBarIconSize = settings.value( "MainWindow/mainToolBar.iconSize" ).toInt();
+    if ( toolBarIconSize == 0 )
+    {
+        toolBarIconSize = ui->mainToolBar->iconSize().height();
+        settings.setValue( "MainWindow/mainToolBar.iconSize", QString::number( toolBarIconSize ) );
+    }
+    else
+    {
+        QSize size( toolBarIconSize, toolBarIconSize );
+        ui->mainToolBar->setIconSize( size );
+    }
 }
 
 void MainWindow::updateNoteTextFromDisk( Note note )

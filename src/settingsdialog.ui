@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -813,6 +813,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </widget>
           </item>
          </layout>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="geometry">
+          <rect>
+           <x>650</x>
+           <y>180</y>
+           <width>271</width>
+           <height>91</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>Toolbar</string>
+         </property>
+         <widget class="QLabel" name="toolbarIconSizeLabel">
+          <property name="geometry">
+           <rect>
+            <x>30</x>
+            <y>40</y>
+            <width>94</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Icon size:</string>
+          </property>
+         </widget>
+         <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
+          <property name="geometry">
+           <rect>
+            <x>140</x>
+            <y>40</y>
+            <width>60</width>
+            <height>34</height>
+           </rect>
+          </property>
+         </widget>
         </widget>
        </widget>
        <widget class="QWidget" name="tab">
