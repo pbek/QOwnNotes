@@ -384,6 +384,12 @@ p, li { white-space: pre-wrap; }
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="iconSize">
+    <size>
+     <width>38</width>
+     <height>38</height>
+    </size>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -767,9 +773,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
-  <include location="adwaita.qrc"/>
   <include location="breeze.qrc"/>
+  <include location="adwaita.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

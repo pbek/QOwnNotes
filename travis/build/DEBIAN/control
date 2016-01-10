@@ -7,6 +7,9 @@ Section: editors
 Homepage: http://www.qownnotes.org
 Priority: optional
 Architecture: all
-Depends: libstdc++6, chise-db, libc6, libffi6, libffi6-dbg, libfreetype6, libgcc1, libgcc1-dbg, libglib2.0-0, libgraphite2-3, libharfbuzz0b, libpcre3, libpcre3-dbg, libpng12-0, libqt5core5a, libqt5gui5, libqt5sql5, libqt5widgets5, libstdc++6, libx11-6, libx11-6-dbg, libxau6, libxau6-dbg, libxcb1, libxdmcp6, libxdmcp6-dbg, libxext6, libxext6-dbg, zlib1g, libqt5script5, openssl, libqt5svg5, libqt5network5, libqt5xml5, libqt5printsupport5
-Description: QOwnNotes is the open source notepad, that works together with the notes application of ownCloud.
- QOwnNotes is the open source notepad, that works together with the notes application of ownCloud.
+Depends: libc6, libgcc1, libstdc++6, libqt5core5a, libqt5gui5, libqt5sql5, libqt5sql5-sqlite, libqt5widgets5, libqt5script5, libqt5svg5, libqt5network5, libqt5xml5, libqt5printsupport5, openssl
+Description: Plain text notepad and todo list manager with markdown support that works together with ownCloud
+ QOwnNotes is the text notepad and todo list manager with markdown support that works together with ownCloud.
+ You own your own notes! All notes are stored as plain-text files on your desktop computer.
+ Sync them over devices (desktop & mobile) with ownCloud.
+ Use ownCloud Notes to edit your notes in the web.

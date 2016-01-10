@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 0.77
+- the icon size in the main toolbar was set to a fixed `38x38` to try prevent high-dpi problems in KDE Plasma
+- `libqt5sql5-sqlite` was added to the dependencies for the Ubuntu PPA build and the Ubuntu deb-package (for [Issue #30](https://github.com/pbek/QOwnNotes/issues/30))
+- if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](http://www.qownnotes.org/Blog/New-release-version-RSS-feed)
+
 ## 0.76
 - the Windows version of QOwnNotes now also includes the OpenSSL library, please report if you have any problems on the [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues))
 - clicking links in all text edit boxes with markdown highlighting should work in the same way now
