@@ -17,8 +17,6 @@ INCLUDEPATH += $$PWD/libraries
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    libraries/markdown-highlight/pmh_parser.c \
-    libraries/markdown-highlight/highlighter.cpp \
     libraries/diff_match_patch/diff_match_patch.cpp \
     libraries/hoedown/html.c \
     libraries/hoedown/autolink.c \
@@ -45,14 +43,13 @@ SOURCES += main.cpp\
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
     services/databaseservice.cpp \
-    widgets/qmarkdowntextedit.cpp
+    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
+    libraries/qmarkdowntextedit/highlighter.cpp \
+    libraries/qmarkdowntextedit/qmarkdowntextedit.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
     version.h \
-    libraries/markdown-highlight/pmh_parser.h \
-    libraries/markdown-highlight/pmh_definitions.h \
-    libraries/markdown-highlight/highlighter.h \
     libraries/diff_match_patch/diff_match_patch.h \
     libraries/hoedown/html.h \
     libraries/hoedown/autolink.h \
@@ -79,7 +76,10 @@ HEADERS  += mainwindow.h \
     helpers/htmlentities.h \
     services/databaseservice.h \
     release.h \
-    widgets/qmarkdowntextedit.h
+    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
+    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
+    libraries/qmarkdowntextedit/highlighter.h \
+    libraries/qmarkdowntextedit/qmarkdowntextedit.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

@@ -763,7 +763,7 @@ p, li { white-space: pre-wrap; }
   <customwidget>
    <class>QMarkdownTextEdit</class>
    <extends>QTextEdit</extends>
-   <header location="global">widgets/qmarkdowntextedit.h</header>
+   <header location="global">libraries/qmarkdowntextedit/qmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

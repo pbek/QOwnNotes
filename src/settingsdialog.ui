@@ -916,7 +916,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <customwidget>
    <class>QMarkdownTextEdit</class>
    <extends>QTextEdit</extends>
-   <header location="global">widgets/qmarkdowntextedit.h</header>
+   <header location="global">libraries/qmarkdowntextedit/qmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>
