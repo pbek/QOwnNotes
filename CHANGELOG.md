@@ -4,7 +4,7 @@
 - you are now able to configure the icon size of the main toolbar in the general settings
 
 ## 0.77
-- the icon size in the main toolbar was set to a fixed `38x38` to try prevent high-dpi problems in KDE Plasma
+- the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma
 - `libqt5sql5-sqlite` was added to the dependencies for the Ubuntu PPA build and the Ubuntu deb-package (for [Issue #30](https://github.com/pbek/QOwnNotes/issues/30))
 - if you don't want to miss a single version of QOwnNotes you might want to take a look at [New release version RSS feed](http://www.qownnotes.org/Blog/New-release-version-RSS-feed)
 
