@@ -8,9 +8,12 @@ install:
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
 
-build_script:
-  # updating submodule
+before_build:
+  # getting submodules
+  - git submodule init
   - git submodule update
+
+build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
   - cd src
