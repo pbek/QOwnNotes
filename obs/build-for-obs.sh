@@ -32,7 +32,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
-git clone git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=50 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 # remove huge .git folder
