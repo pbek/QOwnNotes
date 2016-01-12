@@ -189,7 +189,7 @@ p, li { white-space: pre-wrap; }
           <number>0</number>
          </property>
          <property name="bottomMargin">
-          <number>0</number>
+          <number>3</number>
          </property>
          <item>
           <widget class="QComboBox" name="recentNoteFolderComboBox"/>
