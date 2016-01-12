@@ -45,7 +45,8 @@ SOURCES += main.cpp\
     services/databaseservice.cpp \
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
     libraries/qmarkdowntextedit/highlighter.cpp \
-    libraries/qmarkdowntextedit/qmarkdowntextedit.cpp
+    libraries/qmarkdowntextedit/qmarkdowntextedit.cpp \
+    widgets/qownnotesmarkdowntextedit.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -79,7 +80,8 @@ HEADERS  += mainwindow.h \
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
     libraries/qmarkdowntextedit/highlighter.h \
-    libraries/qmarkdowntextedit/qmarkdowntextedit.h
+    libraries/qmarkdowntextedit/qmarkdowntextedit.h \
+    widgets/qownnotesmarkdowntextedit.h
 
 FORMS    += mainwindow.ui \
     notediffdialog.ui \

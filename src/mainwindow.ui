@@ -96,7 +96,7 @@
            <number>0</number>
           </property>
           <item row="0" column="0">
-           <widget class="QMarkdownTextEdit" name="noteTextEdit">
+           <widget class="QOwnNotesMarkdownTextEdit" name="noteTextEdit">
             <property name="enabled">
              <bool>true</bool>
             </property>
@@ -761,9 +761,9 @@ p, li { white-space: pre-wrap; }
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
   <customwidget>
-   <class>QMarkdownTextEdit</class>
+   <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QTextEdit</extends>
-   <header location="global">libraries/qmarkdowntextedit/qmarkdowntextedit.h</header>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

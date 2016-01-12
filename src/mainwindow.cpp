@@ -27,6 +27,7 @@
 #include "dialogs/aboutdialog.h"
 #include "dialogs/settingsdialog.h"
 #include "entities/calendaritem.h"
+#include "widgets/qownnotesmarkdowntextedit.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -1727,7 +1728,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url)
     }
     else
     {
-        QMarkdownTextEdit::openUrl( url );
+        ui->noteTextEdit->openUrl( url );
     }
 }
 

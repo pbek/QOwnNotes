@@ -32,7 +32,7 @@
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="6" column="0">
-         <widget class="QMarkdownTextEdit" name="descriptionEdit">
+         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
           <property name="readOnly">
            <bool>false</bool>
           </property>
@@ -274,9 +274,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>QMarkdownTextEdit</class>
+   <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QTextEdit</extends>
-   <header location="global">libraries/qmarkdowntextedit/qmarkdowntextedit.h</header>
+   <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>
