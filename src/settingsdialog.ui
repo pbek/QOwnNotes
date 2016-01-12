@@ -804,13 +804,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            <x>20</x>
            <y>520</y>
            <width>601</width>
-           <height>101</height>
+           <height>141</height>
           </rect>
          </property>
          <property name="title">
           <string>Recent notes folders</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="showRecentNoteFolderCheckBox">
+            <property name="text">
+             <string>Show recent notes folders in main area</string>
+            </property>
+           </widget>
+          </item>
           <item>
            <widget class="QPushButton" name="clearRecentNotesFoldersHistoryButton">
             <property name="toolTip">

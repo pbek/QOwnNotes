@@ -85,7 +85,6 @@ private slots:
     void on_actionInsert_image_triggered();
     void on_actionShow_changelog_triggered();
     void openNoteUrl(QUrl url);
-
     void on_action_Find_text_in_note_triggered();
 
 private:
@@ -127,7 +126,7 @@ private:
     void setNoteTextEditMode(bool isInEditMode);
     void setNoteTextFromNote(Note *note);
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly);
-    void loadRecentNoteFolderListMenu();
+    void loadRecentNoteFolderListMenu(QString currentFolderName);
     void storeRecentNoteFolder(QString addFolderName, QString removeFolderName);
     void storeSettings();
     void setupCrypto();

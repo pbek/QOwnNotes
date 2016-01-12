@@ -76,7 +76,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="3" column="1">
        <widget class="QTabWidget" name="noteTabWidget">
         <property name="currentIndex">
          <number>0</number>
@@ -176,20 +176,41 @@ p, li { white-space: pre-wrap; }
         </widget>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QListWidget" name="notesListWidget">
-        <property name="contextMenuPolicy">
-         <enum>Qt::CustomContextMenu</enum>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QListWidget {
+      <item row="3" column="0">
+       <widget class="QFrame" name="notesListFrame">
+        <layout class="QVBoxLayout" name="notesListLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QComboBox" name="recentNoteFolderComboBox"/>
+         </item>
+         <item>
+          <widget class="QListWidget" name="notesListWidget">
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QListWidget {
 /*	border: 1px solid gray;*/
 }
 </string>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </item>
      </layout>

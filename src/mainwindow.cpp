@@ -111,7 +111,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setNoteTextEditMode( true );
 
     // load the recent note folder list in the menu
-    this->loadRecentNoteFolderListMenu();
+    this->loadRecentNoteFolderListMenu( notesPath );
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates( UpdateService::AppStart );
@@ -136,6 +136,9 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->actionCheck_for_updates->setVisible( false );
         ui->actionCheck_for_updates->setEnabled( false );
     }
+
+    // let the note folder be changed with the recent note folder combo box
+    QObject::connect( ui->recentNoteFolderComboBox, SIGNAL( currentTextChanged( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
 }
 
 MainWindow::~MainWindow()
@@ -152,7 +155,7 @@ MainWindow::~MainWindow()
 /*
  * Loads the menu entries for the recent note folders
  */
-void MainWindow::loadRecentNoteFolderListMenu()
+void MainWindow::loadRecentNoteFolderListMenu( QString currentFolderName )
 {
     QSettings settings;
     QStringList recentNoteFolders = settings.value( "recentNoteFolders" ).toStringList();
@@ -172,18 +175,29 @@ void MainWindow::loadRecentNoteFolderListMenu()
     }
 
     // clear menu list
-    this->ui->menuRecentNoteFolders->clear();
+    ui->menuRecentNoteFolders->clear();
 
-    // populate menu list
-    Q_FOREACH( QString noteFolder, recentNoteFolders )
+    const QSignalBlocker blocker( ui->recentNoteFolderComboBox );
     {
-        // add a menu entry
-        QAction *action = this->ui->menuRecentNoteFolders->addAction( noteFolder );
-        QObject::connect( action, SIGNAL( triggered() ), signalMapper, SLOT( map() ) );
+        ui->recentNoteFolderComboBox->clear();
+        ui->recentNoteFolderComboBox->addItem( currentFolderName );
 
-        // add a parameter to changeNoteFolder with the signal mapper
-        signalMapper->setMapping( action, noteFolder );
-        QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
+        // populate menu list
+        Q_FOREACH( QString noteFolder, recentNoteFolders )
+        {
+            // add a menu entry
+            QAction *action = ui->menuRecentNoteFolders->addAction( noteFolder );
+            QObject::connect( action, SIGNAL( triggered() ), signalMapper, SLOT( map() ) );
+
+            // add a parameter to changeNoteFolder with the signal mapper
+            signalMapper->setMapping( action, noteFolder );
+            QObject::connect( signalMapper, SIGNAL( mapped( const QString & ) ), this, SLOT( changeNoteFolder( const QString & ) ) );
+
+            // add an entry to the combo box
+            ui->recentNoteFolderComboBox->addItem( noteFolder );
+        }
+
+        ui->recentNoteFolderComboBox->setCurrentIndex( 0 );
     }
 }
 
@@ -250,9 +264,8 @@ void MainWindow::storeRecentNoteFolder( QString addFolderName, QString removeFol
     }
 
     settings.setValue( "recentNoteFolders", recentNoteFolders );
-
     // reload menu
-    loadRecentNoteFolderListMenu();
+    loadRecentNoteFolderListMenu( removeFolderName );
 }
 
 int MainWindow::openNoteDiffDialog( Note changedNote )
@@ -287,7 +300,7 @@ void MainWindow::setupMainSplitter()
 {
     this->mainSplitter = new QSplitter;
 
-    this->mainSplitter->addWidget(ui->notesListWidget);
+    this->mainSplitter->addWidget(ui->notesListFrame);
     this->mainSplitter->addWidget(ui->noteTabWidget);
 
     // restore splitter sizes
@@ -472,6 +485,9 @@ void MainWindow::readSettingsFromSettingsDialog()
         QSize size( toolBarIconSize, toolBarIconSize );
         ui->mainToolBar->setIconSize( size );
     }
+
+    // check if we want to view the recent note folder combo box
+    ui->recentNoteFolderComboBox->setVisible( settings.value( "MainWindow/showRecentNoteFolderInMainArea" ).toBool() );
 }
 
 void MainWindow::updateNoteTextFromDisk( Note note )
@@ -1276,7 +1292,7 @@ void MainWindow::openSettingsDialog()
     }
 
     // reload recent note folder in case we have cleared the history in the settings
-    loadRecentNoteFolderListMenu();
+    loadRecentNoteFolderListMenu( notesPath );
 }
 
 /**

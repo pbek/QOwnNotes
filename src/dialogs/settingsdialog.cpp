@@ -105,6 +105,7 @@ void SettingsDialog::storeSettings()
     settings.setValue( "MainWindow/noteTextEdit.font", noteTextEditFont.toString() );
     settings.setValue( "MainWindow/noteTextView.font", noteTextViewFont.toString() );
     settings.setValue( "MainWindow/mainToolBar.iconSize", QString::number( ui->toolbarIconSizeSpinBox->value() ) );
+    settings.setValue( "MainWindow/showRecentNoteFolderInMainArea", ui->showRecentNoteFolderCheckBox->isChecked() );
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
@@ -138,6 +139,7 @@ void SettingsDialog::readSettings()
     ui->notifyAllExternalModificationsCheckBox->setChecked( settings.value( "notifyAllExternalModifications" ).toBool() );
     ui->noteSaveIntervalTime->setValue( settings.value( "noteSaveIntervalTime" ).toInt() );
     ui->toolbarIconSizeSpinBox->setValue( settings.value( "MainWindow/mainToolBar.iconSize" ).toInt() );
+    ui->showRecentNoteFolderCheckBox->setChecked( settings.value( "MainWindow/showRecentNoteFolderInMainArea" ).toBool() );
 
     noteTextEditFont.fromString( settings.value( "MainWindow/noteTextEdit.font" ).toString() );
     setFontLabel( ui->noteTextEditFontLabel, noteTextEditFont );

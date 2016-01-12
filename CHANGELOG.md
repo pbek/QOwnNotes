@@ -4,7 +4,9 @@
 - you are now able to configure the icon size of the main toolbar in the general settings
 - you are now able to duplicate text with `Ctrl + Alt + Down` in all markdown edits
 - searching for text is now possible in all markdown edits with `Ctrl + F`
-- added clear buttons to text lines
+- added a clear button to text lines
+- you can now jump to all visited note folders with a select box above the notes list
+    - this select box is turned off by default and can be turned on in the settings
 
 ## 0.77
 - the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma
