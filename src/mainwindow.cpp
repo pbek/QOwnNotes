@@ -52,8 +52,6 @@ MainWindow::MainWindow(QWidget *parent) :
     sorting->addAction( ui->actionBy_date );
     sorting->setExclusive( true );
 
-    ui->searchInNoteWidget->hide();
-
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
@@ -93,7 +91,6 @@ MainWindow::MainWindow(QWidget *parent) :
     QObject::connect( &this->noteDirectoryWatcher, SIGNAL( fileChanged( QString ) ), this, SLOT( notesWereModified( QString ) ) );
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
-    ui->searchInNoteWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->notesListWidget->setCurrentRow( 0 );
@@ -948,33 +945,6 @@ bool MainWindow::eventFilter(QObject* obj, QEvent *event)
             }
             return false;
         }
-        else if ( obj == ui->searchInNoteWidget )
-        {
-            if ( keyEvent->key() == Qt::Key_Escape )
-            {
-                closeSearchInNoteWidget();
-                return true;
-            }
-            else if ( ( keyEvent->modifiers().testFlag( Qt::ShiftModifier ) && ( keyEvent->key() == Qt::Key_Return ) ) || ( keyEvent->key() == Qt::Key_Up ) )
-            {
-                doSearchInNote( false );
-                return true;
-            }
-            else if ( ( keyEvent->key() == Qt::Key_Return ) || ( keyEvent->key() == Qt::Key_Down ) )
-            {
-                doSearchInNote();
-                return true;
-            }
-            return false;
-        }
-        else if ( obj == ui->noteTextEdit )
-        {
-            if ( ( keyEvent->key() == Qt::Key_Escape ) && ui->searchInNoteWidget->isVisible() )
-            {
-                closeSearchInNoteWidget();
-                return true;
-            }
-        }
     }
     if ( event->type() == QEvent::MouseButtonRelease )
     {
@@ -1367,40 +1337,6 @@ void MainWindow::handleTextNoteLinking()
     }
 }
 
-void MainWindow::closeSearchInNoteWidget()
-{
-    ui->searchInNoteWidget->hide();
-    ui->noteTextEdit->setFocus();
-}
-
-/**
- * @brief Searches for text in the current note
- */
-void MainWindow::doSearchInNote( bool searchDown )
-{
-    QString text = ui->searchInNoteEdit->text();
-
-    if ( text == "" )
-    {
-        ui->searchInNoteEdit->setStyleSheet( "* { background: none; }" );
-        return;
-    }
-
-    QTextDocument::FindFlag options = searchDown ? QTextDocument::FindFlag (0) : QTextDocument::FindBackward;
-    bool found = ui->noteTextEdit->find( text, options );
-
-    // start at the top if not found
-    if ( !found )
-    {
-        ui->noteTextEdit->moveCursor( searchDown ? QTextCursor::Start : QTextCursor::End );
-        found = ui->noteTextEdit->find( text, options );
-    }
-
-    // add a background color according if we found the text or not
-    QString colorCode = found ? "#D5FAE2" : "#FAE9EB";
-    ui->searchInNoteEdit->setStyleSheet( "* { background: " + colorCode + "; }" );
-}
-
 /**
  * @brief Sets the current note from a CurrentNoteHistoryItem
  * @param item
@@ -1500,9 +1436,9 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
     searchForSearchLineTextInNoteTextEdit();
 
     // also do a "in note search" if the widget is visible
-    if ( ui->searchInNoteWidget->isVisible() )
+    if ( ui->noteTextEdit->searchWidget()->isVisible() )
     {
-        doSearchInNote();
+        ui->noteTextEdit->searchWidget()->doSearchDown();
     }
 }
 
@@ -1958,42 +1894,6 @@ void MainWindow::on_actionInsert_Link_to_note_triggered()
     handleTextNoteLinking();
 }
 
-void MainWindow::on_action_Find_text_in_note_triggered()
-{
-    ui->searchInNoteEdit->setFocus();
-    ui->searchInNoteEdit->selectAll();
-    ui->searchInNoteWidget->show();
-
-    // if we are not in edit mode go into edit mode
-    if ( ui->noteTabWidget->currentIndex() != 0 )
-    {
-        this->setNoteTextEditMode( true );
-    }
-
-    doSearchInNote();
-}
-
-void MainWindow::on_searchInNoteCloseButton_clicked()
-{
-    closeSearchInNoteWidget();
-}
-
-void MainWindow::on_searchInNoteDownButton_clicked()
-{
-    doSearchInNote();
-}
-
-void MainWindow::on_searchInNoteEdit_textChanged(const QString &arg1)
-{
-    Q_UNUSED( arg1 );
-    doSearchInNote();
-}
-
-void MainWindow::on_searchInNoteUpButton_clicked()
-{
-    doSearchInNote( false );
-}
-
 void MainWindow::on_action_DuplicateText_triggered()
 {
     ui->noteTextEdit->duplicateText();
@@ -2148,4 +2048,15 @@ void MainWindow::on_actionInsert_image_triggered()
 void MainWindow::on_actionShow_changelog_triggered()
 {
     QDesktopServices::openUrl( QUrl( "http://www.qownnotes.org/changelog/QOwnNotes" ) );
+}
+
+void MainWindow::on_action_Find_text_in_note_triggered()
+{
+    // if we are not in edit mode go into edit mode
+    if ( ui->noteTabWidget->currentIndex() != 0 )
+    {
+        this->setNoteTextEditMode( true );
+    }
+
+    ui->noteTextEdit->searchWidget()->activate();
 }

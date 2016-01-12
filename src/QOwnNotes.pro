@@ -96,6 +96,7 @@ FORMS    += mainwindow.ui \
     tododialog.ui
 
 RESOURCES += \
+    libraries/qmarkdowntextedit/media.qrc \
     images.qrc \
     texts.qrc \
     breeze.qrc \

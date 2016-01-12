@@ -70,11 +70,6 @@ private slots:
     void jumpToWelcomeNote();
     void on_noteTextEdit_customContextMenuRequested(const QPoint &pos);
     void on_actionInsert_Link_to_note_triggered();
-    void on_action_Find_text_in_note_triggered();
-    void on_searchInNoteCloseButton_clicked();
-    void on_searchInNoteDownButton_clicked();
-    void on_searchInNoteEdit_textChanged(const QString &arg1);
-    void on_searchInNoteUpButton_clicked();
     void on_action_DuplicateText_triggered();
     void on_action_Back_in_note_history_triggered();
     void on_action_Forward_in_note_history_triggered();
@@ -90,6 +85,8 @@ private slots:
     void on_actionInsert_image_triggered();
     void on_actionShow_changelog_triggered();
     void openNoteUrl(QUrl url);
+
+    void on_action_Find_text_in_note_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -140,8 +137,6 @@ private:
     void selectAllNotes();
     void updateCurrentFolderTooltip();
     void handleTextNoteLinking();
-    void closeSearchInNoteWidget();
-    void doSearchInNote(bool searchDown = true);
     void updateNoteTextFromDisk(Note note);
     void makeCurrentNoteFirstInNoteList();
     void readSettingsFromSettingsDialog();
