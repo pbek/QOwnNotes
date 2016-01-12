@@ -11,7 +11,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.68.8
+#QOWNNOTES_VERSION=0.78.1
 
 BRANCH=develop
 #BRANCH=master
@@ -48,6 +48,10 @@ fi
 # checkout the source code
 git clone --depth=50 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH
+
+# checkout submodules
+git submodule init
+git submodule update
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h

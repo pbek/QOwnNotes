@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.69.10
+#QOWNNOTES_VERSION=0.78.1
 
 BRANCH=develop
 #BRANCH=master
@@ -34,6 +34,10 @@ echo "Project path: $PROJECT_PATH"
 # checkout the source code
 git clone --depth=50 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
+
+# checkout submodules
+git submodule init
+git submodule update
 
 # remove huge .git folder
 rm -Rf .git
