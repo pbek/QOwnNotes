@@ -2,6 +2,7 @@
 
 ## 0.78
 - you are now able to configure the icon size of the main toolbar in the general settings
+- you are now able to duplicate text with `Ctrl + Alt + Down` in all markdown edits
 
 ## 0.77
 - the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma

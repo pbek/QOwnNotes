@@ -127,14 +127,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
-    QList<QKeySequence> shortcuts;
-    // try to set a shortcut specificly for Ubuntu Unity
-    shortcuts.append( QKeySequence( "Ctrl+D" ) );
-    // add an other shortcut for "duplicate text"
-    shortcuts.append( QKeySequence( "Ctrl+Alt+Down" ) );
-
-    ui->action_DuplicateText->setShortcuts( shortcuts );
-
     // add some different shortcuts for the note history on the mac
 #ifdef Q_OS_MAC
     ui->action_Back_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Left );
@@ -2004,44 +1996,7 @@ void MainWindow::on_searchInNoteUpButton_clicked()
 
 void MainWindow::on_action_DuplicateText_triggered()
 {
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    // duplicate line if no text was selected
-    if ( selectedText == "" )
-    {
-        int position = c.position();
-
-        // select the whole line
-        c.movePosition( QTextCursor::StartOfLine );
-        c.movePosition( QTextCursor::EndOfLine, QTextCursor::KeepAnchor );
-
-        int positionDiff = c.position() - position;
-        selectedText = "\n" + c.selectedText();
-
-        // insert text with new line at end of the selected line
-        c.setPosition( c.selectionEnd() );
-        c.insertText( selectedText );
-
-        // set the position to same position it was in the duplicated line
-        c.setPosition( c.position() - positionDiff );
-    }
-    // duplicate selected text
-    else
-    {
-        c.setPosition( c.selectionEnd() );
-        int selectionStart = c.position();
-
-        // insert selected text
-        c.insertText( selectedText );
-        int selectionEnd = c.position();
-
-        // select the inserted text
-        c.setPosition( selectionStart );
-        c.setPosition( selectionEnd, QTextCursor::KeepAnchor );
-    }
-
-    ui->noteTextEdit->setTextCursor( c );
+    ui->noteTextEdit->duplicateText();
 }
 
 void MainWindow::on_action_Back_in_note_history_triggered()
