@@ -49,6 +49,9 @@
           <property name="placeholderText">
            <string>summary</string>
           </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item row="7" column="0">
@@ -262,6 +265,9 @@
          <widget class="QLineEdit" name="newItemEdit">
           <property name="placeholderText">
            <string>add new todo item</string>
+          </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
           </property>
          </widget>
         </item>

@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -90,6 +90,9 @@
                 <property name="placeholderText">
                  <string>https://</string>
                 </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
+                </property>
                </widget>
               </item>
               <item row="2" column="1">
@@ -108,6 +111,9 @@
                 </property>
                 <property name="toolTip">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -140,6 +146,9 @@
                 </property>
                 <property name="echoMode">
                  <enum>QLineEdit::Password</enum>
+                </property>
+                <property name="clearButtonEnabled">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>

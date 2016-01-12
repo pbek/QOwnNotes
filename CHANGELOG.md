@@ -4,6 +4,7 @@
 - you are now able to configure the icon size of the main toolbar in the general settings
 - you are now able to duplicate text with `Ctrl + Alt + Down` in all markdown edits
 - searching for text is now possible in all markdown edits with `Ctrl + F`
+- added clear buttons to text lines
 
 ## 0.77
 - the icon size in the main toolbar was set to a fixed `38x38` to try to prevent high-dpi problems in KDE Plasma

@@ -48,6 +48,9 @@
           <property name="placeholderText">
            <string>enter an URL to link to</string>
           </property>
+          <property name="clearButtonEnabled">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -82,6 +85,9 @@
        </property>
        <property name="placeholderText">
         <string>search for a note to link to</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
