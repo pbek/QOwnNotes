@@ -46,6 +46,7 @@ SOURCES += main.cpp\
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
     libraries/qmarkdowntextedit/highlighter.cpp \
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp \
+    libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp \
     widgets/qownnotesmarkdowntextedit.cpp
 
 HEADERS  += mainwindow.h \
@@ -81,6 +82,7 @@ HEADERS  += mainwindow.h \
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
     libraries/qmarkdowntextedit/highlighter.h \
     libraries/qmarkdowntextedit/qmarkdowntextedit.h \
+    libraries/qmarkdowntextedit/qtexteditsearchwidget.h \
     widgets/qownnotesmarkdowntextedit.h
 
 FORMS    += mainwindow.ui \
