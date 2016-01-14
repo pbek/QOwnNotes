@@ -19,7 +19,7 @@
 #include <QShortcut>
 #include <QPrinter>
 #include <QPrintDialog>
-#include "diff_match_patch/diff_match_patch.h"
+#include "libraries/diff_match_patch/diff_match_patch.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
 #include "version.h"
