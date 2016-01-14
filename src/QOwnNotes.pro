@@ -86,14 +86,14 @@ HEADERS  += mainwindow.h \
     widgets/qownnotesmarkdowntextedit.h
 
 FORMS    += mainwindow.ui \
-    notediffdialog.ui \
-    aboutdialog.ui \
-    updatedialog.ui \
-    settingsdialog.ui \
-    versiondialog.ui \
-    trashdialog.ui \
-    linkdialog.ui \
-    tododialog.ui
+    dialogs/notediffdialog.ui \
+    dialogs/aboutdialog.ui \
+    dialogs/updatedialog.ui \
+    dialogs/settingsdialog.ui \
+    dialogs/versiondialog.ui \
+    dialogs/trashdialog.ui \
+    dialogs/linkdialog.ui \
+    dialogs/tododialog.ui
 
 RESOURCES += \
     libraries/qmarkdowntextedit/media.qrc \
