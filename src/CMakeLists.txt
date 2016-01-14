@@ -1,15 +1,5 @@
-#cmake_minimum_required(VERSION 2.8.11)
 cmake_minimum_required(VERSION 3.2.2)
 project(QOwnNotes)
-
-#[[
-include_directories("libraries")
-include_directories("dialogs")
-include_directories("widgets")
-include_directories("entities")
-]]
-
-#include_directories("dialogs")
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 set(CMAKE_AUTOMOC ON)
@@ -36,11 +26,6 @@ qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
 qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 
-#file (GLOB Resources *.qrc)
-#qt5_add_resources (RESOURCE_ADDED ${Resources})
-
-#set(RESOURCE ${CMAKE_SOURCE_DIR}/adwaita.qrc)
-#qt5_add_resources(RESOURCE_ADDED ${RESOURCE})
 set(RESOURCE_FILES
         adwaita.qrc
         breeze.qrc
@@ -51,8 +36,8 @@ set(RESOURCE_FILES
         ubuntu-mobile.qrc
         libraries/qmarkdowntextedit/media.qrc
         )
-qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})
 
+qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})
 
 set(SOURCE_FILES
     dialogs/aboutdialog.cpp
@@ -154,8 +139,6 @@ set(CMAKE_CXX_FLAGS "${Qt5Network_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5Script_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5Xml_EXECUTABLE_COMPILE_FLAGS}")
 set(CMAKE_CXX_FLAGS "${Qt5PrintSupport_EXECUTABLE_COMPILE_FLAGS}")
-
-#add_executable(QOwnNotes main.cpp mainwindow.cpp)
 
 # The Qt5Widgets_LIBRARIES variable also includes QtGui and QtCore
 target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES} ${Qt5Svg_LIBRARIES} ${Qt5Network_LIBRARIES} ${Qt5Script_LIBRARIES} ${Qt5Xml_LIBRARIES} ${Qt5PrintSupport_LIBRARIES})
