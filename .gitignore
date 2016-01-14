@@ -4,3 +4,4 @@ build-tools
 .directory
 bin/*
 build-tests-*
+.idea

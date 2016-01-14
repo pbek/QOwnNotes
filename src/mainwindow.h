@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QMainWindow>
 #include <QListWidgetItem>
@@ -143,5 +142,3 @@ private:
     void exportNoteAsPDF(QTextEdit *textEdit);
     void printNote(QTextEdit *textEdit);
 };
-
-#endif // MAINWINDOW_H
