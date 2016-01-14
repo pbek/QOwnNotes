@@ -5,9 +5,8 @@
 #include <QListWidgetItem>
 #include <QSplitter>
 
-#include <simplecrypt/simplecrypt.h>
-
-#include <entities/calendaritem.h>
+#include "libraries/simplecrypt/simplecrypt.h"
+#include "entities/calendaritem.h"
 
 namespace Ui {
 class TodoDialog;
