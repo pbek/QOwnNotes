@@ -63,6 +63,7 @@ void OwnCloudService::readSettings()
 
 void OwnCloudService::slotAuthenticationRequired( QNetworkReply* reply, QAuthenticator* authenticator )
 {
+    Q_UNUSED( authenticator );
     qDebug() << "Username and/or password incorrect";
 
     settingsDialog->setOKLabelData( 3, "incorrect", SettingsDialog::Failure );
