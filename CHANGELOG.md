@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.79
+- the search widget in the text edits will now move out of the way if it blocks the search result and some margin changes were done
+
 ## 0.78
 - you are now able to configure the icon size of the main toolbar in the general settings
 - you are now able to duplicate text with `Ctrl + Alt + Down` in all markdown edits
