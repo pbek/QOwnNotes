@@ -267,7 +267,7 @@
                  <string>select main ownCloud sync folder</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="breeze.qrc">
+                 <iconset resource="../breeze.qrc">
                   <normaloff>:/images/breeze/folder-sync.svg</normaloff>:/images/breeze/folder-sync.svg</iconset>
                 </property>
                </widget>
@@ -306,7 +306,7 @@
                  <string>&amp;connect to ownCloud server</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="breeze.qrc">
+                 <iconset resource="../breeze.qrc">
                   <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
                 </property>
                </widget>
@@ -475,7 +475,7 @@ p, li { white-space: pre-wrap; }
                  <string>open ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
-                 <iconset resource="breeze.qrc">
+                 <iconset resource="../breeze.qrc">
                   <normaloff>:/images/breeze/text-html.svg</normaloff>:/images/breeze/text-html.svg</iconset>
                 </property>
                </widget>
@@ -575,7 +575,7 @@ p, li { white-space: pre-wrap; }
              <string>&amp;reload calendar list</string>
             </property>
             <property name="icon">
-             <iconset resource="breeze.qrc">
+             <iconset resource="../breeze.qrc">
               <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
             </property>
            </widget>
@@ -912,7 +912,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <string>&amp;Save debug information</string>
               </property>
               <property name="icon">
-               <iconset resource="breeze.qrc">
+               <iconset resource="../breeze.qrc">
                 <normaloff>:/images/breeze/document-save.svg</normaloff>:/images/breeze/document-save.svg</iconset>
               </property>
              </widget>
@@ -942,7 +942,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
   <tabstop>localOwnCloudPathEdit</tabstop>
  </tabstops>
  <resources>
-  <include location="breeze.qrc"/>
+  <include location="../breeze.qrc"/>
  </resources>
  <connections>
   <connection>

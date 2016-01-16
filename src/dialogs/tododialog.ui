@@ -90,7 +90,7 @@
               <string>&amp;save</string>
              </property>
              <property name="icon">
-              <iconset resource="breeze.qrc">
+              <iconset resource="../breeze.qrc">
                <normaloff>:/images/breeze/document-save.svg</normaloff>:/images/breeze/document-save.svg</iconset>
              </property>
              <property name="shortcut">
@@ -107,7 +107,7 @@
               <string>&amp;remove</string>
              </property>
              <property name="icon">
-              <iconset resource="breeze.qrc">
+              <iconset resource="../breeze.qrc">
                <normaloff>:/images/breeze/edit-delete.svg</normaloff>:/images/breeze/edit-delete.svg</iconset>
              </property>
              <property name="shortcut">
@@ -236,7 +236,7 @@
               <string>&amp;reload</string>
              </property>
              <property name="icon">
-              <iconset resource="breeze.qrc">
+              <iconset resource="../breeze.qrc">
                <normaloff>:/images/breeze/view-refresh.svg</normaloff>:/images/breeze/view-refresh.svg</iconset>
              </property>
             </widget>
@@ -264,7 +264,7 @@
         <item row="0" column="0">
          <widget class="QLineEdit" name="newItemEdit">
           <property name="placeholderText">
-           <string>add new todo item</string>
+           <string>search of create todo item</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
@@ -286,7 +286,7 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze.qrc"/>
+  <include location="../breeze.qrc"/>
  </resources>
  <connections/>
 </ui>
