@@ -67,6 +67,8 @@ public:
     void setAlarmDate(QDateTime dateTime);
     static QList<CalendarItem> fetchAllForReminderAlert();
     static void alertTodoReminders();
+    static QList<QString> searchAsUidList(QString text, QString calendar);
+
 private:
     int id;
     QString summary;

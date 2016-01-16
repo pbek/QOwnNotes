@@ -41,6 +41,7 @@ private slots:
     void on_reminderCheckBox_clicked();
     void on_reloadTodoListButton_clicked();
     void on_summaryEdit_returnPressed();
+    void on_newItemEdit_textChanged(const QString &arg1);
 
 private:
     Ui::TodoDialog *ui;
@@ -48,6 +49,7 @@ private:
     SimpleCrypt *crypto;
     CalendarItem currentCalendarItem;
     CalendarItem lastCreatedCalendarItem;
+    int firstVisibleTodoListRow;
     void setupMainSplitter();
     void storeSettings();
     void loadTodoListData();
@@ -55,6 +57,12 @@ private:
     void resetEditFrameControls();
     void setupUi();
     void updateCurrentCalendarItemWithFormData();
+    void searchForSearchLineTextInNoteTextEdit();
+    void searchInDescriptionTextEdit(QString &str);
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event);
+
 };
 
 #endif // TODODIALOG_H

@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 0.79
-- the search widget in the text edits will now move out of the way if it blocks the search result and some margin changes were done
+- the search widget in the text edits will now move out of the way if it blocks the search result 
+- some margin changes in the search widget were done and some key events were fixed
+- you can now search for todo items in the todo list
 
 ## 0.78
 - you are now able to configure the icon size of the main toolbar in the general settings
