@@ -285,6 +285,20 @@
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>newItemEdit</tabstop>
+  <tabstop>todoList</tabstop>
+  <tabstop>summaryEdit</tabstop>
+  <tabstop>prioritySlider</tabstop>
+  <tabstop>reminderDateTimeEdit</tabstop>
+  <tabstop>descriptionEdit</tabstop>
+  <tabstop>saveButton</tabstop>
+  <tabstop>removeButton</tabstop>
+  <tabstop>reloadTodoListButton</tabstop>
+  <tabstop>showCompletedItemsCheckBox</tabstop>
+  <tabstop>todoListSelector</tabstop>
+  <tabstop>reminderCheckBox</tabstop>
+ </tabstops>
  <resources>
   <include location="../breeze.qrc"/>
  </resources>

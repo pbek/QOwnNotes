@@ -31,7 +31,8 @@ void TodoDialog::setupUi() {
         const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
         Q_UNUSED(blocker);
 
-        bool showCompletedItems = settings.value("TodoDialog/showCompletedItems").toBool();
+        bool showCompletedItems =
+                settings.value("TodoDialog/showCompletedItems").toBool();
         ui->showCompletedItemsCheckBox->setChecked(showCompletedItems);
     }
 
@@ -57,6 +58,8 @@ void TodoDialog::setupUi() {
 
 //    installEventFilter(this);
     ui->newItemEdit->installEventFilter(this);
+
+    ui->newItemEdit->setFocus();
 }
 
 void TodoDialog::setupMainSplitter() {
