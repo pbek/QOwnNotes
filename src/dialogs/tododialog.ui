@@ -264,7 +264,7 @@
         <item row="0" column="0">
          <widget class="QLineEdit" name="newItemEdit">
           <property name="placeholderText">
-           <string>search of create todo item</string>
+           <string>search or create todo item</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
