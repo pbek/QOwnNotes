@@ -33,10 +33,6 @@ install:
       ;
     else
          brew update > /dev/null
-      && cd `brew --prefix`
-      && echo "We are using QT 5.4.2, because we had troubles with the current 4ea4fd83963d1c1eb1e6fc024be9719f8010748f QT 5.5 brew. The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
-      && git checkout 00e46351980ad915424aad9316abffc19936809c Library/Formula/qt5.rb
-      && cd -
       && brew install qt5
       && chmod -R 755 /usr/local/opt/qt5/*
       ;
