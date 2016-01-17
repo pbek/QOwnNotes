@@ -62,7 +62,7 @@ else
 fi
 
 # set release string to disable the update check
-echo "#define RELEASE \"Ubuntu Linux\"" > src/release.h
+echo "#define RELEASE \"Launchpad PPA\"" > src/release.h
 
 changelogText="Released $QOWNNOTES_VERSION"
 
