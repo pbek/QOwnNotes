@@ -28,7 +28,8 @@ void TodoDialog::setupUi() {
     QSettings settings;
 
     {
-        const QSignalBlocker blocker(this->ui->showCompletedItemsCheckBox);
+        const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
+        Q_UNUSED(blocker);
 
         bool showCompletedItems = settings.value("TodoDialog/showCompletedItems").toBool();
         ui->showCompletedItemsCheckBox->setChecked(showCompletedItems);
@@ -37,14 +38,15 @@ void TodoDialog::setupUi() {
     int index = CalendarItem::getCurrentCalendarIndex();
 
     if (index >= 0) {
-        const QSignalBlocker blocker(this->ui->todoListSelector);
+        const QSignalBlocker blocker(ui->todoListSelector);
+        Q_UNUSED(blocker);
 
         // set the index of the todo list selector if we found it
         ui->todoListSelector->setCurrentIndex(index);
-    }
-    else {
+    } else {
         // if we didn't find the index store the new current item
-        settings.setValue("TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText());
+        settings.setValue("TodoDialog/todoListSelectorSelectedItem",
+                          ui->todoListSelector->currentText());
     }
 
     // hide the reminder date time select
@@ -68,14 +70,14 @@ void TodoDialog::setupMainSplitter() {
     QByteArray state = settings.value("TodoDialog/mainSplitterState").toByteArray();
     this->mainSplitter->restoreState(state);
 
-    this->ui->gridLayout->layout()->addWidget(this->mainSplitter);
+    ui->gridLayout->layout()->addWidget(this->mainSplitter);
 }
 
 /**
  * @brief Loads the calendar items from the settings to the todo list selector
  */
 void TodoDialog::loadTodoListData() {
-    const QSignalBlocker blocker(this->ui->todoListSelector);
+    const QSignalBlocker blocker(ui->todoListSelector);
 
     QSettings settings;
     ui->todoListSelector->clear();
@@ -99,7 +101,7 @@ void TodoDialog::reloadTodoListItems() {
     QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(ui->todoListSelector->currentText());
 
     {
-        const QSignalBlocker blocker(this->ui->todoList);
+        const QSignalBlocker blocker(ui->todoList);
 
         ui->todoList->clear();
 
@@ -162,7 +164,7 @@ void TodoDialog::reloadTodoListItems() {
 }
 
 void TodoDialog::clearTodoList() {
-    const QSignalBlocker blocker(this->ui->todoList);
+    const QSignalBlocker blocker(ui->todoList);
     ui->todoList->clear();
     resetEditFrameControls();
 }
