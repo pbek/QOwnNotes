@@ -1878,3 +1878,16 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
 
     ui->noteTextEdit->searchWidget()->activate();
 }
+
+void MainWindow::on_action_Encrypt_note_triggered()
+{
+    QString noteText = currentNote.encryptNote("mypassowrd");
+    qDebug() << __func__ << " - 'noteText': " << noteText;
+
+    ui->noteTextEdit->setPlainText( noteText );
+
+
+//    QString decryptedText = crypto->decryptToString(encryptedText);
+//    qDebug() << __func__ << " - 'decryptedText': " << decryptedText;
+
+}

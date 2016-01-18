@@ -99,6 +99,7 @@ bool DatabaseService::setupTables()
                "has_dirty_data INTEGER DEFAULT 0,"
                "file_last_modified DATETIME,"
                "file_created DATETIME,"
+               "crypto_key INT64,"
                "created DATETIME default current_timestamp,"
                "modified DATETIME default current_timestamp)");
 

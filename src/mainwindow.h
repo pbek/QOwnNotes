@@ -85,6 +85,7 @@ private slots:
     void on_actionShow_changelog_triggered();
     void openNoteUrl(QUrl url);
     void on_action_Find_text_in_note_triggered();
+    void on_action_Encrypt_note_triggered();
 
 private:
     Ui::MainWindow *ui;

@@ -8,6 +8,8 @@
 #include <QSqlError>
 #include <QRegularExpression>
 #include <QUrl>
+#include <QCryptographicHash>
+#include "libraries/simplecrypt/simplecrypt.h"
 #include "libraries/hoedown/html.h"
 
 
@@ -24,6 +26,10 @@ QString Note::getName() {
     return this->name;
 }
 
+qint64 Note::getCryptoKey() {
+    return this->cryptoKey;
+}
+
 QString Note::getFileName() {
     return this->fileName;
 }
@@ -38,6 +44,10 @@ bool Note::getHasDirtyData() {
 
 void Note::setName(QString text) {
     this->name = text;
+}
+
+void Note::setCryptoKey(qint64 cryptoKey) {
+    this->cryptoKey = cryptoKey;
 }
 
 void Note::setNoteText(QString text) {
@@ -473,7 +483,7 @@ bool Note::updateNoteTextFromDisk() {
     this->noteText = in.readAll();
     file.close();
 
-    // strangly it sometimes gets null
+    // strangely it sometimes gets null
     if (this->noteText.isNull()) this->noteText = "";
 
     return true;
@@ -606,14 +616,20 @@ bool Note::removeNoteFile() {
  * @return
  */
 QString Note::toMarkdownHtml(QString notesPath) {
-    hoedown_renderer *renderer = hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
-    hoedown_extensions extensions = (hoedown_extensions) (HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN);
+    hoedown_renderer *renderer =
+            hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
+    hoedown_extensions extensions =
+            (hoedown_extensions) (HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN);
     hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
-    QString str = this->noteText;
+    // get the decrypted note text (or the normal note text if there isn't any)
+    QString str = getDecryptedNoteText();
 
-    // parse for relative file urls and make them absolute (for example to show images under the note path)
-    str.replace(QRegularExpression("\\(file:\\/\\/([^\\/].+)\\)"), "(file://" + notesPath + "/\\1)");
+    // parse for relative file urls and make them absolute
+    // (for example to show images under the note path)
+    str.replace(
+            QRegularExpression("\\(file:\\/\\/([^\\/].+)\\)"),
+            "(file://" + notesPath + "/\\1)");
 
     unsigned char *sequence = (unsigned char *) qstrdup(str.toUtf8().constData());
     int length = strlen((char *) sequence);
@@ -639,7 +655,8 @@ QString Note::toMarkdownHtml(QString notesPath) {
     hoedown_html_renderer_free(renderer);
 
     result =
-            "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; } a { color: #FF9137; text-decoration: none; }</style></head><body>" +
+            "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; }"
+            "a { color: #FF9137; text-decoration: none; }</style></head><body>" +
             result + "</body></html>";
 
     // check if width of embedded local images is too high
@@ -678,9 +695,106 @@ QString Note::generateTextForLink(QString text) {
     return text;
 }
 
+/**
+ * Generates a qint64 hash from a QString
+ */
+qint64 Note::qint64Hash(const QString & str) {
+    QByteArray hash = QCryptographicHash::hash(
+            QByteArray::fromRawData((const char*)str.utf16(), str.length()*2),
+            QCryptographicHash::Md5);
+    Q_ASSERT(hash.size() == 16);
+    QDataStream stream(hash);
+    qint64 a, b;
+    stream >> a >> b;
+    return a ^ b;
+}
+
+/**
+ * Encrypts the note text with a password
+ */
+QString Note::encryptNote(QString password) {
+    // split the text into a string list
+    QStringList noteTextLines = this->noteText.split(
+            QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"));
+
+    // keep the first two lines unencrypted
+    noteText = noteTextLines.at(0) + "\n" + noteTextLines.at(1) + "\n\n" +
+            QString(NOTE_TEXT_ENCRYPTION_PRE_STRING) + "\n";
+
+    // remove the first two lines for encryption
+    noteTextLines.removeFirst();
+    noteTextLines.removeFirst();
+
+    // remove the 3rd line too if it is empty
+    if (noteTextLines.at(0) == "") {
+        noteTextLines.removeFirst();
+    }
+
+    // join the remaining lines
+    QString text = noteTextLines.join("\n");
+
+    // generate a crypto key from the password
+    cryptoKey = qint64Hash(password);
+
+    // encrypt the text
+    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString encryptedText = crypto->encryptToString(text);
+
+    // add the encrypted text to the new note text
+    noteText += encryptedText + "\n" +
+            QString(NOTE_TEXT_ENCRYPTION_POST_STRING);
+
+    // store note
+    store();
+
+    return noteText;
+}
+
+/**
+ * Returns decrypted note text if it is encrypted
+ * The crypto key has to be set in the object
+ */
+QString Note::getDecryptedNoteText() {
+    QString noteText = this->noteText;
+
+    // match the encrypted string
+    QRegularExpression re(
+            QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
+            "\\s+(.+)\\s+" +
+            QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_POST_STRING));
+
+    re.setPatternOptions(
+            QRegularExpression::MultilineOption |
+            QRegularExpression::DotMatchesEverythingOption);
+
+    // check if we have an encrypted note text
+    QRegularExpressionMatch match = re.match(noteText);
+    if (!match.hasMatch()) {
+        return noteText;
+    }
+
+    // try to capture the encrypted note text
+    QString encryptedNoteText = match.captured(1);
+    if (encryptedNoteText == "") {
+        return noteText;
+    }
+
+    // decrypt the note text
+    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+
+    if (decryptedNoteText == "") {
+        return noteText;
+    }
+
+    // replace the encrypted text with the decrypted text
+    noteText.replace(re, decryptedNoteText);
+    return noteText;
+}
+
 QDebug operator<<(QDebug dbg, const Note &note) {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
             " <fileName>" << note.fileName <<
-            " <hasDityData>" << note.hasDirtyData;
+            " <hasDirtyData>" << note.hasDirtyData;
     return dbg.space();
 }
