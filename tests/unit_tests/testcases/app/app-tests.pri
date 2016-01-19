@@ -11,6 +11,7 @@ HEADERS  += \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
+    $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.h \
@@ -23,6 +24,7 @@ SOURCES += \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
+    $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.cpp \
 
