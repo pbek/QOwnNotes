@@ -103,6 +103,8 @@ public:
 
     void setCryptoPassword(QString password);
 
+    bool canDecryptNoteText();
+
 private:
     int id;
     QString name;

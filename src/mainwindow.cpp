@@ -1036,31 +1036,8 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
     }
 
     if (!isInEditMode) {
-
-        qDebug() << __func__ << " - 'note->getCryptoKey()': " << currentNote.getCryptoKey();
-        qDebug() << __func__ << " - 'currentNote.hasEncryptedNoteText()': " << currentNote.hasEncryptedNoteText();
-
-
-        // check if the note is encrypted and no crypto key is present
-        if (currentNote.hasEncryptedNoteText() &&
-                (currentNote.getDecryptedNoteText() != "")) {
-            QString labelText =
-                    "Please enter the <strong>password</strong> "
-                            "of this encrypted note.";
-            PasswordDialog* dialog = new PasswordDialog(this, labelText);
-            int dialogResult = dialog->exec();
-
-            // if user pressed ok take the password
-            if (dialogResult == QDialog::Accepted) {
-                QString password = dialog->password();
-                if (password != "") {
-                    // set the password so it can be decrypted
-                    // for the markdown view
-                    currentNote.setCryptoPassword(password);
-                    currentNote.store();
-                }
-            }
-        }
+        // ask for the password if the note is encrypted and can't be decrypted
+        askForEncryptedNotePasswordIfNeeded();
     }
 
     // make sure the current note is set
@@ -1071,6 +1048,32 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
     // restore search after switching between modes
     if (ui->searchLineEdit->text() != "") {
         searchForSearchLineTextInNoteTextEdit();
+    }
+}
+
+/**
+ * Asks for the password if the note is encrypted and can't be decrypted
+ */
+void MainWindow::askForEncryptedNotePasswordIfNeeded() {
+    // check if the note is encrypted and can't be decrypted
+    if (currentNote.hasEncryptedNoteText() &&
+        !currentNote.canDecryptNoteText()) {
+        QString labelText =
+                "Please enter the <strong>password</strong> "
+                        "of this encrypted note.";
+        PasswordDialog* dialog = new PasswordDialog(this, labelText);
+        int dialogResult = dialog->exec();
+
+        // if user pressed ok take the password
+        if (dialogResult == QDialog::Accepted) {
+            QString password = dialog->password();
+            if (password != "") {
+                // set the password so it can be decrypted
+                // for the markdown view
+                currentNote.setCryptoPassword(password);
+                currentNote.store();
+            }
+        }
     }
 }
 
@@ -2009,4 +2012,20 @@ void MainWindow::updateEncryptNoteButtons()
     ui->action_Encrypt_note->setEnabled(!hasEncryptedNoteText);
     ui->actionEdit_encrypted_note->setEnabled(hasEncryptedNoteText);
     ui->actionDecrypt_note->setEnabled(hasEncryptedNoteText);
+}
+
+/**
+ * Attempt to decrypt note text
+ */
+void MainWindow::on_actionDecrypt_note_triggered()
+{
+    if (!currentNote.hasEncryptedNoteText()) {
+        return;
+    }
+
+    askForEncryptedNotePasswordIfNeeded();
+
+    if (currentNote.canDecryptNoteText()) {
+        ui->noteTextEdit->setText( currentNote.getDecryptedNoteText() );
+    }
 }

@@ -777,6 +777,23 @@ bool Note::hasEncryptedNoteText() {
 }
 
 /**
+ * Checks if note text can be decrypted
+ */
+bool Note::canDecryptNoteText() {
+    QString encryptedNoteText = getEncryptedNoteText();
+
+    if (encryptedNoteText == "") {
+        return false;
+    }
+
+    // decrypt the note text
+    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+
+    return decryptedNoteText != "";
+}
+
+/**
  * Sets the password to generate the cryptoKey
  */
 void Note::setCryptoPassword(QString password) {

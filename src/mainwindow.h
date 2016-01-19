@@ -142,6 +142,8 @@ private slots:
 
     void on_action_Encrypt_note_triggered();
 
+    void on_actionDecrypt_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -231,4 +233,6 @@ private:
     void printNote(QTextEdit *textEdit);
 
     void updateEncryptNoteButtons();
+
+    void askForEncryptedNotePasswordIfNeeded();
 };
