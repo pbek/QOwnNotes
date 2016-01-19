@@ -290,6 +290,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_versions"/>
     <addaction name="separator"/>
     <addaction name="action_Encrypt_note"/>
+    <addaction name="actionEdit_encrypted_note"/>
+    <addaction name="actionDecrypt_note"/>
     <addaction name="separator"/>
     <addaction name="actionToggleEditMode"/>
     <addaction name="separator"/>
@@ -320,6 +322,10 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
    <addaction name="action_Forward_in_note_history"/>
+   <addaction name="separator"/>
+   <addaction name="action_Encrypt_note"/>
+   <addaction name="actionEdit_encrypted_note"/>
+   <addaction name="actionDecrypt_note"/>
    <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
@@ -681,8 +687,30 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="action_Encrypt_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-encrypted.svg</normaloff>:/images/breeze/document-encrypted.svg</iconset>
+   </property>
    <property name="text">
     <string>&amp;Encrypt note</string>
+   </property>
+  </action>
+  <action name="actionEdit_encrypted_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-edit-encrypt.svg</normaloff>:/images/breeze/document-edit-encrypt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Edit encrypted note</string>
+   </property>
+  </action>
+  <action name="actionDecrypt_note">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/document-decrypt.svg</normaloff>:/images/breeze/document-decrypt.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Decrypt note</string>
    </property>
   </action>
  </widget>
@@ -695,9 +723,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze.qrc"/>
-  <include location="adwaita.qrc"/>
   <include location="images.qrc"/>
+  <include location="adwaita.qrc"/>
+  <include location="breeze.qrc"/>
  </resources>
  <connections/>
 </ui>

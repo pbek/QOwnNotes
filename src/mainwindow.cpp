@@ -1,9 +1,4 @@
 #include "mainwindow.h"
-#include "dialogs/linkdialog.h"
-#include "services/owncloudservice.h"
-#include "services/databaseservice.h"
-#include "ui_mainwindow.h"
-#include "dialogs/tododialog.h"
 #include <QSplitter>
 #include <QDebug>
 #include <QDir>
@@ -19,7 +14,11 @@
 #include <QShortcut>
 #include <QPrinter>
 #include <QPrintDialog>
-#include <dialogs/passworddialog.h>
+#include "ui_mainwindow.h"
+#include "dialogs/linkdialog.h"
+#include "services/owncloudservice.h"
+#include "services/databaseservice.h"
+#include "dialogs/tododialog.h"
 #include "libraries/diff_match_patch/diff_match_patch.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
@@ -44,10 +43,14 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setOrganizationDomain("PBE");
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
-    QCoreApplication::setApplicationVersion("version " + QString(VERSION) + " - build " + QString::number(BUILD));
+    QCoreApplication::setApplicationVersion(
+            "version " + QString(VERSION) +
+                    " - build " + QString::number(BUILD));
 
     ui->setupUi(this);
-    this->setWindowTitle("QOwnNotes - version " + QString(VERSION) + " - build " + QString::number(BUILD));
+    this->setWindowTitle(
+            "QOwnNotes - version " + QString(VERSION) +
+                    " - build " + QString::number(BUILD));
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);
     sorting->addAction(ui->actionBy_date);
@@ -80,17 +83,32 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // look if we need to save something every 10 sec (default)
     this->noteSaveTimer = new QTimer(this);
-    QObject::connect(this->noteSaveTimer, SIGNAL(timeout()), this, SLOT(storeUpdatedNotesToDisk()));
+    QObject::connect(
+            this->noteSaveTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(storeUpdatedNotesToDisk()));
     this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
 
     // check if we have a todo reminder every minute
     this->todoReminderTimer = new QTimer(this);
-    QObject::connect(this->todoReminderTimer, SIGNAL(timeout()), this, SLOT(checkTodoReminders()));
+    QObject::connect(
+            this->todoReminderTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(checkTodoReminders()));
     this->todoReminderTimer->start(60000);
 
-    QObject::connect(&this->noteDirectoryWatcher, SIGNAL(directoryChanged(QString)), this,
-                     SLOT(notesDirectoryWasModified(QString)));
-    QObject::connect(&this->noteDirectoryWatcher, SIGNAL(fileChanged(QString)), this, SLOT(notesWereModified(QString)));
+    QObject::connect(
+            &this->noteDirectoryWatcher,
+            SIGNAL(directoryChanged(QString)),
+            this,
+            SLOT(notesDirectoryWasModified(QString)));
+    QObject::connect(
+            &this->noteDirectoryWatcher,
+            SIGNAL(fileChanged(QString)),
+            this,
+            SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
@@ -101,7 +119,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
 
     // handle note url externally in the note text edit
-    QObject::connect(ui->noteTextEdit, SIGNAL(urlClicked(QUrl)), this, SLOT(openNoteUrl(QUrl)));
+    QObject::connect(
+            ui->noteTextEdit,
+            SIGNAL(urlClicked(QUrl)),
+            this,
+            SLOT(openNoteUrl(QUrl)));
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -119,7 +141,10 @@ MainWindow::MainWindow(QWidget *parent) :
     this->updateService->checkForUpdates(UpdateService::AppStart);
 
     QTimer *updateCheckTimer = new QTimer(this);
-    connect(updateCheckTimer, SIGNAL(timeout()), this, SLOT(updateCheckTimerTimeout()));
+    connect(updateCheckTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(updateCheckTimerTimeout()));
     // update check every 2h
     updateCheckTimer->start(7200000);
 
@@ -128,8 +153,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // add some different shortcuts for the note history on the mac
 #ifdef Q_OS_MAC
-    ui->action_Back_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Left );
-    ui->action_Forward_in_note_history->setShortcut( Qt::CTRL + Qt::ALT + Qt::Key_Right );
+    ui->action_Back_in_note_history->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
+    ui->action_Forward_in_note_history->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
 #endif
 
     // disable the update check menu entry if the release string was set
@@ -139,9 +164,11 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     // let the note folder be changed with the recent note folder combo box
-    QObject::connect(ui->recentNoteFolderComboBox, SIGNAL(currentTextChanged(
-                                                                  const QString & )), this, SLOT(changeNoteFolder(
-                                                                                                         const QString & )));
+    QObject::connect(
+            ui->recentNoteFolderComboBox,
+            SIGNAL(currentTextChanged(const QString &)),
+            this,
+            SLOT(changeNoteFolder(const QString & )));
 }
 
 MainWindow::~MainWindow() {
@@ -159,7 +186,8 @@ MainWindow::~MainWindow() {
  */
 void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
     QSettings settings;
-    QStringList recentNoteFolders = settings.value("recentNoteFolders").toStringList();
+    QStringList recentNoteFolders =
+            settings.value("recentNoteFolders").toStringList();
 
     int maxItems = 15;
     // remove items if there are too many
@@ -167,8 +195,7 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
         // remove an item as long as there are too many of them
         do {
             recentNoteFolders.removeAt(maxItems);
-        }
-        while (recentNoteFolders.length() > maxItems);
+        } while (recentNoteFolders.length() > maxItems);
 
         settings.setValue("recentNoteFolders", recentNoteFolders);
     }
@@ -178,20 +205,23 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
 
     const QSignalBlocker blocker(ui->recentNoteFolderComboBox);
     {
+        Q_UNUSED(blocker);
         ui->recentNoteFolderComboBox->clear();
         ui->recentNoteFolderComboBox->addItem(currentFolderName);
 
         // populate menu list
         Q_FOREACH(QString noteFolder, recentNoteFolders) {
                 // add a menu entry
-                QAction *action = ui->menuRecentNoteFolders->addAction(noteFolder);
-                QObject::connect(action, SIGNAL(triggered()), signalMapper, SLOT(map()));
+                QAction *action =
+                        ui->menuRecentNoteFolders->addAction(noteFolder);
+                QObject::connect(
+                        action, SIGNAL(triggered()), signalMapper, SLOT(map()));
 
                 // add a parameter to changeNoteFolder with the signal mapper
                 signalMapper->setMapping(action, noteFolder);
-                QObject::connect(signalMapper, SIGNAL(mapped(
-                                                              const QString & )), this, SLOT(changeNoteFolder(
-                                                                                                     const QString & )));
+                QObject::connect(signalMapper,
+                                 SIGNAL(mapped(const QString &)),
+                                 this, SLOT(changeNoteFolder(const QString & )));
 
                 // add an entry to the combo box
                 ui->recentNoteFolderComboBox->addItem(noteFolder);
@@ -227,11 +257,13 @@ void MainWindow::changeNoteFolder(const QString &folderName) {
 
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         {
+            Q_UNUSED(blocker);
             this->ui->noteTextEdit->clear();
         }
 
         const QSignalBlocker blocker2(this->ui->searchLineEdit);
         {
+            Q_UNUSED(blocker2);
             this->ui->searchLineEdit->clear();
         }
 
@@ -248,9 +280,12 @@ void MainWindow::changeNoteFolder(const QString &folderName) {
 /*
  * Adds and removes a folder from the recent note folders
  */
-void MainWindow::storeRecentNoteFolder(QString addFolderName, QString removeFolderName) {
+void MainWindow::storeRecentNoteFolder(
+        QString addFolderName,
+        QString removeFolderName) {
     QSettings settings;
-    QStringList recentNoteFolders = settings.value("recentNoteFolders").toStringList();
+    QStringList recentNoteFolders =
+            settings.value("recentNoteFolders").toStringList();
 
     recentNoteFolders.removeAll(addFolderName);
     recentNoteFolders.removeAll(removeFolderName);
@@ -308,7 +343,8 @@ void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setIcon(QIcon(":/images/icon.png"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
-            this, SLOT(systemTrayIconClicked(QSystemTrayIcon::ActivationReason)));
+            this, SLOT(
+                    systemTrayIconClicked(QSystemTrayIcon::ActivationReason)));
     if (showSystemTray) {
         trayIcon->show();
     }
@@ -317,9 +353,11 @@ void MainWindow::createSystemTrayIcon() {
 void MainWindow::loadNoteDirectoryList() {
     {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
+        Q_UNUSED(blocker);
 
         {
             const QSignalBlocker blocker2(this->ui->notesListWidget);
+            Q_UNUSED(blocker2);
 
             this->ui->notesListWidget->clear();
 
@@ -335,7 +373,8 @@ void MainWindow::loadNoteDirectoryList() {
 
     // watch all the notes for changes
     Q_FOREACH(QString fileName, fileNameList) {
-            this->noteDirectoryWatcher.addPath(Note::fullNoteFilePath(fileName));
+            this->noteDirectoryWatcher.addPath(
+                    Note::fullNoteFilePath(fileName));
         }
 
     // sort alphabetically again in neccessery
@@ -347,7 +386,6 @@ void MainWindow::loadNoteDirectoryList() {
 
 //    Q_FOREACH(QString directory, directoryList)
 //        qDebug() << "Directory name" << directory <<"\n";
-
 }
 
 /**
@@ -355,7 +393,8 @@ void MainWindow::loadNoteDirectoryList() {
  */
 void MainWindow::makeCurrentNoteFirstInNoteList() {
     QString name = this->currentNote.getName();
-    QList<QListWidgetItem *> items = this->ui->notesListWidget->findItems(name, Qt::MatchExactly);
+    QList<QListWidgetItem *> items =
+            this->ui->notesListWidget->findItems(name, Qt::MatchExactly);
     if (items.count() > 0) {
         const QSignalBlocker blocker(this->ui->notesListWidget);
 
@@ -367,11 +406,13 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
 
 void MainWindow::readSettings() {
     QSettings settings;
-    sortAlphabetically = settings.value("SortingModeAlphabetically", QVariant(false)).toBool();
+    sortAlphabetically = settings.value(
+            "SortingModeAlphabetically", QVariant(false)).toBool();
     showSystemTray = settings.value("ShowSystemTray", QVariant(false)).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
-    ui->menuBar->restoreGeometry(settings.value("MainWindow/menuBarGeometry").toByteArray());
+    ui->menuBar->restoreGeometry(
+            settings.value("MainWindow/menuBarGeometry").toByteArray());
 
     // read all relevant settings, that can be set in the settings dialog
     readSettingsFromSettingsDialog();
@@ -383,8 +424,7 @@ void MainWindow::readSettings() {
     if (this->notesPath != "") {
         settings.setValue("notesPath", this->notesPath);
         settings.remove("General/notesPath");
-    }
-    else {
+    } else {
         this->notesPath = settings.value("notesPath").toString();
     }
 
@@ -395,7 +435,8 @@ void MainWindow::readSettings() {
 
     // migration: remove notes path from recent note folders
     if (this->notesPath != "") {
-        QStringList recentNoteFolders = settings.value("recentNoteFolders").toStringList();
+        QStringList recentNoteFolders =
+                settings.value("recentNoteFolders").toStringList();
         if (recentNoteFolders.contains(this->notesPath)) {
             recentNoteFolders.removeAll(this->notesPath);
             settings.setValue("recentNoteFolders", recentNoteFolders);
@@ -408,7 +449,8 @@ void MainWindow::readSettings() {
  */
 void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
-    this->notifyAllExternalModifications = settings.value("notifyAllExternalModifications").toBool();
+    this->notifyAllExternalModifications =
+            settings.value("notifyAllExternalModifications").toBool();
     this->noteSaveIntervalTime = settings.value("noteSaveIntervalTime").toInt();
 
     // default value is 10 seconds
@@ -418,7 +460,8 @@ void MainWindow::readSettingsFromSettingsDialog() {
     }
 
     // load note text edit font
-    QString fontString = settings.value("MainWindow/noteTextEdit.font").toString();
+    QString fontString = settings.value(
+            "MainWindow/noteTextEdit.font").toString();
 
     // store the current font if there isn't any set yet
     if (fontString == "") {
@@ -450,10 +493,13 @@ void MainWindow::readSettingsFromSettingsDialog() {
     ui->noteTextView->setFont(font);
 
     // set the main toolbar icon size
-    int toolBarIconSize = settings.value("MainWindow/mainToolBar.iconSize").toInt();
+    int toolBarIconSize = settings.value(
+            "MainWindow/mainToolBar.iconSize").toInt();
     if (toolBarIconSize == 0) {
         toolBarIconSize = ui->mainToolBar->iconSize().height();
-        settings.setValue("MainWindow/mainToolBar.iconSize", QString::number(toolBarIconSize));
+        settings.setValue(
+                "MainWindow/mainToolBar.iconSize",
+                QString::number(toolBarIconSize));
     }
     else {
         QSize size(toolBarIconSize, toolBarIconSize);
@@ -461,16 +507,20 @@ void MainWindow::readSettingsFromSettingsDialog() {
     }
 
     // check if we want to view the recent note folder combo box
-    ui->recentNoteFolderComboBox->setVisible(settings.value("MainWindow/showRecentNoteFolderInMainArea").toBool());
+    ui->recentNoteFolderComboBox->setVisible(
+            settings.value(
+                    "MainWindow/showRecentNoteFolderInMainArea").toBool());
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {
     note.updateNoteTextFromDisk();
     note.store();
     this->currentNote = note;
+    updateEncryptNoteButtons();
 
     {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
+        Q_UNUSED(blocker);
         this->setNoteTextFromNote(&note);
     }
 }
@@ -496,39 +546,46 @@ void MainWindow::notesWereModified(const QString &str) {
                 return;
             }
 
-            // if we don't want to get notifications at all external modifications check if we really need one
+            // if we don't want to get notifications at all
+            // external modifications check if we really need one
             if (!this->notifyAllExternalModifications) {
                 bool isCurrentNoteNotEditedForAWhile =
-                        this->currentNoteLastEdited.addSecs(60) < QDateTime::currentDateTime();
+                        this->currentNoteLastEdited.addSecs(60)
+                        < QDateTime::currentDateTime();
 
-                // reloading the current note text straight away if we didn't change it for a minute
-                if (!this->currentNote.getHasDirtyData() && isCurrentNoteNotEditedForAWhile) {
+                // reloading the current note text straight away
+                // if we didn't change it for a minute
+                if (!this->currentNote.getHasDirtyData()
+                    && isCurrentNoteNotEditedForAWhile) {
                     updateNoteTextFromDisk(note);
                     return;
                 }
             }
 
-            qDebug() << "Current note was modified externaly!";
+            qDebug() << "Current note was modified externally!";
 
             int result = openNoteDiffDialog(note);
             switch (result) {
                 // overwrite file with local changes
                 case NoteDiffDialog::Overwrite: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                    Q_UNUSED(blocker);
                     this->currentNote.store();
                     this->currentNote.storeNoteTextFileToDisk();
-                    this->ui->statusBar->showMessage(tr("stored current note to disk"), 1000);
+                    this->ui->statusBar->showMessage(
+                            tr("stored current note to disk"), 1000);
 
                     // just to make sure everything is uptodate
 //                        this->currentNote = note;
 //                        this->setNoteTextFromNote( &note, true );
 
-                    // wait 100ms before the block on this->noteDirectoryWatcher is opened, otherwise we get the event
+                    // wait 100ms before the block on this->noteDirectoryWatcher
+                    // is opened, otherwise we get the event
                     waitMsecs(100);
                 }
                     break;
 
-                    // reload note file from disk
+                // reload note file from disk
                 case NoteDiffDialog::Reload:
                     updateNoteTextFromDisk(note);
                     break;
@@ -539,30 +596,33 @@ void MainWindow::notesWereModified(const QString &str) {
                     // do nothing
                     break;
             }
-        }
-        else {
-            qDebug() << "Current note was removed externaly!";
+        } else {
+            qDebug() << "Current note was removed externally!";
 
-            switch (QMessageBox::information(this, "Note was removed externaly!",
-                                             "Current note was removed outside of this application!\n"
-                                                     "Restore current note?",
-                                             "&Restore", "&Cancel", QString::null,
+            switch (QMessageBox::information(
+                    this, "Note was removed externally!",
+                    "Current note was removed outside of this application!\n"
+                            "Restore current note?",
+                     "&Restore", "&Cancel", QString::null,
                                              0, 1)) {
                 case 0: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                    Q_UNUSED(blocker);
 
                     QString text = this->ui->noteTextEdit->toPlainText();
                     note.storeNewText(text);
 
                     // store note to disk again
                     note.storeNoteTextFileToDisk();
-                    this->ui->statusBar->showMessage(tr("stored current note to disk"), 1000);
+                    this->ui->statusBar->showMessage(
+                            tr("stored current note to disk"), 1000);
 
                     // rebuild and reload the notes directory list
                     buildNotesIndex();
                     loadNoteDirectoryList();
 
-                    // fetch note new (because all the IDs have changed after the buildNotesIndex()
+                    // fetch note new (because all the IDs have changed
+                    // after the buildNotesIndex()
                     note.refetch();
 
                     // restore old selected row (but don't update the note text)
@@ -574,8 +634,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     break;
             }
         }
-    }
-    else {
+    } else {
         qDebug() << "other note was changed: " << str;
         // setCurrentNote(this->currentNote  , false);
 
@@ -745,20 +804,21 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
-    }
-    else {
+    } else {
         if (this->notesPath == "") {
-            switch (QMessageBox::information(this, "No folder was selected",
-                                             "You have to select your ownCloud notes folder to make this software work!",
-                                             "&Retry", "&Exit", QString::null,
-                                             0, 1)) {
+            switch (QMessageBox::information(
+                    this, "No folder was selected",
+                    "You have to select your ownCloud notes folder to make this software work!",
+                    "&Retry", "&Exit", QString::null,
+                    0, 1)) {
                 case 0:
                     selectOwnCloudNotesFolder();
                     break;
                 case 1:
                 default:
                     // No other way to quit the application worked
-                    QTimer::singleShot(50, this, SLOT(on_action_Quit_triggered()));
+                    QTimer::singleShot(
+                            50, this, SLOT(on_action_Quit_triggered()));
                     break;
             }
         }
@@ -767,11 +827,15 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     return this->notesPath;
 }
 
-void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelectedNote, bool addNoteToHistory) {
+void MainWindow::setCurrentNote(Note note,
+                                bool updateNoteText,
+                                bool updateSelectedNote,
+                                bool addNoteToHistory) {
     // update cursor position of previous note
     if (this->currentNote.exists()) {
         QTextCursor c = ui->noteTextEdit->textCursor();
-        this->noteHistory.updateCursorPositionOfNote(this->currentNote, c.position());
+        this->noteHistory.updateCursorPositionOfNote(
+                this->currentNote, c.position());
     }
 
     // add new note to history
@@ -784,14 +848,17 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
     this->setWindowTitle(name + " - QOwnNotes " + QString(VERSION));
 
     // set the note text edit to readonly if note file is not writeable
-    QFileInfo *f = new QFileInfo(this->notesPath + QDir::separator() + note.getFileName());
+    QFileInfo *f = new QFileInfo(
+            this->notesPath + QDir::separator() + note.getFileName());
     ui->noteTextEdit->setReadOnly(!f->isWritable());
 
     // find and set the current item
     if (updateSelectedNote) {
-        QList<QListWidgetItem *> items = this->ui->notesListWidget->findItems(name, Qt::MatchExactly);
+        QList<QListWidgetItem *> items = this->ui->notesListWidget->findItems(
+                name, Qt::MatchExactly);
         if (items.count() > 0) {
             const QSignalBlocker blocker(this->ui->notesListWidget);
+            Q_UNUSED(blocker);
 
             this->ui->notesListWidget->setCurrentItem(items[0]);
         }
@@ -802,6 +869,8 @@ void MainWindow::setCurrentNote(Note note, bool updateNoteText, bool updateSelec
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         this->setNoteTextFromNote(&note);
     }
+
+    updateEncryptNoteButtons();
 }
 
 void MainWindow::focusNoteTextEdit() {
@@ -956,12 +1025,42 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
     this->noteTextEditIsInEditMode = isInEditMode;
     this->ui->actionToggleEditMode->setChecked(isInEditMode);
     this->ui->actionToggleEditMode->setToolTip(
-            "Toogle edit mode - currently " + QString(isInEditMode ? "editing" : "viewing"));
+            "Toggle edit mode - currently " +
+                    QString(isInEditMode ? "editing" : "viewing"));
 
     // set the tab index
     {
         const QSignalBlocker blocker(this->ui->noteTabWidget);
+        Q_UNUSED(blocker);
         this->ui->noteTabWidget->setCurrentIndex(isInEditMode ? 0 : 1);
+    }
+
+    if (!isInEditMode) {
+
+        qDebug() << __func__ << " - 'note->getCryptoKey()': " << currentNote.getCryptoKey();
+        qDebug() << __func__ << " - 'currentNote.hasEncryptedNoteText()': " << currentNote.hasEncryptedNoteText();
+
+
+        // check if the note is encrypted and no crypto key is present
+        if (currentNote.hasEncryptedNoteText() &&
+                (currentNote.getDecryptedNoteText() != "")) {
+            QString labelText =
+                    "Please enter the <strong>password</strong> "
+                            "of this encrypted note.";
+            PasswordDialog* dialog = new PasswordDialog(this, labelText);
+            int dialogResult = dialog->exec();
+
+            // if user pressed ok take the password
+            if (dialogResult == QDialog::Accepted) {
+                QString password = dialog->password();
+                if (password != "") {
+                    // set the password so it can be decrypted
+                    // for the markdown view
+                    currentNote.setCryptoPassword(password);
+                    currentNote.store();
+                }
+            }
+        }
     }
 
     // make sure the current note is set
@@ -976,14 +1075,7 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
 }
 
 /**
- * set the right note text according to whether noteText is in edit mode or not
- */
-void MainWindow::setNoteTextFromNote(Note *note) {
-    setNoteTextFromNote(note, false);
-}
-
-/**
- * set the right note text according to whether noteText is in edit mode or not
+ * Sets the note text according to a note
  */
 void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     if (!updateNoteTextViewOnly) {
@@ -1345,10 +1437,7 @@ void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current,
 }
 
 void MainWindow::on_noteTextEdit_textChanged() {
-//    qDebug() << "noteTextChanged";
-
     Note note = this->currentNote;
-//    qDebug() << __func__ << " - 'this->getFilename()': " << note.getFileName();
     note.updateNoteTextFromDisk();
     QString noteTextFromDisk = note.getNoteText();
 
@@ -1359,7 +1448,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
         this->currentNote.refetch();
         this->currentNoteLastEdited = QDateTime::currentDateTime();
 
-        // qDebug() << __func__ << ": " << this->currentNote;
+        updateEncryptNoteButtons();
     }
 }
 
@@ -1886,6 +1975,11 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
  */
 void MainWindow::on_action_Encrypt_note_triggered()
 {
+    // return if there already is encrypted note text
+    if (currentNote.hasEncryptedNoteText()) {
+        return;
+    }
+
     QString labelText =
             "Please enter your <strong>password</strong> to encrypt the note."
             "<br />Keep in mind that you have to remember it to read the "
@@ -1903,8 +1997,16 @@ void MainWindow::on_action_Encrypt_note_triggered()
             ui->noteTextEdit->setPlainText(noteText);
         }
     }
+}
 
-//    QString decryptedText = crypto->decryptToString(encryptedText);
-//    qDebug() << __func__ << " - 'decryptedText': " << decryptedText;
+/**
+ * Enables or disables the encrypt note buttons
+ */
+void MainWindow::updateEncryptNoteButtons()
+{
+    bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
 
+    ui->action_Encrypt_note->setEnabled(!hasEncryptedNoteText);
+    ui->actionEdit_encrypted_note->setEnabled(hasEncryptedNoteText);
+    ui->actionDecrypt_note->setEnabled(hasEncryptedNoteText);
 }

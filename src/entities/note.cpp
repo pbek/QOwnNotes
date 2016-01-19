@@ -1,4 +1,4 @@
-#include "note.h"
+#include "entities/note.h"
 #include <QDebug>
 #include <QSqlRecord>
 #include <QMessageBox>
@@ -76,8 +76,7 @@ Note Note::fetch(int id) {
 
     if (!query.exec()) {
         qDebug() << __func__ << ": " << query.lastError();
-    }
-    else {
+    } else {
         if (query.first()) {
             note = noteFromQuery(query);
         }
@@ -101,8 +100,7 @@ bool Note::fillByFileName(QString fileName) {
 
     if (!query.exec()) {
         qDebug() << __func__ << ": " << query.lastError();
-    }
-    else {
+    } else {
         if (query.first()) {
             this->fillFromQuery(query);
             return true;
@@ -167,7 +165,7 @@ bool Note::copy(QString destinationPath) {
  * @return bool
  */
 bool Note::move(QString destinationPath) {
-    bool result = copy(destinationPath);
+    bool result = this->copy(destinationPath);
 
     if (result) {
         return remove(true);
@@ -186,9 +184,8 @@ Note Note::fetchByName(QString name) {
     query.bindValue(":name", name);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
-    }
-    else {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
         if (query.first()) {
             note = noteFromQuery(query);
         }
@@ -204,25 +201,16 @@ Note Note::noteFromQuery(QSqlQuery query) {
 }
 
 bool Note::fillFromQuery(QSqlQuery query) {
-    int id = query.value("id").toInt();
-    QString name = query.value("name").toString();
-    QString fileName = query.value("file_name").toString();
-    QString noteText = query.value("note_text").toString();
-    bool hasDirtyData = query.value("has_dirty_data").toInt() == 1;
-    QDateTime fileCreated = query.value("file_created").toDateTime();
-    QDateTime fileLastModified = query.value("file_last_modified").toDateTime();
-    QDateTime created = query.value("created").toDateTime();
-    QDateTime modified = query.value("modified").toDateTime();
-
-    this->id = id;
-    this->name = name;
-    this->fileName = fileName;
-    this->noteText = noteText;
-    this->hasDirtyData = hasDirtyData;
-    this->fileCreated = fileCreated;
-    this->fileLastModified = fileLastModified;
-    this->created = created;
-    this->modified = modified;
+    id = query.value("id").toInt();
+    name = query.value("name").toString();
+    fileName = query.value("file_name").toString();
+    noteText = query.value("note_text").toString();
+    cryptoKey = query.value("crypto_key").toLongLong();
+    hasDirtyData = query.value("has_dirty_data").toInt() == 1;
+    fileCreated = query.value("file_created").toDateTime();
+    fileLastModified = query.value("file_last_modified").toDateTime();
+    created = query.value("created").toDateTime();
+    modified = query.value("modified").toDateTime();
 
     return true;
 }
@@ -235,7 +223,7 @@ QList<Note> Note::fetchAll() {
 
     query.prepare("SELECT * FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
@@ -751,12 +739,9 @@ QString Note::encryptNote(QString password) {
 }
 
 /**
- * Returns decrypted note text if it is encrypted
- * The crypto key has to be set in the object
+ * Returns the regular expression to match encrypted text
  */
-QString Note::getDecryptedNoteText() {
-    QString noteText = this->noteText;
-
+QRegularExpression Note::getEncryptedNoteTextRegularExpression() {
     // match the encrypted string
     QRegularExpression re(
             QRegularExpression::escape(NOTE_TEXT_ENCRYPTION_PRE_STRING) +
@@ -767,14 +752,45 @@ QString Note::getDecryptedNoteText() {
             QRegularExpression::MultilineOption |
             QRegularExpression::DotMatchesEverythingOption);
 
-    // check if we have an encrypted note text
-    QRegularExpressionMatch match = re.match(noteText);
-    if (!match.hasMatch()) {
-        return noteText;
-    }
+    return re;
+}
 
-    // try to capture the encrypted note text
-    QString encryptedNoteText = match.captured(1);
+/**
+ * Returns encrypted note text if it is encrypted
+ */
+QString Note::getEncryptedNoteText() {
+    QString noteText = this->noteText;
+
+    // get regular expression for the encrypted string
+    QRegularExpression re = getEncryptedNoteTextRegularExpression();
+
+    // check if we have an encrypted note text and return it if so
+    QRegularExpressionMatch match = re.match(noteText);
+    return match.hasMatch() ? match.captured(1) : "";
+}
+
+/**
+ * Returns encrypted note text if it is encrypted
+ */
+bool Note::hasEncryptedNoteText() {
+    return !getEncryptedNoteText().isEmpty();
+}
+
+/**
+ * Sets the password to generate the cryptoKey
+ */
+void Note::setCryptoPassword(QString password) {
+    cryptoKey = qint64Hash(password);
+}
+
+/**
+ * Returns decrypted note text if it is encrypted
+ * The crypto key has to be set in the object
+ */
+QString Note::getDecryptedNoteText() {
+    QString noteText = this->noteText;
+    QString encryptedNoteText = getEncryptedNoteText();
+
     if (encryptedNoteText == "") {
         return noteText;
     }
@@ -786,6 +802,9 @@ QString Note::getDecryptedNoteText() {
     if (decryptedNoteText == "") {
         return noteText;
     }
+
+    // get regular expression for the encrypted string
+    QRegularExpression re = getEncryptedNoteTextRegularExpression();
 
     // replace the encrypted text with the decrypted text
     noteText.replace(re, decryptedNoteText);

@@ -41,5 +41,8 @@
         <file>images/breeze/document-print.svg</file>
         <file>images/breeze/insert-image.svg</file>
         <file>images/breeze/text-x-changelog.svg</file>
+        <file>images/breeze/document-decrypt.svg</file>
+        <file>images/breeze/document-encrypted.svg</file>
+        <file>images/breeze/document-edit-encrypt.svg</file>
     </qresource>
 </RCC>

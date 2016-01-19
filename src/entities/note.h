@@ -99,6 +99,10 @@ public:
 
     QString getDecryptedNoteText();
 
+    bool hasEncryptedNoteText();
+
+    void setCryptoPassword(QString password);
+
 private:
     int id;
     QString name;
@@ -111,6 +115,8 @@ private:
     QDateTime modified;
     qint64 cryptoKey;
     void handleNoteTextFileName();
+    QRegularExpression getEncryptedNoteTextRegularExpression();
+    QString getEncryptedNoteText();
 
 signals:
 
