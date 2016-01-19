@@ -19,6 +19,7 @@
 #include <QShortcut>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <dialogs/passworddialog.h>
 #include "libraries/diff_match_patch/diff_match_patch.h"
 #include "dialogs/notediffdialog.h"
 #include "build_number.h"
@@ -28,6 +29,7 @@
 #include "dialogs/settingsdialog.h"
 #include "entities/calendaritem.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
+#include "dialogs/passworddialog.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -1879,13 +1881,28 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
     ui->noteTextEdit->searchWidget()->activate();
 }
 
+/**
+ * Asks the user for a password and encrypts the note text with it
+ */
 void MainWindow::on_action_Encrypt_note_triggered()
 {
-    QString noteText = currentNote.encryptNote("mypassowrd");
-    qDebug() << __func__ << " - 'noteText': " << noteText;
+    QString labelText =
+            "Please enter your <strong>password</strong> to encrypt the note."
+            "<br />Keep in mind that you have to remember it to read the "
+            "content of the note!";
+    PasswordDialog* dialog = new PasswordDialog(this, labelText);
+    int dialogResult = dialog->exec();
 
-    ui->noteTextEdit->setPlainText( noteText );
+    // if user pressed ok take the password
+    if (dialogResult == QDialog::Accepted) {
+        QString password = dialog->password();
 
+        // if password wasn't empty encrypt the note
+        if (!password.isEmpty()) {
+            QString noteText = currentNote.encryptNote(password);
+            ui->noteTextEdit->setPlainText(noteText);
+        }
+    }
 
 //    QString decryptedText = crypto->decryptToString(encryptedText);
 //    qDebug() << __func__ << " - 'decryptedText': " << decryptedText;

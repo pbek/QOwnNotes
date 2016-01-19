@@ -47,7 +47,8 @@ SOURCES += main.cpp\
     libraries/qmarkdowntextedit/highlighter.cpp \
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp \
     libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp \
-    widgets/qownnotesmarkdowntextedit.cpp
+    widgets/qownnotesmarkdowntextedit.cpp \
+    dialogs/passworddialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -83,7 +84,8 @@ HEADERS  += mainwindow.h \
     libraries/qmarkdowntextedit/highlighter.h \
     libraries/qmarkdowntextedit/qmarkdowntextedit.h \
     libraries/qmarkdowntextedit/qtexteditsearchwidget.h \
-    widgets/qownnotesmarkdowntextedit.h
+    widgets/qownnotesmarkdowntextedit.h \
+    dialogs/passworddialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -93,7 +95,8 @@ FORMS    += mainwindow.ui \
     dialogs/versiondialog.ui \
     dialogs/trashdialog.ui \
     dialogs/linkdialog.ui \
-    dialogs/tododialog.ui
+    dialogs/tododialog.ui \
+    dialogs/passworddialog.ui
 
 RESOURCES += \
     libraries/qmarkdowntextedit/media.qrc \
