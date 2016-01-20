@@ -1710,8 +1710,7 @@ void MainWindow::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason)
     if (reason == QSystemTrayIcon::Trigger) {
         if (this->isVisible()) {
             this->hide();
-        }
-        else {
+        } else {
             this->show();
         }
     }
@@ -1721,8 +1720,7 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
     showSystemTray = checked;
     if (checked) {
         trayIcon->show();
-    }
-    else {
+    } else {
         trayIcon->hide();
     }
 }
@@ -1734,7 +1732,8 @@ void MainWindow::on_action_Settings_triggered() {
 
 void MainWindow::on_actionShow_versions_triggered() {
     OwnCloudService *ownCloud = new OwnCloudService(&this->crypto, this);
-    ownCloud->loadVersions(this->notesPath, this->currentNote.getFileName(), this);
+    ownCloud->loadVersions(
+            this->notesPath, this->currentNote.getFileName(), this);
 }
 
 void MainWindow::on_actionShow_trash_triggered() {
@@ -1747,15 +1746,18 @@ void MainWindow::updateCheckTimerTimeout() {
     this->updateService->checkForUpdates(UpdateService::Periodic);
 }
 
-void MainWindow::on_notesListWidget_customContextMenuRequested(const QPoint &pos) {
+void MainWindow::on_notesListWidget_customContextMenuRequested(
+        const QPoint &pos) {
     QPoint globalPos = ui->notesListWidget->mapToGlobal(pos);
     QMenu noteMenu;
-    QMenu *moveDestinationMenu;
-    QMenu *copyDestinationMenu;
+    QMenu *moveDestinationMenu = new QMenu();
+    QMenu *copyDestinationMenu = new QMenu();
     QSettings settings;
-    QStringList recentNoteFolders = settings.value("recentNoteFolders").toStringList();
+    QStringList recentNoteFolders =
+            settings.value("recentNoteFolders").toStringList();
 
-    // show copy and move menu entries only if there is at least one notes folder
+    // show copy and move menu entries only
+    // if there is at least one notes folder
     if (recentNoteFolders.size() > 0) {
         moveDestinationMenu = noteMenu.addMenu("&Move notes to...");
         copyDestinationMenu = noteMenu.addMenu("&Copy notes to...");
@@ -1779,18 +1781,15 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(const QPoint &pos
         if (selectedItem->parent() == moveDestinationMenu) {
             QString destinationFolder = selectedItem->text();
             moveSelectedNotesToFolder(destinationFolder);
-        }
+        } else if (selectedItem->parent() == copyDestinationMenu) {
             // copy notes
-        else if (selectedItem->parent() == copyDestinationMenu) {
             QString destinationFolder = selectedItem->text();
             copySelectedNotesToFolder(destinationFolder);
-        }
+        } else if (selectedItem == removeAction) {
             // remove notes
-        else if (selectedItem == removeAction) {
             removeSelectedNotes();
-        }
+        } else if (selectedItem == selectAllAction) {
             // select all notes
-        else if (selectedItem == selectAllAction) {
             selectAllNotes();
         }
     }
@@ -1811,7 +1810,8 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     menu->addSeparator();
 
     QString linkTextActionName =
-            ui->noteTextEdit->textCursor().selectedText() != "" ? "&Link selected text to note" : "Insert &link note";
+            ui->noteTextEdit->textCursor().selectedText() != "" ?
+            "&Link selected text to note" : "Insert &link note";
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(tr("Ctrl+L"));
 
@@ -1836,19 +1836,22 @@ void MainWindow::on_action_DuplicateText_triggered() {
 void MainWindow::on_action_Back_in_note_history_triggered() {
     if (this->noteHistory.back()) {
         ui->searchLineEdit->clear();
-        setCurrentNoteFromHistoryItem(this->noteHistory.getCurrentHistoryItem());
+        setCurrentNoteFromHistoryItem(
+                this->noteHistory.getCurrentHistoryItem());
     }
 }
 
 void MainWindow::on_action_Forward_in_note_history_triggered() {
     if (this->noteHistory.forward()) {
         ui->searchLineEdit->clear();
-        setCurrentNoteFromHistoryItem(this->noteHistory.getCurrentHistoryItem());
+        setCurrentNoteFromHistoryItem(
+                this->noteHistory.getCurrentHistoryItem());
     }
 }
 
 void MainWindow::on_action_Shortcuts_triggered() {
-    QDesktopServices::openUrl(QUrl("http://www.qownnotes.org/shortcuts/QOwnNotes"));
+    QDesktopServices::openUrl(
+            QUrl("http://www.qownnotes.org/shortcuts/QOwnNotes"));
 }
 
 void MainWindow::on_action_Knowledge_base_triggered() {
@@ -1868,14 +1871,17 @@ void MainWindow::on_actionInsert_current_time_triggered() {
 
 void MainWindow::on_actionOpen_List_triggered() {
     QSettings settings;
-    QStringList todoCalendarEnabledUrlList = settings.value("ownCloud/todoCalendarEnabledUrlList").toStringList();
+    QStringList todoCalendarEnabledUrlList =
+            settings.value("ownCloud/todoCalendarEnabledUrlList")
+                    .toStringList();
 
     // check if we have got any todo list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
-        if (QMessageBox::warning(0, "No selected todo lists!",
-                                 "You have not selected any todo lists.<br />Please check your <strong>Todo</strong> configuration in the settings!",
-                                 "Open &settings", "&Cancel", QString::null,
-                                 0, 1) == 0) {
+        if (QMessageBox::warning(
+                0, "No selected todo lists!",
+                "You have not selected any todo lists.<br />Please check your "
+                        "<strong>Todo</strong> configuration in the settings!",
+                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
             openSettingsDialog();
         }
 
@@ -1943,15 +1949,17 @@ void MainWindow::on_actionInsert_image_triggered() {
                 QFileInfo fileInfo(file.fileName());
 
                 // find a random name for the new file
-                QString fileName = QString::number(qrand()) + "." + fileInfo.suffix();
+                QString newFileName =
+                        QString::number(qrand()) + "." + fileInfo.suffix();
 
                 // copy the file the the media folder
-                file.copy(mediaDir.path() + QDir::separator() + fileName);
+                file.copy(mediaDir.path() + QDir::separator() + newFileName);
 
                 QTextCursor c = ui->noteTextEdit->textCursor();
 
                 // insert the image link
-                c.insertText("![" + fileInfo.baseName() + "](file://media/" + fileName + ")");
+                c.insertText("![" + fileInfo.baseName() +
+                                     "](file://media/" + newFileName + ")");
             }
         }
     }
@@ -1961,7 +1969,8 @@ void MainWindow::on_actionInsert_image_triggered() {
  * @brief Opens a browser with the changelog page
  */
 void MainWindow::on_actionShow_changelog_triggered() {
-    QDesktopServices::openUrl(QUrl("http://www.qownnotes.org/changelog/QOwnNotes"));
+    QDesktopServices::openUrl(
+            QUrl("http://www.qownnotes.org/changelog/QOwnNotes"));
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
@@ -2026,6 +2035,6 @@ void MainWindow::on_actionDecrypt_note_triggered()
     askForEncryptedNotePasswordIfNeeded();
 
     if (currentNote.canDecryptNoteText()) {
-        ui->noteTextEdit->setText( currentNote.getDecryptedNoteText() );
+        ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
     }
 }
