@@ -144,6 +144,8 @@ private slots:
 
     void on_actionDecrypt_note_triggered();
 
+    void on_actionEdit_encrypted_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
