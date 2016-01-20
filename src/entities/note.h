@@ -95,7 +95,7 @@ public:
 
     static qint64 qint64Hash(const QString &str);
 
-    QString encryptNote(QString password);
+    QString encryptNoteText();
 
     QString getDecryptedNoteText();
 

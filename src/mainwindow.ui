@@ -130,11 +130,11 @@ p, li { white-space: pre-wrap; }
              <bool>true</bool>
             </property>
             <property name="contextMenuPolicy">
-             <enum>Qt::CustomContextMenu</enum>
+             <enum>Qt::DefaultContextMenu</enum>
             </property>
             <property name="styleSheet">
              <string notr="true">QTextEdit {
-	border: #aa0000 3px solid inherit;
+	border: 3px dashed #aa0000;
 }
 </string>
             </property>
@@ -728,6 +728,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Edit encrypted note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+E</string>
    </property>
   </action>
   <action name="actionDecrypt_note">

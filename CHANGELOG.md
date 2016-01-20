@@ -3,6 +3,9 @@
 ## 0.80
 - the OSX build of QOwnNotes now uses Qt 5.5.1 to fix a few bugs
 - fixed a few small issues in the todo list
+- you are now able to **encrypt** and **decrypt** notes in QOwnNotes
+    - you are also able to edit encrypted notes without the unencrypted note getting saved to disk
+    - this functionality is still in alpha stage
 
 ## 0.79
 - the search widget in the text edits will now move out of the way if it blocks the search result 

@@ -15,6 +15,7 @@
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
 #include "libraries/simplecrypt/simplecrypt.h"
+#include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 
 
 namespace Ui {
@@ -146,6 +147,8 @@ private slots:
 
     void on_actionEdit_encrypted_note_triggered();
 
+    void on_encryptedNoteTextEdit_textChanged();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -236,5 +239,7 @@ private:
 
     void updateEncryptNoteButtons();
 
-    void askForEncryptedNotePasswordIfNeeded();
+    void askForEncryptedNotePasswordIfNeeded(QString additionalText = "");
+
+    QMarkdownTextEdit *activeNoteTextEdit();
 };

@@ -116,10 +116,13 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->notesListWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
+    ui->encryptedNoteTextEdit->installEventFilter(this);
+    ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->notesListWidget->setCurrentRow(0);
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
     ui->noteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
+    ui->encryptedNoteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
 
     // handle note url externally in the note text edit
     QObject::connect(
@@ -128,11 +131,20 @@ MainWindow::MainWindow(QWidget *parent) :
             this,
             SLOT(openNoteUrl(QUrl)));
 
+    // also handle note url externally in the encrypted note text edit
+    QObject::connect(
+            ui->encryptedNoteTextEdit,
+            SIGNAL(urlClicked(QUrl)),
+            this,
+            SLOT(openNoteUrl(QUrl)));
+
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
     QFont font = ui->noteTextEdit->font();
     QFontMetrics metrics(font);
-    ui->noteTextEdit->setTabStopWidth(tabStop * metrics.width(' '));
+    int width = tabStop * metrics.width(' ');
+    ui->noteTextEdit->setTabStopWidth(width);
+    ui->encryptedNoteTextEdit->setTabStopWidth(width);
 
     // set the edit mode for the note text edit
     this->setNoteTextEditMode(true);
@@ -227,7 +239,7 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
                 QObject::connect(signalMapper,
                                  SIGNAL(mapped(const QString &)),
                                  this,
-                                 SLOT(changeNoteFolder(const QString & )));
+                                 SLOT(changeNoteFolder(const QString &)));
 
                 // add an entry to the combo box
                 ui->recentNoteFolderComboBox->addItem(noteFolder);
@@ -264,13 +276,15 @@ void MainWindow::changeNoteFolder(const QString &folderName) {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         {
             Q_UNUSED(blocker);
-            this->ui->noteTextEdit->clear();
+            ui->noteTextEdit->clear();
+            ui->noteTextEdit->show();
+            ui->encryptedNoteTextEdit->hide();
         }
 
         const QSignalBlocker blocker2(this->ui->searchLineEdit);
         {
             Q_UNUSED(blocker2);
-            this->ui->searchLineEdit->clear();
+            ui->searchLineEdit->clear();
         }
 
         this->ui->noteTextView->clear();
@@ -481,10 +495,12 @@ void MainWindow::readSettingsFromSettingsDialog() {
     // set the note text edit font
     font.fromString(fontString);
     ui->noteTextEdit->setFont(font);
+    ui->encryptedNoteTextEdit->setFont(font);
 
     // set the default size for the highlighter
     ui->noteTextEdit->highlighter()->setDefaultStyles(font.pointSize());
     ui->noteTextEdit->highlighter()->parse();
+    ui->encryptedNoteTextEdit->highlighter()->setDefaultStyles(font.pointSize());
 
     // load note text view font
     fontString = settings.value("MainWindow/noteTextView.font").toString();
@@ -888,6 +904,8 @@ void MainWindow::setCurrentNote(Note note,
     // update the text of the text edit
     if (updateNoteText) {
         const QSignalBlocker blocker(this->ui->noteTextEdit);
+        Q_UNUSED(blocker);
+
         this->setNoteTextFromNote(&note);
     }
 
@@ -1012,10 +1030,12 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
 void MainWindow::searchInNoteTextEdit(QString &str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
     QList<QTextEdit::ExtraSelection> extraSelections2;
+    QList<QTextEdit::ExtraSelection> extraSelections3;
 
     if (str.count() >= 2) {
         ui->noteTextEdit->moveCursor(QTextCursor::Start);
         ui->noteTextView->moveCursor(QTextCursor::Start);
+        ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
         QColor color = QColor(0, 180, 0, 100);
 
         while (ui->noteTextEdit->find(str)) {
@@ -1033,10 +1053,19 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
             extra.cursor = ui->noteTextView->textCursor();
             extraSelections2.append(extra);
         }
+
+        while (ui->encryptedNoteTextEdit->find(str)) {
+            QTextEdit::ExtraSelection extra;
+            extra.format.setBackground(color);
+
+            extra.cursor = ui->encryptedNoteTextEdit->textCursor();
+            extraSelections3.append(extra);
+        }
     }
 
     ui->noteTextEdit->setExtraSelections(extraSelections);
     ui->noteTextView->setExtraSelections(extraSelections2);
+    ui->encryptedNoteTextEdit->setExtraSelections(extraSelections3);
 }
 
 /**
@@ -1083,13 +1112,18 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
 /**
  * Asks for the password if the note is encrypted and can't be decrypted
  */
-void MainWindow::askForEncryptedNotePasswordIfNeeded() {
+void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
     // check if the note is encrypted and can't be decrypted
     if (currentNote.hasEncryptedNoteText() &&
         !currentNote.canDecryptNoteText()) {
         QString labelText =
                 "Please enter the <strong>password</strong> "
                         "of this encrypted note.";
+
+        if (!additionalText.isEmpty()) {
+            labelText += " " + additionalText;
+        }
+
         PasswordDialog* dialog = new PasswordDialog(this, labelText);
         int dialogResult = dialog->exec();
 
@@ -1244,6 +1278,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
             "&Move", "&Cancel", QString::null,
             0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
                 QString name = item->text();
@@ -1269,11 +1304,12 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
 
-    if (QMessageBox::information(this, "Copy selected notes",
-                                 "Copy " + QString::number(selectedItemsCount) + " selected note(s) to <strong>" +
-                                 destinationFolder + "</strong>?",
-                                 "&Copy", "&Cancel", QString::null,
-                                 0, 1) == 0) {
+    if (QMessageBox::information(
+            this,
+            "Copy selected notes",
+            "Copy " + QString::number(selectedItemsCount) + " selected note(s) "
+                      "to <strong>" + destinationFolder + "</strong>?",
+            "&Copy", "&Cancel", QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
                 QString name = item->text();
@@ -1289,9 +1325,11 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                 }
             }
 
-        QMessageBox::information(this, "Done",
-                                 QString::number(copyCount) + " note(s) were copied to <strong>" + destinationFolder +
-                                 "</strong>.");
+        QMessageBox::information(
+                this, "Done",
+                QString::number(copyCount) +
+                        " note(s) were copied to <strong>" + destinationFolder +
+                        "</strong>.");
     }
 }
 
@@ -1299,8 +1337,11 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
  * @brief Updates the current folder tooltip
  */
 void MainWindow::updateCurrentFolderTooltip() {
-    ui->actionSet_ownCloud_Folder->setStatusTip("Current notes folder: " + this->notesPath);
-    ui->actionSet_ownCloud_Folder->setToolTip("Set the notes folder. Current notes folder: " + this->notesPath);
+    ui->actionSet_ownCloud_Folder
+            ->setStatusTip("Current notes folder: " + this->notesPath);
+    ui->actionSet_ownCloud_Folder
+            ->setToolTip("Set the notes folder. Current notes folder: " +
+                                 this->notesPath);
 }
 
 /**
@@ -1320,14 +1361,24 @@ void MainWindow::openSettingsDialog() {
         this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
     }
 
-    // reload recent note folder in case we have cleared the history in the settings
+    // reload recent note folder in case we have cleared
+    // the history in the settings
     loadRecentNoteFolderListMenu(notesPath);
 }
 
 /**
  * @brief Handles the linking of text
  */
+QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
+    return ui->noteTextEdit->isHidden() ?
+                                  ui->encryptedNoteTextEdit : ui->noteTextEdit;
+}
+
+/**
+ * @brief Handles the linking of text
+ */
 void MainWindow::handleTextNoteLinking() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     LinkDialog *dialog = new LinkDialog("Link an url or note", this);
     dialog->exec();
     if (dialog->result() == QDialog::Accepted) {
@@ -1336,37 +1387,35 @@ void MainWindow::handleTextNoteLinking() {
         QString noteNameForLink = Note::generateTextForLink(noteName);
 
         if ((noteName != "") || (url != "")) {
-            QString selectedText = ui->noteTextEdit->textCursor().selectedText();
+            QString selectedText =
+                    textEdit->textCursor().selectedText();
             QString newText;
 
             // if user has entered an url
             if (url != "") {
                 if (selectedText != "") {
                     newText = "[" + selectedText + "](" + url + ")";
-                }
-                else {
+                } else {
                     // if possible fetch the title of the webpage
                     QString title = dialog->getTitleForUrl(QUrl(url));
 
                     // if we got back a tile let's use it in the link
                     if (title != "") {
                         newText = "[" + title + "](" + url + ")";
-                    }
-                    else {
+                    } else {
                         newText = "<" + url + ">";
                     }
                 }
-            }
+            } else {
                 // if user has selected a note
-            else {
                 if (selectedText != "") {
-                    newText = "[" + selectedText + "](note://" + noteNameForLink + ")";
-                }
-                else {
+                    newText = "[" + selectedText + "]"
+                           "(note://" + noteNameForLink + ")";
+                } else {
                     newText = "<note://" + noteNameForLink + ">";
                 }
             }
-            ui->noteTextEdit->textCursor().insertText(newText);
+            textEdit->textCursor().insertText(newText);
         }
     }
 }
@@ -1435,15 +1484,16 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
 
 
 
-// *********************************************************************************************
+// *****************************************************************************
 // *
 // *
 // * Slot implementations
 // *
 // *
-// *********************************************************************************************
+// *****************************************************************************
 
-void MainWindow::on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous) {
+void MainWindow::on_notesListWidget_currentItemChanged(
+        QListWidgetItem *current, QListWidgetItem *previous) {
     Q_UNUSED(previous);
 
     // in case all notes were removed
@@ -1502,12 +1552,16 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
         buildNotesIndex();
         loadNoteDirectoryList();
 
+        ui->noteTextEdit->show();
+        ui->encryptedNoteTextEdit->hide();
+
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         {
-            this->ui->noteTextEdit->clear();
+            Q_UNUSED(blocker);
+            ui->noteTextEdit->clear();
         }
 
-        this->ui->noteTextView->clear();
+        ui->noteTextView->clear();
     }
 }
 
@@ -1521,15 +1575,15 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
             QListWidgetItem *item = this->ui->notesListWidget->item(i);
             if (noteNameList.indexOf(item->text()) < 0) {
                 item->setHidden(true);
-            }
-            else {
-                if (this->firstVisibleNoteListRow < 0) this->firstVisibleNoteListRow = i;
+            } else {
+                if (this->firstVisibleNoteListRow < 0) {
+                    this->firstVisibleNoteListRow = i;
+                }
                 item->setHidden(false);
             }
         }
-    }
+    } else {
         // show all items otherwise
-    else {
         this->firstVisibleNoteListRow = 0;
 
         for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
@@ -1579,13 +1633,15 @@ void MainWindow::on_searchLineEdit_returnPressed() {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
 
             note.storeNoteTextFileToDisk();
-            this->ui->statusBar->showMessage(tr("stored current note to disk"), 1000);
+            this->ui->statusBar->showMessage(
+                    tr("stored current note to disk"), 1000);
         }
 
         buildNotesIndex();
         loadNoteDirectoryList();
 
-        // fetch note new (because all the IDs have changed after the buildNotesIndex()
+        // fetch note new (because all the IDs have changed after
+        // the buildNotesIndex()
         note.refetch();
 
 //        // create a new widget item for the note list
@@ -1626,7 +1682,8 @@ void MainWindow::on_action_Note_note_triggered() {
     QDateTime currentDate = QDateTime::currentDateTime();
 
     // replacing ":" with "_" for Windows systems
-    QString text = "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
+    QString text =
+            "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
     this->ui->searchLineEdit->setText(text);
     on_searchLineEdit_returnPressed();
 }
@@ -1645,7 +1702,7 @@ void MainWindow::on_noteTabWidget_currentChanged(int index) {
  * examples:
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
- * - <http://www.qownnotes.org> opens the webpage
+ * - <http://www.qownnotes.org> opens the web page
  * - <file:///path/to/my/file/QOwnNotes.pdf> opens the file "/path/to/my/file/QOwnNotes.pdf" if the operating system supports that handler
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
@@ -1653,8 +1710,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
 
     if (url.scheme() == "note") {
         openNoteUrl(url);
-    }
-    else {
+    } else {
         ui->noteTextEdit->openUrl(url);
     }
 }
@@ -1672,17 +1728,19 @@ void MainWindow::openNoteUrl(QUrl url) {
     if (url.scheme() == "note") {
         QString fileName = url.host() + ".txt";
 
-        // this makes it possible to search for filenames containing spaces
+        // this makes it possible to search for file names containing spaces
         // instead of spaces a "-" has to be used in the note link
         // example: note://my-note-with-spaces-in-the-name
         fileName.replace("-", "?").replace("_", "?");
 
-        // we need to search for the case sensitive filename, we only get it lowercase by QUrl
+        // we need to search for the case sensitive filename,
+        // we only get it lowercase by QUrl
         QDir currentDir = QDir(this->notesPath);
         QStringList files;
 
         // search for files with that name
-        files = currentDir.entryList(QStringList(fileName), QDir::Files | QDir::NoSymLinks);
+        files = currentDir.entryList(QStringList(fileName),
+                                     QDir::Files | QDir::NoSymLinks);
 
         // did we find files?
         if (files.length() > 0) {
@@ -1735,7 +1793,8 @@ void MainWindow::on_actionBy_date_triggered(bool checked) {
     }
 }
 
-void MainWindow::systemTrayIconClicked(QSystemTrayIcon::ActivationReason reason) {
+void MainWindow::systemTrayIconClicked(
+        QSystemTrayIcon::ActivationReason reason) {
     if (reason == QSystemTrayIcon::Trigger) {
         if (this->isVisible()) {
             this->hide();
@@ -1840,7 +1899,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
 
     QString linkTextActionName =
             ui->noteTextEdit->textCursor().selectedText() != "" ?
-            "&Link selected text to note" : "Insert &link note";
+                "&Link selected text" : "Insert &link";
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(tr("Ctrl+L"));
 
@@ -1859,7 +1918,8 @@ void MainWindow::on_actionInsert_Link_to_note_triggered() {
 }
 
 void MainWindow::on_action_DuplicateText_triggered() {
-    ui->noteTextEdit->duplicateText();
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    textEdit->duplicateText();
 }
 
 void MainWindow::on_action_Back_in_note_history_triggered() {
@@ -1891,7 +1951,8 @@ void MainWindow::on_action_Knowledge_base_triggered() {
  * @brief Inserts the current date in ISO 8601 format
  */
 void MainWindow::on_actionInsert_current_time_triggered() {
-    QTextCursor c = ui->noteTextEdit->textCursor();
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
     QDateTime dateTime = QDateTime::currentDateTime();
 
     // insert the current date in ISO 8601 format
@@ -1932,7 +1993,8 @@ void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
  * @brief Exports the current note as PDF (text)
  */
 void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
-    exportNoteAsPDF(ui->noteTextEdit);
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    exportNoteAsPDF(textEdit);
 }
 
 /**
@@ -1946,7 +2008,8 @@ void MainWindow::on_action_Print_note_markdown_triggered() {
  * @brief Prints the current note (text)
  */
 void MainWindow::on_action_Print_note_text_triggered() {
-    printNote(ui->noteTextEdit);
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    printNote(textEdit);
 }
 
 /**
@@ -1984,7 +2047,8 @@ void MainWindow::on_actionInsert_image_triggered() {
                 // copy the file the the media folder
                 file.copy(mediaDir.path() + QDir::separator() + newFileName);
 
-                QTextCursor c = ui->noteTextEdit->textCursor();
+                QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+                QTextCursor c = textEdit->textCursor();
 
                 // insert the image link
                 c.insertText("![" + fileInfo.baseName() +
@@ -2008,7 +2072,8 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
         this->setNoteTextEditMode(true);
     }
 
-    ui->noteTextEdit->searchWidget()->activate();
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    textEdit->searchWidget()->activate();
 }
 
 /**
@@ -2016,15 +2081,16 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
  */
 void MainWindow::on_action_Encrypt_note_triggered()
 {
-    // return if there already is encrypted note text
+    // return if there the note text is already encrypted
     if (currentNote.hasEncryptedNoteText()) {
         return;
     }
 
     QString labelText =
             "Please enter your <strong>password</strong> to encrypt the note."
-            "<br />Keep in mind that you have to remember it to read the "
-            "content of the note!";
+            "<br />Keep in mind that you have to <strong>remember</strong> "
+            "your password to read the content of the note<br /> and that you "
+            "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!";
     PasswordDialog* dialog = new PasswordDialog(this, labelText);
     int dialogResult = dialog->exec();
 
@@ -2034,7 +2100,8 @@ void MainWindow::on_action_Encrypt_note_triggered()
 
         // if password wasn't empty encrypt the note
         if (!password.isEmpty()) {
-            QString noteText = currentNote.encryptNote(password);
+            currentNote.setCryptoPassword(password);
+            QString noteText = currentNote.encryptNoteText();
             ui->noteTextEdit->setPlainText(noteText);
         }
     }
@@ -2061,24 +2128,59 @@ void MainWindow::on_actionDecrypt_note_triggered()
         return;
     }
 
-    askForEncryptedNotePasswordIfNeeded();
-
-    if (currentNote.canDecryptNoteText()) {
-        ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
-    }
-}
-
-void MainWindow::on_actionEdit_encrypted_note_triggered()
-{
-    if (!currentNote.hasEncryptedNoteText()) {
+    if (QMessageBox::warning(
+            this, "Decrypt note anf store it as plain text",
+            "Your note will be decrypted and stored as plain text gain. Keep "
+                    "in mind that the unencrypted note will possibly be synced "
+                    "to your server and sensitive text may be exposed!<br />"
+                    "Do you want to decrypt your note?",
+            "&Decrypt", "&Cancel", QString::null,
+            0, 1) == 1) {
         return;
     }
 
     askForEncryptedNotePasswordIfNeeded();
 
     if (currentNote.canDecryptNoteText()) {
+        ui->encryptedNoteTextEdit->hide();
+        ui->noteTextEdit->setText(currentNote.getDecryptedNoteText());
+        ui->noteTextEdit->show();
+        ui->noteTextEdit->setFocus();
+    }
+}
+
+/**
+ * Lets the user edit an encrypted note text in a 2nd text edit
+ */
+void MainWindow::on_actionEdit_encrypted_note_triggered()
+{
+    if (!currentNote.hasEncryptedNoteText()) {
+        return;
+    }
+
+    askForEncryptedNotePasswordIfNeeded(
+            "<br />You will be able to edit your encrypted note.");
+
+    if (currentNote.canDecryptNoteText()) {
+        const QSignalBlocker blocker(ui->encryptedNoteTextEdit);
+        Q_UNUSED(blocker);
+
+        ui->noteTextEdit->hide();
         ui->encryptedNoteTextEdit->setText(currentNote.getDecryptedNoteText());
         ui->encryptedNoteTextEdit->show();
-        ui->noteTextEdit->hide();
+        ui->encryptedNoteTextEdit->setFocus();
     }
+}
+
+/**
+ * Puts the encrypted text back to the note text edit
+ */
+void MainWindow::on_encryptedNoteTextEdit_textChanged()
+{
+    // encrypt the note text
+    currentNote.setNoteText(ui->encryptedNoteTextEdit->toPlainText());
+    QString noteText = currentNote.encryptNoteText();
+
+    // put it into the note textedit to be stored
+    ui->noteTextEdit->setText(noteText);
 }

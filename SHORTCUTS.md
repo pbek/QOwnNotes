@@ -8,6 +8,7 @@ Important Shortcuts
 - `Ctrl + N` creates a new note with the current date and time in the name
 - `Ctrl + Shift + F` lets you search for notes (in the name of the note and its content)
 - `Ctrl + E` toggles between the edit and the markdown view mode
+- `Ctrl + Shift + E` edits an encrypted note
 - `Ctrl + R` removes the current note
 - `Ctrl + Shift + U` checks for updates
 - `Ctrl + Shift + T` opens the todo list
@@ -45,6 +46,7 @@ Important Shortcuts
 - `Cmd + N` creates a new note with the current date and time in the name
 - `Cmd + Shift + F` lets you search for notes (in the name of the note and its content)
 - `Cmd + E` toggles between the edit and the markdown view mode
+- `Cmd + Shift + E` edits an encrypted note
 - `Cmd + R` removes the current note
 - `Cmd + Shift + U` checks for updates
 - `Cmd + Shift + T` opens the todo list

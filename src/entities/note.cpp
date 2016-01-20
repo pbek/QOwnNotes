@@ -698,9 +698,9 @@ qint64 Note::qint64Hash(const QString & str) {
 }
 
 /**
- * Encrypts the note text with a password
+ * Encrypts the note text with the note's crypto key
  */
-QString Note::encryptNote(QString password) {
+QString Note::encryptNoteText() {
     // split the text into a string list
     QStringList noteTextLines = this->noteText.split(
             QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"));
@@ -720,9 +720,6 @@ QString Note::encryptNote(QString password) {
 
     // join the remaining lines
     QString text = noteTextLines.join("\n");
-
-    // generate a crypto key from the password
-    cryptoKey = qint64Hash(password);
 
     // encrypt the text
     SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
