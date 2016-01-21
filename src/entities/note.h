@@ -105,6 +105,8 @@ public:
 
     bool canDecryptNoteText();
 
+    static bool expireCryptoKeys();
+
 private:
     int id;
     QString name;

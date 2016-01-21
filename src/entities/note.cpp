@@ -240,7 +240,8 @@ QList<Note> Note::search(QString text) {
 
     QList<Note> noteList;
 
-    query.prepare("SELECT * FROM note WHERE note_text LIKE :text ORDER BY file_last_modified DESC");
+    query.prepare("SELECT * FROM note WHERE note_text LIKE :text "
+                          "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
@@ -262,7 +263,8 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInName) {
     QList<QString> nameList;
     QString searchField = searchInName ? "name" : "note_text";
 
-    query.prepare("SELECT name FROM note WHERE " + searchField + " LIKE :text ORDER BY file_last_modified DESC");
+    query.prepare("SELECT name FROM note WHERE " + searchField + " LIKE :text "
+                  "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
@@ -285,8 +287,7 @@ QStringList Note::fetchNoteNames() {
     query.prepare("SELECT name FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    }
-    else {
+    } else {
         for (int r = 0; query.next(); r++) {
             list.append(query.value("name").toString());
         }
@@ -301,7 +302,8 @@ QStringList Note::fetchNoteFileNames() {
 
     QStringList list;
 
-    query.prepare("SELECT file_name FROM note ORDER BY file_last_modified DESC");
+    query.prepare(
+            "SELECT file_name FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -839,6 +841,32 @@ QString Note::getDecryptedNoteText() {
     // replace the encrypted text with the decrypted text
     noteText.replace(re, decryptedNoteText);
     return noteText;
+}
+
+
+/**
+ * Expire crypto keys in the database after 10min
+ */
+bool Note::expireCryptoKeys() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    // 10min ago
+    QDateTime expiryDate = QDateTime::currentDateTime();
+    expiryDate.addSecs(-600);
+
+    // reset expired crypto keys
+    query.prepare("UPDATE note SET crypto_key = 0 WHERE "
+                          "modified < :expiryDate AND crypto_key != 0");
+    query.bindValue(":expiryDate", expiryDate);
+
+    // on error
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    return true;
 }
 
 QDebug operator<<(QDebug dbg, const Note &note) {

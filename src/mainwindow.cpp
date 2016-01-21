@@ -721,10 +721,12 @@ void MainWindow::storeUpdatedNotesToDisk() {
 }
 
 /**
- * @brief Shows alerts for calendar items with an alarm date in the current minute
+ * Shows alerts for calendar items with an alarm date in the current minute
+ * Also checks for expired note crypto keys
  */
 void MainWindow::checkTodoReminders() {
     CalendarItem::alertTodoReminders();
+    Note::expireCryptoKeys();
 }
 
 void MainWindow::waitMsecs(int msecs) {

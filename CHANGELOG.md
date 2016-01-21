@@ -6,6 +6,8 @@
     - **please decrypt your notes from v0.80 before upgrading to v0.81 or you 
     will not be able to decrypt them!**
 - fixed a problem with encrypting empty notes
+- crypto keys of encrypted notes will now expire after 10min, you will then 
+  have to enter the password again
 
 ## 0.80
 - the OSX build of QOwnNotes now uses Qt 5.5.1 to fix a few bugs
