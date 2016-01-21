@@ -534,8 +534,6 @@ void OwnCloudService::loadVersions( QString notesPath, QString fileName, MainWin
     q.addQueryItem( "file_name", serverNotesPath + fileName );
     url.setQuery( q );
 
-    // qDebug() << url;
-
     QNetworkRequest r(url);
     addAuthHeader(&r);
 

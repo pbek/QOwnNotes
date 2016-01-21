@@ -731,6 +731,12 @@ QString Note::encryptNoteText() {
     // join the remaining lines
     QString text = noteTextLines.join("\n");
 
+    // empty notes will be detected as "can't be decrypted",
+    // so we will add a space
+    if (text.isEmpty()) {
+        text = " ";
+    }
+
     // encrypt the text
     SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
     QString encryptedText = crypto->encryptToString(text);
