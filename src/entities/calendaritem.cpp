@@ -165,7 +165,7 @@ CalendarItem CalendarItem::fetch(int id) {
     query.bindValue(":id", id);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     }
     else if (query.first()) {
         calendarItem.fillFromQuery(query);
@@ -184,7 +184,7 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar(QString url, QString calendar) 
     query.bindValue(":calendar", calendar);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     }
     else if (query.first()) {
         calendarItem.fillFromQuery(query);
@@ -202,7 +202,7 @@ CalendarItem CalendarItem::fetchByUid(QString uid) {
     query.bindValue(":uid", uid);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     }
     else if (query.first()) {
         calendarItem.fillFromQuery(query);
@@ -220,7 +220,7 @@ CalendarItem CalendarItem::fetchByUrl(QUrl url) {
     query.bindValue(":url", url);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     }
     else if (query.first()) {
         calendarItem.fillFromQuery(query);
@@ -237,7 +237,7 @@ bool CalendarItem::remove() {
     query.bindValue(":id", this->id);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     }
     else {
@@ -284,7 +284,7 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar(QString calendar) {
             "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, sort_priority DESC, modified DESC");
     query.bindValue(":calendar", calendar);
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             CalendarItem calendarItem = calendarItemFromQuery(query);
@@ -303,7 +303,7 @@ QList<CalendarItem> CalendarItem::fetchAll() {
 
     query.prepare("SELECT * FROM calendarItem");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             CalendarItem calendarItem = calendarItemFromQuery(query);
@@ -341,7 +341,7 @@ QList<CalendarItem> CalendarItem::fetchAllForReminderAlert() {
     query.bindValue(":alarm_data_to", dateTo);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             CalendarItem calendarItem = calendarItemFromQuery(query);
@@ -361,7 +361,7 @@ QList<QUrl> CalendarItem::fetchAllUrlsByCalendar(QString calendar) {
     query.bindValue(":calendar", calendar);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             urlList.append(query.value("url").toString());
@@ -385,7 +385,7 @@ QList<CalendarItem> CalendarItem::search(QString text) {
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             CalendarItem calendarItem = calendarItemFromQuery(query);
@@ -414,7 +414,7 @@ QList<QString> CalendarItem::searchAsUidList(QString text, QString calendar) {
     query.bindValue(":calendar", calendar);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             resultList.append(query.value("uid").toString());
@@ -489,7 +489,7 @@ bool CalendarItem::store() {
 
     // on error
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     }
         // on insert
@@ -625,7 +625,7 @@ bool CalendarItem::deleteAllByCalendar(QString calendar) {
     query.prepare("DELETE FROM calendarItem WHERE calendar = :calendar");
     query.bindValue(":calendar", calendar);
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
         return true;

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.81
+- fixed a problem where the password of an encrypted note was overwritten 
+  while editing the encrypted note
+
 ## 0.80
 - the OSX build of QOwnNotes now uses Qt 5.5.1 to fix a few bugs
 - fixed a few small issues in the todo list

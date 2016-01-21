@@ -75,7 +75,7 @@ Note Note::fetch(int id) {
     query.bindValue(":id", id);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
             note = noteFromQuery(query);
@@ -99,7 +99,7 @@ bool Note::fillByFileName(QString fileName) {
     query.bindValue(":file_name", fileName);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         if (query.first()) {
             this->fillFromQuery(query);
@@ -118,7 +118,7 @@ bool Note::remove(bool withFile) {
     query.bindValue(":id", this->id);
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
         if (withFile) {
@@ -244,7 +244,7 @@ QList<Note> Note::search(QString text) {
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             Note note = noteFromQuery(query);
@@ -266,7 +266,7 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInName) {
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             nameList.append(query.value("name").toString());
@@ -284,7 +284,7 @@ QStringList Note::fetchNoteNames() {
 
     query.prepare("SELECT name FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     }
     else {
         for (int r = 0; query.next(); r++) {
@@ -303,7 +303,7 @@ QStringList Note::fetchNoteFileNames() {
 
     query.prepare("SELECT file_name FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
             list.append(query.value("file_name").toString());
@@ -333,14 +333,24 @@ bool Note::store() {
 
     if (this->id > 0) {
         query.prepare("UPDATE note SET "
-                              "name = :name, file_name = :file_name, note_text = :note_text, has_dirty_data = :has_dirty_data, "
-                              "file_last_modified = :file_last_modified, file_created = :file_created, modified = :modified "
+                              "name = :name,"
+                              "file_name = :file_name,"
+                              "note_text = :note_text,"
+                              "has_dirty_data = :has_dirty_data, "
+                              "file_last_modified = :file_last_modified,"
+                              "file_created = :file_created,"
+                              "crypto_key = :crypto_key,"
+                              "modified = :modified "
                               "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare("INSERT INTO note"
-                              "( name, file_name, note_text, has_dirty_data, file_last_modified, file_created, modified ) "
-                              "VALUES ( :name, :file_name, :note_text, :has_dirty_data, :file_last_modified, :file_created, :modified )");
+                              "( name, file_name, note_text, has_dirty_data,"
+                              "file_last_modified, file_created, crypto_key,"
+                              "modified ) "
+                              "VALUES ( :name, :file_name, :note_text,"
+                              ":has_dirty_data, :file_last_modified,"
+                              ":file_created, :crypto_key, :modified )");
     }
 
     QDateTime modified = QDateTime::currentDateTime();
@@ -351,11 +361,12 @@ bool Note::store() {
     query.bindValue(":has_dirty_data", this->hasDirtyData ? 1 : 0);
     query.bindValue(":file_created", this->fileCreated);
     query.bindValue(":file_last_modified", this->fileLastModified);
+    query.bindValue(":crypto_key", this->cryptoKey);
     query.bindValue(":modified", modified);
 
     // on error
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else if (this->id == 0) {  // on insert
         this->id = query.lastInsertId().toInt();
@@ -366,7 +377,6 @@ bool Note::store() {
 }
 
 bool Note::storeNoteTextFileToDisk() {
-
     // checks if filename has to be changed (and change it if needed)
     this->handleNoteTextFileName();
 
@@ -376,12 +386,12 @@ bool Note::storeNoteTextFileToDisk() {
     qDebug() << "storing note file: " << this->fileName;
 
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-//        QMessageBox::critical( 0, "Can not store note!", "Can not store note <strong>" + this->name + "</strong><br /><br />" + file.errorString() );
-        qDebug() << file.errorString();
+        qCritical() << file.errorString();
         return false;
     }
 
-    // transform all types of newline to \n (maybe the ownCloud-sync works better then)
+    // transform all types of newline to \n
+    // (maybe the ownCloud-sync works better then)
     QString text = this->noteText;
     text.replace(QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"), "\n");
 
@@ -493,7 +503,7 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
 
     query.prepare("SELECT * FROM note WHERE has_dirty_data = 1");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return 0;
     } else {
         int count = 0;
@@ -554,7 +564,7 @@ bool Note::deleteAll() {
     // no truncate in sqlite
     query.prepare("DELETE FROM note");
     if (!query.exec()) {
-        qDebug() << __func__ << ": " << query.lastError();
+        qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
         return true;

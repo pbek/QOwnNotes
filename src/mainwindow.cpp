@@ -1113,6 +1113,8 @@ void MainWindow::setNoteTextEditMode(bool isInEditMode) {
  * Asks for the password if the note is encrypted and can't be decrypted
  */
 void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
+    currentNote.refetch();
+
     // check if the note is encrypted and can't be decrypted
     if (currentNote.hasEncryptedNoteText() &&
         !currentNote.canDecryptNoteText()) {
@@ -2081,6 +2083,8 @@ void MainWindow::on_action_Find_text_in_note_triggered() {
  */
 void MainWindow::on_action_Encrypt_note_triggered()
 {
+    currentNote.refetch();
+
     // return if there the note text is already encrypted
     if (currentNote.hasEncryptedNoteText()) {
         return;
@@ -2101,6 +2105,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
         // if password wasn't empty encrypt the note
         if (!password.isEmpty()) {
             currentNote.setCryptoPassword(password);
+            currentNote.store();
             QString noteText = currentNote.encryptNoteText();
             ui->noteTextEdit->setPlainText(noteText);
         }
@@ -2112,6 +2117,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
  */
 void MainWindow::updateEncryptNoteButtons()
 {
+    currentNote.refetch();
     bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
 
     ui->action_Encrypt_note->setEnabled(!hasEncryptedNoteText);
@@ -2124,6 +2130,7 @@ void MainWindow::updateEncryptNoteButtons()
  */
 void MainWindow::on_actionDecrypt_note_triggered()
 {
+    currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
     }
@@ -2154,6 +2161,7 @@ void MainWindow::on_actionDecrypt_note_triggered()
  */
 void MainWindow::on_actionEdit_encrypted_note_triggered()
 {
+    currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
     }
@@ -2177,10 +2185,14 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
  */
 void MainWindow::on_encryptedNoteTextEdit_textChanged()
 {
-    // encrypt the note text
-    currentNote.setNoteText(ui->encryptedNoteTextEdit->toPlainText());
-    QString noteText = currentNote.encryptNoteText();
+    askForEncryptedNotePasswordIfNeeded();
 
-    // put it into the note textedit to be stored
-    ui->noteTextEdit->setText(noteText);
+    if (currentNote.canDecryptNoteText()) {
+        // encrypt the note text
+        currentNote.setNoteText(ui->encryptedNoteTextEdit->toPlainText());
+        QString noteText = currentNote.encryptNoteText();
+
+        // put it into the note text edit to be stored
+        ui->noteTextEdit->setText(noteText);
+    }
 }
