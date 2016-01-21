@@ -3,6 +3,8 @@
 ## 0.81
 - fixed a problem where the password of an encrypted note was overwritten 
   while editing the encrypted note
+    - **please decrypt your notes from v0.80 before upgrading to v0.81 or you 
+    will not be able to decrypt them!**
 - fixed a problem with encrypting empty notes
 
 ## 0.80
