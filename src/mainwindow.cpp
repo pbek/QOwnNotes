@@ -394,7 +394,7 @@ void MainWindow::loadNoteDirectoryList() {
     // watch all the notes for changes
     Q_FOREACH(QString fileName, fileNameList) {
             this->noteDirectoryWatcher.addPath(
-                    Note::fullNoteFilePath(fileName));
+                    Note::getFullNoteFilePathForFile(fileName));
         }
 
     // sort alphabetically again in necessary
@@ -787,7 +787,7 @@ void MainWindow::buildNotesIndex() {
     // create all notes from the files
     Q_FOREACH(QString fileName, files) {
             // fetching the content of the file
-            QFile file(Note::fullNoteFilePath(fileName));
+            QFile file(Note::getFullNoteFilePathForFile(fileName));
             Note note;
             note.createFromFile(file);
         }
@@ -2197,4 +2197,11 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged()
         // put it into the note text edit to be stored
         ui->noteTextEdit->setText(noteText);
     }
+}
+
+void MainWindow::on_action_Open_note_in_external_editor_triggered()
+{
+    QUrl url = currentNote.fullNoteFileUrl();
+    qDebug() << __func__ << " - 'url': " << url;
+    QDesktopServices::openUrl(url);
 }

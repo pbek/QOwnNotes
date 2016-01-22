@@ -57,7 +57,7 @@ public:
 
     bool storeNoteTextFileToDisk();
 
-    static QString fullNoteFilePath(QString fileName);
+    static QString getFullNoteFilePathForFile(QString fileName);
 
     static int storeDirtyNotesToDisk(Note &currentNote);
 
@@ -106,6 +106,8 @@ public:
     bool canDecryptNoteText();
 
     static bool expireCryptoKeys();
+
+    QUrl fullNoteFileUrl();
 
 private:
     int id;

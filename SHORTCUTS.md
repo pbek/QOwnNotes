@@ -12,6 +12,7 @@ Important Shortcuts
 - `Ctrl + R` removes the current note
 - `Ctrl + Shift + U` checks for updates
 - `Ctrl + Shift + T` opens the todo list
+- `Ctrl + Shift + O` opens the current note in an external editor
 
 ### In the note list
 
@@ -50,6 +51,7 @@ Important Shortcuts
 - `Cmd + R` removes the current note
 - `Cmd + Shift + U` checks for updates
 - `Cmd + Shift + T` opens the todo list
+- `Cmd + Shift + O` opens the current note in an external editor
 
 ### In the note list
 

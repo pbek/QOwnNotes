@@ -138,7 +138,7 @@ bool Note::remove(bool withFile) {
 bool Note::copy(QString destinationPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
-        QFile file(fullNoteFilePath(this->fileName));
+        QFile file(getFullNoteFilePathForFile(this->fileName));
         QString destinationFileName = destinationPath + QDir::separator() + this->fileName;
 
         if (d.exists(destinationFileName)) {
@@ -382,7 +382,7 @@ bool Note::storeNoteTextFileToDisk() {
     // checks if filename has to be changed (and change it if needed)
     this->handleNoteTextFileName();
 
-    QFile file(fullNoteFilePath(this->fileName));
+    QFile file(getFullNoteFilePathForFile(this->fileName));
     bool fileExists = this->fileExists();
 
     qDebug() << "storing note file: " << this->fileName;
@@ -471,7 +471,7 @@ void Note::handleNoteTextFileName() {
 }
 
 bool Note::updateNoteTextFromDisk() {
-    QFile file(fullNoteFilePath(this->fileName));
+    QFile file(getFullNoteFilePathForFile(this->fileName));
 
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << file.errorString();
@@ -489,11 +489,18 @@ bool Note::updateNoteTextFromDisk() {
     return true;
 }
 
-QString Note::fullNoteFilePath(QString fileName) {
+QString Note::getFullNoteFilePathForFile(QString fileName) {
     QSettings settings;
     QString notesPath = settings.value("notesPath").toString();
 
     return notesPath + QDir::separator() + fileName;
+}
+
+/**
+ * Returns the full url for a note file
+ */
+QUrl Note::fullNoteFileUrl() {
+    return QUrl("file://" + getFullNoteFilePathForFile(this->fileName));
 }
 
 int Note::storeDirtyNotesToDisk(Note &currentNote) {
@@ -577,7 +584,7 @@ bool Note::deleteAll() {
 // checks if file of note exists in the filesystem
 //
 bool Note::fileExists() {
-    QFile file(fullNoteFilePath(this->fileName));
+    QFile file(getFullNoteFilePathForFile(this->fileName));
     return file.exists();
 }
 
@@ -601,7 +608,7 @@ bool Note::refetch() {
 //
 bool Note::removeNoteFile() {
     if (this->fileExists()) {
-        QFile file(fullNoteFilePath(this->fileName));
+        QFile file(getFullNoteFilePathForFile(this->fileName));
         qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();

@@ -149,6 +149,8 @@ private slots:
 
     void on_encryptedNoteTextEdit_textChanged();
 
+    void on_action_Open_note_in_external_editor_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

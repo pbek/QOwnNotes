@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.82
+- you are now able to open the current note in an external editor with `Ctrl + Shift + O`
+
 ## 0.81
 - fixed a problem where the password of an encrypted note was overwritten 
   while editing the encrypted note

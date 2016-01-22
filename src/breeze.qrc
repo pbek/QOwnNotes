@@ -44,5 +44,6 @@
         <file>images/breeze/document-decrypt.svg</file>
         <file>images/breeze/document-encrypted.svg</file>
         <file>images/breeze/document-edit-encrypt.svg</file>
+        <file>images/breeze/story-editor.svg</file>
     </qresource>
 </RCC>
