@@ -7,6 +7,7 @@
   decrypting a note
 - the password dialog will now ask you for your password a 2nd time when 
   encrypting a note
+- added more information to the debug output in the settings dialog
 
 ## 0.81
 - fixed a problem where the password of an encrypted note was overwritten 
