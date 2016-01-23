@@ -1150,6 +1150,14 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
                 currentNote.setCryptoPassword(password);
                 currentNote.store();
             }
+
+            // warn if password is incorrect
+            if (!currentNote.canDecryptNoteText()) {
+                QMessageBox::warning(
+                        this,
+                        "Note can't be decrypted!",
+                        "It seems that your password is not valid!");
+            }
         }
     }
 }
@@ -1254,6 +1262,7 @@ void MainWindow::removeSelectedNotes() {
              "&Remove", "&Cancel", QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
                 QString name = item->text();
@@ -2209,6 +2218,9 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged()
     }
 }
 
+/**
+ * Opens the current note in an enternal editor
+ */
 void MainWindow::on_action_Open_note_in_external_editor_triggered()
 {
     QUrl url = currentNote.fullNoteFileUrl();

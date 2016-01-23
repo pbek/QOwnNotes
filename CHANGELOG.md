@@ -3,6 +3,8 @@
 ## 0.82
 - you are now able to open the current note in an external editor with `Ctrl + Shift + O`
 - fixed a problem with editing encrypted notes while there are changes in the note directory
+- you will now get a warning if you enter a wrong password when you are 
+  decrypting a note
 
 ## 0.81
 - fixed a problem where the password of an encrypted note was overwritten 
