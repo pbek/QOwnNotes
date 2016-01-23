@@ -2116,7 +2116,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
             "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!";
-    PasswordDialog* dialog = new PasswordDialog(this, labelText);
+    PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
     int dialogResult = dialog->exec();
 
     // if user pressed ok take the password

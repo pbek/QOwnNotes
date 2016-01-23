@@ -1,22 +1,55 @@
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
 
-PasswordDialog::PasswordDialog(QWidget *parent, QString labelText) :
-    QDialog(parent),
-    ui(new Ui::PasswordDialog)
-{
+PasswordDialog::PasswordDialog(
+        QWidget *parent,
+        QString labelText,
+        bool doubleEnterPassword) :
+        QDialog(parent),
+        ui(new Ui::PasswordDialog) {
+    _doubleEnterPassword = doubleEnterPassword;
+
     ui->setupUi(this);
+
+    ui->passwordLineEdit2->setVisible(doubleEnterPassword);
+    ui->buttonBox->setEnabled(!doubleEnterPassword);
+    ui->errorLabel->setVisible(false);
+
     if (!labelText.isEmpty()) {
-        ui->label->setText(labelText);
+        ui->headlineLabel->setText(labelText);
     }
 }
 
-PasswordDialog::~PasswordDialog()
-{
+PasswordDialog::~PasswordDialog() {
     delete ui;
 }
 
-QString PasswordDialog::password()
-{
-    return ui->lineEdit->text();
+QString PasswordDialog::password() {
+    return ui->passwordLineEdit->text();
+}
+
+void PasswordDialog::on_passwordLineEdit_textChanged(const QString &arg1) {
+    Q_UNUSED(arg1);
+
+    if (_doubleEnterPassword) {
+        checkIfPasswordsAreEqual();
+    }
+}
+
+void PasswordDialog::on_passwordLineEdit2_textChanged(const QString &arg1) {
+    on_passwordLineEdit_textChanged(arg1);
+}
+
+/**
+ * @brief Checks if the two passwords are equal
+ * @return
+ */
+bool PasswordDialog::checkIfPasswordsAreEqual() {
+    bool equal = ui->passwordLineEdit->text() == ui->passwordLineEdit2->text();
+
+    ui->errorLabel->setVisible(!equal && !ui->passwordLineEdit2->text()
+            .isEmpty());
+    ui->buttonBox->setEnabled(equal);
+
+    return equal;
 }

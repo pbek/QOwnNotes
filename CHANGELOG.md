@@ -5,6 +5,8 @@
 - fixed a problem with editing encrypted notes while there are changes in the note directory
 - you will now get a warning if you enter a wrong password when you are 
   decrypting a note
+- the password dialog will now ask you for your password a 2nd time when 
+  encrypting a note
 
 ## 0.81
 - fixed a problem where the password of an encrypted note was overwritten 
