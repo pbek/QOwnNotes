@@ -568,6 +568,8 @@ void MainWindow::notesWereModified(const QString &str) {
                 return;
             }
 
+            qDebug() << "Current note was modified externally!";
+
             // if we don't want to get notifications at all
             // external modifications check if we really need one
             if (!this->notifyAllExternalModifications) {
@@ -583,8 +585,6 @@ void MainWindow::notesWereModified(const QString &str) {
                     return;
                 }
             }
-
-            qDebug() << "Current note was modified externally!";
 
             int result = openNoteDiffDialog(note);
             switch (result) {
@@ -781,6 +781,9 @@ void MainWindow::buildNotesIndex() {
         QTimer::singleShot(500, this, SLOT(jumpToWelcomeNote()));
     }
 
+    // get the current crypto key to set it again after all notes were read again
+    qint64 cryptoKey = currentNote.getCryptoKey();
+
     // delete all notes in the database first
     Note::deleteAll();
 
@@ -794,7 +797,14 @@ void MainWindow::buildNotesIndex() {
 
     // re-fetch current note (because all the IDs have changed after the
     // buildNotesIndex()
-    this->currentNote.refetch();
+    currentNote.refetch();
+
+    if (cryptoKey != 0)
+    {
+        // reset the old crypto key for the current note
+        currentNote.setCryptoKey(cryptoKey);
+        currentNote.store();
+    }
 }
 
 /**
@@ -909,11 +919,11 @@ void MainWindow::setCurrentNote(Note note,
         Q_UNUSED(blocker);
 
         this->setNoteTextFromNote(&note);
-    }
 
-    // hide the encrypted note text edit by default and show the regular one
-    ui->encryptedNoteTextEdit->hide();
-    ui->noteTextEdit->show();
+        // hide the encrypted note text edit by default and show the regular one
+        ui->encryptedNoteTextEdit->hide();
+        ui->noteTextEdit->show();
+    }
 
     updateEncryptNoteButtons();
 }
