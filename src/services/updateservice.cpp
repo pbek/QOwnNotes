@@ -40,14 +40,12 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     QUrl url("http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QString(PLATFORM) + ".json");
 
-    QString releaseString = QString(RELEASE);
+    QString releaseString = QSysInfo::prettyProductName() + " " +
+                            QSysInfo::buildCpuArchitecture();
 
-    if (!releaseString.isEmpty()) {
-        releaseString += ", ";
+    if (RELEASE != "") {
+        releaseString += ", " + QString(RELEASE);
     }
-
-    releaseString += QSysInfo::prettyProductName() + " " +
-                     QSysInfo::buildCpuArchitecture();
 
     // add the current architecture if it differs from the build architecture
     if (QSysInfo::buildCpuArchitecture() !=
