@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 0.84
+- now non Travis CI or AppVeyor builds have an update check again, but will open
+  the [QOwnNotes installation page](http://www.qownnotes.org/installation) 
+  instead instead downloading the app
+
 ## 0.83
 - switched two buttons in the menu bar
 - fixed a problem with updating and creating the todo list item database (for [Issue #35](https://github.com/pbek/QOwnNotes/issues/35))

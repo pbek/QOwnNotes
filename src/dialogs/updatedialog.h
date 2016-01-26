@@ -20,7 +20,7 @@ private slots:
     void dialogButtonClicked(QAbstractButton *button);
 private:
     Ui::UpdateDialog *ui;
-    QString *releaseUrl;
+    QString releaseUrl;
     QString releaseVersionString;
 
     enum ButtonRole {

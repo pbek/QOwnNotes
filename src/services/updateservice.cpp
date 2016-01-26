@@ -62,16 +62,13 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     q.addQueryItem("debug", QString::number(isDebug));
     url.setQuery(q);
 
-    qDebug() << __func__ << " - 'url': " << url;
-
     manager->get(QNetworkRequest(url));
 }
 
 void UpdateService::onResult(QNetworkReply *reply) {
-    // abort if reply was null (on OSX after waking from sleep),
-    // there was an error or the release string was set
-    if ((reply == NULL) || (reply->error() != QNetworkReply::NoError) ||
-        !QString(RELEASE).isEmpty()) {
+    // abort if reply was null (on OSX after waking from sleep)
+    // or there was an error
+    if ((reply == NULL) || (reply->error() != QNetworkReply::NoError)) {
         return;
     }
 
