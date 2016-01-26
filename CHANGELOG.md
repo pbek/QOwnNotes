@@ -2,7 +2,7 @@
 
 ## 0.83
 - switched two buttons in the menu bar
-- fixed a problem with updating and creating the todo list item database  
+- fixed a problem with updating and creating the todo list item database (for [Issue #35](https://github.com/pbek/QOwnNotes/issues/35))
 
 ## 0.82
 - you are now able to open the current note in an external editor with `Ctrl + Shift + O`
