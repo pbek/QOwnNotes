@@ -118,7 +118,7 @@ bool DatabaseService::setupTables() {
 
         queryDisk.exec("CREATE UNIQUE INDEX idxUrl ON calendarItem( url );");
         queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
-        queryDisk.exec("ALTER TABLE calendarItem"
+        queryDisk.exec("ALTER TABLE calendarItem "
                                "ADD sort_priority INTEGER DEFAULT 0;");
 
         version = 1;
@@ -138,7 +138,7 @@ bool DatabaseService::setAppData(QString name, QString value) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
-    query.prepare("REPLACE INTO appData ( name, value )"
+    query.prepare("REPLACE INTO appData ( name, value ) "
                           "VALUES ( :name, :value )");
     query.bindValue(":name", name);
     query.bindValue(":value", value);

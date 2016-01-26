@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.83
+- switched two buttons in the menu bar
+- fixed a problem with updating and creating the todo list item database  
+
 ## 0.82
 - you are now able to open the current note in an external editor with `Ctrl + Shift + O`
 - fixed a problem with editing encrypted notes while there are changes in the note directory
