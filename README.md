@@ -33,7 +33,7 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 - [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8)
 
 ## Screenshot
-![Screenhot](screenshot.png)
+![Screenhot](screenshots/screenshot.png)
 
 You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
 
