@@ -43,7 +43,7 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     QString releaseString = QSysInfo::prettyProductName() + " " +
                             QSysInfo::buildCpuArchitecture();
 
-    if (RELEASE != "") {
+    if (!QString(RELEASE).isEmpty()) {
         releaseString += ", " + QString(RELEASE);
     }
 
