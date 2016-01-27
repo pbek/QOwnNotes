@@ -111,8 +111,9 @@ cd $obsRepoPath
 osc add $archiveFile
 #osc add qownnotes.bin
 #osc add qownnotes.spec
+osc add PKGBUILD
 
-echo "Commiting changes..."
+echo "Committing changes..."
 
 # commit changes
 osc commit -m "$changelogText"
