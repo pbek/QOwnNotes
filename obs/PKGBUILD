@@ -1,0 +1,27 @@
+# Maintainer: Patrizio Bekerle <patrizio at bekerle dot com>
+
+pkgname=qownnotes
+pkgver=VERSION-STRING
+pkgrel=1
+pkgdesc="Note-taking app and todo list manager with ownCloud integration"
+arch=('i686' 'x86_64')
+url='http://www.qownnotes.org/'
+license=('GPL2')
+groups=('qownnotes')
+depends=('qt5-base' 'qt5-svg' 'qt5-script')
+makedepends=('git' 'qmake' 'qt5-tools')
+provides=("${pkgname%-*}")
+conflicts=("${pkgname%-*}")
+source=("${pkgname}-${pkgver}.tar.xz")
+md5sums=('SKIP')
+
+build() {
+	cd "${pkgname}-${pkgver}/src"
+	qmake
+	make
+}
+
+package() {
+	cd "${pkgname}-${pkgver}/src"
+	make DESTDIR="$pkgdir" install
+}

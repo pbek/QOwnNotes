@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.78.1
+QOWNNOTES_VERSION=0.84.1
 
 BRANCH=develop
 #BRANCH=master
@@ -56,6 +56,9 @@ echo "#define RELEASE \"openSUSE Build Service\"" > src/release.h
 # replace version in spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec
 
+# replace version in PKGBUILD file
+sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/PKGBUILD
+
 changelogText="Released $QOWNNOTES_VERSION"
 
 echo "Using version $QOWNNOTES_VERSION..."
@@ -100,6 +103,7 @@ cd ../..
 mv $archiveFile $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.bin $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
+cp $qownnotesSrcDir/obs/PKGBUILD $obsRepoPath
 
 cd $obsRepoPath
 

@@ -33,7 +33,7 @@ Requires:       libQt5Svg5
 
 License:        GPL-2.0
 Group:          System/GUI/Productivity
-Summary:        A note-taking app and todo list manager with ownCloud integration
+Summary:        Note-taking app and todo list manager with ownCloud integration
 Url:            http://www.qownnotes.org/
 Version:        VERSION-STRING
 Release:        1
