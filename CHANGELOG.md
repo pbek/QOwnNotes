@@ -1,9 +1,11 @@
 # QOwnNotes Changelog
 
 ## 0.84
-- now non Travis CI or AppVeyor builds have an update check again, but will open
-  the [QOwnNotes installation page](http://www.qownnotes.org/installation) 
-  instead instead downloading the app
+- now non Travis CI or AppVeyor builds can perform an update check again, but 
+  will open the [QOwnNotes installation page](http://www.qownnotes.org/installation) 
+  instead of downloading the app
+- there is a new software repository for **Arch Linux**
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
 
 ## 0.83
 - switched two buttons in the menu bar
