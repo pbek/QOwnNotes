@@ -1,4 +1,5 @@
 # Maintainer: Patrizio Bekerle <patrizio at bekerle dot com>
+# see: https://wiki.archlinux.org/index.php/PKGBUILD
 
 pkgname=qownnotes
 pkgver=VERSION-STRING

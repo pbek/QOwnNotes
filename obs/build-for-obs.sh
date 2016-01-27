@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-QOWNNOTES_VERSION=0.84.1
+#QOWNNOTES_VERSION=0.84.4
 
 BRANCH=develop
 #BRANCH=master
@@ -111,7 +111,7 @@ cd $obsRepoPath
 osc add $archiveFile
 #osc add qownnotes.bin
 #osc add qownnotes.spec
-osc add PKGBUILD
+#osc add PKGBUILD
 
 echo "Committing changes..."
 
