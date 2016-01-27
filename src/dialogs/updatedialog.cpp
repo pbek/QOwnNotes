@@ -64,7 +64,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
         {
             // if the release was build by the CI systems download the new
             // release
-            if ((RELEASE == "Travis CI") || (RELEASE == "AppVeyor")) {
+            if ((QString(RELEASE) == "Travis CI") ||
+                    (QString(RELEASE) == "AppVeyor")) {
                 // download the new release
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
             } else {
