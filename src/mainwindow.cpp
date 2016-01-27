@@ -175,10 +175,10 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     // disable the update check menu entry if the release string was set
-    if (!QString(RELEASE).isEmpty()) {
-        ui->actionCheck_for_updates->setVisible(false);
-        ui->actionCheck_for_updates->setEnabled(false);
-    }
+//    if (!QString(RELEASE).isEmpty()) {
+//        ui->actionCheck_for_updates->setVisible(false);
+//        ui->actionCheck_for_updates->setEnabled(false);
+//    }
 
     // let the note folder be changed with the recent note folder combo box
     QObject::connect(
