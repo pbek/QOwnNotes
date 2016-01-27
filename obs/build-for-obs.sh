@@ -50,14 +50,17 @@ else
     echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
 fi
 
-# set release string to disable the update check
+# set the release string
 echo "#define RELEASE \"openSUSE Build Service\"" > src/release.h
 
-# replace version in spec file
+# replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec
 
-# replace version in PKGBUILD file
+# replace the version in the PKGBUILD file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/PKGBUILD
+
+# replace the version in the dsc file
+sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.dsc
 
 changelogText="Released $QOWNNOTES_VERSION"
 
@@ -80,11 +83,14 @@ echo "- $changelogText" >> $changelogPath
 cat $changelogPath
 
 archiveFile="$qownnotesSrcDir.tar.xz"
-
-echo "Creating archive $archiveFile..."
+archiveFileDeb="$qownnotesSrcDir.orig.tar.gz"
 
 # archive the source code
+echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
+
+echo "Creating archive $archiveFileDeb..."
+tar -czf $archiveFileDeb $qownnotesSrcDir
 
 echo "Checking out OBS repository..."
 
@@ -97,21 +103,36 @@ obsRepoPath="home:pbek:QOwnNotes/desktop"
 echo "Removing old archives..."
 cd $obsRepoPath
 osc rm *.xz
+osc rm *.orig.tar.gz
 cd ../..
 
 # copying new files to repository
 mv $archiveFile $obsRepoPath
+mv $archiveFileDeb $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.bin $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
 cp $qownnotesSrcDir/obs/PKGBUILD $obsRepoPath
+cp $qownnotesSrcDir/src/debian/changelog $obsRepoPath/debian.changelog
+cp $qownnotesSrcDir/src/debian/control $obsRepoPath/debian.control
+cp $qownnotesSrcDir/src/debian/rules $obsRepoPath/debian.rules
+cp $qownnotesSrcDir/src/debian/copyright $obsRepoPath/debian.copyright
+cp $qownnotesSrcDir/src/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
+cp $qownnotesSrcDir/obs/qownnotes.dsc $obsRepoPath
 
 cd $obsRepoPath
 
 # add all new files
 osc add $archiveFile
+osc add $archiveFileDeb
 #osc add qownnotes.bin
 #osc add qownnotes.spec
 #osc add PKGBUILD
+#osc add debian.changelog
+#osc add debian.control
+#osc add debian.rules
+#osc add debian.copyright
+#osc add debian.qownnotes.install
+#osc add qownnotes.dsc
 
 echo "Committing changes..."
 
