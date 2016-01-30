@@ -8,7 +8,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.84.5
+#QOWNNOTES_VERSION=0.84.1
 
 BRANCH=develop
 #BRANCH=master
@@ -58,10 +58,10 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 
 
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION" *
-#git push
+git commit -m "releasing version $QOWNNOTES_VERSION" PKGBUILD .SRCINFO
+git push
 
 # remove everything after we are done
-#if [ -d $PROJECT_PATH ]; then
-#    rm -rf $PROJECT_PATH
-#fi
+if [ -d $PROJECT_PATH ]; then
+    rm -rf $PROJECT_PATH
+fi
