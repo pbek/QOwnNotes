@@ -117,6 +117,7 @@ cp $qownnotesSrcDir/src/debian/changelog $obsRepoPath/debian.changelog
 cp $qownnotesSrcDir/src/debian/control $obsRepoPath/debian.control
 cp $qownnotesSrcDir/src/debian/copyright $obsRepoPath/debian.copyright
 cp $qownnotesSrcDir/src/debian/compat $obsRepoPath/debian.compat
+#cp $qownnotesSrcDir/src/debian/rules $obsRepoPath/debian.rules
 cp $qownnotesSrcDir/src/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
 cp $qownnotesSrcDir/obs/qownnotes.dsc $obsRepoPath
 

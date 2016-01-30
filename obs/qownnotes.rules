@@ -28,22 +28,8 @@ include /usr/share/dpkg/default.mk
 #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
 export QT_SELECT=qt5
+export DEB_BUILDDIR='./src'
 
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/class/makefile.mk
-
-
-DEB_MAKE_INSTALL_TARGET = install INSTALL_ROOT=$(DEB_DESTDIR)
-DEB_MAKE_CLEAN_TARGET = distclean
-
-QMAKE ?= qmake
-
-common-configure-arch common-configure-indep:: common-configure-impl
-common-configure-impl:: $(DEB_BUILDDIR)/Makefile
-$(DEB_BUILDDIR)/Makefile:
-        cd $(DEB_BUILDDIR) && $(QMAKE)
-
-clean::
-        rm -f $(DEB_BUILDDIR)/Makefile $(DEB_BUILDDIR)/.qmake.internal.cache
-
-endif
+include /usr/share/cdbs/1/class/qmake.mk
