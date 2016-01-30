@@ -151,6 +151,8 @@ private slots:
 
     void on_action_Open_note_in_external_editor_triggered();
 
+    void on_action_Export_note_as_markdown_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

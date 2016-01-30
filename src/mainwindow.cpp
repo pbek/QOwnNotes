@@ -2227,3 +2227,44 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
     qDebug() << __func__ << " - 'url': " << url;
     QDesktopServices::openUrl(url);
 }
+
+/**
+ * Exports the current note as markdown file
+ */
+void MainWindow::on_action_Export_note_as_markdown_triggered()
+{
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setNameFilter("Markdown files (*.md)");
+    dialog.setWindowTitle("Export current note as Markdown file");
+    dialog.selectFile(currentNote.getName() + ".md");
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.count() > 0) {
+            QString fileName = fileNames.at(0);
+
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".md");
+            }
+
+            QFile file(fileName);
+
+            qDebug() << "exporting note file: " << fileName;
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                qCritical() << file.errorString();
+                return;
+            }
+
+            QTextStream out(&file);
+            out.setCodec("UTF-8");
+            out << ui->noteTextEdit->toPlainText();
+            file.flush();
+            file.close();
+        }
+    }
+}

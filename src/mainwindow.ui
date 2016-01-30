@@ -277,6 +277,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Export_note_as_PDF_text"/>
     <addaction name="action_Export_note_as_PDF_markdown"/>
+    <addaction name="action_Export_note_as_markdown"/>
     <addaction name="separator"/>
     <addaction name="action_Print_note_text"/>
     <addaction name="action_Print_note_markdown"/>
@@ -757,6 +758,15 @@ p, li { white-space: pre-wrap; }
     <string>Ctrl+Shift+O</string>
    </property>
   </action>
+  <action name="action_Export_note_as_markdown">
+   <property name="icon">
+    <iconset resource="breeze.qrc">
+     <normaloff>:/images/breeze/text-x-markdown.svg</normaloff>:/images/breeze/text-x-markdown.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Export note as markdown file</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -768,8 +778,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="breeze.qrc"/>
-  <include location="adwaita.qrc"/>
   <include location="images.qrc"/>
+  <include location="adwaita.qrc"/>
  </resources>
  <connections/>
 </ui>
