@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-# 0.85
+## 0.85
 - you can now export the current note as markdown file
 - beside the regular QOwnNotes software repository for Arch Linux there now 
   also is an official package on the **Arch User Repository** called 
