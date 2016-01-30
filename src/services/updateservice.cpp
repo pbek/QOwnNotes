@@ -40,23 +40,13 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     QUrl url("http://www.qownnotes.org/api/v1/last_release/QOwnNotes/" +
              QString(PLATFORM) + ".json");
 
-    QString releaseString = QSysInfo::prettyProductName() + " " +
-                            QSysInfo::buildCpuArchitecture();
-
-    if (!QString(RELEASE).isEmpty()) {
-        releaseString += ", " + QString(RELEASE);
-    }
-
-    // add the current architecture if it differs from the build architecture
-    if (QSysInfo::buildCpuArchitecture() !=
-            QSysInfo::currentCpuArchitecture()) {
-        releaseString += " (" + QSysInfo::currentCpuArchitecture() + ")";
-    }
-
     QUrlQuery q;
     q.addQueryItem("b", QString::number(BUILD));
     q.addQueryItem("v", QString(VERSION));
-    q.addQueryItem("r", releaseString);
+    q.addQueryItem("r", QString(RELEASE) + " (" +
+            QSysInfo::buildCpuArchitecture() + ")");
+    q.addQueryItem("o", QSysInfo::prettyProductName() + " (" +
+            QSysInfo::currentCpuArchitecture() + ")");
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
