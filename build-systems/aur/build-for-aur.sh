@@ -35,29 +35,15 @@ git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes-pbek.git aur
 git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
-# checkout submodules
-git submodule update --init
-
-# remove the huge .git folder
-rm -Rf .git
+gitCommitHash=`git rev-parse HEAD`
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
-else
-    # set new version if we want to override it
-    echo "#define VERSION \"$QOWNNOTES_VERSION\"" > src/version.h
 fi
 
 # set the release string
 echo "#define RELEASE \"AUR\"" > src/release.h
-
-archiveFile="qownnotes.tar.bz2"
-
-cd ..
-echo "Creating archive $archiveFile..."
-# archive the source code
-tar -cjf aur/$archiveFile QOwnNotes
 
 cd aur
 cp ../QOwnNotes/build-systems/aur/PKGBUILD .
@@ -66,21 +52,16 @@ cp ../QOwnNotes/build-systems/aur/.SRCINFO .
 # replace the version in the PKGBUILD file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 
+# replace the commit hash in the PKGBUILD file
+sed -i "s/COMMIT-HASH/$$gitCommitHash/g" PKGBUILD
+
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 
-# get the archive checksum
-archiveChecksum=`md5sum $archiveFile | grep -om1 '^[0-9a-f]*'`
-echo "Got archive checksum $archiveChecksum"
-
-# replace the package checksum in the PKGBUILD file
-sed -i "s/PACKAGE-MD5-SUM/$archiveChecksum/g" PKGBUILD
-
-git add $archiveFile
 
 echo "Committing changes..."
 git commit -m "releasing version $QOWNNOTES_VERSION"
-git push
+#git push
 
 # remove everything after we are done
 #if [ -d $PROJECT_PATH ]; then

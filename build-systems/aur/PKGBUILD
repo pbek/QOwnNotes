@@ -2,6 +2,7 @@
 
 pkgname=qownnotes-pbek
 pkgver=VERSION-STRING
+tag="COMMIT-HASH"
 pkgrel=1
 pkgdesc="Open source notepad and todo list manager with ownCloud integration"
 arch=('i686' 'x86_64')
@@ -12,17 +13,23 @@ depends=('qt5-base' 'qt5-svg' 'qt5-script')
 makedepends=('qt5-tools')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}")
-source=("qownnotes.tar.bz2")
-md5sums=('PACKAGE-MD5-SUM')
+source=(""git://github.com/pbek/QOwnNotes.git#tag=$tag")
+md5sums=('SKIP')
 
 build() {
-    cd "${pkgname}-${pkgver}/src"
+    cd "${srcdir}/${pkgname}"
+    git submodule update --init
+    cd src
+
+    echo "#define VERSION \"${pkgver}\"" > version.h
+    echo "#define RELEASE \"AUR\"" > release.h
+
     qmake
     make
 }
 
 package() {
-    cd "${pkgname}-${pkgver}/src"
+    cd "${srcdir}/${pkgname}/src"
 
     install -D -m 0755 QOwnNotes $pkgdir/usr/bin/QOwnNotes
     install -D -m 0644 QOwnNotes.desktop $pkgdir/usr/share/applications/QOwnNotes.desktop
