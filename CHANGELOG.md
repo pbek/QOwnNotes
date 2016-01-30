@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+# 0.85
+- Beside the regular QOwnNotes software repository for Arch Linux there now 
+  also is an official package on the **Arch User Repository** called 
+ `qownnotes-pbek`.
+
 ## 0.84
 - now non Travis CI or AppVeyor builds can perform an update check again, but 
   will open the [QOwnNotes installation page](http://www.qownnotes.org/installation) 
