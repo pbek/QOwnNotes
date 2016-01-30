@@ -11,6 +11,6 @@ pkgbase = qownnotes-pbek
 	depends = qt5-base
 	depends = qt5-svg
 	depends = qt5-script
-	source = qownnotes.tar.bz2
+	source = https://github.com/pbek/QOwnNotes.git
 
 pkgname = qownnotes-pbek

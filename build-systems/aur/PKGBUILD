@@ -13,7 +13,7 @@ depends=('qt5-base' 'qt5-svg' 'qt5-script')
 makedepends=('qt5-tools')
 provides=("${pkgname%-*}")
 conflicts=("${pkgname%-*}")
-source=(""git://github.com/pbek/QOwnNotes.git#tag=$tag")
+source=("git://github.com/pbek/QOwnNotes.git#tag=$tag")
 md5sums=('SKIP')
 
 build() {

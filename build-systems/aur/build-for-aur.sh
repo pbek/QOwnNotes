@@ -36,16 +36,14 @@ git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 gitCommitHash=`git rev-parse HEAD`
+echo "Current commit: $gitCommitHash"
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-# set the release string
-echo "#define RELEASE \"AUR\"" > src/release.h
-
-cd aur
+cd ../aur
 cp ../QOwnNotes/build-systems/aur/PKGBUILD .
 cp ../QOwnNotes/build-systems/aur/.SRCINFO .
 
@@ -53,14 +51,14 @@ cp ../QOwnNotes/build-systems/aur/.SRCINFO .
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 
 # replace the commit hash in the PKGBUILD file
-sed -i "s/COMMIT-HASH/$$gitCommitHash/g" PKGBUILD
+sed -i "s/COMMIT-HASH/$gitCommitHash/g" PKGBUILD
 
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 
 
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION"
+git commit -m "releasing version $QOWNNOTES_VERSION" *
 #git push
 
 # remove everything after we are done
