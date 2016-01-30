@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 # 0.85
-- you can now the current note as markdown file
+- you can now export the current note as markdown file
 - beside the regular QOwnNotes software repository for Arch Linux there now 
   also is an official package on the **Arch User Repository** called 
- `qownnotes-pbek`.
+ `qownnotes-pbek`
 
 ## 0.84
 - now non Travis CI or AppVeyor builds can perform an update check again, but 
