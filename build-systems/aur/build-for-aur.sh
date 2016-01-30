@@ -52,24 +52,35 @@ fi
 # set the release string
 echo "#define RELEASE \"AUR\"" > src/release.h
 
+archiveFile="qownnotes.tar.bz2"
+
 cd ..
-echo "Creating archive..."
+echo "Creating archive $archiveFile..."
 # archive the source code
-tar -cjf aur/qownnotes.tar.bz2 QOwnNotes
+tar -cjf aur/$archiveFile QOwnNotes
 
 cd aur
-cp ../QOwnNotes/building/aur/PKGBUILD .
-cp ../QOwnNotes/building/aur/.SRCINFO .
+cp ../QOwnNotes/build-systems/aur/PKGBUILD .
+cp ../QOwnNotes/build-systems/aur/.SRCINFO .
 
 # replace the version in the PKGBUILD file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 
-# replace the version in the dsc file
-sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" SRCINFO
+# replace the version in the .SRCINFO file
+sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
+
+# get the archive checksum
+archiveChecksum=`md5sum $archiveFile | grep -om1 '^[0-9a-f]*'`
+echo "Got archive checksum $archiveChecksum"
+
+# replace the package checksum in the PKGBUILD file
+sed -i "s/PACKAGE-MD5-SUM/$archiveChecksum/g" PKGBUILD
+
+git add $archiveFile
 
 echo "Committing changes..."
 git commit -m "releasing version $QOWNNOTES_VERSION"
-#git push
+git push
 
 # remove everything after we are done
 #if [ -d $PROJECT_PATH ]; then

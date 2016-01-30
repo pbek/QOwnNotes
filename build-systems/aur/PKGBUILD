@@ -16,13 +16,13 @@ source=("qownnotes.tar.bz2")
 md5sums=('PACKAGE-MD5-SUM')
 
 build() {
-	cd "${pkgname}-${pkgver}/src"
-	qmake
-	make
+    cd "${pkgname}-${pkgver}/src"
+    qmake
+    make
 }
 
 package() {
-	cd "${pkgname}-${pkgver}/src"
+    cd "${pkgname}-${pkgver}/src"
 
     install -D -m 0755 QOwnNotes $pkgdir/usr/bin/QOwnNotes
     install -D -m 0644 QOwnNotes.desktop $pkgdir/usr/share/applications/QOwnNotes.desktop
