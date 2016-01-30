@@ -1,0 +1,16 @@
+pkgbase = qownnotes-pbek
+	pkgdesc = Open source notepad and todo list manager with ownCloud integration
+	pkgver = VERSION-STRING
+	pkgrel = 1
+	url = http://www.qownnotes.org/
+	arch = i686
+	arch = x86_64
+	license = GPL2
+	makedepends = git
+	depends = gcc
+	depends = qt5-base
+	depends = qt5-svg
+	depends = qt5-script
+	source = qownnotes.tar.bz2
+
+pkgname = qownnotes-pbek
