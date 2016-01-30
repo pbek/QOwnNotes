@@ -201,12 +201,15 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Build number",
                                           QString::number(BUILD));
     output += prepareDebugInformationLine("Platform", QString(PLATFORM));
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     output += prepareDebugInformationLine("Operating System",
                                           QSysInfo::prettyProductName());
     output += prepareDebugInformationLine("Build architecture",
                                           QSysInfo::buildCpuArchitecture());
     output += prepareDebugInformationLine("Current architecture",
                                           QSysInfo::currentCpuArchitecture());
+#endif
     output += prepareDebugInformationLine("Release", QString(RELEASE));
     output += prepareDebugInformationLine("Qt Version", QT_VERSION_STR);
 

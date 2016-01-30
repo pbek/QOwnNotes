@@ -43,13 +43,19 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     QUrlQuery q;
     q.addQueryItem("b", QString::number(BUILD));
     q.addQueryItem("v", QString(VERSION));
-    q.addQueryItem("r", QString(RELEASE) + " (" +
-            QSysInfo::buildCpuArchitecture() + ")");
-    q.addQueryItem("o", QSysInfo::prettyProductName() + " (" +
-            QSysInfo::currentCpuArchitecture() + ")");
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    q.addQueryItem("r", QString(RELEASE) + " (" +
+                        QSysInfo::buildCpuArchitecture() + ")");
+    q.addQueryItem("o", QSysInfo::prettyProductName() + " (" +
+                        QSysInfo::currentCpuArchitecture() + ")");
+#else
+    q.addQueryItem("r", QString(RELEASE) );
+#endif
+
     url.setQuery(q);
 
     manager->get(QNetworkRequest(url));
