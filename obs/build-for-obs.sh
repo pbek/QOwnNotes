@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.84.4
+#QOWNNOTES_VERSION=0.84.5
 
 BRANCH=develop
 #BRANCH=master
@@ -36,8 +36,7 @@ git clone --depth=50 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 # checkout submodules
-git submodule init
-git submodule update
+git submodule update --init
 
 # remove huge .git folder
 rm -Rf .git
@@ -89,8 +88,8 @@ archiveFileDeb="$qownnotesSrcDir.orig.tar.gz"
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
-echo "Creating archive $archiveFileDeb..."
-tar -czf $archiveFileDeb $qownnotesSrcDir
+#echo "Creating archive $archiveFileDeb..."
+#tar -czf $archiveFileDeb $qownnotesSrcDir
 
 echo "Checking out OBS repository..."
 
@@ -103,12 +102,13 @@ obsRepoPath="home:pbek:QOwnNotes/desktop"
 echo "Removing old archives..."
 cd $obsRepoPath
 osc rm *.xz
-osc rm *.orig.tar.gz
+osc rm *.bz2
+osc rm *.tar.gz
 cd ../..
 
 # copying new files to repository
 mv $archiveFile $obsRepoPath
-mv $archiveFileDeb $obsRepoPath
+#mv $archiveFileDeb $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.bin $obsRepoPath
 cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
 cp $qownnotesSrcDir/obs/PKGBUILD $obsRepoPath
@@ -116,6 +116,7 @@ cp $qownnotesSrcDir/src/debian/changelog $obsRepoPath/debian.changelog
 cp $qownnotesSrcDir/src/debian/control $obsRepoPath/debian.control
 cp $qownnotesSrcDir/src/debian/rules $obsRepoPath/debian.rules
 cp $qownnotesSrcDir/src/debian/copyright $obsRepoPath/debian.copyright
+cp $qownnotesSrcDir/src/debian/compat $obsRepoPath/debian.compat
 cp $qownnotesSrcDir/src/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
 cp $qownnotesSrcDir/obs/qownnotes.dsc $obsRepoPath
 
@@ -123,7 +124,7 @@ cd $obsRepoPath
 
 # add all new files
 osc add $archiveFile
-osc add $archiveFileDeb
+#osc add $archiveFileDeb
 #osc add qownnotes.bin
 #osc add qownnotes.spec
 #osc add PKGBUILD
@@ -131,6 +132,7 @@ osc add $archiveFileDeb
 #osc add debian.control
 #osc add debian.rules
 #osc add debian.copyright
+#osc add debian.compat
 #osc add debian.qownnotes.install
 #osc add qownnotes.dsc
 

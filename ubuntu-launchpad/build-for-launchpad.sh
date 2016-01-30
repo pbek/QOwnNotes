@@ -50,8 +50,7 @@ git clone --depth=50 git@github.com:pbek/QOwnNotes.git $PROJECT_PATH -b $BRANCH
 cd $PROJECT_PATH
 
 # checkout submodules
-git submodule init
-git submodule update
+git submodule update --init
 
 if [ -z $QOWNNOTES_VERSION ]; then
     # get version from version.h

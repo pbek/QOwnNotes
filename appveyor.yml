@@ -10,8 +10,7 @@ install:
 
 before_build:
   # getting submodules
-  - git submodule init
-  - git submodule update
+  - git submodule update --init
 
 build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
