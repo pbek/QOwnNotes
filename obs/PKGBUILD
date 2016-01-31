@@ -17,13 +17,13 @@ source=("${pkgname}-${pkgver}.tar.xz")
 md5sums=('SKIP')
 
 build() {
-	cd "${pkgname}-${pkgver}/src"
+	cd "${pkgname}-${pkgver}"
 	qmake
 	make
 }
 
 package() {
-	cd "${pkgname}-${pkgver}/src"
+	cd "${pkgname}-${pkgver}"
 
     install -D -m 0755 QOwnNotes $pkgdir/usr/bin/QOwnNotes
     install -D -m 0644 QOwnNotes.desktop $pkgdir/usr/share/applications/QOwnNotes.desktop
