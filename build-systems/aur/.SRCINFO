@@ -1,5 +1,5 @@
 pkgbase = qownnotes-pbek
-	pkgdesc = Open source notepad and todo list manager with ownCloud integration
+	pkgdesc = QOwnNotes is a open source notepad and todo list manager with markdown support and ownCloud integration. This package is the "official" release of QOwnNotes on AUR.
 	pkgver = VERSION-STRING
 	pkgrel = 1
 	url = http://www.qownnotes.org/
