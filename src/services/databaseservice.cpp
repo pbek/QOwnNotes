@@ -17,8 +17,17 @@ DatabaseService::DatabaseService() {
  * @return
  */
 QString DatabaseService::getDiskDatabasePath() {
+
+    QStandardPaths::StandardLocation location;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    location = QStandardPaths::AppDataLocation;
+#else
+    location = QStandardPaths::GenericDataLocation;
+#endif
+
     // get the path to store the database
-    QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+    QString path = QStandardPaths::writableLocation(location);
     QDir dir;
 
     // create path if it doesn't exist yet
