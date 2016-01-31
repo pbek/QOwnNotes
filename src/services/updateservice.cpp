@@ -50,8 +50,13 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     q.addQueryItem("r", QString(RELEASE) + " (" +
                         QSysInfo::buildCpuArchitecture() + ")");
-    q.addQueryItem("o", QSysInfo::prettyProductName() + " (" +
-                        QSysInfo::currentCpuArchitecture() + ")");
+
+    QString operatingSystem = QSysInfo::prettyProductName();
+    if (!operatingSystem.contains(QSysInfo::currentCpuArchitecture())) {
+        operatingSystem += " (" + QSysInfo::currentCpuArchitecture() + ")";
+    }
+
+    q.addQueryItem("o", operatingSystem);
 #else
     q.addQueryItem("r", QString(RELEASE) );
 #endif
