@@ -1,3 +1,4 @@
+#include <services/analyticsservice.h>
 #include "passworddialog.h"
 #include "ui_passworddialog.h"
 
@@ -10,6 +11,11 @@ PasswordDialog::PasswordDialog(
     _doubleEnterPassword = doubleEnterPassword;
 
     ui->setupUi(this);
+
+    AnalyticsService* analyticsService =
+            qApp->property("analyticsService").value<AnalyticsService*>();
+
+    analyticsService->sendAppView("password dialog");
 
     ui->passwordLineEdit2->setVisible(doubleEnterPassword);
     ui->buttonBox->setEnabled(!doubleEnterPassword);

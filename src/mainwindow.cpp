@@ -29,6 +29,7 @@
 #include "entities/calendaritem.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include "dialogs/passworddialog.h"
+#include "services/analyticsservice.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -44,13 +45,27 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
     QCoreApplication::setApplicationVersion(
-            "version " + QString(VERSION) +
-                    " - build " + QString::number(BUILD));
+            QString(VERSION) + " " + QString(RELEASE));
 
     ui->setupUi(this);
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
+
+    AnalyticsService *analyticsService = new AnalyticsService(this);
+
+    qApp->setProperty(
+            "analyticsService",
+            QVariant::fromValue<AnalyticsService*>(analyticsService));
+
+    analyticsService->sendAppView("main window");
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    analyticsService->sendEvent("app", "start", QSysInfo::prettyProductName());
+#else
+    analyticsService->sendEvent("app", "start");
+#endif
+
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);
     sorting->addAction(ui->actionBy_date);
@@ -122,7 +137,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
     ui->noteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
-    ui->encryptedNoteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
+    ui->encryptedNoteTextEdit->setIgnoredClickUrlSchemata(
+            QStringList() << "note");
 
     // handle note url externally in the note text edit
     QObject::connect(

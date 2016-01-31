@@ -4,12 +4,18 @@
 #include <QDialogButtonBox>
 #include <QAbstractButton>
 #include <QDebug>
+#include <services/analyticsservice.h>
 
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, QString html) :
     QDialog(parent),
     ui(new Ui::NoteDiffDialog)
 {
     ui->setupUi(this);
+
+    AnalyticsService* analyticsService =
+            qApp->property("analyticsService").value<AnalyticsService*>();
+
+    analyticsService->sendAppView("note diff dialog");
 
     this->ui->textEdit->setHtml( html );
 

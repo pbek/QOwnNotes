@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QScriptValueIterator>
 #include <QPushButton>
+#include <services/analyticsservice.h>
 
 TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,12 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *pa
 {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
+
+    AnalyticsService* analyticsService =
+            qApp->property("analyticsService").value<AnalyticsService*>();
+
+    analyticsService->sendAppView("trash dialog");
+
     setupMainSplitter();
 
     QPushButton *button;

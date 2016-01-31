@@ -12,11 +12,18 @@
 #include <QDesktopServices>
 #include <QFontDialog>
 #include <QMessageBox>
+#include <services/analyticsservice.h>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
         QDialog(parent),
         ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
+
+    AnalyticsService* analyticsService =
+            qApp->property("analyticsService").value<AnalyticsService*>();
+
+    analyticsService->sendAppView("settings dialog");
+
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(

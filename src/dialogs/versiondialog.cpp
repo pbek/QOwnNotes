@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QScriptValueIterator>
 #include <QPushButton>
+#include <services/analyticsservice.h>
 
 VersionDialog::VersionDialog(QScriptValue versions, MainWindow *mainWindow, QWidget *parent) :
     QDialog(parent),
@@ -11,6 +12,12 @@ VersionDialog::VersionDialog(QScriptValue versions, MainWindow *mainWindow, QWid
 {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
+
+    AnalyticsService* analyticsService =
+            qApp->property("analyticsService").value<AnalyticsService*>();
+
+    analyticsService->sendAppView("version dialog");
+
     setupMainSplitter();
 
     QPushButton *button;

@@ -106,12 +106,15 @@ set(SOURCE_FILES
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp
     libraries/versionnumber/versionnumber.h
+    libraries/qt-google-analytics-collector/ganalytics.hpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp
     services/owncloudservice.h
     services/updateservice.cpp
     services/updateservice.h
+    services/analyticsservice.cpp
+    services/analyticsservice.h
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     build_number.h
