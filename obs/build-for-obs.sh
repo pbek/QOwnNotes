@@ -66,7 +66,6 @@ changelogText="Released $QOWNNOTES_VERSION"
 echo "Using version $QOWNNOTES_VERSION..."
 
 qownnotesSrcDir="qownnotes-${QOWNNOTES_VERSION}"
-#cd ..
 
 # copy some needed files file
 cp LICENSE src
@@ -88,14 +87,10 @@ echo "- $changelogText" >> $changelogPath
 cat $changelogPath
 
 archiveFile="$qownnotesSrcDir.tar.xz"
-archiveFileDeb="$qownnotesSrcDir.orig.tar.gz"
 
 # archive the source code
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
-
-#echo "Creating archive $archiveFileDeb..."
-#tar -czf $archiveFileDeb $qownnotesSrcDir
 
 echo "Checking out OBS repository..."
 
@@ -108,16 +103,12 @@ obsRepoPath="home:pbek:QOwnNotes/desktop"
 echo "Removing old archives..."
 cd $obsRepoPath
 osc rm *.xz
-osc rm *.bz2
-osc rm *.tar.gz
 cd ../..
 
 # copying new files to repository
 mv $archiveFile $obsRepoPath
-#mv $archiveFileDeb $obsRepoPath
 cp obs/qownnotes.bin $obsRepoPath
 cp obs/qownnotes.spec $obsRepoPath
-#cp $qownnotesSrcDir/obs/qownnotes.rules $obsRepoPath
 cp obs/PKGBUILD $obsRepoPath
 cp $qownnotesSrcDir/debian/changelog $obsRepoPath/debian.changelog
 cp $qownnotesSrcDir/debian/control $obsRepoPath/debian.control
@@ -131,7 +122,6 @@ cd $obsRepoPath
 
 # add all new files
 osc add $archiveFile
-#osc add $archiveFileDeb
 #osc add qownnotes.bin
 #osc add qownnotes.spec
 #osc add PKGBUILD
