@@ -63,7 +63,7 @@ fi
 # set release string to disable the update check
 echo "#define RELEASE \"Launchpad PPA\"" > src/release.h
 
-changelogText="Released $QOWNNOTES_VERSION"
+changelogText="Released version $QOWNNOTES_VERSION"
 
 echo "Using version $QOWNNOTES_VERSION..."
 

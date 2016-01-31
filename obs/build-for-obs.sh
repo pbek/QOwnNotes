@@ -61,7 +61,7 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/PKGBUILD
 # replace the version in the dsc file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.dsc
 
-changelogText="Released $QOWNNOTES_VERSION"
+changelogText="Released version $QOWNNOTES_VERSION"
 
 echo "Using version $QOWNNOTES_VERSION..."
 
@@ -86,6 +86,17 @@ echo "- $changelogText" >> $changelogPath
 
 cat $changelogPath
 
+# create the Debian changelog file
+debChangelogPath=obs/debian.changelog
+versionPart="$QOWNNOTES_VERSION-1debian"
+echo "qownnotes ($versionPart) debian; urgency=low" > $debChangelogPath
+echo "" >> $debChangelogPath
+echo "  * $changelogText" >> $debChangelogPath
+echo "" >> $debChangelogPath
+echo " -- Patrizio Bekerle <patrizio@bekerle.com>  $DATE" >> $debChangelogPath
+
+cat $debChangelogPath
+
 archiveFile="$qownnotesSrcDir.tar.xz"
 
 # archive the source code
@@ -109,8 +120,8 @@ cd ../..
 mv $archiveFile $obsRepoPath
 cp obs/qownnotes.bin $obsRepoPath
 cp obs/qownnotes.spec $obsRepoPath
+cp $debChangelogPath $obsRepoPath
 cp obs/PKGBUILD $obsRepoPath
-cp $qownnotesSrcDir/debian/changelog $obsRepoPath/debian.changelog
 cp $qownnotesSrcDir/debian/control $obsRepoPath/debian.control
 cp $qownnotesSrcDir/debian/copyright $obsRepoPath/debian.copyright
 cp $qownnotesSrcDir/debian/compat $obsRepoPath/debian.compat
