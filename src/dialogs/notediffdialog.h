@@ -3,12 +3,13 @@
 
 #include <QDialog>
 #include <QAbstractButton>
+#include "masterdialog.h"
 
 namespace Ui {
 class NoteDiffDialog;
 }
 
-class NoteDiffDialog : public QDialog
+class NoteDiffDialog : public MasterDialog
 {
     Q_OBJECT
 

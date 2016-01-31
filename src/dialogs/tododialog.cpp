@@ -5,20 +5,14 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QKeyEvent>
-#include <services/analyticsservice.h>
 
 TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
-        QDialog(parent),
+        MasterDialog(parent),
         ui(new Ui::TodoDialog) {
     this->crypto = crypto;
 
     ui->setupUi(this);
     setupUi();
-
-    AnalyticsService* analyticsService =
-            qApp->property("analyticsService").value<AnalyticsService*>();
-
-    analyticsService->sendAppView("todo dialog");
 }
 
 TodoDialog::~TodoDialog() {

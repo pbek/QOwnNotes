@@ -5,12 +5,13 @@
 #include <QDialog>
 #include <QLabel>
 #include "libraries/simplecrypt/simplecrypt.h"
+#include "masterdialog.h"
 
 namespace Ui {
 class SettingsDialog;
 }
 
-class SettingsDialog : public QDialog
+class SettingsDialog : public MasterDialog
 {
     Q_OBJECT
 

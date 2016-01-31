@@ -58,7 +58,7 @@ MainWindow::MainWindow(QWidget *parent) :
             "analyticsService",
             QVariant::fromValue<AnalyticsService*>(analyticsService));
 
-    analyticsService->sendAppView("main window");
+    analyticsService->sendAppView(objectName());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     analyticsService->sendEvent("app", "start", QSysInfo::prettyProductName());

@@ -7,12 +7,13 @@
 
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "entities/calendaritem.h"
+#include "masterdialog.h"
 
 namespace Ui {
 class TodoDialog;
 }
 
-class TodoDialog : public QDialog
+class TodoDialog : public MasterDialog
 {
     Q_OBJECT
 

@@ -67,6 +67,8 @@ set(SOURCE_FILES
     dialogs/passworddialog.cpp
     dialogs/passworddialog.h
     dialogs/passworddialog.ui
+    dialogs/masterdialog.cpp
+    dialogs/masterdialog.h
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp

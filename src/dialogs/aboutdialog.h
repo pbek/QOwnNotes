@@ -1,13 +1,15 @@
 #ifndef ABOUTDIALOG_H
 #define ABOUTDIALOG_H
 
+#include "masterdialog.h"
+
 #include <QDialog>
 
 namespace Ui {
 class AboutDialog;
 }
 
-class AboutDialog : public QDialog
+class AboutDialog : public MasterDialog
 {
     Q_OBJECT
 

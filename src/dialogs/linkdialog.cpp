@@ -7,20 +7,14 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QFileDialog>
-#include <services/analyticsservice.h>
 #include "entities/note.h"
 #include "helpers/htmlentities.h"
 
 LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
-    QDialog(parent),
+        MasterDialog(parent),
     ui(new Ui::LinkDialog)
 {
     ui->setupUi(this);
-
-    AnalyticsService* analyticsService =
-            qApp->property("analyticsService").value<AnalyticsService*>();
-
-    analyticsService->sendAppView("link dialog");
 
     this->firstVisibleNoteListRow = 0;
 

@@ -3,12 +3,13 @@
 
 #include <QAbstractButton>
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class UpdateDialog;
 }
 
-class UpdateDialog : public QDialog
+class UpdateDialog : public MasterDialog
 {
     Q_OBJECT
 

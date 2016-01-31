@@ -6,18 +6,12 @@
 #include <QFile>
 #include <QDate>
 #include <QTextStream>
-#include <services/analyticsservice.h>
 
 AboutDialog::AboutDialog(QWidget *parent) :
-    QDialog(parent),
+    MasterDialog(parent),
     ui(new Ui::AboutDialog)
 {
     ui->setupUi(this);
-
-    AnalyticsService* analyticsService =
-            qApp->property("analyticsService").value<AnalyticsService*>();
-
-    analyticsService->sendAppView("about dialog");
 
     // load the about.html
     QFile f(":/html/about.html");

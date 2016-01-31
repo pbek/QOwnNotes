@@ -2,6 +2,7 @@
 #define TRASHDIALOG_H
 
 #include "mainwindow.h"
+#include "masterdialog.h"
 
 #include <QAbstractButton>
 #include <QDialog>
@@ -12,7 +13,7 @@ namespace Ui {
 class TrashDialog;
 }
 
-class TrashDialog : public QDialog
+class TrashDialog : public MasterDialog
 {
     Q_OBJECT
 

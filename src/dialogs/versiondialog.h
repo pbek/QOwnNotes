@@ -2,6 +2,7 @@
 #define VERSIONDIALOG_H
 
 #include "mainwindow.h"
+#include "masterdialog.h"
 
 #include <QAbstractButton>
 #include <QDialog>
@@ -12,7 +13,7 @@ namespace Ui {
 class VersionDialog;
 }
 
-class VersionDialog : public QDialog
+class VersionDialog : public MasterDialog
 {
     Q_OBJECT
 

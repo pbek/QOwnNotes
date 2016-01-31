@@ -49,7 +49,8 @@ SOURCES += main.cpp\
     libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
-    services/analyticsservice.cpp
+    services/analyticsservice.cpp \
+    dialogs/masterdialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -88,7 +89,8 @@ HEADERS  += mainwindow.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
     libraries/qt-google-analytics-collector/ganalytics.hpp \
-    services/analyticsservice.h
+    services/analyticsservice.h \
+    dialogs/masterdialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

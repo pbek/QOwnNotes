@@ -6,19 +6,13 @@
 #include <QDebug>
 #include <QSettings>
 #include <release.h>
-#include <services/analyticsservice.h>
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                            QString releaseUrl, QString releaseVersionString,
                            int releaseBuildNumber) :
-        QDialog(parent),
+        MasterDialog(parent),
         ui(new Ui::UpdateDialog) {
     ui->setupUi(this);
-
-    AnalyticsService* analyticsService =
-            qApp->property("analyticsService").value<AnalyticsService*>();
-
-    analyticsService->sendAppView("update dialog");
 
     ui->changeLogEdit->setHtml(changesHtml);
     ui->versionLabel->setText("Version " + releaseVersionString + " - build " +

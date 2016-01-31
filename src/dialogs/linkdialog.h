@@ -2,12 +2,13 @@
 #define NOTESEARCHDIALOG_H
 
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class LinkDialog;
 }
 
-class LinkDialog : public QDialog
+class LinkDialog : public MasterDialog
 {
     Q_OBJECT
 

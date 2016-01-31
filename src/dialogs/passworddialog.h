@@ -2,12 +2,13 @@
 #define PASSWORDDIALOG_H
 
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class PasswordDialog;
 }
 
-class PasswordDialog : public QDialog
+class PasswordDialog : public MasterDialog
 {
     Q_OBJECT
 
