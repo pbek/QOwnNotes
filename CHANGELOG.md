@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 0.86
+- tried to fix a sporadic crash in OSX
+- there is a software repository for **Debian Linux 8.0**
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
+
 ## 0.85
 - you can now export the current note as markdown file
 - beside the regular QOwnNotes software repository for Arch Linux there now 

@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.84.5
+#QOWNNOTES_VERSION=0.85.1
 
 BRANCH=develop
 #BRANCH=master
@@ -68,6 +68,12 @@ echo "Using version $QOWNNOTES_VERSION..."
 qownnotesSrcDir="qownnotes-${QOWNNOTES_VERSION}"
 #cd ..
 
+# copy some needed files file
+cp LICENSE src
+cp README.md src
+cp CHANGELOG.md src
+cp SHORTCUTS.md src
+
 # rename the src directory
 mv src $qownnotesSrcDir
 
@@ -109,17 +115,17 @@ cd ../..
 # copying new files to repository
 mv $archiveFile $obsRepoPath
 #mv $archiveFileDeb $obsRepoPath
-cp $qownnotesSrcDir/obs/qownnotes.bin $obsRepoPath
-cp $qownnotesSrcDir/obs/qownnotes.spec $obsRepoPath
+cp obs/qownnotes.bin $obsRepoPath
+cp obs/qownnotes.spec $obsRepoPath
 #cp $qownnotesSrcDir/obs/qownnotes.rules $obsRepoPath
-cp $qownnotesSrcDir/obs/PKGBUILD $obsRepoPath
-cp $qownnotesSrcDir/src/debian/changelog $obsRepoPath/debian.changelog
-cp $qownnotesSrcDir/src/debian/control $obsRepoPath/debian.control
-cp $qownnotesSrcDir/src/debian/copyright $obsRepoPath/debian.copyright
-cp $qownnotesSrcDir/src/debian/compat $obsRepoPath/debian.compat
-cp $qownnotesSrcDir/src/debian/rules $obsRepoPath/debian.rules
-cp $qownnotesSrcDir/src/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
-cp $qownnotesSrcDir/obs/qownnotes.dsc $obsRepoPath
+cp obs/PKGBUILD $obsRepoPath
+cp $qownnotesSrcDir/debian/changelog $obsRepoPath/debian.changelog
+cp $qownnotesSrcDir/debian/control $obsRepoPath/debian.control
+cp $qownnotesSrcDir/debian/copyright $obsRepoPath/debian.copyright
+cp $qownnotesSrcDir/debian/compat $obsRepoPath/debian.compat
+cp $qownnotesSrcDir/debian/rules $obsRepoPath/debian.rules
+cp $qownnotesSrcDir/debian/qownnotes.install $obsRepoPath/debian.qownnotes.install
+cp obs/qownnotes.dsc $obsRepoPath
 
 cd $obsRepoPath
 

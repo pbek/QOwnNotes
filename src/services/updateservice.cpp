@@ -68,17 +68,24 @@ void UpdateService::onResult(QNetworkReply *reply) {
         return;
     }
 
+    QString allData = reply->readAll();
+    if (allData.isEmpty()) {
+        return;
+    }
+
     // we have to add [], so the string can be parsed as JSON
-    QString data = QString("[") + (QString) reply->readAll() + QString("]");
+    QString data = QString("[") + allData + QString("]");
 
     QScriptEngine engine;
     QScriptValue result = engine.evaluate(data);
 
     // get the information if we should update our app
-    QScriptValue shouldUpdate = result.property("0").property("should_update");
+    bool shouldUpdate =
+            (!result.property("0").isNull()) ?
+            result.property("0").property("should_update").toBool() : false;
 
     // check if we should update our app
-    if (shouldUpdate.toBool()) {
+    if (shouldUpdate) {
         // get the release url
         QString releaseUrl = result.property("0").property("release").property(
                 "assets").property("0").property(
@@ -90,7 +97,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         // get the release build number
         int releaseBuildNumber = result.property("0").property(
-                "release_build_number").toInteger();
+                "release_build_number").toInt32();
 
         // get the changes html
         QString changesHtml = result.property("0").property(
