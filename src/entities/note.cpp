@@ -860,7 +860,7 @@ bool Note::expireCryptoKeys() {
 
     // 10min ago
     QDateTime expiryDate = QDateTime::currentDateTime();
-    expiryDate.addSecs(-600);
+    expiryDate = expiryDate.addSecs(-600);
 
     // reset expired crypto keys
     query.prepare("UPDATE note SET crypto_key = 0 WHERE "
