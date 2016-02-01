@@ -5,6 +5,7 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QKeyEvent>
+#include <services/metricsservice.h>
 
 TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
         MasterDialog(parent),
@@ -70,7 +71,8 @@ void TodoDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state = settings.value("TodoDialog/mainSplitterState").toByteArray();
+    QByteArray state =
+            settings.value("TodoDialog/mainSplitterState").toByteArray();
     this->mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(this->mainSplitter);
@@ -84,7 +86,8 @@ void TodoDialog::loadTodoListData() {
 
     QSettings settings;
     ui->todoListSelector->clear();
-    ui->todoListSelector->addItems(settings.value("ownCloud/todoCalendarEnabledList").toStringList());
+    ui->todoListSelector->addItems(
+            settings.value("ownCloud/todoCalendarEnabledList").toStringList());
 }
 
 /**
@@ -101,7 +104,8 @@ void TodoDialog::reloadTodoList() {
  * @brief Reloads the todo list from the sqlite database
  */
 void TodoDialog::reloadTodoListItems() {
-    QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(ui->todoListSelector->currentText());
+    QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(
+            ui->todoListSelector->currentText());
 
     {
         const QSignalBlocker blocker(ui->todoList);
@@ -112,7 +116,8 @@ void TodoDialog::reloadTodoListItems() {
         while (itr.hasNext()) {
             CalendarItem calItem = itr.next();
 
-            // skip completed items if the "show completed items" ckeckbox is not checked
+            // skip completed items if the "show completed items" ckeckbox
+            // is not checked
             if (!ui->showCompletedItemsCheckBox->checkState()) {
                 if (calItem.isCompleted()) {
                     continue;
@@ -128,9 +133,14 @@ void TodoDialog::reloadTodoListItems() {
 
             QListWidgetItem *item = new QListWidgetItem(calItem.getSummary());
             item->setWhatsThis(uid);
-            item->setCheckState(calItem.isCompleted() ? Qt::Checked : Qt::Unchecked);
-            item->setFlags(Qt::ItemIsDragEnabled | Qt::ItemIsDropEnabled | Qt::ItemIsEnabled | Qt::ItemIsUserCheckable |
-                           Qt::ItemIsSelectable);
+            item->setCheckState(
+                    calItem.isCompleted() ? Qt::Checked : Qt::Unchecked);
+            item->setFlags(
+                    Qt::ItemIsDragEnabled |
+                    Qt::ItemIsDropEnabled |
+                    Qt::ItemIsEnabled |
+                    Qt::ItemIsUserCheckable |
+                    Qt::ItemIsSelectable);
 
             ui->todoList->addItem(item);
         }
@@ -160,8 +170,7 @@ void TodoDialog::reloadTodoListItems() {
 //        qDebug() << __func__ << " - 'row': " << row;
 
         ui->todoList->setCurrentRow(row >= 0 ? row : 0);
-    }
-    else {
+    } else {
         resetEditFrameControls();
     }
 }
@@ -207,9 +216,12 @@ int TodoDialog::findTodoItemRowByUID(QString uid) {
 void TodoDialog::storeSettings() {
     QSettings settings;
     settings.setValue("TodoDialog/geometry", saveGeometry());
-    settings.setValue("TodoDialog/mainSplitterState", this->mainSplitter->saveState());
-    settings.setValue("TodoDialog/showCompletedItems", ui->showCompletedItemsCheckBox->checkState());
-    settings.setValue("TodoDialog/todoListSelectorSelectedItem", ui->todoListSelector->currentText());
+    settings.setValue("TodoDialog/mainSplitterState",
+                      this->mainSplitter->saveState());
+    settings.setValue("TodoDialog/showCompletedItems",
+                      ui->showCompletedItemsCheckBox->checkState());
+    settings.setValue("TodoDialog/todoListSelectorSelectedItem",
+                      ui->todoListSelector->currentText());
 }
 
 /**
@@ -228,7 +240,8 @@ void TodoDialog::updateCurrentCalendarItemWithFormData() {
     currentCalendarItem.setDescription(ui->descriptionEdit->toPlainText());
     currentCalendarItem.setModified(QDateTime::currentDateTime());
     currentCalendarItem.setAlarmDate(
-            ui->reminderCheckBox->isChecked() ? ui->reminderDateTimeEdit->dateTime() : QDateTime());
+            ui->reminderCheckBox->isChecked() ?
+            ui->reminderDateTimeEdit->dateTime() : QDateTime());
     currentCalendarItem.store();
 }
 
@@ -256,6 +269,8 @@ void TodoDialog::on_todoList_currentItemChanged(QListWidgetItem *current, QListW
         resetEditFrameControls();
         return;
     }
+
+    MetricsService::instance()->sendEvent("todo list", "item changed");
 
     QString uid = current->whatsThis();
 
@@ -317,6 +332,8 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
 }
 
 void TodoDialog::on_saveButton_clicked() {
+    MetricsService::instance()->sendEvent("todo list", "item stored");
+
     updateCurrentCalendarItemWithFormData();
 
     OwnCloudService *ownCloud = new OwnCloudService(crypto, this);

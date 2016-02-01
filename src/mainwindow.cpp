@@ -705,6 +705,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
         int count = Note::storeDirtyNotesToDisk(this->currentNote);
 
         if (count > 0) {
+            MetricsService::instance()->sendEvent("note", "stored", "", count);
+
             qDebug() << __func__ << " - 'count': " << count;
 
             this->ui->statusBar->showMessage(
@@ -889,6 +891,8 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
+    MetricsService::instance()->sendEvent("note", "changed");
+
     // update cursor position of previous note
     if (this->currentNote.exists()) {
         QTextCursor c = ui->noteTextEdit->textCursor();
