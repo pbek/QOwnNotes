@@ -41,6 +41,7 @@ private slots:
     void on_clearRecentNotesFoldersHistoryButton_clicked();
     void on_tabWidget_currentChanged(int index);
     void on_saveDebugInfoButton_clicked();
+    void on_appMetricsCheckBox_toggled(bool checked);
 
 private:
     Ui::SettingsDialog *ui;

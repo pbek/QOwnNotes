@@ -6,6 +6,9 @@
   had to enter the password every minute while editing the note
     - now the crypto key will expire after 10min without editing the note  
 - added basic app metrics
+    - anonymous usage data helps to decide what parts of QOwnNotes to 
+    improve next and to find and fix bugs
+    - please only disable it in the settings if you really can't live with it
 
 ## 0.86
 - tried to fix a sporadic crash in OSX

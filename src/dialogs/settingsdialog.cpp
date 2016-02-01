@@ -108,6 +108,8 @@ void SettingsDialog::storeSettings() {
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showRecentNoteFolderCheckBox->isChecked());
+    settings.setValue("appMetrics/disableTracking",
+                      ui->appMetricsCheckBox->isChecked());
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
@@ -152,6 +154,11 @@ void SettingsDialog::readSettings() {
     ui->showRecentNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
 
+    const QSignalBlocker blocker(ui->appMetricsCheckBox);
+    Q_UNUSED(blocker);
+    ui->appMetricsCheckBox->setChecked(settings.value(
+            "appMetrics/disableTracking").toBool());
+
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
@@ -160,8 +167,8 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/noteTextView.font").toString());
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
-    const QSignalBlocker blocker(this->ui->defaultOwnCloudCalendarRadioButton);
-    Q_UNUSED(blocker);
+    const QSignalBlocker blocker2(this->ui->defaultOwnCloudCalendarRadioButton);
+    Q_UNUSED(blocker2);
 
     switch (settings.value("ownCloud/todoCalendarBackend").toInt()) {
         case OwnCloudService::CalendarPlus:
@@ -563,7 +570,7 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
         QFile file(fileNames.at(0));
 
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            qDebug() << file.errorString();
+            qWarning() << file.errorString();
             return;
         }
 
@@ -572,5 +579,26 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
         out << ui->debugInfoTextEdit->toPlainText();
         file.flush();
         file.close();
+    }
+}
+
+void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        int reply;
+        reply = QMessageBox::question(
+                this,
+                "Disable usage tracking",
+                "Anonymous usage data helps to decide what parts of "
+                        "QOwnNotes to improve next and to find and fix bugs."
+                        "<br />Please disable it only if you really can't live"
+                        " with it.<br /><br />Really disable usage tracking?",
+                QMessageBox::Yes|QMessageBox::No,
+                QMessageBox::No);
+        if (reply == QMessageBox::No) {
+            const QSignalBlocker blocker(ui->appMetricsCheckBox);
+            Q_UNUSED(blocker);
+            ui->appMetricsCheckBox->setChecked(0);
+        }
     }
 }

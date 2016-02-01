@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -629,243 +629,304 @@ p, li { white-space: pre-wrap; }
         <attribute name="title">
          <string>General</string>
         </attribute>
-        <widget class="QGroupBox" name="groupBox">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>20</y>
-           <width>601</width>
-           <height>141</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Notes</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>notify about all external modifications</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QSpinBox" name="noteSaveIntervalTime">
-            <property name="toolTip">
-             <string/>
-            </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="minimum">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <number>999</number>
-            </property>
-            <property name="value">
-             <number>10</number>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-            <property name="toolTip">
-             <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Notes</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0" colspan="2">
+               <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>notify about all external modifications</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QSpinBox" name="noteSaveIntervalTime">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>999</number>
+                </property>
+                <property name="value">
+                 <number>10</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                <property name="toolTip">
+                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</string>
-            </property>
-            <property name="text">
-             <string>note save interval time [sec]</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QGroupBox" name="groupBox_2">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>180</y>
-           <width>601</width>
-           <height>151</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Font settings</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="1">
-           <widget class="QLabel" name="noteTextEditFontLabel">
-            <property name="styleSheet">
-             <string notr="true">QLabel {
+                </property>
+                <property name="text">
+                 <string>note save interval time [sec]</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Font settings</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="1">
+               <widget class="QLabel" name="noteTextEditFontLabel">
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
 	background-color: white;
 }</string>
-            </property>
-            <property name="text">
-             <string>Font name</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <widget class="QToolButton" name="noteTextEditButton">
-            <property name="toolTip">
-             <string>set a new font</string>
-            </property>
-            <property name="text">
-             <string>...</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
-            <property name="text">
-             <string>note text edit:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="noteViewEditFontHeadlineLabel">
-            <property name="text">
-             <string>note markdown view:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="noteTextViewFontLabel">
-            <property name="styleSheet">
-             <string notr="true">QLabel {
+                </property>
+                <property name="text">
+                 <string>Font name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QToolButton" name="noteTextEditButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
+                <property name="text">
+                 <string>note text edit:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="noteViewEditFontHeadlineLabel">
+                <property name="text">
+                 <string>note markdown view:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="noteTextViewFontLabel">
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
 	background-color: white;
 }</string>
-            </property>
-            <property name="text">
-             <string>Font name</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QToolButton" name="noteTextViewButton">
-            <property name="toolTip">
-             <string>set a new font</string>
-            </property>
-            <property name="text">
-             <string>...</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QGroupBox" name="groupBox_3">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>350</y>
-           <width>601</width>
-           <height>148</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Database</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_2">
-          <item>
-           <widget class="QPushButton" name="reinitializeDatabaseButton">
-            <property name="text">
-             <string>Reinitialize Database</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="reinitializeDatabaseLabel">
-            <property name="text">
-             <string>Do this if you have troubles with your Todo items.</string>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>520</y>
-           <width>601</width>
-           <height>141</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Recent notes folders</string>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <widget class="QCheckBox" name="showRecentNoteFolderCheckBox">
-            <property name="text">
-             <string>Show recent notes folders in main area</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="clearRecentNotesFoldersHistoryButton">
-            <property name="toolTip">
-             <string>clear the recent note folder history</string>
-            </property>
-            <property name="text">
-             <string>Clear history</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QGroupBox" name="groupBox_6">
-         <property name="geometry">
-          <rect>
-           <x>650</x>
-           <y>180</y>
-           <width>271</width>
-           <height>91</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Toolbar</string>
-         </property>
-         <widget class="QLabel" name="toolbarIconSizeLabel">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>40</y>
-            <width>94</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Icon size:</string>
-          </property>
-         </widget>
-         <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
-          <property name="geometry">
-           <rect>
-            <x>140</x>
-            <y>40</y>
-            <width>60</width>
-            <height>34</height>
-           </rect>
-          </property>
-         </widget>
-        </widget>
+                </property>
+                <property name="text">
+                 <string>Font name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QToolButton" name="noteTextViewButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Database</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QLabel" name="reinitializeDatabaseLabel">
+                <property name="text">
+                 <string>Do this if you have troubles with your Todo items.</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="reinitializeDatabaseButton">
+                <property name="text">
+                 <string>Reinitialize Database</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Recent notes folders</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QCheckBox" name="showRecentNoteFolderCheckBox">
+                <property name="text">
+                 <string>Show recent notes folders in main area</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="clearRecentNotesFoldersHistoryButton">
+                <property name="toolTip">
+                 <string>clear the recent note folder history</string>
+                </property>
+                <property name="text">
+                 <string>Clear history</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="title">
+              <string>Toolbar</string>
+             </property>
+             <widget class="QLabel" name="toolbarIconSizeLabel">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>40</y>
+                <width>94</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Icon size:</string>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
+              <property name="geometry">
+               <rect>
+                <x>140</x>
+                <y>40</y>
+                <width>60</width>
+                <height>34</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="appMetricsGroupBox">
+             <property name="title">
+              <string>App metrics</string>
+             </property>
+             <widget class="QLabel" name="appMetricsLabel">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>40</y>
+                <width>561</width>
+                <height>100</height>
+               </rect>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</string>
+              </property>
+              <property name="scaledContents">
+               <bool>false</bool>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+             <widget class="QCheckBox" name="appMetricsCheckBox">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>140</y>
+                <width>521</width>
+                <height>29</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>disable tracking of usage data</string>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="tab">
         <attribute name="title">
