@@ -12,6 +12,7 @@ TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns
 RC_FILE = QOwnNotes.rc
+TRANSLATIONS = languages/QOwnNotes_en.ts languages/QOwnNotes_de.ts languages/QOwnNotes_fr.ts
 
 INCLUDEPATH += $$PWD/libraries
 
