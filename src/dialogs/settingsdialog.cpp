@@ -12,6 +12,7 @@
 #include <QDesktopServices>
 #include <QFontDialog>
 #include <QMessageBox>
+#include <services/metricsservice.h>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
         MasterDialog(parent),
@@ -108,6 +109,13 @@ void SettingsDialog::storeSettings() {
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showRecentNoteFolderCheckBox->isChecked());
+
+    if (!settings.value("appMetrics/disableTracking").toBool() &&
+            ui->appMetricsCheckBox->isChecked()) {
+        MetricsService::instance()->sendEvent("settings", "app metrics "
+                "disabled");
+    }
+
     settings.setValue("appMetrics/disableTracking",
                       ui->appMetricsCheckBox->isChecked());
 

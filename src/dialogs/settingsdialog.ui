@@ -888,7 +888,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </rect>
               </property>
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
@@ -913,7 +913,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <property name="geometry">
                <rect>
                 <x>10</x>
-                <y>140</y>
+                <y>150</y>
                 <width>521</width>
                 <height>29</height>
                </rect>

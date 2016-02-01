@@ -13,7 +13,7 @@
     - you can disable the app metrics in the settings
 
 ## 0.86
-- tried to fix a sporadic crash in OSX
+- tried to fix a sporadic crash on OS X
 - there now is a software repository for **Debian Linux 8.0**
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
 

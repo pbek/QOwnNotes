@@ -53,7 +53,6 @@ MainWindow::MainWindow(QWidget *parent) :
                     " - build " + QString::number(BUILD));
 
     MetricsService *metricsService = MetricsService::createInstance(this);
-    metricsService->sendAppView(objectName());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     metricsService->sendEvent("app", "start", QSysInfo::prettyProductName());
@@ -197,6 +196,9 @@ MainWindow::MainWindow(QWidget *parent) :
             SIGNAL(currentTextChanged(const QString &)),
             this,
             SLOT(changeNoteFolder(const QString &)));
+
+    // show the app metrics notification if not already shown
+    showAppMetricsNotificationIfNeeded();
 }
 
 MainWindow::~MainWindow() {
@@ -989,6 +991,7 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
+    MetricsService::instance()->sendEvent("app", "end");
     storeSettings();
     QMainWindow::closeEvent(event);
 }
@@ -1519,6 +1522,26 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     }
 }
 
+/**
+ * Shows the app metrics notification if not already shown
+ */
+void MainWindow::showAppMetricsNotificationIfNeeded() {
+    QSettings settings;
+    bool showDialog = !settings.value("appMetrics/notificationShown").toBool();
+
+    if (showDialog) {
+        settings.setValue("appMetrics/notificationShown", true);
+
+        QMessageBox::information(
+                this,
+                tr("QOwnNotes"),
+                tr("QOwnNotes will track anonymous usage data, that helps to "
+                        "decide what parts of QOwnNotes to improve next "
+                        "and to find and fix bugs. You can disable that "
+                        "behaviour in the settings."));
+    }
+}
+
 
 
 // *****************************************************************************
@@ -1573,7 +1596,6 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
 
 void MainWindow::on_action_Quit_triggered() {
-    MetricsService::instance()->sendEvent("app", "end");
     storeSettings();
     QApplication::quit();
 }
@@ -2274,7 +2296,6 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
                 qCritical() << file.errorString();
                 return;
             }
-
             QTextStream out(&file);
             out.setCodec("UTF-8");
             out << ui->noteTextEdit->toPlainText();
@@ -2282,4 +2303,9 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
             file.close();
         }
     }
+}
+
+void MainWindow::showEvent(QShowEvent* event) {
+    QMainWindow::showEvent(event);
+    MetricsService::instance()->sendAppView(objectName());
 }
