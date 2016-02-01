@@ -1,14 +1,16 @@
 # QOwnNotes Changelog
 
 ## 0.87
-- added app translation support
+- start of app translation support implementation
+  (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))
 - fixed a problem with the crypto key expiration of encrypted messages where one
   had to enter the password every minute while editing the note
+  (for [Issue #42](https://github.com/pbek/QOwnNotes/issues/42))
     - now the crypto key will expire after 10min without editing the note  
 - added basic app metrics
     - anonymous usage data helps to decide what parts of QOwnNotes to 
     improve next and to find and fix bugs
-    - please only disable it in the settings if you really can't live with it
+    - you can disable the app metrics in the settings
 
 ## 0.86
 - tried to fix a sporadic crash in OSX

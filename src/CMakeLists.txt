@@ -128,6 +128,13 @@ set(SOURCE_FILES
     version.h
 )
 
+# Translation files
+SET(TRANSLATION_FILES
+    languages/QOwnNotes_en.ts
+    languages/QOwnNotes_de.ts
+    languages/QOwnNotes_fr.ts
+)
+
 add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED})
 
 
