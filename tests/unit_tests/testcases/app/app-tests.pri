@@ -5,7 +5,11 @@ INCLUDEPATH += $$APP_SRC_DIR
 
 HEADERS  += \
     $$PWD/test_*.h \
+    $$APP_SRC_DIR/version.h \
+    $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
+    $$APP_SRC_DIR/libraries/qt-google-analytics-collector/ganalytics.hpp \
+    $$APP_SRC_DIR/services/metricsservice.h \
     $$APP_SRC_DIR/entities/note.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
@@ -14,11 +18,12 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.h \
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.h
 
 SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
+    $$APP_SRC_DIR/services/metricsservice.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
@@ -26,7 +31,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.cpp \
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.cpp
 
 #OTHER_FILES += \
 #    connections.xml

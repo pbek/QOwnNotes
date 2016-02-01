@@ -1,5 +1,5 @@
 
-QT       += core gui testlib sql widgets xml
+QT       += core gui testlib sql widgets xml network
 
 #QT       -= gui
 
