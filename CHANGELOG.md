@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.87
+- added basic app metrics
+- added app translation support
+
 ## 0.86
 - tried to fix a sporadic crash in OSX
 - there now is a software repository for **Debian Linux 8.0**
