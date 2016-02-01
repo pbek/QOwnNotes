@@ -1,15 +1,15 @@
 #include "masterdialog.h"
-#include <services/analyticsservice.h>
+#include "services/metricsservice.h"
 
 MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent)
 {
 }
 
 int MasterDialog::exec() {
-    AnalyticsService* analyticsService =
-            qApp->property("analyticsService").value<AnalyticsService*>();
+    MetricsService * metricsService =
+            qApp->property("metricsService").value<MetricsService *>();
 
-    analyticsService->sendAppView(objectName());
+    metricsService->sendAppView(objectName());
 
     return QDialog::exec();
 }

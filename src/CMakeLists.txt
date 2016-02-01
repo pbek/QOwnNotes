@@ -115,8 +115,8 @@ set(SOURCE_FILES
     services/owncloudservice.h
     services/updateservice.cpp
     services/updateservice.h
-    services/analyticsservice.cpp
-    services/analyticsservice.h
+    services/metricsservice.cpp
+    services/metricsservice.h
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     build_number.h

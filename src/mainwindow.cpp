@@ -29,7 +29,7 @@
 #include "entities/calendaritem.h"
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include "dialogs/passworddialog.h"
-#include "services/analyticsservice.h"
+#include "services/metricsservice.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -52,18 +52,18 @@ MainWindow::MainWindow(QWidget *parent) :
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
 
-    AnalyticsService *analyticsService = new AnalyticsService(this);
+    MetricsService *metricsService = new MetricsService(this);
 
     qApp->setProperty(
-            "analyticsService",
-            QVariant::fromValue<AnalyticsService*>(analyticsService));
+            "metricsService",
+            QVariant::fromValue<MetricsService *>(metricsService));
 
-    analyticsService->sendAppView(objectName());
+    metricsService->sendAppView(objectName());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    analyticsService->sendEvent("app", "start", QSysInfo::prettyProductName());
+    metricsService->sendEvent("app", "start", QSysInfo::prettyProductName());
 #else
-    analyticsService->sendEvent("app", "start");
+    metricsService->sendEvent("app", "start");
 #endif
 
     QActionGroup *sorting = new QActionGroup(this);
@@ -815,8 +815,7 @@ void MainWindow::buildNotesIndex() {
     // buildNotesIndex()
     currentNote.refetch();
 
-    if (cryptoKey != 0)
-    {
+    if (cryptoKey != 0) {
         // reset the old crypto key for the current note
         currentNote.setCryptoKey(cryptoKey);
         currentNote.store();
