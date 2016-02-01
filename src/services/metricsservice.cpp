@@ -6,6 +6,26 @@ MetricsService::MetricsService(QObject *parent) : QObject(parent)
     analytics->generateUserAgentEtc();
 }
 
+/**
+ * Fetches a global instance of the class
+ */
+MetricsService * MetricsService::instance() {
+    return qApp->property("metricsService").value<MetricsService *>();
+}
+
+/**
+ * Creates a global instance of the class
+ */
+MetricsService * MetricsService::createInstance(QObject *parent) {
+    MetricsService *metricsService = new MetricsService(parent);
+
+    qApp->setProperty(
+            "metricsService",
+            QVariant::fromValue<MetricsService *>(metricsService));
+
+    return metricsService;
+}
+
 void MetricsService::sendEvent(
         const QString& eventCategory,
         const QString& eventAction,

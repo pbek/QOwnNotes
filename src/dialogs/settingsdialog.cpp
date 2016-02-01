@@ -161,6 +161,7 @@ void SettingsDialog::readSettings() {
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
     const QSignalBlocker blocker(this->ui->defaultOwnCloudCalendarRadioButton);
+    Q_UNUSED(blocker);
 
     switch (settings.value("ownCloud/todoCalendarBackend").toInt()) {
         case OwnCloudService::CalendarPlus:
@@ -232,8 +233,10 @@ void SettingsDialog::outputSettings() {
     output += "\n## Settings\n\n";
 
     // hide values of these keys
-    QStringList keyHiddenList = (QStringList() << "cryptoKey" <<
-                                 "ownCloud/password");
+    QStringList keyHiddenList = (QStringList() <<
+            "cryptoKey" <<
+            "ownCloud/password" <<
+            "GAnalytics-cid");
 
     while (itr.hasNext()) {
         QString key = itr.next();

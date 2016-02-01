@@ -52,12 +52,7 @@ MainWindow::MainWindow(QWidget *parent) :
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
 
-    MetricsService *metricsService = new MetricsService(this);
-
-    qApp->setProperty(
-            "metricsService",
-            QVariant::fromValue<MetricsService *>(metricsService));
-
+    MetricsService *metricsService = MetricsService::createInstance(this);
     metricsService->sendAppView(objectName());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -1574,6 +1569,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
 
 void MainWindow::on_action_Quit_triggered() {
+    MetricsService::instance()->sendEvent("app", "end");
     storeSettings();
     QApplication::quit();
 }
