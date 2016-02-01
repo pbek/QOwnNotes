@@ -16,9 +16,15 @@ int main(int argc, char *argv[])
     QString locale = QLocale::system().name().section('_', 0, 0);
 
     QTranslator translator;
-    // TODO(pbek): this has to be adapted for build systems
-    translator.load("../src/languages/QOwnNotes_" + locale);
+    QString path;
 
+#ifdef QT_DEBUG
+    path = "../src/languages";
+#else
+    path = "/usr/share/QOwnNotes/languages";
+#endif
+
+    translator.load(path + "/QOwnNotes_" + locale);
     a.installTranslator(&translator);
 
     MainWindow w;
