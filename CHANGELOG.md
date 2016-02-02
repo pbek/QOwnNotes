@@ -8,8 +8,8 @@
     [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)
     if you want to help out with translation
 - fixed a file watcher error on app startup
-- the demo notes are now only created once 
-  (for [Issue #41](https://github.com/pbek/QOwnNotes/issues/41))
+- the demo notes are now only created once instead of every time a notes folder
+  is empty (for [Issue #41](https://github.com/pbek/QOwnNotes/issues/41))
 - fixed a problem with an empty note in the note list
 - fixed a problem with the note text after the last note was deleted in the 
   note list

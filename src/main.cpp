@@ -29,23 +29,22 @@ int main(int argc, char *argv[])
     app.installTranslator(&translatorRelease);
 #endif
 
+    QString appPath = QCoreApplication::applicationDirPath();
+
     QTranslator translator1;
-    translator1.load(QCoreApplication::applicationDirPath() +
-                             "/../src/languages/QOwnNotes_" + locale);
+    translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator1);
 
     QTranslator translator2;
-    translator2.load(QCoreApplication::applicationDirPath() +
-                             "/../languages/QOwnNotes_" + locale);
+    translator2.load(appPath + "/../languages/QOwnNotes_" + locale);
     app.installTranslator(&translator2);
 
     QTranslator translator3;
-    translator3.load(QCoreApplication::applicationDirPath() +
-                             "/languages/QOwnNotes_" + locale);
+    translator3.load(appPath + "/languages/QOwnNotes_" + locale);
     app.installTranslator(&translator3);
 
     QTranslator translator4;
-    translator4.load(QCoreApplication::applicationDirPath() +
-                             "/QOwnNotes_" + locale);
+    translator4.load(appPath + "/QOwnNotes_" + locale);
     app.installTranslator(&translator4);
 
     QTranslator translator5;
@@ -55,6 +54,16 @@ int main(int argc, char *argv[])
     QTranslator translatorLocal;
     translatorLocal.load("QOwnNotes_" + locale);
     app.installTranslator(&translatorLocal);
+
+#ifdef Q_OS_MAC
+    QTranslator translatorOSX;
+    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale);
+    app.installTranslator(&translatorOSX);
+
+    QTranslator translatorOSX2;
+    translatorOSX2.load("../Resources/QOwnNotes_" + locale);
+    app.installTranslator(&translatorOSX2);
+#endif
 
     MainWindow w;
     w.show();
