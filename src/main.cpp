@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
     app.installTranslator(&qtTranslator);
 
     QString locale = QLocale::system().name().section('_', 0, 0);
+//    locale = "de";
     qDebug() << __func__ << " - 'locale': " << locale;
 
 #ifndef QT_DEBUG

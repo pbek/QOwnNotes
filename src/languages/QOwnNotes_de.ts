@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.0" language="de_DE">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -14,8 +15,8 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Note: An external HTML will be loaded here.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -92,6 +93,7 @@ Click Cancel to exit.</source>
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../mainwindow.cpp" line="1584"/>
         <source>QOwnNotes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -103,13 +105,13 @@ Click Cancel to exit.</source>
     <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>search or create note</source>
-        <translation type="unfinished"></translation>
+        <translation>Notiz erstellen oder suchen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
         <location filename="../mainwindow.ui" line="309"/>
         <source>Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>Bearbeiten</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="116"/>
@@ -138,77 +140,77 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="257"/>
         <source>&amp;Note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Notiz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="261"/>
         <source>R&amp;ecent notes folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Zul&amp;etzt geöffnete Notiz-Ordner</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="266"/>
         <source>Sort by</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortieren nach</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="297"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hilfe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="331"/>
         <source>Todo</source>
-        <translation type="unfinished"></translation>
+        <translation>Aufgaben</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="379"/>
         <source>&amp;Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Beenden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="382"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg+Q</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="394"/>
         <source>&amp;Set notes folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Notiz-Ordner auswählen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="403"/>
         <source>&amp;Find note</source>
-        <translation type="unfinished"></translation>
+        <translation>Notiz &amp;finden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="406"/>
         <source>Ctrl+Shift+F</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg + Shift + F</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="415"/>
         <source>&amp;Remove current note</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktuelle Notiz &amp;löschen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="418"/>
         <source>Ctrl+R</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg + R</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="427"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation type="unfinished"></translation>
+        <translation>Über &amp;QOwnNotes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="439"/>
         <source>&amp;New note</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Neue Notiz</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="442"/>
         <source>Ctrl+N</source>
-        <translation type="unfinished"></translation>
+        <translation>Strg + N</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="454"/>
@@ -307,7 +309,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../mainwindow.ui" line="567"/>
-        <location filename="../mainwindow.cpp" line="1942"/>
+        <location filename="../mainwindow.cpp" line="2012"/>
         <source>Ctrl+L</source>
         <translation type="unfinished"></translation>
     </message>
@@ -462,25 +464,30 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="609"/>
-        <location filename="../mainwindow.cpp" line="651"/>
-        <location filename="../mainwindow.cpp" line="1675"/>
+        <location filename="../mainwindow.cpp" line="641"/>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <location filename="../mainwindow.cpp" line="1745"/>
         <source>stored current note to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="713"/>
+        <location filename="../mainwindow.cpp" line="746"/>
         <source>stored %1 note(s) to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="847"/>
+        <location filename="../mainwindow.cpp" line="896"/>
         <source>Select ownCloud folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1482"/>
+        <location filename="../mainwindow.cpp" line="1532"/>
         <source>Print note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1585"/>
+        <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -756,131 +763,146 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="642"/>
+        <location filename="../dialogs/settingsdialog.ui" line="647"/>
         <source>Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="648"/>
+        <location filename="../dialogs/settingsdialog.ui" line="653"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="654"/>
+        <location filename="../dialogs/settingsdialog.ui" line="659"/>
         <source>notify about all external modifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="685"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="684"/>
+        <location filename="../dialogs/settingsdialog.ui" line="689"/>
         <source>note save interval time [sec]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="705"/>
         <source>Font settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="711"/>
-        <location filename="../dialogs/settingsdialog.ui" line="753"/>
+        <location filename="../dialogs/settingsdialog.ui" line="716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="758"/>
         <source>Font name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="718"/>
-        <location filename="../dialogs/settingsdialog.ui" line="760"/>
+        <location filename="../dialogs/settingsdialog.ui" line="723"/>
+        <location filename="../dialogs/settingsdialog.ui" line="765"/>
         <source>set a new font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="721"/>
-        <location filename="../dialogs/settingsdialog.ui" line="763"/>
+        <location filename="../dialogs/settingsdialog.ui" line="726"/>
+        <location filename="../dialogs/settingsdialog.ui" line="768"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="728"/>
+        <location filename="../dialogs/settingsdialog.ui" line="733"/>
         <source>note text edit:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="743"/>
         <source>note markdown view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="779"/>
+        <location filename="../dialogs/settingsdialog.ui" line="784"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="785"/>
+        <location filename="../dialogs/settingsdialog.ui" line="800"/>
         <source>Reinitialize Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="792"/>
+        <location filename="../dialogs/settingsdialog.ui" line="790"/>
         <source>Do this if you have troubles with your Todo items.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="811"/>
+        <location filename="../dialogs/settingsdialog.ui" line="816"/>
         <source>Recent notes folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="817"/>
+        <location filename="../dialogs/settingsdialog.ui" line="822"/>
         <source>Show recent notes folders in main area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="824"/>
+        <location filename="../dialogs/settingsdialog.ui" line="829"/>
         <source>clear the recent note folder history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="827"/>
+        <location filename="../dialogs/settingsdialog.ui" line="832"/>
         <source>Clear history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="842"/>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="855"/>
+        <location filename="../dialogs/settingsdialog.ui" line="854"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="872"/>
+        <location filename="../dialogs/settingsdialog.ui" line="879"/>
+        <source>App metrics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="903"/>
+        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="922"/>
+        <source>disable tracking of usage data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="933"/>
         <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="878"/>
+        <location filename="../dialogs/settingsdialog.ui" line="939"/>
         <source>Debug information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="899"/>
+        <location filename="../dialogs/settingsdialog.ui" line="960"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="912"/>
+        <location filename="../dialogs/settingsdialog.ui" line="973"/>
         <source>&amp;Save debug information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="476"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="491"/>
         <source>Select ownCloud base directory</source>
         <translation type="unfinished"></translation>
     </message>

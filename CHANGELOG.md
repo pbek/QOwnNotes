@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 0.88
+- more app internationalization implementation and integration in deployment 
+  systems (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))
+- start of German translation of QOwnNotes
+    - please leave a message at the
+    [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)
+    if you want to help out with translation
 - fixed a file watcher error on app startup
 - the demo notes are now only created once 
   (for [Issue #41](https://github.com/pbek/QOwnNotes/issues/41))
