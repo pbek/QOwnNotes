@@ -1,7 +1,10 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QtGui>
+#include <QSettings>
 #include <QTranslator>
+#include "version.h"
+#include "release.h"
 
 
 int main(int argc, char *argv[])
@@ -12,14 +15,43 @@ int main(int argc, char *argv[])
 #endif
 
     QApplication app(argc, argv);
+    QString appNameAdd = "";
+
+#ifdef QT_DEBUG
+    appNameAdd = "Debug";
+#endif
+
+    QCoreApplication::setOrganizationDomain("PBE");
+    QCoreApplication::setOrganizationName("PBE");
+    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
+
+    QString appVersion = QString(VERSION) + " " + QString(RELEASE);
+
+#ifdef QT_DEBUG
+    appVersion += " Debug";
+#endif
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    appVersion += " " + QSysInfo::prettyProductName();
+
+    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
+        appVersion += " " + QSysInfo::currentCpuArchitecture();
+    }
+#endif
+
+    QCoreApplication::setApplicationVersion(appVersion);
 
     QTranslator qtTranslator;
     qtTranslator.load("qt_" + QLocale::system().name(),
                       QLibraryInfo::location(QLibraryInfo::TranslationsPath));
     app.installTranslator(&qtTranslator);
 
-    QString locale = QLocale::system().name().section('_', 0, 0);
-//    locale = "de";
+    QSettings settings;
+    QString locale = settings.value("interfaceLanguage").toString();
+
+    if (locale.isEmpty()) {
+        locale = QLocale::system().name().section('_', 0, 0);
+    }
     qDebug() << __func__ << " - 'locale': " << locale;
 
 #ifndef QT_DEBUG

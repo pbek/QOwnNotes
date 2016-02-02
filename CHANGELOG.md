@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.89
+- you can now select the interface language in the settings
+    - currently only a bit of German translation exists
+
 ## 0.88
 - more app internationalization implementation and integration in deployment 
   systems (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))

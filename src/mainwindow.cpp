@@ -35,32 +35,6 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
-    QString appNameAdd = "";
-
-#ifdef QT_DEBUG
-    appNameAdd = "Debug";
-#endif
-
-    QCoreApplication::setOrganizationDomain("PBE");
-    QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
-
-    QString appVersion = QString(VERSION) + " " + QString(RELEASE);
-
-#ifdef QT_DEBUG
-    appVersion += " Debug";
-#endif
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    appVersion += " " + QSysInfo::prettyProductName();
-
-    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
-        appVersion += " " + QSysInfo::currentCpuArchitecture();
-    }
-#endif
-
-    QCoreApplication::setApplicationVersion(appVersion);
-
     ui->setupUi(this);
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
