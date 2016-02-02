@@ -1329,11 +1329,11 @@ void MainWindow::removeSelectedNotes() {
         Q_UNUSED(blocker);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
-                QString name = item->text();
-                Note note = Note::fetchByName(name);
-                note.remove(true);
-                qDebug() << "Removed note " << name;
-            }
+            QString name = item->text();
+            Note note = Note::fetchByName(name);
+            note.remove(true);
+            qDebug() << "Removed note " << name;
+        }
 
         loadNoteDirectoryList();
     }

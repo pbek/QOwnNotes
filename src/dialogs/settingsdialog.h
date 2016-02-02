@@ -25,9 +25,13 @@ public:
 
     explicit SettingsDialog(SimpleCrypt *crypto, QWidget *parent = 0);
     ~SettingsDialog();
-    void connectTestCallback(bool appIsValid, QString appVersion, QString serverVersion, QString connectionErrorMessage);
+    void connectTestCallback(bool appIsValid,
+                             QString appVersion,
+                             QString serverVersion,
+                             QString connectionErrorMessage);
     void setOKLabelData(int number, QString text, OKLabelStatus status);
-    void refreshTodoCalendarList(QStringList items, bool forceReadCheckedState = false);
+    void refreshTodoCalendarList(QStringList items,
+                                 bool forceReadCheckedState = false);
 private slots:
     void on_connectButton_clicked();
     void on_buttonBox_clicked(QAbstractButton *button);

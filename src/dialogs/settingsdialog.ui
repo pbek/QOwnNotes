@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -631,7 +631,7 @@ p, li { white-space: pre-wrap; }
         </attribute>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0,0">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -838,6 +838,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>90</height>
+              </size>
+             </property>
              <property name="title">
               <string>Toolbar</string>
              </property>
@@ -866,6 +872,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              </widget>
             </widget>
            </item>
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </item>
          <item>
@@ -874,55 +893,113 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             <number>0</number>
            </property>
            <item>
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="title">
+              <string>Interface language</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="1" column="0">
+               <widget class="QListWidget" name="languageListWidget">
+                <item>
+                 <property name="text">
+                  <string>Automatic</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true"/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>English</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">en</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>German</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">de</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>French</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">fr</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>If you change the language you have to restart the application for the changes to take action.</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QGroupBox" name="appMetricsGroupBox">
              <property name="title">
               <string>App metrics</string>
              </property>
-             <widget class="QLabel" name="appMetricsLabel">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>40</y>
-                <width>561</width>
-                <height>100</height>
-               </rect>
-              </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>0</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</string>
-              </property>
-              <property name="scaledContents">
-               <bool>false</bool>
-              </property>
-              <property name="wordWrap">
-               <bool>true</bool>
-              </property>
-             </widget>
-             <widget class="QCheckBox" name="appMetricsCheckBox">
-              <property name="geometry">
-               <rect>
-                <x>10</x>
-                <y>150</y>
-                <width>521</width>
-                <height>29</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>disable tracking of usage data</string>
-              </property>
-             </widget>
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="QLabel" name="appMetricsLabel">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QCheckBox" name="appMetricsCheckBox">
+                <property name="text">
+                 <string>disable tracking of usage data</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
            </item>
           </layout>
          </item>

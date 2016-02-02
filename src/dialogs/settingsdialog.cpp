@@ -110,6 +110,13 @@ void SettingsDialog::storeSettings() {
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showRecentNoteFolderCheckBox->isChecked());
 
+    QList<QListWidgetItem*> selectedLanguageItems =
+            ui->languageListWidget->selectedItems();
+    if (selectedLanguageItems.count() >= 1) {
+        settings.setValue("interfaceLanguage",
+                          selectedLanguageItems.first()->whatsThis());
+    }
+
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
         MetricsService::instance()->sendEvent("settings", "app metrics "
@@ -161,6 +168,24 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/mainToolBar.iconSize").toInt());
     ui->showRecentNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
+
+    QString interfaceLanguage = settings.value("interfaceLanguage").toString();
+
+    // get all items from the language selector
+    QList<QListWidgetItem *> items =
+            ui->languageListWidget->findItems(
+                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    // select the right item in the selector
+    Q_FOREACH(QListWidgetItem *item, items) {
+        if (item->whatsThis() == interfaceLanguage) {
+            const QSignalBlocker blocker(ui->languageListWidget);
+            Q_UNUSED(blocker);
+
+            item->whatsThis();
+            ui->languageListWidget->setItemSelected(item, true);
+            break;
+        }
+    }
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
     Q_UNUSED(blocker);
