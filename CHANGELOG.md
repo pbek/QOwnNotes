@@ -2,6 +2,11 @@
 
 ## 0.88
 - fixed a file watcher error on app startup
+- the demo notes are now only created once 
+  (for [Issue #41](https://github.com/pbek/QOwnNotes/issues/41))
+- fixed a problem with an empty note in the note list
+- fixed a problem with the note text after the last note was deleted in the 
+  note list
 
 ## 0.87
 - start of app internationalization implementation

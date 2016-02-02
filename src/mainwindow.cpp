@@ -385,17 +385,23 @@ void MainWindow::createSystemTrayIcon() {
 
 void MainWindow::loadNoteDirectoryList() {
     {
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
+        const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker);
 
         {
-            const QSignalBlocker blocker2(this->ui->notesListWidget);
+            const QSignalBlocker blocker2(ui->notesListWidget);
             Q_UNUSED(blocker2);
 
             this->ui->notesListWidget->clear();
 
             QStringList nameList = Note::fetchNoteNames();
             this->ui->notesListWidget->addItems(nameList);
+
+            // clear the text edits if there are no notes
+            if (nameList.isEmpty()) {
+                ui->noteTextEdit->clear();
+                ui->noteTextView->clear();
+            }
         }
     }
 
@@ -769,8 +775,22 @@ void MainWindow::buildNotesIndex() {
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
 
-    // add some notes if there aren't any
-    if (files.count() == 0) {
+    bool createDemoNotes = files.count() == 0;
+
+    if (createDemoNotes) {
+        QSettings settings;
+        // check if we already have created the demo notes once
+        createDemoNotes = !settings.value("demoNotesCreated").toBool();
+
+        if (createDemoNotes) {
+            // we don't want to create the demo notes again
+            settings.setValue("demoNotesCreated", true);
+        }
+    }
+
+    // add some notes if there aren't any and
+    // we haven't already created them once
+    if (createDemoNotes) {
         qDebug() << "No notes! We will add some...";
         QStringList filenames = QStringList() <<
                 "Markdown Showcase.txt" <<
@@ -802,7 +822,8 @@ void MainWindow::buildNotesIndex() {
         QTimer::singleShot(500, this, SLOT(jumpToWelcomeNote()));
     }
 
-    // get the current crypto key to set it again after all notes were read again
+    // get the current crypto key to set it again
+    // after all notes were read again
     qint64 cryptoKey = currentNote.getCryptoKey();
 
     // delete all notes in the database first
