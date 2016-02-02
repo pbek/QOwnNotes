@@ -23,7 +23,8 @@ int main(int argc, char *argv[])
 
 #ifndef QT_DEBUG
     QTranslator translatorRelease;
-    translatorRelease.load("/usr/share/QOwnNotes/languages/QOwnNotes_" + locale);
+    translatorRelease.load(
+        "/usr/share/QOwnNotes/languages/QOwnNotes_" + locale);
     app.installTranslator(&translatorRelease);
 #endif
 

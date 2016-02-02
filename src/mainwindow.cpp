@@ -773,6 +773,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 void MainWindow::checkTodoReminders() {
     CalendarItem::alertTodoReminders();
     Note::expireCryptoKeys();
+    MetricsService::instance()->sendEvent("app", "heartbeat");
 }
 
 void MainWindow::waitMsecs(int msecs) {
