@@ -44,8 +44,22 @@ MainWindow::MainWindow(QWidget *parent) :
     QCoreApplication::setOrganizationDomain("PBE");
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
-    QCoreApplication::setApplicationVersion(
-            QString(VERSION) + " " + QString(RELEASE));
+
+    QString appVersion = QString(VERSION) + " " + QString(RELEASE);
+
+#ifdef QT_DEBUG
+    appVersion += " Debug";
+#endif
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    appVersion += " " + QSysInfo::prettyProductName();
+
+    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
+        appVersion += " " + QSysInfo::currentCpuArchitecture();
+    }
+#endif
+
+    QCoreApplication::setApplicationVersion(appVersion);
 
     ui->setupUi(this);
     this->setWindowTitle(
