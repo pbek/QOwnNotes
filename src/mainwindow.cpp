@@ -69,9 +69,10 @@ MainWindow::MainWindow(QWidget *parent) :
     MetricsService *metricsService = MetricsService::createInstance(this);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    metricsService->sendEvent("app", "start", QSysInfo::prettyProductName());
+    metricsService->sendEvent(
+            "app", "app start", QSysInfo::prettyProductName());
 #else
-    metricsService->sendEvent("app", "start");
+    metricsService->sendEvent("app", "app start");
 #endif
 
     QActionGroup *sorting = new QActionGroup(this);
@@ -416,6 +417,9 @@ void MainWindow::loadNoteDirectoryList() {
                 ui->noteTextEdit->clear();
                 ui->noteTextView->clear();
             }
+
+            MetricsService::instance()->sendEvent(
+                    "note", "note list loaded", "", nameList.count());
         }
     }
 
@@ -733,7 +737,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
         int count = Note::storeDirtyNotesToDisk(this->currentNote);
 
         if (count > 0) {
-            MetricsService::instance()->sendEvent("note", "stored", "", count);
+            MetricsService::instance()
+                    ->sendEvent("note", "notes stored", "", count);
 
             qDebug() << __func__ << " - 'count': " << count;
 
@@ -934,7 +939,7 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
-    MetricsService::instance()->sendEvent("note", "changed");
+    MetricsService::instance()->sendEvent("note", "current note changed");
 
     // update cursor position of previous note
     if (this->currentNote.exists()) {
@@ -1032,7 +1037,7 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendEvent("app", "end");
+    MetricsService::instance()->sendEvent("app", "app end");
     storeSettings();
     QMainWindow::closeEvent(event);
 }
