@@ -399,16 +399,22 @@ void MainWindow::loadNoteDirectoryList() {
         }
     }
 
-    // watch the notes directory for changes
-    this->noteDirectoryWatcher.addPath(this->notesPath);
+    QDir dir(this->notesPath);
+    if (dir.exists()) {
+        // watch the notes directory for changes
+        this->noteDirectoryWatcher.addPath(this->notesPath);
+    }
 
     QStringList fileNameList = Note::fetchNoteFileNames();
 
     // watch all the notes for changes
     Q_FOREACH(QString fileName, fileNameList) {
-            this->noteDirectoryWatcher.addPath(
-                    Note::getFullNoteFilePathForFile(fileName));
+        QString path = Note::getFullNoteFilePathForFile(fileName);
+        QFile file(path);
+        if (file.exists()) {
+            this->noteDirectoryWatcher.addPath(path);
         }
+    }
 
     // sort alphabetically again in necessary
     if (sortAlphabetically) {
@@ -1691,6 +1697,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         // store the note to disk
         {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
 
             note.storeNoteTextFileToDisk();
             this->ui->statusBar->showMessage(

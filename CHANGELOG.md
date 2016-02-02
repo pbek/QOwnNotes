@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.88
+- fixed a file watcher error on app startup
+
 ## 0.87
 - start of app internationalization implementation
   (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))
