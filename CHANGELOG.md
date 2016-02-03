@@ -5,6 +5,7 @@
     - by default the system language will be used
     - the fallback language is English
 - added German translation from @calis2002, thanks a lot for the great job
+- fixed a character in link titles that disorients the markup highlighter
 
 ## 0.88
 - more app internationalization implementation and integration in deployment 

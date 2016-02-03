@@ -1440,7 +1440,7 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  */
 void MainWindow::handleTextNoteLinking() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    LinkDialog *dialog = new LinkDialog("Link an url or note", this);
+    LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
     dialog->exec();
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
