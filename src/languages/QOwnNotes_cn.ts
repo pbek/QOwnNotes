@@ -84,7 +84,7 @@ Click Cancel to exit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="190"/>
+        <location filename="../dialogs/linkdialog.cpp" line="179"/>
         <source>Select file to link to</source>
         <translation type="unfinished"></translation>
     </message>
@@ -478,6 +478,11 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.cpp" line="870"/>
         <source>Select ownCloud folder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1443"/>
+        <source>Link to an url or note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -892,42 +897,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="940"/>
+        <location filename="../dialogs/settingsdialog.ui" line="943"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="956"/>
         <source>App metrics</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="971"/>
+        <location filename="../dialogs/settingsdialog.ui" line="974"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="984"/>
+        <location filename="../dialogs/settingsdialog.ui" line="987"/>
         <source>disable tracking of usage data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1010"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1013"/>
         <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1019"/>
         <source>Debug information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1037"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1040"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1050"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1053"/>
         <source>&amp;Save debug information</source>
         <translation type="unfinished"></translation>
     </message>
