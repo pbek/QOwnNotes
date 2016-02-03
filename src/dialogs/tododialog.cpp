@@ -402,9 +402,9 @@ void TodoDialog::on_newItemEdit_returnPressed() {
  * @brief Removes the currently selected todo list item from the ownCloud server
  */
 void TodoDialog::on_removeButton_clicked() {
-    if (QMessageBox::information(this, "Remove todo item",
-                                 "Remove the selected todo item?\nThis cannot be undone!",
-                                 "&Remove", "&Cancel", QString::null,
+	if (QMessageBox::information(this, tr("Remove todo item"),
+								 tr("Remove the selected todo item?\nThis cannot be undone!"),
+								 tr("&Remove"), tr("&Cancel"), QString::null,
                                  0, 1) == 0) {
         CalendarItem calItem = currentCalendarItem;
 

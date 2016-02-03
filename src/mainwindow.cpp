@@ -633,10 +633,10 @@ void MainWindow::notesWereModified(const QString &str) {
             qDebug() << "Current note was removed externally!";
 
             switch (QMessageBox::information(
-                    this, "Note was removed externally!",
-                    "Current note was removed outside of this application!\n"
-                            "Restore current note?",
-                     "&Restore", "&Cancel", QString::null,
+					this, tr("Note was removed externally!"),
+					tr("Current note was removed outside of this application!\n"
+							"Restore current note?"),
+					 tr("&Restore"), tr("&Cancel"), QString::null,
                                              0, 1)) {
                 case 0: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
@@ -866,10 +866,10 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     } else {
         if (this->notesPath == "") {
             switch (QMessageBox::information(
-                    this, "No folder was selected",
-                    "You have to select your ownCloud notes "
-                            "folder to make this software work!",
-                    "&Retry", "&Exit", QString::null,
+					this, tr("No folder was selected"),
+					tr("You have to select your ownCloud notes "
+							"folder to make this software work!"),
+					tr("&Retry"), tr("&Exit"), QString::null,
                     0, 1)) {
                 case 0:
                     selectOwnCloudNotesFolder();
@@ -959,9 +959,9 @@ void MainWindow::removeCurrentNote() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    switch (QMessageBox::information(this, "Remove current note",
-                                     "Remove current note: <strong>" + this->currentNote.getName() + "</strong>?",
-                                     "&Remove", "&Cancel", QString::null,
+	switch (QMessageBox::information(this, tr("Remove current note"),
+									 tr("Remove current note: <strong>%1</strong>?").arg(this->currentNote.getName()),
+									 tr("&Remove"), tr("&Cancel"), QString::null,
                                      0, 1)) {
         case 0:
             this->currentNote.remove(true);
@@ -1145,8 +1145,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
     if (currentNote.hasEncryptedNoteText() &&
         !currentNote.canDecryptNoteText()) {
         QString labelText =
-                "Please enter the <strong>password</strong> "
-                        "of this encrypted note.";
+				tr("Please enter the <strong>password</strong> "
+						"of this encrypted note.");
 
         if (!additionalText.isEmpty()) {
             labelText += " " + additionalText;
@@ -1169,8 +1169,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
             if (!currentNote.canDecryptNoteText()) {
                 QMessageBox::warning(
                         this,
-                        "Note can't be decrypted!",
-                        "It seems that your password is not valid!");
+						tr("Note can't be decrypted!"),
+						tr("It seems that your password is not valid!"));
             }
         }
     }
@@ -1267,13 +1267,12 @@ void MainWindow::removeSelectedNotes() {
 
     if (QMessageBox::information(
             this,
-            "Remove selected notes",
-            "Remove <strong>" +
-                    QString::number(selectedItemsCount) +
-            "</strong> selected note(s)?\n\nIf the trash is enabled on your "
+			tr("Remove selected notes"),
+			tr("Remove <strong>%1</strong> selected note(s)?\n\n"
+			   "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
-                    "them from there.",
-             "&Remove", "&Cancel", QString::null,
+					"them from there.","",selectedItemsCount).arg(QString::number(selectedItemsCount)),
+			 tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
@@ -1308,11 +1307,10 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 
     if (QMessageBox::information(
             this,
-            "Move selected notes",
-            "Move " + QString::number(selectedItemsCount) +
-                    " selected note(s) to <strong>" +
-            destinationFolder + "</strong>?",
-            "&Move", "&Cancel", QString::null,
+			tr("Move selected notes"),
+			tr("Move %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
+				.arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+			tr("&Move"), tr("&Cancel"), QString::null,
             0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
@@ -1343,10 +1341,10 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
 
     if (QMessageBox::information(
             this,
-            "Copy selected notes",
-            "Copy " + QString::number(selectedItemsCount) + " selected note(s) "
-                      "to <strong>" + destinationFolder + "</strong>?",
-            "&Copy", "&Cancel", QString::null, 0, 1) == 0) {
+			tr("Copy selected notes"),
+			tr("Copy %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
+				.arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+			tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
                 QString name = item->text();
@@ -1363,10 +1361,9 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
             }
 
         QMessageBox::information(
-                this, "Done",
-                QString::number(copyCount) +
-                        " note(s) were copied to <strong>" + destinationFolder +
-                        "</strong>.");
+				this, tr("Done"),
+				tr("%1 note(s) were copied to <strong>%2</strong>.","",copyCount)
+					.arg(QString::number(copyCount)).arg(destinationFolder));
     }
 }
 
@@ -1375,9 +1372,9 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
  */
 void MainWindow::updateCurrentFolderTooltip() {
     ui->actionSet_ownCloud_Folder
-            ->setStatusTip("Current notes folder: " + this->notesPath);
+			->setStatusTip(tr("Current notes folder: ") + this->notesPath);
     ui->actionSet_ownCloud_Folder
-            ->setToolTip("Set the notes folder. Current notes folder: " +
+			->setToolTip(tr("Set the notes folder. Current notes folder: ") +
                                  this->notesPath);
 }
 
@@ -1416,7 +1413,7 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  */
 void MainWindow::handleTextNoteLinking() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    LinkDialog *dialog = new LinkDialog("Link an url or note", this);
+	LinkDialog *dialog = new LinkDialog(tr("Link an url or note"), this);
     dialog->exec();
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
@@ -1497,8 +1494,8 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter("PDF files (*.pdf)");
-    dialog.setWindowTitle("Export current note as PDF");
+	dialog.setNameFilter(tr("PDF files (*.pdf)"));
+	dialog.setWindowTitle(tr("Export current note as PDF"));
     dialog.selectFile(currentNote.getName() + ".pdf");
     int ret = dialog.exec();
 
@@ -1937,7 +1934,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
 
     QString linkTextActionName =
             ui->noteTextEdit->textCursor().selectedText() != "" ?
-                "&Link selected text" : "Insert &link";
+				tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(tr("Ctrl+L"));
 
@@ -2006,10 +2003,10 @@ void MainWindow::on_actionOpen_List_triggered() {
     // check if we have got any todo list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
         if (QMessageBox::warning(
-                0, "No selected todo lists!",
-                "You have not selected any todo lists.<br />Please check your "
-                        "<strong>Todo</strong> configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
+				0, tr("No selected todo lists!"),
+				tr("You have not selected any todo lists.<br />Please check your "
+						"<strong>Todo</strong> configuration in the settings!"),
+				tr("Open &settings"), tr("&Cancel"), QString::null, 0, 1) == 0) {
             openSettingsDialog();
         }
 
@@ -2058,8 +2055,8 @@ void MainWindow::on_actionInsert_image_triggered() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter("Image files (*.jpg *.png *.gif)");
-    dialog.setWindowTitle("Select image to insert");
+	dialog.setNameFilter(tr("Image files (*.jpg *.png *.gif)"));
+	dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -2127,10 +2124,10 @@ void MainWindow::on_action_Encrypt_note_triggered()
     }
 
     QString labelText =
-            "Please enter your <strong>password</strong> to encrypt the note."
+			tr("Please enter your <strong>password</strong> to encrypt the note."
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
-            "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!";
+			"can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
     PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
     int dialogResult = dialog->exec();
 
@@ -2172,12 +2169,12 @@ void MainWindow::on_actionDecrypt_note_triggered()
     }
 
     if (QMessageBox::warning(
-            this, "Decrypt note anf store it as plain text",
-            "Your note will be decrypted and stored as plain text gain. Keep "
+			this, tr("Decrypt note and store it as plain text"),
+			tr("Your note will be decrypted and stored as plain text gain. Keep "
                     "in mind that the unencrypted note will possibly be synced "
                     "to your server and sensitive text may be exposed!<br />"
-                    "Do you want to decrypt your note?",
-            "&Decrypt", "&Cancel", QString::null,
+					"Do you want to decrypt your note?"),
+			tr("&Decrypt"), tr("&Cancel"), QString::null,
             0, 1) == 1) {
         return;
     }
@@ -2203,7 +2200,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
     }
 
     askForEncryptedNotePasswordIfNeeded(
-            "<br />You will be able to edit your encrypted note.");
+			tr("<br />You will be able to edit your encrypted note."));
 
     if (currentNote.canDecryptNoteText()) {
         const QSignalBlocker blocker(ui->encryptedNoteTextEdit);
@@ -2252,8 +2249,8 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter("Markdown files (*.md)");
-    dialog.setWindowTitle("Export current note as Markdown file");
+	dialog.setNameFilter(tr("Markdown files (*.md)"));
+	dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
 
