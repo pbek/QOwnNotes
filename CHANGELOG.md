@@ -4,8 +4,11 @@
 - you can now select the interface language in the settings
     - by default the system language will be used
     - the fallback language is English
-- added German translation from @calis2002, thanks a lot for the great job
-- fixed a character in link titles that disorients the markup highlighter
+- added German translation from @calis2002, thanks a lot for the great job!
+- if you feel like translating QOwnNotes to an other language please read
+ [How can I help to translate QOwnNotes?](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+- fixed a character in link titles that was disorienting the markdown 
+  highlighter
 
 ## 0.88
 - more app internationalization implementation and integration in deployment 
