@@ -25,11 +25,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setOrganizationName("PBE");
     QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
 
-    QString appVersion = QString(VERSION) + " " + QString(RELEASE);
-
-#ifdef QT_DEBUG
-    appVersion += " Debug";
-#endif
+    QString appVersion = QString(VERSION);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     appVersion += " " + QSysInfo::prettyProductName();
@@ -37,6 +33,12 @@ int main(int argc, char *argv[])
     if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
         appVersion += " " + QSysInfo::currentCpuArchitecture();
     }
+#endif
+
+    appVersion += " " + QString(RELEASE);
+
+#ifdef QT_DEBUG
+    appVersion += " Debug";
 #endif
 
     QCoreApplication::setApplicationVersion(appVersion);
