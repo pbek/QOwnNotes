@@ -2,7 +2,7 @@
 
 ## 0.89
 - you can now select the interface language in the settings
-    - currently only a bit of German translation exists
+- added German translation from @calis2002, thanks a lot for the great job
 
 ## 0.88
 - more app internationalization implementation and integration in deployment 
