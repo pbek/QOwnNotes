@@ -12,6 +12,7 @@
 #include <QDesktopServices>
 #include <QFontDialog>
 #include <QMessageBox>
+#include <services/metricsservice.h>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
         MasterDialog(parent),
@@ -109,6 +110,22 @@ void SettingsDialog::storeSettings() {
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showRecentNoteFolderCheckBox->isChecked());
 
+    QList<QListWidgetItem*> selectedLanguageItems =
+            ui->languageListWidget->selectedItems();
+    if (selectedLanguageItems.count() >= 1) {
+        settings.setValue("interfaceLanguage",
+                          selectedLanguageItems.first()->whatsThis());
+    }
+
+    if (!settings.value("appMetrics/disableTracking").toBool() &&
+            ui->appMetricsCheckBox->isChecked()) {
+        MetricsService::instance()->sendEvent("settings", "app metrics "
+                "disabled");
+    }
+
+    settings.setValue("appMetrics/disableTracking",
+                      ui->appMetricsCheckBox->isChecked());
+
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
     QStringList todoCalendarEnabledUrlList;
@@ -152,6 +169,29 @@ void SettingsDialog::readSettings() {
     ui->showRecentNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
 
+    QString interfaceLanguage = settings.value("interfaceLanguage").toString();
+
+    // get all items from the language selector
+    QList<QListWidgetItem *> items =
+            ui->languageListWidget->findItems(
+                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    // select the right item in the selector
+    Q_FOREACH(QListWidgetItem *item, items) {
+        if (item->whatsThis() == interfaceLanguage) {
+            const QSignalBlocker blocker(ui->languageListWidget);
+            Q_UNUSED(blocker);
+
+            item->whatsThis();
+            ui->languageListWidget->setItemSelected(item, true);
+            break;
+        }
+    }
+
+    const QSignalBlocker blocker(ui->appMetricsCheckBox);
+    Q_UNUSED(blocker);
+    ui->appMetricsCheckBox->setChecked(settings.value(
+            "appMetrics/disableTracking").toBool());
+
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
@@ -160,8 +200,8 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/noteTextView.font").toString());
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
-    const QSignalBlocker blocker(this->ui->defaultOwnCloudCalendarRadioButton);
-    Q_UNUSED(blocker);
+    const QSignalBlocker blocker2(this->ui->defaultOwnCloudCalendarRadioButton);
+    Q_UNUSED(blocker2);
 
     switch (settings.value("ownCloud/todoCalendarBackend").toInt()) {
         case OwnCloudService::CalendarPlus:
@@ -564,7 +604,7 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
         QFile file(fileNames.at(0));
 
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-            qDebug() << file.errorString();
+            qWarning() << file.errorString();
             return;
         }
 
@@ -573,5 +613,26 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
         out << ui->debugInfoTextEdit->toPlainText();
         file.flush();
         file.close();
+    }
+}
+
+void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
+{
+    if (checked) {
+        int reply;
+        reply = QMessageBox::question(
+                this,
+                "Disable usage tracking",
+                "Anonymous usage data helps to decide what parts of "
+                        "QOwnNotes to improve next and to find and fix bugs."
+                        "<br />Please disable it only if you really can't live"
+                        " with it.<br /><br />Really disable usage tracking?",
+                QMessageBox::Yes|QMessageBox::No,
+                QMessageBox::No);
+        if (reply == QMessageBox::No) {
+            const QSignalBlocker blocker(ui->appMetricsCheckBox);
+            Q_UNUSED(blocker);
+            ui->appMetricsCheckBox->setChecked(0);
+        }
     }
 }

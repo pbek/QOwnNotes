@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="en_US">
+<TS version="2.0">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -19,10 +20,32 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>DatabaseService</name>
+    <message>
+        <location filename="../services/databaseservice.cpp" line="57"/>
+        <source>Cannot open memory database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/databaseservice.cpp" line="58"/>
+        <location filename="../services/databaseservice.cpp" line="75"/>
+        <source>Unable to establish a database connection.
+This application needs SQLite support. Please read the Qt SQL driver documentation for information how to build it.
+
+Click Cancel to exit.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/databaseservice.cpp" line="74"/>
+        <source>Cannot open disk database</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>LinkDialog</name>
     <message>
         <location filename="../dialogs/linkdialog.ui" line="14"/>
-        <source>Link an url or note</source>
+        <source>Search note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -70,6 +93,7 @@ p, li { white-space: pre-wrap; }
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
+        <location filename="../mainwindow.cpp" line="1558"/>
         <source>QOwnNotes</source>
         <translation type="unfinished"></translation>
     </message>
@@ -275,7 +299,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
-        <location filename="../mainwindow.cpp" line="1937"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
@@ -286,7 +309,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../mainwindow.ui" line="567"/>
-        <location filename="../mainwindow.cpp" line="1939"/>
+        <location filename="../mainwindow.cpp" line="1986"/>
         <source>Ctrl+L</source>
         <translation type="unfinished"></translation>
     </message>
@@ -441,257 +464,30 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="609"/>
-        <location filename="../mainwindow.cpp" line="651"/>
-        <location filename="../mainwindow.cpp" line="1672"/>
+        <location filename="../mainwindow.cpp" line="615"/>
+        <location filename="../mainwindow.cpp" line="657"/>
+        <location filename="../mainwindow.cpp" line="1719"/>
         <source>stored current note to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="636"/>
-        <source>Note was removed externally!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="637"/>
-        <source>Current note was removed outside of this application!
-Restore current note?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="639"/>
-        <source>&amp;Restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="639"/>
-        <location filename="../mainwindow.cpp" line="964"/>
-        <location filename="../mainwindow.cpp" line="1275"/>
-        <location filename="../mainwindow.cpp" line="1313"/>
-        <location filename="../mainwindow.cpp" line="1347"/>
-        <location filename="../mainwindow.cpp" line="2009"/>
-        <location filename="../mainwindow.cpp" line="2177"/>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="713"/>
+        <location filename="../mainwindow.cpp" line="720"/>
         <source>stored %1 note(s) to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="847"/>
+        <location filename="../mainwindow.cpp" line="870"/>
         <source>Select ownCloud folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="869"/>
-        <source>No folder was selected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="870"/>
-        <source>You have to select your ownCloud notes folder to make this software work!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="872"/>
-        <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="872"/>
-        <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="962"/>
-        <source>Remove current note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="963"/>
-        <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="964"/>
-        <location filename="../mainwindow.cpp" line="1275"/>
-        <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1148"/>
-        <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1172"/>
-        <source>Note can&apos;t be decrypted!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1173"/>
-        <source>It seems that your password is not valid!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1270"/>
-        <source>Remove selected notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1271"/>
-        <source>Remove &lt;strong&gt;%1&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1310"/>
-        <source>Move selected notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1311"/>
-        <source>Move %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1313"/>
-        <source>&amp;Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1344"/>
-        <source>Copy selected notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1345"/>
-        <source>Copy %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1347"/>
-        <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1364"/>
-        <source>Done</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1365"/>
-        <source>%1 note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1375"/>
-        <source>Current notes folder: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1377"/>
-        <source>Set the notes folder. Current notes folder: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1416"/>
-        <source>Link an url or note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1479"/>
+        <location filename="../mainwindow.cpp" line="1506"/>
         <source>Print note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1497"/>
-        <source>PDF files (*.pdf)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1498"/>
-        <source>Export current note as PDF</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1937"/>
-        <source>&amp;Link selected text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2006"/>
-        <source>No selected todo lists!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2007"/>
-        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2009"/>
-        <source>Open &amp;settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2058"/>
-        <source>Image files (*.jpg *.png *.gif)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2059"/>
-        <source>Select image to insert</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2127"/>
-        <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2172"/>
-        <source>Decrypt note and store it as plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2173"/>
-        <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2177"/>
-        <source>&amp;Decrypt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2203"/>
-        <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2252"/>
-        <source>Markdown files (*.md)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2253"/>
-        <source>Export current note as Markdown file</source>
+        <location filename="../mainwindow.cpp" line="1559"/>
+        <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -758,28 +554,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../dialogs/passworddialog.ui" line="50"/>
         <source>passwords don&apos;t match!</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>QWidget</name>
-    <message>
-        <location filename="../services/databaseservice.cpp" line="57"/>
-        <source>Cannot open memory database</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/databaseservice.cpp" line="58"/>
-        <location filename="../services/databaseservice.cpp" line="75"/>
-        <source>Unable to establish a database connection.
-This application needs SQLite support. Please read the Qt SQL driver documentation for information how to build it.
-
-Click Cancel to exit.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../services/databaseservice.cpp" line="74"/>
-        <source>Cannot open disk database</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -927,10 +701,10 @@ Click Cancel to exit.</source>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Please install the latest version of &lt;/span&gt;&lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;You also need to have the two ownCloud core apps &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600;&quot;&gt;Versions&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; enabled on your ownCloud server.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;You still need &lt;/span&gt;&lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; to sync your notes!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -989,173 +763,177 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="642"/>
+        <location filename="../dialogs/settingsdialog.ui" line="647"/>
         <source>Notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="648"/>
+        <location filename="../dialogs/settingsdialog.ui" line="653"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="654"/>
+        <location filename="../dialogs/settingsdialog.ui" line="659"/>
         <source>notify about all external modifications</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="685"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="684"/>
+        <location filename="../dialogs/settingsdialog.ui" line="689"/>
         <source>note save interval time [sec]</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="705"/>
         <source>Font settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="711"/>
-        <location filename="../dialogs/settingsdialog.ui" line="753"/>
+        <location filename="../dialogs/settingsdialog.ui" line="716"/>
+        <location filename="../dialogs/settingsdialog.ui" line="758"/>
         <source>Font name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="718"/>
-        <location filename="../dialogs/settingsdialog.ui" line="760"/>
+        <location filename="../dialogs/settingsdialog.ui" line="723"/>
+        <location filename="../dialogs/settingsdialog.ui" line="765"/>
         <source>set a new font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="721"/>
-        <location filename="../dialogs/settingsdialog.ui" line="763"/>
+        <location filename="../dialogs/settingsdialog.ui" line="726"/>
+        <location filename="../dialogs/settingsdialog.ui" line="768"/>
         <source>...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="728"/>
+        <location filename="../dialogs/settingsdialog.ui" line="733"/>
         <source>note text edit:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="743"/>
         <source>note markdown view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="779"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="784"/>
         <source>Database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="785"/>
-        <source>Reinitialize Database</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="792"/>
+        <location filename="../dialogs/settingsdialog.ui" line="790"/>
         <source>Do this if you have troubles with your Todo items.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="811"/>
+        <location filename="../dialogs/settingsdialog.ui" line="800"/>
+        <source>Reinitialize Database</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="816"/>
         <source>Recent notes folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="817"/>
+        <location filename="../dialogs/settingsdialog.ui" line="822"/>
         <source>Show recent notes folders in main area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="824"/>
+        <location filename="../dialogs/settingsdialog.ui" line="829"/>
         <source>clear the recent note folder history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="827"/>
+        <location filename="../dialogs/settingsdialog.ui" line="832"/>
         <source>Clear history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="843"/>
+        <location filename="../dialogs/settingsdialog.ui" line="848"/>
         <source>Toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="855"/>
+        <location filename="../dialogs/settingsdialog.ui" line="860"/>
         <source>Icon size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="872"/>
+        <location filename="../dialogs/settingsdialog.ui" line="898"/>
+        <source>Interface language</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="905"/>
+        <source>Automatic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="913"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="921"/>
+        <source>German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="929"/>
+        <source>French</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="940"/>
+        <source>If you change the language you have to restart the application for the changes to take action.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="953"/>
+        <source>App metrics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="971"/>
+        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="984"/>
+        <source>disable tracking of usage data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1010"/>
         <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="878"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1016"/>
         <source>Debug information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="899"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1037"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="912"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1050"/>
         <source>&amp;Save debug information</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="298"/>
-        <source>The connection was made successfully!
-Server version: %1
-QOwnNotesAPI version: %2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="307"/>
-        <source>There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
-
-Connection error message: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="477"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="516"/>
         <source>Select ownCloud base directory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="525"/>
-        <source>The Database was reinitialized.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="535"/>
-        <source>Recent note folders history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="536"/>
-        <source>The history was cleared.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="553"/>
-        <source>Markdown files (*.md)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="554"/>
-        <source>Save debug information</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1242,27 +1020,6 @@ Connection error message: </source>
         <source>search or create todo item</source>
         <translation type="unfinished"></translation>
     </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="405"/>
-        <source>Remove todo item</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="406"/>
-        <source>Remove the selected todo item?
-This cannot be undone!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="407"/>
-        <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="407"/>
-        <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>TrashDialog</name>
@@ -1286,22 +1043,12 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="21"/>
-        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="29"/>
+        <location filename="../dialogs/trashdialog.cpp" line="27"/>
         <source>&amp;Download selected note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="30"/>
-        <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/trashdialog.cpp" line="39"/>
+        <location filename="../dialogs/trashdialog.cpp" line="34"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>

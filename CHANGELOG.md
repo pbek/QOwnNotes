@@ -1,14 +1,44 @@
 # QOwnNotes Changelog
 
+## 0.89
+- you can now select the interface language in the settings
+    - by default the system language will be used
+    - the fallback language is English
+- added German translation from @calis2002, thanks a lot for the great job!
+- if you feel like translating QOwnNotes to an other language please read
+ [How can I help to translate QOwnNotes?](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+- fixed a character in link titles that was disorienting the markdown 
+  highlighter
+
+## 0.88
+- more app internationalization implementation and integration in deployment 
+  systems (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))
+- start of German translation of QOwnNotes
+    - please leave a message at the
+    [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)
+    if you want to help out with translation
+- fixed a file watcher error on app startup
+- the demo notes are now only created once instead of every time a notes folder
+  is empty (for [Issue #41](https://github.com/pbek/QOwnNotes/issues/41))
+- fixed a problem with an empty note in the note list
+- fixed a problem with the note text after the last note was deleted in the 
+  note list
+
 ## 0.87
-- added app translation support
+- start of app internationalization implementation
+  (for [Issue #40](https://github.com/pbek/QOwnNotes/issues/40))
 - fixed a problem with the crypto key expiration of encrypted messages where one
   had to enter the password every minute while editing the note
-    - now the crypto key will expire after 10min without editing the note  
+  (for [Issue #42](https://github.com/pbek/QOwnNotes/issues/42))
+    - now the crypto key will expire after 10min without editing the note
+- did some fixes and layout changes in the settings dialog
 - added basic app metrics
+    - anonymous usage data helps to decide what parts of QOwnNotes to 
+    improve next and to find and fix bugs
+    - you can disable the app metrics in the settings
 
 ## 0.86
-- tried to fix a sporadic crash in OSX
+- tried to fix a sporadic crash on OS X
 - there now is a software repository for **Debian Linux 8.0**
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation) for instructions
 

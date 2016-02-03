@@ -1,11 +1,10 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QtGui>
-#include <QTextEdit>
-#include <QSplitter>
-#include <QVBoxLayout>
-#include <QListView>
-#include <QSystemTrayIcon>
+#include <QSettings>
+#include <QTranslator>
+#include "version.h"
+#include "release.h"
 
 
 int main(int argc, char *argv[])
@@ -15,9 +14,92 @@ int main(int argc, char *argv[])
     QCoreApplication::addLibraryPath("./");
 #endif
 
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
+    QString appNameAdd = "";
+
+#ifdef QT_DEBUG
+    appNameAdd = "Debug";
+#endif
+
+    QCoreApplication::setOrganizationDomain("PBE");
+    QCoreApplication::setOrganizationName("PBE");
+    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
+
+    QString appVersion = QString(VERSION);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    appVersion += " " + QSysInfo::prettyProductName();
+
+    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
+        appVersion += " " + QSysInfo::currentCpuArchitecture();
+    }
+#endif
+
+    appVersion += " " + QString(RELEASE);
+
+#ifdef QT_DEBUG
+    appVersion += " Debug";
+#endif
+
+    QCoreApplication::setApplicationVersion(appVersion);
+
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(),
+                      QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+
+    QSettings settings;
+    QString locale = settings.value("interfaceLanguage").toString();
+
+    if (locale.isEmpty()) {
+        locale = QLocale::system().name().section('_', 0, 0);
+    }
+    qDebug() << __func__ << " - 'locale': " << locale;
+
+#ifndef QT_DEBUG
+    QTranslator translatorRelease;
+    translatorRelease.load(
+        "/usr/share/QOwnNotes/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translatorRelease);
+#endif
+
+    QString appPath = QCoreApplication::applicationDirPath();
+
+    QTranslator translator1;
+    translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator1);
+
+    QTranslator translator2;
+    translator2.load(appPath + "/../languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator2);
+
+    QTranslator translator3;
+    translator3.load(appPath + "/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator3);
+
+    QTranslator translator4;
+    translator4.load(appPath + "/QOwnNotes_" + locale);
+    app.installTranslator(&translator4);
+
+    QTranslator translator5;
+    translator5.load("../src/languages/QOwnNotes_" + locale);
+    app.installTranslator(&translator5);
+
+    QTranslator translatorLocal;
+    translatorLocal.load("QOwnNotes_" + locale);
+    app.installTranslator(&translatorLocal);
+
+#ifdef Q_OS_MAC
+    QTranslator translatorOSX;
+    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale);
+    app.installTranslator(&translatorOSX);
+
+    QTranslator translatorOSX2;
+    translatorOSX2.load("../Resources/QOwnNotes_" + locale);
+    app.installTranslator(&translatorOSX2);
+#endif
 
     MainWindow w;
     w.show();
-    return a.exec();
+    return app.exec();
 }

@@ -31,13 +31,18 @@ void MetricsService::sendEvent(
         const QString& eventAction,
         const QString& eventLabel,
         int eventValue) {
-    qDebug() << __func__ << " - 'eventAction': " << eventAction;
-
-    analytics->sendEvent(eventCategory, eventAction, eventLabel, eventValue);
+    QSettings settings;
+    if (!settings.value("appMetrics/disableTracking").toBool()) {
+        qDebug() << __func__ << " - 'eventAction': " << eventAction;
+        analytics->sendEvent(
+                eventCategory, eventAction, eventLabel, eventValue);
+    }
 }
 
 void MetricsService::sendAppView(const QString& screenName) {
-    qDebug() << __func__ << " - 'screenName': " << screenName;
-
-    analytics->sendAppview2(screenName);
+    QSettings settings;
+    if (!settings.value("appMetrics/disableTracking").toBool()) {
+        qDebug() << __func__ << " - 'screenName': " << screenName;
+        analytics->sendAppview2(screenName);
+    }
 }

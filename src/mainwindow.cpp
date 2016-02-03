@@ -35,30 +35,18 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
-    QString appNameAdd = "";
-
-#ifdef QT_DEBUG
-    appNameAdd = "Debug";
-#endif
-
-    QCoreApplication::setOrganizationDomain("PBE");
-    QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
-    QCoreApplication::setApplicationVersion(
-            QString(VERSION) + " " + QString(RELEASE));
-
     ui->setupUi(this);
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
 
     MetricsService *metricsService = MetricsService::createInstance(this);
-    metricsService->sendAppView(objectName());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    metricsService->sendEvent("app", "start", QSysInfo::prettyProductName());
+    metricsService->sendEvent(
+            "app", "app start", QSysInfo::prettyProductName());
 #else
-    metricsService->sendEvent("app", "start");
+    metricsService->sendEvent("app", "app start");
 #endif
 
     QActionGroup *sorting = new QActionGroup(this);
@@ -197,6 +185,9 @@ MainWindow::MainWindow(QWidget *parent) :
             SIGNAL(currentTextChanged(const QString &)),
             this,
             SLOT(changeNoteFolder(const QString &)));
+
+    // show the app metrics notification if not already shown
+    showAppMetricsNotificationIfNeeded();
 }
 
 MainWindow::~MainWindow() {
@@ -383,30 +374,45 @@ void MainWindow::createSystemTrayIcon() {
 
 void MainWindow::loadNoteDirectoryList() {
     {
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
+        const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker);
 
         {
-            const QSignalBlocker blocker2(this->ui->notesListWidget);
+            const QSignalBlocker blocker2(ui->notesListWidget);
             Q_UNUSED(blocker2);
 
             this->ui->notesListWidget->clear();
 
             QStringList nameList = Note::fetchNoteNames();
             this->ui->notesListWidget->addItems(nameList);
+
+            // clear the text edits if there are no notes
+            if (nameList.isEmpty()) {
+                ui->noteTextEdit->clear();
+                ui->noteTextView->clear();
+            }
+
+            MetricsService::instance()->sendEvent(
+                    "note", "note list loaded", "", nameList.count());
         }
     }
 
-    // watch the notes directory for changes
-    this->noteDirectoryWatcher.addPath(this->notesPath);
+    QDir dir(this->notesPath);
+    if (dir.exists()) {
+        // watch the notes directory for changes
+        this->noteDirectoryWatcher.addPath(this->notesPath);
+    }
 
     QStringList fileNameList = Note::fetchNoteFileNames();
 
     // watch all the notes for changes
     Q_FOREACH(QString fileName, fileNameList) {
-            this->noteDirectoryWatcher.addPath(
-                    Note::getFullNoteFilePathForFile(fileName));
+        QString path = Note::getFullNoteFilePathForFile(fileName);
+        QFile file(path);
+        if (file.exists()) {
+            this->noteDirectoryWatcher.addPath(path);
         }
+    }
 
     // sort alphabetically again in necessary
     if (sortAlphabetically) {
@@ -705,7 +711,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
         int count = Note::storeDirtyNotesToDisk(this->currentNote);
 
         if (count > 0) {
-            MetricsService::instance()->sendEvent("note", "stored", "", count);
+            MetricsService::instance()
+                    ->sendEvent("note", "notes stored", "", count);
 
             qDebug() << __func__ << " - 'count': " << count;
 
@@ -740,6 +747,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 void MainWindow::checkTodoReminders() {
     CalendarItem::alertTodoReminders();
     Note::expireCryptoKeys();
+    MetricsService::instance()->sendEvent("app", "heartbeat");
 }
 
 void MainWindow::waitMsecs(int msecs) {
@@ -761,8 +769,22 @@ void MainWindow::buildNotesIndex() {
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
 
-    // add some notes if there aren't any
-    if (files.count() == 0) {
+    bool createDemoNotes = files.count() == 0;
+
+    if (createDemoNotes) {
+        QSettings settings;
+        // check if we already have created the demo notes once
+        createDemoNotes = !settings.value("demoNotesCreated").toBool();
+
+        if (createDemoNotes) {
+            // we don't want to create the demo notes again
+            settings.setValue("demoNotesCreated", true);
+        }
+    }
+
+    // add some notes if there aren't any and
+    // we haven't already created them once
+    if (createDemoNotes) {
         qDebug() << "No notes! We will add some...";
         QStringList filenames = QStringList() <<
                 "Markdown Showcase.txt" <<
@@ -794,7 +816,8 @@ void MainWindow::buildNotesIndex() {
         QTimer::singleShot(500, this, SLOT(jumpToWelcomeNote()));
     }
 
-    // get the current crypto key to set it again after all notes were read again
+    // get the current crypto key to set it again
+    // after all notes were read again
     qint64 cryptoKey = currentNote.getCryptoKey();
 
     // delete all notes in the database first
@@ -891,7 +914,7 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
-    MetricsService::instance()->sendEvent("note", "changed");
+    MetricsService::instance()->sendEvent("note", "current note changed");
 
     // update cursor position of previous note
     if (this->currentNote.exists()) {
@@ -989,6 +1012,7 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
+    MetricsService::instance()->sendEvent("app", "app end");
     storeSettings();
     QMainWindow::closeEvent(event);
 }
@@ -1278,11 +1302,11 @@ void MainWindow::removeSelectedNotes() {
         Q_UNUSED(blocker);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
-                QString name = item->text();
-                Note note = Note::fetchByName(name);
-                note.remove(true);
-                qDebug() << "Removed note " << name;
-            }
+            QString name = item->text();
+            Note note = Note::fetchByName(name);
+            note.remove(true);
+            qDebug() << "Removed note " << name;
+        }
 
         loadNoteDirectoryList();
     }
@@ -1412,8 +1436,8 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  * @brief Handles the linking of text
  */
 void MainWindow::handleTextNoteLinking() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-	LinkDialog *dialog = new LinkDialog(tr("Link an url or note"), this);
+	QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+	LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
     dialog->exec();
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
@@ -1516,6 +1540,26 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     }
 }
 
+/**
+ * Shows the app metrics notification if not already shown
+ */
+void MainWindow::showAppMetricsNotificationIfNeeded() {
+    QSettings settings;
+    bool showDialog = !settings.value("appMetrics/notificationShown").toBool();
+
+    if (showDialog) {
+        settings.setValue("appMetrics/notificationShown", true);
+
+        QMessageBox::information(
+                this,
+                tr("QOwnNotes"),
+                tr("QOwnNotes will track anonymous usage data, that helps to "
+                        "decide what parts of QOwnNotes to improve next "
+                        "and to find and fix bugs. You can disable that "
+                        "behaviour in the settings."));
+    }
+}
+
 
 
 // *****************************************************************************
@@ -1570,7 +1614,6 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
 
 void MainWindow::on_action_Quit_triggered() {
-    MetricsService::instance()->sendEvent("app", "end");
     storeSettings();
     QApplication::quit();
 }
@@ -1666,6 +1709,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         // store the note to disk
         {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
 
             note.storeNoteTextFileToDisk();
             this->ui->statusBar->showMessage(
@@ -2271,7 +2315,6 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
                 qCritical() << file.errorString();
                 return;
             }
-
             QTextStream out(&file);
             out.setCodec("UTF-8");
             out << ui->noteTextEdit->toPlainText();
@@ -2279,4 +2322,9 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
             file.close();
         }
     }
+}
+
+void MainWindow::showEvent(QShowEvent* event) {
+    QMainWindow::showEvent(event);
+    MetricsService::instance()->sendAppView(objectName());
 }

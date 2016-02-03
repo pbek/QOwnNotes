@@ -346,25 +346,22 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
                 } else {
                     settingsDialog->setOKLabelData(
                             5,
-                            QString("note path and ownCloud path are equal")
+                            QString("notes path and ownCloud path are equal")
                                     .arg(notesPath),
                             SettingsDialog::Warning);
                 }
+            } else {
+                settingsDialog->setOKLabelData(
+                        5,
+                        QString("note path\n(%1)\nnot in ownCloud path").arg(
+                                notesPath).arg(localOwnCloudPath),
+                        SettingsDialog::Failure);
             }
-            else {
-                settingsDialog->setOKLabelData(5,
-                                               QString("note path\n(%1)\nnot in ownCloud path").arg(
-                                                       notesPath).arg(
-                                                       localOwnCloudPath),
-                                               SettingsDialog::Failure);
-            }
-        }
-        else {
+        } else {
             settingsDialog->setOKLabelData(5, "does not exist",
                                            SettingsDialog::Failure);
         }
-    }
-    else {
+    } else {
         settingsDialog->setOKLabelData(5, "empty", SettingsDialog::Failure);
     }
 }

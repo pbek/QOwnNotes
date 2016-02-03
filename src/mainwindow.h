@@ -153,6 +153,8 @@ private slots:
 
     void on_action_Export_note_as_markdown_triggered();
 
+    void showEvent(QShowEvent *event);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -246,4 +248,6 @@ private:
     void askForEncryptedNotePasswordIfNeeded(QString additionalText = "");
 
     QMarkdownTextEdit *activeNoteTextEdit();
+
+    void showAppMetricsNotificationIfNeeded();
 };

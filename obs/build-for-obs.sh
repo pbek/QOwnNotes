@@ -10,7 +10,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.85.1
+#QOWNNOTES_VERSION=0.87.1
 
 BRANCH=develop
 #BRANCH=master
@@ -50,7 +50,7 @@ else
 fi
 
 # set the release string
-echo "#define RELEASE \"openSUSE Build Service\"" > src/release.h
+echo "#define RELEASE \"OBS\"" > src/release.h
 
 # replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec

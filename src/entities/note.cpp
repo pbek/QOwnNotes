@@ -289,7 +289,10 @@ QStringList Note::fetchNoteNames() {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
-            list.append(query.value("name").toString());
+            QString name = query.value("name").toString();
+            if (!name.isEmpty()) {
+                list.append(name);
+            }
         }
     }
 

@@ -17,9 +17,12 @@ if [ "$NAME" != "Darwin" ]; then
 fi
 
 echo "Changing bundle identifier"
-sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' QOwnNotes.app/Contents/Info.plist
+sed -i -e 's/com.yourcompany.QOwnNotes/com.PBE.QOwnNotes/g' $APP.app/Contents/Info.plist
 # removing backup plist
-rm -f QOwnNotes.app/Contents/Info.plist-e
+rm -f $APP.app/Contents/Info.plist-e
+
+# copy translation files to app
+cp languages/*.qm $APP.app/Contents/Resources
 
 echo "Adding keys"
 # add the keys for OSX code signing
