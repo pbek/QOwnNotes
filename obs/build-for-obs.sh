@@ -50,7 +50,7 @@ else
 fi
 
 # set the release string
-echo "#define RELEASE \"openSUSE Build Service\"" > src/release.h
+echo "#define RELEASE \"OBS\"" > src/release.h
 
 # replace the version in the spec file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.spec
