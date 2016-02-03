@@ -586,7 +586,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="49"/>
         <source>Your ownCloud server</source>
-        <translation>Ihr ownCloud Server</translation>
+        <translation>ownCloud Server</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="63"/>
@@ -698,7 +698,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="360"/>
         <source>trash app enabled on server</source>
-        <translation>Deleted files App auf Serer aktiviert</translation>
+        <translation>Deleted files App auf Server aktiviert</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="367"/>
@@ -724,7 +724,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Bitte installieren Sie die neuste Version von &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (mindestens QOWNNOTESAPI_MIN_VERSION) auf Ihrem ownCloud Server wenn Sie möchten, dass QOwnNotes Zugriff auf Notizversionen und gelöschte Notizen haben soll.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Es müssen ausserdem die beiden ownCloud apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; und &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; auf Ihrem ownCloud Server aktiviert sein.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Es müssen ausserdem die beiden ownCloud Apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; und &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; auf Ihrem ownCloud Server aktiviert sein.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Sie benötigen weiterhin &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; um Ihre Notizen zu synchronisieren!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -835,7 +835,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="733"/>
         <source>note text edit:</source>
-        <translation>Notiztext bearbeiten:</translation>
+        <translation>Notiz bearbeiten Ansicht:</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="743"/>
@@ -855,22 +855,22 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="790"/>
         <source>Do this if you have troubles with your Todo items.</source>
-        <translation>Ausführen, falls Sie Probleme mit Aufgabeneinträgen haben.</translation>
+        <translation>Führen Sie eine Datenbank Reinitialisierung durch, falls Sie Probleme mit Aufgabeneinträgen haben.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="816"/>
         <source>Recent notes folders</source>
-        <translation>kürzliche Notizen</translation>
+        <translation>zuletzt geöffnete Notizen</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="822"/>
         <source>Show recent notes folders in main area</source>
-        <translation>kürzliche Notizen Ordner in Hauptfenster anzeigen</translation>
+        <translation>zuletzt geöffnete Notizen Ordner in Hauptfenster anzeigen</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="829"/>
         <source>clear the recent note folder history</source>
-        <translation>kürzliche Notizen Verlauf leeren</translation>
+        <translation>zuletzt geöffnete Notizen Verlauf leeren</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="832"/>
@@ -890,32 +890,32 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="898"/>
         <source>Interface language</source>
-        <translation type="unfinished"></translation>
+        <translation>Sprache der Oberfläche</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="905"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="913"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="921"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="929"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Français</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="940"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Die neuen Spracheinstellungen werden erst nach einem Neustart des Programms geladen.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="953"/>
@@ -925,7 +925,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="971"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
-        <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Bitte deaktiviern Sie diese nur wenn Sie wirklich nicht damit leben können.</translation>
+        <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Bitte deaktivieren Sie diese nur wenn Sie wirklich nicht damit leben können.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="984"/>
@@ -973,7 +973,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/tododialog.ui" line="87"/>
         <source>save current todo item</source>
-        <translation>aktuellen Aufgabeneintrag speichern</translation>
+        <translation>aktuelle Aufgabe speichern</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="90"/>
@@ -988,7 +988,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/tododialog.ui" line="104"/>
         <source>remove current todo item</source>
-        <translation>aktuellen Aufgabeneintrag entfernen</translation>
+        <translation>aktuelle Aufgabe entfernen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="107"/>
@@ -1014,7 +1014,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/tododialog.ui" line="226"/>
         <source>Show completed items</source>
-        <translation>erledigte Einträge anzeigen</translation>
+        <translation>erledigte Aufgaben anzeigen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="233"/>
@@ -1034,12 +1034,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/tododialog.ui" line="257"/>
         <source>Todo list items are being loaded from the server</source>
-        <translation>Einträge der Aufgabenliste werden vom Server geladen</translation>
+        <translation>Aufgaben werden vom Server geladen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="267"/>
         <source>search or create todo item</source>
-        <translation>Aufgabeneintrag suchen oder erstellen</translation>
+        <translation>Aufgabe suchen oder erstellen</translation>
     </message>
 </context>
 <context>
