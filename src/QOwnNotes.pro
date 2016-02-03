@@ -14,7 +14,8 @@ ICON = QOwnNotes.icns
 RC_FILE = QOwnNotes.rc
 TRANSLATIONS = languages/QOwnNotes_de.ts \
     languages/QOwnNotes_fr.ts \
-    languages/QOwnNotes_cn.ts
+    languages/QOwnNotes_cn.ts \
+    languages/QOwnNotes_pl.ts
 
 CODECFORTR = UTF-8
 

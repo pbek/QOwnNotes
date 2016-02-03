@@ -102,7 +102,7 @@ Appuyer sur Annuler pour quitter.</translation>
         <translation>Rechercher une note pour le lier avec</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="190"/>
+        <location filename="../dialogs/linkdialog.cpp" line="179"/>
         <source>Select file to link to</source>
         <translation>Rechercher un fichier pour le lier avec</translation>
     </message>
