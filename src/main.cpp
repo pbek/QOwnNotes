@@ -33,6 +33,8 @@ int main(int argc, char *argv[])
     if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
         appVersion += " " + QSysInfo::currentCpuArchitecture();
     }
+#else
+    appVersion += " Qt " + QString(QT_VERSION_STR);
 #endif
 
     appVersion += " " + QString(RELEASE);
