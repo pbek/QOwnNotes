@@ -50,10 +50,6 @@ SOURCES += main.cpp\
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
     services/databaseservice.cpp \
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
-    libraries/qmarkdowntextedit/highlighter.cpp \
-    libraries/qmarkdowntextedit/qmarkdowntextedit.cpp \
-    libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
@@ -88,11 +84,6 @@ HEADERS  += mainwindow.h \
     helpers/htmlentities.h \
     services/databaseservice.h \
     release.h \
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
-    libraries/qmarkdowntextedit/highlighter.h \
-    libraries/qmarkdowntextedit/qmarkdowntextedit.h \
-    libraries/qmarkdowntextedit/qtexteditsearchwidget.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
     libraries/qt-google-analytics-collector/ganalytics.hpp \
@@ -111,7 +102,6 @@ FORMS    += mainwindow.ui \
     dialogs/passworddialog.ui
 
 RESOURCES += \
-    libraries/qmarkdowntextedit/media.qrc \
     images.qrc \
     texts.qrc \
     breeze.qrc \
@@ -119,6 +109,8 @@ RESOURCES += \
     high-contrast.qrc \
     ubuntu-mobile.qrc \
     adwaita.qrc
+
+include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0
