@@ -335,17 +335,18 @@ void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet("color: green;");
         ui->connectionTestLabel->setText(
-                "The connection was made successfully!\nServer version: " +
-                serverVersion + "\nQOwnNotesAPI version: " + appVersion);
+				tr("The connection was made successfully!\n"
+				   "Server version: %1\nQOwnNotesAPI version: %2")
+					.arg(serverVersion).arg(appVersion));
     } else {
         // hide password
         connectionErrorMessage.replace(ui->passwordEdit->text(), "***");
 
         ui->connectionTestLabel->setStyleSheet("color: red;");
         ui->connectionTestLabel->setText(
-                "There was an error connecting to the ownCloud Server!\n"
+				tr("There was an error connecting to the ownCloud Server!\n"
                         "You also need to have the QOwnNotesAPI app installed "
-                        "and enabled!\n\nConnection error message: " +
+						"and enabled!\n\nConnection error message: ") +
                 connectionErrorMessage);
     }
 
@@ -560,8 +561,8 @@ void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
 
 void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
     DatabaseService::reinitializeDiskDatabase();
-    QMessageBox::information(this, "Database",
-                             "The Database was reinitialized.");
+	QMessageBox::information(this, tr("Database"),
+							 tr("The Database was reinitialized."));
 }
 
 /**
@@ -571,8 +572,8 @@ void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked() {
     QSettings settings;
     settings.remove("recentNoteFolders");
 
-    QMessageBox::information(this, "Recent note folders history",
-                             "The history was cleared.");
+	QMessageBox::information(this, tr("Recent note folders history"),
+							 tr("The history was cleared."));
 }
 
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
@@ -589,9 +590,9 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter("Markdown files (*.md)");
-    dialog.setWindowTitle("Save debug information");
-    dialog.selectFile("QOwnNotes Debug Information.md");
+	dialog.setNameFilter(tr("Markdown files (*.md)"));
+	dialog.setWindowTitle(tr("Save debug information"));
+	dialog.selectFile("QOwnNotes Debug Information.md");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
