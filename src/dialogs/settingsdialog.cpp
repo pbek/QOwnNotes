@@ -109,8 +109,8 @@ void SettingsDialog::storeSettings() {
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showRecentNoteFolderCheckBox->isChecked());
-    settings.setValue("MainWindow/defaultViewMode",
-                      ui->defaultViewModeCheckBox->isChecked());
+    settings.setValue("MainWindow/markdownDefaultViewMode",
+                      ui->markdownDefaultViewModeCheckBox->isChecked());
 
     QList<QListWidgetItem*> selectedLanguageItems =
             ui->languageListWidget->selectedItems();
@@ -170,8 +170,8 @@ void SettingsDialog::readSettings() {
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
-    ui->defaultViewModeCheckBox->setChecked(
-            settings.value("MainWindow/defaultViewMode").toBool());
+    ui->markdownDefaultViewModeCheckBox->setChecked(
+            settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
     QString interfaceLanguage = settings.value("interfaceLanguage").toString();
 

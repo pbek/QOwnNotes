@@ -491,7 +491,8 @@ void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
 
     // set the view mode
-    setNoteTextEditMode(settings.value("MainWindow/defaultViewMode").toBool());
+    setNoteTextEditMode(
+            !settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();

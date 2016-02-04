@@ -3,6 +3,8 @@
 ## 0.91
 - the OS X dmg and Ubuntu deb files, that are created by Travis CI now have 
   the version number in the filename
+- the markdown view mode can now be selected as default view mode in the 
+  settings (a big thank you to @dasmaetthes for the contribution)
 
 ## 0.90
 - more strings made translatable and add **French translation** by @Dalan94, a 
