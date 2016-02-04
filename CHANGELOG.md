@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.91
+- the OS X dmg and Ubuntu deb files, that are created by Travis CI now have 
+  the version number in the filename
+
 ## 0.90
 - more strings made translatable and add **French translation** by @Dalan94, a 
   big thank you!
