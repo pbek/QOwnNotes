@@ -106,7 +106,7 @@ deploy:
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-    file: QOwnNotes.deb
+    file: QOwnNotes-${VERSION_NUMBER}.deb
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
@@ -116,7 +116,7 @@ deploy:
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-    file: QOwnNotes.dmg
+    file: QOwnNotes-${VERSION_NUMBER}.dmg
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
