@@ -145,8 +145,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->setTabStopWidth(width);
     ui->encryptedNoteTextEdit->setTabStopWidth(width);
 
+    //called now in readSettingsFromSettingsDialog() line 494
     // set the edit mode for the note text edit
     //this->setNoteTextEditMode(true);
+
 
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu(notesPath);
@@ -489,7 +491,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
 
     // set the view mode
-    setNoteTextEditMode(settings.value("MainWindow/setViewMode").toBool());
+    setNoteTextEditMode(settings.value("MainWindow/defaultViewMode").toBool());
 
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();

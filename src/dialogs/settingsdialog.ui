@@ -883,7 +883,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
              <property name="title">
               <string>View</string>
              </property>
-             <widget class="QCheckBox" name="setViewMode">
+             <widget class="QCheckBox" name="defaultViewModeCheckBox">
               <property name="geometry">
                <rect>
                 <x>10</x>

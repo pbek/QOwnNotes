@@ -172,7 +172,7 @@ private:
     SimpleCrypt crypto;
     QDateTime currentNoteLastEdited;
     bool notifyAllExternalModifications;
-    bool setViewMode;
+    bool defaultViewMode;
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
