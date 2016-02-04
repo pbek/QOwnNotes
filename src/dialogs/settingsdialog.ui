@@ -901,12 +901,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </property>
            <item>
             <widget class="QGroupBox" name="groupBox_7">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="title">
               <string>Interface language</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_10">
               <item row="1" column="0">
                <widget class="QListWidget" name="languageListWidget">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
                 <item>
                  <property name="text">
                   <string>Automatic</string>
@@ -953,9 +965,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  </property>
                  <property name="whatsThis">
                   <string>cn</string>
-                 </property>
-                 <property name="flags">
-                  <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                  </property>
                 </item>
                </widget>
