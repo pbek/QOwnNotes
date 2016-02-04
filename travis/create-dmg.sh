@@ -106,6 +106,8 @@ echo "Verifying code signed disk image"
 codesign --verify --verbose=4 ./$APP.dmg
 spctl --assess --verbose=4 --raw ./$APP.dmg
 
+mv $APP.dmg $APP-$VERSION_NUMBER.dmg
+
 echo "Removing keys"
 # remove keys
 security delete-keychain osx-build.keychain 
