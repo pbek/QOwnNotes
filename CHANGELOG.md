@@ -3,6 +3,8 @@
 ## 0.90
 - more strings made translatable and French translation by @Dalan94, a big 
   thank you!
+- added Polish translation by @Olhur, thank you a lot!
+- you can now select the two new language in the settings
 
 ## 0.89
 - you can now select the interface language in the settings
