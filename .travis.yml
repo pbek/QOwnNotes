@@ -72,10 +72,10 @@ script:
   - make
 
 before_deploy:
+  - VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
   # create debian package for linux and a disk image for OSX
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
-      && cd ../travis
+         cd ../travis
       && dpkg-deb -x QOwnNotes.deb build
       && mv ../src/QOwnNotes build/opt/QOwnNotes/
       && mv ../src/languages/*.qm build/opt/QOwnNotes/
