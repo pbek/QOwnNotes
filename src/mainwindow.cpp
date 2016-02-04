@@ -146,7 +146,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->setTabStopWidth(width);
 
     // set the edit mode for the note text edit
-    this->setNoteTextEditMode(true);
+    //this->setNoteTextEditMode(true);
 
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu(notesPath);
@@ -487,6 +487,10 @@ void MainWindow::readSettings() {
  */
 void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
+
+    // set the view mode
+    setNoteTextEditMode(settings.value("MainWindow/setViewMode").toBool());
+
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
     this->noteSaveIntervalTime = settings.value("noteSaveIntervalTime").toInt();
@@ -544,6 +548,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
     }
+
 
     // check if we want to view the recent note folder combo box
     ui->recentNoteFolderComboBox->setVisible(

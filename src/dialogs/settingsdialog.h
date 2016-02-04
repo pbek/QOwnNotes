@@ -47,6 +47,7 @@ private slots:
     void on_saveDebugInfoButton_clicked();
     void on_appMetricsCheckBox_toggled(bool checked);
 
+
 private:
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;
