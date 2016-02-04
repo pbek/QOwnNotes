@@ -54,8 +54,8 @@ bool DatabaseService::createMemoryConnection() {
     dbMemory.setDatabaseName(":memory:");
 
     if (!dbMemory.open()) {
-        QMessageBox::critical(0, qApp->tr("Cannot open memory database"),
-                              qApp->tr("Unable to establish a database connection.\n"
+		QMessageBox::critical(0, QWidget::tr("Cannot open memory database"),
+							  QWidget::tr("Unable to establish a database connection.\n"
                                                "This application needs SQLite support. Please read "
                                                "the Qt SQL driver documentation for information how "
                                                "to build it.\n\n"
@@ -71,8 +71,8 @@ bool DatabaseService::createDiskConnection() {
     dbDisk.setDatabaseName(getDiskDatabasePath());
 
     if (!dbDisk.open()) {
-        QMessageBox::critical(0, qApp->tr("Cannot open disk database"),
-                              qApp->tr("Unable to establish a database connection.\n"
+		QMessageBox::critical(0, QWidget::tr("Cannot open disk database"),
+							  QWidget::tr("Unable to establish a database connection.\n"
                                                "This application needs SQLite support. Please read "
                                                "the Qt SQL driver documentation for information how "
                                                "to build it.\n\n"

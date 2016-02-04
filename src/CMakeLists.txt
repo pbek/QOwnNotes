@@ -132,6 +132,7 @@ set(SOURCE_FILES
 SET(TRANSLATION_FILES
     languages/QOwnNotes_de.ts
     languages/QOwnNotes_fr.ts
+    languages/QOwnNotes_pl.ts
     languages/QOwnNotes_cn.ts
 )
 

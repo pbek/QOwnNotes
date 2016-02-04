@@ -107,6 +107,8 @@ install -D -m 0644 images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir
 install -D -m 0644 images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
 install -D -m 0644 languages/QOwnNotes_de.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 install -D -m 0644 languages/QOwnNotes_fr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
+install -D -m 0644 languages/QOwnNotes_pl.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
+install -D -m 0644 languages/QOwnNotes_cn.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_cn.qm
 
 %if 0%{?suse_version}
 %suse_update_desktop_file -c  QOwnNotes QOwnNotes QOwnNotes QOwnNotes QOwnNotes "Utility;SyncUtility;"
@@ -134,6 +136,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
 %{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_pl.qm
+%{_datadir}/QOwnNotes/languages/QOwnNotes_cn.qm
 %{_datadir}/applications/QOwnNotes.desktop
 
 %dir %{_datadir}/icons/hicolor/512x512/apps

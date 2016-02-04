@@ -2,7 +2,7 @@
 
 MetricsService::MetricsService(QObject *parent) : QObject(parent)
 {
-    analytics = new GAnalytics(qApp, "UA-52660882-3" );
+    analytics = new GAnalytics(qApp, "UA-52660882-3");
     analytics->generateUserAgentEtc();
 }
 

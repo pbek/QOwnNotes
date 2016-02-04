@@ -957,6 +957,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <property name="whatsThis">
                   <string notr="true">fr</string>
                  </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Polish</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>pl</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Chinese</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>cn</string>
+                 </property>
                  <property name="flags">
                   <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsUserCheckable</set>
                  </property>

@@ -73,8 +73,13 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
 
 void UpdateService::onResult(QNetworkReply *reply) {
     // abort if reply was null (on OSX after waking from sleep)
-    // or there was an error
-    if ((reply == NULL) || (reply->error() != QNetworkReply::NoError)) {
+    if (reply == NULL) {
+        return;
+    }
+
+    // abort if there was an error
+    if (reply->error() != QNetworkReply::NoError) {
+        qWarning() << __func__ << " - 'reply error': " << reply->error();
         return;
     }
 
