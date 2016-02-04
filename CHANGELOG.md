@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 0.90
-- more strings made translatable and French translation by @Dalan94, a big 
+- more strings made translatable and add French translation by @Dalan94, a big 
   thank you!
 - added Polish translation by @Olhur, thank you a lot!
 - you can now select the two new language in the settings
