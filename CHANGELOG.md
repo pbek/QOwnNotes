@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.90
+- more strings made translatable and French translation by @Dalan94, a big 
+  thank you!
+
 ## 0.89
 - you can now select the interface language in the settings
     - by default the system language will be used
