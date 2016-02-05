@@ -6,7 +6,7 @@
 - the markdown view mode can now be selected as default view mode in the 
   settings (a big thank you to @dasmaetthes for the contribution)
 - added **Chinese translation** by @LiangWei88, a big thank you!
-- you can now select the Chinese in the settings
+- you can now select Chinese in the settings
 
 ## 0.90
 - more strings made translatable and add **French translation** by @Dalan94, a 
