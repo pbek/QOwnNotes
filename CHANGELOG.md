@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.92
+- updated German translation (thank you @calis2002)
+
 ## 0.91
 - the OS X dmg and Ubuntu deb files, that are created by Travis CI now have 
   the version number in the filename
