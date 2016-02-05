@@ -489,7 +489,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.cpp" line="1443"/>
         <source>Link to an url or note</source>
-        <translation>Verlinkung zu einer Adresse oder Notiz</translation>
+        <translation>Link zu URL oder Notiz einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1506"/>
