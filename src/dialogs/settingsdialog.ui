@@ -692,6 +692,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </item>
               <item row="2" column="0" colspan="2">
                <widget class="QCheckBox" name="markdownDefaultViewModeCheckBox">
+                <property name="toolTip">
+                 <string>Select this if you want the markdown view to be the default view instead of the edit view.</string>
+                </property>
                 <property name="text">
                  <string>Markdown view mode is default</string>
                 </property>
@@ -1021,19 +1024,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </widget>
               </item>
              </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="groupBox_8">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>50</height>
-              </size>
-             </property>
-             <property name="title">
-              <string>View</string>
-             </property>
             </widget>
            </item>
            <item>
