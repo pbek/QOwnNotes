@@ -4,6 +4,7 @@
 #include <QAbstractButton>
 #include <QDialog>
 #include <QLabel>
+#include <QListWidget>
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "masterdialog.h"
 
@@ -64,6 +65,8 @@ private:
     void setFontLabel(QLabel *label, QFont font);
     void outputSettings();
     QString prepareDebugInformationLine(QString headline, QString data);
+    static void selectListWidgetValue(QListWidget* listWidget, QString value);
+    static QString getSelectedListWidgetValue(QListWidget* listWidget);
 };
 
 #endif // SETTINGSDIALOG_H

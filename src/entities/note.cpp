@@ -139,15 +139,18 @@ bool Note::copy(QString destinationPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
         QFile file(getFullNoteFilePathForFile(this->fileName));
-        QString destinationFileName = destinationPath + QDir::separator() + this->fileName;
+        QString destinationFileName =
+                destinationPath + QDir::separator() + this->fileName;
 
         if (d.exists(destinationFileName)) {
             qDebug() << destinationFileName << "already exists!";
 
             // find a new filename for the note
             QDateTime currentDateTime = QDateTime::currentDateTime();
-            destinationFileName = destinationPath + QDir::separator() + this->name + " " +
-                                  currentDateTime.toString(Qt::ISODate).replace(":", "_") + ".txt";
+            destinationFileName =
+                    destinationPath + QDir::separator() + this->name + " " +
+                    currentDateTime.toString(Qt::ISODate).replace(":", "_") +
+                            "." + defaultNoteFileExtension();
 
             qDebug() << "New file name:" << destinationFileName;
         }
@@ -325,6 +328,14 @@ bool Note::storeNewText(QString text) {
     return this->store();
 }
 
+/**
+ * Returns the default note file extension (`md` or `txt`)
+ */
+QString Note::defaultNoteFileExtension() {
+    QSettings settings;
+    return settings.value("defaultNoteFileExtension", "txt").toString();
+}
+
 //
 // inserts or updates a note object in the database
 //
@@ -333,7 +344,7 @@ bool Note::store() {
     QSqlQuery query(db);
 
     if (this->fileName == "") {
-        this->fileName = this->name + ".txt";
+        this->fileName = this->name + "." + defaultNoteFileExtension();
     }
 
     if (this->id > 0) {
@@ -444,28 +455,29 @@ void Note::handleNoteTextFileName() {
     // check if name has changed
     if (name != this->name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
-        QString fileName = name + ".txt";
+        QString fileName = name + "." + defaultNoteFileExtension();
 
         // check if note with this filename already exists
         Note note = Note::fetchByFileName(fileName);
         if (note.id > 0) {
             // find new filename for the note (not very safe yet)
             QDateTime currentDateTime = QDateTime::currentDateTime();
-            name += " " + currentDateTime.toString(Qt::ISODate).replace(":", "_");
+            name += " " + currentDateTime
+                                  .toString(Qt::ISODate).replace(":", "_");
         }
 
         // remove old note file
-        // TODO: note doesn't seem to be removed very often
+        // TODO(pbek): note doesn't seem to be removed very often
         this->removeNoteFile();
 
         // update first line of note text
-        // TODO: UI has to be updated too then!
+        // TODO(pbek): UI has to be updated too then!
         noteTextLines[0] = name;
         this->noteText = noteTextLines.join("\n");
 
         // store new name and filename
         this->name = name;
-        this->fileName = name + ".txt";
+        this->fileName = name + "." + defaultNoteFileExtension();
         this->store();
     }
 
@@ -551,10 +563,15 @@ void Note::createFromFile(QFile &file) {
         QFileInfo fileInfo;
         fileInfo.setFile(file);
 
-        // create a nicer name by removing ".txt"
-        // TODO: make sure name is ownCloud Notes conform
+        // create a nicer name by removing the extension
+        // TODO(pbek): make sure name is ownCloud Notes conform
         QString name = fileInfo.fileName();
-        name.chop(4);
+        qDebug() << __func__ << " - 'name': " << name;
+
+        int lastPoint = name.lastIndexOf(".");
+        name = name.left(lastPoint);
+
+        qDebug() << __func__ << " - 'name': " << name;
 
         this->name = name;
         this->fileName = fileInfo.fileName();
@@ -563,7 +580,6 @@ void Note::createFromFile(QFile &file) {
         this->fileLastModified = fileInfo.lastModified();
         this->store();
     }
-
 }
 
 //

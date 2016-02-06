@@ -1,7 +1,16 @@
 # QOwnNotes Changelog
 
 ## 0.92
-- updated German translation (thank you @calis2002)
+- you can now choose to use `.md` instead of `.txt` as your default 
+  file-extension for your notes in the settings
+  (for [Issue #25](https://github.com/pbek/QOwnNotes/issues/25))
+    - *ownCloud Notes* and *Cloudnotes* finally also support `.md` as 
+      file-extension 
+    - please try not to use `.md` and `.txt` notes with the same name
+    - you have to update the ownCloud app `QOwnNotesAPI` to version 0.4.2 to
+      make use of the `.md` support
+- updated German translation for the new settings texts and changes by
+  @calis2002
 
 ## 0.91
 - the OS X dmg and Ubuntu deb files, that are created by Travis CI now have 

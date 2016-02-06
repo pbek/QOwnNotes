@@ -535,95 +535,91 @@ p, li { white-space: pre-wrap; }
         <attribute name="title">
          <string>Todo</string>
         </attribute>
-        <widget class="QGroupBox" name="todoCalendarGroupBox">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>170</y>
-           <width>591</width>
-           <height>421</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Select the calendars you want to use for the TODO list</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_7">
-          <item row="0" column="0">
-           <widget class="QListWidget" name="todoCalendarListWidget"/>
-          </item>
-          <item row="1" column="0">
-           <widget class="QPushButton" name="reloadCalendarListButton">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QGroupBox" name="calendarBackendGroupBox">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="title">
+            <string>Which ownCloud calendar backend do you want to use?</string>
+           </property>
+           <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>50</y>
+              <width>321</width>
+              <height>29</height>
+             </rect>
             </property>
             <property name="text">
-             <string>&amp;reload calendar list</string>
+             <string>Default ownCloud calendar</string>
             </property>
-            <property name="icon">
-             <iconset resource="../breeze.qrc">
-              <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
+            <property name="checked">
+             <bool>true</bool>
             </property>
            </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QGroupBox" name="calendarBackendGroupBox">
-         <property name="geometry">
-          <rect>
-           <x>20</x>
-           <y>20</y>
-           <width>591</width>
-           <height>131</height>
-          </rect>
-         </property>
-         <property name="title">
-          <string>Which ownCloud calendar backend do you want to use?</string>
-         </property>
-         <widget class="QRadioButton" name="defaultOwnCloudCalendarRadioButton">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>50</y>
-            <width>321</width>
-            <height>29</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Default ownCloud calendar</string>
-          </property>
-          <property name="checked">
-           <bool>true</bool>
-          </property>
-         </widget>
-         <widget class="QRadioButton" name="calendarPlusRadioButton">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>90</y>
-            <width>291</width>
-            <height>29</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Calendar Plus</string>
-          </property>
-         </widget>
-        </widget>
+           <widget class="QRadioButton" name="calendarPlusRadioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>90</y>
+              <width>291</width>
+              <height>29</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Calendar Plus</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="todoCalendarGroupBox">
+           <property name="title">
+            <string>Select the calendars you want to use for the TODO list</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_7">
+            <item row="0" column="0">
+             <widget class="QListWidget" name="todoCalendarListWidget"/>
+            </item>
+            <item row="1" column="0">
+             <widget class="QPushButton" name="reloadCalendarListButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>&amp;reload calendar list</string>
+              </property>
+              <property name="icon">
+               <iconset resource="../breeze.qrc">
+                <normaloff>:/images/breeze/network-connect.svg</normaloff>:/images/breeze/network-connect.svg</iconset>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
        </widget>
        <widget class="QWidget" name="generalTab">
         <attribute name="title">
@@ -862,18 +858,21 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <rect>
                 <x>30</x>
                 <y>40</y>
-                <width>94</width>
+                <width>141</width>
                 <height>31</height>
                </rect>
               </property>
               <property name="text">
                <string>Icon size:</string>
               </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
              </widget>
              <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
               <property name="geometry">
                <rect>
-                <x>140</x>
+                <x>180</x>
                 <y>40</y>
                 <width>60</width>
                 <height>34</height>
@@ -980,6 +979,53 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <property name="wordWrap">
                  <bool>true</bool>
                 </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Default note file extension</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QListWidget" name="defaultNoteFileExtensionListWidget">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>60</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>90</height>
+                 </size>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>Text file (.txt)</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>txt</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Markdown (.md)</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>md</string>
+                 </property>
+                </item>
                </widget>
               </item>
              </layout>

@@ -383,10 +383,10 @@ void MainWindow::loadNoteDirectoryList() {
             const QSignalBlocker blocker2(ui->notesListWidget);
             Q_UNUSED(blocker2);
 
-            this->ui->notesListWidget->clear();
+            ui->notesListWidget->clear();
 
             QStringList nameList = Note::fetchNoteNames();
-            this->ui->notesListWidget->addItems(nameList);
+            ui->notesListWidget->addItems(nameList);
 
             // clear the text edits if there are no notes
             if (nameList.isEmpty()) {
@@ -395,7 +395,10 @@ void MainWindow::loadNoteDirectoryList() {
             }
 
             MetricsService::instance()->sendEvent(
-                    "note", "note list loaded", "", nameList.count());
+                    "note",
+                    "note list loaded",
+                    QString::number(
+                            nameList.count()) + " notes", nameList.count());
         }
     }
 
@@ -647,10 +650,10 @@ void MainWindow::notesWereModified(const QString &str) {
             qDebug() << "Current note was removed externally!";
 
             switch (QMessageBox::information(
-					this, tr("Note was removed externally!"),
-					tr("Current note was removed outside of this application!\n"
-							"Restore current note?"),
-					 tr("&Restore"), tr("&Cancel"), QString::null,
+                    this, tr("Note was removed externally!"),
+                    tr("Current note was removed outside of this application!\n"
+                            "Restore current note?"),
+                     tr("&Restore"), tr("&Cancel"), QString::null,
                                              0, 1)) {
                 case 0: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
@@ -770,9 +773,9 @@ void MainWindow::buildNotesIndex() {
 
     QDir notesDir(this->notesPath);
 
-    // only show text files
+    // only show markdown and text files
     QStringList filters;
-    filters << "*.txt";
+    filters << "*.txt" << "*.md";
 
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
@@ -795,9 +798,9 @@ void MainWindow::buildNotesIndex() {
     if (createDemoNotes) {
         qDebug() << "No notes! We will add some...";
         QStringList filenames = QStringList() <<
-                "Markdown Showcase.txt" <<
-                "GitHub Flavored Markdown.txt" <<
-                "Welcome to QOwnNotes.txt";
+                "Markdown Showcase.md" <<
+                "GitHub Flavored Markdown.md" <<
+                "Welcome to QOwnNotes.md";
         QString filename;
         QString destinationFile;
 
@@ -805,7 +808,8 @@ void MainWindow::buildNotesIndex() {
         for (int i = 0; i < filenames.size(); ++i) {
             filename = filenames.at(i);
             destinationFile = this->notesPath + QDir::separator() + filename;
-            QFile::copy(":/demonotes/" + filename, destinationFile);
+            QFile sourceFile(":/demonotes/" + filename);
+            sourceFile.copy(destinationFile);
             // set read/write permissions for the owner and user
             QFile::setPermissions(destinationFile,
                                   QFile::ReadOwner | QFile::WriteOwner |
@@ -813,9 +817,11 @@ void MainWindow::buildNotesIndex() {
         }
 
         // copy the shortcuts file and handle its file permissions
-//        destinationFile = this->notesPath + QDir::separator() + "Important Shortcuts.txt";
+//        destinationFile = this->notesPath + QDir::separator() +
+//              "Important Shortcuts.txt";
 //        QFile::copy( ":/shortcuts", destinationFile );
-//        QFile::setPermissions( destinationFile, QFile::ReadOwner | QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
+//        QFile::setPermissions( destinationFile, QFile::ReadOwner |
+//                  QFile::WriteOwner | QFile::ReadUser | QFile::WriteUser );
 
         // fetch all files again
         files = notesDir.entryList(filters, QDir::Files, QDir::Time);
@@ -871,7 +877,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
                 "ownCloud" + QDir::separator() + "Notes";
     }
 
-    // TODO: We sometimes seem to get a "QCoreApplication::postEvent:
+    // TODO(pbek): We sometimes seem to get a "QCoreApplication::postEvent:
     // Unexpected null receiver" here.
     QString dir = QFileDialog::getExistingDirectory(
             this,
@@ -897,10 +903,10 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     } else {
         if (this->notesPath == "") {
             switch (QMessageBox::information(
-					this, tr("No folder was selected"),
-					tr("You have to select your ownCloud notes "
-							"folder to make this software work!"),
-					tr("&Retry"), tr("&Exit"), QString::null,
+                   this, tr("No folder was selected"),
+                    tr("You have to select your ownCloud notes "
+                            "folder to make this software work!"),
+                    tr("&Retry"), tr("&Exit"), QString::null,
                     0, 1)) {
                 case 0:
                     selectOwnCloudNotesFolder();
@@ -990,14 +996,54 @@ void MainWindow::removeCurrentNote() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-	switch (QMessageBox::information(this, tr("Remove current note"),
-									 tr("Remove current note: <strong>%1</strong>?").arg(this->currentNote.getName()),
-									 tr("&Remove"), tr("&Cancel"), QString::null,
-                                     0, 1)) {
-        case 0:
-            this->currentNote.remove(true);
-            loadNoteDirectoryList();
+    switch (QMessageBox::information(this, tr("Remove current note"),
+                     tr("Remove current note: <strong>%1</strong>?")
+                             .arg(this->currentNote.getName()),
+                     tr("&Remove"), tr("&Cancel"), QString::null,
+                     0, 1)) {
+        case 0: {
+            QList<QListWidgetItem*> noteList =
+                    ui->notesListWidget->findItems(currentNote.getName(),
+                                           Qt::MatchExactly);
+
+            if (noteList.count() > 0) {
+                const QSignalBlocker blocker1(ui->notesListWidget);
+                Q_UNUSED(blocker1);
+
+                const QSignalBlocker blocker2(ui->noteTextEdit);
+                Q_UNUSED(blocker2);
+
+                const QSignalBlocker blocker3(ui->noteTextView);
+                Q_UNUSED(blocker3);
+
+                const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
+                Q_UNUSED(blocker4);
+
+                const QSignalBlocker blocker5(noteDirectoryWatcher);
+                Q_UNUSED(blocker5);
+
+                // delete note in database and on file system
+                currentNote.remove(true);
+
+                ui->noteTextEdit->clear();
+                ui->noteTextView->clear();
+                ui->encryptedNoteTextEdit->clear();
+
+                // delete item in note list widget
+                delete noteList[0];
+
+                // set new current note
+                if (ui->notesListWidget->count() > 0) {
+                    ui->notesListWidget->setCurrentRow(0);
+
+                    Note note = Note::fetchByName(
+                            ui->notesListWidget->currentItem()->text());
+                    setCurrentNote(note, true, false);
+                }
+            }
+
             break;
+        }
         case 1:
         default:
             break;
@@ -1009,7 +1055,8 @@ void MainWindow::storeSettings() {
     settings.setValue("MainWindow/geometry", saveGeometry());
     settings.setValue("MainWindow/windowState", saveState());
     settings.setValue("mainSplitterSizes", this->mainSplitter->saveState());
-    settings.setValue("MainWindow/menuBarGeometry", ui->menuBar->saveGeometry());
+    settings.setValue("MainWindow/menuBarGeometry",
+                      ui->menuBar->saveGeometry());
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("ShowSystemTray", showSystemTray);
 }
@@ -1201,8 +1248,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
             if (!currentNote.canDecryptNoteText()) {
                 QMessageBox::warning(
                         this,
-						tr("Note can't be decrypted!"),
-						tr("It seems that your password is not valid!"));
+                        tr("Note can't be decrypted!"),
+                        tr("It seems that your password is not valid!"));
             }
         }
     }
@@ -1253,7 +1300,8 @@ void MainWindow::setCurrentNoteText(QString text) {
  * @param text
  */
 void MainWindow::createNewNote(QString name, QString text) {
-    QFile *f = new QFile(this->notesPath + QDir::separator() + name + ".txt");
+    QString extension = Note::defaultNoteFileExtension();
+    QFile *f = new QFile(this->notesPath + QDir::separator() + name + "." + extension);
 
     // change the name and headline if note exists
     if (f->exists()) {
@@ -1299,12 +1347,12 @@ void MainWindow::removeSelectedNotes() {
 
     if (QMessageBox::information(
             this,
-			tr("Remove selected notes"),
-			tr("Remove <strong>%1</strong> selected note(s)?\n\n"
-			   "If the trash is enabled on your "
+            tr("Remove selected notes"),
+            tr("Remove <strong>%1</strong> selected note(s)?\n\n"
+               "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
-					"them from there.","",selectedItemsCount).arg(QString::number(selectedItemsCount)),
-			 tr("&Remove"), tr("&Cancel"), QString::null,
+                    "them from there.","",selectedItemsCount).arg(QString::number(selectedItemsCount)),
+             tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
@@ -1339,10 +1387,10 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 
     if (QMessageBox::information(
             this,
-			tr("Move selected notes"),
-			tr("Move %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
-				.arg(QString::number(selectedItemsCount)).arg(destinationFolder),
-			tr("&Move"), tr("&Cancel"), QString::null,
+            tr("Move selected notes"),
+            tr("Move %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
+                .arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+            tr("&Move"), tr("&Cancel"), QString::null,
             0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
@@ -1373,10 +1421,10 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
 
     if (QMessageBox::information(
             this,
-			tr("Copy selected notes"),
-			tr("Copy %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
-				.arg(QString::number(selectedItemsCount)).arg(destinationFolder),
-			tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+            tr("Copy selected notes"),
+            tr("Copy %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
+                .arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+            tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
                 QString name = item->text();
@@ -1393,9 +1441,9 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
             }
 
         QMessageBox::information(
-				this, tr("Done"),
-				tr("%1 note(s) were copied to <strong>%2</strong>.","",copyCount)
-					.arg(QString::number(copyCount)).arg(destinationFolder));
+                this, tr("Done"),
+                tr("%1 note(s) were copied to <strong>%2</strong>.","",copyCount)
+                    .arg(QString::number(copyCount)).arg(destinationFolder));
     }
 }
 
@@ -1404,9 +1452,9 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
  */
 void MainWindow::updateCurrentFolderTooltip() {
     ui->actionSet_ownCloud_Folder
-			->setStatusTip(tr("Current notes folder: ") + this->notesPath);
+            ->setStatusTip(tr("Current notes folder: ") + this->notesPath);
     ui->actionSet_ownCloud_Folder
-			->setToolTip(tr("Set the notes folder. Current notes folder: ") +
+            ->setToolTip(tr("Set the notes folder. Current notes folder: ") +
                                  this->notesPath);
 }
 
@@ -1444,8 +1492,8 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  * @brief Handles the linking of text
  */
 void MainWindow::handleTextNoteLinking() {
-	QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-	LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
     dialog->exec();
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
@@ -1526,8 +1574,8 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-	dialog.setNameFilter(tr("PDF files (*.pdf)"));
-	dialog.setWindowTitle(tr("Export current note as PDF"));
+    dialog.setNameFilter(tr("PDF files (*.pdf)"));
+    dialog.setWindowTitle(tr("Export current note as PDF"));
     dialog.selectFile(currentNote.getName() + ".pdf");
     int ret = dialog.exec();
 
@@ -1813,7 +1861,7 @@ void MainWindow::openNoteUrl(QUrl url) {
     qDebug() << __func__ << " - 'url': " << url;
 
     if (url.scheme() == "note") {
-        QString fileName = url.host() + ".txt";
+        QString fileName = url.host();
 
         // this makes it possible to search for file names containing spaces
         // instead of spaces a "-" has to be used in the note link
@@ -1824,29 +1872,25 @@ void MainWindow::openNoteUrl(QUrl url) {
         // we only get it lowercase by QUrl
         QDir currentDir = QDir(this->notesPath);
         QStringList files;
+        QStringList fileSearchList =
+                QStringList() << fileName + ".txt" << fileName + ".md";
 
         // search for files with that name
-        files = currentDir.entryList(QStringList(fileName),
+        files = currentDir.entryList(fileSearchList,
                                      QDir::Files | QDir::NoSymLinks);
 
         // did we find files?
         if (files.length() > 0) {
             // take the first found file
-            fileName = files.at(0);
+            fileName = files.first();
 
-            // does the file name has more than 4 character (something.txt)?
-            if (fileName.length() > 4) {
-                // truncate the last four characters (.txt)
-                fileName = fileName.left(fileName.length() - 4);
+            // try to fetch note
+            Note note = Note::fetchByFileName(fileName);
 
-                // try to fetch note
-                Note note = Note::fetchByName(fileName);
-
-                // does this note really exist?
-                if (note.isFetched()) {
-                    // set current note
-                    setCurrentNote(note);
-                }
+            // does this note really exist?
+            if (note.isFetched()) {
+                // set current note
+                setCurrentNote(note);
             }
         }
     }

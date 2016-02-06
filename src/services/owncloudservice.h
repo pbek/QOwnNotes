@@ -10,11 +10,10 @@
 #include "dialogs/settingsdialog.h"
 #include "dialogs/tododialog.h"
 
-#define QOWNNOTESAPI_MIN_VERSION "0.4.1"
+#define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
-class OwnCloudService : public QObject
-{
-    Q_OBJECT
+class OwnCloudService : public QObject {
+Q_OBJECT
 
 public:
     enum CalendarBackend {
@@ -24,15 +23,28 @@ public:
     Q_ENUMS(CalendarBackend)
 
     explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
-    void settingsConnectionTest( SettingsDialog *dialog );
-    void loadVersions(QString notesPath, QString fileName, MainWindow *mainWindow);
+
+    void settingsConnectionTest(SettingsDialog *dialog);
+
+    void loadVersions(QString notesPath, QString fileName,
+                      MainWindow *mainWindow);
+
     void loadTrash(QString notesPath, MainWindow *mainWindow);
-    void restoreTrashedNoteOnServer(QString notesPath, QString fileName, int timestamp, MainWindow *mainWindow);
-    void settingsGetCalendarList( SettingsDialog *dialog );
-    void todoGetTodoList( QString calendarName, TodoDialog *dialog );
-    void postCalendarItemToServer(CalendarItem calendarItem, TodoDialog *dialog);
+
+    void restoreTrashedNoteOnServer(QString notesPath, QString fileName,
+                                    int timestamp, MainWindow *mainWindow);
+
+    void settingsGetCalendarList(SettingsDialog *dialog);
+
+    void todoGetTodoList(QString calendarName, TodoDialog *dialog);
+
+    void postCalendarItemToServer(CalendarItem calendarItem,
+                                  TodoDialog *dialog);
+
     bool updateICSDataOfCalendarItem(CalendarItem *calItem);
+
     void removeCalendarItem(CalendarItem calItem, TodoDialog *dialog);
+
 private:
     QString serverUrl;
     QString serverUrlPath;
@@ -55,20 +67,31 @@ private:
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;
+
     void checkAppInfo(QNetworkReply *reply);
+
     void readSettings();
+
     void addAuthHeader(QNetworkRequest *r);
+
     QString getServerNotesPath(QString notesPath);
+
     void handleVersionsLoading(QString data);
+
     void handleTrashedLoading(QString data);
+
     QStringList parseCalendarHrefList(QString &data);
+
     void loadTodoItems(QString &data);
-    QStringList parseTodoListICSUrls(QString &data);
+
 signals:
 
 private slots:
-    void slotAuthenticationRequired ( QNetworkReply * reply, QAuthenticator * authenticator );
-    void slotReplyFinished ( QNetworkReply* );
+
+    void slotAuthenticationRequired(QNetworkReply *reply,
+                                    QAuthenticator *authenticator);
+
+    void slotReplyFinished(QNetworkReply *);
 };
 
 #endif // OWNCLOUDSERVICE_H

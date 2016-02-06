@@ -57,6 +57,8 @@ public:
 
     bool storeNoteTextFileToDisk();
 
+    static QString defaultNoteFileExtension();
+
     static QString getFullNoteFilePathForFile(QString fileName);
 
     static int storeDirtyNotesToDisk(Note &currentNote);

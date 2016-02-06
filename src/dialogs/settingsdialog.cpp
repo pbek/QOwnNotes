@@ -101,6 +101,9 @@ void SettingsDialog::storeSettings() {
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
+    settings.setValue("defaultNoteFileExtension",
+                      getSelectedListWidgetValue(
+                              ui->defaultNoteFileExtensionListWidget));
     settings.setValue("MainWindow/noteTextEdit.font",
                       noteTextEditFont.toString());
     settings.setValue("MainWindow/noteTextView.font",
@@ -111,13 +114,8 @@ void SettingsDialog::storeSettings() {
                       ui->showRecentNoteFolderCheckBox->isChecked());
     settings.setValue("MainWindow/markdownDefaultViewMode",
                       ui->markdownDefaultViewModeCheckBox->isChecked());
-
-    QList<QListWidgetItem*> selectedLanguageItems =
-            ui->languageListWidget->selectedItems();
-    if (selectedLanguageItems.count() >= 1) {
-        settings.setValue("interfaceLanguage",
-                          selectedLanguageItems.first()->whatsThis());
-    }
+    settings.setValue("interfaceLanguage",
+                      getSelectedListWidgetValue(ui->languageListWidget));
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -173,23 +171,10 @@ void SettingsDialog::readSettings() {
     ui->markdownDefaultViewModeCheckBox->setChecked(
             settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
-    QString interfaceLanguage = settings.value("interfaceLanguage").toString();
-
-    // get all items from the language selector
-    QList<QListWidgetItem *> items =
-            ui->languageListWidget->findItems(
-                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
-    // select the right item in the selector
-    Q_FOREACH(QListWidgetItem *item, items) {
-        if (item->whatsThis() == interfaceLanguage) {
-            const QSignalBlocker blocker(ui->languageListWidget);
-            Q_UNUSED(blocker);
-
-            item->whatsThis();
-            ui->languageListWidget->setItemSelected(item, true);
-            break;
-        }
-    }
+    selectListWidgetValue(ui->languageListWidget,
+                          settings.value("interfaceLanguage").toString());
+    selectListWidgetValue(ui->defaultNoteFileExtensionListWidget,
+                          Note::defaultNoteFileExtension());
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
     Q_UNUSED(blocker);
@@ -220,6 +205,42 @@ void SettingsDialog::readSettings() {
             "ownCloud/todoCalendarUrlList").toStringList();
     // load the todo calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
+}
+
+/**
+ * Selects a value in a list widget, that is hidden in the whatsThis parameter
+ */
+void SettingsDialog::selectListWidgetValue(
+        QListWidget* listWidget, QString value) {
+    // get all items from the list widget
+    QList<QListWidgetItem *> items =
+            listWidget->findItems(
+                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    // select the right item in the selector
+    Q_FOREACH(QListWidgetItem *item, items) {
+            if (item->whatsThis() == value) {
+                const QSignalBlocker blocker(listWidget);
+                Q_UNUSED(blocker);
+
+                item->whatsThis();
+                listWidget->setItemSelected(item, true);
+                break;
+            }
+        }
+}
+
+/**
+ * Returns the selected value in list widget, that is hidden in
+ * the whatsThis parameter
+ */
+QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
+    QList<QListWidgetItem*> items = listWidget->selectedItems();
+
+    if (items.count() >= 1) {
+        return items.first()->whatsThis();
+    }
+
+    return "";
 }
 
 void SettingsDialog::setFontLabel(QLabel *label, QFont font) {

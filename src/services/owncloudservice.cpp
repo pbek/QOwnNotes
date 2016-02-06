@@ -112,7 +112,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             handleTrashedLoading(data);
             return;
         } else if (reply->url().path().endsWith(capabilitiesPath)) {
-            qDebug() << "Reply from capabilites page";
+            qDebug() << "Reply from capabilities page";
 
             if (data.startsWith("<?xml version=")) {
                 settingsDialog->setOKLabelData(3, "ok", SettingsDialog::OK);
@@ -162,7 +162,8 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     data = "";
                 }
 
-                // this will mostly happen after the PUT request to update or create a todo item
+                // this will mostly happen after the PUT request to update
+                // or create a todo item
                 if (data == "") {
                     // reload the todo list from server
                     this->todoDialog->reloadTodoList();
@@ -270,7 +271,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
             }
         }
 
-        // check if notes path was found after QOwnNotesAPI v0.4.1
+        // check if notes path was found after QOwnNotesAPI v0.4.
         if (serverAppVersion >= VersionNumber("0.4.1")) {
             bool notesPathExists = result.property(0).property(
                     "notes_path_exists").toBool();
@@ -790,8 +791,8 @@ QStringList OwnCloudService::parseCalendarHrefList(QString &data) {
                         QDomNodeList displayNameNodes =
                                 elem.elementsByTagNameNS(NS_DAV, "displayname");
                         if (displayNameNodes.length()) {
-                            // TODO: we want to use this display name in the
-                            // future!
+                            // TODO(pbek): we want to use this display name in
+                            // the future!
                             const QString displayName = displayNameNodes.at(
                                     0).toElement().text();
                             qDebug() << __func__ << " - 'displayName': " <<
