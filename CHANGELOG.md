@@ -9,8 +9,8 @@
     - please try not to use `.md` and `.txt` notes with the same name
     - you have to update the ownCloud app `QOwnNotesAPI` to version 0.4.2 to
       make use of the `.md` support
-- updated German translation for the new settings texts and changes by
-  @calis2002
+- added more German translation for the new settings texts and added some 
+  changes by @calis2002
 
 ## 0.91
 - the OS X dmg and Ubuntu deb files, that are created by Travis CI now have 
