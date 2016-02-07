@@ -577,10 +577,12 @@ Notiz wiederherstellen?</translation>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
         <translation>
-            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählte(n) Notiz(en) löschen?
+            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählte Notiz löschen?
 
-Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz(en) wiederherstellen können.</numerusform>
-            <numerusform></numerusform>
+Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
+            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählte Notizen löschen?
+
+Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notizen wiederherstellen können.</numerusform>
         </translation>
     </message>
     <message>
@@ -592,8 +594,8 @@ Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <location filename="../mainwindow.cpp" line="1386"/>
         <source>Move %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
-            <numerusform>%1 Notiz(en) nach &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%1 Notiz nach &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
+            <numerusform>%1 Notizen nach &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
         </translation>
     </message>
     <message>
@@ -610,8 +612,8 @@ Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <location filename="../mainwindow.cpp" line="1420"/>
         <source>Copy %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
-            <numerusform>%1 Notiz(en) nach &lt;strong&gt;%2&lt;/strong&gt; kopieren?</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%1 Notiz nach &lt;strong&gt;%2&lt;/strong&gt; kopieren?</numerusform>
+            <numerusform>%1 Notizen nach &lt;strong&gt;%2&lt;/strong&gt; kopieren?</numerusform>
         </translation>
     </message>
     <message>
@@ -628,8 +630,8 @@ Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <location filename="../mainwindow.cpp" line="1440"/>
         <source>%1 note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
-            <numerusform>%1 Notiz(en) wurde(n) nach &lt;strong&gt;%2&lt;/strong&gt; kopiert.</numerusform>
-            <numerusform></numerusform>
+            <numerusform>%1 Notiz wurde nach &lt;strong&gt;%2&lt;/strong&gt; kopiert.</numerusform>
+            <numerusform>%1 Notizen wurden nach &lt;strong&gt;%2&lt;/strong&gt; kopiert.</numerusform>
         </translation>
     </message>
     <message>
