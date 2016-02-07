@@ -232,6 +232,13 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
 
         // populate menu list
         Q_FOREACH(QString noteFolder, recentNoteFolders) {
+                QDir folder(noteFolder);
+
+                // don't show not existing folders or if path is empty
+                if (!folder.exists() || noteFolder.isEmpty()) {
+                    continue;
+                }
+
                 // add a menu entry
                 QAction *action =
                         ui->menuRecentNoteFolders->addAction(noteFolder);
@@ -313,6 +320,9 @@ void MainWindow::storeRecentNoteFolder(
 
     recentNoteFolders.removeAll(addFolderName);
     recentNoteFolders.removeAll(removeFolderName);
+
+    // remove empty paths
+    recentNoteFolders.removeAll("");
 
     if (addFolderName != removeFolderName) {
         recentNoteFolders.prepend(addFolderName);

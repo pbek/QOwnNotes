@@ -2,7 +2,10 @@
 
 ## 0.93
 - added more German translation by @calis2002
-- tried to fix a problem with removing multiple notes
+- attempted to fix a problem with removing multiple notes
+- fixed a problem with two notes with the same name (but different extension) 
+  showing up in the note list
+- fixed a problem with empty entries in the recent note folders list 
 
 ## 0.92
 - you can now choose to use `.md` instead of `.txt` as your default 
