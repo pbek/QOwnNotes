@@ -61,7 +61,6 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             break;
         }
         case Download:
-        default:
         {
             // if the release was build by the CI systems download the new
             // release
@@ -74,7 +73,10 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                 QDesktopServices::openUrl(
                         QUrl("http://www.qownnotes.org/installation"));
             }
+            break;
         }
+        default:
+            break;
     }
 
     this->close();
