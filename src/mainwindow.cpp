@@ -419,7 +419,7 @@ void MainWindow::loadNoteDirectoryList() {
         }
     }
 
-    // sort alphabetically again in necessary
+    // sort alphabetically again if necessary
     if (sortAlphabetically) {
         ui->notesListWidget->sortItems(Qt::AscendingOrder);
     }
@@ -1032,14 +1032,8 @@ void MainWindow::removeCurrentNote() {
                 // delete item in note list widget
                 delete noteList[0];
 
-                // set new current note
-                if (ui->notesListWidget->count() > 0) {
-                    ui->notesListWidget->setCurrentRow(0);
-
-                    Note note = Note::fetchByName(
-                            ui->notesListWidget->currentItem()->text());
-                    setCurrentNote(note, true, false);
-                }
+                // set a new first note
+                resetCurrentNote();
             }
 
             break;
@@ -1047,6 +1041,23 @@ void MainWindow::removeCurrentNote() {
         case 1:
         default:
             break;
+    }
+}
+
+/**
+ * Resets the current note to the first note
+ */
+void MainWindow::resetCurrentNote() {
+    // set new current note
+    if (ui->notesListWidget->count() > 0) {
+        const QSignalBlocker blocker(ui->notesListWidget);
+        Q_UNUSED(blocker);
+
+        ui->notesListWidget->setCurrentRow(0);
+
+        Note note = Note::fetchByName(
+                ui->notesListWidget->currentItem()->text());
+        setCurrentNote(note, true, false);
     }
 }
 
@@ -1098,8 +1109,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
             return false;
-        }
-        else if (obj == ui->notesListWidget) {
+        } else if (obj == ui->notesListWidget) {
             // set focus to the note text edit if Key_Return or Key_Tab were
             // pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) ||
@@ -1351,11 +1361,25 @@ void MainWindow::removeSelectedNotes() {
             tr("Remove <strong>%1</strong> selected note(s)?\n\n"
                "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
-                    "them from there.","",selectedItemsCount).arg(QString::number(selectedItemsCount)),
+                    "them from there.",
+               "",
+               selectedItemsCount).arg(QString::number(selectedItemsCount)),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
+
+        const QSignalBlocker blocker1(ui->notesListWidget);
+        Q_UNUSED(blocker1);
+
+        const QSignalBlocker blocker2(ui->noteTextEdit);
+        Q_UNUSED(blocker2);
+
+        const QSignalBlocker blocker3(ui->noteTextView);
+        Q_UNUSED(blocker3);
+
+        const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
+        Q_UNUSED(blocker4);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
             QString name = item->text();
@@ -1365,6 +1389,9 @@ void MainWindow::removeSelectedNotes() {
         }
 
         loadNoteDirectoryList();
+
+        // set a new first note
+        resetCurrentNote();
     }
 }
 

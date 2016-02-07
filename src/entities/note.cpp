@@ -287,7 +287,8 @@ QStringList Note::fetchNoteNames() {
 
     QStringList list;
 
-    query.prepare("SELECT name FROM note ORDER BY file_last_modified DESC");
+    query.prepare(
+            "SELECT DISTINCT(name) FROM note ORDER BY file_last_modified DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {

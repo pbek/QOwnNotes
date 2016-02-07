@@ -250,4 +250,6 @@ private:
     QMarkdownTextEdit *activeNoteTextEdit();
 
     void showAppMetricsNotificationIfNeeded();
+
+    void resetCurrentNote();
 };

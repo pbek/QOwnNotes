@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 0.93
-- added more German translation by @calis2002 
+- added more German translation by @calis2002
+- tried to fix a problem with removing multiple notes
 
 ## 0.92
 - you can now choose to use `.md` instead of `.txt` as your default 
