@@ -281,6 +281,10 @@ void MainWindow::changeNoteFolder(const QString &folderName) {
         QSettings settings;
         settings.setValue("notesPath", folderName);
 
+        // we have to unset the current note otherwise it might show up after
+        // switching to an other note folder
+        currentNote = Note();
+
         buildNotesIndex();
         loadNoteDirectoryList();
 
@@ -789,6 +793,7 @@ void MainWindow::buildNotesIndex() {
 
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
+    qDebug() << __func__ << " - 'files': " << files;
 
     bool createDemoNotes = files.count() == 0;
 

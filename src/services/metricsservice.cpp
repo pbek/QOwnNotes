@@ -33,7 +33,7 @@ void MetricsService::sendEvent(
         int eventValue) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-        qDebug() << __func__ << " - 'eventAction': " << eventAction;
+//        qDebug() << __func__ << " - 'eventAction': " << eventAction;
         analytics->sendEvent(
                 eventCategory, eventAction, eventLabel, eventValue);
     }
@@ -42,7 +42,7 @@ void MetricsService::sendEvent(
 void MetricsService::sendAppView(const QString& screenName) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-        qDebug() << __func__ << " - 'screenName': " << screenName;
+//        qDebug() << __func__ << " - 'screenName': " << screenName;
         analytics->sendAppview2(screenName);
     }
 }

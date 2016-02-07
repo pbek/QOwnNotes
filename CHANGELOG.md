@@ -6,6 +6,8 @@
   (for [Issue #63](https://github.com/pbek/QOwnNotes/issues/63))
 - canceling the update dialog now really cancels the update process like it 
   used to
+- fixed a problem with a wrong note showing up after you change your note folder
+  (for [Issue #60](https://github.com/pbek/QOwnNotes/issues/60))
 
 ## 0.93
 - added more German translation by @calis2002

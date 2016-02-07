@@ -539,9 +539,11 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
             QString newFileName = note.getFileName();
 
             // reassign currentNote if filename of currentNote has changed
-            if ((oldFileName == currentNote.getFileName()) && (oldFileName != newFileName)) {
+            if ((oldFileName == currentNote.getFileName()) &&
+                    (oldFileName != newFileName)) {
                 currentNote = note;
-                qDebug() << "filename of currentNote has changed to: " << newFileName;
+                qDebug() << "filename of currentNote has changed to: "
+                    << newFileName;
             }
 
             qDebug() << "stored note: " << note;
@@ -567,12 +569,9 @@ void Note::createFromFile(QFile &file) {
         // create a nicer name by removing the extension
         // TODO(pbek): make sure name is ownCloud Notes conform
         QString name = fileInfo.fileName();
-        qDebug() << __func__ << " - 'name': " << name;
 
         int lastPoint = name.lastIndexOf(".");
         name = name.left(lastPoint);
-
-        qDebug() << __func__ << " - 'name': " << name;
 
         this->name = name;
         this->fileName = fileInfo.fileName();
