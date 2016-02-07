@@ -580,7 +580,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
             <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählte Notiz löschen?
 
 Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
-            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählten Notizen löschen?
+            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; ausgewählte Notizen löschen?
 
 Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notizen wiederherstellen können.</numerusform>
         </translation>
