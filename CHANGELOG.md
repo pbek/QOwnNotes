@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 0.94
+- pressing `Delete` in the note list widget now attempts to remove all 
+  selected notes, not just the current one
+  (for [Issue #63](https://github.com/pbek/QOwnNotes/issues/63))
+
 ## 0.93
 - added more German translation by @calis2002
 - attempted to fix a problem with removing multiple notes

@@ -1128,7 +1128,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 focusNoteTextEdit();
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete)) {
-                removeCurrentNote();
+                removeSelectedNotes();
                 return true;
             }
             return false;
@@ -1364,6 +1364,10 @@ void MainWindow::removeSelectedNotes() {
     storeUpdatedNotesToDisk();
 
     int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if (selectedItemsCount == 0) {
+        return;
+    }
 
     if (QMessageBox::information(
             this,
