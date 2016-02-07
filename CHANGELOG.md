@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 0.93
+- added more German translation by @calis2002 
+
 ## 0.92
 - you can now choose to use `.md` instead of `.txt` as your default 
   file-extension for your notes in the settings
