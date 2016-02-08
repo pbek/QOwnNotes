@@ -23,6 +23,11 @@ UpdateService::UpdateService(QObject *parent) : QObject(parent) {
 void UpdateService::checkForUpdates(UpdateMode updateMode) {
     this->updateMode = updateMode;
 
+    QSettings settings;
+    if (updateMode != Manual) {
+        settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
+    }
+
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     connect(manager, SIGNAL(finished(QNetworkReply *)),
             this, SLOT(onResult(QNetworkReply *)));
@@ -46,11 +51,7 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
-
-    QSettings settings;
-    if (!settings.value("appMetrics/disableTracking").toBool()) {
-        q.addQueryItem("cid", settings.value("GAnalytics-cid").toString());
-    }
+    q.addQueryItem("cid", settings.value("GAnalytics-cid").toString());
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     q.addQueryItem("r", QString(RELEASE) + " (" +

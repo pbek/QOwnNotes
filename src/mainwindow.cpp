@@ -97,7 +97,7 @@ MainWindow::MainWindow(QWidget *parent) :
             this->todoReminderTimer,
             SIGNAL(timeout()),
             this,
-            SLOT(checkTodoReminders()));
+            SLOT(frequentPeriodicChecker()));
     this->todoReminderTimer->start(60000);
 
     QObject::connect(
@@ -145,9 +145,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->setTabStopWidth(width);
     ui->encryptedNoteTextEdit->setTabStopWidth(width);
 
-    //called now in readSettingsFromSettingsDialog() line 494
+    // called now in readSettingsFromSettingsDialog() line 494
     // set the edit mode for the note text edit
-    //this->setNoteTextEditMode(true);
+    // this->setNoteTextEditMode(true);
 
 
     // load the recent note folder list in the menu
@@ -155,14 +155,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(UpdateService::AppStart);
-
-    QTimer *updateCheckTimer = new QTimer(this);
-    connect(updateCheckTimer,
-            SIGNAL(timeout()),
-            this,
-            SLOT(updateCheckTimerTimeout()));
-    // update check every 2h
-    updateCheckTimer->start(7200000);
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
@@ -190,6 +182,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // show the app metrics notification if not already shown
     showAppMetricsNotificationIfNeeded();
+
+    frequentPeriodicChecker();
 }
 
 MainWindow::~MainWindow() {
@@ -769,10 +763,20 @@ void MainWindow::storeUpdatedNotesToDisk() {
  * Shows alerts for calendar items with an alarm date in the current minute
  * Also checks for expired note crypto keys
  */
-void MainWindow::checkTodoReminders() {
+void MainWindow::frequentPeriodicChecker() {
     CalendarItem::alertTodoReminders();
     Note::expireCryptoKeys();
     MetricsService::instance()->sendEvent("app", "heartbeat");
+
+    QSettings settings;
+    QDateTime lastUpdateCheck = settings.value("LastUpdateCheck").toDateTime();
+    if (!lastUpdateCheck.isValid()) {
+        // set the LastUpdateCheck if it wasn't set
+        settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
+    } else if (lastUpdateCheck.addSecs(1800) <= QDateTime::currentDateTime()) {
+        // check for updates every 30min
+        updateService->checkForUpdates(UpdateService::Periodic);
+    }
 }
 
 void MainWindow::waitMsecs(int msecs) {
@@ -2006,11 +2010,6 @@ void MainWindow::on_actionShow_trash_triggered() {
     ownCloud->loadTrash(this->notesPath, this);
 }
 
-void MainWindow::updateCheckTimerTimeout() {
-    qDebug() << "updateCheck";
-    this->updateService->checkForUpdates(UpdateService::Periodic);
-}
-
 void MainWindow::on_notesListWidget_customContextMenuRequested(
         const QPoint &pos) {
     QPoint globalPos = ui->notesListWidget->mapToGlobal(pos);
@@ -2145,10 +2144,13 @@ void MainWindow::on_actionOpen_List_triggered() {
     // check if we have got any todo list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
         if (QMessageBox::warning(
-				0, tr("No selected todo lists!"),
-				tr("You have not selected any todo lists.<br />Please check your "
-						"<strong>Todo</strong> configuration in the settings!"),
-				tr("Open &settings"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+                0, tr("No selected todo lists!"),
+                tr("You have not selected any todo lists.<br />"
+                           "Please check your <strong>Todo</strong>"
+                           "configuration in the settings!"),
+                tr("Open &settings"),
+                tr("&Cancel"),
+                QString::null, 0, 1) == 0) {
             openSettingsDialog();
         }
 
