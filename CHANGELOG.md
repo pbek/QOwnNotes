@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 0.95
-- code in the Markdown edit now uses the `Monospace` font
+- code in the Markdown edit now uses the `Courier` font
 
 ## 0.94
 - pressing `Delete` in the note list widget now attempts to remove all 
