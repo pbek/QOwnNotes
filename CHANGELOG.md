@@ -2,6 +2,7 @@
 
 ## 0.95
 - code in the Markdown edit now uses the `Courier` font
+  (for [Issue #59](https://github.com/pbek/QOwnNotes/issues/59))
 
 ## 0.94
 - pressing `Delete` in the note list widget now attempts to remove all 
