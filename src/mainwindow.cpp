@@ -773,8 +773,8 @@ void MainWindow::frequentPeriodicChecker() {
     if (!lastUpdateCheck.isValid()) {
         // set the LastUpdateCheck if it wasn't set
         settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
-    } else if (lastUpdateCheck.addSecs(1800) <= QDateTime::currentDateTime()) {
-        // check for updates every 30min
+    } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
+        // check for updates every 1h
         updateService->checkForUpdates(UpdateService::Periodic);
     }
 }
