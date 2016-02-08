@@ -46,3 +46,10 @@ void MetricsService::sendAppView(const QString& screenName) {
         analytics->sendAppview2(screenName);
     }
 }
+
+/**
+ * Sends a heartbeat
+ */
+void MetricsService::sendHeartbeat() {
+    analytics->sendEvent("app", "heartbeat");
+}

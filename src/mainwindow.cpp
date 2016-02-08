@@ -766,7 +766,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 void MainWindow::frequentPeriodicChecker() {
     CalendarItem::alertTodoReminders();
     Note::expireCryptoKeys();
-    MetricsService::instance()->sendEvent("app", "heartbeat");
+    MetricsService::instance()->sendHeartbeat();
 
     QSettings settings;
     QDateTime lastUpdateCheck = settings.value("LastUpdateCheck").toDateTime();
