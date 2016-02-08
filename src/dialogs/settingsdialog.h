@@ -47,7 +47,7 @@ private slots:
     void on_tabWidget_currentChanged(int index);
     void on_saveDebugInfoButton_clicked();
     void on_appMetricsCheckBox_toggled(bool checked);
-
+    void on_clearAppDataAndExitButton_clicked();
 
 private:
     Ui::SettingsDialog *ui;

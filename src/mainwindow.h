@@ -51,6 +51,8 @@ private slots:
 
     void on_action_Quit_triggered();
 
+    void quitApp();
+
     void notesDirectoryWasModified(const QString &str);
 
     void notesWereModified(const QString &str);

@@ -4,6 +4,11 @@
 - code in the Markdown edit now uses the `Courier` font
   (for [Issue #59](https://github.com/pbek/QOwnNotes/issues/59))
 - the update checker was modified to fix a crash on OS X
+- there now is a new *Interface* tab in the settings dialog to make room for 
+  more configuration items
+- there now is a buttons in the *general settings*, that allows you to clear 
+  all settings, remove the local todo database and exit QOwnNotes
+  (for [Issue #56](https://github.com/pbek/QOwnNotes/issues/56))
 
 ## 0.94
 - pressing `Delete` in the note list widget now attempts to remove all 
@@ -13,7 +18,7 @@
   used to
 - fixed a problem with a wrong note showing up after you change your note folder
   (for [Issue #60](https://github.com/pbek/QOwnNotes/issues/60))
-
+  
 ## 0.93
 - added more German translation by @calis2002
 - attempted to fix a problem with removing multiple notes

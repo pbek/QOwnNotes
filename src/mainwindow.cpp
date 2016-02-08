@@ -933,8 +933,9 @@ QString MainWindow::selectOwnCloudNotesFolder() {
                 case 1:
                 default:
                     // No other way to quit the application worked
-                    QTimer::singleShot(
-                            50, this, SLOT(on_action_Quit_triggered()));
+                    // in the constructor
+                    QTimer::singleShot(0, this, SLOT(quitApp()));
+                    QTimer::singleShot(100, this, SLOT(quitApp()));
                     break;
             }
         }
@@ -1718,9 +1719,12 @@ void MainWindow::on_noteTextEdit_textChanged() {
     }
 }
 
-
 void MainWindow::on_action_Quit_triggered() {
     storeSettings();
+    QApplication::quit();
+}
+
+void MainWindow::quitApp() {
     QApplication::quit();
 }
 

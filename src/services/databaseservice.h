@@ -15,9 +15,10 @@ public:
     static QString getAppData(QString name);
     static bool setAppData(QString name, QString value);
     static bool reinitializeDiskDatabase();
+    static bool removeDiskDatabase();
+
 private:
     static QString getDiskDatabasePath();
-    static bool removeDiskDatabase();
     static bool createMemoryConnection();
     static bool createDiskConnection();
 };

@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>2</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -450,10 +450,10 @@
                  <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'.SF NS Text'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;Please install the latest version of &lt;/span&gt;&lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;You also need to have the two ownCloud core apps &lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-weight:600;&quot;&gt;Versions&lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt; and &lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt; enabled on your ownCloud server.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt;You still need &lt;/span&gt;&lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:'Sans Serif';&quot;&gt; to sync your notes!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="openExternalLinks">
                  <bool>true</bool>
@@ -619,80 +619,105 @@ p, li { white-space: pre-wrap; }
            </layout>
           </widget>
          </item>
+         <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="generalTab">
+       <widget class="QWidget" name="interfaceTab">
         <attribute name="title">
-         <string>General</string>
+         <string>Interface</string>
         </attribute>
-        <layout class="QHBoxLayout" name="horizontalLayout">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0,0">
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
+          <layout class="QVBoxLayout" name="verticalLayout_8">
            <item>
-            <widget class="QGroupBox" name="groupBox">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+            <widget class="QGroupBox" name="groupBox_7">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
              </property>
              <property name="title">
-              <string>Notes</string>
+              <string>Interface language</string>
              </property>
-             <layout class="QGridLayout" name="gridLayout_5">
-              <item row="0" column="0" colspan="2">
-               <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                 <string>notify about all external modifications</string>
-                </property>
-               </widget>
-              </item>
+             <layout class="QGridLayout" name="gridLayout_10">
               <item row="1" column="0">
-               <widget class="QSpinBox" name="noteSaveIntervalTime">
-                <property name="toolTip">
-                 <string/>
+               <widget class="QListWidget" name="languageListWidget">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>240</height>
+                 </size>
                 </property>
-                <property name="layoutDirection">
-                 <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="minimum">
-                 <number>1</number>
-                </property>
-                <property name="maximum">
-                 <number>999</number>
-                </property>
-                <property name="value">
-                 <number>10</number>
-                </property>
+                <item>
+                 <property name="text">
+                  <string>Automatic</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true"/>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>English</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">en</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>German</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">de</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>French</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">fr</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Polish</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>pl</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Chinese</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>cn</string>
+                 </property>
+                </item>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                <property name="toolTip">
-                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                </property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_2">
                 <property name="text">
-                 <string>note save interval time [sec]</string>
+                 <string>If you change the language you have to restart the application for the changes to take action.</string>
                 </property>
-               </widget>
-              </item>
-              <item row="2" column="0" colspan="2">
-               <widget class="QCheckBox" name="markdownDefaultViewModeCheckBox">
-                <property name="toolTip">
-                 <string>Select this if you want the markdown view to be the default view instead of the edit view.</string>
-                </property>
-                <property name="text">
-                 <string>Markdown view mode is default</string>
+                <property name="wordWrap">
+                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -779,6 +804,143 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </widget>
            </item>
            <item>
+            <widget class="QGroupBox" name="groupBox_6">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>90</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Toolbar</string>
+             </property>
+             <widget class="QLabel" name="toolbarIconSizeLabel">
+              <property name="geometry">
+               <rect>
+                <x>30</x>
+                <y>40</y>
+                <width>141</width>
+                <height>31</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>Icon size:</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+             <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
+              <property name="geometry">
+               <rect>
+                <x>180</x>
+                <y>40</y>
+                <width>60</width>
+                <height>34</height>
+               </rect>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_10"/>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="generalTab">
+        <attribute name="title">
+         <string>General</string>
+        </attribute>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Notes</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0" colspan="2">
+               <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>notify about all external modifications</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QSpinBox" name="noteSaveIntervalTime">
+                <property name="toolTip">
+                 <string/>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="minimum">
+                 <number>1</number>
+                </property>
+                <property name="maximum">
+                 <number>999</number>
+                </property>
+                <property name="value">
+                 <number>10</number>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                <property name="toolTip">
+                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                </property>
+                <property name="text">
+                 <string>note save interval time [sec]</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QCheckBox" name="markdownDefaultViewModeCheckBox">
+                <property name="toolTip">
+                 <string>Select this if you want the markdown view to be the default view instead of the edit view.</string>
+                </property>
+                <property name="text">
+                 <string>Markdown view mode is default</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QGroupBox" name="groupBox_3">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -843,42 +1005,29 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </widget>
            </item>
            <item>
-            <widget class="QGroupBox" name="groupBox_6">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>90</height>
-              </size>
-             </property>
+            <widget class="QGroupBox" name="groupBox_9">
              <property name="title">
-              <string>Toolbar</string>
+              <string>Clear application data and exit</string>
              </property>
-             <widget class="QLabel" name="toolbarIconSizeLabel">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>40</y>
-                <width>141</width>
-                <height>31</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Icon size:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-             <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
-              <property name="geometry">
-               <rect>
-                <x>180</x>
-                <y>40</y>
-                <width>60</width>
-                <height>34</height>
-               </rect>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" name="verticalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="clearAppDataAndExitButton">
+                <property name="text">
+                 <string>Clear app data and exit</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>
@@ -902,94 +1051,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             <number>0</number>
            </property>
            <item>
-            <widget class="QGroupBox" name="groupBox_7">
+            <widget class="QGroupBox" name="groupBox_8">
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>0</height>
               </size>
              </property>
-             <property name="title">
-              <string>Interface language</string>
-             </property>
-             <layout class="QGridLayout" name="gridLayout_10">
-              <item row="1" column="0">
-               <widget class="QListWidget" name="languageListWidget">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>Automatic</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true"/>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>English</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true">en</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>German</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true">de</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>French</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true">fr</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Polish</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>pl</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Chinese</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>cn</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_2">
-                <property name="text">
-                 <string>If you change the language you have to restart the application for the changes to take action.</string>
-                </property>
-                <property name="wordWrap">
-                 <bool>true</bool>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="groupBox_8">
-             <property name="minimumSize">
+             <property name="maximumSize">
               <size>
-               <width>0</width>
-               <height>0</height>
+               <width>16777215</width>
+               <height>150</height>
               </size>
              </property>
              <property name="title">
@@ -1007,7 +1079,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <property name="maximumSize">
                  <size>
                   <width>16777215</width>
-                  <height>90</height>
+                  <height>16777215</height>
                  </size>
                 </property>
                 <item>

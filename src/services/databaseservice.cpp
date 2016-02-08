@@ -37,8 +37,14 @@ QString DatabaseService::getDiskDatabasePath() {
 }
 
 bool DatabaseService::removeDiskDatabase() {
-    QFile file;
-    return file.remove(getDiskDatabasePath());
+    QFile file(getDiskDatabasePath());
+
+    if (file.exists()) {
+        qDebug() << __func__ << " - 'removing database file': " << file.fileName();
+        return file.remove();
+    }
+
+    return false;
 }
 
 bool DatabaseService::createConnection() {
@@ -54,12 +60,13 @@ bool DatabaseService::createMemoryConnection() {
     dbMemory.setDatabaseName(":memory:");
 
     if (!dbMemory.open()) {
-		QMessageBox::critical(0, QWidget::tr("Cannot open memory database"),
-							  QWidget::tr("Unable to establish a database connection.\n"
-                                               "This application needs SQLite support. Please read "
-                                               "the Qt SQL driver documentation for information how "
-                                               "to build it.\n\n"
-                                               "Click Cancel to exit."), QMessageBox::Cancel);
+        QMessageBox::critical(0, QWidget::tr("Cannot open memory database"),
+              QWidget::tr(
+                  "Unable to establish a database connection.\n"
+                       "This application needs SQLite support. Please read "
+                       "the Qt SQL driver documentation for information how "
+                       "to build it.\n\n"
+                       "Click Cancel to exit."), QMessageBox::Cancel);
         return false;
     }
 
@@ -71,12 +78,13 @@ bool DatabaseService::createDiskConnection() {
     dbDisk.setDatabaseName(getDiskDatabasePath());
 
     if (!dbDisk.open()) {
-		QMessageBox::critical(0, QWidget::tr("Cannot open disk database"),
-							  QWidget::tr("Unable to establish a database connection.\n"
-                                               "This application needs SQLite support. Please read "
-                                               "the Qt SQL driver documentation for information how "
-                                               "to build it.\n\n"
-                                               "Click Cancel to exit."), QMessageBox::Cancel);
+        QMessageBox::critical(0, QWidget::tr("Cannot open disk database"),
+              QWidget::tr(
+                      "Unable to establish a database connection.\n"
+                          "This application needs SQLite support. Please read "
+                          "the Qt SQL driver documentation for information how "
+                          "to build it.\n\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
         return false;
     }
 

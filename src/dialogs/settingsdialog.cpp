@@ -586,8 +586,8 @@ void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
 
 void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
     DatabaseService::reinitializeDiskDatabase();
-	QMessageBox::information(this, tr("Database"),
-							 tr("The Database was reinitialized."));
+    QMessageBox::information(this, tr("Database"),
+                             tr("The Database was reinitialized."));
 }
 
 /**
@@ -597,8 +597,8 @@ void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked() {
     QSettings settings;
     settings.remove("recentNoteFolders");
 
-	QMessageBox::information(this, tr("Recent note folders history"),
-							 tr("The history was cleared."));
+    QMessageBox::information(this, tr("Recent note folders history"),
+                             tr("The history was cleared."));
 }
 
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
@@ -615,9 +615,9 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-	dialog.setNameFilter(tr("Markdown files (*.md)"));
-	dialog.setWindowTitle(tr("Save debug information"));
-	dialog.selectFile("QOwnNotes Debug Information.md");
+    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setWindowTitle(tr("Save debug information"));
+    dialog.selectFile("QOwnNotes Debug Information.md");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -659,5 +659,24 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
             Q_UNUSED(blocker);
             ui->appMetricsCheckBox->setChecked(0);
         }
+    }
+}
+
+/**
+ * Allows the user to clear all settings and the database and exit the app
+ */
+void SettingsDialog::on_clearAppDataAndExitButton_clicked()
+{
+    if (QMessageBox::information(
+            this, tr("Clear app data and exit"),
+            tr("Do you really want to clear all settings, remove the "
+                       "database and exit QOwnNotes?\n\n"
+                       "Your notes will stay intact!"),
+            tr("Clear and &exit"), tr("&Cancel"), QString::null,
+            1) == 0) {
+        QSettings settings;
+        settings.clear();
+        DatabaseService::removeDiskDatabase();
+        qApp->quit();
     }
 }
