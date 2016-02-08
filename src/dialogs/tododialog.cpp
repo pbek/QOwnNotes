@@ -108,7 +108,7 @@ void TodoDialog::reloadTodoListItems() {
             ui->todoListSelector->currentText());
 
     MetricsService::instance()->sendEvent(
-            "note", "todo list loaded", "", calendarItemList.count());
+            "todo list", "todo list loaded", "count", calendarItemList.count());
 
     {
         const QSignalBlocker blocker(ui->todoList);
