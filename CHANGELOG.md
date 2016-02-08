@@ -6,7 +6,7 @@
 - the update checker was modified to fix a crash on OS X
 - there now is a new *Interface* tab in the settings dialog to make room for 
   more configuration items
-- there now is a buttons in the *general settings*, that allows you to clear 
+- there now is a new button in the *general settings*, that allows you to clear 
   all settings, remove the local todo database and exit QOwnNotes
   (for [Issue #56](https://github.com/pbek/QOwnNotes/issues/56))
 
