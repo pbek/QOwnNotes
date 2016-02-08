@@ -51,8 +51,9 @@ UpdateDialog::~UpdateDialog() {
 
 int UpdateDialog::exec() {
     setIsUpdateDialogOpen(true);
-    MasterDialog::exec();
+    int result = MasterDialog::exec();
     setIsUpdateDialogOpen(false);
+    return result;
 }
 
 void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
