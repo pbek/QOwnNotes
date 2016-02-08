@@ -73,7 +73,7 @@ void UpdateService::checkForUpdates(UpdateMode updateMode) {
 }
 
 void UpdateService::onResult(QNetworkReply *reply) {
-    // abort if reply was null (on OSX after waking from sleep)
+    // abort if reply was null
     if (reply == NULL) {
         return;
     }
@@ -120,21 +120,15 @@ void UpdateService::onResult(QNetworkReply *reply) {
                 "changes_html").toString();
 
         bool showUpdateDialog = true;
-        if (this->updateMode != UpdateService::Manual) {
+        if (updateMode != UpdateService::Manual) {
             QSettings settings;
             QString skipVersion = settings.value("skipVersion").toString();
 
             if (releaseVersionString == skipVersion) {
                 showUpdateDialog = false;
-            } else if (this->updateMode == UpdateService::Periodic) {
-                QWidget *widget = QApplication::activeWindow();
-
-                // only load the update dialog if the active window
-                // is the MainWindow
-                if (QString(widget->metaObject()->className()) !=
-                    "MainWindow") {
-                    showUpdateDialog = false;
-                }
+            } else if (updateMode == UpdateService::Periodic) {
+                // check if the update dialog is already open
+                showUpdateDialog = !UpdateDialog::isUpdateDialogOpen();
             }
         }
 

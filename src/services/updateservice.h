@@ -4,24 +4,23 @@
 #include <qnetworkreply.h>
 
 #ifdef Q_OS_LINUX
-    #define PLATFORM "linux"
+#define PLATFORM "linux"
 #endif
 
 #ifdef Q_OS_MAC
-    #define PLATFORM "macosx"
+#define PLATFORM "macosx"
 #endif
 
 #ifdef Q_OS_WIN32
-    #define PLATFORM "windows"
+#define PLATFORM "windows"
 #endif
 
 #ifndef PLATFORM
-    #define PLATFORM "other"
+#define PLATFORM "other"
 #endif
 
-class UpdateService : public QObject
-{
-    Q_OBJECT
+class UpdateService : public QObject {
+Q_OBJECT
 
 public:
     enum UpdateMode {
@@ -32,11 +31,15 @@ public:
     Q_ENUMS(UpdateMode)
 
     explicit UpdateService(QObject *parent = 0);
+
     void checkForUpdates(UpdateMode updateMode = AppStart);
+
 private:
     QObject *parent;
     UpdateMode updateMode;
+
 private slots:
+
     void onResult(QNetworkReply *reply);
 };
 

@@ -49,6 +49,12 @@ UpdateDialog::~UpdateDialog() {
     delete ui;
 }
 
+int UpdateDialog::exec() {
+    setIsUpdateDialogOpen(true);
+    MasterDialog::exec();
+    setIsUpdateDialogOpen(false);
+}
+
 void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
     int actionRole = button->property("ActionRole").toInt();
 
@@ -80,4 +86,18 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
     }
 
     this->close();
+}
+
+/**
+ * Checks if the update dialog is open
+ */
+bool UpdateDialog::isUpdateDialogOpen() {
+    return qApp->property("isUpdateDialogOpen").value<bool>();
+}
+
+/**
+ * Sets if the update dialog is open
+ */
+void UpdateDialog::setIsUpdateDialogOpen(bool isOpen) {
+    qApp->setProperty("isUpdateDialogOpen", QVariant::fromValue<bool>(isOpen));
 }
