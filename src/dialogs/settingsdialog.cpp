@@ -698,3 +698,34 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked()
         qApp->quit();
     }
 }
+
+/**
+ * Resets the font for the note text edit
+ */
+void SettingsDialog::on_noteTextEditResetButton_clicked()
+{
+    QTextEdit textEdit;
+    noteTextEditFont = textEdit.font();
+    setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
+}
+
+/**
+ * Resets the font for the note text code edit
+ */
+void SettingsDialog::on_noteTextEditCodeResetButton_clicked()
+{
+    QTextEdit textEdit;
+    noteTextEditCodeFont = textEdit.font();
+    noteTextEditCodeFont.setFamily("Courier");
+    setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
+}
+
+/**
+ * Resets the font for the note markdown view
+ */
+void SettingsDialog::on_noteTextViewResetButton_clicked()
+{
+    QTextBrowser textView;
+    noteTextViewFont = textView.font();
+    setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
+}

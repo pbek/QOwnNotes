@@ -46,5 +46,6 @@
         <file>images/breeze/document-edit-encrypt.svg</file>
         <file>images/breeze/story-editor.svg</file>
         <file>images/breeze/text-x-markdown.svg</file>
+        <file>images/breeze/gtk-select-font.svg</file>
     </qresource>
 </RCC>

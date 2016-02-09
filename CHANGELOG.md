@@ -3,6 +3,7 @@
 ## 0.96
 - fixed the debug output in the *Debug* settings tab
 - you can now select a font for the code in the markdown enabled text edits
+- you can now reset the fonts to the operating system's default font
 
 ## 0.95
 - code in the Markdown edit now uses the `Courier` font

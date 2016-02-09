@@ -773,8 +773,9 @@ p, li { white-space: pre-wrap; }
                 <property name="toolTip">
                  <string>set a new font</string>
                 </property>
-                <property name="text">
-                 <string>...</string>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/gtk-select-font.svg</normaloff>:/images/breeze/gtk-select-font.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -796,7 +797,11 @@ p, li { white-space: pre-wrap; }
                  <string>set a new font</string>
                 </property>
                 <property name="text">
-                 <string>...</string>
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/gtk-select-font.svg</normaloff>:/images/breeze/gtk-select-font.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -828,7 +833,53 @@ p, li { white-space: pre-wrap; }
                  <string>set a new font</string>
                 </property>
                 <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/gtk-select-font.svg</normaloff>:/images/breeze/gtk-select-font.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QToolButton" name="noteTextEditResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
                  <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/dialog-cancel.svg</normaloff>:/images/breeze/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QToolButton" name="noteTextEditCodeResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/dialog-cancel.svg</normaloff>:/images/breeze/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QToolButton" name="noteTextViewResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
+                </property>
+                <property name="icon">
+                 <iconset resource="../breeze.qrc">
+                  <normaloff>:/images/breeze/dialog-cancel.svg</normaloff>:/images/breeze/dialog-cancel.svg</iconset>
                 </property>
                </widget>
               </item>
