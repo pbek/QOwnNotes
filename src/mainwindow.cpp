@@ -402,11 +402,12 @@ void MainWindow::loadNoteDirectoryList() {
                 ui->noteTextView->clear();
             }
 
+            int itemCount = nameList.count();
             MetricsService::instance()->sendEvent(
                     "note",
                     "note list loaded",
-                    QString::number(
-                            nameList.count()) + " notes", nameList.count());
+                    QString::number(itemCount) + " notes",
+                    itemCount);
         }
     }
 

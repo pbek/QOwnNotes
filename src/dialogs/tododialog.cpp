@@ -107,8 +107,12 @@ void TodoDialog::reloadTodoListItems() {
     QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(
             ui->todoListSelector->currentText());
 
+    int itemCount = calendarItemList.count();
     MetricsService::instance()->sendEvent(
-            "todo list", "todo list loaded", "count", calendarItemList.count());
+            "todo list",
+            "todo list loaded",
+            QString::number(itemCount) + " todo items",
+            itemCount);
 
     {
         const QSignalBlocker blocker(ui->todoList);
