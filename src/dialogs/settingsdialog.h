@@ -48,18 +48,27 @@ private slots:
     void on_saveDebugInfoButton_clicked();
     void on_appMetricsCheckBox_toggled(bool checked);
     void on_clearAppDataAndExitButton_clicked();
+    void on_noteTextEditCodeButton_clicked();
 
 private:
+    enum SettingsTabs {
+        OwnCloudTab,
+        TodoTab,
+        InterfaceTab,
+        GeneralTab,
+        DebugTab
+    };
+
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;
     QFont noteTextEditFont;
+    QFont noteTextEditCodeFont;
     QFont noteTextViewFont;
     bool appIsValid;
     QString appVersion;
     QString serverVersion;
     QString connectionErrorMessage;
     void readSettings();
-    void setupCrypto();
     void storeSettings();
     void startConnectionTest();
     void setFontLabel(QLabel *label, QFont font);

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.96
+- fixed the debug output in the *Debug* settings tab
+- you can now select a font for the code in the markdown enabled text edits
+
 ## 0.95
 - code in the Markdown edit now uses the `Courier` font
   (for [Issue #59](https://github.com/pbek/QOwnNotes/issues/59))

@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>3</number>
+        <number>2</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -736,8 +736,28 @@ p, li { white-space: pre-wrap; }
               <string>Font settings</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_6">
-              <item row="0" column="1">
-               <widget class="QLabel" name="noteTextEditFontLabel">
+              <item row="2" column="0">
+               <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
+                <property name="text">
+                 <string>font in note markdown view:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
+                <property name="text">
+                 <string>default font in note text edits:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLabel" name="noteTextViewFontLabel">
                 <property name="styleSheet">
                  <string notr="true">QLabel {
 	background-color: white;
@@ -758,20 +778,32 @@ p, li { white-space: pre-wrap; }
                 </property>
                </widget>
               </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
-                <property name="text">
-                 <string>note text edit:</string>
+              <item row="0" column="1">
+               <widget class="QLabel" name="noteTextEditFontLabel">
+                <property name="styleSheet">
+                 <string notr="true">QLabel {
+	background-color: white;
+}</string>
                 </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                <property name="text">
+                 <string>Font name</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QToolButton" name="noteTextViewButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string>...</string>
                 </property>
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QLabel" name="noteViewEditFontHeadlineLabel">
+               <widget class="QLabel" name="noteTextEditCodeFontHeadlineLabel">
                 <property name="text">
-                 <string>note markdown view:</string>
+                 <string>code font in markdown text edits:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -779,7 +811,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="1">
-               <widget class="QLabel" name="noteTextViewFontLabel">
+               <widget class="QLabel" name="noteTextEditCodeFontLabel">
                 <property name="styleSheet">
                  <string notr="true">QLabel {
 	background-color: white;
@@ -791,7 +823,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item row="1" column="2">
-               <widget class="QToolButton" name="noteTextViewButton">
+               <widget class="QToolButton" name="noteTextEditCodeButton">
                 <property name="toolTip">
                  <string>set a new font</string>
                 </property>

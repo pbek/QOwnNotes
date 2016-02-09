@@ -106,6 +106,8 @@ void SettingsDialog::storeSettings() {
                               ui->defaultNoteFileExtensionListWidget));
     settings.setValue("MainWindow/noteTextEdit.font",
                       noteTextEditFont.toString());
+    settings.setValue("MainWindow/noteTextEdit.code.font",
+                      noteTextEditCodeFont.toString());
     settings.setValue("MainWindow/noteTextView.font",
                       noteTextViewFont.toString());
     settings.setValue("MainWindow/mainToolBar.iconSize",
@@ -184,6 +186,10 @@ void SettingsDialog::readSettings() {
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
+
+    noteTextEditCodeFont.fromString(
+            settings.value("MainWindow/noteTextEdit.code.font").toString());
+    setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
 
     noteTextViewFont.fromString(
             settings.value("MainWindow/noteTextView.font").toString());
@@ -562,6 +568,18 @@ void SettingsDialog::on_noteTextEditButton_clicked() {
     }
 }
 
+void SettingsDialog::on_noteTextEditCodeButton_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(
+            &ok, noteTextEditCodeFont, this,
+            "", QFontDialog::MonospacedFonts);
+    if (ok) {
+        noteTextEditCodeFont = font;
+        setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
+    }
+}
+
 void SettingsDialog::on_noteTextViewButton_clicked() {
     bool ok;
     QFont font = QFontDialog::getFont(&ok, noteTextViewFont, this);
@@ -602,7 +620,7 @@ void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked() {
 }
 
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
-    if (index == 3) {
+    if (index == DebugTab) {
         outputSettings();
     }
 }

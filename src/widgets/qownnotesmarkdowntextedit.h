@@ -4,13 +4,15 @@
 #include <QObject>
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 
-class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit
-{
-    Q_OBJECT
+class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
+Q_OBJECT
 
 public:
     QOwnNotesMarkdownTextEdit(QWidget *parent = 0);
+
+    void setStyles();
     void openUrl(QUrl url);
+
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H

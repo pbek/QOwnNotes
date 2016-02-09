@@ -515,30 +515,13 @@ void MainWindow::readSettingsFromSettingsDialog() {
         settings.setValue("noteSaveIntervalTime", this->noteSaveIntervalTime);
     }
 
-    // load note text edit font
-    QString fontString = settings.value(
-            "MainWindow/noteTextEdit.font").toString();
-
-    // store the current font if there isn't any set yet
-    if (fontString == "") {
-        fontString = ui->noteTextEdit->font().toString();
-        settings.setValue("MainWindow/noteTextEdit.font", fontString);
-    }
-
-    QFont font;
-
     // set the note text edit font
-    font.fromString(fontString);
-    ui->noteTextEdit->setFont(font);
-    ui->encryptedNoteTextEdit->setFont(font);
-
-    // set the default size for the highlighter
-    ui->noteTextEdit->highlighter()->setDefaultStyles(font.pointSize());
-    ui->noteTextEdit->highlighter()->parse();
-    ui->encryptedNoteTextEdit->highlighter()->setDefaultStyles(font.pointSize());
+    ui->noteTextEdit->setStyles();
+    ui->encryptedNoteTextEdit->setStyles();
 
     // load note text view font
-    fontString = settings.value("MainWindow/noteTextView.font").toString();
+    QString fontString = settings.value("MainWindow/noteTextView.font")
+            .toString();
 
     // store the current font if there isn't any set yet
     if (fontString == "") {
@@ -547,6 +530,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
     }
 
     // set the note text view font
+    QFont font;
     font.fromString(fontString);
     ui->noteTextView->setFont(font);
 
