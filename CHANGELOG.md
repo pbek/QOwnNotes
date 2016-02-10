@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.97
+- I adopted the AUR repository `qownnotes`, the repository `qownnotes-pbek` 
+  will be removed (thank you to Midov for managing `qownnotes` until now) 
+
 ## 0.96
 - fixed the debug output in the *Debug* settings tab
 - you can now select a font for the code in the markdown enabled text edits

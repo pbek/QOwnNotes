@@ -1,6 +1,6 @@
 # Maintainer: Patrizio Bekerle <patrizio at bekerle dot com>
 
-pkgname=qownnotes-pbek
+pkgname=qownnotes
 pkgver=VERSION-STRING
 tag="COMMIT-HASH"
 pkgrel=1
