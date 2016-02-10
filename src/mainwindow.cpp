@@ -385,6 +385,8 @@ void MainWindow::createSystemTrayIcon() {
 }
 
 void MainWindow::changeIconTheme() {
+    qDebug() << __func__ << " - 'QIcon::themeName()': " << QIcon::themeName();
+
     QList<QAction*> actions = ui->mainToolBar->actions();
     foreach (QAction* action, actions) {
 
