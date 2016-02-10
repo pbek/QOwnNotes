@@ -9,8 +9,7 @@
 [Screenshots](http://www.qownnotes.org) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
 
-[![Build Status Linux](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
-[![Build Status OSX](https://ci.gitlab.com/projects/5070/status.png?ref=develop)](https://ci.gitlab.com/projects/5070)
+[![Build Status Linux / OS X](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 [![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=develop&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=develop)
 
