@@ -184,6 +184,8 @@ MainWindow::MainWindow(QWidget *parent) :
     showAppMetricsNotificationIfNeeded();
 
     frequentPeriodicChecker();
+
+    changeIconTheme();
 }
 
 MainWindow::~MainWindow() {
@@ -380,6 +382,19 @@ void MainWindow::createSystemTrayIcon() {
     if (showSystemTray) {
         trayIcon->show();
     }
+}
+
+void MainWindow::changeIconTheme() {
+    QList<QAction*> actions = ui->mainToolBar->actions();
+    foreach (QAction* action, actions) {
+
+            QIcon icon = action->icon();
+            qDebug() << __func__ << " - 'icon': " << icon;
+            qDebug() << __func__ << " - 'action->iconText()': " <<
+            action->iconText();
+
+
+        }
 }
 
 void MainWindow::loadNoteDirectoryList() {
