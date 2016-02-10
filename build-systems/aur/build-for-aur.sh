@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 #
 # This is the build/deploy script for the Arch Linux User Repository (AUR)
-# https://aur.archlinux.org/packages/qownnotes-pbek/
+# https://aur.archlinux.org/packages/qownnotes/
 #
 # We need a ssh key to push to the git repository
 # https://wiki.archlinux.org/index.php/Arch_User_Repository#Creating_a_new_package
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=0.84.1
+#QOWNNOTES_VERSION=0.96.1
 
 BRANCH=develop
 #BRANCH=master
@@ -29,7 +29,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes-pbek.git aur
+git clone --depth=5 ssh://aur@aur.archlinux.org/qownnotes.git aur
 
 # checkout the source code
 git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH

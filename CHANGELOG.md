@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 0.97
-- I adopted the AUR repository `qownnotes`, the repository `qownnotes-pbek` 
-  will be removed (thank you to Midov for managing `qownnotes` until now) 
+- I adopted the **AUR package** **`qownnotes`**, the repository 
+  `qownnotes-pbek` will be discontinued (a big thank you to Midov for 
+  managing `qownnotes` until now) 
 
 ## 0.96
 - fixed the debug output in the *Debug* settings tab
