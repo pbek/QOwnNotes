@@ -1,5 +1,10 @@
 <RCC>
-    <qresource prefix="/">
+    <qresource prefix="icons/breeze">
+        <file alias="index.theme">icons/breeze/index.theme</file>
+        <file alias="48x48/document-edit.svg">icons/breeze/48x48/document-edit.svg</file>
+        <file alias="48x48/document-new.svg">icons/breeze/48x48/document-new.svg</file>
+        <file alias="48x48/edit-delete.svg">icons/breeze/48x48/edit-delete.svg</file>
+
         <file>images/breeze/document-edit.svg</file>
         <file>images/breeze/document-new.svg</file>
         <file>images/breeze/document-save.svg</file>

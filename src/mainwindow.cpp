@@ -385,6 +385,9 @@ void MainWindow::createSystemTrayIcon() {
 }
 
 void MainWindow::changeIconTheme() {
+    //QIcon::setThemeName("breeze-dark");
+    QIcon::setThemeName("breeze");
+
     qDebug() << __func__ << " - 'QIcon::themeName()': " << QIcon::themeName();
 
     QList<QAction*> actions = ui->mainToolBar->actions();
