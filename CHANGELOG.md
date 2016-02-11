@@ -6,8 +6,8 @@
   managing `qownnotes` until now)
 - QOwnNote now uses default **freedesktop theme icons**
   (for [Issue #39](https://github.com/pbek/QOwnNotes/issues/39))
-  - for Windows and OS X there is a bundled fallback theme with Breeze icons 
-    that will be used when the operating system hasn't a theme set
+  - if the operating system hasn't a theme set (like for Windows and OS X)
+    there is a bundled fallback theme with Breeze icons that will be used 
   - this allows the usage of QOwnNotes with **dark system themes**
 
 ## 0.96
