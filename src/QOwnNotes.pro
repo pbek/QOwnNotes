@@ -104,7 +104,8 @@ FORMS    += mainwindow.ui \
 RESOURCES += \
     images.qrc \
     texts.qrc \
-    breeze.qrc \
+    breeze-qownnotes.qrc \
+    qownnotes.qrc \
     demonotes.qrc \
     high-contrast.qrc \
     ubuntu-mobile.qrc \

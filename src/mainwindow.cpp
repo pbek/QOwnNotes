@@ -386,7 +386,9 @@ void MainWindow::createSystemTrayIcon() {
 
 void MainWindow::changeIconTheme() {
     //QIcon::setThemeName("breeze-dark");
-    QIcon::setThemeName("breeze");
+    QIcon::setThemeName("qownnotes");
+
+
 
     qDebug() << __func__ << " - 'QIcon::themeName()': " << QIcon::themeName();
 
@@ -394,9 +396,9 @@ void MainWindow::changeIconTheme() {
     foreach (QAction* action, actions) {
 
             QIcon icon = action->icon();
-            qDebug() << __func__ << " - 'icon': " << icon;
-            qDebug() << __func__ << " - 'action->iconText()': " <<
-            action->iconText();
+//            qDebug() << __func__ << " - 'icon': " << icon;
+//            qDebug() << __func__ << " - 'action->iconText()': " <<
+//            action->iconText();
 
 
         }

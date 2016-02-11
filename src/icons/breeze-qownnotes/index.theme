@@ -1,0 +1,8 @@
+[Icon Theme]
+Name=Breeze QOwnNotes
+Comment=Breeze Icon Theme for QOwnNotes
+Inherits=default
+Directories=16x16
+ 
+[16x16]
+Size=16
