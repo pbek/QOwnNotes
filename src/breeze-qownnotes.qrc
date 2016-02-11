@@ -48,5 +48,6 @@
         <file alias="16x16/story-editor.svg">icons/breeze-qownnotes/16x16/story-editor.svg</file>
         <file alias="16x16/text-x-markdown.svg">icons/breeze-qownnotes/16x16/text-x-markdown.svg</file>
         <file alias="16x16/gtk-select-font.svg">icons/breeze-qownnotes/16x16/gtk-select-font.svg</file>
+        <file alias="16x16/application-exit.svg">icons/breeze-qownnotes/16x16/application-exit.svg</file>
     </qresource>
 </RCC>
