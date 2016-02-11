@@ -252,4 +252,6 @@ private:
     void showAppMetricsNotificationIfNeeded();
 
     void resetCurrentNote();
+
+    void changeIconTheme();
 };

@@ -27,13 +27,11 @@ qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 
 set(RESOURCE_FILES
-        adwaita.qrc
-        breeze.qrc
+        breeze-qownnotes.qrc
+        qownnotes.qrc
         demonotes.qrc
-        high-contrast.qrc
         images.qrc
         texts.qrc
-        ubuntu-mobile.qrc
         libraries/qmarkdowntextedit/media.qrc
         )
 

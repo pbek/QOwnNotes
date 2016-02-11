@@ -3,7 +3,12 @@
 ## 0.97
 - I adopted the **AUR package** **`qownnotes`**, the repository 
   `qownnotes-pbek` will be discontinued (a big thank you to Midov for 
-  managing `qownnotes` until now) 
+  managing `qownnotes` until now)
+- QOwnNote now uses default **freedesktop theme icons**
+  (for [Issue #39](https://github.com/pbek/QOwnNotes/issues/39))
+  - for Windows and OS X there is a bundled fallback theme with Breeze icons 
+    that will be used when the operating system hasn't a theme set
+  - this allows the usage of QOwnNotes with **dark system themes**
 
 ## 0.96
 - fixed the debug output in the *Debug* settings tab

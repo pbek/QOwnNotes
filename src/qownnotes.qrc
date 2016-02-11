@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="icons/qownnotes">
+        <file alias="index.theme">icons/qownnotes/index.theme</file>
+    </qresource>
+</RCC>
