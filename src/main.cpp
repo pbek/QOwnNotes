@@ -101,6 +101,10 @@ int main(int argc, char *argv[])
     app.installTranslator(&translatorOSX2);
 #endif
 
+    if (QIcon::themeName() == "") {
+        QIcon::setThemeName("breeze-qownnotes");
+    }
+
     MainWindow w;
     w.show();
     return app.exec();

@@ -3,54 +3,50 @@
         <file alias="index.theme">icons/breeze-qownnotes/index.theme</file>
         <file alias="16x16/document-edit.svg">icons/breeze-qownnotes/16x16/document-edit.svg</file>
         <file alias="16x16/document-new.svg">icons/breeze-qownnotes/16x16/document-new.svg</file>
+        <file alias="16x16/document-save.svg">icons/breeze-qownnotes/16x16/document-save.svg</file>
         <file alias="16x16/edit-delete.svg">icons/breeze-qownnotes/16x16/edit-delete.svg</file>
-
-        <file>images/breeze/document-edit.svg</file>
-        <file>images/breeze/document-new.svg</file>
-        <file>images/breeze/document-save.svg</file>
-        <file>images/breeze/edit-delete.svg</file>
-        <file>images/breeze/edit-find.svg</file>
-        <file>images/breeze/edit-find-in-note.svg</file>
-        <file>images/breeze/folder-sync.svg</file>
-        <file>images/breeze/help-about.svg</file>
-        <file>images/breeze/lc_setdocumentproperties.svg</file>
-        <file>images/breeze/system-shutdown.svg</file>
-        <file>images/breeze/appointment-new.svg</file>
-        <file>images/breeze/trash-empty.svg</file>
-        <file>images/breeze/network-connect.svg</file>
-        <file>images/breeze/configure.svg</file>
-        <file>images/breeze/svn-update.svg</file>
-        <file>images/breeze/tools-report-bug.svg</file>
-        <file>images/breeze/edit-download.svg</file>
-        <file>images/breeze/dialog-cancel.svg</file>
-        <file>images/breeze/document-open-recent.svg</file>
-        <file>images/breeze/media-skip-forward.svg</file>
-        <file>images/breeze/text-html.svg</file>
-        <file>images/breeze/view-restore.svg</file>
-        <file>images/breeze/insert-link.svg</file>
-        <file>images/breeze/text-frame-link.svg</file>
-        <file>images/breeze/window-close.svg</file>
-        <file>images/breeze/face-smile.svg</file>
-        <file>images/breeze/go-top.svg</file>
-        <file>images/breeze/go-bottom.svg</file>
-        <file>images/breeze/go-previous.svg</file>
-        <file>images/breeze/go-next.svg</file>
-        <file>images/breeze/applications-system.svg</file>
-        <file>images/breeze/resource-calendar-insert.svg</file>
-        <file>images/breeze/view-task.svg</file>
-        <file>images/breeze/view-task-child.svg</file>
-        <file>images/breeze/view-calendar-tasks.svg</file>
-        <file>images/breeze/view-refresh.svg</file>
-        <file>images/breeze/task-new.svg</file>
-        <file>images/breeze/application-pdf.svg</file>
-        <file>images/breeze/document-print.svg</file>
-        <file>images/breeze/insert-image.svg</file>
-        <file>images/breeze/text-x-changelog.svg</file>
-        <file>images/breeze/document-decrypt.svg</file>
-        <file>images/breeze/document-encrypted.svg</file>
-        <file>images/breeze/document-edit-encrypt.svg</file>
-        <file>images/breeze/story-editor.svg</file>
-        <file>images/breeze/text-x-markdown.svg</file>
-        <file>images/breeze/gtk-select-font.svg</file>
+        <file alias="16x16/edit-find.svg">icons/breeze-qownnotes/16x16/edit-find.svg</file>
+        <file alias="16x16/edit-find-in-note.svg">icons/breeze-qownnotes/16x16/edit-find-in-note.svg</file>
+        <file alias="16x16/folder-sync.svg">icons/breeze-qownnotes/16x16/folder-sync.svg</file>
+        <file alias="16x16/help-about.svg">icons/breeze-qownnotes/16x16/help-about.svg</file>
+        <file alias="16x16/lc_setdocumentproperties.svg">icons/breeze-qownnotes/16x16/lc_setdocumentproperties.svg</file>
+        <file alias="16x16/system-shutdown.svg">icons/breeze-qownnotes/16x16/system-shutdown.svg</file>
+        <file alias="16x16/appointment-new.svg">icons/breeze-qownnotes/16x16/appointment-new.svg</file>
+        <file alias="16x16/trash-empty.svg">icons/breeze-qownnotes/16x16/trash-empty.svg</file>
+        <file alias="16x16/network-connect.svg">icons/breeze-qownnotes/16x16/network-connect.svg</file>
+        <file alias="16x16/configure.svg">icons/breeze-qownnotes/16x16/configure.svg</file>
+        <file alias="16x16/svn-update.svg">icons/breeze-qownnotes/16x16/svn-update.svg</file>
+        <file alias="16x16/tools-report-bug.svg">icons/breeze-qownnotes/16x16/tools-report-bug.svg</file>
+        <file alias="16x16/edit-download.svg">icons/breeze-qownnotes/16x16/edit-download.svg</file>
+        <file alias="16x16/dialog-cancel.svg">icons/breeze-qownnotes/16x16/dialog-cancel.svg</file>
+        <file alias="16x16/document-open-recent.svg">icons/breeze-qownnotes/16x16/document-open-recent.svg</file>
+        <file alias="16x16/media-skip-forward.svg">icons/breeze-qownnotes/16x16/media-skip-forward.svg</file>
+        <file alias="16x16/text-html.svg">icons/breeze-qownnotes/16x16/text-html.svg</file>
+        <file alias="16x16/view-restore.svg">icons/breeze-qownnotes/16x16/view-restore.svg</file>
+        <file alias="16x16/insert-link.svg">icons/breeze-qownnotes/16x16/insert-link.svg</file>
+        <file alias="16x16/text-frame-link.svg">icons/breeze-qownnotes/16x16/text-frame-link.svg</file>
+        <file alias="16x16/window-close.svg">icons/breeze-qownnotes/16x16/window-close.svg</file>
+        <file alias="16x16/face-smile.svg">icons/breeze-qownnotes/16x16/face-smile.svg</file>
+        <file alias="16x16/go-top.svg">icons/breeze-qownnotes/16x16/go-top.svg</file>
+        <file alias="16x16/go-bottom.svg">icons/breeze-qownnotes/16x16/go-bottom.svg</file>
+        <file alias="16x16/go-previous.svg">icons/breeze-qownnotes/16x16/go-previous.svg</file>
+        <file alias="16x16/go-next.svg">icons/breeze-qownnotes/16x16/go-next.svg</file>
+        <file alias="16x16/applications-system.svg">icons/breeze-qownnotes/16x16/applications-system.svg</file>
+        <file alias="16x16/resource-calendar-insert.svg">icons/breeze-qownnotes/16x16/resource-calendar-insert.svg</file>
+        <file alias="16x16/view-task.svg">icons/breeze-qownnotes/16x16/view-task.svg</file>
+        <file alias="16x16/view-task-child.svg">icons/breeze-qownnotes/16x16/view-task-child.svg</file>
+        <file alias="16x16/view-calendar-tasks.svg">icons/breeze-qownnotes/16x16/view-calendar-tasks.svg</file>
+        <file alias="16x16/view-refresh.svg">icons/breeze-qownnotes/16x16/view-refresh.svg</file>
+        <file alias="16x16/task-new.svg">icons/breeze-qownnotes/16x16/task-new.svg</file>
+        <file alias="16x16/application-pdf.svg">icons/breeze-qownnotes/16x16/application-pdf.svg</file>
+        <file alias="16x16/document-print.svg">icons/breeze-qownnotes/16x16/document-print.svg</file>
+        <file alias="16x16/insert-image.svg">icons/breeze-qownnotes/16x16/insert-image.svg</file>
+        <file alias="16x16/text-x-changelog.svg">icons/breeze-qownnotes/16x16/text-x-changelog.svg</file>
+        <file alias="16x16/document-decrypt.svg">icons/breeze-qownnotes/16x16/document-decrypt.svg</file>
+        <file alias="16x16/document-encrypted.svg">icons/breeze-qownnotes/16x16/document-encrypted.svg</file>
+        <file alias="16x16/document-edit-encrypt.svg">icons/breeze-qownnotes/16x16/document-edit-encrypt.svg</file>
+        <file alias="16x16/story-editor.svg">icons/breeze-qownnotes/16x16/story-editor.svg</file>
+        <file alias="16x16/text-x-markdown.svg">icons/breeze-qownnotes/16x16/text-x-markdown.svg</file>
+        <file alias="16x16/gtk-select-font.svg">icons/breeze-qownnotes/16x16/gtk-select-font.svg</file>
     </qresource>
 </RCC>

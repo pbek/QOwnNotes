@@ -28,7 +28,8 @@ qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 
 set(RESOURCE_FILES
         adwaita.qrc
-        breeze.qrc
+        breeze-qownnotes.qrc
+        qownnotes.qrc
         demonotes.qrc
         high-contrast.qrc
         images.qrc
