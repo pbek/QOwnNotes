@@ -106,10 +106,7 @@ RESOURCES += \
     texts.qrc \
     breeze-qownnotes.qrc \
     qownnotes.qrc \
-    demonotes.qrc \
-    high-contrast.qrc \
-    ubuntu-mobile.qrc \
-    adwaita.qrc
+    demonotes.qrc
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 

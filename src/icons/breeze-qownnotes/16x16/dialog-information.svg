@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="24"
-   height="24"
+   width="22"
+   height="22"
    id="svg3869"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="appointment-new.svg">
+   sodipodi:docname="dialog-information.svg">
   <defs
      id="defs3871" />
   <sodipodi:namedview
@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627416"
-     inkscape:cx="11.061087"
-     inkscape:cy="12.032563"
+     inkscape:zoom="31.999999"
+     inkscape:cx="5.5603829"
+     inkscape:cy="12.023537"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -34,21 +34,23 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1366"
-     inkscape:window-height="709"
+     inkscape:window-width="1920"
+     inkscape:window-height="1013"
      inkscape:window-x="-4"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:showpageshadow="false">
+     inkscape:showpageshadow="false"
+     inkscape:snap-bbox="true"
+     inkscape:object-nodes="true">
     <inkscape:grid
        type="xygrid"
        id="grid4132" />
     <sodipodi:guide
-       position="4,18"
+       position="2,20.000017"
        orientation="18,0"
        id="guide4138" />
     <sodipodi:guide
-       position="5,3"
+       position="2,2.0000174"
        orientation="0,18"
        id="guide4140" />
     <sodipodi:guide
@@ -56,7 +58,7 @@
        orientation="-18,0"
        id="guide4142" />
     <sodipodi:guide
-       position="2,21"
+       position="20,20.000017"
        orientation="0,-18"
        id="guide4144" />
     <sodipodi:guide
@@ -64,15 +66,15 @@
        orientation="16,0"
        id="guide4146" />
     <sodipodi:guide
-       position="2,4"
+       position="3,3.0000174"
        orientation="0,16"
        id="guide4148" />
     <sodipodi:guide
-       position="21,20"
+       position="19,3.0000174"
        orientation="-16,0"
        id="guide4150" />
     <sodipodi:guide
-       position="2,20"
+       position="19,19.000017"
        orientation="0,-16"
        id="guide4152" />
   </sodipodi:namedview>
@@ -84,7 +86,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -92,17 +94,27 @@
      inkscape:label="Capa 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-326,-532.3622)">
-    <g
-       transform="translate(-51.85714,-6.71427)"
-       id="layer1-1"
-       inkscape:label="Capa 1">
-      <path
-         id="rect4131"
-         transform="translate(378.85714,540.07647)"
-         d="m 11,3 c -4.4319982,0 -8,3.5680018 -8,8 0,4.431998 3.5680018,8 8,8 4.431998,0 8,-3.568002 8,-8 0,-4.4319982 -3.568002,-8 -8,-8 z m 0,1 c 3.877999,0 7,3.1220013 7,7 0,3.877999 -3.122001,7 -7,7 C 7.1220013,18 4,14.877999 4,11 4,7.1220013 7.1220013,4 11,4 Z m -1,1 0,7 1,0 5,0 0,-1 -5,0 0,-6 -1,0 z"
-         style="opacity:1;fill:#4d4d4d;fill-opacity:1;stroke:none"
-         inkscape:connector-curvature="0" />
-    </g>
+     transform="translate(-326,-534.3622)">
+    <path
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       d="m 329,537.36218 0,12.00002 3.00002,4 -2e-5,-3 2e-5,-1 12.99998,0 0,-12 z m 1,1.00002 14,0 2e-5,10 -14,0 z"
+       id="path4147-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccccc" />
+    <rect
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       id="rect4143"
+       width="2"
+       height="6"
+       x="336"
+       y="541.36218"
+       ry="0" />
+    <rect
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       id="rect4145"
+       width="2"
+       height="1"
+       x="336"
+       y="539.36218" />
   </g>
 </svg>
