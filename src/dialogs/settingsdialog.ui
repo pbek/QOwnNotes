@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -264,7 +264,7 @@
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to set your main ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>select main ownCloud sync folder</string>
+                 <string>select location of main local ownCloud sync folder</string>
                 </property>
                 <property name="icon">
                  <iconset theme="folder-sync" resource="../breeze-qownnotes.qrc">
