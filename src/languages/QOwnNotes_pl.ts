@@ -120,12 +120,14 @@ Naciśnij Anuluj by wyjść.</translation>
         <translation>Edycja</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="116"/>
+        <location filename="../mainwindow.ui" line="142"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Oxygen-Sans Sans-Book&apos;; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -137,35 +139,17 @@ p, li { white-space: pre-wrap; }
         <translation>Markdown</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="184"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="116"/>
-        <location filename="../mainwindow.ui" line="142"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Oxygen-Sans Sans-Book&apos;; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="184"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -229,270 +213,270 @@ p, li { white-space: pre-wrap; }
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
+        <location filename="../mainwindow.ui" line="426"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>O &amp;QOwnNotes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="439"/>
+        <location filename="../mainwindow.ui" line="437"/>
         <source>&amp;New note</source>
         <translation>&amp;Nowa notatka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="442"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="454"/>
+        <location filename="../mainwindow.ui" line="451"/>
         <source>&amp;Toggle Edit Mode</source>
         <translation>Przełącz &amp;Tryb Edycji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="454"/>
         <source>Toggle Edit Mode</source>
         <translation>Przełącz Tryb Edycji</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="457"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="465"/>
         <source>Check for &amp;updates</source>
         <translation>Sprawdź akt&amp;ualizację</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="472"/>
+        <location filename="../mainwindow.ui" line="468"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="481"/>
+        <location filename="../mainwindow.ui" line="476"/>
         <source>Report &amp;issues or ideas</source>
         <translation>Zgłoś problemy lub pomysły</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="489"/>
+        <location filename="../mainwindow.ui" line="484"/>
         <source>Alphabetical</source>
         <translation>Alfabetycznie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="492"/>
+        <location filename="../mainwindow.ui" line="487"/>
         <source>Sort alphabetical</source>
         <translation>Sortuj alfabetycznie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="500"/>
+        <location filename="../mainwindow.ui" line="495"/>
         <source>By date</source>
         <translation>Po dacie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="503"/>
+        <location filename="../mainwindow.ui" line="498"/>
         <source>Sort by date</source>
         <translation>Sortuj po dacie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="511"/>
+        <location filename="../mainwindow.ui" line="506"/>
         <source>Sh&amp;ow in system tray</source>
         <translation>P&amp;okaż w tacce systemowej</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="520"/>
+        <location filename="../mainwindow.ui" line="514"/>
         <source>&amp;Settings</source>
         <translation>Ustawienia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="525"/>
         <source>Show note &amp;versions</source>
         <translation>Pokaż wersję notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="535"/>
+        <location filename="../mainwindow.ui" line="528"/>
         <source>Show note versions on server</source>
         <translation>Pokaż wersję notatki na serwerze</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="544"/>
+        <location filename="../mainwindow.ui" line="536"/>
         <source>Show &amp;trash</source>
         <translation>Pokaż kosz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="547"/>
+        <location filename="../mainwindow.ui" line="539"/>
         <source>Show trashed notes on server</source>
         <translation>Pokaż wyrzucone notatki na serwerze</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="552"/>
+        <location filename="../mainwindow.ui" line="544"/>
         <source>Select &amp;all notes</source>
         <translation>Wybierz wszystkie not&amp;atki </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="552"/>
         <location filename="../mainwindow.cpp" line="2067"/>
         <source>Insert &amp;link</source>
         <translation>Wstaw &amp;link</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="555"/>
         <source>Insert link to an url or a note</source>
         <translatorcomment>This doesn&apos;t sound right, but let just keep it that way</translatorcomment>
         <translation>Wstaw link do URL albo notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="567"/>
+        <location filename="../mainwindow.ui" line="558"/>
         <location filename="../mainwindow.cpp" line="2069"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="576"/>
+        <location filename="../mainwindow.ui" line="566"/>
         <source>&amp;Find in current note</source>
         <translation>Znajdź w bieżącej notatce</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="579"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Find text in current note</source>
         <translation>Znajdź tekst w bieżącej notatce</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="582"/>
+        <location filename="../mainwindow.ui" line="572"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="577"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Duplikuj tekst</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="590"/>
+        <location filename="../mainwindow.ui" line="580"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="588"/>
         <source>&amp;Back in note history</source>
         <translation>Wróć w historii notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="591"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="611"/>
+        <location filename="../mainwindow.ui" line="599"/>
         <source>Forward in note history</source>
         <translation>Do przodu w historii notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="602"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="623"/>
+        <location filename="../mainwindow.ui" line="610"/>
         <source>Show &amp;Shortcuts</source>
         <translation>Pokaż &amp;Skróty</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="618"/>
         <source>&amp;Knowledge base</source>
         <translation>Baza wiedzy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="641"/>
+        <location filename="../mainwindow.ui" line="626"/>
         <source>Insert current &amp;time</source>
         <translation>Ws&amp;taw obecną datę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="629"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="653"/>
+        <location filename="../mainwindow.ui" line="637"/>
         <source>Show &amp;Todo List</source>
         <translation>Pokaż listę zadań</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="656"/>
+        <location filename="../mainwindow.ui" line="640"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="665"/>
+        <location filename="../mainwindow.ui" line="648"/>
         <source>&amp;Export note as PDF (markdown)</source>
         <translation>&amp;Eksportuj notatkę jako PDF (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="674"/>
+        <location filename="../mainwindow.ui" line="656"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Eksportuj notatkę jako PDF (tekst)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="683"/>
+        <location filename="../mainwindow.ui" line="664"/>
         <source>&amp;Print note (text)</source>
         <translation>Wydrukuj notatkę (tekst)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="692"/>
+        <location filename="../mainwindow.ui" line="672"/>
         <source>&amp;Print note (markdown)</source>
         <translation>Wydrukuj notatkę (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="701"/>
+        <location filename="../mainwindow.ui" line="680"/>
         <source>Insert &amp;image</source>
         <translation>Wstaw obraz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="704"/>
+        <location filename="../mainwindow.ui" line="683"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Wstaw obraz (obraz zostanie skopiowany do folderu `media` w obecnym folderze notatek)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="686"/>
         <source>Ctrl+I</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
+        <location filename="../mainwindow.ui" line="694"/>
         <source>Show &amp;changelog</source>
         <translation>Pokaż listę zmian</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="725"/>
+        <location filename="../mainwindow.ui" line="702"/>
         <source>&amp;Encrypt note</source>
         <translation>Zaszyfruj notatkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="734"/>
+        <location filename="../mainwindow.ui" line="710"/>
         <source>Edit encrypted note</source>
         <translation>Edytuj zaszyfrowaną notatkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="737"/>
+        <location filename="../mainwindow.ui" line="713"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="746"/>
+        <location filename="../mainwindow.ui" line="721"/>
         <source>Decrypt note</source>
         <translation>Odszyfruj notatkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="755"/>
+        <location filename="../mainwindow.ui" line="729"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Otwórz notatkę w zewnętrznym edytorze</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="758"/>
+        <location filename="../mainwindow.ui" line="732"/>
         <source>Ctrl+Shift+O</source>
         <translation>Ctrl+Shift+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="767"/>
+        <location filename="../mainwindow.ui" line="740"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Eksportuj notatkę jako plik markdown</translation>
     </message>
@@ -521,7 +505,7 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="649"/>
-        <location filename="../mainwindow.cpp" line="1007"/>
+        <location filename="../mainwindow.cpp" line="1008"/>
         <location filename="../mainwindow.cpp" line="1376"/>
         <location filename="../mainwindow.cpp" line="1429"/>
         <location filename="../mainwindow.cpp" line="1463"/>
@@ -531,81 +515,69 @@ Restore current note?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="724"/>
         <source>stored %1 note(s) to disk</source>
-        <translation>zapisano %1 notatek na dysk</translation>
+        <translation type="obsolete">zapisano %1 notatek na dysk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="888"/>
+        <location filename="../mainwindow.cpp" line="889"/>
         <source>Select ownCloud folder</source>
         <translation>Wybierz folder ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="910"/>
+        <location filename="../mainwindow.cpp" line="911"/>
         <source>No folder was selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="911"/>
+        <location filename="../mainwindow.cpp" line="912"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="913"/>
+        <location filename="../mainwindow.cpp" line="914"/>
         <source>&amp;Retry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="913"/>
+        <location filename="../mainwindow.cpp" line="914"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1004"/>
+        <location filename="../mainwindow.cpp" line="1005"/>
         <source>Remove current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1005"/>
+        <location filename="../mainwindow.cpp" line="1006"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1007"/>
+        <location filename="../mainwindow.cpp" line="1008"/>
         <location filename="../mainwindow.cpp" line="1376"/>
         <source>&amp;Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1242"/>
+        <location filename="../mainwindow.cpp" line="1243"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1266"/>
+        <location filename="../mainwindow.cpp" line="1267"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1267"/>
+        <location filename="../mainwindow.cpp" line="1268"/>
         <source>It seems that your password is not valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1369"/>
+        <location filename="../mainwindow.cpp" line="1370"/>
         <source>Remove selected notes</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1370"/>
-        <source>Remove &lt;strong&gt;%1&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1426"/>
@@ -614,7 +586,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1427"/>
-        <source>Move %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -631,15 +603,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <source>Copy selected notes</source>
         <translation type="unfinished"></translation>
     </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1461"/>
-        <source>Copy %1 selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
     <message>
         <location filename="../mainwindow.cpp" line="1463"/>
         <source>&amp;Copy</source>
@@ -651,8 +614,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="724"/>
+        <source>stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="1371"/>
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="1461"/>
+        <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1481"/>
-        <source>%1 note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -1057,6 +1049,11 @@ p, li { white-space: pre-wrap; }
         <translation>CalendarPlus</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="752"/>
+        <source>default font in markdown text edits:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="950"/>
         <source>General</source>
         <translation>Ogólne</translation>
@@ -1239,11 +1236,6 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="752"/>
-        <source>default font in note text edits:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="811"/>
         <source>code font in markdown text edits:</source>
         <translation type="unfinished"></translation>
@@ -1417,64 +1409,64 @@ Your notes will stay intact!</source>
         <translation>zapi&amp;sz</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="97"/>
+        <location filename="../dialogs/tododialog.ui" line="96"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S
 </translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="104"/>
+        <location filename="../dialogs/tododialog.ui" line="103"/>
         <source>remove current todo item</source>
         <translation>usuń bieżace zadanie</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="107"/>
+        <location filename="../dialogs/tododialog.ui" line="106"/>
         <source>&amp;remove</source>
         <translation>&amp;usuń</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="114"/>
+        <location filename="../dialogs/tododialog.ui" line="112"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+U</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="126"/>
-        <location filename="../dialogs/tododialog.ui" line="133"/>
+        <location filename="../dialogs/tododialog.ui" line="124"/>
+        <location filename="../dialogs/tododialog.ui" line="131"/>
         <source>Priority</source>
         <translation>Priorytet</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="161"/>
+        <location filename="../dialogs/tododialog.ui" line="159"/>
         <source>Reminder</source>
         <translation>Przypomnienie</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="226"/>
+        <location filename="../dialogs/tododialog.ui" line="224"/>
         <source>Show completed items</source>
         <translation>Pokaż zakończone zadania</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="233"/>
+        <location filename="../dialogs/tododialog.ui" line="231"/>
         <source>reload the todo list from server</source>
         <translation>wczytaj zadania z serwera</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="236"/>
+        <location filename="../dialogs/tododialog.ui" line="234"/>
         <source>&amp;reload</source>
         <translation>&amp;wczytaj</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="250"/>
+        <location filename="../dialogs/tododialog.ui" line="247"/>
         <source>select your todo list</source>
         <translation>wybierz swoją listę zadań</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="257"/>
+        <location filename="../dialogs/tododialog.ui" line="254"/>
         <source>Todo list items are being loaded from the server</source>
         <translation>Lista zadań jest wczytywana z serwera</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="267"/>
+        <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>search or create todo item</source>
         <translation>szukaj albo stwórz zadanie</translation>
     </message>

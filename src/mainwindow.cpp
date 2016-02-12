@@ -721,7 +721,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
             qDebug() << __func__ << " - 'count': " << count;
 
             this->ui->statusBar->showMessage(
-                    tr("stored %1 note(s) to disk").arg(count), 1000);
+                    tr("stored %n note(s) to disk", "", count),
+                    1000);
 
             // wait 100ms before the block on this->noteDirectoryWatcher
             // is opened, otherwise we get the event
@@ -1367,12 +1368,11 @@ void MainWindow::removeSelectedNotes() {
     if (QMessageBox::information(
             this,
             tr("Remove selected notes"),
-            tr("Remove <strong>%1</strong> selected note(s)?\n\n"
+            tr("Remove <strong>%n</strong> selected note(s)?\n\n"
                "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
                     "them from there.",
-               "",
-               selectedItemsCount).arg(QString::number(selectedItemsCount)),
+               "", selectedItemsCount),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
@@ -1424,8 +1424,8 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
     if (QMessageBox::information(
             this,
             tr("Move selected notes"),
-            tr("Move %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
-                .arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+            tr("Move %n selected note(s) to <strong>%2</strong>?", "",
+               selectedItemsCount).arg(destinationFolder),
             tr("&Move"), tr("&Cancel"), QString::null,
             0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
@@ -1458,8 +1458,8 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
     if (QMessageBox::information(
             this,
             tr("Copy selected notes"),
-            tr("Copy %1 selected note(s) to <strong>%2</strong>?","",selectedItemsCount)
-                .arg(QString::number(selectedItemsCount)).arg(destinationFolder),
+            tr("Copy %n selected note(s) to <strong>%2</strong>?", "",
+               selectedItemsCount).arg(destinationFolder),
             tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
@@ -1478,8 +1478,8 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
 
         QMessageBox::information(
                 this, tr("Done"),
-                tr("%1 note(s) were copied to <strong>%2</strong>.","",copyCount)
-                    .arg(QString::number(copyCount)).arg(destinationFolder));
+                tr("%n note(s) were copied to <strong>%2</strong>.", "",
+                   copyCount).arg(destinationFolder));
     }
 }
 

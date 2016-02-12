@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 0.99
+- implemented plural translations
+  (for [Issue #65](https://github.com/pbek/QOwnNotes/issues/65))
+- updated German translation
+
 ## 0.98
 - made a workaround for the lacking OS X theming support, icons should work 
   again
