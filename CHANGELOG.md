@@ -3,6 +3,7 @@
 ## 0.98
 - made a workaround for the lacking OS X theming support, icons should work 
   again
+- the search bar in the text edits now also uses themes
 
 ## 0.97
 - I adopted the **AUR package** **`qownnotes`**, the repository 
