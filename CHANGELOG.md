@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 0.98
+- made a workaround for the lacking OS X theming support, icons should work 
+  again
+
 ## 0.97
 - I adopted the **AUR package** **`qownnotes`**, the repository 
   `qownnotes-pbek` will be discontinued (a big thank you to Midov for 
