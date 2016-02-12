@@ -90,7 +90,7 @@
               <string>&amp;save</string>
              </property>
              <property name="icon">
-              <iconset theme="document-save"/>
+              <iconset theme="document-save" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
              </property>
              <property name="shortcut">
               <string>Ctrl+S</string>
@@ -106,7 +106,7 @@
               <string>&amp;remove</string>
              </property>
              <property name="icon">
-              <iconset theme="edit-delete"/>
+              <iconset theme="edit-delete" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
              </property>
              <property name="shortcut">
               <string>Ctrl+R</string>
@@ -234,7 +234,7 @@
               <string>&amp;reload</string>
              </property>
              <property name="icon">
-              <iconset theme="view-refresh"/>
+              <iconset theme="view-refresh" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
              </property>
             </widget>
            </item>

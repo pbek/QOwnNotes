@@ -267,7 +267,7 @@
                  <string>select main ownCloud sync folder</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="folder-sync"/>
+                 <iconset theme="folder-sync" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -305,7 +305,7 @@
                  <string>&amp;connect to ownCloud server</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="network-connect"/>
+                 <iconset theme="network-connect" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -473,7 +473,7 @@ p, li { white-space: pre-wrap; }
                  <string>open ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="text-html"/>
+                 <iconset theme="text-html" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -608,7 +608,7 @@ p, li { white-space: pre-wrap; }
                <string>&amp;reload calendar list</string>
               </property>
               <property name="icon">
-               <iconset theme="network-connect"/>
+               <iconset theme="network-connect" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
               </property>
              </widget>
             </item>
@@ -770,7 +770,7 @@ p, li { white-space: pre-wrap; }
                  <string>set a new font</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font"/>
+                 <iconset theme="gtk-select-font" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -795,7 +795,7 @@ p, li { white-space: pre-wrap; }
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font"/>
+                 <iconset theme="gtk-select-font" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -830,7 +830,7 @@ p, li { white-space: pre-wrap; }
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font"/>
+                 <iconset theme="gtk-select-font" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -843,7 +843,7 @@ p, li { white-space: pre-wrap; }
                  <string>...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel"/>
+                 <iconset theme="dialog-cancel" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -856,7 +856,7 @@ p, li { white-space: pre-wrap; }
                  <string>...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel"/>
+                 <iconset theme="dialog-cancel" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -869,7 +869,7 @@ p, li { white-space: pre-wrap; }
                  <string>...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel"/>
+                 <iconset theme="dialog-cancel" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -1274,7 +1274,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <string>&amp;Save debug information</string>
               </property>
               <property name="icon">
-               <iconset theme="document-save"/>
+               <iconset theme="document-save" resource="breeze-qownnotes.qrc"><normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
               </property>
              </widget>
             </item>
