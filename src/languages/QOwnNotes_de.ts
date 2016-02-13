@@ -1049,7 +1049,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="264"/>
         <source>Click here to select the location of the main local ownCloud sync folder.</source>
-        <translation>Klicken Sie hier und den Ort Ihres lokalen onwCloud Synchronisier-Ordners auszufählen. </translation>
+        <translation>Klicken Sie hier um den Ort Ihres lokalen onwCloud Synchronisier-Ordners auszufählen.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="560"/>
