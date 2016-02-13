@@ -25,7 +25,10 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
                                   "QOwnNotes by ownCloud sync.</p>"));
     button->setProperty("ActionRole", RestoreOnServer);
     button->setDefault(false);
-    button->setIcon(QIcon(":/images/breeze/view-restore.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "view-restore",
+                    QIcon(":/icons/breeze-qownnotes/16x16/view-restore.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Download selected note"));
@@ -36,12 +39,18 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
           "<p>You can always restore the note and its versions later.</p>"));
     button->setProperty("ActionRole", Download);
     button->setDefault(false);
-    button->setIcon(QIcon(":/images/breeze/edit-download.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "edit-download",
+                    QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
-    button->setIcon(QIcon(":/images/breeze/dialog-cancel.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "dialog-cancel",
+                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(true);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 

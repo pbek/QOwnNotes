@@ -26,18 +26,28 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     button = new QPushButton(tr("&Download latest"));
     button->setProperty("ActionRole", Download);
     button->setDefault(true);
-    button->setIcon(QIcon(":/images/breeze/edit-download.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "edit-download",
+                    QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Skip version"));
     button->setProperty("ActionRole", Skip);
     button->setDefault(false);
-    button->setIcon(QIcon(":/images/breeze/media-skip-forward.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "media-skip-forward",
+                    QIcon(":/icons/breeze-qownnotes/16x16/"
+                                  "media-skip-forward.svg")));
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
     button = new QPushButton(tr("&Cancel"));
     button->setProperty("ActionRole", Cancel);
-    button->setIcon(QIcon(":/images/breeze/dialog-cancel.svg"));
+    button->setIcon(
+            QIcon::fromTheme(
+                    "dialog-cancel",
+                    QIcon(":/icons/breeze-qownnotes/16x16/dialog-cancel.svg")));
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
