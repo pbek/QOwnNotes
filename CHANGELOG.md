@@ -10,6 +10,7 @@
   (for [Issue #67](https://github.com/pbek/QOwnNotes/issues/67))
 - the languages are now selectable in their native language
   (for [Issue #67](https://github.com/pbek/QOwnNotes/issues/67))
+- add some links to knowledge base articles in the settings dialog
 
 ## 0.98
 - made a workaround for the lacking OS X theming support, icons should work 
