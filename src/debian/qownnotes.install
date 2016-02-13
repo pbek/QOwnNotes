@@ -10,8 +10,10 @@ images/icons/128x128/QOwnNotes.png usr/share/icons/hicolor/128x128/apps
 images/icons/256x256/QOwnNotes.png usr/share/icons/hicolor/256x256/apps
 images/icons/512x512/QOwnNotes.png usr/share/icons/hicolor/512x512/apps
 images/icons/scalable/QOwnNotes.svg usr/share/icons/hicolor/scalable/apps
+languages/QOwnNotes_en.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_de.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_fr.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_pl.qm usr/share/QOwnNotes/languages
 languages/QOwnNotes_cn.qm usr/share/QOwnNotes/languages
+languages/QOwnNotes_ru.qm usr/share/QOwnNotes/languages
 QOwnNotes usr/bin

@@ -5,6 +5,10 @@
   (for [Issue #65](https://github.com/pbek/QOwnNotes/issues/65))
 - updated German translation
 - added missing icons in dialogs
+- added plural translations for English and German
+- added **Russian translation** (a big thank you to @elnull!)
+- the languages are now selectable in their native language
+  (for [Issue #67](https://github.com/pbek/QOwnNotes/issues/67))
 
 ## 0.98
 - made a workaround for the lacking OS X theming support, icons should work 

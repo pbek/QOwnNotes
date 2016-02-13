@@ -900,14 +900,13 @@ Click Cancel to exit.</source>
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="264"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to set your main ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里选择你的 ownCloud 同步主目录.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里选择你的 ownCloud 同步主目录.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="267"/>
         <source>select main ownCloud sync folder</source>
-        <translation>选择 ownCloud 同步主目录</translation>
+        <translation type="unfinished">选择 ownCloud 同步主目录</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="278"/>
@@ -1007,6 +1006,11 @@ p, li { white-space: pre-wrap; }
         <translation>你想使用哪一个 ownCloud 日历后台?</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="264"/>
+        <source>Click here to select the location of the main local ownCloud sync folder.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="560"/>
         <source>Default ownCloud calendar</source>
         <translation>默认 ownCloud 日历</translation>
@@ -1017,74 +1021,79 @@ p, li { white-space: pre-wrap; }
         <translation></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="732"/>
+        <source>Russian</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="778"/>
         <source>default font in markdown text edits:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="950"/>
+        <location filename="../dialogs/settingsdialog.ui" line="965"/>
         <source>General</source>
         <translation>通用</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="967"/>
+        <location filename="../dialogs/settingsdialog.ui" line="982"/>
         <source>Notes</source>
         <translation>笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="973"/>
+        <location filename="../dialogs/settingsdialog.ui" line="988"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选这个框，你会收到所有外部修改提醒，即使被修改的笔记并不是正在被编辑. 推荐 &lt;span style=&quot; font-style:italic;&quot;&gt;不要勾选&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="979"/>
+        <location filename="../dialogs/settingsdialog.ui" line="994"/>
         <source>notify about all external modifications</source>
         <translation>提醒所有外部修改活动</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1005"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1020"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>如果设定低于 10秒, 在跟旧版 ownCloud 同步时会遇到同步问题. 请先测试, 如果有同步冲突问题请调高这一数值.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1009"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1024"/>
         <source>note save interval time [sec]</source>
         <translation>笔记保存时间间隔（秒）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1016"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1031"/>
         <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1019"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1034"/>
         <source>Markdown view mode is default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="736"/>
+        <location filename="../dialogs/settingsdialog.ui" line="762"/>
         <source>Font settings</source>
         <translation>字体设定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="767"/>
-        <location filename="../dialogs/settingsdialog.ui" line="790"/>
-        <location filename="../dialogs/settingsdialog.ui" line="826"/>
+        <location filename="../dialogs/settingsdialog.ui" line="793"/>
+        <location filename="../dialogs/settingsdialog.ui" line="816"/>
+        <location filename="../dialogs/settingsdialog.ui" line="852"/>
         <source>Font name</source>
         <translation>字体名字</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="774"/>
-        <location filename="../dialogs/settingsdialog.ui" line="797"/>
-        <location filename="../dialogs/settingsdialog.ui" line="833"/>
+        <location filename="../dialogs/settingsdialog.ui" line="800"/>
+        <location filename="../dialogs/settingsdialog.ui" line="823"/>
+        <location filename="../dialogs/settingsdialog.ui" line="859"/>
         <source>set a new font</source>
         <translation>设定新字体</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="850"/>
-        <location filename="../dialogs/settingsdialog.ui" line="864"/>
-        <location filename="../dialogs/settingsdialog.ui" line="878"/>
+        <location filename="../dialogs/settingsdialog.ui" line="876"/>
+        <location filename="../dialogs/settingsdialog.ui" line="890"/>
+        <location filename="../dialogs/settingsdialog.ui" line="904"/>
         <source>...</source>
         <translation></translation>
     </message>
@@ -1097,48 +1106,48 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="obsolete">markdown 查看字体:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1035"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1050"/>
         <location filename="../dialogs/settingsdialog.cpp" line="607"/>
         <source>Database</source>
         <translation>数据库</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1041"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1056"/>
         <source>Do this if you have troubles with your Todo items.</source>
         <translation>如果你使用 todo 项目时出现问题，请使用这一功能.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1051"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1066"/>
         <source>Reinitialize Database</source>
         <translation>数据库出厂状态复位</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1067"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1082"/>
         <source>Recent notes folders</source>
         <translation>最近使用的笔记目录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1073"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1088"/>
         <source>Show recent notes folders in main area</source>
         <translation>在主区域显示最近使用的笔记目录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1080"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1095"/>
         <source>clear the recent note folder history</source>
         <translation>清空历史记录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1083"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1098"/>
         <source>Clear history</source>
         <translation>清空历史记录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="898"/>
+        <location filename="../dialogs/settingsdialog.ui" line="924"/>
         <source>Toolbar</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="910"/>
+        <location filename="../dialogs/settingsdialog.ui" line="930"/>
         <source>Icon size:</source>
         <translation>图标尺寸:</translation>
     </message>
@@ -1158,135 +1167,125 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="674"/>
+        <location filename="../dialogs/settingsdialog.ui" line="677"/>
         <source>English</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="682"/>
+        <location filename="../dialogs/settingsdialog.ui" line="688"/>
         <source>German</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="690"/>
+        <location filename="../dialogs/settingsdialog.ui" line="699"/>
         <source>French</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="698"/>
+        <location filename="../dialogs/settingsdialog.ui" line="710"/>
         <source>Polish</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="701"/>
-        <source>pl</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="706"/>
+        <location filename="../dialogs/settingsdialog.ui" line="721"/>
         <source>Chinese</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="709"/>
-        <source>cn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="717"/>
+        <location filename="../dialogs/settingsdialog.ui" line="743"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>重启后生效 Restart the application for the changes to take action.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="742"/>
+        <location filename="../dialogs/settingsdialog.ui" line="768"/>
         <source>font in note markdown view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="811"/>
+        <location filename="../dialogs/settingsdialog.ui" line="837"/>
         <source>code font in markdown text edits:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="847"/>
-        <location filename="../dialogs/settingsdialog.ui" line="861"/>
-        <location filename="../dialogs/settingsdialog.ui" line="875"/>
+        <location filename="../dialogs/settingsdialog.ui" line="873"/>
+        <location filename="../dialogs/settingsdialog.ui" line="887"/>
+        <location filename="../dialogs/settingsdialog.ui" line="901"/>
         <source>reset font</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1093"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1108"/>
         <source>Clear application data and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1099"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1114"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1124"/>
         <location filename="../dialogs/settingsdialog.cpp" line="689"/>
         <source>Clear app data and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1166"/>
         <source>Default note file extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1178"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1193"/>
         <source>Markdown (.md)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1196"/>
         <source>md</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1170"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1185"/>
         <source>Text file (.txt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1173"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1188"/>
         <source>txt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1192"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1207"/>
         <source>App metrics</source>
         <translation>软件改进指标</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1210"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1225"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation>匿名的使用数据能帮助分析出 QOwnNotes 接下来的改进方向和发现问题. 如果你真的无法接受，请关闭这一选项.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1238"/>
         <source>disable tracking of usage data</source>
         <translation>关闭匿名使用数据收集</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1264"/>
         <source>Debug</source>
         <translation>Debug调试</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1255"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1270"/>
         <source>Debug information</source>
         <translation>Debug 信息</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1271"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1286"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果你使用的过程中遇到 &lt;span style=&quot; font-weight:600;&quot;&gt;问题或错误&lt;/span&gt;. 你可以 &lt;span style=&quot; font-weight:600;&quot;&gt;复制粘贴&lt;/span&gt; 这些(或部分)信息, 在 &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt;发布一个 &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt;. 这些信息里面的敏感数据已经被隐藏.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1284"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1299"/>
         <source>&amp;Save debug information</source>
         <translation>保存Debug调试信息(&amp;S)</translation>
     </message>
@@ -1485,17 +1484,17 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="31"/>
+        <location filename="../dialogs/trashdialog.cpp" line="34"/>
         <source>&amp;Download selected note</source>
         <translation>下载选择的笔记(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="32"/>
+        <location filename="../dialogs/trashdialog.cpp" line="35"/>
         <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="42"/>
+        <location filename="../dialogs/trashdialog.cpp" line="48"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -1533,12 +1532,12 @@ p, li { white-space: pre-wrap; }
         <translation>下载最新版(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="32"/>
+        <location filename="../dialogs/updatedialog.cpp" line="35"/>
         <source>&amp;Skip version</source>
         <translation>跳过版本更新(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="38"/>
+        <location filename="../dialogs/updatedialog.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -1565,7 +1564,7 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;恢复到选择的版本</translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="26"/>
+        <location filename="../dialogs/versiondialog.cpp" line="29"/>
         <source>&amp;Cancel</source>
         <translation>&amp;取消</translation>
     </message>

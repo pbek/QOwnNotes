@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1237</width>
+    <width>1298</width>
     <height>888</height>
    </rect>
   </property>
@@ -261,10 +261,10 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to set your main ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>Click here to select the location of the main local ownCloud sync folder.</string>
                 </property>
                 <property name="text">
-                 <string>select location of main local ownCloud sync folder</string>
+                 <string>select main ownCloud sync folder</string>
                 </property>
                 <property name="icon">
                  <iconset theme="folder-sync" resource="../breeze-qownnotes.qrc">
@@ -435,7 +435,7 @@
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>400</width>
+                  <width>16777215</width>
                   <height>16777215</height>
                  </size>
                 </property>
@@ -658,7 +658,7 @@ p, li { white-space: pre-wrap; }
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>240</height>
+                  <height>300</height>
                  </size>
                 </property>
                 <item>
@@ -671,6 +671,9 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">English</string>
+                 </property>
+                 <property name="toolTip">
                   <string>English</string>
                  </property>
                  <property name="whatsThis">
@@ -679,6 +682,9 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">Deutsch</string>
+                 </property>
+                 <property name="toolTip">
                   <string>German</string>
                  </property>
                  <property name="whatsThis">
@@ -687,6 +693,9 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">Français</string>
+                 </property>
+                 <property name="toolTip">
                   <string>French</string>
                  </property>
                  <property name="whatsThis">
@@ -695,18 +704,35 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">Polski</string>
+                 </property>
+                 <property name="toolTip">
                   <string>Polish</string>
                  </property>
                  <property name="whatsThis">
-                  <string>pl</string>
+                  <string notr="true">pl</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">中文</string>
+                 </property>
+                 <property name="toolTip">
                   <string>Chinese</string>
                  </property>
                  <property name="whatsThis">
-                  <string>cn</string>
+                  <string notr="true">cn</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string notr="true">русский</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Russian</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">ru</string>
                  </property>
                 </item>
                </widget>
@@ -897,32 +923,21 @@ p, li { white-space: pre-wrap; }
              <property name="title">
               <string>Toolbar</string>
              </property>
-             <widget class="QLabel" name="toolbarIconSizeLabel">
-              <property name="geometry">
-               <rect>
-                <x>30</x>
-                <y>40</y>
-                <width>141</width>
-                <height>31</height>
-               </rect>
-              </property>
-              <property name="text">
-               <string>Icon size:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-             <widget class="QSpinBox" name="toolbarIconSizeSpinBox">
-              <property name="geometry">
-               <rect>
-                <x>180</x>
-                <y>40</y>
-                <width>60</width>
-                <height>34</height>
-               </rect>
-              </property>
-             </widget>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <widget class="QLabel" name="toolbarIconSizeLabel">
+                <property name="text">
+                 <string>Icon size:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QSpinBox" name="toolbarIconSizeSpinBox"/>
+              </item>
+             </layout>
             </widget>
            </item>
            <item>

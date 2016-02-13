@@ -12,10 +12,12 @@ TARGET = QOwnNotes
 TEMPLATE = app
 ICON = QOwnNotes.icns
 RC_FILE = QOwnNotes.rc
-TRANSLATIONS = languages/QOwnNotes_de.ts \
+TRANSLATIONS = languages/QOwnNotes_en.ts \
+    languages/QOwnNotes_de.ts \
     languages/QOwnNotes_fr.ts \
     languages/QOwnNotes_cn.ts \
-    languages/QOwnNotes_pl.ts
+    languages/QOwnNotes_pl.ts \
+    languages/QOwnNotes_ru.ts
 
 CODECFORTR = UTF-8
 
