@@ -826,6 +826,34 @@ Falls sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     </message>
 </context>
 <context>
+    <name>QTextEditSearchWidget</name>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
+        <source>close search</source>
+        <translation>Suche schließen</translation>
+    </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
+        <source>Find:</source>
+        <translation>Suchen:</translation>
+    </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
+        <source>find in text</source>
+        <translation>im Text finden</translation>
+    </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
+        <source>search forward</source>
+        <translation>vorwärts suchen</translation>
+    </message>
+    <message>
+        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
+        <source>search backward</source>
+        <translation>rückwärts suchen</translation>
+    </message>
+</context>
+<context>
     <name>QWidget</name>
     <message>
         <location filename="../services/databaseservice.cpp" line="63"/>
