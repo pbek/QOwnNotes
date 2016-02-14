@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.0" language="ru_RU">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1503,6 +1504,19 @@ This cannot be undone!</source>
         <location filename="../dialogs/updatedialog.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Отмена</translation>
+    </message>
+</context>
+<context>
+    <name>UpdateService</name>
+    <message>
+        <location filename="../services/updateservice.cpp" line="144"/>
+        <source>No updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/updateservice.cpp" line="145"/>
+        <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

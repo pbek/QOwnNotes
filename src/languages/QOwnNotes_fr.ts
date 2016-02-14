@@ -1210,7 +1210,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1135"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="638"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
         <source>Database</source>
         <translation>Base de données</translation>
     </message>
@@ -1344,7 +1344,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1209"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="720"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
         <source>Clear app data and exit</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1394,7 +1394,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
         <translation>&amp;Enregistrer les informations de déboguage</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="388"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="389"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -1403,7 +1403,7 @@ Version du serveur : %1
 Version de QOwnNotesAPI : %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="398"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -1414,49 +1414,49 @@ Vous devez aussi vérifier que QOwnNotesAPI est bien installé et activé !
 Le message d&apos;erreur est : </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="567"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="568"/>
         <source>Select ownCloud base directory</source>
         <translation>Sélectionner le répertoire de base d&apos;ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="640"/>
         <source>The Database was reinitialized.</source>
         <translation>La base de donnée a été réinitialisée.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="649"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
         <source>Recent note folders history</source>
         <translation>Historique des répertoire de notes récents</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="651"/>
         <source>The history was cleared.</source>
         <translation>L&apos;historique a bien été effacé.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="667"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
         <source>Markdown files (*.md)</source>
         <translation>Fichiers Markdown (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="669"/>
         <source>Save debug information</source>
         <translation>Enregistrer les informations de déboguage</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="722"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>Clear and &amp;exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Annuler</translation>
     </message>
@@ -1652,6 +1652,19 @@ p, li { white-space: pre-wrap; }
         <location filename="../dialogs/updatedialog.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuler</translation>
+    </message>
+</context>
+<context>
+    <name>UpdateService</name>
+    <message>
+        <location filename="../services/updateservice.cpp" line="144"/>
+        <source>No updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/updateservice.cpp" line="145"/>
+        <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

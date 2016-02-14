@@ -1167,7 +1167,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1135"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="638"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
         <source>Database</source>
         <translation>Datenbank</translation>
     </message>
@@ -1310,7 +1310,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1209"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="720"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
         <source>Clear app data and exit</source>
         <translation>Applikations-Daten löschen und beenden</translation>
     </message>
@@ -1360,7 +1360,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>Debug Informationen &amp;speichern</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="388"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="389"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -1369,7 +1369,7 @@ Server Version: %1
 QOwnNotesAPI Version: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="398"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -1380,49 +1380,49 @@ Die QOwnNotesAPI App muss installiert und aktiviert sein!
 Fehlermeldung: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="567"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="568"/>
         <source>Select ownCloud base directory</source>
         <translation>ownCloud Hauptordner auswählen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="640"/>
         <source>The Database was reinitialized.</source>
         <translation>Die Datenbank wurde reinitialisiert.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="649"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
         <source>Recent note folders history</source>
         <translation>zuletzt geöffnete Notizen Verlauf</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="651"/>
         <source>The history was cleared.</source>
         <translation>Der Verlauf wurde geleert.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="667"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
         <source>Markdown files (*.md)</source>
         <translation>Markdown Dateien (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="669"/>
         <source>Save debug information</source>
         <translation>Debug Informationen speichern</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="722"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation>Wollen Sie wirklich alle Einstellungen und die Datenbank löschen und QOwnNotes beenden?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>Clear and &amp;exit</source>
         <translation>Löschen und &amp;Beenden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Abbrechen</translation>
     </message>
@@ -1606,6 +1606,19 @@ Kann nicht rückgängig gemacht werden!</translation>
         <location filename="../dialogs/updatedialog.cpp" line="45"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Abbrechen</translation>
+    </message>
+</context>
+<context>
+    <name>UpdateService</name>
+    <message>
+        <location filename="../services/updateservice.cpp" line="144"/>
+        <source>No updates</source>
+        <translation>Keine Updates</translation>
+    </message>
+    <message>
+        <location filename="../services/updateservice.cpp" line="145"/>
+        <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
+        <translation>Es sind keine Updates verfügbar,&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; ist die letzte Version.</translation>
     </message>
 </context>
 <context>
