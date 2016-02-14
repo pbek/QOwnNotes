@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -755,27 +754,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
         <source>close search</source>
-        <translation type="unfinished"></translation>
+        <translation>закрыть поиск</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Поиск:</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
         <source>find in text</source>
-        <translation type="unfinished"></translation>
+        <translation>поиск в тексте</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
         <source>search forward</source>
-        <translation type="unfinished"></translation>
+        <translation>поиск вперёд</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
         <source>search backward</source>
-        <translation type="unfinished"></translation>
+        <translation>поиск назад</translation>
     </message>
 </context>
 <context>
@@ -809,11 +808,6 @@ Click Cancel to exit.</source>
         <location filename="../dialogs/settingsdialog.ui" line="14"/>
         <source>Settings</source>
         <translation>Настройки</translation>
-    </message>
-    <message>
-        <source>ownCloud</source>
-        <translatorcomment>translation is not needed</translatorcomment>
-        <translation type="obsolete">ownCloud</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="49"/>
@@ -986,11 +980,6 @@ p, li { white-space: pre-wrap; }
         <translation>Стандартный календарь ownCloud</translation>
     </message>
     <message>
-        <source>Calendar Plus</source>
-        <translatorcomment>translation is not needed</translatorcomment>
-        <translation type="obsolete">Calendar Plus</translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="606"/>
         <source>Select the calendars you want to use for the TODO list</source>
         <translation>Выберите календари для работы со списком задач</translation>
@@ -1117,7 +1106,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="950"/>
         <source>code font in note markdown view:</source>
-        <translation type="unfinished"></translation>
+        <translation>моноширинный шрифт заметки в режиме простора:</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1009"/>
@@ -1173,7 +1162,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1135"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="638"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
         <source>Database</source>
         <translation>База данных</translation>
     </message>
@@ -1219,7 +1208,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1209"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="720"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
         <source>Clear app data and exit</source>
         <translation>Удалить данные приложения и выйти</translation>
     </message>
@@ -1232,20 +1221,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <location filename="../dialogs/settingsdialog.ui" line="1270"/>
         <source>Text file (.txt)</source>
         <translation>Текстовый файл (.txt)</translation>
-    </message>
-    <message>
-        <source>txt</source>
-        <translatorcomment>translation is not needed</translatorcomment>
-        <translation type="obsolete">txt</translation>
-    </message>
-    <message>
-        <source>Markdown (.md)</source>
-        <translation type="obsolete">Markdown (.md)</translation>
-    </message>
-    <message>
-        <source>md</source>
-        <translatorcomment>translation is not needed</translatorcomment>
-        <translation type="obsolete">md</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1292"/>
@@ -1283,7 +1258,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>&amp;Сохранить отладочную информацию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="388"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="389"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -1292,7 +1267,7 @@ QOwnNotesAPI version: %2</source>
 Версия QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="398"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -1303,37 +1278,37 @@ Connection error message: </source>
 Сообщение об ошибке:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="567"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="568"/>
         <source>Select ownCloud base directory</source>
         <translation>Выберите основной каталог ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="639"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="640"/>
         <source>The Database was reinitialized.</source>
         <translation>База данных переинициализирована.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="649"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
         <source>Recent note folders history</source>
         <translation>История каталогов с заметками</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="651"/>
         <source>The history was cleared.</source>
         <translation>История удалена.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="667"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
         <source>Markdown files (*.md)</source>
         <translation>Файлы Markdown (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="668"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="669"/>
         <source>Save debug information</source>
         <translation>Сохранить отладочную информацию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="721"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="722"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -1342,12 +1317,12 @@ Your notes will stay intact!</source>
 Заметки останутся в неизменном состоянии!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>Clear and &amp;exit</source>
         <translation>Очистить и &amp;выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="724"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="725"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Отмена</translation>
     </message>
