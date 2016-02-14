@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.0.1
+- updated Russian translation (thank you, @elnull)
+
 ## 1.0
 - yippee, **version 1.0**, so there were already 100 releases!?
     - want to get involved with QOwnNotes? read:
