@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.0
+- updated German and Russian translation (thanks for your help, @elnull)
+
 ## 0.99
 - implemented plural translations
   (for [Issue #65](https://github.com/pbek/QOwnNotes/issues/65))

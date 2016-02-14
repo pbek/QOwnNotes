@@ -29,11 +29,11 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
-         <string>ownCloud</string>
+         <string notr="true">ownCloud</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="0" column="0">
@@ -88,7 +88,7 @@
                  <string/>
                 </property>
                 <property name="placeholderText">
-                 <string>https://</string>
+                 <string notr="true">https://</string>
                 </property>
                 <property name="clearButtonEnabled">
                  <bool>true</bool>
@@ -595,7 +595,7 @@ p, li { white-space: pre-wrap; }
              </rect>
             </property>
             <property name="text">
-             <string>Calendar Plus</string>
+             <string notr="true">Calendar Plus</string>
             </property>
            </widget>
           </widget>
@@ -1220,15 +1220,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <string>Text file (.txt)</string>
                  </property>
                  <property name="whatsThis">
-                  <string>txt</string>
+                  <string notr="true">txt</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>Markdown (.md)</string>
+                  <string notr="true">Markdown (.md)</string>
                  </property>
                  <property name="whatsThis">
-                  <string>md</string>
+                  <string notr="true">md</string>
                  </property>
                 </item>
                </widget>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.0" language="ru_RU">
+<defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
     <message>
@@ -56,7 +57,6 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="14"/>
-        <location filename="../mainwindow.cpp" line="1647"/>
         <source>QOwnNotes</source>
         <translatorcomment>translation is not needed</translatorcomment>
         <translation>QOwnNotes</translation>
@@ -783,10 +783,9 @@ Click Cancel to exit.</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="36"/>
         <source>ownCloud</source>
         <translatorcomment>translation is not needed</translatorcomment>
-        <translation>ownCloud</translation>
+        <translation type="obsolete">ownCloud</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="49"/>
@@ -802,12 +801,6 @@ Click Cancel to exit.</source>
         <location filename="../dialogs/settingsdialog.ui" line="85"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите адрес своего сервера ownCloud, например: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="91"/>
-        <source>https://</source>
-        <translatorcomment>translation is not needed</translatorcomment>
-        <translation></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="113"/>
@@ -965,10 +958,9 @@ p, li { white-space: pre-wrap; }
         <translation>Стандартный календарь ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="598"/>
         <source>Calendar Plus</source>
         <translatorcomment>translation is not needed</translatorcomment>
-        <translation>Calendar Plus</translation>
+        <translation type="obsolete">Calendar Plus</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="606"/>
@@ -1206,21 +1198,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Текстовый файл (.txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1223"/>
         <source>txt</source>
         <translatorcomment>translation is not needed</translatorcomment>
-        <translation>txt</translation>
+        <translation type="obsolete">txt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1228"/>
         <source>Markdown (.md)</source>
-        <translation>Markdown (.md)</translation>
+        <translation type="obsolete">Markdown (.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1231"/>
         <source>md</source>
         <translatorcomment>translation is not needed</translatorcomment>
-        <translation>md</translation>
+        <translation type="obsolete">md</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1242"/>

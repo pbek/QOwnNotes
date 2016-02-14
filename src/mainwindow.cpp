@@ -1644,7 +1644,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
 
         QMessageBox::information(
                 this,
-                tr("QOwnNotes"),
+                "QOwnNotes",
                 tr("QOwnNotes will track anonymous usage data, that helps to "
                         "decide what parts of QOwnNotes to improve next "
                         "and to find and fix bugs. You can disable that "
