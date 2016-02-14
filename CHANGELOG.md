@@ -1,8 +1,13 @@
 # QOwnNotes Changelog
 
 ## 1.0
+- yippee, **version 1.0**, so there were already 100 releases!?
+    - want to get involved with QOwnNotes? read:
+    [Getting involved](http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes)
 - updated German and Russian translation (thanks for your help, @elnull)
 - fixed the visual blocking of the note search bar by the scroll bar
+- the code font in the note Markdown view can now be configured in the settings
+  (for [Issue #59](https://github.com/pbek/QOwnNotes/issues/59))
 
 ## 0.99
 - implemented plural translations

@@ -75,6 +75,10 @@ private slots:
 
     void on_noteTextViewResetButton_clicked();
 
+    void on_noteTextViewCodeButton_clicked();
+
+    void on_noteTextViewCodeResetButton_clicked();
+
 private:
     enum SettingsTabs {
         OwnCloudTab,
@@ -89,6 +93,7 @@ private:
     QFont noteTextEditFont;
     QFont noteTextEditCodeFont;
     QFont noteTextViewFont;
+    QFont noteTextViewCodeFont;
     bool appIsValid;
     QString appVersion;
     QString serverVersion;

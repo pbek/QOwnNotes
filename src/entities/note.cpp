@@ -58,7 +58,8 @@ bool Note::addNote(QString name, QString fileName, QString text) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
-    query.prepare("INSERT INTO note ( name, file_name, note_text ) VALUES ( :name, :file_name, :note_text )");
+    query.prepare(
+            "INSERT INTO note ( name, file_name, note_text ) VALUES ( :name, :file_name, :note_text )");
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
     query.bindValue(":note_text", text);
@@ -150,7 +151,7 @@ bool Note::copy(QString destinationPath) {
             destinationFileName =
                     destinationPath + QDir::separator() + this->name + " " +
                     currentDateTime.toString(Qt::ISODate).replace(":", "_") +
-                            "." + defaultNoteFileExtension();
+                    "." + defaultNoteFileExtension();
 
             qDebug() << "New file name:" << destinationFileName;
         }
@@ -267,7 +268,7 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInName) {
     QString searchField = searchInName ? "name" : "note_text";
 
     query.prepare("SELECT name FROM note WHERE " + searchField + " LIKE :text "
-                  "ORDER BY file_last_modified DESC");
+            "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
 
     if (!query.exec()) {
@@ -464,7 +465,7 @@ void Note::handleNoteTextFileName() {
             // find new filename for the note (not very safe yet)
             QDateTime currentDateTime = QDateTime::currentDateTime();
             name += " " + currentDateTime
-                                  .toString(Qt::ISODate).replace(":", "_");
+                    .toString(Qt::ISODate).replace(":", "_");
         }
 
         // remove old note file
@@ -540,10 +541,10 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
 
             // reassign currentNote if filename of currentNote has changed
             if ((oldFileName == currentNote.getFileName()) &&
-                    (oldFileName != newFileName)) {
+                (oldFileName != newFileName)) {
                 currentNote = note;
                 qDebug() << "filename of currentNote has changed to: "
-                    << newFileName;
+                << newFileName;
             }
 
             qDebug() << "stored note: " << note;
@@ -657,8 +658,9 @@ QString Note::toMarkdownHtml(QString notesPath) {
             QRegularExpression("\\(file:\\/\\/([^\\/].+)\\)"),
             "(file://" + notesPath + "/\\1)");
 
-    unsigned char *sequence = (unsigned char *) qstrdup(str.toUtf8().constData());
-    int length = strlen((char *) sequence);
+    unsigned char *sequence = (unsigned char *) qstrdup(
+            str.toUtf8().constData());
+    qint64 length = strlen((char *) sequence);
 
     // return an empty string if the note is empty
     if (length == 0) {
@@ -680,9 +682,24 @@ QString Note::toMarkdownHtml(QString notesPath) {
     hoedown_document_free(document);
     hoedown_html_renderer_free(renderer);
 
-    result =
-            "<html><head><style>h1, h2, h3 { margin: 5pt 0 10pt 0; }"
-            "a { color: #FF9137; text-decoration: none; }</style></head><body>" +
+    QSettings(settings);
+    QString fontString = settings.value("MainWindow/noteTextView.code.font")
+            .toString();
+
+    // set the stylesheet for the <code> blocks
+    QString codeStyleSheet = "";
+    if (fontString != "") {
+        // set the note text view font
+        QFont font;
+        font.fromString(fontString);
+
+        codeStyleSheet = "pre, code {" + encodeCssFont(font) + "}";
+    }
+
+    result = "<html><head>"
+                    "<style>h1, h2, h3 { margin: 5pt 0 10pt 0; }"
+                    "a { color: #FF9137; text-decoration: none; }" +
+            codeStyleSheet + "</style></head><body>" +
             result + "</body></html>";
 
     // check if width of embedded local images is too high
@@ -696,12 +713,122 @@ QString Note::toMarkdownHtml(QString notesPath) {
         // cap the image width at 980px
         if (image.width() > 980) {
             result.replace(
-                    QRegularExpression("<img src=\"file:\\/\\/" + QRegularExpression::escape(fileName) + "\""),
-                           "<img width=\"980\" src=\"file://" + fileName + "\"");
+                    QRegularExpression("<img src=\"file:\\/\\/" +
+                                       QRegularExpression::escape(fileName) +
+                                       "\""),
+                    "<img width=\"980\" src=\"file://" + fileName + "\"");
         }
     }
 
     return result;
+}
+
+/**
+ * Returns the CSS code for a QFont
+ * Thank you to Phil Weinstein for the code
+ */
+QString Note::encodeCssFont(const QFont& refFont)
+{
+//-----------------------------------------------------------------------
+// This function assembles a CSS Font specification string from
+// a QFont. This supports most of the QFont attributes settable in
+// the Qt 4.8 and Qt 5.3 QFontDialog.
+//
+// (1) Font Family
+// (2) Font Weight (just bold or not)
+// (3) Font Style (possibly Italic or Oblique)
+// (4) Font Size (in either pixels or points)
+// (5) Decorations (possibly Underline or Strikeout)
+//
+// Not supported: Writing System (e.g. Latin).
+//
+// See the corresponding decode function, below.
+// QFont decodeCssFontString (const QString cssFontStr)
+//-----------------------------------------------------------------------
+
+    QStringList fields; // CSS font attribute fields
+
+// ***************************************************
+// *** (1) Font Family: Primary plus Substitutes ***
+// ***************************************************
+
+    const QString family = refFont.family();
+
+// NOTE [9-2014, Qt 4.8.6]: This isn't what I thought it was. It
+// does not return a list of "fallback" font faces (e.g. Georgia,
+// Serif for "Times New Roman"). In my testing, this is always
+// returning an empty list.
+//
+    QStringList famSubs = QFont::substitutes (family);
+
+    if (!famSubs.contains (family))
+        famSubs.prepend (family);
+
+    static const QChar DBL_QUOT ('"');
+    const int famCnt = famSubs.count();
+    QStringList famList;
+    for (int inx = 0; inx < famCnt; ++inx)
+    {
+// Place double quotes around family names having space characters,
+// but only if double quotes are not already there.
+//
+        const QString fam = famSubs [inx];
+        if (fam.contains (' ') && !fam.startsWith (DBL_QUOT))
+            famList << (DBL_QUOT + fam + DBL_QUOT);
+        else
+            famList << fam;
+    }
+
+    const QString famStr = QString ("font-family: ") + famList.join (", ");
+    fields << famStr;
+
+// **************************************
+// *** (2) Font Weight: Bold or Not ***
+// **************************************
+
+    const bool bold = refFont.bold();
+    if (bold)
+        fields << "font-weight: bold";
+
+// ****************************************************
+// *** (3) Font Style: possibly Italic or Oblique ***
+// ****************************************************
+
+    const QFont::Style style = refFont.style();
+    switch (style)
+    {
+        case QFont::StyleNormal: break;
+        case QFont::StyleItalic: fields << "font-style: italic"; break;
+        case QFont::StyleOblique: fields << "font-style: oblique"; break;
+    }
+
+// ************************************************
+// *** (4) Font Size: either Pixels or Points ***
+// ************************************************
+
+    const double sizeInPoints = refFont.pointSizeF(); // <= 0 if not defined.
+    const int sizeInPixels = refFont.pixelSize(); // <= 0 if not defined.
+    if (sizeInPoints > 0.0)
+        fields << QString ("font-size: %1pt") .arg (sizeInPoints);
+    else if (sizeInPixels > 0)
+        fields << QString ("font-size: %1px") .arg (sizeInPixels);
+
+// ***********************************************
+// *** (5) Decorations: Underline, Strikeout ***
+// ***********************************************
+
+    const bool underline = refFont.underline();
+    const bool strikeOut = refFont.strikeOut();
+
+    if (underline && strikeOut)
+        fields << "text-decoration: underline line-through";
+    else if (underline)
+        fields << "text-decoration: underline";
+    else if (strikeOut)
+        fields << "text-decoration: line-through";
+
+    const QString cssFontStr = fields.join ("; ");
+    return cssFontStr;
 }
 
 bool Note::isFetched() {
@@ -724,9 +851,10 @@ QString Note::generateTextForLink(QString text) {
 /**
  * Generates a qint64 hash from a QString
  */
-qint64 Note::qint64Hash(const QString & str) {
+qint64 Note::qint64Hash(const QString &str) {
     QByteArray hash = QCryptographicHash::hash(
-            QByteArray::fromRawData((const char*)str.utf16(), str.length()*2),
+            QByteArray::fromRawData((const char *) str.utf16(),
+                                    str.length() * 2),
             QCryptographicHash::Md5);
     Q_ASSERT(hash.size() == 16);
     QDataStream stream(hash);
@@ -745,7 +873,7 @@ QString Note::encryptNoteText() {
 
     // keep the first two lines unencrypted
     noteText = noteTextLines.at(0) + "\n" + noteTextLines.at(1) + "\n\n" +
-            QString(NOTE_TEXT_ENCRYPTION_PRE_STRING) + "\n";
+               QString(NOTE_TEXT_ENCRYPTION_PRE_STRING) + "\n";
 
     // remove the first two lines for encryption
     noteTextLines.removeFirst();
@@ -766,12 +894,12 @@ QString Note::encryptNoteText() {
     }
 
     // encrypt the text
-    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
     QString encryptedText = crypto->encryptToString(text);
 
     // add the encrypted text to the new note text
     noteText += encryptedText + "\n" +
-            QString(NOTE_TEXT_ENCRYPTION_POST_STRING);
+                QString(NOTE_TEXT_ENCRYPTION_POST_STRING);
 
     // store note
     store();
@@ -828,7 +956,7 @@ bool Note::canDecryptNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
     QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
 
     return decryptedNoteText != "";
@@ -854,7 +982,7 @@ QString Note::getDecryptedNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt* crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
     QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
 
     if (decryptedNoteText == "") {
@@ -897,7 +1025,7 @@ bool Note::expireCryptoKeys() {
 
 QDebug operator<<(QDebug dbg, const Note &note) {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
-            " <fileName>" << note.fileName <<
-            " <hasDirtyData>" << note.hasDirtyData;
+    " <fileName>" << note.fileName <<
+    " <hasDirtyData>" << note.hasDirtyData;
     return dbg.space();
 }

@@ -110,6 +110,8 @@ void SettingsDialog::storeSettings() {
                       noteTextEditCodeFont.toString());
     settings.setValue("MainWindow/noteTextView.font",
                       noteTextViewFont.toString());
+    settings.setValue("MainWindow/noteTextView.code.font",
+                      noteTextViewCodeFont.toString());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
@@ -194,6 +196,24 @@ void SettingsDialog::readSettings() {
     noteTextViewFont.fromString(
             settings.value("MainWindow/noteTextView.font").toString());
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
+
+
+    // load note text view code font
+    QString fontString = settings.value("MainWindow/noteTextView.code.font")
+            .toString();
+
+    // set a default note text view code font
+    if (fontString == "") {
+        // reset the note text view code font
+        on_noteTextViewCodeResetButton_clicked();
+
+        fontString = noteTextViewCodeFont.toString();
+        settings.setValue("MainWindow/noteTextView.code.font", fontString);
+    } else {
+        noteTextViewCodeFont.fromString(fontString);
+    }
+
+    setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
 
     const QSignalBlocker blocker2(this->ui->defaultOwnCloudCalendarRadioButton);
     Q_UNUSED(blocker2);
@@ -589,6 +609,18 @@ void SettingsDialog::on_noteTextViewButton_clicked() {
     }
 }
 
+void SettingsDialog::on_noteTextViewCodeButton_clicked()
+{
+    bool ok;
+    QFont font = QFontDialog::getFont(
+            &ok, noteTextViewCodeFont, this,
+            "", QFontDialog::MonospacedFonts);
+    if (ok) {
+        noteTextViewCodeFont = font;
+        setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
+    }
+}
+
 void SettingsDialog::on_reloadCalendarListButton_clicked() {
     // we need to store the calendar backend
     storeSettings();
@@ -728,4 +760,15 @@ void SettingsDialog::on_noteTextViewResetButton_clicked()
     QTextBrowser textView;
     noteTextViewFont = textView.font();
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
+}
+
+/**
+ * Resets the font for the note markdown code view
+ */
+void SettingsDialog::on_noteTextViewCodeResetButton_clicked()
+{
+    QTextBrowser textView;
+    noteTextViewCodeFont = textView.font();
+    noteTextViewCodeFont.setFamily("Courier");
+    setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
 }
