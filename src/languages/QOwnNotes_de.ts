@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="de_DE">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -1559,12 +1558,12 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="26"/>
         <source>&amp;Download latest</source>
-        <translation>neuste &amp;herunterladen</translation>
+        <translation>&amp;herunterladen</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="35"/>
         <source>&amp;Skip version</source>
-        <translation>&amp;Version überspringen</translation>
+        <translation>&amp;überspringen</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="45"/>
