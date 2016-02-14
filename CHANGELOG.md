@@ -2,6 +2,7 @@
 
 ## 1.0
 - updated German and Russian translation (thanks for your help, @elnull)
+- fixed the visual blocking of the note search bar by the scroll bar
 
 ## 0.99
 - implemented plural translations
