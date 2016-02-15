@@ -155,6 +155,8 @@ private slots:
 
     void showEvent(QShowEvent *event);
 
+    void on_actionGet_invloved_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

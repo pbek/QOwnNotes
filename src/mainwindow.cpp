@@ -2417,3 +2417,9 @@ void MainWindow::showEvent(QShowEvent* event) {
     QMainWindow::showEvent(event);
     MetricsService::instance()->sendAppView(objectName());
 }
+
+void MainWindow::on_actionGet_invloved_triggered()
+{
+    QDesktopServices::openUrl(
+            QUrl("http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"));
+}

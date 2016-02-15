@@ -73,7 +73,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
-        <location filename="../mainwindow.ui" line="309"/>
+        <location filename="../mainwindow.ui" line="310"/>
         <source>Edit</source>
         <translation>Правка</translation>
     </message>
@@ -103,311 +103,316 @@
         <translation>&amp;Справка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="331"/>
+        <location filename="../mainwindow.ui" line="332"/>
         <source>Todo</source>
         <translation>Список задач</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="379"/>
+        <location filename="../mainwindow.ui" line="380"/>
         <source>&amp;Quit</source>
         <translation>&amp;Выход</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="382"/>
+        <location filename="../mainwindow.ui" line="383"/>
         <source>Ctrl+Q</source>
         <translation>Ctrl+Q</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>&amp;Set notes folder</source>
         <translation>&amp;Каталог с заметками</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="403"/>
+        <location filename="../mainwindow.ui" line="404"/>
         <source>&amp;Find note</source>
         <translation>&amp;Найти заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>Ctrl+Shift+F</source>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="416"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Удалить текущую заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="419"/>
         <source>Ctrl+R</source>
         <translation>Ctrl+R</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
+        <location filename="../mainwindow.ui" line="428"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>O &amp;QOwnNotes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="439"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>&amp;New note</source>
         <translation>&amp;Новая заметка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="442"/>
+        <location filename="../mainwindow.ui" line="443"/>
         <source>Ctrl+N</source>
         <translation>Ctrl+N</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="454"/>
+        <location filename="../mainwindow.ui" line="455"/>
         <source>&amp;Toggle Edit Mode</source>
         <translation>&amp;Переключить режим редактирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="458"/>
         <source>Toggle Edit Mode</source>
         <translation>Переключить режим редактирования</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="461"/>
         <source>Ctrl+E</source>
         <translation>Ctrl+E</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="470"/>
         <source>Check for &amp;updates</source>
         <translation>Проверить &amp;обновления</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="472"/>
+        <location filename="../mainwindow.ui" line="473"/>
         <source>Ctrl+Shift+U</source>
         <translation>Ctrl+Shift+U</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="481"/>
+        <location filename="../mainwindow.ui" line="482"/>
         <source>Report &amp;issues or ideas</source>
         <translation>Связаться с &amp;разработчиками</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="489"/>
+        <location filename="../mainwindow.ui" line="490"/>
         <source>Alphabetical</source>
         <translation>По алфавиту</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="492"/>
+        <location filename="../mainwindow.ui" line="493"/>
         <source>Sort alphabetical</source>
         <translation>Сортировка по алфавиту</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="500"/>
+        <location filename="../mainwindow.ui" line="501"/>
         <source>By date</source>
         <translation>По дате</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="503"/>
+        <location filename="../mainwindow.ui" line="504"/>
         <source>Sort by date</source>
         <translation>Сортировка по дате</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="511"/>
+        <location filename="../mainwindow.ui" line="512"/>
         <source>Sh&amp;ow in system tray</source>
         <translation>Показать в системном &amp;лотке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="520"/>
+        <location filename="../mainwindow.ui" line="521"/>
         <source>&amp;Settings</source>
         <translation>&amp;Настройка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="532"/>
+        <location filename="../mainwindow.ui" line="533"/>
         <source>Show note &amp;versions</source>
         <translation>Показать &amp;версии заметки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="535"/>
+        <location filename="../mainwindow.ui" line="536"/>
         <source>Show note versions on server</source>
         <translation>Показать версии заметки на сервере</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="544"/>
+        <location filename="../mainwindow.ui" line="545"/>
         <source>Show &amp;trash</source>
         <translation>Показать &amp;корзину</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="547"/>
+        <location filename="../mainwindow.ui" line="548"/>
         <source>Show trashed notes on server</source>
         <translation>Показать заметки из корзины на сервере</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="552"/>
+        <location filename="../mainwindow.ui" line="553"/>
         <source>Select &amp;all notes</source>
         <translation>Выбрать &amp;все заметки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="561"/>
+        <location filename="../mainwindow.ui" line="562"/>
         <location filename="../mainwindow.cpp" line="2067"/>
         <source>Insert &amp;link</source>
         <translation>Вставить &amp;ссылку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="565"/>
         <source>Insert link to an url or a note</source>
         <translation>Вставить ссылку на URL-адрес или заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="567"/>
+        <location filename="../mainwindow.ui" line="568"/>
         <location filename="../mainwindow.cpp" line="2069"/>
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="576"/>
+        <location filename="../mainwindow.ui" line="577"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Найти в текущей заметке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="579"/>
+        <location filename="../mainwindow.ui" line="580"/>
         <source>Find text in current note</source>
         <translation>Найти текст в текущей заметке</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="582"/>
+        <location filename="../mainwindow.ui" line="583"/>
         <source>Ctrl+F</source>
         <translation>Ctrl+F</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.ui" line="588"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Дублировать текст</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="590"/>
+        <location filename="../mainwindow.ui" line="591"/>
         <source>Ctrl+D</source>
         <translation>Ctrl+D</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="599"/>
+        <location filename="../mainwindow.ui" line="600"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Предыдущая версия заметки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="603"/>
         <source>Alt+Left</source>
         <translation>Alt+Left</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="611"/>
+        <location filename="../mainwindow.ui" line="612"/>
         <source>Forward in note history</source>
         <translation>Следующая версия заметки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="615"/>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="623"/>
+        <location filename="../mainwindow.ui" line="624"/>
         <source>Show &amp;Shortcuts</source>
         <translation>Комбинации &amp;клавиш</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="632"/>
+        <location filename="../mainwindow.ui" line="633"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;База знаний</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="641"/>
+        <location filename="../mainwindow.ui" line="642"/>
         <source>Insert current &amp;time</source>
         <translation>Вставить &amp;текущее время</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="645"/>
         <source>Ctrl+T</source>
         <translation>Ctrl+T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="653"/>
+        <location filename="../mainwindow.ui" line="654"/>
         <source>Show &amp;Todo List</source>
         <translation>Показать список &amp;задач</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="656"/>
+        <location filename="../mainwindow.ui" line="657"/>
         <source>Ctrl+Shift+T</source>
         <translation>Ctrl+Shift+T</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="665"/>
+        <location filename="../mainwindow.ui" line="666"/>
         <source>&amp;Export note as PDF (markdown)</source>
         <translation>&amp;Экспорт заметки в PDF (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="674"/>
+        <location filename="../mainwindow.ui" line="675"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Экспорт заметки в PDF (текст)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="683"/>
+        <location filename="../mainwindow.ui" line="684"/>
         <source>&amp;Print note (text)</source>
         <translation>&amp;Печать заметки (текст)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="692"/>
+        <location filename="../mainwindow.ui" line="693"/>
         <source>&amp;Print note (markdown)</source>
         <translation>&amp;Печать заметки (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="701"/>
+        <location filename="../mainwindow.ui" line="702"/>
         <source>Insert &amp;image</source>
         <translation>Вставка &amp;изображения</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="704"/>
+        <location filename="../mainwindow.ui" line="705"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Вставка изображения (файл будет скопирован в каталог &apos;media&apos; внутри текущего каталога с заметками)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="708"/>
         <source>Ctrl+I</source>
         <translation>Ctrl+I</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="716"/>
+        <location filename="../mainwindow.ui" line="717"/>
         <source>Show &amp;changelog</source>
         <translation>История &amp;изменений</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="725"/>
+        <location filename="../mainwindow.ui" line="726"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Зашифровать заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="734"/>
+        <location filename="../mainwindow.ui" line="735"/>
         <source>Edit encrypted note</source>
         <translation>Редактировать зашифрованную заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="737"/>
+        <location filename="../mainwindow.ui" line="738"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="746"/>
+        <location filename="../mainwindow.ui" line="747"/>
         <source>Decrypt note</source>
         <translation>Расшифровать заметку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="755"/>
+        <location filename="../mainwindow.ui" line="756"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Открыть заметку во внешнем редакторе</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="758"/>
+        <location filename="../mainwindow.ui" line="759"/>
         <source>Ctrl+Shift+O</source>
         <translation>Ctrl+Shift+O</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="767"/>
+        <location filename="../mainwindow.ui" line="768"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Экспорт заметки в формат Markdown</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="777"/>
+        <source>&amp;Get involved</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="619"/>
