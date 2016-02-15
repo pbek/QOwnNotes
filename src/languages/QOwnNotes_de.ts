@@ -347,7 +347,7 @@ Klicken Sie Abbrechen um zu schliessen.</translation>
     <message>
         <location filename="../mainwindow.ui" line="623"/>
         <source>Show &amp;Shortcuts</source>
-        <translation>Ab&amp;kürzung anzeigen</translation>
+        <translation>&amp;Tastaturkürzel anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="632"/>
