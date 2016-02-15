@@ -4,6 +4,8 @@
 - added more German and Russian translations (thank you, @elnull)
 - added a *Get involved* menu entry and a link in the update dialog
 - updated the markdown highlighter
+- added support for newlines in code blocks in the markdown highlighting
+  (for [Issue #71](https://github.com/pbek/QOwnNotes/issues/71))
 
 ## 1.0
 - yippee, **version 1.0**, so there were already 100 releases!?
