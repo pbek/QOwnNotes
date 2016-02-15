@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
-    <height>501</height>
+    <width>908</width>
+    <height>627</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -70,6 +70,16 @@ p, li { white-space: pre-wrap; }
       <widget class="QLabel" name="label_3">
        <property name="text">
         <string>QOwnNotes will be downloaded in your default browser.</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</string>
+       </property>
+       <property name="openExternalLinks">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

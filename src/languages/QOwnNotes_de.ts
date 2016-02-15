@@ -1584,6 +1584,11 @@ Kann nicht rückgängig gemacht werden!</translation>
         <translation>Eine neue QOwnNotes Version ist verfügbar!</translation>
     </message>
     <message>
+        <location filename="../dialogs/updatedialog.ui" line="79"/>
+        <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;jetzt bei QOwnNotes mitmachen&lt;/a&gt;</translation>
+    </message>
+    <message>
         <source>Version 0.xx</source>
         <translation type="obsolete">Version 0.xx</translation>
     </message>

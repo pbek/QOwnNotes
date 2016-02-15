@@ -2,7 +2,7 @@
 
 ## 1.0.1
 - added more German and Russian translations (thank you, @elnull)
-- added a *Get involved* menu entry
+- added a *Get involved* menu entry and a link in the update dialog
 
 ## 1.0
 - yippee, **version 1.0**, so there were already 100 releases!?
