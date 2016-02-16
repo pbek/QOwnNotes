@@ -2476,6 +2476,10 @@ void MainWindow::storeNoteBookmark(int slot) {
     QTextCursor c = ui->noteTextEdit->textCursor();
     NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
     noteBookmarks[slot] = item;
+
+    ui->statusBar->showMessage(
+            tr("bookmarked note position at slot %1").arg(
+                    QString::number(slot)), 3000);
 }
 
 /**
@@ -2488,5 +2492,9 @@ void MainWindow::gotoNoteBookmark(int slot) {
     if (item.getNote().exists()) {
         ui->noteTextEdit->setFocus();
         setCurrentNoteFromHistoryItem(item);
+
+        ui->statusBar->showMessage(
+                tr("jumped to bookmark position at slot %1").arg(
+                        QString::number(slot)), 3000);
     }
 }
