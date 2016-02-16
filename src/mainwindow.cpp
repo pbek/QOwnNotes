@@ -816,7 +816,7 @@ void MainWindow::setupUpdateAvailableButton() {
     _updateAvailableButton = new QPushButton(this);
     _updateAvailableButton->setFlat(true);
     _updateAvailableButton->setToolTip(
-            tr("click here to see what has changed"));
+            tr("click here to see what has changed and to be able to download the latest version"));
     _updateAvailableButton->hide();
 
     QObject::connect(
