@@ -4,6 +4,8 @@
 - added more German translation
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9
   - use `Ctrl + 0..9` jump to the bookmark on slot 0..9
+- fixed a markdown highlighting problem with certain characters like `»` and `·`
+  (for [Issue #73](https://github.com/pbek/QOwnNotes/issues/73))
 
 ## 1.0.1
 - added more German and Russian translations (thank you, @elnull)
