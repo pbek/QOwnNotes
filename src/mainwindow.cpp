@@ -2051,8 +2051,8 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     // show copy and move menu entries only
     // if there is at least one notes folder
     if (recentNoteFolders.size() > 0) {
-        moveDestinationMenu = noteMenu.addMenu("&Move notes to...");
-        copyDestinationMenu = noteMenu.addMenu("&Copy notes to...");
+        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
+        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
 
         // add actions for the recent note folders
         Q_FOREACH(QString noteFolder, recentNoteFolders) {
@@ -2063,9 +2063,9 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
             }
     }
 
-    QAction *removeAction = noteMenu.addAction("&Remove notes");
+    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
-    QAction *selectAllAction = noteMenu.addAction("Select &all notes");
+    QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
 
     QAction *selectedItem = noteMenu.exec(globalPos);
     if (selectedItem) {

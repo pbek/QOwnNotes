@@ -303,6 +303,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../mainwindow.ui" line="553"/>
+        <location filename="../mainwindow.cpp" line="2068"/>
         <source>Select &amp;all notes</source>
         <translation>Selectionner &amp;toutes les notes</translation>
     </message>
@@ -594,6 +595,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
             <numerusform></numerusform>
             <numerusform></numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>&amp;Move notes to...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2055"/>
+        <source>&amp;Copy notes to...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2066"/>
+        <source>&amp;Remove notes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2481"/>

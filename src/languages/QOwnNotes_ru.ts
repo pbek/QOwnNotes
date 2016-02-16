@@ -239,6 +239,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="553"/>
+        <location filename="../mainwindow.cpp" line="2068"/>
         <source>Select &amp;all notes</source>
         <translation>Выбрать &amp;все заметки</translation>
     </message>
@@ -621,6 +622,21 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../mainwindow.cpp" line="1687"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить части программы, которые нуждаются в улучшении и исправлении ошибок. Это поведение можно отключить в настройках.</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>&amp;Move notes to...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2055"/>
+        <source>&amp;Copy notes to...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2066"/>
+        <source>&amp;Remove notes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2106"/>

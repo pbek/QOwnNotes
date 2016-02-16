@@ -279,6 +279,7 @@ Klicken Sie Abbrechen um zu schliessen.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="553"/>
+        <location filename="../mainwindow.cpp" line="2068"/>
         <source>Select &amp;all notes</source>
         <translation>&amp;Alle Notizen auswählen</translation>
     </message>
@@ -574,6 +575,21 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
 
 Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>&amp;Move notes to...</source>
+        <translation>&amp;Verschiebe Notizen nach...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2055"/>
+        <source>&amp;Copy notes to...</source>
+        <translation>&amp;Kopiere Notizen nach...</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2066"/>
+        <source>&amp;Remove notes</source>
+        <translation>&amp;Lösche Noitzen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2481"/>
