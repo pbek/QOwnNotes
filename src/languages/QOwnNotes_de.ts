@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="de_DE">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -504,12 +503,12 @@ Notiz wiederherstellen?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="819"/>
         <source>click here to see what has changed</source>
-        <translation type="unfinished"></translation>
+        <translation>Klicken Sie hier um die Änderungen zu sehen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="835"/>
         <source>new version %1 available</source>
-        <translation type="unfinished"></translation>
+        <translation>Version %1 verfügbar</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="964"/>
@@ -599,7 +598,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
         <location filename="../mainwindow.cpp" line="2102"/>
         <source>&amp;Remove notes</source>
-        <translation>&amp;Lösche Noitzen</translation>
+        <translation>&amp;Lösche Notizen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2517"/>
