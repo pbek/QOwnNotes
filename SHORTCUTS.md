@@ -33,6 +33,8 @@ Important Shortcuts
     - `⇧ + Tab` un-indents the selected text
 - `Alt + Left` jumps back in the note history
     - `Alt + Right` jumps forward in the note history
+- `Ctrl + ⇧ + 0..9` sets a note bookmark on bookmark slot 0..9
+- `Ctrl + 0..9` jump to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 
@@ -72,6 +74,8 @@ Important Shortcuts
     - `⇧ + Tab` un-indents the selected text
 - `⌘ + Opt + Left` jumps back in the note history
     - `⌘ + Opt + Right` jumps forward in the note history
+- `⌘ + ⇧ + 0..9` sets a note bookmark on bookmark slot 0..9
+- `⌘ + 0..9` jump to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 

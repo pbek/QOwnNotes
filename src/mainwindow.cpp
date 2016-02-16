@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->noteHistory = NoteHistory();
 
     // set our signal mapper
-    this->signalMapper = new QSignalMapper(this);
+    this->recentNoteFolderSignalMapper = new QSignalMapper(this);
 
     readSettings();
     setupCrypto();
@@ -184,6 +184,9 @@ MainWindow::MainWindow(QWidget *parent) :
     showAppMetricsNotificationIfNeeded();
 
     frequentPeriodicChecker();
+
+    // setup the shortcuts for the note bookmarks
+    setupNoteBookmarkShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -195,6 +198,40 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Sets the shortcuts for the note bookmarks up
+ */
+void MainWindow::setupNoteBookmarkShortcuts() {
+    this->storeNoteBookmarkSignalMapper = new QSignalMapper(this);
+    this->gotoNoteBookmarkSignalMapper = new QSignalMapper(this);
+
+    for (int number = 0; number <= 9; number++) {
+        // setup the store shortcut
+        QShortcut *storeShortcut = new QShortcut(
+                QKeySequence("Ctrl+Shift+" + QString::number(number)),
+                this);
+
+        connect(storeShortcut, SIGNAL(activated()),
+                storeNoteBookmarkSignalMapper, SLOT(map()));
+        storeNoteBookmarkSignalMapper->setMapping(storeShortcut, number);
+
+        // setup the goto shortcut
+        QShortcut *gotoShortcut = new QShortcut(
+                QKeySequence("Ctrl+" + QString::number(number)),
+                this);
+
+        connect(gotoShortcut, SIGNAL(activated()),
+                gotoNoteBookmarkSignalMapper, SLOT(map()));
+        gotoNoteBookmarkSignalMapper->setMapping(gotoShortcut, number);
+    }
+
+    connect(storeNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
+            this, SLOT(storeNoteBookmark(int)));
+
+    connect(gotoNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
+            this, SLOT(gotoNoteBookmark(int)));
+}
 
 /*
  * Loads the menu entries for the recent note folders
@@ -237,18 +274,20 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
                 QAction *action =
                         ui->menuRecentNoteFolders->addAction(noteFolder);
                 QObject::connect(
-                        action, SIGNAL(triggered()), signalMapper, SLOT(map()));
+                        action, SIGNAL(triggered()),
+                        recentNoteFolderSignalMapper, SLOT(map()));
 
                 // add a parameter to changeNoteFolder with the signal mapper
-                signalMapper->setMapping(action, noteFolder);
-                QObject::connect(signalMapper,
-                                 SIGNAL(mapped(const QString &)),
-                                 this,
-                                 SLOT(changeNoteFolder(const QString &)));
+                recentNoteFolderSignalMapper->setMapping(action, noteFolder);
 
                 // add an entry to the combo box
                 ui->recentNoteFolderComboBox->addItem(noteFolder);
             }
+
+        QObject::connect(recentNoteFolderSignalMapper,
+                         SIGNAL(mapped(const QString &)),
+                         this,
+                         SLOT(changeNoteFolder(const QString &)));
 
         ui->recentNoteFolderComboBox->setCurrentIndex(0);
     }
@@ -2066,7 +2105,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
             ui->noteTextEdit->textCursor().selectedText() != "" ?
 				tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(tr("Ctrl+L"));
+    linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
 
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
@@ -2382,8 +2421,8 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-	dialog.setNameFilter(tr("Markdown files (*.md)"));
-	dialog.setWindowTitle(tr("Export current note as Markdown file"));
+    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
 
@@ -2421,5 +2460,33 @@ void MainWindow::showEvent(QShowEvent* event) {
 void MainWindow::on_actionGet_invloved_triggered()
 {
     QDesktopServices::openUrl(
-            QUrl("http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"));
+            QUrl("http://www.qownnotes.org/Knowledge-base/"
+                         "How-can-I-get-involved-with-QOwnNotes"));
+}
+
+/**
+ * Sets a note bookmark on bookmark slot 0..9
+ */
+void MainWindow::storeNoteBookmark(int slot) {
+    // return if note text edit doesn't have the focus
+    if (!ui->noteTextEdit->hasFocus()) {
+        return;
+    }
+
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
+    noteBookmarks[slot] = item;
+}
+
+/**
+ * Loads and jumps to a note bookmark from bookmark slot 0..9
+ */
+void MainWindow::gotoNoteBookmark(int slot) {
+    NoteHistoryItem item = noteBookmarks[slot];
+
+    // check if the note (still) exists
+    if (item.getNote().exists()) {
+        ui->noteTextEdit->setFocus();
+        setCurrentNoteFromHistoryItem(item);
+    }
 }

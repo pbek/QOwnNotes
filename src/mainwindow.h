@@ -157,6 +157,10 @@ private slots:
 
     void on_actionGet_invloved_triggered();
 
+    void gotoNoteBookmark(int slot = 0);
+
+    void storeNoteBookmark(int slot = 0);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -166,7 +170,9 @@ private:
     int firstVisibleNoteListRow;
     NoteDiffDialog *noteDiffDialog;
     bool noteTextEditIsInEditMode;
-    QSignalMapper *signalMapper;
+    QSignalMapper *recentNoteFolderSignalMapper;
+    QSignalMapper *storeNoteBookmarkSignalMapper;
+    QSignalMapper *gotoNoteBookmarkSignalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
     bool showSystemTray;
@@ -178,6 +184,7 @@ private:
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
     NoteHistory noteHistory;
+    QHash<int, NoteHistoryItem> noteBookmarks;
 
     void setupMainSplitter();
 
@@ -254,4 +261,6 @@ private:
     void showAppMetricsNotificationIfNeeded();
 
     void resetCurrentNote();
+
+    void setupNoteBookmarkShortcuts();
 };
