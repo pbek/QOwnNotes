@@ -158,10 +158,7 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
         title.replace("[", "(")
                 .replace("]", ")")
                 .replace("<", "(")
-                .replace(">", ")")
-                // this character used by GitHub disorients the markup
-                // highlighter
-                .replace("·", "-");
+                .replace(">", ")");
 
         // trim whitespaces and return title
         return title.simplified();
