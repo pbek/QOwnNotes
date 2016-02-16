@@ -1244,7 +1244,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="699"/>
         <source>English</source>
-        <translation></translation>
+        <translation>Englisch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="710"/>
@@ -1254,7 +1254,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="721"/>
         <source>French</source>
-        <translation>Français</translation>
+        <translation>Französisch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="732"/>
