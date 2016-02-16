@@ -80,6 +80,10 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMainSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
+
+    // setup the update available button
+    setupUpdateAvailableButton();
+
     this->noteDiffDialog = new NoteDiffDialog();
 
     // look if we need to save something every 10 sec (default)
@@ -154,7 +158,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->loadRecentNoteFolderListMenu(notesPath);
 
     this->updateService = new UpdateService(this);
-    this->updateService->checkForUpdates(UpdateService::AppStart);
+    this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
@@ -800,8 +804,40 @@ void MainWindow::frequentPeriodicChecker() {
         settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
-        updateService->checkForUpdates(UpdateService::Periodic);
+        updateService->checkForUpdates(this, UpdateService::Periodic);
     }
+}
+
+/**
+ * Does the setup for the update available button
+ */
+void MainWindow::setupUpdateAvailableButton() {
+
+    _updateAvailableButton = new QPushButton(this);
+    _updateAvailableButton->setFlat(true);
+    _updateAvailableButton->setToolTip(
+            tr("click here to see what has changed"));
+    _updateAvailableButton->hide();
+
+    QObject::connect(
+            _updateAvailableButton,
+            SIGNAL(pressed()),
+            this,
+            SLOT(on_actionCheck_for_updates_triggered()));
+
+    ui->statusBar->layout()->addWidget(_updateAvailableButton);
+}
+
+void MainWindow::showUpdateAvailableButton(QString version) {
+
+//    _updateAvailableButton->setStyleSheet("QPushButton {font-weight: bold}");
+    _updateAvailableButton->setText(
+            tr("new version %1 available").arg(version));
+    _updateAvailableButton->show();
+}
+
+void MainWindow::hideUpdateAvailableButton() {
+    _updateAvailableButton->hide();
 }
 
 void MainWindow::waitMsecs(int msecs) {
@@ -1978,7 +2014,7 @@ void MainWindow::openNoteUrl(QUrl url) {
  * Manually check for updates
  */
 void MainWindow::on_actionCheck_for_updates_triggered() {
-    this->updateService->checkForUpdates(UpdateService::Manual);
+    this->updateService->checkForUpdates(this, UpdateService::Manual);
 }
 
 /*

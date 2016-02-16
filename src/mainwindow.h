@@ -38,6 +38,10 @@ public:
 
     void restoreTrashedNoteOnServer(QString fileName, int timestamp);
 
+    void showUpdateAvailableButton(QString version);
+
+    void hideUpdateAvailableButton();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -185,6 +189,7 @@ private:
     QTimer *todoReminderTimer;
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
+    QPushButton *_updateAvailableButton;
 
     void setupMainSplitter();
 
@@ -263,4 +268,6 @@ private:
     void resetCurrentNote();
 
     void setupNoteBookmarkShortcuts();
+
+    void setupUpdateAvailableButton();
 };

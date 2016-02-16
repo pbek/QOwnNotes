@@ -2,6 +2,7 @@
 #define UPDATESERVICE_H
 
 #include <qnetworkreply.h>
+class MainWindow;
 
 #ifdef Q_OS_LINUX
 #define PLATFORM "linux"
@@ -32,10 +33,11 @@ public:
 
     explicit UpdateService(QObject *parent = 0);
 
-    void checkForUpdates(UpdateMode updateMode = AppStart);
+    void checkForUpdates(
+            MainWindow *mainWindow, UpdateMode updateMode = AppStart);
 
 private:
-    QObject *parent;
+    MainWindow *mainWindow;
     UpdateMode updateMode;
 
 private slots:

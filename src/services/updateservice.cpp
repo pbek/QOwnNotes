@@ -15,12 +15,14 @@
 #include "dialogs/updatedialog.h"
 #include "version.h"
 #include "release.h"
+#include "mainwindow.h"
 
-UpdateService::UpdateService(QObject *parent) : QObject(parent) {
-    this->parent = parent;
+UpdateService::UpdateService(QObject *parent) :
+        QObject(parent) {
 }
 
-void UpdateService::checkForUpdates(UpdateMode updateMode) {
+void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMode) {
+    this->mainWindow = mainWindow;
     this->updateMode = updateMode;
 
     QSettings settings;
@@ -133,16 +135,25 @@ void UpdateService::onResult(QNetworkReply *reply) {
         }
 
         if (showUpdateDialog) {
-            // open the update dialog
-            UpdateDialog *dialog = new UpdateDialog(0, changesHtml, releaseUrl,
-                                                    releaseVersionString,
-                                                    releaseBuildNumber);
-            dialog->exec();
+            if (updateMode != UpdateService::Manual) {
+                mainWindow->showUpdateAvailableButton(releaseVersionString);
+            } else {
+                // open the update dialog
+                UpdateDialog *dialog = new UpdateDialog(
+                        0, changesHtml, releaseUrl,
+                        releaseVersionString,
+                        releaseBuildNumber);
+                dialog->exec();
+            }
         }
-    } else if (this->updateMode == UpdateService::Manual) {
-        QMessageBox::information(
-                0, tr("No updates"),
-                tr("There are no updates available.<br /><strong>%1"
-                "</strong> is the latest version.").arg(QString(VERSION)));
+    } else {
+        mainWindow->hideUpdateAvailableButton();
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::information(
+                    0, tr("No updates"),
+                    tr("There are no updates available.<br /><strong>%1"
+                               "</strong> is the latest version.").arg(QString(VERSION)));
+        }
     }
 }
