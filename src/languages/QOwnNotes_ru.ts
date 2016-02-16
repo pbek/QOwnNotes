@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -48,7 +47,7 @@
         <translation>поиск целевой заметки для ссылки</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="179"/>
+        <location filename="../dialogs/linkdialog.cpp" line="176"/>
         <source>Select file to link to</source>
         <translation>Выбор целевого файла для ссылки</translation>
     </message>
@@ -412,7 +411,7 @@
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>&amp;Get involved</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Принять участие</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="658"/>
@@ -626,17 +625,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="2054"/>
         <source>&amp;Move notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Переместить заметки в...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2055"/>
         <source>&amp;Copy notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Копировать заметки в...</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2066"/>
         <source>&amp;Remove notes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Удалить заметки</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2106"/>
@@ -706,12 +705,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="2481"/>
         <source>bookmarked note position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>установлена закладка в ячейке %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2497"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>переход к закладке из ячейки %1</translation>
     </message>
 </context>
 <context>
@@ -1523,7 +1522,7 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="79"/>
         <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Принять участие в развитии QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="26"/>
@@ -1546,12 +1545,12 @@ This cannot be undone!</source>
     <message>
         <location filename="../services/updateservice.cpp" line="144"/>
         <source>No updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет обновлений</translation>
     </message>
     <message>
         <location filename="../services/updateservice.cpp" line="145"/>
         <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-        <translation type="unfinished"></translation>
+        <translation>Нет доступных обновлений.&lt;br /&gt;Последняя доступная версия: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
 </context>
 <context>
