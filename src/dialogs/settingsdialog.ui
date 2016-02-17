@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1388</width>
-    <height>888</height>
+    <height>905</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>2</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -1051,7 +1051,7 @@ p, li { white-space: pre-wrap; }
         </attribute>
         <layout class="QHBoxLayout" name="horizontalLayout">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
+          <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0,0">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -1207,6 +1207,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                <widget class="QPushButton" name="clearAppDataAndExitButton">
                 <property name="text">
                  <string>Clear app data and exit</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_10">
+             <property name="title">
+              <string>Update dialog</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_14">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
+                <property name="text">
+                 <string>Don't show update dialog automatically</string>
                 </property>
                </widget>
               </item>

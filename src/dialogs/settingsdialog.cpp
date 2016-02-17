@@ -97,6 +97,8 @@ void SettingsDialog::storeSettings() {
                       crypto->encryptToString(ui->passwordEdit->text()));
     settings.setValue("ownCloud/localOwnCloudPath",
                       ui->localOwnCloudPathEdit->text());
+    settings.setValue("disableAutomaticUpdateDialog",
+                      ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
@@ -164,6 +166,8 @@ void SettingsDialog::readSettings() {
             settings.value("ownCloud/password").toString()));
     ui->localOwnCloudPathEdit->setText(
             settings.value("ownCloud/localOwnCloudPath").toString());
+    ui->disableAutomaticUpdateDialogCheckBox->setChecked(
+            settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
             settings.value("notifyAllExternalModifications").toBool());
     ui->noteSaveIntervalTime->setValue(
@@ -386,18 +390,18 @@ void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
     if (appIsValid) {
         ui->connectionTestLabel->setStyleSheet("color: green;");
         ui->connectionTestLabel->setText(
-				tr("The connection was made successfully!\n"
-				   "Server version: %1\nQOwnNotesAPI version: %2")
-					.arg(serverVersion).arg(appVersion));
+                tr("The connection was made successfully!\n"
+                   "Server version: %1\nQOwnNotesAPI version: %2")
+                    .arg(serverVersion).arg(appVersion));
     } else {
         // hide password
         connectionErrorMessage.replace(ui->passwordEdit->text(), "***");
 
         ui->connectionTestLabel->setStyleSheet("color: red;");
         ui->connectionTestLabel->setText(
-				tr("There was an error connecting to the ownCloud Server!\n"
+                tr("There was an error connecting to the ownCloud Server!\n"
                         "You also need to have the QOwnNotesAPI app installed "
-						"and enabled!\n\nConnection error message: ") +
+                        "and enabled!\n\nConnection error message: ") +
                 connectionErrorMessage);
     }
 

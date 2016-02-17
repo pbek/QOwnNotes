@@ -549,6 +549,15 @@ void MainWindow::readSettingsFromSettingsDialog() {
     setNoteTextEditMode(
             !settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
+    // disable the automatic update dialog per default for repositories and
+    // self-builds
+    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
+        QString release = QString(RELEASE);
+        bool enabled =
+                release.contains("Travis") || release.contains("AppVeyor");
+        settings.setValue("disableAutomaticUpdateDialog", !enabled);
+    }
+
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
     this->noteSaveIntervalTime = settings.value("noteSaveIntervalTime").toInt();
@@ -812,12 +821,13 @@ void MainWindow::frequentPeriodicChecker() {
  * Does the setup for the update available button
  */
 void MainWindow::setupUpdateAvailableButton() {
-
     _updateAvailableButton = new QPushButton(this);
     _updateAvailableButton->setFlat(true);
     _updateAvailableButton->setToolTip(
-            tr("click here to see what has changed and to be able to download the latest version"));
+            tr("click here to see what has changed and to be able to "
+                       "download the latest version"));
     _updateAvailableButton->hide();
+    _updateAvailableButton->setStyleSheet("QPushButton {padding: 0 5px}");
 
     QObject::connect(
             _updateAvailableButton,
@@ -829,8 +839,6 @@ void MainWindow::setupUpdateAvailableButton() {
 }
 
 void MainWindow::showUpdateAvailableButton(QString version) {
-
-//    _updateAvailableButton->setStyleSheet("QPushButton {font-weight: bold}");
     _updateAvailableButton->setText(
             tr("new version %1 available").arg(version));
     _updateAvailableButton->show();

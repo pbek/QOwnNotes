@@ -121,30 +121,38 @@ void UpdateService::onResult(QNetworkReply *reply) {
         QString changesHtml = result.property("0").property(
                 "changes_html").toString();
 
+        // show the update available button
+        mainWindow->showUpdateAvailableButton(releaseVersionString);
+
         bool showUpdateDialog = true;
+
+        // do some more checks for non manual update requests
         if (updateMode != UpdateService::Manual) {
             QSettings settings;
             QString skipVersion = settings.value("skipVersion").toString();
 
+            // check if this version should be skipped
             if (releaseVersionString == skipVersion) {
                 showUpdateDialog = false;
             } else if (updateMode == UpdateService::Periodic) {
                 // check if the update dialog is already open
                 showUpdateDialog = !UpdateDialog::isUpdateDialogOpen();
             }
+
+            // check if the update dialog was disabled
+            if (showUpdateDialog) {
+                showUpdateDialog = !settings.value
+                        ("disableAutomaticUpdateDialog").toBool();
+            }
         }
 
         if (showUpdateDialog) {
-            if (updateMode != UpdateService::Manual) {
-                mainWindow->showUpdateAvailableButton(releaseVersionString);
-            } else {
-                // open the update dialog
-                UpdateDialog *dialog = new UpdateDialog(
-                        0, changesHtml, releaseUrl,
-                        releaseVersionString,
-                        releaseBuildNumber);
-                dialog->exec();
-            }
+            // open the update dialog
+            UpdateDialog *dialog = new UpdateDialog(
+                    0, changesHtml, releaseUrl,
+                    releaseVersionString,
+                    releaseBuildNumber);
+            dialog->exec();
         }
     } else {
         mainWindow->hideUpdateAvailableButton();
@@ -153,7 +161,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
             QMessageBox::information(
                     0, tr("No updates"),
                     tr("There are no updates available.<br /><strong>%1"
-                               "</strong> is the latest version.").arg(QString(VERSION)));
+                               "</strong> is the latest version.")
+                            .arg(QString(VERSION)));
         }
     }
 }
