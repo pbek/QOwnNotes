@@ -5,7 +5,7 @@ Important Shortcuts
 
 ### Globally
 
-- `Ctrl + N` creates a new note with the current date and time in the name
+- <kbd>Ctrl</kbd>+<kbd>N</kbd> creates a new note with the current date and time in the name
 - `Ctrl + ⇧ + F` lets you search for notes (in the name of the note and its content)
 - `Ctrl + E` toggles between the edit and the markdown view mode
 - `Ctrl + ⇧ + E` edits an encrypted note
