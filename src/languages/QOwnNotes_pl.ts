@@ -623,7 +623,7 @@ Restore current note?</source>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="819"/>
-        <source>click here to see what has changed</source>
+        <source>click here to see what has changed and to be able to download the latest version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
