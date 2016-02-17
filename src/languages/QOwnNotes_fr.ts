@@ -400,7 +400,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="666"/>
         <source>&amp;Export note as PDF (markdown)</source>
-        <translation>&amp;Exporter la note en PDF (markdown)</translation>
+        <translation>&amp;Exporter la note en PDF (Markdown)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="675"/>
@@ -415,7 +415,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>&amp;Print note (markdown)</source>
-        <translation>&amp;Imprimer la note (markdown)</translation>
+        <translation>&amp;Imprimer la note (Markdown)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="702"/>
@@ -470,12 +470,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="768"/>
         <source>&amp;Export note as markdown file</source>
-        <translation>&amp;Exporter la note en tant que fichier markdown</translation>
+        <translation>&amp;Exporter la note en tant que fichier Markdown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>&amp;Get involved</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S&apos;investir dans QOwnNotes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="671"/>
@@ -527,12 +527,12 @@ Voulez vous restaurer la note courante ?</translation>
     <message>
         <location filename="../mainwindow.cpp" line="827"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliquer ici pour voir ce qui a changé dans la dernière version et comment la télécharger</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="843"/>
         <source>new version %1 available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle version %1 disponible</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="972"/>
@@ -612,27 +612,27 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../mainwindow.cpp" line="2098"/>
         <source>&amp;Move notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Déplacer les notes dans…</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2099"/>
         <source>&amp;Copy notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copier les notes dans…</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2110"/>
         <source>&amp;Remove notes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer les notes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2542"/>
         <source>bookmarked note position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mettre un marque page de note à la position %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2558"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Aller au marque page en position %1</translation>
     </message>
     <message numerus="yes">
         <source>Remove &lt;strong&gt;%1&lt;/strong&gt; selected note(s)?
@@ -1311,7 +1311,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="495"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;si vous avez des problèmes pour trouver le répertoire de vos notes sur vocre serveur ownCloud, vous pouvez lire cet article (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problèmes avecle répertoire ownCloud.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si vous avez des problèmes pour trouver le répertoire de vos notes sur vocre serveur ownCloud, vous pouvez lire cet article (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problèmes avec le répertoire ownCloud.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="661"/>
@@ -1356,7 +1356,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;si vous voulez aider à traduire QOwnNotes ou mettre à jour une traduction existente, merci de lire (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Comment je peux aider à traduire QOwnNotes ?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si vous voulez aider à traduire QOwnNotes ou mettre à jour une traduction existente, merci de lire (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Comment je peux aider à traduire QOwnNotes ?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="803"/>
@@ -1366,7 +1366,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="847"/>
         <source>code font in markdown text edits:</source>
-        <translation>Police du code dans la vue édition des notes : </translation>
+        <translation>Police du code dans la vue d&apos;édition des notes : </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="908"/>
@@ -1379,7 +1379,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="950"/>
         <source>code font in note markdown view:</source>
-        <translation>Police du code dans la vue markdown des notes : </translation>
+        <translation>Police du code dans la vue Markdown des notes : </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1193"/>
@@ -1389,7 +1389,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1199"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-        <translation>Ce bouton permet de supprimer tout les paramètres, supprimer la base de donnée locale  et quitter QOwnNotes.</translation>
+        <translation>Ce bouton permet de supprimer tout les paramètres, supprimer la base de donnée locale et quitter QOwnNotes.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1209"/>
@@ -1400,12 +1400,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1219"/>
         <source>Update dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Boite de dialogue de nouvelle version</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1225"/>
         <source>Don&apos;t show update dialog automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne pas afficher la boite de dialogue de nouvelle version automatiquement</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1267"/>
@@ -1420,22 +1420,22 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1308"/>
         <source>External editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Éditeur externe</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1314"/>
         <source>Path to external edior:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin vers l&apos;éditeur externe :</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1321"/>
         <source>path to external editor, leave empy for default</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin vers l&apos;éditeur externe, laisser vide pour utiliser celui par défaut</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1328"/>
         <source>set external editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Choiser l&apos;éditeur externe</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1345"/>
@@ -1542,7 +1542,7 @@ Your notes will stay intact!</source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="797"/>
         <source>Select editor application</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner l&apos;éditeur de texte</translation>
     </message>
 </context>
 <context>
@@ -1711,7 +1711,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/updatedialog.ui" line="79"/>
         <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;S&apos;investir dans QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Version 0.xx</source>
