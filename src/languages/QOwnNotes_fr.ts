@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="fr_FR">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="fr_FR">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -401,7 +400,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="666"/>
         <source>&amp;Export note as PDF (markdown)</source>
-        <translation>&amp;Exporter la note en PDF (markdown)</translation>
+        <translation>&amp;Exporter la note en PDF (Markdown)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="675"/>
@@ -416,7 +415,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="693"/>
         <source>&amp;Print note (markdown)</source>
-        <translation>&amp;Imprimer la note (markdown)</translation>
+        <translation>&amp;Imprimer la note (Markdown)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="702"/>
@@ -471,12 +470,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../mainwindow.ui" line="768"/>
         <source>&amp;Export note as markdown file</source>
-        <translation>&amp;Exporter la note en tant que fichier markdown</translation>
+        <translation>&amp;Exporter la note en tant que fichier Markdown</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="777"/>
         <source>&amp;Get involved</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;S&apos;investir dans QOwnNotes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="671"/>
@@ -520,20 +519,20 @@ Voulez vous restaurer la note courante ?</translation>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="776"/>
         <source>stored %n note(s) to disk</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n note enregistrée sur le disque</numerusform>
+            <numerusform>%n notes enregistrées sur le disque</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="827"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliquer ici pour voir ce qui a changé dans la dernière version et comment la télécharger</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="843"/>
         <source>new version %1 available</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle version %1 disponible</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="972"/>
@@ -601,35 +600,39 @@ Voulez vous restaurer la note courante ?</translation>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; note sélectionnée ?
+
+Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer la note.</numerusform>
+            <numerusform>Supprimer &lt;strong&gt;%n&lt;/strong&gt; notes sélectionnées ?
+
+Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir restaurer la note.</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2098"/>
         <source>&amp;Move notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Déplacer les notes dans…</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2099"/>
         <source>&amp;Copy notes to...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copier les notes dans…</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2110"/>
         <source>&amp;Remove notes</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Supprimer les notes</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2542"/>
         <source>bookmarked note position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mettre un marque page de note à la position %1</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2558"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Aller au marque page en position %1</translation>
     </message>
     <message numerus="yes">
         <source>Remove &lt;strong&gt;%1&lt;/strong&gt; selected note(s)?
@@ -652,25 +655,25 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1510"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Déplacer %n note sélectionnée dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
+            <numerusform>Déplacer les %n notes sélectionnées dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1544"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Copier %n note sélectionnée dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
+            <numerusform>Copir les %n notes sélectionnées dans &lt;strong&gt;%2&lt;/strong&gt; ?</numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1564"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n note a été copiée dans &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+            <numerusform>%n notes ont été copiées dans &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
@@ -727,12 +730,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../mainwindow.cpp" line="1615"/>
         <source>Link to an url or note</source>
-        <translation type="unfinished"></translation>
+        <translation>Lier une note ou une URL</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2220"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous n&apos;avez pas sélectionné de liste de tâches.&lt;br /&gt; Merci de vérifier votre configurations des &lt;strong&gt;Tâches&lt;/strong&gt; dans les paramètres !</translation>
     </message>
     <message>
         <source>Link an url or note</source>
@@ -756,7 +759,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../mainwindow.cpp" line="1731"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-        <translation type="unfinished"></translation>
+        <translation>QOwnNotes va récupérer des données anonymes sur votre usage. Cela permet aux dévellopeurs de QOwnNotes d&apos;améliorer le logiciel ainsi que réparer certains bogues. Vous pouvez désactiver ceci dans les paramètres.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2150"/>
@@ -898,27 +901,27 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
         <source>close search</source>
-        <translation type="unfinished"></translation>
+        <translation>Fermer la recherche</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
         <source>Find:</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouver : </translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
         <source>find in text</source>
-        <translation type="unfinished"></translation>
+        <translation>Trouver dans le texte</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
         <source>search forward</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechercher en avant</translation>
     </message>
     <message>
         <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
         <source>search backward</source>
-        <translation type="unfinished"></translation>
+        <translation>Rechercher en arrière</translation>
     </message>
 </context>
 <context>
@@ -1040,7 +1043,7 @@ Appuyer sur Annuler pour quitter.</translation>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="273"/>
         <source>select main ownCloud sync folder</source>
-        <translation type="unfinished">Choisir le répertoire de synchro d&apos;ownCloud</translation>
+        <translation>Choisir le répertoire de synchro d&apos;ownCloud</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="287"/>
@@ -1141,7 +1144,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="270"/>
         <source>Click here to select the location of the main local ownCloud sync folder.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cliquer ici pour sélectionner le répertoire local où se synchronisent ownCloud.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="459"/>
@@ -1152,7 +1155,13 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Cantarell&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Merci d&apos;installer la dernière version de &lt;/span&gt;&lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; (au minimum la version QOWNNOTESAPI_MIN_VERSION) sur votre serveur ownCloud si vous voulez que QOwnNotes puisse accéder aux différentes versions des notes ainsi qu&apos;à la corbeille.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Vous avez aussi besoin d&apos;avoir les deux applications systèmes &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600;&quot;&gt;Versions&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; et &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; d&apos;activées sur votre serveur ownCloud.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Vous avez toujours besoin du client d&apos;&lt;/span&gt;&lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; pour synchroniser vos notes !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="582"/>
@@ -1166,12 +1175,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="754"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Russe</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="813"/>
         <source>default font in markdown text edits:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police par défaut dans la zone d&apos;édition Markdown :</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1050"/>
@@ -1208,12 +1217,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1116"/>
         <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cocher si vous voulez que la vue par défaut soit la vue Markdown au lieu de la vue d&apos;édition.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1119"/>
         <source>Markdown view mode is default</source>
-        <translation type="unfinished"></translation>
+        <translation>La vue Markdown est la vue par défaut</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="797"/>
@@ -1297,67 +1306,67 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="675"/>
         <source>Interface language</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanque de l&apos;interface</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="495"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si vous avez des problèmes pour trouver le répertoire de vos notes sur vocre serveur ownCloud, vous pouvez lire cet article (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problèmes avec le répertoire ownCloud.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="661"/>
         <source>Interface</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="688"/>
         <source>Automatic</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatique</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="699"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglais</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="710"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Allemand</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="721"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Français</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="732"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Polonais</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="743"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Chinois</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="765"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
-        <translation type="unfinished"></translation>
+        <translation>Si vous changez la langue, vous devez redémarrer le logiciel pour que les changements prennent effet.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="775"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si vous voulez aider à traduire QOwnNotes ou mettre à jour une traduction existente, merci de lire (en anglais) : &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Comment je peux aider à traduire QOwnNotes ?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="803"/>
         <source>font in note markdown view:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police dans la vue Markdown des notes : </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="847"/>
         <source>code font in markdown text edits:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police du code dans la vue d&apos;édition des notes : </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="908"/>
@@ -1365,83 +1374,83 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
         <location filename="../dialogs/settingsdialog.ui" line="936"/>
         <location filename="../dialogs/settingsdialog.ui" line="986"/>
         <source>reset font</source>
-        <translation type="unfinished"></translation>
+        <translation>Remettre à zéro les polices</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="950"/>
         <source>code font in note markdown view:</source>
-        <translation type="unfinished"></translation>
+        <translation>Police du code dans la vue Markdown des notes : </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1193"/>
         <source>Clear application data and exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer toutes les données de l&apos;application et quitter</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1199"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ce bouton permet de supprimer tout les paramètres, supprimer la base de donnée locale et quitter QOwnNotes.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1209"/>
         <location filename="../dialogs/settingsdialog.cpp" line="729"/>
         <source>Clear app data and exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer toutes les données de l&apos;application et quitter</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1219"/>
         <source>Update dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Boite de dialogue de nouvelle version</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1225"/>
         <source>Don&apos;t show update dialog automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Ne pas afficher la boite de dialogue de nouvelle version automatiquement</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1267"/>
         <source>Default note file extension</source>
-        <translation type="unfinished"></translation>
+        <translation>Extension de fichiers pas défaut</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1286"/>
         <source>Text file (.txt)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fichier texte (.txt)</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1308"/>
         <source>External editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Éditeur externe</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1314"/>
         <source>Path to external edior:</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin vers l&apos;éditeur externe :</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1321"/>
         <source>path to external editor, leave empy for default</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin vers l&apos;éditeur externe, laisser vide pour utiliser celui par défaut</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1328"/>
         <source>set external editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Choiser l&apos;éditeur externe</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1345"/>
         <source>App metrics</source>
-        <translation type="unfinished"></translation>
+        <translation>Envoie des données</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1363"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
-        <translation type="unfinished"></translation>
+        <translation>QOwnNotes va récupérer des données anonymes sur votre usage. Cela permet aux dévellopeurs de QOwnNotes d&apos;améliorer le logiciel ainsi que réparer certains bogues. Vous pouvez désactiver ceci dans les paramètres.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1376"/>
         <source>disable tracking of usage data</source>
-        <translation type="unfinished"></translation>
+        <translation>Désactiver l&apos;envoi des données</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1402"/>
@@ -1518,22 +1527,22 @@ Le message d&apos;erreur est : </translation>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-        <translation type="unfinished"></translation>
+        <translation>voulez-vous vraiment tupprimer toutes les données de l&apos;application, supprimer la base de donnée et quitter ?</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="733"/>
         <source>Clear and &amp;exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer et &amp;quitter</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="733"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished">&amp;Annuler</translation>
+        <translation>&amp;Annuler</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="797"/>
         <source>Select editor application</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner l&apos;éditeur de texte</translation>
     </message>
 </context>
 <context>
@@ -1702,7 +1711,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/updatedialog.ui" line="79"/>
         <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;S&apos;investir dans QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Version 0.xx</source>
@@ -1739,12 +1748,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../services/updateservice.cpp" line="162"/>
         <source>No updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas de mises à jour</translation>
     </message>
     <message>
         <location filename="../services/updateservice.cpp" line="163"/>
         <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-        <translation type="unfinished"></translation>
+        <translation>Il n&apos;y a pas de mises à jour disponible. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; est la dernière version.</translation>
     </message>
 </context>
 <context>
