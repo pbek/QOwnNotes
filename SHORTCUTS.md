@@ -28,7 +28,7 @@ Important Shortcuts
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
-- <kbd>Ctrl</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the media folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
@@ -69,7 +69,7 @@ Important Shortcuts
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
-- <kbd>⌘</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the media folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Left</kbd> jumps back in the note history
