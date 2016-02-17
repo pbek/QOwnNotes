@@ -5,8 +5,7 @@
   - use `Ctrl + 0..9` jump to the bookmark on slot 0..9
 - fixed a markdown highlighting problem with certain characters like `»` and `·`
   (for [Issue #73](https://github.com/pbek/QOwnNotes/issues/73))
-- added more German and Russian translations
-  (thank you @calis2002 and @elnull)
+- added more German and Russian translation (thank you @calis2002 and @elnull)
 - you can now disable the automatic update dialog in the settings
     - for self-build versions of QOwnNotes or versions from repositories 
       the automatic update dialog is disabled by default
