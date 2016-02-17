@@ -2447,13 +2447,30 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged()
 }
 
 /**
- * Opens the current note in an enternal editor
+ * Opens the current note in an external editor
  */
 void MainWindow::on_action_Open_note_in_external_editor_triggered()
 {
-    QUrl url = currentNote.fullNoteFileUrl();
-    qDebug() << __func__ << " - 'url': " << url;
-    QDesktopServices::openUrl(url);
+    QSettings settings;
+    QString externalEditorPath =
+            settings.value("externalEditorPath").toString();
+
+    // use the default editor if no other editor was set
+    if (externalEditorPath.isEmpty()) {
+        QUrl url = currentNote.fullNoteFileUrl();
+        qDebug() << __func__ << " - 'url': " << url;
+
+        // open note file in default application for the type of file
+        QDesktopServices::openUrl(url);
+    } else {
+        QString path = currentNote.fullNoteFilePath();
+        qDebug() << __func__ << " - 'path': " << path;
+
+        // open note file in external editor
+        system(QString(
+                externalEditorPath + " \"" + path + "\"")
+                       .toStdString().c_str());
+    }
 }
 
 /**

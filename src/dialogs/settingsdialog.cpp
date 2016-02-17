@@ -106,6 +106,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("defaultNoteFileExtension",
                       getSelectedListWidgetValue(
                               ui->defaultNoteFileExtensionListWidget));
+    settings.setValue("externalEditorPath",
+                      ui->externalEditorPathLineEdit->text());
     settings.setValue("MainWindow/noteTextEdit.font",
                       noteTextEditFont.toString());
     settings.setValue("MainWindow/noteTextEdit.code.font",
@@ -166,6 +168,8 @@ void SettingsDialog::readSettings() {
             settings.value("ownCloud/password").toString()));
     ui->localOwnCloudPathEdit->setText(
             settings.value("ownCloud/localOwnCloudPath").toString());
+    ui->externalEditorPathLineEdit->setText(
+            settings.value("externalEditorPath").toString());
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
             settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
@@ -775,4 +779,31 @@ void SettingsDialog::on_noteTextViewCodeResetButton_clicked()
     noteTextViewCodeFont = textView.font();
     noteTextViewCodeFont.setFamily("Courier");
     setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
+}
+
+/**
+ * Sets a path to an external editor
+ */
+void SettingsDialog::on_setExternalEditorPathToolButton_clicked()
+{
+    QStringList mimeTypeFilters;
+    mimeTypeFilters << "application/x-executable" << "application/octet-stream";
+
+    QFileDialog dialog(this);
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setMimeTypeFilters(mimeTypeFilters);
+    dialog.setWindowTitle(tr("Select editor application"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.size() == 0) {
+            return;
+        }
+
+        QString filePath(fileNames.at(0));
+        ui->externalEditorPathLineEdit->setText(filePath);
+    }
 }

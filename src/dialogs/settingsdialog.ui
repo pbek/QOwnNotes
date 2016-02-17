@@ -1303,6 +1303,43 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </widget>
            </item>
            <item>
+            <widget class="QGroupBox" name="groupBox_11">
+             <property name="title">
+              <string>External editor</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Path to external edior:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="externalEditorPathLineEdit">
+                <property name="placeholderText">
+                 <string>path to external editor, leave empy for default</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QToolButton" name="setExternalEditorPathToolButton">
+                <property name="toolTip">
+                 <string>set external editor</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
             <widget class="QGroupBox" name="appMetricsGroupBox">
              <property name="title">
               <string>App metrics</string>

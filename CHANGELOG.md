@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 1.0.3
+- you can now select an external editor in the settings that will be used
+  instead of the default editor when you open a note file with `Open note in 
+  external editor`
+  (for [Issue #77](https://github.com/pbek/QOwnNotes/issues/77))
+
 ## 1.0.2
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9
   - use `Ctrl + 0..9` jump to the bookmark on slot 0..9

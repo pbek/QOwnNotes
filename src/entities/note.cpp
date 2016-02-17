@@ -514,10 +514,17 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
 }
 
 /**
- * Returns the full url for a note file
+ * Returns the full path of the note file
+ */
+QString Note::fullNoteFilePath() {
+    return getFullNoteFilePathForFile(this->fileName);
+}
+
+/**
+ * Returns the full url of the note file
  */
 QUrl Note::fullNoteFileUrl() {
-    return QUrl("file://" + getFullNoteFilePathForFile(this->fileName));
+    return QUrl("file://" + fullNoteFilePath());
 }
 
 int Note::storeDirtyNotesToDisk(Note &currentNote) {
