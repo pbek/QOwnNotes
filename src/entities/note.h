@@ -111,6 +111,8 @@ public:
 
     QUrl fullNoteFileUrl();
 
+    QString fullNoteFilePath();
+
     static QString encodeCssFont(const QFont& refFont);
 
 private:

@@ -79,6 +79,8 @@ private slots:
 
     void on_noteTextViewCodeResetButton_clicked();
 
+    void on_setExternalEditorPathToolButton_clicked();
+
 private:
     enum SettingsTabs {
         OwnCloudTab,

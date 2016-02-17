@@ -64,7 +64,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->noteHistory = NoteHistory();
 
     // set our signal mapper
-    this->signalMapper = new QSignalMapper(this);
+    this->recentNoteFolderSignalMapper = new QSignalMapper(this);
 
     readSettings();
     setupCrypto();
@@ -80,6 +80,10 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMainSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
+
+    // setup the update available button
+    setupUpdateAvailableButton();
+
     this->noteDiffDialog = new NoteDiffDialog();
 
     // look if we need to save something every 10 sec (default)
@@ -154,7 +158,7 @@ MainWindow::MainWindow(QWidget *parent) :
     this->loadRecentNoteFolderListMenu(notesPath);
 
     this->updateService = new UpdateService(this);
-    this->updateService->checkForUpdates(UpdateService::AppStart);
+    this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
@@ -184,6 +188,9 @@ MainWindow::MainWindow(QWidget *parent) :
     showAppMetricsNotificationIfNeeded();
 
     frequentPeriodicChecker();
+
+    // setup the shortcuts for the note bookmarks
+    setupNoteBookmarkShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -195,6 +202,40 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Sets the shortcuts for the note bookmarks up
+ */
+void MainWindow::setupNoteBookmarkShortcuts() {
+    this->storeNoteBookmarkSignalMapper = new QSignalMapper(this);
+    this->gotoNoteBookmarkSignalMapper = new QSignalMapper(this);
+
+    for (int number = 0; number <= 9; number++) {
+        // setup the store shortcut
+        QShortcut *storeShortcut = new QShortcut(
+                QKeySequence("Ctrl+Shift+" + QString::number(number)),
+                this);
+
+        connect(storeShortcut, SIGNAL(activated()),
+                storeNoteBookmarkSignalMapper, SLOT(map()));
+        storeNoteBookmarkSignalMapper->setMapping(storeShortcut, number);
+
+        // setup the goto shortcut
+        QShortcut *gotoShortcut = new QShortcut(
+                QKeySequence("Ctrl+" + QString::number(number)),
+                this);
+
+        connect(gotoShortcut, SIGNAL(activated()),
+                gotoNoteBookmarkSignalMapper, SLOT(map()));
+        gotoNoteBookmarkSignalMapper->setMapping(gotoShortcut, number);
+    }
+
+    connect(storeNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
+            this, SLOT(storeNoteBookmark(int)));
+
+    connect(gotoNoteBookmarkSignalMapper, SIGNAL(mapped(int)),
+            this, SLOT(gotoNoteBookmark(int)));
+}
 
 /*
  * Loads the menu entries for the recent note folders
@@ -237,18 +278,20 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
                 QAction *action =
                         ui->menuRecentNoteFolders->addAction(noteFolder);
                 QObject::connect(
-                        action, SIGNAL(triggered()), signalMapper, SLOT(map()));
+                        action, SIGNAL(triggered()),
+                        recentNoteFolderSignalMapper, SLOT(map()));
 
                 // add a parameter to changeNoteFolder with the signal mapper
-                signalMapper->setMapping(action, noteFolder);
-                QObject::connect(signalMapper,
-                                 SIGNAL(mapped(const QString &)),
-                                 this,
-                                 SLOT(changeNoteFolder(const QString &)));
+                recentNoteFolderSignalMapper->setMapping(action, noteFolder);
 
                 // add an entry to the combo box
                 ui->recentNoteFolderComboBox->addItem(noteFolder);
             }
+
+        QObject::connect(recentNoteFolderSignalMapper,
+                         SIGNAL(mapped(const QString &)),
+                         this,
+                         SLOT(changeNoteFolder(const QString &)));
 
         ui->recentNoteFolderComboBox->setCurrentIndex(0);
     }
@@ -506,6 +549,15 @@ void MainWindow::readSettingsFromSettingsDialog() {
     setNoteTextEditMode(
             !settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
+    // disable the automatic update dialog per default for repositories and
+    // self-builds
+    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
+        QString release = QString(RELEASE);
+        bool enabled =
+                release.contains("Travis") || release.contains("AppVeyor");
+        settings.setValue("disableAutomaticUpdateDialog", !enabled);
+    }
+
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
     this->noteSaveIntervalTime = settings.value("noteSaveIntervalTime").toInt();
@@ -761,8 +813,39 @@ void MainWindow::frequentPeriodicChecker() {
         settings.setValue("LastUpdateCheck", QDateTime::currentDateTime());
     } else if (lastUpdateCheck.addSecs(3600) <= QDateTime::currentDateTime()) {
         // check for updates every 1h
-        updateService->checkForUpdates(UpdateService::Periodic);
+        updateService->checkForUpdates(this, UpdateService::Periodic);
     }
+}
+
+/**
+ * Does the setup for the update available button
+ */
+void MainWindow::setupUpdateAvailableButton() {
+    _updateAvailableButton = new QPushButton(this);
+    _updateAvailableButton->setFlat(true);
+    _updateAvailableButton->setToolTip(
+            tr("click here to see what has changed and to be able to "
+                       "download the latest version"));
+    _updateAvailableButton->hide();
+    _updateAvailableButton->setStyleSheet("QPushButton {padding: 0 5px}");
+
+    QObject::connect(
+            _updateAvailableButton,
+            SIGNAL(pressed()),
+            this,
+            SLOT(on_actionCheck_for_updates_triggered()));
+
+    ui->statusBar->layout()->addWidget(_updateAvailableButton);
+}
+
+void MainWindow::showUpdateAvailableButton(QString version) {
+    _updateAvailableButton->setText(
+            tr("new version %1 available").arg(version));
+    _updateAvailableButton->show();
+}
+
+void MainWindow::hideUpdateAvailableButton() {
+    _updateAvailableButton->hide();
 }
 
 void MainWindow::waitMsecs(int msecs) {
@@ -1939,7 +2022,7 @@ void MainWindow::openNoteUrl(QUrl url) {
  * Manually check for updates
  */
 void MainWindow::on_actionCheck_for_updates_triggered() {
-    this->updateService->checkForUpdates(UpdateService::Manual);
+    this->updateService->checkForUpdates(this, UpdateService::Manual);
 }
 
 /*
@@ -2012,8 +2095,8 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     // show copy and move menu entries only
     // if there is at least one notes folder
     if (recentNoteFolders.size() > 0) {
-        moveDestinationMenu = noteMenu.addMenu("&Move notes to...");
-        copyDestinationMenu = noteMenu.addMenu("&Copy notes to...");
+        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
+        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
 
         // add actions for the recent note folders
         Q_FOREACH(QString noteFolder, recentNoteFolders) {
@@ -2024,9 +2107,9 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
             }
     }
 
-    QAction *removeAction = noteMenu.addAction("&Remove notes");
+    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
-    QAction *selectAllAction = noteMenu.addAction("Select &all notes");
+    QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
 
     QAction *selectedItem = noteMenu.exec(globalPos);
     if (selectedItem) {
@@ -2066,7 +2149,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
             ui->noteTextEdit->textCursor().selectedText() != "" ?
 				tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(tr("Ctrl+L"));
+    linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
 
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
@@ -2364,13 +2447,30 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged()
 }
 
 /**
- * Opens the current note in an enternal editor
+ * Opens the current note in an external editor
  */
 void MainWindow::on_action_Open_note_in_external_editor_triggered()
 {
-    QUrl url = currentNote.fullNoteFileUrl();
-    qDebug() << __func__ << " - 'url': " << url;
-    QDesktopServices::openUrl(url);
+    QSettings settings;
+    QString externalEditorPath =
+            settings.value("externalEditorPath").toString();
+
+    // use the default editor if no other editor was set
+    if (externalEditorPath.isEmpty()) {
+        QUrl url = currentNote.fullNoteFileUrl();
+        qDebug() << __func__ << " - 'url': " << url;
+
+        // open note file in default application for the type of file
+        QDesktopServices::openUrl(url);
+    } else {
+        QString path = currentNote.fullNoteFilePath();
+        qDebug() << __func__ << " - 'path': " << path;
+
+        // open note file in external editor
+        system(QString(
+                externalEditorPath + " \"" + path + "\"")
+                       .toStdString().c_str());
+    }
 }
 
 /**
@@ -2382,8 +2482,8 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-	dialog.setNameFilter(tr("Markdown files (*.md)"));
-	dialog.setWindowTitle(tr("Export current note as Markdown file"));
+    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
 
@@ -2416,4 +2516,46 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
 void MainWindow::showEvent(QShowEvent* event) {
     QMainWindow::showEvent(event);
     MetricsService::instance()->sendAppView(objectName());
+}
+
+void MainWindow::on_actionGet_invloved_triggered()
+{
+    QDesktopServices::openUrl(
+            QUrl("http://www.qownnotes.org/Knowledge-base/"
+                         "How-can-I-get-involved-with-QOwnNotes"));
+}
+
+/**
+ * Sets a note bookmark on bookmark slot 0..9
+ */
+void MainWindow::storeNoteBookmark(int slot) {
+    // return if note text edit doesn't have the focus
+    if (!ui->noteTextEdit->hasFocus()) {
+        return;
+    }
+
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
+    noteBookmarks[slot] = item;
+
+    ui->statusBar->showMessage(
+            tr("bookmarked note position at slot %1").arg(
+                    QString::number(slot)), 3000);
+}
+
+/**
+ * Loads and jumps to a note bookmark from bookmark slot 0..9
+ */
+void MainWindow::gotoNoteBookmark(int slot) {
+    NoteHistoryItem item = noteBookmarks[slot];
+
+    // check if the note (still) exists
+    if (item.getNote().exists()) {
+        ui->noteTextEdit->setFocus();
+        setCurrentNoteFromHistoryItem(item);
+
+        ui->statusBar->showMessage(
+                tr("jumped to bookmark position at slot %1").arg(
+                        QString::number(slot)), 3000);
+    }
 }

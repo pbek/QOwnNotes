@@ -50,5 +50,7 @@
         <file alias="16x16/gtk-select-font.svg">icons/breeze-qownnotes/16x16/gtk-select-font.svg</file>
         <file alias="16x16/application-exit.svg">icons/breeze-qownnotes/16x16/application-exit.svg</file>
         <file alias="16x16/dialog-information.svg">icons/breeze-qownnotes/16x16/dialog-information.svg</file>
+        <file alias="16x16/archive-extract.svg">icons/breeze-qownnotes/16x16/archive-extract.svg</file>
+        <file alias="16x16/document-open.svg">icons/breeze-qownnotes/16x16/document-open.svg</file>
     </qresource>
 </RCC>

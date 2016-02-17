@@ -38,6 +38,10 @@ public:
 
     void restoreTrashedNoteOnServer(QString fileName, int timestamp);
 
+    void showUpdateAvailableButton(QString version);
+
+    void hideUpdateAvailableButton();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -155,6 +159,12 @@ private slots:
 
     void showEvent(QShowEvent *event);
 
+    void on_actionGet_invloved_triggered();
+
+    void gotoNoteBookmark(int slot = 0);
+
+    void storeNoteBookmark(int slot = 0);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -164,7 +174,9 @@ private:
     int firstVisibleNoteListRow;
     NoteDiffDialog *noteDiffDialog;
     bool noteTextEditIsInEditMode;
-    QSignalMapper *signalMapper;
+    QSignalMapper *recentNoteFolderSignalMapper;
+    QSignalMapper *storeNoteBookmarkSignalMapper;
+    QSignalMapper *gotoNoteBookmarkSignalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
     bool showSystemTray;
@@ -176,6 +188,8 @@ private:
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
     NoteHistory noteHistory;
+    QHash<int, NoteHistoryItem> noteBookmarks;
+    QPushButton *_updateAvailableButton;
 
     void setupMainSplitter();
 
@@ -252,4 +266,8 @@ private:
     void showAppMetricsNotificationIfNeeded();
 
     void resetCurrentNote();
+
+    void setupNoteBookmarkShortcuts();
+
+    void setupUpdateAvailableButton();
 };
