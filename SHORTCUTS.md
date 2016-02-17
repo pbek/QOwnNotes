@@ -5,79 +5,79 @@ Important Shortcuts
 
 ### Globally
 
-- <kbd>Ctrl</kbd>+<kbd>N</kbd> creates a new note with the current date and time in the name
-- `Ctrl + ⇧ + F` lets you search for notes (in the name of the note and its content)
-- `Ctrl + E` toggles between the edit and the markdown view mode
-- `Ctrl + ⇧ + E` edits an encrypted note
-- `Ctrl + R` removes the current note
-- `Ctrl + ⇧ + U` checks for updates
-- `Ctrl + ⇧ + T` opens the todo list
-- `Ctrl + ⇧ + O` opens the current note in an external editor
+- <kbd>Ctrl</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
+- <kbd>Ctrl</kbd> + <kbd>E</kbd> toggles between the edit and the markdown view mode
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
+- <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 
 ### In the note list
 
-- `Ctrl + A` selects all notes (to move, copy or remove them with a right click)
+- <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 
 ### In the note text edit area (in edit mode)
 
-- `Ctrl + Click` on a link to open it
-- `Ctrl + F` lets you search in the current note
-    - use the `Up` and `Down` keys to jump to the previous and next matches
-    - `Escape` closes the search bar
-- `Ctrl + D` duplicates the current line or the selected text
-    - `Ctrl + Alt + Down` does the same
-- `Ctrl + L` opens a dialog to add a link to an other note or an URL (also works on selected text)
-- `Ctrl + T` inserts the current date in ISO 8601 format
-- `Ctrl + I` inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- `Tab` indents the selected text (also works on multiple lines)
-    - `⇧ + Tab` un-indents the selected text
-- `Alt + Left` jumps back in the note history
-    - `Alt + Right` jumps forward in the note history
-- `Ctrl + ⇧ + 0..9` sets a note bookmark on bookmark slot 0..9
-- `Ctrl + 0..9` jump to the note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>Click</kbd> on a link to open it
+- <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
+    - <kbd>Esc</kbd> closes the search bar
+- <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
+    - <kbd>Ctrl</kbd> + Alt + <kbd>Down</kbd> does the same
+- <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
+- <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- `<kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - `<kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jump to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 
-- `Ctrl + S` saves the current todo item
-- `Ctrl + R` removes the current todo item
+- <kbd>Ctrl</kbd> + <kbd>S</kbd> saves the current todo item
+- <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current todo item
 
 
 ## OSX
 
 ### Globally
 
-- `⌘ + N` creates a new note with the current date and time in the name
-- `⌘ + ⇧ + F` lets you search for notes (in the name of the note and its content)
-- `⌘ + E` toggles between the edit and the markdown view mode
-- `⌘ + ⇧ + E` edits an encrypted note
-- `⌘ + R` removes the current note
-- `⌘ + ⇧ + U` checks for updates
-- `⌘ + ⇧ + T` opens the todo list
-- `⌘ + ⇧ + O` opens the current note in an external editor
+- <kbd>⌘</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
+- <kbd>⌘</kbd> + <kbd>E</kbd> toggles between the edit and the markdown view mode
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
+- <kbd>⌘</kbd> + <kbd>R</kbd> removes the current note
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 
 ### In the note list
 
-- `⌘ + A` selects all notes (to move, copy or remove them with a right click)
+- <kbd>⌘</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
 
 ### In the note text edit area (in edit mode)
 
-- `⌘ + Click` on a link to open it
-- `⌘ + F` lets you search in the current note
-    - use the `Up` and `Down` keys to jump to the previous and next matches
-    - `Escape` closes the search bar
-- `⌘ + D` duplicates the current line or the selected text
-    - `⌘ + Opt + Down` does the same
-- `⌘ + L` opens a dialog to add a link to an other note or an URL (also works on selected text)
-- `⌘ + T` inserts the current date in ISO 8601 format
-- `⌘ + I` inserts an image (the image will be copied to the `media` folder in the current notes folder)
-- `Tab` indents the selected text (also works on multiple lines)
-    - `⇧ + Tab` un-indents the selected text
-- `⌘ + Opt + Left` jumps back in the note history
-    - `⌘ + Opt + Right` jumps forward in the note history
-- `⌘ + ⇧ + 0..9` sets a note bookmark on bookmark slot 0..9
-- `⌘ + 0..9` jump to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>Click</kbd> on a link to open it
+- <kbd>⌘</kbd> + <kbd>F</kbd> lets you search in the current note
+    - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
+    - <kbd>Esc</kbd> closes the search bar
+- <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
+    - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
+- <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
+- <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
+- <kbd>⌘</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- `<kbd>Tab</kbd> indents the selected text (also works on multiple lines)
+    - `<kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Left</kbd> jumps back in the note history
+    - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Right</kbd> jumps forward in the note history
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> jump to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 
-- `⌘ + S` saves the current todo item
-- `⌘ + R` removes the current todo item
+- <kbd>⌘</kbd> + <kbd>S</kbd> saves the current todo item
+- <kbd>⌘</kbd> + <kbd>R</kbd> removes the current todo item
