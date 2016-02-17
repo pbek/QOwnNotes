@@ -25,7 +25,7 @@ Important Shortcuts
     - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
     - <kbd>Esc</kbd> closes the search bar
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
-    - <kbd>Ctrl</kbd> + Alt + <kbd>Down</kbd> does the same
+    - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
