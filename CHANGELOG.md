@@ -5,6 +5,7 @@
   instead of the default editor when you open a note file with `Open note in 
   external editor`
   (for [Issue #77](https://github.com/pbek/QOwnNotes/issues/77))
+- added more German translation
 
 ## 1.0.2
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9
@@ -19,7 +20,7 @@
   update available
 
 ## 1.0.1
-- added more German and Russian translations (thank you, @elnull)
+- added more German and Russian translation (thank you, @elnull)
 - added a *Get involved* menu entry and a link in the update dialog
 - added support for newlines in code blocks in the markdown highlighting
   (for [Issue #71](https://github.com/pbek/QOwnNotes/issues/71))
