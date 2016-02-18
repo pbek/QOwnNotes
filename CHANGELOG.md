@@ -6,6 +6,8 @@
   external editor`
   (for [Issue #77](https://github.com/pbek/QOwnNotes/issues/77))
 - added more German and French translation (thank you @Dalan94)
+- added an option to disabled the app-heartbeat in the settings
+  (for [Issue #84](https://github.com/pbek/QOwnNotes/issues/84))
 
 ## 1.0.2
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9

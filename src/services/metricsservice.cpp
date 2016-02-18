@@ -27,15 +27,23 @@ MetricsService * MetricsService::createInstance(QObject *parent) {
 }
 
 void MetricsService::sendEvent(
-        const QString& eventCategory,
-        const QString& eventAction,
-        const QString& eventLabel,
+        const QString &eventCategory,
+        const QString &eventAction,
+        const QString &eventLabel,
+        int eventValue) {
+//    qDebug() << __func__ << " - 'eventAction': " << eventAction;
+    analytics->sendEvent(
+            eventCategory, eventAction, eventLabel, eventValue);
+}
+
+void MetricsService::sendEventIfEnabled(
+        const QString &eventCategory,
+        const QString &eventAction,
+        const QString &eventLabel,
         int eventValue) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-//        qDebug() << __func__ << " - 'eventAction': " << eventAction;
-        analytics->sendEvent(
-                eventCategory, eventAction, eventLabel, eventValue);
+        sendEvent(eventCategory, eventAction, eventLabel, eventValue);
     }
 }
 
@@ -48,8 +56,11 @@ void MetricsService::sendAppView(const QString& screenName) {
 }
 
 /**
- * Sends a heartbeat
+ * Sends a heartbeat if not disabled
  */
 void MetricsService::sendHeartbeat() {
-    analytics->sendEvent("app", "heartbeat");
+    QSettings settings;
+    if (!settings.value("appMetrics/disableAppHeartbeat").toBool()) {
+        analytics->sendEvent("app", "heartbeat");
+    }
 }

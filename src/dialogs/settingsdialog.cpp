@@ -127,12 +127,21 @@ void SettingsDialog::storeSettings() {
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
-        MetricsService::instance()->sendEvent("settings", "app metrics "
-                "disabled");
+        MetricsService::instance()->sendEvent(
+                "settings", "app metrics disabled");
     }
 
     settings.setValue("appMetrics/disableTracking",
                       ui->appMetricsCheckBox->isChecked());
+
+    if (!settings.value("appMetrics/disableAppHeartbeat").toBool() &&
+        ui->appHeartbeatCheckBox->isChecked()) {
+        MetricsService::instance()->sendEvent(
+                "settings", "app heartbeat disabled");
+    }
+
+    settings.setValue("appMetrics/disableAppHeartbeat",
+                      ui->appHeartbeatCheckBox->isChecked());
 
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
@@ -192,6 +201,9 @@ void SettingsDialog::readSettings() {
     Q_UNUSED(blocker);
     ui->appMetricsCheckBox->setChecked(settings.value(
             "appMetrics/disableTracking").toBool());
+
+    ui->appHeartbeatCheckBox->setChecked(settings.value(
+            "appMetrics/disableAppHeartbeat").toBool());
 
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
@@ -710,7 +722,7 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
                         "QOwnNotes to improve next and to find and fix bugs."
                         "<br />Please disable it only if you really can't live"
                         " with it.<br /><br />Really disable usage tracking?",
-                QMessageBox::Yes|QMessageBox::No,
+                QMessageBox::Yes | QMessageBox::No,
                 QMessageBox::No);
         if (reply == QMessageBox::No) {
             const QSignalBlocker blocker(ui->appMetricsCheckBox);
