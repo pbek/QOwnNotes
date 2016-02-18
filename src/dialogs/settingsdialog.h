@@ -23,7 +23,16 @@ public:
         Failure,
     };
 
-    explicit SettingsDialog(SimpleCrypt *crypto, QWidget *parent = 0);
+    enum SettingsTabs {
+        OwnCloudTab,
+        TodoTab,
+        InterfaceTab,
+        GeneralTab,
+        DebugTab
+    };
+
+    explicit SettingsDialog(
+            SimpleCrypt *crypto, int tab = 0, QWidget *parent = 0);
 
     ~SettingsDialog();
 
@@ -82,13 +91,6 @@ private slots:
     void on_setExternalEditorPathToolButton_clicked();
 
 private:
-    enum SettingsTabs {
-        OwnCloudTab,
-        TodoTab,
-        InterfaceTab,
-        GeneralTab,
-        DebugTab
-    };
 
     Ui::SettingsDialog *ui;
     SimpleCrypt *crypto;

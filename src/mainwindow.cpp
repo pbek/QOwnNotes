@@ -1581,9 +1581,9 @@ void MainWindow::updateCurrentFolderTooltip() {
 /**
  * @brief Opens the settings dialog
  */
-void MainWindow::openSettingsDialog() {
+void MainWindow::openSettingsDialog(int tab) {
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog(&crypto, this);
+    SettingsDialog *dialog = new SettingsDialog(&crypto, tab, this);
     int dialogResult = dialog->exec();
 
     if (dialogResult == QDialog::Accepted) {
@@ -1726,13 +1726,18 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
     if (showDialog) {
         settings.setValue("appMetrics/notificationShown", true);
 
-        QMessageBox::information(
+        if (QMessageBox::information(
                 this,
                 "QOwnNotes",
                 tr("QOwnNotes will track anonymous usage data, that helps to "
                         "decide what parts of QOwnNotes to improve next "
                         "and to find and fix bugs. You can disable that "
-                        "behaviour in the settings."));
+                        "behaviour in the settings."),
+                tr("&Ok"),
+                tr("Open &settings"),
+                QString::null, 0, 1) == 1) {
+            openSettingsDialog(SettingsDialog::GeneralTab);
+        }
     }
 }
 

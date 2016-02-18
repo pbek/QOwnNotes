@@ -14,7 +14,7 @@
 #include <QMessageBox>
 #include <services/metricsservice.h>
 
-SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
+SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
@@ -23,7 +23,7 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, QWidget *parent) :
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
-    ui->tabWidget->setCurrentIndex(0);
+    ui->tabWidget->setCurrentIndex(tab);
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
