@@ -5,7 +5,7 @@
   instead of the default editor when you open a note file with `Open note in 
   external editor`
   (for [Issue #77](https://github.com/pbek/QOwnNotes/issues/77))
-- added more German translation
+- added more German and French translation (thank you @Dalan94)
 
 ## 1.0.2
 - you can now set a note bookmark with `Ctrl + ⇧ + 0..9` on slot 0..9
