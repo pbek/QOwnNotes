@@ -1122,6 +1122,16 @@ p, li { white-space: pre-wrap; }
         <translation>Kalenderliste neu &amp;laden</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1376"/>
+        <source>Disable tracking of usage data</source>
+        <translation>Sammeln von Nutzungsdaten deaktivieren</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
+        <source>Disable heartbeat</source>
+        <translation>Herzschlag deaktivieren</translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="570"/>
         <source>Which ownCloud calendar backend do you want to use?</source>
         <translation>Welches ownCloud Kalender Backend benutzen Sie?</translation>
@@ -1415,9 +1425,8 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Bitte deaktivieren Sie diese nur wenn Sie wirklich nicht damit leben können.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1376"/>
         <source>disable tracking of usage data</source>
-        <translation>Deaktiviere das Sammeln von Nutzungsdaten</translation>
+        <translation type="obsolete">Deaktiviere das Sammeln von Nutzungsdaten</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1395"/>
@@ -1435,9 +1444,8 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>Ein kleiner Heartbeat-Request wird periodisch gesendet so lange QOwnNotes gestartet ist. Machen Sie einen Entwickler glücklich indem Sie ihn wissen lassen, dass jemand QOwnNotes benutzt.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
         <source>disable heartbeat</source>
-        <translation>Deaktivere Herzschlag</translation>
+        <translation type="obsolete">Deaktivere Herzschlag</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1468"/>

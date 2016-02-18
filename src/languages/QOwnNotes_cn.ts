@@ -1321,8 +1321,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1376"/>
+        <source>Disable tracking of usage data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
+        <source>Disable heartbeat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>disable tracking of usage data</source>
-        <translation>关闭匿名使用数据收集</translation>
+        <translation type="obsolete">关闭匿名使用数据收集</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1395"/>
@@ -1337,11 +1346,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1429"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
-        <source>disable heartbeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -1394,8 +1394,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1376"/>
+        <source>Disable tracking of usage data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
+        <source>Disable heartbeat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>disable tracking of usage data</source>
-        <translation>zablokuj zbieranie danych </translation>
+        <translation type="obsolete">zablokuj zbieranie danych </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1395"/>
@@ -1410,11 +1419,6 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1429"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
-        <source>disable heartbeat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

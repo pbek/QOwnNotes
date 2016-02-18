@@ -1373,7 +1373,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item row="2" column="0">
                <widget class="QCheckBox" name="appMetricsCheckBox">
                 <property name="text">
-                 <string>disable tracking of usage data</string>
+                 <string>Disable tracking of usage data</string>
                 </property>
                </widget>
               </item>
@@ -1439,7 +1439,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item row="1" column="0">
                <widget class="QCheckBox" name="appHeartbeatCheckBox">
                 <property name="text">
-                 <string>disable heartbeat</string>
+                 <string>Disable heartbeat</string>
                 </property>
                </widget>
               </item>
