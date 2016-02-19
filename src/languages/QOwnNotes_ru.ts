@@ -1065,7 +1065,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1442"/>
         <source>Disable heartbeat</source>
-        <translation>Запретить опрос сервера</translation>
+        <translation>Запретить контрольные пакеты</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="270"/>
