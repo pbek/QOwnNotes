@@ -1243,7 +1243,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1219"/>
         <source>Update dialog</source>
-        <translation>Даилог обновления</translation>
+        <translation>Диалог обновления</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1225"/>
