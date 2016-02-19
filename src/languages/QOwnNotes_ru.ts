@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -452,7 +451,7 @@ Restore current note?</source>
     <message>
         <location filename="../mainwindow.cpp" line="827"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
-        <translation type="unfinished"></translation>
+        <translation>нажмите, чтобы увидеть изменения и загрузить последнюю версию</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="972"/>
@@ -552,7 +551,7 @@ Restore current note?</source>
     <message>
         <location filename="../mainwindow.cpp" line="843"/>
         <source>new version %1 available</source>
-        <translation type="unfinished"></translation>
+        <translation>доступна новая версия: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="1455"/>
@@ -636,7 +635,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="1736"/>
         <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Да</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2104"/>
@@ -794,34 +793,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <location filename="../dialogs/passworddialog.ui" line="50"/>
         <source>passwords don&apos;t match!</source>
         <translation>пароли не совпадают!</translation>
-    </message>
-</context>
-<context>
-    <name>QTextEditSearchWidget</name>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
-        <source>close search</source>
-        <translation>закрыть поиск</translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
-        <source>Find:</source>
-        <translation>Поиск:</translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
-        <source>find in text</source>
-        <translation>поиск в тексте</translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
-        <source>search forward</source>
-        <translation>поиск вперёд</translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
-        <source>search backward</source>
-        <translation>поиск назад</translation>
     </message>
 </context>
 <context>
@@ -1089,12 +1060,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1376"/>
         <source>Disable tracking of usage data</source>
-        <translation type="unfinished"></translation>
+        <translation>Запретить сбор данных об использовании</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1442"/>
         <source>Disable heartbeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Запретить опрос сервера</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="270"/>
@@ -1272,12 +1243,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1219"/>
         <source>Update dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Даилог обновления</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1225"/>
         <source>Don&apos;t show update dialog automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показывать автоматически диалог обновления</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1267"/>
@@ -1292,22 +1263,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1308"/>
         <source>External editor</source>
-        <translation type="unfinished"></translation>
+        <translation>Внешний редактор</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1314"/>
         <source>Path to external edior:</source>
-        <translation type="unfinished"></translation>
+        <translation>Путь ко внешнему редактору:</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1321"/>
         <source>path to external editor, leave empy for default</source>
-        <translation type="unfinished"></translation>
+        <translation>путь ко внешнему редактору, по умолчанию пусто</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1328"/>
         <source>set external editor</source>
-        <translation type="unfinished"></translation>
+        <translation>выбрать внешний редактор</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1345"/>
@@ -1320,23 +1291,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить какие части программы нуждаются в улучшении и исправлении ошибок. Пожалуйста, отключайте только при необходимости.</translation>
     </message>
     <message>
-        <source>disable tracking of usage data</source>
-        <translation type="obsolete">Отключить сбор информации об использовании</translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="1395"/>
         <source>This data includes anonymous information about what features of the app are used.</source>
-        <translation type="unfinished"></translation>
+        <translation>Данные содержать анонимную информацию об используемых частях приложения.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1411"/>
         <source>App heartbeat</source>
-        <translation type="unfinished"></translation>
+        <translation>Контрольный пакет</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1429"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-        <translation type="unfinished"></translation>
+        <translation>Во время работы QOwnNotes периодически отправляется небольшой контрольный пакет. Разработчику приятно осознавать, что кто-то использует QOwnNotes.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1468"/>
@@ -1430,7 +1397,7 @@ Your notes will stay intact!</source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="809"/>
         <source>Select editor application</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбор внешнего редактора</translation>
     </message>
 </context>
 <context>
