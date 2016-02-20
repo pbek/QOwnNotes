@@ -49,6 +49,9 @@ MainWindow::MainWindow(QWidget *parent) :
     metricsService->sendEvent("app", "app start");
 #endif
 
+    // sends locale information
+    metricsService->sendLocaleEvent();
+
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);
     sorting->addAction(ui->actionBy_date);

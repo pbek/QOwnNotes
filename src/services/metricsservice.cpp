@@ -64,3 +64,18 @@ void MetricsService::sendHeartbeat() {
         analytics->sendEvent("app", "heartbeat");
     }
 }
+
+/**
+ * Sends locale information
+ */
+void MetricsService::sendLocaleEvent() {
+
+    QSettings settings;
+    QString eventText = QLocale::system().name().section('_', 0, 0);
+    QString settingsLocale = settings.value("interfaceLanguage").toString();
+    if (!settingsLocale.isEmpty()) {
+        eventText += " (" + settingsLocale + ")";
+    }
+
+    sendEventIfEnabled("app", "locale", eventText);
+}

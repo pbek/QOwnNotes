@@ -21,6 +21,7 @@ public:
     void sendAppView(const QString &screenName);
     static MetricsService *instance();
     static MetricsService *createInstance(QObject *parent);
+    void sendLocaleEvent();
 
 private:
     GAnalytics * analytics;
