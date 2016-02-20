@@ -315,6 +315,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="actionInsert_image"/>
     <addaction name="actionInsert_current_time"/>
+    <addaction name="actionInset_code_block"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
     <addaction name="actionShow_versions"/>
@@ -362,6 +363,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionInsert_Link_to_note"/>
    <addaction name="actionInsert_image"/>
    <addaction name="actionInsert_current_time"/>
+   <addaction name="actionInset_code_block"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
@@ -775,6 +777,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>&amp;Get involved</string>
+   </property>
+  </action>
+  <action name="actionInset_code_block">
+   <property name="icon">
+    <iconset theme="code-context" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert &amp;code block</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+C</string>
    </property>
   </action>
  </widget>

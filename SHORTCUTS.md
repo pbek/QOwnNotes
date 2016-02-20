@@ -29,12 +29,13 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
-- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jump to the note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 
@@ -70,12 +71,13 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>⌘</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
-- <kbd>⌘</kbd> + <kbd>0..9</kbd> jump to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
 
 ### In the Todo list
 

@@ -165,6 +165,8 @@ private slots:
 
     void storeNoteBookmark(int slot = 0);
 
+    void on_actionInset_code_block_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

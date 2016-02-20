@@ -1601,7 +1601,7 @@ void MainWindow::openSettingsDialog(int tab) {
 }
 
 /**
- * @brief Handles the linking of text
+ * @brief Returns the active note text edit
  */
 QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
     return ui->noteTextEdit->isHidden() ?
@@ -2564,4 +2564,17 @@ void MainWindow::gotoNoteBookmark(int slot) {
                 tr("jumped to bookmark position at slot %1").arg(
                         QString::number(slot)), 3000);
     }
+}
+
+/**
+ * Inserts a code block at the current cursor position
+ */
+void MainWindow::on_actionInset_code_block_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    c.insertText("``");
+    c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
+    textEdit->setTextCursor(c);
 }
