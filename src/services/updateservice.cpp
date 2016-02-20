@@ -53,7 +53,10 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
-    q.addQueryItem("cid", settings.value("GAnalytics-cid").toString());
+
+    if (!settings.value("appMetrics/disableTracking").toBool()) {
+        q.addQueryItem("cid", settings.value("GAnalytics-cid").toString());
+    }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     q.addQueryItem("r", QString(RELEASE) + " (" +
