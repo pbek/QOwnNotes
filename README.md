@@ -56,7 +56,9 @@ To get the most current features you can build the application from the source c
 Alternatively you can also checkout the code directly from the git repository:
 
 ```shell
-git clone https://github.com/pbek/QOwnNotes.git -b develop
+git clone https://github.com/pbek/QOwnNotes.git -b master
+cd QOwnNotes
+git submodule update --init
 ```
 
 Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and click on *Build / Build Project QOwnNotes*.
@@ -64,7 +66,7 @@ Then download [Qt Creator](http://www.qt.io/download-open-source), open the proj
 Or you can build it directly in your terminal:
 
 ```shell
-cd QOwnNotes/src
+cd src
 qmake
 make
 ```
