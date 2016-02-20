@@ -76,8 +76,8 @@ Please feel free to contribute source code to this project, make suggestions or 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
 
 ## Minimum software requirements
-- A desktop operating system, that supports [QT](http://www.qt.io/)
-- QT 5.3+
+- A desktop operating system, that supports [Qt](http://www.qt.io/)
+- Qt 5.3+
 - gcc 4.8+
 
 ## Disclaimer
