@@ -71,7 +71,7 @@ void MetricsService::sendHeartbeat() {
 void MetricsService::sendLocaleEvent() {
 
     QSettings settings;
-    QString eventText = QLocale::system().name().section('_', 0, 0);
+    QString eventText = QLocale::system().name();
     QString settingsLocale = settings.value("interfaceLanguage").toString();
     if (!settingsLocale.isEmpty()) {
         eventText += " (" + settingsLocale + ")";
