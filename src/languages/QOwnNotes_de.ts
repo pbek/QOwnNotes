@@ -1122,12 +1122,17 @@ p, li { white-space: pre-wrap; }
         <translation>Kalenderliste neu &amp;laden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1376"/>
+        <location filename="../dialogs/settingsdialog.ui" line="765"/>
+        <source>Portuguese</source>
+        <translation>Portugisisch</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1387"/>
         <source>Disable tracking of usage data</source>
         <translation>Sammeln von Nutzungsdaten deaktivieren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1442"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1453"/>
         <source>Disable heartbeat</source>
         <translation>Herzschlag deaktivieren</translation>
     </message>
@@ -1156,60 +1161,60 @@ p, li { white-space: pre-wrap; }
         <translation>Russisch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="813"/>
+        <location filename="../dialogs/settingsdialog.ui" line="824"/>
         <source>default font in markdown text edits:</source>
         <translation>Standard Schrift für die Markdown-Texteditoren:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1050"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1061"/>
         <source>General</source>
         <translation>Allgemein</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1067"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1078"/>
         <source>Notes</source>
         <translation>Notizen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1073"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1084"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn aktiviert werden Sie über alle externen Veränderungen infomiert, selbst wenn die aktuelle Notiz in der letzen Minuten nicht veränder wurde. Empfohlen ist &lt;span style=&quot; font-style:italic;&quot;&gt;deaktiviert&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1079"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1090"/>
         <source>notify about all external modifications</source>
         <translation>über alle externen Veränderungen informieren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1105"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1116"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Es kann zu Synchronisationsproblemen mit älteren ownCloud Versionen kommen wenn sie weninger als 10 Sek. auswählen.
 Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen Sie einen höheren Wert aus.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1120"/>
         <source>note save interval time [sec]</source>
         <translation>Notiz Speicherintervall [Sek]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="797"/>
+        <location filename="../dialogs/settingsdialog.ui" line="808"/>
         <source>Font settings</source>
         <translation>Schriftart</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="828"/>
-        <location filename="../dialogs/settingsdialog.ui" line="840"/>
-        <location filename="../dialogs/settingsdialog.ui" line="862"/>
-        <location filename="../dialogs/settingsdialog.ui" line="965"/>
+        <location filename="../dialogs/settingsdialog.ui" line="839"/>
+        <location filename="../dialogs/settingsdialog.ui" line="851"/>
+        <location filename="../dialogs/settingsdialog.ui" line="873"/>
+        <location filename="../dialogs/settingsdialog.ui" line="976"/>
         <source>Font name</source>
         <translation>Schriftart Name</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="869"/>
         <location filename="../dialogs/settingsdialog.ui" line="880"/>
-        <location filename="../dialogs/settingsdialog.ui" line="894"/>
-        <location filename="../dialogs/settingsdialog.ui" line="972"/>
+        <location filename="../dialogs/settingsdialog.ui" line="891"/>
+        <location filename="../dialogs/settingsdialog.ui" line="905"/>
+        <location filename="../dialogs/settingsdialog.ui" line="983"/>
         <source>set a new font</source>
         <translation>neue Schriftart auswählen</translation>
     </message>
@@ -1226,58 +1231,58 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation type="obsolete">Notiz Markdown Ansicht:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1135"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1146"/>
         <location filename="../dialogs/settingsdialog.cpp" line="659"/>
         <source>Database</source>
         <translation>Datenbank</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1151"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1162"/>
         <source>Reinitialize Database</source>
         <translation>Datenbank reinitialisieren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1152"/>
         <source>Do this if you have troubles with your Todo items.</source>
         <translation>Führen Sie eine Datenbank Reinitialisierung durch, falls Sie Probleme mit Aufgabeneinträgen haben.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1116"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1127"/>
         <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
         <translation>Aktivieren Sie diese Einstellungen wenn Sie die Markdown Ansicht als Standardansicht auswählen möchten.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1119"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1130"/>
         <source>Markdown view mode is default</source>
         <translation>Markdown Ansicht als Standard</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1167"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1178"/>
         <source>Recent notes folders</source>
         <translation>zuletzt geöffnete Notizen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1173"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1184"/>
         <source>Show recent notes folders in main area</source>
         <translation>zuletzt geöffnete Notizen Ordner in Hauptfenster anzeigen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1180"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1191"/>
         <source>clear the recent note folder history</source>
         <translation>zuletzt geöffnete Notizen Verlauf leeren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1183"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1194"/>
         <source>Clear history</source>
         <translation>Verlauf leeren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1009"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1020"/>
         <source>Toolbar</source>
         <translation>Symbolleiste</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1015"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1026"/>
         <source>Icon size:</source>
         <translation>Icon Grösse:</translation>
     </message>
@@ -1322,17 +1327,17 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation>Chinesisch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="765"/>
+        <location filename="../dialogs/settingsdialog.ui" line="776"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Die neuen Spracheinstellungen werden erst nach einem Neustart des Programms geladen.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="775"/>
+        <location filename="../dialogs/settingsdialog.ui" line="786"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn Sie QOwnNotes in eine andere Sprache übersetzen oder eine existierende Übersetzung ergänzen wollen, dann lesen Sie bitte diesen Leitfaden: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="803"/>
+        <location filename="../dialogs/settingsdialog.ui" line="814"/>
         <source>font in note markdown view:</source>
         <translation>Schriftart in der Markdown-Ansicht der Notiz:</translation>
     </message>
@@ -1341,86 +1346,86 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation type="obsolete">Standard Schrift für die Notiz-Texteditoren:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="847"/>
+        <location filename="../dialogs/settingsdialog.ui" line="858"/>
         <source>code font in markdown text edits:</source>
         <translation>Code Schrift für die Markdown-Texteditoren:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="908"/>
-        <location filename="../dialogs/settingsdialog.ui" line="922"/>
-        <location filename="../dialogs/settingsdialog.ui" line="936"/>
-        <location filename="../dialogs/settingsdialog.ui" line="986"/>
+        <location filename="../dialogs/settingsdialog.ui" line="919"/>
+        <location filename="../dialogs/settingsdialog.ui" line="933"/>
+        <location filename="../dialogs/settingsdialog.ui" line="947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="997"/>
         <source>reset font</source>
         <translation>Schrifart zurücksetzen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="950"/>
+        <location filename="../dialogs/settingsdialog.ui" line="961"/>
         <source>code font in note markdown view:</source>
         <translation>Code-Schriftart in der Markdown-Ansicht der Notiz:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1193"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1204"/>
         <source>Clear application data and exit</source>
         <translation>Applikations-Daten löschen und beenden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1199"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1210"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Dieser Knopf erlaubt ihnen alle Einstellungen und die Todo-Datenbank zu löschen und das Programm zu beenden.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1209"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1220"/>
         <location filename="../dialogs/settingsdialog.cpp" line="741"/>
         <source>Clear app data and exit</source>
         <translation>Applikations-Daten löschen und beenden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1219"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1230"/>
         <source>Update dialog</source>
         <translation>Update Fenster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1225"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1236"/>
         <source>Don&apos;t show update dialog automatically</source>
         <translation>Update Fenster nicht automatisch anzeigen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1267"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1278"/>
         <source>Default note file extension</source>
         <translation>Standardendung der Notizdatei</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1286"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1297"/>
         <source>Text file (.txt)</source>
         <translation>Text Datei (*.txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1308"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1319"/>
         <source>External editor</source>
         <translation>Externer Editor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1314"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1325"/>
         <source>Path to external edior:</source>
         <translation>Pfad zu externem Editor:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1321"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1332"/>
         <source>path to external editor, leave empy for default</source>
         <translation>Pfad zu externem Editor, leer lassen um Standard-Editor zu benutzen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1328"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1339"/>
         <source>set external editor</source>
         <translation>externen Editor auswählen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1356"/>
         <source>App metrics</source>
         <translation>Nutzungsdaten</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1363"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1374"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Bitte deaktivieren Sie diese nur wenn Sie wirklich nicht damit leben können.</translation>
     </message>
@@ -1429,17 +1434,17 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation type="obsolete">Deaktiviere das Sammeln von Nutzungsdaten</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1395"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1406"/>
         <source>This data includes anonymous information about what features of the app are used.</source>
         <translation>Diese Daten beinhalteen anonyme Informationen darüber welche Funktionen der Anwendung genutzt werden.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1411"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1422"/>
         <source>App heartbeat</source>
         <translation>Anwendungs-Herzschlag</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1429"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1440"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
         <translation>Ein kleiner Heartbeat-Request wird periodisch gesendet so lange QOwnNotes gestartet ist. Machen Sie einen Entwickler glücklich indem Sie ihn wissen lassen, dass jemand QOwnNotes benutzt.</translation>
     </message>
@@ -1448,22 +1453,22 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
         <translation type="obsolete">Deaktivere Herzschlag</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1468"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1479"/>
         <source>Debug</source>
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1485"/>
         <source>Debug information</source>
         <translation>Debug Informationen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1508"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sie können diesen Text (oder Teile dieses Textes) &lt;span style=&quot; font-weight:600;&quot;&gt;kopieren&lt;/span&gt; und in einem issue auf der &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues Seite&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;&gt;einfügen&lt;/span&gt; wenn Sie Fragen oder Probleme haben. Sensible Daten werden in diesen Informationen nicht angezeigt.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1521"/>
         <source>&amp;Save debug information</source>
         <translation>Debug Informationen &amp;speichern</translation>
     </message>

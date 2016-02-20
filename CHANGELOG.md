@@ -1,11 +1,12 @@
 # QOwnNotes Changelog
 
 ## 1.0.3
+- added **Portuguese translation** by @mlimacarlos, thank you a lot!
+- added more German, French and Russian translation (thank you @Dalan94 and @elnull)
 - you can now select an external editor in the settings that will be used
   instead of the default editor when you open a note file with `Open note in 
   external editor`
   (for [Issue #77](https://github.com/pbek/QOwnNotes/issues/77))
-- added more German and French translation (thank you @Dalan94)
 - added an option to disabled the app-heartbeat in the settings
   (for [Issue #84](https://github.com/pbek/QOwnNotes/issues/84))
 
