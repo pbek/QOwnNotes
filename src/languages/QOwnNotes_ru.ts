@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="ru_RU">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -417,7 +416,7 @@
     <message>
         <location filename="../mainwindow.ui" line="788"/>
         <source>Insert &amp;code block</source>
-        <translation type="unfinished"></translation>
+        <translation>Вставить блок &amp;кода</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="674"/>
@@ -802,34 +801,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
 </context>
 <context>
-    <name>QTextEditSearchWidget</name>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
-        <source>close search</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
-        <source>Find:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
-        <source>find in text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
-        <source>search forward</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
-        <source>search backward</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>QWidget</name>
     <message>
         <location filename="../services/databaseservice.cpp" line="63"/>
@@ -1077,13 +1048,13 @@ p, li { white-space: pre-wrap; }
         <location filename="../dialogs/settingsdialog.ui" line="721"/>
         <source>French</source>
         <translatorcomment>language name</translatorcomment>
-        <translation>le français (Французский)</translation>
+        <translation>Français (Французский)</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="732"/>
         <source>Polish</source>
         <translatorcomment>language name</translatorcomment>
-        <translation>polszczyzna (Польский)</translation>
+        <translation>Polski (Польский)</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="743"/>
@@ -1094,7 +1065,8 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="765"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>language name</translatorcomment>
+        <translation>Português (Португальский)</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1387"/>
