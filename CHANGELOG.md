@@ -4,6 +4,8 @@
 - added a button to insert a markdown code block at the current cursor position
   (for [Issue #82](https://github.com/pbek/QOwnNotes/issues/82))
   - you can use 'Ctrl + Shift + C` as shortcut
+- fixed a display problem with the update notification button under Windows
+  (for [Issue #90](https://github.com/pbek/QOwnNotes/issues/90))
 
 ## 1.0.3
 - added **Portuguese translation** by @mlimacarlos, thank you a lot!

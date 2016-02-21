@@ -838,7 +838,7 @@ void MainWindow::setupUpdateAvailableButton() {
             this,
             SLOT(on_actionCheck_for_updates_triggered()));
 
-    ui->statusBar->layout()->addWidget(_updateAvailableButton);
+    ui->statusBar->addPermanentWidget(_updateAvailableButton);
 }
 
 void MainWindow::showUpdateAvailableButton(QString version) {
