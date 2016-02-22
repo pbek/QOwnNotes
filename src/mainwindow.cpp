@@ -2580,8 +2580,13 @@ void MainWindow::on_actionInset_code_block_triggered()
 {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
 
-    c.insertText("``");
-    c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
-    textEdit->setTextCursor(c);
+    if (selectedText.isEmpty()) {
+        c.insertText("``");
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
+        textEdit->setTextCursor(c);
+    } else {
+        c.insertText("`" + selectedText + "`");
+    }
 }

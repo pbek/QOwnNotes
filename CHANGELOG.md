@@ -2,6 +2,8 @@
 
 ## 1.0.5
 - Google Analytics got removed in favor of Piwik
+- code blocks will now wrap around selected text when inserted
+  (for [Issue #91](https://github.com/pbek/QOwnNotes/issues/91))
 - added more Russian translation (thank you @elnull)
 
 ## 1.0.4
