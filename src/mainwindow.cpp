@@ -41,13 +41,7 @@ MainWindow::MainWindow(QWidget *parent) :
                     " - build " + QString::number(BUILD));
 
     MetricsService *metricsService = MetricsService::createInstance(this);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    metricsService->sendEventIfEnabled(
-            "app", "app start", QSysInfo::prettyProductName());
-#else
-    metricsService->sendEvent("app", "app start");
-#endif
+    metricsService->sendVisitIfEnabled("app/start", "App Start");
 
     // sends locale information
     metricsService->sendLocaleEvent();
@@ -450,6 +444,7 @@ void MainWindow::loadNoteDirectoryList() {
 
             int itemCount = nameList.count();
             MetricsService::instance()->sendEventIfEnabled(
+                    "note/list/loaded",
                     "note",
                     "note list loaded",
                     QString::number(itemCount) + " notes",
@@ -524,6 +519,11 @@ void MainWindow::readSettings() {
         settings.remove("General/notesPath");
     } else {
         this->notesPath = settings.value("notesPath").toString();
+    }
+
+    // migration: remove GAnalytics-cid
+    if (!settings.value("GAnalytics-cid").toString().isEmpty()) {
+        settings.remove("GAnalytics-cid");
     }
 
     // let us select a folder if we haven't find one in the settings
@@ -771,7 +771,12 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
         if (count > 0) {
             MetricsService::instance()
-                    ->sendEventIfEnabled("note", "notes stored", "", count);
+                    ->sendEventIfEnabled(
+                            "note/notes/stored",
+                            "note",
+                            "notes stored",
+                            QString::number(count) + " notes",
+                            count);
 
             qDebug() << __func__ << " - 'count': " << count;
 
@@ -1020,8 +1025,7 @@ void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
                                 bool addNoteToHistory) {
-    MetricsService::instance()->sendEventIfEnabled("note",
-                                                   "current note changed");
+    MetricsService::instance()->sendVisitIfEnabled("note/current-note/changed");
 
     // update cursor position of previous note
     if (this->currentNote.exists()) {
@@ -1171,7 +1175,7 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendEventIfEnabled("app", "app end");
+    MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
     storeSettings();
     QMainWindow::closeEvent(event);
 }
@@ -2524,7 +2528,7 @@ void MainWindow::on_action_Export_note_as_markdown_triggered()
 
 void MainWindow::showEvent(QShowEvent* event) {
     QMainWindow::showEvent(event);
-    MetricsService::instance()->sendAppView(objectName());
+    MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
 }
 
 void MainWindow::on_actionGet_invloved_triggered()

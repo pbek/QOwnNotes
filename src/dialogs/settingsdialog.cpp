@@ -127,8 +127,8 @@ void SettingsDialog::storeSettings() {
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
-        MetricsService::instance()->sendEvent(
-                "settings", "app metrics disabled");
+        MetricsService::instance()->sendVisit(
+                "settings/app-metrics-disabled");
     }
 
     settings.setValue("appMetrics/disableTracking",
@@ -136,8 +136,8 @@ void SettingsDialog::storeSettings() {
 
     if (!settings.value("appMetrics/disableAppHeartbeat").toBool() &&
         ui->appHeartbeatCheckBox->isChecked()) {
-        MetricsService::instance()->sendEvent(
-                "settings", "app heartbeat disabled");
+        MetricsService::instance()->sendVisit(
+                "settings/app-heartbeat-disabled");
     }
 
     settings.setValue("appMetrics/disableAppHeartbeat",
@@ -347,7 +347,7 @@ void SettingsDialog::outputSettings() {
     QStringList keyHiddenList = (QStringList() <<
             "cryptoKey" <<
             "ownCloud/password" <<
-            "GAnalytics-cid");
+            "PiwikClientId");
 
     while (itr.hasNext()) {
         QString key = itr.next();

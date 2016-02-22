@@ -55,7 +55,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     q.addQueryItem("debug", QString::number(isDebug));
 
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-        q.addQueryItem("cid", settings.value("GAnalytics-cid").toString());
+        q.addQueryItem("cid", settings.value("PiwikClientId").toString());
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))

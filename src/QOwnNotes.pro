@@ -90,7 +90,6 @@ HEADERS  += mainwindow.h \
     release.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
-    libraries/qt-google-analytics-collector/ganalytics.hpp \
     services/metricsservice.h \
     dialogs/masterdialog.h
 
@@ -113,6 +112,7 @@ RESOURCES += \
     demonotes.qrc
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
+include(libraries/piwiktracker/piwiktracker.pri)
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0

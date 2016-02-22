@@ -1,9 +1,26 @@
 #include "metricsservice.h"
+#include "version.h"
+#include "release.h"
+#include <QSettings>
 
 MetricsService::MetricsService(QObject *parent) : QObject(parent)
 {
-    analytics = new GAnalytics(qApp, "UA-52660882-3");
-    analytics->generateUserAgentEtc();
+    QString debug = "0";
+#ifdef QT_DEBUG
+    debug = "1";
+#endif
+
+    _piwikTracker = new PiwikTracker(qApp, QUrl("https://p.qownnotes.org"), 5);
+    _piwikTracker->setCustomDimension(1, QString(VERSION));
+    _piwikTracker->setCustomDimension(2, QLocale::system().name());
+    _piwikTracker->setCustomDimension(3, debug);
+    _piwikTracker->setCustomDimension(9, QString(RELEASE));
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    _piwikTracker->setCustomDimension(
+            7, QSysInfo::prettyProductName() + " (" +
+            QSysInfo::currentCpuArchitecture() + ")");
+#endif
 }
 
 /**
@@ -26,32 +43,35 @@ MetricsService * MetricsService::createInstance(QObject *parent) {
     return metricsService;
 }
 
-void MetricsService::sendEvent(
-        const QString &eventCategory,
-        const QString &eventAction,
-        const QString &eventLabel,
-        int eventValue) {
-//    qDebug() << __func__ << " - 'eventAction': " << eventAction;
-    analytics->sendEvent(
-            eventCategory, eventAction, eventLabel, eventValue);
+void MetricsService::sendVisit(
+        const QString &path,
+        const QString &actionName) {
+    _piwikTracker->sendVisit(path, actionName);
 }
 
-void MetricsService::sendEventIfEnabled(
-        const QString &eventCategory,
-        const QString &eventAction,
-        const QString &eventLabel,
-        int eventValue) {
+void MetricsService::sendVisitIfEnabled(
+        const QString &path,
+        const QString &actionName) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-        sendEvent(eventCategory, eventAction, eventLabel, eventValue);
+        sendVisit(path, actionName);
     }
 }
 
-void MetricsService::sendAppView(const QString& screenName) {
+void MetricsService::sendEventIfEnabled(
+        QString path,
+        QString eventCategory,
+        QString eventAction,
+        QString eventName,
+        int eventValue) {
     QSettings settings;
     if (!settings.value("appMetrics/disableTracking").toBool()) {
-//        qDebug() << __func__ << " - 'screenName': " << screenName;
-        analytics->sendAppview2(screenName);
+        _piwikTracker->sendEvent(
+                path,
+                eventCategory,
+                eventAction,
+                eventName,
+                eventValue);
     }
 }
 
@@ -61,7 +81,7 @@ void MetricsService::sendAppView(const QString& screenName) {
 void MetricsService::sendHeartbeat() {
     QSettings settings;
     if (!settings.value("appMetrics/disableAppHeartbeat").toBool()) {
-        analytics->sendEvent("app", "heartbeat");
+        _piwikTracker->sendVisit("app/heartbeat", "Heartbeat");
     }
 }
 
@@ -77,5 +97,5 @@ void MetricsService::sendLocaleEvent() {
         eventText += " (" + settingsLocale + ")";
     }
 
-    sendEventIfEnabled("app", "locale", eventText);
+    sendEventIfEnabled("app/locale", "app", "locale", eventText);
 }

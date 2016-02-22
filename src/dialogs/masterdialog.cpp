@@ -6,7 +6,6 @@ MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent)
 }
 
 int MasterDialog::exec() {
-    MetricsService::instance()->sendAppView(objectName());
-
+    MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
     return QDialog::exec();
 }

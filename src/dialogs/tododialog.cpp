@@ -109,7 +109,8 @@ void TodoDialog::reloadTodoListItems() {
 
     int itemCount = calendarItemList.count();
     MetricsService::instance()->sendEventIfEnabled(
-            "todo list",
+            "todo/list/loaded",
+            "todo",
             "todo list loaded",
             QString::number(itemCount) + " todo items",
             itemCount);
@@ -275,8 +276,7 @@ void TodoDialog::on_todoList_currentItemChanged(
         return;
     }
 
-    MetricsService::instance()
-            ->sendEventIfEnabled("todo list", "current todo item changed");
+    MetricsService::instance()->sendVisitIfEnabled("todo/item/changed");
 
     QString uid = current->whatsThis();
 
@@ -339,8 +339,7 @@ void TodoDialog::on_showCompletedItemsCheckBox_clicked() {
 }
 
 void TodoDialog::on_saveButton_clicked() {
-    MetricsService::instance()->sendEventIfEnabled("todo list",
-                                                   "todo item stored");
+    MetricsService::instance()->sendVisitIfEnabled("todo/item/stored");
 
     updateCurrentCalendarItemWithFormData();
 

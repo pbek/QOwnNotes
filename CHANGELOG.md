@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.0.5
+- Google Analytics got removed in favor of Piwik
+
 ## 1.0.4
 - added a button to insert a markdown code block at the current cursor position
   (for [Issue #82](https://github.com/pbek/QOwnNotes/issues/82))

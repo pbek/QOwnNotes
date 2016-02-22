@@ -106,7 +106,6 @@ set(SOURCE_FILES
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp
     libraries/versionnumber/versionnumber.h
-    libraries/qt-google-analytics-collector/ganalytics.hpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp
@@ -115,6 +114,8 @@ set(SOURCE_FILES
     services/updateservice.h
     services/metricsservice.cpp
     services/metricsservice.h
+    libraries/piwiktracker/piwiktracker.h
+    libraries/piwiktracker/piwiktracker.cpp
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     build_number.h
