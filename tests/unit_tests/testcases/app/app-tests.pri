@@ -8,7 +8,7 @@ HEADERS  += \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
-    $$APP_SRC_DIR/libraries/qt-google-analytics-collector/ganalytics.hpp \
+    $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
     $$APP_SRC_DIR/services/metricsservice.h \
     $$APP_SRC_DIR/entities/note.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
@@ -23,6 +23,7 @@ HEADERS  += \
 SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
+    $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \
     $$APP_SRC_DIR/services/metricsservice.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \

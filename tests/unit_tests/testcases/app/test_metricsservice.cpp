@@ -5,17 +5,17 @@
 
 void TestMetricsService::initTestCase()
 {
-    MetricsService *metricsService = MetricsService::createInstance(this);
+    MetricsService::createInstance(this);
 }
 
 void TestMetricsService::testSendEvent()
 {
-    MetricsService::instance()->sendEvent("tests", "test event");
+    MetricsService::instance()->sendEventIfEnabled("test/event", "test", "event");
     QVERIFY(true);
 }
 
-void TestMetricsService::testSendAppView()
+void TestMetricsService::testSendVisit()
 {
-    MetricsService::instance()->sendAppView("TestScreen");
+    MetricsService::instance()->sendVisitIfEnabled("test/visit", "TestScreen");
     QVERIFY(true);
 }

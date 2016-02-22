@@ -9,5 +9,5 @@ class TestMetricsService : public QObject
 private Q_SLOTS:
     void initTestCase();
     void testSendEvent();
-    void testSendAppView();
+    void testSendVisit();
 };
