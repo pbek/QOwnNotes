@@ -2,6 +2,7 @@
 
 ## 1.0.5
 - Google Analytics got removed in favor of Piwik
+- added more Russian translation (thank you @elnull)
 
 ## 1.0.4
 - added a button to insert a markdown code block at the current cursor position
