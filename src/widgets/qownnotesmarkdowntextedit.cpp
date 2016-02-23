@@ -41,7 +41,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     QTextCharFormat headers;
     headers.setForeground(QBrush(QColor(0, 49, 110)));
-    headers.setBackground(QBrush(QColor(230, 230, 240)));
+    headers.setBackground(QBrush(QColor(235, 235, 240)));
     headers.setFontWeight(QFont::Bold);
     headers.setFontPointSize(defaultFontSize * 1.2);
     STY(pmh_H1, headers);
@@ -68,8 +68,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     /* <a href> */
     QTextCharFormat link;
-    link.setForeground(QBrush(QColor(255, 128, 0)));
-    link.setBackground(QBrush(QColor(255, 233, 211)));
+    link.setForeground(QBrush(QColor(252, 126, 0)));
+    link.setBackground(QBrush(QColor(255, 242, 228)));
     STY(pmh_LINK, link);
     STY(pmh_AUTO_LINK_URL, link);
     STY(pmh_AUTO_LINK_EMAIL, link);
@@ -87,7 +87,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     /* <pre> */
     QTextCharFormat code;
     code.setForeground(QBrush(Qt::darkGreen));
-    code.setBackground(QBrush(QColor(217, 231, 217)));
+    code.setBackground(QBrush(QColor(226, 231, 226)));
 
     QFont codeFont = this->font();
 

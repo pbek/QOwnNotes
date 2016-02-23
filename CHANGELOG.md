@@ -4,6 +4,8 @@
 - Google Analytics got removed in favor of Piwik
 - code blocks will now wrap around selected text when inserted
   (for [Issue #91](https://github.com/pbek/QOwnNotes/issues/91))
+- increased the color contrast in the markdown highlighting for better 
+  readability
 - added more Russian translation (thank you @elnull)
 
 ## 1.0.4
