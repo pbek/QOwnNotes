@@ -81,7 +81,7 @@ void MetricsService::sendEventIfEnabled(
 void MetricsService::sendHeartbeat() {
     QSettings settings;
     if (!settings.value("appMetrics/disableAppHeartbeat").toBool()) {
-        _piwikTracker->sendVisit("app/heartbeat", "Heartbeat");
+        _piwikTracker->sendPing();
     }
 }
 
