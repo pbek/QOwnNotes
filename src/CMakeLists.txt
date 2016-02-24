@@ -75,6 +75,8 @@ set(SOURCE_FILES
     entities/notehistory.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
+    helpers/clientproxy.cpp
+    helpers/clientproxy.h
     libraries/diff_match_patch/diff_match_patch.cpp
     libraries/diff_match_patch/diff_match_patch.h
     libraries/hoedown/autolink.c
@@ -114,6 +116,8 @@ set(SOURCE_FILES
     services/updateservice.h
     services/metricsservice.cpp
     services/metricsservice.h
+    services/cryptoservice.cpp
+    services/cryptoservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     widgets/qownnotesmarkdowntextedit.cpp

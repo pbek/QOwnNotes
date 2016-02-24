@@ -30,6 +30,8 @@
 #include "widgets/qownnotesmarkdowntextedit.h"
 #include "dialogs/passworddialog.h"
 #include "services/metricsservice.h"
+#include <services/cryptoservice.h>
+#include <helpers/clientproxy.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -45,6 +47,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // sends locale information
     metricsService->sendLocaleEvent();
+
+    // create a crypto service instance
+    CryptoService::createInstance(this);
+
+    ClientProxy proxy;
+    // refresh the Qt proxy settings
+    proxy.setupQtProxyFromSettings();
 
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);

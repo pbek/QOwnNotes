@@ -10,9 +10,11 @@ HEADERS  += \
     $$APP_SRC_DIR/services/databaseservice.h \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
     $$APP_SRC_DIR/services/metricsservice.h \
+    $$APP_SRC_DIR/services/cryptoservice.h \
     $$APP_SRC_DIR/entities/note.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
+    $$APP_SRC_DIR/helpers/clientproxy.h \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
@@ -25,9 +27,11 @@ SOURCES += \
     $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \
     $$APP_SRC_DIR/services/metricsservice.cpp \
+    $$APP_SRC_DIR/services/cryptoservice.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
+    $$APP_SRC_DIR/helpers/clientproxy.cpp \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \

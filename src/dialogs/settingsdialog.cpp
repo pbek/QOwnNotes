@@ -13,6 +13,9 @@
 #include <QFontDialog>
 #include <QMessageBox>
 #include <services/metricsservice.h>
+#include "helpers/clientproxy.h"
+#include <QtNetwork/qnetworkproxy.h>
+#include <services/cryptoservice.h>
 
 SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
         MasterDialog(parent),
@@ -49,6 +52,9 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
     html.replace("QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION);
     ui->installInfotextBrowser->setHtml(html);
 
+    // do the network proxy tab setup
+    setupProxyTab();
+
     this->crypto = crypto;
     readSettings();
 
@@ -60,6 +66,120 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
 
 SettingsDialog::~SettingsDialog() {
     delete ui;
+}
+
+/**
+ * Does the network proxy tab setup
+ */
+void SettingsDialog::setupProxyTab() {
+    ui->hostLineEdit->setPlaceholderText(tr("hostname of proxy server"));
+    ui->userLineEdit->setPlaceholderText(tr("username for proxy server"));
+    ui->passwordLineEdit->setPlaceholderText(tr("password for proxy server"));
+
+    ui->typeComboBox->addItem(tr("HTTP(S) proxy"), QNetworkProxy::HttpProxy);
+    ui->typeComboBox->addItem(tr("SOCKS5 proxy"), QNetworkProxy::Socks5Proxy);
+
+    ui->authRequiredcheckBox->setEnabled(true);
+
+    // Explicitly set up the enabled status of the proxy auth widgets to ensure
+    // toggling the parent enables/disables the children
+    ui->userLineEdit->setEnabled(true);
+    ui->passwordLineEdit->setEnabled(true);
+    ui->authWidgets->setEnabled(ui->authRequiredcheckBox->isChecked());
+    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)),
+            ui->authWidgets, SLOT(setEnabled(bool)));
+
+    connect(ui->manualProxyRadioButton, SIGNAL(toggled(bool)),
+            ui->manualSettings, SLOT(setEnabled(bool)));
+    connect(ui->manualProxyRadioButton, SIGNAL(toggled(bool)),
+            ui->typeComboBox, SLOT(setEnabled(bool)));
+
+    // proxy
+//    connect(ui->typeComboBox, SIGNAL(currentIndexChanged(int)),
+//            SLOT(storeProxySettings()));
+//    connect(ui->proxyButtonGroup, SIGNAL(buttonClicked(int)),
+//            SLOT(storeProxySettings()));
+//    connect(ui->hostLineEdit, SIGNAL(editingFinished()),
+//            SLOT(storeProxySettings()));
+//    connect(ui->userLineEdit, SIGNAL(editingFinished()),
+//            SLOT(storeProxySettings()));
+//    connect(ui->passwordLineEdit, SIGNAL(editingFinished()),
+//            SLOT(storeProxySettings()));
+//    connect(ui->portSpinBox, SIGNAL(editingFinished()),
+//            SLOT(storeProxySettings()));
+//    connect(ui->authRequiredcheckBox, SIGNAL(toggled(bool)),
+//            SLOT(storeProxySettings()));
+}
+
+/**
+ * Loads the proxy settings
+ */
+void SettingsDialog::loadProxySettings() {
+    QSettings settings;
+
+    // load current proxy settings
+    int type = settings.value("networking/proxyType").toInt();
+    switch (type) {
+        case QNetworkProxy::NoProxy:
+            ui->noProxyRadioButton->setChecked(true);
+            break;
+        case QNetworkProxy::DefaultProxy:
+            ui->systemProxyRadioButton->setChecked(true);
+            break;
+        case QNetworkProxy::Socks5Proxy:
+        case QNetworkProxy::HttpProxy:
+            ui->typeComboBox->setCurrentIndex(ui->typeComboBox->findData(type));
+            ui->manualProxyRadioButton->setChecked(true);
+            break;
+        default:
+            break;
+    }
+
+    ui->hostLineEdit->setText(
+            settings.value("networking/proxyHostName").toString());
+    ui->portSpinBox->setValue(
+            settings.value("networking/proxyPort", 8080).toInt());
+    ui->authRequiredcheckBox->setChecked(
+            settings.value("networking/proxyNeedsAuth").toBool());
+    ui->userLineEdit->setText(
+            settings.value("networking/proxyUser").toString());
+    ui->passwordLineEdit->setText(crypto->decryptToString(
+            settings.value("networking/proxyPassword").toString()));
+}
+
+/**
+ * Stores the proxy settings
+ */
+void SettingsDialog::storeProxySettings() {
+    QSettings settings;
+    int proxyType = QNetworkProxy::DefaultProxy;
+
+    if (ui->noProxyRadioButton->isChecked()) {
+        proxyType = QNetworkProxy::NoProxy;
+    } else if (ui->systemProxyRadioButton->isChecked()) {
+        proxyType = QNetworkProxy::DefaultProxy;
+    } else if (ui->manualProxyRadioButton->isChecked()) {
+        proxyType = ui->typeComboBox->itemData(
+                ui->typeComboBox->currentIndex()).toInt();
+
+        settings.setValue(
+                "networking/proxyNeedsAuth",
+                ui->authRequiredcheckBox->isChecked());
+        settings.setValue("networking/proxyUser", ui->userLineEdit->text());
+        settings.setValue(
+                "networking/proxyPassword",
+                CryptoService::instance()->encryptToString(
+                        ui->passwordLineEdit->text()));
+        settings.setValue("networking/proxyHostName", ui->hostLineEdit->text());
+        settings.setValue("networking/proxyPort", ui->portSpinBox->value());
+    }
+
+    settings.setValue("networking/proxyType", proxyType);
+
+    ClientProxy proxy;
+
+    // refresh the Qt proxy settings
+    proxy.setupQtProxyFromSettings();
 }
 
 /**
@@ -167,6 +287,9 @@ void SettingsDialog::storeSettings() {
                       ui->calendarPlusRadioButton->isChecked()
                       ? OwnCloudService::CalendarPlus
                       : OwnCloudService::DefaultOwnCloudCalendar);
+
+    // store the proxy settings
+    storeProxySettings();
 }
 
 void SettingsDialog::readSettings() {
@@ -251,6 +374,9 @@ void SettingsDialog::readSettings() {
             "ownCloud/todoCalendarUrlList").toStringList();
     // load the todo calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
+
+    // load the proxy settings
+    loadProxySettings();
 }
 
 /**

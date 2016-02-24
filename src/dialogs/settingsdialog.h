@@ -25,6 +25,7 @@ public:
 
     enum SettingsTabs {
         OwnCloudTab,
+        NetworkTab,
         TodoTab,
         InterfaceTab,
         GeneralTab,
@@ -90,6 +91,8 @@ private slots:
 
     void on_setExternalEditorPathToolButton_clicked();
 
+    void storeProxySettings();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -118,6 +121,10 @@ private:
     static void selectListWidgetValue(QListWidget *listWidget, QString value);
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
+
+    void setupProxyTab();
+
+    void loadProxySettings();
 };
 
 #endif // SETTINGSDIALOG_H

@@ -53,10 +53,12 @@ SOURCES += main.cpp\
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
+    helpers/clientproxy.cpp \
     services/databaseservice.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
+    services/cryptoservice.cpp \
     dialogs/masterdialog.cpp
 
 HEADERS  += mainwindow.h \
@@ -86,11 +88,13 @@ HEADERS  += mainwindow.h \
     services/owncloudservice.h \
     services/updateservice.h \
     helpers/htmlentities.h \
+    helpers/clientproxy.h \
     services/databaseservice.h \
     release.h \
     widgets/qownnotesmarkdowntextedit.h \
     dialogs/passworddialog.h \
     services/metricsservice.h \
+    services/cryptoservice.h \
     dialogs/masterdialog.h
 
 FORMS    += mainwindow.ui \
