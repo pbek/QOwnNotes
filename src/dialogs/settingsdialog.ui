@@ -1381,7 +1381,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
+              <item row="3" column="0">
                <widget class="QCheckBox" name="appMetricsCheckBox">
                 <property name="text">
                  <string>Disable tracking of usage data</string>
@@ -1404,6 +1404,31 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                 <property name="text">
                  <string>This data includes anonymous information about what features of the app are used.</string>
+                </property>
+                <property name="scaledContents">
+                 <bool>false</bool>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="appMetricsLabel_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Usage tracking is done on a private Piwik server.</string>
                 </property>
                 <property name="scaledContents">
                  <bool>false</bool>
