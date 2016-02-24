@@ -54,7 +54,8 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
 
-    if (!settings.value("appMetrics/disableTracking").toBool()) {
+    if (!settings.value("appMetrics/disableTracking").toBool() ||
+            !settings.value("appMetrics/disableAppHeartbeat").toBool()) {
         q.addQueryItem("cid", settings.value("PiwikClientId").toString());
     }
 

@@ -5,6 +5,8 @@
 
 MetricsService::MetricsService(QObject *parent) : QObject(parent)
 {
+    _firstHeartbeat = true;
+
     QString debug = "0";
 #ifdef QT_DEBUG
     debug = "1";
@@ -81,7 +83,13 @@ void MetricsService::sendEventIfEnabled(
 void MetricsService::sendHeartbeat() {
     QSettings settings;
     if (!settings.value("appMetrics/disableAppHeartbeat").toBool()) {
-        _piwikTracker->sendPing();
+        // send a normal event the first time
+        if (_firstHeartbeat) {
+            _piwikTracker->sendVisit("app/heartbeat");
+            _firstHeartbeat = false;
+        } else {
+            _piwikTracker->sendPing();
+        }
     }
 }
 

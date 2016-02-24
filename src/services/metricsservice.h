@@ -29,6 +29,7 @@ public:
 
 private:
     PiwikTracker * _piwikTracker;
+    bool _firstHeartbeat;
 
 signals:
 
