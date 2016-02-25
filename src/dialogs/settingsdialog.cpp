@@ -471,7 +471,8 @@ void SettingsDialog::outputSettings() {
     QStringList keyHiddenList = (QStringList() <<
             "cryptoKey" <<
             "ownCloud/password" <<
-            "PiwikClientId");
+            "PiwikClientId" <<
+            "networking/proxyPassword");
 
     while (itr.hasNext()) {
         QString key = itr.next();
