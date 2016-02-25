@@ -16,9 +16,16 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>Ctrl</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 
+### In the note search bar
+
+- <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
+- <kbd>Enter</kbd> creates a new note with the text from the search bar as 
+  headline
+
 ### In the note list
 
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
+- <kbd>Tab</kbd> or <kbd>Enter</kbd> lets you edit the current note
 
 ### In the note text edit area (in edit mode)
 
@@ -60,9 +67,16 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>⌘</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 
+### In the note search bar
+
+- <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
+- <kbd>Enter</kbd> creates a new note with the text from the search bar as 
+  headline
+
 ### In the note list
 
 - <kbd>⌘</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
+- <kbd>Tab</kbd> or <kbd>Enter</kbd> lets you edit the current note
 
 ### In the note text edit area (in edit mode)
 
