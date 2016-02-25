@@ -18,10 +18,18 @@ CryptoService::CryptoService(QObject *parent) : QObject(parent)
 }
 
 /**
- * Fetches a global instance of the class
+ * Fetches the global instance of the class
+ * The instance will be created if it doesn't exist.
  */
 CryptoService * CryptoService::instance() {
-    return qApp->property("cryptoService").value<CryptoService *>();
+    CryptoService *cryptoService =
+            qApp->property("cryptoService").value<CryptoService *>();
+
+    if (cryptoService == NULL) {
+        cryptoService = createInstance(NULL);
+    }
+
+    return cryptoService;
 }
 
 /**

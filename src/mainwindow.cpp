@@ -48,9 +48,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // sends locale information
     metricsService->sendLocaleEvent();
 
-    // create a crypto service instance
-    CryptoService::createInstance(this);
-
     ClientProxy proxy;
     // refresh the Qt proxy settings
     proxy.setupQtProxyFromSettings();
