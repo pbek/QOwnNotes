@@ -5,7 +5,6 @@
 #include <QAuthenticator>
 #include <QNetworkReply>
 #include <QObject>
-#include "libraries/simplecrypt/simplecrypt.h"
 #include "mainwindow.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/tododialog.h"
@@ -22,7 +21,7 @@ public:
     };
     Q_ENUMS(CalendarBackend)
 
-    explicit OwnCloudService(SimpleCrypt *crypto, QObject *parent = 0);
+    explicit OwnCloudService(QObject *parent = 0);
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
@@ -52,7 +51,6 @@ private:
     QString userName;
     QString password;
     QString localOwnCloudPath;
-    SimpleCrypt *crypto;
     QNetworkAccessManager *networkManager;
     MainWindow *mainWindow;
     static const QString rootPath;

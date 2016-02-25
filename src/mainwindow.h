@@ -14,7 +14,6 @@
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
-#include "libraries/simplecrypt/simplecrypt.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 
 
@@ -183,7 +182,6 @@ private:
     bool sortAlphabetically;
     bool showSystemTray;
     QSystemTrayIcon *trayIcon;
-    SimpleCrypt crypto;
     QDateTime currentNoteLastEdited;
     bool notifyAllExternalModifications;
     int noteSaveIntervalTime;
@@ -232,8 +230,6 @@ private:
     void storeRecentNoteFolder(QString addFolderName, QString removeFolderName);
 
     void storeSettings();
-
-    void setupCrypto();
 
     void removeSelectedNotes();
 

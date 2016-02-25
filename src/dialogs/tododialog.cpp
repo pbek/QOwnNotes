@@ -7,10 +7,9 @@
 #include <QKeyEvent>
 #include <services/metricsservice.h>
 
-TodoDialog::TodoDialog(SimpleCrypt *crypto, QWidget *parent) :
+TodoDialog::TodoDialog(QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::TodoDialog) {
-    this->crypto = crypto;
 
     ui->setupUi(this);
     setupUi();
@@ -96,7 +95,7 @@ void TodoDialog::loadTodoListData() {
 void TodoDialog::reloadTodoList() {
     ui->todoItemLoadingProgressBar->setValue(0);
     ui->todoItemLoadingProgressBar->show();
-    OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->todoGetTodoList(ui->todoListSelector->currentText(), this);
 }
 
@@ -343,7 +342,7 @@ void TodoDialog::on_saveButton_clicked() {
 
     updateCurrentCalendarItemWithFormData();
 
-    OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
 
     // update the local icsData from server
     ownCloud->updateICSDataOfCalendarItem(&currentCalendarItem);
@@ -393,7 +392,7 @@ void TodoDialog::on_newItemEdit_returnPressed() {
             ui->todoListSelector->currentText());
     lastCreatedCalendarItem = calItem;
 
-    OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
 
     // post the calendar item to the server
     ownCloud->postCalendarItemToServer(calItem, this);
@@ -427,7 +426,7 @@ void TodoDialog::on_removeButton_clicked() {
 
         // remove the calendar item from the ownCloud server
         // (this will reload the todo list as well)
-        OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+        OwnCloudService *ownCloud = new OwnCloudService(this);
         ownCloud->removeCalendarItem(calItem, this);
     }
 }
@@ -445,7 +444,7 @@ void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item) {
         calItem.updateCompleted(item->checkState() == Qt::Checked);
         calItem.store();
 
-        OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+        OwnCloudService *ownCloud = new OwnCloudService(this);
 
         // post the calendar item to the server
         ownCloud->postCalendarItemToServer(calItem, this);

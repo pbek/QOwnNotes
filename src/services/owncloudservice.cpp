@@ -16,15 +16,15 @@
 #include <QTimer>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
+#include "cryptoservice.h"
 
 const QString OwnCloudService::rootPath =
         "/index.php/apps/qownnotesapi/api/v1/";
 const QString OwnCloudService::format = "json";
 const QString NS_DAV("DAV:");
 
-OwnCloudService::OwnCloudService(SimpleCrypt *crypto, QObject *parent)
+OwnCloudService::OwnCloudService(QObject *parent)
         : QObject(parent) {
-    this->crypto = crypto;
     readSettings();
 }
 
@@ -41,7 +41,7 @@ void OwnCloudService::readSettings() {
     }
 
     userName = settings.value("ownCloud/userName").toString();
-    password = crypto->decryptToString(
+    password = CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString());
     localOwnCloudPath = settings.value("ownCloud/localOwnCloudPath").toString();
 

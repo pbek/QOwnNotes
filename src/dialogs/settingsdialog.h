@@ -5,7 +5,6 @@
 #include <QDialog>
 #include <QLabel>
 #include <QListWidget>
-#include "libraries/simplecrypt/simplecrypt.h"
 #include "masterdialog.h"
 
 namespace Ui {
@@ -32,8 +31,7 @@ public:
         DebugTab
     };
 
-    explicit SettingsDialog(
-            SimpleCrypt *crypto, int tab = 0, QWidget *parent = 0);
+    explicit SettingsDialog(int tab = 0, QWidget *parent = 0);
 
     ~SettingsDialog();
 
@@ -96,7 +94,6 @@ private slots:
 private:
 
     Ui::SettingsDialog *ui;
-    SimpleCrypt *crypto;
     QFont noteTextEditFont;
     QFont noteTextEditCodeFont;
     QFont noteTextViewFont;

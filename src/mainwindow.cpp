@@ -70,7 +70,6 @@ MainWindow::MainWindow(QWidget *parent) :
     this->recentNoteFolderSignalMapper = new QSignalMapper(this);
 
     readSettings();
-    setupCrypto();
 
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
@@ -1379,19 +1378,6 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     this->ui->noteTextView->setHtml(note->toMarkdownHtml(notesPath));
 }
 
-void MainWindow::setupCrypto() {
-    QSettings settings;
-    qint64 cryptoKey = settings.value("cryptoKey").toUInt();
-
-    // generate a key if we don't have one
-    if (cryptoKey == 0) {
-        cryptoKey = qrand();
-        settings.setValue("cryptoKey", cryptoKey);
-    }
-
-    this->crypto = SimpleCrypt(static_cast<quint64>(cryptoKey));
-}
-
 /**
  * Sets the text of the current note.
  * This is a public callback function for the version dialog.
@@ -1444,7 +1430,7 @@ void MainWindow::createNewNote(QString name, QString text) {
  * This is a public callback function for the trash dialog.
  */
 void MainWindow::restoreTrashedNoteOnServer(QString fileName, int timestamp) {
-    OwnCloudService *ownCloud = new OwnCloudService(&this->crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->restoreTrashedNoteOnServer(
             this->notesPath, fileName, timestamp, this);
 }
@@ -1596,7 +1582,7 @@ void MainWindow::updateCurrentFolderTooltip() {
  */
 void MainWindow::openSettingsDialog(int tab) {
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog(&crypto, tab, this);
+    SettingsDialog *dialog = new SettingsDialog(tab, this);
     int dialogResult = dialog->exec();
 
     if (dialogResult == QDialog::Accepted) {
@@ -2091,13 +2077,13 @@ void MainWindow::on_action_Settings_triggered() {
 }
 
 void MainWindow::on_actionShow_versions_triggered() {
-    OwnCloudService *ownCloud = new OwnCloudService(&this->crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->loadVersions(
             this->notesPath, this->currentNote.getFileName(), this);
 }
 
 void MainWindow::on_actionShow_trash_triggered() {
-    OwnCloudService *ownCloud = new OwnCloudService(&this->crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->loadTrash(this->notesPath, this);
 }
 
@@ -2248,7 +2234,7 @@ void MainWindow::on_actionOpen_List_triggered() {
         return;
     }
 
-    TodoDialog *dialog = new TodoDialog(&crypto, this);
+    TodoDialog *dialog = new TodoDialog(this);
     dialog->exec();
 }
 

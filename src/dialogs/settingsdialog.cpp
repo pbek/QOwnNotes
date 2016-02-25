@@ -17,8 +17,7 @@
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
 
-SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
-        MasterDialog(parent),
+SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
@@ -55,7 +54,6 @@ SettingsDialog::SettingsDialog(SimpleCrypt *crypto, int tab, QWidget *parent) :
     // do the network proxy tab setup
     setupProxyTab();
 
-    this->crypto = crypto;
     readSettings();
 
     if (ui->serverUrlEdit->text() != "") {
@@ -143,7 +141,7 @@ void SettingsDialog::loadProxySettings() {
             settings.value("networking/proxyNeedsAuth").toBool());
     ui->userLineEdit->setText(
             settings.value("networking/proxyUser").toString());
-    ui->passwordLineEdit->setText(crypto->decryptToString(
+    ui->passwordLineEdit->setText(CryptoService::instance()->decryptToString(
             settings.value("networking/proxyPassword").toString()));
 }
 
@@ -187,7 +185,7 @@ void SettingsDialog::storeProxySettings() {
  */
 void SettingsDialog::startConnectionTest() {
     ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsConnectionTest(this);
 }
 
@@ -214,7 +212,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("ownCloud/serverUrl", url);
     settings.setValue("ownCloud/userName", ui->userNameEdit->text());
     settings.setValue("ownCloud/password",
-                      crypto->encryptToString(ui->passwordEdit->text()));
+                      CryptoService::instance()->encryptToString(ui->passwordEdit->text()));
     settings.setValue("ownCloud/localOwnCloudPath",
                       ui->localOwnCloudPathEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
@@ -296,7 +294,7 @@ void SettingsDialog::readSettings() {
     QSettings settings;
     ui->serverUrlEdit->setText(settings.value("ownCloud/serverUrl").toString());
     ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
-    ui->passwordEdit->setText(crypto->decryptToString(
+    ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString()));
     ui->localOwnCloudPathEdit->setText(
             settings.value("ownCloud/localOwnCloudPath").toString());
@@ -771,7 +769,7 @@ void SettingsDialog::on_reloadCalendarListButton_clicked() {
     // we need to store the calendar backend
     storeSettings();
 
-    OwnCloudService *ownCloud = new OwnCloudService(crypto, this);
+    OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsGetCalendarList(this);
 }
 

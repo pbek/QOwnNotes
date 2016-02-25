@@ -5,7 +5,6 @@
 #include <QListWidgetItem>
 #include <QSplitter>
 
-#include "libraries/simplecrypt/simplecrypt.h"
 #include "entities/calendaritem.h"
 #include "masterdialog.h"
 
@@ -18,7 +17,7 @@ class TodoDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit TodoDialog(SimpleCrypt *crypto, QWidget *parent = 0);
+    explicit TodoDialog(QWidget *parent = 0);
     ~TodoDialog();
 
     void reloadTodoListItems();
@@ -47,7 +46,6 @@ private slots:
 private:
     Ui::TodoDialog *ui;
     QSplitter *mainSplitter;
-    SimpleCrypt *crypto;
     CalendarItem currentCalendarItem;
     CalendarItem lastCreatedCalendarItem;
     int firstVisibleTodoListRow;
