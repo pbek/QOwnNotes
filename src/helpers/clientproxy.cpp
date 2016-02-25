@@ -56,7 +56,7 @@ void ClientProxy::setupQtProxyFromSettings()
     QSettings settings;
     int proxyType = settings.value("networking/proxyType",
                                    QNetworkProxy::DefaultProxy).toInt();
-    QNetworkProxy proxy;
+    QNetworkProxy proxy = proxyFromSettings();
 
     switch (proxyType) {
     case QNetworkProxy::NoProxy:
