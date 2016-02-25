@@ -13,6 +13,8 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
+- <kbd>Ctrl</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 
 ### In the note list
 
@@ -55,6 +57,8 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>⌘</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
+- <kbd>⌘</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 
 ### In the note list
 

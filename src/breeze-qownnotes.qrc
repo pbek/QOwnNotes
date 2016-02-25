@@ -31,6 +31,8 @@
         <file alias="16x16/go-bottom.svg">icons/breeze-qownnotes/16x16/go-bottom.svg</file>
         <file alias="16x16/go-previous.svg">icons/breeze-qownnotes/16x16/go-previous.svg</file>
         <file alias="16x16/go-next.svg">icons/breeze-qownnotes/16x16/go-next.svg</file>
+        <file alias="16x16/go-down.svg">icons/breeze-qownnotes/16x16/go-down.svg</file>
+        <file alias="16x16/go-up.svg">icons/breeze-qownnotes/16x16/go-up.svg</file>
         <file alias="16x16/applications-system.svg">icons/breeze-qownnotes/16x16/applications-system.svg</file>
         <file alias="16x16/resource-calendar-insert.svg">icons/breeze-qownnotes/16x16/resource-calendar-insert.svg</file>
         <file alias="16x16/view-task.svg">icons/breeze-qownnotes/16x16/view-task.svg</file>

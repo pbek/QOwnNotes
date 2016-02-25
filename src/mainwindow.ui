@@ -272,6 +272,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Find_note"/>
     <addaction name="action_Back_in_note_history"/>
     <addaction name="action_Forward_in_note_history"/>
+    <addaction name="actionPrevious_Note"/>
+    <addaction name="actionNext_note"/>
     <addaction name="actionShow_trash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
@@ -791,6 +793,30 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Shift+C</string>
    </property>
   </action>
+  <action name="actionNext_note">
+   <property name="icon">
+    <iconset theme="go-down" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Next note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgDown</string>
+   </property>
+  </action>
+  <action name="actionPrevious_Note">
+   <property name="icon">
+    <iconset theme="go-up" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Previous note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+PgUp</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -801,8 +827,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

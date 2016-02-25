@@ -166,6 +166,10 @@ private slots:
 
     void on_actionInset_code_block_triggered();
 
+    void on_actionNext_note_triggered();
+
+    void on_actionPrevious_Note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -268,4 +272,8 @@ private:
     void setupNoteBookmarkShortcuts();
 
     void setupUpdateAvailableButton();
+
+    void gotoNextNote(int nextRow = -1);
+
+    void gotoPreviousNote(int previousRow = -1);
 };

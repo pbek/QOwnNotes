@@ -5,6 +5,9 @@
   tab to make QOwnNotes work over network proxies
   (for [Issue #79](https://github.com/pbek/QOwnNotes/issues/79))
 - added more German translation
+- use <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> and <kbd>Ctrl</kbd> + <kbd>PgDn</kbd>
+  to jump between visible notes
+  (for [Issue #80](https://github.com/pbek/QOwnNotes/issues/80))
 
 ## 1.0.5
 - Google Analytics got removed in favor of Piwik

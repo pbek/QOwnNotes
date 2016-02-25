@@ -2582,3 +2582,78 @@ void MainWindow::on_actionInset_code_block_triggered()
         c.insertText("`" + selectedText + "`");
     }
 }
+
+void MainWindow::on_actionNext_note_triggered()
+{
+    gotoNextNote();
+}
+
+/**
+ * Jumps to the next visible note
+ */
+void MainWindow::gotoNextNote(int nextRow)
+{
+    if (firstVisibleNoteListRow == -1) {
+        return;
+    }
+
+    // if no next row was set get one after the current row
+    if (nextRow == -1) {
+        nextRow = ui->notesListWidget->currentRow() + 1;
+    }
+
+    // if the row doesn't exist start with 0
+    if (nextRow >= ui->notesListWidget->count()) {
+        return gotoNextNote(0);
+    }
+
+    QListWidgetItem * item = ui->notesListWidget->item(nextRow);
+
+    // if item is hidden try the next row
+    if (item->isHidden()) {
+        return gotoNextNote(nextRow + 1);
+    }
+
+    ui->notesListWidget->setCurrentRow(nextRow);
+}
+
+void MainWindow::on_actionPrevious_Note_triggered()
+{
+    gotoPreviousNote();
+}
+
+/**
+ * Jumps to the previous visible note
+ */
+void MainWindow::gotoPreviousNote(int previousRow)
+{
+    if (firstVisibleNoteListRow == -1) {
+        return;
+    }
+
+    // if no previous row was set get one before the current row
+    if (previousRow == -1) {
+        previousRow = ui->notesListWidget->currentRow() -1;
+    }
+
+    // if the row is below 0 use the last row
+    if (previousRow < 0) {
+        return gotoPreviousNote(ui->notesListWidget->count() - 1);
+    }
+
+    QListWidgetItem * item = ui->notesListWidget->item(previousRow);
+
+    // if the item is hidden try the previous
+    if (item->isHidden()) {
+        previousRow--;
+
+        // if the row is below 0 use the last row
+        if (previousRow < 0) {
+            previousRow = ui->notesListWidget->count() - 1;
+        }
+
+        return gotoPreviousNote(previousRow);
+    }
+
+    ui->notesListWidget->setCurrentRow(previousRow);
+}
