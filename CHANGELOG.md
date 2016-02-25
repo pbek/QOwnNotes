@@ -4,6 +4,7 @@
 - you can now enter **network proxy** settings in the new network settings 
   tab to make QOwnNotes work over network proxies
   (for [Issue #79](https://github.com/pbek/QOwnNotes/issues/79))
+- added more German translation
 
 ## 1.0.5
 - Google Analytics got removed in favor of Piwik
