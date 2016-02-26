@@ -15,7 +15,7 @@ RC_FILE = QOwnNotes.rc
 TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_de.ts \
     languages/QOwnNotes_fr.ts \
-    languages/QOwnNotes_cn.ts \
+    languages/QOwnNotes_zh.ts \
     languages/QOwnNotes_pl.ts \
     languages/QOwnNotes_ru.ts \
     languages/QOwnNotes_es.ts \

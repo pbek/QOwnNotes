@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>3</number>
        </property>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
@@ -934,7 +934,7 @@ p, li { white-space: pre-wrap; }
                   <string>Chinese</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">cn</string>
+                  <string notr="true">zh</string>
                  </property>
                 </item>
                 <item>

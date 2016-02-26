@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 1.0.7
+- the Chinese language got renamed internally for Crowdin, it's possible that 
+  you have to re-select it in the settings if you were using it 
+  (for [Issue #95](https://github.com/pbek/QOwnNotes/issues/95))
+    - join us on [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in your language
+
 ## 1.0.6
 - you can now enter **network proxy settings** in the new network settings 
   tab to make QOwnNotes work over network proxies
