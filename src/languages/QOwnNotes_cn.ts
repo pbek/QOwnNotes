@@ -72,11 +72,6 @@ Click Cancel to exit.</source>
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
-        <source>QOwnNotes</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="57"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;搜索或输入名字并回车来创建新的笔记&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -88,14 +83,9 @@ Click Cancel to exit.</source>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="312"/>
         <source>Edit</source>
         <translation>编辑</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="157"/>
-        <source>Markdown</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -113,325 +103,255 @@ Click Cancel to exit.</source>
         <translation>排列方式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="297"/>
+        <location filename="../mainwindow.ui" line="299"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="333"/>
+        <location filename="../mainwindow.ui" line="335"/>
         <source>Todo</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="382"/>
+        <location filename="../mainwindow.ui" line="384"/>
         <source>&amp;Quit</source>
         <translation>退出(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
-        <source>Ctrl+Q</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="399"/>
         <source>&amp;Set notes folder</source>
         <translation>设定笔记目录(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="408"/>
         <source>&amp;Find note</source>
         <translation>查找笔记(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="409"/>
-        <source>Ctrl+Shift+F</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="420"/>
         <source>&amp;Remove current note</source>
         <translation>移除当前笔记(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="421"/>
-        <source>Ctrl+R</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="432"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>关于 &amp;QOwnNotes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="442"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>&amp;New note</source>
         <translation>新笔记(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="445"/>
-        <source>Ctrl+N</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Toggle Edit Mode</source>
         <translation>转到标记模式(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="462"/>
         <source>Toggle Edit Mode</source>
         <translation>编辑模式</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="463"/>
-        <source>Ctrl+E</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="472"/>
+        <location filename="../mainwindow.ui" line="474"/>
         <source>Check for &amp;updates</source>
-        <translation>检查更新(&amp;U)</translation>
+        <translation type="unfinished">检查更新(&amp;U)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="475"/>
-        <source>Ctrl+Shift+U</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="484"/>
+        <location filename="../mainwindow.ui" line="486"/>
         <source>Report &amp;issues or ideas</source>
-        <translation>报告问题或建议(&amp;I)</translation>
+        <translation type="unfinished">报告问题或建议(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="492"/>
+        <location filename="../mainwindow.ui" line="494"/>
         <source>Alphabetical</source>
-        <translation>字母顺序</translation>
+        <translation type="unfinished">字母顺序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="495"/>
+        <location filename="../mainwindow.ui" line="497"/>
         <source>Sort alphabetical</source>
-        <translation>按字母顺序排列</translation>
+        <translation type="unfinished">按字母顺序排列</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="503"/>
+        <location filename="../mainwindow.ui" line="505"/>
         <source>By date</source>
-        <translation>日期顺序</translation>
+        <translation type="unfinished">日期顺序</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="506"/>
+        <location filename="../mainwindow.ui" line="508"/>
         <source>Sort by date</source>
-        <translation>按日期顺序排列</translation>
+        <translation type="unfinished">按日期顺序排列</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="514"/>
+        <location filename="../mainwindow.ui" line="516"/>
         <source>Sh&amp;ow in system tray</source>
-        <translation>显示在任务托盘(&amp;O)</translation>
+        <translation type="unfinished">显示在任务托盘(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="523"/>
+        <location filename="../mainwindow.ui" line="525"/>
         <source>&amp;Settings</source>
-        <translation>偏好设定((&amp;S)</translation>
+        <translation type="unfinished">偏好设定((&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="535"/>
+        <location filename="../mainwindow.ui" line="537"/>
         <source>Show note &amp;versions</source>
-        <translation>显示笔记版本(&amp;V)</translation>
+        <translation type="unfinished">显示笔记版本(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="538"/>
+        <location filename="../mainwindow.ui" line="540"/>
         <source>Show note versions on server</source>
-        <translation>显示服务器上的笔记版本</translation>
+        <translation type="unfinished">显示服务器上的笔记版本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="547"/>
+        <location filename="../mainwindow.ui" line="549"/>
         <source>Show &amp;trash</source>
-        <translation>显示回收站(&amp;T)</translation>
+        <translation type="unfinished">显示回收站(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="550"/>
+        <location filename="../mainwindow.ui" line="552"/>
         <source>Show trashed notes on server</source>
-        <translation>显示服务器上的回收站</translation>
+        <translation type="unfinished">显示服务器上的回收站</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="555"/>
+        <location filename="../mainwindow.ui" line="557"/>
         <location filename="../mainwindow.cpp" line="2117"/>
         <source>Select &amp;all notes</source>
         <translation>选择所有笔记(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="566"/>
         <location filename="../mainwindow.cpp" line="2155"/>
         <source>Insert &amp;link</source>
         <translation>插入链接(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="567"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Insert link to an url or a note</source>
-        <translation>向笔记插入链接</translation>
+        <translation type="unfinished">向笔记插入链接</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="570"/>
-        <source>Ctrl+L</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="579"/>
+        <location filename="../mainwindow.ui" line="581"/>
         <source>&amp;Find in current note</source>
-        <translation>在当前笔记搜索查找(&amp;F)</translation>
+        <translation type="unfinished">在当前笔记搜索查找(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="582"/>
+        <location filename="../mainwindow.ui" line="584"/>
         <source>Find text in current note</source>
-        <translation>在当前笔记搜索文本</translation>
+        <translation type="unfinished">在当前笔记搜索文本</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="585"/>
-        <source>Ctrl+F</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="590"/>
+        <location filename="../mainwindow.ui" line="592"/>
         <source>&amp;Duplicate text</source>
-        <translation>重复文本(&amp;D)</translation>
+        <translation type="unfinished">重复文本(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="593"/>
-        <source>Ctrl+D</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="604"/>
         <source>&amp;Back in note history</source>
-        <translation>后退较旧的笔记历史记录(&amp;B)</translation>
+        <translation type="unfinished">后退较旧的笔记历史记录(&amp;B)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="605"/>
-        <source>Alt+Left</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="616"/>
         <source>Forward in note history</source>
-        <translation>前进较新的笔记历史</translation>
+        <translation type="unfinished">前进较新的笔记历史</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
-        <source>Alt+Right</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="626"/>
+        <location filename="../mainwindow.ui" line="628"/>
         <source>Show &amp;Shortcuts</source>
-        <translation>显示快捷键(&amp;S)</translation>
+        <translation type="unfinished">显示快捷键(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="635"/>
+        <location filename="../mainwindow.ui" line="637"/>
         <source>&amp;Knowledge base</source>
-        <translation>基础知识(&amp;K)</translation>
+        <translation type="unfinished">基础知识(&amp;K)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="646"/>
         <source>Insert current &amp;time</source>
-        <translation>插入当前时间(&amp;T)</translation>
+        <translation type="unfinished">插入当前时间(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="647"/>
-        <source>Ctrl+T</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="656"/>
+        <location filename="../mainwindow.ui" line="658"/>
         <source>Show &amp;Todo List</source>
-        <translation>显示 Todo 列表(&amp;T)</translation>
+        <translation type="unfinished">显示 Todo 列表(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="659"/>
-        <source>Ctrl+Shift+T</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="668"/>
+        <location filename="../mainwindow.ui" line="670"/>
         <source>&amp;Export note as PDF (markdown)</source>
-        <translation>导出PDF(markdown格式笔记)(&amp;E)</translation>
+        <translation type="unfinished">导出PDF(markdown格式笔记)(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="677"/>
+        <location filename="../mainwindow.ui" line="679"/>
         <source>&amp;Export note as PDF (text)</source>
-        <translation>导出PDF（文本格式笔记）(&amp;E)</translation>
+        <translation type="unfinished">导出PDF（文本格式笔记）(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="686"/>
+        <location filename="../mainwindow.ui" line="688"/>
         <source>&amp;Print note (text)</source>
-        <translation>打印笔记（文本格式笔记）(&amp;P)</translation>
+        <translation type="unfinished">打印笔记（文本格式笔记）(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="695"/>
+        <location filename="../mainwindow.ui" line="697"/>
         <source>&amp;Print note (markdown)</source>
-        <translation>打印笔记（markdown格式笔记）(&amp;P)</translation>
+        <translation type="unfinished">打印笔记（markdown格式笔记）(&amp;P)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="704"/>
+        <location filename="../mainwindow.ui" line="706"/>
         <source>Insert &amp;image</source>
-        <translation>插入图片(&amp;I)</translation>
+        <translation type="unfinished">插入图片(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="709"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-        <translation>插入图片(图片会被复制到当前笔记目录下的 media 目录）</translation>
+        <translation type="unfinished">插入图片(图片会被复制到当前笔记目录下的 media 目录）</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="710"/>
-        <source>Ctrl+I</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="719"/>
+        <location filename="../mainwindow.ui" line="721"/>
         <source>Show &amp;changelog</source>
-        <translation>显示软件改进 Changelog(&amp;C)</translation>
+        <translation type="unfinished">显示软件改进 Changelog(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="728"/>
+        <location filename="../mainwindow.ui" line="730"/>
         <source>&amp;Encrypt note</source>
-        <translation>加密笔记(&amp;E)</translation>
+        <translation type="unfinished">加密笔记(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="737"/>
+        <location filename="../mainwindow.ui" line="739"/>
         <source>Edit encrypted note</source>
-        <translation>编辑加密笔记</translation>
+        <translation type="unfinished">编辑加密笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="740"/>
-        <source>Ctrl+Shift+E</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="749"/>
+        <location filename="../mainwindow.ui" line="751"/>
         <source>Decrypt note</source>
-        <translation>解密笔记</translation>
+        <translation type="unfinished">解密笔记</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="758"/>
+        <location filename="../mainwindow.ui" line="760"/>
         <source>&amp;Open note in external editor</source>
-        <translation>用外部编辑器打开笔记(&amp;O)</translation>
+        <translation type="unfinished">用外部编辑器打开笔记(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="761"/>
-        <source>Ctrl+Shift+O</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="770"/>
+        <location filename="../mainwindow.ui" line="772"/>
         <source>&amp;Export note as markdown file</source>
-        <translation>导出markdown格式笔记(&amp;E)</translation>
+        <translation type="unfinished">导出markdown格式笔记(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="779"/>
+        <location filename="../mainwindow.ui" line="781"/>
         <source>&amp;Get involved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="788"/>
+        <location filename="../mainwindow.ui" line="790"/>
         <source>Insert &amp;code block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="802"/>
+        <source>Next note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="814"/>
+        <source>Previous note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1549,65 +1469,55 @@ Your notes will stay intact!</source>
         <translation>保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="104"/>
-        <source>Ctrl+S</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../dialogs/tododialog.ui" line="111"/>
         <source>remove current todo item</source>
-        <translation>移除这个 todo 项</translation>
+        <translation type="unfinished">移除这个 todo 项</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="114"/>
         <source>&amp;remove</source>
-        <translation>移除(&amp;R)</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="121"/>
-        <source>Ctrl+R</source>
-        <translation></translation>
+        <translation type="unfinished">移除(&amp;R)</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="133"/>
         <location filename="../dialogs/tododialog.ui" line="140"/>
         <source>Priority</source>
-        <translation>优先级</translation>
+        <translation type="unfinished">优先级</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="168"/>
         <source>Reminder</source>
-        <translation>提醒</translation>
+        <translation type="unfinished">提醒</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="233"/>
         <source>Show completed items</source>
-        <translation>显示已经完成项目</translation>
+        <translation type="unfinished">显示已经完成项目</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="240"/>
         <source>reload the todo list from server</source>
-        <translation>从服务器重新载入 todo 列表</translation>
+        <translation type="unfinished">从服务器重新载入 todo 列表</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="243"/>
         <source>&amp;reload</source>
-        <translation>重新载入(&amp;R)</translation>
+        <translation type="unfinished">重新载入(&amp;R)</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="257"/>
         <source>select your todo list</source>
-        <translation>选择你的 todo 列表</translation>
+        <translation type="unfinished">选择你的 todo 列表</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>Todo list items are being loaded from the server</source>
-        <translation>Todo 列表已经从服务器读取载入</translation>
+        <translation type="unfinished">Todo 列表已经从服务器读取载入</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="274"/>
         <source>search or create todo item</source>
-        <translation>搜索或创建新 todo 项</translation>
+        <translation type="unfinished">搜索或创建新 todo 项</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="414"/>

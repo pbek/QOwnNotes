@@ -101,7 +101,7 @@ p, li { white-space: pre-wrap; }
                <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
              </property>
              <property name="shortcut">
-              <string>Ctrl+S</string>
+              <string notr="true">Ctrl+S</string>
              </property>
             </widget>
            </item>
@@ -118,7 +118,7 @@ p, li { white-space: pre-wrap; }
                <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
              </property>
              <property name="shortcut">
-              <string>Ctrl+R</string>
+              <string notr="true">Ctrl+R</string>
              </property>
             </widget>
            </item>

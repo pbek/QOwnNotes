@@ -56,9 +56,8 @@
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.ui" line="14"/>
         <source>QOwnNotes</source>
-        <translation>QOwnNotes</translation>
+        <translation type="obsolete">QOwnNotes</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="57"/>
@@ -72,14 +71,9 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="86"/>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="312"/>
         <source>Edit</source>
         <translation>Editar</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="157"/>
-        <source>Markdown</source>
-        <translation></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="257"/>
@@ -97,325 +91,255 @@
         <translation>Organizar por</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="297"/>
+        <location filename="../mainwindow.ui" line="299"/>
         <source>&amp;Help</source>
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="333"/>
+        <location filename="../mainwindow.ui" line="335"/>
         <source>Todo</source>
         <translation>Tarefas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="382"/>
+        <location filename="../mainwindow.ui" line="384"/>
         <source>&amp;Quit</source>
         <translation>&amp;Sair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
-        <source>Ctrl+Q</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="399"/>
         <source>&amp;Set notes folder</source>
         <translation>&amp;Configurar Diretório de Notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="408"/>
         <source>&amp;Find note</source>
         <translation>&amp;Pesquisar Nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="409"/>
-        <source>Ctrl+Shift+F</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="420"/>
         <source>&amp;Remove current note</source>
         <translation>&amp;Excluir a nota atual</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="421"/>
-        <source>Ctrl+R</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="432"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>Sobre o &amp;QOwnNotes...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="442"/>
+        <location filename="../mainwindow.ui" line="444"/>
         <source>&amp;New note</source>
         <translation>&amp;Nova Nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="445"/>
-        <source>Ctrl+N</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="459"/>
         <source>&amp;Toggle Edit Mode</source>
         <translation>&amp;Alternar para o modo de edição</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="460"/>
+        <location filename="../mainwindow.ui" line="462"/>
         <source>Toggle Edit Mode</source>
         <translation>Alternar para o modo de edição</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="463"/>
-        <source>Ctrl+E</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="472"/>
+        <location filename="../mainwindow.ui" line="474"/>
         <source>Check for &amp;updates</source>
-        <translation>&amp;Updates</translation>
+        <translation type="unfinished">&amp;Updates</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="475"/>
-        <source>Ctrl+Shift+U</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="484"/>
+        <location filename="../mainwindow.ui" line="486"/>
         <source>Report &amp;issues or ideas</source>
-        <translation>Relatar &amp;problemas ou ideias</translation>
+        <translation type="unfinished">Relatar &amp;problemas ou ideias</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="492"/>
+        <location filename="../mainwindow.ui" line="494"/>
         <source>Alphabetical</source>
-        <translation>Alfabética</translation>
+        <translation type="unfinished">Alfabética</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="495"/>
+        <location filename="../mainwindow.ui" line="497"/>
         <source>Sort alphabetical</source>
-        <translation>Ordem Alfabética</translation>
+        <translation type="unfinished">Ordem Alfabética</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="503"/>
+        <location filename="../mainwindow.ui" line="505"/>
         <source>By date</source>
-        <translation>por Data</translation>
+        <translation type="unfinished">por Data</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="506"/>
+        <location filename="../mainwindow.ui" line="508"/>
         <source>Sort by date</source>
-        <translation>Ordenar por Data</translation>
+        <translation type="unfinished">Ordenar por Data</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="514"/>
+        <location filename="../mainwindow.ui" line="516"/>
         <source>Sh&amp;ow in system tray</source>
-        <translation>&amp;Mostrar na área de notificações</translation>
+        <translation type="unfinished">&amp;Mostrar na área de notificações</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="523"/>
+        <location filename="../mainwindow.ui" line="525"/>
         <source>&amp;Settings</source>
-        <translation>&amp;Configurações</translation>
+        <translation type="unfinished">&amp;Configurações</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="535"/>
+        <location filename="../mainwindow.ui" line="537"/>
         <source>Show note &amp;versions</source>
-        <translation>Mostrar versões desta &amp;Nota</translation>
+        <translation type="unfinished">Mostrar versões desta &amp;Nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="538"/>
+        <location filename="../mainwindow.ui" line="540"/>
         <source>Show note versions on server</source>
-        <translation>Mostrar versões da nota no servidor</translation>
+        <translation type="unfinished">Mostrar versões da nota no servidor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="547"/>
+        <location filename="../mainwindow.ui" line="549"/>
         <source>Show &amp;trash</source>
-        <translation>Mostrar &amp;Lixeira</translation>
+        <translation type="unfinished">Mostrar &amp;Lixeira</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="550"/>
+        <location filename="../mainwindow.ui" line="552"/>
         <source>Show trashed notes on server</source>
-        <translation>Mostrar notas apagadas no servidor</translation>
+        <translation type="unfinished">Mostrar notas apagadas no servidor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="555"/>
+        <location filename="../mainwindow.ui" line="557"/>
         <location filename="../mainwindow.cpp" line="2117"/>
         <source>Select &amp;all notes</source>
         <translation>Selecionar &amp;todas as notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="564"/>
+        <location filename="../mainwindow.ui" line="566"/>
         <location filename="../mainwindow.cpp" line="2155"/>
         <source>Insert &amp;link</source>
         <translation>Inserir um &amp;link</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="567"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Insert link to an url or a note</source>
-        <translation>Inserir um link para uma url ou nota</translation>
+        <translation type="unfinished">Inserir um link para uma url ou nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="570"/>
-        <source>Ctrl+L</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="579"/>
+        <location filename="../mainwindow.ui" line="581"/>
         <source>&amp;Find in current note</source>
-        <translation>&amp;Pesquisar na nota</translation>
+        <translation type="unfinished">&amp;Pesquisar na nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="582"/>
+        <location filename="../mainwindow.ui" line="584"/>
         <source>Find text in current note</source>
-        <translation>Pesquisar um texto na nota</translation>
+        <translation type="unfinished">Pesquisar um texto na nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="585"/>
-        <source>Ctrl+F</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="590"/>
+        <location filename="../mainwindow.ui" line="592"/>
         <source>&amp;Duplicate text</source>
-        <translation>&amp;Duplicar o texto</translation>
+        <translation type="unfinished">&amp;Duplicar o texto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="593"/>
-        <source>Ctrl+D</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="602"/>
+        <location filename="../mainwindow.ui" line="604"/>
         <source>&amp;Back in note history</source>
-        <translation>&amp;Voltar no histórico</translation>
+        <translation type="unfinished">&amp;Voltar no histórico</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="605"/>
-        <source>Alt+Left</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="614"/>
+        <location filename="../mainwindow.ui" line="616"/>
         <source>Forward in note history</source>
-        <translation>Avançar no histórico</translation>
+        <translation type="unfinished">Avançar no histórico</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="617"/>
-        <source>Alt+Right</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="626"/>
+        <location filename="../mainwindow.ui" line="628"/>
         <source>Show &amp;Shortcuts</source>
-        <translation>Mostrar &amp;Atalhos</translation>
+        <translation type="unfinished">Mostrar &amp;Atalhos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="635"/>
+        <location filename="../mainwindow.ui" line="637"/>
         <source>&amp;Knowledge base</source>
-        <translation>&amp;Base de Conhecimento</translation>
+        <translation type="unfinished">&amp;Base de Conhecimento</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="644"/>
+        <location filename="../mainwindow.ui" line="646"/>
         <source>Insert current &amp;time</source>
-        <translation>&amp;Inserir data/hora atual</translation>
+        <translation type="unfinished">&amp;Inserir data/hora atual</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="647"/>
-        <source>Ctrl+T</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="656"/>
+        <location filename="../mainwindow.ui" line="658"/>
         <source>Show &amp;Todo List</source>
-        <translation>Mostrar a Lista de &amp;Tarefas</translation>
+        <translation type="unfinished">Mostrar a Lista de &amp;Tarefas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="659"/>
-        <source>Ctrl+Shift+T</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="668"/>
+        <location filename="../mainwindow.ui" line="670"/>
         <source>&amp;Export note as PDF (markdown)</source>
-        <translation>&amp;Exportar notas como PDF(markdown)</translation>
+        <translation type="unfinished">&amp;Exportar notas como PDF(markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="677"/>
+        <location filename="../mainwindow.ui" line="679"/>
         <source>&amp;Export note as PDF (text)</source>
-        <translation>&amp;Exportar notas como PDF(texto)</translation>
+        <translation type="unfinished">&amp;Exportar notas como PDF(texto)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="686"/>
+        <location filename="../mainwindow.ui" line="688"/>
         <source>&amp;Print note (text)</source>
-        <translation>&amp;Imprimir nota (texto)</translation>
+        <translation type="unfinished">&amp;Imprimir nota (texto)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="695"/>
+        <location filename="../mainwindow.ui" line="697"/>
         <source>&amp;Print note (markdown)</source>
-        <translation>&amp;Imprimir nota (markdown)</translation>
+        <translation type="unfinished">&amp;Imprimir nota (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="704"/>
+        <location filename="../mainwindow.ui" line="706"/>
         <source>Insert &amp;image</source>
-        <translation>Inserir &amp;imagem</translation>
+        <translation type="unfinished">Inserir &amp;imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="707"/>
+        <location filename="../mainwindow.ui" line="709"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-        <translation>Inserir imagem (a imagem será copiada para o diretório media)</translation>
+        <translation type="unfinished">Inserir imagem (a imagem será copiada para o diretório media)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="710"/>
-        <source>Ctrl+I</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="719"/>
+        <location filename="../mainwindow.ui" line="721"/>
         <source>Show &amp;changelog</source>
-        <translation>Mostrar &amp;Changelog</translation>
+        <translation type="unfinished">Mostrar &amp;Changelog</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="728"/>
+        <location filename="../mainwindow.ui" line="730"/>
         <source>&amp;Encrypt note</source>
-        <translation>&amp;Encriptar a nota</translation>
+        <translation type="unfinished">&amp;Encriptar a nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="737"/>
+        <location filename="../mainwindow.ui" line="739"/>
         <source>Edit encrypted note</source>
-        <translation>Editar nota encripitada</translation>
+        <translation type="unfinished">Editar nota encripitada</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="740"/>
-        <source>Ctrl+Shift+E</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="749"/>
+        <location filename="../mainwindow.ui" line="751"/>
         <source>Decrypt note</source>
-        <translation>Decriptar a Nota</translation>
+        <translation type="unfinished">Decriptar a Nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="758"/>
+        <location filename="../mainwindow.ui" line="760"/>
         <source>&amp;Open note in external editor</source>
-        <translation>&amp;Abrir a nota num editor externo</translation>
+        <translation type="unfinished">&amp;Abrir a nota num editor externo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="761"/>
-        <source>Ctrl+Shift+O</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="770"/>
+        <location filename="../mainwindow.ui" line="772"/>
         <source>&amp;Export note as markdown file</source>
-        <translation>&amp;Exportar a nota como arquivo markdown</translation>
+        <translation type="unfinished">&amp;Exportar a nota como arquivo markdown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="779"/>
+        <location filename="../mainwindow.ui" line="781"/>
         <source>&amp;Get involved</source>
-        <translation>Envolva-se com o &amp;Projeto</translation>
+        <translation type="unfinished">Envolva-se com o &amp;Projeto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="788"/>
+        <location filename="../mainwindow.ui" line="790"/>
         <source>Insert &amp;code block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="802"/>
+        <source>Next note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="814"/>
+        <source>Previous note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1529,65 +1453,55 @@ Suas Notas estarão intactas!</translation>
         <translation>&amp;salvar</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="104"/>
-        <source>Ctrl+S</source>
-        <translation></translation>
-    </message>
-    <message>
         <location filename="../dialogs/tododialog.ui" line="111"/>
         <source>remove current todo item</source>
-        <translation>Excluir a tarefa atual</translation>
+        <translation type="unfinished">Excluir a tarefa atual</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="114"/>
         <source>&amp;remove</source>
-        <translation>&amp;excluir</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.ui" line="121"/>
-        <source>Ctrl+R</source>
-        <translation></translation>
+        <translation type="unfinished">&amp;excluir</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="133"/>
         <location filename="../dialogs/tododialog.ui" line="140"/>
         <source>Priority</source>
-        <translation>Prioridade</translation>
+        <translation type="unfinished">Prioridade</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="168"/>
         <source>Reminder</source>
-        <translation>Lembrete</translation>
+        <translation type="unfinished">Lembrete</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="233"/>
         <source>Show completed items</source>
-        <translation>Mostrar tarefas concluídas</translation>
+        <translation type="unfinished">Mostrar tarefas concluídas</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="240"/>
         <source>reload the todo list from server</source>
-        <translation>recarregar a lista de tarefas do servidor</translation>
+        <translation type="unfinished">recarregar a lista de tarefas do servidor</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="243"/>
         <source>&amp;reload</source>
-        <translation>&amp;recarregar</translation>
+        <translation type="unfinished">&amp;recarregar</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="257"/>
         <source>select your todo list</source>
-        <translation>seleciona a sua lista de tarefas</translation>
+        <translation type="unfinished">seleciona a sua lista de tarefas</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>Todo list items are being loaded from the server</source>
-        <translation>A lista de tarefas foi carregada do servidor</translation>
+        <translation type="unfinished">A lista de tarefas foi carregada do servidor</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="274"/>
         <source>search or create todo item</source>
-        <translation>procurar ou criar uma tarefa</translation>
+        <translation type="unfinished">procurar ou criar uma tarefa</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="414"/>
