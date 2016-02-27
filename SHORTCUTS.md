@@ -15,6 +15,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>Ctrl</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 
 ### In the note search bar
 
@@ -66,6 +67,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>⌘</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>⌘</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 
 ### In the note search bar
 

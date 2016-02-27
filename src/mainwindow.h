@@ -170,6 +170,10 @@ private slots:
 
     void on_actionPrevious_Note_triggered();
 
+    void on_actionToggle_distraction_free_mode_triggered();
+
+    void toggleDistractionFreeMode();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -194,6 +198,7 @@ private:
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
+    QPushButton *_leaveDistractionFreeModeButton;
 
     void setupMainSplitter();
 
@@ -276,4 +281,10 @@ private:
     void gotoNextNote(int nextRow = -1);
 
     void gotoPreviousNote(int previousRow = -1);
+
+    void restoreDistractionFreeMode();
+
+    void setDistractionFreeMode(bool enabled = true);
+
+    void showStatusBarMessage(const QString & message, int timeout = 0);
 };

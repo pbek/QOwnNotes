@@ -193,6 +193,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
+
+    // restore the distraction free mode
+    restoreDistractionFreeMode();
 }
 
 MainWindow::~MainWindow() {
@@ -204,6 +207,146 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Restores the distraction free mode
+ */
+void MainWindow::restoreDistractionFreeMode() {
+    QSettings settings;
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    if (isInDistractionFreeMode) {
+        setDistractionFreeMode(true);
+    }
+}
+
+/**
+ * Toggles the distraction free mode
+ */
+void MainWindow::toggleDistractionFreeMode() {
+    QSettings settings;
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    qDebug() << __func__ << " - 'isInDistractionFreeMode': " <<
+    isInDistractionFreeMode;
+
+    // store the window settings before we go into distraction free mode
+    if (!isInDistractionFreeMode) {
+        storeSettings();
+    }
+
+    isInDistractionFreeMode = !isInDistractionFreeMode;
+
+    // remember that we were using the distraction free mode
+    settings.setValue("DistractionFreeMode/isEnabled",
+                      isInDistractionFreeMode);
+
+    setDistractionFreeMode(isInDistractionFreeMode);
+}
+
+/**
+ * Enables or disables the distraction free mode
+ */
+void MainWindow::setDistractionFreeMode(bool enabled) {
+    QSettings settings;
+
+    if (enabled) {
+        //
+        // enter the distraction free mode
+        //
+
+        // remember states, geometry and sizes
+        settings.setValue("DistractionFreeMode/windowState", saveState());
+        settings.setValue("DistractionFreeMode/menuBarGeometry",
+                          ui->menuBar->saveGeometry());
+        settings.setValue("DistractionFreeMode/mainSplitterSizes",
+                          mainSplitter->saveState());
+        settings.setValue("DistractionFreeMode/menuBarHeight",
+                          ui->menuBar->height());
+
+        // we must not hide the menu bar or else the shortcuts
+        // will not work any more
+        ui->menuBar->setFixedHeight(0);
+
+        // hide the tool bar
+        ui->mainToolBar->hide();
+
+        // hide the search line edit
+        ui->searchLineEdit->hide();
+
+        // hide the tab bar of the note tab widget
+        ui->noteTabWidget->tabBar()->hide();
+
+        // hide the status bar
+//        ui->statusBar->hide();
+
+        // hide the notes list widget
+        QList<int> sizes = mainSplitter->sizes();
+        int size = sizes.takeFirst() + sizes.takeFirst();
+        sizes << 0 << size;
+        mainSplitter->setSizes(sizes);
+
+        _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
+        _leaveDistractionFreeModeButton->setFlat(true);
+        _leaveDistractionFreeModeButton->setToolTip(
+                tr("leave distraction free mode"));
+        _leaveDistractionFreeModeButton
+                ->setStyleSheet("QPushButton {padding: 0 5px}");
+
+        _leaveDistractionFreeModeButton->setIcon(QIcon::fromTheme(
+                "zoom-original",
+                QIcon(":/media/zoom-original.svg")));
+
+//        _leaveDistractionFreeModeButton->setShortcut(
+//                QKeySequence("Ctrl+Shift+D"));
+
+        connect(_leaveDistractionFreeModeButton, SIGNAL(clicked()),
+                this, SLOT(toggleDistractionFreeMode()));
+
+        statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
+    } else {
+        //
+        // leave the distraction free mode
+        //
+
+        statusBar()->removeWidget(_leaveDistractionFreeModeButton);
+        disconnect(_leaveDistractionFreeModeButton, 0, 0, 0);
+
+        // restore states and sizes
+        QByteArray state = settings.value
+                ("DistractionFreeMode/mainSplitterSizes").toByteArray();
+        mainSplitter->restoreState(state);
+        restoreState(
+                settings.value(
+                        "DistractionFreeMode/windowState").toByteArray());
+        ui->menuBar->restoreGeometry(
+                settings.value(
+                        "DistractionFreeMode/menuBarGeometry").toByteArray());
+        ui->menuBar->setFixedHeight(
+                settings.value("DistractionFreeMode/menuBarHeight").toInt());
+
+        // show the tab bar of the note tab widget
+        ui->noteTabWidget->tabBar()->show();
+
+        // show the search line edit
+        ui->searchLineEdit->show();
+    }
+}
+
+/**
+ * Shows a status bar message if not in distraction free mode
+ */
+void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
+    QSettings settings;
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    if (!isInDistractionFreeMode) {
+        ui->statusBar->showMessage(message, timeout);
+    }
+}
 
 /**
  * Sets the shortcuts for the note bookmarks up
@@ -675,7 +818,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     Q_UNUSED(blocker);
                     this->currentNote.store();
                     this->currentNote.storeNoteTextFileToDisk();
-                    this->ui->statusBar->showMessage(
+                    showStatusBarMessage(
                             tr("stored current note to disk"), 1000);
 
                     // just to make sure everything is uptodate
@@ -717,7 +860,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
                     // store note to disk again
                     note.storeNoteTextFileToDisk();
-                    this->ui->statusBar->showMessage(
+                    showStatusBarMessage(
                             tr("stored current note to disk"), 1000);
 
                     // rebuild and reload the notes directory list
@@ -785,7 +928,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
             qDebug() << __func__ << " - 'count': " << count;
 
-            this->ui->statusBar->showMessage(
+            showStatusBarMessage(
                     tr("stored %n note(s) to disk", "", count),
                     1000);
 
@@ -1165,11 +1308,19 @@ void MainWindow::resetCurrentNote() {
 
 void MainWindow::storeSettings() {
     QSettings settings;
-    settings.setValue("MainWindow/geometry", saveGeometry());
-    settings.setValue("MainWindow/windowState", saveState());
-    settings.setValue("mainSplitterSizes", this->mainSplitter->saveState());
-    settings.setValue("MainWindow/menuBarGeometry",
-                      ui->menuBar->saveGeometry());
+
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    // don't store the window settings in distraction free mode
+    if (!isInDistractionFreeMode) {
+        settings.setValue("MainWindow/geometry", saveGeometry());
+        settings.setValue("MainWindow/windowState", saveState());
+        settings.setValue("mainSplitterSizes", this->mainSplitter->saveState());
+        settings.setValue("MainWindow/menuBarGeometry",
+                          ui->menuBar->saveGeometry());
+    }
+
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("ShowSystemTray", showSystemTray);
 }
@@ -1895,7 +2046,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
             Q_UNUSED(blocker);
 
             note.storeNoteTextFileToDisk();
-            this->ui->statusBar->showMessage(
+            showStatusBarMessage(
                     tr("stored current note to disk"), 1000);
         }
 
@@ -2152,7 +2303,7 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
 
     QString linkTextActionName =
             ui->noteTextEdit->textCursor().selectedText() != "" ?
-				tr("&Link selected text") : tr("Insert &link");
+                tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
 
@@ -2543,7 +2694,7 @@ void MainWindow::storeNoteBookmark(int slot) {
     NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
     noteBookmarks[slot] = item;
 
-    ui->statusBar->showMessage(
+    showStatusBarMessage(
             tr("bookmarked note position at slot %1").arg(
                     QString::number(slot)), 3000);
 }
@@ -2559,7 +2710,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
         ui->noteTextEdit->setFocus();
         setCurrentNoteFromHistoryItem(item);
 
-        ui->statusBar->showMessage(
+        showStatusBarMessage(
                 tr("jumped to bookmark position at slot %1").arg(
                         QString::number(slot)), 3000);
     }
@@ -2656,4 +2807,9 @@ void MainWindow::gotoPreviousNote(int previousRow)
     }
 
     ui->notesListWidget->setCurrentRow(previousRow);
+}
+
+void MainWindow::on_actionToggle_distraction_free_mode_triggered()
+{
+    toggleDistractionFreeMode();
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1024</width>
-    <height>768</height>
+    <width>1163</width>
+    <height>836</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -248,7 +248,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1024</width>
+     <width>1163</width>
      <height>28</height>
     </rect>
    </property>
@@ -336,9 +336,16 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="actionOpen_List"/>
    </widget>
+   <widget class="QMenu" name="menuWindow">
+    <property name="title">
+     <string>Window</string>
+    </property>
+    <addaction name="actionToggle_distraction_free_mode"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
    <addaction name="menuTodo"/>
+   <addaction name="menuWindow"/>
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -372,6 +379,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionOpen_List"/>
    <addaction name="separator"/>
+   <addaction name="actionToggle_distraction_free_mode"/>
    <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -795,7 +803,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionNext_note">
    <property name="icon">
-    <iconset theme="go-down">
+    <iconset theme="go-down" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-down.svg</iconset>
    </property>
    <property name="text">
@@ -807,7 +815,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionPrevious_Note">
    <property name="icon">
-    <iconset theme="go-up">
+    <iconset theme="go-up" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
    </property>
    <property name="text">
@@ -815,6 +823,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+PgUp</string>
+   </property>
+  </action>
+  <action name="actionToggle_distraction_free_mode">
+   <property name="icon">
+    <iconset theme="zoom-original" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/zoom-original.svg</normaloff>:/icons/breeze-qownnotes/16x16/zoom-original.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Distraction free mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Distraction free mode, you can leave it with a button on the bottom right</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
    </property>
   </action>
  </widget>

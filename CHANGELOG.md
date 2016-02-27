@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 1.0.8
+- you can now enter a distraction free mode with a new button in the toolbar
+  (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
+    - you can also toggle it with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> 
+
 ## 1.0.7
 - the Chinese language got renamed internally for Crowdin, it's possible that 
   you have to re-select it in the settings if you were using it 
@@ -7,8 +12,8 @@
     - join us on [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in your language
 - **fixed note encryption** that got broken in version 1.0.6
-    - if you have encrypted notes in version 1.0.6 you have to **decrypt them 
-      with version 1.0.6** first before using them in version 1.0.7! 
+    - if you have encrypted notes in version 1.0.6 you have to first **decrypt 
+      them with version 1.0.6** before using them in version 1.0.7! 
 
 ## 1.0.6
 - you can now enter **network proxy settings** in the new network settings 
