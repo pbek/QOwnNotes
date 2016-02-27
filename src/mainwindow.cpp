@@ -1336,8 +1336,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
     if (currentNote.hasEncryptedNoteText() &&
         !currentNote.canDecryptNoteText()) {
         QString labelText =
-				tr("Please enter the <strong>password</strong> "
-						"of this encrypted note.");
+                tr("Please enter the <strong>password</strong> "
+                        "of this encrypted note.");
 
         if (!additionalText.isEmpty()) {
             labelText += " " + additionalText;

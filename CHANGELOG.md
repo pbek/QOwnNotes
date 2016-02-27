@@ -7,8 +7,8 @@
     - join us on [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in your language
 - **fixed note encryption** that got broken in version 1.0.6
-    - if you have encrypted notes in version 1.0.6 you have to decrypt them 
-      with with version 1.0.6 first! 
+    - if you have encrypted notes in version 1.0.6 you have to **decrypt them 
+      with version 1.0.6** first before using them in version 1.0.7! 
 
 ## 1.0.6
 - you can now enter **network proxy settings** in the new network settings 
