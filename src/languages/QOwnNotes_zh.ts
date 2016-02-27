@@ -370,11 +370,6 @@ Click Cancel to exit.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="840"/>
-        <source>Ctrl+Shift+D</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="822"/>
         <location filename="../mainwindow.cpp" line="864"/>
         <location filename="../mainwindow.cpp" line="2050"/>

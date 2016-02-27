@@ -837,7 +837,7 @@ p, li { white-space: pre-wrap; }
     <string>Distraction free mode, you can leave it with a button on the bottom right</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+D</string>
+    <string notr="true">Ctrl+Shift+D</string>
    </property>
   </action>
  </widget>
