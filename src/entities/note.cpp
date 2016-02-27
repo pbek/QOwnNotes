@@ -9,7 +9,7 @@
 #include <QRegularExpression>
 #include <QUrl>
 #include <QCryptographicHash>
-#include <services/cryptoservice.h>
+#include "libraries/simplecrypt/simplecrypt.h"
 #include "libraries/hoedown/html.h"
 
 
@@ -901,7 +901,8 @@ QString Note::encryptNoteText() {
     }
 
     // encrypt the text
-    QString encryptedText = CryptoService::instance()->encryptToString(text);
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString encryptedText = crypto->encryptToString(text);
 
     // add the encrypted text to the new note text
     noteText += encryptedText + "\n" +
@@ -962,7 +963,8 @@ bool Note::canDecryptNoteText() {
     }
 
     // decrypt the note text
-    QString decryptedNoteText = CryptoService::instance()->decryptToString(encryptedNoteText);
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
 
     return decryptedNoteText != "";
 }
@@ -987,7 +989,8 @@ QString Note::getDecryptedNoteText() {
     }
 
     // decrypt the note text
-    QString decryptedNoteText = CryptoService::instance()->decryptToString(encryptedNoteText);
+    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
 
     if (decryptedNoteText == "") {
         return noteText;
