@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 1.1
+- QOwnNotes now allows the usage of `# ` markdown headlines as note title
+  (for [Issue #87](https://github.com/pbek/QOwnNotes/issues/87))
+    - the characters will be removed in the note name
+    - keep in mind that this behaviour may not be supported by other note 
+      clients, that may add the `# ` back again into the file name 
+
 ## 1.0.9
 - improved the in-note search, so that it will not be able to block the note 
   text any more

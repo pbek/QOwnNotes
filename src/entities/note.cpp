@@ -454,6 +454,9 @@ void Note::handleNoteTextFileName() {
     // do nothing if the first line is empty
     if (name == "") return;
 
+    // remove a leading "# " for markdown headlines
+    name.replace(QRegularExpression("^#\\s"), "");
+
     // check if name has changed
     if (name != this->name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
