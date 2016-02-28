@@ -60,6 +60,10 @@ MainWindow::MainWindow(QWidget *parent) :
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
 
+    // set the search frames for the note text edits
+    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
+    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
+
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
@@ -2572,7 +2576,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
     }
 
     askForEncryptedNotePasswordIfNeeded(
-			tr("<br />You will be able to edit your encrypted note."));
+            tr("<br />You will be able to edit your encrypted note."));
 
     if (currentNote.canDecryptNoteText()) {
         const QSignalBlocker blocker(ui->encryptedNoteTextEdit);

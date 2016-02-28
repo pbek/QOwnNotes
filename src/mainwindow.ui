@@ -98,6 +98,19 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <property name="verticalSpacing">
+           <number>0</number>
+          </property>
+          <item row="2" column="0">
+           <widget class="QFrame" name="noteTextEditSearchFrame">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="lineWidth">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="0">
            <widget class="QOwnNotesMarkdownTextEdit" name="noteTextEdit">
             <property name="enabled">

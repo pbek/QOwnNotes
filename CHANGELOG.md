@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.0.9
+- improved the in-note search, so that it will not be able to block the note 
+  text any more
+
 ## 1.0.8
 - you can now enter a distraction free mode with a new button in the toolbar
   (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
