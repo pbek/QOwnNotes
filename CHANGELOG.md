@@ -6,6 +6,7 @@
     - the characters will be removed in the note name
     - keep in mind that this behaviour may not be supported by other note 
       clients, that may add the `# ` back again into the file name 
+- added more Russian translation (thank you SpacePotato)
 
 ## 1.0.9
 - improved the in-note search, so that it will not be able to block the note 
