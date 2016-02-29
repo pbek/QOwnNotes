@@ -14,7 +14,7 @@ DESCRIPTION="A plain-text file notepad with markdown support and (optional) ownC
 HOMEPAGE="http://www.qownnotes.org/"
 MY_P="COMMIT-HASH"
 SRC_URI="https://github.com/pbek/QOwnNotes/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${MY_P}"
+S="${WORKDIR}/QOwnNotes-${MY_P}"
 
 LICENSE="GPL-2"
 SLOT="0"
