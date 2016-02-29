@@ -5,7 +5,7 @@
 #
 
 # uncomment this if you want to force a version
-QOWNNOTES_VERSION=1.1.0.1
+QOWNNOTES_VERSION=1.1.0.2
 
 BRANCH=develop
 #BRANCH=master
@@ -47,16 +47,28 @@ if [ -z $QOWNNOTES_VERSION ]; then
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
-cd ../overlay/app-office/qownnotes/
-cp ../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
+cd ..
+wget https://github.com/pbek/QOwnNotes/archive/${gitCommitHash}.tar.gz -O archive.tar.gz
+ARCHIVE_SHA512=`sha512sum archive.tar.gz | awk '{ print $1 }'`
+ARCHIVE_SIZE=`stat -c "%s" archive.tar.gz`
+cd QOwnNotes
 
-# replace the version in the PKGBUILD file
+echo "Archive sha512: ${ARCHIVE_SHA512}"
+echo "Archive size: ${ARCHIVE_SIZE}"
+
+cd ../overlay/app-office/qownnotes/
+cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
+
+# replace the version in the ebuild file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.ebuild
 
-# replace the commit hash in the PKGBUILD file
+# replace the commit hash in the ebuild file
 sed -i "s/COMMIT-HASH3/$gitCommitHash3/g" qownnotes.ebuild
 sed -i "s/COMMIT-HASH2/$gitCommitHash2/g" qownnotes.ebuild
 sed -i "s/COMMIT-HASH/$gitCommitHash/g" qownnotes.ebuild
+
+# update the Manifest file
+echo "DIST qownnotes-${QOWNNOTES_VERSION}.tar.gz ${ARCHIVE_SIZE} SHA512 ${ARCHIVE_SHA512}" >> Manifest
 
 eBuildFile="qownnotes-$QOWNNOTES_VERSION.ebuild"
 mv qownnotes.ebuild $eBuildFile
