@@ -40,8 +40,14 @@ src_prepare() {
 
 	cd libraries
 	rmdir qmarkdowntextedit piwikitracker
-	git clone https://github.com/pbek/qmarkdowntextedit.git -b COMMIT-HASH2
-	git clone https://github.com/pbek/qt-piwik-tracker.git -b COMMIT-HASH3 piwiktracker
+	git clone https://github.com/pbek/qmarkdowntextedit.git
+	cd qmarkdowntextedit
+	git checkout COMMIT-HASH2
+	cd ..
+	git clone https://github.com/pbek/qt-piwik-tracker.git piwiktracker
+	cd piwiktracker
+	git checkout COMMIT-HASH3
+	cd ..
 }
 
 src_compile() {
