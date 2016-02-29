@@ -8,11 +8,14 @@ MetricsService::MetricsService(QObject *parent) : QObject(parent)
     _firstHeartbeat = true;
 
     QString debug = "0";
+    int siteId = 5;
 #ifdef QT_DEBUG
     debug = "1";
+    siteId = 6;
 #endif
 
-    _piwikTracker = new PiwikTracker(qApp, QUrl("https://p.qownnotes.org"), 5);
+    _piwikTracker = new PiwikTracker(
+            qApp, QUrl("https://p.qownnotes.org"), siteId);
     _piwikTracker->setCustomDimension(1, QString(VERSION));
     _piwikTracker->setCustomDimension(2, QLocale::system().name());
     _piwikTracker->setCustomDimension(3, debug);
