@@ -340,6 +340,19 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
 }
 
 /**
+ * Sets the distraction free mode if it is currently other than we want it to be
+ */
+void MainWindow::changeDistractionFreeMode(bool enabled) {
+    QSettings settings;
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    if (isInDistractionFreeMode != enabled) {
+        setDistractionFreeMode(enabled);
+    }
+}
+
+/**
  * Shows a status bar message if not in distraction free mode
  */
 void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
@@ -2013,9 +2026,10 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
 }
 
 //
-// set focus on search line edit if Ctrl + F was pressed
+// set focus on search line edit if Ctrl + Shift + F was pressed
 //
 void MainWindow::on_action_Find_note_triggered() {
+    changeDistractionFreeMode(false);
     this->ui->searchLineEdit->setFocus();
     this->ui->searchLineEdit->selectAll();
 }

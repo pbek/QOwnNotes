@@ -286,5 +286,7 @@ private:
 
     void setDistractionFreeMode(bool enabled = true);
 
+    void changeDistractionFreeMode(bool enabled);
+
     void showStatusBarMessage(const QString & message, int timeout = 0);
 };
