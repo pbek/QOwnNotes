@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en_US">
+<TS version="2.0" language="nl" sourcelanguage="en">
 <defaultcodec>UTF-8</defaultcodec>
 <context>
     <name>AboutDialog</name>
@@ -28,6 +28,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/linkdialog.ui" line="49"/>
+        <source>enter an URL to link to</source>
+        <translation type="unfinished">Voer een URL om te linken naar</translation>
+    </message>
+    <message>
         <location filename="../dialogs/linkdialog.ui" line="59"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -36,11 +41,6 @@
         <location filename="../dialogs/linkdialog.ui" line="72"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/linkdialog.ui" line="49"/>
-        <source>enter an URL to link to</source>
-        <translation type="unfinished">Voer een URL om te linken naar</translation>
     </message>
     <message>
         <location filename="../dialogs/linkdialog.ui" line="87"/>
@@ -56,6 +56,11 @@
 <context>
     <name>MainWindow</name>
     <message>
+        <location filename="../mainwindow.ui" line="57"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="72"/>
         <source>search or create note</source>
         <translation type="unfinished">zoek of maak een notitie</translation>
@@ -67,12 +72,14 @@
         <translation type="unfinished">Bewerken</translation>
     </message>
     <message>
-        <source>&amp; Note</source>
-        <translation type="obsolete">Notitie</translation>
+        <location filename="../mainwindow.ui" line="270"/>
+        <source>&amp;Note</source>
+        <translation type="unfinished">Notitie</translation>
     </message>
     <message>
-        <source>R&amp; ecent notes folders</source>
-        <translation type="obsolete">R%amp; ecente merkmappen</translation>
+        <location filename="../mainwindow.ui" line="274"/>
+        <source>R&amp;ecent notes folders</source>
+        <translation type="unfinished">R&amp;ecente merkmappen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="279"/>
@@ -80,66 +87,14 @@
         <translation type="unfinished">Sorteren op</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="348"/>
-        <source>Todo</source>
-        <translation type="unfinished">Todo</translation>
-    </message>
-    <message>
-        <source>&amp; Set notes folder</source>
-        <translation type="obsolete">Set merkmap</translation>
-    </message>
-    <message>
-        <source>&amp; Find note</source>
-        <translation type="obsolete">Vind notitie</translation>
-    </message>
-    <message>
-        <source>&amp; Remove current note</source>
-        <translation type="obsolete">Deze notitie verwijderen</translation>
-    </message>
-    <message>
-        <source>About &amp; QOwnNotes...</source>
-        <translation type="obsolete">Over &amp; QOwnNotes...</translation>
-    </message>
-    <message>
-        <source>&amp; New note</source>
-        <translation type="obsolete">&amp; Nieuwe notitie</translation>
-    </message>
-    <message>
-        <source>&amp; Toggle Edit Mode</source>
-        <translation type="obsolete">&amp; Schakelen naar bewerkmodus</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="483"/>
-        <source>Toggle Edit Mode</source>
-        <translation type="unfinished">&quot;&gt;&amp; Schakelen naar bewerkmodus</translation>
-    </message>
-    <message>
-        <source>Check for &amp; updates</source>
-        <translation type="obsolete">Zoek naar &amp; updates</translation>
-    </message>
-    <message>
-        <source>Report &amp; issues or ideas</source>
-        <translation type="obsolete">Bericht over &amp; problemen of ideeën</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="57"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="270"/>
-        <source>&amp;Note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="274"/>
-        <source>R&amp;ecent notes folders</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="312"/>
         <source>&amp;Help</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="348"/>
+        <source>Todo</source>
+        <translation type="unfinished">Todo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="354"/>
@@ -154,42 +109,47 @@
     <message>
         <location filename="../mainwindow.ui" line="420"/>
         <source>&amp;Set notes folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Set merkmap</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="429"/>
         <source>&amp;Find note</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vind notitie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="441"/>
         <source>&amp;Remove current note</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Deze notitie verwijderen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="453"/>
         <source>About &amp;QOwnNotes...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Over &amp;QOwnNotes...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
         <source>&amp;New note</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Nieuwe notitie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="480"/>
         <source>&amp;Toggle Edit Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Schakelen naar bewerkmodus</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="483"/>
+        <source>Toggle Edit Mode</source>
+        <translation type="unfinished">&quot;&gt;&amp;Schakelen naar bewerkmodus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="495"/>
         <source>Check for &amp;updates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zoek naar &amp;updates</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="507"/>
         <source>Report &amp;issues or ideas</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bericht over &amp;problemen of ideeën</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="515"/>
@@ -214,146 +174,17 @@
     <message>
         <location filename="../mainwindow.ui" line="537"/>
         <source>Sh&amp;ow in system tray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">T&amp;oon in het systeemvak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="546"/>
         <source>&amp;Settings</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Instellingen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="558"/>
         <source>Show note &amp;versions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="570"/>
-        <source>Show &amp;trash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="578"/>
-        <location filename="../mainwindow.cpp" line="2305"/>
-        <source>Select &amp;all notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="587"/>
-        <location filename="../mainwindow.cpp" line="2343"/>
-        <source>Insert &amp;link</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="602"/>
-        <source>&amp;Find in current note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="613"/>
-        <source>&amp;Duplicate text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="625"/>
-        <source>&amp;Back in note history</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="649"/>
-        <source>Show &amp;Shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="658"/>
-        <source>&amp;Knowledge base</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="667"/>
-        <source>Insert current &amp;time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="679"/>
-        <source>Show &amp;Todo List</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="691"/>
-        <source>&amp;Export note as PDF (markdown)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="700"/>
-        <source>&amp;Export note as PDF (text)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="709"/>
-        <source>&amp;Print note (text)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="718"/>
-        <source>&amp;Print note (markdown)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="727"/>
-        <source>Insert &amp;image</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="742"/>
-        <source>Show &amp;changelog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="751"/>
-        <source>&amp;Encrypt note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="781"/>
-        <source>&amp;Open note in external editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="793"/>
-        <source>&amp;Export note as markdown file</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="802"/>
-        <source>&amp;Get involved</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="811"/>
-        <source>Insert &amp;code block</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="847"/>
-        <source>&amp;Distraction free mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="850"/>
-        <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sh&amp; ow in system tray</source>
-        <translation type="obsolete">T&amp; oon in het systeemvak</translation>
-    </message>
-    <message>
-        <source>&amp; Settings</source>
-        <translation type="obsolete">%amp; Instellingen</translation>
-    </message>
-    <message>
-        <source>Show note &amp; versions</source>
-        <translation type="obsolete">Toon notitie &amp; versies</translation>
+        <translation type="unfinished">Toon notitie &amp; versies</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="561"/>
@@ -361,8 +192,9 @@
         <translation type="unfinished">Toon notitie versies op de servers</translation>
     </message>
     <message>
-        <source>Show &amp; trash</source>
-        <translation type="obsolete">Toon &amp; prullenbak</translation>
+        <location filename="../mainwindow.ui" line="570"/>
+        <source>Show &amp;trash</source>
+        <translation type="unfinished">Toon &amp; prullenbak</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="573"/>
@@ -370,12 +202,16 @@
         <translation type="unfinished">Toon verwijderd notities op de server</translation>
     </message>
     <message>
-        <source>Select &amp; all notes</source>
-        <translation type="obsolete">Selecteer &amp; alle notities</translation>
+        <location filename="../mainwindow.ui" line="578"/>
+        <location filename="../mainwindow.cpp" line="2305"/>
+        <source>Select &amp;all notes</source>
+        <translation type="unfinished">Selecteer &amp; alle notities</translation>
     </message>
     <message>
-        <source>Insert &amp; link</source>
-        <translation type="obsolete">Voeg &amp; link in</translation>
+        <location filename="../mainwindow.ui" line="587"/>
+        <location filename="../mainwindow.cpp" line="2343"/>
+        <source>Insert &amp;link</source>
+        <translation type="unfinished">Voeg &amp;link in</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="590"/>
@@ -383,8 +219,9 @@
         <translation type="unfinished">Voeg link in naar een url of een notitie</translation>
     </message>
     <message>
-        <source>&amp; Find in current note</source>
-        <translation type="obsolete">Vind een nieuwe notitie</translation>
+        <location filename="../mainwindow.ui" line="602"/>
+        <source>&amp;Find in current note</source>
+        <translation type="unfinished">Vind een nieuwe notitie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="605"/>
@@ -392,12 +229,14 @@
         <translation type="unfinished">Vind tekst in nieuwe notitie</translation>
     </message>
     <message>
-        <source>&amp; Duplicate text</source>
-        <translation type="obsolete">Dupliceer tekst</translation>
+        <location filename="../mainwindow.ui" line="613"/>
+        <source>&amp;Duplicate text</source>
+        <translation type="unfinished">Dupliceer tekst</translation>
     </message>
     <message>
-        <source>&amp; Back in note history</source>
-        <translation type="obsolete">Terug in notitie verloop</translation>
+        <location filename="../mainwindow.ui" line="625"/>
+        <source>&amp;Back in note history</source>
+        <translation type="unfinished">Terug in notitie verloop</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="637"/>
@@ -405,40 +244,49 @@
         <translation type="unfinished">Naar voren in notitie verloop</translation>
     </message>
     <message>
-        <source>Show &amp; Shortcuts</source>
-        <translation type="obsolete">Toon &amp; Shortcuts</translation>
+        <location filename="../mainwindow.ui" line="649"/>
+        <source>Show &amp;Shortcuts</source>
+        <translation type="unfinished">Toon &amp;Shortcuts</translation>
     </message>
     <message>
-        <source>&amp; Knowledge base</source>
-        <translation type="obsolete">&amp; Kennisbank</translation>
+        <location filename="../mainwindow.ui" line="658"/>
+        <source>&amp;Knowledge base</source>
+        <translation type="unfinished">&amp;Kennisbank</translation>
     </message>
     <message>
-        <source>Insert current &amp; time</source>
-        <translation type="obsolete">Voeg nieuwe &amp; tijd in</translation>
+        <location filename="../mainwindow.ui" line="667"/>
+        <source>Insert current &amp;time</source>
+        <translation type="unfinished">Voeg nieuwe &amp;tijd in</translation>
     </message>
     <message>
-        <source>Show &amp; Todo List</source>
-        <translation type="obsolete">Todo lijst</translation>
+        <location filename="../mainwindow.ui" line="679"/>
+        <source>Show &amp;Todo List</source>
+        <translation type="unfinished">Todo lijst</translation>
     </message>
     <message>
-        <source>&amp; Export note as PDF (markdown)</source>
-        <translation type="obsolete">Exporteer notitie als PDF (markdown)</translation>
+        <location filename="../mainwindow.ui" line="691"/>
+        <source>&amp;Export note as PDF (markdown)</source>
+        <translation type="unfinished">Exporteer notitie als PDF (markdown)</translation>
     </message>
     <message>
-        <source>&amp; Export note as PDF (text)</source>
-        <translation type="obsolete">Exporteer notitie als PDF (tekst)</translation>
+        <location filename="../mainwindow.ui" line="700"/>
+        <source>&amp;Export note as PDF (text)</source>
+        <translation type="unfinished">Exporteer notitie als PDF (tekst)</translation>
     </message>
     <message>
-        <source>&amp; Print note (text)</source>
-        <translation type="obsolete">&amp; Print notitie (tekst)</translation>
+        <location filename="../mainwindow.ui" line="709"/>
+        <source>&amp;Print note (text)</source>
+        <translation type="unfinished">&amp;Print notitie (tekst)</translation>
     </message>
     <message>
-        <source>&amp; Print note (markdown)</source>
-        <translation type="obsolete">&amp; Print notitie (markdown)</translation>
+        <location filename="../mainwindow.ui" line="718"/>
+        <source>&amp;Print note (markdown)</source>
+        <translation type="unfinished">&amp;Print notitie (markdown)</translation>
     </message>
     <message>
-        <source>Insert &amp; image</source>
-        <translation type="obsolete">Voeg &amp; beeld in</translation>
+        <location filename="../mainwindow.ui" line="727"/>
+        <source>Insert &amp;image</source>
+        <translation type="unfinished">Voeg &amp; beeld in</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="730"/>
@@ -446,12 +294,14 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show &amp; changelog</source>
-        <translation type="obsolete">Toon &amp; lijst van veranderingen </translation>
+        <location filename="../mainwindow.ui" line="742"/>
+        <source>Show &amp;changelog</source>
+        <translation type="unfinished">Toon &amp;lijst van veranderingen </translation>
     </message>
     <message>
-        <source>&amp; Encrypt note</source>
-        <translation type="obsolete">&amp; versleutelen notitie</translation>
+        <location filename="../mainwindow.ui" line="751"/>
+        <source>&amp;Encrypt note</source>
+        <translation type="unfinished">&amp;versleutelen notitie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="760"/>
@@ -464,20 +314,24 @@
         <translation type="unfinished">Decrypt notitie</translation>
     </message>
     <message>
-        <source>&amp; Open note in external editor</source>
-        <translation type="obsolete">&amp; Open in externe editor</translation>
+        <location filename="../mainwindow.ui" line="781"/>
+        <source>&amp;Open note in external editor</source>
+        <translation type="unfinished">&amp;Open in externe editor</translation>
     </message>
     <message>
-        <source>&amp; Export note as markdown file</source>
-        <translation type="obsolete">&amp; Export notitie als markdown bestand</translation>
+        <location filename="../mainwindow.ui" line="793"/>
+        <source>&amp;Export note as markdown file</source>
+        <translation type="unfinished">&amp;Export notitie als markdown bestand</translation>
     </message>
     <message>
-        <source>&amp; Get involved</source>
-        <translation type="obsolete">&amp; Doe mee</translation>
+        <location filename="../mainwindow.ui" line="802"/>
+        <source>&amp;Get involved</source>
+        <translation type="unfinished">&amp;Doe mee</translation>
     </message>
     <message>
-        <source>Insert &amp; code block</source>
-        <translation type="obsolete">Plaats &amp; codeblok</translation>
+        <location filename="../mainwindow.ui" line="811"/>
+        <source>Insert &amp;code block</source>
+        <translation type="unfinished">Plaats &amp; codeblok</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="823"/>
@@ -488,6 +342,16 @@
         <location filename="../mainwindow.ui" line="835"/>
         <source>Previous note</source>
         <translation type="unfinished">Vorig notitie</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="847"/>
+        <source>&amp;Distraction free mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="850"/>
+        <source>Distraction free mode, you can leave it with a button on the bottom right</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
@@ -508,33 +372,9 @@
 	Huidige notitie te herstellen?</translation>
     </message>
     <message>
-        <source>&amp; Restore</source>
-        <translation type="obsolete">&amp; Herstellen</translation>
-    </message>
-    <message>
-        <source>&amp; Cancel</source>
-        <translation type="obsolete">&amp; Annuleer</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="296"/>
-        <source>leave</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="299"/>
-        <source>leave distraction free mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="886"/>
-        <source>Current note was removed outside of this application!
-Restore current note?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="888"/>
         <source>&amp;Restore</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Herstellen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="888"/>
@@ -545,7 +385,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="2417"/>
         <location filename="../mainwindow.cpp" line="2586"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Annuleer</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="968"/>
@@ -583,161 +423,12 @@ Restore current note?</source>
     <message>
         <location filename="../mainwindow.cpp" line="1189"/>
         <source>&amp;Retry</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;opnieuw proberen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1189"/>
         <source>&amp;Exit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1281"/>
-        <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1283"/>
-        <location filename="../mainwindow.cpp" line="1646"/>
-        <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1526"/>
-        <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1550"/>
-        <source>Note can&apos;t be decrypted!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1641"/>
-        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
-
-If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1697"/>
-        <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1699"/>
-        <source>&amp;Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1731"/>
-        <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1733"/>
-        <source>&amp;Copy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="1751"/>
-        <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1883"/>
-        <source>PDF files (*.pdf)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1922"/>
-        <source>&amp;Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1923"/>
-        <location filename="../mainwindow.cpp" line="2416"/>
-        <source>Open &amp;settings</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2291"/>
-        <source>&amp;Move notes to...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2292"/>
-        <source>&amp;Copy notes to...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2303"/>
-        <source>&amp;Remove notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2343"/>
-        <source>&amp;Link selected text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2413"/>
-        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2467"/>
-        <source>Image files (*.jpg *.png *.gif)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2536"/>
-        <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2581"/>
-        <source>Decrypt note and store it as plain text</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2582"/>
-        <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2586"/>
-        <source>&amp;Decrypt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2612"/>
-        <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2678"/>
-        <source>Markdown files (*.md)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp; Retry</source>
-        <translation type="obsolete">&amp; opnieuw proberen</translation>
-    </message>
-    <message>
-        <source>&amp; Exit</source>
-        <translation type="obsolete">&gt;&amp; Exit</translation>
+        <translation type="unfinished">&gt;&amp;Exit</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1280"/>
@@ -745,20 +436,25 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Remove current note: &lt; strong&gt;%1&lt;/strong&gt;?</source>
-        <translation type="obsolete">Verwijder nieuwe notitie: &lt; strong&gt;%1&lt;/strong&gt;?</translation>
+        <location filename="../mainwindow.cpp" line="1281"/>
+        <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished">Verwijder nieuwe notitie: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <source>&amp; Remove</source>
-        <translation type="obsolete">&amp; Verwijderen </translation>
+        <location filename="../mainwindow.cpp" line="1283"/>
+        <location filename="../mainwindow.cpp" line="1646"/>
+        <source>&amp;Remove</source>
+        <translation type="unfinished">&amp;Verwijderen </translation>
     </message>
     <message>
-        <source>Please enter the &lt; strong&gt; password&lt;/strong&gt; of this encrypted note.</source>
-        <translation type="obsolete"> AUB voer in de &lt; strong&gt; password&lt;/strong&gt; van deze gecodeerde noot.</translation>
+        <location filename="../mainwindow.cpp" line="1526"/>
+        <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+        <translation type="unfinished"> AUB voer in de &lt;strong&gt;password&lt;/strong&gt; van deze gecodeerde noot.</translation>
     </message>
     <message>
-        <source>Note can&apos; t be decrypted!</source>
-        <translation type="obsolete"> Note kan niet worden ontcijferd!</translation>
+        <location filename="../mainwindow.cpp" line="1550"/>
+        <source>Note can&apos;t be decrypted!</source>
+        <translation type="unfinished"> Note kan niet worden ontcijferd!</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1551"/>
@@ -771,14 +467,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Verwijder geselecteerde noten </translation>
     </message>
     <message numerus="yes">
-        <source>Remove &lt; strong&gt;%n&lt;/strong&gt; selected note(s)?
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 	If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
         <translation type="obsolete">
-            <numerusform>Verwijder &lt; strong&gt; one&lt;/strong&gt; geselecteerd notitie?
+            <numerusform>Verwijder &lt;strong&gt;one&lt;/strong&gt; geselecteerd notitie?
 
 	Als de prullenbak is ingeschakeld op uw ownCloud server, moet je in staat om deze van daar te herstellen.</numerusform>
-            <numerusform>Verwijder &lt; strong&gt;%n&lt;/strong&gt; geselecteerd notitie?
+            <numerusform>Verwijder &lt;strong&gt;%n&lt;/strong&gt; geselecteerd notitie?
 
 	Als de prullenbak is ingeschakeld op uw ownCloud server, moet je in staat om deze van daar te herstellen.</numerusform>
         </translation>
@@ -789,15 +485,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Verplaats geselecteerde noten </translation>
     </message>
     <message numerus="yes">
-        <source>Move %n selected note(s) to &lt; strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="obsolete">
-            <numerusform>Verplaaats een geselecteerd notitie naar &lt; strong&gt;%2&lt;/strong&gt;?</numerusform>
-            <numerusform>Verplaats meerdere geselecteerde notities naar &lt; strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <location filename="../mainwindow.cpp" line="1697"/>
+        <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <translation>
+            <numerusform>Verplaaats een geselecteerd notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+            <numerusform>Verplaats meerdere geselecteerde notities naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
     </message>
     <message>
-        <source>&amp; Move</source>
-        <translation type="obsolete">&amp; Verplaats</translation>
+        <location filename="../mainwindow.cpp" line="1699"/>
+        <source>&amp;Move</source>
+        <translation type="unfinished">&amp;Verplaats</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1730"/>
@@ -805,15 +503,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Kopieer geselecteerde notities</translation>
     </message>
     <message numerus="yes">
-        <source>Copy %n selected note(s) to &lt; strong&gt;%2&lt;/strong&gt;?</source>
-        <translation type="obsolete">
-            <numerusform>Kopiëer een geselecteerd notitie naar &lt; strong&gt;%2&lt;/strong&gt;?</numerusform>
-            <numerusform>Kopiëer %n meerdere geselecteerde notities naar &lt; strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <location filename="../mainwindow.cpp" line="1731"/>
+        <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+        <translation>
+            <numerusform>Kopiëer een geselecteerd notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+            <numerusform>Kopiëer %n meerdere geselecteerde notities naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
     </message>
     <message>
-        <source>&amp; Copy</source>
-        <translation type="obsolete">&amp; Kopiëer</translation>
+        <location filename="../mainwindow.cpp" line="1733"/>
+        <source>&amp;Copy</source>
+        <translation type="unfinished">&amp;Kopiëer</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1750"/>
@@ -821,10 +521,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Klaar</translation>
     </message>
     <message numerus="yes">
-        <source>%n note(s) were copied to &lt; strong&gt;%2&lt;/strong&gt;.</source>
-        <translation type="obsolete">
-            <numerusform>Een notitie was gekopiëerd naar &lt; strong&gt;%2&lt;/strong&gt;.</numerusform>
-            <numerusform>% notities waren gekopiëerd naar &lt; strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <location filename="../mainwindow.cpp" line="1751"/>
+        <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+        <translation>
+            <numerusform>Een notitie was gekopiëerd naar &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+            <numerusform>% notities waren gekopiëerd naar &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
         </translation>
     </message>
     <message>
@@ -848,8 +549,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Print notitie</translation>
     </message>
     <message>
-        <source>PDF files (*. pdf)</source>
-        <translation type="obsolete">PDF-bestanden (*. pdf)</translation>
+        <location filename="../mainwindow.cpp" line="1883"/>
+        <source>PDF files (*.pdf)</source>
+        <translation type="unfinished">PDF-bestanden (* .pdf)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1884"/>
@@ -862,24 +564,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"> Quotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van Quotes als volgende te verbeteren en om bugs te vinden en op te lossen. U kunt dit in de instellingen uitschakelen.</translation>
     </message>
     <message>
-        <source>&amp; Ok</source>
-        <translation type="obsolete">&amp; OK</translation>
+        <location filename="../mainwindow.cpp" line="1922"/>
+        <source>&amp;Ok</source>
+        <translation type="unfinished">&amp;OK</translation>
     </message>
     <message>
-        <source>&amp; Move notes to...</source>
-        <translation type="obsolete">&amp; Verplaats notities naar…</translation>
+        <location filename="../mainwindow.cpp" line="2291"/>
+        <source>&amp;Move notes to...</source>
+        <translation type="unfinished">&amp;Verplaats notities naar</translation>
     </message>
     <message>
-        <source>&amp; Copy notes to...</source>
-        <translation type="obsolete">&amp; Kopieer notities naar...</translation>
+        <location filename="../mainwindow.cpp" line="2292"/>
+        <source>&amp;Copy notes to...</source>
+        <translation type="unfinished">&amp;Kopieer notities naar...</translation>
     </message>
     <message>
-        <source>&amp; Remove notes</source>
-        <translation type="obsolete">&amp; Verwijder notities</translation>
+        <location filename="../mainwindow.cpp" line="2303"/>
+        <source>&amp;Remove notes</source>
+        <translation type="unfinished">&amp;Verwijder notities</translation>
     </message>
     <message>
-        <source>&amp; Link selected text</source>
-        <translation type="obsolete">&amp; Link geselecteerde tekst</translation>
+        <location filename="../mainwindow.cpp" line="2343"/>
+        <source>&amp;Link selected text</source>
+        <translation type="unfinished">&amp;Link geselecteerde tekst</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2412"/>
@@ -887,16 +594,51 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Geen geselecteerde todo-lijsten!</translation>
     </message>
     <message>
-        <source>You have not selected any todo lists.&lt; br /&gt; Please check your &lt; strong&gt; Todo&lt;/strong&gt; configuration in the settings!</source>
-        <translation type="obsolete"> U heeft geen todo lijsten gekozen. AUB controleer de &lt; strong&gt; Todo&lt;/strong&gt; configuratie in de instelingen!</translation>
+        <location filename="../mainwindow.cpp" line="2413"/>
+        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
+        <translation type="unfinished"> U heeft geen todo lijsten gekozen. AUB controleer de &lt;strong&gt;Todo&lt;/strong&gt;configuratie in de instelingen!</translation>
     </message>
     <message>
-        <source>Open &amp; settings</source>
-        <translation type="obsolete">Open &amp; settings</translation>
+        <location filename="../mainwindow.cpp" line="2581"/>
+        <source>Decrypt note and store it as plain text</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Image files (*. jpg *. png *. gif)</source>
-        <translation type="obsolete">Beeldbestanden (*. jpg *. png *. gif) </translation>
+        <location filename="../mainwindow.cpp" line="1923"/>
+        <location filename="../mainwindow.cpp" line="2416"/>
+        <source>Open &amp;settings</source>
+        <translation type="unfinished">Open &amp;settings</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="296"/>
+        <source>leave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="299"/>
+        <source>leave distraction free mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="886"/>
+        <source>Current note was removed outside of this application!
+Restore current note?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="1641"/>
+        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2467"/>
+        <source>Image files (*.jpg *.png *.gif)</source>
+        <translation type="unfinished">Beeldbestanden (*.jpg *.png *.gif) </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2468"/>
@@ -904,24 +646,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Selecteer afbeelding invoegen</translation>
     </message>
     <message>
-        <source>Please enter your &lt; strong&gt; password&lt;/strong&gt; to encrypt the note.&lt; br /&gt; Keep in mind that you have to &lt; strong&gt; remember&lt;/strong&gt; your password to read the content of the note&lt; br /&gt; and that you can &lt; strong&gt; only&lt;/strong&gt; do that &lt; strong&gt; in QOwnNotes&lt;/strong&gt;!</source>
-        <translation type="obsolete">AUB voer je&lt; strong&gt; wachtwoord&lt;/strong&gt; in om de notities te encoderen.&lt; br /&gt; Herinner &lt; strong&gt; je &lt;/strong&gt; wachtwoord om de inhoud van de notitie te lezen.&lt; br /&gt; en herinner dat je dat &lt; strong&gt; alleen kunt in&lt;/strong&gt; &lt; strong&gt; QOwnNotes&lt;/strong&gt;!</translation>
+        <location filename="../mainwindow.cpp" line="2536"/>
+        <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
+        <translation type="unfinished">AUB voer je&lt;strong&gt;wachtwoord&lt;/strong&gt; in om de notities te encoderen.&lt;br /&gt;Herinner &lt;strong&gt; je &lt;/strong&gt; wachtwoord om de inhoud van de notitie te lezen.&lt;br /&gt; en herinner dat je dat &lt;strong&gt;alleen kunt in&lt;/strong&gt; &lt;strong&gt; QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-        <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt; br /&gt; Do you want to decrypt your note?</source>
-        <translation type="obsolete">Je nota wordt versleuteld en opgeslagen als platte tekst te krijgen. Houd in gedachten dat de ongecodeerde notitie eventueel zal worden gesynchroniseerd met je server en gevoelige teksten kunnen worden blootgesteld!&lt; br /&gt; Wilt u uw nota te ontcijferen?</translation>
+        <location filename="../mainwindow.cpp" line="2582"/>
+        <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+        <translation type="unfinished">Je nota wordt versleuteld en opgeslagen als platte tekst te krijgen. Houd in gedachten dat de ongecodeerde notitie eventueel zal worden gesynchroniseerd met je server en gevoelige teksten kunnen worden blootgesteld!&lt;br /&gt;Wilt u uw nota te ontcijferen?</translation>
     </message>
     <message>
-        <source>&amp; Decrypt</source>
-        <translation type="obsolete">Encodeer</translation>
+        <location filename="../mainwindow.cpp" line="2586"/>
+        <source>&amp;Decrypt</source>
+        <translation type="unfinished">Encodeer</translation>
     </message>
     <message>
-        <source>&lt; br /&gt; You will be able to edit your encrypted note.</source>
-        <translation type="obsolete">&lt; br /&gt; Je zult in staat zijn om uw versleutelde notitie te bewerken </translation>
+        <location filename="../mainwindow.cpp" line="2612"/>
+        <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+        <translation type="unfinished">&lt;br /&gt;Je zult in staat zijn om uw versleutelde notitie te bewerken </translation>
     </message>
     <message>
-        <source>Markdown files (*. md)</source>
-        <translation type="obsolete"> Markdown bestanden (*. md)</translation>
+        <location filename="../mainwindow.cpp" line="2678"/>
+        <source>Markdown files (*.md)</source>
+        <translation type="unfinished"> Markdown bestanden (*.md)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2679"/>
@@ -957,40 +704,24 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished">Reload actuele notitie van schijf?</translation>
     </message>
     <message>
-        <source>&amp; Overwrite note on disk</source>
-        <translation type="obsolete">Overschrijf notitie op de harde schijf</translation>
-    </message>
-    <message>
-        <source>&amp; Reload note from disk</source>
-        <translation type="obsolete">Vernieuw notitie van disk </translation>
-    </message>
-    <message>
-        <source>&amp; Ignore changes</source>
-        <translation type="obsolete">Negeer veranderingen</translation>
-    </message>
-    <message>
-        <source>&amp; Cancel</source>
-        <translation type="obsolete">$amp; Annulleren</translation>
-    </message>
-    <message>
         <location filename="../dialogs/notediffdialog.cpp" line="19"/>
         <source>&amp;Overwrite note on disk</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Overschrijf notitie op de harde schijf</translation>
     </message>
     <message>
         <location filename="../dialogs/notediffdialog.cpp" line="24"/>
         <source>&amp;Reload note from disk</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vernieuw notitie van disk </translation>
     </message>
     <message>
         <location filename="../dialogs/notediffdialog.cpp" line="29"/>
         <source>&amp;Ignore changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Negeer veranderingen</translation>
     </message>
     <message>
         <location filename="../dialogs/notediffdialog.cpp" line="34"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">$amp; Annulleren</translation>
     </message>
 </context>
 <context>
@@ -1018,11 +749,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../dialogs/passworddialog.ui" line="50"/>
         <source>passwords don&apos;t match!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>passwords don&apos; t match!</source>
-        <translation type="obsolete">wachtwoorden komen niet overeen! </translation>
+        <translation type="unfinished">wachtwoorden komen niet overeen! </translation>
     </message>
 </context>
 <context>
@@ -1101,12 +828,14 @@ Click Cancel to exit.</source>
         <translation type="unfinished">ownCloud server url:</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Please enter the URL of your ownCloud server, for example: &lt; span style=&quot; font-style: italic;&quot;&gt; https://cloud. yourserver. com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&gt;&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Vul de URL van uw ownCloud server, bijvoorbeeld: &lt; span style=&quot; font-style: italic;&quot;&gt; https://cloud. yourserver. com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="85"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vul de URL van uw ownCloud server, bijvoorbeeld: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Vul de gebruikersnaam in op uw ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="113"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Vul de gebruikersnaam in op uw ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source> your ownCloud username </source>
@@ -1118,8 +847,9 @@ Click Cancel to exit.</source>
         <translation type="unfinished">gebruikersnaam</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Please enter the password for your username.&lt; br/&gt; Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&gt;&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Voer AUB het wachtwoord in voor uw gebruikersnaam.&lt; br/&gt; Momenteel wordt het wachtwoord versleuteld opgeslagen met de andere instellingen, maar is niet erg veilig. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="148"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Voer AUB het wachtwoord in voor uw gebruikersnaam.&lt;br/&gt; Momenteel wordt het wachtwoord versleuteld opgeslagen met de andere instellingen, maar is niet erg veilig. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="154"/>
@@ -1132,8 +862,9 @@ Click Cancel to exit.</source>
         <translation type="unfinished">wachtwoord</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt; p&gt; This should &lt; span style=&quot; font-weight: 600;&quot;&gt; not&lt;/span&gt; your notes folder. The notes folder is usually &lt; span style=&quot; font-weight: 600;&quot;&gt; in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Wij hebben je eigen ownCloud sync folder nodig om de directory te bepalen, waar we de notitie bestand op uw ownCloud server zullen vinden.&lt;/p&gt;&lt; p&gt; Dit zou &lt; span style=&quot; font-weight: 600;&quot;&gt; not&lt;/span&gt; je notities bestand. De notities map is meestal &lt; span style=&quot; font-weight: 600;&quot;&gt; in&lt;/span&gt; de ownCloud sync map.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="186"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=&quot; font-weight:600;&quot;&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=&quot; font-weight:600;&quot;&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wij hebben je eigen ownCloud sync folder nodig om de directory te bepalen, waar we de notitie bestand op uw ownCloud server zullen vinden.&lt;/p&gt;&lt;p&gt;Dit zou &lt;span style=&quot; font-weight:600;&quot;&gt;not&lt;/span&gt; je notities bestand. De notities map is meestal &lt;span style=&quot; font-weight:600;&quot;&gt;in&lt;/span&gt; de ownCloud sync map.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="192"/>
@@ -1178,12 +909,14 @@ Click Cancel to exit.</source>
         <translation type="unfinished">hoofd ownCloud sync folder:</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Klik hier om de verbinding met de ownCloud server te testen &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="318"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de verbinding met de ownCloud server te testen &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&amp; connect to ownCloud server</source>
-        <translation type="obsolete">&amp; verbinding te maken met ownCloud server </translation>
+        <location filename="../dialogs/settingsdialog.ui" line="324"/>
+        <source>&amp;connect to ownCloud server</source>
+        <translation type="unfinished">&amp;verbinding te maken met ownCloud server </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="364"/>
@@ -1211,28 +944,30 @@ Click Cancel to exit.</source>
         <translation type="unfinished">notities pad gevonden op de server </translation>
     </message>
     <message>
-        <source>&lt;! DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4. 0//EN&quot; &quot; http://www. w3. org/TR/REC-html40/strict. dtd&quot;&gt;
-	&lt; html&gt;&lt; head&gt;&lt; meta name=&quot; qrichtext&quot; content=&quot; 1&quot; /&gt;&lt; style type=&quot; text/css&quot;&gt;
-p, li { white-space: pre-wrap;}
-&lt;/style&gt;&lt;/head&gt;&lt; body style=&quot; font-family:&apos; Sans Serif&apos;; font-size: 9pt; font-weight: 400; font-style: normal;&quot;&gt;
-&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; Please install the latest version of &lt; a href=&quot; https://apps. owncloud. com/content/show. php? content=173817&quot;&gt;&lt; span style=&quot; font-weight: 600; text-decoration: underline; color:#0055ff;&quot;&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
-	&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; You also need to have the two ownCloud core apps &lt; span style=&quot; font-weight: 600;&quot;&gt; Versions&lt;/span&gt; and &lt; span style=&quot; font-weight: 600;&quot;&gt; Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
-&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; You still need &lt; a href=&quot; https://owncloud. org/&quot;&gt;&lt; span style=&quot; font-weight: 600; text-decoration: underline; color:#0055ff;&quot;&gt; ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;! DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4. 0//EN&quot; &quot; http://www. w3. org/TR/REC-html40/strict. dtd&quot;&gt;
-	&lt; html&gt;&lt; head&gt;&lt; meta name=&quot; qrichtext&quot; content=&quot; 1&quot; /&gt;&lt; style type=&quot; text/css&quot;&gt;
-p, li { white-space: pre-wrap;}
-&lt;/style&gt;&lt;/head&gt;&lt; body style=&quot; font-family:&apos; Sans Serif&apos;; font-size: 9pt; font-weight: 400; font-style: normal;&quot;&gt;
-&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; Installeer de laatste versie van &lt; a href=&quot; https://apps. owncloud. com/content/show. php? content=173817&quot;&gt;&lt; span style=&quot; font-weight: 600; text-decoration: underline; color:#0055ff;&quot;&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;(Minimaal versie QOWNNOTESAPI_MIN_VERSION) op uw ownCloud server als u wilt QOwnNotes in staat zijn om toegang te krijgen tot notitie versies en vernield notities.&lt;/p&gt;
-	&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; Je moet ook de twee ownCloud kern apps hebben ingeschakeld op uw ownCloud server &lt; span style=&quot; font-weight: 600;&quot;&gt; Versions&lt;/span&gt; and &lt; span style=&quot; font-weight: 600;&quot;&gt; Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
-&lt; p style=&quot; margin-top: 12px; margin-bottom: 12px; margin-left: 0px; margin-right: 0px; -qt-block-indent: 0; text-indent: 0px;&quot;&gt; You still need &lt; a href=&quot; https://owncloud. org/&quot;&gt;&lt; span style=&quot; font-weight: 600; text-decoration: underline; color:#0055ff;&quot;&gt; ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+	&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
+	&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+	&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Installeer de laatste versie van &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt;(Minimaal versie QOWNNOTESAPI_MIN_VERSION) op uw ownCloud server als u wilt QOwnNotes in staat zijn om toegang te krijgen tot notitie versies en vernield notities.&lt;/p&gt;
+	&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt; Je moet ook de twee ownCloud kern apps hebben ingeschakeld op uw ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Opens your ownCloud server &lt; span style=&quot; font-weight: 600;&quot;&gt; App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt; span style=&quot; font-weight: 600;&quot;&gt; Versions&lt;/span&gt; and &lt; span style=&quot; font-weight: 600;&quot;&gt; Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Opent je ownCloud server &lt; span style=&quot; font-weight: 600;&quot;&gt; App configuration&lt;/span&gt; pagina in uw web browser te installeren of updaten QOwnNotesAPI en om de kern apps mogelijk te maken &lt; span style=&quot; font-weight: 600;&quot;&gt; Versions&lt;/span&gt; and &lt; span style=&quot; font-weight: 600;&quot;&gt; Verwijderd besatnden &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="490"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opent je ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; pagina in uw web browser te installeren of updaten QOwnNotesAPI en om de kern apps mogelijk te maken &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Verwijderd besatnden &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>open ownCloud server &amp; Apps page</source>
-        <translation type="obsolete"> open ownCloud server &amp; Apps pagina</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="493"/>
+        <source>open ownCloud server &amp;Apps page</source>
+        <translation type="unfinished"> open ownCloud server &amp;Apps pagina</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="550"/>
@@ -1295,12 +1030,14 @@ p, li { white-space: pre-wrap;}
         <translation type="unfinished">Selecteer de agenda&apos;s die u wilt gebruiken voor de TODO lijst</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">Klik hier om de lijst met agenda&apos;s herladen van je ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="818"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">Klik hier om de lijst met agenda&apos;s herladen van je ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&amp; reload calendar list</source>
-        <translation type="obsolete">&amp; herladen lijst met agenda&apos;s </translation>
+        <location filename="../dialogs/settingsdialog.ui" line="824"/>
+        <source>&amp;reload calendar list</source>
+        <translation type="unfinished">&amp;herladen lijst met agenda&apos;s </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="852"/>
@@ -1348,29 +1085,14 @@ p, li { white-space: pre-wrap;}
         <translation type="unfinished">Portugees</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1286"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <location filename="../dialogs/settingsdialog.ui" line="967"/>
+        <source>Dutch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1318"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1438"/>
-        <source>Don&apos;t show update dialog automatically</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1499"/>
-        <source>Text file (.txt)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1576"/>
-        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1395,9 +1117,30 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">Klik hier om de locatie van de belangrijkste lokale map ownCloud sync selecteren</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="116"/>
+        <source>your ownCloud username</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="282"/>
         <source>select main ownCloud sync folder</source>
         <translation type="unfinished">selecteer hoofdmap ownCloud sync</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="468"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="504"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="945"/>
@@ -1410,8 +1153,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">Als u de taal wijzigt moet u de applicatie opnieuw op starten voordat de veranderingen werken. </translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; If you want to help to translate QOwnNotes or update an existing translation please read: &lt; a href=&quot; http://www. qownnotes. org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt; span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Als je wilt helpen om QOwnNotes te vertalen of bijwerken van een bestaande vertaling gelieve te lezen:&lt; a href=&quot; http://www. qownnotes. org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt; span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="988"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Als je wilt helpen om QOwnNotes te vertalen of bijwerken van een bestaande vertaling gelieve te lezen:&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1010"/>
@@ -1450,87 +1194,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">code lettertype in markdown tekstbewerkingen:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="85"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="113"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="116"/>
-        <source>your ownCloud username</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="148"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="186"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=&quot; font-weight:600;&quot;&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=&quot; font-weight:600;&quot;&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="318"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="324"/>
-        <source>&amp;connect to ownCloud server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="468"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="490"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="493"/>
-        <source>open ownCloud server &amp;Apps page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="504"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="818"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="824"/>
-        <source>&amp;reload calendar list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="967"/>
-        <source>Dutch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="988"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="1121"/>
         <location filename="../dialogs/settingsdialog.ui" line="1135"/>
         <location filename="../dialogs/settingsdialog.ui" line="1149"/>
@@ -1564,18 +1227,9 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Notities</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1735"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1748"/>
-        <source>&amp;Save debug information</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; If checked you will always be notified about external modifications, even if current note wasn&apos; t edited in the last minute. Recommended is &lt; span style=&quot; font-style: italic;&quot;&gt; unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; Indien aangevinkt zal je altijd geïnformeerd worden over externe wijzigingen, zelfs als de actuele notitie niet werd bewerkt in de laatste minuut. Aanbevolen is &lt; span style=&quot; font-style: italic;&quot;&gt; unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="1286"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indien aangevinkt zal je altijd geïnformeerd worden over externe wijzigingen, zelfs als de actuele notitie niet werd bewerkt in de laatste minuut. Aanbevolen is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1292"/>
@@ -1662,8 +1316,9 @@ p, li { white-space: pre-wrap; }
 </translation>
     </message>
     <message>
-        <source>Don&apos; t show update dialog automatically</source>
-        <translation type="obsolete">Toon update dialoogvenster niet automatisch</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="1438"/>
+        <source>Don&apos;t show update dialog automatically</source>
+        <translation type="unfinished">Toon update dialoogvenster niet automatisch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1480"/>
@@ -1671,8 +1326,9 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Standaard note bestandsextensie</translation>
     </message>
     <message>
-        <source>Text file (. txt)</source>
-        <translation type="obsolete">Tekstbestand (. txt)</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="1499"/>
+        <source>Text file (.txt)</source>
+        <translation type="unfinished">Tekstbestand (.txt)</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1521"/>
@@ -1700,8 +1356,9 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos; t live with it.</source>
-        <translation type="obsolete">Anonieme gebruiksgegevens helpen om te bepalen welke delen van Quotes het volgende te verbeteren en om bugs te vinden en op te lossen. Gelieve uitschakelen alleen als je echt niet ermee kunt leven.</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="1576"/>
+        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
+        <translation type="unfinished">Anonieme gebruiksgegevens helpen om te bepalen welke delen van Quotes het volgende te verbeteren en om bugs te vinden en op te lossen. Gelieve uitschakelen alleen als je echt niet ermee kunt leven.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1608"/>
@@ -1729,23 +1386,29 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">Debug informatie</translation>
     </message>
     <message>
-        <source>&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; You can &lt; span style=&quot; font-weight: 600;&quot;&gt; copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt; span style=&quot; font-weight: 600;&quot;&gt; issue&lt;/span&gt; on the &lt; a href=&quot; https://github. com/pbek/QOwnNotes/issues&quot;&gt;&lt; span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt; span style=&quot; font-weight: 600;&quot;&gt; questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt; html&gt;&lt; head/&gt;&lt; body&gt;&lt; p&gt; You can &lt; span style=&quot; font-weight: 600;&quot;&gt; knip en plak &lt;/span&gt; deze tekst (of gedeelten van deze tekst) &lt; span style=&quot; font-weight: 600;&quot;&gt; issue&lt;/span&gt; op de &lt; a href=&quot; https://github. com/pbek/QOwnNotes/issues&quot;&gt;&lt; span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt; QOwnNotes kwesties pagina &lt;/span&gt;&lt;/a&gt; als je &lt; span style=&quot; font-weight: 600;&quot;&gt; vragen of problemen&lt;/span&gt; met QOwnNotes hebt. Gegevens die te gevoelig is verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <location filename="../dialogs/settingsdialog.ui" line="1735"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;knip en plak &lt;/span&gt; deze tekst (of gedeelten van deze tekst) &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; op de &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes kwesties pagina &lt;/span&gt;&lt;/a&gt; als je &lt;span style=&quot; font-weight:600;&quot;&gt;vragen of problemen&lt;/span&gt; met QOwnNotes hebt. Gegevens die te gevoelig is verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1748"/>
+        <source>&amp;Save debug information</source>
+        <translation type="unfinished">&amp; Save debug informatie</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="73"/>
         <source>hostname of proxy server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">hostname van de proxy-server</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="74"/>
         <source>username for proxy server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">gebruikersnaam voor de proxy-server</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="75"/>
         <source>password for proxy server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">wachtwoord voor de proxy-server</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="77"/>
@@ -1756,6 +1419,20 @@ p, li { white-space: pre-wrap; }
         <location filename="../dialogs/settingsdialog.cpp" line="78"/>
         <source>SOCKS5 proxy</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The connection was made successfully!
+	Server version: %1
+QOwnNotesAPI version: %2</source>
+        <translation type="obsolete"> De verbinding werd met succes gemaakt! Server versie: %1 QOwnNotesAPI version: %2</translation>
+    </message>
+    <message>
+        <source>There was an error connecting to the ownCloud Server!
+	You also need to have the QOwnNotesAPI app installed and enabled!
+
+	Connection error message: </source>
+        <translation type="obsolete">Er is een fout opgetreden verbinden met de ownCloud Server!
+	Je moet ook de QOwnNotesAPI app hebben geïnstalleerd en ingeschakeld! Connectie foutmelding:</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="534"/>
@@ -1775,32 +1452,32 @@ Connection error message: </source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="713"/>
         <source>Select ownCloud base directory</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Selecteer ownCloud hoofdmap</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="785"/>
         <source>The Database was reinitialized.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">De database is opnieuw geïnitialiseerd.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="795"/>
         <source>Recent note folders history</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Recente notitiemappen geschiedenis</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="796"/>
         <source>The history was cleared.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">De geschiedenis werd gewisd.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="813"/>
         <source>Markdown files (*.md)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Markdown bestanden</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="814"/>
         <source>Save debug information</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Save debug informatie </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="867"/>
@@ -1810,19 +1487,25 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
+
+	Your notes will stay intact!</source>
+        <translation type="obsolete"> Wil je echt alle instellingen te wissen, verwijdert u de database en afrit QOwnNotes? Uw notities zal intact blijven! </translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.cpp" line="870"/>
         <source>Clear and &amp;exit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">verwijder gegevens en &amp;exit</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="870"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Annuleer </translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="934"/>
         <source>Select editor application</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Selecteer editor applicatie</translation>
     </message>
 </context>
 <context>
@@ -1835,73 +1518,78 @@ Your notes will stay intact!</source>
     <message>
         <location filename="../dialogs/tododialog.ui" line="57"/>
         <source>summary</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">samenvatting</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="94"/>
         <source>save current todo item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">actuele todo item opslaan</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="97"/>
         <source>&amp;save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;opslaan</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="111"/>
         <source>remove current todo item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">verwijder actuele todo item</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="114"/>
         <source>&amp;remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;verwijderen </translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="133"/>
         <location filename="../dialogs/tododialog.ui" line="140"/>
         <source>Priority</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prioriteit</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="168"/>
         <source>Reminder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Herinnering</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="233"/>
         <source>Show completed items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">toon voltooide items</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="240"/>
         <source>reload the todo list from server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">de takenlijst van de server herladen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="243"/>
         <source>&amp;reload</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">herladen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="257"/>
         <source>select your todo list</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Selecteer uw takenlijst</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>Todo list items are being loaded from the server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Todo lijst items worden van de server geladen</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="274"/>
         <source>search or create todo item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">zoek of maak todo item</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="414"/>
         <source>Remove todo item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verwijder todo item</translation>
+    </message>
+    <message>
+        <source>Remove the selected todo item?
+	This cannot be undone!</source>
+        <translation type="obsolete"> Verwijder de geselecteerde todo artikel? Dat kann niet worden ongedaan.</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="415"/>
@@ -1912,12 +1600,12 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="416"/>
         <source>&amp;Remove</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verwijder</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.cpp" line="416"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Annulleer</translation>
     </message>
 </context>
 <context>
@@ -1925,17 +1613,17 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/trashdialog.ui" line="14"/>
         <source>Trashed notes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verwijderde notities</translation>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="20"/>
         <source>&amp;Restore selected note on server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Herstel geselecteerde notitie op de server</translation>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="21"/>
         <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;h3&gt; Langzamer, maar met notitie veries &lt;/h3&gt;&lt;p&gt; De nota wordt hersteld op uw ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met de stad Notes door ownCloud sync..&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="34"/>
@@ -1945,12 +1633,12 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="35"/>
         <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;h3&gt;Sneller, maar met notitie veries&lt;/h3&gt;&lt;p&gt; De nota wordt hersteld op uw ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met de stad Notes door ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/trashdialog.cpp" line="48"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Annulleer</translation>
     </message>
 </context>
 <context>
@@ -1958,42 +1646,43 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="14"/>
         <source>Update available</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Update beschikbaar</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="22"/>
         <source>A new update of QOwnNotes is available!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Een nieuwe update van QOwnNotes is beschikbaar!
+	</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="65"/>
         <source>Do you want to download the new version?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wil je de nieuwe versie downloaden?</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="72"/>
         <source>QOwnNotes will be downloaded in your default browser.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">QOwnNotes worden gedownload in uw standaard browser.</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="79"/>
         <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Doe mee met QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="26"/>
         <source>&amp;Download latest</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Download hier de laatste</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="35"/>
         <source>&amp;Skip version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sla versie over</translation>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.cpp" line="45"/>
         <source>&amp;Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Annuleer</translation>
     </message>
 </context>
 <context>
@@ -2001,12 +1690,12 @@ This cannot be undone!</source>
     <message>
         <location filename="../services/updateservice.cpp" line="166"/>
         <source>No updates</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">geen updates</translation>
     </message>
     <message>
         <location filename="../services/updateservice.cpp" line="167"/>
         <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Er zijn geen updates beschikbaar. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is de nieuwste versie.</translation>
     </message>
 </context>
 <context>
@@ -2014,17 +1703,21 @@ This cannot be undone!</source>
     <message>
         <location filename="../dialogs/versiondialog.ui" line="14"/>
         <source>Note versions on your ownCloud server</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Note versies op uw ownCloud server </translation>
     </message>
     <message>
         <location filename="../dialogs/versiondialog.cpp" line="20"/>
         <source>&amp;Restore selected version</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Herstel geselecteerde versie </translation>
     </message>
     <message>
         <location filename="../dialogs/versiondialog.cpp" line="29"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Cancel </source>
+        <translation type="obsolete">&gt;&amp;Annulleer</translation>
     </message>
 </context>
 </TS>
