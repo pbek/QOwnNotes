@@ -99,7 +99,7 @@
     <message>
         <location filename="../mainwindow.ui" line="354"/>
         <source>Window</source>
-        <translation type="unfinished">Window</translation>
+        <translation>Fenster</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="405"/>
@@ -346,12 +346,12 @@
     <message>
         <location filename="../mainwindow.ui" line="847"/>
         <source>&amp;Distraction free mode</source>
-        <translation type="unfinished">&amp;Distraction free mode</translation>
+        <translation>&amp;Ablenkungsfreier Modus</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="850"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-        <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+        <translation>Ablenkungsfreier Modus, Sie können ihn mit dem Knopf unten rechts abstellen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="858"/>
@@ -609,12 +609,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
         <location filename="../mainwindow.cpp" line="296"/>
         <source>leave</source>
-        <translation type="unfinished">leave</translation>
+        <translation>verlassen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="299"/>
         <source>leave distraction free mode</source>
-        <translation type="unfinished">leave distraction free mode</translation>
+        <translation>Ablenkungsfreien Modus verlassen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2467"/>
@@ -1070,7 +1070,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="967"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Niederländisch</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1589"/>

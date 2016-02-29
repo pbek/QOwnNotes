@@ -6,6 +6,7 @@
   now leaves the distraction free mode
 - the notes in the distraction free mode now have a padding 
   (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
+- added more German translation
 
 ## 1.1
 - QOwnNotes now allows the usage of `# ` markdown headlines as note title
