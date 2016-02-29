@@ -255,6 +255,7 @@ void MainWindow::toggleDistractionFreeMode() {
  */
 void MainWindow::setDistractionFreeMode(bool enabled) {
     QSettings settings;
+    QString styling = "QTextEdit {padding: 25px; background-color: white;}";
 
     if (enabled) {
         //
@@ -310,6 +311,15 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                 this, SLOT(toggleDistractionFreeMode()));
 
         statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
+
+        ui->noteTextEdit->setStyleSheet(
+                ui->noteTextEdit->styleSheet() + styling);
+
+        ui->encryptedNoteTextEdit->setStyleSheet(
+                ui->encryptedNoteTextEdit->styleSheet() + styling);
+
+        ui->noteTextView->setStyleSheet(
+                ui->noteTextView->styleSheet() + styling);
     } else {
         //
         // leave the distraction free mode
@@ -336,6 +346,15 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
 
         // show the search line edit
         ui->searchLineEdit->show();
+
+        ui->noteTextEdit->setStyleSheet(
+                ui->noteTextEdit->styleSheet().replace(styling, ""));
+
+        ui->encryptedNoteTextEdit->setStyleSheet(
+                ui->encryptedNoteTextEdit->styleSheet().replace(styling, ""));
+
+        ui->noteTextView->setStyleSheet(
+                ui->noteTextView->styleSheet().replace(styling, ""));
     }
 }
 

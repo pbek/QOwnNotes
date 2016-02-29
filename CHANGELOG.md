@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
 ## 1.1.1
-- Pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> to do a note search 
+- pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> to do a note search 
   now leaves the distraction free mode
+- the notes in the distraction free mode now have a padding 
+  (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
 
 ## 1.1
 - QOwnNotes now allows the usage of `# ` markdown headlines as note title
