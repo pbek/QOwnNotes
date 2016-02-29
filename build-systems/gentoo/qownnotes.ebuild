@@ -13,7 +13,7 @@ inherit qmake-utils eutils
 DESCRIPTION="A plain-text file notepad with markdown support and (optional) ownCloud integration"
 HOMEPAGE="http://www.qownnotes.org/"
 MY_P="COMMIT-HASH"
-SRC_URI="https://github.com/pbek/QOwnNotes/archive/${MY_P}.zip -> ${P}.tar.gz"
+SRC_URI="https://github.com/pbek/QOwnNotes/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_P}"
 
 LICENSE="GPL-2"
