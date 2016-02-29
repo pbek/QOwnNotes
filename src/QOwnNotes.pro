@@ -19,7 +19,8 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_pl.ts \
     languages/QOwnNotes_ru.ts \
     languages/QOwnNotes_es.ts \
-    languages/QOwnNotes_pt.ts
+    languages/QOwnNotes_pt.ts \
+    languages/QOwnNotes_nl.ts
 
 CODECFORTR = UTF-8
 

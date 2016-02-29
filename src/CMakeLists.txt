@@ -141,6 +141,7 @@ SET(TRANSLATION_FILES
     languages/QOwnNotes_ru.ts
     languages/QOwnNotes_pt.ts
     languages/QOwnNotes_es.ts
+    languages/QOwnNotes_nl.ts
 )
 
 add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED})

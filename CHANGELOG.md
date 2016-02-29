@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 1.1.1
+- added **Dutch translation** (a big thank you to Fabijenna!)
 - pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> to do a note search 
   now leaves the distraction free mode
 - the notes in the distraction free mode now have a padding 
