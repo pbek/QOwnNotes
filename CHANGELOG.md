@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.1.2
+- added more Dutch translation (thank you Fabijenna)
+
 ## 1.1.1
 - added **Dutch translation** (a big thank you to Fabijenna!)
 - pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> to do a note search 
