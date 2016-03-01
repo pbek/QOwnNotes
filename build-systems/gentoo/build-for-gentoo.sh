@@ -5,7 +5,7 @@
 #
 
 # uncomment this if you want to force a version
-QOWNNOTES_VERSION=1.1.0.2
+#QOWNNOTES_VERSION=1.1.0.4
 
 BRANCH=develop
 #BRANCH=master
@@ -26,7 +26,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout AUR repository
-git clone --depth=5 https://github.com/pbek/qownnotes-overlay.git overlay
+git clone --depth=5 git@github.com:pbek/qownnotes-overlay.git overlay
 
 # checkout the source code
 git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
@@ -57,6 +57,7 @@ echo "Archive sha512: ${ARCHIVE_SHA512}"
 echo "Archive size: ${ARCHIVE_SIZE}"
 
 cd ../overlay/app-office/qownnotes/
+#git rm *.ebuild
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
 
 # replace the version in the ebuild file
