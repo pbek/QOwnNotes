@@ -55,7 +55,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4536"
-         style="fill:url(#linearGradient4538);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -67,7 +67,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4586"
-         style="fill:url(#linearGradient4588);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -79,7 +79,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4552"
-         style="fill:url(#linearGradient4554);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -91,7 +91,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4570"
-         style="fill:url(#linearGradient4572);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -103,7 +103,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4530"
-         style="fill:url(#linearGradient4532);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -115,7 +115,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4580"
-         style="fill:url(#linearGradient4582);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -127,7 +127,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4564"
-         style="fill:url(#linearGradient4566);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -139,7 +139,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4546"
-         style="fill:url(#linearGradient4548);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -151,7 +151,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4392"
-         style="fill:url(#linearGradient4532);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -163,7 +163,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4409"
-         style="fill:url(#linearGradient4582);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -175,7 +175,7 @@
          height="31.999971"
          width="31.999989"
          id="rect4426"
-         style="fill:url(#linearGradient4566);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        clipPathUnits="userSpaceOnUse"
@@ -187,13 +187,13 @@
          height="31.999971"
          width="31.999989"
          id="rect4443"
-         style="fill:url(#linearGradient4548);fill-opacity:1;stroke:none" />
+          />
     </clipPath>
     <clipPath
        id="clipPath4528-1"
        clipPathUnits="userSpaceOnUse">
       <rect
-         style="fill:url(#linearGradient4532);fill-opacity:1;stroke:none"
+         
          id="rect4530-7"
          width="31.999989"
          height="31.999971"
@@ -205,7 +205,7 @@
        id="clipPath4578-8"
        clipPathUnits="userSpaceOnUse">
       <rect
-         style="fill:url(#linearGradient4582);fill-opacity:1;stroke:none"
+         
          id="rect4580-7"
          width="31.999989"
          height="31.999971"
@@ -217,7 +217,7 @@
        id="clipPath4562-8"
        clipPathUnits="userSpaceOnUse">
       <rect
-         style="fill:url(#linearGradient4566);fill-opacity:1;stroke:none"
+         
          id="rect4564-8"
          width="31.999989"
          height="31.999971"
@@ -229,7 +229,7 @@
        id="clipPath4544-1"
        clipPathUnits="userSpaceOnUse">
       <rect
-         style="fill:url(#linearGradient4548);fill-opacity:1;stroke:none"
+         
          id="rect4546-1"
          width="31.999989"
          height="31.999971"
