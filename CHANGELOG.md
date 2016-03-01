@@ -2,6 +2,7 @@
 
 ## 1.1.2
 - added more Dutch translation (thank you Fabijenna)
+- fixed the *leave distraction free mode* button icon
 
 ## 1.1.1
 - added **Dutch translation** (a big thank you to Fabijenna!)

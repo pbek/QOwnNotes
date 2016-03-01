@@ -200,6 +200,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // restore the distraction free mode
     restoreDistractionFreeMode();
+
+    // add action tracking
+    connect(ui->menuBar, SIGNAL(triggered(QAction *)),
+            this, SLOT(trackAction(QAction *)));
 }
 
 MainWindow::~MainWindow() {
@@ -302,7 +306,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
 
         _leaveDistractionFreeModeButton->setIcon(QIcon::fromTheme(
                 "zoom-original",
-                QIcon(":/media/zoom-original.svg")));
+                QIcon(":icons/breeze-qownnotes/16x16/zoom-original.svg")));
 
 //        _leaveDistractionFreeModeButton->setShortcut(
 //                QKeySequence("Ctrl+Shift+D"));
@@ -2849,4 +2853,12 @@ void MainWindow::gotoPreviousNote(int previousRow)
 void MainWindow::on_actionToggle_distraction_free_mode_triggered()
 {
     toggleDistractionFreeMode();
+}
+
+/**
+ * Tracks an action
+ */
+void MainWindow::trackAction(QAction *action) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "action/" + action->objectName());
 }

@@ -174,6 +174,8 @@ private slots:
 
     void toggleDistractionFreeMode();
 
+    void trackAction(QAction *action);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
