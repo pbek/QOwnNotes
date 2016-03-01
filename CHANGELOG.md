@@ -8,7 +8,7 @@
   (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
 - added more German translation
 - there now is a **Gentoo Linux overlay** for QOwnNotes (thanks a lot to 
-  @suhr for the help)
+  @internethering and @suhr for the help)
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Gentoo) for instructions
 
 ## 1.1
