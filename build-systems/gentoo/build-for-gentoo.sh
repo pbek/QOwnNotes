@@ -51,6 +51,15 @@ cd ..
 wget https://github.com/pbek/QOwnNotes/archive/${gitCommitHash}.tar.gz -O archive.tar.gz
 ARCHIVE_SHA512=`sha512sum archive.tar.gz | awk '{ print $1 }'`
 ARCHIVE_SIZE=`stat -c "%s" archive.tar.gz`
+
+wget https://github.com/pbek/qmarkdowntextedit/archive/${gitCommitHash2}.tar.gz -O qmarkdowntextedit.tar.gz
+QMARKDOWNTEXTEDIT_SHA512=`sha512sum qmarkdowntextedit.tar.gz | awk '{ print $1 }'`
+QMARKDOWNTEXTEDIT_SIZE=`stat -c "%s" qmarkdowntextedit.tar.gz`
+
+wget https://github.com/pbek/qt-piwik-tracker/archive/${gitCommitHash3}.tar.gz -O qt-piwik-tracker.tar.gz
+PIWIKTRACKER_SHA512=`sha512sum qt-piwik-tracker.tar.gz | awk '{ print $1 }'`
+PIWIKTRACKER_SIZE=`stat -c "%s" qt-piwik-tracker.tar.gz`
+
 cd QOwnNotes
 
 echo "Archive sha512: ${ARCHIVE_SHA512}"
@@ -70,6 +79,8 @@ sed -i "s/COMMIT-HASH/$gitCommitHash/g" qownnotes.ebuild
 
 # update the Manifest file
 echo "DIST qownnotes-${QOWNNOTES_VERSION}.tar.gz ${ARCHIVE_SIZE} SHA512 ${ARCHIVE_SHA512}" >> Manifest
+echo "DIST qmarkdowntextedit-${gitCommitHash2}.tar.gz ${QMARKDOWNTEXTEDIT_SIZE} SHA512 ${QMARKDOWNTEXTEDIT_SHA512}" >> Manifest
+echo "DIST piwiktracker-${gitCommitHash3}.tar.gz ${PIWIKTRACKER_SIZE} SHA512 ${PIWIKTRACKER_SHA512}" >> Manifest
 
 eBuildFile="qownnotes-$QOWNNOTES_VERSION.ebuild"
 mv qownnotes.ebuild $eBuildFile
