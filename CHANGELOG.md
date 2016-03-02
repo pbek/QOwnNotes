@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 1.1.3
+- added shortcuts for note printing
+  (for [Issue #99](https://github.com/pbek/QOwnNotes/issues/99))
+    - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
+    - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note 
+    as markdown
+
+
 ## 1.1.2
 - added more Dutch translation (thank you Fabijenna)
 - fixed the *leave distraction free mode* button icon

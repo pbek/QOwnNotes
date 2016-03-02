@@ -16,6 +16,8 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>Ctrl</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
+- <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 
 ### In the note search bar
 
@@ -68,6 +70,8 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
 - <kbd>⌘</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
+- <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 
 ### In the note search bar
 

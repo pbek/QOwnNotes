@@ -726,6 +726,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>&amp;Print note (text)</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+P</string>
+   </property>
   </action>
   <action name="action_Print_note_markdown">
    <property name="icon">
@@ -734,6 +737,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>&amp;Print note (markdown)</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+P</string>
    </property>
   </action>
   <action name="actionInsert_image">
