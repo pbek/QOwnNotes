@@ -182,6 +182,8 @@ private slots:
 
     void mainToolbarVisibilityChanged(bool visible);
 
+    void dfmEditorWidthActionTriggered(QAction *action);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

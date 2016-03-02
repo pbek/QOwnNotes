@@ -8,7 +8,15 @@ class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 Q_OBJECT
 
 public:
-    QOwnNotesMarkdownTextEdit(QWidget *parent = 0);
+    enum EditorWidthMode {
+        Narrow = 1,
+        Medium,
+        Wide,
+        Full
+    };
+    Q_ENUMS(EditorWidthMode)
+
+    explicit QOwnNotesMarkdownTextEdit(QWidget *parent = 0);
 
     void setStyles();
     void openUrl(QUrl url);

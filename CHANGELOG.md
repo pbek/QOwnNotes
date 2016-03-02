@@ -3,9 +3,10 @@
 ## 1.1.2
 - added more Dutch translation (thank you Fabijenna)
 - fixed the *leave distraction free mode* button icon
-- the notes viewed in the distraction free mode now have a viewport width of 60 
-  characters (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
+- the notes viewed in the distraction free mode now have an adjustable viewport 
+  width (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
     - the viewport will resize automatically if the width of the window changes
+    - you can select between four width modes in the *Window* menu 
 - you can now toggle visibility of the tool bar in the *Windows* menu
   (for [Issue #103](https://github.com/pbek/QOwnNotes/issues/103))
 

@@ -169,16 +169,36 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
             settings.value("DistractionFreeMode/isEnabled").toBool();
 
     if (isInDistractionFreeMode) {
-        QFontMetrics metrics(font());
-        // take the size of an "O" character
-        metrics.width('O');
+        int margin = 0;
+        int editorWidthMode =
+                settings.value("DistractionFreeMode/editorWidthMode").toInt();
 
-        // set the size of 60 "O" characters
-        int proposedEditorWidth = 60 * metrics.width('O');
+        if (editorWidthMode != Full) {
+            QFontMetrics metrics(font());
+            // take the size of an "O" character
+            metrics.width('O');
 
-        int margin = (width - proposedEditorWidth) / 2;
-        if (margin < 0) {
-            margin = 0;
+            int characterAmount = 0;
+            switch (editorWidthMode) {
+                case Medium:
+                    characterAmount = 80;
+                    break;
+                case Wide:
+                    characterAmount = 100;
+                    break;
+                default:
+                case Narrow:
+                    characterAmount = 60;
+                    break;
+            }
+
+            // set the size of characterAmount times the "O" characters
+            int proposedEditorWidth = characterAmount * metrics.width('O');
+
+            margin = (width - proposedEditorWidth) / 2;
+            if (margin < 0) {
+                margin = 0;
+            }
         }
 
         setViewportMargins(margin, 20, margin, 0);

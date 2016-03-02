@@ -353,9 +353,22 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Window</string>
     </property>
+    <widget class="QMenu" name="menuEditor_width">
+     <property name="toolTip">
+      <string>Editor width in distraction free mode</string>
+     </property>
+     <property name="title">
+      <string>Editor width</string>
+     </property>
+     <addaction name="actionEditorWidthNarrow"/>
+     <addaction name="actionEditorWidthMedium"/>
+     <addaction name="actionEditorWidthWide"/>
+     <addaction name="actionEditorWidthFull"/>
+    </widget>
     <addaction name="actionShow_toolbar"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
+    <addaction name="menuEditor_width"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
@@ -864,6 +877,50 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Show &amp;toolbar</string>
+   </property>
+  </action>
+  <action name="actionEditorWidthNarrow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Narrow</string>
+   </property>
+   <property name="whatsThis">
+    <string notr="true">1</string>
+   </property>
+  </action>
+  <action name="actionEditorWidthMedium">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Medium</string>
+   </property>
+   <property name="whatsThis">
+    <string notr="true">2</string>
+   </property>
+  </action>
+  <action name="actionEditorWidthWide">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Wide</string>
+   </property>
+   <property name="whatsThis">
+    <string notr="true">3</string>
+   </property>
+  </action>
+  <action name="actionEditorWidthFull">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Full</string>
+   </property>
+   <property name="whatsThis">
+    <string notr="true">4</string>
    </property>
   </action>
  </widget>

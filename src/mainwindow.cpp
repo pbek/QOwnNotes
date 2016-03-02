@@ -214,6 +214,17 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(ui->mainToolBar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(mainToolbarVisibilityChanged(bool)));
+
+    // set the action group for the width selector of the distraction free mode
+    QActionGroup *dfmEditorWidthActionGroup = new QActionGroup(this);
+    dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthNarrow);
+    dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthMedium);
+    dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthWide);
+    dfmEditorWidthActionGroup->addAction(ui->actionEditorWidthFull);
+    dfmEditorWidthActionGroup->setExclusive(true);
+
+    connect(dfmEditorWidthActionGroup, SIGNAL(triggered(QAction *)),
+            this, SLOT(dfmEditorWidthActionTriggered(QAction *)));
 }
 
 MainWindow::~MainWindow() {
@@ -737,6 +748,26 @@ void MainWindow::readSettings() {
             recentNoteFolders.removeAll(this->notesPath);
             settings.setValue("recentNoteFolders", recentNoteFolders);
         }
+    }
+
+    // set the editor width selector for the distraction free mode
+    int editorWidthMode =
+            settings.value("DistractionFreeMode/editorWidthMode").toInt();
+
+    switch (editorWidthMode) {
+        case QOwnNotesMarkdownTextEdit::Medium:
+            ui->actionEditorWidthMedium->setChecked(true);
+            break;
+        case QOwnNotesMarkdownTextEdit::Wide:
+            ui->actionEditorWidthWide->setChecked(true);
+            break;
+        case QOwnNotesMarkdownTextEdit::Full:
+            ui->actionEditorWidthFull->setChecked(true);
+            break;
+        default:
+        case QOwnNotesMarkdownTextEdit::Narrow:
+            ui->actionEditorWidthNarrow->setChecked(true);
+            break;
     }
 }
 
@@ -2897,4 +2928,13 @@ void MainWindow::mainToolbarVisibilityChanged(bool visible)
         Q_UNUSED(blocker);
         ui->actionShow_toolbar->setChecked(visible);
     }
+}
+
+void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
+    QSettings settings;
+    settings.setValue("DistractionFreeMode/editorWidthMode",
+                      action->whatsThis().toInt());
+
+    ui->noteTextEdit->setPaperMargins(this->width());
+    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
 }
