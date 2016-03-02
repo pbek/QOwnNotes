@@ -259,7 +259,7 @@ void MainWindow::toggleDistractionFreeMode() {
  */
 void MainWindow::setDistractionFreeMode(bool enabled) {
     QSettings settings;
-    QString styling = "QTextEdit {padding: 25px; background-color: white;}";
+    QString styling = "QTextEdit {background-color: white;}";
 
     if (enabled) {
         //
@@ -307,9 +307,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         _leaveDistractionFreeModeButton->setIcon(QIcon::fromTheme(
                 "zoom-original",
                 QIcon(":icons/breeze-qownnotes/16x16/zoom-original.svg")));
-
-//        _leaveDistractionFreeModeButton->setShortcut(
-//                QKeySequence("Ctrl+Shift+D"));
 
         connect(_leaveDistractionFreeModeButton, SIGNAL(clicked()),
                 this, SLOT(toggleDistractionFreeMode()));
@@ -360,6 +357,9 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         ui->noteTextView->setStyleSheet(
                 ui->noteTextView->styleSheet().replace(styling, ""));
     }
+
+    ui->noteTextEdit->setPaperMargins(this->width());
+    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
 }
 
 /**
@@ -2861,4 +2861,10 @@ void MainWindow::on_actionToggle_distraction_free_mode_triggered()
 void MainWindow::trackAction(QAction *action) {
     MetricsService::instance()->sendVisitIfEnabled(
             "action/" + action->objectName());
+}
+
+void MainWindow::resizeEvent(QResizeEvent* event)
+{
+    ui->noteTextEdit->setPaperMargins(event->size().width());
+    ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
 }

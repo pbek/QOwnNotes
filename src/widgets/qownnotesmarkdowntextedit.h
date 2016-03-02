@@ -12,7 +12,8 @@ public:
 
     void setStyles();
     void openUrl(QUrl url);
-
+//    void setViewportMargins(int left, int top, int right, int bottom);
+    void setPaperMargins(int width);
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H

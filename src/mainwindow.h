@@ -46,6 +46,8 @@ protected:
 
     bool eventFilter(QObject *obj, QEvent *event);
 
+    void resizeEvent(QResizeEvent* event);
+
 private slots:
 
     void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);

@@ -154,3 +154,35 @@ void QOwnNotesMarkdownTextEdit::openUrl(QUrl url) {
 
     QMarkdownTextEdit::openUrl(QUrl(urlString));
 }
+
+//void QOwnNotesMarkdownTextEdit::setViewportMargins(
+//        int left, int top, int right, int bottom) {
+//    QMarkdownTextEdit::setViewportMargins(left, top, right, bottom);
+//}
+
+/**
+ * Sets the viewport margins for the distraction free mode
+ */
+void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
+    QSettings settings;
+    bool isInDistractionFreeMode =
+            settings.value("DistractionFreeMode/isEnabled").toBool();
+
+    if (isInDistractionFreeMode) {
+        QFontMetrics metrics(font());
+        // take the size of an "O" character
+        metrics.width('O');
+
+        // set the size of 60 "O" characters
+        int proposedEditorWidth = 60 * metrics.width('O');
+
+        int margin = (width - proposedEditorWidth) / 2;
+        if (margin < 0) {
+            margin = 0;
+        }
+
+        setViewportMargins(margin, 20, margin, 0);
+    } else {
+        setViewportMargins(0, 0, 0, 0);
+    }
+}
