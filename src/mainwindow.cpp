@@ -204,6 +204,16 @@ MainWindow::MainWindow(QWidget *parent) :
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
             this, SLOT(trackAction(QAction *)));
+
+    // set "show toolbar" menu item checked/unchecked
+    const QSignalBlocker blocker(ui->actionShow_toolbar);
+    {
+        Q_UNUSED(blocker);
+        ui->actionShow_toolbar->setChecked(!ui->mainToolBar->isHidden());
+    }
+
+    connect(ui->mainToolBar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(mainToolbarVisibilityChanged(bool)));
 }
 
 MainWindow::~MainWindow() {
@@ -2867,4 +2877,24 @@ void MainWindow::resizeEvent(QResizeEvent* event)
 {
     ui->noteTextEdit->setPaperMargins(event->size().width());
     ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
+}
+
+/**
+ * Toggles the visibility of the main toolbar
+ */
+void MainWindow::on_actionShow_toolbar_triggered(bool checked)
+{
+    ui->mainToolBar->setVisible(checked);
+}
+
+/**
+ * Toggles the checked state of the "show toolbar" checkbox in the main menu
+ */
+void MainWindow::mainToolbarVisibilityChanged(bool visible)
+{
+    const QSignalBlocker blocker(ui->actionShow_toolbar);
+    {
+        Q_UNUSED(blocker);
+        ui->actionShow_toolbar->setChecked(visible);
+    }
 }

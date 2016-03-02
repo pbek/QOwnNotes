@@ -353,6 +353,8 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Window</string>
     </property>
+    <addaction name="actionShow_toolbar"/>
+    <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
@@ -362,6 +364,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="menu_Help"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>main toolbar</string>
+   </property>
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
    </attribute>
@@ -851,6 +856,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="actionShow_toolbar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show &amp;toolbar</string>
    </property>
   </action>
  </widget>

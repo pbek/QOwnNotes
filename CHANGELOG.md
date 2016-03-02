@@ -6,6 +6,8 @@
 - the notes viewed in the distraction free mode now have a viewport width of 60 
   characters (for [Issue #86](https://github.com/pbek/QOwnNotes/issues/86))
     - the viewport will resize automatically if the width of the window changes
+- you can now toggle visibility of the tool bar in the *Windows* menu
+  (for [Issue #103](https://github.com/pbek/QOwnNotes/issues/103))
 
 ## 1.1.1
 - added **Dutch translation** (a big thank you to Fabijenna!)

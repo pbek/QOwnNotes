@@ -178,6 +178,10 @@ private slots:
 
     void trackAction(QAction *action);
 
+    void on_actionShow_toolbar_triggered(bool checked);
+
+    void mainToolbarVisibilityChanged(bool visible);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
