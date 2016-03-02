@@ -9,6 +9,7 @@
     - you can select between four width modes in the *Window* menu 
 - you can now toggle visibility of the tool bar in the *Windows* menu
   (for [Issue #103](https://github.com/pbek/QOwnNotes/issues/103))
+- added more German translation
 
 ## 1.1.1
 - added **Dutch translation** (a big thank you to Fabijenna!)
