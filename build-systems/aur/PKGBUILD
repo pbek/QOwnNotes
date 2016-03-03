@@ -10,7 +10,7 @@ url='http://www.qownnotes.org/'
 license=('GPL2')
 groups=('qownnotes')
 depends=('qt5-base' 'qt5-svg' 'qt5-script' 'openssl')
-makedepends=('base-devel' 'git' 'qt5-tools')
+makedepends=('git' 'qt5-tools')
 source=("git://github.com/pbek/QOwnNotes.git#tag=$tag")
 md5sums=('SKIP')
 
