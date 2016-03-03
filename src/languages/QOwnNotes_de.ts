@@ -618,7 +618,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="2333"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Gelöschte Notizen werden derzeit von Ihrem ownCloud-Server geladen</translation>
+      <translation>gelöschte Notizen werden derzeit von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2357"/>
