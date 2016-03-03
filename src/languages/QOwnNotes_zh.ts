@@ -1333,8 +1333,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1534"/>
-      <source>path to external editor, leave empy for default</source>
-      <translation type="unfinished">path to external editor, leave empy for default</translation>
+      <source>path to external editor, leave empty for default</source>
+      <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1541"/>

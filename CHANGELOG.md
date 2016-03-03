@@ -7,7 +7,6 @@
     - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note 
     as markdown
 
-
 ## 1.1.2
 - added more Dutch translation (thank you Fabijenna)
 - fixed the *leave distraction free mode* button icon

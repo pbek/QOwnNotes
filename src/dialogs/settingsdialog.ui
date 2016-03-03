@@ -1531,7 +1531,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item>
                <widget class="QLineEdit" name="externalEditorPathLineEdit">
                 <property name="placeholderText">
-                 <string>path to external editor, leave empy for default</string>
+                 <string>path to external editor, leave empty for default</string>
                 </property>
                </widget>
               </item>
