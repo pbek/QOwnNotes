@@ -41,6 +41,12 @@ public:
 
     void hideUpdateAvailableButton();
 
+    void enableShowVersionsButton();
+
+    void enableShowTrashButton();
+
+    void showStatusBarMessage(const QString & message, int timeout = 0);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -297,6 +303,4 @@ private:
     void setDistractionFreeMode(bool enabled = true);
 
     void changeDistractionFreeMode(bool enabled);
-
-    void showStatusBarMessage(const QString & message, int timeout = 0);
 };

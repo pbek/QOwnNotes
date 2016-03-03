@@ -618,6 +618,10 @@ QString OwnCloudService::getServerNotesPath(QString notesPath) {
  * @param data
  */
 void OwnCloudService::handleVersionsLoading(QString data) {
+    mainWindow->enableShowVersionsButton();
+    mainWindow->showStatusBarMessage(
+            tr("done with loading note versions"), 2000);
+
     // check if we get any data at all
     if (data == "") {
         if (QMessageBox::critical(
@@ -691,6 +695,10 @@ void OwnCloudService::handleVersionsLoading(QString data) {
  * @param data
  */
 void OwnCloudService::handleTrashedLoading(QString data) {
+    mainWindow->enableShowTrashButton();
+    mainWindow->showStatusBarMessage(
+            tr("done with loading trashed notes"), 2000);
+
     // check if we get any data at all
     if (data == "") {
         if (QMessageBox::critical(

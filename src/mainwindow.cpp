@@ -1256,6 +1256,9 @@ void MainWindow::setCurrentNote(Note note,
                                 bool addNoteToHistory) {
     MetricsService::instance()->sendVisitIfEnabled("note/current-note/changed");
 
+    enableShowVersionsButton();
+    enableShowTrashButton();
+
     // update cursor position of previous note
     if (this->currentNote.exists()) {
         QTextCursor c = ui->noteTextEdit->textCursor();
@@ -2310,14 +2313,32 @@ void MainWindow::on_action_Settings_triggered() {
 }
 
 void MainWindow::on_actionShow_versions_triggered() {
+    ui->actionShow_versions->setDisabled(true);
+    showStatusBarMessage(
+            tr("note versions are currently loaded from your ownCloud server"),
+            20000);
+
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->loadVersions(
             this->notesPath, this->currentNote.getFileName(), this);
 }
 
+void MainWindow::enableShowVersionsButton() {
+    ui->actionShow_versions->setDisabled(false);
+}
+
 void MainWindow::on_actionShow_trash_triggered() {
+    ui->actionShow_trash->setDisabled(true);
+    showStatusBarMessage(
+            tr("trashed notes are currently loaded from your ownCloud server"),
+            20000);
+
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->loadTrash(this->notesPath, this);
+}
+
+void MainWindow::enableShowTrashButton() {
+    ui->actionShow_trash->setDisabled(false);
 }
 
 void MainWindow::on_notesListWidget_customContextMenuRequested(

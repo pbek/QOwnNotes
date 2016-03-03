@@ -9,6 +9,10 @@
     - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
     - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note 
     as markdown
+- you now get a feedback while note versions or trashed notes are loaded and 
+  the buttons are disabled while you are loading them 
+  (for [Issue #97](https://github.com/pbek/QOwnNotes/issues/97))
+- added more German translation
 
 ## 1.1.2
 - added more Dutch translation (thank you Fabijenna)

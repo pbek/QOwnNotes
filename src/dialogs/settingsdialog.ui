@@ -972,7 +972,7 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <property name="text">
-                  <string>Magyar</string>
+                  <string notr="true">Magyar</string>
                  </property>
                  <property name="toolTip">
                   <string>Hungarian</string>
