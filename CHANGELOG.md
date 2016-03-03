@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 1.1.3
+- added **Hungarian translation** (a big thank you to Fabijenna!)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages
 - added shortcuts for note printing
   (for [Issue #99](https://github.com/pbek/QOwnNotes/issues/99))
     - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text

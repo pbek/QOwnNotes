@@ -970,6 +970,17 @@ p, li { white-space: pre-wrap; }
                   <string notr="true">nl</string>
                  </property>
                 </item>
+                <item>
+                 <property name="text">
+                  <string>Magyar</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Hungarian</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">hu</string>
+                 </property>
+                </item>
                </widget>
               </item>
               <item row="0" column="0">
