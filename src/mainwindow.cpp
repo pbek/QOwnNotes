@@ -14,6 +14,7 @@
 #include <QShortcut>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QMimeData>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -225,6 +226,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     connect(dfmEditorWidthActionGroup, SIGNAL(triggered(QAction *)),
             this, SLOT(dfmEditorWidthActionTriggered(QAction *)));
+
+    setAcceptDrops(true);
 }
 
 MainWindow::~MainWindow() {
@@ -2958,4 +2961,82 @@ void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
 
     ui->noteTextEdit->setPaperMargins(this->width());
     ui->encryptedNoteTextEdit->setPaperMargins(this->width());
+}
+
+/**
+ * Allows files to be dropped to QOwnNotes
+ */
+void MainWindow::dragEnterEvent(QDragEnterEvent *e)
+{
+    if (e->mimeData()->hasUrls()) {
+        e->acceptProposedAction();
+    }
+}
+
+/**
+ * Handles the copying of notes to the current notes folder
+ */
+void MainWindow::dropEvent(QDropEvent *e)
+{
+    int successCount = 0;
+    int failureCount = 0;
+    int extensionSkipCount = 0;
+
+    foreach(const QUrl &url, e->mimeData()->urls()) {
+            QString path(url.toLocalFile());
+            qDebug() << __func__ << " - 'path': " << path;
+
+            QFile file(path);
+            QFileInfo fileInfo(path);
+            if (fileInfo.isReadable()) {
+                QString extension = fileInfo.suffix();
+
+                // only allow markdown and text files to be copied
+                if ((extension != "md") && (extension != "txt")) {
+                    extensionSkipCount++;
+                    extensionSkipCount;
+                    continue;
+                }
+
+                // copy file to notes path
+                bool success = file.copy(
+                        notesPath + QDir::separator() + fileInfo.fileName());
+
+                if (success) {
+                    successCount++;
+                } else {
+                    failureCount++;
+                }
+            }
+    }
+
+    QString message;
+    if (successCount > 0) {
+        message += tr("copied %n note(s) to %1", "", successCount)
+                .arg(notesPath);
+    }
+
+    if (failureCount > 0) {
+        if (!message.isEmpty()) {
+            message += ", ";
+        }
+
+        message += tr(
+                "failed to copy %n note(s) (most likely already existing)",
+                "", failureCount);
+    }
+
+    if (extensionSkipCount > 0) {
+        if (!message.isEmpty()) {
+            message += ", ";
+        }
+
+        message += tr(
+                "skipped copying of %n note(s) (no markdown or text file)",
+                "", extensionSkipCount);
+    }
+
+    if (!message.isEmpty()) {
+        showStatusBarMessage(message, 5000);
+    }
 }

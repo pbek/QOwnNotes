@@ -190,6 +190,10 @@ private slots:
 
     void dfmEditorWidthActionTriggered(QAction *action);
 
+    void dragEnterEvent(QDragEnterEvent *e);
+
+    void dropEvent(QDropEvent *e);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
