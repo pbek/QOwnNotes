@@ -10,6 +10,7 @@
 #include <QSignalMapper>
 #include <QSystemTrayIcon>
 #include <QTextEdit>
+#include <QFile>
 #include <entities/note.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
@@ -307,4 +308,8 @@ private:
     void setDistractionFreeMode(bool enabled = true);
 
     void changeDistractionFreeMode(bool enabled);
+
+    bool insertMedia(QFile *file);
+
+    int currentNoteLineNumber();
 };

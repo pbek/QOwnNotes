@@ -15,6 +15,7 @@
 #include <QPrinter>
 #include <QPrintDialog>
 #include <QMimeData>
+#include <QTextBlock>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -2533,8 +2534,8 @@ void MainWindow::on_actionInsert_image_triggered() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setDirectory(QDir::homePath());
-	dialog.setNameFilter(tr("Image files (*.jpg *.png *.gif)"));
-	dialog.setWindowTitle(tr("Select image to insert"));
+    dialog.setNameFilter(tr("Image files (*.jpg *.png *.gif)"));
+    dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
@@ -2543,32 +2544,73 @@ void MainWindow::on_actionInsert_image_triggered() {
             QString fileName = fileNames.at(0);
 
             QFile file(fileName);
-            if (file.exists()) {
-                QDir mediaDir(notesPath + QDir::separator() + "media");
 
-                // created the media folder if it doesn't exist
-                if (!mediaDir.exists()) {
-                    mediaDir.mkpath(mediaDir.path());
-                }
-
-                QFileInfo fileInfo(file.fileName());
-
-                // find a random name for the new file
-                QString newFileName =
-                        QString::number(qrand()) + "." + fileInfo.suffix();
-
-                // copy the file the the media folder
-                file.copy(mediaDir.path() + QDir::separator() + newFileName);
-
-                QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-                QTextCursor c = textEdit->textCursor();
-
-                // insert the image link
-                c.insertText("![" + fileInfo.baseName() +
-                                     "](file://media/" + newFileName + ")");
-            }
+            // insert the image
+            insertMedia(&file);
         }
     }
+}
+
+/**
+ * Insert media files into a note
+ */
+bool MainWindow::insertMedia(QFile *file) {
+    if (file->exists()) {
+        QDir mediaDir(notesPath + QDir::separator() + "media");
+
+        // created the media folder if it doesn't exist
+        if (!mediaDir.exists()) {
+            mediaDir.mkpath(mediaDir.path());
+        }
+
+        QFileInfo fileInfo(file->fileName());
+
+        // find a random name for the new file
+        QString newFileName =
+                QString::number(qrand()) + "." + fileInfo.suffix();
+
+        // copy the file the the media folder
+        file->copy(mediaDir.path() + QDir::separator() + newFileName);
+
+        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        // if we try to insert media in the first line of the note (aka.
+        // note name) move the cursor to the last line
+        if (currentNoteLineNumber() == 1) {
+            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+            textEdit->setTextCursor(c);
+        }
+
+        // insert the image link
+        c.insertText("![" + fileInfo.baseName() +
+                     "](file://media/" + newFileName + ")");
+
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Returns the cursor's line number in the current note
+ */
+int MainWindow::currentNoteLineNumber()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor cursor = textEdit->textCursor();
+
+    QTextDocument *doc = textEdit->document();
+    QTextBlock blk = doc->findBlock(cursor.position());
+    QTextBlock blk2 = doc->begin();
+
+    int i = 1;
+    while ( blk != blk2 ) {
+        blk2 = blk2.next();
+        i++;
+    }
+
+    return i;
 }
 
 /**
@@ -2981,6 +3023,8 @@ void MainWindow::dropEvent(QDropEvent *e)
     int successCount = 0;
     int failureCount = 0;
     int extensionSkipCount = 0;
+    QStringList noteExtensions = QStringList() << "md" << "txt";
+    QStringList mediaExtensions = QStringList() << "jpg" << "png" << "gif";
 
     foreach(const QUrl &url, e->mimeData()->urls()) {
             QString path(url.toLocalFile());
@@ -2991,21 +3035,29 @@ void MainWindow::dropEvent(QDropEvent *e)
             if (fileInfo.isReadable()) {
                 QString extension = fileInfo.suffix();
 
-                // only allow markdown and text files to be copied
-                if ((extension != "md") && (extension != "txt")) {
+                // only allow markdown and text files to be copied as note
+                if (noteExtensions.contains(extension, Qt::CaseInsensitive)) {
+                    // copy file to notes path
+                    bool success = file.copy(
+                            notesPath + QDir::separator() +
+                            fileInfo.fileName());
+
+                    if (success) {
+                        successCount++;
+                    } else {
+                        failureCount++;
+                    }
+                } else if (mediaExtensions.contains(extension,
+                                               Qt::CaseInsensitive)) {
+                    // only allow image files are allowed to be
+                    // inserted as image
+
+                    // insert the image
+                    insertMedia(&file);
+                } else {
                     extensionSkipCount++;
                     extensionSkipCount;
                     continue;
-                }
-
-                // copy file to notes path
-                bool success = file.copy(
-                        notesPath + QDir::separator() + fileInfo.fileName());
-
-                if (success) {
-                    successCount++;
-                } else {
-                    failureCount++;
                 }
             }
     }
