@@ -399,6 +399,12 @@
       <translation>Bilder oder Notizen einfügen</translation>
     </message>
     <message>
+      <location filename="../mainwindow.ui" line="943"/>
+      <location filename="../mainwindow.ui" line="946"/>
+      <source>Paste images or notes from the clipboard</source>
+      <translation>Bilder oder Notizen aus der Zwischenablage einfügen</translation>
+    </message>
+    <message>
       <location filename="../mainwindow.cpp" line="909"/>
       <location filename="../mainwindow.cpp" line="951"/>
       <location filename="../mainwindow.cpp" line="2141"/>

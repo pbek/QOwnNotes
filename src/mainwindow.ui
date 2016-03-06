@@ -939,6 +939,12 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Paste images or notes</string>
    </property>
+   <property name="toolTip">
+    <string>Paste images or notes from the clipboard</string>
+   </property>
+   <property name="statusTip">
+    <string>Paste images or notes from the clipboard</string>
+   </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+V</string>
    </property>

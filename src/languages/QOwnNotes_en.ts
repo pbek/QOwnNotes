@@ -399,6 +399,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="943"/>
+        <location filename="../mainwindow.ui" line="946"/>
+        <source>Paste images or notes from the clipboard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="909"/>
         <location filename="../mainwindow.cpp" line="951"/>
         <location filename="../mainwindow.cpp" line="2141"/>
