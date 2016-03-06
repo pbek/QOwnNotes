@@ -3,16 +3,16 @@
 ## 1.1.4
 - added support for copying notes from a file manager to QOwnNotes via drag and 
   drop (for [Issue #100](https://github.com/pbek/QOwnNotes/issues/100))
-- added support for dragging and dropping of images into notes
+- added support for dragging and dropping images into notes
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
-- added support for coping and pasting images into notes from a file manager
+- added support for copying and pasting images into notes from a file manager
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
     - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
     pasting this way
-- added support for coping and pasting images from a image manipulation 
+- added support for copying and pasting images from an image manipulation 
   software into a note
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
-    - a new png image will be created in the `media` folder in your notes folder 
+    - a new png image will be created in the `media` folder of your notes folder 
     - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
     pasting image data
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
