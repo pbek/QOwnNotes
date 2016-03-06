@@ -940,7 +940,7 @@ p, li { white-space: pre-wrap; }
     <string>Paste images or notes</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+V</string>
+    <string notr="true">Ctrl+Shift+V</string>
    </property>
   </action>
  </widget>
