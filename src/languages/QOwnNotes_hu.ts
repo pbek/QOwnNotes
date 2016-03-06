@@ -109,12 +109,12 @@
     <message>
       <location filename="../mainwindow.ui" line="361"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>Szerkesztő szélessége</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="381"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>fő eszköztár</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="423"/>
@@ -129,17 +129,17 @@
     <message>
       <location filename="../mainwindow.ui" line="447"/>
       <source>&amp;Find note</source>
-      <translation type="unfinished">&amp;Find note</translation>
+      <translation>&amp;Jegyzet megkeresése</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="459"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>Eltávolítom az aktuális jegyzetet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="471"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation type="unfinished">About &amp;QOwnNotes...</translation>
+      <translation>A &amp;QOwnNotes-ról...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="483"/>
@@ -149,12 +149,12 @@
     <message>
       <location filename="../mainwindow.ui" line="498"/>
       <source>&amp;Toggle Edit Mode</source>
-      <translation type="unfinished">&amp;Toggle Edit Mode</translation>
+      <translation>&amp;Szerkesztési mód váltása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="501"/>
       <source>Toggle Edit Mode</source>
-      <translation type="unfinished">Toggle Edit Mode</translation>
+      <translation>Szerkesztési mód váltása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="513"/>
@@ -214,13 +214,13 @@
     <message>
       <location filename="../mainwindow.ui" line="591"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>Mutassa meg a törölt jegyzeteket a szerveren</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="596"/>
       <location filename="../mainwindow.cpp" line="2371"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>Válassza ki az &amp;összes jegyzetet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="605"/>
@@ -236,27 +236,27 @@
     <message>
       <location filename="../mainwindow.ui" line="620"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>&amp;Találd meg az aktuális jegyzetben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="623"/>
       <source>Find text in current note</source>
-      <translation type="unfinished">Find text in current note</translation>
+      <translation>Szöveg keresése az aktuális jegyzetben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="631"/>
       <source>&amp;Duplicate text</source>
-      <translation type="unfinished">&amp;Duplicate text</translation>
+      <translation>&amp;Ismétlődő szöveg</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="643"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>&amp;Vissza a jegyzettörténelemben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="655"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>Előre a jegyzettörténelemben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="667"/>
@@ -266,47 +266,47 @@
     <message>
       <location filename="../mainwindow.ui" line="676"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>&amp;Tudásbázis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="685"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>Jelenlegi &amp;idő beszúrása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="697"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>Mutasd a &amp;tennivalók listáját</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="709"/>
       <source>&amp;Export note as PDF (markdown)</source>
-      <translation type="unfinished">&amp;Export note as PDF (markdown)</translation>
+      <translation>&amp;Jegyzet exportálása PDF-ként (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="718"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
+      <translation>&amp;Jegyzet exportálása PDF-ként (szöveg)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="727"/>
       <source>&amp;Print note (text)</source>
-      <translation type="unfinished">&amp;Print note (text)</translation>
+      <translation>Jegyzet &amp;nyomtatása (szövegként)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="739"/>
       <source>&amp;Print note (markdown)</source>
-      <translation type="unfinished">&amp;Print note (markdown)</translation>
+      <translation>Jegyzet &amp;nyomtatása (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="751"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>&amp;Kép beszúrása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="754"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>Kép beszúrása (a kép bekerül a "média" dosszié-ban a jelenlegi jegyzetek dossziéba)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="766"/>
@@ -331,86 +331,85 @@
     <message>
       <location filename="../mainwindow.ui" line="805"/>
       <source>&amp;Open note in external editor</source>
-      <translation type="unfinished">&amp;Open note in external editor</translation>
+      <translation>&amp;Megynyitom a Jegyzetet külső szerkesztőben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="817"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>&amp;Markdown fájlként exportálhatja a jegyzetet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="826"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>&amp;Végy részt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="835"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>&amp;Kód blokk beszúrása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="847"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>Következő jegyzet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="859"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>Előző jegyzet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="871"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>&amp;Figyelemelterelésmentes mód</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>Figyelemelterelésmentes mód, elhagyása a gombbal a jobb alsó sarokban</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="885"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>&amp;Eszköztár megmutatása</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Keskeny</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="904"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Közepes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="915"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Széles</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="926"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Teljes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="903"/>
       <location filename="../mainwindow.cpp" line="945"/>
       <location filename="../mainwindow.cpp" line="2135"/>
       <source>stored current note to disk</source>
-      <translation type="unfinished">stored current note to disk</translation>
+      <translation>lemezen tárolt aktuális jegyzet</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="930"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>A jegyzetet az alkalmazáson kívül törölték!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="931"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>A jegyzetet az alkalmazáson kívül törölték! Visszaállítja az aktuális jegyzetet?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="933"/>
@@ -669,7 +668,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2533"/>
       <source>Image files (*.jpg *.png *.gif)</source>
-      <translation type="unfinished">Image files (*.jpg *.png *.gif)</translation>
+      <translation>Képfájlok (*.jpg *.png *.gif)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2534"/>
@@ -757,7 +756,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Mégse</translation>
     </message>
   </context>
   <context>
@@ -765,12 +764,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="623"/>
       <source>done with loading note versions</source>
-      <translation type="unfinished">done with loading note versions</translation>
+      <translation>a jegyzetváltozatok töltése befejeződött</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="700"/>
       <source>done with loading trashed notes</source>
-      <translation type="unfinished">done with loading trashed notes</translation>
+      <translation>a törölt jegyzetek töltése befejeződött</translation>
     </message>
   </context>
   <context>
@@ -778,27 +777,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Kérjük, írja be a jelszót</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="20"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Írja be a jelszót:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="30"/>
       <source>password</source>
-      <translation type="unfinished">password</translation>
+      <translation>jelszó</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="40"/>
       <source>re-enter password</source>
-      <translation type="unfinished">re-enter password</translation>
+      <translation>jelszó újra</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="50"/>
       <source>passwords don't match!</source>
-      <translation type="unfinished">passwords don't match!</translation>
+      <translation>jelszavak nem egyeznek!</translation>
     </message>
   </context>
   <context>
@@ -806,27 +805,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="36"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>zárja be a keresést</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="42"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Keresés:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>keresés a szövegben</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>előrefelé keresés</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>visszafelé keresés</translation>
     </message>
   </context>
   <context>
@@ -834,7 +833,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="63"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Memória adatbázis nem nyitható meg</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="64"/>
@@ -851,7 +850,7 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../services/databaseservice.cpp" line="81"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Lemez adatbázisa nem nyitható meg</translation>
     </message>
   </context>
   <context>
@@ -864,12 +863,12 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="49"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>OwnCloud szervere</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="63"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>ownCloud szerver Url-címe:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="85"/>
@@ -1093,7 +1092,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>Interface language</source>
-      <translation type="unfinished">Interface language</translation>
+      <translation>Kezelőfelület nyelve</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="879"/>
@@ -1138,7 +1137,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="978"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>Magyar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1600"/>
