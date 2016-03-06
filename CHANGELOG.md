@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.1.5
+- added more German translation
+
 ## 1.1.4
 - added support for copying notes from a file manager to QOwnNotes via drag and 
   drop (for [Issue #100](https://github.com/pbek/QOwnNotes/issues/100))
