@@ -16,6 +16,8 @@
 #include <QPrintDialog>
 #include <QMimeData>
 #include <QTextBlock>
+#include <QClipboard>
+#include <QTemporaryFile>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -2552,7 +2554,7 @@ void MainWindow::on_actionInsert_image_triggered() {
 }
 
 /**
- * Insert media files into a note
+ * Inserts a media file into a note
  */
 bool MainWindow::insertMedia(QFile *file) {
     if (file->exists()) {
@@ -2583,8 +2585,9 @@ bool MainWindow::insertMedia(QFile *file) {
         }
 
         // insert the image link
+        // we add a "\n" in the end so that hoedown recognizes multiple images
         c.insertText("![" + fileInfo.baseName() +
-                     "](file://media/" + newFileName + ")");
+                     "](file://media/" + newFileName + ")\n");
 
         return true;
     }
@@ -2689,12 +2692,12 @@ void MainWindow::on_actionDecrypt_note_triggered()
     }
 
     if (QMessageBox::warning(
-			this, tr("Decrypt note and store it as plain text"),
-			tr("Your note will be decrypted and stored as plain text gain. Keep "
+            this, tr("Decrypt note and store it as plain text"),
+            tr("Your note will be decrypted and stored as plain text gain. Keep "
                     "in mind that the unencrypted note will possibly be synced "
                     "to your server and sensitive text may be exposed!<br />"
-					"Do you want to decrypt your note?"),
-			tr("&Decrypt"), tr("&Cancel"), QString::null,
+                    "Do you want to decrypt your note?"),
+            tr("&Decrypt"), tr("&Cancel"), QString::null,
             0, 1) == 1) {
         return;
     }
@@ -3008,8 +3011,7 @@ void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
 /**
  * Allows files to be dropped to QOwnNotes
  */
-void MainWindow::dragEnterEvent(QDragEnterEvent *e)
-{
+void MainWindow::dragEnterEvent(QDragEnterEvent *e) {
     if (e->mimeData()->hasUrls()) {
         e->acceptProposedAction();
     }
@@ -3018,77 +3020,133 @@ void MainWindow::dragEnterEvent(QDragEnterEvent *e)
 /**
  * Handles the copying of notes to the current notes folder
  */
-void MainWindow::dropEvent(QDropEvent *e)
-{
-    int successCount = 0;
-    int failureCount = 0;
-    int extensionSkipCount = 0;
-    QStringList noteExtensions = QStringList() << "md" << "txt";
-    QStringList mediaExtensions = QStringList() << "jpg" << "png" << "gif";
+void MainWindow::dropEvent(QDropEvent *e) {
+    handleInsertingFromMimeData(e->mimeData());
+}
 
-    foreach(const QUrl &url, e->mimeData()->urls()) {
-            QString path(url.toLocalFile());
-            qDebug() << __func__ << " - 'path': " << path;
+/**
+ * Handles the inserting of media files and notes from a mime data, for example
+ * produced by a drop event or a paste action
+ */
+void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
+    if (mimeData->hasUrls()) {
+        int successCount = 0;
+        int failureCount = 0;
+        int skipCount = 0;
 
-            QFile file(path);
-            QFileInfo fileInfo(path);
-            if (fileInfo.isReadable()) {
-                QString extension = fileInfo.suffix();
+        foreach(const QUrl &url, mimeData->urls()) {
+                QString path(url.toLocalFile());
+                QFileInfo fileInfo(path);
+                qDebug() << __func__ << " - 'path': " << path;
 
-                // only allow markdown and text files to be copied as note
-                if (noteExtensions.contains(extension, Qt::CaseInsensitive)) {
-                    // copy file to notes path
-                    bool success = file.copy(
-                            notesPath + QDir::separator() +
-                            fileInfo.fileName());
+                if (fileInfo.isReadable()) {
+                    QFile *file = new QFile(path);
 
-                    if (success) {
-                        successCount++;
+                    // only allow markdown and text files to be copied as note
+                    if (isValidNoteFile(file)) {
+                        // copy file to notes path
+                        bool success = file->copy(
+                                notesPath + QDir::separator() +
+                                fileInfo.fileName());
+
+                        if (success) {
+                            successCount++;
+                        } else {
+                            failureCount++;
+                        }
+                    // only allow image files to be inserted as image
+                    } else if (isValidMediaFile(file)) {
+                        // insert the image
+                        insertMedia(file);
                     } else {
-                        failureCount++;
+                        skipCount++;
                     }
-                } else if (mediaExtensions.contains(extension,
-                                               Qt::CaseInsensitive)) {
-                    // only allow image files are allowed to be
-                    // inserted as image
-
-                    // insert the image
-                    insertMedia(&file);
                 } else {
-                    extensionSkipCount++;
-                    extensionSkipCount;
-                    continue;
+                    skipCount++;
                 }
             }
-    }
 
-    QString message;
-    if (successCount > 0) {
-        message += tr("copied %n note(s) to %1", "", successCount)
-                .arg(notesPath);
-    }
-
-    if (failureCount > 0) {
-        if (!message.isEmpty()) {
-            message += ", ";
+        QString message;
+        if (successCount > 0) {
+            message += tr("copied %n note(s) to %1", "", successCount)
+                    .arg(notesPath);
         }
 
-        message += tr(
-                "failed to copy %n note(s) (most likely already existing)",
-                "", failureCount);
-    }
+        if (failureCount > 0) {
+            if (!message.isEmpty()) {
+                message += ", ";
+            }
 
-    if (extensionSkipCount > 0) {
-        if (!message.isEmpty()) {
-            message += ", ";
+            message += tr(
+                    "failed to copy %n note(s) (most likely already existing)",
+                    "", failureCount);
         }
 
-        message += tr(
-                "skipped copying of %n note(s) (no markdown or text file)",
-                "", extensionSkipCount);
-    }
+        if (skipCount > 0) {
+            if (!message.isEmpty()) {
+                message += ", ";
+            }
 
-    if (!message.isEmpty()) {
-        showStatusBarMessage(message, 5000);
+            message += tr(
+                    "skipped copying of %n note(s) "
+                            "(no markdown or text file or not readable)",
+                    "", skipCount);
+        }
+
+        if (!message.isEmpty()) {
+            showStatusBarMessage(message, 5000);
+        }
+    } else if (mimeData->hasImage()) {
+        // get the image from mime data
+        QImage image = mimeData->imageData().value<QImage>();
+
+        if (!image.isNull()) {
+            QTemporaryFile tempFile(
+                    QDir::tempPath() + QDir::separator() +
+                    "qownnotes-media-XXXXXX.png");
+
+            if (tempFile.open()) {
+                // save temporary png image
+                image.save(tempFile.fileName(), "PNG");
+
+                // insert media into note
+                QFile *file = new QFile(tempFile.fileName());
+                insertMedia(file);
+            }
+        }
     }
+}
+
+/**
+ * Evaluates if file is a note file
+ */
+bool MainWindow::isValidMediaFile(QFile *file) {
+    QStringList mediaExtensions = QStringList() << "jpg" << "png" << "gif";
+    QFileInfo fileInfo(file->fileName());
+    QString extension = fileInfo.suffix();
+    return mediaExtensions.contains(extension, Qt::CaseInsensitive);
+}
+
+/**
+ * Evaluates if file is a media file
+ */
+bool MainWindow::isValidNoteFile(QFile *file) {
+    QStringList mediaExtensions = QStringList() << "txt" << "md";
+    QFileInfo fileInfo(file->fileName());
+    QString extension = fileInfo.suffix();
+    return mediaExtensions.contains(extension, Qt::CaseInsensitive);
+}
+
+void MainWindow::on_actionPaste_image_triggered()
+{
+    pasteMediaIntoNote();
+}
+
+/**
+ * Handles the pasting of media into notes
+ */
+void MainWindow::pasteMediaIntoNote() {
+    QClipboard *clipboard = QApplication::clipboard();
+    const QMimeData * mimeData = clipboard->mimeData(QClipboard::Clipboard);
+    handleInsertingFromMimeData(mimeData);
 }

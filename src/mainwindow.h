@@ -119,6 +119,8 @@ private slots:
 
     void on_noteTextEdit_customContextMenuRequested(const QPoint &pos);
 
+    void pasteMediaIntoNote();
+
     void on_actionInsert_Link_to_note_triggered();
 
     void on_action_DuplicateText_triggered();
@@ -194,6 +196,8 @@ private slots:
     void dragEnterEvent(QDragEnterEvent *e);
 
     void dropEvent(QDropEvent *e);
+
+    void on_actionPaste_image_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -312,4 +316,10 @@ private:
     bool insertMedia(QFile *file);
 
     int currentNoteLineNumber();
+
+    bool isValidMediaFile(QFile *file);
+
+    bool isValidNoteFile(QFile *file);
+
+    void handleInsertingFromMimeData(const QMimeData *mimeData);
 };

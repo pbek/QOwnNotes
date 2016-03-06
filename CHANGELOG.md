@@ -5,6 +5,18 @@
   drop (for [Issue #100](https://github.com/pbek/QOwnNotes/issues/100))
 - added support for dragging and dropping of images into notes
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+- added support for coping and pasting images into notes from a file manager
+  (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+    - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
+    pasting this way
+- added support for coping and pasting images from a image manipulation 
+  software into a note
+  (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+    - a new png image will be created in the `media` folder in your notes folder 
+    - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> as shortcut for 
+    pasting image data
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 - added more Hungarian translation (thank you Fabijenna)
 
 ## 1.1.3
