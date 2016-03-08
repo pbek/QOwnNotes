@@ -940,11 +940,6 @@ Kattintson a Mégse gombra a kilépéshez.</translation>
       <translation>jelszó:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="186"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Szükségünk van a fő ownCloud szinkronizált dossziéjára hogy meghatározhassuk a könyvtárat ahol megtaláljuk a jegyzet fájlját az ownCloud kiszolgálóján.&lt;/p&gt; &lt;p&gt;Ez &lt;span style="font-weight:600;"&gt; ne&lt;/span&gt; a jegyzetmappa legyen. A jegyzetmappa általában &lt;span style="font-weight:600;"&gt; az&lt;/span&gt; ownCloud szinkronizált dosszié.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
       <translation>a mappa melyet a ownCloud sync client használ</translation>
@@ -1253,6 +1248,11 @@ p, li { white-space: pre-wrap; }
       <location filename="../dialogs/settingsdialog.ui" line="1071"/>
       <source>code font in markdown text edits:</source>
       <translation>kód betűtípus a markdown szövegszerkesztésben:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="186"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Szükségünk van a fő ownCloud szinkronizált dossziéjára hogy meghatározhassuk a könyvtárat ahol megtaláljuk a jegyzet fájlját az ownCloud kiszolgálóján.&lt;/p&gt; &lt;p&gt;Ez &lt;span style="font-weight:600;"&gt; ne&lt;/span&gt; a jegyzetmappa legyen. A jegyzetmappa általában &lt;span style="font-weight:600;"&gt; az&lt;/span&gt; ownCloud szinkronizált dosszié.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1132"/>

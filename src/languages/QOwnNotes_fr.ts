@@ -942,11 +942,6 @@ Appuyer sur Annuler pour quitter.</translation>
       <translation>Mot de passe : </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="186"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nous avons besoin de votre répertoire de synchronisation ownCloud pour déterminer où trouver les notes de votre serveur ownCloud.&lt;/p&gt;&lt;p&gt;Cela ne doit &lt;span style=" font-weight:600;"&gt;pas&lt;/span&gt; être votre répertoire de notes. Le répertoire de note est habituellement &lt;span style=" font-weight:600;"&gt;dans&lt;/span&gt; le répertoire de synchronisation d'ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
       <translation type="unfinished">the folder the ownCloud sync client uses</translation>
@@ -1255,6 +1250,11 @@ p, li { white-space: pre-wrap; }
       <location filename="../dialogs/settingsdialog.ui" line="1071"/>
       <source>code font in markdown text edits:</source>
       <translation>Police du code dans la vue d'édition des notes : </translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="186"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nous avons besoin de votre répertoire de synchronisation ownCloud pour déterminer où trouver les notes de votre serveur ownCloud.&lt;/p&gt;&lt;p&gt;Cela ne doit &lt;span style=" font-weight:600;"&gt;pas&lt;/span&gt; être votre répertoire de notes. Le répertoire de note est habituellement &lt;span style=" font-weight:600;"&gt;dans&lt;/span&gt; le répertoire de synchronisation d'ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1132"/>

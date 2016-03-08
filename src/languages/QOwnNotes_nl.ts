@@ -938,11 +938,6 @@ Click Cancel to exit.</source>
       <translation>wachtwoord</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="186"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wij hebben je eigen ownCloud sync folder nodig om de directory te bepalen, waar we de notitie bestand op uw ownCloud server zullen vinden.&lt;/p&gt;&lt;p&gt;Dit zou &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; je notities bestand. De notities map is meestal &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; de ownCloud sync map.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
       <translation>de map dat de ownCloud sync client gebruikt</translation>
@@ -1246,6 +1241,11 @@ p, li { white-space: pre-wrap; }
       <location filename="../dialogs/settingsdialog.ui" line="1071"/>
       <source>code font in markdown text edits:</source>
       <translation>code lettertype in markdown tekstbewerkingen:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="186"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wij hebben je eigen ownCloud sync folder nodig om de directory te bepalen, waar we de notitie bestand op uw ownCloud server zullen vinden.&lt;/p&gt;&lt;p&gt;Dit zou &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; je notities bestand. De notities map is meestal &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; de ownCloud sync map.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1132"/>

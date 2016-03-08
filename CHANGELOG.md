@@ -2,6 +2,7 @@
 
 ## 1.1.5
 - added more German, Hungarian and Dutch translation (thank you Fabijenna)
+- fixed some typos
 
 ## 1.1.4
 - added support for copying notes from a file manager to QOwnNotes via drag and 

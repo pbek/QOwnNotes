@@ -942,11 +942,6 @@ Klicken Sie Abbrechen um zu schliessen.</translation>
       <translation>Passwort:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="186"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to derermine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Der ownCloud Hauptordner wird benötigt um das Verzeichnis zu finden, indem sich die Notiz Dateien befinden.&lt;/p&gt;&lt;p&gt;Das ist &lt;span style=" font-weight:600;"&gt;NICHT&lt;/span&gt; Ihr Notizordner. Der Notizordner befindet sich normalerweise &lt;span style=" font-weight:600;"&gt;innerhalb&lt;/span&gt; des ownCloud Hauptordners.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
       <translation>Der Ordner, den Ihr ownCloud Sync Client benutzt</translation>
@@ -1255,6 +1250,11 @@ p, li { white-space: pre-wrap; }
       <location filename="../dialogs/settingsdialog.ui" line="1071"/>
       <source>code font in markdown text edits:</source>
       <translation>Code Schrift für die Markdown-Texteditoren:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="186"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Der ownCloud Hauptordner wird benötigt um das Verzeichnis zu finden, indem sich die Notiz Dateien befinden.&lt;/p&gt;&lt;p&gt;Das ist &lt;span style=" font-weight:600;"&gt;NICHT&lt;/span&gt; Ihr Notizordner. Der Notizordner befindet sich normalerweise &lt;span style=" font-weight:600;"&gt;innerhalb&lt;/span&gt; des ownCloud Hauptordners.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1132"/>
