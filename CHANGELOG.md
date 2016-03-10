@@ -2,7 +2,14 @@
 
 ## 1.1.5
 - added more German, Hungarian and Dutch translation (thank you Fabijenna)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)
+      to make QOwnNotes available in more languages
 - fixed some typos
+- added several fixes for Windows
+  (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+    - dragging and dropping of images into notes
+    - the image preview in markdown mode
+    - opening of links to local files
 
 ## 1.1.4
 - added support for copying notes from a file manager to QOwnNotes via drag and 

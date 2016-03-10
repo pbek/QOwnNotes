@@ -231,7 +231,8 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(dfmEditorWidthActionTriggered(QAction *)));
 
     setAcceptDrops(true);
-    // we need to disallow this explicitly under Windows so the MainWindow gets the event
+    // we need to disallow this explicitly under Windows
+    // so that the MainWindow gets the event
     ui->noteTextEdit->setAcceptDrops(false);
 }
 
