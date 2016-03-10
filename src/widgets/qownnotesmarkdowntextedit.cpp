@@ -148,9 +148,16 @@ void QOwnNotesMarkdownTextEdit::openUrl(QUrl url) {
     QSettings settings;
     QString notesPath = settings.value("notesPath").toString();
 
+    QString windowsSlash = "";
+
+#ifdef Q_OS_WIN32
+    // we need an other slash for Windows
+    windowsSlash = "/";
+#endif
+
     // parse for relative file urls and make them absolute
-    urlString.replace(QRegularExpression("^file:\\/\\/([^\\/].+)$"),
-                      "file://" + notesPath + "/\\1");
+    urlString.replace(QRegularExpression("^file:[\\/]{2}([^\\/].+)$"),
+                      "file://" + windowsSlash + notesPath + "/\\1");
 
     QMarkdownTextEdit::openUrl(QUrl(urlString));
 }

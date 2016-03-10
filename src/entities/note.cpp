@@ -662,11 +662,18 @@ QString Note::toMarkdownHtml(QString notesPath) {
     // get the decrypted note text (or the normal note text if there isn't any)
     QString str = getDecryptedNoteText();
 
+    QString windowsSlash = "";
+
+#ifdef Q_OS_WIN32
+    // we need an other slash for Windows
+    windowsSlash = "/";
+#endif
+
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     str.replace(
             QRegularExpression("\\(file:\\/\\/([^\\/].+)\\)"),
-            "(file://" + notesPath + "/\\1)");
+            "(file://" + windowsSlash + notesPath + "/\\1)");
 
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
