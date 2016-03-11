@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 1.1.6
+- you can now paste html in notes with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + 
+  <kbd>V</kbd> (for [Issue #112](https://github.com/pbek/QOwnNotes/issues/112))
+  - html tags like `strong`, `b`, `em`, `i`, `a`, `h1`, `h2`, `h3`, `h4`, 
+    `h5`, `br` will be translated to markdown
+  - images from `img` tags will be downloaded and inserted as markdown images
+
 ## 1.1.5
 - added more German, Hungarian and Dutch translation (thank you Fabijenna)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)

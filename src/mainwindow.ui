@@ -937,13 +937,13 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/insert-image.svg</normaloff>:/icons/breeze-qownnotes/16x16/insert-image.svg</iconset>
    </property>
    <property name="text">
-    <string>Paste images or notes</string>
+    <string>Paste html or media</string>
    </property>
    <property name="toolTip">
-    <string>Paste images or notes from the clipboard</string>
+    <string>Paste images, notes and html from the clipboard</string>
    </property>
    <property name="statusTip">
-    <string>Paste images or notes from the clipboard</string>
+    <string>Paste images, notes and html from the clipboard</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+V</string>
@@ -959,8 +959,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

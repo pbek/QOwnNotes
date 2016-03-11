@@ -1898,6 +1898,47 @@ void MainWindow::handleTextNoteLinking() {
 }
 
 /**
+ * Downloads an url and stores it to a file
+ */
+bool MainWindow::downloadUrlToFile(QUrl url, QFile *file) {
+    if (!file->open(QIODevice::WriteOnly)) {
+        return false;
+    }
+
+    if (!file->isWritable()) {
+        return false;
+    }
+
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QNetworkReply *reply = manager->get(QNetworkRequest(url));
+    loop.exec();
+
+    // if we didn't get a timeout let's write the file
+    if (timer.isActive()) {
+        // get the text from the network reply
+        QByteArray data = reply->readAll();
+        if (data.size() > 0) {
+            file->write(data);
+            return true;
+        }
+    }
+
+    // timer elapsed, no reply from network request or empty data
+    return false;
+}
+
+
+/**
  * @brief Sets the current note from a CurrentNoteHistoryItem
  * @param item
  */
@@ -2585,7 +2626,7 @@ bool MainWindow::insertMedia(QFile *file) {
  * Returns the markdown of the inserted media file into a note
  */
 QString MainWindow::getInsertMediaMarkdown(QFile *file) {
-    if (file->exists()) {
+    if (file->exists() && (file->size() > 0)) {
         QDir mediaDir(notesPath + QDir::separator() + "media");
 
         // created the media folder if it doesn't exist
@@ -3072,8 +3113,12 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                         }
                     // only allow image files to be inserted as image
                     } else if (isValidMediaFile(file)) {
+                        showStatusBarMessage(tr("inserting image"));
+
                         // insert the image
                         insertMedia(file);
+
+                        showStatusBarMessage(tr("done inserting image"), 3000);
                     } else {
                         skipCount++;
                     }
@@ -3117,6 +3162,8 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         QImage image = mimeData->imageData().value<QImage>();
 
         if (!image.isNull()) {
+            showStatusBarMessage(tr("saving temporary image"));
+
             QTemporaryFile tempFile(
                     QDir::tempPath() + QDir::separator() +
                     "qownnotes-media-XXXXXX.png");
@@ -3127,7 +3174,14 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
                 // insert media into note
                 QFile *file = new QFile(tempFile.fileName());
+
+                showStatusBarMessage(tr("inserting image"));
                 insertMedia(file);
+
+                showStatusBarMessage(tr("done inserting image"), 3000);
+            } else {
+                showStatusBarMessage(
+                        tr("temporary file can't be opened"), 3000);
             }
         }
     } else if (mimeData->hasHtml()) {
@@ -3135,38 +3189,79 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
     }
 }
 
+/**
+ * Inserts html as markdown in the current note
+ * Images are also downloaded
+ */
 void MainWindow::insertHtml(QString html) {
     qDebug() << __func__ << " - 'html': " << html;
 
-    // TODO(pbek): replace html with markdown (italic, bold, links)
+    // replace some html tags with markdown
+    html.replace(QRegularExpression(
+            "<strong[^>]*>([^<]+)<\\/strong>"), "**\\1**");
+    html.replace(QRegularExpression("<b[^>]*>([^<]+)<\\/b>"), "**\\1**");
+    html.replace(QRegularExpression("<em[^>]*>([^<]+)<\\/em>"), "*\\1*");
+    html.replace(QRegularExpression("<i[^>]*>([^<]+)<\\/i>"), "*\\1*");
+    html.replace(QRegularExpression("<h1[^>]*>([^<]+)<\\/h1>"), "## \\1\n");
+    html.replace(QRegularExpression("<h2[^>]*>([^<]+)<\\/h2>"), "### \\1\n");
+    html.replace(QRegularExpression("<h3[^>]*>([^<]+)<\\/h3>"), "#### \\1\n");
+    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>"), "##### \\1\n");
+    html.replace(QRegularExpression("<h5[^>]*>([^<]+)<\\/h5>"), "###### \\1\n");
+    html.replace(QRegularExpression("<br[^>]*>"), "\n");
+    html.replace(
+            QRegularExpression("<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>"),
+            "[\\2](\\1)");
 
     // match image tags
-    QRegularExpression re("<img[^>]+src=\"([^>\"]+)\"[^>]*>");
+    QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>");
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
     // find, download locally and replace all images
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
-        QString imageSrc = match.captured(1);
+        QUrl imageUrl = QUrl(match.captured(1) );
 
-        // TODO(pbek): download image in a temp file
-        QFile *file;
+        qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
 
-//        html.replace(imageTag, getInsertMediaMarkdown(file));
+        if (!imageUrl.isValid()) {
+            continue;
+        }
+
+        showStatusBarMessage(tr("downloading %1").arg(imageUrl.toString()));
+
+        // try to get the suffix from the url
+        QString suffix =
+                imageUrl.toString().split(".", QString::SkipEmptyParts).last();
+        if (suffix.isEmpty()) {
+            suffix = "image";
+        }
+
+        QTemporaryFile *tempFile = new QTemporaryFile(
+                QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
+                        suffix);
+
+        if (tempFile->open()) {
+            // download the image to the temporary file
+            if (downloadUrlToFile(imageUrl, tempFile)) {
+                // copy image to media folder and generate markdown code for
+                // the image
+                QString markdownCode = getInsertMediaMarkdown(tempFile);
+                if (!markdownCode.isEmpty()) {
+                    // replace image tag with markdown code
+                    html.replace(imageTag, markdownCode);
+                }
+            }
+        }
     }
 
-//    QXmlStreamReader xml(html);
-//    QString textString;
-//    while (!xml.atEnd()) {
-//        if ( xml.readNext() == QXmlStreamReader::Characters ) {
-//            textString += xml.text();
-//        }
-//    }
-//
-//    qDebug() << __func__ << " - 'textString': " << textString;
+    showStatusBarMessage(tr("done downloading images"));
 
+    // remove all html tags
     html.remove(QRegularExpression("<[^>]*>"));
+
+    // remove the last character, that is broken
+    html = html.left(html.size() - 1);
 
     qDebug() << __func__ << " - 'html': " << html;
 
