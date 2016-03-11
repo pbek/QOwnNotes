@@ -315,6 +315,8 @@ private:
 
     bool insertMedia(QFile *file);
 
+    QString getInsertMediaMarkdown(QFile *file);
+
     int currentNoteLineNumber();
 
     bool isValidMediaFile(QFile *file);
@@ -322,4 +324,6 @@ private:
     bool isValidNoteFile(QFile *file);
 
     void handleInsertingFromMimeData(const QMimeData *mimeData);
+
+    void insertHtml(QString html);
 };

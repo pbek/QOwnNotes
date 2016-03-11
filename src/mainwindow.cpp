@@ -2560,6 +2560,31 @@ void MainWindow::on_actionInsert_image_triggered() {
  * Inserts a media file into a note
  */
 bool MainWindow::insertMedia(QFile *file) {
+    QString text = getInsertMediaMarkdown(file);
+    if (!text.isEmpty()) {
+        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        // if we try to insert media in the first line of the note (aka.
+        // note name) move the cursor to the last line
+        if (currentNoteLineNumber() == 1) {
+            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+            textEdit->setTextCursor(c);
+        }
+
+        // insert the image link
+        c.insertText(text);
+
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Returns the markdown of the inserted media file into a note
+ */
+QString MainWindow::getInsertMediaMarkdown(QFile *file) {
     if (file->exists()) {
         QDir mediaDir(notesPath + QDir::separator() + "media");
 
@@ -2577,25 +2602,13 @@ bool MainWindow::insertMedia(QFile *file) {
         // copy the file the the media folder
         file->copy(mediaDir.path() + QDir::separator() + newFileName);
 
-        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-        QTextCursor c = textEdit->textCursor();
-
-        // if we try to insert media in the first line of the note (aka.
-        // note name) move the cursor to the last line
-        if (currentNoteLineNumber() == 1) {
-            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
-            textEdit->setTextCursor(c);
-        }
-
-        // insert the image link
+        // return the image link
         // we add a "\n" in the end so that hoedown recognizes multiple images
-        c.insertText("![" + fileInfo.baseName() +
-                     "](file://media/" + newFileName + ")\n");
-
-        return true;
+        return "![" + fileInfo.baseName() + "](file://media/" +
+                newFileName + ")\n";
     }
 
-    return false;
+    return "";
 }
 
 /**
@@ -3117,7 +3130,50 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 insertMedia(file);
             }
         }
+    } else if (mimeData->hasHtml()) {
+        insertHtml(mimeData->html());
     }
+}
+
+void MainWindow::insertHtml(QString html) {
+    qDebug() << __func__ << " - 'html': " << html;
+
+    // TODO(pbek): replace html with markdown (italic, bold, links)
+
+    // match image tags
+    QRegularExpression re("<img[^>]+src=\"([^>\"]+)\"[^>]*>");
+    QRegularExpressionMatchIterator i = re.globalMatch(html);
+
+    // find, download locally and replace all images
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString imageTag = match.captured(0);
+        QString imageSrc = match.captured(1);
+
+        // TODO(pbek): download image in a temp file
+        QFile *file;
+
+//        html.replace(imageTag, getInsertMediaMarkdown(file));
+    }
+
+//    QXmlStreamReader xml(html);
+//    QString textString;
+//    while (!xml.atEnd()) {
+//        if ( xml.readNext() == QXmlStreamReader::Characters ) {
+//            textString += xml.text();
+//        }
+//    }
+//
+//    qDebug() << __func__ << " - 'textString': " << textString;
+
+    html.remove(QRegularExpression("<[^>]*>"));
+
+    qDebug() << __func__ << " - 'html': " << html;
+
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    c.insertText(html);
 }
 
 /**
