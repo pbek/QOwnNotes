@@ -18,7 +18,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes or images from the clipboard
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 
 ### In the note search bar
 
@@ -73,7 +73,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes or images from the clipboard
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 
 ### In the note search bar
 
