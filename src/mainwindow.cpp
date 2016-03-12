@@ -3086,7 +3086,9 @@ void MainWindow::dropEvent(QDropEvent *e) {
  * produced by a drop event or a paste action
  */
 void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
-    if (mimeData->hasUrls()) {
+    if (mimeData->hasHtml()) {
+        insertHtml(mimeData->html());
+    } else if (mimeData->hasUrls()) {
         int successCount = 0;
         int failureCount = 0;
         int skipCount = 0;
@@ -3184,8 +3186,6 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                         tr("temporary file can't be opened"), 3000);
             }
         }
-    } else if (mimeData->hasHtml()) {
-        insertHtml(mimeData->html());
     }
 }
 
@@ -3202,15 +3202,15 @@ void MainWindow::insertHtml(QString html) {
     html.replace(QRegularExpression("<b[^>]*>([^<]+)<\\/b>"), "**\\1**");
     html.replace(QRegularExpression("<em[^>]*>([^<]+)<\\/em>"), "*\\1*");
     html.replace(QRegularExpression("<i[^>]*>([^<]+)<\\/i>"), "*\\1*");
-    html.replace(QRegularExpression("<h1[^>]*>([^<]+)<\\/h1>"), "## \\1\n");
-    html.replace(QRegularExpression("<h2[^>]*>([^<]+)<\\/h2>"), "### \\1\n");
-    html.replace(QRegularExpression("<h3[^>]*>([^<]+)<\\/h3>"), "#### \\1\n");
-    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>"), "##### \\1\n");
-    html.replace(QRegularExpression("<h5[^>]*>([^<]+)<\\/h5>"), "###### \\1\n");
+    html.replace(QRegularExpression("<h1[^>]*>([^<]+)<\\/h1>"), "\n# \\1\n");
+    html.replace(QRegularExpression("<h2[^>]*>([^<]+)<\\/h2>"), "\n## \\1\n");
+    html.replace(QRegularExpression("<h3[^>]*>([^<]+)<\\/h3>"), "\n### \\1\n");
+    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>"), "\n#### \\1\n");
+    html.replace(QRegularExpression(
+            "<h5[^>]*>([^<]+)<\\/h5>"), "\n##### \\1\n");
     html.replace(QRegularExpression("<br[^>]*>"), "\n");
-    html.replace(
-            QRegularExpression("<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>"),
-            "[\\2](\\1)");
+    html.replace(QRegularExpression(
+            "<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>"), "[\\2](\\1)");
 
     // match image tags
     QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>");

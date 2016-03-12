@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.1.7
+- you can now also drop images from websites directly to a note
+  (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+
 ## 1.1.6
 - added **Spanish translation** (a big thank you to moblesmarti!)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/invite)
