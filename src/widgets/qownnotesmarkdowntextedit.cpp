@@ -2,11 +2,15 @@
 #include <QSettings>
 #include <QDebug>
 #include <QRegularExpression>
+#include <QMimeData>
+#include <mainwindow.h>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent) {
     setStyles();
+    qDebug() << __func__ << " - 'parent': " << parent;
+
 }
 
 #define STY(type, format) styles->append((HighlightingStyle){type, format})
@@ -211,5 +215,26 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
         setViewportMargins(margin, 20, margin, 0);
     } else {
         setViewportMargins(0, 0, 0, 0);
+    }
+}
+
+/**
+ * Sets the main window for insertFromMimeData
+ */
+void QOwnNotesMarkdownTextEdit::setMainWindow(MainWindow *mainWindow) {
+    this->mainWindow = mainWindow;
+}
+
+/**
+ * Handles pasting from clipboard
+ */
+void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
+    // if there is text in the clipboard do the normal pasting process
+    if (source->hasText()) {
+        QMarkdownTextEdit::insertFromMimeData(source);
+    } else if (mainWindow != NULL) {
+        // to more complex pasting if there was no text (and a main window
+        // was set)
+        mainWindow->handleInsertingFromMimeData(source);
     }
 }

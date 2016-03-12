@@ -3,6 +3,9 @@
 ## 1.1.7
 - you can now also drop images from websites directly to a note
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+- if there is no plain text to paste with <kbd>Ctrl</kbd> + <kbd>V</kbd> then
+  it will be checked if there html, notes or images to paste automatically
+  (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
 
 ## 1.1.6
 - added **Spanish translation** (a big thank you to moblesmarti!)

@@ -68,6 +68,10 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
 
+    // set the main window for accessing it's public methods
+    ui->noteTextEdit->setMainWindow(this);
+    ui->encryptedNoteTextEdit->setMainWindow(this);
+
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 

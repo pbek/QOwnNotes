@@ -22,6 +22,13 @@ public:
     void openUrl(QUrl url);
 //    void setViewportMargins(int left, int top, int right, int bottom);
     void setPaperMargins(int width);
+    void setMainWindow(MainWindow *mainWindow);
+
+protected:
+    void insertFromMimeData(const QMimeData * source);
+
+private:
+    MainWindow *mainWindow;
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H

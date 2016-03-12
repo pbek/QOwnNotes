@@ -48,6 +48,8 @@ public:
 
     void showStatusBarMessage(const QString & message, int timeout = 0);
 
+    void handleInsertingFromMimeData(const QMimeData *mimeData);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -324,8 +326,6 @@ private:
     bool isValidMediaFile(QFile *file);
 
     bool isValidNoteFile(QFile *file);
-
-    void handleInsertingFromMimeData(const QMimeData *mimeData);
 
     void insertHtml(QString html);
 };
