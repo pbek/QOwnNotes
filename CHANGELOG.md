@@ -7,6 +7,10 @@
   it will be checked if there html, notes or images to paste automatically
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
 - added more Spanish translation (thank you moblesmarti)
+- implemented continuous list editing 
+    - <kbd>Tab</kbd> after a list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after a list character un-indents the list item
+    - <kbd>Return</kbd> in lists creates a new list item
 
 ## 1.1.6
 - added **Spanish translation** (a big thank you to moblesmarti!)

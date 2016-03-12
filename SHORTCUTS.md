@@ -23,13 +23,13 @@ Important Shortcuts
 ### In the note search bar
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Enter</kbd> creates a new note with the text from the search bar as 
+- <kbd>Return</kbd> creates a new note with the text from the search bar as 
   headline
 
 ### In the note list
 
 - <kbd>Ctrl</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
-- <kbd>Tab</kbd> or <kbd>Enter</kbd> lets you edit the current note
+- <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
 ### In the note text edit area (in edit mode)
 
@@ -45,6 +45,9 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after a list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after a list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
@@ -78,13 +81,13 @@ Important Shortcuts
 ### In the note search bar
 
 - <kbd>Down</kbd> or <kbd>Tab</kbd> sets the focus to the note list
-- <kbd>Enter</kbd> creates a new note with the text from the search bar as 
+- <kbd>Return</kbd> creates a new note with the text from the search bar as 
   headline
 
 ### In the note list
 
 - <kbd>⌘</kbd> + <kbd>A</kbd> selects all notes (to move, copy or remove them with a right click)
-- <kbd>Tab</kbd> or <kbd>Enter</kbd> lets you edit the current note
+- <kbd>Tab</kbd> or <kbd>Return</kbd> lets you edit the current note
 
 ### In the note text edit area (in edit mode)
 
@@ -100,6 +103,9 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
+- <kbd>Tab</kbd> after a list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after a list character un-indents the list item
+- <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
