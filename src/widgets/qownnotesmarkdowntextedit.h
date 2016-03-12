@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
+#include "mainwindow.h"
 
 class QOwnNotesMarkdownTextEdit : public QMarkdownTextEdit {
 Q_OBJECT

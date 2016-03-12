@@ -3,7 +3,6 @@
 #include <QDebug>
 #include <QRegularExpression>
 #include <QMimeData>
-#include <mainwindow.h>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
