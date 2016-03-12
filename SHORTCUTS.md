@@ -45,8 +45,9 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
-- <kbd>Tab</kbd> after a list character indents the list item
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after a list character un-indents the list item
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character 
+      un-indents the list item
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>Alt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
@@ -103,8 +104,9 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
-- <kbd>Tab</kbd> after a list character indents the list item
-    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after a list character un-indents the list item
+- <kbd>Tab</kbd> after an unordered list character indents the list item
+    - <kbd>⇧</kbd> + <kbd>Tab</kbd> after an unordered list character 
+      un-indents the list item
 - <kbd>Return</kbd> in lists creates a new list item
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Left</kbd> jumps back in the note history
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Right</kbd> jumps forward in the note history
