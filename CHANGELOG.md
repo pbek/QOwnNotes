@@ -6,6 +6,7 @@
 - if there is no plain text to paste with <kbd>Ctrl</kbd> + <kbd>V</kbd> then
   it will be checked if there html, notes or images to paste automatically
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))
+- added more Spanish translation (thank you moblesmarti)
 
 ## 1.1.6
 - added **Spanish translation** (a big thank you to moblesmarti!)
