@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.1.8
+- added rich text pasting fixes for Internet Explorer
+  (for [Issue #112](https://github.com/pbek/QOwnNotes/issues/112))
+
 ## 1.1.7
 - you can now also drop images from websites directly to a note
   (for [Issue #105](https://github.com/pbek/QOwnNotes/issues/105))

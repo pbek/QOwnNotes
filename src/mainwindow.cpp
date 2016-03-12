@@ -3200,24 +3200,52 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 void MainWindow::insertHtml(QString html) {
     qDebug() << __func__ << " - 'html': " << html;
 
+    // remove some blocks
+    html.remove(QRegularExpression(
+            "<head[^>]*>([^<]+)<\\/head>",
+            QRegularExpression::CaseInsensitiveOption));
+
+    html.remove(QRegularExpression(
+            "<script[^>]*>([^<]+)<\\/script>",
+            QRegularExpression::CaseInsensitiveOption));
+
     // replace some html tags with markdown
     html.replace(QRegularExpression(
-            "<strong[^>]*>([^<]+)<\\/strong>"), "**\\1**");
-    html.replace(QRegularExpression("<b[^>]*>([^<]+)<\\/b>"), "**\\1**");
-    html.replace(QRegularExpression("<em[^>]*>([^<]+)<\\/em>"), "*\\1*");
-    html.replace(QRegularExpression("<i[^>]*>([^<]+)<\\/i>"), "*\\1*");
-    html.replace(QRegularExpression("<h1[^>]*>([^<]+)<\\/h1>"), "\n# \\1\n");
-    html.replace(QRegularExpression("<h2[^>]*>([^<]+)<\\/h2>"), "\n## \\1\n");
-    html.replace(QRegularExpression("<h3[^>]*>([^<]+)<\\/h3>"), "\n### \\1\n");
-    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>"), "\n#### \\1\n");
+            "<strong[^>]*>([^<]+)<\\/strong>",
+            QRegularExpression::CaseInsensitiveOption), "**\\1**");
     html.replace(QRegularExpression(
-            "<h5[^>]*>([^<]+)<\\/h5>"), "\n##### \\1\n");
-    html.replace(QRegularExpression("<br[^>]*>"), "\n");
+            "<b[^>]*>([^<]+)<\\/b>",
+            QRegularExpression::CaseInsensitiveOption), "**\\1**");
     html.replace(QRegularExpression(
-            "<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>"), "[\\2](\\1)");
+            "<em[^>]*>([^<]+)<\\/em>",
+            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+    html.replace(QRegularExpression(
+            "<i[^>]*>([^<]+)<\\/i>",
+            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+    html.replace(QRegularExpression(
+            "<h1[^>]*>([^<]+)<\\/h1>",
+            QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
+    html.replace(QRegularExpression(
+            "<h2[^>]*>([^<]+)<\\/h2>",
+            QRegularExpression::CaseInsensitiveOption), "\n## \\1\n");
+    html.replace(QRegularExpression(
+            "<h3[^>]*>([^<]+)<\\/h3>",
+            QRegularExpression::CaseInsensitiveOption), "\n### \\1\n");
+    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>",
+            QRegularExpression::CaseInsensitiveOption), "\n#### \\1\n");
+    html.replace(QRegularExpression(
+            "<h5[^>]*>([^<]+)<\\/h5>",
+            QRegularExpression::CaseInsensitiveOption), "\n##### \\1\n");
+    html.replace(QRegularExpression(
+            "<br[^>]*>",
+            QRegularExpression::CaseInsensitiveOption), "\n");
+    html.replace(QRegularExpression(
+            "<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>",
+            QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
 
     // match image tags
-    QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>");
+    QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>",
+                          QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
     // find, download locally and replace all images
