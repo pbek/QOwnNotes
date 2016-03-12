@@ -8,8 +8,6 @@
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent) {
     setStyles();
-    qDebug() << __func__ << " - 'parent': " << parent;
-
 }
 
 #define STY(type, format) styles->append((HighlightingStyle){type, format})
