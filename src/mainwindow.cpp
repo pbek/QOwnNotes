@@ -3209,6 +3209,10 @@ void MainWindow::insertHtml(QString html) {
             "<script[^>]*>([^<]+)<\\/script>",
             QRegularExpression::CaseInsensitiveOption));
 
+    html.remove(QRegularExpression(
+            "<style[^>]*>([^<]+)<\\/style>",
+            QRegularExpression::CaseInsensitiveOption));
+
     // replace some html tags with markdown
     html.replace(QRegularExpression(
             "<strong[^>]*>([^<]+)<\\/strong>",
