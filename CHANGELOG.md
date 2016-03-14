@@ -3,6 +3,8 @@
 ## 1.1.9
 - fixed a problem with continuous list editing where text from the previous 
   line got copied to the next line
+- scroll to the cursor if we are at the bottom of the document when creating 
+  a new list item in a note
 
 ## 1.1.8
 - added rich text pasting fixes for Internet Explorer
