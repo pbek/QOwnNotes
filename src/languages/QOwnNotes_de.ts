@@ -396,13 +396,13 @@
     <message>
       <location filename="../mainwindow.ui" line="940"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>HTML oder Medien einfügen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="943"/>
       <location filename="../mainwindow.ui" line="946"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Bilder, Notizen and HTML aus der Zwischenablage einfügen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="912"/>
@@ -665,13 +665,13 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       <location filename="../mainwindow.cpp" line="3116"/>
       <location filename="../mainwindow.cpp" line="3178"/>
       <source>inserting image</source>
-      <translation type="unfinished">inserting image</translation>
+      <translation>Füge Bild ein</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3121"/>
       <location filename="../mainwindow.cpp" line="3181"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>Bild eingefügt</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3132"/>
@@ -700,22 +700,22 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="3165"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>Speichere temporäres Bild</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3184"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>Temporäres Bild konnte nicht geöffnet werden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3231"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>Lade %1 herunter</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3258"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>Herunterladen beendet</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2021"/>
@@ -1205,7 +1205,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Spanisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1611"/>

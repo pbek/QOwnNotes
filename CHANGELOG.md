@@ -7,6 +7,8 @@
   a new list item in a note
 - if return is pressed in a markdown list and there is just a list symbol then
   the list symbol is now removed
+- added more German and Spanish translation (thank you calis2002 and 
+  moblesmarti)
 
 ## 1.1.8
 - added rich text pasting fixes for Internet Explorer

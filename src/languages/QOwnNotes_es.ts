@@ -119,7 +119,7 @@
     <message>
       <location filename="../mainwindow.ui" line="425"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Dejar</translation>
+      <translation>Salir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="440"/>
@@ -134,7 +134,7 @@
     <message>
       <location filename="../mainwindow.ui" line="461"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Remover esta nota</translation>
+      <translation>Elimina nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="473"/>
@@ -214,7 +214,7 @@
     <message>
       <location filename="../mainwindow.ui" line="593"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>Mostrar notas eliminadas en el servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="598"/>
@@ -266,22 +266,22 @@
     <message>
       <location filename="../mainwindow.ui" line="678"/>
       <source>&amp;Knowledge base</source>
-      <translation type="unfinished">&amp;Knowledge base</translation>
+      <translation>Base de conocimiento</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="687"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>Insertar fecha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="699"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>Mostrar lista Todo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="711"/>
       <source>&amp;Export note as PDF (markdown)</source>
-      <translation type="unfinished">&amp;Export note as PDF (markdown)</translation>
+      <translation>Exportar nota como PDF (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="720"/>
@@ -336,7 +336,7 @@
     <message>
       <location filename="../mainwindow.ui" line="819"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>Exportar la nota actual a Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="828"/>
@@ -346,12 +346,12 @@
     <message>
       <location filename="../mainwindow.ui" line="837"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Insertar bloque de código</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="849"/>
       <source>Next note</source>
-      <translation>Siguiente nota</translation>
+      <translation>Nota Siguiente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="861"/>
@@ -366,7 +366,7 @@
     <message>
       <location filename="../mainwindow.ui" line="876"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>El modo libre se puede dejar con un botón en la parte inferior derecha</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="887"/>
@@ -376,7 +376,7 @@
     <message>
       <location filename="../mainwindow.ui" line="895"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Reducir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="906"/>
@@ -396,7 +396,7 @@
     <message>
       <location filename="../mainwindow.ui" line="940"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Pegar html o media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="943"/>
@@ -573,9 +573,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="1808"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n la Nota se ha copiado &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n las Notas se han copiado &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -586,7 +586,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1820"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
+      <translation>Configurar la carpeta de notas. Carpeta de notas actual: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1859"/>
@@ -611,7 +611,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2016"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes registrará los datos de uso anónimos que ayudan a decidir qué partes del QOwnNotes se mejoran y para encontrar y corregir errores. Puede deshabilitar este comportamiento en los ajustes.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2020"/>
@@ -621,12 +621,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2368"/>
       <source>note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">note versions are currently loaded from your ownCloud server</translation>
+      <translation>las versiones de notas actualmente se cargan desde el servidor de ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2383"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>las notas eliminadas actualmente se cargan desde el servidor de ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2407"/>
@@ -656,7 +656,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2529"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
-      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</translation>
+      <translation>No ha seleccionado ninguna Todo lista. &lt;br /&gt; por favor, compruebe su configuración &lt;strong&gt;Todo&lt;/strong&gt; en la configuración general!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3116"/>
@@ -668,7 +668,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3121"/>
       <location filename="../mainwindow.cpp" line="3181"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>insertar imagen</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3132"/>
@@ -681,17 +681,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3141"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>Error al copiar %n la nota probablemente ya existe</numerusform>
+        <numerusform>Error al copiar %n las notas probablemente ya existen</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3151"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>omite la copia de %n de la nota (no hay ningún archivo de texto o markdown legible)</numerusform>
+        <numerusform>omite la copia de %n de las notas (no hay ningún archivo de texto o markdown legible)</numerusform>
       </translation>
     </message>
     <message>
@@ -712,7 +712,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3258"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>imágenes descargas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2021"/>
@@ -743,7 +743,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2707"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Escriba la &lt;strong&gt;contraseña&lt;/strong&gt; para cifrar la nota.&lt;br /&gt;; Tenga en cuenta que hay que &lt;strong&gt;recordar&lt;/strong&gt; la contraseña para leer el contenido de la nota&lt; br /&gt; y que &lt;strong&gt;sólo&lt;/strong&gt; puede hacer esto &lt;strong&gt;en QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2752"/>
@@ -783,7 +783,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2922"/>
       <source>jumped to bookmark position at slot %1</source>
-      <translation type="unfinished">jumped to bookmark position at slot %1</translation>
+      <translation>posición del marcador en slot %1</translation>
     </message>
   </context>
   <context>
@@ -796,22 +796,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="34"/>
       <source>The current note was modified outside of this application!</source>
-      <translation type="unfinished">The current note was modified outside of this application!</translation>
+      <translation>Se modificó la nota actual fuera de esta aplicación!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="55"/>
       <source>Reload current note from disk?</source>
-      <translation type="unfinished">Reload current note from disk?</translation>
+      <translation>¿Volver a cargar la nota actual desde el disco?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="19"/>
       <source>&amp;Overwrite note on disk</source>
-      <translation type="unfinished">&amp;Overwrite note on disk</translation>
+      <translation>Sobrescribir nota en el disco</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="24"/>
       <source>&amp;Reload note from disk</source>
-      <translation type="unfinished">&amp;Reload note from disk</translation>
+      <translation>Volver a cargar nota desde el disco</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="29"/>
@@ -829,12 +829,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="623"/>
       <source>done with loading note versions</source>
-      <translation type="unfinished">done with loading note versions</translation>
+      <translation>conseguir versiones de nota</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="700"/>
       <source>done with loading trashed notes</source>
-      <translation type="unfinished">done with loading trashed notes</translation>
+      <translation>cargado desde notas eliminadas</translation>
     </message>
   </context>
   <context>
@@ -880,17 +880,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="47"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>buscar en el texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="62"/>
       <source>search forward</source>
-      <translation type="unfinished">search forward</translation>
+      <translation>buscar siguiente</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp" line="74"/>
       <source>search backward</source>
-      <translation type="unfinished">search backward</translation>
+      <translation>buscar previa</translation>
     </message>
   </context>
   <context>
@@ -898,7 +898,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="63"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>No se puede abrir la memoria de la base de datos</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="64"/>
@@ -907,15 +907,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 This application needs SQLite support. Please read the Qt SQL driver documentation for information how to build it.
 
 Click Cancel to exit.</source>
-      <translation type="unfinished">Unable to establish a database connection.
-This application needs SQLite support. Please read the Qt SQL driver documentation for information how to build it.
-
-Click Cancel to exit.</translation>
+      <translation>No se puede establecer una conexión de base de datos. 
+Esta aplicación necesita soporte de SQLite. Por favor lea la documentación del controlador Qt SQL para obtener información.
+Haga clic en Cancelar para salir.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="81"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>No se puede abrir base de datos de disco</translation>
     </message>
   </context>
   <context>
@@ -933,17 +932,17 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="63"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>url del servidor ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="85"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Por favor escriba la dirección URL del servidor ownCloud, por ejemplo: &lt;span style="font-style:italic;"&gt; https://cloud.tuserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="113"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Por favor, introduzca el nombre de su servidor ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="116"/>
@@ -958,7 +957,7 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="148"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Por favor, introduzca la contraseña para su nombre de usuario. &lt;br/&gt; Actualmente la contraseña se guardará encriptada con los otros valores, pero no es muy segura.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="154"/>
@@ -973,7 +972,7 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
-      <translation type="unfinished">the folder the ownCloud sync client uses</translation>
+      <translation>usar la carpeta del cliente de sincronización de ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="199"/>
@@ -988,7 +987,7 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="213"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>conexión a QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="220"/>
@@ -1010,17 +1009,17 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="296"/>
       <source>main ownCloud sync folder:</source>
-      <translation type="unfinished">main ownCloud sync folder:</translation>
+      <translation>seleccione la carpeta de sincronización en ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="318"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Haga clic aquí para probar la conexión al servidor ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="324"/>
       <source>&amp;connect to ownCloud server</source>
-      <translation type="unfinished">&amp;connect to ownCloud server</translation>
+      <translation>conectar al servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="364"/>
@@ -1030,22 +1029,22 @@ Click Cancel to exit.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="371"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>aplicación de versiones activada en el servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="378"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>aplicación de versiones activada en el servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="385"/>
       <source>ownCloud path set</source>
-      <translation type="unfinished">ownCloud path set</translation>
+      <translation>ruta conjunto ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="425"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>encontrar rutas de notas en el servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="468"/>
@@ -1056,18 +1055,15 @@ p, li { white-space: pre-wrap; }
 &lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600; text-decoration: underline; color:#0055ff;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
 &lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
 &lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You still need &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600; text-decoration: underline; color:#0055ff;"&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt;&lt;style type="text/css"&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=" font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;"&gt;
-&lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600; text-decoration: underline; color:#0055ff;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
-&lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
-&lt;p style=" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"&gt;You still need &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600; text-decoration: underline; color:#0055ff;"&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;! HTML de DOCTYPE PÚBLICO "-//W3C//DTD HTML 4.0 / / EN" "http://www.w3.org/TR/REC-html40/strict.dtd" &amp;gt; &lt;html&gt;&lt;head&gt;&lt;meta name="qrichtext" content="1" /&gt; &lt;style type="text/css"&gt; p, li {white-space: pre-wrap;}
+&lt;/style&gt;&lt;/head&gt; &lt;body style="font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;"&gt; &lt;p style="margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px;"&gt; por favor, instale la última versión de &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600; text-decoration: underline; color:#0055ff;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (mínimo versión QOWNNOTESAPI_MIN_VERSION) en el servidor de ownCloud si desea que QOwnNotes sea capaz de tener acceso a Notas versiones y Notas eliminadas.&lt;/p&gt; 
+&lt;p style="margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px;"&gt; también necesita tener las aplicaciones de base de ownCloud&lt;span style="font-weight:600;"&gt; versiones&lt;/span&gt; y &lt;span style="font-weight:600;"&gt; archivos eliminados&lt;/span&gt; en el servidor de ownCloud.&lt;/p&gt; 
+&lt;p style="margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px;-qt-block-indent:0; text-indent:0px;"&gt; Necesita &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600; text-decoration: underline; color:#0055ff;"&gt; ownCloud&lt;/span&gt;&lt;/a&gt; para sincronizar tus notas!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="490"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Abra su página de &lt;span style="font-weight:600;"&gt; configuración de la aplicación&lt;/span&gt; del servidor ownCloud en su navegador para instalar o actualizar QOwnNotesAPI y para habilitar las aplicaciones core &lt;span style="font-weight:600;"&gt; versiones&lt;/span&gt; y &lt;span style="font-weight:600;"&gt;archivos eliminados&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="493"/>
@@ -1137,12 +1133,12 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="818"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Haga clic aquí para probar la conexión al servidor ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="824"/>
       <source>&amp;reload calendar list</source>
-      <translation type="unfinished">&amp;reload calendar list</translation>
+      <translation>lista de calendario a cargar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
@@ -1207,7 +1203,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1611"/>
       <source>Disable tracking of usage data</source>
-      <translation type="unfinished">Disable tracking of usage data</translation>
+      <translation>Desactivar seguimiento de datos</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1655"/>
@@ -1222,7 +1218,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="279"/>
       <source>Click here to select the location of the main local ownCloud sync folder.</source>
-      <translation type="unfinished">Click here to select the location of the main local ownCloud sync folder.</translation>
+      <translation>Haga clic aquí para seleccionar la ubicación de la carpeta de sincronización de ownCloud local principal.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="282"/>
@@ -1232,7 +1228,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="504"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href="http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href="http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Si tienes problemas con la configuración para encontrar la ruta de notas en el servidor de ownCloud, quizá quieras leer este artículo: &lt;a href="http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path"&gt; &lt;span style="text-decoration: underline; color:#0000ff;"&gt; problemas con la ruta de ownCloud&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="945"/>
@@ -1247,7 +1243,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1010"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;&lt;span style=" text-decoration: underline; color:#0000ff;"&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Si usted quiere ayudar a traducir QOwnNotes o actualizar una traducción existente por favor lea: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; &lt;span style="text-decoration: underline; color:#0000ff;"&gt; ¿Cómo puedo ayudar a traducir QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
@@ -1257,7 +1253,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1038"/>
       <source>font in note markdown view:</source>
-      <translation type="unfinished">font in note markdown view:</translation>
+      <translation>ver el código fuente markdown:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1048"/>
@@ -1288,7 +1284,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="186"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=" font-weight:600;"&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=" font-weight:600;"&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Necesitamos su carpeta de sincronización de ownCloud para determinar el directorio donde se encuentra las notas en el servidor de ownCloud.&lt;/p&gt; &lt;p&gt;Esto si &lt;span style="font-weight:600;"&gt; no&lt;/span&gt; es la carpeta notas. Suele ser esta carpeta &lt;span style="font-weight:600;"&gt; en&lt;/span&gt; la carpeta de sincronización de ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1143"/>
@@ -1326,7 +1322,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1308"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Siempre se le notificará acerca de modificaciones externas, aunque la nota actual no haya sido editada en el último minuto. Recomendamos &lt;span style="font-style:italic;"&gt; desactivado&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1314"/>
@@ -1337,18 +1333,18 @@ p, li { white-space: pre-wrap; }
       <location filename="../dialogs/settingsdialog.ui" line="1340"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>Podría encontrarse con problemas de sincronización con versiones anteriores de ownCloud cuando se va muy por debajo de 10 seg.
+Se debe probar y si hay conflictos de sincronización establecer un valor más alto.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1344"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>guardar nota en un intervalo de [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1351"/>
       <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
-      <translation type="unfinished">Select this if you want the markdown view to be the default view instead of the edit view.</translation>
+      <translation>Seleccione esta opción si desea markdown como vista predeterminada en lugar del editor.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1354"/>
@@ -1364,7 +1360,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1376"/>
       <source>Do this if you have troubles with your Todo items.</source>
-      <translation type="unfinished">Do this if you have troubles with your Todo items.</translation>
+      <translation>Hacer esto si tiene problemas con sus elementos Todo.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1386"/>
@@ -1379,12 +1375,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1408"/>
       <source>Show recent notes folders in main area</source>
-      <translation type="unfinished">Show recent notes folders in main area</translation>
+      <translation>Mostrar carpetas de notas recientes en la zona principal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1415"/>
       <source>clear the recent note folder history</source>
-      <translation type="unfinished">clear the recent note folder history</translation>
+      <translation>eliminar el historial reciente de la carpeta nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1418"/>
@@ -1475,7 +1471,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1728"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Depurar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1734"/>
@@ -1688,7 +1684,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation type="unfinished">Trashed notes</translation>
+      <translation>Eliminar notas</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="20"/>
