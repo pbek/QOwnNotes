@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.2.0
+- added more German translation
+
 ## 1.1.9
 - fixed a problem with continuous list editing where text from the previous 
   line got copied to the next line
