@@ -9,6 +9,11 @@
   the list symbol is now removed
 - you can now also search in the current note with <kbd>F3</kbd> and 
   <kbd>⇧</kbd> + <kbd>F3</kbd> even if the search widget doesn't have the focus
+- you can now show the current note in your file manager with a new menu item
+  (for [Issue #106](https://github.com/pbek/QOwnNotes/issues/106))
+    - use <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> as shortcut
+    - under OS X the folder of the note is opened in Finder, but the note is 
+      not selected
 - added more German and Spanish translation (thank you calis2002 and 
   moblesmarti)
 

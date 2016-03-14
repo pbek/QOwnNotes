@@ -958,6 +958,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Show note in &amp;file manager</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+F</string>
+   </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>

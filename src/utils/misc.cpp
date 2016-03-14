@@ -18,6 +18,10 @@
 #include <QUrl>
 #include "misc.h"
 
+#ifdef Q_OS_WIN
+#include <windows.h>
+#endif
+
 
 /**
  * Open the given path with an appropriate application
@@ -48,10 +52,11 @@ void Utils::Misc::openFolderSelect(const QString& absolutePath)
 
         // QProcess::startDetached() has an obscure bug. If the path has
         // no spaces and a comma(and maybe other special characters) it doesn't
-        // get wrapped in quotes. So explorer.exe can't find the correct path and
-        // displays the default one. If we wrap the path in quotes and pass it to
-        // QProcess::startDetached() explorer.exe still shows the default path. In
-        // this case QProcess::startDetached() probably puts its own quotes around ours.
+        // get wrapped in quotes. So explorer.exe can't find the correct path
+        // anddisplays the default one. If we wrap the path in quotes and pass
+        // it to QProcess::startDetached() explorer.exe still shows the default
+        // path. In this case QProcess::startDetached() probably puts its
+        // own quotes around ours.
 
         STARTUPINFO startupInfo;
         ::ZeroMemory(&startupInfo, sizeof(startupInfo));
