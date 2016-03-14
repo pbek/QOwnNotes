@@ -5,6 +5,8 @@
   line got copied to the next line
 - scroll to the cursor if we are at the bottom of the document when creating 
   a new list item in a note
+- if return is pressed in a markdown list and there is just a list symbol then
+  the list symbol is now removed
 
 ## 1.1.8
 - added rich text pasting fixes for Internet Explorer
