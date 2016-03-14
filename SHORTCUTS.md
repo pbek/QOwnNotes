@@ -36,6 +36,8 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>Ctrl</kbd> + <kbd>F</kbd> lets you search in the current note
     - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
+    - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
+      previous and next matches even if the search widget doesn't have the focus
     - <kbd>Esc</kbd> closes the search bar
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
@@ -95,6 +97,8 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>Click</kbd> on a link to open it
 - <kbd>⌘</kbd> + <kbd>F</kbd> lets you search in the current note
     - use the <kbd>Up</kbd> and <kbd>Down</kbd> keys to jump to the previous and next matches
+    - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
+      previous and next matches even if the search widget doesn't have the focus
     - <kbd>Esc</kbd> closes the search bar
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
