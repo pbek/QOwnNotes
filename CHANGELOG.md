@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.1.9
+- fixed a problem with continuous list editing where text from the previous 
+  line got copied to the next line
+
 ## 1.1.8
 - added rich text pasting fixes for Internet Explorer
   (for [Issue #112](https://github.com/pbek/QOwnNotes/issues/112))
