@@ -122,6 +122,8 @@ set(SOURCE_FILES
     libraries/piwiktracker/piwiktracker.cpp
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
+    utils/misc.cpp
+    utils/misc.h
     build_number.h
     main.cpp
     mainwindow.cpp

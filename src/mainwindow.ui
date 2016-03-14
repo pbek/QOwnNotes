@@ -298,6 +298,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Print_note_markdown"/>
     <addaction name="separator"/>
     <addaction name="action_Open_note_in_external_editor"/>
+    <addaction name="actionShow_note_in_file_manager"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="menuRecentNoteFolders"/>
@@ -949,6 +950,15 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Shift+V</string>
    </property>
   </action>
+  <action name="actionShow_note_in_file_manager">
+   <property name="icon">
+    <iconset theme="document-open" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show note in &amp;file manager</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -959,8 +969,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

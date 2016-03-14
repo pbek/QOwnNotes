@@ -61,7 +61,8 @@ SOURCES += main.cpp\
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
     services/cryptoservice.cpp \
-    dialogs/masterdialog.cpp
+    dialogs/masterdialog.cpp \
+    utils/misc.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -97,7 +98,8 @@ HEADERS  += mainwindow.h \
     dialogs/passworddialog.h \
     services/metricsservice.h \
     services/cryptoservice.h \
-    dialogs/masterdialog.h
+    dialogs/masterdialog.h \
+    utils/misc.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

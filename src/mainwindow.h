@@ -201,6 +201,8 @@ private slots:
 
     void on_actionPaste_image_triggered();
 
+    void on_actionShow_note_in_file_manager_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

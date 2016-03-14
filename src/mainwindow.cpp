@@ -36,6 +36,7 @@
 #include "services/metricsservice.h"
 #include <services/cryptoservice.h>
 #include <helpers/clientproxy.h>
+#include <utils/misc.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -3339,4 +3340,9 @@ void MainWindow::pasteMediaIntoNote() {
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData * mimeData = clipboard->mimeData(QClipboard::Clipboard);
     handleInsertingFromMimeData(mimeData);
+}
+
+void MainWindow::on_actionShow_note_in_file_manager_triggered()
+{
+    Utils::Misc::openFolderSelect(currentNote.fullNoteFilePath());
 }
