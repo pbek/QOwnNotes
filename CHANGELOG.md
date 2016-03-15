@@ -7,7 +7,8 @@
 - when inserting code blocks there will be added a new line on top and at the 
   bottom of the selected text if the selected text has multiple lines
   (for [Issue #113](https://github.com/pbek/QOwnNotes/issues/113))
-- added more German translation
+- added more German, Portuguese, Hungarian and Dutch translation (thank you 
+  mlimacarlos and Fabijenna)
 
 ## 1.1.9
 - fixed a problem with continuous list editing where text from the previous 

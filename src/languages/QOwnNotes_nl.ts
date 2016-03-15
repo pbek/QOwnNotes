@@ -396,18 +396,18 @@
     <message>
       <location filename="../mainwindow.ui" line="941"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Html plakken of media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <location filename="../mainwindow.ui" line="947"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Beelden, notities en Html-code van het klembord plakken</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Toon opmerking in &amp;bestandmanager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="917"/>
@@ -669,13 +669,13 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../mainwindow.cpp" line="3123"/>
       <location filename="../mainwindow.cpp" line="3185"/>
       <source>inserting image</source>
-      <translation type="unfinished">inserting image</translation>
+      <translation>afbeelding invoegen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3128"/>
       <location filename="../mainwindow.cpp" line="3188"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>klaar met het invoegen van de afbeelding</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3139"/>
@@ -704,22 +704,22 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="3172"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>tijdelijke afbeelding opslaan</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3191"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>tijdelijke bestand kan niet worden geopend</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3268"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>%1 downloaden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3295"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>klaar met afbeeldingen downloaden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2026"/>
@@ -1200,7 +1200,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Spaans</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1611"/>

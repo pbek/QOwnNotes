@@ -99,22 +99,22 @@
     <message>
       <location filename="../mainwindow.ui" line="357"/>
       <source>Window</source>
-      <translation type="unfinished">Window</translation>
+      <translation>Janela</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="361"/>
       <source>Editor width in distraction free mode</source>
-      <translation type="unfinished">Editor width in distraction free mode</translation>
+      <translation>Editar em modo livre de distração</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="364"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>Largura do Editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="384"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>barra de ferramentas principal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="426"/>
@@ -346,68 +346,68 @@
     <message>
       <location filename="../mainwindow.ui" line="838"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Inserir bloco de &amp;código</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="850"/>
       <source>Next note</source>
-      <translation type="unfinished">Next note</translation>
+      <translation>Próxima nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="862"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>Nota Anterior</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="874"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>Modo Livre de &amp;Distração</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="877"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>Modo livre de distração, você pode sair com o botão no canto inferior direito</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="888"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Mostrar &amp;barra de ferramentas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="896"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Limite</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Médio</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="918"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Largo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="929"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Total</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="941"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Cole um código html ou midia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <location filename="../mainwindow.ui" line="947"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Cole imagens, notas e código html da área de transferência</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Mostre a nota no Gerenciador de &amp;Arquivos</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="917"/>
@@ -622,17 +622,17 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="2025"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>&amp;Ok</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2373"/>
       <source>note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">note versions are currently loaded from your ownCloud server</translation>
+      <translation>as versões da nota são carregadas do seu servidor OwnCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2388"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>as notas excluidas são carregadas do seu servidor OwnCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2412"/>
@@ -668,57 +668,57 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
       <location filename="../mainwindow.cpp" line="3123"/>
       <location filename="../mainwindow.cpp" line="3185"/>
       <source>inserting image</source>
-      <translation type="unfinished">inserting image</translation>
+      <translation>inserir imagem</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3128"/>
       <location filename="../mainwindow.cpp" line="3188"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>inserção de imagem completa</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3139"/>
       <source>copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>copied %n note(s) to %1</numerusform>
-        <numerusform>copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>copiado %n nota(s) para %1</numerusform>
+        <numerusform>copiado %n nota(s) para %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3148"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>falha ao copiar %n nota(s) (mais provável que a nota exista)</numerusform>
+        <numerusform>falha ao copiar %n nota(s) (mais provável que a nota exista)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3158"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>ignorando a copia de %n nota(s) (markdown ou arquivo de texto ilegível)</numerusform>
+        <numerusform>ignorando a copia de %n nota(s) (markdown ou arquivo de texto ilegível)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3172"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>salvando imagem temporária</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3191"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>arquivo temporário não pode ser aberto</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3268"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>baixando %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3295"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>download de imagens completo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2026"/>
@@ -729,12 +729,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="335"/>
       <source>leave</source>
-      <translation type="unfinished">leave</translation>
+      <translation>dair</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="338"/>
       <source>leave distraction free mode</source>
-      <translation type="unfinished">leave distraction free mode</translation>
+      <translation>sair do modo de distração</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
@@ -835,12 +835,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../services/owncloudservice.cpp" line="623"/>
       <source>done with loading note versions</source>
-      <translation type="unfinished">done with loading note versions</translation>
+      <translation>versões de notas carregadas</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="700"/>
       <source>done with loading trashed notes</source>
-      <translation type="unfinished">done with loading trashed notes</translation>
+      <translation>notas excluídas carregadas</translation>
     </message>
   </context>
   <context>
@@ -953,7 +953,7 @@ Clique cancelar para sair.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="116"/>
       <source>your ownCloud username</source>
-      <translation type="unfinished">your ownCloud username</translation>
+      <translation>usuário Owncloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="126"/>
@@ -968,7 +968,7 @@ Clique cancelar para sair.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="154"/>
       <source>your ownCloud password</source>
-      <translation type="unfinished">your ownCloud password</translation>
+      <translation>senha OwnCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="164"/>
@@ -978,7 +978,7 @@ Clique cancelar para sair.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="192"/>
       <source>the folder the ownCloud sync client uses</source>
-      <translation type="unfinished">the folder the ownCloud sync client uses</translation>
+      <translation>o diretório que o OwnCloud sync client utiliza</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="199"/>
@@ -1087,37 +1087,37 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="567"/>
       <source>Network</source>
-      <translation type="unfinished">Network</translation>
+      <translation>Rede</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="576"/>
       <source>Proxy Settings</source>
-      <translation type="unfinished">Proxy Settings</translation>
+      <translation>Configurações de proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="582"/>
       <source>No Proxy</source>
-      <translation type="unfinished">No Proxy</translation>
+      <translation>Sem Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="595"/>
       <source>Use system proxy</source>
-      <translation type="unfinished">Use system proxy</translation>
+      <translation>Utilizar proxy do sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="605"/>
       <source>Specify proxy manually as</source>
-      <translation type="unfinished">Specify proxy manually as</translation>
+      <translation>Especificar proxy manualmente</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="633"/>
       <source>Host</source>
-      <translation type="unfinished">Host</translation>
+      <translation>Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="684"/>
       <source>Proxy server requires authentication</source>
-      <translation type="unfinished">Proxy server requires authentication</translation>
+      <translation>Servidor proxy requer autenticação</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="749"/>
@@ -1152,7 +1152,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="852"/>
       <source>Interface</source>
-      <translation type="unfinished">Interface</translation>
+      <translation>Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
@@ -1192,37 +1192,37 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="956"/>
       <source>Portuguese</source>
-      <translation type="unfinished">Portuguese</translation>
+      <translation>Português</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="967"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>Alemão</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="978"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>Húngaro</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Espanhol</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1611"/>
       <source>Disable tracking of usage data</source>
-      <translation type="unfinished">Disable tracking of usage data</translation>
+      <translation>Disabilitar rastreamento de dados de uso</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1655"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
+      <translation>Uso de rastreamento é feito em um servidor privado do Piwik.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1702"/>
       <source>Disable heartbeat</source>
-      <translation type="unfinished">Disable heartbeat</translation>
+      <translation>Desabilitar envio de dados</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="279"/>
@@ -1465,22 +1465,22 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1630"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>Esses dados incluem informações anônimas sobre quais recursos do app são usados.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1671"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>App de envio de dados</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1689"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>É enviado um pacote de dados periodicamente enquanto está executando o QOwnNotes. Faça um desenvolvedor feliz por deixá-lo saber que alguém está usando QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1728"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Depurar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1734"/>
@@ -1500,27 +1500,27 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="73"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>nome do host do servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="74"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>nome de usuário para o servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="75"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>senha para o servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="77"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>Proxy HTTP (S)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="78"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>Proxy SOCKS5</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="534"/>

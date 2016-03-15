@@ -396,18 +396,18 @@
     <message>
       <location filename="../mainwindow.ui" line="941"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Beilleszti a html-t vagy médiát</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
       <location filename="../mainwindow.ui" line="947"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Illessze be a képeket, a jegyzeteket és a html-t a vágólapról</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="959"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Megmutatja a jegyzetet a &amp;fájl igazgatóban</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="917"/>
@@ -669,13 +669,13 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="3123"/>
       <location filename="../mainwindow.cpp" line="3185"/>
       <source>inserting image</source>
-      <translation type="unfinished">inserting image</translation>
+      <translation>kép beszúrása</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3128"/>
       <location filename="../mainwindow.cpp" line="3188"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>kép beillesztése</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3139"/>
@@ -704,22 +704,22 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="3172"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>kép mentése</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3191"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>ideiglenes fájl nem nyitható meg</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3268"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>letöltés %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3295"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>képek letöltése kész</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2026"/>
@@ -1202,7 +1202,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Spanyol</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1611"/>
