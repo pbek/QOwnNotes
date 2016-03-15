@@ -18,6 +18,7 @@
 #include <QTextBlock>
 #include <QClipboard>
 #include <QTemporaryFile>
+#include <QTextDocumentFragment>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -2943,6 +2944,12 @@ void MainWindow::on_actionInset_code_block_triggered()
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     } else {
+        // if the selected text has multiple lines add some new lines
+        // on top and at the bottom of the selected text
+        if (textEdit->textCursor().selection().toPlainText().contains("\n")) {
+            selectedText = "\n" + selectedText + "\n";
+        }
+
         c.insertText("`" + selectedText + "`");
     }
 }

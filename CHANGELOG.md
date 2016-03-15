@@ -5,6 +5,8 @@
 - added bold and italic formatting helpers
     - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
     - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
+- when inserting code blocks there will be added a new line on top and at the 
+  bottom of the selected text if the selected text has multiple lines
 
 ## 1.1.9
 - fixed a problem with continuous list editing where text from the previous 
