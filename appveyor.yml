@@ -15,6 +15,8 @@ before_build:
 build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
+  - mingw32-make -v
+  - type c:\mingw\include\math.h
   - cd src
   - "echo #define RELEASE \"AppVeyor\" > release.h"
   # setting the build number in the header file
