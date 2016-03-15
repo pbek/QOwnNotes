@@ -56,5 +56,7 @@
         <file alias="16x16/document-open.svg">icons/breeze-qownnotes/16x16/document-open.svg</file>
         <file alias="16x16/code-context.svg">icons/breeze-qownnotes/16x16/code-context.svg</file>
         <file alias="16x16/zoom-original.svg">icons/breeze-qownnotes/16x16/zoom-original.svg</file>
+        <file alias="16x16/format-text-bold.svg">icons/breeze-qownnotes/16x16/format-text-bold.svg</file>
+        <file alias="16x16/format-text-italic.svg">icons/breeze-qownnotes/16x16/format-text-italic.svg</file>
     </qresource>
 </RCC>

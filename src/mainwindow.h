@@ -203,6 +203,10 @@ private slots:
 
     void on_actionShow_note_in_file_manager_triggered();
 
+    void on_actionFormat_text_bold_triggered();
+
+    void on_actionFormat_text_italic_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

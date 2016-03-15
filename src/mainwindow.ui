@@ -333,6 +333,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionInsert_current_time"/>
     <addaction name="actionInset_code_block"/>
     <addaction name="separator"/>
+    <addaction name="actionFormat_text_bold"/>
+    <addaction name="actionFormat_text_italic"/>
+    <addaction name="separator"/>
     <addaction name="actionPaste_image"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
@@ -757,7 +760,7 @@ p, li { white-space: pre-wrap; }
     <string>Insert image (the image will be copied to the `media` folder in the current notes folder)</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+I</string>
+    <string>Ctrl+Shift+I</string>
    </property>
   </action>
   <action name="actionShow_changelog">
@@ -962,6 +965,30 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+Shift+F</string>
    </property>
   </action>
+  <action name="actionFormat_text_bold">
+   <property name="icon">
+    <iconset theme="format-text-bold" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Format text &amp;bold</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+  </action>
+  <action name="actionFormat_text_italic">
+   <property name="icon">
+    <iconset theme="format-text-italic" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-text-italic.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-italic.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Format text &amp;italic</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -972,8 +999,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

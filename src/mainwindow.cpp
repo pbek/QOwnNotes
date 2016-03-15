@@ -3346,3 +3346,39 @@ void MainWindow::on_actionShow_note_in_file_manager_triggered()
 {
     Utils::Misc::openFolderSelect(currentNote.fullNoteFilePath());
 }
+
+/**
+ * Inserts a bold block at the current cursor position
+ */
+void MainWindow::on_actionFormat_text_bold_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText("****");
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
+        textEdit->setTextCursor(c);
+    } else {
+        c.insertText("**" + selectedText + "**");
+    }
+}
+
+/**
+ * Inserts a italic block at the current cursor position
+ */
+void MainWindow::on_actionFormat_text_italic_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText("**");
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
+        textEdit->setTextCursor(c);
+    } else {
+        c.insertText("*" + selectedText + "*");
+    }
+}

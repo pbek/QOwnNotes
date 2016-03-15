@@ -2,6 +2,9 @@
 
 ## 1.2.0
 - added more German translation
+- added bold and italic formatting helpers
+    - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
+    - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
 
 ## 1.1.9
 - fixed a problem with continuous list editing where text from the previous 
