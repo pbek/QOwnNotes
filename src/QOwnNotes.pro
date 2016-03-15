@@ -24,7 +24,7 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_hu.ts
 
 CODECFORTR = UTF-8
-#CONFIG += c++11
+CONFIG += c++11
 QMAKE_CXXFLAGS += -std=gnu++0x
 
 INCLUDEPATH += $$PWD/libraries
