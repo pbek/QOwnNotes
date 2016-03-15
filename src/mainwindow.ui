@@ -974,7 +974,7 @@ p, li { white-space: pre-wrap; }
     <string>Format text &amp;bold</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+B</string>
+    <string notr="true">Ctrl+B</string>
    </property>
   </action>
   <action name="actionFormat_text_italic">
@@ -986,7 +986,7 @@ p, li { white-space: pre-wrap; }
     <string>Format text &amp;italic</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+I</string>
+    <string notr="true">Ctrl+I</string>
    </property>
   </action>
  </widget>
@@ -999,8 +999,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
