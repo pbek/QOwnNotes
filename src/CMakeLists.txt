@@ -6,6 +6,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 #set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
+SET(CMAKE_CXX_FLAGS "-std=c++0x")
 
 find_package( Qt5Core 5.3 REQUIRED )
 find_package( Qt5Widgets REQUIRED )
@@ -120,6 +121,10 @@ set(SOURCE_FILES
     services/cryptoservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
+    libraries/botan/botan.h
+    libraries/botan/botan.cpp
+    libraries/botan/botanwrapper.h
+    libraries/botan/botanwrapper.cpp
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     utils/misc.cpp

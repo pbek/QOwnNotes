@@ -38,6 +38,8 @@
 #include <services/cryptoservice.h>
 #include <helpers/clientproxy.h>
 #include <utils/misc.h>
+#include "libraries/botan/botanwrapper.h"
+#include "libraries/botan/botan.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -3377,6 +3379,23 @@ void MainWindow::on_actionFormat_text_bold_triggered()
  */
 void MainWindow::on_actionFormat_text_italic_triggered()
 {
+    BotanWrapper cWrapper;
+
+   // QString cPlain = "/home/rootshell/Source/Wraper/test.txt";
+   // QString cEncrypted = "/home/rootshell/Source/Wraper/encrypted.txt";
+   // QString cDecrypted = "/home/rootshell/Source/Wraper/decrypted.txt";
+
+   // cWrapper.EncryptFile(cPlain,cEncrypted);
+   // cWrapper.DecryptFile(cEncrypted,cDecrypted);
+
+    cWrapper.setPassword("!@#$%^&*()_kjnklawh!@ucoi9293");
+    cWrapper.setSalt("#$%^&!*@y9sg08dfsdfs");
+    QString cEnc = cWrapper.Encrypt("This is my secret :)");
+
+    qDebug() << cEnc;
+    qDebug() << cWrapper.Decrypt(cEnc);
+
+    return;
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = textEdit->textCursor().selectedText();
