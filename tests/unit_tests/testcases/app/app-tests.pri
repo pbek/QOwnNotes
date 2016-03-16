@@ -18,6 +18,7 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.h \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
+    $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.h
@@ -35,8 +36,11 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/diff_match_patch/diff_match_patch.cpp \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
+    $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.cpp
+
+include($$APP_SRC_DIR/libraries/botan/botan.pri)
 
 #OTHER_FILES += \
 #    connections.xml
