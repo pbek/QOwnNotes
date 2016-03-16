@@ -760,7 +760,7 @@ p, li { white-space: pre-wrap; }
     <string>Insert image (the image will be copied to the `media` folder in the current notes folder)</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+I</string>
+    <string notr="true">Ctrl+Shift+I</string>
    </property>
   </action>
   <action name="actionShow_changelog">

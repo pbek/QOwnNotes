@@ -309,9 +309,8 @@
         <translation>Insérer une image (l&apos;image sera alors copiée dans le dossier &quot;media&quot; qui se trouve dans le répertoire des notes)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="763"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Ctrl+Shift+I</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -417,12 +416,12 @@
     <message>
         <location filename="../mainwindow.ui" line="974"/>
         <source>Format text &amp;bold</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format text &amp;bold</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="986"/>
         <source>Format text &amp;italic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Format text &amp;italic</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>

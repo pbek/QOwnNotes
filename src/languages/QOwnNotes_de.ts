@@ -309,9 +309,8 @@
         <translation>Bild einfügen (Das Bild wird in den Ordner `media` im aktuellen Notizordner kopiert)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="763"/>
         <source>Ctrl+Shift+I</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">STRG+UMSCHALT+I</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="772"/>
@@ -417,12 +416,12 @@
     <message>
         <location filename="../mainwindow.ui" line="974"/>
         <source>Format text &amp;bold</source>
-        <translation type="unfinished"></translation>
+        <translation>Text fett formatieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="986"/>
         <source>Format text &amp;italic</source>
-        <translation type="unfinished"></translation>
+        <translation>Text kursiv formatieren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="918"/>

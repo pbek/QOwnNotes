@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.2.1
+- added more German translation (thank you calis2002)
+
 ## 1.2.0
 - added bold and italic formatting helpers
     - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
