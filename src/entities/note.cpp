@@ -11,6 +11,8 @@
 #include <QCryptographicHash>
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "libraries/hoedown/html.h"
+#include "libraries/botan/botanwrapper.h"
+#include "libraries/botan/botan.h"
 
 
 Note::Note() {
@@ -59,7 +61,8 @@ bool Note::addNote(QString name, QString fileName, QString text) {
     QSqlQuery query(db);
 
     query.prepare(
-            "INSERT INTO note ( name, file_name, note_text ) VALUES ( :name, :file_name, :note_text )");
+            "INSERT INTO note ( name, file_name, note_text ) "
+                    "VALUES ( :name, :file_name, :note_text )");
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
     query.bindValue(":note_text", text);
@@ -911,8 +914,13 @@ QString Note::encryptNoteText() {
     }
 
     // encrypt the text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString encryptedText = crypto->encryptToString(text);
+//    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+//    QString encryptedText = crypto->encryptToString(text);
+
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString encryptedText = botanWrapper.Encrypt(text);
 
     // add the encrypted text to the new note text
     noteText += encryptedText + "\n" +
@@ -973,8 +981,16 @@ bool Note::canDecryptNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+    // fallback to SimpleCrypt
+    if (decryptedNoteText == "") {
+        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    }
 
     return decryptedNoteText != "";
 }
@@ -984,6 +1000,7 @@ bool Note::canDecryptNoteText() {
  */
 void Note::setCryptoPassword(QString password) {
     cryptoKey = qint64Hash(password);
+    cryptoPassword = password;
 }
 
 /**
@@ -999,8 +1016,16 @@ QString Note::getDecryptedNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+    // fallback to SimpleCrypt
+    if (decryptedNoteText == "") {
+        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    }
 
     if (decryptedNoteText == "") {
         return noteText;
