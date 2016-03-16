@@ -2,15 +2,15 @@
 
 BotanWrapper::BotanWrapper(QObject *parent) :
         QObject(parent) {
-    //Set the default salt size
+    // Set the default salt size
     mSalt.resize(48);
 
-    //Set the default salt
+    // Set the default salt
     for (int i = 0; i < mSalt.size(); i++) {
         mSalt[i] = i;
     }
 
-    //Set the default password
+    // Set the default password
     mPassword = Hash("!@&^jdshUG24!T^!@*&!Y@()&^909+!-@!@#07");
 }
 
@@ -20,8 +20,7 @@ QString BotanWrapper::Hash(QString Data) {
         pipe.process_msg(Data.toStdString());
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
-    }
-    catch (...) {
+    } catch (...) {
         return "";
     }
 }
@@ -54,22 +53,21 @@ QString BotanWrapper::Decode(QString Data) {
         pipe.process_msg(Data.toStdString());
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
-    }
-    catch (...) {
+    } catch (...) {
         return "";
     }
 }
 
 QString BotanWrapper::Encrypt(QString Data) {
     try {
-        //Setup the key derive functions
+        // Setup the key derive functions
         PKCS5_PBKDF2 pbkdf2(new HMAC(new SHA_160));
         const u32bit PBKDF2_ITERATIONS = 8192;
 
-        //Create the KEY and IV
+        // Create the KEY and IV
         KDF *kdf = get_kdf("KDF2(SHA-1)");
 
-        //Create the master key
+        // Create the master key
         SecureVector<byte> mMaster = pbkdf2.derive_key(
                48,
                mPassword.toStdString(),
@@ -83,8 +81,7 @@ QString BotanWrapper::Encrypt(QString Data) {
         pipe.process_msg(Data.toStdString());
         QString Value = QString::fromStdString(pipe.read_all_as_string(0));
         return Value;
-    }
-    catch (...) {
+    } catch (...) {
         return "";
     }
 }
@@ -120,14 +117,14 @@ QString BotanWrapper::Decrypt(QString Data) {
 
 bool BotanWrapper::EncryptFile(QString Source, QString Destination) {
     try {
-        //Setup the key derive functions
+        // Setup the key derive functions
         PKCS5_PBKDF2 pbkdf2(new HMAC(new SHA_160));
         const u32bit PBKDF2_ITERATIONS = 8192;
 
-        //Create the KEY and IV
+        // Create the KEY and IV
         KDF *kdf = get_kdf("KDF2(SHA-1)");
 
-        //Create the master key
+        // Create the master key
         SecureVector<byte> mMaster = pbkdf2.derive_key(
                48,
                mPassword.toStdString(),
@@ -152,22 +149,21 @@ bool BotanWrapper::EncryptFile(QString Source, QString Destination) {
         in.close();
 
         return true;
-    }
-    catch (...) {
+    } catch (...) {
         return false;
     }
 }
 
 bool BotanWrapper::DecryptFile(QString Source, QString Destination) {
     try {
-        //Setup the key derive functions
+        // Setup the key derive functions
         PKCS5_PBKDF2 pbkdf2(new HMAC(new SHA_160));
         const u32bit PBKDF2_ITERATIONS = 8192;
 
-        //Create the KEY and IV
+        // Create the KEY and IV
         KDF *kdf = get_kdf("KDF2(SHA-1)");
 
-        //Create the master key
+        // Create the master key
         SecureVector<byte> mMaster = pbkdf2.derive_key(
                48,
                mPassword.toStdString(),
@@ -192,14 +188,13 @@ bool BotanWrapper::DecryptFile(QString Source, QString Destination) {
         in.close();
 
         return true;
-    }
-    catch (...) {
+    } catch (...) {
         return false;
     }
 }
 
 void BotanWrapper::setPassword(QString Password) {
-    //Set the password
+    // Set the password
     mPassword = Password;
 }
 

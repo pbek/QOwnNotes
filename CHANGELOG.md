@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 1.2.1
+- client side **note encryption** changed from SimpleCrypt to the much 
+  more secure **AES-256** encryption
+    - old encrypted notes will be decrypted with SimpleCrypt and encrypted 
+      with AES-256 when you edit them
+    - some major changes had to be made to make this possible, please report 
+      if you run into troubles
 - added more German translation (thank you calis2002)
 
 ## 1.2.0
