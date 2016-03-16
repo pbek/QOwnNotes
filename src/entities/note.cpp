@@ -11,6 +11,8 @@
 #include <QCryptographicHash>
 #include "libraries/simplecrypt/simplecrypt.h"
 #include "libraries/hoedown/html.h"
+#include "libraries/botan/botanwrapper.h"
+#include "libraries/botan/botan.h"
 
 
 Note::Note() {
@@ -28,6 +30,10 @@ QString Note::getName() {
 
 qint64 Note::getCryptoKey() {
     return this->cryptoKey;
+}
+
+QString Note::getCryptoPassword() {
+    return this->cryptoPassword;
 }
 
 QString Note::getFileName() {
@@ -54,12 +60,17 @@ void Note::setNoteText(QString text) {
     this->noteText = text;
 }
 
+void Note::setDecryptedNoteText(QString text) {
+    this->decryptedNoteText = text;
+}
+
 bool Note::addNote(QString name, QString fileName, QString text) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     query.prepare(
-            "INSERT INTO note ( name, file_name, note_text ) VALUES ( :name, :file_name, :note_text )");
+            "INSERT INTO note ( name, file_name, note_text ) "
+                    "VALUES ( :name, :file_name, :note_text )");
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
     query.bindValue(":note_text", text);
@@ -209,7 +220,9 @@ bool Note::fillFromQuery(QSqlQuery query) {
     name = query.value("name").toString();
     fileName = query.value("file_name").toString();
     noteText = query.value("note_text").toString();
+    decryptedNoteText = query.value("decrypted_note_text").toString();
     cryptoKey = query.value("crypto_key").toLongLong();
+    cryptoPassword = query.value("crypto_password").toString();
     hasDirtyData = query.value("has_dirty_data").toInt() == 1;
     fileCreated = query.value("file_created").toDateTime();
     fileLastModified = query.value("file_last_modified").toDateTime();
@@ -330,6 +343,13 @@ bool Note::storeNewText(QString text) {
     return this->store();
 }
 
+bool Note::storeNewDecryptedText(QString text) {
+    this->decryptedNoteText = text;
+    this->hasDirtyData = true;
+
+    return this->store();
+}
+
 /**
  * Returns the default note file extension (`md` or `txt`)
  */
@@ -354,21 +374,24 @@ bool Note::store() {
                               "name = :name,"
                               "file_name = :file_name,"
                               "note_text = :note_text,"
+                              "decrypted_note_text = :decrypted_note_text,"
                               "has_dirty_data = :has_dirty_data, "
                               "file_last_modified = :file_last_modified,"
                               "file_created = :file_created,"
                               "crypto_key = :crypto_key,"
+                              "crypto_password = :crypto_password,"
                               "modified = :modified "
                               "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare("INSERT INTO note"
-                              "( name, file_name, note_text, has_dirty_data,"
+                              "(name, file_name, note_text, has_dirty_data,"
                               "file_last_modified, file_created, crypto_key,"
-                              "modified ) "
-                              "VALUES ( :name, :file_name, :note_text,"
+                              "modified, crypto_password, decrypted_note_text) "
+                              "VALUES (:name, :file_name, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
-                              ":file_created, :crypto_key, :modified )");
+                              ":file_created, :crypto_key, :modified,"
+                              ":crypto_password, :decrypted_note_text)");
     }
 
     QDateTime modified = QDateTime::currentDateTime();
@@ -376,10 +399,12 @@ bool Note::store() {
     query.bindValue(":name", this->name);
     query.bindValue(":file_name", this->fileName);
     query.bindValue(":note_text", this->noteText);
+    query.bindValue(":decrypted_note_text", this->decryptedNoteText);
     query.bindValue(":has_dirty_data", this->hasDirtyData ? 1 : 0);
     query.bindValue(":file_created", this->fileCreated);
     query.bindValue(":file_last_modified", this->fileLastModified);
     query.bindValue(":crypto_key", this->cryptoKey);
+    query.bindValue(":crypto_password", this->cryptoPassword);
     query.bindValue(":modified", modified);
 
     // on error
@@ -406,6 +431,13 @@ bool Note::storeNoteTextFileToDisk() {
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qCritical() << file.errorString();
         return false;
+    }
+
+    // if we find a decrypted text to encrypt, then we attempt encrypt it
+    if (!decryptedNoteText.isEmpty()) {
+        noteText = decryptedNoteText;
+        encryptNoteText();
+        decryptedNoteText = "";
     }
 
     // transform all types of newline to \n
@@ -911,8 +943,13 @@ QString Note::encryptNoteText() {
     }
 
     // encrypt the text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString encryptedText = crypto->encryptToString(text);
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString encryptedText = botanWrapper.Encrypt(text);
+
+//    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+//    QString encryptedText = crypto->encryptToString(text);
 
     // add the encrypted text to the new note text
     noteText += encryptedText + "\n" +
@@ -973,8 +1010,16 @@ bool Note::canDecryptNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+    // fallback to SimpleCrypt
+    if (decryptedNoteText == "") {
+        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    }
 
     return decryptedNoteText != "";
 }
@@ -984,6 +1029,7 @@ bool Note::canDecryptNoteText() {
  */
 void Note::setCryptoPassword(QString password) {
     cryptoKey = qint64Hash(password);
+    cryptoPassword = password;
 }
 
 /**
@@ -999,8 +1045,16 @@ QString Note::getDecryptedNoteText() {
     }
 
     // decrypt the note text
-    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-    QString decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    BotanWrapper botanWrapper;
+    botanWrapper.setPassword(cryptoPassword);
+    botanWrapper.setSalt(BOTAN_SALT);
+    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+    // fallback to SimpleCrypt
+    if (decryptedNoteText == "") {
+        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
+        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    }
 
     if (decryptedNoteText == "") {
         return noteText;
@@ -1027,7 +1081,7 @@ bool Note::expireCryptoKeys() {
     expiryDate = expiryDate.addSecs(-600);
 
     // reset expired crypto keys
-    query.prepare("UPDATE note SET crypto_key = 0 WHERE "
+    query.prepare("UPDATE note SET crypto_key = 0, crypto_password = '' WHERE "
                           "modified < :expiryDate AND crypto_key != 0");
     query.bindValue(":expiryDate", expiryDate);
 

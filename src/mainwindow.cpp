@@ -1173,6 +1173,7 @@ void MainWindow::buildNotesIndex() {
     // get the current crypto key to set it again
     // after all notes were read again
     qint64 cryptoKey = currentNote.getCryptoKey();
+    QString cryptoPassword = currentNote.getCryptoPassword();
 
     // delete all notes in the database first
     Note::deleteAll();
@@ -1192,6 +1193,7 @@ void MainWindow::buildNotesIndex() {
     if (cryptoKey != 0) {
         // reset the old crypto key for the current note
         currentNote.setCryptoKey(cryptoKey);
+        currentNote.setCryptoPassword(cryptoPassword);
         currentNote.store();
     }
 }
@@ -2804,6 +2806,8 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
  */
 void MainWindow::on_encryptedNoteTextEdit_textChanged()
 {
+    currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText());
+    return;
     askForEncryptedNotePasswordIfNeeded();
 
     if (currentNote.canDecryptNoteText()) {
@@ -3373,7 +3377,7 @@ void MainWindow::on_actionFormat_text_bold_triggered()
 }
 
 /**
- * Inserts a italic block at the current cursor position
+ * Inserts an italic block at the current cursor position
  */
 void MainWindow::on_actionFormat_text_italic_triggered()
 {

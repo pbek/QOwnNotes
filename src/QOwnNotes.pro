@@ -24,7 +24,7 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_hu.ts
 
 CODECFORTR = UTF-8
-
+CONFIG += c++11
 
 INCLUDEPATH += $$PWD/libraries
 
@@ -41,6 +41,7 @@ SOURCES += main.cpp\
     libraries/hoedown/version.c \
     libraries/simplecrypt/simplecrypt.cpp \
     libraries/versionnumber/versionnumber.cpp \
+    libraries/botan/botanwrapper.cpp \
     dialogs/aboutdialog.cpp \
     dialogs/linkdialog.cpp \
     dialogs/notediffdialog.cpp \
@@ -77,6 +78,7 @@ HEADERS  += mainwindow.h \
     libraries/hoedown/version.h \
     libraries/simplecrypt/simplecrypt.h \
     libraries/versionnumber/versionnumber.h \
+    libraries/botan/botanwrapper.h \
     entities/notehistory.h \
     entities/note.h \
     entities/calendaritem.h \
@@ -121,6 +123,7 @@ RESOURCES += \
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
+include(libraries/botan/botan.pri)
 
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0

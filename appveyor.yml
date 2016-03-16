@@ -15,7 +15,11 @@ before_build:
 build_script:
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
+  # workaround for MinGW bug
+  - sed -i s/_hypot/hypot/g c:\mingw\include\math.h
   - cd src
+  # we need to modify that to make it running on AppVeyor
+  - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
   - "echo #define RELEASE \"AppVeyor\" > release.h"
   # setting the build number in the header file
   - "echo #define BUILD %APPVEYOR_BUILD_NUMBER% > build_number.h"

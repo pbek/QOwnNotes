@@ -108,10 +108,12 @@ bool DatabaseService::setupTables() {
                              "name VARCHAR(255),"
                              "file_name VARCHAR(255),"
                              "note_text TEXT,"
+                             "decrypted_note_text TEXT,"
                              "has_dirty_data INTEGER DEFAULT 0,"
                              "file_last_modified DATETIME,"
                              "file_created DATETIME,"
                              "crypto_key INT64 DEFAULT 0,"
+                             "crypto_password VARCHAR(255),"
                              "created DATETIME default current_timestamp,"
                              "modified DATETIME default current_timestamp)");
 

@@ -8,6 +8,7 @@
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
+#define BOTAN_SALT "Gj3%36/SmPoe12$snNAs-A-_.),?faQ1@!f32"
 
 class Note {
 public:
@@ -28,6 +29,8 @@ public:
     void setNoteText(QString text);
 
     qint64 getCryptoKey();
+
+    QString getCryptoPassword();
 
     void setCryptoKey(qint64 cryptoKey);
 
@@ -115,17 +118,23 @@ public:
 
     static QString encodeCssFont(const QFont& refFont);
 
+    void setDecryptedNoteText(QString text);
+
+    bool storeNewDecryptedText(QString text);
+
 private:
     int id;
     QString name;
     QString fileName;
     QString noteText;
+    QString decryptedNoteText;
     bool hasDirtyData;
     QDateTime fileCreated;
     QDateTime fileLastModified;
     QDateTime created;
     QDateTime modified;
     qint64 cryptoKey;
+    QString cryptoPassword;
     void handleNoteTextFileName();
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
