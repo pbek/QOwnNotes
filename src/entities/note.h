@@ -30,6 +30,8 @@ public:
 
     qint64 getCryptoKey();
 
+    QString getCryptoPassword();
+
     void setCryptoKey(qint64 cryptoKey);
 
     static bool addNote(QString name, QString fileName, QString text);
@@ -116,11 +118,16 @@ public:
 
     static QString encodeCssFont(const QFont& refFont);
 
+    void setDecryptedNoteText(QString text);
+
+    bool storeNewDecryptedText(QString text);
+
 private:
     int id;
     QString name;
     QString fileName;
     QString noteText;
+    QString decryptedNoteText;
     bool hasDirtyData;
     QDateTime fileCreated;
     QDateTime fileLastModified;
