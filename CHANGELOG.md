@@ -7,6 +7,8 @@
     - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
     - <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
     - <kbd>Ctrl</kbd> + <kbd>/</kbd> resets the note text font size
+- added more German, Portuguese, Hungarian and Dutch translation (thank you 
+  mlimacarlos and Fabijenna)
 
 ## 1.2.1
 - client side **note encryption** changed from SimpleCrypt to the much 
