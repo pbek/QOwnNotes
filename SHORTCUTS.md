@@ -58,6 +58,9 @@ Important Shortcuts
     - <kbd>Alt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
 - <kbd>Ctrl</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>Ctrl</kbd> + <kbd>/</kbd> resets the note text font size
 
 ### In the Todo list
 
@@ -122,6 +125,9 @@ Important Shortcuts
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Right</kbd> jumps forward in the note history
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>0..9</kbd> sets a note bookmark on bookmark slot 0..9
 - <kbd>⌘</kbd> + <kbd>0..9</kbd> jumps to the note bookmark on bookmark slot 0..9
+- <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+- <kbd>⌘</kbd> + <kbd>/</kbd> resets the note text font size
 
 ### In the Todo list
 

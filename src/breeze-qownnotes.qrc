@@ -58,5 +58,10 @@
         <file alias="16x16/zoom-original.svg">icons/breeze-qownnotes/16x16/zoom-original.svg</file>
         <file alias="16x16/format-text-bold.svg">icons/breeze-qownnotes/16x16/format-text-bold.svg</file>
         <file alias="16x16/format-text-italic.svg">icons/breeze-qownnotes/16x16/format-text-italic.svg</file>
+        <file alias="16x16/zoom-in.svg">icons/breeze-qownnotes/16x16/zoom-in.svg</file>
+        <file alias="16x16/zoom-out.svg">icons/breeze-qownnotes/16x16/zoom-out.svg</file>
+        <file alias="16x16/zoom-fit-height.svg">icons/breeze-qownnotes/16x16/zoom-fit-height.svg</file>
+        <file alias="16x16/format-font-size-less.svg">icons/breeze-qownnotes/16x16/format-font-size-less.svg</file>
+        <file alias="16x16/format-font-size-more.svg">icons/breeze-qownnotes/16x16/format-font-size-more.svg</file>
     </qresource>
 </RCC>

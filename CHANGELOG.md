@@ -2,6 +2,11 @@
 
 ## 1.2.2
 - fixed a crash that could happen when a recent notes folder was selected
+- added shortcuts to quickly increase or decrease the font size of the notes 
+  in edit mode
+    - <kbd>Ctrl</kbd> + <kbd>+</kbd> increases the note text font size by one point
+    - <kbd>Ctrl</kbd> + <kbd>-</kbd> decreases the note text font size by one point
+    - <kbd>Ctrl</kbd> + <kbd>/</kbd> resets the note text font size
 
 ## 1.2.1
 - client side **note encryption** changed from SimpleCrypt to the much 

@@ -3410,3 +3410,41 @@ void MainWindow::on_actionFormat_text_italic_triggered()
         c.insertText("*" + selectedText + "*");
     }
 }
+
+/**
+ * Increases the note text font size by one
+ */
+void MainWindow::on_action_Increase_note_text_size_triggered()
+{
+    int fontSize = ui->noteTextEdit
+            ->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
+    ui->encryptedNoteTextEdit->setStyles();
+    ui->encryptedNoteTextEdit->highlighter()->parse();
+    showStatusBarMessage(
+            tr("Increased font size to %1 pt").arg(fontSize), 2000);
+}
+
+/**
+ * Decreases the note text font size by one
+ */
+void MainWindow::on_action_Decrease_note_text_size_triggered()
+{
+    int fontSize = ui->noteTextEdit
+            ->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
+    ui->encryptedNoteTextEdit->setStyles();
+    ui->encryptedNoteTextEdit->highlighter()->parse();
+    showStatusBarMessage(
+            tr("Decreased font size to %1 pt").arg(fontSize), 2000);
+}
+
+/**
+ * Resets the note text font size
+ */
+void MainWindow::on_action_Reset_note_text_size_triggered()
+{
+    int fontSize = ui->noteTextEdit
+            ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
+    ui->encryptedNoteTextEdit->setStyles();
+    ui->encryptedNoteTextEdit->highlighter()->parse();
+    showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 2000);
+}

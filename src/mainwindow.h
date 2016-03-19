@@ -207,6 +207,12 @@ private slots:
 
     void on_actionFormat_text_italic_triggered();
 
+    void on_action_Increase_note_text_size_triggered();
+
+    void on_action_Decrease_note_text_size_triggered();
+
+    void on_action_Reset_note_text_size_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

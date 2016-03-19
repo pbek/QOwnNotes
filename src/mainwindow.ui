@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1163</width>
+    <width>1199</width>
     <height>836</height>
    </rect>
   </property>
@@ -261,7 +261,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1163</width>
+     <width>1199</width>
      <height>28</height>
     </rect>
    </property>
@@ -375,6 +375,10 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
+    <addaction name="separator"/>
+    <addaction name="action_Increase_note_text_size"/>
+    <addaction name="action_Decrease_note_text_size"/>
+    <addaction name="action_Reset_note_text_size"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
@@ -417,6 +421,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionOpen_List"/>
    <addaction name="separator"/>
    <addaction name="actionToggle_distraction_free_mode"/>
+   <addaction name="action_Increase_note_text_size"/>
+   <addaction name="action_Decrease_note_text_size"/>
+   <addaction name="action_Reset_note_text_size"/>
    <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -987,6 +994,42 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+I</string>
+   </property>
+  </action>
+  <action name="action_Increase_note_text_size">
+   <property name="icon">
+    <iconset theme="format-font-size-more" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-more.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-more.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Increase note text size</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl++</string>
+   </property>
+  </action>
+  <action name="action_Decrease_note_text_size">
+   <property name="icon">
+    <iconset theme="format-font-size-less" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-less.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-less.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Decrease note text size</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+-</string>
+   </property>
+  </action>
+  <action name="action_Reset_note_text_size">
+   <property name="icon">
+    <iconset theme="zoom-fit-height" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/zoom-fit-height.svg</normaloff>:/icons/breeze-qownnotes/16x16/zoom-fit-height.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Reset note text size</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+/</string>
    </property>
   </action>
  </widget>

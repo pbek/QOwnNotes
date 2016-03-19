@@ -134,6 +134,96 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 }
 
 /**
+ * Modifies the font size of the text edit
+ */
+int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
+    QSettings settings;
+    QFont font = this->font();
+    int fontSize = font.pointSize();
+    bool doSetStyles = false;
+
+    // modify the text edit default font
+    QString fontString = settings.value(
+            "MainWindow/noteTextEdit.font").toString();
+    if (fontString != "") {
+        font.fromString(fontString);
+
+        fontSize = font.pointSize();
+
+        switch (mode) {
+            case FontModificationMode::Increase:
+                fontSize++;
+                doSetStyles = true;
+                break;
+            case FontModificationMode::Decrease:
+                fontSize--;
+
+                if (fontSize < 5) {
+                    fontSize = 5;
+                } else {
+                    doSetStyles = true;
+                }
+                break;
+            default:
+                QTextEdit textEdit;
+                int newFontSize = textEdit.font().pointSize();
+                if ( fontSize != newFontSize ) {
+                    fontSize = newFontSize;
+                    doSetStyles = true;
+                }
+        }
+
+        font.setPointSize(fontSize);
+
+        // store the font settings
+        settings.setValue("MainWindow/noteTextEdit.font", font.toString());
+    }
+
+    // modify the text edit code font
+    fontString = settings.value("MainWindow/noteTextEdit.code.font").toString();
+    if (fontString != "") {
+        font.fromString(fontString);
+
+        int codeFontSize = font.pointSize();
+
+        switch (mode) {
+            case FontModificationMode::Increase:
+                fontSize++;
+                doSetStyles = true;
+                break;
+            case FontModificationMode::Decrease:
+                fontSize--;
+
+                if (fontSize < 5) {
+                    fontSize = 5;
+                } else {
+                    doSetStyles = true;
+                }
+                break;
+            default:
+                QTextEdit textEdit;
+                int newFontSize = textEdit.font().pointSize();
+                if ( fontSize != newFontSize ) {
+                    fontSize = newFontSize;
+                    doSetStyles = true;
+                }
+        }
+
+        font.setPointSize(codeFontSize);
+
+        // store the font settings
+        settings.setValue("MainWindow/noteTextEdit.code.font", font.toString());
+    }
+
+    if (doSetStyles) {
+        this->setStyles();
+        highlighter()->parse();
+    }
+
+    return fontSize;
+}
+
+/**
  * Handles clicked urls (including relative urls)
  *
  * examples:
