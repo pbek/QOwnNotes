@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.2.2
+- fixed a crash that could happen when a recent notes folder was selected
+
 ## 1.2.1
 - client side **note encryption** changed from SimpleCrypt to the much 
   more secure **AES-256** encryption

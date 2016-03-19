@@ -169,7 +169,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // set the edit mode for the note text edit
     // this->setNoteTextEditMode(true);
 
-
     // load the recent note folder list in the menu
     this->loadRecentNoteFolderListMenu(notesPath);
 
@@ -478,7 +477,25 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
     }
 
     // clear menu list
-    ui->menuRecentNoteFolders->clear();
+    // we must not do this, because the app might crash if trackAction() is
+    // called, because the action was triggered and then removed
+//    ui->menuRecentNoteFolders->clear();
+
+    // find all actions of the recent note folders menu
+    QList<QAction*> actions =
+            ui->menuRecentNoteFolders->findChildren<QAction*>();
+
+    // loop through all actions of the recent note folders menu and hide them
+    // this is a workaround because the app might crash if trackAction() is
+    // called, because the action was triggered and then removed
+    int c = 0;
+    Q_FOREACH(QAction* action, actions) {
+            // start with the 2nd item, the first item is the menu itself
+            if (c++ > 0) {
+                // hide menu item
+                action->setVisible(false);
+            }
+        }
 
     const QSignalBlocker blocker(ui->recentNoteFolderComboBox);
     {
