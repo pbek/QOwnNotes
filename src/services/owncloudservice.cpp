@@ -311,8 +311,7 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
 
     // direct server url request without auth header
     QNetworkReply *reply = networkManager->get(r);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 
     QUrlQuery q;
     q.addQueryItem("format", format);
@@ -364,6 +363,17 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
         }
     } else {
         settingsDialog->setOKLabelData(5, "empty", SettingsDialog::Failure);
+    }
+}
+
+/**
+ * Ignores ssl errors for a QNetworkReply if allowed
+ */
+void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
+    QSettings settings;
+    if (settings.value("networking/ignoreSSLErrors", true).toBool()) {
+        QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
+                         SLOT(ignoreSslErrors()));
     }
 }
 
@@ -455,8 +465,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "REPORT",
                                                              buffer);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -503,8 +512,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(QString notesPath,
     addAuthHeader(&r);
 
     QNetworkReply *reply = networkManager->get(r);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -556,8 +564,7 @@ void OwnCloudService::loadTrash(QString notesPath, MainWindow *mainWindow) {
     addAuthHeader(&r);
 
     QNetworkReply *reply = networkManager->get(r);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
@@ -570,7 +577,8 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 }
 
 /**
- * Try to find the server notes path with the help of the notes path and the local ownCloud path
+ * Try to find the server notes path with the help of the notes path and
+ * the local ownCloud path
  *
  * @brief OwnCloudService::getServerNotesPath
  * @param notesPath
@@ -660,7 +668,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     // get the filename to check if everything is all right
     QScriptValue fileName = result.property(0).property("file_name");
 
-    // check if we got no usefull data
+    // check if we got no useful data
     if (fileName.toString() == "") {
         if (QMessageBox::critical(
                 0, "ownCloud server connection error!",
@@ -956,8 +964,7 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
     QBuffer *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "PUT", buffer);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -978,7 +985,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
 
     timer.setSingleShot(true);
     connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    connect(manager, SIGNAL(finished(QNetworkReply * )), &loop, SLOT(quit()));
+    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
 
     // 5 sec timeout for the request
     timer.start(5000);

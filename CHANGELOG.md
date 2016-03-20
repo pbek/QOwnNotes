@@ -6,6 +6,12 @@
     - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
 - you can now close the distraction free mode with <kbd>Esc</kbd>
 - you can now open the settings with <kbd>Ctrl</kbd> + <kbd>,</kbd>
+- there now is a new setting for **ignoring SSL errors** when connecting to 
+  your ownCloud server
+    - by default this setting is turned on, to mimic recent behaviour of 
+      QOwnNotes
+    - get free SSL certificates at [Let's encrypt](https://letsencrypt.org/) 
+      for your own server and turn off the *ignoring SSL errors* checkbox!
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.2

@@ -82,6 +82,8 @@ private:
 
     void loadTodoItems(QString &data);
 
+    void ignoreSslErrorsIfAllowed(QNetworkReply *reply);
+
 signals:
 
 private slots:

@@ -286,6 +286,9 @@ void SettingsDialog::storeSettings() {
                       ? OwnCloudService::CalendarPlus
                       : OwnCloudService::DefaultOwnCloudCalendar);
 
+    settings.setValue("networking/ignoreSSLErrors",
+                      ui->ignoreSSLErrorsCheckBox->isChecked());
+
     // store the proxy settings
     storeProxySettings();
 }
@@ -372,6 +375,9 @@ void SettingsDialog::readSettings() {
             "ownCloud/todoCalendarUrlList").toStringList();
     // load the todo calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
+
+    ui->ignoreSSLErrorsCheckBox->setChecked(
+            settings.value("networking/ignoreSSLErrors", true).toBool());
 
     // load the proxy settings
     loadProxySettings();
