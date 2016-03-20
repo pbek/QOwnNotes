@@ -19,6 +19,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
+    - you can also close it with <kbd>Esc</kbd>
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
@@ -88,6 +89,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgDown</kbd>
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
+    - you can also close it with <kbd>Esc</kbd>
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard

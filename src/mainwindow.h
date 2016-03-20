@@ -340,4 +340,6 @@ private:
     bool isValidNoteFile(QFile *file);
 
     void insertHtml(QString html);
+
+    bool isInDistractionFreeMode();
 };

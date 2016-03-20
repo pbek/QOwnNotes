@@ -259,13 +259,17 @@ MainWindow::~MainWindow() {
  * Restores the distraction free mode
  */
 void MainWindow::restoreDistractionFreeMode() {
-    QSettings settings;
-    bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
-
-    if (isInDistractionFreeMode) {
+    if (isInDistractionFreeMode()) {
         setDistractionFreeMode(true);
     }
+}
+
+/**
+ * Checks if we are in distraction free mode
+ */
+bool MainWindow::isInDistractionFreeMode() {
+    QSettings settings;
+    return settings.value("DistractionFreeMode/isEnabled").toBool();
 }
 
 /**
@@ -273,8 +277,7 @@ void MainWindow::restoreDistractionFreeMode() {
  */
 void MainWindow::toggleDistractionFreeMode() {
     QSettings settings;
-    bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
+    bool isInDistractionFreeMode = this->isInDistractionFreeMode();
 
     qDebug() << __func__ << " - 'isInDistractionFreeMode': " <<
     isInDistractionFreeMode;
@@ -405,11 +408,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
  * Sets the distraction free mode if it is currently other than we want it to be
  */
 void MainWindow::changeDistractionFreeMode(bool enabled) {
-    QSettings settings;
-    bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
-
-    if (isInDistractionFreeMode != enabled) {
+    if (isInDistractionFreeMode() != enabled) {
         setDistractionFreeMode(enabled);
     }
 }
@@ -418,11 +417,7 @@ void MainWindow::changeDistractionFreeMode(bool enabled) {
  * Shows a status bar message if not in distraction free mode
  */
 void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
-    QSettings settings;
-    bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
-
-    if (!isInDistractionFreeMode) {
+    if (!isInDistractionFreeMode()) {
         ui->statusBar->showMessage(message, timeout);
     }
 }
@@ -1431,11 +1426,8 @@ void MainWindow::resetCurrentNote() {
 void MainWindow::storeSettings() {
     QSettings settings;
 
-    bool isInDistractionFreeMode =
-            settings.value("DistractionFreeMode/isEnabled").toBool();
-
     // don't store the window settings in distraction free mode
-    if (!isInDistractionFreeMode) {
+    if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
         settings.setValue("MainWindow/windowState", saveState());
         settings.setValue("mainSplitterSizes", this->mainSplitter->saveState());
@@ -1469,12 +1461,12 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // set focus to the notes list if Key_Down or Key_Tab were
             // pressed in the search line edit
             if ((keyEvent->key() == Qt::Key_Down) ||
-                    (keyEvent->key() == Qt::Key_Tab)) {
+                (keyEvent->key() == Qt::Key_Tab)) {
                 // choose an other selected item if current item is invisible
                 QListWidgetItem *item = ui->notesListWidget->currentItem();
                 if ((item != NULL) &&
-                        ui->notesListWidget->currentItem()->isHidden() &&
-                        (this->firstVisibleNoteListRow >= 0)) {
+                    ui->notesListWidget->currentItem()->isHidden() &&
+                    (this->firstVisibleNoteListRow >= 0)) {
                     ui->notesListWidget->setCurrentRow(
                             this->firstVisibleNoteListRow);
                 }
@@ -1482,6 +1474,17 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 // give the keyboard focus to the notes list widget
                 ui->notesListWidget->setFocus();
                 return true;
+            }
+            return false;
+        } else if (obj == activeNoteTextEdit()) {
+            // check if we want to leave the distraction free mode and the
+            // search widget is not visible (because we want to close that
+            // first)
+            if ((keyEvent->key() == Qt::Key_Escape)
+                && isInDistractionFreeMode()
+                && !activeNoteTextEdit()->searchWidget()->isVisible()) {
+                toggleDistractionFreeMode();
+                return false;
             }
             return false;
         } else if (obj == ui->notesListWidget) {
