@@ -4,6 +4,7 @@
 - added some alternate shortcuts for moving between notes
     - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
+- added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.2
 - fixed a crash that could happen when a recent notes folder was selected

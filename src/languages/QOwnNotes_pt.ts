@@ -422,17 +422,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1005"/>
       <source>&amp;Increase note text size</source>
-      <translation type="unfinished">&amp;Increase note text size</translation>
+      <translation>&amp;Aumentar o tamanho da fonte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1017"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>&amp;Diminuir o tamanho da fonte</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1029"/>
       <source>&amp;Reset note text size</source>
-      <translation type="unfinished">&amp;Reset note text size</translation>
+      <translation>&amp;Restaurar o tamanho original da fonte</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="935"/>
@@ -748,17 +748,17 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="3424"/>
       <source>Increased font size to %1 pt</source>
-      <translation type="unfinished">Increased font size to %1 pt</translation>
+      <translation>Incrementar o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3437"/>
       <source>Decreased font size to %1 pt</source>
-      <translation type="unfinished">Decreased font size to %1 pt</translation>
+      <translation>Diminuir o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3449"/>
       <source>Reset font size to %1 pt</source>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Restaurar o tamanho da fonte para %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2046"/>
