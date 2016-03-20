@@ -186,6 +186,10 @@ MainWindow::MainWindow(QWidget *parent) :
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
 #endif
 
+    // adding some alternate shortcuts
+    ui->actionNext_note->setShortcut(QKeySequence("Ctrl+PgDown"));
+    ui->actionPrevious_Note->setShortcut(QKeySequence("Ctrl+PgUp"));
+
     // disable the update check menu entry if the release string was set
 //    if (!QString(RELEASE).isEmpty()) {
 //        ui->actionCheck_for_updates->setVisible(false);

@@ -860,7 +860,7 @@ p, li { white-space: pre-wrap; }
     <string>Next note</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+PgDown</string>
+    <string notr="true">Alt+Down</string>
    </property>
   </action>
   <action name="actionPrevious_Note">
@@ -872,7 +872,7 @@ p, li { white-space: pre-wrap; }
     <string>Previous note</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+PgUp</string>
+    <string notr="true">Alt+Up</string>
    </property>
   </action>
   <action name="actionToggle_distraction_free_mode">

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 1.2.3
+- added some alternate shortcuts for moving between notes
+    - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
+    - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
+
 ## 1.2.2
 - fixed a crash that could happen when a recent notes folder was selected
 - added shortcuts to quickly increase or decrease the font size of the notes 

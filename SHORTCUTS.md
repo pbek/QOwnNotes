@@ -14,8 +14,10 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> shows the current note in the file manager
-- <kbd>Ctrl</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
-- <kbd>Ctrl</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
+- <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
+    - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgDown</kbd>
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
@@ -81,8 +83,10 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
-- <kbd>⌘</kbd> + <kbd>PgUp</kbd> jumps to the previous visible note
-- <kbd>⌘</kbd> + <kbd>PgDn</kbd> jumps to the next visible note
+- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgUp</kbd>
+- <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
+    - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgDown</kbd>
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
