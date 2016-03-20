@@ -23,6 +23,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
+- <kbd>Ctrl</kbd> + <kbd>,</kbd> opens the settings
 
 ### In the note search bar
 
@@ -93,6 +94,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
+- <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
 
 ### In the note search bar
 

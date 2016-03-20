@@ -576,6 +576,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>&amp;Settings</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+,</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::PreferencesRole</enum>
    </property>

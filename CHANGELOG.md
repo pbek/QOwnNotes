@@ -5,6 +5,7 @@
     - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
 - you can now close the distraction free mode with <kbd>Esc</kbd>
+- you can now open the settings with <kbd>Ctrl</kbd> + <kbd>,</kbd>
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.2
