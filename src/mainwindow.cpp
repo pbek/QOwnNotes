@@ -186,15 +186,13 @@ MainWindow::MainWindow(QWidget *parent) :
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
 #endif
 
-    // adding some alternate shortcuts
-    ui->actionNext_note->setShortcut(QKeySequence("Ctrl+PgDown"));
-    ui->actionPrevious_Note->setShortcut(QKeySequence("Ctrl+PgUp"));
-
-    // disable the update check menu entry if the release string was set
-//    if (!QString(RELEASE).isEmpty()) {
-//        ui->actionCheck_for_updates->setVisible(false);
-//        ui->actionCheck_for_updates->setEnabled(false);
-//    }
+    // adding some alternate shortcuts for changing the current note
+    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+PgDown"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionNext_note_triggered()));
+    shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionPrevious_Note_triggered()));
 
     // let the note folder be changed with the recent note folder combo box
     QObject::connect(
