@@ -904,6 +904,9 @@ void MainWindow::notesWereModified(const QString &str) {
 
             qDebug() << "Current note was modified externally!";
 
+            showStatusBarMessage(
+                    tr("current note was modified externally"), 3000);
+
             // if we don't want to get notifications at all
             // external modifications check if we really need one
             if (!this->notifyAllExternalModifications) {
@@ -993,6 +996,9 @@ void MainWindow::notesWereModified(const QString &str) {
     } else {
         qDebug() << "other note was changed: " << str;
 
+        showStatusBarMessage(
+                tr("note was modified externally: %1").arg(str), 3000);
+
         // rebuild and reload the notes directory list
         buildNotesIndex();
         loadNoteDirectoryList();
@@ -1002,6 +1008,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
 void MainWindow::notesDirectoryWasModified(const QString &str) {
     qDebug() << "notesDirectoryWasModified: " << str;
+    showStatusBarMessage(tr("notes directory was modified externally"), 3000);
 
     // rebuild and reload the notes directory list
     buildNotesIndex();

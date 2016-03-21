@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 1.2.4
+- added some information about [Let's encrypt](https://letsencrypt.org/) to 
+  the settings
+- added some status messages about externally modified notes
+
 ## 1.2.3
 - added some alternate shortcuts for moving between notes
     - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note

@@ -376,8 +376,10 @@ void SettingsDialog::readSettings() {
     // load the todo calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
 
-    ui->ignoreSSLErrorsCheckBox->setChecked(
-            settings.value("networking/ignoreSSLErrors", true).toBool());
+    bool ignoreSSLErrors =
+            settings.value("networking/ignoreSSLErrors", true).toBool();
+    ui->ignoreSSLErrorsCheckBox->setChecked(ignoreSSLErrors);
+    ui->letsEncryptInfoLabel->setVisible(ignoreSSLErrors);
 
     // load the proxy settings
     loadProxySettings();
@@ -949,4 +951,9 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked()
         QString filePath(fileNames.at(0));
         ui->externalEditorPathLineEdit->setText(filePath);
     }
+}
+
+void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked)
+{
+    ui->letsEncryptInfoLabel->setVisible(checked);
 }

@@ -91,6 +91,8 @@ private slots:
 
     void storeProxySettings();
 
+    void on_ignoreSSLErrorsCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;
