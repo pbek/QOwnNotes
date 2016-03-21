@@ -106,6 +106,23 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item>
+            <widget class="QPushButton" name="saveAndInsertButton">
+             <property name="toolTip">
+              <string>save current todo item</string>
+             </property>
+             <property name="text">
+              <string>save and &amp;insert into note</string>
+             </property>
+             <property name="icon">
+              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+             </property>
+             <property name="shortcut">
+              <string notr="true">Ctrl+I</string>
+             </property>
+            </widget>
+           </item>
+           <item>
             <widget class="QPushButton" name="removeButton">
              <property name="toolTip">
               <string>remove current todo item</string>

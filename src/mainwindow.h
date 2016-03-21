@@ -50,6 +50,8 @@ public:
 
     void handleInsertingFromMimeData(const QMimeData *mimeData);
 
+    QMarkdownTextEdit *activeNoteTextEdit();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -153,7 +155,7 @@ private slots:
 
     void on_actionShow_changelog_triggered();
 
-    void openNoteUrl(QUrl url);
+    void openLocalUrl(QUrl url);
 
     void on_action_Find_text_in_note_triggered();
 
@@ -309,8 +311,6 @@ private:
 
     void askForEncryptedNotePasswordIfNeeded(QString additionalText = "");
 
-    QMarkdownTextEdit *activeNoteTextEdit();
-
     void showAppMetricsNotificationIfNeeded();
 
     void resetCurrentNote();
@@ -342,4 +342,6 @@ private:
     void insertHtml(QString html);
 
     bool isInDistractionFreeMode();
+
+    void openTodoDialog(QString taskUid = "");
 };

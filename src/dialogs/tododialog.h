@@ -6,6 +6,7 @@
 #include <QSplitter>
 
 #include "entities/calendaritem.h"
+#include "mainwindow.h"
 #include "masterdialog.h"
 
 namespace Ui {
@@ -17,7 +18,8 @@ class TodoDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit TodoDialog(QWidget *parent = 0);
+    explicit TodoDialog(MainWindow *mainWindow, QString taskUid = "",
+                            QWidget *parent = 0);
     ~TodoDialog();
 
     void reloadTodoListItems();
@@ -27,6 +29,7 @@ public:
     void todoItemLoadingProgressBarSetMaximum(int value);
     void todoItemLoadingProgressBarHide();
     void todoItemLoadingProgressBarHideIfOnMaximum();
+
 private slots:
     void on_TodoDialog_finished(int result);
     void on_todoListSelector_currentIndexChanged(const QString &arg1);
@@ -42,12 +45,15 @@ private slots:
     void on_reloadTodoListButton_clicked();
     void on_summaryEdit_returnPressed();
     void on_newItemEdit_textChanged(const QString &arg1);
+    void on_saveAndInsertButton_clicked();
 
 private:
     Ui::TodoDialog *ui;
+    MainWindow *_mainWindow;
     QSplitter *mainSplitter;
     CalendarItem currentCalendarItem;
     CalendarItem lastCreatedCalendarItem;
+    QString _jumpToCalendarItemUid = "";
     int firstVisibleTodoListRow;
     void setupMainSplitter();
     void storeSettings();
@@ -62,6 +68,7 @@ private:
 protected:
     bool eventFilter(QObject *obj, QEvent *event);
 
+    void jumpToTodoListItem();
 };
 
 #endif // TODODIALOG_H

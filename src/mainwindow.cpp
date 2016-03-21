@@ -139,23 +139,24 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->notesListWidget->setCurrentRow(0);
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
-    ui->noteTextEdit->setIgnoredClickUrlSchemata(QStringList() << "note");
+    ui->noteTextEdit->setIgnoredClickUrlSchemata(
+            QStringList() << "note" << "task");
     ui->encryptedNoteTextEdit->setIgnoredClickUrlSchemata(
-            QStringList() << "note");
+            QStringList() << "note" << "task");
 
     // handle note url externally in the note text edit
     QObject::connect(
             ui->noteTextEdit,
             SIGNAL(urlClicked(QUrl)),
             this,
-            SLOT(openNoteUrl(QUrl)));
+            SLOT(openLocalUrl(QUrl)));
 
     // also handle note url externally in the encrypted note text edit
     QObject::connect(
             ui->encryptedNoteTextEdit,
             SIGNAL(urlClicked(QUrl)),
             this,
-            SLOT(openNoteUrl(QUrl)));
+            SLOT(openLocalUrl(QUrl)));
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -2062,6 +2063,36 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
     }
 }
 
+/**
+ * Opens the todo list dialog
+ */
+void MainWindow::openTodoDialog(QString taskUid) {
+    QSettings settings;
+    QStringList todoCalendarEnabledUrlList =
+            settings.value("ownCloud/todoCalendarEnabledUrlList")
+                    .toStringList();
+
+    // check if we have got any todo list enabled
+    if (todoCalendarEnabledUrlList.count() == 0) {
+        if (QMessageBox::warning(
+                0, tr("No selected todo lists!"),
+                tr("You have not selected any todo lists.<br />"
+                           "Please check your <strong>Todo</strong>"
+                           "configuration in the settings!"),
+                tr("Open &settings"),
+                tr("&Cancel"),
+                QString::null, 0, 1) == 0) {
+            openSettingsDialog();
+        }
+
+        return;
+    }
+
+    TodoDialog *dialog = new TodoDialog(this, taskUid, this);
+    dialog->exec();
+}
+
+
 
 
 // *****************************************************************************
@@ -2292,9 +2323,10 @@ void MainWindow::on_noteTabWidget_currentChanged(int index) {
  */
 void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
     qDebug() << __func__ << " - 'url': " << url;
+    QString scheme = url.scheme();
 
-    if (url.scheme() == "note") {
-        openNoteUrl(url);
+    if ((scheme == "note" || scheme == "task")) {
+        openLocalUrl(url);
     } else {
         ui->noteTextEdit->openUrl(url);
     }
@@ -2307,10 +2339,11 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  */
-void MainWindow::openNoteUrl(QUrl url) {
+void MainWindow::openLocalUrl(QUrl url) {
     qDebug() << __func__ << " - 'url': " << url;
+    QString scheme = url.scheme();
 
-    if (url.scheme() == "note") {
+    if (scheme == "note") {
         QString fileName = url.host();
 
         // this makes it possible to search for file names containing spaces
@@ -2343,6 +2376,8 @@ void MainWindow::openNoteUrl(QUrl url) {
                 setCurrentNote(note);
             }
         }
+    } else if (scheme == "task") {
+        openTodoDialog(url.host());
     }
 }
 
@@ -2554,29 +2589,7 @@ void MainWindow::on_actionInsert_current_time_triggered() {
 }
 
 void MainWindow::on_actionOpen_List_triggered() {
-    QSettings settings;
-    QStringList todoCalendarEnabledUrlList =
-            settings.value("ownCloud/todoCalendarEnabledUrlList")
-                    .toStringList();
-
-    // check if we have got any todo list enabled
-    if (todoCalendarEnabledUrlList.count() == 0) {
-        if (QMessageBox::warning(
-                0, tr("No selected todo lists!"),
-                tr("You have not selected any todo lists.<br />"
-                           "Please check your <strong>Todo</strong>"
-                           "configuration in the settings!"),
-                tr("Open &settings"),
-                tr("&Cancel"),
-                QString::null, 0, 1) == 0) {
-            openSettingsDialog();
-        }
-
-        return;
-    }
-
-    TodoDialog *dialog = new TodoDialog(this);
-    dialog->exec();
+    openTodoDialog();
 }
 
 /**

@@ -33,6 +33,7 @@ public:
     static QList<CalendarItem> fetchAllByCalendar(QString calendar);
     static bool deleteAllByCalendar(QString calendar);
     QString getUrl();
+    QString getCalendar();
     QString getSummary();
     QString getDescription();
     void setSummary(QString text);

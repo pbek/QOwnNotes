@@ -7,12 +7,41 @@
 #include <QKeyEvent>
 #include <services/metricsservice.h>
 
-TodoDialog::TodoDialog(QWidget *parent) :
+TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
+                       QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::TodoDialog) {
-
+    _mainWindow = mainWindow;
     ui->setupUi(this);
     setupUi();
+
+    QString selectedText =
+            _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+
+    // insert the selected note text in the new item edit
+    if (!selectedText.isEmpty()) {
+        ui->newItemEdit->setText(selectedText);
+    }
+
+    if (!taskUid.isEmpty()) {
+        CalendarItem calendarItem = CalendarItem::fetchByUid(taskUid);
+        qDebug() << __func__ << " - 'calendarItem': " << calendarItem;
+
+        if (calendarItem.exists()) {
+            // set a calendar item uid to jump to later on
+            _jumpToCalendarItemUid = taskUid;
+
+            QString calendar = calendarItem.getCalendar();
+            // if the calendar of the calendar item isn't the current one we
+            // have to switch to it
+            if (ui->todoListSelector->currentText() != calendar) {
+                ui->todoListSelector->setCurrentText(calendar);
+            } else {
+                // jump to the correct todo list item
+                jumpToTodoListItem();
+            }
+        }
+    }
 }
 
 TodoDialog::~TodoDialog() {
@@ -82,6 +111,7 @@ void TodoDialog::setupMainSplitter() {
  */
 void TodoDialog::loadTodoListData() {
     const QSignalBlocker blocker(ui->todoListSelector);
+    Q_UNUSED(blocker);
 
     QSettings settings;
     ui->todoListSelector->clear();
@@ -100,7 +130,7 @@ void TodoDialog::reloadTodoList() {
 }
 
 /**
- * @brief Reloads the todo list from the SQLite database
+ * Reloads the todo list from the SQLite database
  */
 void TodoDialog::reloadTodoListItems() {
     QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(
@@ -155,11 +185,29 @@ void TodoDialog::reloadTodoListItems() {
     }
 
     // set the current row of the todo list to the first row
+    jumpToTodoListItem();
+}
+
+/**
+ * Jumps to the correct todo list item
+ */
+void TodoDialog::jumpToTodoListItem() {
+    // set the current row of the todo list to the first row
     if (ui->todoList->count() > 0) {
         int row = -1;
 
+        // let us jump to a specific calendar item if it was set in the
+        // constructor
+        if (!_jumpToCalendarItemUid.isEmpty()) {
+            row = findTodoItemRowByUID(_jumpToCalendarItemUid);
+
+            if (row != 1) {
+                _jumpToCalendarItemUid = "";
+            }
+        }
+
         // try to find a possible last created calendar item
-        if (lastCreatedCalendarItem.isFetched()) {
+        if ((row == -1) && lastCreatedCalendarItem.isFetched()) {
             row = findTodoItemRowByUID(lastCreatedCalendarItem.getUid());
 
             // clear the last created calendar item if we found it in the list
@@ -574,4 +622,26 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
     }
 
     return QDialog::eventFilter(obj, event);
+}
+
+/**
+ * Saves the current note and inserts a link to it in the current note of the
+ * main window
+ */
+void TodoDialog::on_saveAndInsertButton_clicked()
+{
+    on_saveButton_clicked();
+
+    QString selectedText =
+            _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
+
+    QString taskUrl = "task://" + currentCalendarItem.getUid();
+
+    // insert a link to the task in the current note
+    QString summaryText = selectedText.isEmpty() ?
+                          currentCalendarItem.getSummary() : selectedText;
+    QString insertText = "[" + summaryText + "](" + taskUrl + ")";
+
+    _mainWindow->activeNoteTextEdit()->textCursor().insertText(insertText);
+    close();
 }

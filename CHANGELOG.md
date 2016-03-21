@@ -1,9 +1,15 @@
 # QOwnNotes Changelog
 
 ## 1.2.4
+- the selected text in a note will be inserted as summary in the todo dialog
+  to create a new tasks more easily
+- you now can insert a link to a task in a note from the todo dialog
+    - tasks from these links get viewed in the todo dialog when clicked
+      if they exist  
 - added some information about [Let's encrypt](https://letsencrypt.org/) to 
   the settings
 - added some status messages about externally modified notes
+- added some missing SSL error checks
 
 ## 1.2.3
 - added some alternate shortcuts for moving between notes

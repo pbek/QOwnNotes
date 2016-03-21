@@ -30,6 +30,10 @@ QString CalendarItem::getSummary() {
     return this->summary;
 }
 
+QString CalendarItem::getCalendar() {
+    return this->calendar;
+}
+
 QString CalendarItem::getUrl() {
     return this->url;
 }
