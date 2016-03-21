@@ -405,8 +405,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "PROPFIND",
                                                              buffer);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -481,8 +480,7 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
     addAuthHeader(&r);
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -537,8 +535,7 @@ void OwnCloudService::loadVersions(QString notesPath, QString fileName,
     addAuthHeader(&r);
 
     QNetworkReply *reply = networkManager->get(r);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -745,7 +742,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     // get the directory to check if everything is all right
     QString directory = result.property(0).property("directory").toString();
 
-    // check if we got no usefull data
+    // check if we got no useful data
     if (directory == "") {
         if (QMessageBox::critical(
                 0, "ownCloud server connection error!",
@@ -909,9 +906,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             addAuthHeader(&r);
 
                             QNetworkReply *reply = networkManager->get(r);
-                            QObject::connect(reply, SIGNAL(sslErrors(
-                                    QList<QSslError>)), reply,
-                                             SLOT(ignoreSslErrors()));
+                            ignoreSslErrorsIfAllowed(reply);
 
                             requestCount++;
                         }
@@ -991,8 +986,8 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     timer.start(5000);
 
     QNetworkReply *reply = manager->get(r);
-    QObject::connect(reply, SIGNAL(sslErrors(QList<QSslError>)), reply,
-                     SLOT(ignoreSslErrors()));
+    ignoreSslErrorsIfAllowed(reply);
+
     loop.exec();
 
     if (timer.isActive()) {
