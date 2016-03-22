@@ -69,6 +69,7 @@ Important Shortcuts
 ### In the Todo list
 
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> saves the current todo item
+- <kbd>Ctrl</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current todo item
 
 
@@ -140,4 +141,5 @@ Important Shortcuts
 ### In the Todo list
 
 - <kbd>⌘</kbd> + <kbd>S</kbd> saves the current todo item
+- <kbd>⌘</kbd> + <kbd>I</kbd> saves the current todo item and inserts in into the current note
 - <kbd>⌘</kbd> + <kbd>R</kbd> removes the current todo item

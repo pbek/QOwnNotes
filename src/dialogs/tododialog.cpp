@@ -5,6 +5,7 @@
 #include <QSettings>
 #include <QMessageBox>
 #include <QKeyEvent>
+#include <QShortcut>
 #include <services/metricsservice.h>
 
 TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
@@ -85,10 +86,22 @@ void TodoDialog::setupUi() {
     // now load the todo list items
     reloadTodoList();
 
-//    installEventFilter(this);
     ui->newItemEdit->installEventFilter(this);
+    ui->todoList->installEventFilter(this);
 
     ui->newItemEdit->setFocus();
+
+    // adding shortcuts, that weren't working when defined in the ui file
+    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+S"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_saveButton_clicked()));
+    shortcut = new QShortcut(QKeySequence("Ctrl+I"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_saveAndInsertButton_clicked()));
+    shortcut = new QShortcut(QKeySequence("Ctrl+R"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_removeButton_clicked()));
+
 }
 
 void TodoDialog::setupMainSplitter() {
@@ -186,6 +199,12 @@ void TodoDialog::reloadTodoListItems() {
 
     // set the current row of the todo list to the first row
     jumpToTodoListItem();
+
+    // set the focus to the description edit if we wanted to
+    if (_setFocusToDescriptionEdit) {
+        ui->descriptionEdit->setFocus();
+        _setFocusToDescriptionEdit = false;
+    }
 }
 
 /**
@@ -443,6 +462,9 @@ void TodoDialog::on_newItemEdit_returnPressed() {
             ui->todoListSelector->currentText());
     lastCreatedCalendarItem = calItem;
 
+    // set the focus to the description edit after we loaded the tasks
+    _setFocusToDescriptionEdit = true;
+
     OwnCloudService *ownCloud = new OwnCloudService(this);
 
     // post the calendar item to the server
@@ -458,7 +480,7 @@ void TodoDialog::on_newItemEdit_returnPressed() {
 }
 
 /**
- * @brief Removes the currently selected todo list item from the ownCloud server
+ * @brief Removes the currently selected task from the ownCloud server
  */
 void TodoDialog::on_removeButton_clicked() {
     if (QMessageBox::information(
@@ -526,10 +548,10 @@ void TodoDialog::on_reloadTodoListButton_clicked() {
 }
 
 /**
- * @brief Pressing return in the summary text line of a todo item saves it
+ * Pressing return in the summary text line of a task saves it
  */
 void TodoDialog::on_summaryEdit_returnPressed() {
-    // save the todo item if the save button is enabled
+    // save the task if the save button is enabled
     if (ui->saveButton->isEnabled()) {
         on_saveButton_clicked();
     }
@@ -616,6 +638,17 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
 
                 // give the keyboard focus to the todo list widget
                 ui->todoList->setFocus();
+                return true;
+            }
+
+            return false;
+        } else if (obj == ui->todoList) {
+            // set focus to the description edit if the tab key is pressed
+            if (keyEvent->key() == Qt::Key_Tab) {
+                ui->descriptionEdit->setFocus();
+                return true;
+            } else if (keyEvent->key() == Qt::Key_Delete) {
+                on_removeButton_clicked();
                 return true;
             }
 
