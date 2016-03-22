@@ -1,13 +1,17 @@
 # QOwnNotes Changelog
 
 ## 1.2.5
-- in the todo dialog the *save and insert* button will be disabled correctly now
-- did some tab order improvements in the todo dialog
-- the description edit now gets the focus after creating a new task in the 
-  todo dialog
-- fixed the shortcuts in the todo dialog
-    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
-      for a list of all shortcuts
+- lots of todo dialog improvements
+    - the *save and insert* button will be disabled correctly now
+    - did some tab order improvements
+    - the description edit now gets the focus after creating a new task
+    - when editing a reminder date and pressing enter, the task 
+      now gets stored and the description edit gets the focus
+    - you can now remove tasks with the <kbd>Del</kbd> key
+    - fixed the shortcuts of the *Store*, *Store and insert* and *Remove* 
+      buttons
+        - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+          for a list of all shortcuts
 - added more German and Portuguese translation (thank you calis2002 and mlimacarlos)
 
 ## 1.2.4

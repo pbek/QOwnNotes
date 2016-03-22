@@ -88,6 +88,7 @@ void TodoDialog::setupUi() {
 
     ui->newItemEdit->installEventFilter(this);
     ui->todoList->installEventFilter(this);
+    ui->reminderDateTimeEdit->installEventFilter(this);
 
     ui->newItemEdit->setFocus();
 
@@ -649,6 +650,16 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             } else if (keyEvent->key() == Qt::Key_Delete) {
                 on_removeButton_clicked();
+                return true;
+            }
+
+            return false;
+        } else if (obj == ui->reminderDateTimeEdit) {
+            // store the task and set focus to the description edit if the
+            // return key is pressed
+            if (keyEvent->key() == Qt::Key_Return) {
+                on_saveButton_clicked();
+                ui->descriptionEdit->setFocus();
                 return true;
             }
 
