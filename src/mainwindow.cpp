@@ -1245,7 +1245,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     // Unexpected null receiver" here.
     QString dir = QFileDialog::getExistingDirectory(
             this,
-            tr("Select ownCloud folder"),
+            tr("Please select the folder where your notes will get stored to"),
             path,
             QFileDialog::ShowDirsOnly);
 

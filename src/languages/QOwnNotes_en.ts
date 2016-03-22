@@ -497,11 +497,6 @@ Restore current note?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1248"/>
-        <source>Select ownCloud folder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="1270"/>
         <source>No folder was selected</source>
         <translation type="unfinished"></translation>
@@ -698,6 +693,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="909"/>
         <source>current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1248"/>
+        <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1732,23 +1732,23 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="463"/>
+        <location filename="../dialogs/tododialog.cpp" line="488"/>
         <source>Remove todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="464"/>
+        <location filename="../dialogs/tododialog.cpp" line="489"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="465"/>
+        <location filename="../dialogs/tododialog.cpp" line="490"/>
         <source>&amp;Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="465"/>
+        <location filename="../dialogs/tododialog.cpp" line="490"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
