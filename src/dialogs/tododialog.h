@@ -53,7 +53,7 @@ private:
     QSplitter *mainSplitter;
     CalendarItem currentCalendarItem;
     CalendarItem lastCreatedCalendarItem;
-    QString _jumpToCalendarItemUid = "";
+    QString _jumpToCalendarItemUid;
     bool _setFocusToDescriptionEdit = false;
     int firstVisibleTodoListRow;
     void setupMainSplitter();
