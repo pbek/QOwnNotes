@@ -241,6 +241,7 @@ void TodoDialog::resetEditFrameControls() {
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
     ui->saveButton->setEnabled(false);
+    ui->saveAndInsertButton->setEnabled(false);
     ui->removeButton->setEnabled(false);
     currentCalendarItem = CalendarItem();
 }
@@ -350,6 +351,7 @@ void TodoDialog::on_todoList_currentItemChanged(
         on_prioritySlider_valueChanged(priority);
 
         ui->saveButton->setEnabled(true);
+        ui->saveAndInsertButton->setEnabled(true);
         ui->removeButton->setEnabled(true);
     }
 }

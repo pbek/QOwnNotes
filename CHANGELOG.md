@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.2.5
+- in the todo dialog the *save and insert* button will be disabled correctly now
+
 ## 1.2.4
 - the selected text in a note will be inserted as summary in the todo dialog
   to create a new tasks more easily
