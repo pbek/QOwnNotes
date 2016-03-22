@@ -8,6 +8,7 @@
 - fixed the shortcuts in the todo dialog
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- added more German and Portuguese translation (thank you calis2002 and mlimacarlos)
 
 ## 1.2.4
 - the selected text in a note will be inserted as summary in the todo dialog
