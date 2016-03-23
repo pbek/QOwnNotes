@@ -63,7 +63,8 @@ SOURCES += main.cpp\
     services/metricsservice.cpp \
     services/cryptoservice.cpp \
     dialogs/masterdialog.cpp \
-    utils/misc.cpp
+    utils/misc.cpp \
+    dialogs/welcomedialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -101,7 +102,8 @@ HEADERS  += mainwindow.h \
     services/metricsservice.h \
     services/cryptoservice.h \
     dialogs/masterdialog.h \
-    utils/misc.h
+    utils/misc.h \
+    dialogs/welcomedialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -112,7 +114,8 @@ FORMS    += mainwindow.ui \
     dialogs/trashdialog.ui \
     dialogs/linkdialog.ui \
     dialogs/tododialog.ui \
-    dialogs/passworddialog.ui
+    dialogs/passworddialog.ui \
+    dialogs/welcomedialog.ui
 
 RESOURCES += \
     images.qrc \

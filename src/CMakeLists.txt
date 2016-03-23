@@ -25,6 +25,7 @@ qt5_wrap_ui(dialogs/ui_linkdialog.h linkdialog.ui)
 qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
 qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
+qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
 
 set(RESOURCE_FILES
         breeze-qownnotes.qrc
@@ -38,6 +39,9 @@ set(RESOURCE_FILES
 qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})
 
 set(SOURCE_FILES
+    dialogs/welcomedialog.cpp
+    dialogs/welcomedialog.h
+    dialogs/welcomedialog.ui
     dialogs/aboutdialog.cpp
     dialogs/aboutdialog.h
     dialogs/aboutdialog.ui

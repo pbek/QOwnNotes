@@ -1,8 +1,10 @@
+#include "dialogs/welcomedialog.h"
 #include "mainwindow.h"
 #include <QApplication>
 #include <QtGui>
 #include <QSettings>
 #include <QTranslator>
+#include <services/metricsservice.h>
 #include "version.h"
 #include "release.h"
 
@@ -105,7 +107,37 @@ int main(int argc, char *argv[])
         QIcon::setThemeName("breeze-qownnotes");
     }
 
+    MetricsService *metricsService = MetricsService::createInstance();
+    metricsService->sendVisitIfEnabled("app/start", "App Start");
+
+    // sends locale information
+    metricsService->sendLocaleEvent();
+
+    // check legacy setting
+    QString notesPath = settings.value("General/notesPath").toString();
+
+    // migration: remove old setting if we found one and store new one
+    if (!notesPath.isEmpty()) {
+        settings.setValue("notesPath", notesPath);
+        settings.remove("General/notesPath");
+    } else {
+        notesPath = settings.value("notesPath").toString();
+    }
+
+    // for developing
+    notesPath = "";
+
+    // if the notes path is empty open the welcome dialog
+    if (notesPath.isEmpty()) {
+        WelcomeDialog welcomeDialog;
+        // exit QOwnNotes if the welcome dialog was canceled
+        if (welcomeDialog.exec() != 1) {
+            return 0;
+        }
+    }
+
     MainWindow w;
     w.show();
+
     return app.exec();
 }

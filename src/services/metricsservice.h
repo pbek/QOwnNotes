@@ -24,7 +24,7 @@ public:
             int eventValue = 0);
     void sendHeartbeat();
     static MetricsService *instance();
-    static MetricsService *createInstance(QObject *parent);
+    static MetricsService *createInstance(QObject *parent = 0);
     void sendLocaleEvent();
 
 private:

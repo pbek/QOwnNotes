@@ -48,12 +48,6 @@ MainWindow::MainWindow(QWidget *parent) :
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
 
-    MetricsService *metricsService = MetricsService::createInstance(this);
-    metricsService->sendVisitIfEnabled("app/start", "App Start");
-
-    // sends locale information
-    metricsService->sendLocaleEvent();
-
     ClientProxy proxy;
     // refresh the Qt proxy settings
     proxy.setupQtProxyFromSettings();
@@ -749,16 +743,8 @@ void MainWindow::readSettings() {
     // read all relevant settings, that can be set in the settings dialog
     readSettingsFromSettingsDialog();
 
-    // check legacy setting
-    this->notesPath = settings.value("General/notesPath").toString();
-
-    // migration: remove old setting if we found one and store new one
-    if (this->notesPath != "") {
-        settings.setValue("notesPath", this->notesPath);
-        settings.remove("General/notesPath");
-    } else {
-        this->notesPath = settings.value("notesPath").toString();
-    }
+    // get notes path
+    this->notesPath = settings.value("notesPath").toString();
 
     // migration: remove GAnalytics-cid
     if (!settings.value("GAnalytics-cid").toString().isEmpty()) {
