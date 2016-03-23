@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.2.6
+- fixed building of QOwnNotes under ARM by patching the Botan library
+  (for [Issue #116](https://github.com/pbek/QOwnNotes/issues/116))
+
 ## 1.2.5
 - lots of todo dialog improvements
     - the *save and insert* button will be disabled correctly now
