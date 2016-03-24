@@ -87,12 +87,23 @@
         <property name="text">
          <string>&amp;Back</string>
         </property>
+        <property name="icon">
+         <iconset theme="go-previous" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</iconset>
+        </property>
        </widget>
       </item>
       <item>
        <widget class="QPushButton" name="nextButton">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
         <property name="text">
          <string>&amp;Next</string>
+        </property>
+        <property name="icon">
+         <iconset theme="go-next" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</iconset>
         </property>
        </widget>
       </item>
