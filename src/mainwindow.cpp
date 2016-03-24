@@ -1786,6 +1786,24 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 QString name = item->text();
                 Note note = Note::fetchByName(name);
 
+                // remove note path form directory watcher
+                this->noteDirectoryWatcher.removePath(note.fullNoteFilePath());
+
+                if (note.getId() == currentNote.getId()) {
+                    // reset the current note
+                    this->currentNote = Note();
+
+                    // clear the note text edit
+                    const QSignalBlocker blocker2(ui->noteTextEdit);
+                    Q_UNUSED(blocker2);
+                    ui->noteTextEdit->clear();
+
+                    // clear the encrypted note text edit
+                    const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
+                    Q_UNUSED(blocker3);
+                    ui->encryptedNoteTextEdit->clear();
+                }
+
                 // move note
                 bool result = note.move(destinationFolder);
                 if (result) {

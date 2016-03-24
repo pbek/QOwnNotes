@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.2.7
+- fixed a problem after moving notes to an other folder
+  (for [Issue #117](https://github.com/pbek/QOwnNotes/issues/117))
+
 ## 1.2.6
 - fixed building of QOwnNotes under ARM by patching the Botan library
   (for [Issue #116](https://github.com/pbek/QOwnNotes/issues/116))
