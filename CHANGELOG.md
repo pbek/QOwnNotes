@@ -3,6 +3,12 @@
 ## 1.2.6
 - fixed building of QOwnNotes under ARM by patching the Botan library
   (for [Issue #116](https://github.com/pbek/QOwnNotes/issues/116))
+- there now is a setup-wizard-like welcome dialog that opens if no note path is
+  set (for example at first start of QOwnNotes)
+    - there you can setup your notes path
+    - reach the ownCloud settings to setup access to your ownCloud server
+    - reach the general settings to disable app metrics
+- added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.5
 - lots of todo dialog improvements
