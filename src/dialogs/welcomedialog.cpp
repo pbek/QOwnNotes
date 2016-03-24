@@ -40,7 +40,7 @@ void WelcomeDialog::on_nextButton_clicked()
         // try to create the note folder, if it failed stay on page
         if (!handleNoteFolderSetup()) {
             return;
-        };
+        }
     }
 
     if (index < maxIndex) {
@@ -48,6 +48,10 @@ void WelcomeDialog::on_nextButton_clicked()
         ui->stackedWidget->setCurrentIndex(index);
     }
 
+    if (index == WelcomePages::MetricsPage) {
+        QSettings settings;
+        settings.setValue("appMetrics/notificationShown", true);
+    }
     ui->finishButton->setEnabled(_allowFinishButton);
     ui->backButton->setEnabled(true);
     ui->nextButton->setEnabled(index < maxIndex);
