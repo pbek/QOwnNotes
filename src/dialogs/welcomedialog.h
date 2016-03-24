@@ -33,6 +33,16 @@ private slots:
 
     void on_ownCloudSettingsButton_clicked();
 
+    void on_generalSettingsButton_clicked();
+
 private:
     Ui::WelcomeDialog *ui;
+    bool _allowFinishButton;
+    QString _notesPath;
+
+    bool handleNoteFolderSetup();
+
+    void showNoteFolderErrorMessage(QString message);
+
+    void storeNoteFolderSettings();
 };

@@ -121,17 +121,17 @@ int main(int argc, char *argv[])
         settings.setValue("notesPath", notesPath);
         settings.remove("General/notesPath");
     } else {
+        // load the notes path
         notesPath = settings.value("notesPath").toString();
     }
 
-    // for developing
-    notesPath = "";
+    QDir dir(notesPath);
 
-    // if the notes path is empty open the welcome dialog
-    if (notesPath.isEmpty()) {
+    // if the notes path is empty or doesn't exist open the welcome dialog
+    if (notesPath.isEmpty() || !dir.exists()) {
         WelcomeDialog welcomeDialog;
         // exit QOwnNotes if the welcome dialog was canceled
-        if (welcomeDialog.exec() != 1) {
+        if (welcomeDialog.exec() != QDialog::Accepted) {
             return 0;
         }
     }
