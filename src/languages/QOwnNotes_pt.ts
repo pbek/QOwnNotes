@@ -1882,87 +1882,87 @@ Isso não poderá ser desfeito!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Bem-vindo ao QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
+      <translation>arquivo de texto com suporte a notação markdown e integração com ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Voltar</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="95"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Próximo</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="108"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Finalizado</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="131"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancelar</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="160"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Diretório de Notas</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="166"/>
       <source>create note folder if not existing</source>
-      <translation type="unfinished">create note folder if not existing</translation>
+      <translation>criar o diretório de notas se ele não existir</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="176"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Por favor, selecione onde você deseja armazenar suas notas:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>select &amp;folder</source>
-      <translation type="unfinished">select &amp;folder</translation>
+      <translation>selecione o &amp;diretório</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="294"/>
       <source>If you want to be able to access an ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation type="unfinished">If you want to be able to access an ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
+      <translation>Se você deseja acessar o servidor ownCloud você pode configurá-lo agora. Você também pode faze-lo posteriormente.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="304"/>
       <source>open ownCloud &amp;settings</source>
-      <translation type="unfinished">open ownCloud &amp;settings</translation>
+      <translation>abrir &amp;configurações do ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>open general &amp;settings</source>
-      <translation type="unfinished">open general &amp;settings</translation>
+      <translation>abrir configurações &amp;gerais</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes rastreará anonimamente os dados de uso, isso ajuda a decidir que partes do QOwnNotes serão melhoradas posteriormente e a procurar bugs. Você pode desabilitar esse comportamento nas configurações.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="72"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>Não é possível criar o caminho nota!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="75"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Este caminho de nota não existe!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="124"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Por favor, selecione a pasta onde suas anotações ficarão armazenadas</translation>
     </message>
   </context>
 </TS>
