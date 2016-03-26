@@ -1,12 +1,13 @@
 #pragma once
 
+#include "masterdialog.h"
 #include <QDialog>
 
 namespace Ui {
 class WelcomeDialog;
 }
 
-class WelcomeDialog : public QDialog
+class WelcomeDialog : public MasterDialog
 {
     Q_OBJECT
 
@@ -45,4 +46,6 @@ private:
     void showNoteFolderErrorMessage(QString message);
 
     void storeNoteFolderSettings();
+
+    void closeEvent(QCloseEvent *event);
 };

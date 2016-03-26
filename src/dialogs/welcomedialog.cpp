@@ -4,9 +4,10 @@
 #include "welcomedialog.h"
 #include "ui_welcomedialog.h"
 #include "settingsdialog.h"
+#include "services/metricsservice.h"
 
 WelcomeDialog::WelcomeDialog(QWidget *parent) :
-    QDialog(parent),
+        MasterDialog(parent),
     ui(new Ui::WelcomeDialog)
 {
     ui->setupUi(this);
@@ -28,11 +29,15 @@ WelcomeDialog::~WelcomeDialog()
 
 void WelcomeDialog::on_cancelButton_clicked()
 {
+    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/cancel");
+
     done(QDialog::Rejected);
 }
 
 void WelcomeDialog::on_nextButton_clicked()
 {
+    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/next");
+
     int index = ui->stackedWidget->currentIndex();
     int maxIndex = ui->stackedWidget->count() - 1;
 
@@ -74,9 +79,13 @@ bool WelcomeDialog::handleNoteFolderSetup() {
                 _allowFinishButton = true;
             } else {
                 showNoteFolderErrorMessage(tr("Cannot create note path!"));
+                MetricsService::instance()->sendVisitIfEnabled(
+                        "welcome-dialog/note-folder/cannot-create");
             }
         } else {
             showNoteFolderErrorMessage(tr("This note path doesn't exist!"));
+            MetricsService::instance()->sendVisitIfEnabled(
+                    "welcome-dialog/note-folder/not-exist");
         }
     }
 
@@ -99,12 +108,17 @@ void WelcomeDialog::showNoteFolderErrorMessage(QString message) {
  * Stores the note path in the settings
  */
 void WelcomeDialog::storeNoteFolderSettings() {
+    MetricsService::instance()
+            ->sendVisitIfEnabled("welcome-dialog/note-folder/stored");
+
     QSettings settings;
     settings.setValue("notesPath", _notesPath);
 }
 
 void WelcomeDialog::on_backButton_clicked()
 {
+    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/back");
+
     int index = ui->stackedWidget->currentIndex();
 
     if (index > 0) {
@@ -118,11 +132,16 @@ void WelcomeDialog::on_backButton_clicked()
 
 void WelcomeDialog::on_finishButton_clicked()
 {
+    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/finished");
+
     done(QDialog::Accepted);
 }
 
 void WelcomeDialog::on_noteFolderButton_clicked()
 {
+    MetricsService::instance()
+            ->sendVisitIfEnabled("welcome-dialog/set-note-folder");
+
     QString dir = QFileDialog::getExistingDirectory(
             this,
             tr("Please select the folder where your notes will get stored to"),
@@ -139,6 +158,9 @@ void WelcomeDialog::on_noteFolderButton_clicked()
 
 void WelcomeDialog::on_ownCloudSettingsButton_clicked()
 {
+    MetricsService::instance()
+            ->sendVisitIfEnabled("welcome-dialog/owncloud-settings");
+
     SettingsDialog *dialog = new SettingsDialog(
             SettingsDialog::OwnCloudTab, this);
     dialog->exec();
@@ -146,7 +168,15 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked()
 
 void WelcomeDialog::on_generalSettingsButton_clicked()
 {
+    MetricsService::instance()
+            ->sendVisitIfEnabled("welcome-dialog/general-settings");
+
     SettingsDialog *dialog = new SettingsDialog(
             SettingsDialog::GeneralTab, this);
     dialog->exec();
+}
+
+void WelcomeDialog::closeEvent(QCloseEvent *event) {
+    MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/close");
+    WelcomeDialog::closeEvent(event);
 }
