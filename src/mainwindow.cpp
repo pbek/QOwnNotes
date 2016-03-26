@@ -38,6 +38,7 @@
 #include <services/cryptoservice.h>
 #include <helpers/clientproxy.h>
 #include <utils/misc.h>
+#include <entities/notefolder.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -731,6 +732,8 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
 }
 
 void MainWindow::readSettings() {
+    NoteFolder::migrateToNoteFolders();
+
     QSettings settings;
     sortAlphabetically = settings.value(
             "SortingModeAlphabetically", QVariant(false)).toBool();

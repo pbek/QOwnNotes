@@ -139,13 +139,23 @@ bool DatabaseService::setupTables() {
         queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
         queryDisk.exec("ALTER TABLE calendarItem "
                                "ADD sort_priority INTEGER DEFAULT 0;");
-
         version = 1;
     }
 
     if (version < 2) {
         CalendarItem::updateAllSortPriorities();
         version = 2;
+    }
+
+    if (version < 3) {
+        queryDisk.exec("CREATE TABLE noteFolder ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255),"
+                               "local_path VARCHAR(255),"
+                               "remote_path VARCHAR(255),"
+                               "owncloud_server_id INTEGER DEFAULT 0,"
+                               "priority INTEGER DEFAULT 0 )");
+        version = 3;
     }
 
     setAppData("database_version", QString::number(version));

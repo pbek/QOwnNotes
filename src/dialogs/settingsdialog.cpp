@@ -16,6 +16,7 @@
 #include "helpers/clientproxy.h"
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
+#include <entities/notefolder.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -53,6 +54,9 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
 
     // do the network proxy tab setup
     setupProxyTab();
+
+    // setup the note folder tab
+    setupNoteFolderTab();
 
     readSettings();
 
@@ -956,4 +960,161 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked()
 void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked)
 {
     ui->letsEncryptInfoLabel->setVisible(checked);
+}
+
+/**
+ * Does the note folder tab setup
+ */
+void SettingsDialog::setupNoteFolderTab() {
+    // hide the owncloud server settings
+    ui->noteFolderOwnCloudServerLabel->setVisible(false);
+    ui->noteFolderOwnCloudServerComboBox->setVisible(false);
+    ui->noteFolderRemotePathButton->setVisible(false);
+
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+    int noteFoldersCount = noteFolders.count();
+
+    // populate the note folder list
+    if (noteFoldersCount > 0) {
+        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+                QListWidgetItem *item =
+                        new QListWidgetItem(noteFolder.getName());
+                item->setWhatsThis(QString::number(noteFolder.getId()));
+                ui->noteFolderListWidget->addItem(item);
+            }
+
+        // set the current row
+        ui->noteFolderListWidget->setCurrentRow(0);
+    }
+
+    // disable the remove button if there is only one item
+    ui->noteFolderRemoveButton->setEnabled(noteFoldersCount > 1);
+
+    // set local path placeholder text
+    ui->noteFolderLocalPathLineEdit->setPlaceholderText(
+            QDir::homePath() + QDir::separator() + "ownCloud" +
+                    QDir::separator() + "Notes");
+}
+
+void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
+        QListWidgetItem *current, QListWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+
+    int noteFolderId = current->whatsThis().toInt();
+    _selectedNoteFolder = NoteFolder::fetch(noteFolderId);
+    if (_selectedNoteFolder.isFetched()) {
+        ui->noteFolderNameLineEdit->setText(_selectedNoteFolder.getName());
+        ui->noteFolderLocalPathLineEdit->setText(
+                _selectedNoteFolder.getLocalPath());
+        ui->noteFolderRemotePathLineEdit->setText(
+                _selectedNoteFolder.getRemotePath());
+        ui->noteFolderActiveCheckBox->setChecked(
+                _selectedNoteFolder.isCurrent());
+    }
+}
+
+void SettingsDialog::on_noteFolderAddButton_clicked()
+{
+    _selectedNoteFolder = NoteFolder();
+    _selectedNoteFolder.setName(tr("new folder"));
+    _selectedNoteFolder.setLocalPath(
+            QDir::homePath() + QDir::separator() + "ownCloud" +
+                    QDir::separator() + "Notes");
+    _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
+    _selectedNoteFolder.store();
+
+    if (_selectedNoteFolder.isFetched()) {
+        QListWidgetItem *item =
+                new QListWidgetItem(_selectedNoteFolder.getName());
+        item->setWhatsThis(QString::number(_selectedNoteFolder.getId()));
+        ui->noteFolderListWidget->addItem(item);
+
+        // set the current row
+        ui->noteFolderListWidget->setCurrentRow(
+                ui->noteFolderListWidget->count() - 1);
+
+        // enable the remove button
+        ui->noteFolderRemoveButton->setEnabled(true);
+    }
+}
+
+/**
+ * Removes the current note folder
+ */
+void SettingsDialog::on_noteFolderRemoveButton_clicked()
+{
+    if (QMessageBox::information(
+            this,
+            tr("Remove note folder"),
+            tr("Remove the current note folder <strong>%1</strong>?")
+                    .arg(_selectedNoteFolder.getName()),
+            tr("&Remove"), tr("&Cancel"), QString::null,
+            0, 1) == 0) {
+        // remove the note folder from the database
+        _selectedNoteFolder.remove();
+
+        // remove the list item
+        ui->noteFolderListWidget->takeItem(
+                ui->noteFolderListWidget->currentRow());
+
+        // disable the remove button if there is only one item left
+        ui->noteFolderRemoveButton->setEnabled(
+                ui->noteFolderListWidget->count() > 1);
+    }
+}
+
+/**
+ * Updates the name of the current note folder edit
+ */
+void SettingsDialog::on_noteFolderNameLineEdit_editingFinished()
+{
+    QString text = ui->noteFolderNameLineEdit->text();
+    _selectedNoteFolder.setName(text);
+    _selectedNoteFolder.store();
+
+    ui->noteFolderListWidget->currentItem()->setText(text);
+}
+
+/**
+ * Updates the remote path of the current note folder edit
+ */
+void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished()
+{
+    QString text = ui->noteFolderRemotePathLineEdit->text();
+    _selectedNoteFolder.setRemotePath(text);
+    _selectedNoteFolder.store();
+}
+
+void SettingsDialog::on_noteFolderLocalPathButton_clicked()
+{
+    QString dir = QFileDialog::getExistingDirectory(
+            this,
+            tr("Please select the folder where your notes will get stored to"),
+            _selectedNoteFolder.getLocalPath(),
+            QFileDialog::ShowDirsOnly);
+
+    QDir d = QDir(dir);
+
+    if (d.exists() && (dir != "")) {
+        ui->noteFolderLocalPathLineEdit->setText(dir);
+        _selectedNoteFolder.setLocalPath(dir);
+        _selectedNoteFolder.store();
+    }
+}
+
+/**
+ * Sets the current note folder as active note folder
+ */
+void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
+{
+    Q_UNUSED(arg1);
+
+    if (!ui->noteFolderActiveCheckBox->isChecked()) {
+        const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
+        Q_UNUSED(blocker);
+        ui->noteFolderActiveCheckBox->setChecked(true);
+    } else {
+        _selectedNoteFolder.setAsCurrent();
+    }
 }
