@@ -1870,6 +1870,8 @@ void MainWindow::updateCurrentFolderTooltip() {
  * @brief Opens the settings dialog
  */
 void MainWindow::openSettingsDialog(int tab) {
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+
     // open the settings dialog
     SettingsDialog *dialog = new SettingsDialog(tab, this);
     int dialogResult = dialog->exec();
@@ -1881,6 +1883,14 @@ void MainWindow::openSettingsDialog(int tab) {
         // reset the note save timer
         this->noteSaveTimer->stop();
         this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
+    }
+
+    // if the current note folder was changed we will change the note path
+    if (currentNoteFolderId != NoteFolder::currentNoteFolderId()) {
+        NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+        if (noteFolder.isFetched()) {
+            changeNoteFolder(noteFolder.getLocalPath());
+        }
     }
 
     // reload recent note folder in case we have cleared

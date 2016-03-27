@@ -217,9 +217,26 @@ void NoteFolder::setAsCurrent() {
     settings.setValue("notesPath", localPath);
 }
 
+/**
+ * Checks if this note folder is the current one
+ */
 bool NoteFolder::isCurrent() {
+    return currentNoteFolderId() == id;
+}
+
+/**
+ * Returns the id of the current note folder in the settings
+ */
+int NoteFolder::currentNoteFolderId() {
     QSettings settings;
-    return settings.value("currentNoteFolderId").toInt() == id;
+    return settings.value("currentNoteFolderId").toInt();
+}
+
+/**
+ * Returns the current note folder
+ */
+NoteFolder NoteFolder::currentNoteFolder() {
+    return NoteFolder::fetch(currentNoteFolderId());
 }
 
 /**

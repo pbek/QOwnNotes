@@ -1009,6 +1009,9 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
                 _selectedNoteFolder.getLocalPath());
         ui->noteFolderRemotePathLineEdit->setText(
                 _selectedNoteFolder.getRemotePath());
+
+        const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
+        Q_UNUSED(blocker);
         ui->noteFolderActiveCheckBox->setChecked(
                 _selectedNoteFolder.isCurrent());
     }
@@ -1044,6 +1047,10 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
  */
 void SettingsDialog::on_noteFolderRemoveButton_clicked()
 {
+    if (ui->noteFolderListWidget->count() < 2) {
+        return;
+    }
+
     if (QMessageBox::information(
             this,
             tr("Remove note folder"),
@@ -1051,6 +1058,8 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
                     .arg(_selectedNoteFolder.getName()),
             tr("&Remove"), tr("&Cancel"), QString::null,
             0, 1) == 0) {
+        bool wasCurrent = _selectedNoteFolder.isCurrent();
+
         // remove the note folder from the database
         _selectedNoteFolder.remove();
 
@@ -1061,6 +1070,15 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
         // disable the remove button if there is only one item left
         ui->noteFolderRemoveButton->setEnabled(
                 ui->noteFolderListWidget->count() > 1);
+
+        // if the removed note folder was the current folder we set the first
+        // note folder as new current one
+        if (wasCurrent) {
+            QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+            if (noteFolders.count() > 0) {
+                noteFolders[0].setAsCurrent();
+            }
+        }
     }
 }
 

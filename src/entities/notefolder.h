@@ -34,6 +34,8 @@ public:
     static bool migrateToNoteFolders();
     void setAsCurrent();
     bool isCurrent();
+    static int currentNoteFolderId();
+    static NoteFolder currentNoteFolder();
 
 private:
     int id;
