@@ -241,7 +241,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
-                      ui->showRecentNoteFolderCheckBox->isChecked());
+                      ui->showNoteFolderCheckBox->isChecked());
     settings.setValue("MainWindow/markdownDefaultViewMode",
                       ui->markdownDefaultViewModeCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
@@ -313,7 +313,7 @@ void SettingsDialog::readSettings() {
             settings.value("notifyAllExternalModifications").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime").toInt());
-    ui->showRecentNoteFolderCheckBox->setChecked(settings.value(
+    ui->showNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
@@ -795,17 +795,6 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
     DatabaseService::reinitializeDiskDatabase();
     QMessageBox::information(this, tr("Database"),
                              tr("The Database was reinitialized."));
-}
-
-/**
- * @brief Clears the recent note folder history in the settings
- */
-void SettingsDialog::on_clearRecentNotesFoldersHistoryButton_clicked() {
-    QSettings settings;
-    settings.remove("recentNoteFolders");
-
-    QMessageBox::information(this, tr("Recent note folders history"),
-                             tr("The history was cleared."));
 }
 
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
