@@ -5,6 +5,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QSettings>
+#include <QDir>
 
 
 NoteFolder::NoteFolder() {
@@ -107,6 +108,11 @@ int NoteFolder::countAll() {
     }
 
     return 0;
+}
+
+bool NoteFolder::localPathExists() {
+    QDir folder(localPath);
+    return folder.exists() && !localPath.isEmpty();
 }
 
 bool NoteFolder::remove() {

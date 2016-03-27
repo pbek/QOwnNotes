@@ -36,6 +36,7 @@ public:
     bool isCurrent();
     static int currentNoteFolderId();
     static NoteFolder currentNoteFolder();
+    bool localPathExists();
 
 private:
     int id;

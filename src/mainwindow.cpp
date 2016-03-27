@@ -165,8 +165,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // set the edit mode for the note text edit
     // this->setNoteTextEditMode(true);
 
-    // load the recent note folder list in the menu
-    this->loadRecentNoteFolderListMenu(notesPath);
+    // load the note folder list in the menu
+    this->loadNoteFolderListMenu();
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
@@ -189,13 +189,6 @@ MainWindow::MainWindow(QWidget *parent) :
     shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
     QObject::connect(shortcut, SIGNAL(activated()),
                      this, SLOT(on_actionPrevious_Note_triggered()));
-
-    // let the note folder be changed with the recent note folder combo box
-    QObject::connect(
-            ui->recentNoteFolderComboBox,
-            SIGNAL(currentTextChanged(const QString &)),
-            this,
-            SLOT(changeNoteFolder(const QString &)));
 
     // show the app metrics notification if not already shown
     showAppMetricsNotificationIfNeeded();
@@ -451,32 +444,17 @@ void MainWindow::setupNoteBookmarkShortcuts() {
 }
 
 /*
- * Loads the menu entries for the recent note folders
+ * Loads the menu entries for the note folders
  */
-void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
-    QSettings settings;
-    QStringList recentNoteFolders =
-            settings.value("recentNoteFolders").toStringList();
-
-    int maxItems = 15;
-    // remove items if there are too many
-    if (recentNoteFolders.length() > maxItems) {
-        // remove an item as long as there are too many of them
-        do {
-            recentNoteFolders.removeAt(maxItems);
-        } while (recentNoteFolders.length() > maxItems);
-
-        settings.setValue("recentNoteFolders", recentNoteFolders);
-    }
-
+void MainWindow::loadNoteFolderListMenu() {
     // clear menu list
     // we must not do this, because the app might crash if trackAction() is
     // called, because the action was triggered and then removed
-//    ui->menuRecentNoteFolders->clear();
+//    ui->noteFoldersMenu->clear();
 
     // find all actions of the recent note folders menu
     QList<QAction*> actions =
-            ui->menuRecentNoteFolders->findChildren<QAction*>();
+            ui->noteFoldersMenu->findChildren<QAction*>();
 
     // loop through all actions of the recent note folders menu and hide them
     // this is a workaround because the app might crash if trackAction() is
@@ -490,54 +468,85 @@ void MainWindow::loadRecentNoteFolderListMenu(QString currentFolderName) {
             }
         }
 
-    const QSignalBlocker blocker(ui->recentNoteFolderComboBox);
-    {
-        Q_UNUSED(blocker);
-        ui->recentNoteFolderComboBox->clear();
-        ui->recentNoteFolderComboBox->addItem(currentFolderName);
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+    int noteFoldersCount = noteFolders.count();
 
-        // populate menu list
-        Q_FOREACH(QString noteFolder, recentNoteFolders) {
-                QDir folder(noteFolder);
+    const QSignalBlocker blocker(ui->noteFolderComboBox);
+    Q_UNUSED(blocker);
 
+    ui->noteFolderComboBox->clear();
+    int index = 0;
+    int noteFolderComboBoxIndex = 0;
+
+    // populate the note folder list
+    if (noteFoldersCount > 0) {
+        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
                 // don't show not existing folders or if path is empty
-                if (!folder.exists() || noteFolder.isEmpty()) {
+                if (!noteFolder.localPathExists()) {
                     continue;
                 }
 
+                // add an entry to the combo box
+                ui->noteFolderComboBox->addItem(noteFolder.getName(),
+                                                      noteFolder.getId());
+
                 // add a menu entry
                 QAction *action =
-                        ui->menuRecentNoteFolders->addAction(noteFolder);
+                        ui->noteFoldersMenu->addAction(noteFolder.getName());
+                action->setData(noteFolder.getId());
+
+                if (noteFolder.isCurrent()) {
+                    QFont font = action->font();
+                    font.setBold(true);
+                    action->setFont(font);
+
+                    noteFolderComboBoxIndex = index;
+                }
+
                 QObject::connect(
                         action, SIGNAL(triggered()),
                         recentNoteFolderSignalMapper, SLOT(map()));
 
                 // add a parameter to changeNoteFolder with the signal mapper
-                recentNoteFolderSignalMapper->setMapping(action, noteFolder);
+                recentNoteFolderSignalMapper->setMapping(
+                        action, noteFolder.getId());
 
-                // add an entry to the combo box
-                ui->recentNoteFolderComboBox->addItem(noteFolder);
+                index++;
             }
 
         QObject::connect(recentNoteFolderSignalMapper,
-                         SIGNAL(mapped(const QString &)),
+                         SIGNAL(mapped(int)),
                          this,
-                         SLOT(changeNoteFolder(const QString &)));
+                         SLOT(changeNoteFolder(int)));
 
-        ui->recentNoteFolderComboBox->setCurrentIndex(0);
+        // set the current row
+        ui->noteFolderComboBox->setCurrentIndex(
+                noteFolderComboBoxIndex);
     }
 }
 
 /*
  * Set a new note folder
  */
-void MainWindow::changeNoteFolder(const QString &folderName) {
+void MainWindow::changeNoteFolder(int noteFolderId) {
+    NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+    if (!noteFolder.isFetched()) {
+        return;
+    }
+
+    if (noteFolder.isCurrent()) {
+        return;
+    }
+
+    QString folderName = noteFolder.getLocalPath();
     QString oldPath = this->notesPath;
 
     // reload notes if notes folder was changed
     if (oldPath != folderName) {
         // store everything before changing folder
         storeUpdatedNotesToDisk();
+
+        noteFolder.setAsCurrent();
 
         // update the recent note folder list
         storeRecentNoteFolder(this->notesPath, folderName);
@@ -602,7 +611,7 @@ void MainWindow::storeRecentNoteFolder(
 
     settings.setValue("recentNoteFolders", recentNoteFolders);
     // reload menu
-    loadRecentNoteFolderListMenu(removeFolderName);
+    loadNoteFolderListMenu();
 }
 
 int MainWindow::openNoteDiffDialog(Note changedNote) {
@@ -853,7 +862,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
 
     // check if we want to view the recent note folder combo box
-    ui->recentNoteFolderComboBox->setVisible(
+    ui->noteFolderComboBox->setVisible(
             settings.value(
                     "MainWindow/showRecentNoteFolderInMainArea").toBool());
 }
@@ -1889,13 +1898,13 @@ void MainWindow::openSettingsDialog(int tab) {
     if (currentNoteFolderId != NoteFolder::currentNoteFolderId()) {
         NoteFolder noteFolder = NoteFolder::currentNoteFolder();
         if (noteFolder.isFetched()) {
-            changeNoteFolder(noteFolder.getLocalPath());
+            changeNoteFolder(noteFolder.getId());
         }
     }
 
-    // reload recent note folder in case we have cleared
+    // reload note folder in case we have cleared
     // the history in the settings
-    loadRecentNoteFolderListMenu(notesPath);
+    loadNoteFolderListMenu();
 }
 
 /**
@@ -2099,7 +2108,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
                 tr("Open &settings"),
                 tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
-            openSettingsDialog();
+            openSettingsDialog(SettingsDialog::TodoTab);
         }
 
         return;
@@ -2175,25 +2184,7 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    QString oldPath = this->notesPath;
-    selectOwnCloudNotesFolder();
-
-    // reload notes if notes folder was changed
-    if (oldPath != this->notesPath) {
-        buildNotesIndex();
-        loadNoteDirectoryList();
-
-        ui->noteTextEdit->show();
-        ui->encryptedNoteTextEdit->hide();
-
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
-        {
-            Q_UNUSED(blocker);
-            ui->noteTextEdit->clear();
-        }
-
-        ui->noteTextView->clear();
-    }
+    openSettingsDialog(SettingsDialog::NoteFolderTab);
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
@@ -3489,4 +3480,16 @@ void MainWindow::on_action_Reset_note_text_size_triggered()
     ui->encryptedNoteTextEdit->setStyles();
     ui->encryptedNoteTextEdit->highlighter()->parse();
     showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 2000);
+}
+
+/**
+ * Sets the note folder from the recent note folder combobox
+ */
+void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
+{
+    int noteFolderId = ui->noteFolderComboBox->itemData(index).toInt();
+    NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+    if (noteFolder.isFetched()) {
+        changeNoteFolder(noteFolderId);
+    }
 }
