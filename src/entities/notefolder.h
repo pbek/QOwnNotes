@@ -37,6 +37,8 @@ public:
     static int currentNoteFolderId();
     static NoteFolder currentNoteFolder();
     bool localPathExists();
+    QString suggestRemotePath();
+    QString fixRemotePath();
 
 private:
     int id;
@@ -45,7 +47,4 @@ private:
     int ownCloudServerId;
     QString remotePath;
     int priority;
-
-    QString suggestRemotePath();
-    QString fixRemotePath();
 };

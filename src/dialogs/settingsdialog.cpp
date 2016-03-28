@@ -1090,7 +1090,16 @@ void SettingsDialog::on_noteFolderRemotePathLineEdit_editingFinished()
 {
     QString text = ui->noteFolderRemotePathLineEdit->text();
     _selectedNoteFolder.setRemotePath(text);
+    QString remotePath = _selectedNoteFolder.fixRemotePath();
     _selectedNoteFolder.store();
+
+    // set new path if fixed path differs
+    if (text != remotePath) {
+        const QSignalBlocker blocker(ui->noteFolderRemotePathLineEdit);
+        Q_UNUSED(blocker);
+
+        ui->noteFolderRemotePathLineEdit->setText(remotePath);
+    }
 }
 
 void SettingsDialog::on_noteFolderLocalPathButton_clicked()
