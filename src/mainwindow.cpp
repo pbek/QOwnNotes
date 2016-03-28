@@ -530,13 +530,13 @@ void MainWindow::loadNoteFolderListMenu() {
 /*
  * Set a new note folder
  */
-void MainWindow::changeNoteFolder(int noteFolderId) {
+void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
         return;
     }
 
-    if (noteFolder.isCurrent()) {
+    if (noteFolder.isCurrent() && !forceChange) {
         return;
     }
 
@@ -1899,8 +1899,9 @@ void MainWindow::openSettingsDialog(int tab) {
     // if the current note folder was changed we will change the note path
     if (currentNoteFolderId != NoteFolder::currentNoteFolderId()) {
         NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+
         if (noteFolder.isFetched()) {
-            changeNoteFolder(noteFolder.getId());
+            changeNoteFolder(noteFolder.getId(), true);
         }
     }
 

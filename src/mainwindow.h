@@ -94,7 +94,7 @@ private slots:
 
     void on_noteTabWidget_currentChanged(int index);
 
-    void changeNoteFolder(int noteFolderId);
+    void changeNoteFolder(int noteFolderId, bool forceChange = false);
 
     void on_noteTextView_anchorClicked(const QUrl &arg1);
 

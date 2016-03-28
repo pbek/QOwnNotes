@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.2.9
+- fixed that the note list didn't get reloaded after you set a different active 
+  note folder in the settings
+
 ## 1.2.8
 - you are now able to **configure your note folders** in the settings
   (for [Issue #36](https://github.com/pbek/QOwnNotes/issues/36))
