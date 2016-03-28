@@ -63,5 +63,6 @@
         <file alias="16x16/zoom-fit-height.svg">icons/breeze-qownnotes/16x16/zoom-fit-height.svg</file>
         <file alias="16x16/format-font-size-less.svg">icons/breeze-qownnotes/16x16/format-font-size-less.svg</file>
         <file alias="16x16/format-font-size-more.svg">icons/breeze-qownnotes/16x16/format-font-size-more.svg</file>
+        <file alias="16x16/folder-new.svg">icons/breeze-qownnotes/16x16/folder-new.svg</file>
     </qresource>
 </RCC>

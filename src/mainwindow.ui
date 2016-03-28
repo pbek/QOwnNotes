@@ -231,7 +231,7 @@ p, li { white-space: pre-wrap; }
           <number>3</number>
          </property>
          <item>
-          <widget class="QComboBox" name="recentNoteFolderComboBox"/>
+          <widget class="QComboBox" name="noteFolderComboBox"/>
          </item>
          <item>
           <widget class="QListWidget" name="notesListWidget">
@@ -269,9 +269,9 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;Note</string>
     </property>
-    <widget class="QMenu" name="menuRecentNoteFolders">
+    <widget class="QMenu" name="noteFoldersMenu">
      <property name="title">
-      <string>R&amp;ecent notes folders</string>
+      <string>Notes &amp;folders</string>
      </property>
     </widget>
     <widget class="QMenu" name="menuSort_by">
@@ -301,7 +301,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_note_in_file_manager"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
-    <addaction name="menuRecentNoteFolders"/>
+    <addaction name="noteFoldersMenu"/>
     <addaction name="separator"/>
     <addaction name="actionShow_system_tray"/>
     <addaction name="action_Settings"/>
@@ -448,7 +448,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Set notes folder</string>
+    <string>&amp;Setup note folders</string>
    </property>
   </action>
   <action name="action_Find_note">

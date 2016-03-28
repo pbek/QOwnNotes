@@ -29,8 +29,244 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>3</number>
+        <number>0</number>
        </property>
+       <widget class="QWidget" name="noteFoldersTab">
+        <attribute name="title">
+         <string>Note folders</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_19">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_13">
+           <property name="title">
+            <string>Your note folders</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_21">
+            <item row="0" column="0">
+             <widget class="QFrame" name="noteFolderSelectFrame">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>2</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_20">
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <property name="spacing">
+                <number>9</number>
+               </property>
+               <item row="0" column="0">
+                <widget class="QListWidget" name="noteFolderListWidget">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                   <horstretch>2</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QFrame" name="frame">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Plain</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_23">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="noteFolderAddButton">
+                    <property name="text">
+                     <string>&amp;Add folder</string>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="folder-new" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <spacer name="horizontalSpacer">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="noteFolderRemoveButton">
+                    <property name="text">
+                     <string>&amp;Remove folder</string>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QFrame" name="noteFolderEditFrame">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>3</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_22">
+               <item row="5" column="0">
+                <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Path on your ownCloud server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0">
+                <spacer name="verticalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLineEdit" name="noteFolderNameLineEdit">
+                 <property name="toolTip">
+                  <string>This name will be viewed in all the menus.</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>a name you will recognize</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
+                 <property name="toolTip">
+                  <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string notr="true">Notes</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="1">
+                <widget class="QPushButton" name="noteFolderRemotePathButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="noteFolderLocalPathButton">
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Note folder path</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
+                 <property name="text">
+                  <string>ownCloud server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <widget class="QCheckBox" name="noteFolderActiveCheckBox">
+                 <property name="text">
+                  <string>Use as active note folder</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="owncloudTab">
         <attribute name="title">
          <string notr="true">ownCloud</string>
@@ -95,6 +331,16 @@
                 </property>
                </widget>
               </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>username:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
               <item row="2" column="1">
                <widget class="QLineEdit" name="userNameEdit">
                 <property name="sizePolicy">
@@ -120,10 +366,10 @@
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_3">
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_5">
                 <property name="text">
-                 <string>username:</string>
+                 <string>password:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -158,109 +404,6 @@
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_5">
-                <property name="text">
-                 <string>password:</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <widget class="QLineEdit" name="localOwnCloudPathEdit">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>300</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;We need your main ownCloud sync folder to determine the directory where we will find the note file on your ownCloud server.&lt;/p&gt;&lt;p&gt;This should &lt;span style=&quot; font-weight:600;&quot;&gt;not&lt;/span&gt; be your notes folder. The notes folder is usually &lt;span style=&quot; font-weight:600;&quot;&gt;in&lt;/span&gt; the ownCloud sync folder.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="readOnly">
-                 <bool>true</bool>
-                </property>
-                <property name="placeholderText">
-                 <string>the folder the ownCloud sync client uses</string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="1">
-               <widget class="QLabel" name="check1Label">
-                <property name="text">
-                 <string>connection to web server</string>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="1">
-               <widget class="QLabel" name="check2Label">
-                <property name="text">
-                 <string>ownCloud server detected</string>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="1">
-               <widget class="QLabel" name="check4Label">
-                <property name="text">
-                 <string>connection to QOwnNotesAPI</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="1">
-               <widget class="QLabel" name="check3Label">
-                <property name="text">
-                 <string>username and password correct</string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="0">
-               <widget class="QLabel" name="ok1Label">
-                <property name="text">
-                 <string>unknown</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="0">
-               <widget class="QLabel" name="ok2Label">
-                <property name="text">
-                 <string>unknown</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="0">
-               <widget class="QLabel" name="ok3Label">
-                <property name="text">
-                 <string>unknown</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="0">
-               <widget class="QLabel" name="ok4Label">
-                <property name="text">
-                 <string>unknown</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-               </widget>
-              </item>
               <item row="4" column="1">
                <widget class="QPushButton" name="localOwnCloudDirectoryButton">
                 <property name="sizePolicy">
@@ -290,17 +433,20 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_6">
-                <property name="text">
-                 <string>main ownCloud sync folder:</string>
+              <item row="5" column="1">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
                 </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>20</height>
+                 </size>
                 </property>
-               </widget>
+               </spacer>
               </item>
-              <item row="7" column="1">
+              <item row="6" column="1">
                <widget class="QPushButton" name="connectButton">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -329,20 +475,7 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="8" column="1">
+              <item row="7" column="1">
                <spacer name="verticalSpacer_2">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -355,7 +488,7 @@
                 </property>
                </spacer>
               </item>
-              <item row="9" column="1">
+              <item row="8" column="1">
                <widget class="QLabel" name="okLabelStatus">
                 <property name="styleSheet">
                  <string notr="true">font-weight: bold;</string>
@@ -365,28 +498,75 @@
                 </property>
                </widget>
               </item>
-              <item row="14" column="1">
-               <widget class="QLabel" name="check6Label">
+              <item row="9" column="0">
+               <widget class="QLabel" name="ok1Label">
                 <property name="text">
-                 <string>versions app enabled on server</string>
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                 </property>
                </widget>
               </item>
-              <item row="15" column="1">
-               <widget class="QLabel" name="check7Label">
+              <item row="9" column="1">
+               <widget class="QLabel" name="check1Label">
                 <property name="text">
-                 <string>trash app enabled on server</string>
+                 <string>connection to web server</string>
                 </property>
                </widget>
               </item>
-              <item row="16" column="1">
-               <widget class="QLabel" name="check5Label">
+              <item row="10" column="0">
+               <widget class="QLabel" name="ok2Label">
                 <property name="text">
-                 <string>ownCloud path set</string>
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                 </property>
                </widget>
               </item>
-              <item row="14" column="0">
+              <item row="10" column="1">
+               <widget class="QLabel" name="check2Label">
+                <property name="text">
+                 <string>ownCloud server detected</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QLabel" name="ok3Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="1">
+               <widget class="QLabel" name="check3Label">
+                <property name="text">
+                 <string>username and password correct</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="0">
+               <widget class="QLabel" name="ok4Label">
+                <property name="text">
+                 <string>unknown</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="1">
+               <widget class="QLabel" name="check4Label">
+                <property name="text">
+                 <string>connection to QOwnNotesAPI</string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="0">
                <widget class="QLabel" name="ok6Label">
                 <property name="text">
                  <string>unknown</string>
@@ -396,7 +576,14 @@
                 </property>
                </widget>
               </item>
-              <item row="15" column="0">
+              <item row="13" column="1">
+               <widget class="QLabel" name="check6Label">
+                <property name="text">
+                 <string>versions app enabled on server</string>
+                </property>
+               </widget>
+              </item>
+              <item row="14" column="0">
                <widget class="QLabel" name="ok7Label">
                 <property name="text">
                  <string>unknown</string>
@@ -406,33 +593,27 @@
                 </property>
                </widget>
               </item>
-              <item row="16" column="0">
-               <widget class="QLabel" name="ok5Label">
+              <item row="14" column="1">
+               <widget class="QLabel" name="check7Label">
                 <property name="text">
-                 <string>unknown</string>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-                <property name="wordWrap">
-                 <bool>false</bool>
+                 <string>trash app enabled on server</string>
                 </property>
                </widget>
               </item>
-              <item row="17" column="1">
-               <widget class="QLabel" name="check8Label">
-                <property name="text">
-                 <string>notes path found on server</string>
-                </property>
-               </widget>
-              </item>
-              <item row="17" column="0">
+              <item row="15" column="0">
                <widget class="QLabel" name="ok8Label">
                 <property name="text">
                  <string>unknown</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="1">
+               <widget class="QLabel" name="check8Label">
+                <property name="text">
+                 <string>notes path found on server</string>
                 </property>
                </widget>
               </item>
@@ -470,8 +651,8 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Sans Serif'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server.&lt;/p&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You still need &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud&lt;/span&gt;&lt;/a&gt; to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="openExternalLinks">
                  <bool>true</bool>
@@ -490,24 +671,11 @@ p, li { white-space: pre-wrap; }
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>open ownCloud server &amp;Apps page</string>
+                 <string>open your ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
                  <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_9">
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you have troubles with the settings to find the notes path on your ownCloud server you might want to read this article: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/QOwnNotes-settings-are-reporting-a-problem-with-my-ownCloud-path&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Problems with the ownCloud path&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="wordWrap">
-                 <bool>true</bool>
-                </property>
-                <property name="openExternalLinks">
-                 <bool>true</bool>
                 </property>
                </widget>
               </item>
@@ -1399,7 +1567,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item>
                <widget class="QLabel" name="reinitializeDatabaseLabel">
                 <property name="text">
-                 <string>Do this if you have troubles with your Todo items.</string>
+                 <string>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -1425,23 +1593,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               </sizepolicy>
              </property>
              <property name="title">
-              <string>Recent notes folders</string>
+              <string>Notes folders</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_3">
               <item>
-               <widget class="QCheckBox" name="showRecentNoteFolderCheckBox">
+               <widget class="QCheckBox" name="showNoteFolderCheckBox">
                 <property name="text">
-                 <string>Show recent notes folders in main area</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="clearRecentNotesFoldersHistoryButton">
-                <property name="toolTip">
-                 <string>clear the recent note folder history</string>
-                </property>
-                <property name="text">
-                 <string>Clear history</string>
+                 <string>Show note folders in main area</string>
                 </property>
                </widget>
               </item>
@@ -1823,7 +1981,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>serverUrlEdit</tabstop>
   <tabstop>userNameEdit</tabstop>
   <tabstop>passwordEdit</tabstop>
-  <tabstop>localOwnCloudPathEdit</tabstop>
  </tabstops>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>

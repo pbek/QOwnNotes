@@ -16,6 +16,7 @@
 #include <QDesktopServices>
 #include <QDir>
 #include <QUrl>
+#include <QRegularExpression>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -132,4 +133,52 @@ void Utils::Misc::openFolderSelect(const QString& absolutePath)
 #else
     openPath(path.left(path.lastIndexOf("/")));
 #endif
+}
+
+/**
+ * Removes a string from the start if it starts with it
+ */
+QString Utils::Misc::removeIfStartsWith(QString text, QString removeString) {
+    if (text.startsWith(removeString)) {
+        text.remove(QRegularExpression(
+                "^" + QRegularExpression::escape(removeString)));
+    }
+
+    return text;
+}
+
+/**
+ * Removes a string from the end if it ends with it
+ */
+QString Utils::Misc::removeIfEndsWith(QString text, QString removeString) {
+    if (text.endsWith(removeString)) {
+        text.remove(QRegularExpression(
+                QRegularExpression::escape(removeString) + "$"));
+    }
+
+    return text;
+}
+
+/**
+ * Adds a string to the beginning of a string if it doesn't start with it
+ */
+QString Utils::Misc::prependIfDoesNotStartWith(
+        QString text, QString startString) {
+    if (!text.startsWith(startString)) {
+        text.prepend(startString);
+    }
+
+    return text;
+}
+
+/**
+ * Adds a string to the end of a string if it doesn't end with it
+ */
+QString Utils::Misc::appendIfDoesNotEndWith(
+        QString text, QString endString) {
+    if (!text.endsWith(endString)) {
+        text.append(endString);
+    }
+
+    return text;
 }

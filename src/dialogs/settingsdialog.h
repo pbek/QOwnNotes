@@ -5,6 +5,7 @@
 #include <QDialog>
 #include <QLabel>
 #include <QListWidget>
+#include <entities/notefolder.h>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -23,6 +24,7 @@ public:
     };
 
     enum SettingsTabs {
+        NoteFolderTab,
         OwnCloudTab,
         NetworkTab,
         TodoTab,
@@ -51,8 +53,6 @@ private slots:
 
     void on_buttonBox_clicked(QAbstractButton *button);
 
-    void on_localOwnCloudDirectoryButton_clicked();
-
     void on_ownCloudServerAppPageButton_clicked();
 
     void on_noteTextEditButton_clicked();
@@ -64,8 +64,6 @@ private slots:
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
 
     void on_reinitializeDatabaseButton_clicked();
-
-    void on_clearRecentNotesFoldersHistoryButton_clicked();
 
     void on_tabWidget_currentChanged(int index);
 
@@ -93,6 +91,20 @@ private slots:
 
     void on_ignoreSSLErrorsCheckBox_toggled(bool checked);
 
+    void on_noteFolderListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
+    void on_noteFolderAddButton_clicked();
+
+    void on_noteFolderRemoveButton_clicked();
+
+    void on_noteFolderNameLineEdit_editingFinished();
+
+    void on_noteFolderRemotePathLineEdit_editingFinished();
+
+    void on_noteFolderLocalPathButton_clicked();
+
+    void on_noteFolderActiveCheckBox_stateChanged(int arg1);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -104,6 +116,7 @@ private:
     QString appVersion;
     QString serverVersion;
     QString connectionErrorMessage;
+    NoteFolder _selectedNoteFolder;
 
     void readSettings();
 
@@ -124,6 +137,8 @@ private:
     void setupProxyTab();
 
     void loadProxySettings();
+
+    void setupNoteFolderTab();
 };
 
 #endif // SETTINGSDIALOG_H

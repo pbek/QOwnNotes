@@ -77,6 +77,8 @@ set(SOURCE_FILES
     entities/note.h
     entities/notehistory.cpp
     entities/notehistory.h
+    entities/notefolder.cpp
+    entities/notefolder.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
     helpers/clientproxy.cpp

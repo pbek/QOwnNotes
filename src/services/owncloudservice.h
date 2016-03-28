@@ -50,7 +50,6 @@ private:
     QString serverUrlWithoutPath;
     QString userName;
     QString password;
-    QString localOwnCloudPath;
     QNetworkAccessManager *networkManager;
     MainWindow *mainWindow;
     static const QString rootPath;
@@ -71,8 +70,6 @@ private:
     void readSettings();
 
     void addAuthHeader(QNetworkRequest *r);
-
-    QString getServerNotesPath(QString notesPath);
 
     void handleVersionsLoading(QString data);
 

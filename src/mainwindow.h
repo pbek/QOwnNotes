@@ -12,6 +12,7 @@
 #include <QTextEdit>
 #include <QFile>
 #include <entities/note.h>
+#include <entities/notefolder.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -93,7 +94,7 @@ private slots:
 
     void on_noteTabWidget_currentChanged(int index);
 
-    void changeNoteFolder(const QString &folderName);
+    void changeNoteFolder(int noteFolderId);
 
     void on_noteTextView_anchorClicked(const QUrl &arg1);
 
@@ -215,6 +216,8 @@ private slots:
 
     void on_action_Reset_note_text_size_triggered();
 
+    void on_noteFolderComboBox_currentIndexChanged(int index);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -275,7 +278,7 @@ private:
 
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false);
 
-    void loadRecentNoteFolderListMenu(QString currentFolderName);
+    void loadNoteFolderListMenu();
 
     void storeRecentNoteFolder(QString addFolderName, QString removeFolderName);
 
