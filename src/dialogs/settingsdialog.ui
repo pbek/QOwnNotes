@@ -1635,7 +1635,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item>
                <widget class="QLabel" name="reinitializeDatabaseLabel">
                 <property name="text">
-                 <string>Do this if you have troubles with your Todo items.</string>
+                 <string>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>

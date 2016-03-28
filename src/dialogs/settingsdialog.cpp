@@ -792,9 +792,19 @@ void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
 }
 
 void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
-    DatabaseService::reinitializeDiskDatabase();
-    QMessageBox::information(this, tr("Database"),
-                             tr("The Database was reinitialized."));
+    if (QMessageBox::information(
+            this, tr("Database"),
+            tr("Do you really want to clear the local database? "
+                       "This will also remove your configured note "
+                       "folders and your cached todo items!"),
+            tr("Clear &database"), tr("&Cancel"), QString::null,
+            1) == 0) {
+        DatabaseService::reinitializeDiskDatabase();
+        NoteFolder::migrateToNoteFolders();
+
+        QMessageBox::information(this, tr("Database"),
+                                 tr("The Database was reinitialized."));
+    }
 }
 
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
