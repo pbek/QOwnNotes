@@ -184,7 +184,7 @@ void TodoDialog::reloadTodoListItems() {
             }
 
             QListWidgetItem *item = new QListWidgetItem(calItem.getSummary());
-            item->setWhatsThis(uid);
+            item->setData(Qt::UserRole, uid);
             item->setCheckState(
                     calItem.isCompleted() ? Qt::Checked : Qt::Unchecked);
             item->setFlags(
@@ -279,7 +279,7 @@ int TodoDialog::findTodoItemRowByUID(QString uid) {
 
     for (int i = 0; i < count; i++) {
         QListWidgetItem *item = ui->todoList->item(i);
-        if (item->whatsThis() == uid) {
+        if (item->data(Qt::UserRole).toString() == uid) {
             return i;
         }
     }
@@ -347,7 +347,7 @@ void TodoDialog::on_todoList_currentItemChanged(
 
     MetricsService::instance()->sendVisitIfEnabled("todo/item/changed");
 
-    QString uid = current->whatsThis();
+    QString uid = current->data(Qt::UserRole).toString();
 
     currentCalendarItem = CalendarItem::fetchByUid(uid);
     if (currentCalendarItem.isFetched()) {
@@ -511,7 +511,7 @@ void TodoDialog::on_removeButton_clicked() {
  */
 void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item) {
     qDebug() << __func__ << " - 'item': " << item;
-    QString uid = item->whatsThis();
+    QString uid = item->data(Qt::UserRole).toString();
 
     CalendarItem calItem = CalendarItem::fetchByUid(uid);
     if (calItem.isFetched()) {
@@ -567,7 +567,7 @@ void TodoDialog::on_newItemEdit_textChanged(const QString &arg1) {
 
         for (int i = 0; i < ui->todoList->count(); ++i) {
             QListWidgetItem *item = ui->todoList->item(i);
-            if (noteNameList.indexOf(item->whatsThis()) < 0) {
+            if (noteNameList.indexOf(item->data(Qt::UserRole).toString()) < 0) {
                 item->setHidden(true);
             } else {
                 if (firstVisibleTodoListRow < 0) {

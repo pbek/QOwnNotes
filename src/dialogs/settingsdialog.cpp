@@ -952,7 +952,8 @@ void SettingsDialog::setupNoteFolderTab() {
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
                 QListWidgetItem *item =
                         new QListWidgetItem(noteFolder.getName());
-                item->setWhatsThis(QString::number(noteFolder.getId()));
+                item->setData(Qt::UserRole,
+                              noteFolder.getId());
                 ui->noteFolderListWidget->addItem(item);
             }
 
@@ -974,7 +975,7 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
 {
     Q_UNUSED(previous);
 
-    int noteFolderId = current->whatsThis().toInt();
+    int noteFolderId = current->data(Qt::UserRole).toInt();
     _selectedNoteFolder = NoteFolder::fetch(noteFolderId);
     if (_selectedNoteFolder.isFetched()) {
         ui->noteFolderNameLineEdit->setText(_selectedNoteFolder.getName());
@@ -1003,7 +1004,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
     if (_selectedNoteFolder.isFetched()) {
         QListWidgetItem *item =
                 new QListWidgetItem(_selectedNoteFolder.getName());
-        item->setWhatsThis(QString::number(_selectedNoteFolder.getId()));
+        item->setData(Qt::UserRole, _selectedNoteFolder.getId());
         ui->noteFolderListWidget->addItem(item);
 
         // set the current row

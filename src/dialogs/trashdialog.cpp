@@ -86,7 +86,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
 
         QListWidgetItem *item = new QListWidgetItem();
         item->setText(itemName);
-        item->setWhatsThis(fileName);
+        item->setData(Qt::UserRole, fileName);
         item->setToolTip(dateString);
         ui->trashListWidget->addItem(item);
         dataList->append(data);
@@ -129,7 +129,8 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
     int actionRole = button->property("ActionRole").toInt();
     QString name = ui->trashListWidget->currentItem()->text();
-    QString fileName = ui->trashListWidget->currentItem()->whatsThis();
+    QString fileName = ui->trashListWidget->currentItem()
+            ->data(Qt::UserRole).toString();
 
     switch (actionRole) {
         case Download: {
