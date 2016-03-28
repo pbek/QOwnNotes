@@ -50,8 +50,8 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
       if [ "${TRAVIS_BRANCH}" != "master" ]; then
            ./../bin/tests/tests -platform minimal -txt
-        && sudo pip install cpp-coveralls
-        && "coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log" || :
+        && sudo pip install cpp-coveralls || :
+        && coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log || :
         ;
       fi
       ;
