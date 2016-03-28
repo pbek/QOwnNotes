@@ -5,8 +5,9 @@
   note folder in the settings
 - fixed that notes weren't stopped from being watched for external changes 
   after the note folder got switched
-- if you configure an editor for opening your note files with it the editor 
-  will now be executed in the background
+- if you configured an editor for opening your note files with it the editor 
+  will now be executed in the background, so you can continue to work with 
+  QOwnNotes
 
 ## 1.2.8
 - you are now able to **configure your note folders** in the settings
