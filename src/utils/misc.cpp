@@ -158,3 +158,27 @@ QString Utils::Misc::removeIfEndsWith(QString text, QString removeString) {
 
     return text;
 }
+
+/**
+ * Adds a string to the beginning of a string if it doesn't start with it
+ */
+QString Utils::Misc::prependIfDoesNotStartWith(
+        QString text, QString startString) {
+    if (!text.startsWith(startString)) {
+        text.prepend(startString);
+    }
+
+    return text;
+}
+
+/**
+ * Adds a string to the end of a string if it doesn't end with it
+ */
+QString Utils::Misc::appendIfDoesNotEndWith(
+        QString text, QString endString) {
+    if (!text.endsWith(endString)) {
+        text.append(endString);
+    }
+
+    return text;
+}

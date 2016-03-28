@@ -247,6 +247,26 @@ NoteFolder NoteFolder::currentNoteFolder() {
 }
 
 /**
+ * Fetches the current remote path for the ownCloud service
+ */
+QString NoteFolder::currentRemotePath() {
+    QString remotePath;
+    NoteFolder noteFolder = currentNoteFolder();
+
+    if (noteFolder.isFetched()) {
+        remotePath = noteFolder.getRemotePath();
+    }
+
+    // add a leading "/"
+    remotePath = Utils::Misc::prependIfDoesNotStartWith(remotePath, "/");
+
+    // add a trailing "/"
+    remotePath = Utils::Misc::appendIfDoesNotEndWith(remotePath, "/");
+
+    return remotePath;
+}
+
+/**
  * Suggests a remote path
  */
 QString NoteFolder::suggestRemotePath() {

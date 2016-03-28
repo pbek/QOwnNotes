@@ -14,6 +14,7 @@
 #include <QBuffer>
 #include <QEventLoop>
 #include <QTimer>
+#include <utils/misc.h>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
@@ -328,7 +329,7 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     reply = networkManager->get(r);
 
     url.setUrl(serverUrl + appInfoPath);
-    QString serverNotesPath = getServerNotesPath(notesPath);
+    QString serverNotesPath = NoteFolder::currentRemotePath();
     q.addQueryItem("notes_path", serverNotesPath);
     url.setQuery(q);
     r.setUrl(url);
@@ -493,7 +494,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(QString notesPath,
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + restoreTrashedNotePath);
-    QString serverNotesPath = getServerNotesPath(notesPath);
+    QString serverNotesPath = NoteFolder::currentRemotePath();
 
     url.setUserName(userName);
     url.setPassword(password);
@@ -521,7 +522,7 @@ void OwnCloudService::loadVersions(QString notesPath, QString fileName,
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + versionListPath);
-    QString serverNotesPath = getServerNotesPath(notesPath);
+    QString serverNotesPath = NoteFolder::currentRemotePath();
 
     url.setUserName(userName);
     url.setPassword(password);
@@ -545,7 +546,7 @@ void OwnCloudService::loadTrash(QString notesPath, MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + trashListPath);
-    QString serverNotesPath = getServerNotesPath(notesPath);
+    QString serverNotesPath = NoteFolder::currentRemotePath();
 
     url.setUserName(userName);
     url.setPassword(password);
@@ -571,49 +572,6 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
     }
-}
-
-/**
- * Try to find the server notes path with the help of the notes path and
- * the local ownCloud path
- *
- * @brief OwnCloudService::getServerNotesPath
- * @param notesPath
- * @return QString
- */
-QString OwnCloudService::getServerNotesPath(QString notesPath) {
-    QString path = this->localOwnCloudPath;
-
-    // try to assume local ownCloud directory if not set
-    if (path == "") {
-        path = QDir::homePath() + QDir::separator() + "ownCloud";
-    }
-
-    QString serverNotesPath = "";
-    if (notesPath.contains(path)) {
-        // get the server notes path out of the notes path
-        QStringList list = notesPath.split(path);
-        serverNotesPath = (list.count() > 1) ? list.at(1) : "/";
-
-        // translate the directory separators to "/"
-        serverNotesPath = serverNotesPath.split(QDir::separator()).join("/");
-
-        if (serverNotesPath == "") {
-            serverNotesPath = "/";
-        } else {
-            // add a leading "/"
-            if (serverNotesPath.at(0) != '/') {
-                serverNotesPath.prepend("/");
-            }
-
-            // add a trailing "/"
-            if (serverNotesPath.at(serverNotesPath.size() - 1) != '/') {
-                serverNotesPath.append("/");
-            }
-        }
-    }
-
-    return serverNotesPath;
 }
 
 /**

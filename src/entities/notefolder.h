@@ -39,6 +39,7 @@ public:
     bool localPathExists();
     QString suggestRemotePath();
     QString fixRemotePath();
+    static QString currentRemotePath();
 
 private:
     int id;

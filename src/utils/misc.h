@@ -25,5 +25,7 @@ namespace Utils
         void openFolderSelect(const QString& absolutePath);
         QString removeIfStartsWith(QString text, QString removeString);
         QString removeIfEndsWith(QString text, QString removeString);
+        QString prependIfDoesNotStartWith(QString text, QString startString);
+        QString appendIfDoesNotEndWith(QString text, QString endString);
     }
 }

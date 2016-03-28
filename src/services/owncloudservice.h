@@ -72,8 +72,6 @@ private:
 
     void addAuthHeader(QNetworkRequest *r);
 
-    QString getServerNotesPath(QString notesPath);
-
     void handleVersionsLoading(QString data);
 
     void handleTrashedLoading(QString data);
