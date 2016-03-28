@@ -44,7 +44,6 @@ void OwnCloudService::readSettings() {
     userName = settings.value("ownCloud/userName").toString();
     password = CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString());
-    localOwnCloudPath = settings.value("ownCloud/localOwnCloudPath").toString();
 
     networkManager = new QNetworkAccessManager();
 
@@ -304,9 +303,6 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     // qDebug() << userName;
     // qDebug() << password;
 
-    QSettings settings;
-    QString notesPath = settings.value("notesPath").toString();
-
     QUrl url(serverUrl);
     QNetworkRequest r(url);
 
@@ -323,10 +319,12 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     url.setUrl(serverUrl + capabilitiesPath);
     r.setUrl(url);
     reply = networkManager->get(r);
+    ignoreSslErrorsIfAllowed(reply);
 
     url.setUrl(serverUrl + ownCloudTestPath);
     r.setUrl(url);
     reply = networkManager->get(r);
+    ignoreSslErrorsIfAllowed(reply);
 
     url.setUrl(serverUrl + appInfoPath);
     QString serverNotesPath = NoteFolder::currentRemotePath();
@@ -334,37 +332,7 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     url.setQuery(q);
     r.setUrl(url);
     reply = networkManager->get(r);
-
-    QString localOwnCloudPath = settings.value(
-            "ownCloud/localOwnCloudPath").toString();
-
-    if (localOwnCloudPath != "") {
-        QDir d = QDir(localOwnCloudPath);
-        if (d.exists()) {
-            if (notesPath.startsWith(localOwnCloudPath)) {
-                if (notesPath != localOwnCloudPath) {
-                    settingsDialog->setOKLabelData(5, "ok", SettingsDialog::OK);
-                } else {
-                    settingsDialog->setOKLabelData(
-                            5,
-                            QString("notes path and ownCloud path are equal")
-                                    .arg(notesPath),
-                            SettingsDialog::Warning);
-                }
-            } else {
-                settingsDialog->setOKLabelData(
-                        5,
-                        QString("note path\n(%1)\nnot in ownCloud path").arg(
-                                notesPath).arg(localOwnCloudPath),
-                        SettingsDialog::Failure);
-            }
-        } else {
-            settingsDialog->setOKLabelData(5, "does not exist",
-                                           SettingsDialog::Failure);
-        }
-    } else {
-        settingsDialog->setOKLabelData(5, "empty", SettingsDialog::Failure);
-    }
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**

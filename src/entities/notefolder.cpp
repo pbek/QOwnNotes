@@ -267,7 +267,7 @@ QString NoteFolder::currentRemotePath() {
 }
 
 /**
- * Suggests a remote path
+ * Suggests a remote path from an old localOwnCloudPath
  */
 QString NoteFolder::suggestRemotePath() {
     QSettings settings;

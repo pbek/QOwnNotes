@@ -217,8 +217,6 @@ void SettingsDialog::storeSettings() {
     settings.setValue("ownCloud/userName", ui->userNameEdit->text());
     settings.setValue("ownCloud/password",
                       CryptoService::instance()->encryptToString(ui->passwordEdit->text()));
-    settings.setValue("ownCloud/localOwnCloudPath",
-                      ui->localOwnCloudPathEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
@@ -303,8 +301,6 @@ void SettingsDialog::readSettings() {
     ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
     ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString()));
-    ui->localOwnCloudPathEdit->setText(
-            settings.value("ownCloud/localOwnCloudPath").toString());
     ui->externalEditorPathLineEdit->setText(
             settings.value("externalEditorPath").toString());
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
@@ -585,9 +581,6 @@ void SettingsDialog::setOKLabelData(int number, QString text,
         case 4:
             label = ui->ok4Label;
             break;
-        case 5:
-            label = ui->ok5Label;
-            break;
         case 6:
             label = ui->ok6Label;
             break;
@@ -707,27 +700,6 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
 void SettingsDialog::on_buttonBox_clicked(QAbstractButton *button) {
     if (button == ui->buttonBox->button(QDialogButtonBox::Ok)) {
         storeSettings();
-    }
-}
-
-/**
- * select the local ownCloud directory
- */
-void SettingsDialog::on_localOwnCloudDirectoryButton_clicked() {
-    QString path = ui->localOwnCloudPathEdit->text();
-
-    if (path == "") {
-        path = QDir::homePath() + QDir::separator() + "ownCloud";
-    }
-
-    QString dir = QFileDialog::getExistingDirectory(
-            this,
-            tr("Select ownCloud base directory"),
-            path,
-            QFileDialog::ShowDirsOnly);
-
-    if (dir != "") {
-        ui->localOwnCloudPathEdit->setText(dir);
     }
 }
 

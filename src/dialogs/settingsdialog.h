@@ -53,8 +53,6 @@ private slots:
 
     void on_buttonBox_clicked(QAbstractButton *button);
 
-    void on_localOwnCloudDirectoryButton_clicked();
-
     void on_ownCloudServerAppPageButton_clicked();
 
     void on_noteTextEditButton_clicked();
