@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.2.8
+- added more Polish translation (thank you @Olhur)
+
 ## 1.2.7
 - fixed a problem after moving notes to an other folder
   (for [Issue #117](https://github.com/pbek/QOwnNotes/issues/117))
