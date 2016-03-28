@@ -782,6 +782,8 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
 void SettingsDialog::on_tabWidget_currentChanged(int index) {
     if (index == DebugTab) {
         outputSettings();
+    } else if (index == OwnCloudTab) {
+        on_connectButton_clicked();
     }
 }
 
