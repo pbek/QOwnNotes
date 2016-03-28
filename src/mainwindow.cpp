@@ -3349,6 +3349,9 @@ void MainWindow::insertHtml(QString html) {
             suffix = "image";
         }
 
+        // remove strings like "?b=16068071000" from the suffix
+        suffix.remove(QRegularExpression("\\?.+$"));
+
         QTemporaryFile *tempFile = new QTemporaryFile(
                 QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
                         suffix);

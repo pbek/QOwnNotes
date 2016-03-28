@@ -8,6 +8,8 @@
 - if you configured an editor for opening your note files with it the editor 
   will now be executed in the background, so you can continue to work with 
   QOwnNotes
+- strings like `?b=16068071000` will now be removed from the suffix of 
+  downloaded media files
 
 ## 1.2.8
 - you are now able to **configure your note folders** in the settings
