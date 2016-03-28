@@ -4,6 +4,13 @@ os:
   - linux
   - osx
 
+branches:
+  only:
+    - develop
+    - master
+    - testing
+    - feature/*
+
 env:
   global:
     - secure: Wt43koA55PGba7TsJ85f9vHyW4b/QfPh2Ywhw5+40sba5Us4Y3h+l23VyVjQbXuHfCGgC+t5+AABm1ubhL4MjCvxzS9BepjhNN92LPXoLfBRM2AHhNLWMKLLxt4T7OofjnLPw21l6cjjVrlZZojVbN4MnuG2IPUeUzoEBuA5TPE=
