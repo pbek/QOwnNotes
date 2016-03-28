@@ -113,9 +113,6 @@ void WelcomeDialog::storeNoteFolderSettings() {
 
     QSettings settings;
     settings.setValue("notesPath", _notesPath);
-
-    // create a note folder for the notes path
-    NoteFolder::migrateToNoteFolders();
 }
 
 void WelcomeDialog::on_backButton_clicked()
@@ -136,6 +133,10 @@ void WelcomeDialog::on_backButton_clicked()
 void WelcomeDialog::on_finishButton_clicked()
 {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/finished");
+    storeNoteFolderSettings();
+
+    // create a note folder for the notes path
+    NoteFolder::migrateToNoteFolders();
 
     done(QDialog::Accepted);
 }

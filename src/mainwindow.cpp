@@ -494,6 +494,8 @@ void MainWindow::loadNoteFolderListMenu() {
                 QAction *action =
                         ui->noteFoldersMenu->addAction(noteFolder.getName());
                 action->setData(noteFolder.getId());
+                action->setToolTip(noteFolder.getLocalPath());
+                action->setStatusTip(noteFolder.getLocalPath());
 
                 if (noteFolder.isCurrent()) {
                     QFont font = action->font();
@@ -861,7 +863,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
     }
 
 
-    // check if we want to view the recent note folder combo box
+    // check if we want to view the note folder combo box
     ui->noteFolderComboBox->setVisible(
             settings.value(
                     "MainWindow/showRecentNoteFolderInMainArea").toBool());
@@ -1902,8 +1904,7 @@ void MainWindow::openSettingsDialog(int tab) {
         }
     }
 
-    // reload note folder in case we have cleared
-    // the history in the settings
+    // reload note folders in case we changed them in the settings
     loadNoteFolderListMenu();
 }
 
