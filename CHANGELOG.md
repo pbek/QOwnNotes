@@ -5,6 +5,8 @@
   note folder in the settings
 - fixed that notes weren't stopped from being watched for external changes 
   after the note folder got switched
+- if you configure an editor for opening your note files with it the editor 
+  will now be executed in the background
 
 ## 1.2.8
 - you are now able to **configure your note folders** in the settings
@@ -19,7 +21,7 @@
 	- keep in mind that you also can turn on a **select box** with all your 
 	  **note folders** over your note list in the settings 
 - the default horizontal stretch of the notes list and the note view was 
-  improved 
+  improved
 - some more information was added to the welcome screen
 - added more Polish translation (thank you @Olhur)
 

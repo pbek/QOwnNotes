@@ -2895,12 +2895,19 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
         QDesktopServices::openUrl(url);
     } else {
         QString path = currentNote.fullNoteFilePath();
-        qDebug() << __func__ << " - 'path': " << path;
+        QString command = externalEditorPath + " \"" + path + "\"";
+
+        // we want to start the command in the background
+#ifdef _WIN32
+        command = "start " + command;
+#else
+        command += " &";
+#endif
+
+        qDebug() << __func__ << " - 'command': " << command;
 
         // open note file in external editor
-        system(QString(
-                externalEditorPath + " \"" + path + "\"")
-                       .toStdString().c_str());
+        system(command.toStdString().c_str());
     }
 }
 
