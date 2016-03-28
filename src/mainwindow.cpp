@@ -698,6 +698,11 @@ void MainWindow::loadNoteDirectoryList() {
     }
 
     QDir dir(this->notesPath);
+
+    // clear all paths from the directory watcher
+    noteDirectoryWatcher.removePaths(noteDirectoryWatcher.directories());
+    noteDirectoryWatcher.removePaths(noteDirectoryWatcher.files());
+
     if (dir.exists()) {
         // watch the notes directory for changes
         this->noteDirectoryWatcher.addPath(this->notesPath);

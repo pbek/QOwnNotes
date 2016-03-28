@@ -3,6 +3,8 @@
 ## 1.2.9
 - fixed that the note list didn't get reloaded after you set a different active 
   note folder in the settings
+- fixed that notes weren't stopped from being watched for external changes 
+  after the note folder got switched
 
 ## 1.2.8
 - you are now able to **configure your note folders** in the settings
