@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1199</width>
-    <height>836</height>
+    <width>1383</width>
+    <height>1032</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,6 +78,12 @@
       </item>
       <item row="3" column="1">
        <widget class="QTabWidget" name="noteTabWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>3</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="currentIndex">
          <number>0</number>
         </property>
@@ -217,6 +223,12 @@ p, li { white-space: pre-wrap; }
       </item>
       <item row="3" column="0">
        <widget class="QFrame" name="notesListFrame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <layout class="QVBoxLayout" name="notesListLayout">
          <property name="leftMargin">
           <number>0</number>
@@ -261,7 +273,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1199</width>
+     <width>1383</width>
      <height>28</height>
     </rect>
    </property>
@@ -1045,8 +1057,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

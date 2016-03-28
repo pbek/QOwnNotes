@@ -1,6 +1,17 @@
 # QOwnNotes Changelog
 
 ## 1.2.8
+- you are now able to **configure your note folders** in the settings
+  (for [Issue #36](https://github.com/pbek/QOwnNotes/issues/36))
+	- as a consequence the *recent note folders* will not be used any more to 
+	  switch between note folders
+		- everything that was using the *recent note folders* will now use the 
+		  **note folders**
+	- you can also configure a path on your ownCloud server for each folder
+	- the field *main ownCloud sync folder* was removed from the ownCloud 
+	  settings since this will now be done be the *note folders*
+- the default horizontal stretch of the notes list and the note view was 
+  improved 
 - added more Polish translation (thank you @Olhur)
 
 ## 1.2.7
