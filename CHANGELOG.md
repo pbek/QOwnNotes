@@ -10,8 +10,11 @@
 	- you can also configure a path on your ownCloud server for each folder
 	- the field *main ownCloud sync folder* was removed from the ownCloud 
 	  settings since this will now be done be the *note folders*
+	- keep in mind that you also can turn on a **select box** with all your 
+	  **note folders** over your note list in the settings 
 - the default horizontal stretch of the notes list and the note view was 
   improved 
+- some more information was added to the welcome screen
 - added more Polish translation (thank you @Olhur)
 
 ## 1.2.7
