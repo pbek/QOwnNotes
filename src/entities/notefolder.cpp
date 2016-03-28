@@ -6,6 +6,7 @@
 #include <QSqlError>
 #include <QSettings>
 #include <QDir>
+#include <utils/misc.h>
 
 
 NoteFolder::NoteFolder() {
@@ -246,6 +247,35 @@ NoteFolder NoteFolder::currentNoteFolder() {
 }
 
 /**
+ * Suggests a remote path
+ */
+QString NoteFolder::suggestRemotePath() {
+    QSettings settings;
+    QString localOwnCloudPath = settings.value(
+            "ownCloud/localOwnCloudPath").toString();
+
+    // get remote path from local ownCloud path
+    if (!localOwnCloudPath.isEmpty()) {
+        remotePath = QString(localPath);
+        remotePath.remove(localOwnCloudPath);
+        fixRemotePath();
+    } else {
+        remotePath = "Notes";
+    }
+
+    return remotePath;
+}
+
+/**
+ * Removes a leading or trailing slash from the remote path
+ */
+QString NoteFolder::fixRemotePath() {
+    remotePath = Utils::Misc::removeIfStartsWith(remotePath, "/");
+    remotePath = Utils::Misc::removeIfEndsWith(remotePath, "/");
+    return remotePath;
+}
+
+/**
  * Create the notesPath and the recentNoteFolders to NoteFolder objects
  */
 bool NoteFolder::migrateToNoteFolders() {
@@ -263,7 +293,7 @@ bool NoteFolder::migrateToNoteFolders() {
         noteFolder.setName(QObject::tr("default"));
         noteFolder.setLocalPath(notesPath);
         noteFolder.setOwnCloudServerId(1);
-        noteFolder.setRemotePath("Notes");
+        noteFolder.suggestRemotePath();
         noteFolder.setPriority(priority++);
         noteFolder.store();
 
@@ -283,7 +313,7 @@ bool NoteFolder::migrateToNoteFolders() {
                     noteFolder.setName(recentNoteFolderPath);
                     noteFolder.setLocalPath(recentNoteFolderPath);
                     noteFolder.setOwnCloudServerId(1);
-                    noteFolder.setRemotePath("");
+                    noteFolder.suggestRemotePath();
                     noteFolder.setPriority(priority++);
                     noteFolder.store();
                 }

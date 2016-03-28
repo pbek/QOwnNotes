@@ -45,4 +45,7 @@ private:
     int ownCloudServerId;
     QString remotePath;
     int priority;
+
+    QString suggestRemotePath();
+    QString fixRemotePath();
 };

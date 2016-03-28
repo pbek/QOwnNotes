@@ -23,5 +23,7 @@ namespace Utils
     namespace Misc {
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
+        QString removeIfStartsWith(QString text, QString removeString);
+        QString removeIfEndsWith(QString text, QString removeString);
     }
 }
