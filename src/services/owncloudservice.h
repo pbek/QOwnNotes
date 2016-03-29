@@ -25,10 +25,9 @@ public:
 
     void settingsConnectionTest(SettingsDialog *dialog);
 
-    void loadVersions(QString notesPath, QString fileName,
-                      MainWindow *mainWindow);
+    void loadVersions(QString fileName, MainWindow *mainWindow);
 
-    void loadTrash(QString notesPath, MainWindow *mainWindow);
+    void loadTrash(MainWindow *mainWindow);
 
     void restoreTrashedNoteOnServer(QString notesPath, QString fileName,
                                     int timestamp, MainWindow *mainWindow);

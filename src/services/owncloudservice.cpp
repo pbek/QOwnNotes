@@ -485,8 +485,7 @@ void OwnCloudService::restoreTrashedNoteOnServer(QString notesPath,
 /**
  * @brief OwnCloudService::loadVersions
  */
-void OwnCloudService::loadVersions(QString notesPath, QString fileName,
-                                   MainWindow *mainWindow) {
+void OwnCloudService::loadVersions(QString fileName, MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + versionListPath);
@@ -510,7 +509,7 @@ void OwnCloudService::loadVersions(QString notesPath, QString fileName,
 /**
  * @brief OwnCloudService::loadTrash
  */
-void OwnCloudService::loadTrash(QString notesPath, MainWindow *mainWindow) {
+void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + trashListPath);

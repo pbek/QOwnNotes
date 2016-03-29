@@ -2456,8 +2456,7 @@ void MainWindow::on_actionShow_versions_triggered() {
             20000);
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->loadVersions(
-            this->notesPath, this->currentNote.getFileName(), this);
+    ownCloud->loadVersions(this->currentNote.getFileName(), this);
 }
 
 void MainWindow::enableShowVersionsButton() {
@@ -2471,7 +2470,7 @@ void MainWindow::on_actionShow_trash_triggered() {
             20000);
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->loadTrash(this->notesPath, this);
+    ownCloud->loadTrash(this);
 }
 
 void MainWindow::enableShowTrashButton() {

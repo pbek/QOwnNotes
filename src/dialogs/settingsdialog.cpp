@@ -999,6 +999,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
             QDir::homePath() + QDir::separator() + "ownCloud" +
                     QDir::separator() + "Notes");
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
+    _selectedNoteFolder.setOwnCloudServerId(1);
     _selectedNoteFolder.store();
 
     if (_selectedNoteFolder.isFetched()) {

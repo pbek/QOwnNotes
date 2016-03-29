@@ -13,7 +13,7 @@ NoteFolder::NoteFolder() {
     id = 0;
     name = "";
     localPath = "";
-    ownCloudServerId = 0;
+    ownCloudServerId = 1;
     remotePath = "";
     priority = 0;
 }
