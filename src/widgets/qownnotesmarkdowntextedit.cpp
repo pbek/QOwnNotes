@@ -68,7 +68,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     /* <ul> */
     QTextCharFormat list;
-    list.setForeground(QBrush(QColor(163, 0, 123)));
+    list.setForeground(QBrush(darkModeColors ? Qt::yellow : QColor(163, 0, 123)));
     STY(pmh_LIST_BULLET, list);
     STY(pmh_LIST_ENUMERATOR, list);
 
@@ -76,7 +76,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QTextCharFormat link;
     link.setForeground(QBrush(QColor(252, 126, 0)));
     link.setBackground(QBrush(darkModeColors ?
-                              QColor(104, 104, 104) : QColor(255, 242, 228)));
+                              QColor(51, 51, 51) : QColor(255, 242, 228)));
     STY(pmh_LINK, link);
     STY(pmh_AUTO_LINK_URL, link);
     STY(pmh_AUTO_LINK_EMAIL, link);
@@ -93,9 +93,9 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     /* <pre> */
     QTextCharFormat code;
-    code.setForeground(QBrush(Qt::darkGreen));
+    code.setForeground(QBrush(darkModeColors ? Qt::green : Qt::darkGreen));
     code.setBackground(QBrush(darkModeColors ?
-                              QColor(104, 104, 104) : QColor(226, 231, 226)));
+                              QColor(51, 51, 51) : QColor(226, 231, 226)));
 
     QFont codeFont = this->font();
 
