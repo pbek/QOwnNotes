@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 1.3.0
-- moving and copying notes now works with note folders, like it should
+- moving and copying of notes now works with note folders, like it should
+- fixed the position of the context menu in the note text edit
+  (for [Issue #124](https://github.com/pbek/QOwnNotes/issues/124))
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.9

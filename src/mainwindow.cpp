@@ -2549,7 +2549,7 @@ void MainWindow::on_actionSelect_all_notes_triggered() {
  * @param pos
  */
 void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
-    QPoint globalPos = ui->notesListWidget->mapToGlobal(pos);
+    QPoint globalPos = ui->noteTextEdit->mapToGlobal(pos);
     QMenu *menu = ui->noteTextEdit->createStandardContextMenu();
 
     menu->addSeparator();
