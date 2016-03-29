@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.3.0
+- added more Portuguese translation (thank you mlimacarlos)
+
 ## 1.2.9
 - fixed that the note list didn't get reloaded after you set a different active 
   note folder in the settings
