@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 1.3.0
+- moving and copying notes now works with note folders, like it should
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.9

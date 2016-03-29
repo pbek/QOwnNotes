@@ -283,7 +283,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QMenu" name="noteFoldersMenu">
      <property name="title">
-      <string>Notes &amp;folders</string>
+      <string>Note &amp;folders</string>
      </property>
     </widget>
     <widget class="QMenu" name="menuSort_by">

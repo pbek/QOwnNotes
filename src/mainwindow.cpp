@@ -2483,22 +2483,36 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     QMenu noteMenu;
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
-    QSettings settings;
-    QStringList recentNoteFolders =
-            settings.value("recentNoteFolders").toStringList();
 
-    // show copy and move menu entries only
-    // if there is at least one notes folder
-    if (recentNoteFolders.size() > 0) {
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+
+    // show copy and move menu entries only if there
+    // is at least one other note folder
+    if (noteFolders.count() > 1) {
         moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
         copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
 
-        // add actions for the recent note folders
-        Q_FOREACH(QString noteFolder, recentNoteFolders) {
-                if (noteFolder != this->notesPath) {
-                    moveDestinationMenu->addAction(noteFolder);
-                    copyDestinationMenu->addAction(noteFolder);
+        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+                // don't show not existing folders or if path is empty
+                if (!noteFolder.localPathExists()) {
+                    continue;
                 }
+
+                if (noteFolder.isCurrent()) {
+                    continue;
+                }
+
+                QAction *moveAction = moveDestinationMenu->addAction(
+                        noteFolder.getName());
+                moveAction->setData(noteFolder.getLocalPath());
+                moveAction->setToolTip(noteFolder.getLocalPath());
+                moveAction->setStatusTip(noteFolder.getLocalPath());
+
+                QAction *copyAction = copyDestinationMenu->addAction(
+                        noteFolder.getName());
+                copyAction->setData(noteFolder.getLocalPath());
+                copyAction->setToolTip(noteFolder.getLocalPath());
+                copyAction->setStatusTip(noteFolder.getLocalPath());
             }
     }
 
@@ -2508,13 +2522,13 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
 
     QAction *selectedItem = noteMenu.exec(globalPos);
     if (selectedItem) {
-        // move notes
         if (selectedItem->parent() == moveDestinationMenu) {
-            QString destinationFolder = selectedItem->text();
+            // move notes
+            QString destinationFolder = selectedItem->data().toString();
             moveSelectedNotesToFolder(destinationFolder);
         } else if (selectedItem->parent() == copyDestinationMenu) {
             // copy notes
-            QString destinationFolder = selectedItem->text();
+            QString destinationFolder = selectedItem->data().toString();
             copySelectedNotesToFolder(destinationFolder);
         } else if (selectedItem == removeAction) {
             // remove notes
