@@ -75,7 +75,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     /* <a href> */
     QTextCharFormat link;
     link.setForeground(QBrush(QColor(252, 126, 0)));
-    link.setBackground(QBrush(QColor(255, 242, 228)));
+    link.setBackground(QBrush(darkModeColors ?
+                              QColor(104, 104, 104) : QColor(255, 242, 228)));
     STY(pmh_LINK, link);
     STY(pmh_AUTO_LINK_URL, link);
     STY(pmh_AUTO_LINK_EMAIL, link);
@@ -93,7 +94,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     /* <pre> */
     QTextCharFormat code;
     code.setForeground(QBrush(Qt::darkGreen));
-    code.setBackground(QBrush(QColor(226, 231, 226)));
+    code.setBackground(QBrush(darkModeColors ?
+                              QColor(104, 104, 104) : QColor(226, 231, 226)));
 
     QFont codeFont = this->font();
 
@@ -113,22 +115,20 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     code.setFont(codeFont);
 
-    if (darkModeColors) {
-        code.setBackground(QBrush(QColor(186, 186, 186)));
-    }
-
     STY(pmh_CODE, code);
     STY(pmh_VERBATIM, code);
 
     /* <em> */
     QTextCharFormat emph;
-    emph.setForeground(QBrush(QColor(0, 87, 174)));
+    emph.setForeground(QBrush(darkModeColors ?
+                              QColor(158, 182, 255) ? QColor(0, 87, 174)));
     emph.setFontItalic(true);
     STY(pmh_EMPH, emph);
 
     /* <strong> */
     QTextCharFormat strong;
-    strong.setForeground(QBrush(QColor(0, 66, 138)));
+    strong.setForeground(QBrush(darkModeColors ?
+                              QColor(158, 182, 255) ? QColor(0, 66, 138)));
     strong.setFontWeight(QFont::Bold);
     STY(pmh_STRONG, strong);
 
