@@ -32,6 +32,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     }
 
     int defaultFontSize = font.pointSize();
+    bool darkModeColors = settings.value("darkModeColors").toBool();
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -41,8 +42,12 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
 
     QTextCharFormat headers;
-    headers.setForeground(QBrush(QColor(0, 49, 110)));
-    headers.setBackground(QBrush(QColor(235, 235, 240)));
+    headers.setForeground(QBrush(darkModeColors ?
+                                 QColor(158, 182, 255) : QColor(0, 49, 110)));
+
+    if (!darkModeColors) {
+        headers.setBackground(QBrush(QColor(235, 235, 240)));
+    }
     headers.setFontWeight(QFont::Bold);
     headers.setFontPointSize(defaultFontSize * 1.2);
     STY(pmh_H1, headers);
@@ -107,6 +112,11 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     }
 
     code.setFont(codeFont);
+
+    if (darkModeColors) {
+        code.setBackground(QBrush(QColor(186, 186, 186)));
+    }
+
     STY(pmh_CODE, code);
     STY(pmh_VERBATIM, code);
 

@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -1450,6 +1450,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item row="0" column="1">
                <widget class="QSpinBox" name="toolbarIconSizeSpinBox"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_14">
+             <property name="title">
+              <string>Dark mode</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_24">
+              <item row="0" column="0">
+               <widget class="QCheckBox" name="darkModeColorsCheckBox">
+                <property name="text">
+                 <string>Optimize colors for dark mode desktop themes</string>
+                </property>
+               </widget>
               </item>
              </layout>
             </widget>

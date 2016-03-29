@@ -4,6 +4,8 @@
 - moving and copying of notes now works with note folders, like it should
 - fixed the position of the context menu in the note text edit
   (for [Issue #124](https://github.com/pbek/QOwnNotes/issues/124))
+- added a setting that will optimize the colors in dark desktop themes a bit
+    - more ideas for dark mode theme colors are welcome
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.2.9

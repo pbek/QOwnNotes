@@ -263,6 +263,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("appMetrics/disableAppHeartbeat",
                       ui->appHeartbeatCheckBox->isChecked());
 
+    settings.setValue("darkModeColors",
+                      ui->darkModeColorsCheckBox->isChecked());
+
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
     QStringList todoCalendarEnabledUrlList;
@@ -328,6 +331,9 @@ void SettingsDialog::readSettings() {
 
     ui->appHeartbeatCheckBox->setChecked(settings.value(
             "appMetrics/disableAppHeartbeat").toBool());
+
+    ui->darkModeColorsCheckBox->setChecked(settings.value(
+            "darkModeColors").toBool());
 
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
