@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.3.1
+- fixed the background color in the note folder text edit on the welcome 
+  screen for dark mode themes 
+
 ## 1.3.0
 - moving and copying of notes now works with note folders, like it should
 - fixed the position of the context menu in the note text edit

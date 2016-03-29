@@ -17,7 +17,7 @@ WelcomeDialog::WelcomeDialog(QWidget *parent) :
 
     _notesPath = QDir::homePath() + QDir::separator() +
            "ownCloud" + QDir::separator() + "Notes";
-    ui->noteFolderLabel->setText(_notesPath);
+    ui->noteFolderLineEdit->setText(_notesPath);
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
 }
@@ -156,7 +156,7 @@ void WelcomeDialog::on_noteFolderButton_clicked()
 
     if (d.exists() && (dir != "")) {
         _notesPath = dir;
-        ui->noteFolderLabel->setText(dir);
+        ui->noteFolderLineEdit->setText(dir);
     }
 }
 
