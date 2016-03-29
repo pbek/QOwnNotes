@@ -121,14 +121,14 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     /* <em> */
     QTextCharFormat emph;
     emph.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) ? QColor(0, 87, 174)));
+                              QColor(158, 182, 255) : QColor(0, 87, 174)));
     emph.setFontItalic(true);
     STY(pmh_EMPH, emph);
 
     /* <strong> */
     QTextCharFormat strong;
     strong.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) ? QColor(0, 66, 138)));
+                              QColor(158, 182, 255) : QColor(0, 66, 138)));
     strong.setFontWeight(QFont::Bold);
     STY(pmh_STRONG, strong);
 
