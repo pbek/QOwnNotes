@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 1.3.2
+- fixed a problem with the output of ownCloud error messages in the settings 
+  dialog
+- fixed a potential crash when opening the note folder tab in the settings 
+  from the welcome screen as long there was no note folder configured
+- removed an obsolete button from the ownCloud settings tab
+
 ## 1.3.1
 - fixed the background color in the note folder text edit on the welcome 
   screen for dark mode themes 

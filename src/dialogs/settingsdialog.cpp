@@ -550,7 +550,9 @@ void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
                     .arg(serverVersion).arg(appVersion));
     } else {
         // hide password
-        connectionErrorMessage.replace(ui->passwordEdit->text(), "***");
+        if (!ui->passwordEdit->text().isEmpty()) {
+            connectionErrorMessage.replace(ui->passwordEdit->text(), "***");
+        }
 
         ui->connectionTestLabel->setStyleSheet("color: red;");
         ui->connectionTestLabel->setText(
@@ -949,6 +951,7 @@ void SettingsDialog::setupNoteFolderTab() {
     ui->noteFolderOwnCloudServerLabel->setVisible(false);
     ui->noteFolderOwnCloudServerComboBox->setVisible(false);
     ui->noteFolderRemotePathButton->setVisible(false);
+    ui->noteFolderEditFrame->setEnabled(NoteFolder::countAll() > 0);
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
     int noteFoldersCount = noteFolders.count();

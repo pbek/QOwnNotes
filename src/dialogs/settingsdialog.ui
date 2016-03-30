@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1388</width>
-    <height>923</height>
+    <height>1003</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>4</number>
+        <number>1</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -405,48 +405,6 @@
                </widget>
               </item>
               <item row="4" column="1">
-               <widget class="QPushButton" name="localOwnCloudDirectoryButton">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="toolTip">
-                 <string>Click here to select the location of the main local ownCloud sync folder.</string>
-                </property>
-                <property name="text">
-                 <string>select main ownCloud sync folder</string>
-                </property>
-                <property name="icon">
-                 <iconset theme="folder-sync" resource="../breeze-qownnotes.qrc">
-                  <normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>
-                </property>
-                <property name="flat">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="1">
-               <spacer name="verticalSpacer">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="6" column="1">
                <widget class="QPushButton" name="connectButton">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
@@ -475,7 +433,7 @@
                 </property>
                </widget>
               </item>
-              <item row="7" column="1">
+              <item row="5" column="1">
                <spacer name="verticalSpacer_2">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -488,7 +446,7 @@
                 </property>
                </spacer>
               </item>
-              <item row="8" column="1">
+              <item row="6" column="1">
                <widget class="QLabel" name="okLabelStatus">
                 <property name="styleSheet">
                  <string notr="true">font-weight: bold;</string>
@@ -498,7 +456,7 @@
                 </property>
                </widget>
               </item>
-              <item row="9" column="0">
+              <item row="7" column="0">
                <widget class="QLabel" name="ok1Label">
                 <property name="text">
                  <string>unknown</string>
@@ -508,14 +466,14 @@
                 </property>
                </widget>
               </item>
-              <item row="9" column="1">
+              <item row="7" column="1">
                <widget class="QLabel" name="check1Label">
                 <property name="text">
                  <string>connection to web server</string>
                 </property>
                </widget>
               </item>
-              <item row="10" column="0">
+              <item row="8" column="0">
                <widget class="QLabel" name="ok2Label">
                 <property name="text">
                  <string>unknown</string>
@@ -525,14 +483,14 @@
                 </property>
                </widget>
               </item>
-              <item row="10" column="1">
+              <item row="8" column="1">
                <widget class="QLabel" name="check2Label">
                 <property name="text">
                  <string>ownCloud server detected</string>
                 </property>
                </widget>
               </item>
-              <item row="11" column="0">
+              <item row="9" column="0">
                <widget class="QLabel" name="ok3Label">
                 <property name="text">
                  <string>unknown</string>
@@ -542,14 +500,14 @@
                 </property>
                </widget>
               </item>
-              <item row="11" column="1">
+              <item row="9" column="1">
                <widget class="QLabel" name="check3Label">
                 <property name="text">
                  <string>username and password correct</string>
                 </property>
                </widget>
               </item>
-              <item row="12" column="0">
+              <item row="10" column="0">
                <widget class="QLabel" name="ok4Label">
                 <property name="text">
                  <string>unknown</string>
@@ -559,14 +517,14 @@
                 </property>
                </widget>
               </item>
-              <item row="12" column="1">
+              <item row="10" column="1">
                <widget class="QLabel" name="check4Label">
                 <property name="text">
                  <string>connection to QOwnNotesAPI</string>
                 </property>
                </widget>
               </item>
-              <item row="13" column="0">
+              <item row="11" column="0">
                <widget class="QLabel" name="ok6Label">
                 <property name="text">
                  <string>unknown</string>
@@ -576,14 +534,14 @@
                 </property>
                </widget>
               </item>
-              <item row="13" column="1">
+              <item row="11" column="1">
                <widget class="QLabel" name="check6Label">
                 <property name="text">
                  <string>versions app enabled on server</string>
                 </property>
                </widget>
               </item>
-              <item row="14" column="0">
+              <item row="12" column="0">
                <widget class="QLabel" name="ok7Label">
                 <property name="text">
                  <string>unknown</string>
@@ -593,14 +551,14 @@
                 </property>
                </widget>
               </item>
-              <item row="14" column="1">
+              <item row="12" column="1">
                <widget class="QLabel" name="check7Label">
                 <property name="text">
                  <string>trash app enabled on server</string>
                 </property>
                </widget>
               </item>
-              <item row="15" column="0">
+              <item row="13" column="0">
                <widget class="QLabel" name="ok8Label">
                 <property name="text">
                  <string>unknown</string>
@@ -610,7 +568,7 @@
                 </property>
                </widget>
               </item>
-              <item row="15" column="1">
+              <item row="13" column="1">
                <widget class="QLabel" name="check8Label">
                 <property name="text">
                  <string>notes path found on server</string>
