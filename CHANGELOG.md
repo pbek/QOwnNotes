@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.3.3
+- added more Spanish translation (thank you asoliverez)
+
 ## 1.3.2
 - fixed a problem with the output of ownCloud error messages in the settings 
   dialog

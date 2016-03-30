@@ -79,7 +79,7 @@
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>Carpetas de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="291"/>
@@ -558,7 +558,9 @@ Restore current note?</source>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation type="unfinished">
-        <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada.</numerusform>
+        <numerusform>Eliminar &lt;strong&gt;%n&lt;/strong&gt; nota(s) seleccionada(s)?
+
+Si la papelera está habilitada en su servidor de ownCloud debería poder restaurarla(s) desde allí.</numerusform>
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
@@ -838,7 +840,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2993"/>
       <source>bookmarked note position at slot %1</source>
-      <translation type="unfinished">bookmarked note position at slot %1</translation>
+      <translation>se guardó la posición de la nota en la ranura %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3009"/>
@@ -1035,7 +1037,7 @@ Haga clic en Cancelar para salir.</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="212"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
+      <translation>Establecer la ruta de ownCloud donde la carpeta de notas se sincronizará en su servidor de ownCloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="244"/>
@@ -1333,17 +1335,17 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1418"/>
       <source>Dark mode</source>
-      <translation type="unfinished">Dark mode</translation>
+      <translation>Modo oscuro</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1424"/>
       <source>Optimize colors for dark mode desktop themes</source>
-      <translation type="unfinished">Optimize colors for dark mode desktop themes</translation>
+      <translation>Optimizar los colores para temas de escritorio oscuros</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1544"/>
       <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
-      <translation type="unfinished">Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</translation>
+      <translation>Haga esto sólo si tiene problemas con sus tareas. Se advierte que esto eliminará las carpetas de notas configuradas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1570"/>
@@ -1368,7 +1370,7 @@ p, li { white-space: pre-wrap; }
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1860"/>
       <source>Disable heartbeat</source>
-      <translation type="unfinished">Disable heartbeat</translation>
+      <translation>Deshabilitar heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1097"/>
@@ -1506,7 +1508,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1592"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
+      <translation>Este botón permite borrar todos los ajustes, eliminar la base de datos local de tareas y salir de QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1602"/>
@@ -1527,7 +1529,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1660"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>Extensión predeterminada de los archivos de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1679"/>
@@ -1562,7 +1564,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1756"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>Los datos de uso anónimos ayudan a decidir qué partes de QOwnNotes mejorar primero y encontrar y arreglar errores. Por favor deshabilitarlo solamente si no puede vivir con ello.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1788"/>
@@ -1572,12 +1574,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1829"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>Latido de la aplicación</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1847"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>Se envía periodicamente una pequeña solicitud de latidos mientras QOwnNotes se está ejecutando. Haga feliz a un desarrollador haciéndole saber que alguien está utilizando QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1886"/>
@@ -1597,17 +1599,17 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1928"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Guardar información de depuración</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="77"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>nombre de host del servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="78"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>nombre de usuario para el servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="79"/>
@@ -1644,32 +1646,32 @@ Mensaje de error de conexión: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1006"/>
       <source>new folder</source>
-      <translation type="unfinished">new folder</translation>
+      <translation>nueva carpeta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1040"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>Eliminar carpeta de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1041"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Eliminar la carpeta de notas actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1043"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Eliminar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1104"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="786"/>
       <source>The Database was reinitialized.</source>
-      <translation type="unfinished">The Database was reinitialized.</translation>
+      <translation>Se reinicializó la base de datos.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="806"/>
@@ -1703,17 +1705,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="777"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
+      <translation>¿Realmente desea borrar la base de datos local? Esto también eliminará las carpetas de notas configuradas y sus tareas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="780"/>
       <source>Clear &amp;database</source>
-      <translation type="unfinished">Clear &amp;database</translation>
+      <translation>Limpiar la base de &amp;datos</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="927"/>
       <source>Select editor application</source>
-      <translation type="unfinished">Select editor application</translation>
+      <translation>Seleccionar la aplicación de edición</translation>
     </message>
   </context>
   <context>
@@ -1742,7 +1744,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="114"/>
       <source>save and &amp;insert into note</source>
-      <translation type="unfinished">save and &amp;insert into note</translation>
+      <translation>guardar e &amp;insertar en nota</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="128"/>
@@ -1804,8 +1806,7 @@ Your notes will stay intact!</source>
       <location filename="../dialogs/tododialog.cpp" line="489"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation type="unfinished">Remove the selected todo item?
-This cannot be undone!</translation>
+      <translation>¿Eliminar la tarea seleccionada? Esto no se puede deshacer!</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="490"/>
@@ -1912,7 +1913,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation type="unfinished">Note versions on your ownCloud server</translation>
+      <translation>Versiones de notas en su servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="20"/>
@@ -1931,92 +1932,92 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Bienvenido a QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
+      <translation>el bloc de notas en texto plano con soporte de markdown e integración con ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation type="unfinished">&amp;Back</translation>
+      <translation>&amp;Atrás</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="102"/>
       <source>&amp;Next</source>
-      <translation type="unfinished">&amp;Next</translation>
+      <translation>&amp;Siguiente</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="119"/>
       <source>&amp;Finished</source>
-      <translation type="unfinished">&amp;Finished</translation>
+      <translation>&amp;Finalizado</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="142"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancelar</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="171"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Carpeta de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="187"/>
       <source>create note folder if not existing</source>
-      <translation type="unfinished">create note folder if not existing</translation>
+      <translation>crear carpeta de notas si no existe</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="197"/>
       <source>Please select where you want to store your notes:</source>
-      <translation type="unfinished">Please select where you want to store your notes:</translation>
+      <translation>Por favor seleccione dónde almacenar sus notas:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>select &amp;folder</source>
-      <translation type="unfinished">select &amp;folder</translation>
+      <translation>seleccionar &amp;carpeta</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
+      <translation>Si desea poder acceder a las versiones de sus notas y a notas eliminadas en su servidor de ownCloud, puede configurarlo para ello ahora. También puede hacerlo después.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
       <source>open ownCloud &amp;settings</source>
-      <translation type="unfinished">open ownCloud &amp;settings</translation>
+      <translation>abrir configuración de &amp;ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
+      <translation>En todo caso, necesita el cliente de sincronización de ownCloud (u otro cliente de sincronización) para sincronizar sus notas con el servidor de ownCloud.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>open general &amp;settings</source>
-      <translation type="unfinished">open general &amp;settings</translation>
+      <translation>abrir configuración &amp;general</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes registrará datos anónimos de uso para ayudar a decidir qué partes de QOwnNotes mejorar primero y encontrar y arreglar errores. Puede deshabilitar esta función en la configuración.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="81"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>No se puede crear ruta de notas!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="86"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Esta ruta de notas no existe!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="151"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
     </message>
   </context>
 </TS>
