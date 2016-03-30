@@ -6,6 +6,7 @@
 - fixed a potential crash when opening the note folder tab in the settings 
   from the welcome screen as long there was no note folder configured
 - removed an obsolete button from the ownCloud settings tab
+- <kbd>⇧</kbd> + <kbd>Tab</kbd> will now also un-indent spaces in front of text
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.3.1
@@ -18,6 +19,7 @@
   (for [Issue #124](https://github.com/pbek/QOwnNotes/issues/124))
 - added a setting that will optimize the colors in dark desktop themes a bit
     - more ideas for dark mode theme colors are welcome
+- 
 - added more Portuguese and Spanish translation (thank you mlimacarlos and asoliverez)
 
 ## 1.2.9
