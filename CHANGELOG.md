@@ -6,6 +6,7 @@
 - fixed a potential crash when opening the note folder tab in the settings 
   from the welcome screen as long there was no note folder configured
 - removed an obsolete button from the ownCloud settings tab
+- added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.3.1
 - fixed the background color in the note folder text edit on the welcome 
@@ -17,7 +18,7 @@
   (for [Issue #124](https://github.com/pbek/QOwnNotes/issues/124))
 - added a setting that will optimize the colors in dark desktop themes a bit
     - more ideas for dark mode theme colors are welcome
-- added more Portuguese translation (thank you mlimacarlos)
+- added more Portuguese and Spanish translation (thank you mlimacarlos and asoliverez)
 
 ## 1.2.9
 - fixed that the note list didn't get reloaded after you set a different active 
