@@ -355,7 +355,9 @@ bool Note::storeNewDecryptedText(QString text) {
  */
 QString Note::defaultNoteFileExtension() {
     QSettings settings;
-    return settings.value("defaultNoteFileExtension", "txt").toString();
+    QString extension = settings.value(
+            "defaultNoteFileExtension", "txt").toString();
+    return extension.isEmpty() ? "txt" : extension;
 }
 
 //

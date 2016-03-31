@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 1.3.3
+- fixed a possible problem with an empty default note file extension setting
 - added more Spanish translation (thank you asoliverez)
 
 ## 1.3.2
