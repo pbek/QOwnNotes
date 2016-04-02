@@ -79,7 +79,7 @@
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>&amp;Папки для заметок</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="291"/>
@@ -109,12 +109,12 @@
     <message>
       <location filename="../mainwindow.ui" line="379"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>Ширина окна редактора</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="403"/>
       <source>main toolbar</source>
-      <translation type="unfinished">main toolbar</translation>
+      <translation>Главная панель инструментов</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="448"/>
@@ -124,7 +124,7 @@
     <message>
       <location filename="../mainwindow.ui" line="463"/>
       <source>&amp;Setup note folders</source>
-      <translation type="unfinished">&amp;Setup note folders</translation>
+      <translation>&amp;Настройка каталогов для заметок</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="472"/>
@@ -371,68 +371,68 @@
     <message>
       <location filename="../mainwindow.ui" line="913"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Отобразить панель &amp;инструментов</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="921"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Узкое</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="932"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Среднее</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="943"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Широкое</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="954"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>На весь экран</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="966"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Вставка страниц html или медиа-файлов</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="969"/>
       <location filename="../mainwindow.ui" line="972"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Вставка изображений, заметок и страниц html из буфера обмена</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="984"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Показать заметки в &amp;файл-менеджере</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="996"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Текст &amp;полужирный</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1008"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Текст &amp;курсив</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1020"/>
       <source>&amp;Increase note text size</source>
-      <translation type="unfinished">&amp;Increase note text size</translation>
+      <translation>У&amp;величить размер текста</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1032"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>У&amp;меньшить размер текста</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1044"/>
       <source>&amp;Reset note text size</source>
-      <translation type="unfinished">&amp;Reset note text size</translation>
+      <translation>С&amp;бросить размер текста</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="941"/>
@@ -472,12 +472,12 @@ Restore current note?</source>
     <message>
       <location filename="../mainwindow.cpp" line="1006"/>
       <source>note was modified externally: %1</source>
-      <translation type="unfinished">note was modified externally: %1</translation>
+      <translation>Заметка изменена внешней программой: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1017"/>
       <source>notes directory was modified externally</source>
-      <translation type="unfinished">notes directory was modified externally</translation>
+      <translation>Каталог заметок был изменен извне</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="1055"/>
@@ -666,12 +666,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2455"/>
       <source>note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">note versions are currently loaded from your ownCloud server</translation>
+      <translation>Версии заметок в настоящее время загружены с сервера ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2469"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">trashed notes are currently loaded from your ownCloud server</translation>
+      <translation>Удаленные заметки в настоящее время загружены с сервера ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2492"/>
@@ -701,12 +701,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="914"/>
       <source>current note was modified externally</source>
-      <translation type="unfinished">current note was modified externally</translation>
+      <translation>Текущая заметка была изменена извне</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1253"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Пожалуйста, выберите папку для хранения заметок</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2112"/>
@@ -717,19 +717,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3211"/>
       <location filename="../mainwindow.cpp" line="3273"/>
       <source>inserting image</source>
-      <translation type="unfinished">inserting image</translation>
+      <translation>вставка изображения</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3216"/>
       <location filename="../mainwindow.cpp" line="3276"/>
       <source>done inserting image</source>
-      <translation type="unfinished">done inserting image</translation>
+      <translation>изображение вставлено</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3227"/>
       <source>copied %n note(s) to %1</source>
       <translation type="unfinished">
-        <numerusform>copied %n note(s) to %1</numerusform>
+        <numerusform>скопировано %n заметок(ки) в %1</numerusform>
         <numerusform>copied %n note(s) to %1</numerusform>
         <numerusform>copied %n note(s) to %1</numerusform>
       </translation>
@@ -738,7 +738,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3236"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
       <translation type="unfinished">
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>не удалось скопировать %n заметок(ки) (скорее всего уже существуют)</numerusform>
         <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
         <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
@@ -747,7 +747,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3246"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation type="unfinished">
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>пропущено копирование of %n заметок(ки) (неизвестный формат или нечитаемые)</numerusform>
         <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
@@ -755,37 +755,37 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3260"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>сохранение временного изображения</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3279"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>невозможно открыть временный файл</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3356"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>Загрузка %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3386"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>загрузка изображений завершена</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3487"/>
       <source>Increased font size to %1 pt</source>
-      <translation type="unfinished">Increased font size to %1 pt</translation>
+      <translation>Размер шрифта увеличен до %1 пунктов</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3500"/>
       <source>Decreased font size to %1 pt</source>
-      <translation type="unfinished">Decreased font size to %1 pt</translation>
+      <translation>Размер шрифта уменьшен до %1 пунктов</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3512"/>
       <source>Reset font size to %1 pt</source>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Размер шрифта сброшен до %1 пунктов</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2092"/>
@@ -902,12 +902,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="553"/>
       <source>done with loading note versions</source>
-      <translation type="unfinished">done with loading note versions</translation>
+      <translation>загрузка версий заметки завершена</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="630"/>
       <source>done with loading trashed notes</source>
-      <translation type="unfinished">done with loading trashed notes</translation>
+      <translation>загрузка удаленных заметок завершена</translation>
     </message>
   </context>
   <context>
@@ -943,7 +943,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="313"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>по умолчанию</translation>
     </message>
   </context>
   <context>
@@ -1009,27 +1009,27 @@ Click Cancel to exit.</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="36"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Папки заметок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="42"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Ваши папки заметок</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="109"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;Добавить папку</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="133"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Удалить папку</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Имя</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="175"/>

@@ -2,7 +2,7 @@
 
 ## 1.3.3
 - fixed a possible problem with an empty default note file extension setting
-- added more Spanish translation (thank you asoliverez)
+- added more Spanish and Russian translation (thank you asoliverez and Valerian)
 
 ## 1.3.2
 - fixed a problem with the output of ownCloud error messages in the settings 
