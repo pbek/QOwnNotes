@@ -43,6 +43,8 @@ public:
 
     void removeCalendarItem(CalendarItem calItem, TodoDialog *dialog);
 
+    void settingsGetFileList(SettingsDialog *dialog, QString path);
+
 private:
     QString serverUrl;
     QString serverUrlPath;
@@ -60,6 +62,7 @@ private:
     QString ownCloudTestPath;
     QString restoreTrashedNotePath;
     QString calendarPath;
+    QString webdavPath;
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;
@@ -79,6 +82,8 @@ private:
     void loadTodoItems(QString &data);
 
     void ignoreSslErrorsIfAllowed(QNetworkReply *reply);
+
+    void loadDirectory(QString &data);
 
 signals:
 

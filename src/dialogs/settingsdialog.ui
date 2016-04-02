@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>1</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -159,37 +159,25 @@
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_22">
-               <item row="5" column="0">
-                <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
-               </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_12">
+               <item row="4" column="1">
+                <widget class="QPushButton" name="noteFolderLocalPathButton">
                  <property name="text">
-                  <string>Name</string>
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                  </property>
                 </widget>
-               </item>
-               <item row="6" column="0">
-                <widget class="QLabel" name="label_14">
-                 <property name="text">
-                  <string>Path on your ownCloud server</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="9" column="0">
-                <spacer name="verticalSpacer_9">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
                </item>
                <item row="3" column="0">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Note folder path</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
                 <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
                  <property name="readOnly">
                   <bool>true</bool>
@@ -206,7 +194,14 @@
                  </property>
                 </widget>
                </item>
-               <item row="7" column="0">
+               <item row="0" column="0">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
                 <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
                  <property name="toolTip">
                   <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
@@ -216,7 +211,17 @@
                  </property>
                 </widget>
                </item>
-               <item row="7" column="1">
+               <item row="7" column="0">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Path on your ownCloud server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
+               </item>
+               <item row="8" column="1">
                 <widget class="QPushButton" name="noteFolderRemotePathButton">
                  <property name="text">
                   <string/>
@@ -227,37 +232,113 @@
                  </property>
                 </widget>
                </item>
-               <item row="3" column="1">
-                <widget class="QPushButton" name="noteFolderLocalPathButton">
-                 <property name="text">
-                  <string/>
+               <item row="9" column="0">
+                <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
                  </property>
-                 <property name="icon">
-                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
-                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
                  </property>
+                 <layout class="QGridLayout" name="gridLayout_25">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QTreeWidget" name="noteFolderRemotePathTreeWidget">
+                    <attribute name="headerVisible">
+                     <bool>false</bool>
+                    </attribute>
+                    <column>
+                     <property name="text">
+                      <string>path</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QFrame" name="frame_3">
+                    <property name="frameShape">
+                     <enum>QFrame::NoFrame</enum>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_26">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item row="0" column="1">
+                      <widget class="QPushButton" name="useOwnCloudPathButton">
+                       <property name="text">
+                        <string>&amp;use as ownCloud path</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <spacer name="horizontalSpacer_2">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item row="2" column="0">
-                <widget class="QLabel" name="label_13">
+                <widget class="QCheckBox" name="noteFolderActiveCheckBox">
                  <property name="text">
-                  <string>Note folder path</string>
+                  <string>Use as active note folder</string>
                  </property>
                 </widget>
                </item>
-               <item row="4" column="0">
+               <item row="5" column="0">
                 <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
                  <property name="text">
                   <string>ownCloud server</string>
                  </property>
                 </widget>
                </item>
-               <item row="8" column="0">
-                <widget class="QCheckBox" name="noteFolderActiveCheckBox">
-                 <property name="text">
-                  <string>Use as active note folder</string>
+               <item row="11" column="0">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
                  </property>
-                </widget>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
                </item>
               </layout>
              </widget>

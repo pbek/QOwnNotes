@@ -5,6 +5,7 @@
 #include <QDialog>
 #include <QLabel>
 #include <QListWidget>
+#include <QTreeWidgetItem>
 #include <entities/notefolder.h>
 #include "masterdialog.h"
 
@@ -46,6 +47,8 @@ public:
 
     void refreshTodoCalendarList(QStringList items,
                                  bool forceReadCheckedState = false);
+
+    void setNoteFolderRemotePathList(QStringList pathList);
 
 private slots:
 
@@ -105,6 +108,13 @@ private slots:
 
     void on_noteFolderActiveCheckBox_stateChanged(int arg1);
 
+    void on_noteFolderRemotePathButton_clicked();
+
+    void on_noteFolderRemotePathTreeWidget_currentItemChanged(
+            QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
+    void on_useOwnCloudPathButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -139,6 +149,15 @@ private:
     void loadProxySettings();
 
     void setupNoteFolderTab();
+
+    QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
+            QTreeWidgetItem *parent, QString text);
+
+    void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent,
+                                                 QString path);
+
+    void generatePathFromCurrentNoteFolderRemotePathItem(
+            QTreeWidgetItem *item);
 };
 
 #endif // SETTINGSDIALOG_H

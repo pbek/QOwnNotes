@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.3.4
+- the note path on your ownCloud server can now be selected directly from 
+  your server in the *note folder* settings 
+
 ## 1.3.3
 - fixed a possible problem with an empty default note file extension setting
   (for [Issue #123](https://github.com/pbek/QOwnNotes/issues/123))

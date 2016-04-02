@@ -950,8 +950,8 @@ void SettingsDialog::setupNoteFolderTab() {
     // hide the owncloud server settings
     ui->noteFolderOwnCloudServerLabel->setVisible(false);
     ui->noteFolderOwnCloudServerComboBox->setVisible(false);
-    ui->noteFolderRemotePathButton->setVisible(false);
     ui->noteFolderEditFrame->setEnabled(NoteFolder::countAll() > 0);
+    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
     int noteFoldersCount = noteFolders.count();
@@ -983,6 +983,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous)
 {
     Q_UNUSED(previous);
+
+    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
 
     int noteFolderId = current->data(Qt::UserRole).toInt();
     _selectedNoteFolder = NoteFolder::fetch(noteFolderId);
@@ -1127,5 +1129,122 @@ void SettingsDialog::on_noteFolderActiveCheckBox_stateChanged(int arg1)
         ui->noteFolderActiveCheckBox->setChecked(true);
     } else {
         _selectedNoteFolder.setAsCurrent();
+    }
+}
+
+void SettingsDialog::on_noteFolderRemotePathButton_clicked()
+{
+    // store ownCloud settings
+    storeSettings();
+
+    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(true);
+
+    OwnCloudService *ownCloud = new OwnCloudService(this);
+    ownCloud->settingsGetFileList(this, "");
+}
+
+void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
+    const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
+    Q_UNUSED(blocker);
+
+    Q_FOREACH(QString path, pathList) {
+            if (path.isEmpty()) {
+                continue;
+            }
+
+            addPathToNoteFolderRemotePathTreeWidget(NULL, path);
+        }
+}
+
+void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
+        QTreeWidgetItem *parent, QString path) {
+    if (path.isEmpty()) {
+        return;
+    }
+
+    QStringList pathPartList = path.split("/");
+    QString pathPart = pathPartList.takeFirst();
+    QTreeWidgetItem *item = findNoteFolderRemotePathTreeWidgetItem(
+            parent, pathPart);
+
+    if (item == NULL) {
+        item = new QTreeWidgetItem();
+        item->setText(0, pathPart);
+        if (parent == NULL) {
+            ui->noteFolderRemotePathTreeWidget->addTopLevelItem(item);
+        } else {
+            parent->addChild(item);
+        }
+    }
+
+    if (pathPartList.count() > 0) {
+        addPathToNoteFolderRemotePathTreeWidget(item, pathPartList.join("/"));
+    }
+}
+
+QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
+        QTreeWidgetItem *parent, QString text) {
+    if (parent == NULL) {
+        for (int i = 0;
+            i < ui->noteFolderRemotePathTreeWidget->topLevelItemCount();
+            i++) {
+            QTreeWidgetItem *item =
+                    ui->noteFolderRemotePathTreeWidget->topLevelItem(i);
+            if (item->text(0) == text) {
+                return item;
+            }
+        }
+    } else {
+        for (int i = 0; i < parent->childCount(); i++) {
+            QTreeWidgetItem *item = parent->child(i);
+            if (item->text(0) == text) {
+                return item;
+            }
+        }
+    }
+
+    return NULL;
+}
+
+void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+
+    OwnCloudService *ownCloud = new OwnCloudService(this);
+    ownCloud->settingsGetFileList(this, current->text(0));
+}
+
+void SettingsDialog::on_useOwnCloudPathButton_clicked()
+{
+    QTreeWidgetItem *item = ui->noteFolderRemotePathTreeWidget->currentItem();
+    if (item == NULL) {
+        return;
+    }
+
+    qDebug() << __func__ << " - 'item': " << item->text(0);
+
+    ui->noteFolderRemotePathLineEdit->clear();
+    generatePathFromCurrentNoteFolderRemotePathItem(item);
+    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
+}
+
+void SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
+        QTreeWidgetItem *item) {
+    if (item == NULL) {
+        return;
+    }
+
+    QString text = ui->noteFolderRemotePathLineEdit->text();
+    if (!text.isEmpty()) {
+        text.prepend("/");
+    }
+
+    text.prepend(item->text(0));
+    ui->noteFolderRemotePathLineEdit->setText(text);
+
+    QTreeWidgetItem *parent = item->parent();
+    if (parent != NULL) {
+        return generatePathFromCurrentNoteFolderRemotePathItem(parent);
     }
 }

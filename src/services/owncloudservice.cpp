@@ -53,6 +53,7 @@ void OwnCloudService::readSettings() {
     capabilitiesPath = "/ocs/v1.php/cloud/capabilities";
     ownCloudTestPath = "/ocs/v1.php";
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
+    webdavPath = "/remote.php/webdav";
 
     int calendarBackend = settings.value(
             "ownCloud/todoCalendarBackend").toInt();
@@ -200,6 +201,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // load the Todo items
                 loadTodoItems(data);
             }
+        } else if (reply->url().path()
+            .startsWith(serverUrlPath + webdavPath)) {
+            // this should be the reply of a calendar item list request
+            qDebug() << "Reply from ownCloud webdav";
+
+            // load the directories
+            loadDirectory(data);
 
             return;
         } else if (reply->url().toString() == serverUrl) {
@@ -865,6 +873,65 @@ void OwnCloudService::loadTodoItems(QString &data) {
     qDebug() << CalendarItem::fetchAllByCalendar(calendarName);
 }
 
+void OwnCloudService::loadDirectory(QString &data) {
+    QDomDocument doc;
+    doc.setContent(data, true);
+
+    if (data.isEmpty()) {
+        // TODO(pbek): show message box "ownCloud server configured?"
+    }
+
+    QStringList pathList;
+    QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, "response");
+
+    for (int i = 0; i < responseNodes.count(); i++) {
+        QDomNode responseNode = responseNodes.at(i);
+        if (responseNode.isElement()) {
+            QDomElement elem = responseNode.toElement();
+
+            bool isFolder = false;
+            QDomNodeList resourceTypeNodes =
+                    elem.elementsByTagNameNS(NS_DAV, "resourcetype");
+            if (resourceTypeNodes.length()) {
+                QDomNodeList typeNodes = resourceTypeNodes.at(0).childNodes();
+                for (int j = 0; j < typeNodes.length(); ++j) {
+                    QDomNode typeNode = typeNodes.at(j);
+                    QString typeString = typeNode.toElement().tagName();
+
+                    if (typeString == "collection") {
+                        isFolder = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!isFolder) {
+                continue;
+            }
+
+            // check if we have an url
+            QDomNodeList urlPartNodes = elem.elementsByTagNameNS(NS_DAV,
+                                                                 "href");
+            if (urlPartNodes.length()) {
+                QString urlPart = urlPartNodes.at(0).toElement().text();
+
+                QRegularExpression re(
+                    QRegularExpression::escape(webdavPath) + "\\/(.+)\\/$");
+
+                QRegularExpressionMatch match = re.match(urlPart);
+                QString folderString =
+                        match.hasMatch() ? match.captured(1) : "";
+
+                if (!folderString.isEmpty()) {
+                    pathList << folderString;
+                }
+            }
+        }
+    }
+
+    settingsDialog->setNoteFolderRemotePathList(pathList);
+}
+
 void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
                                                TodoDialog *dialog) {
     this->todoDialog = dialog;
@@ -927,4 +994,32 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
 
     // timer elapsed, no reply from network request
     return false;
+}
+
+/**
+ * Gets the file list from the ownCloud server
+ * for the settings dialog
+ */
+void OwnCloudService::settingsGetFileList(
+        SettingsDialog *dialog, QString path) {
+    settingsDialog = dialog;
+
+    QUrl url(serverUrl + webdavPath + "/" + path);
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    // build the request body
+    QString body = "<?xml version=\"1.0\"?>"
+            "<a:propfind xmlns:a=\"DAV:\">"
+                "<a:prop><a:resourcetype />"
+                "</a:prop>"
+            "</a:propfind>";
+
+    QByteArray *dataToSend = new QByteArray(body.toLatin1());
+    r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    QBuffer *buffer = new QBuffer(dataToSend);
+
+    QNetworkReply *reply = networkManager->sendCustomRequest(
+            r, "PROPFIND", buffer);
+    ignoreSslErrorsIfAllowed(reply);
 }
