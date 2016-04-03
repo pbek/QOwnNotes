@@ -161,6 +161,9 @@
               <layout class="QGridLayout" name="gridLayout_22">
                <item row="4" column="1">
                 <widget class="QPushButton" name="noteFolderLocalPathButton">
+                 <property name="toolTip">
+                  <string>Click here to select your local note path</string>
+                 </property>
                  <property name="text">
                   <string/>
                  </property>
@@ -263,6 +266,9 @@
                </item>
                <item row="8" column="1">
                 <widget class="QPushButton" name="noteFolderRemotePathButton">
+                 <property name="toolTip">
+                  <string>Click here to select your remote note path on your ownCloud server</string>
+                 </property>
                  <property name="text">
                   <string/>
                  </property>
@@ -313,6 +319,9 @@
                      </property>
                      <item row="0" column="1">
                       <widget class="QPushButton" name="useOwnCloudPathButton">
+                       <property name="toolTip">
+                        <string>Click here to use the selected folder from your server as note folder</string>
+                       </property>
                        <property name="text">
                         <string>&amp;use as ownCloud path</string>
                        </property>

@@ -1150,18 +1150,23 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
     ownCloud->settingsGetFileList(this, "");
 }
 
+/**
+ * Populates the note folder remote path tree with items
+ *
+ * Callback function from OwnCloudService::loadDirectory()
+ */
 void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
-    noteFolderRemotePathTreeStatusBar->clearMessage();
-
-    const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
-    Q_UNUSED(blocker);
+    if (pathList.count() <= 1) {
+        noteFolderRemotePathTreeStatusBar->showMessage(
+                tr("No more folders were found in the current folder"), 1000);
+    } else {
+        noteFolderRemotePathTreeStatusBar->clearMessage();
+    }
 
     Q_FOREACH(QString path, pathList) {
-            if (path.isEmpty()) {
-                continue;
+            if (!path.isEmpty()) {
+                addPathToNoteFolderRemotePathTreeWidget(NULL, path);
             }
-
-            addPathToNoteFolderRemotePathTreeWidget(NULL, path);
         }
 }
 
@@ -1176,6 +1181,9 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
     QTreeWidgetItem *item = findNoteFolderRemotePathTreeWidgetItem(
             parent, pathPart);
 
+    const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
+    Q_UNUSED(blocker);
+
     if (item == NULL) {
         item = new QTreeWidgetItem();
         item->setText(0, pathPart);
@@ -1183,6 +1191,7 @@ void SettingsDialog::addPathToNoteFolderRemotePathTreeWidget(
             ui->noteFolderRemotePathTreeWidget->addTopLevelItem(item);
         } else {
             parent->addChild(item);
+            parent->setExpanded(true);
         }
     }
 
@@ -1222,7 +1231,7 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
 
     QString folderName = current->text(0);
     noteFolderRemotePathTreeStatusBar->showMessage(
-            tr("Loading folder '%1' from server").arg(folderName));
+            tr("Loading folders in '%1' from server").arg(folderName));
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsGetFileList(this, folderName);
@@ -1234,8 +1243,6 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked()
     if (item == NULL) {
         return;
     }
-
-    qDebug() << __func__ << " - 'item': " << item->text(0);
 
     ui->noteFolderRemotePathLineEdit->clear();
     generatePathFromCurrentNoteFolderRemotePathItem(item);

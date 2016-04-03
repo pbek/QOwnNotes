@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
 ## 1.3.4
-- the note path on your ownCloud server can now be selected directly from 
-  your server in the *note folder* settings 
+- in the *note folder* settings the note path on your ownCloud server can now
+  be selected directly from your server 
+   - your folders will be fetched directly via WebDAV
 
 ## 1.3.3
 - fixed a possible problem with an empty default note file extension setting
