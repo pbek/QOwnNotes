@@ -951,7 +951,7 @@ void SettingsDialog::setupNoteFolderTab() {
     ui->noteFolderOwnCloudServerLabel->setVisible(false);
     ui->noteFolderOwnCloudServerComboBox->setVisible(false);
     ui->noteFolderEditFrame->setEnabled(NoteFolder::countAll() > 0);
-    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
+    setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
     int noteFoldersCount = noteFolders.count();
@@ -977,6 +977,10 @@ void SettingsDialog::setupNoteFolderTab() {
     ui->noteFolderLocalPathLineEdit->setPlaceholderText(
             QDir::homePath() + QDir::separator() + "ownCloud" +
                     QDir::separator() + "Notes");
+
+    noteFolderRemotePathTreeStatusBar = new QStatusBar();
+    ui->noteFolderRemotePathTreeWidgetFrame->layout()->addWidget(
+            noteFolderRemotePathTreeStatusBar);
 }
 
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
@@ -984,7 +988,7 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
 {
     Q_UNUSED(previous);
 
-    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
+    setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
 
     int noteFolderId = current->data(Qt::UserRole).toInt();
     _selectedNoteFolder = NoteFolder::fetch(noteFolderId);
@@ -1137,13 +1141,18 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
     // store ownCloud settings
     storeSettings();
 
-    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(true);
+    setNoteFolderRemotePathTreeWidgetFrameVisibility(true);
+
+    noteFolderRemotePathTreeStatusBar->showMessage(
+            tr("Loading folders from server"));
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsGetFileList(this, "");
 }
 
 void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
+    noteFolderRemotePathTreeStatusBar->showMessage("");
+
     const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
     Q_UNUSED(blocker);
 
@@ -1211,8 +1220,12 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
 {
     Q_UNUSED(previous);
 
+    QString folderName = current->text(0);
+    noteFolderRemotePathTreeStatusBar->showMessage(
+            tr("Loading folder '%1' from server").arg(folderName));
+
     OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->settingsGetFileList(this, current->text(0));
+    ownCloud->settingsGetFileList(this, folderName);
 }
 
 void SettingsDialog::on_useOwnCloudPathButton_clicked()
@@ -1226,7 +1239,7 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked()
 
     ui->noteFolderRemotePathLineEdit->clear();
     generatePathFromCurrentNoteFolderRemotePathItem(item);
-    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(false);
+    setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
 }
 
 void SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
@@ -1247,4 +1260,10 @@ void SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
     if (parent != NULL) {
         return generatePathFromCurrentNoteFolderRemotePathItem(parent);
     }
+}
+
+void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
+        bool visible) {
+    ui->noteFolderRemotePathTreeWidgetFrame->setVisible(visible);
+    ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
 }

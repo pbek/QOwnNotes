@@ -6,6 +6,7 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QTreeWidgetItem>
+#include <QStatusBar>
 #include <entities/notefolder.h>
 #include "masterdialog.h"
 
@@ -118,6 +119,7 @@ private slots:
 private:
 
     Ui::SettingsDialog *ui;
+    QStatusBar *noteFolderRemotePathTreeStatusBar;
     QFont noteTextEditFont;
     QFont noteTextEditCodeFont;
     QFont noteTextViewFont;
@@ -158,6 +160,8 @@ private:
 
     void generatePathFromCurrentNoteFolderRemotePathItem(
             QTreeWidgetItem *item);
+
+    void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 };
 
 #endif // SETTINGSDIALOG_H
