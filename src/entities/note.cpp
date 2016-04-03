@@ -421,6 +421,10 @@ bool Note::store() {
     return true;
 }
 
+/**
+ * Stores a note text file to disk
+ * The file name will be changed if needed
+ */
 bool Note::storeNoteTextFileToDisk() {
     // checks if filename has to be changed (and change it if needed)
     this->handleNoteTextFileName();
@@ -471,11 +475,11 @@ bool Note::storeNoteTextFileToDisk() {
     return this->store();
 }
 
-//
-// checks if filename has to be changed
-// generates a new name and filename and removes the old file
-// (the new file is not stored to a note text file!)
-//
+/**
+ * Checks if filename has to be changed
+ * Generates a new name and filename and removes the old file
+ * (the new file is not stored to a note text file!)
+ */
 void Note::handleNoteTextFileName() {
     // split the text into a string list
     QStringList noteTextLines = this->noteText.split(
@@ -494,7 +498,8 @@ void Note::handleNoteTextFileName() {
     // check if name has changed
     if (name != this->name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
-        QString fileName = name + "." + defaultNoteFileExtension();
+        QString fileName = QFile::encodeName(name) + "." +
+                defaultNoteFileExtension();
 
         // check if note with this filename already exists
         Note note = Note::fetchByFileName(fileName);

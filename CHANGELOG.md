@@ -1,9 +1,9 @@
 # QOwnNotes Changelog
 
 ## 1.3.4
-- in the *note folder* settings the note path on your ownCloud server can now
-  be selected directly from your server 
-   - your folders will be fetched directly via WebDAV
+- in the *note folder* settings you can now select your remote ownCloud note 
+  path directly on your server 
+   - the folders will be fetched via WebDAV from your ownCloud server 
 - added more Russian translation (thank you Valerian)
 
 ## 1.3.3
