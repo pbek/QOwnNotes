@@ -493,13 +493,18 @@ void Note::handleNoteTextFileName() {
     if (name == "") return;
 
     // remove a leading "# " for markdown headlines
-    name.replace(QRegularExpression("^#\\s"), "");
+    name.remove(QRegularExpression("^#\\s"));
+
+    // remove characters from the name that are problematic
+    name.remove(QRegularExpression("[\\/\\\\:]"));
+
+    // remove multiple whitespaces from the name
+    name.replace(QRegularExpression("\\s+"), " ");
 
     // check if name has changed
     if (name != this->name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
-        QString fileName = QFile::encodeName(name) + "." +
-                defaultNoteFileExtension();
+        QString fileName = name + "." + defaultNoteFileExtension();
 
         // check if note with this filename already exists
         Note note = Note::fetchByFileName(fileName);

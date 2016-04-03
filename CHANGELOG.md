@@ -5,6 +5,10 @@
   path directly on your server 
    - the folders will be fetched via WebDAV from your ownCloud server 
 - added more Russian translation (thank you Valerian)
+- characters like `:`, `/` and `\`, as well as multiple whitespace characters
+  will now be removed from the note file name if the first line of the note 
+  is containing them
+  (for [Issue #126](https://github.com/pbek/QOwnNotes/issues/126))
 
 ## 1.3.3
 - fixed a possible problem with an empty default note file extension setting
