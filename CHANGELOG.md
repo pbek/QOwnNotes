@@ -4,6 +4,7 @@
 - in the *note folder* settings the note path on your ownCloud server can now
   be selected directly from your server 
    - your folders will be fetched directly via WebDAV
+- added more Russian translation (thank you Valerian)
 
 ## 1.3.3
 - fixed a possible problem with an empty default note file extension setting
