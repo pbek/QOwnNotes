@@ -550,6 +550,32 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 }
 
 /**
+ * Shows a message dialog with a ownCloud server error
+ */
+void OwnCloudService::showOwnCloudServerErrorMessage(
+        QString message, bool withSettingsButton) {
+    QString headline = tr("ownCloud server connection error");
+    QString text = message.isEmpty() ?
+            "Cannot connect to your ownCloud server! "
+            "Please check your ownCloud configuration." :
+            tr("ownCloud server error: <strong>%1</strong><br />"
+            "Please check your ownCloud configuration.").arg(message);
+
+    if (withSettingsButton) {
+        if (QMessageBox::warning(
+                0, headline, text,
+                tr("Open &settings"), tr("&Cancel"),
+                QString::null, 0, 1) == 0) {
+            if (mainWindow != NULL) {
+                mainWindow->openSettingsDialog(SettingsDialog::OwnCloudTab);
+            }
+        }
+    } else {
+        QMessageBox::warning(0, headline, text);
+    }
+}
+
+/**
  * Handles the versions loading
  *
  * @brief OwnCloudService::handleVersionsLoading
@@ -561,15 +587,8 @@ void OwnCloudService::handleVersionsLoading(QString data) {
             tr("done with loading note versions"), 2000);
 
     // check if we get any data at all
-    if (data == "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "Cannot connect to the ownCloud server!<br />"
-                        "Please check your configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+    if (data.isEmpty()) {
+        showOwnCloudServerErrorMessage();
         return;
     }
 
@@ -584,14 +603,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
 
     // check if we got an error message
     if (message != "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "ownCloud server error: <strong>" + message + "</strong><br />"
-                        "Please check your configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+        showOwnCloudServerErrorMessage(message);
         return;
     }
 
@@ -600,14 +612,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
 
     // check if we got no useful data
     if (fileName.toString() == "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "QOwnNotes was unable to connect to your ownCloud server! "
-                        "Please check the configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+        showOwnCloudServerErrorMessage();
         return;
     }
 
@@ -617,8 +622,8 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     // check if we got no useful data
     if (versions.toString() == "") {
         QMessageBox::information(
-                0, "no other version",
-                "There are no other versions on the server for this note.");
+                0, tr("no other version"),
+                tr("There are no other versions on the server for this note."));
         return;
     }
 
@@ -639,14 +644,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 
     // check if we get any data at all
     if (data == "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "Cannot connect to the ownCloud server!<br />"
-                        "Please check your configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+        showOwnCloudServerErrorMessage();
         return;
     }
 
@@ -661,14 +659,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 
     // check if we got an error message
     if (message != "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "ownCloud server error: <strong>" + message + "</strong><br />"
-                        "Please check your configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+        showOwnCloudServerErrorMessage(message);
         return;
     }
 
@@ -677,14 +668,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 
     // check if we got no useful data
     if (directory == "") {
-        if (QMessageBox::critical(
-                0, "ownCloud server connection error!",
-                "QOwnNotes was unable to connect to your ownCloud server! "
-                        "Please check the configuration in the settings!",
-                "Open &settings", "&Cancel", QString::null, 0, 1) == 0) {
-            mainWindow->openSettingsDialog();
-        }
-
+        showOwnCloudServerErrorMessage();
         return;
     }
 
@@ -878,7 +862,7 @@ void OwnCloudService::loadDirectory(QString &data) {
     doc.setContent(data, true);
 
     if (data.isEmpty()) {
-        // TODO(pbek): show message box "ownCloud server configured?"
+        showOwnCloudServerErrorMessage("", false);
     }
 
     QStringList pathList;

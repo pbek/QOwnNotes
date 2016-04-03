@@ -880,12 +880,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
+        <location filename="../services/owncloudservice.cpp" line="557"/>
+        <source>ownCloud server connection error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../services/owncloudservice.cpp" line="561"/>
+        <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="567"/>
+        <source>Open &amp;settings</source>
+        <translation type="unfinished">Open &amp;settings</translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="567"/>
+        <source>&amp;Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="587"/>
         <source>done with loading note versions</source>
         <translation type="unfinished">done with loading note versions</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="638"/>
+        <location filename="../services/owncloudservice.cpp" line="625"/>
+        <source>no other version</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="626"/>
+        <source>There are no other versions on the server for this note.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="643"/>
         <source>done with loading trashed notes</source>
         <translation type="unfinished">done with loading trashed notes</translation>
     </message>
@@ -1036,128 +1066,128 @@ Click Cancel to exit.</source>
         <translation type="unfinished">Note folder path</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="366"/>
+        <location filename="../dialogs/settingsdialog.ui" line="373"/>
         <source>ownCloud server</source>
         <translation type="unfinished">ownCloud server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="366"/>
         <source>Use as active note folder</source>
         <translation type="unfinished">Use as active note folder</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="393"/>
+        <location filename="../dialogs/settingsdialog.ui" line="400"/>
         <source>Your ownCloud server</source>
         <translation>你的 ownCloud 服务器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="407"/>
+        <location filename="../dialogs/settingsdialog.ui" line="414"/>
         <source>ownCloud server url:</source>
         <translation>ownCloud 服务器地址:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="429"/>
+        <location filename="../dialogs/settingsdialog.ui" line="436"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器地址, 例如: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="474"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入你的 ownCloud 服务器上的用户名.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="470"/>
+        <location filename="../dialogs/settingsdialog.ui" line="477"/>
         <source>your ownCloud username</source>
         <translation type="unfinished">your ownCloud username</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="445"/>
+        <location filename="../dialogs/settingsdialog.ui" line="452"/>
         <source>username:</source>
         <translation>用户名:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="502"/>
+        <location filename="../dialogs/settingsdialog.ui" line="509"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;请输入登录密码.&lt;br/&gt;目前这个密码会以加密形式跟其他设定一起存储, 但不能保证绝对安全.(如果有极私密资料请另外做安全措施)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="508"/>
+        <location filename="../dialogs/settingsdialog.ui" line="515"/>
         <source>your ownCloud password</source>
         <translation type="unfinished">your ownCloud password</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="480"/>
+        <location filename="../dialogs/settingsdialog.ui" line="487"/>
         <source>password:</source>
         <translation>密码:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="580"/>
+        <location filename="../dialogs/settingsdialog.ui" line="587"/>
         <source>connection to web server</source>
         <translation>连接服务器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="597"/>
+        <location filename="../dialogs/settingsdialog.ui" line="604"/>
         <source>ownCloud server detected</source>
         <translation>已检测到 ownCloud 服务器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="631"/>
+        <location filename="../dialogs/settingsdialog.ui" line="638"/>
         <source>connection to QOwnNotesAPI</source>
         <translation>连接到 QOwnNotesAPI</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="614"/>
+        <location filename="../dialogs/settingsdialog.ui" line="621"/>
         <source>username and password correct</source>
         <translation>用户名和密码正确</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="570"/>
-        <location filename="../dialogs/settingsdialog.ui" line="587"/>
-        <location filename="../dialogs/settingsdialog.ui" line="604"/>
-        <location filename="../dialogs/settingsdialog.ui" line="621"/>
-        <location filename="../dialogs/settingsdialog.ui" line="638"/>
-        <location filename="../dialogs/settingsdialog.ui" line="655"/>
-        <location filename="../dialogs/settingsdialog.ui" line="672"/>
+        <location filename="../dialogs/settingsdialog.ui" line="577"/>
+        <location filename="../dialogs/settingsdialog.ui" line="594"/>
+        <location filename="../dialogs/settingsdialog.ui" line="611"/>
+        <location filename="../dialogs/settingsdialog.ui" line="628"/>
+        <location filename="../dialogs/settingsdialog.ui" line="645"/>
+        <location filename="../dialogs/settingsdialog.ui" line="662"/>
+        <location filename="../dialogs/settingsdialog.ui" line="679"/>
         <source>unknown</source>
         <translation>未知</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="530"/>
+        <location filename="../dialogs/settingsdialog.ui" line="537"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里测试 ownCloud 服务器连接.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="536"/>
+        <location filename="../dialogs/settingsdialog.ui" line="543"/>
         <source>&amp;connect to ownCloud server</source>
         <translation>连接 ownCloud 服务器(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="563"/>
+        <location filename="../dialogs/settingsdialog.ui" line="570"/>
         <source>connection status</source>
         <translation>连接状态</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="648"/>
+        <location filename="../dialogs/settingsdialog.ui" line="655"/>
         <source>versions app enabled on server</source>
         <translation>服务器上版本功能可用</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="665"/>
+        <location filename="../dialogs/settingsdialog.ui" line="672"/>
         <source>trash app enabled on server</source>
         <translation>服务器上回收站功能可用</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="682"/>
+        <location filename="../dialogs/settingsdialog.ui" line="689"/>
         <source>notes path found on server</source>
         <translation>已在服务器找到笔记路径</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="737"/>
+        <location filename="../dialogs/settingsdialog.ui" line="744"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;在浏览器打开你的 ownCloud 服务器 &lt;span style=&quot; font-weight:600;&quot;&gt;设定&lt;/span&gt; 页面以安装或更新 QOwnNotesAPI 并激活核心功能: &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; 和 &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="715"/>
+        <location filename="../dialogs/settingsdialog.ui" line="722"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1174,430 +1204,435 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0055ff;&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="303"/>
+        <location filename="../dialogs/settingsdialog.ui" line="348"/>
         <source>path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="329"/>
+        <location filename="../dialogs/settingsdialog.ui" line="317"/>
         <source>&amp;use as ownCloud path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="740"/>
+        <location filename="../dialogs/settingsdialog.ui" line="356"/>
+        <source>Please select your note folder on your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="747"/>
         <source>open your ownCloud server &amp;Apps page</source>
         <translation type="unfinished">open your ownCloud server &amp;Apps page</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="784"/>
+        <location filename="../dialogs/settingsdialog.ui" line="791"/>
         <source>Error Message</source>
         <translation>错误消息</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="801"/>
+        <location filename="../dialogs/settingsdialog.ui" line="808"/>
         <source>Network</source>
         <translation type="unfinished">Network</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="823"/>
+        <location filename="../dialogs/settingsdialog.ui" line="830"/>
         <source>Proxy Settings</source>
         <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="836"/>
         <source>No Proxy</source>
         <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="842"/>
+        <location filename="../dialogs/settingsdialog.ui" line="849"/>
         <source>Use system proxy</source>
         <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="852"/>
+        <location filename="../dialogs/settingsdialog.ui" line="859"/>
         <source>Specify proxy manually as</source>
         <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="880"/>
+        <location filename="../dialogs/settingsdialog.ui" line="887"/>
         <source>Host</source>
         <translation type="unfinished">Host</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="931"/>
+        <location filename="../dialogs/settingsdialog.ui" line="938"/>
         <source>Proxy server requires authentication</source>
         <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="982"/>
+        <location filename="../dialogs/settingsdialog.ui" line="989"/>
         <source>SSL Settings</source>
         <translation type="unfinished">SSL Settings</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="988"/>
+        <location filename="../dialogs/settingsdialog.ui" line="995"/>
         <source>Ignore SSL errors</source>
         <translation type="unfinished">Ignore SSL errors</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="995"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1002"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Let&apos;s encrypt&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;Let&apos;s encrypt&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1009"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1016"/>
         <source>Todo</source>
         <translation type="unfinished">Todo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1028"/>
         <source>Which ownCloud calendar backend do you want to use?</source>
         <translation>你想使用哪一个 ownCloud 日历后台?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1033"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1040"/>
         <source>Default ownCloud calendar</source>
         <translation>默认 ownCloud 日历</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1057"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1064"/>
         <source>Select the calendars you want to use for the TODO list</source>
         <translation>选择你想在 todo 列表使用的日历</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1078"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1085"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;点击这里刷新，从你的 ownCloud 服务器上重新载入日历列表.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1084"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1091"/>
         <source>&amp;reload calendar list</source>
         <translation>刷新日历列表(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1112"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1119"/>
         <source>Interface</source>
         <translation type="unfinished">Interface</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1126"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1133"/>
         <source>Interface language</source>
         <translation>介面语言</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1139"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1146"/>
         <source>Automatic</source>
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1150"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1157"/>
         <source>English</source>
         <translation type="unfinished">English</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1161"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1168"/>
         <source>German</source>
         <translation type="unfinished">German</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1172"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1179"/>
         <source>French</source>
         <translation type="unfinished">French</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1183"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1190"/>
         <source>Polish</source>
         <translation type="unfinished">Polish</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1194"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1201"/>
         <source>Chinese</source>
         <translation type="unfinished">Chinese</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1223"/>
         <source>Portuguese</source>
         <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1227"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1234"/>
         <source>Dutch</source>
         <translation type="unfinished">Dutch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1238"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1245"/>
         <source>Hungarian</source>
         <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1249"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1256"/>
         <source>Spanish</source>
         <translation type="unfinished">Spanish</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1526"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1533"/>
         <source>Dark mode</source>
         <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1539"/>
         <source>Optimize colors for dark mode desktop themes</source>
         <translation type="unfinished">Optimize colors for dark mode desktop themes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1652"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1659"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
         <translation type="unfinished">Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1678"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1685"/>
         <source>Notes folders</source>
         <translation type="unfinished">Notes folders</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1684"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1691"/>
         <source>Show note folders in main area</source>
         <translation type="unfinished">Show note folders in main area</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1877"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1884"/>
         <source>Disable tracking of usage data</source>
         <translation type="unfinished">Disable tracking of usage data</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1921"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1928"/>
         <source>Usage tracking is done on a private Piwik server.</source>
         <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1968"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1975"/>
         <source>Disable heartbeat</source>
         <translation type="unfinished">Disable heartbeat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1205"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1212"/>
         <source>Russian</source>
         <translation type="unfinished">Russian</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1267"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>重启后生效 Restart the application for the changes to take action.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1277"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;How can I help to translate QOwnNotes?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1292"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1299"/>
         <source>Font settings</source>
         <translation>字体设定</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1298"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1305"/>
         <source>font in note markdown view:</source>
         <translation type="unfinished">font in note markdown view:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1308"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1315"/>
         <source>default font in markdown text edits:</source>
         <translation type="unfinished">default font in markdown text edits:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1323"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1335"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1357"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1460"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1330"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1342"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1364"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1467"/>
         <source>Font name</source>
         <translation>字体名字</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1364"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1375"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1389"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1467"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1382"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1396"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1474"/>
         <source>set a new font</source>
         <translation>设定新字体</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1342"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1349"/>
         <source>code font in markdown text edits:</source>
         <translation type="unfinished">code font in markdown text edits:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1403"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1417"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1431"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1481"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1410"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1424"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1438"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1488"/>
         <source>reset font</source>
         <translation type="unfinished">reset font</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1445"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1452"/>
         <source>code font in note markdown view:</source>
         <translation type="unfinished">code font in note markdown view:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1504"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1511"/>
         <source>Toolbar</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1517"/>
         <source>Icon size:</source>
         <translation>图标尺寸:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1561"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1568"/>
         <source>General</source>
         <translation>通用</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1578"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1585"/>
         <source>Notes</source>
         <translation>笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1584"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1591"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选这个框，你会收到所有外部修改提醒，即使被修改的笔记并不是正在被编辑. 推荐 &lt;span style=&quot; font-style:italic;&quot;&gt;不要勾选&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1597"/>
         <source>notify about all external modifications</source>
         <translation>提醒所有外部修改活动</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1616"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1623"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>如果设定低于 10秒, 在跟旧版 ownCloud 同步时会遇到同步问题. 请先测试, 如果有同步冲突问题请调高这一数值.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1620"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1627"/>
         <source>note save interval time [sec]</source>
         <translation>笔记保存时间间隔（秒）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1627"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1634"/>
         <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
         <translation type="unfinished">Select this if you want the markdown view to be the default view instead of the edit view.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1630"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1637"/>
         <source>Markdown view mode is default</source>
         <translation type="unfinished">Markdown view mode is default</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1646"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1653"/>
         <location filename="../dialogs/settingsdialog.cpp" line="776"/>
         <location filename="../dialogs/settingsdialog.cpp" line="785"/>
         <source>Database</source>
         <translation>数据库</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1662"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1669"/>
         <source>Reinitialize Database</source>
         <translation>数据库出厂状态复位</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1694"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1701"/>
         <source>Clear application data and exit</source>
         <translation type="unfinished">Clear application data and exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1707"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1710"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1717"/>
         <location filename="../dialogs/settingsdialog.cpp" line="859"/>
         <source>Clear app data and exit</source>
         <translation type="unfinished">Clear app data and exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1727"/>
         <source>Update dialog</source>
         <translation type="unfinished">Update dialog</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1726"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1733"/>
         <source>Don&apos;t show update dialog automatically</source>
         <translation type="unfinished">Don&apos;t show update dialog automatically</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1768"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1775"/>
         <source>Default note file extension</source>
         <translation type="unfinished">Default note file extension</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1787"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1794"/>
         <source>Text file (.txt)</source>
         <translation type="unfinished">Text file (.txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1809"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1816"/>
         <source>External editor</source>
         <translation type="unfinished">External editor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1815"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1822"/>
         <source>Path to external edior:</source>
         <translation type="unfinished">Path to external edior:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1822"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1829"/>
         <source>path to external editor, leave empty for default</source>
         <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1836"/>
         <source>set external editor</source>
         <translation type="unfinished">set external editor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1846"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1853"/>
         <source>App metrics</source>
         <translation>软件改进指标</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1864"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1871"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation>匿名的使用数据能帮助分析出 QOwnNotes 接下来的改进方向和发现问题. 如果你真的无法接受，请关闭这一选项.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1896"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1903"/>
         <source>This data includes anonymous information about what features of the app are used.</source>
         <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1937"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1944"/>
         <source>App heartbeat</source>
         <translation type="unfinished">App heartbeat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1955"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1962"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
         <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1994"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2001"/>
         <source>Debug</source>
         <translation>Debug调试</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2000"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2007"/>
         <source>Debug information</source>
         <translation>Debug 信息</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2023"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2030"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果你使用的过程中遇到 &lt;span style=&quot; font-weight:600;&quot;&gt;问题或错误&lt;/span&gt;. 你可以 &lt;span style=&quot; font-weight:600;&quot;&gt;复制粘贴&lt;/span&gt; 这些(或部分)信息, 在 &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;QOwnNotes issues page&lt;/span&gt;&lt;/a&gt;发布一个 &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt;. 这些信息里面的敏感数据已经被隐藏.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2036"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2043"/>
         <source>&amp;Save debug information</source>
         <translation>保存Debug调试信息(&amp;S)</translation>
     </message>

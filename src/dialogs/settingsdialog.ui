@@ -293,19 +293,7 @@
                   <property name="bottomMargin">
                    <number>0</number>
                   </property>
-                  <item row="0" column="0">
-                   <widget class="QTreeWidget" name="noteFolderRemotePathTreeWidget">
-                    <attribute name="headerVisible">
-                     <bool>false</bool>
-                    </attribute>
-                    <column>
-                     <property name="text">
-                      <string>path</string>
-                     </property>
-                    </column>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
+                  <item row="2" column="0">
                    <widget class="QFrame" name="frame_3">
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -348,6 +336,25 @@
                       </spacer>
                      </item>
                     </layout>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QTreeWidget" name="noteFolderRemotePathTreeWidget">
+                    <attribute name="headerVisible">
+                     <bool>false</bool>
+                    </attribute>
+                    <column>
+                     <property name="text">
+                      <string>path</string>
+                     </property>
+                    </column>
+                   </widget>
+                  </item>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="label_6">
+                    <property name="text">
+                     <string>Please select your note folder on your ownCloud server</string>
+                    </property>
                    </widget>
                   </item>
                  </layout>

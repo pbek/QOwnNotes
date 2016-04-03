@@ -85,6 +85,9 @@ private:
 
     void loadDirectory(QString &data);
 
+    void showOwnCloudServerErrorMessage(
+            QString message = QString(""), bool withSettingsButton = true);
+
 signals:
 
 private slots:
