@@ -1151,7 +1151,7 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
 }
 
 void SettingsDialog::setNoteFolderRemotePathList(QStringList pathList) {
-    noteFolderRemotePathTreeStatusBar->showMessage("");
+    noteFolderRemotePathTreeStatusBar->clearMessage();
 
     const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
     Q_UNUSED(blocker);
