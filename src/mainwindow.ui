@@ -60,8 +60,8 @@
          <string notr="true">QLineEdit {
 	border: 1px solid lightgray;
 	border-radius: 5px;
-	padding: 2px 5px 2px 25px;
-	background-image: url(:/images/search.png);
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
 	background-repeat: no-repeat;
 	background-position: center left;
 	margin-right: 0px;
@@ -1057,8 +1057,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

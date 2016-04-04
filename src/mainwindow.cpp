@@ -867,11 +867,19 @@ void MainWindow::readSettingsFromSettingsDialog() {
         ui->mainToolBar->setIconSize(size);
     }
 
-
     // check if we want to view the note folder combo box
     ui->noteFolderComboBox->setVisible(
             settings.value(
                     "MainWindow/showRecentNoteFolderInMainArea").toBool());
+
+    // change the search notes symbol between dark and light mode
+    QString fileName = settings.value("darkModeColors").toBool() ?
+                       "search-notes-dark.svg" : "search-notes.svg";
+    QString styleSheet = ui->searchLineEdit->styleSheet();
+    styleSheet.replace(
+            QRegularExpression("background-image: url\\(:.+\\);"),
+            QString("background-image: url(:/images/%1);").arg(fileName));
+    ui->searchLineEdit->setStyleSheet(styleSheet);
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {

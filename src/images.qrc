@@ -2,5 +2,7 @@
     <qresource prefix="/">
         <file>images/search.png</file>
         <file>images/icon.png</file>
+        <file>images/search-notes.svg</file>
+        <file>images/search-notes-dark.svg</file>
     </qresource>
 </RCC>
