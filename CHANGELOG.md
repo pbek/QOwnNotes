@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.3.5
+- fixed a remote folder selection issue with special characters and 
+  whitespaces in the folder names
+
 ## 1.3.4
 - in the *note folder* settings you can now select your remote ownCloud note 
   path directly on your server 

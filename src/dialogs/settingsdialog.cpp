@@ -1247,6 +1247,7 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked()
     ui->noteFolderRemotePathLineEdit->clear();
     generatePathFromCurrentNoteFolderRemotePathItem(item);
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
+    on_noteFolderRemotePathLineEdit_editingFinished();
 }
 
 void SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(

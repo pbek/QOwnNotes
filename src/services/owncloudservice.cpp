@@ -907,7 +907,8 @@ void OwnCloudService::loadDirectory(QString &data) {
                         match.hasMatch() ? match.captured(1) : "";
 
                 if (!folderString.isEmpty()) {
-                    pathList << folderString;
+                    pathList << QUrl::fromPercentEncoding(
+                            folderString.toUtf8());
                 }
             }
         }
