@@ -7,6 +7,7 @@
   additional dark mode theme version of the symbol
 - improved the note font preview in the settings for dark mode themes
 - improved the links and some texts in the settings dialog for dark mode themes
+- added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.3.4
 - in the *note folder* settings you can now select your remote ownCloud note 
