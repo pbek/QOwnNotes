@@ -427,7 +427,7 @@ QString SettingsDialog::getSelectedListWidgetValue(QListWidget* listWidget) {
     return "";
 }
 
-void SettingsDialog::setFontLabel(QLabel *label, QFont font) {
+void SettingsDialog::setFontLabel(QLineEdit *label, QFont font) {
     label->setText(
             font.family() + " (" + QString::number(font.pointSize()) + ")");
     label->setFont(font);

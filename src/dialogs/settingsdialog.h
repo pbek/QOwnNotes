@@ -136,7 +136,7 @@ private:
 
     void startConnectionTest();
 
-    void setFontLabel(QLabel *label, QFont font);
+    void setFontLabel(QLineEdit *label, QFont font);
 
     void outputSettings();
 

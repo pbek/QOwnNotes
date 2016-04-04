@@ -5,6 +5,7 @@
   whitespaces in the folder names
 - implemented a new symbol in the note search/create line edit with an  
   additional dark mode theme version of the symbol
+- improved the note font preview in the settings for dark mode themes  
 
 ## 1.3.4
 - in the *note folder* settings you can now select your remote ownCloud note 
