@@ -17,6 +17,7 @@
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
 #include <entities/notefolder.h>
+#include <QTextBrowser>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -32,25 +33,10 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
     }
 
-    QString html = ui->installInfotextBrowser->toHtml();
-
-    // increase font size for OSX
-#ifdef Q_OS_MAC
-    QString styleSheet = ui->installInfotextBrowser->styleSheet();
-    styleSheet.replace("font-size: 9pt;", "font-size: 13pt;");
-    ui->installInfotextBrowser->setStyleSheet(styleSheet);
-
-    html.replace("font-size:9pt", "font-size:13pt;");
-#endif
-
-    // add information text for Windows users to install OpenSSL
-#ifdef Q_OS_WIN32
-    //    html += "<p>If your ownCloud server uses SSL (https) you also need to install <a href='https://www.openssl.org'>OpenSSL</a> into your system directory.</p>";
-    //    html += "<p>You can find binary packages of OpenSSL <a href='http://slproweb.com/products/Win32OpenSSL.html'>here</a>.</p>";
-#endif
-
+    // add the QOwnNotesAPI minimum version number to the info text
+    QString html = ui->installInfoTextLabel1->text();
     html.replace("QOWNNOTESAPI_MIN_VERSION", QOWNNOTESAPI_MIN_VERSION);
-    ui->installInfotextBrowser->setHtml(html);
+    ui->installInfoTextLabel1->setText(html);
 
     // do the network proxy tab setup
     setupProxyTab();
