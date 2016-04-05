@@ -1,8 +1,9 @@
 # QOwnNotes Changelog
 
-## 1.3.5
+## 1.3.6
 - fixed a remote folder selection issue with deeper levels of folders in the 
   note folders settings
+- added more Russian translation (thank you Valerian)
 
 ## 1.3.5
 - fixed a remote folder selection issue with special characters and 
