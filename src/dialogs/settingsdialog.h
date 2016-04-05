@@ -158,7 +158,7 @@ private:
     void addPathToNoteFolderRemotePathTreeWidget(QTreeWidgetItem *parent,
                                                  QString path);
 
-    void generatePathFromCurrentNoteFolderRemotePathItem(
+    QString generatePathFromCurrentNoteFolderRemotePathItem(
             QTreeWidgetItem *item);
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);

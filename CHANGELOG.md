@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 1.3.5
+- fixed a remote folder selection issue with deeper levels of folders in the 
+  note folders settings
+
+## 1.3.5
 - fixed a remote folder selection issue with special characters and 
   whitespaces in the folder names
 - implemented a new symbol in the note search/create line edit with an  

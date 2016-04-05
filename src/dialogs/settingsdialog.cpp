@@ -1215,9 +1215,10 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
 {
     Q_UNUSED(previous);
 
-    QString folderName = current->text(0);
+    QString folderName =
+            generatePathFromCurrentNoteFolderRemotePathItem(current);
     noteFolderRemotePathTreeStatusBar->showMessage(
-            tr("Loading folders in '%1' from server").arg(folderName));
+            tr("Loading folders in '%1' from server").arg(current->text(0)));
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsGetFileList(this, folderName);
@@ -1231,29 +1232,28 @@ void SettingsDialog::on_useOwnCloudPathButton_clicked()
     }
 
     ui->noteFolderRemotePathLineEdit->clear();
-    generatePathFromCurrentNoteFolderRemotePathItem(item);
+    ui->noteFolderRemotePathLineEdit->setText(
+            generatePathFromCurrentNoteFolderRemotePathItem(item));
     setNoteFolderRemotePathTreeWidgetFrameVisibility(false);
     on_noteFolderRemotePathLineEdit_editingFinished();
 }
 
-void SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
+/**
+ * Recursively generates the path string from the tree widget items
+ */
+QString SettingsDialog::generatePathFromCurrentNoteFolderRemotePathItem(
         QTreeWidgetItem *item) {
     if (item == NULL) {
-        return;
+        return "";
     }
-
-    QString text = ui->noteFolderRemotePathLineEdit->text();
-    if (!text.isEmpty()) {
-        text.prepend("/");
-    }
-
-    text.prepend(item->text(0));
-    ui->noteFolderRemotePathLineEdit->setText(text);
 
     QTreeWidgetItem *parent = item->parent();
     if (parent != NULL) {
-        return generatePathFromCurrentNoteFolderRemotePathItem(parent);
+        return generatePathFromCurrentNoteFolderRemotePathItem(parent)
+               + "/" + item->text(0);
     }
+
+    return item->text(0);
 }
 
 void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
