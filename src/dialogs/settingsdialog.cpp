@@ -1260,4 +1260,7 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
         bool visible) {
     ui->noteFolderRemotePathTreeWidgetFrame->setVisible(visible);
     ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
+    if (!visible) {
+        ui->noteFolderRemotePathTreeWidget->clear();
+    }
 }
