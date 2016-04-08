@@ -8,10 +8,13 @@ HEADERS  += \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
+    $$APP_SRC_DIR/utils/misc.h \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
     $$APP_SRC_DIR/services/metricsservice.h \
     $$APP_SRC_DIR/services/cryptoservice.h \
+    $$APP_SRC_DIR/entities/notefolder.h \
     $$APP_SRC_DIR/entities/note.h \
+    $$APP_SRC_DIR/entities/tag.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
     $$APP_SRC_DIR/helpers/htmlentities.h \
     $$APP_SRC_DIR/helpers/clientproxy.h \
@@ -26,10 +29,13 @@ HEADERS  += \
 SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
+    $$APP_SRC_DIR/utils/misc.cpp \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \
     $$APP_SRC_DIR/services/metricsservice.cpp \
     $$APP_SRC_DIR/services/cryptoservice.cpp \
+    $$APP_SRC_DIR/entities/notefolder.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
+    $$APP_SRC_DIR/entities/tag.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \
     $$APP_SRC_DIR/helpers/htmlentities.cpp \
     $$APP_SRC_DIR/helpers/clientproxy.cpp \
