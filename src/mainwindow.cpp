@@ -39,6 +39,7 @@
 #include <helpers/clientproxy.h>
 #include <utils/misc.h>
 #include <entities/notefolder.h>
+#include <entities/tag.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :

@@ -54,6 +54,7 @@ SOURCES += main.cpp\
     entities/note.cpp \
     entities/notehistory.cpp \
     entities/notefolder.cpp \
+    entities/tag.cpp \
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
@@ -85,6 +86,7 @@ HEADERS  += mainwindow.h \
     entities/note.h \
     entities/calendaritem.h \
     entities/notefolder.h \
+    entities/tag.h \
     dialogs/aboutdialog.h \
     dialogs/linkdialog.h \
     dialogs/notediffdialog.h \

@@ -52,7 +52,8 @@ bool DatabaseService::removeDiskDatabase() {
     QFile file(getDiskDatabasePath());
 
     if (file.exists()) {
-        qDebug() << __func__ << " - 'removing database file': " << file.fileName();
+        qDebug() << __func__ << " - 'removing database file': "
+        << file.fileName();
         return file.remove();
     }
 
@@ -140,6 +141,7 @@ bool DatabaseService::setupNoteFolderTables() {
         queryDisk.exec("CREATE TABLE tag ("
                                "id INTEGER PRIMARY KEY,"
                                "name VARCHAR(255),"
+                               "priority INTEGER,"
                                "created DATETIME DEFAULT current_timestamp)");
 
         queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON tag (name);");
