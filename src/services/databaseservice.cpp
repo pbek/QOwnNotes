@@ -8,6 +8,7 @@
 #include <QDebug>
 #include <QApplication>
 #include <QSqlError>
+#include <entities/notefolder.h>
 
 DatabaseService::DatabaseService() {
 }
@@ -34,6 +35,17 @@ QString DatabaseService::getDiskDatabasePath() {
     dir.mkpath(path);
 
     return path + QDir::separator() + "QOwnNotes.sqlite";
+}
+
+
+/**
+ * @brief Returns the path to the note folder database
+ * @return string
+ */
+QString DatabaseService::getNoteFolderDatabasePath() {
+
+    return NoteFolder::currentLocalPath() + QDir::separator()
+           + "notes.sqlite";
 }
 
 bool DatabaseService::removeDiskDatabase() {
@@ -91,6 +103,67 @@ bool DatabaseService::createDiskConnection() {
     return true;
 }
 
+bool DatabaseService::createNoteFolderConnection() {
+    QSqlDatabase dbDisk = QSqlDatabase::addDatabase("QSQLITE", "note_folder");
+    dbDisk.setDatabaseName(getNoteFolderDatabasePath());
+
+    if (!dbDisk.open()) {
+        QMessageBox::critical(
+                0, QWidget::tr("Cannot open note folder database"),
+              QWidget::tr(
+                      "Unable to establish a database connection.\n"
+                          "This application needs SQLite support. Please read "
+                          "the Qt SQL driver documentation for information how "
+                          "to build it.\n\n"
+                          "Click Cancel to exit."), QMessageBox::Cancel);
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Creates or updates the note folder tables
+ */
+bool DatabaseService::setupNoteFolderTables() {
+    QSqlDatabase dbDisk = QSqlDatabase::database("note_folder");
+    QSqlQuery queryDisk(dbDisk);
+
+    queryDisk.exec("CREATE TABLE appData ("
+                           "name VARCHAR(255) PRIMARY KEY, "
+                           "value VARCHAR(255));");
+    int version = getAppData("database_version", "note_folder").toInt();
+    int oldVersion = version;
+    qDebug() << __func__ << " - 'database version': " << version;
+
+    if (version < 1) {
+        queryDisk.exec("CREATE TABLE tag ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255),"
+                               "created DATETIME DEFAULT current_timestamp)");
+
+        queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON tag (name);");
+
+        queryDisk.exec("CREATE TABLE noteTagLink ("
+                               "id INTEGER PRIMARY KEY,"
+                               "tag_id INTEGER,"
+                               "note_file_name VARCHAR(255),"
+                               "created DATETIME DEFAULT current_timestamp)");
+
+        queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON noteTagLink (tag_id, "
+                               "note_file_name);");
+
+        version = 1;
+    }
+
+    if (version != oldVersion) {
+        setAppData("database_version",
+                   QString::number(version), "note_folder");
+    }
+
+    return true;
+}
+
 bool DatabaseService::setupTables() {
     QSqlDatabase dbDisk = QSqlDatabase::database("disk");
     QSqlQuery queryDisk(dbDisk);
@@ -99,6 +172,7 @@ bool DatabaseService::setupTables() {
                            "name VARCHAR(255) PRIMARY KEY, "
                            "value VARCHAR(255));");
     int version = getAppData("database_version").toInt();
+    int oldVersion = version;
     qDebug() << __func__ << " - 'database_version': " << version;
 
     QSqlDatabase dbMemory = QSqlDatabase::database("memory");
@@ -158,13 +232,16 @@ bool DatabaseService::setupTables() {
         version = 3;
     }
 
-    setAppData("database_version", QString::number(version));
+    if (version != oldVersion) {
+        setAppData("database_version", QString::number(version));
+    }
 
     return true;
 }
 
-bool DatabaseService::setAppData(QString name, QString value) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+bool DatabaseService::setAppData(QString name, QString value,
+                                 QString connectionName) {
+    QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 
     query.prepare("REPLACE INTO appData ( name, value ) "
@@ -174,8 +251,8 @@ bool DatabaseService::setAppData(QString name, QString value) {
     return query.exec();
 }
 
-QString DatabaseService::getAppData(QString name) {
-    QSqlDatabase db = QSqlDatabase::database("disk");
+QString DatabaseService::getAppData(QString name, QString connectionName) {
+    QSqlDatabase db = QSqlDatabase::database(connectionName);
     QSqlQuery query(db);
 
     query.prepare("SELECT value FROM appData WHERE name = :name");

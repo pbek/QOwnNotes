@@ -40,6 +40,7 @@ public:
     QString suggestRemotePath();
     QString fixRemotePath();
     static QString currentRemotePath();
+    static QString currentLocalPath();
 
 private:
     int id;

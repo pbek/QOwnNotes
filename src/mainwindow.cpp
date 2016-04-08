@@ -1231,6 +1231,10 @@ void MainWindow::buildNotesIndex() {
         currentNote.setCryptoPassword(cryptoPassword);
         currentNote.store();
     }
+
+    // setup the note folder database
+    DatabaseService::createNoteFolderConnection();
+    DatabaseService::setupNoteFolderTables();
 }
 
 /**

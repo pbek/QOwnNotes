@@ -267,6 +267,15 @@ QString NoteFolder::currentRemotePath() {
 }
 
 /**
+ * Fetches the current local path
+ */
+QString NoteFolder::currentLocalPath() {
+    NoteFolder noteFolder = currentNoteFolder();
+    return noteFolder.isFetched() ? Utils::Misc::removeIfEndsWith(
+            noteFolder.getLocalPath(), QDir::separator()) : "";
+}
+
+/**
  * Suggests a remote path from an old localOwnCloudPath
  */
 QString NoteFolder::suggestRemotePath() {
