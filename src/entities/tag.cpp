@@ -33,7 +33,7 @@ void Tag::setPriority(int value) {
 }
 
 Tag Tag::fetch(int id) {
-    QSqlDatabase db = QSqlDatabase::database("note-folder");
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     Tag tag;
@@ -51,7 +51,7 @@ Tag Tag::fetch(int id) {
 }
 
 int Tag::countAll() {
-    QSqlDatabase db = QSqlDatabase::database("note-folder");
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM tag");
@@ -65,10 +65,14 @@ int Tag::countAll() {
     return 0;
 }
 
+/**
+ * Removes the tag and its note link items
+ */
 bool Tag::remove() {
-    QSqlDatabase db = QSqlDatabase::database("note-folder");
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
+    // remove the tag
     query.prepare("DELETE FROM tag WHERE id = :id");
     query.bindValue(":id", this->id);
 
@@ -76,7 +80,16 @@ bool Tag::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
-        return true;
+        // remove the note tag links
+        query.prepare("DELETE FROM noteTagLink WHERE tag_id = :id");
+        query.bindValue(":id", this->id);
+
+        if (!query.exec()) {
+            qWarning() << __func__ << ": " << query.lastError();
+            return false;
+        } else {
+            return true;
+        }
     }
 }
 
@@ -94,12 +107,12 @@ bool Tag::fillFromQuery(QSqlQuery query) {
 }
 
 QList<Tag> Tag::fetchAll() {
-    QSqlDatabase db = QSqlDatabase::database("note-folder");
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     QList<Tag> tagList;
 
-    query.prepare("SELECT * FROM tag ORDER BY priority ASC, id ASC");
+    query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -116,7 +129,7 @@ QList<Tag> Tag::fetchAll() {
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {
-    QSqlDatabase db = QSqlDatabase::database("note-folder");
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     if (this->id > 0) {

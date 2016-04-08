@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QDebug>
 #include <QApplication>
+#include <QSettings>
 #include <QSqlError>
 #include <entities/notefolder.h>
 
@@ -141,7 +142,7 @@ bool DatabaseService::setupNoteFolderTables() {
         queryDisk.exec("CREATE TABLE tag ("
                                "id INTEGER PRIMARY KEY,"
                                "name VARCHAR(255),"
-                               "priority INTEGER,"
+                               "priority INTEGER DEFAULT 0,"
                                "created DATETIME DEFAULT current_timestamp)");
 
         queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON tag (name);");
@@ -232,6 +233,14 @@ bool DatabaseService::setupTables() {
                                "owncloud_server_id INTEGER DEFAULT 0,"
                                "priority INTEGER DEFAULT 0 )");
         version = 3;
+    }
+
+    if (version < 4) {
+        QSettings settings;
+        // remove the main splitter sizes for the tags pane
+        settings.remove("mainSplitterSizes");
+
+        version = 4;
     }
 
     if (version != oldVersion) {

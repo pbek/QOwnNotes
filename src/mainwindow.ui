@@ -40,7 +40,7 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
-    <item row="0" column="0">
+    <item row="0" column="1">
      <layout class="QGridLayout" name="gridLayout">
       <property name="rightMargin">
        <number>0</number>
@@ -222,6 +222,53 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
       <item row="3" column="0">
+       <widget class="QFrame" name="tagFrame">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Plain</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>3</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLineEdit" name="tagLineEdit">
+           <property name="placeholderText">
+            <string>find or create tag</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QListWidget" name="tagListWidget">
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="3" column="0">
        <widget class="QFrame" name="notesListFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -392,8 +439,15 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Decrease_note_text_size"/>
     <addaction name="action_Reset_note_text_size"/>
    </widget>
+   <widget class="QMenu" name="menuTag">
+    <property name="title">
+     <string>Tag</string>
+    </property>
+    <addaction name="action_new_tag"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
+   <addaction name="menuTag"/>
    <addaction name="menuTodo"/>
    <addaction name="menuWindow"/>
    <addaction name="menu_Help"/>
@@ -1047,6 +1101,15 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+/</string>
    </property>
   </action>
+  <action name="action_new_tag">
+   <property name="icon">
+    <iconset theme="tag" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New tag</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -1057,8 +1120,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

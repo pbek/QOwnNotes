@@ -218,6 +218,14 @@ private slots:
 
     void on_noteFolderComboBox_currentIndexChanged(int index);
 
+    void on_action_new_tag_triggered();
+
+    void on_tagLineEdit_returnPressed();
+
+    void on_tagListWidget_itemChanged(QListWidgetItem *item);
+
+    void on_tagLineEdit_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -347,4 +355,8 @@ private:
     bool isInDistractionFreeMode();
 
     void openTodoDialog(QString taskUid = "");
+
+    void reloadTagList();
+
+    void removeSelectedTags();
 };

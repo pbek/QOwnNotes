@@ -132,6 +132,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
+    ui->tagListWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow(0);
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
@@ -646,6 +647,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 void MainWindow::setupMainSplitter() {
     this->mainSplitter = new QSplitter;
 
+    this->mainSplitter->addWidget(ui->tagFrame);
     this->mainSplitter->addWidget(ui->notesListFrame);
     this->mainSplitter->addWidget(ui->noteTabWidget);
 
@@ -1236,6 +1238,9 @@ void MainWindow::buildNotesIndex() {
     // setup the note folder database
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();
+
+    // reload the tag list
+    reloadTagList();
 }
 
 /**
@@ -1524,6 +1529,12 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
             return false;
+        } else if (obj == ui->tagListWidget) {
+            if ((keyEvent->key() == Qt::Key_Delete)) {
+                removeSelectedTags();
+                return true;
+            }
+            return false;
         }
     }
     if (event->type() == QEvent::MouseButtonRelease) {
@@ -1784,6 +1795,41 @@ void MainWindow::removeSelectedNotes() {
 
         // set a new first note
         resetCurrentNote();
+    }
+}
+
+/**
+ * @brief Removes selected tags after a confirmation
+ */
+void MainWindow::removeSelectedTags() {
+    int selectedItemsCount = ui->tagListWidget->selectedItems().size();
+
+    if (selectedItemsCount == 0) {
+        return;
+    }
+
+    if (QMessageBox::information(
+            this,
+            tr("Remove selected tags"),
+            tr("Remove <strong>%n</strong> selected tag(s)? No notes will "
+                       "be removed in this process.",
+               "", selectedItemsCount),
+             tr("&Remove"), tr("&Cancel"), QString::null,
+             0, 1) == 0) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        const QSignalBlocker blocker1(ui->tagListWidget);
+        Q_UNUSED(blocker1);
+
+        Q_FOREACH(QListWidgetItem *item, ui->tagListWidget->selectedItems()) {
+            int tagId = item->data(Qt::UserRole).toInt();
+            Tag tag = Tag::fetch(tagId);
+            tag.remove();
+            qDebug() << "Removed tag " << tag.getName();
+        }
+
+        reloadTagList();
     }
 }
 
@@ -3534,5 +3580,101 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
+    }
+}
+
+void MainWindow::on_action_new_tag_triggered()
+{
+    Tag* tag = new Tag();
+
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    tag->store();
+    reloadTagList();
+}
+
+/**
+ * Reloads the tag list
+ */
+void MainWindow::reloadTagList()
+{
+    ui->tagListWidget->clear();
+
+    // add an item to view all notes
+    QListWidgetItem *allItem = new QListWidgetItem(tr("All notes"));
+    allItem->setData(Qt::UserRole, -1);
+    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    allItem->setIcon(QIcon::fromTheme(
+            "edit-copy",
+            QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+    ui->tagListWidget->addItem(allItem);
+
+    // add an empty item
+    QListWidgetItem *emptyItem = new QListWidgetItem();
+    emptyItem->setData(Qt::UserRole, 0);
+    emptyItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    ui->tagListWidget->addItem(emptyItem);
+
+    // add all tags as item
+    QList<Tag> tagList = Tag::fetchAll();
+    Q_FOREACH(Tag tag, tagList) {
+            QListWidgetItem *item = new QListWidgetItem(tag.getName());
+            item->setData(Qt::UserRole, tag.getId());
+            item->setFlags(item->flags() | Qt::ItemIsEditable);
+            ui->tagListWidget->addItem(item);
+        }
+}
+
+/**
+ * Creates a new tag
+ */
+void MainWindow::on_tagLineEdit_returnPressed()
+{
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    Tag* tag = new Tag();
+    tag->setName(ui->tagLineEdit->text());
+    tag->store();
+    reloadTagList();
+}
+
+/**
+ * Updates a tag
+ */
+void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
+{
+    Tag tag = Tag::fetch(item->data(Qt::UserRole).toInt());
+    if (tag.isFetched()) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        tag.setName(item->text());
+        tag.store();
+        reloadTagList();
+    }
+}
+
+void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
+{
+    // search tags if at least one character was entered
+    if (arg1.count() >= 1) {
+        QList<QListWidgetItem*> foundItems = ui->tagListWidget->
+                findItems(arg1, Qt::MatchContains);
+
+        for (int i = 0; i < this->ui->tagListWidget->count(); ++i) {
+            QListWidgetItem *item =
+                    this->ui->tagListWidget->item(i);
+            int tagId = item->data(Qt::UserRole).toInt();
+            item->setHidden(!foundItems.contains(item) && (tagId > 0));
+        }
+    } else {
+        // show all items otherwise
+        for (int i = 0; i < this->ui->tagListWidget->count(); ++i) {
+            QListWidgetItem *item =
+                    this->ui->tagListWidget->item(i);
+            item->setHidden(false);
+        }
     }
 }
