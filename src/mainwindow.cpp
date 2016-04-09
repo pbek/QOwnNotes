@@ -3621,12 +3621,17 @@ void MainWindow::reloadTagList()
  */
 void MainWindow::on_tagLineEdit_returnPressed()
 {
+    QString name = ui->tagLineEdit->text();
+    if (name.isEmpty()) {
+        return;
+    }
+
     const QSignalBlocker blocker(this->noteDirectoryWatcher);
     Q_UNUSED(blocker);
 
-    Tag* tag = new Tag();
-    tag->setName(ui->tagLineEdit->text());
-    tag->store();
+    Tag tag;
+    tag.setName(name);
+    tag.store();
     reloadTagList();
 }
 
@@ -3637,12 +3642,15 @@ void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
 {
     Tag tag = Tag::fetch(item->data(Qt::UserRole).toInt());
     if (tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        QString name = item->text();
+        if (!name.isEmpty()) {
+            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
 
-        tag.setName(item->text());
-        tag.store();
-        reloadTagList();
+            tag.setName(name);
+            tag.store();
+            reloadTagList();
+        }
     }
 }
 
@@ -3718,12 +3726,14 @@ void MainWindow::on_newNoteTagButton_clicked()
  */
 void MainWindow::on_newNoteTagLineEdit_returnPressed()
 {
-    qDebug() << __func__;
     QString text = ui->newNoteTagLineEdit->text();
 
     // create a new tag if it doesn't exist
     Tag tag = Tag::fetchByName(text);
     if (!tag.isFetched()) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
         tag.setName(text);
         tag.store();
         reloadTagList();
@@ -3731,7 +3741,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed()
 
     // link the current note to the tag
     if (tag.isFetched()) {
-        const QSignalBlocker blocker(noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         tag.linkToNote(currentNote);
@@ -3804,4 +3814,16 @@ void MainWindow::on_action_new_tag_triggered()
     }
 
     on_newNoteTagButton_clicked();
+}
+
+void MainWindow::on_tagListWidget_currentItemChanged(
+        QListWidgetItem *current, QListWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+
+    int tagId = current->data(Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+    QStringList fileNameList = tag.fetchAllLinkedNoteFileNames();
+    qDebug() << __func__ << " - 'fileNameList': " << fileNameList;
+
 }

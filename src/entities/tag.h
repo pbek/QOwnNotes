@@ -54,6 +54,8 @@ public:
 
     bool removeLinkToNote(Note note);
 
+    QStringList fetchAllLinkedNoteFileNames();
+
 private:
     int id;
     QString name;

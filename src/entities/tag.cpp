@@ -172,6 +172,29 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 }
 
 /**
+ * Fetches all linked note file names
+ */
+QStringList Tag::fetchAllLinkedNoteFileNames() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    QStringList fileNameList;
+
+    query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
+    query.bindValue(":id", this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            fileNameList.append(query.value("note_file_name").toString());
+        }
+    }
+
+    return fileNameList;
+}
+
+/**
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {

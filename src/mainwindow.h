@@ -236,6 +236,8 @@ private slots:
 
     void on_action_new_tag_triggered();
 
+    void on_tagListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
