@@ -1239,8 +1239,8 @@ void MainWindow::buildNotesIndex() {
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();
 
-    // reload the tag list
-    reloadTagList();
+    // setup tagging
+    setupTags();
 }
 
 /**
@@ -1368,6 +1368,7 @@ void MainWindow::setCurrentNote(Note note,
     }
 
     updateEncryptNoteButtons();
+    reloadCurrentNoteTags();
 }
 
 void MainWindow::focusNoteTextEdit() {
@@ -3583,17 +3584,6 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
     }
 }
 
-void MainWindow::on_action_new_tag_triggered()
-{
-    Tag* tag = new Tag();
-
-    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker);
-
-    tag->store();
-    reloadTagList();
-}
-
 /**
  * Reloads the tag list
  */
@@ -3656,6 +3646,9 @@ void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
     }
 }
 
+/**
+ * Filters tags
+ */
 void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
     // search tags if at least one character was entered
@@ -3677,4 +3670,138 @@ void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
             item->setHidden(false);
         }
     }
+}
+
+/**
+ * Shows or hides everything for the note tags
+ */
+void MainWindow::setupTags() {
+    QSettings settings;
+    bool tagsEnabled = settings.value("tagsEnabled", false).toBool();
+
+    ui->tagFrame->setVisible(tagsEnabled);
+    ui->noteTagFrame->setVisible(tagsEnabled);
+    ui->newNoteTagLineEdit->setVisible(false);
+    ui->newNoteTagButton->setVisible(true);
+
+    const QSignalBlocker blocker(ui->actionToggle_tag_pane);
+    Q_UNUSED(blocker);
+    ui->actionToggle_tag_pane->setChecked(tagsEnabled);
+
+    if (tagsEnabled) {
+        reloadTagList();
+        reloadCurrentNoteTags();
+    }
+}
+
+/**
+ * Toogles the note panes
+ */
+void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
+{
+    QSettings settings;
+    settings.setValue("tagsEnabled", arg1);
+    setupTags();
+}
+
+/**
+ * Hides the note tag add button and shows the text edit
+ */
+void MainWindow::on_newNoteTagButton_clicked()
+{
+    ui->newNoteTagLineEdit->setVisible(true);
+    ui->newNoteTagButton->setVisible(false);
+}
+
+/**
+ * Links a note to the tag entered
+ */
+void MainWindow::on_newNoteTagLineEdit_returnPressed()
+{
+    qDebug() << __func__;
+    QString text = ui->newNoteTagLineEdit->text();
+
+    // create a new tag if it doesn't exist
+    Tag tag = Tag::fetchByName(text);
+    if (!tag.isFetched()) {
+        tag.setName(text);
+        tag.store();
+        reloadTagList();
+    }
+
+    // link the current note to the tag
+    if (tag.isFetched()) {
+        const QSignalBlocker blocker(noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        tag.linkToNote(currentNote);
+        reloadCurrentNoteTags();
+    }
+}
+
+void MainWindow::on_newNoteTagLineEdit_editingFinished()
+{
+    ui->newNoteTagLineEdit->setVisible(false);
+    ui->newNoteTagButton->setVisible(true);
+}
+
+/**
+ * Reloads the note tag buttons for the current note
+ */
+void MainWindow::reloadCurrentNoteTags()
+{
+    // remove all remove-tag buttons
+    QLayoutItem *child;
+    while ((child = ui->noteTagButtonFrame->layout()->takeAt(0)) != 0) {
+        delete child;
+    }
+
+    // add all remove-tag buttons
+    QList<Tag> tagList = Tag::fetchAllOfNote(currentNote);
+    Q_FOREACH(Tag tag, tagList) {
+            QPushButton* button = new QPushButton(tag.getName(),
+                                                  ui->noteTagButtonFrame);
+            button->setIcon(QIcon::fromTheme(
+                    "xml-attribute-delete",
+                    QIcon(":icons/breeze-qownnotes/16x16/"
+                                  "xml-attribute-delete.svg")));
+            button->setToolTip(
+                    tr("remove tag '%1' from note").arg(tag.getName()));
+            button->setObjectName(
+                    "removeNoteTag" + QString::number(tag.getId()));
+            QObject::connect(button, SIGNAL(clicked()),
+                             this, SLOT(removeNoteTagClicked()));
+
+            ui->noteTagButtonFrame->layout()->addWidget(button);
+        }
+}
+
+/**
+ * Removes a note tag link
+ */
+void MainWindow::removeNoteTagClicked()
+{
+    QString objectName = sender()->objectName();
+    if (objectName.startsWith("removeNoteTag")) {
+        int tagId = objectName.remove("removeNoteTag").toInt();
+        Tag tag = Tag::fetch(tagId);
+
+        const QSignalBlocker blocker(noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        tag.removeLinkToNote(currentNote);
+        reloadCurrentNoteTags();
+    }
+}
+
+/**
+ * Allows the user to add a tag to the current note
+ */
+void MainWindow::on_action_new_tag_triggered()
+{
+    if (!ui->actionToggle_tag_pane->isChecked()) {
+        ui->actionToggle_tag_pane->setChecked(true);
+    }
+
+    on_newNoteTagButton_clicked();
 }

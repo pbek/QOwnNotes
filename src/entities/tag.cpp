@@ -1,4 +1,5 @@
 #include "tag.h"
+#include "note.h"
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -40,6 +41,24 @@ Tag Tag::fetch(int id) {
 
     query.prepare("SELECT * FROM tag WHERE id = :id");
     query.bindValue(":id", id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        tag.fillFromQuery(query);
+    }
+
+    return tag;
+}
+
+Tag Tag::fetchByName(QString name) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    Tag tag;
+
+    query.prepare("SELECT * FROM tag WHERE LOWER(name) = :name");
+    query.bindValue(":name", name.toLower());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -126,6 +145,33 @@ QList<Tag> Tag::fetchAll() {
 }
 
 /**
+ * Fetches all linked tags of a note
+ */
+QList<Tag> Tag::fetchAllOfNote(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    QList<Tag> tagList;
+
+    query.prepare("SELECT t.* FROM tag t "
+                          "JOIN noteTagLink l ON t.id = l.tag_id "
+                          "WHERE l.note_file_name = :fileName "
+                          "ORDER BY t.priority ASC, t.name ASC");
+    query.bindValue(":fileName", note.getFileName());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+/**
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {
@@ -152,6 +198,56 @@ bool Tag::store() {
     } else if (this->id == 0) {
         // on insert
         this->id = query.lastInsertId().toInt();
+    }
+
+    return true;
+}
+
+/**
+ * Links a note to a tag
+ */
+bool Tag::linkToNote(Note note) {
+    if (!isFetched()) {
+        return false;
+    }
+
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name) "
+                           "VALUES (:tagId, :noteFileName)");
+
+    query.bindValue(":tagId", this->id);
+    query.bindValue(":noteFileName", note.getFileName());
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Removes the link to a note
+ */
+bool Tag::removeLinkToNote(Note note) {
+    if (!isFetched()) {
+        return false;
+    }
+
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM noteTagLink WHERE tag_id = :tagId AND "
+                          "note_file_name = :noteFileName");
+
+    query.bindValue(":tagId", this->id);
+    query.bindValue(":noteFileName", note.getFileName());
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
     }
 
     return true;

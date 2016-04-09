@@ -218,13 +218,23 @@ private slots:
 
     void on_noteFolderComboBox_currentIndexChanged(int index);
 
-    void on_action_new_tag_triggered();
-
     void on_tagLineEdit_returnPressed();
 
     void on_tagListWidget_itemChanged(QListWidgetItem *item);
 
     void on_tagLineEdit_textChanged(const QString &arg1);
+
+    void on_actionToggle_tag_pane_toggled(bool arg1);
+
+    void on_newNoteTagButton_clicked();
+
+    void on_newNoteTagLineEdit_returnPressed();
+
+    void on_newNoteTagLineEdit_editingFinished();
+
+    void removeNoteTagClicked();
+
+    void on_action_new_tag_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -359,4 +369,8 @@ private:
     void reloadTagList();
 
     void removeSelectedTags();
+
+    void setupTags();
+
+    void reloadCurrentNoteTags();
 };

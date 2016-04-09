@@ -145,7 +145,7 @@ bool DatabaseService::setupNoteFolderTables() {
                                "priority INTEGER DEFAULT 0,"
                                "created DATETIME DEFAULT current_timestamp)");
 
-        queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON tag (name);");
+        queryDisk.exec("CREATE UNIQUE INDEX idxUniqueTag ON tag (name);");
 
         queryDisk.exec("CREATE TABLE noteTagLink ("
                                "id INTEGER PRIMARY KEY,"
@@ -153,8 +153,8 @@ bool DatabaseService::setupNoteFolderTables() {
                                "note_file_name VARCHAR(255),"
                                "created DATETIME DEFAULT current_timestamp)");
 
-        queryDisk.exec("CREATE UNIQUE INDEX idxUnique ON noteTagLink (tag_id, "
-                               "note_file_name);");
+        queryDisk.exec("CREATE UNIQUE INDEX idxUniqueTagNoteLink ON "
+                               "noteTagLink (tag_id, note_file_name);");
 
         version = 1;
     }
