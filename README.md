@@ -51,6 +51,17 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 - manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
+- encryption of notes (AES-256)
+- dark mode theme support (if your operating system supports it)
+- support for freedesktop theme icons, so you can use QOwnNotes with your 
+  native desktop icons and with your favorite dark desktop theme
+  QOwnNotes supports Freedesktop icon themes
+- QOwnNotes is available in many different languages like English, German, 
+  French, Polish, Chinese, Russian, Portuguese, Hungarian, Dutch and Spanish
+    - [YOUR help](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+      is needed to maintain these translations or to translate QOwnNotes 
+      in more languages
+- tagging of notes
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
