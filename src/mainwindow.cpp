@@ -3763,6 +3763,7 @@ void MainWindow::reloadCurrentNoteTags()
     // remove all remove-tag buttons
     QLayoutItem *child;
     while ((child = ui->noteTagButtonFrame->layout()->takeAt(0)) != 0) {
+        delete child->widget();
         delete child;
     }
 
