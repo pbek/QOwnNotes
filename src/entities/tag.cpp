@@ -11,6 +11,7 @@
 Tag::Tag() {
     id = 0;
     name = "";
+    priority = 0;
 }
 
 int Tag::getId() {
@@ -157,7 +158,7 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
                           "JOIN noteTagLink l ON t.id = l.tag_id "
                           "WHERE l.note_file_name = :fileName "
                           "ORDER BY t.priority ASC, t.name ASC");
-    query.bindValue(":fileName", note.getFileName());
+    query.bindValue(":fileName", note.getName());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -169,6 +170,28 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
     }
 
     return tagList;
+}
+
+/**
+ * Checks if tag is linked to a note
+ */
+bool Tag::isLinkedToNote(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
+                          "WHERE note_file_name = :fileName "
+                          "AND tag_id = :tagId");
+    query.bindValue(":fileName", note.getName());
+    query.bindValue(":fileName", id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        return query.value("cnt").toInt() > 0;
+    }
+
+    return false;
 }
 
 /**
@@ -240,7 +263,7 @@ bool Tag::linkToNote(Note note) {
                            "VALUES (:tagId, :noteFileName)");
 
     query.bindValue(":tagId", this->id);
-    query.bindValue(":noteFileName", note.getFileName());
+    query.bindValue(":noteFileName", note.getName());
 
     if (!query.exec()) {
         // on error
@@ -265,7 +288,7 @@ bool Tag::removeLinkToNote(Note note) {
                           "note_file_name = :noteFileName");
 
     query.bindValue(":tagId", this->id);
-    query.bindValue(":noteFileName", note.getFileName());
+    query.bindValue(":noteFileName", note.getName());
 
     if (!query.exec()) {
         // on error

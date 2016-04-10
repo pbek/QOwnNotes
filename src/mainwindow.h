@@ -375,4 +375,12 @@ private:
     void setupTags();
 
     void reloadCurrentNoteTags();
+
+    void filterNotesByTag();
+
+    void filterNotesBySearchLineEditText();
+
+    void filterNotes();
+
+    bool isTagsEnabled();
 };

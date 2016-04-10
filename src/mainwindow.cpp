@@ -727,10 +727,8 @@ void MainWindow::loadNoteDirectoryList() {
         ui->notesListWidget->sortItems(Qt::AscendingOrder);
     }
 
-//    QStringList directoryList = this->noteDirectoryWatcher.directories();
-
-//    Q_FOREACH(QString directory, directoryList)
-//        qDebug() << "Directory name" << directory <<"\n";
+    // setup tagging
+    setupTags();
 }
 
 /**
@@ -1238,9 +1236,6 @@ void MainWindow::buildNotesIndex() {
     // setup the note folder database
     DatabaseService::createNoteFolderConnection();
     DatabaseService::setupNoteFolderTables();
-
-    // setup tagging
-    setupTags();
 }
 
 /**
@@ -2255,6 +2250,40 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
+    Q_UNUSED(arg1);
+    filterNotes();
+}
+
+/**
+ * Does the note filtering
+ */
+void MainWindow::filterNotes() {
+    // filter the notes by text in the search line edit
+    filterNotesBySearchLineEditText();
+
+    if (isTagsEnabled()) {
+        // filter the notes by tag
+        filterNotesByTag();
+    }
+
+    // let's highlight the text from the search line edit
+    searchForSearchLineTextInNoteTextEdit();
+}
+
+/**
+ * Checks if tagging is enabled
+ */
+bool MainWindow::isTagsEnabled() {
+    QSettings settings;
+    return settings.value("tagsEnabled", false).toBool();
+}
+
+/**
+ * Does the note filtering by text in the search line edit
+ */
+void MainWindow::filterNotesBySearchLineEditText() {
+    QString arg1 = ui->searchLineEdit->text();
+
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
         QList<QString> noteNameList = Note::searchAsNameList(arg1);
@@ -2280,9 +2309,45 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
             item->setHidden(false);
         }
     }
+}
 
-    // let's highlight the text from the search line edit
-    searchForSearchLineTextInNoteTextEdit();
+/**
+ * Does the note filtering by tags
+ */
+void MainWindow::filterNotesByTag() {
+    // check if there is an active tag
+    Tag tag = Tag::activeTag();
+
+    qDebug() << __func__ << " - 'tag': " << tag;
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    // fetch all linked note names
+    QStringList fileNameList = tag.fetchAllLinkedNoteFileNames();
+
+    qDebug() << __func__ << " - 'fileNameList': " << fileNameList;
+
+
+    // loop through all notes
+    for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
+        QListWidgetItem *item = this->ui->notesListWidget->item(i);
+        // omit the already hidden notes
+        if (item->isHidden()) {
+            continue;
+        }
+
+        // hide all notes that are not linked to the active tag
+        if (!fileNameList.contains(item->text())) {
+            item->setHidden(true);
+        } else {
+            if (this->firstVisibleNoteListRow < 0) {
+                this->firstVisibleNoteListRow = i;
+            }
+            item->setHidden(false);
+        }
+    }
 }
 
 //
@@ -3589,6 +3654,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
  */
 void MainWindow::reloadTagList()
 {
+    int activeTagId = Tag::activeTagId();
     ui->tagListWidget->clear();
 
     // add an item to view all notes
@@ -3610,9 +3676,19 @@ void MainWindow::reloadTagList()
     QList<Tag> tagList = Tag::fetchAll();
     Q_FOREACH(Tag tag, tagList) {
             QListWidgetItem *item = new QListWidgetItem(tag.getName());
+            item->setIcon(QIcon::fromTheme(
+                    "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
             item->setData(Qt::UserRole, tag.getId());
             item->setFlags(item->flags() | Qt::ItemIsEditable);
             ui->tagListWidget->addItem(item);
+
+            // set the active item
+            if (activeTagId == tag.getId()) {
+                const QSignalBlocker blocker(ui->tagListWidget);
+                Q_UNUSED(blocker);
+
+                ui->tagListWidget->setCurrentItem(item);
+            }
         }
 }
 
@@ -3684,8 +3760,7 @@ void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
  * Shows or hides everything for the note tags
  */
 void MainWindow::setupTags() {
-    QSettings settings;
-    bool tagsEnabled = settings.value("tagsEnabled", false).toBool();
+    bool tagsEnabled = isTagsEnabled();
 
     ui->tagFrame->setVisible(tagsEnabled);
     ui->noteTagFrame->setVisible(tagsEnabled);
@@ -3700,10 +3775,13 @@ void MainWindow::setupTags() {
         reloadTagList();
         reloadCurrentNoteTags();
     }
+
+    // filter the notes again
+    filterNotes();
 }
 
 /**
- * Toogles the note panes
+ * Toggles the note panes
  */
 void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
 {
@@ -3718,11 +3796,13 @@ void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
 void MainWindow::on_newNoteTagButton_clicked()
 {
     ui->newNoteTagLineEdit->setVisible(true);
+    ui->newNoteTagLineEdit->setFocus();
     ui->newNoteTagButton->setVisible(false);
 }
 
 /**
- * Links a note to the tag entered
+ * Links a note to the tag entered after pressing return
+ * in the note tag line edit
  */
 void MainWindow::on_newNoteTagLineEdit_returnPressed()
 {
@@ -3749,6 +3829,9 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed()
     }
 }
 
+/**
+ * Hides the note tag line edit after editing
+ */
 void MainWindow::on_newNoteTagLineEdit_editingFinished()
 {
     ui->newNoteTagLineEdit->setVisible(false);
@@ -3767,7 +3850,7 @@ void MainWindow::reloadCurrentNoteTags()
         delete child;
     }
 
-    // add all remove-tag buttons
+    // add all new remove-tag buttons
     QList<Tag> tagList = Tag::fetchAllOfNote(currentNote);
     Q_FOREACH(Tag tag, tagList) {
             QPushButton* button = new QPushButton(tag.getName(),
@@ -3780,6 +3863,7 @@ void MainWindow::reloadCurrentNoteTags()
                     tr("remove tag '%1' from note").arg(tag.getName()));
             button->setObjectName(
                     "removeNoteTag" + QString::number(tag.getId()));
+
             QObject::connect(button, SIGNAL(clicked()),
                              this, SLOT(removeNoteTagClicked()));
 
@@ -3796,6 +3880,9 @@ void MainWindow::removeNoteTagClicked()
     if (objectName.startsWith("removeNoteTag")) {
         int tagId = objectName.remove("removeNoteTag").toInt();
         Tag tag = Tag::fetch(tagId);
+        if (!tag.isFetched()) {
+            return;
+        }
 
         const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
@@ -3817,14 +3904,21 @@ void MainWindow::on_action_new_tag_triggered()
     on_newNoteTagButton_clicked();
 }
 
+/**
+ * Sets a new active tag if an other tag was selected
+ */
 void MainWindow::on_tagListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous)
 {
     Q_UNUSED(previous);
 
+    if (current == NULL) {
+        return;
+    }
+
     int tagId = current->data(Qt::UserRole).toInt();
     Tag tag = Tag::fetch(tagId);
-    QStringList fileNameList = tag.fetchAllLinkedNoteFileNames();
-    qDebug() << __func__ << " - 'fileNameList': " << fileNameList;
+    tag.setAsActive();
 
+    filterNotes();
 }

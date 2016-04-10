@@ -56,6 +56,8 @@ public:
 
     QStringList fetchAllLinkedNoteFileNames();
 
+    bool isLinkedToNote(Note note);
+
 private:
     int id;
     QString name;
