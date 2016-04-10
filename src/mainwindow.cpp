@@ -3773,6 +3773,11 @@ void MainWindow::setupTags() {
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 
+    // add a right margin for OS X
+#ifdef Q_OS_MAC
+    ui->tagFrame->layout()->setContentsMargins(0, 0, 3, 3);
+#endif
+
     const QSignalBlocker blocker(ui->actionToggle_tag_pane);
     Q_UNUSED(blocker);
     ui->actionToggle_tag_pane->setChecked(tagsEnabled);
