@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 1.3.8
+- some tagging user interface styling and naming changes
+- when a tag is clicked in the tag list widget now the note search line edit 
+  will be cleared
+- when a new tag is created for a note the previously entered text will now 
+  be selected
+
 ## 1.3.7
 - you now can **tag your notes**
 	- you can turn on tagging with <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd>

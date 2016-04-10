@@ -195,10 +195,10 @@ p, li { white-space: pre-wrap; }
                 <string>add a tag to this note</string>
                </property>
                <property name="text">
-                <string>New tag</string>
+                <string>Add tag</string>
                </property>
                <property name="icon">
-                <iconset theme="tag" resource="breeze-qownnotes.qrc">
+                <iconset theme="tag">
                  <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
                </property>
               </widget>
@@ -320,6 +320,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="tagLineEdit">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit { padding-left: 5px; }</string>
+           </property>
            <property name="placeholderText">
             <string>find or create tag</string>
            </property>
@@ -1179,7 +1182,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_new_tag">
    <property name="icon">
-    <iconset theme="tag" resource="breeze-qownnotes.qrc">
+    <iconset theme="tag">
      <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
    </property>
    <property name="text">
@@ -1194,7 +1197,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="tag" resource="breeze-qownnotes.qrc">
+    <iconset theme="tag">
      <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
    </property>
    <property name="text">

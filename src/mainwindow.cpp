@@ -3803,6 +3803,7 @@ void MainWindow::on_newNoteTagButton_clicked()
 {
     ui->newNoteTagLineEdit->setVisible(true);
     ui->newNoteTagLineEdit->setFocus();
+    ui->newNoteTagLineEdit->selectAll();
     ui->newNoteTagButton->setVisible(false);
 }
 
@@ -3925,6 +3926,13 @@ void MainWindow::on_tagListWidget_currentItemChanged(
     int tagId = current->data(Qt::UserRole).toInt();
     Tag tag = Tag::fetch(tagId);
     tag.setAsActive();
+
+    if (tagId > 0) {
+        const QSignalBlocker blocker(ui->searchLineEdit);
+        Q_UNUSED(blocker);
+
+        ui->searchLineEdit->clear();
+    }
 
     filterNotes();
 }
