@@ -58,6 +58,11 @@ public:
 
     bool isLinkedToNote(Note note);
 
+    static bool removeAllLinksToNote(Note note);
+
+    static bool renameNoteFileNamesOfLinks(
+            QString oldFileName, QString newFileName);
+
 private:
     int id;
     QString name;

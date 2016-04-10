@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 1.3.7
+- you now can **tag your notes**
+	- you can turn on tagging with <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd>
+	- tags and their associations to note files are stored in each note folder
+	  individually in a SQLite database
+	- if notes are renamed by QOwnNotes the tags will be moved to the renamed
+	  notes
+	- if notes are move to an other folder their associated tags are lost 
+	- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
+
 ## 1.3.6
 - fixed a remote folder selection issue with deeper levels of folders in the 
   note folders settings

@@ -234,7 +234,6 @@ p, li { white-space: pre-wrap; }
             <property name="lineWidth">
              <number>0</number>
             </property>
-            <zorder>noteTagFrame</zorder>
            </widget>
           </item>
          </layout>
@@ -1179,6 +1178,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>&amp;Add tag to note</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+A</string>
+   </property>
   </action>
   <action name="actionToggle_tag_pane">
    <property name="checkable">
@@ -1190,6 +1192,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>&amp;Toggle tag pane</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+T</string>
    </property>
   </action>
  </widget>

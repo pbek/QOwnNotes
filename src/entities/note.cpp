@@ -13,6 +13,7 @@
 #include "libraries/hoedown/html.h"
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
+#include "tag.h"
 
 
 Note::Note() {
@@ -135,6 +136,9 @@ bool Note::remove(bool withFile) {
     } else {
         if (withFile) {
             this->removeNoteFile();
+
+            // remove all links to tags
+            Tag::removeAllLinksToNote(*this);
         }
 
         return true;

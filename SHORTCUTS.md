@@ -24,6 +24,8 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opens the settings
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 
 ### In the note search bar
 
@@ -96,6 +98,8 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 
 ### In the note search bar
 

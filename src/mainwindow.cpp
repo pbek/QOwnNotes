@@ -1078,6 +1078,9 @@ void MainWindow::storeUpdatedNotesToDisk() {
                 // reloading the whole list
                 makeCurrentNoteFirstInNoteList();
             } else {
+                // rename the note file names of note tag links
+                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+
                 // reload the directory list if note name has changed
                 loadNoteDirectoryList();
             }
@@ -3659,6 +3662,7 @@ void MainWindow::reloadTagList()
 
     // add an item to view all notes
     QListWidgetItem *allItem = new QListWidgetItem(tr("All notes"));
+    allItem->setToolTip(tr("show all notes"));
     allItem->setData(Qt::UserRole, -1);
     allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
     allItem->setIcon(QIcon::fromTheme(
@@ -3676,6 +3680,8 @@ void MainWindow::reloadTagList()
     QList<Tag> tagList = Tag::fetchAll();
     Q_FOREACH(Tag tag, tagList) {
             QListWidgetItem *item = new QListWidgetItem(tag.getName());
+            item->setToolTip(tr("show all notes tagged with '%1'")
+                                     .arg(tag.getName()));
             item->setIcon(QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
             item->setData(Qt::UserRole, tag.getId());

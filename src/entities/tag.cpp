@@ -300,6 +300,47 @@ bool Tag::removeLinkToNote(Note note) {
 }
 
 /**
+ * Removes all links to a note
+ */
+bool Tag::removeAllLinksToNote(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM noteTagLink WHERE "
+                          "note_file_name = :noteFileName");
+
+    query.bindValue(":noteFileName", note.getName());
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Renames the note file name of note links
+ */
+bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
+                          "note_file_name = :oldFileName");
+
+    query.bindValue(":oldFileName", oldFileName);
+    query.bindValue(":newFileName", newFileName);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    return true;
+}
+
+/**
  * Checks if the active tag still exists in the database
  */
 bool Tag::exists() {
