@@ -316,7 +316,7 @@ p, li { white-space: pre-wrap; }
           <number>3</number>
          </property>
          <property name="verticalSpacing">
-          <number>0</number>
+          <number>3</number>
          </property>
          <item row="0" column="0">
           <widget class="QLineEdit" name="tagLineEdit">
@@ -344,6 +344,9 @@ p, li { white-space: pre-wrap; }
          </sizepolicy>
         </property>
         <layout class="QVBoxLayout" name="notesListLayout">
+         <property name="spacing">
+          <number>3</number>
+         </property>
          <property name="leftMargin">
           <number>0</number>
          </property>
@@ -357,7 +360,11 @@ p, li { white-space: pre-wrap; }
           <number>3</number>
          </property>
          <item>
-          <widget class="QComboBox" name="noteFolderComboBox"/>
+          <widget class="QComboBox" name="noteFolderComboBox">
+           <property name="maxVisibleItems">
+            <number>100</number>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QListWidget" name="notesListWidget">
@@ -1207,8 +1214,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
