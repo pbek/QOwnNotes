@@ -131,7 +131,7 @@ bool DatabaseService::setupNoteFolderTables() {
     QSqlDatabase dbDisk = QSqlDatabase::database("note_folder");
     QSqlQuery queryDisk(dbDisk);
 
-    queryDisk.exec("CREATE TABLE appData ("
+    queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
                            "name VARCHAR(255) PRIMARY KEY, "
                            "value VARCHAR(255));");
     int version = getAppData("database_version", "note_folder").toInt();
@@ -139,22 +139,23 @@ bool DatabaseService::setupNoteFolderTables() {
     qDebug() << __func__ << " - 'database version': " << version;
 
     if (version < 1) {
-        queryDisk.exec("CREATE TABLE tag ("
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS tag ("
                                "id INTEGER PRIMARY KEY,"
                                "name VARCHAR(255),"
                                "priority INTEGER DEFAULT 0,"
                                "created DATETIME DEFAULT current_timestamp)");
 
-        queryDisk.exec("CREATE UNIQUE INDEX idxUniqueTag ON tag (name);");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                               "tag (name);");
 
-        queryDisk.exec("CREATE TABLE noteTagLink ("
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS noteTagLink ("
                                "id INTEGER PRIMARY KEY,"
                                "tag_id INTEGER,"
                                "note_file_name VARCHAR(255),"
                                "created DATETIME DEFAULT current_timestamp)");
 
-        queryDisk.exec("CREATE UNIQUE INDEX idxUniqueTagNoteLink ON "
-                               "noteTagLink (tag_id, note_file_name);");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink"
+                               " ON noteTagLink (tag_id, note_file_name);");
 
         version = 1;
     }
@@ -171,7 +172,7 @@ bool DatabaseService::setupTables() {
     QSqlDatabase dbDisk = QSqlDatabase::database("disk");
     QSqlQuery queryDisk(dbDisk);
 
-    queryDisk.exec("CREATE TABLE appData ("
+    queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
                            "name VARCHAR(255) PRIMARY KEY, "
                            "value VARCHAR(255));");
     int version = getAppData("database_version").toInt();
@@ -180,7 +181,7 @@ bool DatabaseService::setupTables() {
 
     QSqlDatabase dbMemory = QSqlDatabase::database("memory");
     QSqlQuery queryMemory(dbMemory);
-    queryMemory.exec("CREATE TABLE note ("
+    queryMemory.exec("CREATE TABLE IF NOT EXISTS note ("
                              "id INTEGER PRIMARY KEY,"
                              "name VARCHAR(255),"
                              "file_name VARCHAR(255),"
@@ -195,7 +196,7 @@ bool DatabaseService::setupTables() {
                              "modified DATETIME default current_timestamp)");
 
     if (version < 1) {
-        queryDisk.exec("CREATE TABLE calendarItem ("
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS calendarItem ("
                                "id INTEGER PRIMARY KEY,"
                                "summary VARCHAR(255),"
                                "url VARCHAR(255),"
@@ -212,7 +213,8 @@ bool DatabaseService::setupTables() {
                                "created DATETIME DEFAULT current_timestamp,"
                                "modified DATETIME DEFAULT current_timestamp)");
 
-        queryDisk.exec("CREATE UNIQUE INDEX idxUrl ON calendarItem( url );");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUrl "
+                               "ON calendarItem( url );");
         queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
         queryDisk.exec("ALTER TABLE calendarItem "
                                "ADD sort_priority INTEGER DEFAULT 0;");
@@ -225,7 +227,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 3) {
-        queryDisk.exec("CREATE TABLE noteFolder ("
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS noteFolder ("
                                "id INTEGER PRIMARY KEY,"
                                "name VARCHAR(255),"
                                "local_path VARCHAR(255),"

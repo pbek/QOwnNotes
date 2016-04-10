@@ -3773,7 +3773,8 @@ void MainWindow::setupTags() {
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 
-    // add a right margin for OS X
+    // add a right margin to the tag frame in OS X, so that the splitter handle
+    // is shown correctly
 #ifdef Q_OS_MAC
     ui->tagFrame->layout()->setContentsMargins(0, 0, 3, 3);
 #endif
