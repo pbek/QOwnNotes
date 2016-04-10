@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 1.3.8
-- some tagging user interface styling and naming changes
-- when a tag is clicked in the tag list widget now the note search line edit 
+- some user interface styling and naming changes for tagging 
+- when a tag is clicked in the tag list widget the note search line edit now 
   will be cleared
 - when a new tag is created for a note the previously entered text will now 
   be selected
