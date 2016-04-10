@@ -6,6 +6,8 @@
   will be cleared
 - when a new tag is created for a note the previously entered text will now 
   be selected
+- fixed a possible crash when selecting a remote note folder in the note 
+  folder settings
 
 ## 1.3.7
 - you now can **tag your notes**

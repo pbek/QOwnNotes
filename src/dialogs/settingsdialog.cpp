@@ -1261,6 +1261,9 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
     ui->noteFolderRemotePathTreeWidgetFrame->setVisible(visible);
     ui->noteFolderVerticalSpacerFrame->setVisible(!visible);
     if (!visible) {
+        const QSignalBlocker blocker(ui->noteFolderRemotePathTreeWidget);
+        Q_UNUSED(blocker);
+
         ui->noteFolderRemotePathTreeWidget->clear();
     }
 }
