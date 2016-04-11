@@ -681,16 +681,26 @@ void MainWindow::loadNoteDirectoryList() {
 
             ui->notesListWidget->clear();
 
-            QStringList nameList = Note::fetchNoteNames();
-            ui->notesListWidget->addItems(nameList);
+            // load all notes and add them to the note list widget
+            QList<Note> noteList = Note::fetchAll();
+            Q_FOREACH(Note note, noteList) {
+                QListWidgetItem *item = new QListWidgetItem(note.getName());
+                item->setToolTip(tr("show note '%1'").arg(note.getName()));
+                item->setIcon(QIcon::fromTheme(
+                        "text-x-generic",
+                        QIcon(":icons/breeze-qownnotes/16x16/"
+                                      "text-x-generic.svg")));
+                item->setData(Qt::UserRole, note.getId());
+                ui->notesListWidget->addItem(item);
+            }
 
             // clear the text edits if there are no notes
-            if (nameList.isEmpty()) {
+            if (noteList.isEmpty()) {
                 ui->noteTextEdit->clear();
                 ui->noteTextView->clear();
             }
 
-            int itemCount = nameList.count();
+            int itemCount = noteList.count();
             MetricsService::instance()->sendEventIfEnabled(
                     "note/list/loaded",
                     "note",
