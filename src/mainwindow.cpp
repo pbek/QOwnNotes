@@ -714,12 +714,23 @@ void MainWindow::loadNoteDirectoryList() {
     QStringList fileNameList = Note::fetchNoteFileNames();
 
     // watch all the notes for changes
+    int count = 0;
     Q_FOREACH(QString fileName, fileNameList) {
-        QString path = Note::getFullNoteFilePathForFile(fileName);
-        QFile file(path);
-        if (file.exists()) {
-            this->noteDirectoryWatcher.addPath(path);
-        }
+#ifdef Q_OS_LINUX
+            // only add the last first 200 notes to the file watcher to
+            // prevent that nothing is watched at all because of too many
+            // open files
+            if (count > 200) {
+                break;
+            }
+#endif
+
+            QString path = Note::getFullNoteFilePathForFile(fileName);
+            QFile file(path);
+            if (file.exists()) {
+                this->noteDirectoryWatcher.addPath(path);
+                count++;
+            }
     }
 
     // sort alphabetically again if necessary
