@@ -385,4 +385,9 @@ private:
     void filterNotes();
 
     bool isTagsEnabled();
+
+    void setListWidgetItemToolTipForNote(
+            QListWidgetItem *item,
+            Note *note,
+            QDateTime *overrideFileLastModified = 0);
 };

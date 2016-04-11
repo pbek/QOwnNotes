@@ -122,6 +122,10 @@ public:
 
     bool storeNewDecryptedText(QString text);
 
+    QDateTime getFileLastModified();
+
+    QDateTime getModified();
+
 private:
     int id;
     QString name;

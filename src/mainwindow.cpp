@@ -684,14 +684,14 @@ void MainWindow::loadNoteDirectoryList() {
             // load all notes and add them to the note list widget
             QList<Note> noteList = Note::fetchAll();
             Q_FOREACH(Note note, noteList) {
-                QListWidgetItem *item = new QListWidgetItem(note.getName());
-                item->setToolTip(tr("show note '%1'").arg(note.getName()));
-                item->setIcon(QIcon::fromTheme(
-                        "text-x-generic",
-                        QIcon(":icons/breeze-qownnotes/16x16/"
-                                      "text-x-generic.svg")));
-                item->setData(Qt::UserRole, note.getId());
-                ui->notesListWidget->addItem(item);
+                    QListWidgetItem *item = new QListWidgetItem(note.getName());
+                    setListWidgetItemToolTipForNote(item, &note);
+                    item->setIcon(QIcon::fromTheme(
+                            "text-x-generic",
+                            QIcon(":icons/breeze-qownnotes/16x16/"
+                                          "text-x-generic.svg")));
+                    item->setData(Qt::UserRole, note.getId());
+                    ui->notesListWidget->addItem(item);
             }
 
             // clear the text edits if there are no notes
@@ -750,6 +750,28 @@ void MainWindow::loadNoteDirectoryList() {
 
     // setup tagging
     setupTags();
+}
+
+/**
+ * Sets the list widget tooltip for a note
+ */
+void MainWindow::setListWidgetItemToolTipForNote(
+        QListWidgetItem *item,
+        Note *note,
+        QDateTime *overrideFileLastModified) {
+    if ((item == NULL) || (note == NULL)) {
+        return;
+    }
+
+    QDateTime modified = note->getFileLastModified();
+    QDateTime *fileLastModified = (overrideFileLastModified != NULL) ?
+                                 overrideFileLastModified : &modified;
+
+    item->setToolTip(tr("<strong>%1</strong><br />last modified: %2")
+            .arg(note->getName(), fileLastModified->toString()));
+
+    qDebug() << __func__ << " - 'item->toolTip()': " << item->toolTip();
+
 }
 
 /**
@@ -2254,6 +2276,11 @@ void MainWindow::on_noteTextEdit_textChanged() {
         this->currentNoteLastEdited = QDateTime::currentDateTime();
 
         updateEncryptNoteButtons();
+
+        // update the note list tooltip of the note
+        setListWidgetItemToolTipForNote(ui->notesListWidget->currentItem(),
+                                        &currentNote,
+                                        &currentNoteLastEdited);
     }
 }
 

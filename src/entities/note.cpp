@@ -29,6 +29,14 @@ QString Note::getName() {
     return this->name;
 }
 
+QDateTime Note::getFileLastModified() {
+    return this->fileLastModified;
+}
+
+QDateTime Note::getModified() {
+    return this->modified;
+}
+
 qint64 Note::getCryptoKey() {
     return this->cryptoKey;
 }

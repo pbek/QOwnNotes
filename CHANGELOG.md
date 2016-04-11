@@ -6,7 +6,8 @@
 - on Linux now only the 200 most recent notes will be watched for external 
   changes to prevent that nothing is watched at all because of too many open 
   files
-- the notes in the note list now have an icon to look more fancy
+- the notes in the note list now have an icon to look more fancy and the last
+  modified date is shown in the tooltip
 
 ## 1.3.8
 - some user interface styling and naming changes for tagging 
