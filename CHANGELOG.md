@@ -8,6 +8,7 @@
   files
 - the notes in the note list now have an icon to look more fancy and the last
   modified date is shown in the tooltip
+- added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.3.8
 - some user interface styling and naming changes for tagging 
