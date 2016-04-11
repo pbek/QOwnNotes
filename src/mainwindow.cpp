@@ -684,7 +684,14 @@ void MainWindow::loadNoteDirectoryList() {
             // load all notes and add them to the note list widget
             QList<Note> noteList = Note::fetchAll();
             Q_FOREACH(Note note, noteList) {
-                    QListWidgetItem *item = new QListWidgetItem(note.getName());
+                    QString name = note.getName();
+
+                    // skip notes without name
+                    if (name.isEmpty()) {
+                        continue;
+                    }
+
+                    QListWidgetItem *item = new QListWidgetItem(name);
                     setListWidgetItemToolTipForNote(item, &note);
                     item->setIcon(QIcon::fromTheme(
                             "text-x-generic",
