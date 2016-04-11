@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.3.9
+- There now is a menu entry to reload the current note folder
+    - use <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> as a shortcut
+
 ## 1.3.8
 - some user interface styling and naming changes for tagging 
 - when a tag is clicked in the tag list widget the note search line edit now 

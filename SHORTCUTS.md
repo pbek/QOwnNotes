@@ -26,6 +26,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opens the settings
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 
 ### In the note search bar
 
@@ -100,6 +101,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 
 ### In the note search bar
 

@@ -238,6 +238,8 @@ private slots:
 
     void on_tagListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
 
+    void on_action_Reload_note_folder_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

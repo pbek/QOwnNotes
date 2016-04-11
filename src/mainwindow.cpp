@@ -3946,3 +3946,12 @@ void MainWindow::on_tagListWidget_currentItemChanged(
 
     filterNotes();
 }
+
+/**
+ * Reloads the current note folder
+ */
+void MainWindow::on_action_Reload_note_folder_triggered()
+{
+    buildNotesIndex();
+    loadNoteDirectoryList();
+}
