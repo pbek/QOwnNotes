@@ -3734,9 +3734,12 @@ void MainWindow::reloadTagList()
     // add all tags as item
     QList<Tag> tagList = Tag::fetchAll();
     Q_FOREACH(Tag tag, tagList) {
-            QListWidgetItem *item = new QListWidgetItem(tag.getName());
+            QString name = tag.getName();
+            QString text = QString("%1 (%2)")
+                    .arg(name, QString::number(tag.countLinkedNoteFileNames()));
+            QListWidgetItem *item = new QListWidgetItem(text);
             item->setToolTip(tr("show all notes tagged with '%1'")
-                                     .arg(tag.getName()));
+                                     .arg(name));
             item->setIcon(QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
             item->setData(Qt::UserRole, tag.getId());

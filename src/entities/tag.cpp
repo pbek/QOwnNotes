@@ -218,6 +218,26 @@ QStringList Tag::fetchAllLinkedNoteFileNames() {
 }
 
 /**
+ * Count the linked note file names
+ */
+int Tag::countLinkedNoteFileNames() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                          "WHERE tag_id = :id");
+    query.bindValue(":id", this->id);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
+/**
  * Inserts or updates a Tag object in the database
  */
 bool Tag::store() {

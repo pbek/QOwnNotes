@@ -63,6 +63,8 @@ public:
     static bool renameNoteFileNamesOfLinks(
             QString oldFileName, QString newFileName);
 
+    int countLinkedNoteFileNames();
+
 private:
     int id;
     QString name;

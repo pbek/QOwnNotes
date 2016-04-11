@@ -8,6 +8,7 @@
   files
 - the notes in the note list now have an icon to look more fancy and the last
   modified date is shown in the tooltip
+- the amount of notes for each tag is now shown in the tag list 
 - added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.3.8
