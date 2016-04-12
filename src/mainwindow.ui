@@ -117,12 +117,6 @@
             <property name="contextMenuPolicy">
              <enum>Qt::CustomContextMenu</enum>
             </property>
-            <property name="autoFillBackground">
-             <bool>false</bool>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
             </property>

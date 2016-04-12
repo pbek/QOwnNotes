@@ -658,7 +658,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 
 void MainWindow::setupMainSplitter() {
     this->mainSplitter = new QSplitter;
-    mainSplitter->setHandleWidth(10);
+    mainSplitter->setHandleWidth(1);
 
     this->mainSplitter->addWidget(ui->tagFrame);
     this->mainSplitter->addWidget(ui->notesListFrame);
