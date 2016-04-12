@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1388</width>
-    <height>1003</height>
+    <width>1202</width>
+    <height>923</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -109,7 +109,7 @@
                      <string>&amp;Add folder</string>
                     </property>
                     <property name="icon">
-                     <iconset theme="folder-new" resource="../breeze-qownnotes.qrc">
+                     <iconset theme="folder-new">
                       <normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</iconset>
                     </property>
                    </widget>
@@ -133,7 +133,7 @@
                      <string>&amp;Remove folder</string>
                     </property>
                     <property name="icon">
-                     <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
+                     <iconset theme="edit-delete">
                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
                     </property>
                    </widget>
@@ -168,7 +168,7 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                  <iconset theme="document-open">
                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                  </property>
                 </widget>
@@ -273,7 +273,7 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                  <iconset theme="document-open">
                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                  </property>
                 </widget>
@@ -326,7 +326,7 @@
                         <string>&amp;use as ownCloud path</string>
                        </property>
                        <property name="icon">
-                        <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                        <iconset theme="document-open">
                          <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                        </property>
                       </widget>
@@ -552,7 +552,7 @@
                  <string>&amp;connect to ownCloud server</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="network-connect">
                   <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
                 </property>
                </widget>
@@ -757,7 +757,7 @@
                  <string>open your ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="text-html">
                   <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
                 </property>
                </widget>
@@ -1101,7 +1101,7 @@
                <string>&amp;reload calendar list</string>
               </property>
               <property name="icon">
-               <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
+               <iconset theme="network-connect">
                 <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
               </property>
              </widget>
@@ -1145,12 +1145,6 @@
              <layout class="QGridLayout" name="gridLayout_10">
               <item row="1" column="0">
                <widget class="QListWidget" name="languageListWidget">
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>300</height>
-                 </size>
-                </property>
                 <item>
                  <property name="text">
                   <string>Automatic</string>
@@ -1359,7 +1353,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="gtk-select-font">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1383,7 +1377,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="dialog-cancel">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1407,7 +1401,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="dialog-cancel">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1418,7 +1412,7 @@
                  <string>set a new font</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="gtk-select-font">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1432,7 +1426,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="gtk-select-font">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1446,7 +1440,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="dialog-cancel">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1460,7 +1454,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="gtk-select-font">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1474,7 +1468,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="dialog-cancel">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1842,7 +1836,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                 <iconset theme="document-open">
                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                 </property>
                </widget>
@@ -2046,7 +2040,7 @@ p, li { white-space: pre-wrap; }
                <string>&amp;Save debug information</string>
               </property>
               <property name="icon">
-               <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+               <iconset theme="document-save">
                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
               </property>
              </widget>
@@ -2074,9 +2068,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>userNameEdit</tabstop>
   <tabstop>passwordEdit</tabstop>
  </tabstops>
- <resources>
-  <include location="../breeze-qownnotes.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>buttonBox</sender>
