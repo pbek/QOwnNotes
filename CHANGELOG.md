@@ -3,6 +3,7 @@
 ## 1.4.0
 - the amount of all notes is now also shown in the tag list
 - the size of the settings screen was decreased so it fits on smaller displays
+- small design changes were done in the main interface
 - added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.3.9
