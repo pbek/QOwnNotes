@@ -319,6 +319,12 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the tab bar of the note tab widget
         ui->noteTabWidget->tabBar()->hide();
 
+        // hide tag frames if tagging is enabled
+        if (isTagsEnabled()) {
+            ui->tagFrame->hide();
+            ui->noteTagFrame->hide();
+        }
+
         // hide the status bar
 //        ui->statusBar->hide();
 
@@ -378,6 +384,12 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
 
         // show the search line edit
         ui->searchLineEdit->show();
+
+        // show tag frames if tagging is enabled
+        if (isTagsEnabled()) {
+            ui->tagFrame->show();
+            ui->noteTagFrame->show();
+        }
 
         ui->noteTextEdit->setStyleSheet(
                 ui->noteTextEdit->styleSheet().replace(styling, ""));
@@ -646,6 +658,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 
 void MainWindow::setupMainSplitter() {
     this->mainSplitter = new QSplitter;
+    mainSplitter->setHandleWidth(10);
 
     this->mainSplitter->addWidget(ui->tagFrame);
     this->mainSplitter->addWidget(ui->notesListFrame);

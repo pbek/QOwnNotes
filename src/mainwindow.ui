@@ -58,8 +58,7 @@
         </property>
         <property name="styleSheet">
          <string notr="true">QLineEdit {
-	border: 1px solid lightgray;
-	border-radius: 5px;
+	border: none;
 	padding: 2px 5px 2px 27px;
 	background-image: url(:/images/search-notes.svg);
 	background-repeat: no-repeat;
@@ -84,8 +83,11 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget {border: none;}</string>
+        </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="editTab">
          <attribute name="title">
@@ -167,8 +169,14 @@ p, li { white-space: pre-wrap; }
           </item>
           <item row="3" column="0">
            <widget class="QFrame" name="noteTagFrame">
+            <property name="styleSheet">
+             <string notr="true">QFrame { border: none; }</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
@@ -330,7 +338,7 @@ p, li { white-space: pre-wrap; }
          <item>
           <widget class="QLineEdit" name="tagLineEdit">
            <property name="styleSheet">
-            <string notr="true">QLineEdit { padding-left: 5px; }</string>
+            <string notr="true">QLineEdit { border: none; padding-left: 5px; }</string>
            </property>
            <property name="placeholderText">
             <string>find or create tag</string>
@@ -339,6 +347,9 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <widget class="QListWidget" name="tagListWidget">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
            <property name="selectionMode">
             <enum>QAbstractItemView::ExtendedSelection</enum>
            </property>
@@ -354,6 +365,9 @@ p, li { white-space: pre-wrap; }
           <horstretch>1</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::VLine</enum>
         </property>
         <layout class="QVBoxLayout" name="notesListLayout">
          <property name="spacing">
@@ -373,6 +387,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <widget class="QComboBox" name="noteFolderComboBox">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
            <property name="maxVisibleItems">
             <number>100</number>
            </property>
@@ -388,6 +405,9 @@ p, li { white-space: pre-wrap; }
 /*	border: 1px solid gray;*/
 }
 </string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
            <property name="selectionMode">
             <enum>QAbstractItemView::ExtendedSelection</enum>
@@ -584,7 +604,7 @@ p, li { white-space: pre-wrap; }
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
    <property name="icon">
-    <iconset theme="application-exit" resource="breeze-qownnotes.qrc">
+    <iconset theme="application-exit">
      <normaloff>:/icons/breeze-qownnotes/16x16/application-exit.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-exit.svg</iconset>
    </property>
    <property name="text">
@@ -599,7 +619,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSet_ownCloud_Folder">
    <property name="icon">
-    <iconset theme="folder-sync" resource="breeze-qownnotes.qrc">
+    <iconset theme="folder-sync">
      <normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-sync.svg</iconset>
    </property>
    <property name="text">
@@ -608,7 +628,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Find_note">
    <property name="icon">
-    <iconset theme="edit-find" resource="breeze-qownnotes.qrc">
+    <iconset theme="edit-find">
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
    </property>
    <property name="text">
@@ -620,7 +640,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Remove_note">
    <property name="icon">
-    <iconset theme="edit-delete" resource="breeze-qownnotes.qrc">
+    <iconset theme="edit-delete">
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
    </property>
    <property name="text">
@@ -632,7 +652,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAbout_QOwnNotes">
    <property name="icon">
-    <iconset theme="help-about" resource="breeze-qownnotes.qrc">
+    <iconset theme="help-about">
      <normaloff>:/icons/breeze-qownnotes/16x16/help-about.svg</normaloff>:/icons/breeze-qownnotes/16x16/help-about.svg</iconset>
    </property>
    <property name="text">
@@ -644,7 +664,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="action_Note_note">
    <property name="icon">
-    <iconset theme="document-new" resource="breeze-qownnotes.qrc">
+    <iconset theme="document-new">
      <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
    </property>
    <property name="text">
