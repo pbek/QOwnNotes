@@ -93,6 +93,11 @@ MainWindow::MainWindow(QWidget *parent) :
     buildNotesIndex();
     loadNoteDirectoryList();
 
+#ifdef Q_OS_MAC
+    // we don't want a frame under OS X
+    ui->notesListFrame->setFrameShape(QFrame::NoFrame);
+#endif
+
     // setup the update available button
     setupUpdateAvailableButton();
 
@@ -658,7 +663,7 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 
 void MainWindow::setupMainSplitter() {
     this->mainSplitter = new QSplitter;
-    mainSplitter->setHandleWidth(1);
+    mainSplitter->setHandleWidth(0);
 
     this->mainSplitter->addWidget(ui->tagFrame);
     this->mainSplitter->addWidget(ui->notesListFrame);
