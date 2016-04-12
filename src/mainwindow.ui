@@ -48,9 +48,6 @@
       <property name="horizontalSpacing">
        <number>0</number>
       </property>
-      <property name="verticalSpacing">
-       <number>5</number>
-      </property>
       <item row="3" column="1">
        <widget class="QTabWidget" name="noteTabWidget">
         <property name="sizePolicy">
@@ -320,6 +317,9 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="placeholderText">
             <string>find or create tag</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
            </property>
           </widget>
          </item>

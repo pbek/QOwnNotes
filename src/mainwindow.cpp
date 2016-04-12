@@ -295,6 +295,8 @@ void MainWindow::toggleDistractionFreeMode() {
  */
 void MainWindow::setDistractionFreeMode(bool enabled) {
     QSettings settings;
+    bool darkModeColors = settings.value("darkModeColors").toBool();
+
     QString styling = "QTextEdit {background-color: white;}";
 
     if (enabled) {
@@ -355,14 +357,16 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
 
         statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
 
-        ui->noteTextEdit->setStyleSheet(
-                ui->noteTextEdit->styleSheet() + styling);
+        if (!darkModeColors) {
+            ui->noteTextEdit->setStyleSheet(
+                    ui->noteTextEdit->styleSheet() + styling);
 
-        ui->encryptedNoteTextEdit->setStyleSheet(
-                ui->encryptedNoteTextEdit->styleSheet() + styling);
+            ui->encryptedNoteTextEdit->setStyleSheet(
+                    ui->encryptedNoteTextEdit->styleSheet() + styling);
 
-        ui->noteTextView->setStyleSheet(
-                ui->noteTextView->styleSheet() + styling);
+            ui->noteTextView->setStyleSheet(
+                    ui->noteTextView->styleSheet() + styling);
+        }
     } else {
         //
         // leave the distraction free mode
@@ -396,14 +400,17 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
             ui->noteTagFrame->show();
         }
 
-        ui->noteTextEdit->setStyleSheet(
-                ui->noteTextEdit->styleSheet().replace(styling, ""));
+        if (!darkModeColors) {
+            ui->noteTextEdit->setStyleSheet(
+                    ui->noteTextEdit->styleSheet().replace(styling, ""));
 
-        ui->encryptedNoteTextEdit->setStyleSheet(
-                ui->encryptedNoteTextEdit->styleSheet().replace(styling, ""));
+            ui->encryptedNoteTextEdit->setStyleSheet(
+                    ui->encryptedNoteTextEdit->styleSheet()
+                            .replace(styling, ""));
 
-        ui->noteTextView->setStyleSheet(
-                ui->noteTextView->styleSheet().replace(styling, ""));
+            ui->noteTextView->setStyleSheet(
+                    ui->noteTextView->styleSheet().replace(styling, ""));
+        }
     }
 
     ui->noteTextEdit->setPaperMargins(this->width());
