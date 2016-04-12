@@ -126,6 +126,8 @@ public:
 
     QDateTime getModified();
 
+    static int countAll();
+
 private:
     int id;
     QString name;

@@ -3716,7 +3716,8 @@ void MainWindow::reloadTagList()
     ui->tagListWidget->clear();
 
     // add an item to view all notes
-    QListWidgetItem *allItem = new QListWidgetItem(tr("All notes"));
+    QListWidgetItem *allItem = new QListWidgetItem(
+            tr("All notes (%1)").arg(QString::number(Note::countAll())));
     allItem->setToolTip(tr("show all notes"));
     allItem->setData(Qt::UserRole, -1);
     allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
