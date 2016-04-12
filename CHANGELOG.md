@@ -3,6 +3,7 @@
 ## 1.4.0
 - the amount of all notes is now also shown in the tag list
 - the size of the settings screen was decreased so it fits on smaller displays
+- added more Portuguese translation (thank you mlimacarlos)
 
 ## 1.3.9
 - there now is a menu entry to reload the current note folder
