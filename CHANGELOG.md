@@ -1,12 +1,12 @@
 # QOwnNotes Changelog
 
 ## 1.4.0
+- a lot of **design changes** were done in the **main interface**
 - the amount of all notes is now also shown in the tag list
 - the size of the settings screen was decreased so it fits on smaller displays
-- fixed distraction free mode when tagging is turned on
-- fixed distraction free mode when dark mode is turned on
-- a lot of design changes were done in the main interface
-- added more Portuguese translation (thank you mlimacarlos)
+- the distraction free mode was fixed for when tagging is turned on
+- the distraction free mode was fixed for when dark mode is turned on
+- added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.3.9
 - there now is a menu entry to reload the current note folder

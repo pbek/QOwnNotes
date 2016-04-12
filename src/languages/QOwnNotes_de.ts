@@ -56,472 +56,472 @@
   <context>
     <name>MainWindow</name>
     <message>
-      <location filename="../mainwindow.ui" line="57"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Text eingeben und mit Enter bestätigen um nach Notiz zu suchen oder neue Notiz anzulegen&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="72"/>
+      <location filename="../mainwindow.ui" line="383"/>
       <source>search or create note</source>
       <translation>Notiz erstellen oder suchen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="92"/>
-      <location filename="../mainwindow.ui" line="463"/>
+      <location filename="../mainwindow.ui" line="67"/>
+      <location filename="../mainwindow.ui" line="494"/>
       <source>Edit</source>
       <translation>Bearbeiten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="195"/>
+      <location filename="../mainwindow.ui" line="176"/>
       <source>add a tag to this note</source>
       <translation type="unfinished">add a tag to this note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="198"/>
+      <location filename="../mainwindow.ui" line="179"/>
       <source>Add tag</source>
       <translation type="unfinished">Add tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="209"/>
+      <location filename="../mainwindow.ui" line="190"/>
       <source>new tag</source>
       <translation type="unfinished">new tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="327"/>
+      <location filename="../mainwindow.ui" line="319"/>
       <source>find or create tag</source>
       <translation type="unfinished">find or create tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="406"/>
+      <location filename="../mainwindow.ui" line="369"/>
+      <source>search for notes or create new notes by entering text and pressing return</source>
+      <translation type="unfinished">search for notes or create new notes by entering text and pressing return</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="437"/>
       <source>&amp;Note</source>
       <translation>&amp;Notiz</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="410"/>
+      <location filename="../mainwindow.ui" line="441"/>
       <source>Note &amp;folders</source>
       <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="415"/>
+      <location filename="../mainwindow.ui" line="446"/>
       <source>Sort by</source>
       <translation>Sortieren nach</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="450"/>
+      <location filename="../mainwindow.ui" line="481"/>
       <source>&amp;Help</source>
       <translation>&amp;Hilfe</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="491"/>
+      <location filename="../mainwindow.ui" line="522"/>
       <source>Todo</source>
       <translation>Aufgaben</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="497"/>
+      <location filename="../mainwindow.ui" line="528"/>
       <source>Window</source>
       <translation>Fenster</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="501"/>
+      <location filename="../mainwindow.ui" line="532"/>
       <source>Editor width in distraction free mode</source>
       <translation>Editor-Breite im ablenkungsfreien Modus</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="504"/>
+      <location filename="../mainwindow.ui" line="535"/>
       <source>Editor width</source>
       <translation>Editor-Breite</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="522"/>
+      <location filename="../mainwindow.ui" line="553"/>
       <source>Tag</source>
       <translation type="unfinished">Tag</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="536"/>
+      <location filename="../mainwindow.ui" line="567"/>
       <source>main toolbar</source>
       <translation>Hauptsymbolleiste</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="582"/>
+      <location filename="../mainwindow.ui" line="613"/>
       <source>&amp;Quit</source>
       <translation>&amp;Beenden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="597"/>
+      <location filename="../mainwindow.ui" line="628"/>
       <source>&amp;Setup note folders</source>
       <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="606"/>
+      <location filename="../mainwindow.ui" line="637"/>
       <source>&amp;Find note</source>
       <translation>Notiz &amp;finden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="618"/>
+      <location filename="../mainwindow.ui" line="649"/>
       <source>&amp;Remove current note</source>
       <translation>Aktuelle Notiz &amp;löschen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="630"/>
+      <location filename="../mainwindow.ui" line="661"/>
       <source>About &amp;QOwnNotes...</source>
       <translation>Über &amp;QOwnNotes...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="642"/>
+      <location filename="../mainwindow.ui" line="673"/>
       <source>&amp;New note</source>
       <translation>&amp;Neue Notiz</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="657"/>
+      <location filename="../mainwindow.ui" line="688"/>
       <source>&amp;Toggle Edit Mode</source>
       <translation>&amp;Bearbeitungsmodus umschalten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="660"/>
+      <location filename="../mainwindow.ui" line="691"/>
       <source>Toggle Edit Mode</source>
       <translation>Bearbeitungsmodus umschalten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="672"/>
+      <location filename="../mainwindow.ui" line="703"/>
       <source>Check for &amp;updates</source>
       <translation>Nach &amp;Updates suchen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="684"/>
+      <location filename="../mainwindow.ui" line="715"/>
       <source>Report &amp;issues or ideas</source>
       <translation>Fehler oder &amp;Ideen melden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="692"/>
+      <location filename="../mainwindow.ui" line="723"/>
       <source>Alphabetical</source>
       <translation>Alphabetisch</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="695"/>
+      <location filename="../mainwindow.ui" line="726"/>
       <source>Sort alphabetical</source>
       <translation>Sortieren nach Alphabet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="703"/>
+      <location filename="../mainwindow.ui" line="734"/>
       <source>By date</source>
       <translation>Nach Datum</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="706"/>
+      <location filename="../mainwindow.ui" line="737"/>
       <source>Sort by date</source>
       <translation>Sortieren nach Datum</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="714"/>
+      <location filename="../mainwindow.ui" line="745"/>
       <source>Sh&amp;ow in system tray</source>
       <translation>System Tray Ic&amp;on anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="723"/>
+      <location filename="../mainwindow.ui" line="754"/>
       <source>&amp;Settings</source>
       <translation>&amp;Einstellungen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="738"/>
+      <location filename="../mainwindow.ui" line="769"/>
       <source>Show note &amp;versions</source>
       <translation>Notiz Versionen anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="741"/>
+      <location filename="../mainwindow.ui" line="772"/>
       <source>Show note versions on server</source>
       <translation>Notiz Versionen auf dem Server anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="750"/>
+      <location filename="../mainwindow.ui" line="781"/>
       <source>Show &amp;trash</source>
       <translation>Papierkorb anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="753"/>
+      <location filename="../mainwindow.ui" line="784"/>
       <source>Show trashed notes on server</source>
       <translation>Notizen im Server Papierkorb anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="758"/>
-      <location filename="../mainwindow.cpp" line="2704"/>
+      <location filename="../mainwindow.ui" line="789"/>
+      <location filename="../mainwindow.cpp" line="2729"/>
       <source>Select &amp;all notes</source>
       <translation>&amp;Alle Notizen auswählen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="767"/>
-      <location filename="../mainwindow.cpp" line="2742"/>
+      <location filename="../mainwindow.ui" line="798"/>
+      <location filename="../mainwindow.cpp" line="2767"/>
       <source>Insert &amp;link</source>
       <translation>&amp;Link einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="770"/>
+      <location filename="../mainwindow.ui" line="801"/>
       <source>Insert link to an url or a note</source>
       <translation>Link zu URL oder Notiz einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="782"/>
+      <location filename="../mainwindow.ui" line="813"/>
       <source>&amp;Find in current note</source>
       <translation>In aktueller Notiz &amp;suchen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="785"/>
+      <location filename="../mainwindow.ui" line="816"/>
       <source>Find text in current note</source>
       <translation>Text in aktueller Notiz suchen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="793"/>
+      <location filename="../mainwindow.ui" line="824"/>
       <source>&amp;Duplicate text</source>
       <translation>Text &amp;duplizieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="805"/>
+      <location filename="../mainwindow.ui" line="836"/>
       <source>&amp;Back in note history</source>
       <translation>&amp;zurück in Notiz Verlauf</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="817"/>
+      <location filename="../mainwindow.ui" line="848"/>
       <source>Forward in note history</source>
       <translation>vorwärts in Notiz Verlauf</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="829"/>
+      <location filename="../mainwindow.ui" line="860"/>
       <source>Show &amp;Shortcuts</source>
       <translation>&amp;Tastaturkürzel anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="838"/>
+      <location filename="../mainwindow.ui" line="869"/>
       <source>&amp;Knowledge base</source>
       <translation>&amp;Wissensdatenbank</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="847"/>
+      <location filename="../mainwindow.ui" line="878"/>
       <source>Insert current &amp;time</source>
       <translation>aktuelle Zei&amp;t einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="859"/>
+      <location filename="../mainwindow.ui" line="890"/>
       <source>Show &amp;Todo List</source>
       <translation>&amp;Aufgabenliste anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="871"/>
+      <location filename="../mainwindow.ui" line="902"/>
       <source>&amp;Export note as PDF (markdown)</source>
       <translation>Notiz als PDF &amp;exportieren (markdown)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="880"/>
+      <location filename="../mainwindow.ui" line="911"/>
       <source>&amp;Export note as PDF (text)</source>
       <translation>Notiz als PDF &amp;exportiern (text)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="889"/>
+      <location filename="../mainwindow.ui" line="920"/>
       <source>&amp;Print note (text)</source>
       <translation>Notiz &amp;drucken (text)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="901"/>
+      <location filename="../mainwindow.ui" line="932"/>
       <source>&amp;Print note (markdown)</source>
       <translation>Notiz &amp;drucken (markdown)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="913"/>
+      <location filename="../mainwindow.ui" line="944"/>
       <source>Insert &amp;image</source>
       <translation>&amp;Bild einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="916"/>
+      <location filename="../mainwindow.ui" line="947"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
       <translation>Bild einfügen (Das Bild wird in den Ordner `media` im aktuellen Notizordner kopiert)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="928"/>
+      <location filename="../mainwindow.ui" line="959"/>
       <source>Show &amp;changelog</source>
       <translation>&amp;Changelog anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="937"/>
+      <location filename="../mainwindow.ui" line="968"/>
       <source>&amp;Encrypt note</source>
       <translation>Notiz &amp;verschlüsseln</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="946"/>
+      <location filename="../mainwindow.ui" line="977"/>
       <source>Edit encrypted note</source>
       <translation>verschlüsselte Notiz bearbeiten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="958"/>
+      <location filename="../mainwindow.ui" line="989"/>
       <source>Decrypt note</source>
       <translation>Notiz entschlüsseln</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="967"/>
+      <location filename="../mainwindow.ui" line="998"/>
       <source>&amp;Open note in external editor</source>
       <translation>Notiz in e&amp;xternem Editor öffnen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="979"/>
+      <location filename="../mainwindow.ui" line="1010"/>
       <source>&amp;Export note as markdown file</source>
       <translation>Notiz als markdown Datei &amp;exportieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="988"/>
+      <location filename="../mainwindow.ui" line="1019"/>
       <source>&amp;Get involved</source>
       <translation>&amp;Mitmachen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="997"/>
+      <location filename="../mainwindow.ui" line="1028"/>
       <source>Insert &amp;code block</source>
       <translation>&amp;Code Block einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1009"/>
+      <location filename="../mainwindow.ui" line="1040"/>
       <source>Next note</source>
       <translation>Nächste Notiz</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1021"/>
+      <location filename="../mainwindow.ui" line="1052"/>
       <source>Previous note</source>
       <translation>Vorherige Notiz</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1033"/>
+      <location filename="../mainwindow.ui" line="1064"/>
       <source>&amp;Distraction free mode</source>
       <translation>&amp;Ablenkungsfreier Modus</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1036"/>
+      <location filename="../mainwindow.ui" line="1067"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
       <translation>Ablenkungsfreier Modus, Sie können ihn mit dem Knopf unten rechts abstellen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1047"/>
+      <location filename="../mainwindow.ui" line="1078"/>
       <source>Show &amp;toolbar</source>
       <translation>Symbolleiste &amp;anzeigen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1055"/>
+      <location filename="../mainwindow.ui" line="1086"/>
       <source>Narrow</source>
       <translation>Schmal</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1066"/>
+      <location filename="../mainwindow.ui" line="1097"/>
       <source>Medium</source>
       <translation>Mittel</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1077"/>
+      <location filename="../mainwindow.ui" line="1108"/>
       <source>Wide</source>
       <translation>Breit</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1088"/>
+      <location filename="../mainwindow.ui" line="1119"/>
       <source>Full</source>
       <translation>Voll</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1100"/>
+      <location filename="../mainwindow.ui" line="1131"/>
       <source>Paste html or media</source>
       <translation>HTML oder Medien einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1103"/>
-      <location filename="../mainwindow.ui" line="1106"/>
+      <location filename="../mainwindow.ui" line="1134"/>
+      <location filename="../mainwindow.ui" line="1137"/>
       <source>Paste images, notes and html from the clipboard</source>
       <translation>Bilder, Notizen and HTML aus der Zwischenablage einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1118"/>
+      <location filename="../mainwindow.ui" line="1149"/>
       <source>Show note in &amp;file manager</source>
       <translation>Notiz im Datei-Manager angezeigt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1130"/>
+      <location filename="../mainwindow.ui" line="1161"/>
       <source>Format text &amp;bold</source>
       <translation>Text fett formatieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1142"/>
+      <location filename="../mainwindow.ui" line="1173"/>
       <source>Format text &amp;italic</source>
       <translation>Text kursiv formatieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1154"/>
+      <location filename="../mainwindow.ui" line="1185"/>
       <source>&amp;Increase note text size</source>
       <translation>Notiz-Textgröße &amp;erhöhen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1166"/>
+      <location filename="../mainwindow.ui" line="1197"/>
       <source>&amp;Decrease note text size</source>
       <translation>Notiz-Textgröße &amp;verringern</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1178"/>
+      <location filename="../mainwindow.ui" line="1209"/>
       <source>&amp;Reset note text size</source>
       <translation>Notiz-Textgröße &amp;zurücksetzen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1190"/>
+      <location filename="../mainwindow.ui" line="1221"/>
       <source>&amp;Add tag to note</source>
       <translation type="unfinished">&amp;Add tag to note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1205"/>
+      <location filename="../mainwindow.ui" line="1236"/>
       <source>&amp;Toggle tag pane</source>
       <translation type="unfinished">&amp;Toggle tag pane</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="1217"/>
+      <location filename="../mainwindow.ui" line="1248"/>
       <source>&amp;Reload note folder</source>
       <translation type="unfinished">&amp;Reload note folder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1000"/>
-      <location filename="../mainwindow.cpp" line="1042"/>
-      <location filename="../mainwindow.cpp" line="2451"/>
+      <location filename="../mainwindow.cpp" line="1025"/>
+      <location filename="../mainwindow.cpp" line="1067"/>
+      <location filename="../mainwindow.cpp" line="2476"/>
       <source>stored current note to disk</source>
       <translation>aktuelle Notiz auf Datenträger gespeichert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1027"/>
+      <location filename="../mainwindow.cpp" line="1052"/>
       <source>Note was removed externally!</source>
       <translation>Notiz wurde extern entfernt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1028"/>
+      <location filename="../mainwindow.cpp" line="1053"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Aktuelle Notiz wurde ausserhalb des Programms entfernt!
 Notiz wiederherstellen?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1030"/>
+      <location filename="../mainwindow.cpp" line="1055"/>
       <source>&amp;Restore</source>
       <translation>&amp;Wiederherstellen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1030"/>
-      <location filename="../mainwindow.cpp" line="1442"/>
-      <location filename="../mainwindow.cpp" line="1819"/>
-      <location filename="../mainwindow.cpp" line="1866"/>
-      <location filename="../mainwindow.cpp" line="1907"/>
-      <location filename="../mainwindow.cpp" line="1959"/>
-      <location filename="../mainwindow.cpp" line="2224"/>
-      <location filename="../mainwindow.cpp" line="3018"/>
+      <location filename="../mainwindow.cpp" line="1055"/>
+      <location filename="../mainwindow.cpp" line="1467"/>
+      <location filename="../mainwindow.cpp" line="1844"/>
+      <location filename="../mainwindow.cpp" line="1891"/>
+      <location filename="../mainwindow.cpp" line="1932"/>
+      <location filename="../mainwindow.cpp" line="1984"/>
+      <location filename="../mainwindow.cpp" line="2249"/>
+      <location filename="../mainwindow.cpp" line="3043"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Abbrechen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1065"/>
+      <location filename="../mainwindow.cpp" line="1090"/>
       <source>note was modified externally: %1</source>
       <translation>Notiz wurde extern verändert: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1076"/>
+      <location filename="../mainwindow.cpp" line="1101"/>
       <source>notes directory was modified externally</source>
       <translation>Notizordner wurde extern verändert</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1114"/>
+      <location filename="../mainwindow.cpp" line="1139"/>
       <source>stored %n note(s) to disk</source>
       <translation>
         <numerusform>eine Notiz wurde auf dem Datenträger gespeichert</numerusform>
@@ -529,74 +529,74 @@ Notiz wiederherstellen?</translation>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1168"/>
+      <location filename="../mainwindow.cpp" line="1193"/>
       <source>click here to see what has changed and to be able to download the latest version</source>
       <translation>Klicken Sie hier um die Änderungen zu sehen und um die letzte Version herunterladen zu können</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1184"/>
+      <location filename="../mainwindow.cpp" line="1209"/>
       <source>new version %1 available</source>
       <translation>Version %1 verfügbar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1341"/>
+      <location filename="../mainwindow.cpp" line="1366"/>
       <source>No folder was selected</source>
       <translation>Es wurde kein Ordner ausgewählt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1342"/>
+      <location filename="../mainwindow.cpp" line="1367"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Sie müssen Ihren ownCloud Notiz Order auswählen damit dieses Programm funktioniert!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1369"/>
       <source>&amp;Retry</source>
       <translation>Wiede&amp;rholen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1344"/>
+      <location filename="../mainwindow.cpp" line="1369"/>
       <source>&amp;Exit</source>
       <translation>&amp;Schliessen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1439"/>
+      <location filename="../mainwindow.cpp" line="1464"/>
       <source>Remove current note</source>
       <translation>Aktuelle Notiz löschen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1440"/>
+      <location filename="../mainwindow.cpp" line="1465"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Aktuelle Notiz löschen: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1442"/>
-      <location filename="../mainwindow.cpp" line="1819"/>
-      <location filename="../mainwindow.cpp" line="1866"/>
+      <location filename="../mainwindow.cpp" line="1467"/>
+      <location filename="../mainwindow.cpp" line="1844"/>
+      <location filename="../mainwindow.cpp" line="1891"/>
       <source>&amp;Remove</source>
       <translation>&amp;Löschen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1699"/>
+      <location filename="../mainwindow.cpp" line="1724"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Bitte geben Sie das &lt;strong&gt;Passwort&lt;/strong&gt; für die verschlüsselte Notiz ein.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1723"/>
+      <location filename="../mainwindow.cpp" line="1748"/>
       <source>Note can't be decrypted!</source>
       <translation>Notiz konnte nicht entschlüsselt werden!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1724"/>
+      <location filename="../mainwindow.cpp" line="1749"/>
       <source>It seems that your password is not valid!</source>
       <translation>Passwort nicht korrekt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1813"/>
+      <location filename="../mainwindow.cpp" line="1838"/>
       <source>Remove selected notes</source>
       <translation>Ausgewählte Notizen löschen</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1814"/>
+      <location filename="../mainwindow.cpp" line="1839"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -610,12 +610,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1862"/>
+      <location filename="../mainwindow.cpp" line="1887"/>
       <source>Remove selected tags</source>
       <translation type="unfinished">Remove selected tags</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1863"/>
+      <location filename="../mainwindow.cpp" line="1888"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation type="unfinished">
         <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
@@ -623,12 +623,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1904"/>
+      <location filename="../mainwindow.cpp" line="1929"/>
       <source>Move selected notes</source>
       <translation>Ausgewählte Notiz verschieben</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1905"/>
+      <location filename="../mainwindow.cpp" line="1930"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Eine Notiz nach &lt;strong&gt;%2&lt;/strong&gt; verschieben?</numerusform>
@@ -636,17 +636,17 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1907"/>
+      <location filename="../mainwindow.cpp" line="1932"/>
       <source>&amp;Move</source>
       <translation>&amp;Verschieben</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1956"/>
+      <location filename="../mainwindow.cpp" line="1981"/>
       <source>Copy selected notes</source>
       <translation>Ausgewählte Notiz kopieren</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1957"/>
+      <location filename="../mainwindow.cpp" line="1982"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Eine Notiz nach &lt;strong&gt;%2&lt;/strong&gt; kopieren?</numerusform>
@@ -654,17 +654,17 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1959"/>
+      <location filename="../mainwindow.cpp" line="1984"/>
       <source>&amp;Copy</source>
       <translation>&amp;Kopieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1976"/>
+      <location filename="../mainwindow.cpp" line="2001"/>
       <source>Done</source>
       <translation>Fertig</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1977"/>
+      <location filename="../mainwindow.cpp" line="2002"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>Eine Notiz wurde nach &lt;strong&gt;%2&lt;/strong&gt; kopiert.</numerusform>
@@ -672,134 +672,134 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1987"/>
+      <location filename="../mainwindow.cpp" line="2012"/>
       <source>Current notes folder: </source>
       <translation>Aktueller Notiz Ordner:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1989"/>
+      <location filename="../mainwindow.cpp" line="2014"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Notizordner auswählen. Aktueller Notiz Ordner: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2038"/>
+      <location filename="../mainwindow.cpp" line="2063"/>
       <source>Link to an url or note</source>
       <translation>Link zu URL oder Notiz einfügen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2142"/>
+      <location filename="../mainwindow.cpp" line="2167"/>
       <source>Print note</source>
       <translation>Notiz drucken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2160"/>
+      <location filename="../mainwindow.cpp" line="2185"/>
       <source>PDF files (*.pdf)</source>
       <translation>PDF Dateien (*.pdf)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2161"/>
+      <location filename="../mainwindow.cpp" line="2186"/>
       <source>Export current note as PDF</source>
       <translation>aktuelle Notiz als PDF Datei exportieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2195"/>
+      <location filename="../mainwindow.cpp" line="2220"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Sie können dieses Verhalten in den Einstellungen deaktivieren.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2199"/>
+      <location filename="../mainwindow.cpp" line="2224"/>
       <source>&amp;Ok</source>
       <translation>&amp;Ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2638"/>
+      <location filename="../mainwindow.cpp" line="2663"/>
       <source>note versions are currently loaded from your ownCloud server</source>
       <translation>Notiz-Versionen werden von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2652"/>
+      <location filename="../mainwindow.cpp" line="2677"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
       <translation>gelöschte Notizen werden derzeit von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2675"/>
+      <location filename="../mainwindow.cpp" line="2700"/>
       <source>&amp;Move notes to...</source>
       <translation>&amp;Verschiebe Notizen nach...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2676"/>
+      <location filename="../mainwindow.cpp" line="2701"/>
       <source>&amp;Copy notes to...</source>
       <translation>&amp;Kopiere Notizen nach...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2702"/>
+      <location filename="../mainwindow.cpp" line="2727"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Lösche Notizen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2742"/>
+      <location filename="../mainwindow.cpp" line="2767"/>
       <source>&amp;Link selected text</source>
       <translation>markierten Text ver&amp;linken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3720"/>
+      <location filename="../mainwindow.cpp" line="3745"/>
       <source>All notes (%1)</source>
       <translation type="unfinished">All notes (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3721"/>
+      <location filename="../mainwindow.cpp" line="3746"/>
       <source>show all notes</source>
       <translation type="unfinished">show all notes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3742"/>
+      <location filename="../mainwindow.cpp" line="3767"/>
       <source>show all notes tagged with '%1'</source>
       <translation type="unfinished">show all notes tagged with '%1'</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3939"/>
+      <location filename="../mainwindow.cpp" line="3960"/>
       <source>remove tag '%1' from note</source>
       <translation type="unfinished">remove tag '%1' from note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2219"/>
+      <location filename="../mainwindow.cpp" line="2244"/>
       <source>No selected todo lists!</source>
       <translation>Keine ausgewählten Todo Listen!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="777"/>
+      <location filename="../mainwindow.cpp" line="802"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="973"/>
+      <location filename="../mainwindow.cpp" line="998"/>
       <source>current note was modified externally</source>
       <translation>aktuelle Notiz wurde extern verändert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1319"/>
+      <location filename="../mainwindow.cpp" line="1344"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2220"/>
+      <location filename="../mainwindow.cpp" line="2245"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
       <translation>Sie haben keine Todo Liste ausgewählt. &lt;br /&gt;Bitte überprüfen Sie Ihre &lt;strong&gt;Todo&lt;/strong&gt; Konfiguration in den Einstellungen!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3394"/>
-      <location filename="../mainwindow.cpp" line="3456"/>
+      <location filename="../mainwindow.cpp" line="3419"/>
+      <location filename="../mainwindow.cpp" line="3481"/>
       <source>inserting image</source>
       <translation>Füge Bild ein</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3399"/>
-      <location filename="../mainwindow.cpp" line="3459"/>
+      <location filename="../mainwindow.cpp" line="3424"/>
+      <location filename="../mainwindow.cpp" line="3484"/>
       <source>done inserting image</source>
       <translation>Bild eingefügt</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3410"/>
+      <location filename="../mainwindow.cpp" line="3435"/>
       <source>copied %n note(s) to %1</source>
       <translation>
         <numerusform>eine Notiz wurde nach %1 kopiert</numerusform>
@@ -807,7 +807,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3419"/>
+      <location filename="../mainwindow.cpp" line="3444"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>Fehler beim Kopieren von einer Notiz (höchstwahrscheinlich bereits vorhanden)</numerusform>
@@ -815,7 +815,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3429"/>
+      <location filename="../mainwindow.cpp" line="3454"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>das Kopieren von einer Notiz wurde übersprungen (keine Markdown/Text-Datei oder nicht lesbar)</numerusform>
@@ -823,108 +823,108 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3443"/>
+      <location filename="../mainwindow.cpp" line="3468"/>
       <source>saving temporary image</source>
       <translation>Speichere temporäres Bild</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3462"/>
+      <location filename="../mainwindow.cpp" line="3487"/>
       <source>temporary file can't be opened</source>
       <translation>Temporäres Bild konnte nicht geöffnet werden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3539"/>
+      <location filename="../mainwindow.cpp" line="3564"/>
       <source>downloading %1</source>
       <translation>Lade %1 herunter</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3569"/>
+      <location filename="../mainwindow.cpp" line="3594"/>
       <source>done downloading images</source>
       <translation>Herunterladen beendet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3670"/>
+      <location filename="../mainwindow.cpp" line="3695"/>
       <source>Increased font size to %1 pt</source>
       <translation>Notiz-Textgröße wurde auf %1 Punkte erhöht</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3683"/>
+      <location filename="../mainwindow.cpp" line="3708"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Notiz-Textgröße wurde auf %1 Punkte verringert</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3695"/>
+      <location filename="../mainwindow.cpp" line="3720"/>
       <source>Reset font size to %1 pt</source>
       <translation>Notiz-Textgröße wurde auf %1 Punkte zurückgesetzt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2200"/>
-      <location filename="../mainwindow.cpp" line="2223"/>
+      <location filename="../mainwindow.cpp" line="2225"/>
+      <location filename="../mainwindow.cpp" line="2248"/>
       <source>Open &amp;settings</source>
       <translation>Öffne &amp;Einstellungen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="331"/>
+      <location filename="../mainwindow.cpp" line="344"/>
       <source>leave</source>
       <translation>verlassen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="334"/>
+      <location filename="../mainwindow.cpp" line="347"/>
       <source>leave distraction free mode</source>
       <translation>Ablenkungsfreien Modus verlassen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2844"/>
+      <location filename="../mainwindow.cpp" line="2869"/>
       <source>Image files (*.jpg *.png *.gif)</source>
       <translation>Bild Dateien (*.jpg *.png *.gif)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2845"/>
+      <location filename="../mainwindow.cpp" line="2870"/>
       <source>Select image to insert</source>
       <translation>Bild zum einfügen auswählen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2968"/>
+      <location filename="../mainwindow.cpp" line="2993"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Bitte geben Sie ein &lt;strong&gt;Passwort&lt;/strong&gt; ein um die Notiz zu verschlüsseln. &lt;br /&gt;Bitte beachten Sie, dass sie das Passwort benötigen um den Inhalt der Notiz lesen zu können&lt;br /&gt; und das dies &lt;strong&gt;ausschliesslich in QOwnNotes&lt;/strong&gt; möglich ist!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3013"/>
+      <location filename="../mainwindow.cpp" line="3038"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Notiz entschlüsseln und als Text speichern</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3014"/>
+      <location filename="../mainwindow.cpp" line="3039"/>
       <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Ihre Notiz wird entschlüsselt und wieder als Text gespeichert. Beachten Sie, dass die unverschlüsselte Notiz möglicherweise auf Ihren Server synchronisiert wird und dabei sensible Informationen preisgegeben werden können! &lt;br /&gt; Möchten Sie die Notiz entschlüsseln?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3018"/>
+      <location filename="../mainwindow.cpp" line="3043"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Entschlüsseln</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3044"/>
+      <location filename="../mainwindow.cpp" line="3069"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt; Sie werden Ihre verschlüsselte Notiz bearbeiten können.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3119"/>
+      <location filename="../mainwindow.cpp" line="3144"/>
       <source>Markdown files (*.md)</source>
       <translation>Markdown Dateien (*.md)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3120"/>
+      <location filename="../mainwindow.cpp" line="3145"/>
       <source>Export current note as Markdown file</source>
       <translation>aktuelle Notiz als Markdown Datei exportieren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3176"/>
+      <location filename="../mainwindow.cpp" line="3201"/>
       <source>bookmarked note position at slot %1</source>
       <translation>Lesezeichen %1 wurde abgelegt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3192"/>
+      <location filename="../mainwindow.cpp" line="3217"/>
       <source>jumped to bookmark position at slot %1</source>
       <translation>es wurde zu Lesezeichen %1 gesprungen</translation>
     </message>
@@ -1424,102 +1424,102 @@ Klicken Sie Abbrechen um zu schliessen.</translation>
       <translation>Sprache der Oberfläche</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1156"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1150"/>
       <source>Automatic</source>
       <translation>Automatisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1167"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1161"/>
       <source>English</source>
       <translation>Englisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1178"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1172"/>
       <source>German</source>
       <translation>Deutsch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1189"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1183"/>
       <source>French</source>
       <translation>Französisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1200"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1194"/>
       <source>Polish</source>
       <translation>Polnisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1211"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1205"/>
       <source>Chinese</source>
       <translation>Chinesisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1233"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1227"/>
       <source>Portuguese</source>
       <translation>Portugisisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1244"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1238"/>
       <source>Dutch</source>
       <translation>Niederländisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1249"/>
       <source>Hungarian</source>
       <translation>Ungarisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1266"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1260"/>
       <source>Spanish</source>
       <translation>Spanisch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1287"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1281"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1536"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1530"/>
       <source>Dark mode</source>
       <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1542"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1536"/>
       <source>Optimize colors for dark mode desktop themes</source>
       <translation type="unfinished">Optimize colors for dark mode desktop themes</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1662"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1656"/>
       <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
       <translation type="unfinished">Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1688"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1682"/>
       <source>Notes folders</source>
       <translation type="unfinished">Notes folders</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1694"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1688"/>
       <source>Show note folders in main area</source>
       <translation type="unfinished">Show note folders in main area</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1887"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1881"/>
       <source>Disable tracking of usage data</source>
       <translation>Sammeln von Nutzungsdaten deaktivieren</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1931"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1925"/>
       <source>Usage tracking is done on a private Piwik server.</source>
       <translation>Die Nutzungsdaten werden auf einem privaten Piwik-Server gesammelt.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1978"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1972"/>
       <source>Disable heartbeat</source>
       <translation>Herzschlag deaktivieren</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1222"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1216"/>
       <source>Russian</source>
       <translation>Russisch</translation>
     </message>
@@ -1529,213 +1529,213 @@ Klicken Sie Abbrechen um zu schliessen.</translation>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1277"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1271"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>Die neuen Spracheinstellungen werden erst nach einem Neustart des Programms geladen.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1309"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1303"/>
       <source>Font settings</source>
       <translation>Schriftart</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1336"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1330"/>
       <source>font in note markdown view:</source>
       <translation>Schriftart in der Markdown-Ansicht der Notiz:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1346"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1340"/>
       <source>default font in markdown text edits:</source>
       <translation>Standard Schrift für die Markdown-Texteditoren:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1356"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1418"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1429"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1457"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1350"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1412"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1423"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1451"/>
       <source>set a new font</source>
       <translation>neue Schriftart auswählen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1370"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1364"/>
       <source>code font in markdown text edits:</source>
       <translation>Code Schrift für die Markdown-Texteditoren:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1380"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1404"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1443"/>
-      <location filename="../dialogs/settingsdialog.ui" line="1471"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1374"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1398"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1437"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1465"/>
       <source>reset font</source>
       <translation>Schrifart zurücksetzen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1394"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1388"/>
       <source>code font in note markdown view:</source>
       <translation>Code-Schriftart in der Markdown-Ansicht der Notiz:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1501"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1495"/>
       <source>Toolbar</source>
       <translation>Symbolleiste</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1507"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1501"/>
       <source>Icon size:</source>
       <translation>Icon Grösse:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1571"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1565"/>
       <source>General</source>
       <translation>Allgemein</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1588"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1582"/>
       <source>Notes</source>
       <translation>Notizen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1594"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1588"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wenn aktiviert werden Sie über alle externen Veränderungen infomiert, selbst wenn die aktuelle Notiz in der letzen Minuten nicht veränder wurde. Empfohlen ist &lt;span style=" font-style:italic;"&gt;deaktiviert&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1600"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1594"/>
       <source>notify about all external modifications</source>
       <translation>über alle externen Veränderungen informieren</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1626"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1620"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>Es kann zu Synchronisationsproblemen mit älteren ownCloud Versionen kommen wenn sie weninger als 10 Sek. auswählen.
 Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen Sie einen höheren Wert aus.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1630"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1624"/>
       <source>note save interval time [sec]</source>
       <translation>Notiz Speicherintervall [Sek]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1637"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1631"/>
       <source>Select this if you want the markdown view to be the default view instead of the edit view.</source>
       <translation>Aktivieren Sie diese Einstellungen wenn Sie die Markdown Ansicht als Standardansicht auswählen möchten.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1640"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1634"/>
       <source>Markdown view mode is default</source>
       <translation>Markdown Ansicht als Standard</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1656"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1650"/>
       <location filename="../dialogs/settingsdialog.cpp" line="762"/>
       <location filename="../dialogs/settingsdialog.cpp" line="771"/>
       <source>Database</source>
       <translation>Datenbank</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1672"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1666"/>
       <source>Reinitialize Database</source>
       <translation>Datenbank reinitialisieren</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1704"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1698"/>
       <source>Clear application data and exit</source>
       <translation>Applikations-Daten löschen und beenden</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1710"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1704"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>Dieser Knopf erlaubt ihnen alle Einstellungen und die Todo-Datenbank zu löschen und das Programm zu beenden.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1720"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1714"/>
       <location filename="../dialogs/settingsdialog.cpp" line="845"/>
       <source>Clear app data and exit</source>
       <translation>Applikations-Daten löschen und beenden</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1730"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1724"/>
       <source>Update dialog</source>
       <translation>Update Fenster</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1736"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>Don't show update dialog automatically</source>
       <translation>Update Fenster nicht automatisch anzeigen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1778"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1772"/>
       <source>Default note file extension</source>
       <translation>Standardendung der Notizdatei</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1797"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1791"/>
       <source>Text file (.txt)</source>
       <translation>Text Datei (*.txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1819"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1813"/>
       <source>External editor</source>
       <translation>Externer Editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1825"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1819"/>
       <source>Path to external edior:</source>
       <translation>Pfad zu externem Editor:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1832"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1826"/>
       <source>path to external editor, leave empty for default</source>
       <translation>Pfad zu externem Editor, leer lassen um Standard-Editor zu benutzen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1839"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1833"/>
       <source>set external editor</source>
       <translation>externen Editor auswählen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1856"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1850"/>
       <source>App metrics</source>
       <translation>Nutzungsdaten</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1874"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1868"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
       <translation>QOwnNotes sammelt anonyme Nutzungsdaten die dabei helfen Bugs zu finden und um zu entscheiden, welche Bereiche von QOwnNotes als nächstes verbessert werden. Bitte deaktivieren Sie diese nur wenn Sie wirklich nicht damit leben können.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1906"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1900"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
       <translation>Diese Daten beinhalteen anonyme Informationen darüber welche Funktionen der Anwendung genutzt werden.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1947"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1941"/>
       <source>App heartbeat</source>
       <translation>Anwendungs-Herzschlag</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1965"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1959"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
       <translation>Ein kleiner Heartbeat-Request wird periodisch gesendet so lange QOwnNotes gestartet ist. Machen Sie einen Entwickler glücklich indem Sie ihn wissen lassen, dass jemand QOwnNotes benutzt.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2004"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1998"/>
       <source>Debug</source>
       <translation>Debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2010"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2004"/>
       <source>Debug information</source>
       <translation>Debug Informationen</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2033"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2027"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2046"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2040"/>
       <source>&amp;Save debug information</source>
       <translation>Debug Informationen &amp;speichern</translation>
     </message>
