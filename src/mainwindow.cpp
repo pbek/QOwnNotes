@@ -746,8 +746,11 @@ void MainWindow::loadNoteDirectoryList() {
     QDir dir(this->notesPath);
 
     // clear all paths from the directory watcher
-    noteDirectoryWatcher.removePaths(noteDirectoryWatcher.directories());
-    noteDirectoryWatcher.removePaths(noteDirectoryWatcher.files());
+    QStringList fileList = noteDirectoryWatcher.directories() +
+            noteDirectoryWatcher.files();
+    if (fileList.count() > 0) {
+        noteDirectoryWatcher.removePaths(fileList);
+    }
 
     if (dir.exists()) {
         // watch the notes directory for changes
