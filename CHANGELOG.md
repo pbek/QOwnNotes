@@ -1,12 +1,19 @@
 # QOwnNotes Changelog
 
 ## 1.4.1
-- some main splitter user interface fixes for OS X were done
-- did some note editing user interface improvements and fixes for the 
-  distraction free mode and dark mode
 - you can now **tag multiple notes** by selecting them, then right-clicking on 
   the notes and selecting *Tag selected notes with...*  
   (for [Issue #135](https://github.com/pbek/QOwnNotes/issues/135))
+- added **live markdown preview**
+  (for [Issue #119](https://github.com/pbek/QOwnNotes/issues/119))
+    - the **markdown note view** is now optionally **visible all the time**
+    - <kbd>Ctrl</kbd> + <kbd>E</kbd> now toggles the markdown view mode
+    - the markdown preview will be updated every 2 sec 
+    - todo: linked scrolling between note edit and markdown view
+    - todo: markdown preview update when editing encrypted notes 
+- some main splitter user interface fixes for OS X were done
+- did some note editing user interface improvements and fixes for the 
+  distraction free mode and the dark mode
 - added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.4.0

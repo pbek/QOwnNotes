@@ -113,6 +113,15 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(storeUpdatedNotesToDisk()));
     this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
 
+    // look if we need update the note view every two seconds
+    _noteViewUpdateTimer = new QTimer(this);
+    QObject::connect(
+            _noteViewUpdateTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(noteViewUpdateTimerSlot()));
+    _noteViewUpdateTimer->start(2000);
+
     // check if we have a todo reminder every minute
     this->todoReminderTimer = new QTimer(this);
     QObject::connect(
@@ -205,6 +214,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
+
+    // setup the markdown view
+    setupMarkdownView();
 
     // restore the distraction free mode
     restoreDistractionFreeMode();
@@ -352,23 +364,27 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the search line edit
         ui->searchLineEdit->hide();
 
-        // hide the tab bar of the note tab widget
-        ui->noteTabWidget->tabBar()->hide();
-
         // hide tag frames if tagging is enabled
         if (isTagsEnabled()) {
             ui->tagFrame->hide();
             ui->noteTagFrame->hide();
         }
 
+        // hide note view if markdown view is enabled
+        if (isMarkdownViewEnabled()) {
+            ui->noteViewFrame->hide();
+        }
+
         // hide the status bar
 //        ui->statusBar->hide();
 
         // hide the notes list widget
-        QList<int> sizes = mainSplitter->sizes();
-        int size = sizes.takeFirst() + sizes.takeFirst();
-        sizes << 0 << size;
-        mainSplitter->setSizes(sizes);
+        ui->notesListFrame->hide();
+
+//        QList<int> sizes = mainSplitter->sizes();
+//        int size = sizes.takeFirst() + sizes.takeFirst();
+//        sizes << 0 << size;
+//        mainSplitter->setSizes(sizes);
 
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
@@ -406,16 +422,20 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         ui->menuBar->setFixedHeight(
                 settings.value("DistractionFreeMode/menuBarHeight").toInt());
 
-        // show the tab bar of the note tab widget
-        ui->noteTabWidget->tabBar()->show();
-
         // show the search line edit
         ui->searchLineEdit->show();
+
+        ui->notesListFrame->show();
 
         // show tag frames if tagging is enabled
         if (isTagsEnabled()) {
             ui->tagFrame->show();
             ui->noteTagFrame->show();
+        }
+
+        // show note view if markdown view is enabled
+        if (isMarkdownViewEnabled()) {
+            ui->noteViewFrame->show();
         }
     }
 
@@ -680,7 +700,8 @@ void MainWindow::setupMainSplitter() {
 
     this->mainSplitter->addWidget(ui->tagFrame);
     this->mainSplitter->addWidget(ui->notesListFrame);
-    this->mainSplitter->addWidget(ui->noteTabWidget);
+    this->mainSplitter->addWidget(ui->noteEditFrame);
+    this->mainSplitter->addWidget(ui->noteViewFrame);
 
     // restore splitter sizes
     QSettings settings;
@@ -896,10 +917,6 @@ void MainWindow::readSettings() {
  */
 void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
-
-    // set the view mode
-    setNoteTextEditMode(
-            !settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
     // disable the automatic update dialog per default for repositories and
     // self-builds
@@ -1119,6 +1136,18 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
 
     // restore old selected row (but don't update the note text)
     setCurrentNote(this->currentNote, updateNoteText);
+}
+
+/**
+ * Checks if the note view needs an update because the text has changed
+ */
+void MainWindow::noteViewUpdateTimerSlot() {
+    if (_noteViewNeedsUpdate) {
+        if (isMarkdownViewEnabled()) {
+            setNoteTextFromNote(&currentNote, true);
+        }
+        _noteViewNeedsUpdate = false;
+    }
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
@@ -1604,7 +1633,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) ||
                     (keyEvent->key() == Qt::Key_Tab)) {
-                setNoteTextEditMode(true);
                 focusNoteTextEdit();
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete)) {
@@ -1685,39 +1713,6 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->searchLineEdit->text();
     searchInNoteTextEdit(searchString);
-}
-
-/**
- * switch edit mode for noteTextEdit on or off
- */
-void MainWindow::setNoteTextEditMode(bool isInEditMode) {
-    this->noteTextEditIsInEditMode = isInEditMode;
-    this->ui->actionToggleEditMode->setChecked(isInEditMode);
-    this->ui->actionToggleEditMode->setToolTip(
-            "Toggle edit mode - currently " +
-                    QString(isInEditMode ? "editing" : "viewing"));
-
-    // set the tab index
-    {
-        const QSignalBlocker blocker(this->ui->noteTabWidget);
-        Q_UNUSED(blocker);
-        this->ui->noteTabWidget->setCurrentIndex(isInEditMode ? 0 : 1);
-    }
-
-    if (!isInEditMode) {
-        // ask for the password if the note is encrypted and can't be decrypted
-        askForEncryptedNotePasswordIfNeeded();
-    }
-
-    // make sure the current note is set
-    if (this->currentNote.exists()) {
-        this->setCurrentNote(this->currentNote, true);
-    }
-
-    // restore search after switching between modes
-    if (ui->searchLineEdit->text() != "") {
-        searchForSearchLineTextInNoteTextEdit();
-    }
 }
 
 /**
@@ -2349,6 +2344,7 @@ void MainWindow::on_noteTextEdit_textChanged() {
         this->currentNote.storeNewText(text);
         this->currentNote.refetch();
         this->currentNoteLastEdited = QDateTime::currentDateTime();
+        _noteViewNeedsUpdate = true;
 
         updateEncryptNoteButtons();
 
@@ -2402,6 +2398,14 @@ void MainWindow::filterNotes() {
 bool MainWindow::isTagsEnabled() {
     QSettings settings;
     return settings.value("tagsEnabled", false).toBool();
+}
+
+/**
+ * Checks if the markdown view is enabled
+ */
+bool MainWindow::isMarkdownViewEnabled() {
+    QSettings settings;
+    return settings.value("markdownViewEnabled", false).toBool();
 }
 
 /**
@@ -2541,9 +2545,6 @@ void MainWindow::on_searchLineEdit_returnPressed() {
     // jump to the found or created note
     setCurrentNote(note);
 
-    // go into edit mode
-    setNoteTextEditMode(true);
-
     // focus the note text edit and set the cursor correctly
     focusNoteTextEdit();
 }
@@ -2568,14 +2569,6 @@ void MainWindow::on_action_Note_note_triggered() {
             "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
     this->ui->searchLineEdit->setText(text);
     on_searchLineEdit_returnPressed();
-}
-
-void MainWindow::on_actionToggleEditMode_triggered() {
-    this->setNoteTextEditMode(this->ui->actionToggleEditMode->isChecked());
-}
-
-void MainWindow::on_noteTabWidget_currentChanged(int index) {
-    this->setNoteTextEditMode(index == 0);
 }
 
 /*
@@ -3034,11 +3027,6 @@ void MainWindow::on_actionShow_changelog_triggered() {
 }
 
 void MainWindow::on_action_Find_text_in_note_triggered() {
-    // if we are not in edit mode go into edit mode
-    if (ui->noteTabWidget->currentIndex() != 0) {
-        this->setNoteTextEditMode(true);
-    }
-
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activate();
 }
@@ -3161,6 +3149,8 @@ void MainWindow::on_encryptedNoteTextEdit_textChanged()
 
         // put it into the note text edit to be stored
         ui->noteTextEdit->setText(noteText);
+
+        _noteViewNeedsUpdate = true;
     }
 }
 
@@ -3943,6 +3933,19 @@ void MainWindow::setupTags() {
 }
 
 /**
+ * Shows or hides everything for the markdown view
+ */
+void MainWindow::setupMarkdownView() {
+    bool markdownViewEnabled = isMarkdownViewEnabled();
+
+    ui->noteViewFrame->setVisible(markdownViewEnabled);
+
+    const QSignalBlocker blocker(ui->actionToggle_markdown_preview);
+    Q_UNUSED(blocker);
+    ui->actionToggle_markdown_preview->setChecked(markdownViewEnabled);
+}
+
+/**
  * Toggles the note panes
  */
 void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
@@ -4100,4 +4103,13 @@ void MainWindow::on_action_Reload_note_folder_triggered()
 {
     buildNotesIndex();
     loadNoteDirectoryList();
+}
+
+void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1)
+{
+    QSettings settings;
+    settings.setValue("markdownViewEnabled", arg1);
+
+    // setup the markdown view
+    setupMarkdownView();
 }

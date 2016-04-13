@@ -226,8 +226,6 @@ void SettingsDialog::storeSettings() {
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showNoteFolderCheckBox->isChecked());
-    settings.setValue("MainWindow/markdownDefaultViewMode",
-                      ui->markdownDefaultViewModeCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
 
@@ -302,8 +300,6 @@ void SettingsDialog::readSettings() {
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
-    ui->markdownDefaultViewModeCheckBox->setChecked(
-            settings.value("MainWindow/markdownDefaultViewMode").toBool());
 
     selectListWidgetValue(ui->languageListWidget,
                           settings.value("interfaceLanguage").toString());

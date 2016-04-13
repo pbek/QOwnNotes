@@ -109,7 +109,7 @@
                      <string>&amp;Add folder</string>
                     </property>
                     <property name="icon">
-                     <iconset theme="folder-new">
+                     <iconset theme="folder-new" resource="../breeze-qownnotes.qrc">
                       <normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-new.svg</iconset>
                     </property>
                    </widget>
@@ -133,7 +133,7 @@
                      <string>&amp;Remove folder</string>
                     </property>
                     <property name="icon">
-                     <iconset theme="edit-delete">
+                     <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
                       <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
                     </property>
                    </widget>
@@ -168,7 +168,7 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset theme="document-open">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                  </property>
                 </widget>
@@ -273,7 +273,7 @@
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset theme="document-open">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                  </property>
                 </widget>
@@ -326,7 +326,7 @@
                         <string>&amp;use as ownCloud path</string>
                        </property>
                        <property name="icon">
-                        <iconset theme="document-open">
+                        <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
                          <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                        </property>
                       </widget>
@@ -552,7 +552,7 @@
                  <string>&amp;connect to ownCloud server</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="network-connect">
+                 <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
                 </property>
                </widget>
@@ -757,7 +757,7 @@
                  <string>open your ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="text-html">
+                 <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
                 </property>
                </widget>
@@ -1101,7 +1101,7 @@
                <string>&amp;reload calendar list</string>
               </property>
               <property name="icon">
-               <iconset theme="network-connect">
+               <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
                 <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
               </property>
              </widget>
@@ -1353,7 +1353,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1377,7 +1377,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1401,7 +1401,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1412,7 +1412,7 @@
                  <string>set a new font</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1426,7 +1426,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1440,7 +1440,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1454,7 +1454,7 @@
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="gtk-select-font">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                 </property>
                </widget>
@@ -1468,7 +1468,7 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
                 </property>
                </widget>
@@ -1582,6 +1582,17 @@
               <string>Notes</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
+              <item row="1" column="1">
+               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                <property name="toolTip">
+                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                </property>
+                <property name="text">
+                 <string>note save interval time [sec]</string>
+                </property>
+               </widget>
+              </item>
               <item row="0" column="0" colspan="2">
                <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
                 <property name="toolTip">
@@ -1611,27 +1622,6 @@
                 </property>
                 <property name="value">
                  <number>10</number>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                <property name="toolTip">
-                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                </property>
-                <property name="text">
-                 <string>note save interval time [sec]</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0" colspan="2">
-               <widget class="QCheckBox" name="markdownDefaultViewModeCheckBox">
-                <property name="toolTip">
-                 <string>Select this if you want the markdown view to be the default view instead of the edit view.</string>
-                </property>
-                <property name="text">
-                 <string>Markdown view mode is default</string>
                 </property>
                </widget>
               </item>
@@ -1836,7 +1826,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <string/>
                 </property>
                 <property name="icon">
-                 <iconset theme="document-open">
+                 <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
                 </property>
                </widget>
@@ -2040,7 +2030,7 @@ p, li { white-space: pre-wrap; }
                <string>&amp;Save debug information</string>
               </property>
               <property name="icon">
-               <iconset theme="document-save">
+               <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
               </property>
              </widget>
@@ -2068,7 +2058,9 @@ p, li { white-space: pre-wrap; }
   <tabstop>userNameEdit</tabstop>
   <tabstop>passwordEdit</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

@@ -91,10 +91,6 @@ private slots:
 
     void on_action_Note_note_triggered();
 
-    void on_actionToggleEditMode_triggered();
-
-    void on_noteTabWidget_currentChanged(int index);
-
     void changeNoteFolder(int noteFolderId, bool forceChange = false);
 
     void on_noteTextView_anchorClicked(const QUrl &arg1);
@@ -241,6 +237,10 @@ private slots:
 
     void on_action_Reload_note_folder_triggered();
 
+    void noteViewUpdateTimerSlot();
+
+    void on_actionToggle_markdown_preview_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -262,6 +262,8 @@ private:
     int noteSaveIntervalTime;
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
+    QTimer *_noteViewUpdateTimer;
+    bool _noteViewNeedsUpdate = false;
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
@@ -296,8 +298,6 @@ private:
     void searchForSearchLineTextInNoteTextEdit();
 
     int openNoteDiffDialog(Note changedNote);
-
-    void setNoteTextEditMode(bool isInEditMode);
 
     void setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly = false);
 
@@ -395,4 +395,8 @@ private:
     void initStyling();
 
     void tagSelectedNotes(Tag tag);
+
+    bool isMarkdownViewEnabled();
+
+    void setupMarkdownView();
 };
