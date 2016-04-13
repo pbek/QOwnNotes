@@ -311,7 +311,7 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
         setViewportMargins(margin, 20, margin, 0);
     } else {
-        setViewportMargins(0, 0, 0, 0);
+        setViewportMargins(10, 10, 10, 0);
     }
 }
 

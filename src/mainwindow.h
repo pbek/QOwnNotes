@@ -390,4 +390,6 @@ private:
             QListWidgetItem *item,
             Note *note,
             QDateTime *overrideFileLastModified = 0);
+
+    void initStyling();
 };

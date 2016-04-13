@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 1.4.1
-- some main splitter UI fixes for OS X were done
+- some main splitter user interface fixes for OS X were done
+- did some note editing user interface improvements and fixes for the 
+  distraction free mode   
 
 ## 1.4.0
 - a lot of **design changes** were done in the **main interface**

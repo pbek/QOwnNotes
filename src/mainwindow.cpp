@@ -238,6 +238,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // we need to disallow this explicitly under Windows
     // so that the MainWindow gets the event
     ui->noteTextEdit->setAcceptDrops(false);
+
+    // do a bit more styling
+    initStyling();
 }
 
 MainWindow::~MainWindow() {
@@ -292,13 +295,38 @@ void MainWindow::toggleDistractionFreeMode() {
 }
 
 /**
+ * Does some basic styling
+ */
+void MainWindow::initStyling() {
+    QPalette palette;
+    QColor color = palette.color(QPalette::Base);
+
+    QString textEditStyling = QString("QTextEdit {background-color: %1;}")
+            .arg(color.name());
+
+    ui->noteTextEdit->setStyleSheet(
+            ui->noteTextEdit->styleSheet() + textEditStyling);
+
+    ui->encryptedNoteTextEdit->setStyleSheet(
+            ui->encryptedNoteTextEdit->styleSheet() + textEditStyling);
+
+    QString frameStyling = QString("QFrame {background-color: %1;}")
+            .arg(color.name());
+
+    ui->noteTagFrame->setStyleSheet(
+            ui->noteTextView->styleSheet() + frameStyling);
+
+    if (!isInDistractionFreeMode()) {
+        ui->noteTextEdit->setPaperMargins(0);
+        ui->encryptedNoteTextEdit->setPaperMargins(0);
+    }
+}
+
+/**
  * Enables or disables the distraction free mode
  */
 void MainWindow::setDistractionFreeMode(bool enabled) {
     QSettings settings;
-    bool darkModeColors = settings.value("darkModeColors").toBool();
-
-    QString styling = "QTextEdit {background-color: white;}";
 
     if (enabled) {
         //
@@ -357,17 +385,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                 this, SLOT(toggleDistractionFreeMode()));
 
         statusBar()->addPermanentWidget(_leaveDistractionFreeModeButton);
-
-        if (!darkModeColors) {
-            ui->noteTextEdit->setStyleSheet(
-                    ui->noteTextEdit->styleSheet() + styling);
-
-            ui->encryptedNoteTextEdit->setStyleSheet(
-                    ui->encryptedNoteTextEdit->styleSheet() + styling);
-
-            ui->noteTextView->setStyleSheet(
-                    ui->noteTextView->styleSheet() + styling);
-        }
     } else {
         //
         // leave the distraction free mode
@@ -399,18 +416,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         if (isTagsEnabled()) {
             ui->tagFrame->show();
             ui->noteTagFrame->show();
-        }
-
-        if (!darkModeColors) {
-            ui->noteTextEdit->setStyleSheet(
-                    ui->noteTextEdit->styleSheet().replace(styling, ""));
-
-            ui->encryptedNoteTextEdit->setStyleSheet(
-                    ui->encryptedNoteTextEdit->styleSheet()
-                            .replace(styling, ""));
-
-            ui->noteTextView->setStyleSheet(
-                    ui->noteTextView->styleSheet().replace(styling, ""));
         }
     }
 
@@ -680,7 +685,7 @@ void MainWindow::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-//    this->mainSplitter->restoreState(state);
+    this->mainSplitter->restoreState(state);
 
     this->ui->centralWidget->layout()->addWidget(this->mainSplitter);
 }
