@@ -13,6 +13,7 @@
 #include <QFile>
 #include <entities/note.h>
 #include <entities/notefolder.h>
+#include <entities/tag.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -392,4 +393,6 @@ private:
             QDateTime *overrideFileLastModified = 0);
 
     void initStyling();
+
+    void tagSelectedNotes(Tag tag);
 };

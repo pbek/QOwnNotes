@@ -3,7 +3,9 @@
 ## 1.4.1
 - some main splitter user interface fixes for OS X were done
 - did some note editing user interface improvements and fixes for the 
-  distraction free mode   
+  distraction free mode and dark mode
+- you can now **tag multiple notes** by selecting them, then right-clicking on 
+  the notes and selecting *Tag selected notes with...*  
 
 ## 1.4.0
 - a lot of **design changes** were done in the **main interface**

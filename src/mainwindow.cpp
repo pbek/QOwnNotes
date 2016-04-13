@@ -1970,7 +1970,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 if (result) {
                     qDebug() << "Note was moved:" << note.getName();
                 } else {
-                    qDebug() << "Could not move note:" << note.getName();
+                    qWarning() << "Could not move note:" << note.getName();
                 }
             }
 
@@ -2002,7 +2002,7 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                     copyCount++;
                     qDebug() << "Note was copied:" << note.getName();
                 } else {
-                    qDebug() << "Could not copy note:" << note.getName();
+                    qWarning() << "Could not copy note:" << note.getName();
                 }
             }
 
@@ -2010,6 +2010,40 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                 this, tr("Done"),
                 tr("%n note(s) were copied to <strong>%2</strong>.", "",
                    copyCount).arg(destinationFolder));
+    }
+}
+
+/**
+ * Tags selected notes
+ */
+void MainWindow::tagSelectedNotes(Tag tag) {
+    int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if (QMessageBox::information(
+            this,
+            tr("Tag selected notes"),
+            tr("Tag %n selected note(s) with <strong>%2</strong>?", "",
+               selectedItemsCount).arg(tag.getName()),
+            tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+        int tagCount = 0;
+        Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
+                QString name = item->text();
+                Note note = Note::fetchByName(name);
+
+                // tag note
+                bool result = tag.linkToNote(note);
+                if (result) {
+                    tagCount++;
+                    qDebug() << "Note was tagged:" << note.getName();
+                } else {
+                    qWarning() << "Could not tag note:" << note.getName();
+                }
+            }
+
+        QMessageBox::information(
+                this, tr("Done"),
+                tr("%n note(s) were tagged with <strong>%2</strong>.", "",
+                   tagCount).arg(tag.getName()));
     }
 }
 
@@ -2700,6 +2734,7 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     QMenu noteMenu;
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
+    QMenu *tagMenu = new QMenu();
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
@@ -2733,6 +2768,21 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
             }
     }
 
+    QList<Tag> tagList = Tag::fetchAll();
+
+    // show the tagging menu if at least one tag is present
+    if (tagList.count() > 1) {
+        tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
+
+        Q_FOREACH(Tag tag, tagList) {
+                QAction *action = tagMenu->addAction(
+                        tag.getName());
+                action->setData(tag.getId());
+                action->setToolTip(tag.getName());
+                action->setStatusTip(tag.getName());
+            }
+    }
+
     QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
     QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
@@ -2747,6 +2797,13 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
             // copy notes
             QString destinationFolder = selectedItem->data().toString();
             copySelectedNotesToFolder(destinationFolder);
+        } else if (selectedItem->parent() == tagMenu) {
+            // tag notes
+            Tag tag = Tag::fetch(selectedItem->data().toInt());
+
+            if (tag.isFetched()) {
+                tagSelectedNotes(tag);
+            }
         } else if (selectedItem == removeAction) {
             // remove notes
             removeSelectedNotes();
