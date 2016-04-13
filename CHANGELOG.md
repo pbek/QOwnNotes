@@ -6,6 +6,7 @@
   distraction free mode and dark mode
 - you can now **tag multiple notes** by selecting them, then right-clicking on 
   the notes and selecting *Tag selected notes with...*  
+- added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.4.0
 - a lot of **design changes** were done in the **main interface**
