@@ -49,12 +49,12 @@
        <widget class="QFrame" name="tagFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>1</horstretch>
+          <horstretch>2</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
         <property name="frameShape">
-         <enum>QFrame::NoFrame</enum>
+         <enum>QFrame::VLine</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
@@ -113,7 +113,7 @@
        <widget class="QFrame" name="notesListFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>1</horstretch>
+          <horstretch>3</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
@@ -196,7 +196,7 @@
        <widget class="QTabWidget" name="noteTabWidget">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>3</horstretch>
+          <horstretch>4</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>

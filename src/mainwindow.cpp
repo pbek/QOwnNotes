@@ -96,6 +96,7 @@ MainWindow::MainWindow(QWidget *parent) :
 #ifdef Q_OS_MAC
     // we don't want a frame under OS X
     ui->notesListFrame->setFrameShape(QFrame::NoFrame);
+    ui->tagFrame->setFrameShape(QFrame::NoFrame);
 #endif
 
     // setup the update available button
@@ -679,7 +680,7 @@ void MainWindow::setupMainSplitter() {
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-    this->mainSplitter->restoreState(state);
+//    this->mainSplitter->restoreState(state);
 
     this->ui->centralWidget->layout()->addWidget(this->mainSplitter);
 }

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 1.4.1
+- some main splitter UI fixes for OS X were done
+
 ## 1.4.0
 - a lot of **design changes** were done in the **main interface**
 - the amount of all notes is now also shown in the tag list

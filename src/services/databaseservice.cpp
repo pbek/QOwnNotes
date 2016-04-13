@@ -237,12 +237,13 @@ bool DatabaseService::setupTables() {
         version = 3;
     }
 
-    if (version < 4) {
+    // we need to remove the main splitter sizes for version 4 and 5
+    if (version < 5) {
         QSettings settings;
         // remove the main splitter sizes for the tags pane
         settings.remove("mainSplitterSizes");
 
-        version = 4;
+        version = 5;
     }
 
     if (version != oldVersion) {
