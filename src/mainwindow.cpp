@@ -681,7 +681,7 @@ void MainWindow::setupMainSplitter() {
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
     this->mainSplitter->restoreState(state);
 
-    this->ui->gridLayout->layout()->addWidget(this->mainSplitter);
+    this->ui->centralWidget->layout()->addWidget(this->mainSplitter);
 }
 
 void MainWindow::createSystemTrayIcon() {
