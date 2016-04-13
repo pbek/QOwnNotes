@@ -196,7 +196,7 @@
        <widget class="QFrame" name="noteEditFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>4</horstretch>
+          <horstretch>5</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
@@ -361,7 +361,7 @@ p, li { white-space: pre-wrap; }
        <widget class="QFrame" name="noteViewFrame">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-          <horstretch>4</horstretch>
+          <horstretch>3</horstretch>
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
