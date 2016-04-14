@@ -1220,6 +1220,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
         int count = Note::storeDirtyNotesToDisk(this->currentNote);
 
         if (count > 0) {
+            _noteViewNeedsUpdate = true;
+
             MetricsService::instance()
                     ->sendEventIfEnabled(
                             "note/notes/stored",
@@ -3193,6 +3195,7 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
         ui->encryptedNoteTextEdit->setText(currentNote.getDecryptedNoteText());
         ui->encryptedNoteTextEdit->show();
         ui->encryptedNoteTextEdit->setFocus();
+        _noteViewNeedsUpdate = true;
     }
 }
 
@@ -3202,19 +3205,6 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
 void MainWindow::on_encryptedNoteTextEdit_textChanged()
 {
     currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText());
-    return;
-    askForEncryptedNotePasswordIfNeeded();
-
-    if (currentNote.canDecryptNoteText()) {
-        // encrypt the note text
-        currentNote.setNoteText(ui->encryptedNoteTextEdit->toPlainText());
-        QString noteText = currentNote.encryptNoteText();
-
-        // put it into the note text edit to be stored
-        ui->noteTextEdit->setText(noteText);
-
-        _noteViewNeedsUpdate = true;
-    }
 }
 
 /**

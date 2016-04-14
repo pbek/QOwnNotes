@@ -9,6 +9,8 @@
 - fixed some displaying problems on the main screen
   (for [Issue #140](https://github.com/pbek/QOwnNotes/issues/140))
 - the note edit and note markdown view scrollbars are now linked together
+- the markdown preview now also works when editing encrypted notes (although 
+  the update interval is the note storage interval)
 - fixed an issue with the note order in the note list in alphabetical sorting 
   mode when editing a note
   (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
