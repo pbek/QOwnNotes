@@ -915,8 +915,8 @@ void MainWindow::readSettings() {
 
     QSettings settings;
     sortAlphabetically = settings.value(
-            "SortingModeAlphabetically", QVariant(false)).toBool();
-    showSystemTray = settings.value("ShowSystemTray", QVariant(false)).toBool();
+            "SortingModeAlphabetically", false).toBool();
+    showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(
@@ -1243,11 +1243,12 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
             QString newNoteName = this->currentNote.getName();
             if (oldNoteName == newNoteName) {
-                // if note name has not changed makes the current note
-                // the first item in the note list without
-                // reloading the whole list
-                // TODO: alphabetically!
-                makeCurrentNoteFirstInNoteList();
+                if ( !sortAlphabetically ) {
+                    // if note name has not changed makes the current note
+                    // the first item in the note list without
+                    // reloading the whole list
+                    makeCurrentNoteFirstInNoteList();
+                }
             } else {
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);

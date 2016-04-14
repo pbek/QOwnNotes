@@ -9,6 +9,9 @@
 - fixed some displaying problems on the main screen
   (for [Issue #140](https://github.com/pbek/QOwnNotes/issues/140))
 - the note edit and note markdown view scrollbars are now linked together
+- fixed an issue with the note order in the note list in alphabetical sorting 
+  mode when editing a note
+  (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
 
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 
