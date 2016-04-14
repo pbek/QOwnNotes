@@ -5,6 +5,7 @@
   key is pressed in the note text edit or not
 - the lines between frames on the main screen were made a bit stronger under 
   Linux  
+- the `Reload note folder` menu entry also reloads the current note now
 
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 

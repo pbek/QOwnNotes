@@ -4111,6 +4111,8 @@ void MainWindow::on_action_Reload_note_folder_triggered()
 {
     buildNotesIndex();
     loadNoteDirectoryList();
+    currentNote.refetch();
+    setNoteTextFromNote(&currentNote);
 }
 
 void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1)
