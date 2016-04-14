@@ -3,6 +3,8 @@
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 
   key is pressed in the note text edit or not
+- the lines between frames on the main screen were made a bit stronger under 
+  Linux  
 
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 

@@ -332,6 +332,14 @@ void MainWindow::initStyling() {
         ui->noteTextEdit->setPaperMargins(0);
         ui->encryptedNoteTextEdit->setPaperMargins(0);
     }
+
+#ifdef Q_OS_LINUX
+    // make lines between frames a bit stronger under Linux
+    ui->tagFrame->setLineWidth(2);
+    ui->notesListFrame->setLineWidth(2);
+    ui->noteEditFrame->setLineWidth(2);
+    ui->noteViewFrame->setLineWidth(2);
+#endif
 }
 
 /**
