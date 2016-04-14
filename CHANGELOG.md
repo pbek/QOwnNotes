@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.4.2
+- some improvements were made to the detection whether the <kbd>Ctrl</kbd> 
+  key is pressed in the note text edit or not
+
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 
   the notes and selecting *Tag selected notes with...*  
