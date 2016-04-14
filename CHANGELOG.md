@@ -18,6 +18,7 @@
   (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
 - inserted buttons for *bold* and *italic* in the main menu
   (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
+- added more Portuguese and Russian translation (thank you mlimacarlos and Valerian)
 
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 
