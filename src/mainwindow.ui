@@ -53,8 +53,11 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">#tagFrame {margin-right: 3px;}</string>
+        </property>
         <property name="frameShape">
-         <enum>QFrame::VLine</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
@@ -117,8 +120,8 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
-        <property name="frameShape">
-         <enum>QFrame::VLine</enum>
+        <property name="styleSheet">
+         <string notr="true">#notesListFrame {margin: 0;}</string>
         </property>
         <layout class="QVBoxLayout" name="notesListLayout">
          <property name="spacing">
@@ -200,8 +203,11 @@
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">#noteEditFrame {margin: 0 0 0 3px;}</string>
+        </property>
         <property name="frameShape">
-         <enum>QFrame::VLine</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout">
          <property name="spacing">
@@ -365,8 +371,11 @@ p, li { white-space: pre-wrap; }
           <verstretch>0</verstretch>
          </sizepolicy>
         </property>
+        <property name="styleSheet">
+         <string notr="true">#noteViewFrame {margin: 0 0 0 3px;}</string>
+        </property>
         <property name="frameShape">
-         <enum>QFrame::VLine</enum>
+         <enum>QFrame::NoFrame</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout">
          <property name="leftMargin">
