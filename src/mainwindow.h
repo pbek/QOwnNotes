@@ -253,7 +253,6 @@ private:
     Note currentNote;
     int firstVisibleNoteListRow;
     NoteDiffDialog *noteDiffDialog;
-    bool noteTextEditIsInEditMode;
     QSignalMapper *recentNoteFolderSignalMapper;
     QSignalMapper *storeNoteBookmarkSignalMapper;
     QSignalMapper *gotoNoteBookmarkSignalMapper;
@@ -267,7 +266,7 @@ private:
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
     QTimer *_noteViewUpdateTimer;
-    bool _noteViewNeedsUpdate = false;
+    bool _noteViewNeedsUpdate;
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
