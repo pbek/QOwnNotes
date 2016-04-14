@@ -326,6 +326,14 @@ void MainWindow::initStyling() {
         ui->noteTextEdit->setPaperMargins(0);
         ui->encryptedNoteTextEdit->setPaperMargins(0);
     }
+
+#ifdef Q_OS_MAC
+    // no stylesheets needed for OS X, the margins doesn't work the same there
+    ui->tagFrame->setStyleSheet("");
+    ui->notesListFrame->setStyleSheet("");
+    ui->noteEditFrame->setStyleSheet("");
+    ui->noteViewFrame->setStyleSheet("");
+#endif
 }
 
 /**
