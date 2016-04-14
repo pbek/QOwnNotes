@@ -1246,6 +1246,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
                 // if note name has not changed makes the current note
                 // the first item in the note list without
                 // reloading the whole list
+                // TODO: alphabetically!
                 makeCurrentNoteFirstInNoteList();
             } else {
                 // rename the note file names of note tag links
@@ -1822,6 +1823,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     }
 
     this->ui->noteTextView->setHtml(note->toMarkdownHtml(notesPath));
+
+    // update the slider when editing notes
+    noteTextSliderValueChanged(
+            activeNoteTextEdit()->verticalScrollBar()->value());
 }
 
 /**
