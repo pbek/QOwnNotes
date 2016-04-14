@@ -592,11 +592,14 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionEdit_encrypted_note"/>
    <addaction name="actionDecrypt_note"/>
    <addaction name="separator"/>
+   <addaction name="actionFormat_text_bold"/>
+   <addaction name="actionFormat_text_italic"/>
+   <addaction name="actionInset_code_block"/>
+   <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
    <addaction name="actionInsert_Link_to_note"/>
    <addaction name="actionInsert_image"/>
    <addaction name="actionInsert_current_time"/>
-   <addaction name="actionInset_code_block"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
