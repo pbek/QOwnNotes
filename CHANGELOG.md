@@ -8,6 +8,7 @@
 - the `Reload note folder` menu entry also reloads the current note now
 - fixed some displaying problems on the main screen
   (for [Issue #140](https://github.com/pbek/QOwnNotes/issues/140))
+- the note edit and note markdown view scrollbars are now linked together
 
 ## 1.4.1
 - you can now **tag multiple notes** by selecting them, then right-clicking on 

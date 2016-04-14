@@ -18,6 +18,7 @@
 #include <QTextBlock>
 #include <QClipboard>
 #include <QTemporaryFile>
+#include <QScrollBar>
 #include <QTextDocumentFragment>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
@@ -334,6 +335,63 @@ void MainWindow::initStyling() {
     ui->noteEditFrame->setStyleSheet("");
     ui->noteViewFrame->setStyleSheet("");
 #endif
+
+    // move the note view scrollbar when the note edit scrollbar was moved
+    connect(ui->noteTextEdit->verticalScrollBar(), SIGNAL(valueChanged(int)),
+            this, SLOT(noteTextSliderValueChanged(int)));
+    connect(ui->encryptedNoteTextEdit->verticalScrollBar(),
+            SIGNAL(valueChanged(int)),
+            this, SLOT(noteTextSliderValueChanged(int)));
+
+    // move the note edit scrollbar when the note view scrollbar was moved
+    connect(ui->noteTextView->verticalScrollBar(),
+            SIGNAL(valueChanged(int)),
+            this, SLOT(noteViewSliderValueChanged(int)));
+}
+
+/**
+ * Moves the note view scrollbar when the note edit scrollbar was moved
+ */
+void MainWindow::noteTextSliderValueChanged(int value) {
+    // don't react if note text edit doesn't have the focus
+    if (!activeNoteTextEdit()->hasFocus()) {
+        return;
+    }
+
+    QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
+    QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
+
+    float editScrollFactor =
+            static_cast<float>(value) / editScrollBar->maximum();
+    int viewPosition =
+            static_cast<int>(viewScrollBar->maximum() * editScrollFactor);
+
+    // set the scroll position in the note text view
+    viewScrollBar->setSliderPosition(viewPosition);
+}
+
+/**
+ * Moves the note edit scrollbar when the note view scrollbar was moved
+ */
+void MainWindow::noteViewSliderValueChanged(int value) {
+    // don't react if note text view doesn't have the focus
+    if (!ui->noteTextView->hasFocus()) {
+        return;
+    }
+
+    QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
+    QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
+
+    editScrollBar->maximum();
+
+    float editScrollFactor =
+            static_cast<float>(value) / viewScrollBar->maximum();
+
+    int editPosition =
+            static_cast<int>(editScrollBar->maximum() * editScrollFactor);
+
+    // set the scroll position in the note text edit
+    editScrollBar->setSliderPosition(editPosition);
 }
 
 /**
@@ -833,9 +891,6 @@ void MainWindow::setListWidgetItemToolTipForNote(
 
     item->setToolTip(tr("<strong>%1</strong><br />last modified: %2")
             .arg(note->getName(), fileLastModified->toString()));
-
-    qDebug() << __func__ << " - 'item->toolTip()': " << item->toolTip();
-
 }
 
 /**

@@ -241,6 +241,10 @@ private slots:
 
     void on_actionToggle_markdown_preview_toggled(bool arg1);
 
+    void noteTextSliderValueChanged(int value);
+
+    void noteViewSliderValueChanged(int value);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
