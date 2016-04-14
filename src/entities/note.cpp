@@ -766,14 +766,23 @@ QString Note::toMarkdownHtml(QString notesPath) {
         QFont font;
         font.fromString(fontString);
 
-        codeStyleSheet = "pre, code {" + encodeCssFont(font) + "}";
+        // do some code formatting
+        codeStyleSheet = QString(
+                "pre, code { %1; padding: 16px; overflow: auto;"
+                        " line-height: 1.45em; background-color: #f1f1f1;"
+                        " border-radius: 3px; }").arg(encodeCssFont(font));
     }
 
-    result = "<html><head>"
-                    "<style>h1, h2, h3 { margin: 5pt 0 10pt 0; }"
-                    "a { color: #FF9137; text-decoration: none; }" +
-            codeStyleSheet + "</style></head><body>" +
-            result + "</body></html>";
+    // remove double code blocks
+    result.replace("<pre><code>", "<pre>")
+            .replace("</code></pre>", "</pre>");
+
+    result = QString("<html><head><style>"
+                 "h1 { margin: 5px 0 20px 0; }"
+                 "h2, h3 { margin: 10px 0 15px 0; }"
+             "a { color: #FF9137; text-decoration: none; } %1"
+                             "</style></head><body>%2</body></html>")
+            .arg(codeStyleSheet, result);
 
     // check if width of embedded local images is too high
     QRegularExpression re("<img src=\"file:\\/\\/([^\"]+)\"");
