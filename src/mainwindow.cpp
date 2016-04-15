@@ -3235,8 +3235,8 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
 
         // open note file in external editor
 #ifdef Q_OS_MAC
-        process.startDetached("open", QStringList() << externalEditorPath <<
-        path);
+        process.startDetached(
+            "open", QStringList() << externalEditorPath << "--args" << path);
 #else
         process.startDetached(externalEditorPath, QStringList() << path);
 #endif

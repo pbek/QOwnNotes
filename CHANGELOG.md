@@ -4,7 +4,7 @@
 - opening notes in the default editor was fixed for Windows
   (for [Issue #142](https://github.com/pbek/QOwnNotes/issues/142))
 - opening notes with multi-byte file names in the an custom external editor was 
-  fixed for Windows
+  fixed for Windows and OS X
   (for [Issue #143](https://github.com/pbek/QOwnNotes/issues/143))
 
 ## 1.4.2
