@@ -20,6 +20,7 @@
 #include <QTemporaryFile>
 #include <QScrollBar>
 #include <QTextDocumentFragment>
+#include <QProcess>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -3237,7 +3238,9 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
         qDebug() << __func__ << " - 'command': " << command;
 
         // open note file in external editor
-        system(command.toStdString().c_str());
+
+        QProcess process;
+        process.startDetached(externalEditorPath, QStringList() << path);
     }
 }
 
