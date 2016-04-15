@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 1.4.3
+- opening notes in the default editor was fixed for Windows
+  (for [Issue #142](https://github.com/pbek/QOwnNotes/issues/142))
+
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 
   key is pressed in the note text edit or not
