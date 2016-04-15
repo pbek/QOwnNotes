@@ -583,7 +583,14 @@ QString Note::fullNoteFilePath() {
  * Returns the full url of the note file
  */
 QUrl Note::fullNoteFileUrl() {
-    return QUrl("file://" + fullNoteFilePath());
+    QString windowsSlash = "";
+
+#ifdef Q_OS_WIN32
+    // we need an other slash for Windows
+    windowsSlash = "/";
+#endif
+
+    return QUrl("file://" + windowsSlash + fullNoteFilePath());
 }
 
 int Note::storeDirtyNotesToDisk(Note &currentNote) {
