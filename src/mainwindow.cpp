@@ -2445,7 +2445,7 @@ void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {
 /**
  * Does the note filtering
  */
-void MainWindow::filterNotes() {
+void MainWindow::filterNotes(bool searchForText) {
     // filter the notes by text in the search line edit
     filterNotesBySearchLineEditText();
 
@@ -2454,8 +2454,10 @@ void MainWindow::filterNotes() {
         filterNotesByTag();
     }
 
-    // let's highlight the text from the search line edit
-    searchForSearchLineTextInNoteTextEdit();
+    if (searchForText) {
+        // let's highlight the text from the search line edit
+        searchForSearchLineTextInNoteTextEdit();
+    }
 }
 
 /**
@@ -3991,7 +3993,7 @@ void MainWindow::setupTags() {
     }
 
     // filter the notes again
-    filterNotes();
+    filterNotes(false);
 }
 
 /**

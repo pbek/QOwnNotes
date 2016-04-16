@@ -12,6 +12,8 @@
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
 - added more Russian, German, Hungarian and Dutch translation (thank you 
   Valerian, calis2002 and Fabijenna)
+- fixed a problem with a jumping text cursor when the note folder is modified
+  externally (for [Issue #146](https://github.com/pbek/QOwnNotes/issues/146))
 
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 

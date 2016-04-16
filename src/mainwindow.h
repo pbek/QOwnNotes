@@ -386,7 +386,7 @@ private:
 
     void filterNotesBySearchLineEditText();
 
-    void filterNotes();
+    void filterNotes(bool searchForText = true);
 
     bool isTagsEnabled();
 
