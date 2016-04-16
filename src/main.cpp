@@ -11,6 +11,11 @@
 
 int main(int argc, char *argv[])
 {
+    // don't log SSL warnings in releases on OS X
+#if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
+    qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
+#endif
+
     // fixing some troubles in Windows 8.1
 #ifdef Q_OS_WIN32
     QCoreApplication::addLibraryPath("./");
