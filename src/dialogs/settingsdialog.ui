@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>4</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -184,6 +184,9 @@
                 <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
                  <property name="readOnly">
                   <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>path where your notes are stored locally</string>
                  </property>
                 </widget>
                </item>

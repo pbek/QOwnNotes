@@ -183,7 +183,7 @@ bool Tag::isLinkedToNote(Note note) {
                           "WHERE note_file_name = :fileName "
                           "AND tag_id = :tagId");
     query.bindValue(":fileName", note.getName());
-    query.bindValue(":fileName", id);
+    query.bindValue(":tagId", id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -192,6 +192,35 @@ bool Tag::isLinkedToNote(Note note) {
     }
 
     return false;
+}
+
+/**
+ * Returns all tags that are linked to certain note names
+ */
+QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QList<Tag> tagList;
+    QString noteIdListString = noteNameList.join("','");
+
+    QString sql = QString(
+            "SELECT t.* FROM tag t "
+                "JOIN noteTagLink l ON t.id = l.tag_id "
+                "WHERE l.note_file_name IN ('%1') "
+                "GROUP BY t.id "
+                "ORDER BY t.priority ASC, t.name ASC")
+            .arg(noteIdListString);
+
+    if (!query.exec(sql)) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
 }
 
 /**

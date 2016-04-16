@@ -402,4 +402,6 @@ private:
     bool isMarkdownViewEnabled();
 
     void setupMarkdownView();
+
+    void removeTagFromSelectedNotes(Tag tag);
 };

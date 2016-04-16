@@ -8,12 +8,15 @@
   fixed for Windows and OS X
   (for [Issue #143](https://github.com/pbek/QOwnNotes/issues/143))
 - SSL warnings on OS X are not logged to the console any more
-- support for linking notes with unicode characters in their names was added
+- support for **linking notes with unicode characters** in their names was added
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
-- added more Russian, German, Hungarian and Dutch translation (thank you 
-  Valerian, calis2002 and Fabijenna)
 - fixed a problem with a jumping text cursor when the note folder is modified
   externally (for [Issue #146](https://github.com/pbek/QOwnNotes/issues/146))
+- you can now **remove a tag from multiple notes** by selecting them, then 
+  right-clicking on the notes and selecting *Remove tag from selected notes...*  
+  (for [Issue #139](https://github.com/pbek/QOwnNotes/issues/139))
+- added more Russian, German, Hungarian and Dutch translation (thank you 
+  Valerian, calis2002 and Fabijenna)
 
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 

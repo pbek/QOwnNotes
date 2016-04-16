@@ -2109,6 +2109,41 @@ void MainWindow::tagSelectedNotes(Tag tag) {
 }
 
 /**
+ * Removes a tag from the selected notes
+ */
+void MainWindow::removeTagFromSelectedNotes(Tag tag) {
+    int selectedItemsCount = ui->notesListWidget->selectedItems().size();
+
+    if (QMessageBox::information(
+            this,
+            tr("Remove tag from selected notes"),
+            tr("Remove tag <strong>%1</strong> from %n selected note(s)?", "",
+               selectedItemsCount).arg(tag.getName()),
+            tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
+        int tagCount = 0;
+        Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
+                QString name = item->text();
+                Note note = Note::fetchByName(name);
+
+                // tag note
+                bool result = tag.removeLinkToNote(note);
+                if (result) {
+                    tagCount++;
+                    qDebug() << "Tag was removed from note:" << note.getName();
+                } else {
+                    qWarning() << "Could not remove tag from note:"
+                    << note.getName();
+                }
+            }
+
+        QMessageBox::information(
+                this, tr("Done"),
+                tr("Tag <strong>%1</strong> was removed from %n note(s)", "",
+                   tagCount).arg(tag.getName()));
+    }
+}
+
+/**
  * @brief Updates the current folder tooltip
  */
 void MainWindow::updateCurrentFolderTooltip() {
@@ -2803,6 +2838,7 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
     QMenu *tagMenu = new QMenu();
+    QMenu *tagRemoveMenu = new QMenu();
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
@@ -2839,11 +2875,37 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     QList<Tag> tagList = Tag::fetchAll();
 
     // show the tagging menu if at least one tag is present
-    if (tagList.count() > 1) {
+    if (tagList.count() > 0) {
         tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
 
         Q_FOREACH(Tag tag, tagList) {
                 QAction *action = tagMenu->addAction(
+                        tag.getName());
+                action->setData(tag.getId());
+                action->setToolTip(tag.getName());
+                action->setStatusTip(tag.getName());
+            }
+    }
+
+    QStringList noteNameList;
+    Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
+            QString name = item->text();
+            Note note = Note::fetchByName(name);
+            if (note.isFetched()) {
+                noteNameList << note.getName();
+            }
+        }
+
+    QList<Tag> tagRemoveList = Tag::fetchAllWithLinkToNoteNames(
+            noteNameList);
+
+    // show the remove tags menu if at least one tag is present
+    if (tagRemoveList.count() > 0) {
+        tagRemoveMenu = noteMenu.addMenu(
+                tr("&Remove tag from selected notes..."));
+
+        Q_FOREACH(Tag tag, tagRemoveList) {
+                QAction *action = tagRemoveMenu->addAction(
                         tag.getName());
                 action->setData(tag.getId());
                 action->setToolTip(tag.getName());
@@ -2871,6 +2933,13 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
 
             if (tag.isFetched()) {
                 tagSelectedNotes(tag);
+            }
+        } else if (selectedItem->parent() == tagRemoveMenu) {
+            // remove tag from notes
+            Tag tag = Tag::fetch(selectedItem->data().toInt());
+
+            if (tag.isFetched()) {
+                removeTagFromSelectedNotes(tag);
             }
         } else if (selectedItem == removeAction) {
             // remove notes

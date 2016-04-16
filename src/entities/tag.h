@@ -65,6 +65,8 @@ public:
 
     int countLinkedNoteFileNames();
 
+    static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
+
 private:
     int id;
     QString name;
