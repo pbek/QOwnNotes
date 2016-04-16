@@ -2669,7 +2669,14 @@ void MainWindow::openLocalUrl(QUrl url) {
     QString scheme = url.scheme();
 
     if (scheme == "note") {
-        QString fileName = url.host();
+        // add a ".com" to the filename to simulate a valid domain
+        QString fileName = url.host() + ".com";;
+
+        // convert the ACE to IDN (internationalized domain names) to support
+        // links to notes with unicode characters in their names
+        // then remove the ".com" again
+        fileName = Utils::Misc::removeIfEndsWith(
+                QUrl::fromAce(fileName.toLatin1()), ".com");
 
         // this makes it possible to search for file names containing spaces
         // instead of spaces a "-" has to be used in the note link

@@ -6,6 +6,9 @@
 - opening notes with multi-byte file names in the an custom external editor was 
   fixed for Windows and OS X
   (for [Issue #143](https://github.com/pbek/QOwnNotes/issues/143))
+- SSL warnings on OS X are not logged to the console any more
+- support for linking notes with unicode characters in their names was added
+  (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
 
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 

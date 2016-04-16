@@ -931,8 +931,11 @@ bool Note::isFetched() {
  */
 QString Note::generateTextForLink(QString text) {
     // replace everything but characters and numbers with "_"
+    // we want to treat unicode characters as normal characters
+    // to support links to notes with unicode characters in their names
     QRegularExpression re(
-            "[^\\d\\w]", QRegularExpression::CaseInsensitiveOption);
+            "[^\\d\\w]", QRegularExpression::CaseInsensitiveOption |
+                    QRegularExpression::UseUnicodePropertiesOption);
     text.replace(re, "_");
     return text;
 }
