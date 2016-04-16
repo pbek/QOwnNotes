@@ -29,7 +29,7 @@
      <item row="1" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -1155,6 +1155,17 @@
                 </item>
                 <item>
                  <property name="text">
+                  <string notr="true">Deutsch</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>German</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">de</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
                   <string notr="true">English</string>
                  </property>
                  <property name="toolTip">
@@ -1166,13 +1177,13 @@
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Deutsch</string>
+                  <string notr="true">Español</string>
                  </property>
                  <property name="toolTip">
-                  <string>German</string>
+                  <string>Spanish</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">de</string>
+                  <string notr="true">es</string>
                  </property>
                 </item>
                 <item>
@@ -1188,46 +1199,24 @@
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Polski</string>
+                  <string notr="true">Magyar</string>
                  </property>
                  <property name="toolTip">
-                  <string>Polish</string>
+                  <string>Hungarian</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">pl</string>
+                  <string notr="true">hu</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">中文</string>
+                  <string notr="true">日本語</string>
                  </property>
                  <property name="toolTip">
-                  <string>Chinese</string>
+                  <string>Japanese</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">zh</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string notr="true">русский</string>
-                 </property>
-                 <property name="toolTip">
-                  <string>Russian</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true">ru</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string notr="true">Português</string>
-                 </property>
-                 <property name="toolTip">
-                  <string>Portuguese</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string notr="true">pt</string>
+                  <string notr="true">ja</string>
                  </property>
                 </item>
                 <item>
@@ -1243,24 +1232,46 @@
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Magyar</string>
+                  <string notr="true">Polski</string>
                  </property>
                  <property name="toolTip">
-                  <string>Hungarian</string>
+                  <string>Polish</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">hu</string>
+                  <string notr="true">pl</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Español</string>
+                  <string notr="true">Português</string>
                  </property>
                  <property name="toolTip">
-                  <string>Spanish</string>
+                  <string>Portuguese</string>
                  </property>
                  <property name="whatsThis">
-                  <string notr="true">es</string>
+                  <string notr="true">pt</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string notr="true">русский</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Russian</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">ru</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string notr="true">中文</string>
+                 </property>
+                 <property name="toolTip">
+                  <string>Chinese</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string notr="true">zh</string>
                  </property>
                 </item>
                </widget>

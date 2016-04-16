@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 1.4.3
+- added **Japanese translation** (a big thank you to piyo!)
 - opening notes in the default editor was fixed for Windows
   (for [Issue #142](https://github.com/pbek/QOwnNotes/issues/142))
 - opening notes with multi-byte file names in the an custom external editor was 
@@ -9,6 +10,8 @@
 - SSL warnings on OS X are not logged to the console any more
 - support for linking notes with unicode characters in their names was added
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
+- added more Russian, German, Hungarian and Dutch translation (thank you 
+  Valerian, calis2002 and Fabijenna)
 
 ## 1.4.2
 - some improvements were made to the detection whether the <kbd>Ctrl</kbd> 

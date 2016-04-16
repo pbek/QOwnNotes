@@ -48,4 +48,5 @@ package() {
     install -D -m 0644 languages/QOwnNotes_es.qm $pkgdir/usr/share/QOwnNotes/languages/QOwnNotes_es.qm
     install -D -m 0644 languages/QOwnNotes_nl.qm $pkgdir/usr/share/QOwnNotes/languages/QOwnNotes_nl.qm
     install -D -m 0644 languages/QOwnNotes_hu.qm $pkgdir/usr/share/QOwnNotes/languages/QOwnNotes_hu.qm
+    install -D -m 0644 languages/QOwnNotes_js.qm $pkgdir/usr/share/QOwnNotes/languages/QOwnNotes_js.qm
 }
