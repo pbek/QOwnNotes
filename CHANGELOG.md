@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.04.12
-- switched versioning to a more *rolling style*, so it doesn't gets confused 
-  with semantic versioning
+- switched QOwnNotes release versioning to a more *rolling release style*, so
+  it doesn't get confused with semantic versioning
     - `<year of release>.<month of release>.<release number in the month>` 
 - added support for full width numbers in note names when linking notes with 
   unicode characters
