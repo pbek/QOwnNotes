@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.04.12
-- switched QOwnNotes release versioning to a more *rolling release style*, so
-  it doesn't get confused with semantic versioning
+- **switched QOwnNotes release versioning** to a more *rolling release 
+  style*, so it doesn't get confused with semantic versioning
     - `<year of release>.<month of release>.<release number in the month>` 
 - added support for full width numbers in note names when linking notes with 
   unicode characters
@@ -14,6 +14,8 @@
 - the main toolbar is now split into multiple toolbars that you can rearrange
   or hide by themselves
   (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
+    - keep in mind that you can also drag toolbars to the left, right or 
+      bottom of the window
 - added more Japanese translation (thank you piyo)
 
 ## 1.4.3
