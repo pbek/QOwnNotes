@@ -2715,6 +2715,13 @@ void MainWindow::openLocalUrl(QUrl url) {
         fileName = Utils::Misc::removeIfEndsWith(
                 QUrl::fromAce(fileName.toLatin1()), ".com");
 
+        // if it seem we have unicode characters in our filename lets use
+        // wildcards instead of numbers, because full width numbers get somehow
+        // translated to normal numbers by the QTextEdit
+        if (fileName != url.host()) {
+            fileName.replace(QRegularExpression("\\d"), "?");
+        }
+
         // this makes it possible to search for file names containing spaces
         // instead of spaces a "-" has to be used in the note link
         // example: note://my-note-with-spaces-in-the-name

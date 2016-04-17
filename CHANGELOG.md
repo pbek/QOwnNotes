@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.04.12
+- switched versioning to a more *rolling style*, so it doesn't gets confused 
+  with semantic versioning
+    - `<year of release>.<month of release>.<release number in the month>` 
+- added support for full width numbers in note names when linking notes with 
+  unicode characters
+  (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
+
 ## 1.4.3
 - added **Japanese translation** (a big thank you to piyo!)
 - opening notes in the default editor was fixed for Windows
