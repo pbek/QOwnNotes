@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.04.13
+- added better support for full width numbers in note names when linking notes 
+  with unicode characters
+  (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
+
 ## 16.04.12
 - **switched QOwnNotes release versioning** to a more *rolling release 
   style*, so it doesn't get confused with semantic versioning

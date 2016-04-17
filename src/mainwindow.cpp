@@ -2777,11 +2777,20 @@ void MainWindow::openLocalUrl(QUrl url) {
         fileName = Utils::Misc::removeIfEndsWith(
                 QUrl::fromAce(fileName.toLatin1()), ".com");
 
-        // if it seem we have unicode characters in our filename lets use
-        // wildcards instead of numbers, because full width numbers get somehow
+        // if it seem we have unicode characters in our filename let us use
+        // wildcards for each number, because full width numbers get somehow
         // translated to normal numbers by the QTextEdit
         if (fileName != url.host()) {
-            fileName.replace(QRegularExpression("\\d"), "?");
+            fileName.replace("1", "[1１]")
+                    .replace("2", "[2２]")
+                    .replace("3", "[3３]")
+                    .replace("4", "[4４]")
+                    .replace("5", "[5５]")
+                    .replace("6", "[6６]")
+                    .replace("7", "[7７]")
+                    .replace("8", "[8８]")
+                    .replace("9", "[9９]")
+                    .replace("0", "[0０]");
         }
 
         // this makes it possible to search for file names containing spaces
