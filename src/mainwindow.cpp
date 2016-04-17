@@ -3933,6 +3933,8 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
  */
 void MainWindow::reloadTagList()
 {
+    qDebug() << __func__ << " - 'reloadTagList'";
+
     int activeTagId = Tag::activeTagId();
     ui->tagListWidget->clear();
 
@@ -3957,11 +3959,12 @@ void MainWindow::reloadTagList()
     QList<Tag> tagList = Tag::fetchAll();
     Q_FOREACH(Tag tag, tagList) {
             QString name = tag.getName();
+            int linkCount = tag.countLinkedNoteFileNames();
             QString text = QString("%1 (%2)")
-                    .arg(name, QString::number(tag.countLinkedNoteFileNames()));
+                    .arg(name, QString::number(linkCount));
             QListWidgetItem *item = new QListWidgetItem(text);
-            item->setToolTip(tr("show all notes tagged with '%1'")
-                                     .arg(name));
+            item->setToolTip(tr("show all notes tagged with '%1' (%2)")
+                                     .arg(name, QString::number(linkCount)));
             item->setIcon(QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
             item->setData(Qt::UserRole, tag.getId());
@@ -3974,6 +3977,9 @@ void MainWindow::reloadTagList()
                 Q_UNUSED(blocker);
 
                 ui->tagListWidget->setCurrentItem(item);
+
+                // set a name without link count so we can edit the name
+                item->setText(tag.getName());
             }
         }
 }
@@ -4226,11 +4232,15 @@ void MainWindow::on_tagListWidget_currentItemChanged(
     Tag tag = Tag::fetch(tagId);
     tag.setAsActive();
 
-    if (tagId > 0) {
+    if (tag.isFetched()) {
         const QSignalBlocker blocker(ui->searchLineEdit);
         Q_UNUSED(blocker);
 
         ui->searchLineEdit->clear();
+
+        // in the future we maybe have to set the name of the current and
+        // previous items here
+//        current->setText(tag.getName());
     }
 
     filterNotes();
