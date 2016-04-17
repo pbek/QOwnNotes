@@ -519,7 +519,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionEdit_encrypted_note"/>
     <addaction name="actionDecrypt_note"/>
     <addaction name="separator"/>
-    <addaction name="actionToggle_markdown_preview"/>
     <addaction name="separator"/>
     <addaction name="actionSelect_all_notes"/>
    </widget>
@@ -547,19 +546,21 @@ p, li { white-space: pre-wrap; }
     </widget>
     <addaction name="actionShow_toolbar"/>
     <addaction name="separator"/>
+    <addaction name="actionToggle_tag_pane"/>
+    <addaction name="actionToggle_markdown_preview"/>
+    <addaction name="actionToggle_note_edit_pane"/>
+    <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
     <addaction name="separator"/>
     <addaction name="action_Increase_note_text_size"/>
     <addaction name="action_Decrease_note_text_size"/>
-    <addaction name="action_Reset_note_text_size"/>
    </widget>
    <widget class="QMenu" name="menuTag">
     <property name="title">
      <string>Tag</string>
     </property>
     <addaction name="action_new_tag"/>
-    <addaction name="actionToggle_tag_pane"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
@@ -582,7 +583,9 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Find_note"/>
    <addaction name="action_Remove_note"/>
    <addaction name="action_Open_note_in_external_editor"/>
+   <addaction name="separator"/>
    <addaction name="actionToggle_tag_pane"/>
+   <addaction name="actionToggle_note_edit_pane"/>
    <addaction name="actionToggle_markdown_preview"/>
    <addaction name="separator"/>
    <addaction name="action_Back_in_note_history"/>
@@ -610,6 +613,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Increase_note_text_size"/>
    <addaction name="action_Decrease_note_text_size"/>
    <addaction name="action_Reset_note_text_size"/>
+   <addaction name="separator"/>
    <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -1254,7 +1258,22 @@ p, li { white-space: pre-wrap; }
     <string>Toggle markdown preview</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+E</string>
+    <string notr="true">Alt+Shift+M</string>
+   </property>
+  </action>
+  <action name="actionToggle_note_edit_pane">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle note edit pane</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+E</string>
    </property>
   </action>
  </widget>
@@ -1267,8 +1286,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

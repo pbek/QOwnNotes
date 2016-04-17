@@ -245,6 +245,8 @@ private slots:
 
     void noteViewSliderValueChanged(int value);
 
+    void on_actionToggle_note_edit_pane_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -406,4 +408,8 @@ private:
     void removeTagFromSelectedNotes(Tag tag);
 
     void setTagListWidgetName(QListWidgetItem *item);
+
+    void setupNoteEditPane();
+
+    bool isNoteEditPaneEnabled();
 };

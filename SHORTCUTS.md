@@ -7,7 +7,9 @@ Important Shortcuts
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
-- <kbd>Ctrl</kbd> + <kbd>E</kbd> toggles the markdown view mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
@@ -24,7 +26,6 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>Ctrl</kbd> + <kbd>,</kbd> opens the settings
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 
@@ -82,7 +83,9 @@ Important Shortcuts
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
-- <kbd>⌘</kbd> + <kbd>E</kbd> toggles markdown view mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>⌘</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
@@ -99,7 +102,6 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 

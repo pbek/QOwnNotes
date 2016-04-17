@@ -9,7 +9,8 @@
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
 - added a workaround to keep the note count in the tag name and still being 
   able to edit it without having to remove the note count from the name
-  (for [Issue #147](https://github.com/pbek/QOwnNotes/issues/147))
+- it is now possible to toggle the visibility of the note edit pane
+  (for [Issue #145](https://github.com/pbek/QOwnNotes/issues/145))
 - added more Japanese translation (thank you piyo)
 
 ## 1.4.3

@@ -214,6 +214,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the markdown view
     setupMarkdownView();
 
+    // setup the note edit pane
+    setupNoteEditPane();
+
     // restore the distraction free mode
     restoreDistractionFreeMode();
 
@@ -2508,7 +2511,15 @@ bool MainWindow::isTagsEnabled() {
  */
 bool MainWindow::isMarkdownViewEnabled() {
     QSettings settings;
-    return settings.value("markdownViewEnabled", false).toBool();
+    return settings.value("markdownViewEnabled", true).toBool();
+}
+
+/**
+ * Checks if the note edit pane is enabled
+ */
+bool MainWindow::isNoteEditPaneEnabled() {
+    QSettings settings;
+    return settings.value("noteEditPaneEnabled", true).toBool();
 }
 
 /**
@@ -4115,6 +4126,19 @@ void MainWindow::setupMarkdownView() {
 }
 
 /**
+ * Shows or hides everything for the note edit pane
+ */
+void MainWindow::setupNoteEditPane() {
+    bool paneEnabled = isNoteEditPaneEnabled();
+
+    ui->noteEditFrame->setVisible(paneEnabled);
+
+    const QSignalBlocker blocker(ui->actionToggle_note_edit_pane);
+    Q_UNUSED(blocker);
+    ui->actionToggle_note_edit_pane->setChecked(paneEnabled);
+}
+
+/**
  * Toggles the note panes
  */
 void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
@@ -4289,4 +4313,13 @@ void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1)
 
     // setup the markdown view
     setupMarkdownView();
+}
+
+void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1)
+{
+    QSettings settings;
+    settings.setValue("noteEditPaneEnabled", arg1);
+
+    // setup the note edit pane
+    setupNoteEditPane();
 }
