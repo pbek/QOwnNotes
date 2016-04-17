@@ -3983,6 +3983,10 @@ void MainWindow::reloadTagList()
  * Sets the name (and the tooltip) of a tag list widget item
  */
 void MainWindow::setTagListWidgetName(QListWidgetItem *item) {
+    if (item == NULL) {
+        return;
+    }
+
     int tagId = item->data(Qt::UserRole).toInt();
     Tag tag = Tag::fetch(tagId);
 
