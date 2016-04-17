@@ -11,6 +11,9 @@
   able to edit it without having to remove the note count from the name
 - it is now possible to toggle the visibility of the note edit pane
   (for [Issue #145](https://github.com/pbek/QOwnNotes/issues/145))
+- the main toolbar is now split into multiple toolbars that you can rearrange
+  or hide by themselves
+  (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
 - added more Japanese translation (thank you piyo)
 
 ## 1.4.3

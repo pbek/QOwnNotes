@@ -81,6 +81,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // set our signal mapper
     this->recentNoteFolderSignalMapper = new QSignalMapper(this);
 
+    // initialize the toolbars
+    initToolbars();
+
     readSettings();
 
     // set sorting
@@ -265,6 +268,46 @@ MainWindow::~MainWindow() {
  */
 
 /**
+ * Initializes the toolbars
+ */
+void MainWindow::initToolbars() {
+    _formattingToolbar = new QToolBar(tr("formatting toolbar"), this);
+    _formattingToolbar->addAction(ui->actionFormat_text_bold);
+    _formattingToolbar->addAction(ui->actionFormat_text_italic);
+    _formattingToolbar->addAction(ui->actionInset_code_block);
+    _formattingToolbar->setObjectName("formattingToolbar");
+    addToolBar(_formattingToolbar);
+
+    _insertingToolbar = new QToolBar(tr("inserting toolbar"), this);
+    _insertingToolbar->addAction(ui->actionInsert_Link_to_note);
+    _insertingToolbar->addAction(ui->actionInsert_image);
+    _insertingToolbar->addAction(ui->actionInsert_current_time);
+    _insertingToolbar->setObjectName("insertingToolbar");
+    addToolBar(_insertingToolbar);
+
+    _encryptionToolbar = new QToolBar(tr("encryption toolbar"), this);
+    _encryptionToolbar->addAction(ui->action_Encrypt_note);
+    _encryptionToolbar->addAction(ui->actionEdit_encrypted_note);
+    _encryptionToolbar->addAction(ui->actionDecrypt_note);
+    _encryptionToolbar->setObjectName("encryptionToolbar");
+    addToolBar(_encryptionToolbar);
+
+    _windowToolbar =
+            new QToolBar(tr("window toolbar"), this);
+    _windowToolbar->addAction(ui->actionToggle_tag_pane);
+    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
+    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
+    _windowToolbar->addSeparator();
+    _windowToolbar->addAction(
+            ui->actionToggle_distraction_free_mode);
+    _windowToolbar->addAction(ui->action_Increase_note_text_size);
+    _windowToolbar->addAction(ui->action_Decrease_note_text_size);
+    _windowToolbar->addAction(ui->action_Reset_note_text_size);
+    _windowToolbar->setObjectName("windowToolbar");
+    addToolBar(_windowToolbar);
+}
+
+/**
  * Restores the distraction free mode
  */
 void MainWindow::restoreDistractionFreeMode() {
@@ -422,8 +465,12 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // will not work any more
         ui->menuBar->setFixedHeight(0);
 
-        // hide the tool bar
+        // hide the toolbars
         ui->mainToolBar->hide();
+        _formattingToolbar->hide();
+        _insertingToolbar->hide();
+        _encryptionToolbar->hide();
+        _windowToolbar->hide();
 
         // hide the search line edit
         ui->searchLineEdit->hide();
@@ -1028,6 +1075,10 @@ void MainWindow::readSettingsFromSettingsDialog() {
     } else {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
+        _formattingToolbar->setIconSize(size);
+        _insertingToolbar->setIconSize(size);
+        _encryptionToolbar->setIconSize(size);
+        _windowToolbar->setIconSize(size);
     }
 
     // check if we want to view the note folder combo box
@@ -3545,11 +3596,15 @@ void MainWindow::resizeEvent(QResizeEvent* event)
 }
 
 /**
- * Toggles the visibility of the main toolbar
+ * Toggles the visibility of the toolbars
  */
 void MainWindow::on_actionShow_toolbar_triggered(bool checked)
 {
     ui->mainToolBar->setVisible(checked);
+    _formattingToolbar->setVisible(checked);
+    _insertingToolbar->setVisible(checked);
+    _encryptionToolbar->setVisible(checked);
+    _windowToolbar->setVisible(checked);
 }
 
 /**

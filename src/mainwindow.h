@@ -14,6 +14,7 @@
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+#include <QtWidgets/QToolBar>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -273,6 +274,10 @@ private:
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
     QPushButton *_leaveDistractionFreeModeButton;
+    QToolBar *_formattingToolbar;
+    QToolBar *_insertingToolbar;
+    QToolBar *_encryptionToolbar;
+    QToolBar *_windowToolbar;
 
     void setupMainSplitter();
 
@@ -412,4 +417,6 @@ private:
     void setupNoteEditPane();
 
     bool isNoteEditPaneEnabled();
+
+    void initToolbars();
 };
