@@ -404,4 +404,6 @@ private:
     void setupMarkdownView();
 
     void removeTagFromSelectedNotes(Tag tag);
+
+    void setTagListWidgetName(QListWidgetItem *item);
 };

@@ -3958,16 +3958,11 @@ void MainWindow::reloadTagList()
     // add all tags as item
     QList<Tag> tagList = Tag::fetchAll();
     Q_FOREACH(Tag tag, tagList) {
-            QString name = tag.getName();
-            int linkCount = tag.countLinkedNoteFileNames();
-            QString text = QString("%1 (%2)")
-                    .arg(name, QString::number(linkCount));
-            QListWidgetItem *item = new QListWidgetItem(text);
-            item->setToolTip(tr("show all notes tagged with '%1' (%2)")
-                                     .arg(name, QString::number(linkCount)));
+            QListWidgetItem *item = new QListWidgetItem();
+            item->setData(Qt::UserRole, tag.getId());
+            setTagListWidgetName(item);
             item->setIcon(QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
-            item->setData(Qt::UserRole, tag.getId());
             item->setFlags(item->flags() | Qt::ItemIsEditable);
             ui->tagListWidget->addItem(item);
 
@@ -3982,6 +3977,30 @@ void MainWindow::reloadTagList()
                 item->setText(tag.getName());
             }
         }
+}
+
+/**
+ * Sets the name (and the tooltip) of a tag list widget item
+ */
+void MainWindow::setTagListWidgetName(QListWidgetItem *item) {
+    int tagId = item->data(Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    int linkCount = tag.countLinkedNoteFileNames();
+
+    QString name = tag.getName();
+    QString text = name;
+    if (tagId != Tag::activeTagId()) {
+        text += QString(" (%1)").arg(linkCount);
+    }
+
+    item->setText(text);
+    item->setToolTip(tr("show all notes tagged with '%1' (%2)")
+                             .arg(name, QString::number(linkCount)));
 }
 
 /**
@@ -4222,8 +4241,6 @@ void MainWindow::on_action_new_tag_triggered()
 void MainWindow::on_tagListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous)
 {
-    Q_UNUSED(previous);
-
     if (current == NULL) {
         return;
     }
@@ -4237,13 +4254,17 @@ void MainWindow::on_tagListWidget_currentItemChanged(
         Q_UNUSED(blocker);
 
         ui->searchLineEdit->clear();
-
-        // in the future we maybe have to set the name of the current and
-        // previous items here
-//        current->setText(tag.getName());
     }
 
     filterNotes();
+
+    const QSignalBlocker blocker2(ui->tagListWidget);
+    Q_UNUSED(blocker2);
+
+    // this is a workaround so we can have the note counts in the tag
+    // name and edit it at the same time
+    setTagListWidgetName(current);
+    setTagListWidgetName(previous);
 }
 
 /**
