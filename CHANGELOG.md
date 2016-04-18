@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.04.14
+- you can now also delete tags, notes and tasks with the <kbd>Backspace</kbd>
+  key (for the OS X users) instead of only with the <kbd>Del</kbd> key
+
 ## 16.04.13
 - added better support for full width numbers in note names when linking notes 
   with unicode characters
@@ -10,7 +14,7 @@
   (for [Issue #148](https://github.com/pbek/QOwnNotes/issues/148))
 - you can now also **split** the note edit pane and note markdown preview 
   **vertically** instead of horizontally to gain more space on screens with 
-  lower vertical resolution
+  lower horizontal resolution
   (for [Issue #145](https://github.com/pbek/QOwnNotes/issues/145))
 - added more Portuguese and Japanese translation (thank you mlimacarlos and piyo)
 

@@ -1822,13 +1822,15 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                     (keyEvent->key() == Qt::Key_Tab)) {
                 focusNoteTextEdit();
                 return true;
-            } else if ((keyEvent->key() == Qt::Key_Delete)) {
+            } else if ((keyEvent->key() == Qt::Key_Delete) ||
+                       (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedNotes();
                 return true;
             }
             return false;
         } else if (obj == ui->tagListWidget) {
-            if ((keyEvent->key() == Qt::Key_Delete)) {
+            if ((keyEvent->key() == Qt::Key_Delete) ||
+                (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedTags();
                 return true;
             }

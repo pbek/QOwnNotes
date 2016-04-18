@@ -648,7 +648,8 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
             if (keyEvent->key() == Qt::Key_Tab) {
                 ui->descriptionEdit->setFocus();
                 return true;
-            } else if (keyEvent->key() == Qt::Key_Delete) {
+            } else if ((keyEvent->key() == Qt::Key_Delete) ||
+                       (keyEvent->key() == Qt::Key_Backspace)) {
                 on_removeButton_clicked();
                 return true;
             }
