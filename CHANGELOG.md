@@ -4,6 +4,7 @@
 - added better support for full width numbers in note names when linking notes 
   with unicode characters
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
+- the in-text search in the todo summary edit and debug text-edit were fixed
 
 ## 16.04.12
 - **switched QOwnNotes release versioning** to a more *rolling release 
