@@ -8,6 +8,10 @@
 - collapsing was disabled for all panels in the main window, so they can't be 
   hidden by accident
   (for [Issue #148](https://github.com/pbek/QOwnNotes/issues/148))
+- you can now also **split** the note edit pane and note markdown preview 
+  **vertically** instead of horizontally to gain more space on screens with 
+  lower vertical resolution
+  (for [Issue #145](https://github.com/pbek/QOwnNotes/issues/145))
 - added more Portuguese and Japanese translation (thank you mlimacarlos and piyo)
 
 ## 16.04.12

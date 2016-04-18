@@ -54,7 +54,7 @@
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">#tagFrame {margin-right: 3px;}</string>
+         <string notr="true"/>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -121,7 +121,7 @@
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">#notesListFrame {margin: 0;}</string>
+         <string notr="true"/>
         </property>
         <layout class="QVBoxLayout" name="notesListLayout">
          <property name="spacing">
@@ -204,7 +204,7 @@
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">#noteEditFrame {margin: 0 0 0 3px;}</string>
+         <string notr="true"/>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -372,7 +372,7 @@ p, li { white-space: pre-wrap; }
          </sizepolicy>
         </property>
         <property name="styleSheet">
-         <string notr="true">#noteViewFrame {margin: 0 0 0 3px;}</string>
+         <string notr="true"/>
         </property>
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
@@ -547,8 +547,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_toolbar"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_tag_pane"/>
-    <addaction name="actionToggle_markdown_preview"/>
     <addaction name="actionToggle_note_edit_pane"/>
+    <addaction name="actionToggle_markdown_preview"/>
+    <addaction name="actionUse_vertical_preview_layout"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
@@ -1254,6 +1255,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+E</string>
+   </property>
+  </action>
+  <action name="actionUse_vertical_preview_layout">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use &amp;vertical preview layout</string>
    </property>
   </action>
  </widget>

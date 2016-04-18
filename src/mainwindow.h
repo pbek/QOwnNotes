@@ -248,6 +248,8 @@ private slots:
 
     void on_actionToggle_note_edit_pane_toggled(bool arg1);
 
+    void on_actionUse_vertical_preview_layout_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -278,6 +280,10 @@ private:
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
     QToolBar *_windowToolbar;
+    QFrame *_verticalNoteFrame;
+    QSplitter *_verticalNoteFrameSplitter;
+
+    void initMainSplitter();
 
     void setupMainSplitter();
 
@@ -419,4 +425,6 @@ private:
     bool isNoteEditPaneEnabled();
 
     void initToolbars();
+
+    bool isVerticalPreviewModeEnabled();
 };

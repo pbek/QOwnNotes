@@ -94,7 +94,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionShow_system_tray->setChecked(showSystemTray);
 
     createSystemTrayIcon();
-    setupMainSplitter();
+    initMainSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
 
@@ -805,19 +805,80 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     return result;
 }
 
-void MainWindow::setupMainSplitter() {
-    mainSplitter = new QSplitter;
+/**
+ * Does the initialization for the main splitter
+ */
+void MainWindow::initMainSplitter() {
+    mainSplitter = new QSplitter();
     mainSplitter->setHandleWidth(0);
+
+    ui->tagFrame->setStyleSheet("#tagFrame {margin-right: 3px;}");
+    ui->notesListFrame->setStyleSheet("#notesListFrame {margin: 0;}");
+
+    _verticalNoteFrame = new QFrame();
+    _verticalNoteFrame->setObjectName("verticalNoteFrame");
+    _verticalNoteFrame->setStyleSheet(
+            "#verticalNoteFrame {margin: 0 0 0 3px;}");
+    _verticalNoteFrame->setFrameShape(QFrame::NoFrame);
+    _verticalNoteFrame->setVisible(false);
+
+    _verticalNoteFrameSplitter = new QSplitter(Qt::Vertical);
+    _verticalNoteFrameSplitter->setHandleWidth(0);
+
+    QVBoxLayout *layout = new QVBoxLayout();
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->addWidget(_verticalNoteFrameSplitter);
+    _verticalNoteFrame->setLayout(layout);
 
     mainSplitter->addWidget(ui->tagFrame);
     mainSplitter->addWidget(ui->notesListFrame);
-    mainSplitter->addWidget(ui->noteEditFrame);
-    mainSplitter->addWidget(ui->noteViewFrame);
+    mainSplitter->addWidget(_verticalNoteFrame);
 
-    // restore splitter sizes
+    // restore main splitter state
     QSettings settings;
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
     mainSplitter->restoreState(state);
+
+    ui->centralWidget->layout()->addWidget(this->mainSplitter);
+
+    // do the further setup for the main splitter and all the panes
+    setupMainSplitter();
+
+    // setup the checkbox
+    const QSignalBlocker blocker(ui->actionUse_vertical_preview_layout);
+    Q_UNUSED(blocker);
+    ui->actionUse_vertical_preview_layout
+            ->setChecked(isVerticalPreviewModeEnabled());
+}
+
+/**
+ * Does the further setup for the main splitter and all the panes
+ */
+void MainWindow::setupMainSplitter() {
+    if ( isVerticalPreviewModeEnabled() ) {
+        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 3px 0;}");
+        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0;}");
+
+        _verticalNoteFrameSplitter->addWidget(ui->noteEditFrame);
+        _verticalNoteFrameSplitter->addWidget(ui->noteViewFrame);
+
+        // disable collapsing for all widgets in the splitter, users had
+        // problems with collapsed panels
+        for (int i = 0; i < _verticalNoteFrameSplitter->count(); i++) {
+            _verticalNoteFrameSplitter->setCollapsible(i, false);
+        }
+
+        // restore the vertical note frame splitter state
+        QSettings settings;
+        _verticalNoteFrameSplitter->restoreState(settings.value(
+                "verticalNoteFrameSplitterState").toByteArray());
+    } else {
+        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 0 3px;}");
+        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0 0 0 3px;}");
+
+        mainSplitter->addWidget(ui->noteEditFrame);
+        mainSplitter->addWidget(ui->noteViewFrame);
+    }
 
     // disable collapsing for all widgets in the splitter, users had problems
     // with collapsed panels
@@ -825,7 +886,9 @@ void MainWindow::setupMainSplitter() {
         mainSplitter->setCollapsible(i, false);
     }
 
-    ui->centralWidget->layout()->addWidget(this->mainSplitter);
+    // set the visibillity of the vertical note frame
+    _verticalNoteFrame->setVisible(isVerticalPreviewModeEnabled() &&
+                (isNoteEditPaneEnabled() || isMarkdownViewEnabled()));
 }
 
 void MainWindow::createSystemTrayIcon() {
@@ -1693,7 +1756,9 @@ void MainWindow::storeSettings() {
     if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
         settings.setValue("MainWindow/windowState", saveState());
-        settings.setValue("mainSplitterSizes", this->mainSplitter->saveState());
+        settings.setValue("mainSplitterSizes", mainSplitter->saveState());
+        settings.setValue("verticalNoteFrameSplitterState",
+                          _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
     }
@@ -2553,6 +2618,14 @@ void MainWindow::filterNotes(bool searchForText) {
         // let's highlight the text from the search line edit
         searchForSearchLineTextInNoteTextEdit();
     }
+}
+
+/**
+ * Checks if the vertical preview mode is enabled
+ */
+bool MainWindow::isVerticalPreviewModeEnabled() {
+    QSettings settings;
+    return settings.value("verticalPreviewModeEnabled", false).toBool();
 }
 
 /**
@@ -4211,8 +4284,7 @@ void MainWindow::setupNoteEditPane() {
 /**
  * Toggles the note panes
  */
-void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
-{
+void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
     QSettings settings;
     settings.setValue("tagsEnabled", arg1);
     setupTags();
@@ -4221,8 +4293,7 @@ void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1)
 /**
  * Hides the note tag add button and shows the text edit
  */
-void MainWindow::on_newNoteTagButton_clicked()
-{
+void MainWindow::on_newNoteTagButton_clicked() {
     ui->newNoteTagLineEdit->setVisible(true);
     ui->newNoteTagLineEdit->setFocus();
     ui->newNoteTagLineEdit->selectAll();
@@ -4233,8 +4304,7 @@ void MainWindow::on_newNoteTagButton_clicked()
  * Links a note to the tag entered after pressing return
  * in the note tag line edit
  */
-void MainWindow::on_newNoteTagLineEdit_returnPressed()
-{
+void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     QString text = ui->newNoteTagLineEdit->text();
 
     // create a new tag if it doesn't exist
@@ -4261,8 +4331,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed()
 /**
  * Hides the note tag line edit after editing
  */
-void MainWindow::on_newNoteTagLineEdit_editingFinished()
-{
+void MainWindow::on_newNoteTagLineEdit_editingFinished() {
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 }
@@ -4270,8 +4339,7 @@ void MainWindow::on_newNoteTagLineEdit_editingFinished()
 /**
  * Reloads the note tag buttons for the current note
  */
-void MainWindow::reloadCurrentNoteTags()
-{
+void MainWindow::reloadCurrentNoteTags() {
     // remove all remove-tag buttons
     QLayoutItem *child;
     while ((child = ui->noteTagButtonFrame->layout()->takeAt(0)) != 0) {
@@ -4303,8 +4371,7 @@ void MainWindow::reloadCurrentNoteTags()
 /**
  * Removes a note tag link
  */
-void MainWindow::removeNoteTagClicked()
-{
+void MainWindow::removeNoteTagClicked() {
     QString objectName = sender()->objectName();
     if (objectName.startsWith("removeNoteTag")) {
         int tagId = objectName.remove("removeNoteTag").toInt();
@@ -4324,8 +4391,7 @@ void MainWindow::removeNoteTagClicked()
 /**
  * Allows the user to add a tag to the current note
  */
-void MainWindow::on_action_new_tag_triggered()
-{
+void MainWindow::on_action_new_tag_triggered() {
     if (!ui->actionToggle_tag_pane->isChecked()) {
         ui->actionToggle_tag_pane->setChecked(true);
     }
@@ -4337,8 +4403,7 @@ void MainWindow::on_action_new_tag_triggered()
  * Sets a new active tag if an other tag was selected
  */
 void MainWindow::on_tagListWidget_currentItemChanged(
-        QListWidgetItem *current, QListWidgetItem *previous)
-{
+        QListWidgetItem *current, QListWidgetItem *previous) {
     if (current == NULL) {
         return;
     }
@@ -4368,28 +4433,39 @@ void MainWindow::on_tagListWidget_currentItemChanged(
 /**
  * Reloads the current note folder
  */
-void MainWindow::on_action_Reload_note_folder_triggered()
-{
+void MainWindow::on_action_Reload_note_folder_triggered() {
     buildNotesIndex();
     loadNoteDirectoryList();
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
 }
 
-void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1)
-{
+void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
     QSettings settings;
     settings.setValue("markdownViewEnabled", arg1);
 
     // setup the markdown view
     setupMarkdownView();
+
+    // setup the main splitter again for the vertical note pane visibility
+    setupMainSplitter();
 }
 
-void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1)
-{
+void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
     QSettings settings;
     settings.setValue("noteEditPaneEnabled", arg1);
 
     // setup the note edit pane
     setupNoteEditPane();
+
+    // setup the main splitter again for the vertical note pane visibility
+    setupMainSplitter();
+}
+
+void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
+    QSettings settings;
+    settings.setValue("verticalPreviewModeEnabled", arg1);
+
+    // setup the main splitter again
+    setupMainSplitter();
 }
