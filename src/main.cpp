@@ -9,34 +9,43 @@
 #include "version.h"
 #include "release.h"
 
+/**
+ * Macro for loading the translations
+ */
 #define LOAD_TRANSLATIONS(app) \
-qtTranslator.load("qt_" + QLocale::system().name(), \
-QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
-app.installTranslator(&qtTranslator); \
-QString appPath = QCoreApplication::applicationDirPath(); \
-translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale); \
-app.installTranslator(&translator1); \
-translator2.load(appPath + "/../languages/QOwnNotes_" + locale); \
-app.installTranslator(&translator2); \
-translator3.load(appPath + "/languages/QOwnNotes_" + locale); \
-app.installTranslator(&translator3); \
-translator4.load(appPath + "/QOwnNotes_" + locale); \
-app.installTranslator(&translator4); \
-translator5.load("../src/languages/QOwnNotes_" + locale); \
-app.installTranslator(&translator5); \
-translatorLocal.load("QOwnNotes_" + locale); \
-app.installTranslator(&translatorLocal);
+    qtTranslator.load("qt_" + QLocale::system().name(), \
+    QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
+    app.installTranslator(&qtTranslator); \
+    QString appPath = QCoreApplication::applicationDirPath(); \
+    translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator1); \
+    translator2.load(appPath + "/../languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator2); \
+    translator3.load(appPath + "/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator3); \
+    translator4.load(appPath + "/QOwnNotes_" + locale); \
+    app.installTranslator(&translator4); \
+    translator5.load("../src/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translator5); \
+    translatorLocal.load("QOwnNotes_" + locale); \
+    app.installTranslator(&translatorLocal);
 
+/**
+ * Macro for loading the release translations
+ */
 #define LOAD_RELEASE_TRANSLATIONS(app) \
-translatorRelease.load( \
-"/usr/share/QOwnNotes/languages/QOwnNotes_" + locale); \
-app.installTranslator(&translatorRelease);
+    translatorRelease.load( \
+    "/usr/share/QOwnNotes/languages/QOwnNotes_" + locale); \
+    app.installTranslator(&translatorRelease);
 
+/**
+ * Macro for loading the translations on OS X
+ */
 #define LOAD_MAC_TRANSLATIONS(app) \
-translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale); \
-app.installTranslator(&translatorOSX); \
-translatorOSX2.load("../Resources/QOwnNotes_" + locale); \
-app.installTranslator(&translatorOSX2); \
+    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale); \
+    app.installTranslator(&translatorOSX); \
+    translatorOSX2.load("../Resources/QOwnNotes_" + locale); \
+    app.installTranslator(&translatorOSX2);
 
 
 /**
