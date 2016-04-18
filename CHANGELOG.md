@@ -7,6 +7,7 @@
 - the in-text search in the todo summary edit and debug text-edit were fixed
 - collapsing was disabled for all panels in the main window, so they can't be 
   hidden by accident
+  (for [Issue #148](https://github.com/pbek/QOwnNotes/issues/148))
 
 ## 16.04.12
 - **switched QOwnNotes release versioning** to a more *rolling release 
