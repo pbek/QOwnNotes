@@ -3,6 +3,7 @@
 ## 16.04.14
 - you can now also delete tags, notes and tasks with the <kbd>Backspace</kbd>
   key (for the OS X users) instead of only with the <kbd>Del</kbd> key
+- added more Russian and Japanese translation (thank you Valerian and piyo)
 
 ## 16.04.13
 - added better support for full width numbers in note names when linking notes 
