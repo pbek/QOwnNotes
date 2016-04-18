@@ -116,6 +116,8 @@ set(SOURCE_FILES
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp
     libraries/versionnumber/versionnumber.h
+    libraries/singleapplication/singleapplication.h
+    libraries/singleapplication/singleapplication.cpp
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp

@@ -5,108 +5,46 @@
 #include <QSettings>
 #include <QTranslator>
 #include <services/metricsservice.h>
+#include "libraries/singleapplication/singleapplication.h"
 #include "version.h"
 #include "release.h"
 
+#define LOAD_TRANSLATIONS(app) \
+qtTranslator.load("qt_" + QLocale::system().name(), \
+QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
+app.installTranslator(&qtTranslator); \
+QString appPath = QCoreApplication::applicationDirPath(); \
+translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale); \
+app.installTranslator(&translator1); \
+translator2.load(appPath + "/../languages/QOwnNotes_" + locale); \
+app.installTranslator(&translator2); \
+translator3.load(appPath + "/languages/QOwnNotes_" + locale); \
+app.installTranslator(&translator3); \
+translator4.load(appPath + "/QOwnNotes_" + locale); \
+app.installTranslator(&translator4); \
+translator5.load("../src/languages/QOwnNotes_" + locale); \
+app.installTranslator(&translator5); \
+translatorLocal.load("QOwnNotes_" + locale); \
+app.installTranslator(&translatorLocal);
 
-int main(int argc, char *argv[])
-{
-    // don't log SSL warnings in releases on OS X
-#if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
-    qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
-#endif
+#define LOAD_RELEASE_TRANSLATIONS(app) \
+translatorRelease.load( \
+"/usr/share/QOwnNotes/languages/QOwnNotes_" + locale); \
+app.installTranslator(&translatorRelease);
 
-    // fixing some troubles in Windows 8.1
-#ifdef Q_OS_WIN32
-    QCoreApplication::addLibraryPath("./");
-#endif
+#define LOAD_MAC_TRANSLATIONS(app) \
+translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale); \
+app.installTranslator(&translatorOSX); \
+translatorOSX2.load("../Resources/QOwnNotes_" + locale); \
+app.installTranslator(&translatorOSX2); \
 
-    QApplication app(argc, argv);
-    QString appNameAdd = "";
 
-#ifdef QT_DEBUG
-    appNameAdd = "Debug";
-#endif
-
-    QCoreApplication::setOrganizationDomain("PBE");
-    QCoreApplication::setOrganizationName("PBE");
-    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
-
-    QString appVersion = QString(VERSION);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    appVersion += " " + QSysInfo::prettyProductName();
-
-    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
-        appVersion += " " + QSysInfo::currentCpuArchitecture();
-    }
-#else
-    appVersion += " Qt " + QString(QT_VERSION_STR);
-#endif
-
-    appVersion += " " + QString(RELEASE);
-
-#ifdef QT_DEBUG
-    appVersion += " Debug";
-#endif
-
-    QCoreApplication::setApplicationVersion(appVersion);
-
-    QTranslator qtTranslator;
-    qtTranslator.load("qt_" + QLocale::system().name(),
-                      QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    app.installTranslator(&qtTranslator);
-
+/**
+ * Does the miscellaneous startup
+ * If false is returned the app is supposed to quit
+ */
+bool mainStartupMisc() {
     QSettings settings;
-    QString locale = settings.value("interfaceLanguage").toString();
-
-    if (locale.isEmpty()) {
-        locale = QLocale::system().name().section('_', 0, 0);
-    }
-    qDebug() << __func__ << " - 'locale': " << locale;
-
-#ifndef QT_DEBUG
-    QTranslator translatorRelease;
-    translatorRelease.load(
-        "/usr/share/QOwnNotes/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translatorRelease);
-#endif
-
-    QString appPath = QCoreApplication::applicationDirPath();
-
-    QTranslator translator1;
-    translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator1);
-
-    QTranslator translator2;
-    translator2.load(appPath + "/../languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator2);
-
-    QTranslator translator3;
-    translator3.load(appPath + "/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator3);
-
-    QTranslator translator4;
-    translator4.load(appPath + "/QOwnNotes_" + locale);
-    app.installTranslator(&translator4);
-
-    QTranslator translator5;
-    translator5.load("../src/languages/QOwnNotes_" + locale);
-    app.installTranslator(&translator5);
-
-    QTranslator translatorLocal;
-    translatorLocal.load("QOwnNotes_" + locale);
-    app.installTranslator(&translatorLocal);
-
-#ifdef Q_OS_MAC
-    QTranslator translatorOSX;
-    translatorOSX.load(appPath + "/../Resources/QOwnNotes_" + locale);
-    app.installTranslator(&translatorOSX);
-
-    QTranslator translatorOSX2;
-    translatorOSX2.load("../Resources/QOwnNotes_" + locale);
-    app.installTranslator(&translatorOSX2);
-#endif
 
     if (QIcon::themeName() == "") {
         QIcon::setThemeName("breeze-qownnotes");
@@ -137,12 +75,133 @@ int main(int argc, char *argv[])
         WelcomeDialog welcomeDialog;
         // exit QOwnNotes if the welcome dialog was canceled
         if (welcomeDialog.exec() != QDialog::Accepted) {
-            return 0;
+            return false;
         }
     }
 
-    MainWindow w;
-    w.show();
+    return true;
+}
 
-    return app.exec();
+int main(int argc, char *argv[]) {
+    // don't log SSL warnings in releases on OS X
+#if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
+    qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
+#endif
+
+    // fixing some troubles in Windows 8.1
+#ifdef Q_OS_WIN32
+    QCoreApplication::addLibraryPath("./");
+#endif
+
+    QString appNameAdd = "";
+
+#ifdef QT_DEBUG
+    appNameAdd = "Debug";
+#endif
+
+    QCoreApplication::setOrganizationDomain("PBE");
+    QCoreApplication::setOrganizationName("PBE");
+    QCoreApplication::setApplicationName("QOwnNotes" + appNameAdd);
+
+    QString appVersion = QString(VERSION);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    appVersion += " " + QSysInfo::prettyProductName();
+
+    if (!appVersion.contains(QSysInfo::currentCpuArchitecture())) {
+        appVersion += " " + QSysInfo::currentCpuArchitecture();
+    }
+#else
+    appVersion += " Qt " + QString(QT_VERSION_STR);
+#endif
+
+    appVersion += " " + QString(RELEASE);
+
+#ifdef QT_DEBUG
+    appVersion += " Debug";
+#endif
+
+    QCoreApplication::setApplicationVersion(appVersion);
+
+    QSettings settings;
+    QString locale = settings.value("interfaceLanguage").toString();
+
+    if (locale.isEmpty()) {
+        locale = QLocale::system().name().section('_', 0, 0);
+    }
+    qDebug() << __func__ << " - 'locale': " << locale;
+
+#ifndef QT_DEBUG
+    QTranslator translatorRelease;
+#endif
+
+#ifdef Q_OS_MAC
+    QTranslator translatorOSX;
+    QTranslator translatorOSX2;
+#endif
+
+    QTranslator qtTranslator;
+    QTranslator translator1;
+    QTranslator translator2;
+    QTranslator translator3;
+    QTranslator translator4;
+    QTranslator translator5;
+    QTranslator translatorLocal;
+
+    bool allowOnlyOneAppInstance = settings.value(
+            "allowOnlyOneAppInstance", false).toBool();
+
+    // if only one app instance is allowed use SingleApplication
+    if (allowOnlyOneAppInstance) {
+        SingleApplication app(argc, argv);
+#ifndef QT_DEBUG
+        LOAD_RELEASE_TRANSLATIONS(app)
+#endif
+
+        LOAD_TRANSLATIONS(app)
+
+#ifdef Q_OS_MAC
+        LOAD_MAC_TRANSLATIONS(app)
+#endif
+
+        bool result = mainStartupMisc();
+        if (!result) {
+            return 0;
+        }
+
+        MainWindow w;
+        w.show();
+
+        // raise the main window if app was started a 2nd time in single
+        // application mode
+        QObject::connect(&app, &SingleApplication::showUp, [&] {
+            w.show();
+            w.raise();
+            w.activateWindow();
+        });
+
+        return app.exec();
+    } else {
+        QApplication app(argc, argv);
+
+#ifndef QT_DEBUG
+        LOAD_RELEASE_TRANSLATIONS(app)
+#endif
+
+        LOAD_TRANSLATIONS(app)
+
+#ifdef Q_OS_MAC
+        LOAD_MAC_TRANSLATIONS(app)
+#endif
+
+        bool result = mainStartupMisc();
+        if (!result) {
+            return 0;
+        }
+
+        MainWindow w;
+        w.show();
+
+        return app.exec();
+    }
 }
