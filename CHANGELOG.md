@@ -5,6 +5,8 @@
   with unicode characters
   (for [Issue #144](https://github.com/pbek/QOwnNotes/issues/144))
 - the in-text search in the todo summary edit and debug text-edit were fixed
+- collapsing was disabled for all panels in the main window, so they can't be 
+  hidden by accident
 
 ## 16.04.12
 - **switched QOwnNotes release versioning** to a more *rolling release 

@@ -806,20 +806,26 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 }
 
 void MainWindow::setupMainSplitter() {
-    this->mainSplitter = new QSplitter;
+    mainSplitter = new QSplitter;
     mainSplitter->setHandleWidth(0);
 
-    this->mainSplitter->addWidget(ui->tagFrame);
-    this->mainSplitter->addWidget(ui->notesListFrame);
-    this->mainSplitter->addWidget(ui->noteEditFrame);
-    this->mainSplitter->addWidget(ui->noteViewFrame);
+    mainSplitter->addWidget(ui->tagFrame);
+    mainSplitter->addWidget(ui->notesListFrame);
+    mainSplitter->addWidget(ui->noteEditFrame);
+    mainSplitter->addWidget(ui->noteViewFrame);
 
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-    this->mainSplitter->restoreState(state);
+    mainSplitter->restoreState(state);
 
-    this->ui->centralWidget->layout()->addWidget(this->mainSplitter);
+    // disable collapsing for all widgets in the splitter, users had problems
+    // with collapsed panels
+    for (int i = 0; i < mainSplitter->count(); i++) {
+        mainSplitter->setCollapsible(i, false);
+    }
+
+    ui->centralWidget->layout()->addWidget(this->mainSplitter);
 }
 
 void MainWindow::createSystemTrayIcon() {
