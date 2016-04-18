@@ -9,7 +9,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/tags
+    - feature/single-application
 
 env:
   global:
