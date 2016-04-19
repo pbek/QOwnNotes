@@ -250,6 +250,8 @@ private slots:
 
     void on_actionUse_vertical_preview_layout_toggled(bool arg1);
 
+    void on_tagListWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -8,7 +8,12 @@
 - you can now set in the general settings that you only want to **allow one 
   application instance running at the same time**
   (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
+- the tag list has now a context menu for deleting and editing tags
+- the structure of the settings dialog was changed to decrease the height for
+  smaller screens
+  (for [Issue #141](https://github.com/pbek/QOwnNotes/issues/141))
 - added more Russian and Japanese translation (thank you Valerian and piyo)
+- improved the meaningfulness of some error messages
 
 ## 16.04.13
 - added better support for full width numbers in note names when linking notes 

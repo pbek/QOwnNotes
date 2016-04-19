@@ -2490,7 +2490,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
                 tr("&Ok"),
                 tr("Open &settings"),
                 QString::null, 0, 1) == 1) {
-            openSettingsDialog(SettingsDialog::GeneralTab);
+            openSettingsDialog(SettingsDialog::NetworkTab);
         }
     }
 }
@@ -4470,4 +4470,35 @@ void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
 
     // setup the main splitter again
     setupMainSplitter();
+}
+
+/**
+ * Provides a context menu for the tag list widget
+ */
+void MainWindow::on_tagListWidget_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->tagListWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    QAction *editAction = menu.addAction(
+            tr("&Edit tag"));
+    QAction *removeAction = menu.addAction(
+            tr("&Remove tags"));
+
+    QListWidgetItem *item = ui->tagListWidget->currentItem();
+
+    // don't allow clicking on non-tag items
+    if (item->data(Qt::UserRole) <= 0) {
+        return;
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == removeAction) {
+            // remove selected tag
+            removeSelectedTags();
+        } else if (selectedItem == editAction) {
+            ui->tagListWidget->editItem(item);
+        }
+    }
 }

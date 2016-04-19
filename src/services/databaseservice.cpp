@@ -74,13 +74,11 @@ bool DatabaseService::createMemoryConnection() {
     dbMemory.setDatabaseName(":memory:");
 
     if (!dbMemory.open()) {
-        QMessageBox::critical(0, QWidget::tr("Cannot open memory database"),
-              QWidget::tr(
-                  "Unable to establish a database connection.\n"
-                       "This application needs SQLite support. Please read "
-                       "the Qt SQL driver documentation for information how "
-                       "to build it.\n\n"
-                       "Click Cancel to exit."), QMessageBox::Cancel);
+        QMessageBox::critical(
+                0, QWidget::tr("Cannot open memory database"),
+                QWidget::tr(
+                        "Unable to establish a memory database connection."),
+                QMessageBox::Ok);
         return false;
     }
 
@@ -89,16 +87,17 @@ bool DatabaseService::createMemoryConnection() {
 
 bool DatabaseService::createDiskConnection() {
     QSqlDatabase dbDisk = QSqlDatabase::addDatabase("QSQLITE", "disk");
-    dbDisk.setDatabaseName(getDiskDatabasePath());
+    QString path = getDiskDatabasePath();
+    dbDisk.setDatabaseName(path);
 
     if (!dbDisk.open()) {
-        QMessageBox::critical(0, QWidget::tr("Cannot open disk database"),
-              QWidget::tr(
-                      "Unable to establish a database connection.\n"
-                          "This application needs SQLite support. Please read "
-                          "the Qt SQL driver documentation for information how "
-                          "to build it.\n\n"
-                          "Click Cancel to exit."), QMessageBox::Cancel);
+        QMessageBox::critical(
+                0, QWidget::tr("Cannot open disk database"),
+                QWidget::tr(
+                      "Unable to establish a database connection with "
+                              "file '%1'.\nAre the folder and the file "
+                              "writeable?").arg(path),
+                QMessageBox::Ok);
         return false;
     }
 
@@ -107,17 +106,17 @@ bool DatabaseService::createDiskConnection() {
 
 bool DatabaseService::createNoteFolderConnection() {
     QSqlDatabase dbDisk = QSqlDatabase::addDatabase("QSQLITE", "note_folder");
-    dbDisk.setDatabaseName(getNoteFolderDatabasePath());
+    QString path = getNoteFolderDatabasePath();
+    dbDisk.setDatabaseName(path);
 
     if (!dbDisk.open()) {
         QMessageBox::critical(
                 0, QWidget::tr("Cannot open note folder database"),
-              QWidget::tr(
-                      "Unable to establish a database connection.\n"
-                          "This application needs SQLite support. Please read "
-                          "the Qt SQL driver documentation for information how "
-                          "to build it.\n\n"
-                          "Click Cancel to exit."), QMessageBox::Cancel);
+                QWidget::tr(
+                        "Unable to establish a database connection with "
+                                "file '%1'.\nAre the folder and the file "
+                                "writeable?").arg(path),
+                QMessageBox::Ok);
         return false;
     }
 

@@ -23,6 +23,12 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
+    QRect rect = geometry();
+    if (rect.height() > 700) {
+        rect.setHeight(700);
+        setGeometry(rect);
+    }
+
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(

@@ -34,7 +34,7 @@ private slots:
 
     void on_ownCloudSettingsButton_clicked();
 
-    void on_generalSettingsButton_clicked();
+    void on_networkSettingsButton_clicked();
 
 private:
     Ui::WelcomeDialog *ui;

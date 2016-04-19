@@ -170,13 +170,13 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked()
     dialog->exec();
 }
 
-void WelcomeDialog::on_generalSettingsButton_clicked()
+void WelcomeDialog::on_networkSettingsButton_clicked()
 {
     MetricsService::instance()
-            ->sendVisitIfEnabled("welcome-dialog/general-settings");
+            ->sendVisitIfEnabled("welcome-dialog/network-settings");
 
     SettingsDialog *dialog = new SettingsDialog(
-            SettingsDialog::GeneralTab, this);
+            SettingsDialog::NetworkTab, this);
     dialog->exec();
 }
 
