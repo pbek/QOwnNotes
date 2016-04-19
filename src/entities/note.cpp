@@ -773,12 +773,20 @@ QString Note::toMarkdownHtml(QString notesPath) {
         QFont font;
         font.fromString(fontString);
 
-        // do some code formatting
+        // add the font for the code block
         codeStyleSheet = QString(
-                "pre, code { %1; padding: 16px; overflow: auto;"
-                        " line-height: 1.45em; background-color: #f1f1f1;"
-                        " border-radius: 3px; }").arg(encodeCssFont(font));
+                "pre, code { %1; }").arg(encodeCssFont(font));
     }
+
+    bool darkModeColors = settings.value("darkModeColors").toBool();
+
+    QString codeBackgroundColor = darkModeColors ? "#444444" : "#f1f1f1";
+
+    // do some more code formatting
+    codeStyleSheet += QString(
+            "pre, code { padding: 16px; overflow: auto;"
+                    " line-height: 1.45em; background-color: %1;"
+                    " border-radius: 3px; }").arg(codeBackgroundColor);
 
     // remove double code blocks
     result.replace("<pre><code>", "<pre>")

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.04.15
+- improved the code background color in the markdown view in dark mode
+
 ## 16.04.14
 - you can now also delete tags, notes and tasks with the <kbd>Backspace</kbd>
   key (for the OS X users) instead of only with the <kbd>Del</kbd> key
