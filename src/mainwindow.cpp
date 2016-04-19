@@ -834,15 +834,15 @@ void MainWindow::initMainSplitter() {
     mainSplitter->addWidget(ui->notesListFrame);
     mainSplitter->addWidget(_verticalNoteFrame);
 
+    // do the further setup for the main splitter and all the panes
+    setupMainSplitter();
+
     // restore main splitter state
     QSettings settings;
     QByteArray state = settings.value("mainSplitterSizes").toByteArray();
     mainSplitter->restoreState(state);
 
     ui->centralWidget->layout()->addWidget(this->mainSplitter);
-
-    // do the further setup for the main splitter and all the panes
-    setupMainSplitter();
 
     // setup the checkbox
     const QSignalBlocker blocker(ui->actionUse_vertical_preview_layout);
@@ -886,7 +886,7 @@ void MainWindow::setupMainSplitter() {
         mainSplitter->setCollapsible(i, false);
     }
 
-    // set the visibillity of the vertical note frame
+    // set the visibility of the vertical note frame
     _verticalNoteFrame->setVisible(isVerticalPreviewModeEnabled() &&
                 (isNoteEditPaneEnabled() || isMarkdownViewEnabled()));
 }

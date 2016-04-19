@@ -191,6 +191,8 @@ int main(int argc, char *argv[]) {
 
         return app.exec();
     } else {
+        // use a normal QApplication if multiple instances of the app are
+        // allowed
         QApplication app(argc, argv);
 
 #ifndef QT_DEBUG

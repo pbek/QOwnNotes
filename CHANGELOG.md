@@ -3,6 +3,8 @@
 ## 16.04.14
 - you can now also delete tags, notes and tasks with the <kbd>Backspace</kbd>
   key (for the OS X users) instead of only with the <kbd>Del</kbd> key
+- fixed some problems with remembering the correct sizes of the panes in the 
+  main window after an app restart
 - added more Russian and Japanese translation (thank you Valerian and piyo)
 
 ## 16.04.13
