@@ -5,6 +5,9 @@
   key (for the OS X users) instead of only with the <kbd>Del</kbd> key
 - fixed some problems with remembering the correct sizes of the panes in the 
   main window after an app restart
+- you can now set in the general settings that you only want to **allow one 
+  application instance running at the same time**
+  (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
 - added more Russian and Japanese translation (thank you Valerian and piyo)
 
 ## 16.04.13
