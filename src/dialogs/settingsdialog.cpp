@@ -226,6 +226,8 @@ void SettingsDialog::storeSettings() {
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showNoteFolderCheckBox->isChecked());
+    settings.setValue("allowOnlyOneAppInstance",
+                      ui->allowOnlyOneAppInstanceCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
 
@@ -298,6 +300,8 @@ void SettingsDialog::readSettings() {
             settings.value("noteSaveIntervalTime").toInt());
     ui->showNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
+    ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
+            "allowOnlyOneAppInstance").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
 
