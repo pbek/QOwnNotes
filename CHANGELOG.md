@@ -2,6 +2,9 @@
 
 ## 16.04.15
 - improved the code background color in the markdown view in dark mode
+- when in single application mode the app will now come up again if it was 
+  minimized and started a second time
+  (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
 
 ## 16.04.14
 - you can now also delete tags, notes and tasks with the <kbd>Backspace</kbd>

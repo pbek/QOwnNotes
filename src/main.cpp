@@ -187,6 +187,12 @@ int main(int argc, char *argv[]) {
             w.show();
             w.raise();
             w.activateWindow();
+
+            // in case the window was minimized show it normal again
+            // (it didn't came up when it was minimized on KDE)
+            if (w.isMinimized()) {
+                w.showNormal();
+            }
         });
 
         return app.exec();
