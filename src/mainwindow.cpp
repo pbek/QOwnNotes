@@ -2073,7 +2073,7 @@ void MainWindow::removeSelectedNotes() {
  * @brief Removes selected tags after a confirmation
  */
 void MainWindow::removeSelectedTags() {
-    int selectedItemsCount = ui->tagListWidget->selectedItems().size();
+    int selectedItemsCount = ui->tagTreeWidget->selectedItems().size();
 
     if (selectedItemsCount == 0) {
         return;
@@ -2090,11 +2090,11 @@ void MainWindow::removeSelectedTags() {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        const QSignalBlocker blocker1(ui->tagListWidget);
+        const QSignalBlocker blocker1(ui->tagTreeWidget);
         Q_UNUSED(blocker1);
 
-        Q_FOREACH(QListWidgetItem *item, ui->tagListWidget->selectedItems()) {
-            int tagId = item->data(Qt::UserRole).toInt();
+        Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
+            int tagId = item->data(0, Qt::UserRole).toInt();
             Tag tag = Tag::fetch(tagId);
             tag.remove();
             qDebug() << "Removed tag " << tag.getName();
@@ -4091,76 +4091,83 @@ void MainWindow::reloadTagList()
 {
     qDebug() << __func__ << " - 'reloadTagList'";
 
-    int activeTagId = Tag::activeTagId();
-    ui->tagListWidget->clear();
+    ui->tagTreeWidget->clear();
+
+    int linkCount = Note::countAll();
+    QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
     // add an item to view all notes
-    QListWidgetItem *allItem = new QListWidgetItem(
-            tr("All notes (%1)").arg(QString::number(Note::countAll())));
-    allItem->setToolTip(tr("show all notes"));
-    allItem->setData(Qt::UserRole, -1);
-    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
-    allItem->setIcon(QIcon::fromTheme(
+    QTreeWidgetItem *allItem = new QTreeWidgetItem();
+    allItem->setText(0, tr("All notes"));
+    allItem->setTextColor(1, QColor(Qt::gray));
+    allItem->setText(1, QString::number(linkCount));
+    allItem->setToolTip(0, toolTip);
+    allItem->setToolTip(1, toolTip);
+    allItem->setData(0, Qt::UserRole, -1);
+    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable
+                      & ~Qt::ItemIsDropEnabled);
+    allItem->setIcon(0, QIcon::fromTheme(
             "edit-copy",
             QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
-    ui->tagListWidget->addItem(allItem);
+    ui->tagTreeWidget->addTopLevelItem(allItem);
 
     // add an empty item
-    QListWidgetItem *emptyItem = new QListWidgetItem();
-    emptyItem->setData(Qt::UserRole, 0);
-    emptyItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
-    ui->tagListWidget->addItem(emptyItem);
+//    QTreeWidgetItem *emptyItem = new QTreeWidgetItem();
+//    emptyItem->setData(0, Qt::UserRole, 0);
+//    emptyItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+//    ui->tagTreeWidget->addTopLevelItem(emptyItem);
 
-    // add all tags as item
-    QList<Tag> tagList = Tag::fetchAll();
-    Q_FOREACH(Tag tag, tagList) {
-            QListWidgetItem *item = new QListWidgetItem();
-            item->setData(Qt::UserRole, tag.getId());
-            setTagListWidgetName(item);
-            item->setIcon(QIcon::fromTheme(
-                    "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
-            item->setFlags(item->flags() | Qt::ItemIsEditable);
-            ui->tagListWidget->addItem(item);
+    // add all tags recursively as items
+    buildTagTreeForParentItem();
 
-            // set the active item
-            if (activeTagId == tag.getId()) {
-                const QSignalBlocker blocker(ui->tagListWidget);
-                Q_UNUSED(blocker);
-
-                ui->tagListWidget->setCurrentItem(item);
-
-                // set a name without link count so we can edit the name
-                item->setText(tag.getName());
-            }
-        }
+    ui->tagTreeWidget->resizeColumnToContents(0);
+    ui->tagTreeWidget->resizeColumnToContents(1);
 }
 
 /**
- * Sets the name (and the tooltip) of a tag list widget item
+ * Populates the tag tree recursively with its tags
  */
-void MainWindow::setTagListWidgetName(QListWidgetItem *item) {
-    if (item == NULL) {
-        return;
-    }
+void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
+    int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+    int activeTagId = Tag::activeTagId();
 
-    int tagId = item->data(Qt::UserRole).toInt();
-    Tag tag = Tag::fetch(tagId);
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
+    Q_FOREACH(Tag tag, tagList) {
+            QString name = tag.getName();
+            int linkCount = tag.countLinkedNoteFileNames();
+            QString toolTip = tr("show all notes tagged with '%1' (%2)")
+                    .arg(name, QString::number(linkCount));
 
-    if (!tag.isFetched()) {
-        return;
-    }
+            QTreeWidgetItem *item = new QTreeWidgetItem();
+            item->setData(0, Qt::UserRole, tag.getId());
+            item->setText(0, name);
+            item->setText(1, QString::number(linkCount));
+            item->setTextColor(1, QColor(Qt::gray));
+            item->setIcon(0, QIcon::fromTheme(
+                    "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
+            item->setToolTip(0, toolTip);
+            item->setToolTip(1, toolTip);
+            item->setFlags(item->flags() | Qt::ItemIsEditable);
 
-    int linkCount = tag.countLinkedNoteFileNames();
+            if (parentId == 0) {
+                // add the item at top level if there was no parent item
+                ui->tagTreeWidget->addTopLevelItem(item);
+            } else {
+                // add the item as child of the parent
+                parent->addChild(item);
+            }
 
-    QString name = tag.getName();
-    QString text = name;
-    if (tagId != Tag::activeTagId()) {
-        text += QString(" (%1)").arg(linkCount);
-    }
+            // set the active item
+            if (activeTagId == tag.getId()) {
+                const QSignalBlocker blocker(ui->tagTreeWidget);
+                Q_UNUSED(blocker);
 
-    item->setText(text);
-    item->setToolTip(tr("show all notes tagged with '%1' (%2)")
-                             .arg(name, QString::number(linkCount)));
+                ui->tagTreeWidget->setCurrentItem(item);
+            }
+
+            // recursively populate the next level
+            buildTagTreeForParentItem(item);
+        }
 }
 
 /**
@@ -4425,11 +4432,6 @@ void MainWindow::on_tagListWidget_currentItemChanged(
 
     const QSignalBlocker blocker2(ui->tagListWidget);
     Q_UNUSED(blocker2);
-
-    // this is a workaround so we can have the note counts in the tag
-    // name and edit it at the same time
-    setTagListWidgetName(current);
-    setTagListWidgetName(previous);
 }
 
 /**
@@ -4501,4 +4503,124 @@ void MainWindow::on_tagListWidget_customContextMenuRequested(const QPoint &pos)
             ui->tagListWidget->editItem(item);
         }
     }
+}
+
+/**
+ * Stores the tag after it was edited
+ */
+void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
+{
+    Q_UNUSED(column);
+
+    Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
+    if (tag.isFetched()) {
+        QString name = item->text(0);
+        if (!name.isEmpty()) {
+            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
+
+            tag.setName(name);
+            tag.store();
+            reloadTagList();
+        }
+    }
+}
+
+/**
+ * Sets a new active tag
+ */
+void MainWindow::on_tagTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+
+    if (current == NULL) {
+        return;
+    }
+
+    int tagId = current->data(0, Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+    tag.setAsActive();
+
+    if (tag.isFetched()) {
+        const QSignalBlocker blocker(ui->searchLineEdit);
+        Q_UNUSED(blocker);
+
+        ui->searchLineEdit->clear();
+    }
+
+    filterNotes();
+
+    const QSignalBlocker blocker2(ui->tagListWidget);
+    Q_UNUSED(blocker2);
+}
+
+/**
+ * Creates a context menu for the tag tree widget
+ */
+void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->tagTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    QAction *editAction = menu.addAction(
+            tr("&Edit tag"));
+    QAction *removeAction = menu.addAction(
+            tr("&Remove tags"));
+
+    // build the tag moving menu
+    QMenu *moveMenu = menu.addMenu(tr("&Move tag to..."));
+    buildTagMenuTreeForParentItem(moveMenu);
+
+    QTreeWidgetItem *item = ui->tagTreeWidget->currentItem();
+
+    // don't allow clicking on non-tag items
+    if (item->data(0, Qt::UserRole) <= 0) {
+        return;
+    }
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == removeAction) {
+            // remove selected tag
+            removeSelectedTags();
+        } else if (selectedItem == editAction) {
+            ui->tagTreeWidget->editItem(item);
+        } else  {
+            // TODO: move to the tag
+            // how do we check which item was clicked?
+        }
+    }
+}
+
+/**
+ * Populates a tag menu tree recursively with tags
+ */
+void MainWindow::buildTagMenuTreeForParentItem(QMenu *parentMenu,
+                                               int parentTagId) {
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+
+    Q_FOREACH(Tag tag, tagList) {
+            int tagId = tag.getId();
+            QString name = tag.getName();
+
+            int count = Tag::countAllParentId(tagId);
+            if (count > 0) {
+                // if there are sub-tag build a new menu level
+                QMenu *tagMenu = parentMenu->addMenu(name);
+                buildTagMenuTreeForParentItem(tagMenu, tagId);
+            } else {
+                // if there are no sub-tags just create a named action
+                QAction *action = parentMenu->addAction(name);
+                action->setData(tagId);
+            }
+        }
+
+    // add an action to move to this tag
+    if (parentTagId > 0) {
+        parentMenu->addSeparator();
+        QAction *action = parentMenu->addAction(tr("Move to this tag"));
+        action->setData(parentTagId);
+    }
+
 }

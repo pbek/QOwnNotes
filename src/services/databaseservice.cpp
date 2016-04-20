@@ -159,6 +159,13 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 1;
     }
 
+    if (version < 2) {
+        queryDisk.exec("ALTER TABLE tag ADD parent_id INTEGER DEFAULT 0;");
+        queryDisk.exec("CREATE INDEX IF NOT EXISTS idxTagParent "
+                               "ON tag( parent_id );");
+        version = 2;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

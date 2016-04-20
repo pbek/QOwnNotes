@@ -15,6 +15,7 @@
 #include <entities/notefolder.h>
 #include <entities/tag.h>
 #include <QtWidgets/QToolBar>
+#include <QtWidgets/QTreeWidgetItem>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -252,6 +253,12 @@ private slots:
 
     void on_tagListWidget_customContextMenuRequested(const QPoint &pos);
 
+    void on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
+    void on_tagTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
+    void on_tagTreeWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -420,8 +427,6 @@ private:
 
     void removeTagFromSelectedNotes(Tag tag);
 
-    void setTagListWidgetName(QListWidgetItem *item);
-
     void setupNoteEditPane();
 
     bool isNoteEditPaneEnabled();
@@ -429,4 +434,9 @@ private:
     void initToolbars();
 
     bool isVerticalPreviewModeEnabled();
+
+    void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0);
+
+    void buildTagMenuTreeForParentItem(QMenu *parentMenu,
+                                           int parentTagId = 0);
 };

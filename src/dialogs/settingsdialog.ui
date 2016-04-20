@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1069</width>
-    <height>822</height>
+    <width>1173</width>
+    <height>827</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -31,7 +31,7 @@
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>4</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -175,13 +175,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="3" column="0">
-                <widget class="QLabel" name="label_13">
-                 <property name="text">
-                  <string>Note folder path</string>
-                 </property>
-                </widget>
-               </item>
                <item row="4" column="0">
                 <widget class="QLineEdit" name="noteFolderLocalPathLineEdit">
                  <property name="readOnly">
@@ -189,23 +182,6 @@
                  </property>
                  <property name="placeholderText">
                   <string>path where your notes are stored locally</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLineEdit" name="noteFolderNameLineEdit">
-                 <property name="toolTip">
-                  <string>This name will be viewed in all the menus.</string>
-                 </property>
-                 <property name="placeholderText">
-                  <string>a name you will recognize</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_12">
-                 <property name="text">
-                  <string>Name</string>
                  </property>
                 </widget>
                </item>
@@ -259,16 +235,6 @@
                  </layout>
                 </widget>
                </item>
-               <item row="7" column="0">
-                <widget class="QLabel" name="label_14">
-                 <property name="text">
-                  <string>Path on your ownCloud server</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="0">
-                <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
-               </item>
                <item row="8" column="1">
                 <widget class="QPushButton" name="noteFolderRemotePathButton">
                  <property name="toolTip">
@@ -283,7 +249,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="9" column="0">
+               <item row="9" column="0" colspan="2">
                 <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
                  <property name="frameShape">
                   <enum>QFrame::NoFrame</enum>
@@ -374,17 +340,51 @@
                  </layout>
                 </widget>
                </item>
-               <item row="2" column="0">
+               <item row="1" column="0" colspan="2">
+                <widget class="QLineEdit" name="noteFolderNameLineEdit">
+                 <property name="toolTip">
+                  <string>This name will be viewed in all the menus.</string>
+                 </property>
+                 <property name="placeholderText">
+                  <string>a name you will recognize</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="2">
                 <widget class="QCheckBox" name="noteFolderActiveCheckBox">
                  <property name="text">
                   <string>Use as active note folder</string>
                  </property>
                 </widget>
                </item>
-               <item row="5" column="0">
+               <item row="5" column="0" colspan="2">
                 <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
                  <property name="text">
                   <string>ownCloud server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0" colspan="2">
+                <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
+               </item>
+               <item row="7" column="0" colspan="2">
+                <widget class="QLabel" name="label_14">
+                 <property name="text">
+                  <string>Path on your ownCloud server</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="2">
+                <widget class="QLabel" name="label_12">
+                 <property name="text">
+                  <string>Name</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0" colspan="2">
+                <widget class="QLabel" name="label_13">
+                 <property name="text">
+                  <string>Note folder path</string>
                  </property>
                 </widget>
                </item>

@@ -67,8 +67,17 @@ public:
 
     static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
 
+    int getParentId();
+
+    void setParentId(int id);
+
+    static QList<Tag> fetchAllByParentId(int parentId);
+
+    static int countAllParentId(int parentId);
+
 private:
     int id;
     QString name;
     int priority;
+    int parentId;
 };

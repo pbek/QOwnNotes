@@ -12,10 +12,19 @@ Tag::Tag() {
     id = 0;
     name = "";
     priority = 0;
+    parentId = 0;
 }
 
 int Tag::getId() {
     return this->id;
+}
+
+int Tag::getParentId() {
+    return this->parentId;
+}
+
+void Tag::setParentId(int id) {
+    this->parentId = id;
 }
 
 QString Tag::getName() {
@@ -143,6 +152,44 @@ QList<Tag> Tag::fetchAll() {
     }
 
     return tagList;
+}
+
+QList<Tag> Tag::fetchAllByParentId(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QList<Tag> tagList;
+
+    query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
+                          "priority ASC, name ASC");
+    query.bindValue(":parentId", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+int Tag::countAllParentId(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM tag "
+                          "WHERE parent_id = :parentId ");
+    query.bindValue(":parentId", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
 }
 
 /**
@@ -275,16 +322,19 @@ bool Tag::store() {
 
     if (this->id > 0) {
         query.prepare(
-                "UPDATE tag SET name = :name, priority = :priority "
+                "UPDATE tag SET name = :name, priority = :priority, "
+                        "parent_id = :parentId "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
-                "INSERT INTO tag (name, priority) VALUES (:name, :priority)");
+                "INSERT INTO tag (name, priority, parent_id) "
+                        "VALUES (:name, :priority, :parentId)");
     }
 
     query.bindValue(":name", this->name);
     query.bindValue(":priority", this->priority);
+    query.bindValue(":parentId", this->parentId);
 
     if (!query.exec()) {
         // on error

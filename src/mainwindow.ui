@@ -112,6 +112,35 @@
            </property>
           </widget>
          </item>
+         <item>
+          <widget class="QTreeWidget" name="tagTreeWidget">
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::ExtendedSelection</enum>
+           </property>
+           <property name="rootIsDecorated">
+            <bool>false</bool>
+           </property>
+           <property name="headerHidden">
+            <bool>true</bool>
+           </property>
+           <column>
+            <property name="text">
+             <string notr="true">Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string notr="true">Note count</string>
+            </property>
+           </column>
+          </widget>
+         </item>
         </layout>
        </widget>
       </item>
