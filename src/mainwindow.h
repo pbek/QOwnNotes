@@ -259,6 +259,8 @@ private slots:
 
     void on_tagTreeWidget_customContextMenuRequested(const QPoint &pos);
 
+    void moveSelectedTagsToTagId(int tagId);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -437,6 +439,8 @@ private:
 
     void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0);
 
-    void buildTagMenuTreeForParentItem(QMenu *parentMenu,
-                                           int parentTagId = 0);
+    void buildTagMoveMenuTree(QMenu *parentMenu,
+                              int parentTagId = 0);
+
+    bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 };

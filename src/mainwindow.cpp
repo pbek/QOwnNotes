@@ -4104,8 +4104,7 @@ void MainWindow::reloadTagList()
     allItem->setToolTip(0, toolTip);
     allItem->setToolTip(1, toolTip);
     allItem->setData(0, Qt::UserRole, -1);
-    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable
-                      & ~Qt::ItemIsDropEnabled);
+    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
     allItem->setIcon(0, QIcon::fromTheme(
             "edit-copy",
             QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
@@ -4120,6 +4119,10 @@ void MainWindow::reloadTagList()
     // add all tags recursively as items
     buildTagTreeForParentItem();
 
+    // decorate root of there multiple levels to be able to expand them
+    ui->tagTreeWidget->setRootIsDecorated(
+            Tag::countAllParentId(0) != Tag::countAll());
+
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
 }
@@ -4130,16 +4133,18 @@ void MainWindow::reloadTagList()
 void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeTagId = Tag::activeTagId();
+    qDebug() << __func__ << " - 'parentId': " << parentId;
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
+            int tagId = tag.getId();
             QString name = tag.getName();
             int linkCount = tag.countLinkedNoteFileNames();
             QString toolTip = tr("show all notes tagged with '%1' (%2)")
                     .arg(name, QString::number(linkCount));
 
             QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setData(0, Qt::UserRole, tag.getId());
+            item->setData(0, Qt::UserRole, tagId);
             item->setText(0, name);
             item->setText(1, QString::number(linkCount));
             item->setTextColor(1, QColor(Qt::gray));
@@ -4158,7 +4163,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
             }
 
             // set the active item
-            if (activeTagId == tag.getId()) {
+            if (activeTagId == tagId) {
                 const QSignalBlocker blocker(ui->tagTreeWidget);
                 Q_UNUSED(blocker);
 
@@ -4209,29 +4214,54 @@ void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
 }
 
 /**
- * Filters tags
+ * Filters tags in the tag tree list widget
  */
 void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
     // search tags if at least one character was entered
     if (arg1.count() >= 1) {
-        QList<QListWidgetItem*> foundItems = ui->tagListWidget->
-                findItems(arg1, Qt::MatchContains);
+        // search for items
+        QList<QTreeWidgetItem*> foundItems = ui->tagTreeWidget->
+                findItems(arg1, Qt::MatchContains | Qt::MatchRecursive);
 
-        for (int i = 0; i < this->ui->tagListWidget->count(); ++i) {
-            QListWidgetItem *item =
-                    this->ui->tagListWidget->item(i);
-            int tagId = item->data(Qt::UserRole).toInt();
-            item->setHidden(!foundItems.contains(item) && (tagId > 0));
-        }
+        // hide all not found items
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                int tagId = item->data(0, Qt::UserRole).toInt();
+                item->setHidden(!foundItems.contains(item) && (tagId > 0));
+            }
+
+        // show items again that have visible children so that they are
+        // really shown
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                if (isOneTreeWidgetItemChildVisible(item)) {
+                    item->setHidden(false);
+                    item->setExpanded(true);
+                }
+            }
     } else {
         // show all items otherwise
-        for (int i = 0; i < this->ui->tagListWidget->count(); ++i) {
-            QListWidgetItem *item =
-                    this->ui->tagListWidget->item(i);
-            item->setHidden(false);
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                item->setHidden(false);
+            }
+    }
+}
+
+/**
+ * Checks if there is at least one child that is visible
+ */
+bool MainWindow::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
+    for (int i = 0; i < item->childCount(); i++) {
+        QTreeWidgetItem *child = item->child(i);
+        if (!child->isHidden() || isOneTreeWidgetItemChildVisible(child)) {
+            return true;
         }
     }
+
+    return false;
 }
 
 /**
@@ -4569,8 +4599,8 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
             tr("&Remove tags"));
 
     // build the tag moving menu
-    QMenu *moveMenu = menu.addMenu(tr("&Move tag to..."));
-    buildTagMenuTreeForParentItem(moveMenu);
+    QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
+    buildTagMoveMenuTree(moveMenu);
 
     QTreeWidgetItem *item = ui->tagTreeWidget->currentItem();
 
@@ -4586,19 +4616,17 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
             removeSelectedTags();
         } else if (selectedItem == editAction) {
             ui->tagTreeWidget->editItem(item);
-        } else  {
-            // TODO: move to the tag
-            // how do we check which item was clicked?
         }
     }
 }
 
 /**
- * Populates a tag menu tree recursively with tags
+ * Populates a tag menu tree for moving tags
  */
-void MainWindow::buildTagMenuTreeForParentItem(QMenu *parentMenu,
-                                               int parentTagId) {
+void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
+                                      int parentTagId) {
     QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QSignalMapper *tagMovingSignalMapper = new QSignalMapper(this);
 
     Q_FOREACH(Tag tag, tagList) {
             int tagId = tag.getId();
@@ -4608,19 +4636,64 @@ void MainWindow::buildTagMenuTreeForParentItem(QMenu *parentMenu,
             if (count > 0) {
                 // if there are sub-tag build a new menu level
                 QMenu *tagMenu = parentMenu->addMenu(name);
-                buildTagMenuTreeForParentItem(tagMenu, tagId);
+                buildTagMoveMenuTree(tagMenu, tagId);
             } else {
                 // if there are no sub-tags just create a named action
                 QAction *action = parentMenu->addAction(name);
-                action->setData(tagId);
+
+                QObject::connect(
+                        action, SIGNAL(triggered()),
+                        tagMovingSignalMapper, SLOT(map()));
+
+                tagMovingSignalMapper->setMapping(
+                        action, tagId);
             }
         }
 
     // add an action to move to this tag
-    if (parentTagId > 0) {
-        parentMenu->addSeparator();
-        QAction *action = parentMenu->addAction(tr("Move to this tag"));
-        action->setData(parentTagId);
-    }
+    parentMenu->addSeparator();
+    QAction *action = parentMenu->addAction(
+            parentTagId == 0 ? tr("Move to the root") : tr("Move to this tag"));
+    action->setData(parentTagId);
+
+    QObject::connect(
+            action, SIGNAL(triggered()),
+            tagMovingSignalMapper, SLOT(map()));
+
+    tagMovingSignalMapper->setMapping(
+            action, parentTagId);
+
+    // connect the signal mapper
+    QObject::connect(tagMovingSignalMapper,
+                     SIGNAL(mapped(int)),
+                     this,
+                     SLOT(moveSelectedTagsToTagId(int)));
+}
+
+/**
+ * Moves selected tags to tagId
+ */
+void MainWindow::moveSelectedTagsToTagId(int tagId) {
+    qDebug() << __func__ << " - 'tagId': " << tagId;
+
+    Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            Tag tag = Tag::fetch(id);
+            if (tag.isFetched()) {
+                if (tag.hasChild(tagId) || (id == tagId)) {
+                    showStatusBarMessage(
+                            tr("Cannot move tag '%1' to this tag")
+                                    .arg(tag.getName()),
+                            3000);
+                } else {
+                    tag.setParentId(tagId);
+                    tag.store();
+
+                    showStatusBarMessage(
+                            tr("Moved tag '%1' to new tag").arg(tag.getName()),
+                            3000);
+                }
+            }
+        }
 
 }

@@ -75,6 +75,8 @@ public:
 
     static int countAllParentId(int parentId);
 
+    bool hasChild(int tagId);
+
 private:
     int id;
     QString name;

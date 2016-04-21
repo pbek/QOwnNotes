@@ -95,7 +95,7 @@ int Tag::countAll() {
 }
 
 /**
- * Removes the tag and its note link items
+ * Removes the tag, their children and its note link items
  */
 bool Tag::remove() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
@@ -103,15 +103,20 @@ bool Tag::remove() {
 
     // remove the tag
     query.prepare("DELETE FROM tag WHERE id = :id");
-    query.bindValue(":id", this->id);
+    query.bindValue(":id", id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        // remove all children tags
+        Q_FOREACH(Tag tag, fetchAllByParentId(id)) {
+                tag.remove();
+            }
+
         // remove the note tag links
         query.prepare("DELETE FROM noteTagLink WHERE tag_id = :id");
-        query.bindValue(":id", this->id);
+        query.bindValue(":id", id);
 
         if (!query.exec()) {
             qWarning() << __func__ << ": " << query.lastError();
@@ -131,6 +136,8 @@ Tag Tag::tagFromQuery(QSqlQuery query) {
 bool Tag::fillFromQuery(QSqlQuery query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
+    this->priority = query.value("priority").toInt();
+    this->parentId = query.value("parent_id").toInt();
 
     return true;
 }
@@ -190,6 +197,21 @@ int Tag::countAllParentId(int parentId) {
     }
 
     return 0;
+}
+
+/**
+ * Checks if the current tag has a child with tagId
+ */
+bool Tag::hasChild(int tagId) {
+    Q_FOREACH(Tag tag, fetchAllByParentId(id)) {
+            qDebug() << __func__ << " - 'tag': " << tag;
+
+            if ((tag.getId() == tagId) || tag.hasChild(tagId)) {
+                return true;
+            }
+        }
+
+    return false;
 }
 
 /**
@@ -479,7 +501,7 @@ Tag Tag::activeTag() {
 }
 
 QDebug operator<<(QDebug dbg, const Tag &tag) {
-    dbg.nospace() << "Tag: <id>" << tag.id << " <name>" <<
-            " <priority>" << tag.priority;
+    dbg.nospace() << "Tag: <id>" << tag.id << " <name>" << tag.name <<
+            " <parentId>" << tag.parentId;
     return dbg.space();
 }
