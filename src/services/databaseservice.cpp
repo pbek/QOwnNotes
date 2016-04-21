@@ -166,6 +166,13 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 2;
     }
 
+    if (version < 3) {
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag;");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                               "tag (name, parent_id);");
+        version = 3;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

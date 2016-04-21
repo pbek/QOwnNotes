@@ -261,6 +261,8 @@ private slots:
 
     void moveSelectedTagsToTagId(int tagId);
 
+    void tagSelectedNotesToTagId(int tagId);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -398,7 +400,7 @@ private:
 
     void openTodoDialog(QString taskUid = "");
 
-    void reloadTagList();
+    void reloadTagTree();
 
     void removeSelectedTags();
 
@@ -443,4 +445,6 @@ private:
                               int parentTagId = 0);
 
     bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
+
+    void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 };

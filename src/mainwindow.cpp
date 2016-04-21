@@ -2100,7 +2100,7 @@ void MainWindow::removeSelectedTags() {
             qDebug() << "Removed tag " << tag.getName();
         }
 
-        reloadTagList();
+        reloadTagTree();
     }
 }
 
@@ -2996,7 +2996,6 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
     QMenu noteMenu;
     QMenu *moveDestinationMenu = new QMenu();
     QMenu *copyDestinationMenu = new QMenu();
-    QMenu *tagMenu = new QMenu();
     QMenu *tagRemoveMenu = new QMenu();
 
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
@@ -3035,15 +3034,8 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
 
     // show the tagging menu if at least one tag is present
     if (tagList.count() > 0) {
-        tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
-
-        Q_FOREACH(Tag tag, tagList) {
-                QAction *action = tagMenu->addAction(
-                        tag.getName());
-                action->setData(tag.getId());
-                action->setToolTip(tag.getName());
-                action->setStatusTip(tag.getName());
-            }
+        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
+        buildBulkNoteTagMenuTree(tagMenu);
     }
 
     QStringList noteNameList;
@@ -3086,13 +3078,6 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
             // copy notes
             QString destinationFolder = selectedItem->data().toString();
             copySelectedNotesToFolder(destinationFolder);
-        } else if (selectedItem->parent() == tagMenu) {
-            // tag notes
-            Tag tag = Tag::fetch(selectedItem->data().toInt());
-
-            if (tag.isFetched()) {
-                tagSelectedNotes(tag);
-            }
         } else if (selectedItem->parent() == tagRemoveMenu) {
             // remove tag from notes
             Tag tag = Tag::fetch(selectedItem->data().toInt());
@@ -4085,11 +4070,11 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
 }
 
 /**
- * Reloads the tag list
+ * Reloads the tag tree
  */
-void MainWindow::reloadTagList()
+void MainWindow::reloadTagTree()
 {
-    qDebug() << __func__ << " - 'reloadTagList'";
+    qDebug() << __func__;
 
     ui->tagTreeWidget->clear();
 
@@ -4146,7 +4131,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
             QTreeWidgetItem *item = new QTreeWidgetItem();
             item->setData(0, Qt::UserRole, tagId);
             item->setText(0, name);
-            item->setText(1, QString::number(linkCount));
+            item->setText(1, linkCount > 0 ? QString::number(linkCount) : "");
             item->setTextColor(1, QColor(Qt::gray));
             item->setIcon(0, QIcon::fromTheme(
                     "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
@@ -4191,7 +4176,7 @@ void MainWindow::on_tagLineEdit_returnPressed()
     Tag tag;
     tag.setName(name);
     tag.store();
-    reloadTagList();
+    reloadTagTree();
 }
 
 /**
@@ -4208,7 +4193,7 @@ void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
 
             tag.setName(name);
             tag.store();
-            reloadTagList();
+            reloadTagTree();
         }
     }
 }
@@ -4286,7 +4271,7 @@ void MainWindow::setupTags() {
     ui->actionToggle_tag_pane->setChecked(tagsEnabled);
 
     if (tagsEnabled) {
-        reloadTagList();
+        reloadTagTree();
         reloadCurrentNoteTags();
     }
 
@@ -4354,7 +4339,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed() {
 
         tag.setName(text);
         tag.store();
-        reloadTagList();
+        reloadTagTree();
     }
 
     // link the current note to the tag
@@ -4551,7 +4536,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
 
             tag.setName(name);
             tag.store();
-            reloadTagList();
+            reloadTagTree();
         }
     }
 }
@@ -4671,6 +4656,57 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
 }
 
 /**
+ * Populates a tag menu tree for bulk note tagging
+ */
+void MainWindow::buildBulkNoteTagMenuTree(QMenu *parentMenu,
+                                          int parentTagId) {
+    QList<Tag> tagList = Tag::fetchAllByParentId(parentTagId);
+    QSignalMapper *signalMapper = new QSignalMapper(this);
+
+    Q_FOREACH(Tag tag, tagList) {
+            int tagId = tag.getId();
+            QString name = tag.getName();
+
+            int count = Tag::countAllParentId(tagId);
+            if (count > 0) {
+                // if there are sub-tag build a new menu level
+                QMenu *tagMenu = parentMenu->addMenu(name);
+                buildBulkNoteTagMenuTree(tagMenu, tagId);
+            } else {
+                // if there are no sub-tags just create a named action
+                QAction *action = parentMenu->addAction(name);
+
+                QObject::connect(
+                        action, SIGNAL(triggered()),
+                        signalMapper, SLOT(map()));
+
+                signalMapper->setMapping(
+                        action, tagId);
+            }
+        }
+
+    if (parentTagId > 0) {
+        // add an action to tag this
+        parentMenu->addSeparator();
+        QAction *action = parentMenu->addAction(tr("Tag this"));
+        action->setData(parentTagId);
+
+        QObject::connect(
+                action, SIGNAL(triggered()),
+                signalMapper, SLOT(map()));
+
+        signalMapper->setMapping(
+                action, parentTagId);
+    }
+
+    // connect the signal mapper
+    QObject::connect(signalMapper,
+                     SIGNAL(mapped(int)),
+                     this,
+                     SLOT(tagSelectedNotesToTagId(int)));
+}
+
+/**
  * Moves selected tags to tagId
  */
 void MainWindow::moveSelectedTagsToTagId(int tagId) {
@@ -4696,4 +4732,17 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
             }
         }
 
+}
+
+/**
+ * Tag selected notes to tagId
+ */
+void MainWindow::tagSelectedNotesToTagId(int tagId) {
+    qDebug() << __func__ << " - 'tagId': " << tagId;
+    Tag tag = Tag::fetch(tagId);
+
+    // tag notes
+    if (tag.isFetched()) {
+        tagSelectedNotes(tag);
+    }
 }
