@@ -146,7 +146,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
-    ui->tagListWidget->installEventFilter(this);
+    ui->tagTreeWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow(0);
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
@@ -1828,7 +1828,7 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return true;
             }
             return false;
-        } else if (obj == ui->tagListWidget) {
+        } else if (obj == ui->tagTreeWidget) {
             if ((keyEvent->key() == Qt::Key_Delete) ||
                 (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedTags();
@@ -2070,7 +2070,7 @@ void MainWindow::removeSelectedNotes() {
 }
 
 /**
- * @brief Removes selected tags after a confirmation
+ * Removes selected tags after a confirmation
  */
 void MainWindow::removeSelectedTags() {
     int selectedItemsCount = ui->tagTreeWidget->selectedItems().size();
@@ -4118,7 +4118,6 @@ void MainWindow::reloadTagTree()
 void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeTagId = Tag::activeTagId();
-    qDebug() << __func__ << " - 'parentId': " << parentId;
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
@@ -4177,25 +4176,6 @@ void MainWindow::on_tagLineEdit_returnPressed()
     tag.setName(name);
     tag.store();
     reloadTagTree();
-}
-
-/**
- * Updates a tag
- */
-void MainWindow::on_tagListWidget_itemChanged(QListWidgetItem *item)
-{
-    Tag tag = Tag::fetch(item->data(Qt::UserRole).toInt());
-    if (tag.isFetched()) {
-        QString name = item->text();
-        if (!name.isEmpty()) {
-            const QSignalBlocker blocker(this->noteDirectoryWatcher);
-            Q_UNUSED(blocker);
-
-            tag.setName(name);
-            tag.store();
-            reloadTagTree();
-        }
-    }
 }
 
 /**
@@ -4424,32 +4404,6 @@ void MainWindow::on_action_new_tag_triggered() {
 }
 
 /**
- * Sets a new active tag if an other tag was selected
- */
-void MainWindow::on_tagListWidget_currentItemChanged(
-        QListWidgetItem *current, QListWidgetItem *previous) {
-    if (current == NULL) {
-        return;
-    }
-
-    int tagId = current->data(Qt::UserRole).toInt();
-    Tag tag = Tag::fetch(tagId);
-    tag.setAsActive();
-
-    if (tag.isFetched()) {
-        const QSignalBlocker blocker(ui->searchLineEdit);
-        Q_UNUSED(blocker);
-
-        ui->searchLineEdit->clear();
-    }
-
-    filterNotes();
-
-    const QSignalBlocker blocker2(ui->tagListWidget);
-    Q_UNUSED(blocker2);
-}
-
-/**
  * Reloads the current note folder
  */
 void MainWindow::on_action_Reload_note_folder_triggered() {
@@ -4487,37 +4441,6 @@ void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
 
     // setup the main splitter again
     setupMainSplitter();
-}
-
-/**
- * Provides a context menu for the tag list widget
- */
-void MainWindow::on_tagListWidget_customContextMenuRequested(const QPoint &pos)
-{
-    QPoint globalPos = ui->tagListWidget->mapToGlobal(pos);
-    QMenu menu;
-
-    QAction *editAction = menu.addAction(
-            tr("&Edit tag"));
-    QAction *removeAction = menu.addAction(
-            tr("&Remove tags"));
-
-    QListWidgetItem *item = ui->tagListWidget->currentItem();
-
-    // don't allow clicking on non-tag items
-    if (item->data(Qt::UserRole) <= 0) {
-        return;
-    }
-
-    QAction *selectedItem = menu.exec(globalPos);
-    if (selectedItem) {
-        if (selectedItem == removeAction) {
-            // remove selected tag
-            removeSelectedTags();
-        } else if (selectedItem == editAction) {
-            ui->tagListWidget->editItem(item);
-        }
-    }
 }
 
 /**
@@ -4565,9 +4488,6 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
     }
 
     filterNotes();
-
-    const QSignalBlocker blocker2(ui->tagListWidget);
-    Q_UNUSED(blocker2);
 }
 
 /**

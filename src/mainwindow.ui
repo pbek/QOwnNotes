@@ -100,19 +100,6 @@
           </widget>
          </item>
          <item>
-          <widget class="QListWidget" name="tagListWidget">
-           <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="selectionMode">
-            <enum>QAbstractItemView::ExtendedSelection</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QTreeWidget" name="tagTreeWidget">
            <property name="contextMenuPolicy">
             <enum>Qt::CustomContextMenu</enum>

@@ -1,6 +1,28 @@
 # QOwnNotes Changelog
 
 ## 16.04.15
+- **tags can now have a hierarchical structure**
+  (for [Issue #137](https://github.com/pbek/QOwnNotes/issues/137))
+	- there is a number right of each tag name in the tag tree that indicates
+	  how many notes are tagged with the tag
+	- you are able to search for tags in your tag tree with the `find or create 
+	  tag` line edit by typing in it
+		- if you press enter a new tag with the content of the line edit is 
+		  created at the root level
+	- you are able to move selected tags to an other tag by right-clicking on 
+	  them and select *Move tags to...*
+	- you are able to remove selected tags by right-clicking on them and select
+	  *Remove tags*
+	- you are able to edit the name of selected tags by right-clicking on them
+	  and select *Edit tag* or double-clicking on it
+	- you are able to tag selected notes by right-clicking on the notes and 
+	  select *Tag selected notes with...*
+	- you are able to remove a tag from selected notes by right-clicking on the 
+	  notes and select *Remove tag from selected notes...*
+	- the name of a tag has to be unique for its parent
+		- so you can create tags with the same name under different tags
+		- you cannot move a tag to an other tag if a tag with the same name 
+		  already exists there
 - improved the code background color in the markdown view in dark mode
 - when in single application mode the app will now come up again if it was 
   minimized and started a second time
