@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1173</width>
-    <height>827</height>
+    <width>1075</width>
+    <height>828</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -31,7 +31,7 @@
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>4</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -1306,198 +1306,6 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QGroupBox" name="groupBox_2">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="title">
-                 <string>Font settings</string>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_6">
-                 <item row="0" column="1">
-                  <widget class="QLineEdit" name="noteTextEditFontLabel">
-                   <property name="readOnly">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
-                   <property name="readOnly">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QLineEdit" name="noteTextViewFontLabel">
-                   <property name="readOnly">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="0">
-                  <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
-                   <property name="text">
-                    <string>font in note markdown view:</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
-                   <property name="text">
-                    <string>default font in markdown text edits:</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QToolButton" name="noteTextEditCodeResetButton">
-                   <property name="toolTip">
-                    <string>reset font</string>
-                   </property>
-                   <property name="text">
-                    <string notr="true">...</string>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <widget class="QToolButton" name="noteTextEditResetButton">
-                   <property name="toolTip">
-                    <string>reset font</string>
-                   </property>
-                   <property name="text">
-                    <string notr="true">...</string>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="2">
-                  <widget class="QToolButton" name="noteTextViewButton">
-                   <property name="toolTip">
-                    <string>set a new font</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="noteTextEditCodeFontHeadlineLabel">
-                   <property name="text">
-                    <string>code font in markdown text edits:</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0">
-                  <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
-                   <property name="text">
-                    <string>code font in note markdown view:</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QToolButton" name="noteTextEditButton">
-                   <property name="toolTip">
-                    <string>set a new font</string>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QLineEdit" name="noteTextEditCodeFontLabel">
-                   <property name="readOnly">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="2">
-                  <widget class="QToolButton" name="noteTextEditCodeButton">
-                   <property name="toolTip">
-                    <string>set a new font</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="3">
-                  <widget class="QToolButton" name="noteTextViewResetButton">
-                   <property name="toolTip">
-                    <string>reset font</string>
-                   </property>
-                   <property name="text">
-                    <string notr="true">...</string>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="3">
-                  <widget class="QToolButton" name="noteTextViewCodeResetButton">
-                   <property name="toolTip">
-                    <string>reset font</string>
-                   </property>
-                   <property name="text">
-                    <string notr="true">...</string>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="2">
-                  <widget class="QToolButton" name="noteTextViewCodeButton">
-                   <property name="toolTip">
-                    <string>set a new font</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="icon">
-                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                     <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item>
                <widget class="QGroupBox" name="groupBox_14">
                 <property name="title">
                  <string>Dark mode</string>
@@ -1782,6 +1590,198 @@
                   </widget>
                  </item>
                 </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="0" colspan="2">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="title">
+              <string>Font settings</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_6">
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="noteTextEditFontLabel">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="noteTextViewFontLabel">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
+                <property name="text">
+                 <string>font in note markdown view:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
+                <property name="text">
+                 <string>default font in markdown text edits:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QToolButton" name="noteTextEditCodeResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string notr="true">...</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QToolButton" name="noteTextEditResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string notr="true">...</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QToolButton" name="noteTextViewButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="noteTextEditCodeFontHeadlineLabel">
+                <property name="text">
+                 <string>code font in markdown text edits:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
+                <property name="text">
+                 <string>code font in note markdown view:</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QToolButton" name="noteTextEditButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="noteTextEditCodeFontLabel">
+                <property name="readOnly">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QToolButton" name="noteTextEditCodeButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QToolButton" name="noteTextViewResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string notr="true">...</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QToolButton" name="noteTextViewCodeResetButton">
+                <property name="toolTip">
+                 <string>reset font</string>
+                </property>
+                <property name="text">
+                 <string notr="true">...</string>
+                </property>
+                <property name="icon">
+                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QToolButton" name="noteTextViewCodeButton">
+                <property name="toolTip">
+                 <string>set a new font</string>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="icon">
+                 <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                </property>
                </widget>
               </item>
              </layout>

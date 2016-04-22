@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.04.16
+- did some fixes to the settings dialog to support small screen widths
+  (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
+
 ## 16.04.15
 - **tags can now have a hierarchical structure**
   (for [Issue #137](https://github.com/pbek/QOwnNotes/issues/137))
