@@ -3,6 +3,8 @@
 ## 16.04.16
 - did some fixes to the settings dialog to support small screen widths
   (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
+- the tag tree will now be expanded automatically when the tags are loaded 
+  and the columns are sized to the contained content 
 
 ## 16.04.15
 - **tags can now have a hierarchical structure**

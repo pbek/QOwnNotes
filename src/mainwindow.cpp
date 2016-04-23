@@ -3668,6 +3668,8 @@ void MainWindow::resizeEvent(QResizeEvent* event)
 {
     ui->noteTextEdit->setPaperMargins(event->size().width());
     ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
+    ui->tagTreeWidget->resizeColumnToContents(0);
+    ui->tagTreeWidget->resizeColumnToContents(1);
 }
 
 /**
@@ -4252,6 +4254,7 @@ void MainWindow::setupTags() {
 
     if (tagsEnabled) {
         reloadTagTree();
+        ui->tagTreeWidget->expandAll();
         reloadCurrentNoteTags();
     }
 
