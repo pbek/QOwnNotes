@@ -9,6 +9,9 @@
   select *Add tag*
 - added a new QOwnNotes desktop icon (a big thank you to Alex L from the KDE 
   V Design Group)
+- added more Dutch, Hungarian, Portuguese, French, Spanish, Russian and Japanese 
+  translation (thank you Fabijenna, mlimacarlos, Loelo, fitoschido, frostyland
+  and piyo)
 
 ## 16.04.15
 - **tags can now have a hierarchical structure**
