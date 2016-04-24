@@ -441,4 +441,6 @@ private:
     bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
+
+    QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
 };

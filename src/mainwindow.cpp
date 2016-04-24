@@ -42,6 +42,7 @@
 #include <utils/misc.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+#include <dialogs/tagadddialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -4123,33 +4124,10 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
-            int tagId = tag.getId();
-            QString name = tag.getName();
-            int linkCount = tag.countLinkedNoteFileNames();
-            QString toolTip = tr("show all notes tagged with '%1' (%2)")
-                    .arg(name, QString::number(linkCount));
-
-            QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setData(0, Qt::UserRole, tagId);
-            item->setText(0, name);
-            item->setText(1, linkCount > 0 ? QString::number(linkCount) : "");
-            item->setTextColor(1, QColor(Qt::gray));
-            item->setIcon(0, QIcon::fromTheme(
-                    "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
-            item->setToolTip(0, toolTip);
-            item->setToolTip(1, toolTip);
-            item->setFlags(item->flags() | Qt::ItemIsEditable);
-
-            if (parentId == 0) {
-                // add the item at top level if there was no parent item
-                ui->tagTreeWidget->addTopLevelItem(item);
-            } else {
-                // add the item as child of the parent
-                parent->addChild(item);
-            }
+            QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
 
             // set the active item
-            if (activeTagId == tagId) {
+            if (activeTagId == tag.getId()) {
                 const QSignalBlocker blocker(ui->tagTreeWidget);
                 Q_UNUSED(blocker);
 
@@ -4159,6 +4137,43 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
             // recursively populate the next level
             buildTagTreeForParentItem(item);
         }
+}
+
+/**
+ * Ads a tag to the tag tree widget
+ */
+QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
+        QTreeWidgetItem *parent, Tag tag) {
+    int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+    if (parentId < 0) {
+        parentId = 0;
+    }
+    int tagId = tag.getId();
+
+    QTreeWidgetItem *item =  new QTreeWidgetItem();
+    QString name = tag.getName();
+    int linkCount = tag.countLinkedNoteFileNames();
+    QString toolTip = tr("show all notes tagged with '%1' (%2)")
+                    .arg(name, QString::number(linkCount));
+    item->setData(0, Qt::UserRole, tagId);
+    item->setText(0, name);
+    item->setText(1, linkCount > 0 ? QString::number(linkCount) : "");
+    item->setTextColor(1, QColor(Qt::gray));
+    item->setIcon(0, QIcon::fromTheme(
+                    "tag", QIcon(":icons/breeze-qownnotes/16x16/tag.svg")));
+    item->setToolTip(0, toolTip);
+    item->setToolTip(1, toolTip);
+    item->setFlags(item->flags() | Qt::ItemIsEditable);
+
+    if (parentId == 0) {
+        // add the item at top level if there was no parent item
+        ui->tagTreeWidget->addTopLevelItem(item);
+    } else {
+        // add the item as child of the parent
+        parent->addChild(item);
+    }
+
+    return item;
 }
 
 /**
@@ -4501,6 +4516,8 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
     QPoint globalPos = ui->tagTreeWidget->mapToGlobal(pos);
     QMenu menu;
 
+    QAction *addAction = menu.addAction(
+            tr("&Add tag"));
     QAction *editAction = menu.addAction(
             tr("&Edit tag"));
     QAction *removeAction = menu.addAction(
@@ -4510,21 +4527,53 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
     QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
     buildTagMoveMenuTree(moveMenu);
 
+    QAction *selectedItem = menu.exec(globalPos);
+
+    if (selectedItem == NULL) {
+        return;
+    }
+
     QTreeWidgetItem *item = ui->tagTreeWidget->currentItem();
 
-    // don't allow clicking on non-tag items
+    if (selectedItem == addAction) {
+        // open the "add new tag" dialog
+        TagAddDialog *dialog = new TagAddDialog(this);
+        int dialogResult = dialog->exec();
+
+        // if user pressed ok take the name
+        if (dialogResult == QDialog::Accepted) {
+            QString name = dialog->name();
+            if (!name.isEmpty()) {
+                int parentId = item->data(0, Qt::UserRole).toInt();
+                if (parentId < 0) {
+                    parentId = 0;
+                }
+
+                // create a new tag with the name
+                Tag tag;
+                tag.setParentId(parentId);
+                tag.setName(name);
+                tag.store();
+
+                if (!tag.isFetched()) {
+                    showStatusBarMessage(tr("Tag could not be created!"), 3000);
+                }
+            }
+        }
+
+        return;
+    }
+
+    // don't allow clicking on non-tag items vor removing nnd editing
     if (item->data(0, Qt::UserRole) <= 0) {
         return;
     }
 
-    QAction *selectedItem = menu.exec(globalPos);
-    if (selectedItem) {
-        if (selectedItem == removeAction) {
-            // remove selected tag
-            removeSelectedTags();
-        } else if (selectedItem == editAction) {
-            ui->tagTreeWidget->editItem(item);
-        }
+    if (selectedItem == removeAction) {
+        // remove selected tag
+        removeSelectedTags();
+    } else if (selectedItem == editAction) {
+        ui->tagTreeWidget->editItem(item);
     }
 }
 

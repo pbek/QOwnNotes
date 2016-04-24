@@ -5,6 +5,8 @@
   (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))
 - the tag tree will now be expanded automatically when the tags are loaded 
   and the columns are sized to the contained content
+- you can now add a new tag beneath an other tag by right-clicking on it and 
+  select *Add tag*
 - added a new QOwnNotes desktop icon (a big thank you to Alex L from the KDE 
   V Design Group)
 

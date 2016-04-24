@@ -26,6 +26,7 @@ qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
 qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
+qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
 
 set(RESOURCE_FILES
         breeze-qownnotes.qrc
@@ -71,6 +72,9 @@ set(SOURCE_FILES
     dialogs/passworddialog.ui
     dialogs/masterdialog.cpp
     dialogs/masterdialog.h
+    dialogs/tagadddialog.cpp
+    dialogs/tagadddialog.h
+    dialogs/tagadddialog.ui
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp
