@@ -30,7 +30,7 @@ qdbus $KDS >>/tmp/KDS || exit
 echo >>/tmp/KDS
 
 # See note https://docs.kde.org/trunk5/en/applications/konsole/scripting.html about using /Konsole
-qdbus $KDS /Konsole >>/tmp/KDS
+qdbus $KDS /Windows/1 >>/tmp/KDS
 echo >>/tmp/KDS
 
 FirstTime=1
@@ -41,10 +41,10 @@ do
     echo >>/tmp/KDS
     if [ $FirstTime -eq 1 ]
     then
-        session=$(qdbus $KDS /Konsole currentSession)
+        session=$(qdbus $KDS /Windows/1 currentSession)
         FirstTime=0
     else
-        session=$(qdbus $KDS /Konsole newSession)
+        session=$(qdbus $KDS /Windows/1 newSession)
     fi
     echo $session >>/tmp/KDS
 

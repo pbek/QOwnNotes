@@ -15,7 +15,7 @@
 
 BRANCH=develop
 #BRANCH=master
-UBUNTU_RELEASES=( "vivid" "wily" "xenial" )
+UBUNTU_RELEASES=( "vivid" "wily" "xenial" "yakkety" )
 
 
 DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
