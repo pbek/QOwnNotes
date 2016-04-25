@@ -31,7 +31,7 @@
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>4</number>
+        <number>0</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -1788,9 +1788,6 @@
             </widget>
            </item>
           </layout>
-         </item>
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_10"/>
          </item>
         </layout>
        </widget>
