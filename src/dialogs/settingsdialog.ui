@@ -1996,7 +1996,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
               <item>
                <widget class="QLabel" name="label_10">
                 <property name="text">
-                 <string>Path to external edior:</string>
+                 <string>Path to external editor:</string>
                 </property>
                </widget>
               </item>
