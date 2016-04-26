@@ -11,7 +11,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current note
+- <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
@@ -48,6 +48,7 @@ Important Shortcuts
     - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
       previous and next matches even if the search widget doesn't have the focus
     - <kbd>Esc</kbd> closes the search bar
+- <kbd>Ctrl</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
@@ -87,7 +88,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>⌘</kbd> + <kbd>R</kbd> removes the current note
+- <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
@@ -124,6 +125,7 @@ Important Shortcuts
     - use <kbd>F3</kbd> and <kbd>⇧</kbd> + <kbd>F3</kbd> keys to jump to the 
       previous and next matches even if the search widget doesn't have the focus
     - <kbd>Esc</kbd> closes the search bar
+- <kbd>⌘</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)

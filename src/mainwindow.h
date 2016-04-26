@@ -257,6 +257,8 @@ private slots:
 
     void tagSelectedNotesToTagId(int tagId);
 
+    void on_actionReplace_in_current_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

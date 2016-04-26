@@ -518,6 +518,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_DuplicateText"/>
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
+    <addaction name="actionReplace_in_current_note"/>
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="actionInsert_image"/>
     <addaction name="actionInsert_current_time"/>
@@ -605,6 +606,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="action_Forward_in_note_history"/>
    <addaction name="separator"/>
    <addaction name="action_Find_text_in_note"/>
+   <addaction name="actionReplace_in_current_note"/>
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
@@ -659,7 +661,7 @@ p, li { white-space: pre-wrap; }
     <string>&amp;Remove current note</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+R</string>
+    <string>Alt+R</string>
    </property>
   </action>
   <action name="actionAbout_QOwnNotes">
@@ -1279,6 +1281,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Use &amp;vertical preview layout</string>
+   </property>
+  </action>
+  <action name="actionReplace_in_current_note">
+   <property name="icon">
+    <iconset theme="edit-find-replace" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/edit-find-replace.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find-replace.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Replace in current note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
    </property>
   </action>
  </widget>

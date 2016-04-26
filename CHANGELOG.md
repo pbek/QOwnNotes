@@ -6,6 +6,12 @@
   now get tagged with that tag
 - when creating a new note folder in the settings dialog the folder name will
   now be selected and gets the focus
+- you can now replace found text in the current note with <kbd>Ctrl</kbd> +
+  <kbd>R</kbd> (for [Issue #149](https://github.com/pbek/QOwnNotes/issues/149))
+    - The shortcut for removing the current note went to <kbd>Alt</kbd> + 
+    <kbd>R</kbd>
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 16.04.16
 - did some fixes to the settings dialog to support small screen widths

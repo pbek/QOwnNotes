@@ -27,6 +27,8 @@ qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
 qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
+qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
+        libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
 
 set(RESOURCE_FILES
         breeze-qownnotes.qrc
@@ -116,6 +118,7 @@ set(SOURCE_FILES
     libraries/qmarkdowntextedit/qmarkdowntextedit.h
     libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp
     libraries/qmarkdowntextedit/qtexteditsearchwidget.h
+    libraries/qmarkdowntextedit/qtexteditsearchwidget.ui
     libraries/simplecrypt/simplecrypt.cpp
     libraries/simplecrypt/simplecrypt.h
     libraries/versionnumber/versionnumber.cpp

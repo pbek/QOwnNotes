@@ -4724,3 +4724,12 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
         tagSelectedNotes(tag);
     }
 }
+
+/**
+ * Opens the widget to replace text in the current note
+ */
+void MainWindow::on_actionReplace_in_current_note_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    textEdit->searchWidget()->activateReplace();
+}
