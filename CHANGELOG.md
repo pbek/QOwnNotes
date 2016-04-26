@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.04.17
+- decreased the width of *add tag* dialog
+- if a note is created while a tag was selected in the tag tree the note will
+  now get tagged with that tag
+
 ## 16.04.16
 - did some fixes to the settings dialog to support small screen widths
   (for [Issue #136](https://github.com/pbek/QOwnNotes/issues/136))

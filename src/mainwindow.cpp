@@ -2760,6 +2760,12 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         note.setNoteText(noteText);
         note.store();
 
+        // if a tag is selected add the tag to the just created note
+        Tag tag = Tag::activeTag();
+        if (tag.isFetched()) {
+            tag.linkToNote(note);
+        }
+
         // store the note to disk
         {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
