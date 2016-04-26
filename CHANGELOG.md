@@ -12,6 +12,8 @@
     <kbd>R</kbd>
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- added more Portuguese, French, Russian, German and Japanese translation 
+  (thank you mlimacarlos, Loelo, frostyland and piyo)
 
 ## 16.04.16
 - did some fixes to the settings dialog to support small screen widths

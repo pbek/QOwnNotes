@@ -1811,11 +1811,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">External editor</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1999"/>
-      <source>Path to external edior:</source>
-      <translation type="unfinished">Path to external edior:</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="2006"/>
       <source>path to external editor, leave empty for default</source>
       <translation type="unfinished">path to external editor, leave empty for default</translation>
@@ -1864,6 +1859,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="1907"/>
       <source>You need to restart the application to let these changes take action.</source>
       <translation type="unfinished">You need to restart the application to let these changes take action.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="1999"/>
+      <source>Path to external editor:</source>
+      <translation type="unfinished">Path to external editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2068"/>
