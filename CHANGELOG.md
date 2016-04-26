@@ -4,6 +4,8 @@
 - decreased the width of *add tag* dialog
 - if a note is created while a tag was selected in the tag tree the note will
   now get tagged with that tag
+- when creating a new note folder in the settings dialog the folder name will
+  now be selected and gets the focus
 
 ## 16.04.16
 - did some fixes to the settings dialog to support small screen widths

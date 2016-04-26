@@ -1016,6 +1016,10 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
 
         // enable the remove button
         ui->noteFolderRemoveButton->setEnabled(true);
+
+        // focus the folder name edit and select the text
+        ui->noteFolderNameLineEdit->setFocus();
+        ui->noteFolderNameLineEdit->selectAll();
     }
 }
 
