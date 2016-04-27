@@ -661,7 +661,7 @@ p, li { white-space: pre-wrap; }
     <string>&amp;Remove current note</string>
    </property>
    <property name="shortcut">
-    <string>Alt+R</string>
+    <string notr="true">Alt+R</string>
    </property>
   </action>
   <action name="actionAbout_QOwnNotes">
@@ -1292,7 +1292,7 @@ p, li { white-space: pre-wrap; }
     <string>Replace in current note</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+R</string>
+    <string notr="true">Ctrl+R</string>
    </property>
   </action>
  </widget>
@@ -1305,8 +1305,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

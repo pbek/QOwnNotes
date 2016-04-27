@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.04.18
+- added more German translation
+
 ## 16.04.17
 - decreased the width of *add tag* dialog
 - if a note is created while a tag was selected in the tag tree the note will
