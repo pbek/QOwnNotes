@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.04.18
+- added some styling fixes for the text-replace widget in OS X 
 - added more German translation
 
 ## 16.04.17
