@@ -3,6 +3,7 @@
 ## 16.04.18
 - added some styling fixes for the text-replace widget in OS X 
 - added more German translation
+- fixed the size of the todo dialog
 
 ## 16.04.17
 - decreased the width of *add tag* dialog

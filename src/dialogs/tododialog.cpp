@@ -15,7 +15,6 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
     _mainWindow = mainWindow;
     ui->setupUi(this);
     setupUi();
-    resize(1, 1);
 
     QString selectedText =
             _mainWindow->activeNoteTextEdit()->textCursor().selectedText();

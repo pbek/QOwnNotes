@@ -7,6 +7,7 @@ TagAddDialog::TagAddDialog(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->nameLineEdit->setFocus();
+    resize(1, 1);
 }
 
 TagAddDialog::~TagAddDialog()
