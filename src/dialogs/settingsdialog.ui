@@ -1502,6 +1502,17 @@
                    </item>
                    <item>
                     <property name="text">
+                     <string notr="true">Italiano</string>
+                    </property>
+                    <property name="statusTip">
+                     <string>Italian</string>
+                    </property>
+                    <property name="whatsThis">
+                     <string notr="true">it</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string notr="true">Magyar</string>
                     </property>
                     <property name="toolTip">

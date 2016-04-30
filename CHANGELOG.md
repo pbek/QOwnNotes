@@ -1,6 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.04.18
+- added **Italian translation** (a big thank you to alexl and rogepix!)
 - added some styling fixes for the text-replace widget in OS X 
 - added more German translation
 - fixed the size of the todo dialog
