@@ -1954,7 +1954,13 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         this->ui->noteTextEdit->setText(note->getNoteText());
     }
 
-    this->ui->noteTextView->setHtml(note->toMarkdownHtml(notesPath));
+    int maxImageWidth = ui->noteTextView->width() - 10;
+    if (maxImageWidth < 0) {
+        maxImageWidth = 16;
+    }
+
+    this->ui->noteTextView->setHtml(
+            note->toMarkdownHtml(notesPath, maxImageWidth));
 
     // update the slider when editing notes
     noteTextSliderValueChanged(

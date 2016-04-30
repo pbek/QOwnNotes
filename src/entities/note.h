@@ -88,7 +88,7 @@ public:
 
     bool remove(bool withFile);
 
-    QString toMarkdownHtml(QString notesPath = "");
+    QString toMarkdownHtml(QString notesPath, int maxImageWidth = 980);
 
     bool isFetched();
 

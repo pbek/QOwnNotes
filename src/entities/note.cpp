@@ -715,7 +715,7 @@ bool Note::removeNoteFile() {
  * @param notesPath for transforming relative local urls to absolute ones
  * @return
  */
-QString Note::toMarkdownHtml(QString notesPath) {
+QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
     hoedown_extensions extensions =
@@ -807,13 +807,14 @@ QString Note::toMarkdownHtml(QString notesPath) {
         QString fileName = match.captured(1);
         QImage image(fileName);
 
-        // cap the image width at 980px
-        if (image.width() > 980) {
+        // cap the image width at 980px or the note text view width
+        if (image.width() > maxImageWidth) {
             result.replace(
                     QRegularExpression("<img src=\"file:\\/\\/" +
                                        QRegularExpression::escape(fileName) +
                                        "\""),
-                    "<img width=\"980\" src=\"file://" + fileName + "\"");
+                    QString("<img width=\"%1\" src=\"file://%2\"").arg(
+                            QString::number(maxImageWidth), fileName));
         }
     }
 

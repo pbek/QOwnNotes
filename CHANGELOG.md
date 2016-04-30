@@ -4,6 +4,9 @@
 - added some styling fixes for the text-replace widget in OS X 
 - added more German translation
 - fixed the size of the todo dialog
+- the width of images in the preview will now be reduced to the width of the 
+  preview pane if they are larger than that
+  (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
 
 ## 16.04.17
 - decreased the width of *add tag* dialog
