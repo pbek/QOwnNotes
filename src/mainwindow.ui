@@ -156,12 +156,36 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLineEdit" name="searchLineEdit">
-           <property name="toolTip">
-            <string>search for notes or create new notes by entering text and pressing return</string>
+          <widget class="QFrame" name="noteListSubFrame">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
            </property>
-           <property name="styleSheet">
-            <string notr="true">QLineEdit {
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="noteListSubFrameLayout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="searchLineEdit">
+              <property name="toolTip">
+               <string>search for notes or create new notes by entering text and pressing return</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
 	border: none;
 	padding: 2px 5px 2px 27px;
 	background-image: url(:/images/search-notes.svg);
@@ -170,42 +194,60 @@
 	margin-right: 0px;
 }
 </string>
-           </property>
-           <property name="placeholderText">
-            <string>search or create note</string>
-           </property>
-           <property name="clearButtonEnabled">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="noteFolderComboBox">
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="maxVisibleItems">
-            <number>100</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QListWidget" name="notesListWidget">
-           <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">QListWidget {
+              </property>
+              <property name="placeholderText">
+               <string>search or create note</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="noteFolderComboBox">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="maxVisibleItems">
+               <number>100</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListWidget" name="notesListWidget">
+              <property name="contextMenuPolicy">
+               <enum>Qt::CustomContextMenu</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QListWidget {
 /*	border: 1px solid gray;*/
 }
 </string>
-           </property>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="NavigationWidget" name="navigationWidget">
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
-           <property name="selectionMode">
-            <enum>QAbstractItemView::ExtendedSelection</enum>
-           </property>
+           <attribute name="headerVisible">
+            <bool>true</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Navigation</string>
+            </property>
+           </column>
           </widget>
          </item>
         </layout>
@@ -1302,6 +1344,11 @@ p, li { white-space: pre-wrap; }
    <class>QOwnNotesMarkdownTextEdit</class>
    <extends>QTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>NavigationWidget</class>
+   <extends>QTreeWidget</extends>
+   <header location="global">widgets/navigationwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -96,6 +96,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     createSystemTrayIcon();
     initMainSplitter();
+    initNoteListSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
 
@@ -256,6 +257,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // do a bit more styling
     initStyling();
+
+    // act on position clicks in the navigation widget
+    QObject::connect(ui->navigationWidget, SIGNAL(positionClicked(int)),
+                     this, SLOT(onNavigationWidgetPositionClicked(int)));
+
+    // do the navigation parsing after the highlighter was finished
+    QObject::connect(ui->noteTextEdit->highlighter(),
+                     SIGNAL(parsingFinished()),
+                     this,
+                     SLOT(startNavigationParser()));
 }
 
 MainWindow::~MainWindow() {
@@ -853,6 +864,25 @@ void MainWindow::initMainSplitter() {
 }
 
 /**
+ * Does the initialization for the note list splitter
+ */
+void MainWindow::initNoteListSplitter() {
+    _noteListSplitter = new QSplitter();
+    _noteListSplitter->setOrientation(Qt::Vertical);
+//    _noteListSplitter->setHandleWidth(0);
+
+    _noteListSplitter->addWidget(ui->noteListSubFrame);
+    _noteListSplitter->addWidget(ui->navigationWidget);
+
+    ui->notesListFrame->layout()->addWidget(_noteListSplitter);
+
+    // restore main splitter state
+    QSettings settings;
+    QByteArray state = settings.value("noteListSplitterState").toByteArray();
+    _noteListSplitter->restoreState(state);
+}
+
+/**
  * Does the further setup for the main splitter and all the panes
  */
 void MainWindow::setupMainSplitter() {
@@ -1365,7 +1395,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
             // is opened, otherwise we get the event
             waitMsecs(100);
 
-            // just to make sure everything is uptodate
+            // just to make sure everything is up-to-date
             this->currentNote.refetch();
 
             QString newNoteName = this->currentNote.getName();
@@ -1758,6 +1788,8 @@ void MainWindow::storeSettings() {
         settings.setValue("MainWindow/geometry", saveGeometry());
         settings.setValue("MainWindow/windowState", saveState());
         settings.setValue("mainSplitterSizes", mainSplitter->saveState());
+        settings.setValue("noteListSplitterState",
+                          _noteListSplitter->saveState());
         settings.setValue("verticalNoteFrameSplitterState",
                           _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
@@ -1968,6 +2000,13 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
 }
 
 /**
+ * Starts the parsing for the navigation widget
+ */
+void MainWindow::startNavigationParser() {
+    ui->navigationWidget->parse(activeNoteTextEdit()->document());
+}
+
+/**
  * Sets the text of the current note.
  * This is a public callback function for the version dialog.
  *
@@ -1989,7 +2028,8 @@ void MainWindow::setCurrentNoteText(QString text) {
  */
 void MainWindow::createNewNote(QString name, QString text) {
     QString extension = Note::defaultNoteFileExtension();
-    QFile *f = new QFile(this->notesPath + QDir::separator() + name + "." + extension);
+    QFile *f = new QFile(this->notesPath + QDir::separator() + name + "."
+                         + extension);
 
     // change the name and headline if note exists
     if (f->exists()) {
@@ -4070,6 +4110,12 @@ void MainWindow::on_action_Reset_note_text_size_triggered()
     ui->encryptedNoteTextEdit->setStyles();
     ui->encryptedNoteTextEdit->highlighter()->parse();
     showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 2000);
+
+    QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
+
+    QTextCursor c = ui->noteTextEdit->textCursor();
+    c.setPosition(cursor.position());
+    ui->noteTextEdit->setTextCursor(c);
 }
 
 /**
@@ -4734,8 +4780,19 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
 /**
  * Opens the widget to replace text in the current note
  */
-void MainWindow::on_actionReplace_in_current_note_triggered()
-{
+void MainWindow::on_actionReplace_in_current_note_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     textEdit->searchWidget()->activateReplace();
+}
+
+/**
+ * Jumps to the position that was clicked in the navigation widget
+ */
+void MainWindow::onNavigationWidgetPositionClicked(int position) {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+
+    QTextCursor c = textEdit->textCursor();
+    c.setPosition(position);
+    textEdit->setTextCursor(c);
+    textEdit->setFocus();
 }

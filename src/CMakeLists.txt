@@ -143,6 +143,8 @@ set(SOURCE_FILES
     libraries/botan/botanwrapper.cpp
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
+    widgets/navigationwidget.cpp
+    widgets/navigationwidget.h
     utils/misc.cpp
     utils/misc.h
     build_number.h

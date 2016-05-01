@@ -259,9 +259,14 @@ private slots:
 
     void on_actionReplace_in_current_note_triggered();
 
+    void onNavigationWidgetPositionClicked(int position);
+
+    void startNavigationParser();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
+    QSplitter *_noteListSplitter;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
@@ -445,4 +450,6 @@ private:
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
+
+    void initNoteListSplitter();
 };

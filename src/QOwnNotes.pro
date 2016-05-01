@@ -70,7 +70,8 @@ SOURCES += main.cpp\
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
     dialogs/welcomedialog.cpp \
-    dialogs/tagadddialog.cpp
+    dialogs/tagadddialog.cpp \
+    widgets/navigationwidget.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -113,7 +114,8 @@ HEADERS  += mainwindow.h \
     dialogs/masterdialog.h \
     utils/misc.h \
     dialogs/welcomedialog.h \
-    dialogs/tagadddialog.h
+    dialogs/tagadddialog.h \
+    widgets/navigationwidget.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

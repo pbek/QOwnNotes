@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.05.0
+- a navigation bar that shows the headline structure of the current note was 
+  implemented (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
+  - click on a headline to jump to in the note 
+
 ## 16.04.18
 - added **Italian translation** (a big thank you to alexl and rogepix!)
 - added some styling fixes for the text-replace widget in OS X 
