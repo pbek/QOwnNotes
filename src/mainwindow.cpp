@@ -872,7 +872,7 @@ void MainWindow::initNoteListSplitter() {
 //    _noteListSplitter->setHandleWidth(0);
 
     _noteListSplitter->addWidget(ui->noteListSubFrame);
-    _noteListSplitter->addWidget(ui->navigationWidget);
+    _noteListSplitter->addWidget(ui->navigationFrame);
 
     ui->notesListFrame->layout()->addWidget(_noteListSplitter);
 

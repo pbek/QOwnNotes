@@ -81,8 +81,6 @@ void NavigationWidget::parse(QTextDocument *document) {
             continue;
         }
 
-        qDebug() << __func__ << " - 'text': " << text << " : " << elementType;
-
         QTreeWidgetItem *item = new QTreeWidgetItem();
         item->setText(0, text);
         item->setData(0, Qt::UserRole, block.position());
