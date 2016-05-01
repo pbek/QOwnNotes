@@ -395,6 +395,9 @@ void MainWindow::initStyling() {
     ui->navigationFrame->setStyleSheet("");
     ui->noteEditFrame->setStyleSheet("");
     ui->noteViewFrame->setStyleSheet("");
+
+    // add some margins in OS X to match the styling of the note list
+    ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved
