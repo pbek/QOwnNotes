@@ -3,7 +3,10 @@
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
   implemented (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
-  - click on a headline to jump to in the note 
+  - click on a headline to jump to in the note
+  - you can hide the navigation bar by dragging it to the bottom with the 
+    splitter between the note list and the navigation bar 
+- added more German and French translation (thank you Loelo)
 
 ## 16.04.18
 - added **Italian translation** (a big thank you to alexl and rogepix!)
