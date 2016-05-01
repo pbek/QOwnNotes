@@ -391,6 +391,8 @@ void MainWindow::initStyling() {
     // no stylesheets needed for OS X, the margins doesn't work the same there
     ui->tagFrame->setStyleSheet("");
     ui->notesListFrame->setStyleSheet("");
+    ui->noteListSubFrame->setStyleSheet("");
+    ui->navigationFrame->setStyleSheet("");
     ui->noteEditFrame->setStyleSheet("");
     ui->noteViewFrame->setStyleSheet("");
 #endif
@@ -869,7 +871,9 @@ void MainWindow::initMainSplitter() {
 void MainWindow::initNoteListSplitter() {
     _noteListSplitter = new QSplitter();
     _noteListSplitter->setOrientation(Qt::Vertical);
-//    _noteListSplitter->setHandleWidth(0);
+
+    ui->noteListSubFrame->setStyleSheet("#noteListSubFrame {margin: 0;}");
+    ui->navigationFrame->setStyleSheet("#navigationFrame {margin: 0;}");
 
     _noteListSplitter->addWidget(ui->noteListSubFrame);
     _noteListSplitter->addWidget(ui->navigationFrame);
