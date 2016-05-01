@@ -380,7 +380,7 @@ void MainWindow::initStyling() {
             .arg(color.name());
 
     ui->noteTagFrame->setStyleSheet(
-            ui->noteTextView->styleSheet() + frameStyling);
+            ui->noteTagFrame->styleSheet() + frameStyling);
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
