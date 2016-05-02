@@ -14,6 +14,7 @@
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
 #include "tag.h"
+#include <utils/misc.h>
 
 
 Note::Note() {
@@ -805,7 +806,13 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileName = match.captured(1);
+
+#ifdef Q_OS_WIN
+        // remove the leading slash under Windows to get a more correct filename
+        QImage image(Utils::Misc::removeIfStartsWith(fileName, "/"));
+#else
         QImage image(fileName);
+#endif
 
         // cap the image width at 980px or the note text view width
         if (image.width() > maxImageWidth) {
