@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.05.1
+- the automatic image resizing in the preview under Windows was fixed
+
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
   implemented (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
