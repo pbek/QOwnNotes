@@ -259,6 +259,19 @@ bool DatabaseService::setupTables() {
         version = 5;
     }
 
+    if (version < 6) {
+        QSettings settings;
+        // remove the obsolete activeTagId setting
+        settings.remove("activeTagId");
+
+        version = 6;
+    }
+
+    if (version < 7) {
+        queryDisk.exec("ALTER TABLE noteFolder ADD active_tag_id INTEGER;");
+        version = 7;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

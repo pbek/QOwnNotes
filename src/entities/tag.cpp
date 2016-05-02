@@ -1,5 +1,6 @@
 #include "tag.h"
 #include "note.h"
+#include "notefolder.h"
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -474,8 +475,9 @@ bool Tag::isFetched() {
 }
 
 void Tag::setAsActive() {
-    QSettings settings;
-    settings.setValue("activeTagId", id);
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    noteFolder.setActiveTagId(id);
+    noteFolder.store();
 }
 
 /**
@@ -489,8 +491,8 @@ bool Tag::isActive() {
  * Returns the id of the active note folder in the settings
  */
 int Tag::activeTagId() {
-    QSettings settings;
-    return settings.value("activeTagId").toInt();
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    return noteFolder.getActiveTagId();
 }
 
 /**

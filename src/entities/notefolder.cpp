@@ -16,6 +16,7 @@ NoteFolder::NoteFolder() {
     ownCloudServerId = 1;
     remotePath = "";
     priority = 0;
+    activeTagId = 0;
 }
 
 int NoteFolder::getId() {
@@ -42,6 +43,10 @@ int NoteFolder::getPriority() {
     return this->priority;
 }
 
+int NoteFolder::getActiveTagId() {
+    return this->activeTagId;
+}
+
 void NoteFolder::setName(QString text) {
     this->name = text;
 }
@@ -60,6 +65,10 @@ void NoteFolder::setRemotePath(QString text) {
 
 void NoteFolder::setPriority(int value) {
     this->priority = value;
+}
+
+void NoteFolder::setActiveTagId(int value) {
+    this->activeTagId = value;
 }
 
 bool NoteFolder::create(QString name, QString localPath,
@@ -144,6 +153,7 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->ownCloudServerId = query.value("owncloud_server_id").toInt();
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
+    this->activeTagId = query.value("active_tag_id").toInt();
 
     return true;
 }
@@ -178,14 +188,16 @@ bool NoteFolder::store() {
         query.prepare(
                 "UPDATE noteFolder SET name = :name, local_path = :localPath, "
                         "owncloud_server_id = :ownCloudServerId, "
-                        "remote_path = :remotePath, priority = :priority "
+                        "remote_path = :remotePath, priority = :priority, "
+                        "active_tag_id = :activeTagId "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO noteFolder (name, local_path, owncloud_server_id, "
-                        "remote_path, priority) VALUES (:name, :localPath, "
-                        ":ownCloudServerId, :remotePath, :priority)");
+                        "remote_path, priority, active_tag_id) VALUES "
+                        "(:name, :localPath, :ownCloudServerId, :remotePath, "
+                        ":priority, :activeTagId)");
     }
 
     query.bindValue(":name", this->name);
@@ -193,6 +205,7 @@ bool NoteFolder::store() {
     query.bindValue(":ownCloudServerId", this->ownCloudServerId);
     query.bindValue(":remotePath", this->remotePath);
     query.bindValue(":priority", this->priority);
+    query.bindValue(":activeTagId", this->activeTagId);
 
     if (!query.exec()) {
         // on error

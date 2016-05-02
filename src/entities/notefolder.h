@@ -41,6 +41,8 @@ public:
     QString fixRemotePath();
     static QString currentRemotePath();
     static QString currentLocalPath();
+    void setActiveTagId(int value);
+    int getActiveTagId();
 
 private:
     int id;
@@ -49,4 +51,5 @@ private:
     int ownCloudServerId;
     QString remotePath;
     int priority;
+    int activeTagId;
 };

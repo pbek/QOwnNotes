@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.05.2
+- the active tag will now be remembered across different note folders when 
+  switching between note folders
+
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
