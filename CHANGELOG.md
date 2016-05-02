@@ -3,6 +3,8 @@
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
+- improved the automatic image width calculation for the image resizing in the
+  preview (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
 - fixed a sporadic crash that occurred when switching the note folder
 - in the navigation tree now a suitable parent headline will be searched if 
   the headline order was not correct

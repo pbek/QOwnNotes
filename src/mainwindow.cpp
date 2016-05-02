@@ -1993,7 +1993,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         this->ui->noteTextEdit->setText(note->getNoteText());
     }
 
-    int maxImageWidth = ui->noteTextView->width() - 10;
+    QMargins margins = ui->noteTextView->contentsMargins();
+    int maxImageWidth = ui->noteTextView->viewport()->width() - margins.left()
+                        - margins.right() - 15;
+
     if (maxImageWidth < 0) {
         maxImageWidth = 16;
     }
@@ -4797,6 +4800,8 @@ void MainWindow::on_actionReplace_in_current_note_triggered() {
  */
 void MainWindow::onNavigationWidgetPositionClicked(int position) {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+
+    // set the focus first so the preview also scrolls to the headline
     textEdit->setFocus();
 
     QTextCursor c = textEdit->textCursor();
