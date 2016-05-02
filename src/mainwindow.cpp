@@ -4797,9 +4797,9 @@ void MainWindow::on_actionReplace_in_current_note_triggered() {
  */
 void MainWindow::onNavigationWidgetPositionClicked(int position) {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    textEdit->setFocus();
 
     QTextCursor c = textEdit->textCursor();
     c.setPosition(position);
     textEdit->setTextCursor(c);
-    textEdit->setFocus();
 }
