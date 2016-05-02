@@ -49,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    _noteViewIsRegenerated = false;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -271,6 +272,12 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(parsingFinished()),
                      this,
                      SLOT(startNavigationParser()));
+
+    // act on note preview resize
+    QObject::connect(ui->noteTextView,
+                     SIGNAL(resize(QSize, QSize)),
+                     this,
+                     SLOT(onNoteTextViewResize(QSize, QSize)));
 }
 
 MainWindow::~MainWindow() {
@@ -1994,7 +2001,7 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
  */
 void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     if (!updateNoteTextViewOnly) {
-        this->ui->noteTextEdit->setText(note->getNoteText());
+        ui->noteTextEdit->setText(note->getNoteText());
     }
 
     QMargins margins = ui->noteTextView->contentsMargins();
@@ -2005,7 +2012,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         maxImageWidth = 16;
     }
 
-    this->ui->noteTextView->setHtml(
+    ui->noteTextView->setHtml(
             note->toMarkdownHtml(notesPath, maxImageWidth));
 
     // update the slider when editing notes
@@ -2017,7 +2024,6 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
-    qDebug() << __func__;
     ui->navigationWidget->parse(activeNoteTextEdit()->document());
 }
 
@@ -4812,4 +4818,26 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     QTextCursor c = textEdit->textCursor();
     c.setPosition(position);
     textEdit->setTextCursor(c);
+}
+
+/**
+ * Start a note preview regeneration to resize too large images
+ */
+void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
+    Q_UNUSED(size);
+    Q_UNUSED(oldSize);
+
+    // just regenerate the note once a second for performance reasons
+    if (!_noteViewIsRegenerated) {
+        _noteViewIsRegenerated = true;
+        QTimer::singleShot(1000, this, SLOT(regenerateNotePreview()));
+    }
+}
+
+/**
+ * Regenerate the note preview by converting the markdown to html again
+ */
+void MainWindow::regenerateNotePreview() {
+    setNoteTextFromNote(&currentNote, true);
+    _noteViewIsRegenerated = false;
 }

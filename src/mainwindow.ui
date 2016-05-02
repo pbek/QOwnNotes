@@ -476,7 +476,7 @@ p, li { white-space: pre-wrap; }
           <number>0</number>
          </property>
          <item row="0" column="0">
-          <widget class="QTextBrowser" name="noteTextView">
+          <widget class="NotePreviewWidget" name="noteTextView">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -1377,10 +1377,15 @@ p, li { white-space: pre-wrap; }
    <extends>QTreeWidget</extends>
    <header location="global">widgets/navigationwidget.h</header>
   </customwidget>
+  <customwidget>
+   <class>NotePreviewWidget</class>
+   <extends>QTextBrowser</extends>
+   <header location="global">widgets/notepreviewwidget.h</header>
+  </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

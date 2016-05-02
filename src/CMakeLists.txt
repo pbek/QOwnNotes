@@ -145,6 +145,8 @@ set(SOURCE_FILES
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
     widgets/navigationwidget.h
+    widgets/notepreviewwidget.cpp
+    widgets/notepreviewwidget.h
     utils/misc.cpp
     utils/misc.h
     build_number.h

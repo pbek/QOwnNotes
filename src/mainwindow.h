@@ -263,6 +263,10 @@ private slots:
 
     void startNavigationParser();
 
+    void onNoteTextViewResize(QSize size, QSize oldSize);
+
+    void regenerateNotePreview();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -296,6 +300,7 @@ private:
     QToolBar *_windowToolbar;
     QFrame *_verticalNoteFrame;
     QSplitter *_verticalNoteFrameSplitter;
+    bool _noteViewIsRegenerated;
 
     void initMainSplitter();
 
