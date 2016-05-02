@@ -11,6 +11,8 @@
 - the preview view now also scrolls to the position of the headline if 
   clicked in the navigation bar
 - the navigation bar now also works while editing encrypted notes
+- added more Portuguese, Japanese and Dutch translation (thank you 
+  mlimacarlos, piyo and hartwin)
 
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
