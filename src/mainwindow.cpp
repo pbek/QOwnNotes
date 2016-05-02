@@ -267,6 +267,10 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(parsingFinished()),
                      this,
                      SLOT(startNavigationParser()));
+    QObject::connect(ui->encryptedNoteTextEdit->highlighter(),
+                     SIGNAL(parsingFinished()),
+                     this,
+                     SLOT(startNavigationParser()));
 }
 
 MainWindow::~MainWindow() {
@@ -2013,6 +2017,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
  * Starts the parsing for the navigation widget
  */
 void MainWindow::startNavigationParser() {
+    qDebug() << __func__;
     ui->navigationWidget->parse(activeNoteTextEdit()->document());
 }
 

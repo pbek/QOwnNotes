@@ -8,8 +8,9 @@
 - fixed a sporadic crash that occurred when switching the note folder
 - in the navigation tree now a suitable parent headline will be searched if 
   the headline order was not correct
-- now the preview view also scrolls to the position of the headline if 
+- the preview view now also scrolls to the position of the headline if 
   clicked in the navigation bar
+- the navigation bar now also works while editing encrypted notes
 
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
