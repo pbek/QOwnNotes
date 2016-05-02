@@ -34,4 +34,7 @@ signals:
 
 private:
     QTextDocument *_document;
+    QMap<int, QTreeWidgetItem *> _lastHeadingItemList;
+
+    QTreeWidgetItem *findSuitableParentItem(int elementType);
 };

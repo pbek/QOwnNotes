@@ -58,7 +58,7 @@ void NavigationWidget::parse(QTextDocument *document) {
 
     setDocument(document);
     clear();
-    QMap<int, QTreeWidgetItem *> lastHeadingItemList;
+    _lastHeadingItemList.clear();
 
     for (int i = 0; i < document->blockCount(); i++) {
         QTextBlock block = document->findBlockByNumber(i);
@@ -86,8 +86,8 @@ void NavigationWidget::parse(QTextDocument *document) {
         item->setData(0, Qt::UserRole, block.position());
         item->setToolTip(0, tr("headline %1").arg(elementType - pmh_H1 + 1));
 
-        QTreeWidgetItem *lastHigherItem =
-                lastHeadingItemList.value(elementType - 1);
+        // attempt to find a suitable parent item for the element type
+        QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
 
         if (lastHigherItem == NULL) {
             // if there wasn't a last higher level item then add the current
@@ -99,8 +99,19 @@ void NavigationWidget::parse(QTextDocument *document) {
             lastHigherItem->addChild(item);
         }
 
-        lastHeadingItemList[elementType] = item;
+        _lastHeadingItemList[elementType] = item;
     }
 
     expandAll();
+}
+
+/**
+ * Attempts to find a suitable parent item for the element type
+ */
+QTreeWidgetItem * NavigationWidget::findSuitableParentItem(int elementType) {
+    elementType--;
+    QTreeWidgetItem *lastHigherItem = _lastHeadingItemList[elementType];
+
+    return ((lastHigherItem == NULL) && (elementType > pmh_H1)) ?
+           findSuitableParentItem(elementType) : lastHigherItem;
 }

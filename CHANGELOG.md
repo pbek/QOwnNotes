@@ -4,6 +4,8 @@
 - fixed the automatic image resizing in the preview under Windows
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
 - fixed a sporadic crash that occurred when switching the note folder
+- in the navigation tree now a suitable parent headline will be searched if 
+  the headline order was not correct
 
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
