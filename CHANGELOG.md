@@ -11,6 +11,7 @@
 - when clicking a headline in the navigation bar the text beneath the headline 
   will be now made fully visible by scrolling more intelligently
   (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
+  - in addition the text of the headline will be selected
 
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows

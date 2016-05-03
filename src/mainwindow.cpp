@@ -4827,6 +4827,10 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     }
 
     c.setPosition(position);
+
+    // select the text of the headline
+    c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
+
     textEdit->setTextCursor(c);
 }
 
