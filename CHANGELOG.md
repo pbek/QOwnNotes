@@ -8,6 +8,9 @@
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
 - when the text replace functionality is activated now the currently selected 
   text will be entered in the search line edit
+- when clicking a headline in the navigation bar the text beneath the headline 
+  will be now made fully visible by scrolling more intelligently
+  (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
 
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows

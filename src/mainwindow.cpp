@@ -4816,6 +4816,16 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     textEdit->setFocus();
 
     QTextCursor c = textEdit->textCursor();
+
+    // if the current position of the cursor is smaller than the position
+    // where we want to jump to set the cursor to the end of the note to make
+    // sure it scrolls up, not down
+    // everything is visible that way
+    if (c.position() < position) {
+        c.movePosition(QTextCursor::End);
+        textEdit->setTextCursor(c);
+    }
+
     c.setPosition(position);
     textEdit->setTextCursor(c);
 }
