@@ -18,13 +18,14 @@ BuildRequires:  qt5-qtbase-gui
 #BuildRequires:  qt5-qtwebkit-devel
 BuildRequires:  qt5-qttools qt5-qttools-devel
 BuildRequires:  qt5-qtsvg-devel
+BuildRequires:  qt5-declarative-devel
 BuildRequires:  desktop-file-utils
 Requires:       qt5-qtsvg
 
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libQt5Svg-devel
+BuildRequires:  libqt5-qtbase-devel libQt5Declarative-devel libQt5Svg-devel
 BuildRequires:  update-desktop-files 
 Requires:       libQt5Svg5
 
