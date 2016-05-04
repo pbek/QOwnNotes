@@ -2,10 +2,11 @@
 #include "ui_versiondialog.h"
 #include <QSettings>
 #include <QDebug>
-#include <QScriptValueIterator>
 #include <QPushButton>
+#include <QJSValue>
+#include <QJSValueIterator>
 
-VersionDialog::VersionDialog(QScriptValue versions, MainWindow *mainWindow,
+VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
                              QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::VersionDialog) {
@@ -45,8 +46,8 @@ VersionDialog::VersionDialog(QScriptValue versions, MainWindow *mainWindow,
     diffList = new QStringList();
     dataList = new QStringList();
 
-    // init the iterator for the verions
-    QScriptValueIterator versionsIterator(versions);
+    // init the iterator for the versions
+    QJSValueIterator versionsIterator(versions);
 
     // iterate over the versions
     while (versionsIterator.hasNext()) {

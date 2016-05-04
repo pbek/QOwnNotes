@@ -4889,9 +4889,9 @@ void MainWindow::on_actionAutocomplete_triggered()
     equation = match.captured(1);
     qDebug() << __func__ << " - 'equation': " << equation;
 
-    QJSEngine myEngine;
+    QJSEngine engine;
     // evaluate our equation
-    QJSValue result = myEngine.evaluate(equation);
+    QJSValue result = engine.evaluate(equation);
     double resultValue = result.toNumber();
     qDebug() << __func__ << " - 'resultValue': " << resultValue;
 

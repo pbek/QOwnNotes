@@ -4,13 +4,12 @@
 #include <QNetworkRequest>
 #include <QUrl>
 #include <QObject>
-#include <QScriptEngine>
-#include <QScriptValueIterator>
 #include <QMessageBox>
 #include <QLibraryInfo>
 #include <QUrlQuery>
 #include <QSettings>
 #include <QApplication>
+#include <QJSEngine>
 #include "build_number.h"
 #include "dialogs/updatedialog.h"
 #include "version.h"
@@ -98,8 +97,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
     // we have to add [], so the string can be parsed as JSON
     QString data = QString("[") + allData + QString("]");
 
-    QScriptEngine engine;
-    QScriptValue result = engine.evaluate(data);
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
 
     // get the information if we should update our app
     bool shouldUpdate =
@@ -119,7 +118,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         // get the release build number
         int releaseBuildNumber = result.property("0").property(
-                "release_build_number").toInt32();
+                "release_build_number").toInt();
 
         // get the changes html
         QString changesHtml = result.property("0").property(

@@ -34,7 +34,7 @@ DEPEND="
 	dev-qt/qtsql:5
 	dev-qt/qtsvg:5
 	dev-qt/qtnetwork:5
-	dev-qt/qtscript:5
+	dev-qt/qtdeclarative:5
 	dev-qt/qtprintsupport:5
 "
 RDEPEND="${DEPEND}"

@@ -2,10 +2,11 @@
 #include "ui_trashdialog.h"
 #include <QSettings>
 #include <QDebug>
-#include <QScriptValueIterator>
 #include <QPushButton>
+#include <QJSValue>
+#include <QJSValueIterator>
 
-TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
+TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
                          QWidget *parent) :
         MasterDialog(parent),
         ui(new Ui::TrashDialog) {
@@ -67,7 +68,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
     timestampList = new QList<int>;
 
     // init the iterator for the versions
-    QScriptValueIterator notesIterator(notes);
+    QJSValueIterator notesIterator(notes);
 
     // iterate over the trashed notes
     while (notesIterator.hasNext()) {
@@ -76,7 +77,7 @@ TrashDialog::TrashDialog(QScriptValue notes, MainWindow *mainWindow,
         itemName = notesIterator.value().property("noteName").toString();
         dateString = notesIterator.value().property("dateString").toString();
         data = notesIterator.value().property("data").toString();
-        timestamp = notesIterator.value().property("timestamp").toInt32();
+        timestamp = notesIterator.value().property("timestamp").toInt();
         QString fileName =
                 notesIterator.value().property("fileName").toString();
 

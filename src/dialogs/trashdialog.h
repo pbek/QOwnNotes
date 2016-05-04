@@ -6,8 +6,8 @@
 
 #include <QAbstractButton>
 #include <QDialog>
-#include <QScriptValue>
 #include <QSplitter>
+#include <QJSValue>
 
 namespace Ui {
 class TrashDialog;
@@ -18,7 +18,8 @@ class TrashDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit TrashDialog(QScriptValue notes, MainWindow *mainWindow, QWidget *parent = 0);
+    explicit TrashDialog(QJSValue notes, MainWindow *mainWindow,
+                         QWidget *parent = 0);
     ~TrashDialog();
 
 private slots:

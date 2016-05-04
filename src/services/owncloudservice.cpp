@@ -6,7 +6,6 @@
 #include <QSettings>
 #include <QDebug>
 #include <QUrlQuery>
-#include <QScriptEngine>
 #include <QDir>
 #include <QMessageBox>
 #include <QDomDocument>
@@ -15,6 +14,7 @@
 #include <QEventLoop>
 #include <QTimer>
 #include <utils/misc.h>
+#include <QJSEngine>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
@@ -100,7 +100,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
         if (reply->url().path().endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
-            // qDebug() << data;
+            qDebug() << data;
 
             // handle the versions loading
             handleVersionsLoading(data);
@@ -232,8 +232,8 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     // we have to add [], so the string can be parsed as JSON
     data = QString("[") + data + QString("]");
 
-    QScriptEngine engine;
-    QScriptValue result = engine.evaluate(data);
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
 
     bool appIsValid = result.property(0).property("versioning").toBool();
     QString appVersion = result.property(0).property("app_version").toString();
@@ -595,20 +595,23 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     // we have to add [], so the string can be parsed as JSON
     data = QString("[") + data + QString("]");
 
-    QScriptEngine engine;
-    QScriptValue result = engine.evaluate(data);
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
 
     // get the information if versioning is available
-    QString message = result.property(0).property("message").toString();
+    // we are casting to QVariant first because otherwise we might get a
+    // "undefined" string if "message" is not set
+    QString message = result.property(0).property("message").toVariant()
+            .toString();
 
     // check if we got an error message
-    if (message != "") {
+    if (!message.isEmpty()) {
         showOwnCloudServerErrorMessage(message);
         return;
     }
 
     // get the filename to check if everything is all right
-    QScriptValue fileName = result.property(0).property("file_name");
+    QJSValue fileName = result.property(0).property("file_name");
 
     // check if we got no useful data
     if (fileName.toString() == "") {
@@ -617,7 +620,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
     // get the versions
-    QScriptValue versions = result.property(0).property("versions");
+    QJSValue versions = result.property(0).property("versions");
 
     // check if we got no useful data
     if (versions.toString() == "") {
@@ -651,14 +654,17 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     // we have to add [], so the string can be parsed as JSON
     data = QString("[") + data + QString("]");
 
-    QScriptEngine engine;
-    QScriptValue result = engine.evaluate(data);
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
 
     // get a possible error messages
-    QString message = result.property(0).property("message").toString();
+    // we are casting to QVariant first because otherwise we might get a
+    // "undefined" string if "message" is not set
+    QString message = result.property(0).property("message").toVariant()
+            .toString();
 
     // check if we got an error message
-    if (message != "") {
+    if (!message.isEmpty()) {
         showOwnCloudServerErrorMessage(message);
         return;
     }
@@ -673,7 +679,7 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     }
 
     // get the versions
-    QScriptValue notes = result.property(0).property("notes");
+    QJSValue notes = result.property(0).property("notes");
 
     // check if we got no usefull data
     if (notes.toString() == "") {

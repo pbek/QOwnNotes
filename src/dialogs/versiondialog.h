@@ -6,8 +6,8 @@
 
 #include <QAbstractButton>
 #include <QDialog>
-#include <QScriptValue>
 #include <QSplitter>
+#include <QJSValue>
 
 namespace Ui {
 class VersionDialog;
@@ -18,7 +18,8 @@ class VersionDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit VersionDialog(QScriptValue versions, MainWindow *mainWindow, QWidget *parent = 0);
+    explicit VersionDialog(QJSValue versions, MainWindow *mainWindow,
+                           QWidget *parent = 0);
     ~VersionDialog();
 
 private slots:
