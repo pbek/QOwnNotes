@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.05.2
-- the active tag will now be remembered across different note folders when 
-  switching between note folders
+- the **active tag** will now be **remembered across different note folders** 
+  when switching between note folders
 - the note preview is now regenerated once a second when the preview 
   pane is resized to readjust the width of embedded images
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))
@@ -14,8 +14,8 @@
   - in addition the text of the headline will be selected
 - if a note was created by hitting `Return` in the note search line edit now
   the line edit will be cleared so all notes will be viewed again
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> now tries to solve simple equations like
- `(4+5)*3=` in the current line in front of the cursor 
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> now tries to **solve simple equations** 
+  like `(4+5)*3=` in the current line in front of the cursor 
   (for [Issue #152](https://github.com/pbek/QOwnNotes/issues/152))
   - the result will be put into the note if the cursor is after the `=` 
 
