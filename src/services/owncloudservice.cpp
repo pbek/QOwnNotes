@@ -100,7 +100,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
         if (reply->url().path().endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
-            qDebug() << data;
+            // qDebug() << data;
 
             // handle the versions loading
             handleVersionsLoading(data);
@@ -136,12 +136,12 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             return;
         } else if (reply->url().path().endsWith(restoreTrashedNotePath)) {
             qDebug() << "Reply from ownCloud restore trashed note page";
-            qDebug() << data;
+            // qDebug() << data;
 
             return;
         } else if (reply->url().path().endsWith(serverUrlPath + calendarPath)) {
             qDebug() << "Reply from ownCloud calendar page";
-            qDebug() << data;
+            // qDebug() << data;
 
             QStringList calendarHrefList = parseCalendarHrefList(data);
             settingsDialog->refreshTodoCalendarList(calendarHrefList);
@@ -152,7 +152,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             // check if we have a reply from a calendar item request
             if (reply->url().path().endsWith(".ics")) {
                 qDebug() << "Reply from ownCloud calendar item ics page";
-                qDebug() << data;
+                // qDebug() << data;
 
                 // a workaround for a ownCloud error message
                 if (data.indexOf(
