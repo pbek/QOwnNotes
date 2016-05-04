@@ -607,6 +607,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionSelect_all_notes"/>
+    <addaction name="actionAutocomplete"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
@@ -1364,6 +1365,17 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+R</string>
    </property>
   </action>
+  <action name="actionAutocomplete">
+   <property name="text">
+    <string>Solve equation</string>
+   </property>
+   <property name="toolTip">
+    <string>Solve a simple equation like '(2+3)*6=' in the current line</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Space</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -1384,8 +1396,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

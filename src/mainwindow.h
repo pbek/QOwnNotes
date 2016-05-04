@@ -267,6 +267,8 @@ private slots:
 
     void regenerateNotePreview();
 
+    void on_actionAutocomplete_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

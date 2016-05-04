@@ -21,6 +21,7 @@
 #include <QScrollBar>
 #include <QTextDocumentFragment>
 #include <QProcess>
+#include <QJSEngine>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -4857,4 +4858,56 @@ void MainWindow::onNoteTextViewResize(QSize size, QSize oldSize) {
 void MainWindow::regenerateNotePreview() {
     setNoteTextFromNote(&currentNote, true);
     _noteViewIsRegenerated = false;
+}
+
+void MainWindow::on_actionAutocomplete_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // get the text from the current cursor to the start of the line
+    c.movePosition(QTextCursor::StartOfLine, QTextCursor::KeepAnchor);
+    QString text = c.selectedText();
+    qDebug() << __func__ << " - 'text': " << text;
+
+    QString equation = text;
+
+    // replace "," with "." to allow "," as coma
+    equation.replace(",", ".");
+
+    // match all characters and basic operations like +, -, * and /
+    QRegularExpressionMatch match =
+            QRegularExpression("([\\d\\.,+\\-*\\/\\(\\)\\s]+)\\s*=")
+                    .match(equation);
+
+    if (!match.hasMatch()) {
+        showStatusBarMessage(tr("no equation was found in front of the cursor"),
+                             3000);
+        return;
+    }
+
+    equation = match.captured(1);
+    qDebug() << __func__ << " - 'equation': " << equation;
+
+    QJSEngine myEngine;
+    // evaluate our equation
+    QJSValue result = myEngine.evaluate(equation);
+    double resultValue = result.toNumber();
+    qDebug() << __func__ << " - 'resultValue': " << resultValue;
+
+    // compensate for subtraction errors with 0
+    if ((resultValue < 0.0001) && (resultValue > 0)) {
+        resultValue = 0;
+    }
+
+    showStatusBarMessage(tr("result for equation: %1 = %2")
+                                 .arg(equation, QString::number(resultValue)),
+                         10000);
+
+    // check if cursor is after the "="
+    match = QRegularExpression("=\\s*$").match(text);
+    if (match.hasMatch()) {
+        // put the result into the note
+        textEdit->insertPlainText(QString::number(resultValue));
+    }
 }
