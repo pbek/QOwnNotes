@@ -12,7 +12,9 @@
   will be now made fully visible by scrolling more intelligently
   (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
   - in addition the text of the headline will be selected
-
+- if a note was created by hitting `Return` in the note search line edit now
+  the line edit will be cleared so all notes will be viewed again
+  
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows
   (for [Issue #154](https://github.com/pbek/QOwnNotes/issues/154))

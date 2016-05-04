@@ -2860,6 +2860,9 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
 //            ui->notesListWidget->insertItem( 0, widgetItem );
 //        }
+
+        // clear search line edit so all notes will be viewed again
+        ui->searchLineEdit->clear();
     }
 
     // jump to the found or created note
