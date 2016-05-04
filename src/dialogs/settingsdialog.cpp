@@ -28,7 +28,6 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
-    ui->tabWidget->setCurrentIndex(tab);
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
@@ -51,6 +50,10 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         // start a connection test
         startConnectionTest();
     }
+
+    // must be done in the end so that the settings are loaded first when
+    // doing a connection test
+    ui->tabWidget->setCurrentIndex(tab);
 }
 
 SettingsDialog::~SettingsDialog() {

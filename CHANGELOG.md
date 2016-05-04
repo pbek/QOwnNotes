@@ -18,6 +18,8 @@
   like `(4+5)*3=` in the current line in front of the cursor 
   (for [Issue #152](https://github.com/pbek/QOwnNotes/issues/152))
   - the result will be put into the note if the cursor is after the `=` 
+- fixed a problem where opening the settings dialog from an other dialog 
+  would remove some settings
 
 ## 16.05.1
 - fixed the automatic image resizing in the preview under Windows
