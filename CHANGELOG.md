@@ -6,6 +6,7 @@
   - visit [Building QOwnNotes](http://www.qownnotes.org/installation#building) 
   for more information on building QOwnNotes and source archives
 - the text is now also selected in the text replace dialog
+- added more Japanese translation (thank you piyo)
 
 ## 16.05.2
 - the **active tag** will now be **remembered across different note folders** 

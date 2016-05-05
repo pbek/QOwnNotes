@@ -15,7 +15,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Enllaçar una url o nota</translation>
+      <translation>Enllaça un URL o una nota</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="40"/>
@@ -58,7 +58,7 @@
     <message>
       <location filename="../mainwindow.ui" line="199"/>
       <source>search or create note</source>
-      <translation>buscar o crear nota</translation>
+      <translation>cerca o crea una nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="585"/>
@@ -83,12 +83,12 @@
     <message>
       <location filename="../mainwindow.ui" line="95"/>
       <source>find or create tag</source>
-      <translation>cercar o crear etiqueta</translation>
+      <translation>troba o crea una etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="185"/>
       <source>search for notes or create new notes by entering text and pressing return</source>
-      <translation>cerca notes o crea noves notes introduint text i prement retorn</translation>
+      <translation>cerca notes o en crea de noves escrivint text i prement Retorn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="272"/>
@@ -103,7 +103,7 @@
     <message>
       <location filename="../mainwindow.ui" line="532"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Carpeta de Notes</translation>
+      <translation>&amp;Carpetes de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="537"/>
@@ -113,7 +113,7 @@
     <message>
       <location filename="../mainwindow.ui" line="572"/>
       <source>&amp;Help</source>
-      <translation>&amp;Ayuda</translation>
+      <translation>&amp;Ajuda</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="614"/>
@@ -128,12 +128,12 @@
     <message>
       <location filename="../mainwindow.ui" line="624"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Editor en mode de lliure distracció</translation>
+      <translation>Amplada de l’editor en mode sense distraccions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="627"/>
       <source>Editor width</source>
-      <translation>Amplada de l'editor</translation>
+      <translation>Amplada de l’editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="649"/>
@@ -148,12 +148,12 @@
     <message>
       <location filename="../mainwindow.ui" line="695"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Sortir</translation>
+      <translation>&amp;Surt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="710"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Configurar carpetes de notes</translation>
+      <translation>&amp;Configura les carpetes de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="719"/>
@@ -213,22 +213,22 @@
     <message>
       <location filename="../mainwindow.ui" line="818"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>&amp;Paràmetres</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="833"/>
       <source>Show note &amp;versions</source>
-      <translation type="unfinished">Show note &amp;versions</translation>
+      <translation>Mostra les &amp;versions de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="836"/>
       <source>Show note versions on server</source>
-      <translation type="unfinished">Show note versions on server</translation>
+      <translation>Mostra les versions de la nota al servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="845"/>
       <source>Show &amp;trash</source>
-      <translation type="unfinished">Show &amp;trash</translation>
+      <translation>Mostra la &amp;paperera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="848"/>
@@ -534,17 +534,17 @@ Restore current note?</translation>
       <location filename="../mainwindow.cpp" line="2584"/>
       <location filename="../mainwindow.cpp" line="3463"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1347"/>
       <source>note was modified externally: %1</source>
-      <translation type="unfinished">note was modified externally: %1</translation>
+      <translation>s’ha modificat la nota externament: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1358"/>
       <source>notes directory was modified externally</source>
-      <translation type="unfinished">notes directory was modified externally</translation>
+      <translation>s’ha modificat la carpeta de notes externament</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="1410"/>
@@ -567,22 +567,22 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="1639"/>
       <source>No folder was selected</source>
-      <translation type="unfinished">No folder was selected</translation>
+      <translation>No s’ha seleccionat cap carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1640"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
+      <translation>Heu de seleccionar una carpeta de notes de l’ownCloud perquè aquest programa funcioni</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1642"/>
       <source>&amp;Retry</source>
-      <translation type="unfinished">&amp;Retry</translation>
+      <translation>&amp;Torna a provar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1642"/>
       <source>&amp;Exit</source>
-      <translation type="unfinished">&amp;Exit</translation>
+      <translation>&amp;Surt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1737"/>
@@ -765,17 +765,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2502"/>
       <source>Print note</source>
-      <translation type="unfinished">Print note</translation>
+      <translation>Imprimeix la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2520"/>
       <source>PDF files (*.pdf)</source>
-      <translation type="unfinished">PDF files (*.pdf)</translation>
+      <translation>Fitxers PDF (*.pdf)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2521"/>
       <source>Export current note as PDF</source>
-      <translation type="unfinished">Export current note as PDF</translation>
+      <translation>Exporta la nota actual com a PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2555"/>
@@ -835,12 +835,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4172"/>
       <source>All notes</source>
-      <translation type="unfinished">All notes</translation>
+      <translation>Totes les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4603"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;Afegeix una etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4610"/>
@@ -915,22 +915,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="298"/>
       <source>formatting toolbar</source>
-      <translation type="unfinished">formatting toolbar</translation>
+      <translation>barra d’eines de formatació</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="305"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>barra d’eines d’inserció</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="312"/>
       <source>encryption toolbar</source>
-      <translation type="unfinished">encryption toolbar</translation>
+      <translation>barra d’eines de xifratge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="320"/>
       <source>window toolbar</source>
-      <translation type="unfinished">window toolbar</translation>
+      <translation>barra d’eines de la finestra</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1062"/>
@@ -1138,7 +1138,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
   </context>
   <context>
@@ -1161,7 +1161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="567"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="587"/>
@@ -1189,17 +1189,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation type="unfinished">Please enter your password</translation>
+      <translation>Escriviu la vostra contrasenya</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="20"/>
       <source>Enter your password:</source>
-      <translation type="unfinished">Enter your password:</translation>
+      <translation>Escriviu la contrasenya:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="30"/>
       <source>password</source>
-      <translation type="unfinished">password</translation>
+      <translation>contrasenya</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="40"/>
@@ -1260,17 +1260,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Substitueix:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="168"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Substitueix</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="178"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Substitueix-ho tot</translation>
     </message>
   </context>
   <context>
@@ -1278,7 +1278,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>No es pot obrir la base de dades de la memòria</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="79"/>
@@ -1288,7 +1288,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>No es pot obrir la base de dades del disc</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="96"/>
@@ -1309,12 +1309,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <source>Settings</source>
-      <translation type="unfinished">Settings</translation>
+      <translation>Paràmetres</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="38"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Carpetes de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="44"/>

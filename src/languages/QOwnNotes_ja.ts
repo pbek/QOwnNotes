@@ -491,12 +491,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1370"/>
       <source>Solve equation</source>
-      <translation type="unfinished">Solve equation</translation>
+      <translation>式の計算</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1373"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>現在の行にある (2+3)*6= のような単純な式を計算します</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1282"/>
@@ -868,12 +868,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="4884"/>
       <source>no equation was found in front of the cursor</source>
-      <translation type="unfinished">no equation was found in front of the cursor</translation>
+      <translation>カーソルの前に計算式がありません</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4903"/>
       <source>result for equation: %1 = %2</source>
-      <translation type="unfinished">result for equation: %1 = %2</translation>
+      <translation>計算結果: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4239"/>
