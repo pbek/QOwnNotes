@@ -5,6 +5,9 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+# Upload source archive to SourceForge
+$DIR/sourceforge/build-sourceforge-src.sh
+
 # List of commands to run, with parameters, in quotes, space-separated; do not use quotes inside (see bash arrays)
 COMMANDS=("$DIR/../ubuntu-launchpad/build-for-launchpad.sh" "$DIR/../obs/build-for-obs.sh" "$DIR/aur/build-for-aur.sh" "$DIR/gentoo/build-for-gentoo.sh")
 
