@@ -11,11 +11,11 @@
 #include <QSystemTrayIcon>
 #include <QTextEdit>
 #include <QFile>
+#include <QToolBar>
+#include <QTreeWidgetItem>
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
-#include <QtWidgets/QToolBar>
-#include <QtWidgets/QTreeWidgetItem>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
