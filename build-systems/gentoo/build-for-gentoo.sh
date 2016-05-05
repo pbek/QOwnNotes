@@ -37,15 +37,30 @@ if [ -z $QOWNNOTES_VERSION ]; then
     QOWNNOTES_VERSION=`cat src/version.h | sed "s/[^0-9,.]//g"`
 fi
 
+cd ..
+
+ARCHIVE_FILE=qownnotes-${QOWNNOTES_VERSION}.tar.xz
+wget http://downloads.sourceforge.net/project/qownnotes/src/${ARCHIVE_FILE}
+
+ARCHIVE_SHA512=`sha512sum ${ARCHIVE_FILE} | awk '{ print $1 }'`
+ARCHIVE_SIZE=`stat -c "%s" ${ARCHIVE_FILE}`
+
+cd QOwnNotes
+
+echo "Archive sha512: ${ARCHIVE_SHA512}"
+echo "Archive size: ${ARCHIVE_SIZE}"
+
 cd ../overlay/app-office/qownnotes/
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
 
 # replace the version in the ebuild file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.ebuild
 
+# update the Manifest file
+echo "DIST ${ARCHIVE_FILE} ${ARCHIVE_SIZE} SHA512 ${ARCHIVE_SHA512}" >> Manifest
+
 eBuildFile="qownnotes-$QOWNNOTES_VERSION.ebuild"
 mv qownnotes.ebuild ${eBuildFile}
-
 
 echo "Committing changes..."
 git add ${eBuildFile}
