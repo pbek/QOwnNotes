@@ -10,7 +10,7 @@ pkgbase = qownnotes
 	depends = gcc
 	depends = qt5-base
 	depends = qt5-svg
-	depends = qt5-script
+	depends = qt5-declarative
 	source = https://github.com/pbek/QOwnNotes.git
 
 pkgname = qownnotes
