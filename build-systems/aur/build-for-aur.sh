@@ -8,7 +8,7 @@
 #
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=1.1.3.2
+#QOWNNOTES_VERSION=16.05.2
 
 BRANCH=develop
 #BRANCH=master

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.05.3
+- QOwnNotes will now be built from a source archive (like it should be) in 
+  the AUR and not from git repositories
+  - visit [Building QOwnNotes](http://www.qownnotes.org/installation#building) 
+  for more information on building QOwnNotes and source archives
+
 ## 16.05.2
 - the **active tag** will now be **remembered across different note folders** 
   when switching between note folders
