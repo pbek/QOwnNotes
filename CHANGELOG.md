@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.05.3
-- QOwnNotes will now be built from a source archive (like it should be) in 
+- QOwnNotes will now be built from a **source archive** (like it should be) in 
   the AUR and in the Gentoo overlay (and not from git repositories)
   - visit [Building QOwnNotes](http://www.qownnotes.org/installation#building) 
   for more information on building QOwnNotes and source archives
