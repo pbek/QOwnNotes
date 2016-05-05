@@ -303,6 +303,7 @@ private:
     QFrame *_verticalNoteFrame;
     QSplitter *_verticalNoteFrameSplitter;
     bool _noteViewIsRegenerated;
+    QHash<int, QString> _activeNoteFolderNoteNames;
 
     void initMainSplitter();
 
@@ -459,4 +460,6 @@ private:
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
 
     void initNoteListSplitter();
+
+    void jumpToNoteName(QString name);
 };

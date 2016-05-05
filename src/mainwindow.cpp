@@ -723,6 +723,10 @@ void MainWindow::loadNoteFolderListMenu() {
  * Set a new note folder
  */
 void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
+    // store the current note name of the current note folder
+    _activeNoteFolderNoteNames[NoteFolder::currentNoteFolderId()] =
+            currentNote.getName();
+
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
         return;
@@ -780,6 +784,12 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // clear the note history
         this->noteHistory.clear();
+
+        // check if there is a note name set and jump to it
+        QString noteName = _activeNoteFolderNoteNames[noteFolderId];
+        if (!noteName.isEmpty()) {
+            jumpToNoteName(noteName);
+        }
     }
 }
 
@@ -1590,12 +1600,19 @@ void MainWindow::buildNotesIndex() {
 }
 
 /**
- * @brief Jumps to the welcome note in the note selector
+ * Jumps to the welcome note in the note selector
  */
 void MainWindow::jumpToWelcomeNote() {
-    // search for the welcome note
+    jumpToNoteName("Welcome to QOwnNotes");
+}
+
+/**
+ * Jumps to a note in the note selector
+ */
+void MainWindow::jumpToNoteName(QString name) {
+    // search for the note
     QList<QListWidgetItem *> items = ui->notesListWidget->
-            findItems("Welcome to QOwnNotes", Qt::MatchExactly);
+            findItems(name, Qt::MatchExactly);
     if (items.count() > 0) {
         // set the welcome note as current note
         ui->notesListWidget->setCurrentItem(items.at(0));

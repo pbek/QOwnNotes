@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.05.4
+- the last open note will now be remembered when switching between note folders
+
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
   the AUR and in the Gentoo overlay (and not from git repositories)
