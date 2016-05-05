@@ -12,15 +12,7 @@ inherit qmake-utils eutils
 
 DESCRIPTION="A plain-text file notepad with markdown support and (optional) ownCloud integration"
 HOMEPAGE="http://www.qownnotes.org/"
-
-MY_P="COMMIT-HASH"
-MY_QMDTE="COMMIT-HASH2"
-MY_PWT="COMMIT-HASH3"
-SRC_URI="https://github.com/pbek/QOwnNotes/archive/${MY_P}.tar.gz -> ${P}.tar.gz
-	https://github.com/pbek/qmarkdowntextedit/archive/${MY_QMDTE}.tar.gz -> qmarkdowntextedit-${MY_QMDTE}.tar.gz
-	https://github.com/pbek/qt-piwik-tracker/archive/${MY_PWT}.tar.gz -> piwiktracker-${MY_PWT}.tar.gz
-"
-S="${WORKDIR}/QOwnNotes-${MY_P}"
+SRC_URI="http://downloads.sourceforge.net/project/${PN}/src/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -39,32 +31,15 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
-src_unpack() {
-	unpack "${P}.tar.gz"
-
-	cd "${S}"/src/libraries
-	rmdir qmarkdowntextedit piwiktracker
-
-	unpack "qmarkdowntextedit-${MY_QMDTE}.tar.gz"
-	mv "qmarkdowntextedit-${MY_QMDTE}" qmarkdowntextedit
-
-	unpack "piwiktracker-${MY_PWT}.tar.gz"
-	mv "qt-piwik-tracker-${MY_PWT}" piwiktracker
-}
-
 src_prepare() {
-	cd src
-	echo "#define VERSION \"VERSION-STRING\"" > version.h
 	echo "#define RELEASE \"Gentoo\"" > release.h
 }
 
 src_compile() {
-	cd src
 	eqmake5 QOwnNotes.pro -r
 }
 
 src_install() {
-	cd src
 	emake
 	dobin QOwnNotes
 
