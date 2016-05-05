@@ -25,9 +25,9 @@ Requires:       qt5-qtsvg
 %else
 # This is for all SUSE
 
-BuildRequires:  libqt5-qtbase-devel libQt5Declarative-devel libQt5Declarative5-devel libQt5Svg-devel
+BuildRequires:  libqt5-qtbase-devel libQt5Declarative5 libQt5Svg-devel
 BuildRequires:  update-desktop-files 
-Requires:       libQt5Svg5
+Requires:       libQt5Svg5 libQt5Declarative5
 
 %endif
 
