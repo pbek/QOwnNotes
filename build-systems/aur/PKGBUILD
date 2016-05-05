@@ -16,17 +16,17 @@ md5sums=('SKIP')
 
 prepare() {
 	cd "${pkgname}-${pkgver}"
-    echo "#define RELEASE \"AUR\"" > src/release.h
+    echo "#define RELEASE \"AUR\"" > release.h
 }
 
 build() {
-	cd "${pkgname}-${pkgver}/src"
+	cd "${pkgname}-${pkgver}"
     qmake
     make
 }
 
 package() {
-	cd "${pkgname}-${pkgver}/src"
+	cd "${pkgname}-${pkgver}"
 
     install -D -m 0755 QOwnNotes $pkgdir/usr/bin/QOwnNotes
     install -D -m 0644 QOwnNotes.desktop $pkgdir/usr/share/applications/QOwnNotes.desktop
