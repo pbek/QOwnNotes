@@ -73,10 +73,11 @@ archiveFile="$qownnotesSrcDir.tar.xz"
 echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
+md5sum $archiveFile > $archiveFile.md5
+
 echo "Uploading archive to SourceForge..."
 
-#rsync -ahv --progress $archiveFile patbek,qownnotes@frs.sourceforge.net:/src
-rsync -ahv --progress $archiveFile patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src
+rsync -ahv --progress $archiveFile* patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
