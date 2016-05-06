@@ -8,6 +8,7 @@
       occurrences of `\1`, `\2`, ... can be used in the replace text
 - fixed a possible search and replace infinite loop
 - added support for case sensitive search
+- added more Portuguese and German translation (thank you mlimacarlos and dgirke)
 
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
