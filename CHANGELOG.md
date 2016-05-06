@@ -2,6 +2,11 @@
 
 ## 16.05.4
 - the last open note will now be remembered when switching between note folders
+- you can now use the new **regular expression** and **whole word** modes to 
+  search for text inside of notes
+    - when replacing with regular expressions containing capturing parentheses, 
+      occurrences of `\1`, `\2`, ... can be used in the replace text
+- fixed a possible search and replace infinite loop
 
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
@@ -22,13 +27,13 @@
 - when clicking a headline in the navigation bar the text beneath the headline 
   will be now made fully visible by scrolling more intelligently
   (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
-  - in addition the text of the headline will be selected
+    - in addition the text of the headline will be selected
 - if a note was created by hitting `Return` in the note search line edit now
   the line edit will be cleared so all notes will be viewed again
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> now tries to **solve simple equations** 
   like `(4+5)*3=` in the current line in front of the cursor 
   (for [Issue #152](https://github.com/pbek/QOwnNotes/issues/152))
-  - the result will be put into the note if the cursor is after the `=` 
+    - the result will be put into the note if the cursor is after the `=` 
 - fixed a problem where opening the settings dialog from an other dialog 
   would remove some settings
 
@@ -49,9 +54,9 @@
 ## 16.05.0
 - a navigation bar that shows the headline structure of the current note was 
   implemented (for [Issue #153](https://github.com/pbek/QOwnNotes/issues/153))
-  - click on a headline to jump to it in the note
-  - you can hide the navigation bar by dragging it to the bottom with the 
-    splitter handle between the note list and the navigation bar 
+    - click on a headline to jump to it in the note
+    - you can hide the navigation bar by dragging it to the bottom with the 
+      splitter handle between the note list and the navigation bar 
 - added more German and French translation (thank you Loelo)
 
 ## 16.04.18
