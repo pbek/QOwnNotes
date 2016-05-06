@@ -6,6 +6,10 @@
 # We need a ssh key to push to the git repository
 # https://wiki.archlinux.org/index.php/Arch_User_Repository#Creating_a_new_package
 #
+# The QOwnNotes repository for AUR relies on our source archive on
+# https://sourceforge.net/projects/qownnotes/files/src/
+#
+
 
 # uncomment this if you want to force a version
 #QOWNNOTES_VERSION=16.05.2
