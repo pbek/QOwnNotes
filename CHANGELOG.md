@@ -7,6 +7,7 @@
     - when replacing with regular expressions containing capturing parentheses, 
       occurrences of `\1`, `\2`, ... can be used in the replace text
 - fixed a possible search and replace infinite loop
+- added support for case sensitive search
 
 ## 16.05.3
 - QOwnNotes will now be built from a **source archive** (like it should be) in 
