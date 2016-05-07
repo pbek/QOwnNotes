@@ -211,6 +211,8 @@ void SettingsDialog::storeSettings() {
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
+    settings.setValue("allowDifferentNoteFileName",
+                      ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
     settings.setValue("defaultNoteFileExtension",
@@ -300,6 +302,8 @@ void SettingsDialog::readSettings() {
             settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
             settings.value("notifyAllExternalModifications").toBool());
+    ui->allowDifferentNoteFileNameCheckBox->setChecked(
+            settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime").toInt());
     ui->showNoteFolderCheckBox->setChecked(settings.value(

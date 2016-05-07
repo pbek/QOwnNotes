@@ -4,6 +4,17 @@
 - fixed a problem with the Gentoo Linux overlay
   (for [Issue #163](https://github.com/pbek/QOwnNotes/issues/163))
 - did some styling fixes for the text replace widget on OS X
+- you can new use a new setting in the general settings to **allow that the 
+  note file name is different from the note headline**
+  (for [Issue #157](https://github.com/pbek/QOwnNotes/issues/157))
+    - this allows you to keep your old note files regardless of what the content
+      of them is
+    - the note name will also be found in the note search
+    - you are able to **rename your note files** by double-clicking on the note 
+      name in the note list
+        - renaming will fail if there already exists a note with the same name
+    - be aware of that ownCloud notes needs the note file name to be the same 
+      as the note headline
 
 ## 16.05.4
 - the last open note will now be remembered when switching between note folders

@@ -269,6 +269,8 @@ private slots:
 
     void on_actionAutocomplete_triggered();
 
+    void on_notesListWidget_itemChanged(QListWidgetItem *item);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

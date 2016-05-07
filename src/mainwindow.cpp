@@ -973,6 +973,8 @@ void MainWindow::loadNoteDirectoryList() {
 
             ui->notesListWidget->clear();
 
+            bool isEditable = Note::allowDifferentFileName();
+
             // load all notes and add them to the note list widget
             QList<Note> noteList = Note::fetchAll();
             Q_FOREACH(Note note, noteList) {
@@ -990,6 +992,11 @@ void MainWindow::loadNoteDirectoryList() {
                             QIcon(":icons/breeze-qownnotes/16x16/"
                                           "text-x-generic.svg")));
                     item->setData(Qt::UserRole, note.getId());
+
+                    if (isEditable) {
+                        item->setFlags(item->flags() | Qt::ItemIsEditable);
+                    }
+
                     ui->notesListWidget->addItem(item);
             }
 
@@ -2397,6 +2404,9 @@ void MainWindow::openSettingsDialog(int tab) {
 
     // reload note folders in case we changed them in the settings
     loadNoteFolderListMenu();
+
+    // load the note list again in case the setting on the note name has changed
+    loadNoteDirectoryList();
 }
 
 /**
@@ -2661,6 +2671,9 @@ void MainWindow::on_noteTextEdit_textChanged() {
         _noteViewNeedsUpdate = true;
 
         updateEncryptNoteButtons();
+
+        const QSignalBlocker blocker(ui->notesListWidget);
+        Q_UNUSED(blocker);
 
         // update the note list tooltip of the note
         setListWidgetItemToolTipForNote(ui->notesListWidget->currentItem(),
@@ -4926,5 +4939,37 @@ void MainWindow::on_actionAutocomplete_triggered()
     if (match.hasMatch()) {
         // put the result into the note
         textEdit->insertPlainText(QString::number(resultValue));
+    }
+}
+
+/**
+ * Renames a note file if the note was renamed in the note list widget
+ */
+void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item)
+{
+    if (item == NULL || !Note::allowDifferentFileName()) {
+        return;
+    }
+
+    int noteId = item->data(Qt::UserRole).toInt();
+    Note note = Note::fetch(noteId);
+    if (note.isFetched()) {
+        qDebug() << __func__ << " - 'note': " << note;
+
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        if (note.renameNoteFile(item->text())) {
+            note.refetch();
+            setCurrentNote(note);
+//            loadNoteDirectoryList();
+        }
+
+        const QSignalBlocker blocker2(ui->notesListWidget);
+        Q_UNUSED(blocker2);
+
+        // set old name back in case the renaming failed or the file name got
+        // altered in the renaming process
+        item->setText(note.getName());
     }
 }

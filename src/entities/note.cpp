@@ -286,14 +286,15 @@ QList<Note> Note::search(QString text) {
     return noteList;
 }
 
-QList<QString> Note::searchAsNameList(QString text, bool searchInName) {
+QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     QList<QString> nameList;
-    QString searchField = searchInName ? "name" : "note_text";
+    QString textSearchSql = !searchInNameOnly ? "OR note_text LIKE :text " : "";
 
-    query.prepare("SELECT name FROM note WHERE " + searchField + " LIKE :text "
+    query.prepare("SELECT name FROM note WHERE name LIKE :text " +
+            textSearchSql +
             "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
 
@@ -373,6 +374,14 @@ QString Note::defaultNoteFileExtension() {
     return extension.isEmpty() ? "txt" : extension;
 }
 
+/**
+ * Checks if it is allowed to have a different note file name than the headline
+ */
+bool Note::allowDifferentFileName() {
+    QSettings settings;
+    return settings.value("allowDifferentNoteFileName").toBool();
+}
+
 //
 // inserts or updates a note object in the database
 //
@@ -439,8 +448,10 @@ bool Note::store() {
  * The file name will be changed if needed
  */
 bool Note::storeNoteTextFileToDisk() {
-    // checks if filename has to be changed (and change it if needed)
-    this->handleNoteTextFileName();
+    if (!allowDifferentFileName()) {
+        // checks if filename has to be changed (and change it if needed)
+        this->handleNoteTextFileName();
+    }
 
     QFile file(getFullNoteFilePathForFile(this->fileName));
     bool fileExists = this->fileExists();
@@ -489,6 +500,19 @@ bool Note::storeNoteTextFileToDisk() {
 }
 
 /**
+ * Does a file name cleanup
+ */
+QString Note::cleanupFileName(QString name) {
+    // remove characters from the name that are problematic
+    name.remove(QRegularExpression("[\\/\\\\:]"));
+
+    // remove multiple whitespaces from the name
+    name.replace(QRegularExpression("\\s+"), " ");
+
+    return name;
+}
+
+/**
  * Checks if filename has to be changed
  * Generates a new name and filename and removes the old file
  * (the new file is not stored to a note text file!)
@@ -508,11 +532,8 @@ void Note::handleNoteTextFileName() {
     // remove a leading "# " for markdown headlines
     name.remove(QRegularExpression("^#\\s"));
 
-    // remove characters from the name that are problematic
-    name.remove(QRegularExpression("[\\/\\\\:]"));
-
-    // remove multiple whitespaces from the name
-    name.replace(QRegularExpression("\\s+"), " ");
+    // cleanup additional characters
+    name = cleanupFileName(name);
 
     // check if name has changed
     if (name != this->name) {
@@ -695,6 +716,48 @@ bool Note::exists() {
 //
 bool Note::refetch() {
     return this->fillByFileName(this->fileName);
+}
+
+/**
+ * Returns the suffix of the note file name
+ */
+QString Note::fileNameSuffix() {
+    QFileInfo fileInfo;
+    fileInfo.setFile(fileName);
+    return fileInfo.suffix();
+}
+
+/**
+ * Renames a note
+ */
+bool Note::renameNoteFile(QString newName) {
+    // cleanup not allowed characters characters
+    newName = cleanupFileName(newName);
+
+    // add the old file suffix to the name
+    QString newFileName = newName + "." + fileNameSuffix();
+
+    // check if name has really changed
+    if (name == newName) {
+        return false;
+    }
+
+    // check if name already exists
+    Note existingNote = Note::fetchByName(newName);
+    if (existingNote.isFetched() && (existingNote.getId() != id)) {
+        return false;
+    }
+
+    // get the note file to rename it
+    QFile file(getFullNoteFilePathForFile(fileName));
+
+    // store the new note file name
+    fileName = newFileName;
+    name = newName;
+    store();
+
+    // rename the note file name
+    return file.rename(getFullNoteFilePathForFile(newFileName));
 }
 
 //

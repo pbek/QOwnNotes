@@ -46,7 +46,8 @@ public:
 
     static QList<Note> search(QString text);
 
-    static QList<QString> searchAsNameList(QString text, bool searchInName = false);
+    static QList<QString> searchAsNameList(QString text,
+                                           bool searchInNameOnly = false);
 
     static QStringList fetchNoteNames();
 
@@ -128,6 +129,12 @@ public:
 
     static int countAll();
 
+    static bool allowDifferentFileName();
+
+    bool renameNoteFile(QString newName);
+
+    QString fileNameSuffix();
+
 private:
     int id;
     QString name;
@@ -144,6 +151,7 @@ private:
     void handleNoteTextFileName();
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
+    static QString cleanupFileName(QString name);
 
 signals:
 
