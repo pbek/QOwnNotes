@@ -3,6 +3,7 @@
 ## 16.05.5
 - fixed a problem with the Gentoo Linux overlay
   (for [Issue #163](https://github.com/pbek/QOwnNotes/issues/163))
+- did some styling fixes for the text replace widget on OS X
 
 ## 16.05.4
 - the last open note will now be remembered when switching between note folders
