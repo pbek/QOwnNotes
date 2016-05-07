@@ -15,6 +15,7 @@
         - renaming will fail if there already exists a note with the same name
     - be aware of that ownCloud notes needs the note file name to be the same 
       as the note headline
+- added more Japanese translation (thank you piyo)
 
 ## 16.05.4
 - the last open note will now be remembered when switching between note folders
