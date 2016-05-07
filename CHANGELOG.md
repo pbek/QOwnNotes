@@ -13,6 +13,8 @@
     - you are able to **rename your note files** by double-clicking on the note 
       name in the note list
         - renaming will fail if there already exists a note with the same name
+        - some characters are also not allowed in the file name, they will be 
+          removed automatically
     - be aware of that ownCloud notes needs the note file name to be the same 
       as the note headline
 - added more Japanese translation (thank you piyo)
