@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.05.5
+- fixed a problem with the Gentoo Linux overlay
+  (for [Issue #163](https://github.com/pbek/QOwnNotes/issues/163))
+
 ## 16.05.4
 - the last open note will now be remembered when switching between note folders
 - you can now use the new **regular expression** and **whole word** modes to 
