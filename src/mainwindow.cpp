@@ -14,6 +14,7 @@
 #include <QShortcut>
 #include <QPrinter>
 #include <QPrintDialog>
+#include <QPageSetupDialog>
 #include <QMimeData>
 #include <QTextBlock>
 #include <QClipboard>
@@ -2559,6 +2560,12 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
             }
 
             QPrinter printer(QPrinter::HighResolution);
+            QPageSetupDialog pageSetupDialog(&printer, this);
+
+            if (pageSetupDialog.exec() != QDialog::Accepted) {
+                return;
+            }
+
             printer.setOutputFormat(QPrinter::PdfFormat);
             printer.setOutputFileName(fileName);
             textEdit->document()->print(&printer);
