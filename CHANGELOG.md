@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.05.7
-- made a workaround for the not working page select dialog for the PDF 
+- made a workaround for the not working page setup dialog for the PDF 
   export under OS X and Windows 
   (for [Issue #156](https://github.com/pbek/QOwnNotes/issues/156))
     - you can select page sizes from A0 to A9
