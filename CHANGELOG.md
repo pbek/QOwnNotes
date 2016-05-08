@@ -4,6 +4,7 @@
 - added SHA256 hashes to the AUR repository
 - you can now select the page format when exporting notes as PDF
   (for [Issue #156](https://github.com/pbek/QOwnNotes/issues/156))
+- added more Japanese and French translation (thank you piyo and Loelo)
 
 ## 16.05.5
 - fixed a problem with the Gentoo Linux overlay
