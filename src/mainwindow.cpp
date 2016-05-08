@@ -2572,7 +2572,9 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
             }
 #else
             // under OS X and Windows the QPageSetupDialog dialog doesn't work,
-            // we will use a workaround to select page sizes
+            // we will use a workaround to select page sizes and the orientation
+
+            // select the page size
             QStringList pageSizeStrings;
             pageSizeStrings << "A0" << "A1" << "A2" << "A3" << "A4" << "A5"
                 << "A6" << "A7" << "A8" << "A9";
@@ -2598,6 +2600,28 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
 
             QPageSize pageSize(pageSizes.at(pageSizeIndex));
             printer.setPageSize(pageSize);
+
+            // select the orientation
+            QStringList orientationStrings;
+            orientationStrings << tr("Portrait") << tr("Landscape");
+            QList<QPrinter::Orientation> orientations;
+            orientations << QPrinter::Portrait << QPrinter::Landscape;
+
+            QString orientationString = QInputDialog::getItem(
+                    this, tr("Orientation"), tr("Orientation:"),
+                    orientationStrings, 0, false, &ok);
+
+            if (!ok || orientationString.isEmpty()) {
+                return;
+            }
+
+            int orientationIndex =
+                    orientationStrings.indexOf(orientationString);
+            if (orientationIndex == -1) {
+                return;
+            }
+
+            printer.setOrientation(orientations.at(orientationIndex));
 #endif
 
             printer.setOutputFormat(QPrinter::PdfFormat);

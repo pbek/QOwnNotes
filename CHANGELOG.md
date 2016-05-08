@@ -5,6 +5,7 @@
   export under OS X and Windows 
   (for [Issue #156](https://github.com/pbek/QOwnNotes/issues/156))
     - you can select page sizes from A0 to A9
+    - you can select the page orientation (portrait and landscape)
 
 ## 16.05.6
 - SHA256 hashes were added to the AUR repository
