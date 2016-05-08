@@ -23,6 +23,7 @@
 #include <QTextDocumentFragment>
 #include <QProcess>
 #include <QJSEngine>
+#include <QInputDialog>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -2560,11 +2561,44 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
             }
 
             QPrinter printer(QPrinter::HighResolution);
+
+#ifdef Q_OS_LINUX
+            // under Linux we use the the QPageSetupDialog to change layout
+            // settings of the PDF export
             QPageSetupDialog pageSetupDialog(&printer, this);
 
             if (pageSetupDialog.exec() != QDialog::Accepted) {
                 return;
             }
+#else
+            // under OS X and Windows the QPageSetupDialog dialog doesn't work,
+            // we will use a workaround to select page sizes
+            QStringList pageSizeStrings;
+            pageSizeStrings << "A0" << "A1" << "A2" << "A3" << "A4" << "A5"
+                << "A6" << "A7" << "A8" << "A9";
+            QList<QPageSize::PageSizeId> pageSizes;
+            pageSizes << QPageSize::A0 << QPageSize::A1 << QPageSize::A2 <<
+                    QPageSize::A3 << QPageSize::A4 << QPageSize::A5 <<
+                    QPageSize::A6 << QPageSize::A7 << QPageSize::A8 <<
+                    QPageSize::A9;
+
+            bool ok;
+            QString pageSizeString = QInputDialog::getItem(
+                    this, tr("Page size"), tr("Page size:"),
+                    pageSizeStrings, 4, false, &ok);
+
+            if (!ok || pageSizeString.isEmpty()) {
+                return;
+            }
+
+            int pageSizeIndex = pageSizeStrings.indexOf(pageSizeString);
+            if (pageSizeIndex == -1) {
+                return;
+            }
+
+            QPageSize pageSize(pageSizes.at(pageSizeIndex));
+            printer.setPageSize(pageSize);
+#endif
 
             printer.setOutputFormat(QPrinter::PdfFormat);
             printer.setOutputFileName(fileName);

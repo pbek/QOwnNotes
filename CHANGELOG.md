@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.05.7
+- made a workaround for the not working page select dialog for the PDF 
+  export under OS X and Windows 
+  (for [Issue #156](https://github.com/pbek/QOwnNotes/issues/156))
+    - you can select page sizes from A0 to A9
+
 ## 16.05.6
 - SHA256 hashes were added to the AUR repository
 - you can now select the page format when exporting notes as PDF
