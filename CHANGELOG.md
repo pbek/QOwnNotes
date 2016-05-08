@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.05.6
+- added SHA256 hashes to the AUR repository
+
 ## 16.05.5
 - fixed a problem with the Gentoo Linux overlay
   (for [Issue #163](https://github.com/pbek/QOwnNotes/issues/163))
