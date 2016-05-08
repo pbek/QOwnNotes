@@ -74,6 +74,8 @@ echo "Creating archive $archiveFile..."
 tar -cJf $archiveFile $qownnotesSrcDir
 
 md5sum $archiveFile > $archiveFile.md5
+sha256sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha256
+sha512sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha512
 
 echo "Uploading archive to SourceForge..."
 

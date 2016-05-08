@@ -5,14 +5,14 @@ pkgver=VERSION-STRING
 tag="COMMIT-HASH"
 pkgrel=1
 pkgdesc="Open source notepad and todo list manager with markdown support and ownCloud integration"
-arch=('i686' 'x86_64')
+arch=('i686' 'x86_64' 'armv7l')
 url='http://www.qownnotes.org/'
 license=('GPL2')
 groups=('qownnotes')
 depends=('qt5-base' 'qt5-svg' 'qt5-declarative' 'openssl')
 makedepends=('qt5-tools')
 source=("http://downloads.sourceforge.net/project/${pkgname}/src/${pkgname}-${pkgver}.tar.xz")
-md5sums=('SKIP')
+sha256sums=('ARCHIVE-SHA256')
 
 prepare() {
 	cd "${pkgname}-${pkgver}"

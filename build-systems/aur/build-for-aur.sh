@@ -57,6 +57,10 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" PKGBUILD
 # replace the commit hash in the PKGBUILD file
 sed -i "s/COMMIT-HASH/$gitCommitHash/g" PKGBUILD
 
+# replace the archive sha256 hash in the PKGBUILD file
+ARCHIVE_SHA256=`wget -qO- http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-${QOWNNOTES_VERSION}.tar.xz.sha256`
+sed -i "s/ARCHIVE-SHA256/$ARCHIVE_SHA256/g" PKGBUILD
+
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 
