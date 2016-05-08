@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.05.6
-- added SHA256 hashes to the AUR repository
+- SHA256 hashes were added to the AUR repository
 - you can now select the page format when exporting notes as PDF
   (for [Issue #156](https://github.com/pbek/QOwnNotes/issues/156))
 - added more German, Japanese and French translation (thank you piyo and Loelo)
