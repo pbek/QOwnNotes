@@ -271,6 +271,8 @@ private slots:
 
     void on_notesListWidget_itemChanged(QListWidgetItem *item);
 
+    void setupNoteEditPane();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -441,8 +443,6 @@ private:
     void setupMarkdownView();
 
     void removeTagFromSelectedNotes(Tag tag);
-
-    void setupNoteEditPane();
 
     bool isNoteEditPaneEnabled();
 

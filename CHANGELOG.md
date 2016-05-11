@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.05.8
+- fixed the the jumping to headlines when clicking on them in the navigation 
+  bar if the note edit pane was disabled at app startup
+  (for [Issue #165](https://github.com/pbek/QOwnNotes/issues/165))
+
 ## 16.05.7
 - made a workaround for the not working page setup dialog for the PDF 
   export under OS X and Windows 

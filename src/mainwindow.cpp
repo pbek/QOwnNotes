@@ -224,7 +224,14 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMarkdownView();
 
     // setup the note edit pane
-    setupNoteEditPane();
+    // if the pane is disabled we have to setup the pane with a timer, so the
+    // automatic scrolling when clicked on the navigation bar works in the
+    // preview
+    if (isNoteEditPaneEnabled()) {
+        setupNoteEditPane();
+    } else {
+        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
+    }
 
     // restore the distraction free mode
     restoreDistractionFreeMode();
