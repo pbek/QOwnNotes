@@ -9,7 +9,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/hierachical-tagging
+    - feature/scripting
 
 env:
   global:

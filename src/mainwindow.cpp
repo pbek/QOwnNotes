@@ -46,6 +46,11 @@
 #include <entities/notefolder.h>
 #include <entities/tag.h>
 #include <dialogs/tagadddialog.h>
+#include <QQmlEngine>
+#include <QQmlContext>
+#include <QQmlComponent>
+#include <QQmlApplicationEngine>
+#include <services/scriptingservice.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -293,6 +298,55 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(resize(QSize, QSize)),
                      this,
                      SLOT(onNoteTextViewResize(QSize, QSize)));
+
+    initScriptingEngine();
+    return;
+
+
+
+//    QJSEngine myEngine;
+//    myEngine.globalObject().setProperty("myNumber", 123);
+//    myEngine.globalObject().setProperty("mainWindow", this);
+
+    QQmlEngine *engine = new QQmlEngine(this);
+//    engine->setObjectOwnership(this, QQmlEngine::CppOwnership);
+//    engine->setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
+//    engine->rootContext()->setContextProperty("mainWindow", this);
+    engine->rootContext()->setContextProperty("noteTextEdit",
+                                              ui->noteTextEdit);
+//    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
+
+    QString fileName = "/home/omega/Code/_internal/QOwnNotes/src/script.qml";
+    const QUrl fileUrl = QUrl::fromLocalFile(QFileInfo(fileName)
+                                                     .absoluteFilePath());
+
+    QQmlComponent component(engine);
+    component.loadUrl(fileUrl);
+
+    QObject *object = component.create();
+    if (component.isReady() && !component.isError()) {
+        qDebug() << __func__ << " - 'result': " << object;
+
+//        QVariant returnedValue;
+//        QVariant msg = "Hello from C++";
+//        QMetaObject::invokeMethod(object, "init",
+//                                  Q_RETURN_ARG(QVariant, returnedValue),
+//                                  Q_ARG(QVariant, msg));
+//        qDebug() << "QML function returned:" << returnedValue.toString();
+
+        // call the init function if it exists
+        if (object->metaObject()->indexOfMethod("init()") > -1) {
+            QMetaObject::invokeMethod(object, "init");
+        }
+
+        QObject::connect(this, SIGNAL(noteChanged(QVariant)),
+                         object, SLOT(onNoteChanged(QVariant)));
+
+//        delete object;
+
+    } else {
+        qDebug() << __func__ << " - 'component.errors': " << component.errors();
+    }
 }
 
 MainWindow::~MainWindow() {
@@ -304,6 +358,14 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+void MainWindow::initScriptingEngine() {
+    ScriptingService* scriptingService = ScriptingService::createInstance(this);
+    QQmlEngine* engine = scriptingService->engine();
+//    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
+    engine->rootContext()->setContextProperty("noteTextEdit", ui->noteTextEdit);
+    scriptingService->initComponents();
+}
 
 /**
  * Initializes the toolbars
@@ -3446,6 +3508,11 @@ void MainWindow::on_actionInsert_image_triggered() {
 bool MainWindow::insertMedia(QFile *file) {
     QString text = getInsertMediaMarkdown(file);
     if (!text.isEmpty()) {
+        ScriptingService* scriptingService = ScriptingService::instance();
+        // attempts to ask a script for an other markdown text
+        text = scriptingService->callModifyMediaMarkdown(file, text);
+        qDebug() << __func__ << " - 'text': " << text;
+
         QMarkdownTextEdit* textEdit = activeNoteTextEdit();
         QTextCursor c = textEdit->textCursor();
 

@@ -58,6 +58,7 @@ SOURCES += main.cpp\
     entities/notehistory.cpp \
     entities/notefolder.cpp \
     entities/tag.cpp \
+    entities/script.cpp \
     services/owncloudservice.cpp \
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
@@ -67,6 +68,7 @@ SOURCES += main.cpp\
     dialogs/passworddialog.cpp \
     services/metricsservice.cpp \
     services/cryptoservice.cpp \
+    services/scriptingservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
     dialogs/welcomedialog.cpp \
@@ -94,6 +96,7 @@ HEADERS  += mainwindow.h \
     entities/calendaritem.h \
     entities/notefolder.h \
     entities/tag.h \
+    entities/script.h \
     dialogs/aboutdialog.h \
     dialogs/linkdialog.h \
     dialogs/notediffdialog.h \
@@ -104,6 +107,7 @@ HEADERS  += mainwindow.h \
     dialogs/versiondialog.h \
     services/owncloudservice.h \
     services/updateservice.h \
+    services/scriptingservice.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
     services/databaseservice.h \

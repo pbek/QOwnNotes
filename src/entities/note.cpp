@@ -15,6 +15,7 @@
 #include "libraries/botan/botan.h"
 #include "tag.h"
 #include <utils/misc.h>
+#include <services/scriptingservice.h>
 
 
 Note::Note() {
@@ -591,7 +592,8 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
     QSettings settings;
     QString notesPath = settings.value("notesPath").toString();
 
-    return notesPath + QDir::separator() + fileName;
+    return Utils::Misc::removeIfEndsWith(notesPath, "/") +
+            QDir::separator() + fileName;
 }
 
 /**
@@ -618,7 +620,7 @@ QUrl Note::fullNoteFileUrl() {
 int Note::storeDirtyNotesToDisk(Note &currentNote) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
-
+    ScriptingService* scriptingService = ScriptingService::instance();
     Note note;
 //    qDebug() << "storeDirtyNotesToDisk";
 
@@ -633,6 +635,10 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
             QString oldFileName = note.getFileName();
             note.storeNoteTextFileToDisk();
             QString newFileName = note.getFileName();
+
+            // emit the signal for the QML that the note was stored
+            emit scriptingService->noteStored(note.fullNoteFilePath(),
+                                              note.getNoteText());
 
             // reassign currentNote if filename of currentNote has changed
             if ((oldFileName == currentNote.getFileName()) &&

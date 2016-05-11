@@ -272,6 +272,16 @@ bool DatabaseService::setupTables() {
         version = 7;
     }
 
+    if (version < 8) {
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS script ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255),"
+                               "script_path TEXT,"
+                               "enabled BOOLEAN DEFAULT 1,"
+                               "priority INTEGER DEFAULT 0 )");
+        version = 8;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

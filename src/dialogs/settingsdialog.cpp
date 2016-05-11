@@ -18,6 +18,7 @@
 #include <services/cryptoservice.h>
 #include <entities/notefolder.h>
 #include <QTextBrowser>
+#include <entities/script.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -43,6 +44,9 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
 
     // setup the note folder tab
     setupNoteFolderTab();
+
+    // setup the scripting tab
+    setupScriptingTab();
 
     readSettings();
 
@@ -206,7 +210,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("ownCloud/serverUrl", url);
     settings.setValue("ownCloud/userName", ui->userNameEdit->text());
     settings.setValue("ownCloud/password",
-                      CryptoService::instance()->encryptToString(ui->passwordEdit->text()));
+                      CryptoService::instance()->encryptToString(
+                              ui->passwordEdit->text()));
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
@@ -975,6 +980,35 @@ void SettingsDialog::setupNoteFolderTab() {
     noteFolderRemotePathTreeStatusBar = new QStatusBar();
     ui->noteFolderRemotePathTreeWidgetFrame->layout()->addWidget(
             noteFolderRemotePathTreeStatusBar);
+}
+
+/**
+ * Does the scripting tab setup
+ */
+void SettingsDialog::setupScriptingTab() {
+    QList<Script> scripts = Script::fetchAll();
+    int scriptsCount = scripts.count();
+
+    // populate the note folder list
+    if (scriptsCount > 0) {
+        Q_FOREACH(Script script, scripts) {
+                QListWidgetItem *item =
+                        new QListWidgetItem(script.getName());
+                item->setData(Qt::UserRole,
+                              script.getId());
+                item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+                ui->scriptListWidget->addItem(item);
+            }
+
+        // set the current row
+        ui->scriptListWidget->setCurrentRow(0);
+    }
+
+    // disable the edit frame if there is no item
+    ui->scriptEditFrame->setEnabled(scriptsCount > 0);
+
+    // disable the remove button if there is no item
+    ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
 }
 
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(

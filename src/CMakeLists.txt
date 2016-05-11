@@ -87,6 +87,8 @@ set(SOURCE_FILES
     entities/notefolder.h
     entities/tag.cpp
     entities/tag.h
+    entities/script.cpp
+    entities/script.h
     helpers/htmlentities.cpp
     helpers/htmlentities.h
     helpers/clientproxy.cpp
@@ -135,6 +137,8 @@ set(SOURCE_FILES
     services/metricsservice.h
     services/cryptoservice.cpp
     services/cryptoservice.h
+    services/scriptingservice.cpp
+    services/scriptingservice.h
     libraries/piwiktracker/piwiktracker.h
     libraries/piwiktracker/piwiktracker.cpp
     libraries/botan/botan.h

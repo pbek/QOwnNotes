@@ -464,4 +464,6 @@ private:
     void initNoteListSplitter();
 
     void jumpToNoteName(QString name);
+
+    void initScriptingEngine();
 };

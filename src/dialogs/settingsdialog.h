@@ -31,6 +31,7 @@ public:
         NetworkTab,
         TodoTab,
         InterfaceTab,
+        ScriptingTab,
         GeneralTab,
         DebugTab
     };
@@ -162,6 +163,8 @@ private:
             QTreeWidgetItem *item);
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
+
+    void setupScriptingTab();
 };
 
 #endif // SETTINGSDIALOG_H
