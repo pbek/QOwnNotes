@@ -1402,6 +1402,16 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     buildNotesIndex();
     loadNoteDirectoryList();
 
+#ifdef Q_OS_LINUX
+    // check if the current note was modified
+    // this is a small remedy for the problem of not detected external note
+    // changes
+    QString noteFileName = currentNote.getFileName();
+    if (!noteFileName.isEmpty()) {
+        notesWereModified(currentNote.getFileName());
+    }
+#endif
+
     // also update the text of the text edit if current note has changed
     bool updateNoteText = !this->currentNote.exists();
     qDebug() << "updateNoteText: " << updateNoteText;

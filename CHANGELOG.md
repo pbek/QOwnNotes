@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.05.9
+- added a small remedy for the problem of not detected external note changes 
+  under Linux
+
 ## 16.05.8
 - fixed the the jumping to headlines when clicking on them in the navigation 
   bar if the note edit pane was disabled at app startup
