@@ -93,7 +93,7 @@
     <message>
       <location filename="../mainwindow.ui" line="272"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>Навигация</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="528"/>
@@ -491,12 +491,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1370"/>
       <source>Solve equation</source>
-      <translation type="unfinished">Solve equation</translation>
+      <translation>Решить уравнение</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1373"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Решение простого уравнение типа '(2+3) * 6 =' в текущей строке</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1301"/>
@@ -782,22 +782,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Портрет</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Ландшафт</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Ориентация</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Ориентация:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2613"/>
@@ -812,12 +812,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Размер страницы</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Размер страницы:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2652"/>
@@ -922,12 +922,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4984"/>
       <source>no equation was found in front of the cursor</source>
-      <translation type="unfinished">no equation was found in front of the cursor</translation>
+      <translation>уравнение под курсором не обнаружено</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5003"/>
       <source>result for equation: %1 = %2</source>
-      <translation type="unfinished">result for equation: %1 = %2</translation>
+      <translation>результат уравнения: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4339"/>
@@ -1145,7 +1145,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="87"/>
       <source>headline %1</source>
-      <translation type="unfinished">headline %1</translation>
+      <translation>заголовок %1</translation>
     </message>
   </context>
   <context>
@@ -1310,17 +1310,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Обычный текст</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Целые слова</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Регулярное выражение</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
@@ -1335,12 +1335,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Режим:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Совпадение с учетом регистра</translation>
     </message>
   </context>
   <context>
@@ -1980,17 +1980,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1508"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Итальянский</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1873"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
+      <translation>Разрешить имени файла заметки отличаться от заголовка. &lt;br&gt;Имейте в виду, что ownCloud требует совпадения!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1879"/>
       <source>Allow note file name to be different from headline</source>
-      <translation type="unfinished">Allow note file name to be different from headline</translation>
+      <translation>Разрешить имени файла заметки отличаться от заголовка</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1915"/>

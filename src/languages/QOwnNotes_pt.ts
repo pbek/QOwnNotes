@@ -768,22 +768,22 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Retrato</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Paisagem</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Orientação</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Orientação:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2613"/>
@@ -798,12 +798,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Tamanho da página</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Tamanho da página:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2652"/>
@@ -1293,17 +1293,17 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Texto sem formatação</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Palavras inteiras</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Expressão regular</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
@@ -1318,12 +1318,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Modo:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Não coincidir maiúsculas e minúsculas</translation>
     </message>
   </context>
   <context>
@@ -1968,12 +1968,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1873"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
+      <translation>Permitir que o nome do arquivo de nota ser diferente a manchete. &lt;br&gt;Estar ciente de que o ownCloud notas precisa deles para ser o mesmo!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1879"/>
       <source>Allow note file name to be different from headline</source>
-      <translation type="unfinished">Allow note file name to be different from headline</translation>
+      <translation>Permitir que o nome do arquivo de nota ser diferente da manchete</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1915"/>

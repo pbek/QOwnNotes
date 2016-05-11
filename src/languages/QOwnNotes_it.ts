@@ -93,7 +93,7 @@
     <message>
       <location filename="../mainwindow.ui" line="272"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>Navigazione</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="528"/>
@@ -486,17 +486,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1362"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Sostituisci nella nota corrente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1370"/>
       <source>Solve equation</source>
-      <translation type="unfinished">Solve equation</translation>
+      <translation>Risolvi equazione</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1373"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Risolvere una semplice equazione come '(2+3) * 6 =' nella riga corrente</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1301"/>
@@ -769,22 +769,22 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Verticale</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Orizzontale</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Orientamento</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Orientamento:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2613"/>
@@ -799,12 +799,12 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Dimensioni della pagina</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Dimensioni della pagina:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2652"/>

@@ -6,6 +6,8 @@
   (for [Issue #165](https://github.com/pbek/QOwnNotes/issues/165))
 - fixed the distraction free mode if the note edit pane was disabled while 
   entering the distraction free mode
+- added more Japanese, Portuguese, Italian and Russian translation (thank you 
+  piyo, mlimacarlos, rogepix and frostyland)
 
 ## 16.05.7
 - made a workaround for the not working page setup dialog for the PDF 

@@ -758,22 +758,22 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>縦</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2588"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>横</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>ページの向き</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2593"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>ページの向き:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2613"/>
@@ -788,12 +788,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>ページ サイズ</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2571"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>ページ サイズ:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2652"/>
