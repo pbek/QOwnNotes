@@ -52,10 +52,14 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     // iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();
-//        qDebug() << versionsIterator.name() << ": " << versionsIterator.value().property( "timestamp" ).toString() << " - " << versionsIterator.value().property( "humanReadableTimestamp" ).toString() << " - " << versionsIterator.value().property( "diffHtml" ).toString();
+        QJSValue property = versionsIterator.value()
+                .property("humanReadableTimestamp");
 
-        itemName = versionsIterator.value().property(
-                "humanReadableTimestamp").toString();
+        if (property.isUndefined()) {
+            continue;
+        }
+
+        itemName = property.toString();
 
         if (itemName == "") {
             continue;

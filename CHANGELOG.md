@@ -3,6 +3,8 @@
 ## 16.05.9
 - added a small remedy for the problem of not detected external note changes 
   under Linux
+- fixed the `undefined` list entry in the version dialog and the trash dialog
+- fixed a problem with the automatic text selection when replacing text in notes
 
 ## 16.05.8
 - fixed the the jumping to headlines when clicking on them in the navigation 

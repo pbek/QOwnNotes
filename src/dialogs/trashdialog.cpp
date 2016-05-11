@@ -74,16 +74,23 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     while (notesIterator.hasNext()) {
         notesIterator.next();
 
-        itemName = notesIterator.value().property("noteName").toString();
+        QJSValue property = notesIterator.value().property("noteName");
+
+        if (property.isUndefined()) {
+            continue;
+        }
+
+        itemName = property.toString();
+
+        if (itemName == "") {
+            continue;
+        }
+
         dateString = notesIterator.value().property("dateString").toString();
         data = notesIterator.value().property("data").toString();
         timestamp = notesIterator.value().property("timestamp").toInt();
         QString fileName =
                 notesIterator.value().property("fileName").toString();
-
-        if (itemName == "") {
-            continue;
-        }
 
         QListWidgetItem *item = new QListWidgetItem();
         item->setText(itemName);
