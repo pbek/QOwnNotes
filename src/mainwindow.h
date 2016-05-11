@@ -273,6 +273,8 @@ private slots:
 
     void setupNoteEditPane();
 
+    void restoreDistractionFreeMode();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -390,8 +392,6 @@ private:
     void gotoNextNote(int nextRow = -1);
 
     void gotoPreviousNote(int previousRow = -1);
-
-    void restoreDistractionFreeMode();
 
     void setDistractionFreeMode(bool enabled = true);
 

@@ -223,18 +223,23 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the markdown view
     setupMarkdownView();
 
-    // setup the note edit pane
-    // if the pane is disabled we have to setup the pane with a timer, so the
-    // automatic scrolling when clicked on the navigation bar works in the
-    // preview
     if (isNoteEditPaneEnabled()) {
+        // setup the note edit pane
         setupNoteEditPane();
-    } else {
-        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
-    }
 
-    // restore the distraction free mode
-    restoreDistractionFreeMode();
+        // restore the distraction free mode
+        restoreDistractionFreeMode();
+    } else {
+        // setup the note edit pane
+        // if the pane is disabled we have to setup the pane with a timer, so
+        // the automatic scrolling when clicked on the navigation bar works in
+        // the preview
+        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
+
+        // if the note edit pane is disabled we have to wait with restoring
+        // the distraction free mode
+        QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
+    }
 
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
@@ -519,6 +524,11 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
             ui->noteTagFrame->hide();
         }
 
+        // show the note edit frame if was disabled
+        if (!isNoteEditPaneEnabled()) {
+            ui->noteEditFrame->show();
+        }
+
         // hide note view if markdown view is enabled
         if (isMarkdownViewEnabled()) {
             ui->noteViewFrame->hide();
@@ -580,6 +590,11 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         if (isTagsEnabled()) {
             ui->tagFrame->show();
             ui->noteTagFrame->show();
+        }
+
+        // hide the note edit frame if was disabled
+        if (!isNoteEditPaneEnabled()) {
+            ui->noteEditFrame->hide();
         }
 
         // show note view if markdown view is enabled

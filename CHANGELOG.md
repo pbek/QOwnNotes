@@ -4,6 +4,8 @@
 - fixed the the jumping to headlines when clicking on them in the navigation 
   bar if the note edit pane was disabled at app startup
   (for [Issue #165](https://github.com/pbek/QOwnNotes/issues/165))
+- fixed the distraction free mode if the note edit pane was disabled while 
+  entering the distraction free mode
 
 ## 16.05.7
 - made a workaround for the not working page setup dialog for the PDF 
