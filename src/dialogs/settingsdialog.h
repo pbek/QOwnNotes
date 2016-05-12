@@ -8,6 +8,7 @@
 #include <QTreeWidgetItem>
 #include <QStatusBar>
 #include <entities/notefolder.h>
+#include <entities/script.h>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -117,6 +118,19 @@ private slots:
 
     void on_useOwnCloudPathButton_clicked();
 
+    void on_scriptAddButton_clicked();
+
+    void on_scriptRemoveButton_clicked();
+
+    void on_scriptPathButton_clicked();
+
+    void on_scriptListWidget_currentItemChanged(
+            QListWidgetItem *current, QListWidgetItem *previous);
+
+    void on_scriptNameLineEdit_editingFinished();
+
+    void on_scriptValidationButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -130,6 +144,7 @@ private:
     QString serverVersion;
     QString connectionErrorMessage;
     NoteFolder _selectedNoteFolder;
+    Script _selectedScript;
 
     void readSettings();
 
@@ -165,6 +180,10 @@ private:
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 
     void setupScriptingTab();
+
+    void storeScriptListEnabledState();
+
+    void validateCurrentScript();
 };
 
 #endif // SETTINGSDIALOG_H

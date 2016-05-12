@@ -19,6 +19,7 @@
 #include <entities/notefolder.h>
 #include <QTextBrowser>
 #include <entities/script.h>
+#include <services/scriptingservice.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -293,6 +294,9 @@ void SettingsDialog::storeSettings() {
 
     // store the proxy settings
     storeProxySettings();
+
+    // store the enabled state of the scripts
+    storeScriptListEnabledState();
 }
 
 void SettingsDialog::readSettings() {
@@ -982,35 +986,6 @@ void SettingsDialog::setupNoteFolderTab() {
             noteFolderRemotePathTreeStatusBar);
 }
 
-/**
- * Does the scripting tab setup
- */
-void SettingsDialog::setupScriptingTab() {
-    QList<Script> scripts = Script::fetchAll();
-    int scriptsCount = scripts.count();
-
-    // populate the note folder list
-    if (scriptsCount > 0) {
-        Q_FOREACH(Script script, scripts) {
-                QListWidgetItem *item =
-                        new QListWidgetItem(script.getName());
-                item->setData(Qt::UserRole,
-                              script.getId());
-                item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-                ui->scriptListWidget->addItem(item);
-            }
-
-        // set the current row
-        ui->scriptListWidget->setCurrentRow(0);
-    }
-
-    // disable the edit frame if there is no item
-    ui->scriptEditFrame->setEnabled(scriptsCount > 0);
-
-    // disable the remove button if there is no item
-    ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
-}
-
 void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous)
 {
@@ -1312,4 +1287,196 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
 
         ui->noteFolderRemotePathTreeWidget->clear();
     }
+}
+
+/**
+ * Does the scripting tab setup
+ */
+void SettingsDialog::setupScriptingTab() {
+    QList<Script> scripts = Script::fetchAll();
+    int scriptsCount = scripts.count();
+
+    // populate the script list
+    if (scriptsCount > 0) {
+        Q_FOREACH(Script script, scripts) {
+                QListWidgetItem *item =
+                        new QListWidgetItem(script.getName());
+                item->setData(Qt::UserRole,
+                              script.getId());
+                item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+                item->setCheckState(
+                        script.getEnabled() ? Qt::Checked : Qt::Unchecked);
+                ui->scriptListWidget->addItem(item);
+            }
+
+        // set the current row
+        ui->scriptListWidget->setCurrentRow(0);
+    }
+
+    // disable the edit frame if there is no item
+    ui->scriptEditFrame->setEnabled(scriptsCount > 0);
+
+    // disable the remove button if there is no item
+    ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
+}
+
+/**
+ * Adds a new script
+ */
+void SettingsDialog::on_scriptAddButton_clicked() {
+    _selectedScript = Script();
+    _selectedScript.setName(tr("new script"));
+    _selectedScript.setPriority(ui->scriptListWidget->count());
+    _selectedScript.store();
+
+    if (_selectedScript.isFetched()) {
+        QListWidgetItem *item =
+                new QListWidgetItem(_selectedScript.getName());
+        item->setData(Qt::UserRole, _selectedScript.getId());
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+        item->setCheckState(Qt::Checked);
+        ui->scriptListWidget->addItem(item);
+
+        // set the current row
+        ui->scriptListWidget->setCurrentRow(
+                ui->scriptListWidget->count() - 1);
+
+        // enable the remove button
+        ui->scriptRemoveButton->setEnabled(true);
+
+        // focus the script name edit and select the text
+        ui->scriptNameLineEdit->setFocus();
+        ui->scriptNameLineEdit->selectAll();
+    }
+}
+
+/**
+ * Removes the current script
+ */
+void SettingsDialog::on_scriptRemoveButton_clicked() {
+    if (ui->scriptListWidget->count() < 1) {
+        return;
+    }
+
+    if (QMessageBox::information(
+            this,
+            tr("Remove script"),
+            tr("Remove the current script <strong>%1</strong>?")
+                    .arg(_selectedScript.getName()),
+            tr("&Remove"), tr("&Cancel"), QString::null,
+            0, 1) == 0) {
+        // remove the script from the database
+        _selectedScript.remove();
+
+        // remove the list item
+        ui->scriptListWidget->takeItem(
+                ui->scriptListWidget->currentRow());
+
+        // disable the remove button if there is only no item left
+        ui->scriptRemoveButton->setEnabled(
+                ui->scriptListWidget->count() > 0);
+    }
+}
+
+/**
+ * Allows to choose the script path
+ */
+void SettingsDialog::on_scriptPathButton_clicked() {
+    QString path = QFileDialog::getOpenFileName(
+            this, tr("Please select your QML file"),
+            QDir::homePath(), tr("QML Files (*.qml)"));
+
+    QFile file(path);
+
+    if (file.exists() && (path != "")) {
+        ui->scriptPathLineEdit->setText(path);
+        _selectedScript.setScriptPath(path);
+        _selectedScript.store();
+    }
+}
+
+/**
+ * Loads the current script in the UI
+ */
+void SettingsDialog::on_scriptListWidget_currentItemChanged(
+        QListWidgetItem *current, QListWidgetItem *previous) {
+    Q_UNUSED(previous);
+
+    ui->scriptValidationLabel->clear();
+
+    int scriptId = current->data(Qt::UserRole).toInt();
+    _selectedScript = Script::fetch(scriptId);
+    if (_selectedScript.isFetched()) {
+        ui->scriptNameLineEdit->setText(_selectedScript.getName());
+        ui->scriptPathLineEdit->setText(_selectedScript.getScriptPath());
+        ui->scriptEditFrame->setEnabled(true);
+
+        // validate the script
+        validateCurrentScript();
+    } else {
+        ui->scriptEditFrame->setEnabled(false);
+        ui->scriptNameLineEdit->clear();
+        ui->scriptPathLineEdit->clear();
+    }
+}
+
+/**
+ * Validates the current script
+ */
+void SettingsDialog::validateCurrentScript() {
+    ui->scriptValidationLabel->clear();
+
+    if (_selectedScript.isFetched()) {
+        QString path = _selectedScript.getScriptPath();
+
+        // check the script validity if the path is not empty
+        if (!path.isEmpty()) {
+            QString errorMessage;
+            bool result = ScriptingService::validateScript(
+                    _selectedScript, errorMessage);
+            QString validationText = result ? tr("Your script seems valid") :
+                                     tr("There were script errors:\n%1")
+                                             .arg(errorMessage);
+            ui->scriptValidationLabel->setText(validationText);
+            ui->scriptValidationLabel->setStyleSheet(
+                    QString("color: %1;").arg(result ? "green" : "red"));
+        }
+    }
+}
+
+/**
+ * Stores a script name after it was edited
+ */
+void SettingsDialog::on_scriptNameLineEdit_editingFinished() {
+    QString text = ui->scriptNameLineEdit->text();
+    _selectedScript.setName(text);
+    _selectedScript.store();
+
+    ui->scriptListWidget->currentItem()->setText(text);
+}
+
+/**
+ * Stores the enabled states of the scripts
+ */
+void SettingsDialog::storeScriptListEnabledState() {
+    for (int i = 0; i < ui->scriptListWidget->count(); i++) {
+        QListWidgetItem *item = ui->scriptListWidget->item(i);
+        bool enabled = item->checkState() == Qt::Checked;
+        int scriptId = item->data(Qt::UserRole).toInt();
+
+        Script script = Script::fetch(scriptId);
+        if (script.isFetched()) {
+            if (script.getEnabled() != enabled) {
+                script.setEnabled(enabled);
+                script.store();
+            }
+        }
+    }
+
+}
+
+void SettingsDialog::on_scriptValidationButton_clicked()
+{
+    // validate the script
+    validateCurrentScript();
 }

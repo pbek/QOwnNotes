@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QQmlComponent>
 #include <QFileInfo>
+#include <entities/script.h>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -44,14 +45,12 @@ QQmlEngine* ScriptingService::engine() {
 }
 
 /**
- * Initializes the components
- * Currently there only is one component
+ * Initializes a component from a script
  */
-void ScriptingService::initComponents() {
-    // TODO(pbek): use script from settings here
-    QString fileName = "script.qml";
-    const QUrl fileUrl = QUrl::fromLocalFile(QFileInfo(fileName)
-                                                     .absoluteFilePath());
+void ScriptingService::initComponent(Script script) {
+    const QString path = script.getScriptPath();
+    qInfo() << "loading script file: " << path;
+    const QUrl fileUrl = QUrl::fromLocalFile(path);
 
     ScriptComponent scriptComponent;
     QQmlComponent *component = new QQmlComponent(_engine);
@@ -61,8 +60,7 @@ void ScriptingService::initComponents() {
     if (component->isReady() && !component->isError()) {
         scriptComponent.component = component;
         scriptComponent.object = object;
-        // TODO(pbek): use script ids instead of 1 and use a loop
-        _scriptComponents[1] = scriptComponent;
+        _scriptComponents[script.getId()] = scriptComponent;
 
         // call the init function if it exists
         if (methodExistsForObject(object, "init()")) {
@@ -76,8 +74,54 @@ void ScriptingService::initComponents() {
                              object, SLOT(onNoteStored(QVariant, QVariant)));
         }
     } else {
-        qWarning() << "component.errors: " << component->errors();
+        qWarning() << "script errors: " << component->errors();
     }
+}
+
+/**
+ * Checks if the script can be used in a component
+ */
+bool ScriptingService::validateScript(Script script,
+                                      QString &errorMessage) {
+    const QString path = script.getScriptPath();
+    QFile file(path);
+
+    if (!file.exists()) {
+        errorMessage = tr("file doesn't exist");
+        return false;
+    }
+
+    const QUrl fileUrl = QUrl::fromLocalFile(path);
+
+    QQmlEngine *engine = new QQmlEngine();
+    QQmlComponent *component = new QQmlComponent(engine);
+    component->loadUrl(fileUrl);
+
+    // we need the object to get all errors
+    QObject *object = component->create();
+
+    bool result = component->isReady() && !component->isError();
+
+    if (!result) {
+        errorMessage = component->errorString();
+    }
+
+    delete(object);
+    delete(component);
+    return result;
+}
+
+/**
+ * Initializes all components
+ */
+void ScriptingService::initComponents() {
+    QList<Script> scripts = Script::fetchAll();
+
+    Q_FOREACH(Script script, scripts) {
+            if (script.isEnabled()) {
+                initComponent(script);
+            }
+        }
 }
 
 /**

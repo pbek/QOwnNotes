@@ -35,6 +35,10 @@ bool Script::getEnabled() {
     return this->enabled;
 }
 
+bool Script::isEnabled() {
+    return getEnabled();
+}
+
 void Script::setName(QString text) {
     this->name = text;
 }

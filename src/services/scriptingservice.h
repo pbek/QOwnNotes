@@ -4,6 +4,7 @@
 #include <QQmlEngine>
 #include <QQmlComponent>
 #include <QtCore/QFile>
+#include <entities/script.h>
 
 
 struct ScriptComponent {
@@ -22,6 +23,7 @@ public:
     QQmlEngine* engine();
     void initComponents();
     QString callModifyMediaMarkdown(QFile *file, QString markdownText);
+    static bool validateScript(Script script, QString &errorMessage);
 
 private:
     QQmlEngine *_engine;
@@ -30,6 +32,7 @@ private:
     QString callModifyMediaMarkdownForObject(QObject *object,
                                              QFile *file,
                                              QString markdownText);
+    void initComponent(Script script);
 
 signals:
     void noteStored(QVariant fileName, QVariant noteText);

@@ -1374,6 +1374,14 @@ Are the folder and the file writeable?</source>
     </message>
 </context>
 <context>
+    <name>ScriptingService</name>
+    <message>
+        <location filename="../services/scriptingservice.cpp" line="90"/>
+        <source>file doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
@@ -1402,7 +1410,7 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="380"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1946"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1936"/>
         <source>Name</source>
         <translation>Имя</translation>
     </message>
@@ -1413,13 +1421,11 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="346"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1936"/>
         <source>This name will be viewed in all the menus.</source>
         <translation>Это имя будет отображаться во всех меню.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="349"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1939"/>
         <source>a name you will recognize</source>
         <translation>имя, которое вы узнаете</translation>
     </message>
@@ -1566,7 +1572,6 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="167"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1960"/>
         <source>Click here to select your local note path</source>
         <translation>Нажмите для выбора локального пути к заметке</translation>
     </message>
@@ -1766,7 +1771,7 @@ Are the folder and the file writeable?</source>
         <translation>Оптимизация цветов для темы рабочего стола &quot;Темный режим&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2277"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
         <translation>Сделать это только в случае проблем с режимом &quot;Список задач&quot;. Имейте в виду, что будут также удалены сконфигурированные папки заметок!</translation>
     </message>
@@ -1862,27 +1867,27 @@ Are the folder and the file writeable?</source>
         <translation>Размер пиктограммы:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2004"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2021"/>
         <source>General</source>
         <translation>Общее</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2038"/>
         <source>Notes</source>
         <translation>Заметки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2038"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2055"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если выбрано, то уведомления об изменениях внешними программами будут появляться, даже если текущая заметка не будет отредактирована. Рекомендуемое значение: &lt;span style=&quot; font-style:italic;&quot;&gt;отключить&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2044"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2061"/>
         <source>notify about all external modifications</source>
         <translation>уведомлять обо всех внешних изменениях</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2027"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2044"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>В более старых версиях ownCloud sync могут появиться проблемы синхронизации, если установить значение меньше 10 секунд.
@@ -1894,65 +1899,65 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Японский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2048"/>
         <source>note save interval time [sec]</source>
         <translation>период сохранения заметок (секунды)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2254"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="775"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="784"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="788"/>
         <source>Database</source>
         <translation>База данных</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2287"/>
         <source>Reinitialize Database</source>
         <translation>Инициализация базы данных</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2103"/>
         <source>Clear application data and exit</source>
         <translation>Удалить данные приложения и выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2092"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2109"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Нажатие этой кнопки приведёт к удалению всех настроек, локальной базы данных списка задач и выходу из QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2102"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="858"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2119"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
         <source>Clear app data and exit</source>
         <translation>Удалить данные приложения и выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2280"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2297"/>
         <source>Update dialog</source>
         <translation>Диалог обновления</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2170"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2187"/>
         <source>Default note file extension</source>
         <translation>Расширение файлов заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2189"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2206"/>
         <source>Text file (.txt)</source>
         <translation>Текстовый файл (.txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2211"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2228"/>
         <source>External editor</source>
         <translation>Внешний редактор</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2224"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2241"/>
         <source>path to external editor, leave empty for default</source>
         <translation>путь ко внешнему редактору, по умолчанию пусто</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2231"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2248"/>
         <source>set external editor</source>
         <translation>выбрать внешний редактор</translation>
     </message>
@@ -2007,97 +2012,112 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1943"/>
         <source>Script path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1977"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1950"/>
+        <source>Click here to select your QML script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1967"/>
         <source>path to your QML file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1987"/>
+        <source>script name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2007"/>
+        <source>Validate Script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2087"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation>Разрешить имени файла заметки отличаться от заголовка. &lt;br&gt;Имейте в виду, что ownCloud требует совпадения!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2076"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2093"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Разрешить имени файла заметки отличаться от заголовка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2112"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2129"/>
         <source>App instance</source>
         <translation>Экземпляр приложения</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2118"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2135"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Разрешить только один экземпляр приложения одновременно</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2125"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2142"/>
         <source>You need to restart the application to let these changes take action.</source>
         <translation>Необходимо перезапустить приложение, чтобы изменения вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2217"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2234"/>
         <source>Path to external editor:</source>
         <translation>Путь ко внешнему редактору:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2286"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2303"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Не показывать диалоговое окно обновления автоматически</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2329"/>
         <source>Debug</source>
         <translation>Отладка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2318"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2335"/>
         <source>Debug information</source>
         <translation>Отладочная информация</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2358"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можно &lt;span style=&quot; font-weight:600;&quot;&gt;скопировать и вставить&lt;/span&gt; этот текст (или его части) в &lt;span style=&quot; font-weight:600;&quot;&gt;сообщение о проблеме&lt;/span&gt; на &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;странице проблем QOwnNotes&lt;/a&gt;, если у вас есть &lt;span style=&quot; font-weight:600;&quot;&gt;вопросы или проблемы&lt;/span&gt; с QOwnNotes. Важные данные не выводятся в это информационное поле.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2354"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2371"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Сохранить отладочную информацию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="71"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="72"/>
         <source>hostname of proxy server</source>
         <translation>имя хоста прокси-сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="72"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="73"/>
         <source>username for proxy server</source>
         <translation>имя пользователя для прокси-сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="73"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="74"/>
         <source>password for proxy server</source>
         <translation>пароль для прокси-сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="75"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="76"/>
         <source>HTTP(S) proxy</source>
         <translation>HTTP(S) прокси</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="76"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="77"/>
         <source>SOCKS5 proxy</source>
         <translation>SOCKS5 прокси</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="547"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="551"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -2106,7 +2126,7 @@ QOwnNotesAPI version: %2</source>
 Версия QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="558"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="562"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -2117,62 +2137,99 @@ Connection error message: </source>
 Сообщение об ошибке:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1040"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1015"/>
         <source>new folder</source>
         <translation>новая папка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1078"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1053"/>
         <source>Remove note folder</source>
         <translation>Удалить папку заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1054"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Удалить текущую папку заметок: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1081"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1366"/>
         <source>&amp;Remove</source>
         <translation>&amp;Удалить</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1142"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1117"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Пожалуйста, выберите папку для хранения заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1179"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1154"/>
         <source>Loading folders from server</source>
         <translation>Загрузка папок с сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1193"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1168"/>
         <source>No more folders were found in the current folder</source>
         <translation>Нет больше папок в текущей папке</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1267"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1242"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Загрузка папок с сервера в &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="785"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1328"/>
+        <source>new script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1363"/>
+        <source>Remove script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1364"/>
+        <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1386"/>
+        <source>Please select your QML file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1387"/>
+        <source>QML Files (*.qml)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
+        <source>Your script seems valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1438"/>
+        <source>There were script errors:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="789"/>
         <source>The Database was reinitialized.</source>
         <translation>База данных переинициализирована.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="805"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="809"/>
         <source>Markdown files (*.md)</source>
         <translation>Файлы Markdown (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="806"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="810"/>
         <source>Save debug information</source>
         <translation>Сохранить отладочную информацию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="859"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="863"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -2181,29 +2238,30 @@ Your notes will stay intact!</source>
 Заметки останутся в неизменном состоянии!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="866"/>
         <source>Clear and &amp;exit</source>
         <translation>Очистить и &amp;выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1081"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="783"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="866"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1366"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Отмена</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="776"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="780"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Вы действительно хотите очистить локальную базу данных? Это также удалит ваши настроенные папки заметок и сохраненные элементы списков задач!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="783"/>
         <source>Clear &amp;database</source>
         <translation>Очистить &amp;базу данных</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="926"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="930"/>
         <source>Select editor application</source>
         <translation>Выбор внешнего редактора</translation>
     </message>

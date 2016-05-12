@@ -1358,6 +1358,14 @@ Are the folder and the file writeable?</source>
     </message>
 </context>
 <context>
+    <name>ScriptingService</name>
+    <message>
+        <location filename="../services/scriptingservice.cpp" line="90"/>
+        <source>file doesn&apos;t exist</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SettingsDialog</name>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="26"/>
@@ -1386,7 +1394,7 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="380"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1946"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1936"/>
         <source>Name</source>
         <translation>Név</translation>
     </message>
@@ -1397,13 +1405,11 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="346"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1936"/>
         <source>This name will be viewed in all the menus.</source>
         <translation>Deze naam wordt weergegeven in alle menu&apos;s.</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="349"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1939"/>
         <source>a name you will recognize</source>
         <translation>een naam die u zult herkennen</translation>
     </message>
@@ -1550,7 +1556,6 @@ Are the folder and the file writeable?</source>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="167"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1960"/>
         <source>Click here to select your local note path</source>
         <translation>Klik hier om uw lokale notitie pad te selecteren</translation>
     </message>
@@ -1750,7 +1755,7 @@ Are the folder and the file writeable?</source>
         <translation>Kleuren voor donkere modus bureaubladthema&apos;s optimaliseren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2260"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2277"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
         <translation>Doe dit alleen als u problemen met uw Todo items hebt. Wees gewaarschuwd dat dit ook uw geconfigureerde notaomslagen zal verwijderen!</translation>
     </message>
@@ -1847,27 +1852,27 @@ Are the folder and the file writeable?</source>
         <translation>Pictogramformaat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2004"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2021"/>
         <source>General</source>
         <translation>Algemeen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2021"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2038"/>
         <source>Notes</source>
         <translation>Notities</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2038"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2055"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indien aangevinkt zal je altijd geïnformeerd worden over externe wijzigingen, zelfs als de actuele notitie niet werd bewerkt in de laatste minuut. Aanbevolen is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2044"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2061"/>
         <source>notify about all external modifications</source>
         <translation>Informeer over alle externe wijzigingen.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2027"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2044"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>U zou synchronisatieconflicten met oudere versies van ownCloud kunnen tegenkomen wanneer je ver. onder de 10 sec gaat. Test jezelf als je synchronisatieconflicten tegenkomt en stel een hogere waarde in, als dat gebeurt.</translation>
@@ -1878,66 +1883,66 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Japaans</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2031"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2048"/>
         <source>note save interval time [sec]</source>
         <translation>notitie op te slaan interval [sec] </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2254"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="775"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="784"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2271"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="788"/>
         <source>Database</source>
         <translation>Database</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2270"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2287"/>
         <source>Reinitialize Database</source>
         <translation> Reinitialize Database </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2103"/>
         <source>Clear application data and exit</source>
         <translation>Applicatie gegevens wissen en exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2092"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2109"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Met deze knop kunt u alle instellingen wissen, de lokale todo-database en exit QOwnNotes verwijderen.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2102"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="858"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2119"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
         <source>Clear app data and exit</source>
         <translation>App-gegevens wissen en exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2280"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2297"/>
         <source>Update dialog</source>
         <translation>dialoogvenster bijwerken
 </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2170"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2187"/>
         <source>Default note file extension</source>
         <translation>Standaard note bestandsextensie</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2189"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2206"/>
         <source>Text file (.txt)</source>
         <translation>Tekstbestand (.txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2211"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2228"/>
         <source>External editor</source>
         <translation>externe editor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2224"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2241"/>
         <source>path to external editor, leave empty for default</source>
         <translation>pad naar externe editor, laat leeg voor standaard</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2231"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2248"/>
         <source>set external editor</source>
         <translation>Set externe editor </translation>
     </message>
@@ -1992,104 +1997,119 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1943"/>
         <source>Script path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1977"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1950"/>
+        <source>Click here to select your QML script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1967"/>
         <source>path to your QML file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1987"/>
+        <source>script name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2007"/>
+        <source>Validate Script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2087"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2076"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2093"/>
         <source>Allow note file name to be different from headline</source>
         <translation type="unfinished">Allow note file name to be different from headline</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2112"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2129"/>
         <source>App instance</source>
         <translation>App exemplaar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2118"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2135"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Alleen één exemplaar van de app op hetzelfde moment toelaten</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2125"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2142"/>
         <source>You need to restart the application to let these changes take action.</source>
         <translation>U moet opnieuw opstarten om deze veranderingen van de toepassing te laten optreden.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2217"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2234"/>
         <source>Path to external editor:</source>
         <translation>Pad naar externe edior:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2286"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2303"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Toon update dialoogvenster niet automatisch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2312"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2329"/>
         <source>Debug</source>
         <translation>Debug</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2318"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2335"/>
         <source>Debug information</source>
         <translation>Debug informatie</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2358"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;u kunt &lt;span style=&quot;font-weight:600;&quot;&gt; kopiëren en plakken&lt;/span&gt; deze tekst (of delen van deze tekst) in een &lt;span style=&quot;font-weight:600;&quot;&gt; probleem&lt;/span&gt; op de &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;pagina kwesties de QOwnNotes&lt;/a&gt; hebt u &lt;span style=&quot;font-weight:600;&quot;&gt;vragen of problemen&lt;/span&gt; met QOwnNotes. Gegevens die te gevoelig zijn, zijn verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2354"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2371"/>
         <source>&amp;Save debug information</source>
         <translation>&amp; Save debug informatie</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="71"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="72"/>
         <source>hostname of proxy server</source>
         <translation>hostname van de proxy-server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="72"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="73"/>
         <source>username for proxy server</source>
         <translation>gebruikersnaam voor de proxy-server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="73"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="74"/>
         <source>password for proxy server</source>
         <translation>wachtwoord voor de proxy-server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="75"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="76"/>
         <source>HTTP(S) proxy</source>
         <translation>Proxy HTTP(S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="76"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="77"/>
         <source>SOCKS5 proxy</source>
         <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="547"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="551"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
         <translation>De verbinding werd met succes gemaakt! Serverversie: %1 QOwnNotesAPI versie: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="558"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="562"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -2097,91 +2117,129 @@ Connection error message: </source>
         <translation>Er is een fout opgetreden met het aansluiten op de ownCloud Server! Ook moet u de QOwnNotesAPI app geïnstalleerd en ingeschakeld hebben! Verbindingsfoutbericht: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1040"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1015"/>
         <source>new folder</source>
         <translation>nieuwe map</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1078"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1053"/>
         <source>Remove note folder</source>
         <translation>Verwijderen van de notaomslag</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1054"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>De huidige opmerking map &lt;strong&gt;%1&lt;/strong&gt; verwijderen?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1081"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1366"/>
         <source>&amp;Remove</source>
         <translation>&amp;Verwijder</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1142"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1117"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Selecteer de map waar uw notities zullen worden opgeslagen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1179"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1154"/>
         <source>Loading folders from server</source>
         <translation>Laden van mappen vanaf de server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1193"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1168"/>
         <source>No more folders were found in the current folder</source>
         <translation>Geen meer mappen gevonden in de huidige map</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1267"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1242"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Laden van mappen in &apos;%1&apos; van server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="785"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1328"/>
+        <source>new script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1363"/>
+        <source>Remove script</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1364"/>
+        <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1386"/>
+        <source>Please select your QML file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1387"/>
+        <source>QML Files (*.qml)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
+        <source>Your script seems valid</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1438"/>
+        <source>There were script errors:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="789"/>
         <source>The Database was reinitialized.</source>
         <translation>De database is opnieuw geïnitialiseerd.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="805"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="809"/>
         <source>Markdown files (*.md)</source>
         <translation>Markdown bestanden</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="806"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="810"/>
         <source>Save debug information</source>
         <translation> Save debug informatie </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="859"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="863"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation>Wilt u echt alle instellingen wissen, verwijderen van de database en QOwnNotes sluiten? Uw notities zullen intact blijven!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="866"/>
         <source>Clear and &amp;exit</source>
         <translation>verwijder gegevens en &amp;exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="862"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1081"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="783"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="866"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1366"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuleer </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="776"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="780"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Wilt u echt de lokale database wissen? Dit zal ook uw geconfigureerde notaomslagen en uw cache todo items verwijderen!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="779"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="783"/>
         <source>Clear &amp;database</source>
         <translation>&amp;database wissen </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="926"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="930"/>
         <source>Select editor application</source>
         <translation>Selecteer editor applicatie</translation>
     </message>

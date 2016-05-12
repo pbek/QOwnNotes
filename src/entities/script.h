@@ -29,6 +29,7 @@ public:
     bool scriptPathExists();
     void setEnabled(bool value);
     bool getEnabled();
+    bool isEnabled();
 
 private:
     int id;
