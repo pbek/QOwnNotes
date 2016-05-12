@@ -49,7 +49,7 @@ QQmlEngine* ScriptingService::engine() {
  */
 void ScriptingService::initComponent(Script script) {
     const QString path = script.getScriptPath();
-    qInfo() << "loading script file: " << path;
+    qWarning() << "loading script file: " << path;
     const QUrl fileUrl = QUrl::fromLocalFile(path);
 
     ScriptComponent scriptComponent;
