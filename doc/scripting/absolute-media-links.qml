@@ -14,7 +14,10 @@ QtObject {
     function modifyMediaMarkdown(fileName, mediaMarkdownText) {
         // get the path of the current note folder
         var path = script.currentNoteFolderPath();
-        
+
+        // Windows users might want to add an additional slash in front of the path
+        //path = "/" + path;
+
         // make the path of inserted media files absolute
         return mediaMarkdownText.replace(new RegExp("media", "g"), path + "/media");
     }
