@@ -7,10 +7,19 @@
 #include <entities/script.h>
 #include <utils/misc.h>
 #include <entities/notefolder.h>
+#include <services/metricsservice.h>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty("script", this);
+
+    int scriptCount = Script::countAll();
+    MetricsService::instance()->sendEventIfEnabled(
+            "script/init",
+            "script",
+            "script count",
+            QString::number(scriptCount) + " scripts",
+            scriptCount);
 }
 
 /**
