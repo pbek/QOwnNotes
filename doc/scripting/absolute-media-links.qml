@@ -16,6 +16,6 @@ QtObject {
         var path = script.currentNoteFolderPath();
         
         // make the path of inserted media files absolute
-        return mediaMarkdownText.replace(new RegExp("media", "g"), path + "media");
+        return mediaMarkdownText.replace(new RegExp("media", "g"), path + "/media");
     }
 }
