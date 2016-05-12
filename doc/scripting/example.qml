@@ -35,7 +35,7 @@ QtObject {
     }
     
     /**
-     * This function is called when html or media file are pasted to a note with `Ctrl + Shift + V`
+     * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
      * 
      * @param text text of the QMimeData object
      * @param html html of the QMimeData object

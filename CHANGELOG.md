@@ -13,7 +13,8 @@
 - a new script hook was added `insertingFromMimeDataHook`
     - this function is called when html or media file are pasted to a note 
       with `Ctrl + Shift + V`
-    - there is an example
+    - you can intercept the media paste mechanism with it
+    - there is an example at
       [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/note-text-from-5pm-mail.qml)
 - the script function `modifyMediaMarkdown` was be renamed to `insertMediaHook`
   for more consistency
