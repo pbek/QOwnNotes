@@ -2071,7 +2071,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="text">
-                 <string>notify about all external modifications</string>
+                 <string>notify about all external modifications of the current note</string>
                 </property>
                </widget>
               </item>

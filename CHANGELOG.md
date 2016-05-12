@@ -4,6 +4,10 @@
 - fixed the QOwnNotesAPI test in the settings dialog if no network connection
   is present
 - made the ownCloud server error text in the settings dialog copyable by mouse
+- clarified the the meaning of the setting `notify about all external 
+  modifications` (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
+- generally increased the time a status message is visible for messages that 
+  were viewed too short (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
 
 ## 16.05.10
 - QOwnNotes now has experimental **scripting support**

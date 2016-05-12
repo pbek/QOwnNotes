@@ -1308,7 +1308,7 @@ void MainWindow::notesWereModified(const QString &str) {
             qDebug() << "Current note was modified externally!";
 
             showStatusBarMessage(
-                    tr("current note was modified externally"), 3000);
+                    tr("current note was modified externally"), 5000);
 
             // if we don't want to get notifications at all
             // external modifications check if we really need one
@@ -1335,7 +1335,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     this->currentNote.store();
                     this->currentNote.storeNoteTextFileToDisk();
                     showStatusBarMessage(
-                            tr("stored current note to disk"), 1000);
+                            tr("stored current note to disk"), 3000);
 
                     // just to make sure everything is uptodate
 //                        this->currentNote = note;
@@ -1377,7 +1377,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     // store note to disk again
                     note.storeNoteTextFileToDisk();
                     showStatusBarMessage(
-                            tr("stored current note to disk"), 1000);
+                            tr("stored current note to disk"), 3000);
 
                     // rebuild and reload the notes directory list
                     buildNotesIndex();
@@ -1400,7 +1400,7 @@ void MainWindow::notesWereModified(const QString &str) {
         qDebug() << "other note was changed: " << str;
 
         showStatusBarMessage(
-                tr("note was modified externally: %1").arg(str), 3000);
+                tr("note was modified externally: %1").arg(str), 5000);
 
         // rebuild and reload the notes directory list
         buildNotesIndex();
@@ -1411,7 +1411,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
 void MainWindow::notesDirectoryWasModified(const QString &str) {
     qDebug() << "notesDirectoryWasModified: " << str;
-    showStatusBarMessage(tr("notes directory was modified externally"), 3000);
+    showStatusBarMessage(tr("notes directory was modified externally"), 5000);
 
     // rebuild and reload the notes directory list
     buildNotesIndex();
@@ -1474,7 +1474,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
             showStatusBarMessage(
                     tr("stored %n note(s) to disk", "", count),
-                    1000);
+                    3000);
 
             // wait 100ms before the block on this->noteDirectoryWatcher
             // is opened, otherwise we get the event
@@ -2988,7 +2988,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
             note.storeNoteTextFileToDisk();
             showStatusBarMessage(
-                    tr("stored current note to disk"), 1000);
+                    tr("stored current note to disk"), 3000);
         }
 
         buildNotesIndex();
@@ -4255,7 +4255,7 @@ void MainWindow::on_action_Increase_note_text_size_triggered()
     ui->encryptedNoteTextEdit->setStyles();
     ui->encryptedNoteTextEdit->highlighter()->parse();
     showStatusBarMessage(
-            tr("Increased font size to %1 pt").arg(fontSize), 2000);
+            tr("Increased font size to %1 pt").arg(fontSize), 3000);
 }
 
 /**
@@ -4268,7 +4268,7 @@ void MainWindow::on_action_Decrease_note_text_size_triggered()
     ui->encryptedNoteTextEdit->setStyles();
     ui->encryptedNoteTextEdit->highlighter()->parse();
     showStatusBarMessage(
-            tr("Decreased font size to %1 pt").arg(fontSize), 2000);
+            tr("Decreased font size to %1 pt").arg(fontSize), 3000);
 }
 
 /**
@@ -4280,7 +4280,7 @@ void MainWindow::on_action_Reset_note_text_size_triggered()
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
     ui->encryptedNoteTextEdit->setStyles();
     ui->encryptedNoteTextEdit->highlighter()->parse();
-    showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 2000);
+    showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 3000);
 
     QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
 
@@ -5028,7 +5028,7 @@ void MainWindow::on_actionAutocomplete_triggered()
 
     if (!match.hasMatch()) {
         showStatusBarMessage(tr("no equation was found in front of the cursor"),
-                             3000);
+                             5000);
         return;
     }
 
