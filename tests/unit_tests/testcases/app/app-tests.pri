@@ -8,6 +8,7 @@ HEADERS  += \
     $$APP_SRC_DIR/version.h \
     $$APP_SRC_DIR/release.h \
     $$APP_SRC_DIR/services/databaseservice.h \
+    $$APP_SRC_DIR/services/scriptingservice.h \
     $$APP_SRC_DIR/utils/misc.h \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
     $$APP_SRC_DIR/services/metricsservice.h \
@@ -29,6 +30,7 @@ HEADERS  += \
 SOURCES += \
     $$PWD/test_*.cpp \
     $$APP_SRC_DIR/services/databaseservice.cpp \
+    $$APP_SRC_DIR/services/scriptingservice.cpp \
     $$APP_SRC_DIR/utils/misc.cpp \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \
     $$APP_SRC_DIR/services/metricsservice.cpp \
