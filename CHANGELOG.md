@@ -18,6 +18,7 @@
       [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/note-text-from-5pm-mail.qml)
 - the script function `modifyMediaMarkdown` was be renamed to `insertMediaHook`
   for more consistency
+- added a `Paste HTML or media` context menu entry for notes
 - added more Japanese translation (thank you piyo)
 
 ## 16.05.10

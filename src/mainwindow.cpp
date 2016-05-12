@@ -3340,11 +3340,17 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
 
+    QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
+    pasteMediaAction->setShortcut(QKeySequence("Ctrl+Shift+V"));
+
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
         if (selectedItem == linkTextAction) {
             // handle the linking of text with a note
             handleTextNoteLinking();
+        } else if (selectedItem == pasteMediaAction) {
+            // paste HTML or media into the note
+            pasteMediaIntoNote();
         }
     }
 }
