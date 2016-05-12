@@ -192,6 +192,10 @@ QString ScriptingService::callModifyMediaMarkdown(QFile *file,
 
 /**
  * QML wrapper to start a detached process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @return true on success, false otherwise
  */
 bool ScriptingService::startDetachedProcess(QString executablePath,
                                             QStringList parameters) {
@@ -200,6 +204,8 @@ bool ScriptingService::startDetachedProcess(QString executablePath,
 
 /**
  * QML wrapper to get the current note folder path
+ *
+ * @return the path of the current note folder
  */
 QString ScriptingService::currentNoteFolderPath() {
     return NoteFolder::currentNoteFolder().getLocalPath();
