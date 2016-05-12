@@ -10,8 +10,8 @@
   were viewed too short (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
 - scripts are now automatically validated when the script file is set in the 
   settings dialog
-- a new script hook was added `insertingFromMimeDataHook`
-    - this function is called when html or media file are pasted to a note 
+- a new script hook `insertingFromMimeDataHook` was added
+    - this function is called when html or media files are pasted to a note 
       with `Ctrl + Shift + V`
     - you can intercept the media paste mechanism with it
     - there is an example at
