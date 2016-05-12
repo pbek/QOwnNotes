@@ -13,6 +13,7 @@ QtObject {
      * @returns the string that should be inserted instead of the text from the QMimeData object
      */
     function insertingFromMimeDataHook(text, html) {
+        // http://www.regexpal.com is your friend
         var re1 = /^Neue Aufgabe von [\w\s]+$\s\s^([\w\s\.:]+)$/igm;
         var result1 = re1.exec(text);
 
