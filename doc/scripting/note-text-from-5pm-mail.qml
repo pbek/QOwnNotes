@@ -19,7 +19,7 @@ QtObject {
         var re2 = /^Direkter Zugriff hier: (http.+\d+)$/igm;
         var result2 = re2.exec(text);
 
-        var re3 = /^^Projekt: .+\nBeschreibung: ((.|\n)+)^Priorität: /igm;
+        var re3 = /^Projekt: .+\nBeschreibung: ((.|\n)+)^Priorität: /igm;
         var result3 = re3.exec(text);
         
         // return an empty string if we didn't find anything
