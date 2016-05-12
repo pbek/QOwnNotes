@@ -1318,6 +1318,12 @@ void SettingsDialog::setupScriptingTab() {
 
     // disable the remove button if there is no item
     ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
+
+    ui->scriptInfoLabel->setText(
+            tr("If you need access to a certain functionality in QOwnNotes "
+                       "please open an issue on the <a href=\"%1\">"
+                       "QOwnNotes issue page</a>.")
+                    .arg("https://github.com/pbek/QOwnNotes/issues"));
 }
 
 /**
@@ -1402,6 +1408,10 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous) {
     Q_UNUSED(previous);
 
+    if (current == Q_NULLPTR) {
+        return;
+    }
+
     ui->scriptValidationLabel->clear();
 
     int scriptId = current->data(Qt::UserRole).toInt();
@@ -1434,7 +1444,8 @@ void SettingsDialog::validateCurrentScript() {
             QString errorMessage;
             bool result = ScriptingService::validateScript(
                     _selectedScript, errorMessage);
-            QString validationText = result ? tr("Your script seems valid") :
+            QString validationText = result ?
+                                     tr("Your script seems to be valid") :
                                      tr("There were script errors:\n%1")
                                              .arg(errorMessage);
             ui->scriptValidationLabel->setText(validationText);

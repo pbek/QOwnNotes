@@ -77,9 +77,26 @@ md5sum $archiveFile > $archiveFile.md5
 sha256sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha256
 sha512sum $archiveFile | awk '{ print $1 }' > $archiveFile.sha512
 
-echo "Uploading archive to SourceForge..."
+remotePath="patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src"
+sourceForgeReadme="sourceforge-readme.md"
 
-rsync -ahv --progress $archiveFile* patbek@frs.sourceforge.net:/home/frs/project/qownnotes/src
+# generate the readme for sourceforge with a screenshot from GitHub
+cat README.md | sed "s/screenshots\\/screenshot.png/https:\\/\\/raw.githubusercontent.com\\/pbek\\/QOwnNotes\\/develop\\/screenshots\\/screenshot.png/g" >> ${sourceForgeReadme}
+echo >> ${sourceForgeReadme}
+echo >> ${sourceForgeReadme}
+cat CHANGELOG.md >> ${sourceForgeReadme}
+
+echo "Uploading files to SourceForge..."
+
+# upload the changelog file as README.md
+# it will be viewed on the sourceforge webpage
+rsync -ahv --progress ${sourceForgeReadme} ${remotePath}/README.md
+
+## upload the screenshots
+#rsync -ahv --progress screenshots/* ${remotePath}/screenshots
+
+# upload archive and checksum files
+rsync -ahv --progress ${archiveFile}* ${remotePath}
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then

@@ -1,12 +1,16 @@
 #include "scriptingservice.h"
 #include <QCoreApplication>
 #include <QDebug>
+#include <QQmlContext>
 #include <QQmlComponent>
 #include <QFileInfo>
 #include <entities/script.h>
+#include <utils/misc.h>
+#include <entities/notefolder.h>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
+    _engine->rootContext()->setContextProperty("script", this);
 }
 
 /**
@@ -184,4 +188,19 @@ QString ScriptingService::callModifyMediaMarkdown(QFile *file,
     }
 
     return markdownText;
+}
+
+/**
+ * QML wrapper to start a detached process
+ */
+bool ScriptingService::startDetachedProcess(QString executablePath,
+                                            QStringList parameters) {
+    return Utils::Misc::startDetachedProcess(executablePath, parameters);
+}
+
+/**
+ * QML wrapper to get the current note folder path
+ */
+QString ScriptingService::currentNoteFolderPath() {
+    return NoteFolder::currentNoteFolder().getLocalPath();
 }

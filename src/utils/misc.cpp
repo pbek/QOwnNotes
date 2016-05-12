@@ -17,6 +17,7 @@
 #include <QDir>
 #include <QUrl>
 #include <QRegularExpression>
+#include <QDebug>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -181,4 +182,20 @@ QString Utils::Misc::appendIfDoesNotEndWith(
     }
 
     return text;
+}
+
+/**
+ * Starts an executable detached with parameters
+ */
+bool Utils::Misc::startDetachedProcess(
+        QString executablePath, QStringList parameters) {
+    QProcess process;
+
+    // start executablePath detached with parameters
+#ifdef Q_OS_MAC
+    return process.startDetached(
+            "open", QStringList() << executablePath << "--args" << parameters);
+#else
+    return process.startDetached(executablePath, parameters);
+#endif
 }

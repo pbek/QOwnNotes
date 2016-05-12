@@ -300,53 +300,6 @@ MainWindow::MainWindow(QWidget *parent) :
                      SLOT(onNoteTextViewResize(QSize, QSize)));
 
     initScriptingEngine();
-    return;
-
-
-
-//    QJSEngine myEngine;
-//    myEngine.globalObject().setProperty("myNumber", 123);
-//    myEngine.globalObject().setProperty("mainWindow", this);
-
-    QQmlEngine *engine = new QQmlEngine(this);
-//    engine->setObjectOwnership(this, QQmlEngine::CppOwnership);
-//    engine->setObjectOwnership(this, QQmlEngine::JavaScriptOwnership);
-//    engine->rootContext()->setContextProperty("mainWindow", this);
-    engine->rootContext()->setContextProperty("noteTextEdit",
-                                              ui->noteTextEdit);
-//    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
-
-    QString fileName = "/home/omega/Code/_internal/QOwnNotes/src/script.qml";
-    const QUrl fileUrl = QUrl::fromLocalFile(QFileInfo(fileName)
-                                                     .absoluteFilePath());
-
-    QQmlComponent component(engine);
-    component.loadUrl(fileUrl);
-
-    QObject *object = component.create();
-    if (component.isReady() && !component.isError()) {
-        qDebug() << __func__ << " - 'result': " << object;
-
-//        QVariant returnedValue;
-//        QVariant msg = "Hello from C++";
-//        QMetaObject::invokeMethod(object, "init",
-//                                  Q_RETURN_ARG(QVariant, returnedValue),
-//                                  Q_ARG(QVariant, msg));
-//        qDebug() << "QML function returned:" << returnedValue.toString();
-
-        // call the init function if it exists
-        if (object->metaObject()->indexOfMethod("init()") > -1) {
-            QMetaObject::invokeMethod(object, "init");
-        }
-
-        QObject::connect(this, SIGNAL(noteChanged(QVariant)),
-                         object, SLOT(onNoteChanged(QVariant)));
-
-//        delete object;
-
-    } else {
-        qDebug() << __func__ << " - 'component.errors': " << component.errors();
-    }
 }
 
 MainWindow::~MainWindow() {
@@ -3730,15 +3683,9 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
         externalEditorPath;
         qDebug() << __func__ << " - 'path': " << path;
 
-        QProcess process;
-
         // open note file in external editor
-#ifdef Q_OS_MAC
-        process.startDetached(
-            "open", QStringList() << externalEditorPath << "--args" << path);
-#else
-        process.startDetached(externalEditorPath, QStringList() << path);
-#endif
+        Utils::Misc::startDetachedProcess(externalEditorPath,
+                                          QStringList() << path);
     }
 }
 

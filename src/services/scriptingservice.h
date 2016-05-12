@@ -5,6 +5,7 @@
 #include <QQmlComponent>
 #include <QtCore/QFile>
 #include <entities/script.h>
+#include <entities/notefolder.h>
 
 
 struct ScriptComponent {
@@ -24,7 +25,9 @@ public:
     void initComponents();
     QString callModifyMediaMarkdown(QFile *file, QString markdownText);
     static bool validateScript(Script script, QString &errorMessage);
-
+    Q_INVOKABLE bool startDetachedProcess(QString executablePath,
+                                          QStringList parameters);
+    Q_INVOKABLE QString currentNoteFolderPath();
 private:
     QQmlEngine *_engine;
     QHash<int, ScriptComponent> _scriptComponents;
@@ -33,11 +36,10 @@ private:
                                              QFile *file,
                                              QString markdownText);
     void initComponent(Script script);
+    void outputMethodsOfObject(QObject *object);
 
 signals:
     void noteStored(QVariant fileName, QVariant noteText);
 
 public slots:
-
-    void outputMethodsOfObject(QObject *object);
 };
