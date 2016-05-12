@@ -1319,11 +1319,15 @@ void SettingsDialog::setupScriptingTab() {
     // disable the remove button if there is no item
     ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
 
+    QString issueUrl = "https://github.com/pbek/QOwnNotes/issues";
+    QString exampleUrl =
+            "https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting";
     ui->scriptInfoLabel->setText(
             tr("If you need access to a certain functionality in QOwnNotes "
                        "please open an issue on the <a href=\"%1\">"
-                       "QOwnNotes issue page</a>.")
-                    .arg("https://github.com/pbek/QOwnNotes/issues"));
+                       "QOwnNotes issue page</a>. Click <a href=\"%2\">"
+                       "QML examples</a> for a place to start with your "
+                       "scripting.").arg(issueUrl, exampleUrl));
 }
 
 /**

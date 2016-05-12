@@ -1,5 +1,16 @@
 # QOwnNotes Changelog
 
+## 16.05.10
+- QOwnNotes now has experimental **scripting support**
+	- by harnessing the power of the QQmlEngine and QML files you are now able
+	  to script some behaviors in the application yourself
+	- you will find a new *Scripting* tab in the settings dialog where you can 
+	  add multiple scripts to QOwnNotes
+	- it is possible to disable or remove scripts
+	- I prepared some
+	  [examples](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting)
+	  to play around with
+
 ## 16.05.9
 - added a small remedy for the problem of not detected external note changes 
   under Linux
