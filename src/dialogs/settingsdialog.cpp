@@ -1402,6 +1402,9 @@ void SettingsDialog::on_scriptPathButton_clicked() {
         ui->scriptPathLineEdit->setText(path);
         _selectedScript.setScriptPath(path);
         _selectedScript.store();
+
+        // validate the script
+        validateCurrentScript();
     }
 }
 

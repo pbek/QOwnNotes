@@ -8,6 +8,8 @@
   modifications` (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
 - generally increased the time a status message is visible for messages that 
   were viewed too short (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
+- scripts are now automatically validated when the script file is set in the 
+  settings dialog
 
 ## 16.05.10
 - QOwnNotes now has experimental **scripting support**
