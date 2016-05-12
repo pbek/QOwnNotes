@@ -4,6 +4,7 @@
 #include <QQmlContext>
 #include <QQmlComponent>
 #include <QFileInfo>
+#include <QMimeData>
 #include <entities/script.h>
 #include <utils/misc.h>
 #include <entities/notefolder.h>
@@ -158,16 +159,16 @@ void ScriptingService::outputMethodsOfObject(QObject *object) {
 }
 
 /**
- * Calls the modifyMediaMarkdown function for an object
+ * Calls the insertMediaHook function for an object
  */
-QString ScriptingService::callModifyMediaMarkdownForObject(
+QString ScriptingService::callInsertMediaHookForObject(
         QObject *object,
         QFile *file,
         QString markdownText) {
     if (methodExistsForObject(object,
-                              "modifyMediaMarkdown(QVariant,QVariant)")) {
+                              "insertMediaHook(QVariant,QVariant)")) {
         QVariant newMarkdownText;
-        QMetaObject::invokeMethod(object, "modifyMediaMarkdown",
+        QMetaObject::invokeMethod(object, "insertMediaHook",
                                   Q_RETURN_ARG(QVariant, newMarkdownText),
                                   Q_ARG(QVariant, file->fileName()),
                                   Q_ARG(QVariant, markdownText));
@@ -178,25 +179,65 @@ QString ScriptingService::callModifyMediaMarkdownForObject(
 }
 
 /**
- * Calls the modifyMediaMarkdown function for all script components
+ * Calls the insertMediaHook function for all script components
  */
-QString ScriptingService::callModifyMediaMarkdown(QFile *file,
-                                                  QString markdownText) {
-
+QString ScriptingService::callInsertMediaHook(QFile *file,
+                                              QString markdownText) {
     QHashIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
         ScriptComponent scriptComponent = i.value();
 
-        QString text = callModifyMediaMarkdownForObject(scriptComponent.object,
-                                                        file, markdownText);
+        QString text = callInsertMediaHookForObject(scriptComponent.object,
+                                                    file, markdownText);
         if (!text.isEmpty()) {
             return text;
         }
     }
 
     return markdownText;
+}
+
+/**
+ * Calls the insertingFromMimeDataHook function for an object
+ */
+QString ScriptingService::callInsertingFromMimeDataHookForObject(
+        QObject *object,
+        const QMimeData *mimeData) {
+    if (methodExistsForObject(
+            object,
+            "insertingFromMimeDataHook(QVariant,QVariant)")) {
+        QVariant text;
+        QMetaObject::invokeMethod(object, "insertingFromMimeDataHook",
+                                  Q_RETURN_ARG(QVariant, text),
+                                  Q_ARG(QVariant, mimeData->text()),
+                                  Q_ARG(QVariant, mimeData->html()));
+        return text.toString();
+    }
+
+    return "";
+}
+
+/**
+ * Calls the insertingFromMimeDataHook function for all script components
+ */
+QString ScriptingService::callInsertingFromMimeDataHook(
+        const QMimeData *mimeData) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString text = callInsertingFromMimeDataHookForObject(
+                scriptComponent.object, mimeData);
+        if (!text.isEmpty()) {
+            return text;
+        }
+    }
+
+    return "";
 }
 
 /**

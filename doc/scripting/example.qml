@@ -29,8 +29,20 @@ QtObject {
      * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
      * @return string the new markdown text of the media file
      */
-    function modifyMediaMarkdown(fileName, mediaMarkdownText) {
+    function insertMediaHook(fileName, mediaMarkdownText) {
         console.log("mediafile was inserted: " + fileName);
+        return "";
+    }
+    
+    /**
+     * This function is called when html or media file are pasted to a note with `Ctrl + Shift + V`
+     * 
+     * @param text text of the QMimeData object
+     * @param html html of the QMimeData object
+     * @returns the string that should be inserted instead of the text from the QMimeData object
+     */
+    function insertingFromMimeDataHook(text, html) {
+        console.log("text was pasted: " + text);
         return "";
     }
     

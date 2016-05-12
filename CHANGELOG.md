@@ -10,6 +10,13 @@
   were viewed too short (for [Issue #161](https://github.com/pbek/QOwnNotes/issues/161))
 - scripts are now automatically validated when the script file is set in the 
   settings dialog
+- a new script hook was added `insertingFromMimeDataHook`
+    - this function is called when html or media file are pasted to a note 
+      with `Ctrl + Shift + V`
+    - there is an example
+      [note-text-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/note-text-from-5pm-mail.qml)
+- the script function `modifyMediaMarkdown` was be renamed to `insertMediaHook`
+  for more consistency
 - added more Japanese translation (thank you piyo)
 
 ## 16.05.10

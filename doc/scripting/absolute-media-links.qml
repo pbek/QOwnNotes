@@ -11,7 +11,7 @@ QtObject {
      * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
      * @return string the new markdown text of the media file
      */
-    function modifyMediaMarkdown(fileName, mediaMarkdownText) {
+    function callInsertMediaHook(fileName, mediaMarkdownText) {
         // get the path of the current note folder
         var path = script.currentNoteFolderPath();
 

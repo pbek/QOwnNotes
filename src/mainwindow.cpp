@@ -3463,7 +3463,7 @@ bool MainWindow::insertMedia(QFile *file) {
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
         // attempts to ask a script for an other markdown text
-        text = scriptingService->callModifyMediaMarkdown(file, text);
+        text = scriptingService->callInsertMediaHook(file, text);
         qDebug() << __func__ << " - 'text': " << text;
 
         QMarkdownTextEdit* textEdit = activeNoteTextEdit();
@@ -3950,6 +3950,23 @@ void MainWindow::dropEvent(QDropEvent *e) {
  * produced by a drop event or a paste action
  */
 void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
+    // check if a QML wants to set the inserted text
+    if (mimeData->hasText() || mimeData->hasHtml()) {
+        ScriptingService* scriptingService = ScriptingService::instance();
+        QString text = scriptingService->callInsertingFromMimeDataHook(
+                mimeData);
+
+        if (!text.isEmpty()) {
+            QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+            QTextCursor c = textEdit->textCursor();
+
+            // insert text from QML
+            c.insertText(text);
+
+            return;
+        }
+    }
+
     if (mimeData->hasHtml()) {
         insertHtml(mimeData->html());
     } else if (mimeData->hasUrls()) {
