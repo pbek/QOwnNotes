@@ -1,5 +1,11 @@
 # QOwnNotes Scripting
- 
+
+- you may need to restart QOwnNotes to let changes in a script take action 
+- if you need access to a certain functionality in QOwnNotes or have 
+  questions or ideas please open an issue on the 
+  [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues)
+
+
 ## Methods and objects QOwnNotes provides
 
 ### Starting an external program in the background
