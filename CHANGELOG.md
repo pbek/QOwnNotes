@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.05.11
+- fixed the QOwnNotesAPI test in the settings dialog if no network connection
+  is present
+- made the ownCloud server error text in the settings dialog copyable by mouse
+
 ## 16.05.10
 - QOwnNotes now has experimental **scripting support**
     - by using the power of the QQmlEngine and QML files you are now able

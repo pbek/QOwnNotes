@@ -236,9 +236,10 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     QJSValue result = engine.evaluate(data);
 
     bool appIsValid = result.property(0).property("versioning").toBool();
-    QString appVersion = result.property(0).property("app_version").toString();
-    QString serverVersion = result.property(0).property(
-            "server_version").toString();
+    QString appVersion = result.property(0).property("app_version")
+            .toVariant().toString();
+    QString serverVersion = result.property(0).property("server_version")
+            .toVariant().toString();
 
     // reset to "unknown" in case we can't test if versions
     // and trash app are enabled
