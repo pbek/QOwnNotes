@@ -27,9 +27,14 @@ QtObject {
         if ((result1 === null) || (result2 === null)) {
             return "";
         }
-        
-        var headline = result1[1];
+
         var url = result2[1];
+
+        var re4 = /(\d+)$/igm;
+        var result4 = re4.exec(url);
+
+        var id = result4[1];
+        var headline = result1[1] + " (" + id + ")";
         
         // add the headline of the task
         var text = headline + "\n";
