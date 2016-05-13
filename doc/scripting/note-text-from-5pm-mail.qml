@@ -14,7 +14,7 @@ QtObject {
      */
     function insertingFromMimeDataHook(text, html) {
         // http://www.regexpal.com is your friend
-        var re1 = /^Neue Aufgabe von [\w\s]+$\s\s^([\w\s\.:]+)$/igm;
+        var re1 = /^Neue Aufgabe von [\w\s]+$\s\s^(.+)$/igm;
         var result1 = re1.exec(text);
 
         var re2 = /^Direkter Zugriff hier: (http.+\d+)$/igm;
