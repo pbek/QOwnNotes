@@ -4,7 +4,8 @@
 - if you need access to a certain functionality in QOwnNotes or have 
   questions or ideas please open an issue on the 
   [QOwnNotes issue page](https://github.com/pbek/QOwnNotes/issues)
-
+- since debug output is disabled in the releases of QOwnNotes you might want to use `console.warn()` instead of `console.log()` to actually see an output
+    - additionally you need to run QOwnNotes from the command line to see the outputs on the command line
 
 ## Methods and objects QOwnNotes provides
 
