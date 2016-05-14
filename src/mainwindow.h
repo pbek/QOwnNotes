@@ -16,6 +16,7 @@
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
+#include <services/scriptingservice.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -27,7 +28,12 @@ class MainWindow;
 }
 
 class MainWindow : public QMainWindow {
-Q_OBJECT
+    Q_OBJECT
+    Q_PROPERTY(Note currentNote WRITE setCurrentNote MEMBER currentNote
+                       NOTIFY currentNoteChanged)
+
+Q_SIGNALS:
+    void currentNoteChanged(Note &note);
 
 public:
     explicit MainWindow(QWidget *parent = 0);

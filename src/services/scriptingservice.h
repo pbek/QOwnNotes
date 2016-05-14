@@ -6,7 +6,9 @@
 #include <QtCore/QFile>
 #include <entities/script.h>
 #include <entities/notefolder.h>
+#include <entities/note.h>
 #include <QMimeData>
+#include <api/noteapi.h>
 
 
 struct ScriptComponent {
@@ -17,6 +19,8 @@ struct ScriptComponent {
 class ScriptingService : public QObject
 {
     Q_OBJECT
+//    Q_PROPERTY(NoteApi currentNote READ currentNote())
+//    Q_PROPERTY(NoteApi currentNoteX MEMBER _currentNoteX READ currentNote)
 
 public:
     explicit ScriptingService(QObject *parent = 0);
@@ -29,12 +33,14 @@ public:
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,
                                           QStringList parameters);
     Q_INVOKABLE QString currentNoteFolderPath();
+    Q_INVOKABLE NoteApi *currentNote();
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);
 
 private:
     QQmlEngine *_engine;
+    NoteApi *_currentNoteAPi;
     QHash<int, ScriptComponent> _scriptComponents;
     bool methodExistsForObject(QObject *object, QString method);
     QString callInsertMediaHookForObject(QObject *object,
@@ -47,4 +53,5 @@ signals:
     void noteStored(QVariant fileName, QVariant noteText);
 
 public slots:
+    void onCurrentNoteChanged(Note *note);
 };

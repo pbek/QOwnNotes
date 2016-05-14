@@ -14,6 +14,9 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty("script", this);
 
+    qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");
+    qmlRegisterType<NoteApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
+
     int scriptCount = Script::countAll();
     MetricsService::instance()->sendEventIfEnabled(
             "script/init",
@@ -259,4 +262,20 @@ bool ScriptingService::startDetachedProcess(QString executablePath,
  */
 QString ScriptingService::currentNoteFolderPath() {
     return NoteFolder::currentNoteFolder().getLocalPath();
+}
+
+/**
+ */
+void ScriptingService::onCurrentNoteChanged(Note *note) {
+    _currentNoteAPi = new NoteApi();
+    _currentNoteAPi->fetch(note->getId());
+}
+
+/**
+ * QML wrapper to get the current note folder path
+ *
+ * @return the path of the current note folder
+ */
+NoteApi* ScriptingService::currentNote() {
+    return _currentNoteAPi;
 }

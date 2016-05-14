@@ -1240,6 +1240,13 @@ int Note::countAll() {
     return 0;
 }
 
+/**
+ * Fetches all tags of the note
+ */
+//QList<Tag> Note::tags() {
+//    return Tag::fetchAllOfNote(this);
+//}
+
 QDebug operator<<(QDebug dbg, const Note &note) {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
     " <fileName>" << note.fileName <<

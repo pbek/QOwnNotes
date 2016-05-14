@@ -77,7 +77,7 @@ public:
 
     bool hasChild(int tagId);
 
-private:
+protected:
     int id;
     QString name;
     int priority;

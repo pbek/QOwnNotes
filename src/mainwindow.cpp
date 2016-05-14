@@ -96,6 +96,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     readSettings();
 
+    initScriptingEngine();
+
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
     ui->actionAlphabetical->setChecked(sortAlphabetically);
@@ -298,8 +300,6 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(resize(QSize, QSize)),
                      this,
                      SLOT(onNoteTextViewResize(QSize, QSize)));
-
-    initScriptingEngine();
 }
 
 MainWindow::~MainWindow() {
@@ -1282,6 +1282,8 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
         Q_UNUSED(blocker);
         this->setNoteTextFromNote(&note);
     }
+
+    ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 }
 
 void MainWindow::notesWereModified(const QString &str) {
@@ -1788,6 +1790,8 @@ void MainWindow::setCurrentNote(Note note,
 
     updateEncryptNoteButtons();
     reloadCurrentNoteTags();
+
+    ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 }
 
 void MainWindow::focusNoteTextEdit() {
@@ -4627,7 +4631,7 @@ void MainWindow::reloadCurrentNoteTags() {
             QPushButton* button = new QPushButton(tag.getName(),
                                                   ui->noteTagButtonFrame);
             button->setIcon(QIcon::fromTheme(
-                    "xml-attribute-delete",
+                    "tag-delete",
                     QIcon(":icons/breeze-qownnotes/16x16/"
                                   "xml-attribute-delete.svg")));
             button->setToolTip(

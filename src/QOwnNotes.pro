@@ -74,7 +74,10 @@ SOURCES += main.cpp\
     dialogs/welcomedialog.cpp \
     dialogs/tagadddialog.cpp \
     widgets/navigationwidget.cpp \
-    widgets/notepreviewwidget.cpp
+    widgets/notepreviewwidget.cpp \
+    api/noteapi.cpp \
+    api/tagapi.cpp
+
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -121,7 +124,9 @@ HEADERS  += mainwindow.h \
     dialogs/welcomedialog.h \
     dialogs/tagadddialog.h \
     widgets/navigationwidget.h \
-    widgets/notepreviewwidget.h
+    widgets/notepreviewwidget.h \
+    api/noteapi.h \
+    api/tagapi.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

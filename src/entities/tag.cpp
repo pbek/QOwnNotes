@@ -1,5 +1,4 @@
 #include "tag.h"
-#include "note.h"
 #include "notefolder.h"
 #include <QDebug>
 #include <QSqlDatabase>

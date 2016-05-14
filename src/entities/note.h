@@ -5,7 +5,6 @@
 #include <QSqlQuery>
 #include <QFile>
 
-
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
 #define BOTAN_SALT "Gj3%36/SmPoe12$snNAs-A-_.),?faQ1@!f32"
@@ -135,7 +134,7 @@ public:
 
     QString fileNameSuffix();
 
-private:
+protected:
     int id;
     QString name;
     QString fileName;

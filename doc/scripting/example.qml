@@ -1,4 +1,5 @@
 import QtQml 2.0
+import com.qownnotes.noteapi 1.0
 
 /**
  * This script is a generic example of some functions that will be called by QOwnNotes
@@ -49,10 +50,10 @@ QtObject {
     }
     
     /**
-     * This starts a timer that triggers every second
+     * This starts a timer that triggers two seconds
      */
     property QtObject timer: Timer {
-        interval: 1000
+        interval: 2000
         repeat: true
         running: true
         
@@ -61,6 +62,13 @@ QtObject {
         onTriggered: {
             count++;
             console.log("count = " + count);
+            console.log(script.currentNote().id);
+            console.log(script.currentNote().name);
+            console.log(script.currentNote().fileName);
+            
+            // tagNames() returns a list of all tag names
+            var tagNameList = script.currentNote().tagNames();
+            console.log(tagNameList);
         }
     }
 }
