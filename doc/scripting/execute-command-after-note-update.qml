@@ -6,6 +6,8 @@ import QtQml 2.0
 QtObject {
     /**
      * This function is called when a note gets stored to disk
+     * You cannot modify stored notes, that would be a mess since 
+     * you are most likely editing them by hand at the same time
      * 
      * @param fileName string the file path of the note
      * @param noteText string the note text
