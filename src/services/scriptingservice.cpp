@@ -18,12 +18,14 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
 
     int scriptCount = Script::countAll();
-    MetricsService::instance()->sendEventIfEnabled(
-            "script/init",
-            "script",
-            "script count",
-            QString::number(scriptCount) + " scripts",
-            scriptCount);
+    if (scriptCount > 0) {
+        MetricsService::instance()->sendEventIfEnabled(
+                "script/init",
+                "script",
+                "script count",
+                QString::number(scriptCount) + " scripts",
+                scriptCount);
+    }
 }
 
 /**
