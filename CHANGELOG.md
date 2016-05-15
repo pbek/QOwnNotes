@@ -14,6 +14,8 @@
   be different from headline* is enabled in the settings)
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
     - it allows you to modify the name of the note file
+- added more Japanese, Portuguese, German and Dutch translation (thank you 
+  piyo, mlimacarlos, bigant and Telesight)
 
 ## 16.05.11
 - fixed the QOwnNotesAPI test in the settings dialog if no network connection
