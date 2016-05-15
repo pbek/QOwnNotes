@@ -15,7 +15,7 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine->rootContext()->setContextProperty("script", this);
 
     qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");
-    qmlRegisterType<NoteApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
+    qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
 
     int scriptCount = Script::countAll();
     MetricsService::instance()->sendEventIfEnabled(

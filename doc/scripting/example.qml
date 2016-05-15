@@ -1,5 +1,6 @@
 import QtQml 2.0
 import com.qownnotes.noteapi 1.0
+import com.qownnotes.tagapi 1.0
 
 /**
  * This script is a generic example of some functions that will be called by QOwnNotes
@@ -68,12 +69,23 @@ QtObject {
         onTriggered: {
             count++;
             console.log("count = " + count);
-            console.log(script.currentNote().id);
-            console.log(script.currentNote().name);
-            console.log(script.currentNote().fileName);
+            
+            var note = script.currentNote();
+            console.log(note.id);
+            console.log(note.name);
+            console.log(note.fileName);
+            
+            // the tags property returns a list of assigned tag objects
+            var tags = note.tags;
+            
+            // print out all tag names
+            for (var i in tags) {
+                 var tag = tags[i];
+                 console.log(tag.name);
+            }
             
             // tagNames() returns a list of all tag names
-            var tagNameList = script.currentNote().tagNames();
+            var tagNameList = note.tagNames();
             console.log(tagNameList);
         }
     }

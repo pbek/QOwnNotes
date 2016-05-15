@@ -80,6 +80,7 @@ class NoteApi {
     Q_PROPERTY(QString noteText)
     Q_PROPERTY(QString decryptedNoteText)
     Q_PROPERTY(bool hasDirtyData)
+    Q_PROPERTY(QQmlListProperty<TagApi> tags)
     Q_INVOKABLE QStringList tagNames();
 };
 ```

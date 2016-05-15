@@ -31,8 +31,9 @@ NoteApi* NoteApi::fromNote(Note note) {
 /**
  * Returns all linked tags
  */
-QList<TagApi*> NoteApi::tags() {
-    QList<TagApi*> tagApiList;
+QQmlListProperty<TagApi> NoteApi::tags() {
+    _tags.clear();
+
     Note note = Note::fetch(id);
     QList<Tag> tags = Tag::fetchAllOfNote(note);
     QListIterator<Tag> itr(tags);
@@ -41,10 +42,10 @@ QList<TagApi*> NoteApi::tags() {
 
         TagApi* tagApi = new TagApi();
         tagApi->fetch(tag.getId());
-        tagApiList << tagApi;
+        _tags.append(tagApi);
     }
 
-    return tagApiList;
+    return QQmlListProperty<TagApi>(this, _tags);
 }
 
 /**

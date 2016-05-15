@@ -2,6 +2,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <QQmlListProperty>
 #include "entities/note.h"
 #include "tagapi.h"
 
@@ -15,12 +16,16 @@ class NoteApi : public QObject, public Note {
     Q_PROPERTY(QString decryptedNoteText READ getDecryptedNoteText()
     WRITE setDecryptedNoteText())
     Q_PROPERTY(bool hasDirtyData READ getHasDirtyData())
+    Q_PROPERTY(QQmlListProperty<TagApi> tags READ tags)
+
+private:
+    QList<TagApi *> _tags;
 
 public:
     NoteApi *fetch(int id);
     static NoteApi *fromNote(Note note);
 //    static NoteApi fromNote(Note note);
 
-    Q_INVOKABLE QList<TagApi*> tags();
+    Q_INVOKABLE QQmlListProperty<TagApi> tags();
     Q_INVOKABLE QStringList tagNames() const;
 };
