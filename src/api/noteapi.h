@@ -21,5 +21,5 @@ public:
 //    static NoteApi fromNote(Note note);
 
     Q_INVOKABLE QList<TagApi*> tags();
-    Q_INVOKABLE QStringList tagNames();
+    Q_INVOKABLE QStringList tagNames() const;
 };

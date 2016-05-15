@@ -50,7 +50,7 @@ QList<TagApi*> NoteApi::tags() {
 /**
  * Returns the names of all linked tags
  */
-QStringList NoteApi::tagNames() {
+QStringList NoteApi::tagNames() const {
     QStringList tagNameList;
     Note note = Note::fetch(id);
     QList<Tag> tags = Tag::fetchAllOfNote(note);
