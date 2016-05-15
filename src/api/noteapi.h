@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QObject>
+#include <QStringList>
 #include "entities/note.h"
 #include "tagapi.h"
 
