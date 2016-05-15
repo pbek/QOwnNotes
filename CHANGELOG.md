@@ -14,6 +14,8 @@
   be different from headline* is enabled in the settings)
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
     - it allows you to modify the name of the note file
+    - there is an example at
+      [use-tag-names-in-filename.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml)
 - added more Japanese, Portuguese, German and Dutch translation (thank you 
   piyo, mlimacarlos, bigant and Telesight)
 
