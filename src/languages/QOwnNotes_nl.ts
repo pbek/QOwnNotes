@@ -1385,12 +1385,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="44"/>
       <source>Your note folders</source>
-      <translation>Uw notitie bestanden</translation>
+      <translation>Uw notitie mappen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="111"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Bestand toevoegen</translation>
+      <translation>&amp;Map toevoegen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="135"/>
@@ -1401,12 +1401,12 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/settingsdialog.ui" line="380"/>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Name</source>
-      <translation>Név</translation>
+      <translation>Naam</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="373"/>
       <source>Path on your ownCloud server</source>
-      <translation>Pad op de server van uw ownCloud</translation>
+      <translation>Pad op je ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="346"/>
@@ -1421,7 +1421,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="191"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Het pad van de ownCloud instellen op de plaats waar het pad van de map opmerking te worden gesynchroniseerd op uw ownCloud-server.</translation>
+      <translation>Stel het ownCloud pad in waar de notitie map naar wordt gesynchroniseerd op je ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="387"/>
@@ -1431,57 +1431,57 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="363"/>
       <source>ownCloud server</source>
-      <translation>ownCloud-server</translation>
+      <translation>ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="356"/>
       <source>Use as active note folder</source>
-      <translation>Als actieve notitie map gebruiken</translation>
+      <translation>Gebruik als actieve notitie map</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="414"/>
       <source>Your ownCloud server</source>
-      <translation>Uw ownCloud server</translation>
+      <translation>Je ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="428"/>
       <source>ownCloud server url:</source>
-      <translation>de url van de server van de ownCloud:</translation>
+      <translation>de URL van je ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vul de URL van uw ownCloud server, bijvoorbeeld: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vul de URL van je ownCloud server in, bijvoorbeeld: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="488"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Vul de gebruikersnaam in op uw ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Vul je gebruikersnaam op je ownCloud server in.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="491"/>
       <source>your ownCloud username</source>
-      <translation>uw ownCloud-gebruikersnaam</translation>
+      <translation>je ownCloud gebruikersnaam</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="466"/>
       <source>username:</source>
-      <translation>gebruikersnaam</translation>
+      <translation>gebruikersnaam:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="523"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Voer AUB het wachtwoord in voor uw gebruikersnaam.&lt;br/&gt; Momenteel wordt het wachtwoord versleuteld opgeslagen met de andere instellingen, maar is niet erg veilig. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&gt;&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt; Voer aub het wachtwoord in voor uw gebruikersnaam.&lt;br/&gt; Momenteel wordt het wachtwoord gecodeerd opgeslagen met de andere instellingen, maar is niet erg veilig. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="529"/>
       <source>your ownCloud password</source>
-      <translation> je ownCloud wachtwoord </translation>
+      <translation>je ownCloud wachtwoord</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="501"/>
       <source>password:</source>
-      <translation>wachtwoord</translation>
+      <translation>wachtwoord:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="601"/>
@@ -1491,17 +1491,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="618"/>
       <source>ownCloud server detected</source>
-      <translation>ownCloud server gedetecteerd </translation>
+      <translation>ownCloud server gedetecteerd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="652"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>aansluiting op qON Notes API</translation>
+      <translation>verbinding naar QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="635"/>
       <source>username and password correct</source>
-      <translation>gebruikersnaam en wachtwoord correct </translation>
+      <translation>gebruikersnaam en wachtwoord correct</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="591"/>
@@ -1517,12 +1517,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="551"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de verbinding met de ownCloud server te testen &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Klik hier om de verbinding met je ownCloud server te testen. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="557"/>
       <source>&amp;connect to ownCloud server</source>
-      <translation>&amp;verbinding te maken met ownCloud server </translation>
+      <translation>&amp;verbinding maken met je ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="584"/>
@@ -1532,22 +1532,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="669"/>
       <source>versions app enabled on server</source>
-      <translation>versies app ingeschakeld op server</translation>
+      <translation>versies app ingeschakeld op je server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="686"/>
       <source>trash app enabled on server</source>
-      <translation>trash app ingeschakeld op server</translation>
+      <translation>trash app ingeschakeld op je server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="703"/>
       <source>notes path found on server</source>
-      <translation>notities pad gevonden op de server </translation>
+      <translation>notities pad gevonden op je server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="759"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opent je ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; pagina in uw web browser te installeren of updaten QOwnNotesAPI en om de kern apps mogelijk te maken &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Verwijderd besatnden &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Open je ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; pagina in je web browser om QOwnNotesAPI te installeren of te updaten en om de kern apps mogelijk te maken &lt;span style=" font-weight:600;"&gt;Versies&lt;/span&gt; en &lt;span style=" font-weight:600;"&gt;Verwijderde bestanden &lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="328"/>
@@ -1562,47 +1562,47 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="167"/>
       <source>Click here to select your local note path</source>
-      <translation>Klik hier om uw lokale notitie pad te selecteren</translation>
+      <translation>Klik hier om je lokale notitie pad te selecteren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="184"/>
       <source>path where your notes are stored locally</source>
-      <translation>pad waar uw notities lokaal worden opgeslagen</translation>
+      <translation>pad waar je notities lokaal worden opgeslagen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="241"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Klik hier om uw externe notitie pad op de server van uw ownCloud te selecteren</translation>
+      <translation>Klik hier om je externe notitie pad op je ownCloud server te selecteren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="294"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Klik hier voor de geselecteerde map van uw server als notaomslag</translation>
+      <translation>Klik hier om de geselecteerde map van je server als notitie map te gebruiken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="336"/>
       <source>Please select your note folder on your ownCloud server</source>
-      <translation>Selecteer uw opmerking-map op uw server ownCloud</translation>
+      <translation>Selecteer je notitie map op je ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="714"/>
       <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Installeer de nieuwste versie van &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (minstens versie QOWNNOTESAPI_MIN_VERSION) op uw ownCloud-server als u toegang naar notitie versies en gewisd notities op QOwnNotes wilt hebben.</translation>
+      <translation>Installeer de nieuwste versie van &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (minimaal versie QOWNNOTESAPI_MIN_VERSION) op je ownCloud server als je toegang tot notitie versies en verwijderde notities op QOwnNotes wilt hebben.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="727"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Moet u ook de twee ownCloud core apps &lt;span style="font-weight:600;"&gt; versies&lt;/span&gt; en &lt;span style="font-weight:600;"&gt;Verwijderde bestanden&lt;/span&gt; op uw server ownCloud (dat moet de standaard) ingeschakeld.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je moet ook de twee ownCloud kern apps &lt;span style="font-weight:600;"&gt; versies&lt;/span&gt; en &lt;span style="font-weight:600;"&gt;Verwijderde bestanden&lt;/span&gt; op je ownCloud server ingeschakeld hebben (dat moet de standaard zijn).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="740"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;u zal nog steeds nodig de &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600"&gt; ownCloud sync client&lt;/span&gt;&lt;/a&gt; (of een andere desktop sync client) aan sync uw notities!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je zal nog steeds de &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600"&gt; ownCloud sync client&lt;/span&gt;&lt;/a&gt; (of een andere desktop sync client) nodig hebben om je notities te synchroniseren!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="762"/>
       <source>open your ownCloud server &amp;Apps page</source>
-      <translation>open uw ownCloud server &amp;Apps pagina</translation>
+      <translation>open je ownCloud server &amp;Apps pagina</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="806"/>
@@ -1632,7 +1632,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="864"/>
       <source>Specify proxy manually as</source>
-      <translation>proxy handmatig opgeven als</translation>
+      <translation>Proxy handmatig opgeven als</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="892"/>
@@ -1642,7 +1642,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="943"/>
       <source>Proxy server requires authentication</source>
-      <translation>Proxy-server vereist verificatie</translation>
+      <translation>Proxy server vereist verificatie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="994"/>
@@ -1652,12 +1652,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1000"/>
       <source>Ignore SSL errors</source>
-      <translation>SSL fouten negeren</translation>
+      <translation>Negeer SSL fouten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1182"/>
       <source>Todo</source>
-      <translation>Todo</translation>
+      <translation>Taken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1194"/>
@@ -1672,27 +1672,27 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1230"/>
       <source>Select the calendars you want to use for the TODO list</source>
-      <translation>Selecteer de agenda's die u wilt gebruiken voor de TODO lijst</translation>
+      <translation>Selecteer de agenda's die u wilt gebruiken voor de takenlijst</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1251"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>Klik hier om de lijst met agenda's herladen van je ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>Klik hier om de lijst met kalenders van je ownCloud server te herladen.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1257"/>
       <source>&amp;reload calendar list</source>
-      <translation>&amp;herladen lijst met agenda's </translation>
+      <translation>&amp;herladen lijst met kalenders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1285"/>
       <source>Interface</source>
-      <translation> Interface</translation>
+      <translation>Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1436"/>
       <source>Interface language</source>
-      <translation> Interface talen</translation>
+      <translation>Interface talen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1456"/>
@@ -1707,7 +1707,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1467"/>
       <source>German</source>
-      <translation>Guits</translation>
+      <translation>Duits</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1500"/>
@@ -1747,7 +1747,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1442"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Als uwilt helpen wilt bij het vertalen van QOwnNotes of bijwerken van een bestaande vertaling, lees: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Hoe kan ik helpen QOwnNotes te vertalen?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Als je wilt helpen bij het vertalen van QOwnNotes of een bestaande vertaling wilt bijwerken, lees: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Hoe kan ik helpen om QOwnNotes te vertalen?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1314"/>
@@ -1757,12 +1757,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1320"/>
       <source>Optimize colors for dark mode desktop themes</source>
-      <translation>Kleuren voor donkere modus bureaubladthema's optimaliseren</translation>
+      <translation>Kleuren optimaliseren voor de donkere modus bureaublad thema's</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2290"/>
       <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
-      <translation>Doe dit alleen als u problemen met uw Todo items hebt. Wees gewaarschuwd dat dit ook uw geconfigureerde notaomslagen zal verwijderen!</translation>
+      <translation>Doe dit alleen als je problemen met je taken items hebt. Wees gewaarschuwd dat dit ook je geconfigureerde notitie mappen zal verwijderen!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1336"/>
@@ -1772,18 +1772,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1342"/>
       <source>Show note folders in main area</source>
-      <translation>Opmerking mappen in de belangrijkste gebied weergeven</translation>
+      <translation>Geef de notitie mappen in het hoofdgebied weer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1054"/>
       <source>Disable tracking of usage data</source>
-      <translation> Schakel het bijhouden van gebruiksgegevens uit.
-</translation>
+      <translation>Schakel het bijhouden van gebruiksgegevens uit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1098"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Usage tracking gedaan op een prive Piwik server </translation>
+      <translation>Gebruik bijhouden wordt gedaan op een prive Piwik server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1158"/>
@@ -1798,22 +1797,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1007"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;u zou willen overwegen om een gratis SSL-certificaat van &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je zou kunnen overwegen om een gratis SSL-certificaat te verkrijgen van &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1599"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Als u de taal wijzigt moet u de applicatie opnieuw op starten voordat de veranderingen werken. </translation>
+      <translation>Als u de taal wijzigt moet u de applicatie opnieuw opstarten voordat de veranderingen werken.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1621"/>
       <source>Font settings</source>
-      <translation>lettertype-instellingen </translation>
+      <translation>Lettertype instellingen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1648"/>
       <source>font in note markdown view:</source>
-      <translation>lettertype in de nota markdown weergave:</translation>
+      <translation>lettertype in de notitie markdown weergave:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1658"/>
@@ -1826,12 +1825,12 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1748"/>
       <location filename="../dialogs/settingsdialog.ui" line="1790"/>
       <source>set a new font</source>
-      <translation>lettertype zetten</translation>
+      <translation>lettertype instellen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1710"/>
       <source>code font in markdown text edits:</source>
-      <translation>code lettertype in markdown tekstbewerkingen:</translation>
+      <translation>code lettertype voor markdown tekstbewerkingen:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1668"/>
@@ -1839,22 +1838,22 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1762"/>
       <location filename="../dialogs/settingsdialog.ui" line="1776"/>
       <source>reset font</source>
-      <translation>reset lettertype</translation>
+      <translation>herinstellen lettertype</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1720"/>
       <source>code font in note markdown view:</source>
-      <translation>code lettertype in de notitie markdown weergave</translation>
+      <translation>code lettertype in de notitie markdown weergave:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1358"/>
       <source>Toolbar</source>
-      <translation>Knoppenbalk</translation>
+      <translation>Werkbalk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1364"/>
       <source>Icon size:</source>
-      <translation>Pictogramformaat</translation>
+      <translation>De grootte van de pictogrammen:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2034"/>
@@ -1869,23 +1868,23 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2068"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indien aangevinkt zal je altijd geïnformeerd worden over externe wijzigingen, zelfs als de actuele notitie niet werd bewerkt in de laatste minuut. Aanbevolen is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Indien aangevinkt zul je altijd geïnformeerd worden over externe wijzigingen, zelfs als de huidige notitie niet werd bewerkt gedurende de laatste minuut. Aanbevolen wordt &lt;span style=" font-style:italic;"&gt;niet aangevinkt&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2057"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>U zou synchronisatieconflicten met oudere versies van ownCloud kunnen tegenkomen wanneer je ver. onder de 10 sec gaat. Test jezelf als je synchronisatieconflicten tegenkomt en stel een hogere waarde in, als dat gebeurt.</translation>
+      <translation>Je zou synchronisatieconflicten met oudere versies van ownCloud sync kunnen tegenkomen wanneer je ver onder de 10 sec gaat. Test zelf als je synchronisatieconflicten tegenkomt en stel een hogere waarde in als dat gebeurt.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1533"/>
       <source>Japanese</source>
-      <translation>Japaans</translation>
+      <translation>Japans</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2061"/>
       <source>note save interval time [sec]</source>
-      <translation>notitie op te slaan interval [sec] </translation>
+      <translation>notitie opslag interval [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2284"/>
@@ -1897,34 +1896,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2300"/>
       <source>Reinitialize Database</source>
-      <translation> Reinitialize Database </translation>
+      <translation>Herinitialiseer de database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2116"/>
       <source>Clear application data and exit</source>
-      <translation>Applicatie gegevens wissen en exit</translation>
+      <translation>Applicatie gegevens wissen en afsluiten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2122"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Met deze knop kunt u alle instellingen wissen, de lokale todo-database en exit QOwnNotes verwijderen.</translation>
+      <translation>Met deze knop kun je alle instellingen wissen, de lokale taken database verwijderen en QOwnNotes afsluiten.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2132"/>
       <location filename="../dialogs/settingsdialog.cpp" line="862"/>
       <source>Clear app data and exit</source>
-      <translation>App-gegevens wissen en exit</translation>
+      <translation>App-gegevens wissen en afsluiten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2310"/>
       <source>Update dialog</source>
-      <translation>dialoogvenster bijwerken
-</translation>
+      <translation>Dialoogvenster bijwerken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2200"/>
       <source>Default note file extension</source>
-      <translation>Standaard note bestandsextensie</translation>
+      <translation>Standaard notitie bestandsextensie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2219"/>
@@ -1934,17 +1932,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>External editor</source>
-      <translation>externe editor</translation>
+      <translation>Externe editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2254"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>pad naar externe editor, laat leeg voor standaard</translation>
+      <translation>pad naar externe editor, laat leeg voor de standaardwaarde</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2261"/>
       <source>set external editor</source>
-      <translation>Set externe editor </translation>
+      <translation>stel externe editor in</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1023"/>
@@ -1954,22 +1952,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1041"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>Anonieme gebruiksgegevens helpen om te bepalen welke delen van Quotes het volgende te verbeteren en om bugs te vinden en op te lossen. Gelieve uitschakelen alleen als je echt niet ermee kunt leven.</translation>
+      <translation>Anonieme gebruiksgegevens helpen om te bepalen welke delen van QOwnNotes verbetert kunnen worden en om bugs te vinden en op te lossen. Aub alleen uitschakelen als je hier echt niet mee kunt leven.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1073"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Deze gegevens omvatten anonieme informatie over welke functies van de app worden gebruikt.</translation>
+      <translation>Deze gegevens bevatten anonieme informatie over welke functies van de app worden gebruikt.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1127"/>
       <source>App heartbeat</source>
-      <translation>App heartbeat </translation>
+      <translation>App heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1145"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Een kleine heartbeat verzoek wordt periodiek verzonden terwijl QOwnNotes loopt. Maak een ontwikkelaar gelukkig door hun te laten weten dat er iemand is met behulp van QOwnNotes.</translation>
+      <translation>Een kleine heartbeat verzoek wordt periodiek verzonden terwijl QOwnNotes loopt. Maak een ontwikkelaar gelukkig door deze te laten weten dat er iemand is die QOwnNotes gebruikt.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1511"/>
@@ -2049,17 +2047,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2155"/>
       <source>You need to restart the application to let these changes take action.</source>
-      <translation>U moet opnieuw opstarten om deze veranderingen van de toepassing te laten optreden.</translation>
+      <translation>Je moet de applicatie opnieuw opstarten om deze veranderingen werkzaam te maken.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2247"/>
       <source>Path to external editor:</source>
-      <translation>Pad naar externe edior:</translation>
+      <translation>Pad naar externe editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2316"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Toon update dialoogvenster niet automatisch</translation>
+      <translation>Toon het update dialoogvenster niet automatisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2342"/>
@@ -2074,32 +2072,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2371"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;u kunt &lt;span style="font-weight:600;"&gt; kopiëren en plakken&lt;/span&gt; deze tekst (of delen van deze tekst) in een &lt;span style="font-weight:600;"&gt; probleem&lt;/span&gt; op de &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pagina kwesties de QOwnNotes&lt;/a&gt; hebt u &lt;span style="font-weight:600;"&gt;vragen of problemen&lt;/span&gt; met QOwnNotes. Gegevens die te gevoelig zijn, zijn verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Je kunt deze tekst &lt;span style="font-weight:600;"&gt; kopiëren en plakken&lt;/span&gt; (of delen van deze tekst) in een &lt;span style="font-weight:600;"&gt; probleem&lt;/span&gt; op de &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes problemen pagina&lt;/a&gt; Als je &lt;span style="font-weight:600;"&gt;vragen of problemen hebt&lt;/span&gt; met QOwnNotes. Gegevens die te gevoelig zijn, zijn verborgen in deze informatie.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2384"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp; Save debug informatie</translation>
+      <translation>&amp; Sla debug informatie op</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="72"/>
       <source>hostname of proxy server</source>
-      <translation>hostname van de proxy-server</translation>
+      <translation>hostname van de proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="73"/>
       <source>username for proxy server</source>
-      <translation>gebruikersnaam voor de proxy-server</translation>
+      <translation>gebruikersnaam voor de proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="74"/>
       <source>password for proxy server</source>
-      <translation>wachtwoord voor de proxy-server</translation>
+      <translation>wachtwoord voor de proxyserver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="76"/>
       <source>HTTP(S) proxy</source>
-      <translation>Proxy HTTP(S)</translation>
+      <translation>HTTP(S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="77"/>
@@ -2111,7 +2109,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>De verbinding werd met succes gemaakt! Serverversie: %1 QOwnNotesAPI versie: %2</translation>
+      <translation>De verbinding is geslaagd! Serverversie: %1 QOwnNotesAPI versie: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="562"/>
@@ -2119,7 +2117,9 @@ QOwnNotesAPI version: %2</source>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Er is een fout opgetreden met het aansluiten op de ownCloud Server! Ook moet u de QOwnNotesAPI app geïnstalleerd en ingeschakeld hebben! Verbindingsfoutbericht: </translation>
+      <translation>Er is een fout opgetreden bij het verbinden met de ownCloud Server! Je moet ook de QOwnNotesAPI app geïnstalleerd en ingeschakeld hebben! 
+
+Verbinding foutbericht: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1015"/>
@@ -2129,12 +2129,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1053"/>
       <source>Remove note folder</source>
-      <translation>Verwijderen van de notaomslag</translation>
+      <translation>Verwijder de notitie map</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1054"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>De huidige opmerking map &lt;strong&gt;%1&lt;/strong&gt; verwijderen?</translation>
+      <translation>Verwijder de huidige notitie map &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
@@ -2145,7 +2145,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1117"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Selecteer de map waar uw notities zullen worden opgeslagen</translation>
+      <translation>Selecteer de map waar je notities in zullen worden opgeslagen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1154"/>
@@ -2155,7 +2155,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1168"/>
       <source>No more folders were found in the current folder</source>
-      <translation>Geen meer mappen gevonden in de huidige map</translation>
+      <translation>Geen mappen gevonden in de huidige map</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1242"/>
@@ -2212,24 +2212,26 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="809"/>
       <source>Markdown files (*.md)</source>
-      <translation>Markdown bestanden</translation>
+      <translation>Markdown bestanden (*.md)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="810"/>
       <source>Save debug information</source>
-      <translation> Save debug informatie </translation>
+      <translation>Sla debug informatie op</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="863"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Wilt u echt alle instellingen wissen, verwijderen van de database en QOwnNotes sluiten? Uw notities zullen intact blijven!</translation>
+      <translation>Wil je echt alle instellingen wissen, de database verwijderen en QOwnNotes afsluiten? 
+
+Je notities zullen intact blijven!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="866"/>
       <source>Clear and &amp;exit</source>
-      <translation>verwijder gegevens en &amp;exit</translation>
+      <translation>Verwijder gegevens en &amp;afsluiten</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="783"/>
@@ -2237,17 +2239,17 @@ Your notes will stay intact!</source>
       <location filename="../dialogs/settingsdialog.cpp" line="1056"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1376"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Annuleer </translation>
+      <translation>&amp;Annuleer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="780"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Wilt u echt de lokale database wissen? Dit zal ook uw geconfigureerde notaomslagen en uw cache todo items verwijderen!</translation>
+      <translation>Wilt u echt de lokale database wissen? Dit zal ook uw geconfigureerde notitie mappen en je gecachde taken items verwijderen!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="783"/>
       <source>Clear &amp;database</source>
-      <translation>&amp;database wissen </translation>
+      <translation>&amp;database wissen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="930"/>
@@ -2260,12 +2262,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Een nieuwe tag toevoegen</translation>
+      <translation>Een nieuw label toevoegen</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="26"/>
       <source>Add new tag</source>
-      <translation>Voeg nieuwe tags toe</translation>
+      <translation>Voeg nieuw label toe</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="43"/>
@@ -2278,7 +2280,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Todo</translation>
+      <translation>Taken</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="57"/>
@@ -2289,7 +2291,7 @@ Your notes will stay intact!</source>
       <location filename="../dialogs/tododialog.ui" line="94"/>
       <location filename="../dialogs/tododialog.ui" line="111"/>
       <source>save current todo item</source>
-      <translation>actuele todo item opslaan</translation>
+      <translation>huidige takenitem opslaan</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="97"/>
@@ -2304,12 +2306,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="128"/>
       <source>remove current todo item</source>
-      <translation>verwijder actuele todo item</translation>
+      <translation>verwijder huidige taken item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="131"/>
       <source>&amp;remove</source>
-      <translation>&amp;verwijderen </translation>
+      <translation>&amp;verwijderen</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="150"/>
@@ -2325,7 +2327,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="250"/>
       <source>Show completed items</source>
-      <translation>toon voltooide items</translation>
+      <translation>Toon voltooide items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="257"/>
@@ -2340,28 +2342,28 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="274"/>
       <source>select your todo list</source>
-      <translation>Selecteer uw takenlijst</translation>
+      <translation>selecteer je takenlijst</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="281"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Todo lijst items worden van de server geladen</translation>
+      <translation>Takenlijst items worden van de server geladen</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="291"/>
       <source>search or create todo item</source>
-      <translation>zoek of maak todo item</translation>
+      <translation>zoek of maak takenlijst item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="488"/>
       <source>Remove todo item</source>
-      <translation>Verwijder todo item</translation>
+      <translation>Verwijder takenlijst item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="489"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Het geselecteerde todo item verwijderen? 
+      <translation>Het geselecteerde takenlijst item verwijderen? 
 Dit kan niet ongedaan worden gemaakt!</translation>
     </message>
     <message>
@@ -2372,7 +2374,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="490"/>
       <source>&amp;Cancel</source>
-      <translation>Annulleer</translation>
+      <translation>Annuleer</translation>
     </message>
   </context>
   <context>
@@ -2390,7 +2392,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="22"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt; Langzamer, maar met notitie veries &lt;/h3&gt;&lt;p&gt; De nota wordt hersteld op uw ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met de stad Notes door ownCloud sync..&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt; Langzamer, maar met notitie versies &lt;/h3&gt;&lt;p&gt; De notitie wordt hersteld op je ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met QOwnNotes door ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="35"/>
@@ -2400,12 +2402,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="36"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Sneller, maar met notitie veries&lt;/h3&gt;&lt;p&gt; De nota wordt hersteld op uw ownCloud server met alle versies.&lt;/p&gt;&lt;p&gt; Je zult moeten wachten totdat het wordt gesynchroniseerd met de stad Notes door ownCloud sync.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Sneller, maar zonder de versies&lt;/h3&gt; &lt;p&gt;De notitie zal worden gemaakt met de tekst van de voorvertoning.&lt;/p&gt; &lt;p&gt;De notitie versies op uw ownCloud server niet worden teruggezet en de notitie blijft in de Prullenbak.&lt;/p&gt; &lt;p&gt;je kunt altijd de notitie en de versies later herstellen.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="49"/>
       <source>&amp;Cancel</source>
-      <translation>Annulleer</translation>
+      <translation>Annuleer</translation>
     </message>
   </context>
   <context>
@@ -2429,12 +2431,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="72"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>QOwnNotes worden gedownload in uw standaard browser.</translation>
+      <translation>QOwnNotes wordt gedownload in je standaard browser.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="79"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Doe mee met QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Werk mee met QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="26"/>
@@ -2457,12 +2459,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../services/updateservice.cpp" line="165"/>
       <source>No updates</source>
-      <translation>geen updates</translation>
+      <translation>Geen updates</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="166"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation> Er zijn geen updates beschikbaar. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is de nieuwste versie.</translation>
+      <translation>Er zijn geen updates beschikbaar. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is de nieuwste versie.</translation>
     </message>
   </context>
   <context>
@@ -2470,12 +2472,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Note versies op uw ownCloud server </translation>
+      <translation>Notitie versies op je ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="21"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Herstel geselecteerde versie </translation>
+      <translation>&amp;Herstel geselecteerde versie</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="30"/>
@@ -2494,7 +2496,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>de kladblok tekstbestand met markdown ondersteuning en ownCloud integratie</translation>
+      <translation>de tekst onder opmaak notepad met markdown ondersteuning en ownCloud integratie</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
@@ -2519,27 +2521,27 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="171"/>
       <source>Note folder</source>
-      <translation>Notaomslag</translation>
+      <translation>Notities map</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="187"/>
       <source>create note folder if not existing</source>
-      <translation>maken van de notitie map als niet bestaande</translation>
+      <translation>maak de notitie map als deze nog niet bestaat</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="197"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Selecteer waar u uw notities wilt opslaan:</translation>
+      <translation>Selecteer waar je je notities wilt opslaan:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>select &amp;folder</source>
-      <translation>Selecteer &amp;map</translation>
+      <translation>selecteer &amp;map</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation>Als u wilt kunnen toegang krijgen tot uw notitie versies en weggegooid notities op uw ownCloud-server kunt u QOwnNotes voor het nu configureren. U kunt dit ook later doen.</translation>
+      <translation>Als je toegang wilt krijgen tot je notitie versies en verwijderde notities op je ownCloud server kun je nu QOwnNotes configureren. Je kunt dit ook later doen.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
@@ -2549,7 +2551,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>In ieder geval moet u de ownCloud sync client (of een andere synchronisatie-client) om uw notities met het ownCloud-mailserver te synchroniseren.</translation>
+      <translation>In ieder geval moet de ownCloud sync client (of een andere synchronisatie client) je notities met je ownCloud server synchroniseren.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
@@ -2559,7 +2561,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>Quotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van Quotes als volgende zullen worden verbeterd en om bugs te vinden en deze op te lossen. U kunt dit in de instellingen uitschakelen.</translation>
+      <translation>QOwnNotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van QOwnNotes als volgende zullen worden verbeterd en om bugs te vinden en deze op te lossen. U kunt dit in de instellingen uitschakelen.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="81"/>
@@ -2569,7 +2571,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="86"/>
       <source>This note path doesn't exist!</source>
-      <translation>Deze notitie pad bestaat niet!</translation>
+      <translation>Dit notitie pad bestaat niet!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="151"/>
