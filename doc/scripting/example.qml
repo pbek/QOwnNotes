@@ -32,6 +32,31 @@ QtObject {
     }
     
     /**
+     * This function is called when a note gets stored to disk if
+     * "Allow note file name to be different from headline" is enabled 
+     * in the settings
+     * 
+     * It allows you to modify the name of the note file
+     * Return an empty string if the file name of the note should 
+     * not be modified
+     * 
+     * @param {NoteApi} note - the note object of the stored note
+     * @return {string} the file name of the note
+     */
+    function handleNoteTextFileNameHook(note) {
+        console.log(note.id);
+        console.log(note.name);
+        console.log(note.fileName);
+        
+        // tagNames() returns a list of all tag names
+        var tagNameList = note.tagNames();
+        console.log(tagNameList);
+        
+        // don't actually change anything
+        return "";
+    }
+    
+    /**
      * This function is called when media file is inserted into the note
      * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
      * 

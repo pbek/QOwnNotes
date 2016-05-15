@@ -134,6 +134,8 @@ public:
 
     QString fileNameSuffix();
 
+    bool modifyNoteTextFileNameFromQMLHook();
+
 protected:
     int id;
     QString name;

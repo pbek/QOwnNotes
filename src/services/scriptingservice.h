@@ -37,6 +37,9 @@ public:
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);
+    QString callHandleNoteTextFileNameHookForObject(QObject *object,
+                                                    Note *note);
+    QString callHandleNoteTextFileNameHook(Note *note);
 
 private:
     QQmlEngine *_engine;

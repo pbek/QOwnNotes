@@ -244,6 +244,50 @@ QString ScriptingService::callInsertingFromMimeDataHook(
 }
 
 /**
+ * Calls the handleNoteTextFileNameHook function for an object
+ */
+QString ScriptingService::callHandleNoteTextFileNameHookForObject(
+        QObject *object,
+        Note *note) {
+    if (methodExistsForObject(
+            object,
+            "handleNoteTextFileNameHook(QVariant)")) {
+        NoteApi *noteApi = new NoteApi();
+        noteApi->fetch(note->getId());
+
+        QVariant text;
+        QMetaObject::invokeMethod(object, "handleNoteTextFileNameHook",
+                                  Q_RETURN_ARG(QVariant, text),
+                                  Q_ARG(QVariant, QVariant::fromValue(
+                                          static_cast<QObject*>(noteApi))));
+        return text.toString();
+    }
+
+    return "";
+}
+
+/**
+ * Calls the handleNoteTextFileNameHook function for all script components
+ */
+QString ScriptingService::callHandleNoteTextFileNameHook(
+        Note *note) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString text = callHandleNoteTextFileNameHookForObject(
+                scriptComponent.object, note);
+        if (!text.isEmpty()) {
+            return text;
+        }
+    }
+
+    return "";
+}
+
+/**
  * QML wrapper to start a detached process
  *
  * @param executablePath the path of the executable

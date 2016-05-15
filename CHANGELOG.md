@@ -9,6 +9,11 @@
 - you can get the current note with `script.currentNote()` from QML
 - `function onNoteStored(note)` now gets a note object as parameter instead of 
   just the file name and the note text
+- there now is a new scripting hook `function handleNoteTextFileNameHook(note)`
+  that is called when a note gets stored to disk (if *Allow note file name to 
+  be different from headline* is enabled in the settings)
+  (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
+    - it allows you to modify the name of the note file
 
 ## 16.05.11
 - fixed the QOwnNotesAPI test in the settings dialog if no network connection

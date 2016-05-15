@@ -449,9 +449,13 @@ bool Note::store() {
  * The file name will be changed if needed
  */
 bool Note::storeNoteTextFileToDisk() {
-    if (!allowDifferentFileName()) {
+    if (allowDifferentFileName()) {
+        // check if a QML function wants to set an other note file name and
+        // modify it accordingly
+        modifyNoteTextFileNameFromQMLHook();
+    } else {
         // checks if filename has to be changed (and change it if needed)
-        this->handleNoteTextFileName();
+        handleNoteTextFileName();
     }
 
     QFile file(getFullNoteFilePathForFile(this->fileName));
@@ -514,7 +518,28 @@ QString Note::cleanupFileName(QString name) {
 }
 
 /**
- * Checks if filename has to be changed
+ * Checks if a QML function wants to set an other note file name and
+ * modifies it accordingly
+ */
+bool Note::modifyNoteTextFileNameFromQMLHook() {
+    // check if a QML function wants to set an other note file name
+    QString newFileName = ScriptingService::instance()->
+            callHandleNoteTextFileNameHook(this);
+
+    // set the file name from the QML hook
+    if (!newFileName.isEmpty()) {
+        qDebug() << __func__ << " - 'newFileName': " << newFileName;
+
+        fileName = newFileName;
+        store();
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Checks if the filename has to be changed
  * Generates a new name and filename and removes the old file
  * (the new file is not stored to a note text file!)
  */
@@ -554,7 +579,7 @@ void Note::handleNoteTextFileName() {
         // TODO(pbek): note doesn't seem to be removed very often
         this->removeNoteFile();
 
-        // update first line of note text
+        // update the first line of the note text
         // TODO(pbek): UI has to be updated too then!
         noteTextLines[0] = name;
         this->noteText = noteTextLines.join("\n");
