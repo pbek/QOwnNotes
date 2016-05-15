@@ -17,11 +17,17 @@ QtObject {
      * You cannot modify stored notes, that would be a mess since 
      * you are most likely editing them by hand at the same time
      * 
-     * @param fileName string the file path of the note
-     * @param noteText string the note text
+     * @param {NoteApi} note - the note object of the stored note
      */
-    function onNoteStored(fileName, noteText) {
-        console.log("fileName was stored: " + fileName);
+    function onNoteStored(note) {
+        console.log("fileName was stored!");
+        console.log(note.id);
+        console.log(note.name);
+        console.log(note.fileName);
+        
+        // tagNames() returns a list of all tag names
+        var tagNameList = note.tagNames();
+        console.log(tagNameList);
     }
     
     /**

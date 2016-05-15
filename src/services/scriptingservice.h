@@ -50,7 +50,7 @@ private:
     void outputMethodsOfObject(QObject *object);
 
 signals:
-    void noteStored(QVariant fileName, QVariant noteText);
+    void noteStored(QVariant note);
 
 public slots:
     void onCurrentNoteChanged(Note *note);

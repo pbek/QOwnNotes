@@ -16,6 +16,18 @@ NoteApi* NoteApi::fetch(int id) {
     return this;
 }
 
+NoteApi* NoteApi::fromNote(Note note) {
+    NoteApi *noteApi = new NoteApi();
+    noteApi->fetch(note.getId());
+    return noteApi;
+}
+
+//NoteApi NoteApi::fromNote(Note note) {
+//    NoteApi noteApi;
+//    noteApi.fetch(note.getId());
+//    return noteApi;
+//}
+
 /**
  * Returns all linked tags
  */
@@ -45,7 +57,7 @@ QStringList NoteApi::tagNames() {
     QListIterator<Tag> itr(tags);
     while (itr.hasNext()) {
         Tag tag = itr.next();
-        tagNameList << tag.getName();
+        tagNameList.append(tag.getName());
     }
 
     return tagNameList;

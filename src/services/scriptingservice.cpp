@@ -86,9 +86,9 @@ void ScriptingService::initComponent(Script script) {
 
 //        outputMethodsOfObject(object);
 
-        if (methodExistsForObject(object, "onNoteStored(QVariant,QVariant)")) {
-            QObject::connect(this, SIGNAL(noteStored(QVariant, QVariant)),
-                             object, SLOT(onNoteStored(QVariant, QVariant)));
+        if (methodExistsForObject(object, "onNoteStored(QVariant)")) {
+            QObject::connect(this, SIGNAL(noteStored(QVariant)),
+                             object, SLOT(onNoteStored(QVariant)));
         }
     } else {
         qWarning() << "script errors: " << component->errors();
@@ -272,9 +272,9 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
 }
 
 /**
- * QML wrapper to get the current note folder path
+ * QML wrapper to get the current note
  *
- * @return the path of the current note folder
+ * @return {Note} the path of the current note folder
  */
 NoteApi* ScriptingService::currentNote() {
     return _currentNoteAPi;

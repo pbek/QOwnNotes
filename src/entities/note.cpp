@@ -637,8 +637,9 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
             QString newFileName = note.getFileName();
 
             // emit the signal for the QML that the note was stored
-            emit scriptingService->noteStored(note.fullNoteFilePath(),
-                                              note.getNoteText());
+            emit scriptingService->noteStored(
+                    QVariant::fromValue(
+                            static_cast<QObject*>(NoteApi::fromNote(note))));
 
             // reassign currentNote if filename of currentNote has changed
             if ((oldFileName == currentNote.getFileName()) &&

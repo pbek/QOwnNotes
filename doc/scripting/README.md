@@ -48,3 +48,48 @@ QString currentNoteFolderPath();
 ```javascript
 var path = script.currentNoteFolderPath();
 ```
+
+### Getting the current note
+
+#### Parameters
+
+```cpp
+/**
+ * QML wrapper to get the current note folder path
+ *
+ * @returns {NoteApi} the the current note object
+ */
+QString currentNote();
+```
+
+#### Usage in QML
+
+```javascript
+var note = script.currentNote();
+```
+
+## Exposed classes
+
+### Note
+
+```cpp
+class NoteApi {
+    Q_PROPERTY(int id)
+    Q_PROPERTY(QString name)
+    Q_PROPERTY(QString fileName)
+    Q_PROPERTY(QString noteText)
+    Q_PROPERTY(QString decryptedNoteText)
+    Q_PROPERTY(bool hasDirtyData)
+    Q_INVOKABLE QStringList tagNames();
+};
+```
+
+### Tag
+
+```cpp
+class TagApi {
+    Q_PROPERTY(int id)
+    Q_PROPERTY(QString name)
+    Q_PROPERTY(int parentId)
+};
+```

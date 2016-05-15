@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 16.05.12
+- tags and notes can now be exposed to the QML scripting engine
+- beside the note name, the file name and the note text you can also get a 
+  list of all assigned tag names for notes
+    - see [examples](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting)
+      for a full list of all note attributes and functions 
+- you can get the current note with `script.currentNote()` from QML
+- `function onNoteStored(note)` now gets a note object as parameter instead of 
+  just the file name and the note text
+
 ## 16.05.11
 - fixed the QOwnNotesAPI test in the settings dialog if no network connection
   is present

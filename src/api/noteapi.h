@@ -6,7 +6,8 @@
 
 class NoteApi : public QObject, public Note {
     Q_OBJECT
-            Q_PROPERTY(int id READ getId())
+
+    Q_PROPERTY(int id READ getId())
     Q_PROPERTY(QString name READ getName() WRITE setName)
     Q_PROPERTY(QString fileName READ getFileName())
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
@@ -16,6 +17,8 @@ class NoteApi : public QObject, public Note {
 
 public:
     NoteApi *fetch(int id);
+    static NoteApi *fromNote(Note note);
+//    static NoteApi fromNote(Note note);
 
     Q_INVOKABLE QList<TagApi*> tags();
     Q_INVOKABLE QStringList tagNames();
