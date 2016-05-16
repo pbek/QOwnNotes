@@ -61,6 +61,33 @@ bool mainStartupMisc() {
 
     MetricsService *metricsService = MetricsService::createInstance();
     metricsService->sendVisitIfEnabled("app/start", "App Start");
+    metricsService->sendEventIfEnabled(
+            "app/qt-version", "app", "qt version", QString(QT_VERSION_STR));
+    metricsService->sendEventIfEnabled(
+            "app/release", "app", "release", QString(RELEASE));
+
+    QString productType;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+    productType = QSysInfo::productType();
+#else
+    productType = QString(QT_VERSION_STR);
+#endif
+
+    metricsService->sendEventIfEnabled(
+            "app/product-type", "app", "product-type", productType);
+
+    QString os = "other";
+#ifdef Q_OS_LINUX
+    os = "linux";
+#elif Q_OS_MAC
+    os = "mac";
+#elif Q_OS_WIN
+    os = "windows";
+#endif
+
+    metricsService->sendEventIfEnabled(
+            "app/os", "app", "os", os);
 
     // sends locale information
     metricsService->sendLocaleEvent();

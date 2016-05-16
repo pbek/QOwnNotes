@@ -11,7 +11,7 @@
         - it will be done automatically when you set a script file, delete a 
           script or store the settings
 - you can now open a dialog to view past status messages and the log output 
-  from your scripts
+  from your scripts (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
     - use the new script command `script.log()` to log to that dialog
 
 ## 16.05.12
