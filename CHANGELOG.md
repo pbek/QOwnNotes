@@ -15,6 +15,7 @@
     - use the new script command `script.log()` to log to that dialog
 - there now is a new menu entry for exporting the HTML of your note preview
   (for [Issue #168](https://github.com/pbek/QOwnNotes/issues/168))
+- added more German and Russian translation (thank you bigant and frostyland)
 
 ## 16.05.12
 - tags and notes can now be exposed to the QML scripting engine
