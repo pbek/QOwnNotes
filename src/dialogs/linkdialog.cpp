@@ -137,7 +137,14 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
     // 5 sec timeout for the request
     timer.start(5000);
 
-    QNetworkReply *reply = manager->get(QNetworkRequest(url));
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
+#endif
+
+    QNetworkReply *reply = manager->get(networkRequest);
     loop.exec();
 
     // if we didn't get a timeout let's fetch the title of the webpage

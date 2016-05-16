@@ -87,6 +87,27 @@ void log(QString text);
 script.log("my text");
 ```
 
+
+### Downloading an url to a string
+
+#### Parameters
+
+```cpp
+/**
+ * QML wrapper to download an url and returning it as text
+ *
+ * @param url
+ * @return {QString} the content of the downloaded url
+ */
+QString downloadUrlToString(QUrl url);
+```
+
+#### Usage in QML
+
+```javascript
+script.downloadUrlToString("http://www.qownnotes.org");
+```
+
 ## Exposed classes
 
 ### Note

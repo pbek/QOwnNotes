@@ -10,6 +10,7 @@
 #include <entities/notefolder.h>
 #include <services/metricsservice.h>
 #include <dialogs/logdialog.h>
+#include <QTimer>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -365,4 +366,46 @@ NoteApi* ScriptingService::currentNote() {
 void ScriptingService::log(QString text) {
     LogDialog::instance()->addLogEntry(LogDialog::ScriptingLogType, text);
     qDebug() << text;
+}
+
+
+/**
+ * QML wrapper to download an url and returning it as text
+ *
+ * @param url
+ * @return {QString} the content of the downloaded url
+ */
+QString ScriptingService::downloadUrlToString(QUrl url) {
+    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
+#endif
+
+    QNetworkReply *reply = manager->get(networkRequest);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        // get the text from the network reply
+        QString data = reply->readAll();
+        if (data.size() > 0) {
+            return data;
+        }
+    }
+
+    // timer elapsed, no reply from network request or empty data
+    return "";
 }

@@ -15,6 +15,13 @@
     - use the new script command `script.log()` to log to that dialog
 - there now is a new menu entry for exporting the HTML of your note preview
   (for [Issue #168](https://github.com/pbek/QOwnNotes/issues/168))
+- downloading media files, web pages for links, calendar files for the todo 
+  list and files in QML scripting will now support following redirects from 
+  Qt 5.6 on
+- there now is a new script function `script.downloadUrlToString("http://the-webpage");`
+    - it allows you to download an url to a string
+    - there is an example at
+      [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml)
 - added more German and Russian translation (thank you bigant and frostyland)
 
 ## 16.05.12

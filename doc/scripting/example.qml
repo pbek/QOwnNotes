@@ -96,22 +96,24 @@ QtObject {
             script.log("count = " + count);
             
             var note = script.currentNote();
-            script.log(note.id);
-            script.log(note.name);
-            script.log(note.fileName);
-            
-            // the tags property returns a list of assigned tag objects
-            var tags = note.tags;
-            
-            // print out all tag names
-            for (var i in tags) {
-                 var tag = tags[i];
-                 script.log(tag.name);
+            if (note) {
+                script.log(note.id);
+                script.log(note.name);
+                script.log(note.fileName);
+                
+                // the tags property returns a list of assigned tag objects
+                var tags = note.tags;
+                
+                // print out all tag names
+                for (var i in tags) {
+                    var tag = tags[i];
+                    script.log(tag.name);
+                }
+                
+                // tagNames() returns a list of all tag names
+                var tagNameList = note.tagNames();
+                script.log(tagNameList);
             }
-            
-            // tagNames() returns a list of all tag names
-            var tagNameList = note.tagNames();
-            script.log(tagNameList);
         }
     }
 }

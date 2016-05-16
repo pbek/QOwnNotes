@@ -302,6 +302,9 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(resize(QSize, QSize)),
                      this,
                      SLOT(onNoteTextViewResize(QSize, QSize)));
+
+    // initializes the log dialog
+    initLogDialog();
 }
 
 MainWindow::~MainWindow() {
@@ -314,12 +317,25 @@ MainWindow::~MainWindow() {
  * Methods
  */
 
+/**
+ * Initializes the scripting engine
+ */
 void MainWindow::initScriptingEngine() {
     ScriptingService* scriptingService = ScriptingService::createInstance(this);
     QQmlEngine* engine = scriptingService->engine();
 //    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
     engine->rootContext()->setContextProperty("noteTextEdit", ui->noteTextEdit);
     scriptingService->initComponents();
+}
+
+/**
+ * Initializes the log dialog
+ */
+void MainWindow::initLogDialog() const {
+    QSettings settings;
+    if (settings.value("LogDialog/showAtStartup", false).toBool()) {
+        LogDialog::instance()->show();
+    }
 }
 
 /**
@@ -1899,6 +1915,8 @@ void MainWindow::storeSettings() {
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("ShowSystemTray", showSystemTray);
+    settings.setValue("LogDialog/showAtStartup",
+                      LogDialog::instance()->isVisible());
 }
 
 
@@ -2559,7 +2577,14 @@ bool MainWindow::downloadUrlToFile(QUrl url, QFile *file) {
     // 10 sec timeout for the request
     timer.start(10000);
 
-    QNetworkReply *reply = manager->get(QNetworkRequest(url));
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
+#endif
+
+    QNetworkReply *reply = manager->get(networkRequest);
     loop.exec();
 
     // if we didn't get a timeout let's write the file
@@ -3764,8 +3789,7 @@ void MainWindow::showEvent(QShowEvent* event) {
     MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
 }
 
-void MainWindow::on_actionGet_invloved_triggered()
-{
+void MainWindow::on_actionGet_invloved_triggered() {
     QDesktopServices::openUrl(
             QUrl("http://www.qownnotes.org/Knowledge-base/"
                          "How-can-I-get-involved-with-QOwnNotes"));

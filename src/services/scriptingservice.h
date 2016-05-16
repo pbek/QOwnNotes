@@ -3,7 +3,7 @@
 #include <QObject>
 #include <QQmlEngine>
 #include <QQmlComponent>
-#include <QtCore/QFile>
+#include <QFile>
 #include <entities/script.h>
 #include <entities/notefolder.h>
 #include <entities/note.h>
@@ -35,6 +35,7 @@ public:
     Q_INVOKABLE QString currentNoteFolderPath();
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
+    Q_INVOKABLE QString downloadUrlToString(QUrl url);
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);

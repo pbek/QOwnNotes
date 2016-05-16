@@ -484,4 +484,6 @@ private:
     void hideNoteFolderComboBoxIfNeeded() const;
 
     void showLogDialog();
+
+    void initLogDialog() const;
 };
