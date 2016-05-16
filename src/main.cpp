@@ -82,10 +82,10 @@ bool mainStartupMisc() {
     platform = "linux";
 #endif
 #ifdef Q_OS_MAC
-    os = "mac";
+    platform = "mac";
 #endif
 #ifdef Q_OS_WIN
-    os = "windows";
+    platform = "windows";
 #endif
 
     metricsService->sendEventIfEnabled(
