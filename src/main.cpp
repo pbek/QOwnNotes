@@ -77,17 +77,19 @@ bool mainStartupMisc() {
     metricsService->sendEventIfEnabled(
             "app/product-type", "app", "product-type", productType);
 
-    QString os = "other";
+    QString platform = "other";
 #ifdef Q_OS_LINUX
-    os = "linux";
-#elif Q_OS_MAC
+    platform = "linux";
+#endif
+#ifdef Q_OS_MAC
     os = "mac";
-#elif Q_OS_WIN
+#endif
+#ifdef Q_OS_WIN
     os = "windows";
 #endif
 
     metricsService->sendEventIfEnabled(
-            "app/os", "app", "os", os);
+            "app/platform", "app", "platform", platform);
 
     // sends locale information
     metricsService->sendLocaleEvent();
