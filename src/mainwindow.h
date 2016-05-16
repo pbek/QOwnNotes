@@ -281,6 +281,8 @@ private slots:
 
     void restoreDistractionFreeMode();
 
+    void on_actionSelect_note_folder_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -472,4 +474,6 @@ private:
     void jumpToNoteName(QString name);
 
     void initScriptingEngine();
+
+    void hideNoteFolderComboBoxIfNeeded() const;
 };

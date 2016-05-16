@@ -560,6 +560,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="action_Reload_note_folder"/>
+    <addaction name="actionSelect_note_folder"/>
     <addaction name="noteFoldersMenu"/>
     <addaction name="separator"/>
     <addaction name="actionShow_system_tray"/>
@@ -1374,6 +1375,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Space</string>
+   </property>
+  </action>
+  <action name="actionSelect_note_folder">
+   <property name="text">
+    <string>Select note folder</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+F</string>
    </property>
   </action>
  </widget>

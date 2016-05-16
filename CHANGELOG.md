@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.05.13
+- there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd>
+  that lets you select a different note folder
+  (for [Issue #169](https://github.com/pbek/QOwnNotes/issues/169))
+
 ## 16.05.12
 - tags and notes can now be exposed to the QML scripting engine
 - beside the note name, the file name and the note text you can also get a 

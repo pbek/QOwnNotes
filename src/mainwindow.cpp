@@ -155,6 +155,7 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
+    ui->noteFolderComboBox->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
@@ -1954,6 +1955,13 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedNotes();
+                return true;
+            }
+            return false;
+        } else if (obj == ui->noteFolderComboBox) {
+            if ((keyEvent->key() == Qt::Key_Escape)) {
+                // hide the note folder combobox if it should not be visible
+                hideNoteFolderComboBoxIfNeeded();
                 return true;
             }
             return false;
@@ -4326,6 +4334,19 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
     }
+
+    // hide the note folder combobox if it should not be visible
+    hideNoteFolderComboBoxIfNeeded();
+}
+
+/**
+ * Hides the note folder combobox if it should not be visible
+ */
+void MainWindow::hideNoteFolderComboBoxIfNeeded() const {
+    QSettings settings;
+    if (!settings.value("MainWindow/showRecentNoteFolderInMainArea").toBool()) {
+        ui->noteFolderComboBox->hide();
+    }
 }
 
 /**
@@ -5115,4 +5136,13 @@ void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item)
         // altered in the renaming process
         item->setText(note.getName());
     }
+}
+
+/**
+ * Shows the note folder selection popup
+ */
+void MainWindow::on_actionSelect_note_folder_triggered()
+{
+    ui->noteFolderComboBox->show();
+    ui->noteFolderComboBox->showPopup();
 }
