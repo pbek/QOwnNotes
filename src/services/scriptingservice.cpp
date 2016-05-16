@@ -98,6 +98,28 @@ void ScriptingService::initComponent(Script script) {
 }
 
 /**
+ * Reloads all script components
+ */
+void ScriptingService::reloadScriptComponents() {
+
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    // delete all objects and components
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        delete(scriptComponent.object);
+        delete(scriptComponent.component);
+    }
+
+    // clear the component cache
+    _engine->clearComponentCache();
+
+    // init the components again
+    initComponents();
+}
+
+/**
  * Checks if the script can be used in a component
  */
 bool ScriptingService::validateScript(Script script,
@@ -134,6 +156,7 @@ bool ScriptingService::validateScript(Script script,
  * Initializes all components
  */
 void ScriptingService::initComponents() {
+    _scriptComponents.clear();
     QList<Script> scripts = Script::fetchAll();
 
     Q_FOREACH(Script script, scripts) {
@@ -141,6 +164,13 @@ void ScriptingService::initComponents() {
                 initComponent(script);
             }
         }
+}
+
+/**
+ * Reloads the engine
+ */
+void ScriptingService::reloadEngine() {
+    reloadScriptComponents();
 }
 
 /**

@@ -283,6 +283,8 @@ private slots:
 
     void on_actionSelect_note_folder_triggered();
 
+    void on_actionReload_scripting_engine_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

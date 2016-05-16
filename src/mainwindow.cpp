@@ -5146,3 +5146,12 @@ void MainWindow::on_actionSelect_note_folder_triggered()
     ui->noteFolderComboBox->show();
     ui->noteFolderComboBox->showPopup();
 }
+
+/**
+ * Reloads the scripting engine
+ */
+void MainWindow::on_actionReload_scripting_engine_triggered()
+{
+    ScriptingService::instance()->reloadEngine();
+    showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
+}

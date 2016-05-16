@@ -29,6 +29,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> reloads the scripting engine 
 
 ### In the note search bar
 
@@ -108,6 +109,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 - <kbd>⌘</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> reloads the scripting engine 
 
 ### In the note search bar
 

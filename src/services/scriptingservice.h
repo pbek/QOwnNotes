@@ -51,10 +51,12 @@ private:
                                          QString markdownText);
     void initComponent(Script script);
     void outputMethodsOfObject(QObject *object);
+    void reloadScriptComponents();
 
 signals:
     void noteStored(QVariant note);
 
 public slots:
     void onCurrentNoteChanged(Note *note);
+    void reloadEngine();
 };

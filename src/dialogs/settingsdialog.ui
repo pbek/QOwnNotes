@@ -1933,10 +1933,20 @@
                <enum>QFrame::Raised</enum>
               </property>
               <layout class="QGridLayout" name="gridLayout_33">
-               <item row="5" column="0" colspan="2">
-                <widget class="QPushButton" name="scriptValidationButton">
+               <item row="2" column="0" colspan="2">
+                <widget class="QLabel" name="label_18">
                  <property name="text">
-                  <string>Validate Script</string>
+                  <string>Script path</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="0" colspan="2">
+                <widget class="QLabel" name="scriptInfoLabel">
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="openExternalLinks">
+                  <bool>true</bool>
                  </property>
                 </widget>
                </item>
@@ -1947,38 +1957,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="2" column="0" colspan="2">
-                <widget class="QLabel" name="label_18">
-                 <property name="text">
-                  <string>Script path</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="1">
-                <widget class="QPushButton" name="scriptPathButton">
-                 <property name="toolTip">
-                  <string>Click here to select your QML script</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="icon">
-                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
-                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QLineEdit" name="scriptPathLineEdit">
-                 <property name="readOnly">
-                  <bool>true</bool>
-                 </property>
-                 <property name="placeholderText">
-                  <string>path to your QML file</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="8" column="0">
+               <item row="10" column="0">
                 <spacer name="verticalSpacer">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -1998,7 +1977,85 @@
                  </property>
                 </widget>
                </item>
+               <item row="3" column="0">
+                <widget class="QLineEdit" name="scriptPathLineEdit">
+                 <property name="readOnly">
+                  <bool>true</bool>
+                 </property>
+                 <property name="placeholderText">
+                  <string>path to your QML file</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QPushButton" name="scriptPathButton">
+                 <property name="toolTip">
+                  <string>Click here to select your QML script</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                   <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                 </property>
+                </widget>
+               </item>
                <item row="6" column="0" colspan="2">
+                <widget class="QFrame" name="frame_6">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_34">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item row="0" column="2">
+                   <widget class="QPushButton" name="scriptReloadEngineButton">
+                    <property name="toolTip">
+                     <string>You need to reload the scripting engine if you modify a script file</string>
+                    </property>
+                    <property name="text">
+                     <string>Reload scripting engine</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QPushButton" name="scriptValidationButton">
+                    <property name="text">
+                     <string>Validate script</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="3">
+                   <spacer name="horizontalSpacer_5">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="7" column="0" colspan="2">
                 <widget class="QLabel" name="scriptValidationLabel">
                  <property name="text">
                   <string/>
@@ -2008,16 +2065,6 @@
                  </property>
                  <property name="textInteractionFlags">
                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="0" colspan="2">
-                <widget class="QLabel" name="scriptInfoLabel">
-                 <property name="wordWrap">
-                  <bool>true</bool>
-                 </property>
-                 <property name="openExternalLinks">
-                  <bool>true</bool>
                  </property>
                 </widget>
                </item>

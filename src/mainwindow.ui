@@ -651,10 +651,17 @@ p, li { white-space: pre-wrap; }
     </property>
     <addaction name="action_new_tag"/>
    </widget>
+   <widget class="QMenu" name="menuScripting">
+    <property name="title">
+     <string>Scripting</string>
+    </property>
+    <addaction name="actionReload_scripting_engine"/>
+   </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>
    <addaction name="menuTag"/>
    <addaction name="menuTodo"/>
+   <addaction name="menuScripting"/>
    <addaction name="menuWindow"/>
    <addaction name="menu_Help"/>
   </widget>
@@ -1381,8 +1388,23 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Select note folder</string>
    </property>
+   <property name="toolTip">
+    <string notr="true">Select note folder</string>
+   </property>
    <property name="shortcut">
-    <string>Ctrl+Alt+F</string>
+    <string notr="true">Ctrl+Alt+F</string>
+   </property>
+  </action>
+  <action name="actionReload_scripting_engine">
+   <property name="icon">
+    <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Reload scripting engine</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+S</string>
    </property>
   </action>
  </widget>

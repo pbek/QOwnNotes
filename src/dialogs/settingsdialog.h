@@ -131,6 +131,8 @@ private slots:
 
     void on_scriptValidationButton_clicked();
 
+    void on_scriptReloadEngineButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

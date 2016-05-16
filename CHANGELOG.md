@@ -4,6 +4,12 @@
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd>
   that lets you select a different note folder
   (for [Issue #169](https://github.com/pbek/QOwnNotes/issues/169))
+- you now can now reload the scripting engine with <kbd>Ctrl</kbd> + 
+  <kbd>⇧</kbd> + <kbd>S</kbd>
+    - you need to do that when you modify a script
+    - you can also do that with a button in the scripting settings
+        - it will be done automatically when you set a script file, delete a 
+          script or store the settings
 
 ## 16.05.12
 - tags and notes can now be exposed to the QML scripting engine

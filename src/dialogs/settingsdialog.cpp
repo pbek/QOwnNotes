@@ -1385,6 +1385,9 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
         // disable the remove button if there is only no item left
         ui->scriptRemoveButton->setEnabled(
                 ui->scriptListWidget->count() > 0);
+
+        // reload the scripting engine
+        ScriptingService::instance()->reloadEngine();
     }
 }
 
@@ -1405,6 +1408,9 @@ void SettingsDialog::on_scriptPathButton_clicked() {
 
         // validate the script
         validateCurrentScript();
+
+        // reload the scripting engine
+        ScriptingService::instance()->reloadEngine();
     }
 }
 
@@ -1491,10 +1497,24 @@ void SettingsDialog::storeScriptListEnabledState() {
         }
     }
 
+    // reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
 }
 
+/**
+ * Validates the current script
+ */
 void SettingsDialog::on_scriptValidationButton_clicked()
 {
     // validate the script
     validateCurrentScript();
+}
+
+/**
+ * Reloads the scripting engine
+ */
+void SettingsDialog::on_scriptReloadEngineButton_clicked()
+{
+    // reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
 }
