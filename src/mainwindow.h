@@ -285,6 +285,8 @@ private slots:
 
     void on_actionReload_scripting_engine_triggered();
 
+    void on_actionShow_log_dialog_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -478,4 +480,6 @@ private:
     void initScriptingEngine();
 
     void hideNoteFolderComboBoxIfNeeded() const;
+
+    void showLogDialog();
 };

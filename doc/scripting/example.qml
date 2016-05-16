@@ -10,7 +10,7 @@ QtObject {
      * This is called when the script is loaded by QOwnNotes
      */
     function init() {
-        console.log("Script init");
+        script.log("Script init");
     }
     
     /**
@@ -21,14 +21,14 @@ QtObject {
      * @param {NoteApi} note - the note object of the stored note
      */
     function onNoteStored(note) {
-        console.log("fileName was stored!");
-        console.log(note.id);
-        console.log(note.name);
-        console.log(note.fileName);
+        script.log("fileName was stored!");
+        script.log(note.id);
+        script.log(note.name);
+        script.log(note.fileName);
         
         // tagNames() returns a list of all tag names
         var tagNameList = note.tagNames();
-        console.log(tagNameList);
+        script.log(tagNameList);
     }
     
     /**
@@ -44,13 +44,13 @@ QtObject {
      * @return {string} the file name of the note
      */
     function handleNoteTextFileNameHook(note) {
-        console.log(note.id);
-        console.log(note.name);
-        console.log(note.fileName);
+        script.log(note.id);
+        script.log(note.name);
+        script.log(note.fileName);
         
         // tagNames() returns a list of all tag names
         var tagNameList = note.tagNames();
-        console.log(tagNameList);
+        script.log(tagNameList);
         
         // don't actually change anything
         return "";
@@ -65,7 +65,7 @@ QtObject {
      * @return string the new markdown text of the media file
      */
     function insertMediaHook(fileName, mediaMarkdownText) {
-        console.log("mediafile was inserted: " + fileName);
+        script.log("mediafile was inserted: " + fileName);
         return "";
     }
     
@@ -77,7 +77,7 @@ QtObject {
      * @returns the string that should be inserted instead of the text from the QMimeData object
      */
     function insertingFromMimeDataHook(text, html) {
-        console.log("text was pasted: " + text);
+        script.log("text was pasted: " + text);
         return "";
     }
     
@@ -93,12 +93,12 @@ QtObject {
         
         onTriggered: {
             count++;
-            console.log("count = " + count);
+            script.log("count = " + count);
             
             var note = script.currentNote();
-            console.log(note.id);
-            console.log(note.name);
-            console.log(note.fileName);
+            script.log(note.id);
+            script.log(note.name);
+            script.log(note.fileName);
             
             // the tags property returns a list of assigned tag objects
             var tags = note.tags;
@@ -106,12 +106,12 @@ QtObject {
             // print out all tag names
             for (var i in tags) {
                  var tag = tags[i];
-                 console.log(tag.name);
+                 script.log(tag.name);
             }
             
             // tagNames() returns a list of all tag names
             var tagNameList = note.tagNames();
-            console.log(tagNameList);
+            script.log(tagNameList);
         }
     }
 }

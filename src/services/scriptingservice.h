@@ -34,6 +34,7 @@ public:
                                           QStringList parameters);
     Q_INVOKABLE QString currentNoteFolderPath();
     Q_INVOKABLE NoteApi *currentNote();
+    Q_INVOKABLE void log(QString text);
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);

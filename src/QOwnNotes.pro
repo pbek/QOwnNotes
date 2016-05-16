@@ -76,7 +76,8 @@ SOURCES += main.cpp\
     widgets/navigationwidget.cpp \
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
-    api/tagapi.cpp
+    api/tagapi.cpp \
+    dialogs/logdialog.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -126,7 +127,8 @@ HEADERS  += mainwindow.h \
     widgets/navigationwidget.h \
     widgets/notepreviewwidget.h \
     api/noteapi.h \
-    api/tagapi.h
+    api/tagapi.h \
+    dialogs/logdialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -139,7 +141,8 @@ FORMS    += mainwindow.ui \
     dialogs/tododialog.ui \
     dialogs/passworddialog.ui \
     dialogs/welcomedialog.ui \
-    dialogs/tagadddialog.ui
+    dialogs/tagadddialog.ui \
+    dialogs/logdialog.ui
 
 RESOURCES += \
     images.qrc \

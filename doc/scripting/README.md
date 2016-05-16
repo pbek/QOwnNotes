@@ -68,6 +68,25 @@ QString currentNote();
 var note = script.currentNote();
 ```
 
+### Logging to the log dialog
+
+#### Parameters
+
+```cpp
+/**
+ * QML wrapper to log to the log dialog
+ *
+ * @param text
+ */
+void log(QString text);
+```
+
+#### Usage in QML
+
+```javascript
+script.log("my text");
+```
+
 ## Exposed classes
 
 ### Note

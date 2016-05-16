@@ -9,6 +9,7 @@
 #include <utils/misc.h>
 #include <entities/notefolder.h>
 #include <services/metricsservice.h>
+#include <dialogs/logdialog.h>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -354,4 +355,14 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
  */
 NoteApi* ScriptingService::currentNote() {
     return _currentNoteAPi;
+}
+
+/**
+ * QML wrapper to log to the log dialog
+ *
+ * @param text
+ */
+void ScriptingService::log(QString text) {
+    LogDialog::instance()->addLogEntry(LogDialog::ScriptingLogType, text);
+    qDebug() << text;
 }

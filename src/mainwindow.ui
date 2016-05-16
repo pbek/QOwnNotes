@@ -633,6 +633,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthFull"/>
     </widget>
     <addaction name="actionShow_toolbar"/>
+    <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_tag_pane"/>
     <addaction name="actionToggle_note_edit_pane"/>
@@ -1405,6 +1406,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionShow_log_dialog">
+   <property name="text">
+    <string>Show log dialog</string>
    </property>
   </action>
  </widget>

@@ -10,6 +10,9 @@
     - you can also do that with a button in the scripting settings
         - it will be done automatically when you set a script file, delete a 
           script or store the settings
+- you can now open a dialog to view past status messages and the log output 
+  from your scripts
+    - use the new script command `script.log()` to log to that dialog
 
 ## 16.05.12
 - tags and notes can now be exposed to the QML scripting engine

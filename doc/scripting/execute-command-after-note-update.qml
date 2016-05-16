@@ -18,6 +18,6 @@ QtObject {
         // the file every time you change the note
         script.startDetachedProcess("/path/to/my/program", [fileName]);
         
-        console.log("program was executed for file: " + fileName);
+        script.log("program was executed for file: " + fileName);
     }
 }

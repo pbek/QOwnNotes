@@ -51,6 +51,7 @@
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
 #include <services/scriptingservice.h>
+#include <dialogs/logdialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -639,6 +640,9 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
     if (!isInDistractionFreeMode()) {
         ui->statusBar->showMessage(message, timeout);
     }
+
+    // write to the log dialog
+    LogDialog::instance()->addLogEntry(LogDialog::StatusLogType, message);
 }
 
 /**
@@ -1905,6 +1909,7 @@ void MainWindow::storeSettings() {
 void MainWindow::closeEvent(QCloseEvent *event) {
     MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
     storeSettings();
+    delete(LogDialog::instance());
     QMainWindow::closeEvent(event);
 }
 
@@ -2468,6 +2473,13 @@ void MainWindow::openSettingsDialog(int tab) {
 
     // load the note list again in case the setting on the note name has changed
     loadNoteDirectoryList();
+}
+
+/**
+ * Shows the log dialog
+ */
+void MainWindow::showLogDialog() {
+    LogDialog::instance()->show();
 }
 
 /**
@@ -5154,4 +5166,9 @@ void MainWindow::on_actionReload_scripting_engine_triggered()
 {
     ScriptingService::instance()->reloadEngine();
     showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
+}
+
+void MainWindow::on_actionShow_log_dialog_triggered()
+{
+    showLogDialog();
 }

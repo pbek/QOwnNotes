@@ -42,7 +42,7 @@ QtObject {
         // at a proper file extension
         fileName += ".md";
         
-        console.log("note file name: " + fileName);
+        script.log("note file name: " + fileName);
         return fileName;
     }
 }
