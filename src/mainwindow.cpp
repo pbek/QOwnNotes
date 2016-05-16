@@ -5066,8 +5066,7 @@ void MainWindow::regenerateNotePreview() {
     _noteViewIsRegenerated = false;
 }
 
-void MainWindow::on_actionAutocomplete_triggered()
-{
+void MainWindow::on_actionAutocomplete_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
@@ -5121,8 +5120,7 @@ void MainWindow::on_actionAutocomplete_triggered()
 /**
  * Renames a note file if the note was renamed in the note list widget
  */
-void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item)
-{
+void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item) {
     if (item == NULL || !Note::allowDifferentFileName()) {
         return;
     }
@@ -5153,8 +5151,7 @@ void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item)
 /**
  * Shows the note folder selection popup
  */
-void MainWindow::on_actionSelect_note_folder_triggered()
-{
+void MainWindow::on_actionSelect_note_folder_triggered() {
     ui->noteFolderComboBox->show();
     ui->noteFolderComboBox->showPopup();
 }
@@ -5162,13 +5159,50 @@ void MainWindow::on_actionSelect_note_folder_triggered()
 /**
  * Reloads the scripting engine
  */
-void MainWindow::on_actionReload_scripting_engine_triggered()
-{
+void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
     showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
 }
 
-void MainWindow::on_actionShow_log_dialog_triggered()
-{
+void MainWindow::on_actionShow_log_dialog_triggered() {
     showLogDialog();
+}
+
+/**
+ * Exports the note preview as HTML
+ */
+void MainWindow::on_actionExport_preview_HTML_triggered() {
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setNameFilter(tr("HTML files (*.html)"));
+    dialog.setWindowTitle(tr("Export current note as HTML file"));
+    dialog.selectFile(currentNote.getName() + ".html");
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.count() > 0) {
+            QString fileName = fileNames.at(0);
+
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".html");
+            }
+
+            QFile file(fileName);
+
+            qDebug() << "exporting html file: " << fileName;
+
+            if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+                qCritical() << file.errorString();
+                return;
+            }
+            QTextStream out(&file);
+            out.setCodec("UTF-8");
+            out << ui->noteTextView->toHtml();
+            file.flush();
+            file.close();
+        }
+    }
 }

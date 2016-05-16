@@ -287,6 +287,8 @@ private slots:
 
     void on_actionShow_log_dialog_triggered();
 
+    void on_actionExport_preview_HTML_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
