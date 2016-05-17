@@ -187,11 +187,13 @@ void LogDialog::logMessageOutput(
             fprintf(stderr, "Debug: %s\n", localMsg.constData());
             LogDialog::instance()->log(LogType::DebugLogType, msg);
             break;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
             fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
             LogDialog::instance()->log(LogType::InfoLogType, msg);
             break;
+#endif
         case QtWarningMsg:
             fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
