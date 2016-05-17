@@ -53,7 +53,6 @@ script:
       ;
     fi
   - cd ./tests
-  - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
   - cd ./../src
   - echo "#define BUILD ""$TRAVIS_BUILD_NUMBER" > build_number.h
   - echo "#define RELEASE \"Travis CI\"" > release.h
