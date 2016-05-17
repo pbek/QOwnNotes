@@ -883,6 +883,12 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
         this->noteDiffDialog->close();
     }
 
+    // if we should ignore all changes return here
+    QSettings settings;
+    if (settings.value("ignoreAllExternalModifications").toBool()) {
+        return NoteDiffDialog::Ignore;
+    }
+
     QString text1 = this->ui->noteTextEdit->toPlainText();
 
     changedNote.updateNoteTextFromDisk();

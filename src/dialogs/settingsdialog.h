@@ -133,6 +133,10 @@ private slots:
 
     void on_scriptReloadEngineButton_clicked();
 
+    void on_notifyAllExternalModificationsCheckBox_toggled(bool checked);
+
+    void on_ignoreAllExternalModificationsCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

@@ -13,6 +13,10 @@
     - there is a new button to clear the log
 - there are now icons for each dialog
 - fixed two possible crashes in the versioning dialog
+- you are now able to ignore all external modifications of your note file 
+  while you are editing your note in the note diff dialog
+  (for [Issue #171](https://github.com/pbek/QOwnNotes/issues/171))
+    - you can turn the ignore off in the settings 
 
 ## 16.05.13
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd>

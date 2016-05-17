@@ -61,6 +61,13 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
+      <widget class="QCheckBox" name="ignoreAllExternalChangesCheckBox">
+       <property name="text">
+        <string>Ignore all external modifications in the future</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QDialogButtonBox" name="buttonBox">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -85,13 +92,6 @@ p, li { white-space: pre-wrap; }
        </property>
        <property name="standardButtons">
         <set>QDialogButtonBox::Ok</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox">
-       <property name="text">
-        <string>ignore all external changes in the future</string>
        </property>
       </widget>
      </item>

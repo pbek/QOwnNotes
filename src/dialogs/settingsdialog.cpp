@@ -217,6 +217,8 @@ void SettingsDialog::storeSettings() {
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
+    settings.setValue("ignoreAllExternalModifications",
+                      ui->ignoreAllExternalModificationsCheckBox->isChecked());
     settings.setValue("allowDifferentNoteFileName",
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
@@ -311,6 +313,8 @@ void SettingsDialog::readSettings() {
             settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
             settings.value("notifyAllExternalModifications").toBool());
+    ui->ignoreAllExternalModificationsCheckBox->setChecked(
+            settings.value("ignoreAllExternalModifications").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
@@ -1517,4 +1521,32 @@ void SettingsDialog::on_scriptReloadEngineButton_clicked()
 {
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
+}
+
+/**
+ * Turns off "ignoring all external modifications" if "notify all external
+ * modifications" is checked
+ *
+ * @param checked
+ */
+void SettingsDialog::on_notifyAllExternalModificationsCheckBox_toggled(
+        bool checked)
+{
+    if (checked) {
+        ui->ignoreAllExternalModificationsCheckBox->setChecked(false);
+    }
+}
+
+/**
+ * Turns off "notify all external modifications" if "ignoring all external
+ * modifications" is checked
+ *
+ * @param checked
+ */
+void SettingsDialog::on_ignoreAllExternalModificationsCheckBox_toggled(
+        bool checked)
+{
+    if (checked) {
+        ui->notifyAllExternalModificationsCheckBox->setChecked(false);
+    }
 }

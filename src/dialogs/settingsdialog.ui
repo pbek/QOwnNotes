@@ -2102,7 +2102,7 @@
               <string>Notes</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
-              <item row="1" column="1">
+              <item row="2" column="1">
                <widget class="QLabel" name="noteSaveIntervalTimeLabel">
                 <property name="toolTip">
                  <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
@@ -2122,11 +2122,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <enum>Qt::LeftToRight</enum>
                 </property>
                 <property name="text">
-                 <string>notify about all external modifications of the current note</string>
+                 <string>Notify about all external modifications of the current note</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="0">
+              <item row="2" column="0">
                <widget class="QSpinBox" name="noteSaveIntervalTime">
                 <property name="toolTip">
                  <string/>
@@ -2145,7 +2145,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                </widget>
               </item>
-              <item row="2" column="0" colspan="2">
+              <item row="3" column="0" colspan="2">
                <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                 <property name="toolTip">
                  <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
@@ -2155,6 +2155,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                 <property name="text">
                  <string>Allow note file name to be different from headline</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0" colspan="2">
+               <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                <property name="toolTip">
+                 <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>Ignore all external modifications of the current note</string>
                 </property>
                </widget>
               </item>
