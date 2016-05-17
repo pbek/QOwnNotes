@@ -1410,6 +1410,10 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionShow_log_dialog">
+   <property name="icon">
+    <iconset theme="text-x-generic" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
+   </property>
    <property name="text">
     <string>Show log dialog</string>
    </property>

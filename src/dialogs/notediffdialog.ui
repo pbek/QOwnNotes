@@ -16,6 +16,10 @@
   <property name="windowTitle">
    <string>Note was modified externaly!</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="dialog-information" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/dialog-information.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-information.svg</iconset>
+  </property>
   <property name="modal">
    <bool>true</bool>
   </property>
@@ -84,11 +88,20 @@ p, li { white-space: pre-wrap; }
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="text">
+        <string>ignore all external changes in the future</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

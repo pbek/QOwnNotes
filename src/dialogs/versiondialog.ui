@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Note versions on your ownCloud server</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="appointment-new" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="1" column="0">
     <widget class="QDialogButtonBox" name="buttonBox">
@@ -47,7 +51,9 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

@@ -49,6 +49,11 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     // init the iterator for the versions
     QJSValueIterator versionsIterator(versions);
 
+    // this seems to report a has next even if there aren't any items
+    if (!versionsIterator.hasNext()) {
+        return;
+    }
+
     // iterate over the versions
     while (versionsIterator.hasNext()) {
         versionsIterator.next();

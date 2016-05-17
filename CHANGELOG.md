@@ -4,12 +4,15 @@
 - there are several new features in the **log dialog**
     - you can now select different log types you want to log:
       `debug`, `info`, `warning`, `critical`, `fatal`, `status` and `scripting`
+      (for [Issue #170](https://github.com/pbek/QOwnNotes/issues/170))
     - the adding of log entries to the text area was improved to handle many 
       log entries
     - the log text area will now only scroll automatically to the bottom if 
       it was scrolled to the bottom before the log entry was added
     - you can search for text in the text area with <kbd>Ctrl</kbd> + <kbd>F</kbd>
     - there is a new button to clear the log
+- there are now icons for each dialog
+- fixed two possible crashes in the versioning dialog
 
 ## 16.05.13
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd>

@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Todo</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="view-task" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/view-task.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-task.svg</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
     <layout class="QGridLayout" name="gridLayout">

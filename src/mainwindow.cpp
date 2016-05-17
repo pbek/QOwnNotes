@@ -3237,6 +3237,11 @@ void MainWindow::on_action_Settings_triggered() {
 }
 
 void MainWindow::on_actionShow_versions_triggered() {
+    // check if we have selected a note
+    if (!currentNote.exists()) {
+        return;
+    }
+
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
             tr("note versions are currently loaded from your ownCloud server"),

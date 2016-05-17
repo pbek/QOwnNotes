@@ -15,6 +15,7 @@
 #include <QTimer>
 #include <utils/misc.h>
 #include <QJSEngine>
+#include <QJSValueIterator>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
@@ -612,19 +613,16 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     }
 
     // get the filename to check if everything is all right
-    QJSValue fileName = result.property(0).property("file_name");
-
-    // check if we got no useful data
-    if (fileName.toString() == "") {
-        showOwnCloudServerErrorMessage();
-        return;
-    }
+    QString fileName = result.property(0).property("file_name").toVariant()
+            .toString();
 
     // get the versions
     QJSValue versions = result.property(0).property("versions");
+    QJSValueIterator versionsIterator(versions);
 
-    // check if we got no useful data
-    if (versions.toString() == "") {
+    // check if we got no useful data, we also need to do this to prevent crashs
+    if (fileName.isEmpty() || !versionsIterator.hasNext() ||
+            versions.toString().isEmpty()) {
         QMessageBox::information(
                 0, tr("no other version"),
                 tr("There are no other versions on the server for this note."));

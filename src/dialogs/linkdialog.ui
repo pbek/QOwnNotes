@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Link an url or note</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="insert-link" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/insert-link.svg</normaloff>:/icons/breeze-qownnotes/16x16/insert-link.svg</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -108,7 +112,9 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

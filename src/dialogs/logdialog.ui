@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Logs</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="text-x-generic" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0" colspan="5">
     <widget class="QOwnNotesMarkdownTextEdit" name="logTextEdit"/>
