@@ -17,6 +17,7 @@
   while you are editing your note in the note diff dialog
   (for [Issue #171](https://github.com/pbek/QOwnNotes/issues/171))
     - you can turn the ignore off in the settings 
+- added more Japanese and Portuguese translation (thank you piyo and mlimacarlos)
 
 ## 16.05.13
 - there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd>
