@@ -70,7 +70,7 @@ QQmlEngine* ScriptingService::engine() {
  */
 void ScriptingService::initComponent(Script script) {
     const QString path = script.getScriptPath();
-    qWarning() << "loading script file: " << path;
+    log("loading script file: " + path);
     const QUrl fileUrl = QUrl::fromLocalFile(path);
 
     ScriptComponent scriptComponent;
@@ -364,8 +364,7 @@ NoteApi* ScriptingService::currentNote() {
  * @param text
  */
 void ScriptingService::log(QString text) {
-    LogDialog::instance()->addLogEntry(LogDialog::ScriptingLogType, text);
-    qDebug() << text;
+    LogDialog::instance()->log(LogDialog::ScriptingLogType, text);
 }
 
 

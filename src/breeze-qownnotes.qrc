@@ -70,5 +70,6 @@
         <file alias="16x16/text-x-generic.svg">icons/breeze-qownnotes/16x16/text-x-generic.svg</file>
         <file alias="16x16/edit-find-replace.svg">icons/breeze-qownnotes/16x16/edit-find-replace.svg</file>
         <file alias="16x16/text-xml.svg">icons/breeze-qownnotes/16x16/text-xml.svg</file>
+        <file alias="16x16/edit-clear.svg">icons/breeze-qownnotes/16x16/edit-clear.svg</file>
     </qresource>
 </RCC>

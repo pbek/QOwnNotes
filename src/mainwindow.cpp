@@ -658,7 +658,7 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
     }
 
     // write to the log dialog
-    LogDialog::instance()->addLogEntry(LogDialog::StatusLogType, message);
+    LogDialog::instance()->log(LogDialog::StatusLogType, message);
 }
 
 /**
