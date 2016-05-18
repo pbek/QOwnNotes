@@ -57,6 +57,23 @@ QtObject {
     }
     
     /**
+     * This function is called when the markdown html of a note is generated
+     * 
+     * It allows you to modify this html
+     * This is for example called before by the note preview
+     * 
+     * @param {NoteApi} note - the note object
+     * @param {string} html - the html that is about to being rendered
+     * @return {string} the modfied html or an empty string if nothing should be modified
+     */
+    function noteToMarkdownHtmlHook(note, html) {
+        script.log("noteToMarkdownHtmlHook was called");
+        
+        // show a custom headline and a horizontal ruler on top of the preview
+        return html.replace("body>", "body><h1>Custom preview for note " + note.name + "</h1><hr />");
+    }
+    
+    /**
      * This function is called when media file is inserted into the note
      * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
      * 

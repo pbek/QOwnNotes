@@ -920,6 +920,14 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
         }
     }
 
+    // check if there is a script that wants to modify the content
+    QString scriptResult = ScriptingService::instance()
+            ->callNoteToMarkdownHtmlHook(this, result);
+
+    if (!scriptResult.isEmpty()) {
+        result = scriptResult;
+    }
+
     return result;
 }
 

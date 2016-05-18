@@ -42,6 +42,7 @@ public:
     QString callHandleNoteTextFileNameHookForObject(QObject *object,
                                                     Note *note);
     QString callHandleNoteTextFileNameHook(Note *note);
+    QString callNoteToMarkdownHtmlHook(Note *note, QString html);
 
 private:
     QQmlEngine *_engine;
@@ -51,6 +52,8 @@ private:
     QString callInsertMediaHookForObject(QObject *object,
                                          QFile *file,
                                          QString markdownText);
+    QString callNoteToMarkdownHtmlHookForObject(QObject *object, Note *note,
+                                                QString html);
     void initComponent(Script script);
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();

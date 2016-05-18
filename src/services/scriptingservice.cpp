@@ -217,6 +217,7 @@ QString ScriptingService::callInsertMediaHookForObject(
 
 /**
  * Calls the insertMediaHook function for all script components
+ * This function is called when media file is inserted into the note
  */
 QString ScriptingService::callInsertMediaHook(QFile *file,
                                               QString markdownText) {
@@ -258,6 +259,8 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(
 
 /**
  * Calls the insertingFromMimeDataHook function for all script components
+ * This function is called when html or a media file is pasted to a note with
+ * `Ctrl + Shift + V`
  */
 QString ScriptingService::callInsertingFromMimeDataHook(
         const QMimeData *mimeData) {
@@ -279,6 +282,9 @@ QString ScriptingService::callInsertingFromMimeDataHook(
 
 /**
  * Calls the handleNoteTextFileNameHook function for an object
+ * This function is called when a note gets stored to disk if
+ * "Allow note file name to be different from headline" is enabled
+ * in the settings
  */
 QString ScriptingService::callHandleNoteTextFileNameHookForObject(
         QObject *object,
@@ -313,6 +319,51 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
 
         QString text = callHandleNoteTextFileNameHookForObject(
                 scriptComponent.object, note);
+        if (!text.isEmpty()) {
+            return text;
+        }
+    }
+
+    return "";
+}
+
+/**
+ * Calls the noteToMarkdownHtmlHook function for an object
+ */
+QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
+        QObject *object, Note *note, QString html) {
+    if (methodExistsForObject(
+            object,
+            "noteToMarkdownHtmlHook(QVariant,QVariant)")) {
+        NoteApi *noteApi = new NoteApi();
+        noteApi->fetch(note->getId());
+
+        QVariant text;
+        QMetaObject::invokeMethod(object, "noteToMarkdownHtmlHook",
+                                  Q_RETURN_ARG(QVariant, text),
+                                  Q_ARG(QVariant, QVariant::fromValue(
+                                          static_cast<QObject*>(noteApi))),
+                                  Q_ARG(QVariant, html));
+        return text.toString();
+    }
+
+    return "";
+}
+
+/**
+ * Calls the noteToMarkdownHtmlHook function for all script components
+ * This function is called when the markdown html of a note is generated
+ */
+QString ScriptingService::callNoteToMarkdownHtmlHook(
+        Note *note, QString html) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString text = callNoteToMarkdownHtmlHookForObject(
+                scriptComponent.object, note, html);
         if (!text.isEmpty()) {
             return text;
         }

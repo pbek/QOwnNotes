@@ -14,6 +14,13 @@
   versioned note (beside only the diff between the version on the server and 
   the current version)
     - you can also search in the note text with <kbd>Ctrl</kbd> + <kbd>F</kbd>
+- there now is a new scripting hook `noteToMarkdownHtmlHook(note, html)`
+  that is called when the markdown html of a note is generated
+  (for [Issue #164](https://github.com/pbek/QOwnNotes/issues/164))
+    - it allows you to modify this html
+    - this is for example called before by the note preview
+    - there is an example call in
+      [example.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml)
 - added more Japanese and Portuguese translation (thank you piyo and mlimacarlos)
 
 ## 16.05.14
