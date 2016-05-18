@@ -14,6 +14,7 @@
   versioned note (beside only the diff between the version on the server and 
   the current version)
     - you can also search in the note text with <kbd>Ctrl</kbd> + <kbd>F</kbd>
+- added more Japanese and Portuguese translation (thank you piyo and mlimacarlos)
 
 ## 16.05.14
 - there are several new features in the **log dialog**
