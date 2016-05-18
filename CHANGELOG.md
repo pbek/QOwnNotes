@@ -7,6 +7,9 @@
 - fixed a database warning
 - now also the cursor position in the note text will be restored when 
   switching note folders
+- when replacing text in a note with the `Replace` button the cursor will now
+  stay with the last search hit if no more text can be replaced instead of 
+  moving to the top of the note
 
 ## 16.05.14
 - there are several new features in the **log dialog**
