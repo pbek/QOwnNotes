@@ -5,6 +5,8 @@
   not be viewed and was triggered by the shortcut
   (for [Issue #169](https://github.com/pbek/QOwnNotes/issues/169))
 - fixed a database warning
+- now also the cursor position in the note text will be restored when 
+  switching note folders
 
 ## 16.05.14
 - there are several new features in the **log dialog**

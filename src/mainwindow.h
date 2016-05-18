@@ -326,6 +326,7 @@ private:
     QSplitter *_verticalNoteFrameSplitter;
     bool _noteViewIsRegenerated;
     QHash<int, QString> _activeNoteFolderNoteNames;
+    QHash<int, int> _activeNoteFolderNotePositions;
 
     void initMainSplitter();
 

@@ -786,9 +786,14 @@ void MainWindow::loadNoteFolderListMenu() {
  * Set a new note folder
  */
 void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
+    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
+
     // store the current note name of the current note folder
-    _activeNoteFolderNoteNames[NoteFolder::currentNoteFolderId()] =
-            currentNote.getName();
+    _activeNoteFolderNoteNames[currentNoteFolderId] = currentNote.getName();
+
+    // store the current position in the note of the current note folder
+    QTextCursor c = activeNoteTextEdit()->textCursor();
+    _activeNoteFolderNotePositions[currentNoteFolderId] = c.position();
 
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
@@ -852,6 +857,12 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
         QString noteName = _activeNoteFolderNoteNames[noteFolderId];
         if (!noteName.isEmpty()) {
             jumpToNoteName(noteName);
+
+            // restore the current position in the note
+            QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+            QTextCursor c = textEdit->textCursor();
+            c.setPosition(_activeNoteFolderNotePositions[noteFolderId]);
+            textEdit->setTextCursor(c);
         }
     }
 }
