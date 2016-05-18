@@ -809,9 +809,11 @@ bool Note::removeNoteFile() {
 /**
  * @brief Returns html rendered markdown of the note text
  * @param notesPath for transforming relative local urls to absolute ones
+ * @param maxImageWidth defined maximum image width (ignored if forExport is true)
+ * @param forExport defines whether the export or preview stylesheet
  * @return
  */
-QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
+QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExport) {
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
     hoedown_extensions extensions =
@@ -888,12 +890,37 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
     result.replace("<pre><code>", "<pre>")
             .replace("</code></pre>", "</pre>");
 
-    result = QString("<html><head><style>"
-                 "h1 { margin: 5px 0 20px 0; }"
-                 "h2, h3 { margin: 10px 0 15px 0; }"
-             "a { color: #FF9137; text-decoration: none; } %1"
-                             "</style></head><body>%2</body></html>")
+    if (forExport) {
+        // get defined body font from settings
+        QString bodyfontString = settings.value("MainWindow/noteTextView.font")
+                .toString();
+
+        // create export stylesheet
+        QString exportStyleSheet = "";
+        if (bodyfontString != "") {
+            QFont bodyFont;
+            bodyFont.fromString(bodyfontString);
+
+            exportStyleSheet = QString(
+                    "body { %1; }").arg(encodeCssFont(bodyFont));
+        }
+
+        result = QString("<html><head><meta charset=\"utf-8\"/><style>"
+                    "h1 { margin: 5px 0 20px 0; }"
+                    "h2, h3 { margin: 10px 0 15px 0; }"
+                    "img { max-width: 100%; }"
+                    "a { color: #FF9137; text-decoration: none; } %1 %2"
+                    "</style></head><body>%3</body></html>")
+            .arg(codeStyleSheet, exportStyleSheet, result);
+    } else {
+        // for preview
+        result = QString("<html><head><style>"
+                    "h1 { margin: 5px 0 20px 0; }"
+                    "h2, h3 { margin: 10px 0 15px 0; }"
+                    "a { color: #FF9137; text-decoration: none; } %1"
+                    "</style></head><body>%2</body></html>")
             .arg(codeStyleSheet, result);
+    }
 
     // check if width of embedded local images is too high
     QRegularExpression re("<img src=\"file:\\/\\/([^\"]+)\"");
@@ -909,14 +936,23 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth) {
         QImage image(fileName);
 #endif
 
-        // cap the image width at 980px or the note text view width
-        if (image.width() > maxImageWidth) {
+        if (forExport) {
             result.replace(
                     QRegularExpression("<img src=\"file:\\/\\/" +
                                        QRegularExpression::escape(fileName) +
                                        "\""),
-                    QString("<img width=\"%1\" src=\"file://%2\"").arg(
-                            QString::number(maxImageWidth), fileName));
+                    QString("<img src=\"file://%2\"").arg(fileName));
+        } else {
+            // for preview
+            // cap the image width at 980px or the note text view width
+            if (image.width() > maxImageWidth) {
+                result.replace(
+                        QRegularExpression("<img src=\"file:\\/\\/" +
+                                           QRegularExpression::escape(fileName) +
+                                           "\""),
+                        QString("<img width=\"%1\" src=\"file://%2\"").arg(
+                                QString::number(maxImageWidth), fileName));
+            }
         }
     }
 
