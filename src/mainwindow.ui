@@ -204,7 +204,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QComboBox" name="noteFolderComboBox">
+             <widget class="ComboBox" name="noteFolderComboBox">
               <property name="styleSheet">
                <string notr="true"/>
               </property>
@@ -1445,10 +1445,15 @@ p, li { white-space: pre-wrap; }
    <extends>QTextBrowser</extends>
    <header location="global">widgets/notepreviewwidget.h</header>
   </customwidget>
+  <customwidget>
+   <class>ComboBox</class>
+   <extends>QComboBox</extends>
+   <header location="global">widgets/combobox.h</header>
+  </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.05.15
+- the note folder select box is now hidden correctly every time, if it should
+  not be viewed and was triggered by the shortcut
+  (for [Issue #169](https://github.com/pbek/QOwnNotes/issues/169))
+- fixed a database warning
+
 ## 16.05.14
 - there are several new features in the **log dialog**
     - you can now select different log types you want to log:

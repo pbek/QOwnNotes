@@ -23,9 +23,9 @@ LogDialog::LogDialog(QWidget *parent) :
     ui->debugCheckBox->setChecked(
             settings.value("LogDialog/debugLog", false).toBool());
     ui->infoCheckBox->setChecked(
-            settings.value("LogDialog/infoLog", true).toBool());
+            settings.value("LogDialog/infoLog", false).toBool());
     ui->warningCheckBox->setChecked(
-            settings.value("LogDialog/warningLog", true).toBool());
+            settings.value("LogDialog/warningLog", false).toBool());
     ui->criticalCheckBox->setChecked(
             settings.value("LogDialog/criticalLog", true).toBool());
     ui->fatalCheckBox->setChecked(

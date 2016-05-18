@@ -77,7 +77,8 @@ SOURCES += main.cpp\
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
     api/tagapi.cpp \
-    dialogs/logdialog.cpp
+    dialogs/logdialog.cpp \
+    widgets/combobox.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -128,7 +129,8 @@ HEADERS  += mainwindow.h \
     widgets/notepreviewwidget.h \
     api/noteapi.h \
     api/tagapi.h \
-    dialogs/logdialog.h
+    dialogs/logdialog.h \
+    widgets/combobox.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

@@ -289,6 +289,8 @@ private slots:
 
     void on_actionExport_preview_HTML_triggered();
 
+    void hideNoteFolderComboBoxIfNeeded() const;
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -480,8 +482,6 @@ private:
     void jumpToNoteName(QString name);
 
     void initScriptingEngine();
-
-    void hideNoteFolderComboBoxIfNeeded() const;
 
     void showLogDialog();
 

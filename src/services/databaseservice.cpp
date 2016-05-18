@@ -105,7 +105,10 @@ bool DatabaseService::createDiskConnection() {
 }
 
 bool DatabaseService::createNoteFolderConnection() {
-    QSqlDatabase dbDisk = QSqlDatabase::addDatabase("QSQLITE", "note_folder");
+    QSqlDatabase dbDisk = QSqlDatabase::contains("note_folder") ?
+                          QSqlDatabase::database("note_folder") :
+                          QSqlDatabase::addDatabase("QSQLITE", "note_folder");
+
     QString path = getNoteFolderDatabasePath();
     dbDisk.setDatabaseName(path);
 

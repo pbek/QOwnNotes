@@ -159,6 +159,8 @@ set(SOURCE_FILES
     widgets/navigationwidget.h
     widgets/notepreviewwidget.cpp
     widgets/notepreviewwidget.h
+    widgets/combobox.cpp
+    widgets/combobox.h
     utils/misc.cpp
     utils/misc.h
     build_number.h

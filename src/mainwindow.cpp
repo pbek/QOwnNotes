@@ -156,7 +156,6 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
-    ui->noteFolderComboBox->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
@@ -470,6 +469,10 @@ void MainWindow::initStyling() {
     connect(ui->noteTextView->verticalScrollBar(),
             SIGNAL(valueChanged(int)),
             this, SLOT(noteViewSliderValueChanged(int)));
+
+    // hide the combo box if it looses focus if it should not be viewed
+    connect(ui->noteFolderComboBox, SIGNAL(focusOut()),
+            this, SLOT(hideNoteFolderComboBoxIfNeeded()));
 }
 
 /**
@@ -1984,13 +1987,6 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {
                 removeSelectedNotes();
-                return true;
-            }
-            return false;
-        } else if (obj == ui->noteFolderComboBox) {
-            if ((keyEvent->key() == Qt::Key_Escape)) {
-                // hide the note folder combobox if it should not be visible
-                hideNoteFolderComboBoxIfNeeded();
                 return true;
             }
             return false;
