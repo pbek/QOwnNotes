@@ -12,6 +12,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         ui(new Ui::VersionDialog) {
     this->mainWindow = mainWindow;
     ui->setupUi(this);
+    ui->tabWidget->setCurrentIndex(0);
 
     setupMainSplitter();
 
@@ -89,25 +90,24 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
 }
 
 void VersionDialog::setupMainSplitter() {
-    this->versionSplitter = new QSplitter;
+    versionSplitter = new QSplitter;
 
-    this->versionSplitter->addWidget(ui->versionListWidget);
-    this->versionSplitter->addWidget(ui->diffBrowser);
+    versionSplitter->addWidget(ui->versionListWidget);
+    versionSplitter->addWidget(ui->tabWidget);
 
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value("versionSplitterSizes").toByteArray();
-    this->versionSplitter->restoreState(state);
+    versionSplitter->restoreState(state);
 
-    this->ui->gridLayout->layout()->addWidget(this->versionSplitter);
-    this->ui->gridLayout->layout()->addWidget(ui->buttonBox);
+    ui->gridLayout->addWidget(versionSplitter);
 }
 
 void VersionDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
     settings.setValue("versionSplitterSizes",
-                      this->versionSplitter->saveState());
+                      versionSplitter->saveState());
 }
 
 VersionDialog::~VersionDialog() {
@@ -116,6 +116,7 @@ VersionDialog::~VersionDialog() {
 
 void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
     ui->diffBrowser->setHtml(diffList->value(currentRow));
+    ui->noteTextEdit->setText(dataList->value(currentRow));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {

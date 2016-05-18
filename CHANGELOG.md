@@ -10,6 +10,10 @@
 - when replacing text in a note with the `Replace` button the cursor will now
   stay with the last search hit if no more text can be replaced instead of 
   moving to the top of the note
+- the note version dialog now also lets you also view the full text of the 
+  versioned note (beside only the diff between the version on the server and 
+  the current version)
+    - you can also search in the note text with <kbd>Ctrl</kbd> + <kbd>F</kbd>
 
 ## 16.05.14
 - there are several new features in the **log dialog**
