@@ -61,5 +61,5 @@ include($$APP_SRC_DIR/libraries/botan/botan.pri)
 #OTHER_FILES += \
 #    connections.xml
 
-FORMS += \
-    $$APP_SRC_DIR/dialogs/logdialog.ui \
+#FORMS += \
+#    $$APP_SRC_DIR/dialogs/logdialog.ui \

@@ -3,12 +3,18 @@
 #include <QScrollBar>
 #include <QDebug>
 #include "logdialog.h"
+
+#ifndef INTEGRATION_TESTS
 #include "ui_logdialog.h"
+#endif
 
 LogDialog::LogDialog(QWidget *parent) :
-    QDialog(parent),
-    ui(new Ui::LogDialog)
+    QDialog(parent)
+#ifndef INTEGRATION_TESTS
+        ,ui(new Ui::LogDialog)
+#endif
 {
+#ifndef INTEGRATION_TESTS
     ui->setupUi(this);
 
     // load the dialog settings
@@ -41,17 +47,21 @@ LogDialog::LogDialog(QWidget *parent) :
     connect(ui->statusCheckBox, SIGNAL(clicked()), this, SLOT(storeSettings()));
     connect(ui->scriptingCheckBox, SIGNAL(clicked()),
             this, SLOT(storeSettings()));
+#endif
 }
 
 LogDialog::~LogDialog()
 {
+#ifndef INTEGRATION_TESTS
     delete ui;
+#endif
 }
 
 /**
  * Stores the settings of the dialog
  */
 void LogDialog::storeSettings() const {
+#ifndef INTEGRATION_TESTS
     QSettings settings;
     settings.setValue("LogDialog/geometry", saveGeometry());
     settings.setValue("LogDialog/debugLog",
@@ -68,6 +78,7 @@ void LogDialog::storeSettings() const {
                       ui->statusCheckBox->isChecked());
     settings.setValue("LogDialog/scriptingLog",
                       ui->scriptingCheckBox->isChecked());
+#endif
 }
 
 /**
@@ -76,6 +87,7 @@ void LogDialog::storeSettings() const {
 void LogDialog::log(LogType logType, QString text) {
 
     QString type = "";
+#ifndef INTEGRATION_TESTS
     switch (logType) {
         case DebugLogType:
             if (!ui->debugCheckBox->isChecked()) {
@@ -144,6 +156,7 @@ void LogDialog::log(LogType logType, QString text) {
         // move the text cursor to the end
         ui->logTextEdit->moveCursor(QTextCursor::End);
     }
+#endif
 }
 
 /**
@@ -151,8 +164,10 @@ void LogDialog::log(LogType logType, QString text) {
  * The instance will be created if it doesn't exist.
  */
 LogDialog * LogDialog::instance() {
-    LogDialog *logDialog =
-            qApp->property("logDialog").value<LogDialog *>();
+    LogDialog *logDialog;
+#ifndef INTEGRATION_TESTS
+    logDialog = qApp->property("logDialog").value<LogDialog *>();
+#endif
 
     if (logDialog == NULL) {
         logDialog = createInstance(NULL);
@@ -167,9 +182,11 @@ LogDialog * LogDialog::instance() {
 LogDialog * LogDialog::createInstance(QWidget *parent) {
     LogDialog *logDialog = new LogDialog(parent);
 
+#ifndef INTEGRATION_TESTS
     qApp->setProperty(
             "logDialog",
             QVariant::fromValue<LogDialog *>(logDialog));
+#endif
 
     return logDialog;
 }
@@ -217,5 +234,7 @@ void LogDialog::logMessageOutput(
  */
 void LogDialog::on_clearButton_clicked()
 {
+#ifndef INTEGRATION_TESTS
     ui->logTextEdit->clear();
+#endif
 }
