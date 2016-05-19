@@ -2,6 +2,7 @@
 
 ## 16.05.16
 - added improvements to the HTML export by @dwu
+- assigned tags are now preserved when manually renaming a note
 - added more German, Japanese and Russian translation (thank you bigant, piyo
   and frostyland)
 

@@ -5183,10 +5183,22 @@ void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
+        QString oldNoteName = note.getName();
+
         if (note.renameNoteFile(item->text())) {
-            note.refetch();
-            setCurrentNote(note);
-//            loadNoteDirectoryList();
+            QString newNoteName = note.getName();
+
+            if (oldNoteName != newNoteName) {
+
+                note.refetch();
+                setCurrentNote(note);
+
+                // rename the note file names of note tag links
+                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+
+                // reload the directory list if note name has changed
+//                loadNoteDirectoryList();
+            }
         }
 
         const QSignalBlocker blocker2(ui->notesListWidget);
