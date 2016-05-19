@@ -2119,13 +2119,10 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
 }
 
 /**
- * Sets the note text according to a note
+ * Gets the maximum image width
  */
-void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
-    if (!updateNoteTextViewOnly) {
-        ui->noteTextEdit->setText(note->getNoteText());
-    }
-
+int MainWindow::getMaxImageWidth()
+{
     QMargins margins = ui->noteTextView->contentsMargins();
     int maxImageWidth = ui->noteTextView->viewport()->width() - margins.left()
                         - margins.right() - 15;
@@ -2134,8 +2131,19 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         maxImageWidth = 16;
     }
 
+    return maxImageWidth;
+}
+
+/**
+ * Sets the note text according to a note
+ */
+void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
+    if (!updateNoteTextViewOnly) {
+        ui->noteTextEdit->setText(note->getNoteText());
+    }
+
     ui->noteTextView->setHtml(
-            note->toMarkdownHtml(notesPath, maxImageWidth));
+            note->toMarkdownHtml(notesPath, getMaxImageWidth()));
 
     // update the slider when editing notes
     noteTextSliderValueChanged(
@@ -5242,7 +5250,7 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
             }
             QTextStream out(&file);
             out.setCodec("UTF-8");
-            out << ui->noteTextView->toHtml();
+            out << currentNote.toMarkdownHtml(notesPath, getMaxImageWidth(), true);
             file.flush();
             file.close();
         }

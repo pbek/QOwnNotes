@@ -487,4 +487,6 @@ private:
     void showLogDialog();
 
     void initLogDialog() const;
+
+    int getMaxImageWidth();
 };
