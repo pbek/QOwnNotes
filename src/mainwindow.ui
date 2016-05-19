@@ -550,8 +550,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Export_note_as_PDF_text"/>
     <addaction name="action_Export_note_as_PDF_markdown"/>
-    <addaction name="action_Export_note_as_markdown"/>
     <addaction name="actionExport_preview_HTML"/>
+    <addaction name="action_Export_note_as_markdown"/>
     <addaction name="separator"/>
     <addaction name="action_Print_note_text"/>
     <addaction name="action_Print_note_markdown"/>
@@ -1424,7 +1424,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</iconset>
    </property>
    <property name="text">
-    <string>Export note preview as HTML file</string>
+    <string>Export note as HTML (markdown)</string>
    </property>
   </action>
  </widget>

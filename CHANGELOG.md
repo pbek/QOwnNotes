@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.05.16
+- added improvements to the HTML export by @dwu
+- added more German translation (thank you bigant)
+
 ## 16.05.15
 - the note folder select box is now hidden correctly every time, if it should
   not be viewed and was triggered by the shortcut
