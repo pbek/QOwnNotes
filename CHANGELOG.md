@@ -3,6 +3,11 @@
 ## 16.05.16
 - added improvements to the HTML export by @dwu
 - assigned tags are now preserved when manually renaming a note
+- many improvements with note file renaming and preserving tags in 
+  conjunction with scripting and automatic filename generation has been made
+  (for [Issue #170](https://github.com/pbek/QOwnNotes/issues/170))
+    - the scripting hook `handleNoteTextFileNameHook(note)` now needs to return
+      a filename without file-extension
 - added more German, Japanese and Russian translation (thank you bigant, piyo
   and frostyland)
 

@@ -449,6 +449,8 @@ bool Note::store() {
  * The file name will be changed if needed
  */
 bool Note::storeNoteTextFileToDisk() {
+    QString oldName = name;
+
     if (allowDifferentFileName()) {
         // check if a QML function wants to set an other note file name and
         // modify it accordingly
@@ -456,6 +458,13 @@ bool Note::storeNoteTextFileToDisk() {
     } else {
         // checks if filename has to be changed (and change it if needed)
         handleNoteTextFileName();
+    }
+
+    QString newName = name;
+
+    // assign the tags to the new name if the name has changed
+    if (oldName != newName) {
+        Tag::renameNoteFileNamesOfLinks(oldName, newName);
     }
 
     QFile file(getFullNoteFilePathForFile(this->fileName));
@@ -522,16 +531,22 @@ QString Note::cleanupFileName(QString name) {
  * modifies it accordingly
  */
 bool Note::modifyNoteTextFileNameFromQMLHook() {
-    // check if a QML function wants to set an other note file name
-    QString newFileName = ScriptingService::instance()->
+    // check if a QML function wants to set an other note name
+    QString newName = ScriptingService::instance()->
             callHandleNoteTextFileNameHook(this);
 
     // set the file name from the QML hook
-    if (!newFileName.isEmpty()) {
-        qDebug() << __func__ << " - 'newFileName': " << newFileName;
+    if (!newName.isEmpty() && (newName != name)) {
+        qDebug() << __func__ << " - 'newName': " << newName;
 
-        fileName = newFileName;
+        // remove old note file
+        removeNoteFile();
+
+        // store new name and filename
+        name = newName;
+        fileName = newName + "." + fileNameSuffix();
         store();
+
         return true;
     }
 

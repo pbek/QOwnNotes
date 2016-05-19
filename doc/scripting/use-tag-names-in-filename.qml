@@ -16,7 +16,7 @@ QtObject {
      * not be modified
      * 
      * @param {NoteApi} note - the note object of the stored note
-     * @return {string} the file name of the note
+     * @return {string} the file name of the note without file extension
      */
     function handleNoteTextFileNameHook(note) {
         // the current note name is the fallback
@@ -38,9 +38,6 @@ QtObject {
         if (tagNameList.length > 0) {
             fileName += " [" + tagNameList.join("] [") + "]";
         }
-        
-        // at a proper file extension
-        fileName += ".md";
         
         script.log("note file name: " + fileName);
         return fileName;
