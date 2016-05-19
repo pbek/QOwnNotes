@@ -569,7 +569,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1427"/>
       <source>Export note as HTML (markdown)</source>
-      <translation type="unfinished">Export note as HTML (markdown)</translation>
+      <translation>Notiz als HTML exportieren (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1381"/>
