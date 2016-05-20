@@ -353,6 +353,11 @@ void MainWindow::reloadTodoLists() {
         showStatusBarMessage(
                 tr("your tasks are being loaded from your ownCloud server"),
                 4000);
+
+        // generate the system tray context menu to show modified tasks
+        // in 15 sec (because we don't know when all new tasks will be loaded)
+        QTimer::singleShot(15000, this, SLOT(generateSystemTrayContextMenu()));
+
     }
 }
 
@@ -2871,6 +2876,9 @@ void MainWindow::openTodoDialog(QString taskUid) {
 
     TodoDialog *dialog = new TodoDialog(this, taskUid, this);
     dialog->exec();
+
+    // generate the system tray context menu to show modified tasks
+    generateSystemTrayContextMenu();
 }
 
 
@@ -3327,40 +3335,88 @@ void MainWindow::generateSystemTrayContextMenu() {
     connect(createNoteAction, SIGNAL(triggered()),
             this, SLOT(on_action_Note_note_triggered()));
 
-    // add a menu for recent notes
-    QMenu *noteMenu = menu->addMenu(tr("Recent notes"));
-
     int maxRows = ui->notesListWidget->count() - 1;
-    if (maxRows > 9) {
-        maxRows = 9;
+
+    if (maxRows >= 0) {
+        if (maxRows > 9) {
+            maxRows = 9;
+        }
+
+        // add a menu for recent notes
+        QMenu *noteMenu = menu->addMenu(tr("Recent notes"));
+
+        QSignalMapper *noteSignalMapper = new QSignalMapper(this);
+
+        // add menu entries to jump to notes
+        for (int row = 0; row <= maxRows; row++) {
+            QListWidgetItem *item = ui->notesListWidget->item(row);
+            int noteId = item->data(Qt::UserRole).toInt();
+            Note note = Note::fetch(noteId);
+
+            QAction *action = noteMenu->addAction(note.getName());
+            action->setIcon(QIcon::fromTheme(
+                    "text-x-generic",
+                    QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg")));
+
+            QObject::connect(
+                    action, SIGNAL(triggered()),
+                    noteSignalMapper, SLOT(map()));
+
+            noteSignalMapper->setMapping(
+                    action, noteId);
+        }
+
+        // connect the signal mapper
+        QObject::connect(noteSignalMapper,
+                         SIGNAL(mapped(int)),
+                         this,
+                         SLOT(setCurrentNoteFromNoteId(int)));
     }
 
-    QSignalMapper *signalMapper = new QSignalMapper(this);
+    menu->addSeparator();
 
-    // add menu entries to jump to notes note
-    for (int row = 0; row <= maxRows; row++) {
-        QListWidgetItem *item = ui->notesListWidget->item(row);
-        int noteId = item->data(Qt::UserRole).toInt();
-        Note note = Note::fetch(noteId);
+    // add menu entry to show the tasks
+    QAction *taskAction = menu->addAction(tr("Show todo lists"));
+    taskAction->setIcon(QIcon::fromTheme(
+            "view-calendar-tasks",
+            QIcon(":icons/breeze-qownnotes/16x16/view-calendar-tasks.svg")));
 
-        QAction *action = noteMenu->addAction(note.getName());
-        action->setIcon(QIcon::fromTheme(
-                "text-x-generic",
-                QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg")));
+    connect(taskAction, SIGNAL(triggered()),
+            this, SLOT(openTodoDialog()));
 
-        QObject::connect(
-                action, SIGNAL(triggered()),
-                signalMapper, SLOT(map()));
+    QList<CalendarItem> taskList = CalendarItem::fetchAllForSystemTray(10);
+    if (taskList.count() > 0) {
+        // add a menu for recent tasks
+        QMenu *taskMenu = menu->addMenu(tr("Recent tasks"));
 
-        signalMapper->setMapping(
-                action, noteId);
+        QSignalMapper *taskSignalMapper = new QSignalMapper(this);
+
+        // add menu entries to jump to tasks
+        QListIterator<CalendarItem> itr(taskList);
+        while (itr.hasNext()) {
+            CalendarItem task = itr.next();
+
+            QAction *action = taskMenu->addAction(task.getSummary());
+            action->setIcon(QIcon::fromTheme(
+                    "view-task",
+                    QIcon(":icons/breeze-qownnotes/16x16/view-task.svg")));
+
+            QObject::connect(
+                    action, SIGNAL(triggered()),
+                    taskSignalMapper, SLOT(map()));
+
+            taskSignalMapper->setMapping(
+                    action, task.getUid());
+        }
+
+        // connect the signal mapper
+        QObject::connect(taskSignalMapper,
+                         SIGNAL(mapped(QString)),
+                         this,
+                         SLOT(openTodoDialog(QString)));
     }
 
-    // connect the signal mapper
-    QObject::connect(signalMapper,
-                     SIGNAL(mapped(int)),
-                     this,
-                     SLOT(setCurrentNoteFromNoteId(int)));
+    menu->addSeparator();
 
     // add menu entry to quit the app
     QAction *quitAction = menu->addAction(tr("Quit"));

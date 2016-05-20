@@ -297,6 +297,8 @@ private slots:
 
     void reloadTodoLists();
 
+    void openTodoDialog(QString taskUid = "");
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -434,8 +436,6 @@ private:
     void insertHtml(QString html);
 
     bool isInDistractionFreeMode();
-
-    void openTodoDialog(QString taskUid = "");
 
     void reloadTagTree();
 

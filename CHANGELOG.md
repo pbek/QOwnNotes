@@ -5,8 +5,8 @@
   their log type
 - fixed a crash when showing the log window after opening QOwnNotes from the 
   system tray
-- from the QOwnNotes tray icon you can now create new notes, open the top 
-  most ten notes or quit the app
+- from the QOwnNotes tray icon you can now create new notes, open the ten top 
+  most notes, open the todo lists, open the 10 most recent tasks or quit the app
   (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
 - the tasks of your todo lists will now automatically be updated from your
   ownCloud server every 10 minutes to allow better reminding of tasks

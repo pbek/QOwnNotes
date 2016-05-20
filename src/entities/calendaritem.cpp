@@ -319,6 +319,32 @@ QList<CalendarItem> CalendarItem::fetchAll() {
 }
 
 /**
+ * Fetches tasks for the system tray menu
+ */
+QList<CalendarItem> CalendarItem::fetchAllForSystemTray(int limit) {
+    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlQuery query(db);
+
+    QList<CalendarItem> calendarItemList;
+
+    query.prepare("SELECT * FROM calendarItem WHERE completed = 0 "
+                          "ORDER BY priority DESC, modified DESC "
+                          "LIMIT :limit");
+    query.bindValue(":limit", 10);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            CalendarItem calendarItem = calendarItemFromQuery(query);
+            calendarItemList.append(calendarItem);
+        }
+    }
+
+    return calendarItemList;
+}
+
+/**
  * @brief Fetches all calendar items with an alarm date in the current minute
  * @return
  */
@@ -340,7 +366,8 @@ QList<CalendarItem> CalendarItem::fetchAllForReminderAlert() {
     QDateTime dateFrom = QDateTime(date, timeFrom);
     QDateTime dateTo = QDateTime(date, timeTo);
 
-    query.prepare("SELECT * FROM calendarItem WHERE alarm_date >= :alarm_data_from AND alarm_date <= :alarm_data_to");
+    query.prepare("SELECT * FROM calendarItem WHERE alarm_date >= "
+                          ":alarm_data_from AND alarm_date <= :alarm_data_to");
     query.bindValue(":alarm_data_from", dateFrom);
     query.bindValue(":alarm_data_to", dateTo);
 
