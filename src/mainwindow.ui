@@ -564,7 +564,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionSelect_note_folder"/>
     <addaction name="noteFoldersMenu"/>
     <addaction name="separator"/>
-    <addaction name="actionShow_system_tray"/>
     <addaction name="action_Settings"/>
     <addaction name="separator"/>
     <addaction name="action_Quit"/>
@@ -634,6 +633,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthFull"/>
     </widget>
     <addaction name="actionShow_toolbar"/>
+    <addaction name="actionShow_system_tray"/>
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_tag_pane"/>

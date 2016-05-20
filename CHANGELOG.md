@@ -11,6 +11,7 @@
 - the tasks of your todo lists will now automatically be updated from your
   ownCloud server every 10 minutes to allow better reminding of tasks
   (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
+- the `Show in system tray` checkbox was moved to the `Window` menu
 - added more Japanese and Russian translation (thank you piyo and frostyland)
 
 ## 16.05.16
