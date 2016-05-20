@@ -85,8 +85,9 @@ void LogDialog::storeSettings() const {
  * Adds a log entry
  */
 void LogDialog::log(LogType logType, QString text) {
-
     QString type = "";
+    QColor color = QColor(Qt::black);
+
 #ifndef INTEGRATION_TESTS
     switch (logType) {
         case DebugLogType:
@@ -94,42 +95,55 @@ void LogDialog::log(LogType logType, QString text) {
                 return;
             }
             type = "debug";
+            // gray
+            color = QColor(98, 98, 98);
             break;
         case InfoLogType:
             if (!ui->infoCheckBox->isChecked()) {
                 return;
             }
             type = "info";
+            color = QColor(Qt::darkBlue);
             break;
         case WarningLogType:
             if (!ui->warningCheckBox->isChecked()) {
                 return;
             }
             type = "warning";
+            // orange
+            color = QColor(255, 128, 0);
             break;
         case CriticalLogType:
             if (!ui->criticalCheckBox->isChecked()) {
                 return;
             }
             type = "critical";
+            // light red
+            color = QColor(192, 0, 0);
             break;
         case FatalLogType:
             if (!ui->fatalCheckBox->isChecked()) {
                 return;
             }
             type = "fatal";
+            // lighter red
+            color = QColor(210, 0, 0);
             break;
         case StatusLogType:
             if (!ui->statusCheckBox->isChecked()) {
                 return;
             }
             type = "status";
+            // green
+            color = QColor(0, 128, 0);
             break;
         case ScriptingLogType:
             if (!ui->scriptingCheckBox->isChecked()) {
                 return;
             }
             type = "scripting";
+            // blue
+            color = QColor(0, 102, 255);
             break;
         default:
             type = "unknown";
@@ -137,8 +151,12 @@ void LogDialog::log(LogType logType, QString text) {
     }
 
     QDateTime dateTime = QDateTime::currentDateTime();
-    text.prepend("[" + dateTime.toString("hh:mm:ss") + "] [" + type + "] ");
-    text.append("\n");
+//    text.prepend("[" + dateTime.toString("hh:mm:ss") + "] [" + type + "] ");
+//    text.append("\n");
+
+    QString html = QString("<div style=\"color: %1\">[%2] [%3] %4</div><br />")
+            .arg(color.name(), dateTime.toString("hh:mm:ss"), type,
+                 text.toHtmlEscaped());
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
 
@@ -150,7 +168,7 @@ void LogDialog::log(LogType logType, QString text) {
 
     // insert the text at the end
     c.movePosition(QTextCursor::End);
-    c.insertText(text);
+    c.insertHtml(html);
 
     if (scrollDown) {
         // move the text cursor to the end
@@ -169,7 +187,7 @@ LogDialog * LogDialog::instance() {
     logDialog = qApp->property("logDialog").value<LogDialog *>();
 #endif
 
-    if (logDialog == NULL) {
+    if (logDialog == Q_NULLPTR) {
         logDialog = createInstance(NULL);
     }
 

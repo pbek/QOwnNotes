@@ -291,6 +291,10 @@ private slots:
 
     void hideNoteFolderComboBoxIfNeeded() const;
 
+    void generateSystemTrayContextMenu();
+
+    void setCurrentNoteFromNoteId(int noteId);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

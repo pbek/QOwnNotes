@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.05.17
+- the log entries in the log window now have different colors depending on 
+  their log type
+- fixed a crash when showing the log window after opening QOwnNotes from the 
+  system tray
+- from the QOwnNotes tray icon you can now create new notes, open the top 
+  most ten notes or quit the app
+
 ## 16.05.16
 - added improvements to the HTML export by @dwu
 - assigned tags are now preserved when manually renaming a note

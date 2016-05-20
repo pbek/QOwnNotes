@@ -308,6 +308,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow() {
     storeUpdatedNotesToDisk();
+    if (showSystemTray) {
+        // if we are using the system tray lets delete the log window so the
+        // app can quit
+        delete(LogDialog::instance());
+    }
     delete ui;
 }
 
@@ -1034,9 +1039,11 @@ void MainWindow::setupMainSplitter() {
 void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setIcon(QIcon(":/images/icon.png"));
+
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(
                     systemTrayIconClicked(QSystemTrayIcon::ActivationReason)));
+
     if (showSystemTray) {
         trayIcon->show();
     }
@@ -1139,6 +1146,9 @@ void MainWindow::loadNoteDirectoryList() {
 
     // setup tagging
     setupTags();
+
+    // generate the tray context menu
+    generateSystemTrayContextMenu();
 }
 
 /**
@@ -1774,6 +1784,19 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     return this->notesPath;
 }
 
+/**
+ * Sets the current note from a note id
+ */
+void MainWindow::setCurrentNoteFromNoteId(int noteId) {
+    // make sure the main window is visible
+    show();
+
+    Note note = Note::fetch(noteId);
+    if (note.isFetched()) {
+        setCurrentNote(note);
+    }
+}
+
 void MainWindow::setCurrentNote(Note note,
                                 bool updateNoteText,
                                 bool updateSelectedNote,
@@ -1947,7 +1970,15 @@ void MainWindow::storeSettings() {
 void MainWindow::closeEvent(QCloseEvent *event) {
     MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
     storeSettings();
-    delete(LogDialog::instance());
+    if (showSystemTray) {
+        // if we use the system tray lets hide the log dialog when the
+        // main window is closed
+        LogDialog::instance()->hide();
+    } else {
+        // if we don't use the system tray we delete the log widow so the app
+        // can quit
+        delete(LogDialog::instance());
+    }
     QMainWindow::closeEvent(event);
 }
 
@@ -3103,6 +3134,9 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered() {
 // hotkey to create new note with date in name
 //
 void MainWindow::on_action_Note_note_triggered() {
+    // show window in case we are using the system tray
+    show();
+
     QDateTime currentDate = QDateTime::currentDateTime();
 
     // replacing ":" with "_" for Windows systems
@@ -3241,6 +3275,67 @@ void MainWindow::systemTrayIconClicked(
             this->show();
         }
     }
+}
+
+/**
+ * Generates the system tray context menu
+ */
+void MainWindow::generateSystemTrayContextMenu() {
+    QMenu *menu = new QMenu();
+
+    // add menu entry to create a new note
+    QAction *createNoteAction = menu->addAction(tr("New note"));
+    createNoteAction->setIcon(QIcon::fromTheme(
+            "document-new",
+            QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+
+    connect(createNoteAction, SIGNAL(triggered()),
+            this, SLOT(on_action_Note_note_triggered()));
+
+    // add a menu for recent notes
+    QMenu *noteMenu = menu->addMenu(tr("Recent notes"));
+
+    int maxRows = ui->notesListWidget->count() - 1;
+    if (maxRows > 9) {
+        maxRows = 9;
+    }
+
+    QSignalMapper *signalMapper = new QSignalMapper(this);
+
+    // add menu entries to jump to notes note
+    for (int row = 0; row <= maxRows; row++) {
+        QListWidgetItem *item = ui->notesListWidget->item(row);
+        int noteId = item->data(Qt::UserRole).toInt();
+        Note note = Note::fetch(noteId);
+
+        QAction *action = noteMenu->addAction(note.getName());
+        action->setIcon(QIcon::fromTheme(
+                "text-x-generic",
+                QIcon(":icons/breeze-qownnotes/16x16/text-x-generic.svg")));
+
+        QObject::connect(
+                action, SIGNAL(triggered()),
+                signalMapper, SLOT(map()));
+
+        signalMapper->setMapping(
+                action, noteId);
+    }
+
+    // connect the signal mapper
+    QObject::connect(signalMapper,
+                     SIGNAL(mapped(int)),
+                     this,
+                     SLOT(setCurrentNoteFromNoteId(int)));
+
+    // add menu entry to quit the app
+    QAction *quitAction = menu->addAction(tr("Quit"));
+    quitAction->setIcon(QIcon::fromTheme(
+            "application-exit",
+            QIcon(":icons/breeze-qownnotes/16x16/application-exit.svg")));
+    connect(quitAction, SIGNAL(triggered()),
+            this, SLOT(on_action_Quit_triggered()));
+
+    trayIcon->setContextMenu(menu);
 }
 
 void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
