@@ -28,6 +28,8 @@ const QString NS_DAV("DAV:");
 OwnCloudService::OwnCloudService(QObject *parent)
         : QObject(parent) {
     readSettings();
+    settingsDialog = Q_NULLPTR;
+    todoDialog = Q_NULLPTR;
 }
 
 void OwnCloudService::readSettings() {
@@ -75,10 +77,12 @@ void OwnCloudService::readSettings() {
 void OwnCloudService::slotAuthenticationRequired(
         QNetworkReply *reply, QAuthenticator *authenticator) {
     Q_UNUSED(authenticator);
-    qDebug() << "Username and/or password incorrect";
+    qWarning() << "Username and/or password incorrect";
 
-    settingsDialog->setOKLabelData(3, "incorrect", SettingsDialog::Failure);
-    settingsDialog->setOKLabelData(4, "not connected", SettingsDialog::Failure);
+    if (settingsDialog != Q_NULLPTR) {
+        settingsDialog->setOKLabelData(3, "incorrect", SettingsDialog::Failure);
+        settingsDialog->setOKLabelData(4, "not connected", SettingsDialog::Failure);
+    }
 
     reply->abort();
 }
@@ -164,15 +168,17 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     data = "";
                 }
 
-                // this will mostly happen after the PUT request to update
-                // or create a todo item
-                if (data == "") {
-                    // reload the todo list from server
-                    this->todoDialog->reloadTodoList();
-                }
+                if (todoDialog != Q_NULLPTR) {
+                    // this will mostly happen after the PUT request to update
+                    // or create a todo item
+                    if (data == "") {
+                        // reload the todo list from server
+                        todoDialog->reloadTodoList();
+                    }
 
-                // increment the progress bar
-                this->todoDialog->todoItemLoadingProgressBarIncrement();
+                    // increment the progress bar
+                    todoDialog->todoItemLoadingProgressBarIncrement();
+                }
 
                 // fetch the calendar item, that was already stored
                 // by loadTodoItems()
@@ -189,8 +195,10 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                         return;
                     }
 
-                    // reload the todo list items
-                    this->todoDialog->reloadTodoListItems();
+                    if (todoDialog != Q_NULLPTR) {
+                        // reload the todo list items
+                        todoDialog->reloadTodoListItems();
+                    }
 
                     qDebug() << __func__ << " - 'calItem': " << calItem;
                 }
@@ -755,7 +763,9 @@ void OwnCloudService::loadTodoItems(QString &data) {
     int requestCount = 0;
 
     // set the preliminary maximum of the progress bar
-    this->todoDialog->todoItemLoadingProgressBarSetMaximum(responseNodesCount);
+    if (todoDialog != Q_NULLPTR) {
+        todoDialog->todoItemLoadingProgressBarSetMaximum(responseNodesCount);
+    }
 
     // loop all response blocks
     for (int i = 0; i < responseNodesCount; ++i) {
@@ -838,12 +848,14 @@ void OwnCloudService::loadTodoItems(QString &data) {
         }
     }
 
-    // set the real maximum of the progress bar
-    this->todoDialog->todoItemLoadingProgressBarSetMaximum(requestCount);
+    if (todoDialog != Q_NULLPTR) {
+        // set the real maximum of the progress bar
+        todoDialog->todoItemLoadingProgressBarSetMaximum(requestCount);
 
-    // hide progress bar if there were no updates
-    if (requestCount == 0) {
-        this->todoDialog->todoItemLoadingProgressBarHide();
+        // hide progress bar if there were no updates
+        if (requestCount == 0) {
+            todoDialog->todoItemLoadingProgressBarHide();
+        }
     }
 
     // remove all not found items
@@ -856,10 +868,10 @@ void OwnCloudService::loadTodoItems(QString &data) {
         }
     }
 
-    // reload the existing items
-    this->todoDialog->reloadTodoListItems();
-
-    qDebug() << CalendarItem::fetchAllByCalendar(calendarName);
+    if (todoDialog != Q_NULLPTR) {
+        // reload the existing items
+        todoDialog->reloadTodoListItems();
+    }
 }
 
 void OwnCloudService::loadDirectory(QString &data) {

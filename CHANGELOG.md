@@ -7,6 +7,10 @@
   system tray
 - from the QOwnNotes tray icon you can now create new notes, open the top 
   most ten notes or quit the app
+  (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
+- the tasks of your todo lists will now automatically be updated from your
+  ownCloud server every 10 minutes to allow better reminding of tasks
+  (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
 
 ## 16.05.16
 - added improvements to the HTML export by @dwu

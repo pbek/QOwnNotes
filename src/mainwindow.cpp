@@ -304,6 +304,16 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // initializes the log dialog
     initLogDialog();
+
+    // reloads all tasks from the ownCloud server
+    reloadTodoLists();
+
+    // create a timer to load all tasks every 10min
+    _todoListTimer = new QTimer(this);
+    QObject::connect(
+            _todoListTimer, SIGNAL(timeout()),
+            this, SLOT(reloadTodoLists()));
+    _todoListTimer->start(600000);
 }
 
 MainWindow::~MainWindow() {
@@ -320,6 +330,31 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Reloads all tasks from the ownCloud server
+ */
+void MainWindow::reloadTodoLists() {
+    QSettings settings;
+    QStringList calendars
+            = settings.value("ownCloud/todoCalendarEnabledList").toStringList();
+    QString serverUrl =
+            settings.value("ownCloud/serverUrl").toString().trimmed();
+
+    if (calendars.count() > 0 && !serverUrl.isEmpty()) {
+        OwnCloudService *ownCloud = new OwnCloudService(this);
+
+        QListIterator<QString> itr(calendars);
+        while (itr.hasNext()) {
+            QString calendar =  itr.next();
+            ownCloud->todoGetTodoList(calendar, Q_NULLPTR);
+        }
+
+        showStatusBarMessage(
+                tr("your tasks are being loaded from your ownCloud server"),
+                4000);
+    }
+}
 
 /**
  * Initializes the scripting engine

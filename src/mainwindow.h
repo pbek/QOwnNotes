@@ -295,6 +295,8 @@ private slots:
 
     void setCurrentNoteFromNoteId(int noteId);
 
+    void reloadTodoLists();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -317,6 +319,7 @@ private:
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
     QTimer *_noteViewUpdateTimer;
+    QTimer *_todoListTimer;
     bool _noteViewNeedsUpdate;
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
