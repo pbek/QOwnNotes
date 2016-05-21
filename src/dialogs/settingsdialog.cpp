@@ -318,7 +318,7 @@ void SettingsDialog::readSettings() {
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
-            settings.value("noteSaveIntervalTime").toInt());
+            settings.value("noteSaveIntervalTime", 10).toInt());
     ui->showNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(

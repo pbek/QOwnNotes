@@ -1303,7 +1303,8 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
-    this->noteSaveIntervalTime = settings.value("noteSaveIntervalTime").toInt();
+    this->noteSaveIntervalTime =
+            settings.value("noteSaveIntervalTime", 10).toInt();
 
     // default value is 10 seconds
     if (this->noteSaveIntervalTime == 0) {
