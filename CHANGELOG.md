@@ -10,6 +10,8 @@
 - opening QOwnNotes with the tray icon or the context menu entry will also 
   un-minimize the window and bring it to the front
   (for [Issue #176](https://github.com/pbek/QOwnNotes/issues/176))
+- trying to fix duplicate menu entries in the context menu under Ubuntu 14.04
+  (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
 
 ## 16.05.17
 - the log entries in the log window now have different colors depending on 

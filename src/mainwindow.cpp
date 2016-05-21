@@ -3343,7 +3343,13 @@ void MainWindow::showWindow() {
  * Generates the system tray context menu
  */
 void MainWindow::generateSystemTrayContextMenu() {
-    QMenu *menu = new QMenu();
+    // trying to destroy the old context menu as fix for Ubuntu 14.04
+    // just clearing an existing menu resulted in empty sub-menus
+    QMenu *menu = trayIcon->contextMenu();
+    delete(menu);
+
+    menu = new QMenu();
+    menu->setTitle("QOwnNotes");
 
     // add menu entry to open the app
     QAction *openAction = menu->addAction(tr("Open QOwnNotes"));
