@@ -3319,7 +3319,7 @@ void MainWindow::systemTrayIconClicked(
     // context menu will be triggered
 #ifndef Q_OS_MAC
     if (reason == QSystemTrayIcon::Trigger) {
-        if (this->isVisible()) {
+        if (isVisible() && !isMinimized()) {
             this->hide();
         } else {
             showWindow();
