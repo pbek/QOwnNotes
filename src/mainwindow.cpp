@@ -3315,13 +3315,17 @@ void MainWindow::on_actionBy_date_triggered(bool checked) {
 
 void MainWindow::systemTrayIconClicked(
         QSystemTrayIcon::ActivationReason reason) {
+    // don't show or hide the app on OS X with a simple click because also the
+    // context menu will be triggered
+#ifndef Q_OS_MAC
     if (reason == QSystemTrayIcon::Trigger) {
         if (this->isVisible()) {
             this->hide();
         } else {
-            // this->show();
+            showWindow();
         }
     }
+#endif
 }
 
 /**
