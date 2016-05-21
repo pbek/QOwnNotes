@@ -2,10 +2,14 @@
 
 ## 16.05.18
 - in the tray icon there now is a new context menu entry for opening QOwnNotes
+  (for [Issue #176](https://github.com/pbek/QOwnNotes/issues/176))
 - left clicking on the tray icon now doesn't show or hide the app under OS X 
   because this will also also trigger the context menu
+- closing the app from the title bar should now hide the app more reliably if
+  the system tray icon was enabled
 - opening QOwnNotes with the tray icon or the context menu entry will also 
   un-minimize the window and bring it to the front
+  (for [Issue #176](https://github.com/pbek/QOwnNotes/issues/176))
 
 ## 16.05.17
 - the log entries in the log window now have different colors depending on 
