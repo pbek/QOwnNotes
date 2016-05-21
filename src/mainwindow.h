@@ -299,6 +299,8 @@ private slots:
 
     void openTodoDialog(QString taskUid = "");
 
+    void showWindow();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

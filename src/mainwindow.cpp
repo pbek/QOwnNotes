@@ -2008,18 +2008,22 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
-    MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
     storeSettings();
+
     if (showSystemTray) {
         // if we use the system tray lets hide the log dialog when the
         // main window is closed
         LogDialog::instance()->hide();
+        hide();
+        event->ignore();
     } else {
+        MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
+
         // if we don't use the system tray we delete the log widow so the app
         // can quit
         delete(LogDialog::instance());
+        QMainWindow::closeEvent(event);
     }
-    QMainWindow::closeEvent(event);
 }
 
 //
@@ -3315,9 +3319,19 @@ void MainWindow::systemTrayIconClicked(
         if (this->isVisible()) {
             this->hide();
         } else {
-            this->show();
+            // this->show();
         }
     }
+}
+
+/**
+ * Shows the window (also brings it to the front and un-minimizes it)
+ */
+void MainWindow::showWindow() {
+    show();
+    activateWindow();
+    setWindowState((windowState() & ~Qt::WindowMinimized) | Qt::WindowActive);
+    raise();
 }
 
 /**
@@ -3325,6 +3339,15 @@ void MainWindow::systemTrayIconClicked(
  */
 void MainWindow::generateSystemTrayContextMenu() {
     QMenu *menu = new QMenu();
+
+    // add menu entry to open the app
+    QAction *openAction = menu->addAction(tr("Open QOwnNotes"));
+    openAction->setIcon(QIcon(":/images/icon.png"));
+
+    connect(openAction, SIGNAL(triggered()),
+            this, SLOT(showWindow()));
+
+    menu->addSeparator();
 
     // add menu entry to create a new note
     QAction *createNoteAction = menu->addAction(tr("New note"));
