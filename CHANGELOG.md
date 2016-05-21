@@ -12,6 +12,11 @@
   (for [Issue #176](https://github.com/pbek/QOwnNotes/issues/176))
 - trying to fix duplicate menu entries in the context menu under Ubuntu 14.04
   (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
+- the pane sizes in the main window are now saved and restored for all 
+  combinations of tag pane, edit pane, markdown pane and vertical mode 
+  toggling possibilities to assure a better pane sizes experience when 
+  toggling different panes
+  (for [Issue #175](https://github.com/pbek/QOwnNotes/issues/175))
 
 ## 16.05.17
 - the log entries in the log window now have different colors depending on 

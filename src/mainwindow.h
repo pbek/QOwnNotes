@@ -498,4 +498,16 @@ private:
     void initLogDialog() const;
 
     int getMaxImageWidth();
+
+    void saveMainSplitterState(
+            bool invertTagState = false, bool invertMarkdownState = false,
+            bool invertEditState = false, bool invertVerticalModeState = false);
+
+    QString getMainSplitterStateKey(
+            bool invertTagState = false, bool invertMarkdownState = false,
+            bool invertEditState = false, bool invertVerticalModeState = false);
+
+    void restoreMainSplitterState(
+            bool invertTagState = false, bool invertMarkdownState = false,
+            bool invertEditState = false, bool invertVerticalModeState = false);
 };

@@ -1995,6 +1995,8 @@ void MainWindow::storeSettings() {
                           _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
+
+        saveMainSplitterState();
     }
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
@@ -4863,12 +4865,83 @@ void MainWindow::setupNoteEditPane() {
 }
 
 /**
+ * Returns the key for storing and restoring the main splitter state
+ */
+QString MainWindow::getMainSplitterStateKey(
+        bool invertTagState, bool invertMarkdownState,
+        bool invertEditState, bool invertVerticalModeState) {
+    bool state1 = ui->actionToggle_tag_pane->isChecked();
+    bool state2 = ui->actionToggle_markdown_preview->isChecked();
+    bool state3 = ui->actionToggle_note_edit_pane->isChecked();
+    bool state4 = isVerticalPreviewModeEnabled();
+
+    if (invertTagState) {
+        state1 = !state1;
+    }
+
+    if (invertMarkdownState) {
+        state2 = !state2;
+    }
+
+    if (invertEditState) {
+        state3 = !state3;
+    }
+
+    if (invertVerticalModeState) {
+        state4 = !state4;
+    }
+
+    QString state1Str = state1 ? "1" : "0";
+    QString state2Str = state2 ? "1" : "0";
+    QString state3Str = state3 ? "1" : "0";
+    QString state4Str = state4 ? "1" : "0";
+    return QString("mainSplitterState-%1-%2-%3-%4").arg(
+            state1Str, state2Str, state3Str, state4Str);
+}
+
+/**
+ * Stores the main splitter state
+ */
+void MainWindow::saveMainSplitterState(
+        bool invertTagState, bool invertMarkdownState,
+        bool invertEditState, bool invertVerticalModeState) {
+    QString key = getMainSplitterStateKey(
+            invertTagState, invertMarkdownState,
+            invertEditState, invertVerticalModeState);
+
+    // store the main splitter state
+    QSettings settings;
+    settings.setValue(key, mainSplitter->saveState());
+}
+
+/**
+ * Restores the main splitter state
+ */
+void MainWindow::restoreMainSplitterState(
+        bool invertTagState, bool invertMarkdownState,
+        bool invertEditState, bool invertVerticalModeState) {
+    QString key = getMainSplitterStateKey(
+            invertTagState, invertMarkdownState,
+            invertEditState, invertVerticalModeState);
+
+    // restore main splitter state
+    QSettings settings;
+    QByteArray state = settings.value(key).toByteArray();
+
+    mainSplitter->restoreState(state);
+}
+
+/**
  * Toggles the note panes
  */
 void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
+    saveMainSplitterState(true);
+
     QSettings settings;
     settings.setValue("tagsEnabled", arg1);
     setupTags();
+
+    restoreMainSplitterState();
 }
 
 /**
@@ -4991,6 +5064,8 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
 }
 
 void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
+    saveMainSplitterState(false, true);
+
     QSettings settings;
     settings.setValue("markdownViewEnabled", arg1);
 
@@ -4999,9 +5074,13 @@ void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
 
     // setup the main splitter again for the vertical note pane visibility
     setupMainSplitter();
+
+    restoreMainSplitterState();
 }
 
 void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
+    saveMainSplitterState(false, false, true);
+
     QSettings settings;
     settings.setValue("noteEditPaneEnabled", arg1);
 
@@ -5010,14 +5089,20 @@ void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
 
     // setup the main splitter again for the vertical note pane visibility
     setupMainSplitter();
+
+    restoreMainSplitterState();
 }
 
 void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
+    saveMainSplitterState(false, false, false, true);
+
     QSettings settings;
     settings.setValue("verticalPreviewModeEnabled", arg1);
 
     // setup the main splitter again
     setupMainSplitter();
+
+    restoreMainSplitterState();
 }
 
 /**
