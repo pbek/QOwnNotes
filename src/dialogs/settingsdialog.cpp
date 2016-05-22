@@ -469,7 +469,8 @@ void SettingsDialog::outputSettings() {
                                           QSysInfo::currentCpuArchitecture());
 #endif
     output += prepareDebugInformationLine("Release", QString(RELEASE));
-    output += prepareDebugInformationLine("Qt Version", QT_VERSION_STR);
+    output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
+    output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
 
     // add information about the server
     output += "\n## Server Info\n\n";

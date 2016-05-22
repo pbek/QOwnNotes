@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.05.19
+- added more information to the debug settings tab
+
 ## 16.05.18
 - in the tray icon there now is a new context menu entry for opening QOwnNotes
   (for [Issue #176](https://github.com/pbek/QOwnNotes/issues/176))

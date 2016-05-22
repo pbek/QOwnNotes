@@ -63,7 +63,11 @@ bool mainStartupMisc() {
     MetricsService *metricsService = MetricsService::createInstance();
     metricsService->sendVisitIfEnabled("app/start", "App Start");
     metricsService->sendEventIfEnabled(
-            "app/qt-version", "app", "qt version", QString(QT_VERSION_STR));
+            "app/qt-version-build", "app", "qt version build",
+            QString(QT_VERSION_STR));
+    metricsService->sendEventIfEnabled(
+            "app/qt-version-runtime", "app", "qt version runtime",
+            qVersion());
     metricsService->sendEventIfEnabled(
             "app/release", "app", "release", QString(RELEASE));
 
@@ -72,7 +76,7 @@ bool mainStartupMisc() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
     productType = QSysInfo::productType();
 #else
-    productType = QString(QT_VERSION_STR);
+    productType += " Qt " + QString(QT_VERSION_STR);
 #endif
 
     metricsService->sendEventIfEnabled(
