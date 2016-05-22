@@ -2,6 +2,8 @@
 
 ## 16.05.19
 - added more information to the debug settings tab
+- added more Japanese, German and Portuguese translation (thank you piyo, 
+  bigant and mlimacarlos)
 
 ## 16.05.18
 - in the tray icon there now is a new context menu entry for opening QOwnNotes

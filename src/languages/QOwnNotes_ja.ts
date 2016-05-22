@@ -861,27 +861,27 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="3330"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>新しいノート</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3345"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>最近のノート</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3378"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Todoリストを表示</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3389"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>最近のタスク</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>終了</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5411"/>
@@ -906,7 +906,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../mainwindow.cpp" line="354"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>タスクをあなたのownCloud サーバーから読み込みました</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>

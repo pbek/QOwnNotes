@@ -878,22 +878,22 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="3345"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Aktuelle Notizen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3378"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Aufgabenlisten anzeigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3389"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Aktuelle Aufgaben</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Beenden</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5411"/>
@@ -918,7 +918,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="354"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>Die Aufgaben werden von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>

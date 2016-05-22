@@ -569,7 +569,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1427"/>
       <source>Export note as HTML (markdown)</source>
-      <translation type="unfinished">Export note as HTML (markdown)</translation>
+      <translation>Exportar notas como HTML (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1431"/>
@@ -871,27 +871,27 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="3330"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Nova Nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3345"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Notas recentes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3378"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Mostrar a Lista de Tarefas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3389"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Tarefas recentes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Sair</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5411"/>
@@ -916,7 +916,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="354"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>suas tarefas são carregadas do servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>
@@ -2621,12 +2621,12 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="52"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="85"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Texto da nota</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="22"/>
