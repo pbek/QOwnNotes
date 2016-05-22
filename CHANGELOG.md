@@ -2,6 +2,8 @@
 
 ## 16.05.19
 - added more information to the debug settings tab
+- added a hot-fix for a crash in conjunction with the system tray under 
+  Ubuntu 14.04 (for [Issue #172](https://github.com/pbek/QOwnNotes/issues/172))
 - added more Japanese, German and Portuguese translation (thank you piyo, 
   bigant and mlimacarlos)
 
