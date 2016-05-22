@@ -6,6 +6,12 @@
 # We will need some packages to execute this locally:
 # sudo apt-get install build-essential autoconf automake autotools-dev dh-make debhelper devscripts fakeroot xutils lintian pbuilder cdbs
 #
+# To make this script work also the Qt 5.6 Trusty repository has to be in place
+# https://launchpad.net/~beineri/+archive/ubuntu/opt-qt56-trusty
+#
+# sudo apt-add-repository ppa:beineri/opt-qt56-trusty
+# sudo apt-get update
+#
 # The GPG public key $GPG_PUBLIC_KEY also has to be in place locally
 # Also a ~/.dput.cf has to be in place
 #
@@ -22,7 +28,7 @@ DATE=$(LC_ALL=C date +'%a, %d %b %Y %T %z')
 PROJECT_PATH="/tmp/QOwnNotes-$$"
 CUR_DIR=$(pwd)
 UPLOAD="true"
-DEBUILD_ARGS=""
+DEBUILD_ARGS="-d"
 GPG_PUBLIC_KEY=D55B7124
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
@@ -77,15 +83,15 @@ tar -czf $qownnotesSrcDir.orig.tar.gz $qownnotesSrcDir
 
 changelogPath=debian/changelog
 
-## get the modified trusty files in place
-cp ../ubuntu-launchpad/trusty/* debian
-
 # build for every Ubuntu release
 for ubuntuRelease in "${UBUNTU_RELEASES[@]}"
 do
     :
     echo "Building for $ubuntuRelease..."
     cd $qownnotesSrcDir
+
+    # get the modified trusty files in place
+    cp ../ubuntu-launchpad/trusty/* debian
 
     versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 
