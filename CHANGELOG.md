@@ -4,6 +4,7 @@
 - the `insert code block` command will now automatically use a multi-line 
   code block instead of an inline code block if a newline character is found in 
   the selected text (for [Issue #180](https://github.com/pbek/QOwnNotes/issues/180))
+- the `deb` package should now use the 2016 version of the application icon
 
 ## 16.05.19
 - added more information to the debug settings tab

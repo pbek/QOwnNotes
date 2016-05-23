@@ -80,6 +80,7 @@ before_deploy:
       && dpkg-deb -x QOwnNotes.deb build
       && mv ../src/QOwnNotes build/opt/QOwnNotes/
       && mv ../src/languages/*.qm build/opt/QOwnNotes/
+      && mv ../icons/* build/opt/QOwnNotes/
       && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
       && dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
       ;
