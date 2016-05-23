@@ -4092,13 +4092,19 @@ void MainWindow::on_actionInset_code_block_triggered()
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     } else {
-        // if the selected text has multiple lines add some new lines
-        // on top and at the bottom of the selected text
+        bool addNewline = false;
+
+        // if the selected text has multiple lines add a multi-line code block
         if (textEdit->textCursor().selection().toPlainText().contains("\n")) {
-            selectedText = "\n" + selectedText + "\n";
+            selectedText = "``\n" + selectedText + "``";
+            addNewline = true;
         }
 
         c.insertText("`" + selectedText + "`");
+
+        if (addNewline) {
+            c.insertText("\n");
+        }
     }
 }
 
