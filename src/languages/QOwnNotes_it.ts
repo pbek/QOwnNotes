@@ -58,47 +58,47 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="14"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Log</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="38"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Fatale</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="45"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Avviso</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="52"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Critico</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="59"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="66"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Info</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="73"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Stato</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="80"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="87"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Pulisci log</translation>
     </message>
   </context>
   <context>
@@ -191,7 +191,7 @@
     <message>
       <location filename="../mainwindow.ui" line="658"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="672"/>
@@ -554,22 +554,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1391"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Seleziona la cartella delle note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1406"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Ricarica il motore di scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1418"/>
       <source>Show log dialog</source>
-      <translation type="unfinished">Show log dialog</translation>
+      <translation>Visualizza log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1427"/>
       <source>Export note as HTML (markdown)</source>
-      <translation type="unfinished">Export note as HTML (markdown)</translation>
+      <translation>Esporta nota come HTML (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1431"/>
@@ -872,42 +872,42 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="3330"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Nuova nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3345"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Note recenti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3378"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Mostra la lista di to-do</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3389"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Attività recenti</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Esci</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5411"/>
       <source>the scripting engine was reloaded</source>
-      <translation type="unfinished">the scripting engine was reloaded</translation>
+      <translation>il motore di script è stato ricaricato</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5426"/>
       <source>HTML files (*.html)</source>
-      <translation type="unfinished">HTML files (*.html)</translation>
+      <translation>file HTML (*.html)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5427"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>Esporta la nota corrente in HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>
@@ -917,7 +917,7 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="354"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>le tue attività sono state caricate dal tuo server ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>
@@ -977,7 +977,7 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="3603"/>
       <source>Paste HTML or media</source>
-      <translation type="unfinished">Paste HTML or media</translation>
+      <translation>Incolla codice HTML o un media</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4609"/>
@@ -1032,12 +1032,12 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="5324"/>
       <source>no equation was found in front of the cursor</source>
-      <translation type="unfinished">no equation was found in front of the cursor</translation>
+      <translation>nessuna equazione è stata trovata davanti al cursore</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5343"/>
       <source>result for equation: %1 = %2</source>
-      <translation type="unfinished">result for equation: %1 = %2</translation>
+      <translation>risultato dell'equazione %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4680"/>
@@ -1119,67 +1119,67 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4280"/>
       <source>copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>copied %n note(s) to %1</numerusform>
-        <numerusform>copied %n note(s) to %1</numerusform>
+      <translation>
+        <numerusform>copiata %n nota in %1</numerusform>
+        <numerusform>copiate %n note in %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4289"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
-      <translation type="unfinished">
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
-        <numerusform>failed to copy %n note(s) (most likely already existing)</numerusform>
+      <translation>
+        <numerusform>fallita la copia di %n nota (molto probabilmente già esistente)</numerusform>
+        <numerusform>fallita la copia di %n note (molto probabilmente già esistente)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4299"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>saltata la copia di %n nota (nessun file di testo o markdown o non leggibile)</numerusform>
+        <numerusform>saltata la copia di %n note (nessun file di testo o markdown o non leggibile)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4313"/>
       <source>saving temporary image</source>
-      <translation type="unfinished">saving temporary image</translation>
+      <translation>salvataggio dell'immagine temporanea</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4332"/>
       <source>temporary file can't be opened</source>
-      <translation type="unfinished">temporary file can't be opened</translation>
+      <translation>impossibile aprire il file temporaneo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4409"/>
       <source>downloading %1</source>
-      <translation type="unfinished">downloading %1</translation>
+      <translation>download %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4439"/>
       <source>done downloading images</source>
-      <translation type="unfinished">done downloading images</translation>
+      <translation>download delle immagini completato</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4540"/>
       <source>Increased font size to %1 pt</source>
-      <translation type="unfinished">Increased font size to %1 pt</translation>
+      <translation>Aumentata la dimensione del font a %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4553"/>
       <source>Decreased font size to %1 pt</source>
-      <translation type="unfinished">Decreased font size to %1 pt</translation>
+      <translation>Diminuita la dimensione del font a %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4565"/>
       <source>Reset font size to %1 pt</source>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Resettata la dimensione del font a %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2845"/>
       <location filename="../mainwindow.cpp" line="2868"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Apri &amp;impostazioni</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="629"/>
@@ -1189,7 +1189,7 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="632"/>
       <source>leave distraction free mode</source>
-      <translation type="unfinished">leave distraction free mode</translation>
+      <translation>esci dalla modalità anti-distrazione</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3707"/>
@@ -1204,27 +1204,27 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="3831"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
+      <translation>Per favore, inserisci la tua &lt;strong&gt;password&lt;/strong&gt; per criptare la nota.&lt;br /&gt; Ricorda che devi &lt;strong&gt;ricordarti&lt;/strong&gt; la tua password per leggere il contenuto della nota&lt;br /&gt; e che puoi farlo &lt;strong&gt;solo&lt;/strong&gt; con &lt;strong&gt;QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3876"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation type="unfinished">Decrypt note and store it as plain text</translation>
+      <translation>Decripta la nota e memorizzala come testo in chiaro</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3877"/>
       <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation type="unfinished">Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
+      <translation>La tua nota verrà decriptata e memorizzata come testo in chiaro. Tieni a mente che le note non criptate potrebbero essere sincronizzate con il tuo server e delle informazioni sensibili potrebbero finire esposte!&lt;br /&gt; Vuoi decriptare la tua nota?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3881"/>
       <source>&amp;Decrypt</source>
-      <translation type="unfinished">&amp;Decrypt</translation>
+      <translation>&amp;Decripta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3907"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
+      <translation>&lt;br /&gt;Sarai in grado di modificare la tua nota criptata.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3967"/>
@@ -1234,7 +1234,7 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../mainwindow.cpp" line="3968"/>
       <source>Export current note as Markdown file</source>
-      <translation type="unfinished">Export current note as Markdown file</translation>
+      <translation>Esporta la nota corrente come file Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4023"/>
@@ -1265,32 +1265,32 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="38"/>
       <source>The current note was modified outside of this application!</source>
-      <translation type="unfinished">The current note was modified outside of this application!</translation>
+      <translation>La nota corrente è stata modificata all'esterno di questa applicazione!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="59"/>
       <source>Reload current note from disk?</source>
-      <translation type="unfinished">Reload current note from disk?</translation>
+      <translation>Ricaricare la nota corrente dal disco?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="66"/>
       <source>Ignore all external modifications in the future</source>
-      <translation type="unfinished">Ignore all external modifications in the future</translation>
+      <translation>Ignorare tutte le modifiche esterne in futuro</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="19"/>
       <source>&amp;Overwrite note on disk</source>
-      <translation type="unfinished">&amp;Overwrite note on disk</translation>
+      <translation>&amp;Sovrascrivi la nota sul disco</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="24"/>
       <source>&amp;Reload note from disk</source>
-      <translation type="unfinished">&amp;Reload note from disk</translation>
+      <translation>&amp;Ricarica la nota dal disco</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="29"/>
       <source>&amp;Ignore changes</source>
-      <translation type="unfinished">&amp;Ignore changes</translation>
+      <translation>&amp;Ignora le modifiche</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="34"/>
@@ -1303,17 +1303,17 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../services/owncloudservice.cpp" line="567"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>errore di connessione al server ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="571"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>errore del server ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; per favore controlla la tua configurazione di ownCloud.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="577"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Apri le &amp;impostazioni</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="577"/>
@@ -1361,7 +1361,7 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>re-enter password</source>
-      <translation type="unfinished">re-enter password</translation>
+      <translation>Reinserisci la password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
@@ -1382,22 +1382,22 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation type="unfinished">close search</translation>
+      <translation>chiudi la ricerca</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Trova:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>sostituisci testo</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>trova nel testo</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
@@ -1412,47 +1412,47 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>sostituisci con</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Sostituisci:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Testo semplice</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Parole intere</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Espressione regolare</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Sostituisci</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Sostituisci tutto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Modalità:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Corrispondenza tra maiuscole e minuscole</translation>
     </message>
   </context>
   <context>
@@ -1460,30 +1460,29 @@ Se il cestino è abilitato sul tuo server ownCloud dovresti essere in grado di r
     <message>
       <location filename="../services/databaseservice.cpp" line="78"/>
       <source>Cannot open memory database</source>
-      <translation type="unfinished">Cannot open memory database</translation>
+      <translation>Impossibile aprire il database di memoria</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="79"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation type="unfinished">Unable to establish a memory database connection.</translation>
+      <translation>Impossibile stabilire una connessione di database di memoria.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="95"/>
       <source>Cannot open disk database</source>
-      <translation type="unfinished">Cannot open disk database</translation>
+      <translation>Impossibile aprire il database su disco</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="96"/>
       <location filename="../services/databaseservice.cpp" line="118"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation type="unfinished">Unable to establish a database connection with file '%1'.
-Are the folder and the file writeable?</translation>
+      <translation>Impossibile stabilire una connessione al database con il file '%1'. La cartella e il file sono scrivibili?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="117"/>
       <source>Cannot open note folder database</source>
-      <translation type="unfinished">Cannot open note folder database</translation>
+      <translation>Impossibile aprire il database della cartella delle note</translation>
     </message>
   </context>
   <context>
@@ -1491,7 +1490,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="133"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>file inesistente</translation>
     </message>
   </context>
   <context>
@@ -1504,22 +1503,22 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="42"/>
       <source>Note folders</source>
-      <translation type="unfinished">Note folders</translation>
+      <translation>Cartelle delle note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="48"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Le tua cartelle delle note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="115"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>&amp;Aggiungi cartella</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="139"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>&amp;Rimuovi cartella</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="384"/>
@@ -1530,27 +1529,27 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="377"/>
       <source>Path on your ownCloud server</source>
-      <translation type="unfinished">Path on your ownCloud server</translation>
+      <translation>Percorso del tuo server ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="350"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation type="unfinished">This name will be viewed in all the menus.</translation>
+      <translation>Questo nome verrà visualizzato in tutti i menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="353"/>
       <source>a name you will recognize</source>
-      <translation type="unfinished">a name you will recognize</translation>
+      <translation>un nome che saprai riconoscere</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="195"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
+      <translation>Impostare il percorso sul server ownCloud in cui la cartella delle note verrà sincronizzata.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="391"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Percorso della cartella delle note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="367"/>
@@ -1560,32 +1559,32 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="360"/>
       <source>Use as active note folder</source>
-      <translation type="unfinished">Use as active note folder</translation>
+      <translation>Usa come cartella delle note attiva</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="418"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Il tuo server ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="432"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>indirizzo url del server ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="454"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Per favore, inserisci l'URL del server ownCloud, ad esempio: &lt;span style="font-style:italic;"&gt; https://cloud.server.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="492"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per favore inserisci l'username che usi sul tuo server ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="495"/>
       <source>your ownCloud username</source>
-      <translation type="unfinished">your ownCloud username</translation>
+      <translation>il tuo username ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="470"/>
@@ -1595,12 +1594,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="527"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per favore inserisci la password per il tuo username.&lt;br/&gt;Attualmente la password verrà salvata in chiaro con le altre impostazioni, ma non è molto sicuro.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="533"/>
       <source>your ownCloud password</source>
-      <translation type="unfinished">your ownCloud password</translation>
+      <translation>la tua password ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="505"/>
@@ -1615,17 +1614,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="622"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>server ownCloud rilevato</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="656"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>connessione a QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="639"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>nome utente e password corretti</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="595"/>
@@ -1641,12 +1640,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="555"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Clicca qui per testare la connessione al tuo server ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="561"/>
       <source>&amp;connect to ownCloud server</source>
-      <translation type="unfinished">&amp;connect to ownCloud server</translation>
+      <translation>&amp;connetti al server ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="588"/>
@@ -1656,17 +1655,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="673"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>supporto alle versioni abilitato sul server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="690"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>supporto al cestino abilitato sul server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="707"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>trovato il percorso delle note sul server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="763"/>
@@ -1681,17 +1680,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="301"/>
       <source>&amp;use as ownCloud path</source>
-      <translation type="unfinished">&amp;use as ownCloud path</translation>
+      <translation>&amp;usa come percorso ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="171"/>
       <source>Click here to select your local note path</source>
-      <translation type="unfinished">Click here to select your local note path</translation>
+      <translation>Clicca qui per selezionare il percorso delle tue note in locale</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="188"/>
       <source>path where your notes are stored locally</source>
-      <translation type="unfinished">path where your notes are stored locally</translation>
+      <translation>percorso in cui sono memorizzate le tue note in locale</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="245"/>

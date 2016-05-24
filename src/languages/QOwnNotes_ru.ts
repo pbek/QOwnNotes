@@ -885,27 +885,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3330"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Новая заметка</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3345"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Недавние заметки</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3378"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Показать списки todo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3389"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Последние задачи</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3421"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Выход</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5411"/>
@@ -930,7 +930,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="354"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>ваши задачи загружаются с сервера ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2759"/>
