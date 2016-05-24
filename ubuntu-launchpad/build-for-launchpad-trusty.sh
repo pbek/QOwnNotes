@@ -91,7 +91,8 @@ do
     cd $qownnotesSrcDir
 
     # get the modified trusty files in place
-    cp ../ubuntu-launchpad/trusty/* debian
+#    cp ../ubuntu-launchpad/trusty/* debian
+    cp ../ubuntu-launchpad/trusty/rules debian
 
     versionPart="$QOWNNOTES_VERSION-1ubuntu3ppa1~${ubuntuRelease}1"
 
