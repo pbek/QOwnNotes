@@ -18,10 +18,7 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
-sudo apt-add-repository -y ppa:beineri/opt-qt56-trusty
-sudo apt-get -qq update
-sudo apt-get -qq install qt56-meta-full libqt5svg5
-/opt/qt56/bin/qt56-env.sh
+sudo apt-add-repository -y ppa:beineri/opt-qt56-trusty && sudo apt-get -qq update && sudo apt-get -qq install qt56-meta-full libqt5svg5 && /opt/qt56/bin/qt56-env.sh
 #	dh $@
 
 # dh_make generated override targets
