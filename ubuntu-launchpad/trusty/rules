@@ -18,7 +18,7 @@ include /usr/share/dpkg/default.mk
 
 # main packaging script based on dh7 syntax
 %:
-/opt/qt56/bin/qt56-env.sh
+	/opt/qt56/bin/qt56-env.sh
 
 #	dh $@
 
