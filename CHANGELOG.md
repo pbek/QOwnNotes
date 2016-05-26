@@ -9,6 +9,9 @@
 - the note text view in the trash dialog now also supports markdown 
   highlighting and text searching
 - replacing in markdown text edits is now prohibited if they are readonly
+- when creating a code block from a selected multi-line text now a newline 
+  character will be added at the end of the selected text if there wasn't 
+  already one there
 - added more information to the debug settings tab
 
 ## 16.05.20

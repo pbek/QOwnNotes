@@ -4085,7 +4085,7 @@ void MainWindow::on_actionInset_code_block_triggered()
 {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
+    QString selectedText = c.selection().toPlainText();
 
     if (selectedText.isEmpty()) {
         c.insertText("``");
@@ -4095,8 +4095,12 @@ void MainWindow::on_actionInset_code_block_triggered()
         bool addNewline = false;
 
         // if the selected text has multiple lines add a multi-line code block
-        if (textEdit->textCursor().selection().toPlainText().contains("\n")) {
-            selectedText = "``\n" + selectedText + "``";
+        if (selectedText.contains("\n")) {
+            // add an other newline if there is no newline at the end of the
+            // selected text
+            QString endNewline = selectedText.endsWith("\n") ? "" : "\n";
+
+            selectedText = "``\n" + selectedText + endNewline + "``";
             addNewline = true;
         }
 
