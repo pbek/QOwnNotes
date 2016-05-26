@@ -13,6 +13,9 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     this->mainWindow = mainWindow;
     ui->setupUi(this);
 
+    // init the note browser search frame
+    ui->noteBrowser->initSearchFrame(ui->noteBrowserSearchFrame);
+
     setupMainSplitter();
 
     QPushButton *button;
@@ -106,24 +109,24 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
 }
 
 void TrashDialog::setupMainSplitter() {
-    this->trashSplitter = new QSplitter;
+    trashSplitter = new QSplitter;
 
-    this->trashSplitter->addWidget(ui->trashListWidget);
-    this->trashSplitter->addWidget(ui->noteBrowser);
+    trashSplitter->addWidget(ui->trashListWidget);
+    trashSplitter->addWidget(ui->noteBrowserFrame);
 
     // restore splitter sizes
     QSettings settings;
     QByteArray state = settings.value("trashSplitterSizes").toByteArray();
-    this->trashSplitter->restoreState(state);
+    trashSplitter->restoreState(state);
 
-    this->ui->gridLayout->layout()->addWidget(this->trashSplitter);
-    this->ui->gridLayout->layout()->addWidget(ui->buttonBox);
+    ui->gridLayout->layout()->addWidget(trashSplitter);
+    ui->gridLayout->layout()->addWidget(ui->buttonBox);
 }
 
 void TrashDialog::storeSettings() {
     // store the splitter sizes
     QSettings settings;
-    settings.setValue("trashSplitterSizes", this->trashSplitter->saveState());
+    settings.setValue("trashSplitterSizes", trashSplitter->saveState());
 }
 
 TrashDialog::~TrashDialog() {

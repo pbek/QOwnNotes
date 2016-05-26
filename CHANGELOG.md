@@ -7,6 +7,8 @@
 - added frames for the search box for the task description edit, the 
   note version view and the settings debug output edit so that the search 
   widget doesn't get placed inside the text edits
+- the note text view in the trash dialog now also supports markdown 
+  highlighting and text searching
 
 ## 16.05.20
 - the `insert code block` command will now automatically use a multi-line 
