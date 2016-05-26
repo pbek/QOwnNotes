@@ -14,6 +14,9 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
     ui->setupUi(this);
     ui->tabWidget->setCurrentIndex(0);
 
+    // init the note text edit search frame
+    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
+
     setupMainSplitter();
 
     QPushButton *button;

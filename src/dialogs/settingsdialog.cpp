@@ -56,6 +56,9 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         startConnectionTest();
     }
 
+    // init the debug info search frame
+    ui->debugInfoTextEdit->initSearchFrame(ui->debugInfoTextEditSearchFrame);
+
     // must be done in the end so that the settings are loaded first when
     // doing a connection test
     ui->tabWidget->setCurrentIndex(tab);

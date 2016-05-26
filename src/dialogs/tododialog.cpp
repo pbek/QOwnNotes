@@ -16,6 +16,9 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
     ui->setupUi(this);
     setupUi();
 
+    // init the description edit search frame
+    ui->descriptionEdit->initSearchFrame(ui->descriptionEditSearchFrame);
+
     QString selectedText =
             _mainWindow->activeNoteTextEdit()->textCursor().selectedText();
 

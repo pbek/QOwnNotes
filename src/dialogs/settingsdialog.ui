@@ -2442,7 +2442,7 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QPushButton" name="saveDebugInfoButton">
               <property name="text">
                <string>&amp;Save debug information</string>
@@ -2450,6 +2450,16 @@ p, li { white-space: pre-wrap; }
               <property name="icon">
                <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QFrame" name="debugInfoTextEditSearchFrame">
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
               </property>
              </widget>
             </item>
