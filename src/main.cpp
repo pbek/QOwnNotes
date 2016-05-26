@@ -69,6 +69,8 @@ bool mainStartupMisc() {
             "app/qt-version-runtime", "app", "qt version runtime",
             qVersion());
     metricsService->sendEventIfEnabled(
+            "app/theme", "app", "theme", QIcon::themeName());
+    metricsService->sendEventIfEnabled(
             "app/release", "app", "release", QString(RELEASE));
 
     QString productType;

@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.05.21
+- added more information to the debug settings tab
+
 ## 16.05.20
 - the `insert code block` command will now automatically use a multi-line 
   code block instead of an inline code block if a newline character is found in 

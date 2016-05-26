@@ -472,6 +472,15 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
     output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
 
+    output += prepareDebugInformationLine("Locale (system)",
+                                          QLocale::system().name());
+    output += prepareDebugInformationLine("Locale (interface)",
+                                          settings.value("interfaceLanguage")
+                                                  .toString());
+
+    output += prepareDebugInformationLine("Icon theme",
+                                          QIcon::themeName());
+
     // add information about the server
     output += "\n## Server Info\n\n";
     output += prepareDebugInformationLine("serverUrl",
