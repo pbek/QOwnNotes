@@ -1,14 +1,15 @@
 # QOwnNotes Changelog
 
 ## 16.05.21
-- added more information to the debug settings tab
 - attempted to fix a problem with the interface language
   (for [Issue #184](https://github.com/pbek/QOwnNotes/issues/184))
 - added frames for the search box for the task description edit, the 
-  note version view and the settings debug output edit so that the search 
-  widget doesn't get placed inside the text edits
+  note version view, the log dialog and the settings debug output edit so that 
+  the search widget doesn't get placed inside the text edits
 - the note text view in the trash dialog now also supports markdown 
   highlighting and text searching
+- replacing in markdown text edits is now prohibited if they are readonly
+- added more information to the debug settings tab
 
 ## 16.05.20
 - the `insert code block` command will now automatically use a multi-line 

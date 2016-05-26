@@ -17,6 +17,9 @@ LogDialog::LogDialog(QWidget *parent) :
 #ifndef INTEGRATION_TESTS
     ui->setupUi(this);
 
+    // init the log text edit search frame
+    ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame);
+
     // load the dialog settings
     QSettings settings;
     restoreGeometry(settings.value("LogDialog/geometry").toByteArray());
