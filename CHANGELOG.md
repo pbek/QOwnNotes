@@ -2,6 +2,8 @@
 
 ## 16.05.21
 - added more information to the debug settings tab
+- attempted to fix a problem with the interface language
+  (for [Issue #184](https://github.com/pbek/QOwnNotes/issues/184))
 
 ## 16.05.20
 - the `insert code block` command will now automatically use a multi-line 

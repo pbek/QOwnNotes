@@ -17,6 +17,9 @@
     qtTranslator.load("qt_" + QLocale::system().name(), \
     QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
     app.installTranslator(&qtTranslator); \
+    qtTranslator2.load("qt_" + locale, \
+    QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
+    app.installTranslator(&qtTranslator2); \
     QString appPath = QCoreApplication::applicationDirPath(); \
     translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale); \
     app.installTranslator(&translator1); \
@@ -186,6 +189,7 @@ int main(int argc, char *argv[]) {
 #endif
 
     QTranslator qtTranslator;
+    QTranslator qtTranslator2;
     QTranslator translator1;
     QTranslator translator2;
     QTranslator translator3;
