@@ -137,6 +137,14 @@ private slots:
 
     void on_ignoreAllExternalModificationsCheckBox_toggled(bool checked);
 
+    void on_addCustomNoteFileExtensionButton_clicked();
+
+    void on_removeCustomNoteFileExtensionButton_clicked();
+
+    void on_defaultNoteFileExtensionListWidget_itemChanged(QListWidgetItem *item);
+
+    void on_defaultNoteFileExtensionListWidget_currentRowChanged(int currentRow);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -190,6 +198,9 @@ private:
     void storeScriptListEnabledState();
 
     void validateCurrentScript();
+
+    QListWidgetItem *addCustomeNoteFileExtension(
+            const QString &fileExtension);
 };
 
 #endif // SETTINGSDIALOG_H
