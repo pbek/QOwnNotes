@@ -9,7 +9,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/scripting
+    - feature/custom-file-extensions
 
 env:
   global:
