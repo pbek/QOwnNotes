@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.05.22
+- more fixes for a problem with the interface language under Windows
+  (for [Issue #184](https://github.com/pbek/QOwnNotes/issues/184))
+
 ## 16.05.21
 - attempted to fix a problem with the interface language
   (for [Issue #184](https://github.com/pbek/QOwnNotes/issues/184))
