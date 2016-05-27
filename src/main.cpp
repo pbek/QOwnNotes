@@ -21,7 +21,7 @@
     QLibraryInfo::location(QLibraryInfo::TranslationsPath)); \
     app.installTranslator(&qtTranslator2); \
     QString appPath = QCoreApplication::applicationDirPath(); \
-    qtTranslator3.load(appPath + "/translations/qt_" + locale); \
+    qtTranslator3.load("qt_" + locale, appPath + "/translations"); \
     app.installTranslator(&qtTranslator3); \
     translator1.load(appPath + "/../src/languages/QOwnNotes_" + locale); \
     app.installTranslator(&translator1); \
