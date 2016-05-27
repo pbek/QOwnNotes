@@ -44,6 +44,9 @@ build_script:
   - copy ..\libwinpthread-1.dll . /y
   # this dll didn't work when released by windeployqt
   - copy "..\libstdc++-6.dll" . /y
+  # for some reason AppVeyor or windeployqt uses a copy of the German
+  # translation file as English one, which screws up the English user interface
+  - del "translations\qt_en.qm"
 
 artifacts:
   # pushing entire folder as a zip archive
