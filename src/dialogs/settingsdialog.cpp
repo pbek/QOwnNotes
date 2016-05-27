@@ -20,6 +20,8 @@
 #include <QTextBrowser>
 #include <entities/script.h>
 #include <services/scriptingservice.h>
+#include <QInputDialog>
+#include <utils/misc.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -30,6 +32,7 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
+    ui->removeCustomNoteFileExtensionButton->setDisabled(true);
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
@@ -297,6 +300,16 @@ void SettingsDialog::storeSettings() {
     settings.setValue("networking/ignoreSSLErrors",
                       ui->ignoreSSLErrorsCheckBox->isChecked());
 
+    // store the custom note file extensions
+    QStringList customNoteFileExtensionList;
+    for (int i = 2; i < ui->defaultNoteFileExtensionListWidget->count(); i++) {
+        QListWidgetItem *item = ui->defaultNoteFileExtensionListWidget->item(i);
+
+        customNoteFileExtensionList.append(item->whatsThis());
+    }
+    settings.setValue("customNoteFileExtensionList",
+                      customNoteFileExtensionList);
+
     // store the proxy settings
     storeProxySettings();
 
@@ -331,8 +344,6 @@ void SettingsDialog::readSettings() {
 
     selectListWidgetValue(ui->languageListWidget,
                           settings.value("interfaceLanguage").toString());
-    selectListWidgetValue(ui->defaultNoteFileExtensionListWidget,
-                          Note::defaultNoteFileExtension());
 
     const QSignalBlocker blocker(ui->appMetricsCheckBox);
     Q_UNUSED(blocker);
@@ -391,6 +402,16 @@ void SettingsDialog::readSettings() {
             "ownCloud/todoCalendarUrlList").toStringList();
     // load the todo calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
+
+    // loads the custom note file extensions
+    QListIterator<QString> itr(Note::customNoteFileExtensionList());
+    while (itr.hasNext()) {
+        QString fileExtension = itr.next();
+        addCustomeNoteFileExtension(fileExtension);
+    }
+
+    selectListWidgetValue(ui->defaultNoteFileExtensionListWidget,
+                          Note::defaultNoteFileExtension());
 
     bool ignoreSSLErrors =
             settings.value("networking/ignoreSSLErrors", true).toBool();
@@ -1521,8 +1542,7 @@ void SettingsDialog::storeScriptListEnabledState() {
 /**
  * Validates the current script
  */
-void SettingsDialog::on_scriptValidationButton_clicked()
-{
+void SettingsDialog::on_scriptValidationButton_clicked() {
     // validate the script
     validateCurrentScript();
 }
@@ -1530,8 +1550,7 @@ void SettingsDialog::on_scriptValidationButton_clicked()
 /**
  * Reloads the scripting engine
  */
-void SettingsDialog::on_scriptReloadEngineButton_clicked()
-{
+void SettingsDialog::on_scriptReloadEngineButton_clicked() {
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
 }
@@ -1543,8 +1562,7 @@ void SettingsDialog::on_scriptReloadEngineButton_clicked()
  * @param checked
  */
 void SettingsDialog::on_notifyAllExternalModificationsCheckBox_toggled(
-        bool checked)
-{
+        bool checked) {
     if (checked) {
         ui->ignoreAllExternalModificationsCheckBox->setChecked(false);
     }
@@ -1557,9 +1575,73 @@ void SettingsDialog::on_notifyAllExternalModificationsCheckBox_toggled(
  * @param checked
  */
 void SettingsDialog::on_ignoreAllExternalModificationsCheckBox_toggled(
-        bool checked)
-{
+        bool checked) {
     if (checked) {
         ui->notifyAllExternalModificationsCheckBox->setChecked(false);
     }
+}
+
+/**
+ * Adds a custom file extension
+ */
+void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
+    bool ok;
+    QString fileExtension;
+    fileExtension = QInputDialog::getText(
+            this, tr("File extension"),
+            tr("Enter your custom file extension:"), QLineEdit::Normal,
+            fileExtension, &ok);
+
+    if (!ok) {
+        return;
+    }
+
+    // make sure the file extension doesn't start with a point
+    fileExtension = Utils::Misc::removeIfStartsWith(fileExtension, ".");
+
+    QListWidgetItem *item = addCustomeNoteFileExtension(fileExtension);
+    ui->defaultNoteFileExtensionListWidget->setCurrentItem(item);
+}
+
+/**
+ * Adds a custom note file extension
+ */
+QListWidgetItem *SettingsDialog::addCustomeNoteFileExtension(
+        const QString &fileExtension) {
+    QListWidgetItem *item = new QListWidgetItem(fileExtension);
+    item->setFlags(item->flags() | Qt::ItemIsEditable);
+    item->setWhatsThis(fileExtension);
+    ui->defaultNoteFileExtensionListWidget->addItem(item);
+
+    return item;
+}
+
+/**
+ * Removes a custom file extension
+ */
+void SettingsDialog::on_removeCustomNoteFileExtensionButton_clicked() {
+    delete(ui->defaultNoteFileExtensionListWidget->currentItem());
+}
+
+/**
+ * Updates a custom file extension
+ */
+void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
+        QListWidgetItem *item) {
+    // make sure the file extension doesn't start with a point
+    QString fileExtension = Utils::Misc::removeIfStartsWith(item->text(), ".");
+
+    if (fileExtension != item->text()) {
+        item->setText(fileExtension);
+    }
+
+    item->setWhatsThis(fileExtension);
+}
+
+/**
+ * Disables the remove custom file extension button for the first two rows
+ */
+void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
+        int currentRow) {
+    ui->removeCustomNoteFileExtensionButton->setEnabled(currentRow > 1);
 }

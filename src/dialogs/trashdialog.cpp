@@ -105,7 +105,9 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     }
 
     ui->trashListWidget->setCurrentRow(0);
-    ui->noteBrowser->setText(dataList->at(0));
+    if (dataList->count() > 0) {
+        ui->noteBrowser->setText(dataList->at(0));
+    }
 }
 
 void TrashDialog::setupMainSplitter() {
@@ -138,29 +140,32 @@ void TrashDialog::on_trashListWidget_currentRowChanged(int currentRow) {
 }
 
 void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
-    int actionRole = button->property("ActionRole").toInt();
-    QString name = ui->trashListWidget->currentItem()->text();
-    QString fileName = ui->trashListWidget->currentItem()
-            ->data(Qt::UserRole).toString();
+    if (ui->trashListWidget->currentItem() != Q_NULLPTR) {
+        int actionRole = button->property("ActionRole").toInt();
 
-    switch (actionRole) {
-        case Download: {
-            QString text = dataList->value(ui->trashListWidget->currentRow());
-            mainWindow->createNewNote(name, text);
-            break;
+        QString name = ui->trashListWidget->currentItem()->text();
+        QString fileName = ui->trashListWidget->currentItem()
+                ->data(Qt::UserRole).toString();
+
+        switch (actionRole) {
+            case Download: {
+                QString text = dataList->value(ui->trashListWidget->currentRow());
+                mainWindow->createNewNote(name, text);
+                break;
+            }
+
+            case RestoreOnServer: {
+                int timestamp = this->timestampList->value(
+                        ui->trashListWidget->currentRow());
+                qDebug() << name << timestamp;
+
+                mainWindow->restoreTrashedNoteOnServer(fileName, timestamp);
+                break;
+            }
+
+            default:
+                break;
         }
-
-        case RestoreOnServer: {
-            int timestamp = this->timestampList->value(
-                    ui->trashListWidget->currentRow());
-            qDebug() << name << timestamp;
-
-            mainWindow->restoreTrashedNoteOnServer(fileName, timestamp);
-            break;
-        }
-
-        default:
-            break;
     }
 
     this->close();

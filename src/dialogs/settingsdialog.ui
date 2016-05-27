@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1119</width>
+    <width>1194</width>
     <height>837</height>
    </rect>
   </property>
@@ -35,7 +35,7 @@
      <item row="0" column="0">
       <widget class="QTabWidget" name="tabWidget">
        <property name="currentIndex">
-        <number>0</number>
+        <number>6</number>
        </property>
        <widget class="QWidget" name="noteFoldersTab">
         <attribute name="title">
@@ -2248,23 +2248,52 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
            </property>
            <item>
             <widget class="QGroupBox" name="groupBox_8">
-             <property name="minimumSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>150</height>
-              </size>
-             </property>
              <property name="title">
               <string>Default note file extension</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_12">
-              <item row="0" column="0">
+              <item row="1" column="0">
+               <widget class="QPushButton" name="addCustomNoteFileExtensionButton">
+                <property name="toolTip">
+                 <string>Add a custom file extension</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+                <property name="icon">
+                 <iconset theme="list-add" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="removeCustomNoteFileExtensionButton">
+                <property name="toolTip">
+                 <string>Remove a custom file extension</string>
+                </property>
+                <property name="text">
+                 <string notr="true"/>
+                </property>
+                <property name="icon">
+                 <iconset theme="list-remove" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-remove.svg</iconset>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0" colspan="3">
                <widget class="QListWidget" name="defaultNoteFileExtensionListWidget">
                 <property name="minimumSize">
                  <size>
@@ -2278,9 +2307,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <height>16777215</height>
                  </size>
                 </property>
+                <property name="toolTip">
+                 <string>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</string>
+                </property>
                 <item>
                  <property name="text">
-                  <string>Text file (.txt)</string>
+                  <string>Text file (txt)</string>
                  </property>
                  <property name="whatsThis">
                   <string notr="true">txt</string>
@@ -2288,7 +2320,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Markdown (.md)</string>
+                  <string notr="true">Markdown (md)</string>
                  </property>
                  <property name="whatsThis">
                   <string notr="true">md</string>

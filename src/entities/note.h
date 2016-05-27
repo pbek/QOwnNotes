@@ -62,6 +62,8 @@ public:
 
     static QString defaultNoteFileExtension();
 
+    static QStringList customNoteFileExtensionList(QString prefix = "");
+
     static QString getFullNoteFilePathForFile(QString fileName);
 
     static int storeDirtyNotesToDisk(Note &currentNote);

@@ -1663,6 +1663,9 @@ void MainWindow::buildNotesIndex() {
     QStringList filters;
     filters << "*.txt" << "*.md";
 
+    // append the custom extensions
+    filters.append(Note::customNoteFileExtensionList("*."));
+
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
     qDebug() << __func__ << " - 'files': " << files;
@@ -3265,6 +3268,10 @@ void MainWindow::openLocalUrl(QUrl url) {
         QStringList fileSearchList =
                 QStringList() << fileName + ".txt" << fileName + ".md";
 
+        // append the files with custom extension
+        fileSearchList.append(
+                Note::customNoteFileExtensionList(fileName + "."));
+
         // search for files with that name
         files = currentDir.entryList(fileSearchList,
                                      QDir::Files | QDir::NoSymLinks);
@@ -4514,6 +4521,10 @@ bool MainWindow::isValidMediaFile(QFile *file) {
  */
 bool MainWindow::isValidNoteFile(QFile *file) {
     QStringList mediaExtensions = QStringList() << "txt" << "md";
+
+    // append the custom extensions
+    mediaExtensions.append(Note::customNoteFileExtensionList());
+
     QFileInfo fileInfo(file->fileName());
     QString extension = fileInfo.suffix();
     return mediaExtensions.contains(extension, Qt::CaseInsensitive);
