@@ -1306,42 +1306,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="567"/>
+        <location filename="../services/owncloudservice.cpp" line="580"/>
         <source>ownCloud server connection error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="571"/>
+        <location filename="../services/owncloudservice.cpp" line="584"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="577"/>
+        <location filename="../services/owncloudservice.cpp" line="590"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="577"/>
+        <location filename="../services/owncloudservice.cpp" line="590"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="597"/>
+        <location filename="../services/owncloudservice.cpp" line="610"/>
         <source>done with loading note versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="635"/>
+        <location filename="../services/owncloudservice.cpp" line="648"/>
         <source>no other version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="636"/>
+        <location filename="../services/owncloudservice.cpp" line="649"/>
         <source>There are no other versions on the server for this note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="653"/>
+        <location filename="../services/owncloudservice.cpp" line="666"/>
         <source>done with loading trashed notes</source>
         <translation type="unfinished"></translation>
     </message>

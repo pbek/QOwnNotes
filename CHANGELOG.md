@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 16.05.23
+- it is now possible to add **custom note file extensions** in the settings
+  (for [Issue #185](https://github.com/pbek/QOwnNotes/issues/185))
+    - these file extensions will be recognized in the note list and you can 
+      create new notes with them
+    - they will also work with the ownCloud note versions and the trash feature 
+      (for the latter you have to update QOwnNotesAPI on your ownCloud 
+      server to version 0.4.4)
+- fixed a possible crash in the ownCloud trash dialog
+- added more Portuguese, Dutch and Hungarian translation (thank you 
+  mlimacarlos and Fabijenna)
+
 ## 16.05.22
 - more fixes for a problem with the interface language under Windows
   (for [Issue #184](https://github.com/pbek/QOwnNotes/issues/184))
