@@ -404,9 +404,7 @@ void SettingsDialog::readSettings() {
     refreshTodoCalendarList(todoCalendarUrlList, true);
 
     // loads the custom note file extensions
-    QStringList customNoteFileExtensionList = settings.value(
-            "customNoteFileExtensionList").toStringList();
-    QListIterator<QString> itr(customNoteFileExtensionList);
+    QListIterator<QString> itr(Note::customNoteFileExtensionList());
     while (itr.hasNext()) {
         QString fileExtension = itr.next();
         addCustomeNoteFileExtension(fileExtension);

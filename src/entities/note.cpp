@@ -366,13 +366,28 @@ bool Note::storeNewDecryptedText(QString text) {
 }
 
 /**
- * Returns the default note file extension (`md` or `txt`)
+ * Returns the default note file extension (`md`, `txt` or custom extensions)
  */
 QString Note::defaultNoteFileExtension() {
     QSettings settings;
     QString extension = settings.value(
             "defaultNoteFileExtension", "txt").toString();
     return extension.isEmpty() ? "txt" : extension;
+}
+
+/**
+ * Returns the a list of the custom note file extensions
+ */
+QStringList Note::customNoteFileExtensionList(QString prefix) {
+    QSettings settings;
+    QStringList list = settings.value(
+            "customNoteFileExtensionList").toStringList();
+
+    if (!prefix.isEmpty()) {
+        list.replaceInStrings(QRegularExpression("^"), prefix);
+    }
+
+    return list;
 }
 
 /**

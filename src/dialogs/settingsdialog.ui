@@ -2312,7 +2312,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                 <item>
                  <property name="text">
-                  <string>Text file (.txt)</string>
+                  <string>Text file (txt)</string>
                  </property>
                  <property name="whatsThis">
                   <string notr="true">txt</string>
@@ -2320,7 +2320,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </item>
                 <item>
                  <property name="text">
-                  <string notr="true">Markdown (.md)</string>
+                  <string notr="true">Markdown (md)</string>
                  </property>
                  <property name="whatsThis">
                   <string notr="true">md</string>
