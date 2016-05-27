@@ -372,7 +372,7 @@ QString Note::defaultNoteFileExtension() {
     QSettings settings;
     QString extension = settings.value(
             "defaultNoteFileExtension", "txt").toString();
-    return extension.isEmpty() ? "txt" : extension;
+    return extension;
 }
 
 /**
