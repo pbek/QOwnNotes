@@ -9,6 +9,8 @@
       (for the latter you have to update QOwnNotesAPI on your ownCloud 
       server to version 0.4.4)
 - fixed a possible crash in the ownCloud trash dialog
+- added a menu entry to the `#qownnotes` **IRC channel** on freenode
+    - join the fun at [#qownnotes IRC channel](https://webchat.freenode.net/?channels=qownnotes)
 - added more Portuguese, Dutch and Hungarian translation (thank you 
   mlimacarlos and Fabijenna)
 

@@ -5595,3 +5595,11 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
         }
     }
 }
+
+/**
+ * Opens the IRC web chat page
+ */
+void MainWindow::on_actionOpen_IRC_Channel_triggered() {
+    QDesktopServices::openUrl(
+            QUrl("https://webchat.freenode.net/?channels=qownnotes"));
+}

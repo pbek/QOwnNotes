@@ -301,6 +301,8 @@ private slots:
 
     void showWindow();
 
+    void on_actionOpen_IRC_Channel_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
