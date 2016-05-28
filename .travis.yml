@@ -132,3 +132,8 @@ notifications:
   email:
     on_success: change
     on_failure: change
+  irc:
+    channels:
+      - "chat.freenode.net#qownnotes"
+    on_success: always
+    on_failure: never
