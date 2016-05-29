@@ -3595,6 +3595,11 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
 
     QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
+    QAction *openInExternalEditorAction = noteMenu.addAction(
+            tr("Open note in external editor"));
+    QAction *showInFileManagerAction = noteMenu.addAction(
+            tr("Show note in file manager"));
+    noteMenu.addSeparator();
     QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
 
     QAction *selectedItem = noteMenu.exec(globalPos);
@@ -3620,6 +3625,12 @@ void MainWindow::on_notesListWidget_customContextMenuRequested(
         } else if (selectedItem == selectAllAction) {
             // select all notes
             selectAllNotes();
+        } else if (selectedItem == openInExternalEditorAction) {
+            // opens the current note in an external editor
+            on_action_Open_note_in_external_editor_triggered();
+        } else if (selectedItem == showInFileManagerAction) {
+            // show the current note in the file manager
+            on_actionShow_note_in_file_manager_triggered();
         }
     }
 }

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.05.24
+- you can now `Show note in file manager` and `Open note in external editor` 
+  from the context menu in the note list
+  (for [Issue #188](https://github.com/pbek/QOwnNotes/issues/188))
+
 ## 16.05.23
 - it is now possible to add **custom note file extensions** in the settings
   (for [Issue #185](https://github.com/pbek/QOwnNotes/issues/185))
