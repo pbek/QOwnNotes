@@ -135,5 +135,10 @@ notifications:
   irc:
     channels:
       - "chat.freenode.net#qownnotes"
+    template:
+      - "%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+      - "Commit message : %{commit_message}"
+      - "Change view : %{compare_url}"
+      - "Build details : %{build_url}"
     on_success: always
     on_failure: never
