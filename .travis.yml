@@ -136,10 +136,10 @@ notifications:
     channels:
       - "chat.freenode.net#qownnotes"
     template:
-      - "%{repository} (%{branch} - %{commit}): %{message}"
-      - "Commit message : %{commit_message}"
-      - "Change view : %{compare_url}"
-      - "Build details : %{build_url}"
+      - "[%{commit}] %{repository} (%{branch}): %{message}"
+      - "[%{commit}] Commit message : %{commit_message}"
+      - "[%{commit}] Change view : %{compare_url}"
+      - "[%{commit}] Build details : %{build_url}"
     on_success: always
     on_failure: always
     use_notice: true
