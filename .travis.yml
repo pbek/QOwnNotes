@@ -57,8 +57,7 @@ script:
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
       if [ "${TRAVIS_BRANCH}" != "master" ]; then
            ./../bin/tests/tests -platform minimal -txt
-        && sudo pip install cpp-coveralls
-        && coveralls -b `pwd`/unit_tests/ -r `readlink -m ./../` -e tests/ -E .+/moc_.* -E .+/qrc_.* -E .+/qxt.* -E .+/ui_.*  > coveralls.log
+        && ../travis/linux/coveralls.sh
         ;
       fi
       ;
@@ -141,5 +140,5 @@ notifications:
       - "Change view : %{compare_url}"
       - "Build details : %{build_url}"
     on_success: always
-    on_failure: never
+    on_failure: always
     skip_join: true
