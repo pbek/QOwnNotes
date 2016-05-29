@@ -43,6 +43,12 @@ public:
 
     static QList<Note> fetchAll();
 
+    static QList<Note> fetchAllNotTagged();
+
+    static QStringList fetchAllNotTaggedNames();
+
+    static int countAllNotTagged();
+
     static QList<Note> search(QString text);
 
     static QList<QString> searchAsNameList(QString text,

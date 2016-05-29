@@ -6,6 +6,11 @@
 
 class Tag {
 public:
+    enum SpecialTag {
+        AllNotesId = -1,
+        AllUntaggedNotesId = -2,
+    };
+
     explicit Tag();
 
     int getId();
@@ -78,6 +83,10 @@ public:
     static int countAllParentId(int parentId);
 
     bool hasChild(int tagId);
+
+    static int countAllOfNote(Note note);
+
+    static void setAsActive(int tagId);
 
 protected:
     int id;

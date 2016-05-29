@@ -6,6 +6,8 @@
   (for [Issue #188](https://github.com/pbek/QOwnNotes/issues/188))
 - added tag name auto-completion when adding a tag to the current note
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
+- there now is a new item in the tag list that allows you to view all untagged 
+  notes (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
 - added more Portuguese and Japanese translation (thank you mlimacarlos and
   piyo)
 

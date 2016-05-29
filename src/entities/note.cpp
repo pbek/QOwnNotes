@@ -265,6 +265,54 @@ QList<Note> Note::fetchAll() {
     return noteList;
 }
 
+/**
+ * Returns all notes that are not tagged
+ */
+QList<Note> Note::fetchAllNotTagged() {
+    QList<Note> noteList = Note::fetchAll();
+    QList<Note> untaggedNoteList;
+
+    QListIterator<Note> itr(noteList);
+
+    while (itr.hasNext()) {
+        Note note = itr.next();
+        int tagCount = Tag::countAllOfNote(note);
+        if (tagCount == 0) {
+            untaggedNoteList << note;
+        }
+    }
+
+    return untaggedNoteList;
+}
+
+/**
+ * Returns all notes names that are not tagged
+ */
+QStringList Note::fetchAllNotTaggedNames() {
+    QList<Note> noteList = Note::fetchAll();
+    QStringList untaggedNoteFileNameList;
+
+    QListIterator<Note> itr(noteList);
+
+    while (itr.hasNext()) {
+        Note note = itr.next();
+        int tagCount = Tag::countAllOfNote(note);
+        if (tagCount == 0) {
+            untaggedNoteFileNameList << note.getName();
+        }
+    }
+
+    return untaggedNoteFileNameList;
+}
+
+/**
+ * Counts all notes that are not tagged
+ */
+int Note::countAllNotTagged() {
+    QList<Note> noteList = Note::fetchAllNotTagged();
+    return noteList.count();
+}
+
 QList<Note> Note::search(QString text) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);

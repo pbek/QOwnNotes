@@ -3062,20 +3062,32 @@ void MainWindow::filterNotesBySearchLineEditText() {
  * Does the note filtering by tags
  */
 void MainWindow::filterNotesByTag() {
-    // check if there is an active tag
-    Tag tag = Tag::activeTag();
+    int tagId = Tag::activeTagId();
+    QStringList fileNameList;
 
-    qDebug() << __func__ << " - 'tag': " << tag;
+    switch (tagId) {
+        case Tag::AllNotesId:
+            // don't do any additional filtering here
+            return;
+        break;
+        case Tag::AllUntaggedNotesId:
+            // get all note names that are not tagged
+            fileNameList = Note::fetchAllNotTaggedNames();
+            break;
+        default:
+            // check if there is an active tag
+            Tag tag = Tag::activeTag();
 
-    if (!tag.isFetched()) {
-        return;
+            if (!tag.isFetched()) {
+                return;
+            }
+
+            // fetch all linked note names
+            fileNameList = tag.fetchAllLinkedNoteFileNames();
+            break;
     }
 
-    // fetch all linked note names
-    QStringList fileNameList = tag.fetchAllLinkedNoteFileNames();
-
     qDebug() << __func__ << " - 'fileNameList': " << fileNameList;
-
 
     // loop through all notes
     for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
@@ -4675,17 +4687,17 @@ void MainWindow::reloadTagTree()
 
     ui->tagTreeWidget->clear();
 
+    // add an item to view all notes
     int linkCount = Note::countAll();
     QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
-    // add an item to view all notes
     QTreeWidgetItem *allItem = new QTreeWidgetItem();
     allItem->setText(0, tr("All notes"));
     allItem->setTextColor(1, QColor(Qt::gray));
     allItem->setText(1, QString::number(linkCount));
     allItem->setToolTip(0, toolTip);
     allItem->setToolTip(1, toolTip);
-    allItem->setData(0, Qt::UserRole, -1);
+    allItem->setData(0, Qt::UserRole, Tag::AllNotesId);
     allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
     allItem->setIcon(0, QIcon::fromTheme(
             "edit-copy",
@@ -4700,6 +4712,23 @@ void MainWindow::reloadTagTree()
 
     // add all tags recursively as items
     buildTagTreeForParentItem();
+
+    // add an item to view untagged notes
+    linkCount = Note::countAllNotTagged();
+    toolTip = tr("show all untagged notes (%1)")
+            .arg(QString::number(linkCount));
+    QTreeWidgetItem *untaggedItem = new QTreeWidgetItem();
+    untaggedItem->setText(0, tr("Untagged notes"));
+    untaggedItem->setTextColor(1, QColor(Qt::gray));
+    untaggedItem->setText(1, QString::number(linkCount));
+    untaggedItem->setToolTip(0, toolTip);
+    untaggedItem->setToolTip(1, toolTip);
+    untaggedItem->setData(0, Qt::UserRole, Tag::AllUntaggedNotesId);
+    untaggedItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    untaggedItem->setIcon(0, QIcon::fromTheme(
+            "edit-copy",
+            QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+    ui->tagTreeWidget->addTopLevelItem(untaggedItem);
 
     // decorate root of there multiple levels to be able to expand them
     ui->tagTreeWidget->setRootIsDecorated(
@@ -5177,16 +5206,14 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
         return;
     }
 
+    // set the tag id as active
     int tagId = current->data(0, Qt::UserRole).toInt();
-    Tag tag = Tag::fetch(tagId);
-    tag.setAsActive();
+    Tag::setAsActive(tagId);
 
-    if (tag.isFetched()) {
-        const QSignalBlocker blocker(ui->searchLineEdit);
-        Q_UNUSED(blocker);
+    const QSignalBlocker blocker(ui->searchLineEdit);
+    Q_UNUSED(blocker);
 
-        ui->searchLineEdit->clear();
-    }
+    ui->searchLineEdit->clear();
 
     filterNotes();
 }

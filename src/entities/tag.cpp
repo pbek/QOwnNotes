@@ -242,6 +242,26 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 }
 
 /**
+ * Count all linked tags of a note
+ */
+int Tag::countAllOfNote(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
+                          "WHERE note_file_name = :fileName");
+    query.bindValue(":fileName", note.getName());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
+/**
  * Checks if tag is linked to a note
  */
 bool Tag::isLinkedToNote(Note note) {
@@ -256,7 +276,7 @@ bool Tag::isLinkedToNote(Note note) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    } else {
+    } else if (query.first()) {
         return query.value("cnt").toInt() > 0;
     }
 
@@ -496,8 +516,12 @@ bool Tag::isFetched() {
 }
 
 void Tag::setAsActive() {
+    Tag::setAsActive(id);
+}
+
+void Tag::setAsActive(int tagId) {
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();
-    noteFolder.setActiveTagId(id);
+    noteFolder.setActiveTagId(tagId);
     noteFolder.store();
 }
 
