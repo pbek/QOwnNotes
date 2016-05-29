@@ -56,6 +56,8 @@ public:
 
     QStringList fetchAllLinkedNoteFileNames();
 
+    static QStringList fetchAllNames();
+
     bool isLinkedToNote(Note note);
 
     static bool removeAllLinksToNote(Note note);

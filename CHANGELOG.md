@@ -4,6 +4,8 @@
 - you can now `Show note in file manager` and `Open note in external editor` 
   from the context menu in the note list
   (for [Issue #188](https://github.com/pbek/QOwnNotes/issues/188))
+- added tag name auto-completion when adding a tag to the current note
+  (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
 - added more Portuguese and Japanese translation (thank you mlimacarlos and
   piyo)
 

@@ -316,6 +316,28 @@ QStringList Tag::fetchAllLinkedNoteFileNames() {
 }
 
 /**
+ * Fetches all tag names
+ */
+QStringList Tag::fetchAllNames() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    QStringList nameList;
+
+    query.prepare("SELECT name FROM tag ORDER BY name");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            nameList.append(query.value("name").toString());
+        }
+    }
+
+    return nameList;
+}
+
+/**
  * Count the linked note file names
  */
 int Tag::countLinkedNoteFileNames() {

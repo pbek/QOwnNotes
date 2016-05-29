@@ -24,6 +24,7 @@
 #include <QProcess>
 #include <QJSEngine>
 #include <QInputDialog>
+#include <QCompleter>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -4984,6 +4985,12 @@ void MainWindow::on_newNoteTagButton_clicked() {
     ui->newNoteTagLineEdit->setFocus();
     ui->newNoteTagLineEdit->selectAll();
     ui->newNoteTagButton->setVisible(false);
+
+    // add tag name auto-completion
+    QStringList wordList = Tag::fetchAllNames();
+    QCompleter *completer = new QCompleter(wordList, this);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    ui->newNoteTagLineEdit->setCompleter(completer);
 }
 
 /**

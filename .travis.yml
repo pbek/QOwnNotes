@@ -132,6 +132,7 @@ notifications:
     on_success: change
     on_failure: change
   irc:
+    # https://docs.travis-ci.com/user/notifications/#IRC-notification
     channels:
       - "chat.freenode.net#qownnotes"
     template:
@@ -141,4 +142,5 @@ notifications:
       - "Build details : %{build_url}"
     on_success: always
     on_failure: always
+    use_notice: true
     skip_join: true
