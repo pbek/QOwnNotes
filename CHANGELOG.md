@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+16.06.0
+- now the tag list context menu isn't opened if no tags are selected
+  (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
+
 ## 16.05.24
 - you can now `Show note in file manager` and `Open note in external editor` 
   from the context menu in the note list

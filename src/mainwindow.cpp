@@ -5223,6 +5223,11 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
  */
 void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
 {
+    // don't open the context menu if no tags are selected
+    if (ui->tagTreeWidget->selectedItems().count() == 0) {
+        return;
+    }
+
     QPoint globalPos = ui->tagTreeWidget->mapToGlobal(pos);
     QMenu menu;
 
