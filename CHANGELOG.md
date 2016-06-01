@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-16.06.0
+## 16.06.0
 - now the tag list context menu isn't opened if no tags are selected
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
 - fixed a wrong note count for `All notes` in the tag list
