@@ -5,7 +5,10 @@
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
 - fixed a wrong note count for `All notes` in the tag list
 - the item `Untagged notes` in the tag list will now only be viewed if there 
-  are untagged notes 
+  are untagged notes
+- instead of the notification dialog after bulk tagging notes now a status 
+  message will be shown
+  (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
 
 ## 16.05.24
 - you can now `Show note in file manager` and `Open note in external editor` 

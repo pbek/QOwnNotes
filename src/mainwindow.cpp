@@ -2508,10 +2508,9 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                 }
             }
 
-        QMessageBox::information(
-                this, tr("Done"),
+        showStatusBarMessage(
                 tr("%n note(s) were tagged with <strong>%2</strong>.", "",
-                   tagCount).arg(tag.getName()));
+                   tagCount).arg(tag.getName()), 5000);
     }
 }
 
