@@ -4713,22 +4713,25 @@ void MainWindow::reloadTagTree()
     // add all tags recursively as items
     buildTagTreeForParentItem();
 
-    // add an item to view untagged notes
+    // add an item to view untagged notes if there are any
     linkCount = Note::countAllNotTagged();
-    toolTip = tr("show all untagged notes (%1)")
-            .arg(QString::number(linkCount));
-    QTreeWidgetItem *untaggedItem = new QTreeWidgetItem();
-    untaggedItem->setText(0, tr("Untagged notes"));
-    untaggedItem->setTextColor(1, QColor(Qt::gray));
-    untaggedItem->setText(1, QString::number(linkCount));
-    untaggedItem->setToolTip(0, toolTip);
-    untaggedItem->setToolTip(1, toolTip);
-    untaggedItem->setData(0, Qt::UserRole, Tag::AllUntaggedNotesId);
-    untaggedItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
-    untaggedItem->setIcon(0, QIcon::fromTheme(
-            "edit-copy",
-            QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
-    ui->tagTreeWidget->addTopLevelItem(untaggedItem);
+
+    if (linkCount > 0) {
+        toolTip = tr("show all untagged notes (%1)")
+                .arg(QString::number(linkCount));
+        QTreeWidgetItem *untaggedItem = new QTreeWidgetItem();
+        untaggedItem->setText(0, tr("Untagged notes"));
+        untaggedItem->setTextColor(1, QColor(Qt::gray));
+        untaggedItem->setText(1, QString::number(linkCount));
+        untaggedItem->setToolTip(0, toolTip);
+        untaggedItem->setToolTip(1, toolTip);
+        untaggedItem->setData(0, Qt::UserRole, Tag::AllUntaggedNotesId);
+        untaggedItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+        untaggedItem->setIcon(0, QIcon::fromTheme(
+                "edit-copy",
+                QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+        ui->tagTreeWidget->addTopLevelItem(untaggedItem);
+    }
 
     // decorate root of there multiple levels to be able to expand them
     ui->tagTreeWidget->setRootIsDecorated(

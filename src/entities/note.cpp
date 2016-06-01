@@ -453,11 +453,16 @@ bool Note::store() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
-    if (this->fileName == "") {
-        this->fileName = this->name + "." + defaultNoteFileExtension();
+    if (fileName.isEmpty()) {
+        // don't store notes with empty filename and empty name
+        if (name.isEmpty()) {
+            return false;
+        }
+
+        fileName = name + "." + defaultNoteFileExtension();
     }
 
-    if (this->id > 0) {
+    if (id > 0) {
         query.prepare("UPDATE note SET "
                               "name = :name,"
                               "file_name = :file_name,"
@@ -470,7 +475,7 @@ bool Note::store() {
                               "crypto_password = :crypto_password,"
                               "modified = :modified "
                               "WHERE id = :id");
-        query.bindValue(":id", this->id);
+        query.bindValue(":id", id);
     } else {
         query.prepare("INSERT INTO note"
                               "(name, file_name, note_text, has_dirty_data,"
@@ -484,26 +489,26 @@ bool Note::store() {
 
     QDateTime modified = QDateTime::currentDateTime();
 
-    query.bindValue(":name", this->name);
-    query.bindValue(":file_name", this->fileName);
-    query.bindValue(":note_text", this->noteText);
-    query.bindValue(":decrypted_note_text", this->decryptedNoteText);
-    query.bindValue(":has_dirty_data", this->hasDirtyData ? 1 : 0);
-    query.bindValue(":file_created", this->fileCreated);
-    query.bindValue(":file_last_modified", this->fileLastModified);
-    query.bindValue(":crypto_key", this->cryptoKey);
-    query.bindValue(":crypto_password", this->cryptoPassword);
+    query.bindValue(":name", name);
+    query.bindValue(":file_name", fileName);
+    query.bindValue(":note_text", noteText);
+    query.bindValue(":decrypted_note_text", decryptedNoteText);
+    query.bindValue(":has_dirty_data", hasDirtyData ? 1 : 0);
+    query.bindValue(":file_created", fileCreated);
+    query.bindValue(":file_last_modified", fileLastModified);
+    query.bindValue(":crypto_key", cryptoKey);
+    query.bindValue(":crypto_password", cryptoPassword);
     query.bindValue(":modified", modified);
 
     // on error
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
-    } else if (this->id == 0) {  // on insert
-        this->id = query.lastInsertId().toInt();
+    } else if (id == 0) {  // on insert
+        id = query.lastInsertId().toInt();
     }
 
-    this->modified = modified;
+    modified = modified;
     return true;
 }
 
