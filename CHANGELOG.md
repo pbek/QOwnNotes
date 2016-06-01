@@ -9,6 +9,8 @@
 - instead of the notification dialog after bulk tagging notes now a status 
   message will be shown
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))
+- added more Portuguese, Russian, German and Japanese translation (thank you 
+  mlimacarlos, frostyland, bigant and piyo)
 
 ## 16.05.24
 - you can now `Show note in file manager` and `Open note in external editor` 
