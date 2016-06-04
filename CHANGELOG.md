@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.06.1
+- the window title will now be updated correctly if the note is renamed 
+
 ## 16.06.0
 - now the tag list context menu isn't opened if no tags are selected
   (for [Issue #166](https://github.com/pbek/QOwnNotes/issues/166))

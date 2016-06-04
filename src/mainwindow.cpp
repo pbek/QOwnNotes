@@ -1590,6 +1590,9 @@ void MainWindow::storeUpdatedNotesToDisk() {
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
 
+                // just to make sure the window title is set correctly
+                updateWindowTitle();
+
                 // reload the directory list if note name has changed
                 loadNoteDirectoryList();
             }
@@ -1865,7 +1868,7 @@ void MainWindow::setCurrentNote(Note note,
 
     this->currentNote = note;
     QString name = note.getName();
-    this->setWindowTitle(name + " - QOwnNotes " + QString(VERSION));
+    updateWindowTitle();
 
     // set the note text edit to readonly if note file is not writable
     QFileInfo *f = new QFileInfo(
@@ -1901,6 +1904,13 @@ void MainWindow::setCurrentNote(Note note,
     reloadCurrentNoteTags();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+}
+
+/**
+ * Updates the windows title for the current note
+ */
+void MainWindow::updateWindowTitle() {
+    setWindowTitle(currentNote.getName() + " - QOwnNotes " + QString(VERSION));
 }
 
 void MainWindow::focusNoteTextEdit() {

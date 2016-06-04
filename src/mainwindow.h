@@ -512,4 +512,6 @@ private:
     void restoreMainSplitterState(
             bool invertTagState = false, bool invertMarkdownState = false,
             bool invertEditState = false, bool invertVerticalModeState = false);
+
+    void updateWindowTitle();
 };
