@@ -2,6 +2,7 @@
 
 ## 16.06.1
 - the window title will now be updated correctly if the note is renamed 
+- added more Spanish translation (thank you guijan)
 
 ## 16.06.0
 - now the tag list context menu isn't opened if no tags are selected

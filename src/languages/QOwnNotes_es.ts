@@ -58,47 +58,47 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="14"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>logs</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="55"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Grave</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="87"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Aviso</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="24"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Grave</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="48"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="94"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Information</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="62"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Status</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="69"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="76"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Borrar log</translation>
     </message>
   </context>
   <context>
@@ -141,7 +141,7 @@
     <message>
       <location filename="../mainwindow.ui" line="272"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>Navegación</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="528"/>
@@ -191,7 +191,7 @@
     <message>
       <location filename="../mainwindow.ui" line="659"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="673"/>
@@ -333,7 +333,7 @@
     <message>
       <location filename="../mainwindow.ui" line="935"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>Mostrar Shortcuts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="944"/>
@@ -539,48 +539,48 @@
     <message>
       <location filename="../mainwindow.ui" line="1373"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Reemplazar nodo actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1381"/>
       <source>Solve equation</source>
-      <translation type="unfinished">Solve equation</translation>
+      <translation>Resolver ecuación</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1384"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Resolver una ecuación simple como '(2+3)*6=' en la fila actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1392"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Seleccionar archivador de nodos</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1407"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Recargar scripting engine</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1419"/>
       <source>Show log dialog</source>
-      <translation type="unfinished">Show log dialog</translation>
+      <translation>Mostrar diálogo de log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
       <source>Export note as HTML (markdown)</source>
-      <translation type="unfinished">Export note as HTML (markdown)</translation>
+      <translation>Exportar nota como HTML (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1437"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Abrir chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1440"/>
       <location filename="../mainwindow.ui" line="1443"/>
       <source>Open the #qownnotes IRC channel</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel</translation>
+      <translation>Abrir el canal IRC #qownnotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1433"/>
@@ -852,22 +852,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="2786"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Retrato</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2786"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Paisaje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2791"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Orientación</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2791"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Orientación:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2811"/>
@@ -882,82 +882,82 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="3376"/>
       <source>Open QOwnNotes</source>
-      <translation type="unfinished">Open QOwnNotes</translation>
+      <translation>Abrir QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3385"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Nueva nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3401"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Notas recientes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3434"/>
       <source>Show todo lists</source>
-      <translation type="unfinished">Show todo lists</translation>
+      <translation>Mostrar listas de todo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3445"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Tareas recientes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3477"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>Cerrar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3611"/>
       <source>Open note in external editor</source>
-      <translation type="unfinished">Open note in external editor</translation>
+      <translation>Abrir nota en editor externo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3613"/>
       <source>Show note in file manager</source>
-      <translation type="unfinished">Show note in file manager</translation>
+      <translation>Mostrar nota en administrador de archivos</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4719"/>
       <source>show all untagged notes (%1)</source>
-      <translation type="unfinished">show all untagged notes (%1)</translation>
+      <translation>Mostrar todas las notas sin etiquetar (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4722"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>Notas sin etiquetar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5604"/>
       <source>the scripting engine was reloaded</source>
-      <translation type="unfinished">the scripting engine was reloaded</translation>
+      <translation>La engine de scripting ha sido actualizada</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5619"/>
       <source>HTML files (*.html)</source>
-      <translation type="unfinished">HTML files (*.html)</translation>
+      <translation>Archivos HTML (*.html)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5620"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>Exportar nota abierta como archivo HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2769"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Tamaño de página</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="355"/>
       <source>your tasks are being loaded from your ownCloud server</source>
-      <translation type="unfinished">your tasks are being loaded from your ownCloud server</translation>
+      <translation>las tareas se están cargando desde el servidor de ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2769"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Tamaño de página:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2850"/>
@@ -1012,7 +1012,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="3670"/>
       <source>Paste HTML or media</source>
-      <translation type="unfinished">Paste HTML or media</translation>
+      <translation>Pegar HTML o los medios</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4691"/>
@@ -1027,7 +1027,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5237"/>
       <source>&amp;Add tag</source>
-      <translation type="unfinished">&amp;Add tag</translation>
+      <translation>&amp;añadir tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5244"/>
@@ -1037,7 +1037,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5276"/>
       <source>Tag could not be created!</source>
-      <translation type="unfinished">Tag could not be created!</translation>
+      <translation>No se pudo crear la etiqueta!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5330"/>
@@ -1067,12 +1067,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5517"/>
       <source>no equation was found in front of the cursor</source>
-      <translation type="unfinished">no equation was found in front of the cursor</translation>
+      <translation>No se pudo encontrar ninguna ecuación en la posición del cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5536"/>
       <source>result for equation: %1 = %2</source>
-      <translation type="unfinished">result for equation: %1 = %2</translation>
+      <translation>Resultado de la ecuación: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4781"/>
@@ -1287,7 +1287,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="87"/>
       <source>headline %1</source>
-      <translation type="unfinished">headline %1</translation>
+      <translation>Titulo %1</translation>
     </message>
   </context>
   <context>
@@ -1310,7 +1310,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="66"/>
       <source>Ignore all external modifications in the future</source>
-      <translation type="unfinished">Ignore all external modifications in the future</translation>
+      <translation>Ignorar todos los cambios externos en el futuro</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="19"/>
@@ -1427,7 +1427,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation type="unfinished">replace text</translation>
+      <translation>Reemplazar texto</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
@@ -1447,47 +1447,47 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>Reemplazar con</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation type="unfinished">Replace:</translation>
+      <translation>Reemplazar:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation type="unfinished">Plain text</translation>
+      <translation>Texto sin formato</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation type="unfinished">Whole words</translation>
+      <translation>Palabras completas</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation type="unfinished">Regular expression</translation>
+      <translation>Expresión regular</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation type="unfinished">Replace</translation>
+      <translation>Reemplazar</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation type="unfinished">Replace All</translation>
+      <translation>Reemplazar todo</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Modo:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Coincidir mayúsculas y minúsculas</translation>
     </message>
   </context>
   <context>
@@ -1525,7 +1525,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../services/scriptingservice.cpp" line="133"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>archivo no existe</translation>
     </message>
   </context>
   <context>
@@ -2016,17 +2016,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2032"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Necesita volver a cargar el script engine si modifca un programa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2035"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Recargar scripting engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>Validar script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2085"/>
@@ -2063,7 +2063,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2125"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation type="unfinished">Notify about all external modifications of the current note</translation>
+      <translation>Notificar sobre todas las modificaciones externas de la nota actual</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2380"/>
@@ -2146,67 +2146,67 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1515"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Italiano</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1814"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1820"/>
       <source>Your scripts</source>
-      <translation type="unfinished">Your scripts</translation>
+      <translation>Tus scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1887"/>
       <source>&amp;Add script</source>
-      <translation type="unfinished">&amp;Add script</translation>
+      <translation>&amp;añadir script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1911"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>&amp; Eliminar script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1943"/>
       <source>Script path</source>
-      <translation type="unfinished">Script path</translation>
+      <translation>Ruta del script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1997"/>
       <source>Click here to select your QML script</source>
-      <translation type="unfinished">Click here to select your QML script</translation>
+      <translation>Haga clic aquí para seleccionar su script QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1990"/>
       <source>path to your QML file</source>
-      <translation type="unfinished">path to your QML file</translation>
+      <translation>ruta al archivo QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1980"/>
       <source>script name</source>
-      <translation type="unfinished">script name</translation>
+      <translation>nombre del script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2151"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
+      <translation>Permita que el nombre de archivo de nota sea diferente del titular. &lt;br&gt;Sea consciente de que las notas onnCloud tienen que ser las mismas!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2157"/>
       <source>Allow note file name to be different from headline</source>
-      <translation type="unfinished">Allow note file name to be different from headline</translation>
+      <translation>Permitir que el nombre de archivo de la nota sea diferente al titulo de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2164"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+      <translation>Marque esto si desea ignorar todas las modificaciones externas mientras está editando la nota actual.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2170"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation type="unfinished">Ignore all external modifications of the current note</translation>
+      <translation>Ignorar todas las modificaciones externas de la nota actual</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2206"/>
@@ -2226,27 +2226,27 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2258"/>
       <source>Add a custom file extension</source>
-      <translation type="unfinished">Add a custom file extension</translation>
+      <translation>Agregar una extensión de archivo personalizado</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2272"/>
       <source>Remove a custom file extension</source>
-      <translation type="unfinished">Remove a custom file extension</translation>
+      <translation>Quitar una extensión de archivo personalizado</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2311"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
+      <translation>Si agregas extensiones personalizadas simplemente teclee la extensión, como "taskpaper".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Text file (txt)</source>
-      <translation type="unfinished">Text file (txt)</translation>
+      <translation>Archivo de texto (.txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2343"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>Ruta a editor externo:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2412"/>
@@ -2359,54 +2359,54 @@ Mensaje de error de conexión: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1364"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</translation>
+      <translation>Si necesita acceso a una cierta funcionalidad en QOwnNotes por favor abra un tema en el &lt;a href="%1"&gt; QOwnNotes pagina de problemas&lt;/a&gt;. Haga clic en &lt;a href="%2"&gt; ejemplos QML&lt;/a&gt; para iniciar el scripting.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1376"/>
       <source>new script</source>
-      <translation type="unfinished">new script</translation>
+      <translation>nuevo script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1411"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Eliminar script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1412"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>¿Quitar el script actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
       <source>Please select your QML file</source>
-      <translation type="unfinished">Please select your QML file</translation>
+      <translation>Por favor, seleccione su archivo QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1438"/>
       <source>QML Files (*.qml)</source>
-      <translation type="unfinished">QML Files (*.qml)</translation>
+      <translation>Archivos QML (*.qml)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1499"/>
       <source>Your script seems to be valid</source>
-      <translation type="unfinished">Your script seems to be valid</translation>
+      <translation>Su script parece ser válido</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1500"/>
       <source>There were script errors:
 %1</source>
-      <translation type="unfinished">There were script errors:
+      <translation>Hubo errores en el script:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1591"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Extensión de archivo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1592"/>
       <source>Enter your custom file extension:</source>
-      <translation type="unfinished">Enter your custom file extension:</translation>
+      <translation>Escriba la extensión de archivo personalizado:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="827"/>
@@ -2464,17 +2464,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation type="unfinished">Add a new tag</translation>
+      <translation>Agregar una nueva etiqueta</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation type="unfinished">Add new tag</translation>
+      <translation>Añadir etiqueta nueva</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>new tag</source>
-      <translation type="unfinished">new tag</translation>
+      <translation>etiqueta nueva</translation>
     </message>
   </context>
   <context>
@@ -2677,12 +2677,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="52"/>
       <source>Diff</source>
-      <translation type="unfinished">Diff</translation>
+      <translation>Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="85"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Texto de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
