@@ -403,7 +403,7 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
 /**
  * QML wrapper to get the current note
  *
- * @return {Note} the path of the current note folder
+ * @return {NoteApi} the the current note
  */
 NoteApi* ScriptingService::currentNote() {
     return _currentNoteAPi;

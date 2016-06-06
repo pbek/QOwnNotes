@@ -55,11 +55,11 @@ var path = script.currentNoteFolderPath();
 
 ```cpp
 /**
- * QML wrapper to get the current note folder path
+ * QML wrapper to get the current note
  *
  * @returns {NoteApi} the the current note object
  */
-QString currentNote();
+NoteApi currentNote();
 ```
 
 #### Usage in QML
