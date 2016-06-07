@@ -21,12 +21,12 @@ QtObject {
         var result1 = re1.exec(text);
         
         if (result1 === null) {
-            re1 = /^Nachricht aktualisiert von [\w\s]+$\s\s^(.+)$/igm;
+            re1 = /^Nachricht aktualisiert von [\w\s]+$\s\s^Aufgabe: (.+)$/igm;
             result1 = re1.exec(text);
         }
 
         if (result1 === null) {
-            re1 = /^Neue Nachricht erstellt von [\w\s]+$\s\s^(.+)$/igm;
+            re1 = /^Neue Nachricht erstellt von [\w\s]+$\s\s^Aufgabe: (.+)$/igm;
             result1 = re1.exec(text);
         }
 
