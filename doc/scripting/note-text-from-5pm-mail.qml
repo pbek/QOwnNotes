@@ -13,9 +13,22 @@ QtObject {
      * @returns the string that should be inserted instead of the text from the QMimeData object
      */
     function insertingFromMimeDataHook(text, html) {
+//         script.log(text);
+//         script.log(html);
+
         // http://www.regexpal.com is your friend
         var re1 = /^Neue Aufgabe von [\w\s]+$\s\s^(.+)$/igm;
         var result1 = re1.exec(text);
+        
+        if (result1 === null) {
+            re1 = /^Nachricht aktualisiert von [\w\s]+$\s\s^(.+)$/igm;
+            result1 = re1.exec(text);
+        }
+
+        if (result1 === null) {
+            re1 = /^Neue Nachricht erstellt von [\w\s]+$\s\s^(.+)$/igm;
+            result1 = re1.exec(text);
+        }
 
         var re2 = /^Direkter Zugriff hier: (http.+\d+)$/igm;
         var result2 = re2.exec(text);
@@ -23,8 +36,18 @@ QtObject {
         var re3 = /^Projekt: .+\nBeschreibung: ((.|\n)+)^Priorität: /igm;
         var result3 = re3.exec(text);
         
+        if (result3 === null) {
+            re3 = /^Projekt: .+\n((.|\n)+)^Direkter Zugriff hier: /igm;
+            result3 = re3.exec(text);
+        }
+        
+//         script.log(result1);
+//         script.log(result2);
+//         script.log(result3);
+        
         // return an empty string if we didn't find anything
         if ((result1 === null) || (result2 === null)) {
+            script.log("no 5pm task was found");
             return "";
         }
 
