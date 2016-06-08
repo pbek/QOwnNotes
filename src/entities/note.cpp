@@ -358,6 +358,74 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
     return nameList;
 }
 
+/**
+ * Searches for text in notes and returns the note ids
+ *
+ * By default notes that contain every single word will be found, `word1
+ * word2` will find all notes that are containing `word1` and `word2`
+ *
+ * You can search for longer texts by using quotes, `"this word1" word2`
+ * will find all notes that are containing `this word1` and `word2`
+ */
+QList<int> Note::searchInNotes(QString search) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+    QList<int> noteIdList;
+    QStringList sqlList;
+
+    // build the string list of the search string
+    QStringList queryStrings = buildQueryStringList(search);
+
+    for (int i = 0; i < queryStrings.count(); i++) {
+        sqlList.append("note_text LIKE ?");
+    }
+
+    QString sql = "SELECT id FROM note WHERE " + sqlList.join( " AND " );
+    query.prepare(sql);
+
+    // add the values to the query
+    for (int i = 0; i < queryStrings.count(); i++) {
+        query.bindValue(i, "%" + queryStrings[i] + "%");
+    }
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            noteIdList.append(query.value("id").toInt());
+        }
+    }
+
+    return noteIdList;
+}
+
+/**
+ * Builds a string list of a search string
+ */
+QStringList Note::buildQueryStringList(QString searchString) {
+    QStringList queryStrings;
+
+    // check for strings in ""
+    QRegularExpression re("\"([^\"]+)\"");
+    QRegularExpressionMatchIterator i = re.globalMatch(searchString);
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        queryStrings.append(match.captured(1));
+        searchString.remove(match.captured(0));
+    }
+
+    // remove a possible remaining "
+
+    searchString.remove("\"");
+    // remove multiple spaces and spaces in front and at the end
+    searchString = searchString.simplified();
+
+    // add the remaining strings
+    queryStrings.append(searchString.split(" "));
+
+    return queryStrings;
+}
+
 QStringList Note::fetchNoteNames() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);

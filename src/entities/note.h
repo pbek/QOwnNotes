@@ -144,6 +144,8 @@ public:
 
     bool modifyNoteTextFileNameFromQMLHook();
 
+    static QList<int> searchInNotes(QString query);
+
 protected:
     int id;
     QString name;
@@ -165,6 +167,8 @@ protected:
 signals:
 
 public slots:
+
+    static QStringList buildQueryStringList(QString searchString);
 };
 
 #endif // NOTE_H

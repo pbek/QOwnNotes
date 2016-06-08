@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.06.2
+- you now can **search for multiple words** in notes
+  (for [Issue #195](https://github.com/pbek/QOwnNotes/issues/195))
+    - by default notes that contain every single word will be found, `word1 
+      word2` will find all notes that are containing `word1` and `word2`
+    - you can search for longer texts by using quotes, `"this word1" word2` 
+      will find all notes that are containing `this word1` and `word2`
+
 ## 16.06.1
 - the window title will now be updated correctly if the note is renamed 
 - added more Spanish translation (thank you guijan)

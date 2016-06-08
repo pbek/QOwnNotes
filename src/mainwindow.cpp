@@ -3042,12 +3042,12 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
-        QList<QString> noteNameList = Note::searchAsNameList(arg1);
+        QList<int> noteIdList = Note::searchInNotes(arg1);
         this->firstVisibleNoteListRow = -1;
 
         for (int i = 0; i < this->ui->notesListWidget->count(); ++i) {
             QListWidgetItem *item = this->ui->notesListWidget->item(i);
-            if (noteNameList.indexOf(item->text()) < 0) {
+            if (noteIdList.indexOf(item->data(Qt::UserRole).toInt()) < 0) {
                 item->setHidden(true);
             } else {
                 if (this->firstVisibleNoteListRow < 0) {
