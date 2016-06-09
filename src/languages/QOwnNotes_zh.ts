@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="14"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="55"/>
@@ -88,7 +88,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="62"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>状态</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="69"/>

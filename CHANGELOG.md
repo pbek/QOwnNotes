@@ -14,6 +14,7 @@
     - for every note folder a different search history will be kept
     - your whole search history will be shown if you press the <kbd>Down</kbd> 
       button in the note search line edit
+- added more Chinese translation (thank you hoilc)
 
 ## 16.06.1
 - the window title will now be updated correctly if the note is renamed 
