@@ -7,6 +7,13 @@
       word2` will find all notes that are containing `word1` and `word2`
     - you can search for longer texts by using quotes, `"this word1" word2` 
       will find all notes that are containing `this word1` and `word2`
+- there now is a **search history**
+  (for [Issue #138](https://github.com/pbek/QOwnNotes/issues/138))
+    - your last 100 note searches will be stored and you can access them as 
+      completer in the note search line edit
+    - for every note folder a different search history will be kept
+    - your whole search history will be shown if you press the <kbd>Down</kbd> 
+      button in the note search line edit
 
 ## 16.06.1
 - the window title will now be updated correctly if the note is renamed 

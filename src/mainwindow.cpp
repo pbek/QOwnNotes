@@ -60,6 +60,7 @@ MainWindow::MainWindow(QWidget *parent) :
         ui(new Ui::MainWindow) {
     ui->setupUi(this);
     _noteViewIsRegenerated = false;
+    _searchLineEditFromCompleter = false;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -163,6 +164,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
     ui->notesListWidget->setCurrentRow(0);
+
+    // init the saved searches completer
+    initSavedSearchesCompleter();
 
     // ignores note clicks in QMarkdownTextEdit in the note text edit
     ui->noteTextEdit->setIgnoredClickUrlSchemata(
@@ -2050,11 +2054,47 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 
-        if (obj == ui->searchLineEdit) {
-            // set focus to the notes list if Key_Down or Key_Tab were
+        if (obj == ui->searchLineEdit->completer()->popup()) {
+            if (keyEvent->key() == Qt::Key_Return) {
+                // set a variable to ignore that first "Return" in the
+                // return-handler
+                _searchLineEditFromCompleter = true;
+                return false;
+            }
+        } else if (obj == ui->searchLineEdit) {
+            bool downSelectNote = false;
+
+            // fallback to the default completion
+            ui->searchLineEdit->completer()->setCompletionMode(
+                    QCompleter::PopupCompletion);
+
+            if (keyEvent->key() == Qt::Key_Down) {
+                if (ui->searchLineEdit->completer()->completionCount() > 0) {
+                    // the search text is empty we want to show all saved
+                    // searches if "Down" was pressed
+                    if (ui->searchLineEdit->text().isEmpty()) {
+                        ui->searchLineEdit->completer()->setCompletionMode(
+                                QCompleter::UnfilteredPopupCompletion);
+                    }
+
+                    // open the completer
+                    ui->searchLineEdit->completer()->complete();
+                    return false;
+                } else {
+                    // if nothing was found in the completer we want to jump
+                    // to the note list
+                    downSelectNote = true;
+                }
+            }
+
+            // set focus to the notes list if Key_Right or Key_Tab were
             // pressed in the search line edit
-            if ((keyEvent->key() == Qt::Key_Down) ||
-                (keyEvent->key() == Qt::Key_Tab)) {
+            if ((keyEvent->key() == Qt::Key_Right) ||
+                (keyEvent->key() == Qt::Key_Tab) ||
+                downSelectNote) {
+                // add the current search text to the saved searches
+                storeSavedSearch();
+
                 // choose an other selected item if current item is invisible
                 QListWidgetItem *item = ui->notesListWidget->currentItem();
                 if ((item != NULL) &&
@@ -3131,6 +3171,15 @@ void MainWindow::on_action_Find_note_triggered() {
 // jump to found note or create a new one if not found
 //
 void MainWindow::on_searchLineEdit_returnPressed() {
+    // ignore if `return` was pressed in the completer
+    if (_searchLineEditFromCompleter) {
+        _searchLineEditFromCompleter = false;
+        return;
+    }
+
+    // add the current search text to the saved searches
+    storeSavedSearch();
+
     QString text = this->ui->searchLineEdit->text();
     text = text.trimmed();
 
@@ -5664,4 +5713,54 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
 void MainWindow::on_actionOpen_IRC_Channel_triggered() {
     QDesktopServices::openUrl(
             QUrl("https://webchat.freenode.net/?channels=qownnotes"));
+}
+
+/**
+ * Adds the current search text to the saved searches
+ */
+void MainWindow::storeSavedSearch() {
+    QString text = ui->searchLineEdit->text();
+    if (!text.isEmpty()) {
+        int noteFolderId = NoteFolder::currentNoteFolderId();
+        QSettings settings;
+        QString settingsKey = "savedSearches/noteFolder-"
+                              + QString::number(noteFolderId);
+        QStringList savedSearches = settings.value(settingsKey)
+                .toStringList();
+
+        // add the text to the saved searches
+        savedSearches.prepend(text);
+
+        // remove duplicate entries, `text` will remain at the top
+        savedSearches.removeDuplicates();
+
+        // only keep 100 searches
+        while (savedSearches.count() > 100) {
+            savedSearches.removeLast();
+        }
+
+        settings.setValue(settingsKey, savedSearches);
+
+        // init the saved searches completer
+        initSavedSearchesCompleter();
+    }
+}
+
+/**
+ * Initializes the saved searches completer
+ */
+void MainWindow::initSavedSearchesCompleter() {
+    int noteFolderId = NoteFolder::currentNoteFolderId();
+    QSettings settings;
+    QString settingsKey = "savedSearches/noteFolder-"
+                          + QString::number(noteFolderId);
+    QStringList savedSearches = settings.value(settingsKey).toStringList();
+
+    // add the completer
+    QCompleter *completer = new QCompleter(savedSearches, ui->searchLineEdit);
+    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    ui->searchLineEdit->setCompleter(completer);
+
+    // install event filter for the popup
+    completer->popup()->installEventFilter(this);
 }

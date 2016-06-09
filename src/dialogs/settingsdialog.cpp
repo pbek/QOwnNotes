@@ -1095,6 +1095,12 @@ void SettingsDialog::on_noteFolderRemoveButton_clicked()
             0, 1) == 0) {
         bool wasCurrent = _selectedNoteFolder.isCurrent();
 
+        // remove saved searches
+        QSettings settings;
+        QString settingsKey = "savedSearches/noteFolder-"
+                              + QString::number(_selectedNoteFolder.getId());
+        settings.remove(settingsKey);
+
         // remove the note folder from the database
         _selectedNoteFolder.remove();
 

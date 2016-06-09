@@ -303,6 +303,8 @@ private slots:
 
     void on_actionOpen_IRC_Channel_triggered();
 
+    void storeSavedSearch();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -340,6 +342,7 @@ private:
     bool _noteViewIsRegenerated;
     QHash<int, QString> _activeNoteFolderNoteNames;
     QHash<int, int> _activeNoteFolderNotePositions;
+    bool _searchLineEditFromCompleter;
 
     void initMainSplitter();
 
@@ -514,4 +517,6 @@ private:
             bool invertEditState = false, bool invertVerticalModeState = false);
 
     void updateWindowTitle();
+
+    void initSavedSearchesCompleter();
 };
