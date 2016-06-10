@@ -910,6 +910,15 @@ QString Note::fileNameSuffix() {
 }
 
 /**
+ * Returns the base name of the note file name
+ */
+QString Note::fileBaseName() {
+    QFileInfo fileInfo;
+    fileInfo.setFile(fileName);
+    return fileInfo.baseName();
+}
+
+/**
  * Renames a note
  */
 bool Note::renameNoteFile(QString newName) {

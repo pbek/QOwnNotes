@@ -425,6 +425,12 @@ void MainWindow::initToolbars() {
     _windowToolbar->addAction(ui->action_Reset_note_text_size);
     _windowToolbar->setObjectName("windowToolbar");
     addToolBar(_windowToolbar);
+
+    _quitToolbar =
+            new QToolBar(tr("quit toolbar"), this);
+    _quitToolbar->addAction(ui->action_Quit);
+    _quitToolbar->setObjectName("quitToolbar");
+    addToolBar(_quitToolbar);
 }
 
 /**
@@ -600,6 +606,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         _insertingToolbar->hide();
         _encryptionToolbar->hide();
         _windowToolbar->hide();
+        _quitToolbar->hide();
 
         // hide the search line edit
         ui->searchLineEdit->hide();
@@ -1351,6 +1358,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
         _windowToolbar->setIconSize(size);
+        _quitToolbar->setIconSize(size);
     }
 
     // check if we want to view the note folder combo box
@@ -4313,6 +4321,7 @@ void MainWindow::on_actionShow_toolbar_triggered(bool checked)
     _insertingToolbar->setVisible(checked);
     _encryptionToolbar->setVisible(checked);
     _windowToolbar->setVisible(checked);
+    _quitToolbar->setVisible(checked);
 }
 
 /**
@@ -5769,4 +5778,22 @@ void MainWindow::initSavedSearchesCompleter() {
 
     // install event filter for the popup
     completer->popup()->installEventFilter(this);
+}
+
+void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
+{
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+//    c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
+    c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
+
+    QString fileName = currentNote.fileBaseName();
+    QString text = fileName + "\n";
+
+    for (int i = 0; i < fileName.count(); i++) {
+        text.append("=");
+    }
+
+    text.append("\n\n");
+    c.insertText(text);
 }

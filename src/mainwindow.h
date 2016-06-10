@@ -305,6 +305,8 @@ private slots:
 
     void storeSavedSearch();
 
+    void on_actionInsert_headline_from_note_filename_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -337,6 +339,7 @@ private:
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
     QToolBar *_windowToolbar;
+    QToolBar *_quitToolbar;
     QFrame *_verticalNoteFrame;
     QSplitter *_verticalNoteFrameSplitter;
     bool _noteViewIsRegenerated;

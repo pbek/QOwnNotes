@@ -148,6 +148,8 @@ public:
 
     static QStringList buildQueryStringList(QString searchString);
 
+    QString fileBaseName();
+
 protected:
     int id;
     QString name;

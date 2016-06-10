@@ -594,6 +594,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionInsert_image"/>
     <addaction name="actionInsert_current_time"/>
     <addaction name="actionInset_code_block"/>
+    <addaction name="actionInsert_headline_from_note_filename"/>
     <addaction name="separator"/>
     <addaction name="actionFormat_text_bold"/>
     <addaction name="actionFormat_text_italic"/>
@@ -693,8 +694,6 @@ p, li { white-space: pre-wrap; }
    <addaction name="actionShow_trash"/>
    <addaction name="separator"/>
    <addaction name="actionOpen_List"/>
-   <addaction name="separator"/>
-   <addaction name="action_Quit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_Quit">
@@ -1441,6 +1440,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Open the #qownnotes IRC channel</string>
+   </property>
+  </action>
+  <action name="actionInsert_headline_from_note_filename">
+   <property name="icon">
+    <iconset theme="format-font-size-more" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-more.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-more.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert headline from note filename</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+H</string>
    </property>
   </action>
  </widget>
