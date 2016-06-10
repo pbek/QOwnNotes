@@ -588,11 +588,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1454"/>
-        <source>Ctrl+Shift+H</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="1445"/>
         <location filename="../mainwindow.cpp" line="1487"/>
         <location filename="../mainwindow.cpp" line="3230"/>

@@ -1451,7 +1451,7 @@ p, li { white-space: pre-wrap; }
     <string>Insert headline from note filename</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+H</string>
+    <string notr="true">Ctrl+Shift+H</string>
    </property>
   </action>
  </widget>
