@@ -2171,7 +2171,13 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
         ui->encryptedNoteTextEdit->moveCursor(QTextCursor::Start);
         QColor color = QColor(0, 180, 0, 100);
 
-        while (ui->noteTextEdit->find(str)) {
+        // build the string list of the search string
+        QString queryStr = str.replace("|", "\\|");
+        QStringList queryStrings = Note::buildQueryStringList(queryStr);
+
+        QRegExp regExp("(" + queryStrings.join("|") + ")", Qt::CaseInsensitive);
+
+        while (ui->noteTextEdit->find(regExp)) {
             QTextEdit::ExtraSelection extra;
             extra.format.setBackground(color);
 
@@ -2179,7 +2185,7 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
             extraSelections.append(extra);
         }
 
-        while (ui->noteTextView->find(str)) {
+        while (ui->noteTextView->find(regExp)) {
             QTextEdit::ExtraSelection extra;
             extra.format.setBackground(color);
 
@@ -2187,7 +2193,7 @@ void MainWindow::searchInNoteTextEdit(QString &str) {
             extraSelections2.append(extra);
         }
 
-        while (ui->encryptedNoteTextEdit->find(str)) {
+        while (ui->encryptedNoteTextEdit->find(regExp)) {
             QTextEdit::ExtraSelection extra;
             extra.format.setBackground(color);
 

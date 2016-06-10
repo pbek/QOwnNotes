@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.06.3
+- the **highlighting** for text found by the **search for multiple words** 
+  feature from version 16.06.2 now also works for those patterns 
+  (for [Issue #195](https://github.com/pbek/QOwnNotes/issues/195))
+
 ## 16.06.2
 - you now can **search for multiple words** in notes
   (for [Issue #195](https://github.com/pbek/QOwnNotes/issues/195))

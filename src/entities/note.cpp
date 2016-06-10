@@ -415,7 +415,6 @@ QStringList Note::buildQueryStringList(QString searchString) {
     }
 
     // remove a possible remaining "
-
     searchString.remove("\"");
     // remove multiple spaces and spaces in front and at the end
     searchString = searchString.simplified();
