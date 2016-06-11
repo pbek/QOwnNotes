@@ -39,6 +39,7 @@ install:
     else
          brew update > /dev/null
       && brew tap homebrew/versions
+      && echo "We are using QT 5.5, because we had troubles with the current QT 5.6 brew. The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
       && brew install qt55
       && chmod -R 755 /usr/local/opt/qt55/*
       ;
