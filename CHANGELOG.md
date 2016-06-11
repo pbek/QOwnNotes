@@ -10,6 +10,10 @@
 - there now is a new toolbar for the quit button right of the other toolbars, 
   so this button can be disabled
   (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
+- you can now set the markdown highlighting interval in the interface settings
+  (for [Issue #104](https://github.com/pbek/QOwnNotes/issues/104))
+    - setting it to `0` will disable the highlighting
+      (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
 
 ## 16.06.2
 - you now can **search for multiple words** in notes

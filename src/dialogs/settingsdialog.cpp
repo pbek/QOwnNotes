@@ -250,6 +250,8 @@ void SettingsDialog::storeSettings() {
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
+    settings.setValue("markdownHighlightingInterval",
+                      ui->markdownHighlightingIntervalSpinBox->value());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -335,6 +337,8 @@ void SettingsDialog::readSettings() {
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
+    ui->markdownHighlightingIntervalSpinBox->setValue(
+            settings.value("markdownHighlightingInterval", 200).toInt());
     ui->showNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
