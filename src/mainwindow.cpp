@@ -5568,8 +5568,19 @@ void MainWindow::regenerateNotePreview() {
     _noteViewIsRegenerated = false;
 }
 
+/**
+ * Tries to open a link at the current cursor position or solve an equation
+ */
 void MainWindow::on_actionAutocomplete_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+
+    // try to open a link at the cursor position
+    if (textEdit->openLinkAtCursorPosition()) {
+        showStatusBarMessage(
+                tr("an url was opened at the current cursor position"), 5000);
+        return;
+    }
+
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current cursor to the start of the line

@@ -1377,7 +1377,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAutocomplete">
    <property name="text">
-    <string>Solve equation</string>
+    <string>Solve equation or open URL</string>
    </property>
    <property name="toolTip">
     <string>Solve a simple equation like '(2+3)*6=' in the current line</string>

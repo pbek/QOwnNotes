@@ -4,6 +4,9 @@
 - file names with multiple dots are now supported when inserting a headline 
   from the note filename with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  
   (for [Issue #206](https://github.com/pbek/QOwnNotes/issues/206))
+- you now can open a link at the current cursor position with 
+  <kbd>Ctrl</kbd> + <kbd>Space</kbd> 
+  (for [Issue #203](https://github.com/pbek/QOwnNotes/issues/203))
 - added more Portuguese, Russian, Dutch, Japanese and German translation
   (thank you mlimacarlos, frostyland, Telesight and piyo)
 
