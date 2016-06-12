@@ -4,6 +4,8 @@
 - file names with multiple dots are now supported when inserting a headline 
   from the note filename with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  
   (for [Issue #206](https://github.com/pbek/QOwnNotes/issues/206))
+- added more Portuguese, Russian, Dutch, Japanese and German translation
+  (thank you mlimacarlos, frostyland, Telesight and piyo)
 
 ## 16.06.3
 - the **highlighting** for text found by the **search for multiple words** 
