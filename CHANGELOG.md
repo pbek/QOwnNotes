@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.06.4
+- file names with multiple dots are now supported when inserting a headline 
+  from the note filename with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  
+  (for [Issue #206](https://github.com/pbek/QOwnNotes/issues/206))
+
 ## 16.06.3
 - the **highlighting** for text found by the **search for multiple words** 
   feature from version 16.06.2 now also works for those patterns

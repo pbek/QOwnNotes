@@ -912,10 +912,16 @@ QString Note::fileNameSuffix() {
 /**
  * Returns the base name of the note file name
  */
-QString Note::fileBaseName() {
-    QFileInfo fileInfo;
-    fileInfo.setFile(fileName);
-    return fileInfo.baseName();
+QString Note::fileBaseName(bool withFullName) {
+    if (withFullName) {
+        QStringList parts = fileName.split(".");
+        parts.removeLast();
+        return parts.join(".");
+    } else {
+        QFileInfo fileInfo;
+        fileInfo.setFile(fileName);
+        return fileInfo.baseName();
+    }
 }
 
 /**

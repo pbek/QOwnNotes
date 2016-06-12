@@ -148,7 +148,7 @@ public:
 
     static QStringList buildQueryStringList(QString searchString);
 
-    QString fileBaseName();
+    QString fileBaseName(bool withFullName = false);
 
 protected:
     int id;

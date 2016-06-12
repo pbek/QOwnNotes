@@ -5780,14 +5780,16 @@ void MainWindow::initSavedSearchesCompleter() {
     completer->popup()->installEventFilter(this);
 }
 
+/**
+ * Inserts the note file name as headline
+ */
 void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
 {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-//    c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
     c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
 
-    QString fileName = currentNote.fileBaseName();
+    QString fileName = currentNote.fileBaseName(true);
     QString text = fileName + "\n";
 
     for (int i = 0; i < fileName.count(); i++) {
