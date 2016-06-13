@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 # This is the build script for the openSUSE Build Service (OBS)
-# https://build.opensuse.org/package/show/home:pbek:QOwnNotes/qownnotes
+# https://build.opensuse.org/package/show/home:pbek:QOwnNotes/desktop
 #
 # We will need some packages to execute this locally:
 # sudo apt-get install osc xz

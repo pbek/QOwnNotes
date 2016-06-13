@@ -105,6 +105,7 @@ install -D -m 0644 images/icons/96x96/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/
 install -D -m 0644 images/icons/128x128/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
 install -D -m 0644 images/icons/256x256/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
 install -D -m 0644 images/icons/512x512/QOwnNotes.png $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
+install -D -m 0644 images/icons/scalable/QOwnNotes.svg $RPM_BUILD_ROOT/%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 install -D -m 0644 languages/QOwnNotes_en.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_en.qm
 install -D -m 0644 languages/QOwnNotes_de.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 install -D -m 0644 languages/QOwnNotes_fr.qm $RPM_BUILD_ROOT/%{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
@@ -142,6 +143,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/icons/hicolor/128x128/apps/QOwnNotes.png
 %{_datadir}/icons/hicolor/256x256/apps/QOwnNotes.png
 %{_datadir}/icons/hicolor/512x512/apps/QOwnNotes.png
+%{_datadir}/icons/hicolor/scalable/apps/QOwnNotes.svg
 %{_datadir}/QOwnNotes/languages/QOwnNotes_en.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_de.qm
 %{_datadir}/QOwnNotes/languages/QOwnNotes_fr.qm
