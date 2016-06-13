@@ -6,6 +6,8 @@
   (for [Issue #203](https://github.com/pbek/QOwnNotes/issues/203))
 - menu icons are now hidden under OSX to be more "conform" 
   (for [Issue #198](https://github.com/pbek/QOwnNotes/issues/198))
+- added more Portuguese, Russian, Dutch, Japanese and German translation
+  (thank you mlimacarlos, frostyland, Telesight, Fabijenna, piyo and bigant)
 
 ## 16.06.4
 - file names with multiple dots are now supported when inserting a headline 
