@@ -58,6 +58,11 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+#ifdef Q_OS_MAC
+    // disable icons in the menu
+    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
+#endif
+
     ui->setupUi(this);
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
@@ -515,9 +520,6 @@ void MainWindow::initStyling() {
 
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
-
-    // disable icons in the menu
-    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved
