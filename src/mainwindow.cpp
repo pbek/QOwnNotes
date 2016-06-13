@@ -5137,6 +5137,10 @@ void MainWindow::on_newNoteTagButton_clicked() {
 void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     QString text = ui->newNoteTagLineEdit->text();
 
+    if (text.isEmpty()) {
+        return;
+    }
+
     // create a new tag if it doesn't exist
     Tag tag = Tag::fetchByName(text);
     if (!tag.isFetched()) {
@@ -5291,14 +5295,18 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
     if (tag.isFetched()) {
         QString name = item->text(0);
+
         if (!name.isEmpty()) {
             const QSignalBlocker blocker(this->noteDirectoryWatcher);
             Q_UNUSED(blocker);
 
             tag.setName(name);
             tag.store();
-            reloadTagTree();
         }
+
+        // we also have to reload the tag tree if we don't change the tag
+        // name to get the old name back
+        reloadTagTree();
     }
 }
 
