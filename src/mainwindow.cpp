@@ -515,6 +515,9 @@ void MainWindow::initStyling() {
 
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
+
+    // disable icons in the menu
+    QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved

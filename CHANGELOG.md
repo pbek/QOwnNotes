@@ -4,6 +4,8 @@
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> to solve simple equations and open links
   now also works under OS X
   (for [Issue #203](https://github.com/pbek/QOwnNotes/issues/203))
+- menu icons are now hidden under OSX to be more "conform" 
+  (for [Issue #198](https://github.com/pbek/QOwnNotes/issues/198))
 
 ## 16.06.4
 - file names with multiple dots are now supported when inserting a headline 
