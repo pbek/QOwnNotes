@@ -153,7 +153,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
 - <kbd>⌘</kbd> + <kbd>/</kbd> resets the note text font size
-- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 
 ### In the Todo list

@@ -209,12 +209,15 @@ MainWindow::MainWindow(QWidget *parent) :
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
-    // add some different shortcuts for the note history on the mac
 #ifdef Q_OS_MAC
+    // add some different shortcuts for the note history on the mac
     ui->action_Back_in_note_history->
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
     ui->action_Forward_in_note_history->
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
+
+    // add an other shortcut for the autocompleter
+    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
 #endif
 
     // adding some alternate shortcuts for changing the current note

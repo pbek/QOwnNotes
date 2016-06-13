@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.06.5
+- <kbd>Ctrl</kbd> + <kbd>Space</kbd> to solve simple equations and open links
+  now also works under OS X
+  (for [Issue #203](https://github.com/pbek/QOwnNotes/issues/203))
+
 ## 16.06.4
 - file names with multiple dots are now supported when inserting a headline 
   from the note filename with <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd>  
