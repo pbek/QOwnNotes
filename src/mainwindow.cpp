@@ -327,6 +327,16 @@ MainWindow::MainWindow(QWidget *parent) :
             _todoListTimer, SIGNAL(timeout()),
             this, SLOT(reloadTodoLists()));
     _todoListTimer->start(600000);
+
+    // setup the softwrap checkbox
+    const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
+    Q_UNUSED(blocker2);
+    QSettings settings;
+    ui->actionUse_softwrap_in_note_editor->setChecked(
+            settings.value("useSoftWrapInNoteEditor", true).toBool());
+
+    // initialize the editor soft wrapping
+    initEditorSoftWrap();
 }
 
 MainWindow::~MainWindow() {
@@ -343,6 +353,20 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Initializes the editor soft wrapping
+ */
+void MainWindow::initEditorSoftWrap() {
+    QSettings settings;
+    QTextEdit::LineWrapMode mode =
+            settings.value("useSoftWrapInNoteEditor", true).toBool() ?
+            QTextEdit::WidgetWidth : QTextEdit::NoWrap;
+
+    ui->noteTextEdit->setLineWrapMode(mode);
+    ui->encryptedNoteTextEdit->setLineWrapMode(mode);
+    ui->noteTextView->setLineWrapMode(mode);
+}
 
 /**
  * Reloads all tasks from the ownCloud server
@@ -5817,4 +5841,16 @@ void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
 
     text.append("\n\n");
     c.insertText(text);
+}
+
+/**
+ * Toggles the editor soft wrapping
+ */
+void MainWindow::on_actionUse_softwrap_in_note_editor_toggled(bool arg1)
+{
+    QSettings settings;
+    settings.setValue("useSoftWrapInNoteEditor", arg1);
+
+    // initialize the editor soft wrapping
+    initEditorSoftWrap();
 }

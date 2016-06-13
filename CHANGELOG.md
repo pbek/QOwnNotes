@@ -6,6 +6,8 @@
   (for [Issue #203](https://github.com/pbek/QOwnNotes/issues/203))
 - menu icons are now hidden under OSX to be more "conform" 
   (for [Issue #198](https://github.com/pbek/QOwnNotes/issues/198))
+- you now can disable the soft wrapping in the note editor and preview in the
+  window menu (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
 - added more Portuguese, Russian, Dutch, Japanese and German translation
   (thank you mlimacarlos, frostyland, Telesight, Fabijenna, piyo and bigant)
 

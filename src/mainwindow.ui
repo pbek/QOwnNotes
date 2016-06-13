@@ -642,6 +642,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
     <addaction name="actionUse_vertical_preview_layout"/>
+    <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
     <addaction name="menuEditor_width"/>
@@ -1452,6 +1453,17 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+H</string>
+   </property>
+  </action>
+  <action name="actionUse_softwrap_in_note_editor">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use softwrap in note editor and preview</string>
    </property>
   </action>
  </widget>

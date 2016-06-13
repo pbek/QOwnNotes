@@ -307,6 +307,8 @@ private slots:
 
     void on_actionInsert_headline_from_note_filename_triggered();
 
+    void on_actionUse_softwrap_in_note_editor_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -522,4 +524,6 @@ private:
     void updateWindowTitle();
 
     void initSavedSearchesCompleter();
+
+    void initEditorSoftWrap();
 };
