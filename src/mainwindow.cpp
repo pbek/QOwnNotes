@@ -64,6 +64,7 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     ui->setupUi(this);
+    _noteDirectoryWatcher = new QFileSystemWatcher(this);
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     this->setWindowTitle(
@@ -1179,18 +1180,18 @@ void MainWindow::loadNoteDirectoryList() {
 
     QDir dir(this->notesPath);
 
-    noteDirectoryWatcher = new QFileSystemWatcher(this);
+    _noteDirectoryWatcher = new QFileSystemWatcher(this);
 
     // clear all paths from the directory watcher
-//    QStringList fileList = noteDirectoryWatcher->directories() +
-//            noteDirectoryWatcher->files();
+//    QStringList fileList = _noteDirectoryWatcher->directories() +
+//            _noteDirectoryWatcher->files();
 //    if (fileList.count() > 0) {
-//        noteDirectoryWatcher->removePaths(fileList);
+//        _noteDirectoryWatcher->removePaths(fileList);
 //    }
 
     if (dir.exists()) {
         // watch the notes directory for changes
-        this->noteDirectoryWatcher->addPath(this->notesPath);
+        this->_noteDirectoryWatcher->addPath(this->notesPath);
     }
 
     QStringList fileNameList = Note::fetchNoteFileNames();
@@ -1210,7 +1211,7 @@ void MainWindow::loadNoteDirectoryList() {
             QString path = Note::getFullNoteFilePathForFile(fileName);
             QFile file(path);
             if (file.exists()) {
-                this->noteDirectoryWatcher->addPath(path);
+                this->_noteDirectoryWatcher->addPath(path);
                 count++;
             }
     }
@@ -1221,12 +1222,12 @@ void MainWindow::loadNoteDirectoryList() {
     }
 
     QObject::connect(
-            this->noteDirectoryWatcher,
+            this->_noteDirectoryWatcher,
             SIGNAL(directoryChanged(QString)),
             this,
             SLOT(notesDirectoryWasModified(QString)));
     QObject::connect(
-            this->noteDirectoryWatcher,
+            this->_noteDirectoryWatcher,
             SIGNAL(fileChanged(QString)),
             this,
             SLOT(notesWereModified(QString)));
@@ -1472,7 +1473,7 @@ void MainWindow::notesWereModified(const QString &str) {
             switch (result) {
                 // overwrite file with local changes
                 case NoteDiffDialog::Overwrite: {
-                    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                    const QSignalBlocker blocker(this->_noteDirectoryWatcher);
                     Q_UNUSED(blocker);
                     this->currentNote.store();
                     this->currentNote.storeNoteTextFileToDisk();
@@ -1483,7 +1484,7 @@ void MainWindow::notesWereModified(const QString &str) {
 //                        this->currentNote = note;
 //                        this->setNoteTextFromNote( &note, true );
 
-                    // wait 100ms before the block on this->noteDirectoryWatcher
+                    // wait 100ms before the block on this->_noteDirectoryWatcher
                     // is opened, otherwise we get the event
                     waitMsecs(100);
                 }
@@ -1510,7 +1511,7 @@ void MainWindow::notesWereModified(const QString &str) {
                      tr("&Restore"), tr("&Cancel"), QString::null,
                                              0, 1)) {
                 case 0: {
-                    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+                    const QSignalBlocker blocker(this->_noteDirectoryWatcher);
                     Q_UNUSED(blocker);
 
                     QString text = this->ui->noteTextEdit->toPlainText();
@@ -1591,12 +1592,12 @@ void MainWindow::noteViewUpdateTimerSlot() {
 
 void MainWindow::storeUpdatedNotesToDisk() {
     {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         QString oldNoteName = this->currentNote.getName();
 
-        // For some reason this->noteDirectoryWatcher gets an event from this.
+        // For some reason this->_noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
         // All flushing and syncing didn't help.
         int count = Note::storeDirtyNotesToDisk(this->currentNote);
@@ -1618,7 +1619,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
                     tr("stored %n note(s) to disk", "", count),
                     3000);
 
-            // wait 100ms before the block on this->noteDirectoryWatcher
+            // wait 100ms before the block on this->_noteDirectoryWatcher
             // is opened, otherwise we get the event
             waitMsecs(100);
 
@@ -2000,7 +2001,7 @@ void MainWindow::removeCurrentNote() {
                 const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
                 Q_UNUSED(blocker4);
 
-                const QSignalBlocker blocker5(noteDirectoryWatcher);
+                const QSignalBlocker blocker5(_noteDirectoryWatcher);
                 Q_UNUSED(blocker5);
 
                 // delete note in database and on file system
@@ -2419,7 +2420,7 @@ void MainWindow::removeSelectedNotes() {
                "", selectedItemsCount),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         const QSignalBlocker blocker1(ui->notesListWidget);
@@ -2466,7 +2467,7 @@ void MainWindow::removeSelectedTags() {
                "", selectedItemsCount),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         const QSignalBlocker blocker1(ui->tagTreeWidget);
@@ -2507,7 +2508,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                selectedItemsCount).arg(destinationFolder),
             tr("&Move"), tr("&Cancel"), QString::null,
             0, 1) == 0) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         Q_FOREACH(QListWidgetItem *item, ui->notesListWidget->selectedItems()) {
@@ -2515,7 +2516,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 Note note = Note::fetchByName(name);
 
                 // remove note path form directory watcher
-                this->noteDirectoryWatcher->removePath(note.fullNoteFilePath());
+                this->_noteDirectoryWatcher->removePath(note.fullNoteFilePath());
 
                 if (note.getId() == currentNote.getId()) {
                     // reset the current note
@@ -3257,7 +3258,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
         // store the note to disk
         {
-            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            const QSignalBlocker blocker(this->_noteDirectoryWatcher);
             Q_UNUSED(blocker);
 
             note.storeNoteTextFileToDisk();
@@ -4920,7 +4921,7 @@ void MainWindow::on_tagLineEdit_returnPressed()
         return;
     }
 
-    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    const QSignalBlocker blocker(this->_noteDirectoryWatcher);
     Q_UNUSED(blocker);
 
     Tag tag;
@@ -5147,7 +5148,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     // create a new tag if it doesn't exist
     Tag tag = Tag::fetchByName(text);
     if (!tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         tag.setName(text);
@@ -5157,7 +5158,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed() {
 
     // link the current note to the tag
     if (tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         tag.linkToNote(currentNote);
@@ -5217,7 +5218,7 @@ void MainWindow::removeNoteTagClicked() {
             return;
         }
 
-        const QSignalBlocker blocker(noteDirectoryWatcher);
+        const QSignalBlocker blocker(_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         tag.removeLinkToNote(currentNote);
@@ -5300,7 +5301,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
         QString name = item->text(0);
 
         if (!name.isEmpty()) {
-            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            const QSignalBlocker blocker(this->_noteDirectoryWatcher);
             Q_UNUSED(blocker);
 
             tag.setName(name);
@@ -5686,7 +5687,7 @@ void MainWindow::on_notesListWidget_itemChanged(QListWidgetItem *item) {
     if (note.isFetched()) {
         qDebug() << __func__ << " - 'note': " << note;
 
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(this->_noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         QString oldNoteName = note.getName();
