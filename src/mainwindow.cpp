@@ -151,16 +151,6 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(frequentPeriodicChecker()));
     this->todoReminderTimer->start(60000);
 
-    QObject::connect(
-            &this->noteDirectoryWatcher,
-            SIGNAL(directoryChanged(QString)),
-            this,
-            SLOT(notesDirectoryWasModified(QString)));
-    QObject::connect(
-            &this->noteDirectoryWatcher,
-            SIGNAL(fileChanged(QString)),
-            this,
-            SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
     ui->notesListWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
@@ -1189,16 +1179,18 @@ void MainWindow::loadNoteDirectoryList() {
 
     QDir dir(this->notesPath);
 
+    noteDirectoryWatcher = new QFileSystemWatcher(this);
+
     // clear all paths from the directory watcher
-    QStringList fileList = noteDirectoryWatcher.directories() +
-            noteDirectoryWatcher.files();
-    if (fileList.count() > 0) {
-        noteDirectoryWatcher.removePaths(fileList);
-    }
+//    QStringList fileList = noteDirectoryWatcher->directories() +
+//            noteDirectoryWatcher->files();
+//    if (fileList.count() > 0) {
+//        noteDirectoryWatcher->removePaths(fileList);
+//    }
 
     if (dir.exists()) {
         // watch the notes directory for changes
-        this->noteDirectoryWatcher.addPath(this->notesPath);
+        this->noteDirectoryWatcher->addPath(this->notesPath);
     }
 
     QStringList fileNameList = Note::fetchNoteFileNames();
@@ -1218,7 +1210,7 @@ void MainWindow::loadNoteDirectoryList() {
             QString path = Note::getFullNoteFilePathForFile(fileName);
             QFile file(path);
             if (file.exists()) {
-                this->noteDirectoryWatcher.addPath(path);
+                this->noteDirectoryWatcher->addPath(path);
                 count++;
             }
     }
@@ -1227,6 +1219,17 @@ void MainWindow::loadNoteDirectoryList() {
     if (sortAlphabetically) {
         ui->notesListWidget->sortItems(Qt::AscendingOrder);
     }
+
+    QObject::connect(
+            this->noteDirectoryWatcher,
+            SIGNAL(directoryChanged(QString)),
+            this,
+            SLOT(notesDirectoryWasModified(QString)));
+    QObject::connect(
+            this->noteDirectoryWatcher,
+            SIGNAL(fileChanged(QString)),
+            this,
+            SLOT(notesWereModified(QString)));
 
     // setup tagging
     setupTags();
@@ -2512,7 +2515,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 Note note = Note::fetchByName(name);
 
                 // remove note path form directory watcher
-                this->noteDirectoryWatcher.removePath(note.fullNoteFilePath());
+                this->noteDirectoryWatcher->removePath(note.fullNoteFilePath());
 
                 if (note.getId() == currentNote.getId()) {
                     // reset the current note

@@ -9,7 +9,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/custom-file-extensions
+    - feature/filesystemwatcher
 
 env:
   global:

@@ -314,7 +314,7 @@ private:
     QSplitter *mainSplitter;
     QSplitter *_noteListSplitter;
     QString notesPath;
-    QFileSystemWatcher noteDirectoryWatcher;
+    QFileSystemWatcher *noteDirectoryWatcher;
     Note currentNote;
     int firstVisibleNoteListRow;
     NoteDiffDialog *noteDiffDialog;
