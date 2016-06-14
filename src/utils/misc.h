@@ -27,6 +27,8 @@ namespace Utils
         QString removeIfEndsWith(QString text, QString removeString);
         QString prependIfDoesNotStartWith(QString text, QString startString);
         QString appendIfDoesNotEndWith(QString text, QString endString);
-        bool startDetachedProcess(QString executablePath, QStringList parameters);
+        bool startDetachedProcess(
+                QString executablePath, QStringList parameters);
+        QString shorten(QString text, int length, QString sequence = "...");
     }
 }

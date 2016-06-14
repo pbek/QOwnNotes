@@ -185,6 +185,24 @@ QString Utils::Misc::appendIfDoesNotEndWith(
 }
 
 /**
+ * Shortens text and adds a sequence string if text is too long
+ */
+QString Utils::Misc::shorten(
+        QString text, int length, QString sequence) {
+    if (text.length() > length) {
+        int newLength = length - sequence.length();
+
+        if (newLength < 0) {
+            newLength = 0;
+        }
+
+        return (text.left(newLength) + sequence).left(length);
+    }
+
+    return text;
+}
+
+/**
  * Starts an executable detached with parameters
  */
 bool Utils::Misc::startDetachedProcess(

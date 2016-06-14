@@ -5184,8 +5184,9 @@ void MainWindow::reloadCurrentNoteTags() {
     // add all new remove-tag buttons
     QList<Tag> tagList = Tag::fetchAllOfNote(currentNote);
     Q_FOREACH(Tag tag, tagList) {
-            QPushButton* button = new QPushButton(tag.getName(),
-                                                  ui->noteTagButtonFrame);
+            QPushButton* button = new QPushButton(
+                    Utils::Misc::shorten(tag.getName(), 25),
+                    ui->noteTagButtonFrame);
             button->setIcon(QIcon::fromTheme(
                     "tag-delete",
                     QIcon(":icons/breeze-qownnotes/16x16/"

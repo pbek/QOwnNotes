@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.06.6
+- very long tag names will now be shortened in the tag remove button
+  (for [Issue #210](https://github.com/pbek/QOwnNotes/issues/210))
+
 ## 16.06.5
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> to solve simple equations and open links
   now also works under OS X
