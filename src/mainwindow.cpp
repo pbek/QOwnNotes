@@ -65,6 +65,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->setupUi(this);
     _noteDirectoryWatcher = new QFileSystemWatcher(this);
+
+//    QObject::connect(
+//            this->_noteDirectoryWatcher,
+//            SIGNAL(directoryChanged(QString)),
+//            this,
+//            SLOT(notesDirectoryWasModified(QString)));
+//    QObject::connect(
+//            this->_noteDirectoryWatcher,
+//            SIGNAL(fileChanged(QString)),
+//            this,
+//            SLOT(notesWereModified(QString)));
+
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     this->setWindowTitle(
@@ -1179,6 +1191,9 @@ void MainWindow::loadNoteDirectoryList() {
     }
 
     QDir dir(this->notesPath);
+
+    const QSignalBlocker blocker3(_noteDirectoryWatcher);
+    Q_UNUSED(blocker3);
 
     _noteDirectoryWatcher = new QFileSystemWatcher(this);
 
