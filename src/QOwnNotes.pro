@@ -150,8 +150,10 @@ RESOURCES += \
     images.qrc \
     texts.qrc \
     breeze-qownnotes.qrc \
+    breeze-dark-qownnotes.qrc \
     qownnotes.qrc \
-    demonotes.qrc
+    demonotes.qrc \
+    libraries/qdarkstyle/style.qrc
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)

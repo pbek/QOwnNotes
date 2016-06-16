@@ -33,11 +33,13 @@ qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
 
 set(RESOURCE_FILES
         breeze-qownnotes.qrc
+        breeze-dark-qownnotes.qrc
         qownnotes.qrc
         demonotes.qrc
         images.qrc
         texts.qrc
         libraries/qmarkdowntextedit/media.qrc
+        libraries/qdarkstyle/style.qrc
         )
 
 qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})

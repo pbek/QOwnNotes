@@ -65,6 +65,11 @@ bool mainStartupMisc() {
         QIcon::setThemeName("breeze-qownnotes");
     }
 
+    bool darkMode = settings.value("darkMode").toBool();
+    if (darkMode) {
+        QIcon::setThemeName("breeze-dark-qownnotes");
+    }
+
     MetricsService *metricsService = MetricsService::createInstance();
     metricsService->sendVisitIfEnabled("app/start", "App Start");
     metricsService->sendEventIfEnabled(

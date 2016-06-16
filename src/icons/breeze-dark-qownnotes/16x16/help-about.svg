@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs id="defs3051">
+    <style type="text/css" id="current-color-scheme">
+      .ColorScheme-Text {
+        color:#f2f2f2
+      }
+      </style>
+  </defs>
+ <path style="fill:currentColor;fill-opacity:1;stroke:none" 
+     d="m7.5 3c-3.038 0-5.5 2.462-5.5 5.5 0 3.038 2.462 5.5 5.5 5.5 3.038 0 5.5-2.462 5.5-5.5 0-3.038-2.462-5.5-5.5-5.5m0 1c2.485 0 4.5 2.01 4.5 4.5 0 2.485-2.01 4.5-4.5 4.5-2.485 0-4.5-2.01-4.5-4.5 0-2.485 2.01-4.5 4.5-4.5m-.5 1v1h1v-1zm0 2v5h1v-5z"
+     class="ColorScheme-Text"
+     />
+</svg>

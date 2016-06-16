@@ -274,6 +274,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("darkModeColors",
                       ui->darkModeColorsCheckBox->isChecked());
 
+    settings.setValue("darkMode",
+                      ui->darkModeCheckBox->isChecked());
+
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
     QStringList todoCalendarEnabledUrlList;
@@ -359,6 +362,12 @@ void SettingsDialog::readSettings() {
 
     ui->darkModeColorsCheckBox->setChecked(settings.value(
             "darkModeColors").toBool());
+
+    ui->darkModeCheckBox->setChecked(settings.value(
+            "darkMode").toBool());
+
+    // toggle the dark mode colors check box with the dark mode checkbox
+    on_darkModeCheckBox_toggled();
 
     noteTextEditFont.fromString(
             settings.value("MainWindow/noteTextEdit.font").toString());
@@ -1654,4 +1663,18 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_itemChanged(
 void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
         int currentRow) {
     ui->removeCustomNoteFileExtensionButton->setEnabled(currentRow > 1);
+}
+
+/**
+ * Toggles the dark mode colors check box with the dark mode checkbox
+ */
+void SettingsDialog::on_darkModeCheckBox_toggled()
+{
+    bool checked = ui->darkModeCheckBox->isChecked();
+
+    ui->darkModeColorsCheckBox->setEnabled(!checked);
+
+    if (checked) {
+        ui->darkModeColorsCheckBox->setChecked(true);
+    }
 }

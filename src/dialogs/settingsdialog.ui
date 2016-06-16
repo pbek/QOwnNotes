@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1194</width>
-    <height>837</height>
+    <width>1255</width>
+    <height>964</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1318,10 +1318,23 @@
                  <string>Dark mode</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_24">
-                 <item row="0" column="0">
+                 <item row="1" column="0">
                   <widget class="QCheckBox" name="darkModeColorsCheckBox">
+                   <property name="toolTip">
+                    <string>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</string>
+                   </property>
                    <property name="text">
                     <string>Optimize colors for dark mode desktop themes</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QCheckBox" name="darkModeCheckBox">
+                   <property name="toolTip">
+                    <string>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</string>
+                   </property>
+                   <property name="text">
+                    <string>Enable dark mode</string>
                    </property>
                   </widget>
                  </item>

@@ -145,6 +145,8 @@ private slots:
 
     void on_defaultNoteFileExtensionListWidget_currentRowChanged(int currentRow);
 
+    void on_darkModeCheckBox_toggled();
+
 private:
 
     Ui::SettingsDialog *ui;

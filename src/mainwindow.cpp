@@ -510,11 +510,32 @@ void MainWindow::toggleDistractionFreeMode() {
  * Does some basic styling
  */
 void MainWindow::initStyling() {
-    QPalette palette;
-    QColor color = palette.color(QPalette::Base);
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+    QString colorName;
+
+    // turn on the dark mode if enabled
+    if (darkMode) {
+        QFile f(":qdarkstyle/style.qss");
+        if (!f.exists()) {
+            qWarning("Unable to set stylesheet, file not found!");
+        } else {
+            f.open(QFile::ReadOnly | QFile::Text);
+            QTextStream ts(&f);
+            qApp->setStyleSheet(ts.readAll());
+        }
+
+        // QTextEdit background color of qdarkstyle
+        colorName = "#201F1F";
+    } else {
+        QPalette palette;
+        QColor color = palette.color(QPalette::Base);
+        colorName = color.name();
+    }
+
 
     QString textEditStyling = QString("QTextEdit {background-color: %1;}")
-            .arg(color.name());
+            .arg(colorName);
 
     ui->noteTextEdit->setStyleSheet(
             ui->noteTextEdit->styleSheet() + textEditStyling);
@@ -523,7 +544,7 @@ void MainWindow::initStyling() {
             ui->encryptedNoteTextEdit->styleSheet() + textEditStyling);
 
     QString frameStyling = QString("QFrame {background-color: %1;}")
-            .arg(color.name());
+            .arg(colorName);
 
     ui->noteTagFrame->setStyleSheet(
             ui->noteTagFrame->styleSheet() + frameStyling);

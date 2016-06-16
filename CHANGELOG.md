@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 16.06.6
+- you now can use a real **dark mode** on every operating system
+  (for [Issue #208](https://github.com/pbek/QOwnNotes/issues/208))
+    - turn it on in the interface settings
 - very long tag names will now be shortened in the tag remove button
   (for [Issue #210](https://github.com/pbek/QOwnNotes/issues/210))
 
