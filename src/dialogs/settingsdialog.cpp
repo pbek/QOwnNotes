@@ -65,6 +65,12 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
     // must be done in the end so that the settings are loaded first when
     // doing a connection test
     ui->tabWidget->setCurrentIndex(tab);
+
+#ifdef Q_OS_MAC
+    // we don't need app instance settings on OS X
+    ui->appInstanceGroupBox->setVisible(false);
+    ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
+#endif
 }
 
 SettingsDialog::~SettingsDialog() {

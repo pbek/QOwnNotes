@@ -2268,7 +2268,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
             </widget>
            </item>
            <item>
-            <widget class="QGroupBox" name="groupBox_15">
+            <widget class="QGroupBox" name="appInstanceGroupBox">
              <property name="title">
               <string>App instance</string>
              </property>
