@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.06.7
+- when doing a text search in your note the selected text is now preset as 
+  search text if there is any and there is no other search text filled in
+
 ## 16.06.6
 - you now can use a real **dark mode** on every operating system
   (for [Issue #208](https://github.com/pbek/QOwnNotes/issues/208))
