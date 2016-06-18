@@ -8,6 +8,8 @@
   (for [Issue #208](https://github.com/pbek/QOwnNotes/issues/208))
 - the app instance settings are now hidden on OS X since we don't need them 
   there (for [Issue #208](https://github.com/pbek/QOwnNotes/issues/208))
+- added more Portuguese and Russian translation (thank you mlimacarlos and 
+  frostyland)
 
 ## 16.06.6
 - you now can use a real **dark mode** on every operating system
