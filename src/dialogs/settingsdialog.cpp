@@ -852,6 +852,16 @@ void SettingsDialog::on_tabWidget_currentChanged(int index) {
     } else if (index == OwnCloudTab) {
         on_connectButton_clicked();
     }
+
+    if (OwnCloudService::hasOwnCloudSettings()) {
+        ui->todoCalendarTab->setEnabled(true);
+        ui->todoCalendarTab->setToolTip("");
+    } else {
+        ui->todoCalendarTab->setEnabled(false);
+        ui->todoCalendarTab->setToolTip(
+                tr("Please make sure the connection to your your "
+                           "ownCloud server works."));
+    }
 }
 
 /**
