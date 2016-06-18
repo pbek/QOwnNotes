@@ -3,6 +3,7 @@
 ## 16.06.7
 - when doing a text search in your note the selected text is now preset as 
   search text if there is any and there is no other search text filled in
+- added more information to the debug tab in the settings
 
 ## 16.06.6
 - you now can use a real **dark mode** on every operating system

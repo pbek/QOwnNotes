@@ -30,6 +30,7 @@ public:
     void setEnabled(bool value);
     bool getEnabled();
     bool isEnabled();
+    static int countEnabled();
 
 private:
     int id;

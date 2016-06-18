@@ -45,6 +45,8 @@ public:
 
     void settingsGetFileList(SettingsDialog *dialog, QString path);
 
+    static bool hasOwnCloudSettings();
+
 private:
     QString serverUrl;
     QString serverUrlPath;

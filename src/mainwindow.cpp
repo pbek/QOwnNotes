@@ -337,6 +337,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // initialize the editor soft wrapping
     initEditorSoftWrap();
+
+    // check if user has set ownCloud settings
+    MetricsService::instance()->sendEventIfEnabled(
+            "app/has-owncloud-settings", "app", "has owncloud settings",
+            OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
 }
 
 MainWindow::~MainWindow() {

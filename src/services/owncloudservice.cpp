@@ -573,6 +573,21 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 }
 
 /**
+ * Checks if ownCloud settings are set
+ */
+bool OwnCloudService::hasOwnCloudSettings() {
+    QSettings settings;
+    QString serverUrl =
+            settings.value("ownCloud/serverUrl").toString().trimmed();
+    QString userName =
+            settings.value("ownCloud/userName").toString().trimmed();
+    QString password =
+            settings.value("ownCloud/password").toString().trimmed();
+
+    return !(serverUrl.isEmpty() || userName.isEmpty() || password.isEmpty());
+}
+
+/**
  * Shows a message dialog with a ownCloud server error
  */
 void OwnCloudService::showOwnCloudServerErrorMessage(

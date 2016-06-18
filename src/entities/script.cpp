@@ -99,6 +99,21 @@ int Script::countAll() {
     return 0;
 }
 
+int Script::countEnabled() {
+    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM script WHERE enabled = 1");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
 bool Script::scriptPathExists() {
     QFile file(scriptPath);
     return file.exists() && !scriptPath.isEmpty();

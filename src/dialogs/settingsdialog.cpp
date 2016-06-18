@@ -517,6 +517,11 @@ void SettingsDialog::outputSettings() {
 
     output += prepareDebugInformationLine("Icon theme",
                                           QIcon::themeName());
+    output += prepareDebugInformationLine("Notes in current note folder",
+                                          QString::number(Note::countAll()));
+    output += prepareDebugInformationLine("Enabled scripts",
+                                          QString::number(
+                                                  Script::countEnabled()));
 
     // add information about the server
     output += "\n## Server Info\n\n";
