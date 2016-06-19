@@ -570,6 +570,9 @@ void MainWindow::initStyling() {
 
     // add some margins in OS X to match the styling of the note list
     ui->navigationFrame->setContentsMargins(3, 0, 3, 0);
+
+    // there is no system tray in OS X
+    ui->actionShow_system_tray->setText(tr("Show menu bar item"));
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved

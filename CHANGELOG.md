@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.06.8
+- the menu entry `Show in system tray` was renamed to `Show menu bar item` on 
+  OS X (for [Issue #214](https://github.com/pbek/QOwnNotes/issues/214))
+
 ## 16.06.7
 - when doing a text search in your note the selected text is now preset as 
   search text if there is any and there is no other search text filled in
