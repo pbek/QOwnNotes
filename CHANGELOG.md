@@ -10,6 +10,8 @@
 - under OS X now a lot of settings keys, that get added by Qt under OS X 
   will be ignored in the debug output of the settings dialog
   (for [Issue #217](https://github.com/pbek/QOwnNotes/issues/217))
+- added more Portuguese, Japanese, French, Hungarian and Spanish translation
+  (thank you mlimacarlos, piyo, Loelo, Fabijenna and kender)
 
 ## 16.06.7
 - when doing a text search in your note the selected text is now preset as 
