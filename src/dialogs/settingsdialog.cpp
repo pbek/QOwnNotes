@@ -485,8 +485,6 @@ void SettingsDialog::setFontLabel(QLineEdit *label, QFont font) {
 
 void SettingsDialog::outputSettings() {
     QSettings settings;
-
-    QListIterator<QString> itr(settings.allKeys());
     QString output;
 
     output += "QOwnNotes Debug Information\n";
@@ -553,9 +551,37 @@ void SettingsDialog::outputSettings() {
             "PiwikClientId" <<
             "networking/proxyPassword");
 
+    // under OS X we have to ignore some keys
+#ifdef Q_OS_MAC
+    QStringList keyIgnoreList;
+    keyIgnoreList << "AKDeviceUnlockState" << "Apple" << "NS" << "NavPanel"
+    << "com/apple";
+#endif
+
+    QListIterator<QString> itr(settings.allKeys());
     while (itr.hasNext()) {
         QString key = itr.next();
         QVariant value = settings.value(key);
+
+        // under OS X we have to ignore some keys
+#ifdef Q_OS_MAC
+        bool ignoreKey = false;
+
+        // ignore values of certain keys
+        QListIterator<QString> itr2(keyIgnoreList);
+        while (itr2.hasNext()) {
+            QString pattern = itr2.next();
+            if (key.startsWith(pattern)) {
+                ignoreKey = true;
+                break;
+            }
+        }
+
+        // check if key has to be ignored
+        if (ignoreKey) {
+            continue;
+        }
+#endif
 
         // hide values of certain keys
         if (keyHiddenList.contains(key)) {
