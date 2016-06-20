@@ -7,6 +7,9 @@
   activated (for [Issue #213](https://github.com/pbek/QOwnNotes/issues/213))
     - if the menu entry it is checked by a user all toolbars will be activated 
       again
+- under OS X now a lot of settings keys, that get added by Qt under OS X 
+  will be ignored in the debug output of the settings dialog
+  (for [Issue #217](https://github.com/pbek/QOwnNotes/issues/217))
 
 ## 16.06.7
 - when doing a text search in your note the selected text is now preset as 
