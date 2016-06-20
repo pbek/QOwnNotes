@@ -270,11 +270,21 @@ MainWindow::MainWindow(QWidget *parent) :
     const QSignalBlocker blocker(ui->actionShow_toolbar);
     {
         Q_UNUSED(blocker);
-        ui->actionShow_toolbar->setChecked(!ui->mainToolBar->isHidden());
+        ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
 
     connect(ui->mainToolBar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(mainToolbarVisibilityChanged(bool)));
+            this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_formattingToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_insertingToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_encryptionToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_windowToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_quitToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
 
     // set the action group for the width selector of the distraction free mode
     QActionGroup *dfmEditorWidthActionGroup = new QActionGroup(this);
@@ -4364,8 +4374,7 @@ void MainWindow::trackAction(QAction *action) {
             "action/" + action->objectName());
 }
 
-void MainWindow::resizeEvent(QResizeEvent* event)
-{
+void MainWindow::resizeEvent(QResizeEvent* event) {
     ui->noteTextEdit->setPaperMargins(event->size().width());
     ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
     ui->tagTreeWidget->resizeColumnToContents(0);
@@ -4375,8 +4384,7 @@ void MainWindow::resizeEvent(QResizeEvent* event)
 /**
  * Toggles the visibility of the toolbars
  */
-void MainWindow::on_actionShow_toolbar_triggered(bool checked)
-{
+void MainWindow::on_actionShow_toolbar_triggered(bool checked) {
     ui->mainToolBar->setVisible(checked);
     _formattingToolbar->setVisible(checked);
     _insertingToolbar->setVisible(checked);
@@ -4388,13 +4396,26 @@ void MainWindow::on_actionShow_toolbar_triggered(bool checked)
 /**
  * Toggles the checked state of the "show toolbar" checkbox in the main menu
  */
-void MainWindow::mainToolbarVisibilityChanged(bool visible)
-{
+void MainWindow::toolbarVisibilityChanged(bool visible) {
+    Q_UNUSED(visible);
+
     const QSignalBlocker blocker(ui->actionShow_toolbar);
     {
         Q_UNUSED(blocker);
-        ui->actionShow_toolbar->setChecked(visible);
+        ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
+}
+
+/**
+ * Checks if at least one toolbar is visible
+ */
+bool MainWindow::isToolbarVisible() {
+    return ui->mainToolBar->isVisible() ||
+            _formattingToolbar->isVisible() ||
+            _insertingToolbar->isVisible() ||
+            _encryptionToolbar->isVisible() ||
+            _windowToolbar->isVisible() ||
+            _quitToolbar->isVisible();
 }
 
 void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {

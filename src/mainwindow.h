@@ -199,7 +199,7 @@ private slots:
 
     void on_actionShow_toolbar_triggered(bool checked);
 
-    void mainToolbarVisibilityChanged(bool visible);
+    void toolbarVisibilityChanged(bool visible);
 
     void dfmEditorWidthActionTriggered(QAction *action);
 
@@ -526,4 +526,6 @@ private:
     void initSavedSearchesCompleter();
 
     void initEditorSoftWrap();
+
+    bool isToolbarVisible();
 };
