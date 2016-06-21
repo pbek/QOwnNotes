@@ -6,6 +6,9 @@
   to "/notes.sqlite"` errors was added
   (for [Issue #219](https://github.com/pbek/QOwnNotes/issues/219) and 
   [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
+- the layout direction for the `next` button in the welcome dialog was
+  changed to `left to right` again, because some operating systems showed 
+  strange behaviors with `right to left` 
 
 ## 16.06.8
 - the menu entry `Show in system tray` was renamed to `Show menu bar item` on 

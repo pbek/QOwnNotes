@@ -95,9 +95,6 @@
       </item>
       <item>
        <widget class="QPushButton" name="nextButton">
-        <property name="layoutDirection">
-         <enum>Qt::RightToLeft</enum>
-        </property>
         <property name="text">
          <string>&amp;Next</string>
         </property>
@@ -383,8 +380,8 @@
   </layout>
  </widget>
  <resources>
-  <include location="../images.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../images.qrc"/>
  </resources>
  <connections/>
 </ui>
