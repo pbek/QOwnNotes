@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.06.9
+- there now is note folder information in the debug dump in the settings dialog
+- a fallback for loading the note folder path to prevent `Can't write 
+  to "/notes.sqlite"` errors was added
+  (for [Issue #219](https://github.com/pbek/QOwnNotes/issues/219) and 
+  [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
+
 ## 16.06.8
 - the menu entry `Show in system tray` was renamed to `Show menu bar item` on 
   OS X (for [Issue #214](https://github.com/pbek/QOwnNotes/issues/214))

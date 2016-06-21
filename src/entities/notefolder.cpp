@@ -283,9 +283,20 @@ QString NoteFolder::currentRemotePath() {
  * Fetches the current local path
  */
 QString NoteFolder::currentLocalPath() {
+    QString path;
     NoteFolder noteFolder = currentNoteFolder();
-    return noteFolder.isFetched() ? Utils::Misc::removeIfEndsWith(
-            noteFolder.getLocalPath(), QDir::separator()) : "";
+
+    if (noteFolder.isFetched()) {
+        path = noteFolder.getLocalPath();
+    }
+
+    // load notesPath as fallback
+    if (path.isEmpty()) {
+        QSettings settings;
+        path = settings.value("notesPath").toString();
+    }
+
+    return Utils::Misc::removeIfEndsWith(path, QDir::separator());
 }
 
 /**

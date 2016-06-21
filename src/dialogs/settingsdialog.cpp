@@ -541,6 +541,30 @@ void SettingsDialog::outputSettings() {
                                               connectionErrorMessage);
     }
 
+    // add note folder information
+    output += "\n## Note folders\n\n";
+    output += prepareDebugInformationLine(
+            "currentNoteFolderId",
+            QString::number(NoteFolder::currentNoteFolderId()));
+
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+    if (noteFolders.count() > 0) {
+        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+                output += "\n### " + noteFolder.getName() + "\n\n";
+                output += prepareDebugInformationLine(
+                        "id", QString::number(noteFolder.getId()));
+                output += prepareDebugInformationLine(
+                        "activeTagId",
+                        QString::number(noteFolder.getActiveTagId()));
+                output += prepareDebugInformationLine(
+                        "localPath", noteFolder.getLocalPath());
+                output += prepareDebugInformationLine(
+                        "remotePath", noteFolder.getRemotePath());
+            }
+
+        output += "\n";
+    }
+
     // add information about the settings
     output += "\n## Settings\n\n";
 
