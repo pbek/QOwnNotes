@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.06.10
+- if there were no note folders found when QOwnNotes starts they now will 
+  generated from the settings at the very beginning, this should prevent some 
+  errors (for [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
+- the packages `libQt5Sql5` and `libQt5PrintSupport5` are now required in the 
+  QOwnNotes openSUSE packages
+  (for [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
+
 ## 16.06.9
 - there now is note folder information in the debug dump in the settings dialog
 - a fallback for loading the note folder path to prevent `Can't write 

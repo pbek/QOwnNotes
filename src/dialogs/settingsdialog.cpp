@@ -561,8 +561,6 @@ void SettingsDialog::outputSettings() {
                 output += prepareDebugInformationLine(
                         "remotePath", noteFolder.getRemotePath());
             }
-
-        output += "\n";
     }
 
     // add information about the settings
@@ -638,7 +636,7 @@ void SettingsDialog::outputSettings() {
 QString SettingsDialog::prepareDebugInformationLine(QString headline,
                                                     QString data) {
     data = (data == "") ? "*empty*" : "`" + data + "`";
-    return "**" + headline + "**: " + data + "\n";
+    return "**" + headline + "**: " + data + "  \n";
 }
 
 /**

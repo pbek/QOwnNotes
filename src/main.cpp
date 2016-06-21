@@ -134,6 +134,9 @@ bool mainStartupMisc() {
         }
     }
 
+    // try to re-create note folders if they are missing
+    NoteFolder::migrateToNoteFolders();
+
     return true;
 }
 

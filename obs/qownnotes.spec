@@ -27,7 +27,7 @@ Requires:       qt5-qtsvg
 
 BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel
 BuildRequires:  update-desktop-files 
-Requires:       libQt5Svg5 libQt5Declarative5
+Requires:       libQt5Svg5 libQt5Declarative5 libQt5Sql5 libQt5PrintSupport5
 
 %endif
 
