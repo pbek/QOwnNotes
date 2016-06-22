@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.06.11
+- the 100% cpu problem when disabling the markdown highlighter in the settings 
+  is now fixed (for [Issue #217](https://github.com/pbek/QOwnNotes/issues/217))
 - there are now required packages for openSUSE: `libQt5Sql5-sqlite libQt5Gui5 
   libQt5Network5 libQt5Widgets5 libQt5Xml5`
   (for [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
