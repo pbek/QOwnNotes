@@ -3,10 +3,12 @@
 ## 16.06.11
 - the 100% cpu problem when disabling the markdown highlighter in the settings 
   is now fixed (for [Issue #217](https://github.com/pbek/QOwnNotes/issues/217))
-- there are now required packages for openSUSE: `libQt5Sql5-sqlite libQt5Gui5 
-  libQt5Network5 libQt5Widgets5 libQt5Xml5`
+- there are now more dependencies required in the openSUSE packages: 
+  `libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5`
   (for [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
-
+- there now are repositories for **Fedora 24**
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora) for instructions
+    
 ## 16.06.10
 - if there were no note folders found when QOwnNotes starts they now will 
   generated from the settings at the very beginning, this should prevent some 
