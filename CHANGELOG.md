@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.06.12
+- a problem with detecting the ownCloud server if it just returns a server 
+  code 302 when requesting the server url was fixed in the settings dialog 
+
 ## 16.06.11
 - the 100% cpu problem when disabling the markdown highlighter in the settings 
   is now fixed (for [Issue #217](https://github.com/pbek/QOwnNotes/issues/217))

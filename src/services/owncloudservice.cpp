@@ -122,6 +122,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             if (data.startsWith("<?xml version=")) {
                 settingsDialog->setOKLabelData(3, "ok", SettingsDialog::OK);
+                settingsDialog->setOKLabelData(1, "ok", SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(3, "not correct",
                                                SettingsDialog::Failure);
@@ -133,6 +134,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             if (data.startsWith("<?xml version=")) {
                 settingsDialog->setOKLabelData(2, "ok", SettingsDialog::OK);
+                settingsDialog->setOKLabelData(1, "ok", SettingsDialog::OK);
             } else {
                 settingsDialog->setOKLabelData(2, "not detected",
                                                SettingsDialog::Failure);
