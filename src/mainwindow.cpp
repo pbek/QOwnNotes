@@ -2360,7 +2360,8 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     }
 
     ui->noteTextView->setHtml(
-            note->toMarkdownHtml(notesPath, getMaxImageWidth()));
+            note->toMarkdownHtml(NoteFolder::currentLocalPath(),
+                                 getMaxImageWidth()));
 
     // update the slider when editing notes
     noteTextSliderValueChanged(
@@ -5834,7 +5835,7 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
             QTextStream out(&file);
             out.setCodec("UTF-8");
             out << currentNote.toMarkdownHtml(
-                    notesPath, getMaxImageWidth(), true);
+                    NoteFolder::currentLocalPath(), getMaxImageWidth(), true);
             file.flush();
             file.close();
         }

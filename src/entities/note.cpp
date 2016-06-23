@@ -998,8 +998,8 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     str.replace(
-            QRegularExpression("\\(file:\\/\\/([^\\/].+)\\)"),
-            "(file://" + windowsSlash + notesPath + "/\\1)");
+            QRegularExpression("([\\(<])file:\\/\\/([^\\/].+)([\\)>])"),
+            "\\1file://" + windowsSlash + notesPath + "/\\2\\3");
 
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
