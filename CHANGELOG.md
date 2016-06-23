@@ -3,6 +3,8 @@
 ## 16.06.12
 - a problem with detecting the ownCloud server if it just returns a server 
   code 302 when requesting the server url was fixed in the settings dialog 
+- added more Hungarian and Russian translation (thank you Fabijenna and 
+  frostyland)
 
 ## 16.06.11
 - the 100% cpu problem when disabling the markdown highlighter in the settings 
