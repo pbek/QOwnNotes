@@ -3384,9 +3384,18 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  */
 void MainWindow::openLocalUrl(QString urlString) {
     if (urlString.startsWith("file://..")) {
+        QString windowsSlash = "";
+
+#ifdef Q_OS_WIN32
+    // we need an other slash for Windows
+    windowsSlash = "/";
+#endif
+
         urlString.replace(
                 "file://..",
-                "file://" + NoteFolder::currentLocalPath() + "/..");
+                "file://" + windowsSlash + NoteFolder::currentLocalPath() +
+                        "/..");
+
         QDesktopServices::openUrl(QUrl(urlString));
         return;
     }
