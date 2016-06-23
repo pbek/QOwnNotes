@@ -161,7 +161,7 @@ private slots:
 
     void on_actionShow_changelog_triggered();
 
-    void openLocalUrl(QUrl url);
+    void openLocalUrl(QString urlString);
 
     void on_action_Find_text_in_note_triggered();
 

@@ -242,13 +242,11 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
  * "/path/to/my/file/QOwnNotes.pdf" if the operating system
  * supports that handler
  */
-void QOwnNotesMarkdownTextEdit::openUrl(QUrl url) {
-    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - 'url': " << url;
+void QOwnNotesMarkdownTextEdit::openUrl(QString urlString) {
+    qDebug() << "QOwnNotesMarkdownTextEdit " << __func__ << " - 'urlString': "
+        << urlString;
 
-    QString urlString = url.toString();
-    QSettings settings;
-    QString notesPath = settings.value("notesPath").toString();
-
+    QString notesPath = NoteFolder::currentLocalPath();
     QString windowsSlash = "";
 
 #ifdef Q_OS_WIN32
@@ -260,7 +258,7 @@ void QOwnNotesMarkdownTextEdit::openUrl(QUrl url) {
     urlString.replace(QRegularExpression("^file:[\\/]{2}([^\\/].+)$"),
                       "file://" + windowsSlash + notesPath + "/\\1");
 
-    QMarkdownTextEdit::openUrl(QUrl(urlString));
+    QMarkdownTextEdit::openUrl(urlString);
 }
 
 //void QOwnNotesMarkdownTextEdit::setViewportMargins(

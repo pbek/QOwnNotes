@@ -182,16 +182,16 @@ MainWindow::MainWindow(QWidget *parent) :
     // handle note url externally in the note text edit
     QObject::connect(
             ui->noteTextEdit,
-            SIGNAL(urlClicked(QUrl)),
+            SIGNAL(urlClicked(QString)),
             this,
-            SLOT(openLocalUrl(QUrl)));
+            SLOT(openLocalUrl(QString)));
 
     // also handle note url externally in the encrypted note text edit
     QObject::connect(
             ui->encryptedNoteTextEdit,
-            SIGNAL(urlClicked(QUrl)),
+            SIGNAL(urlClicked(QString)),
             this,
-            SLOT(openLocalUrl(QUrl)));
+            SLOT(openLocalUrl(QString)));
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -3369,9 +3369,9 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
     QString scheme = url.scheme();
 
     if ((scheme == "note" || scheme == "task")) {
-        openLocalUrl(url);
+        openLocalUrl(url.toString());
     } else {
-        ui->noteTextEdit->openUrl(url);
+        ui->noteTextEdit->openUrl(url.toString());
     }
 }
 
@@ -3382,8 +3382,16 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  * - <note://MyNote> opens the note "MyNote"
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  */
-void MainWindow::openLocalUrl(QUrl url) {
-    qDebug() << __func__ << " - 'url': " << url;
+void MainWindow::openLocalUrl(QString urlString) {
+    if (urlString.startsWith("file://..")) {
+        urlString.replace(
+                "file://..",
+                "file://" + NoteFolder::currentLocalPath() + "/..");
+        QDesktopServices::openUrl(QUrl(urlString));
+        return;
+    }
+
+    QUrl url = QUrl(urlString);
     QString scheme = url.scheme();
 
     if (scheme == "note") {
