@@ -3341,17 +3341,23 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered() {
 }
 
 //
-// hotkey to create new note with date in name
+// Triggered by the shortcut to create new note with date in the headline
 //
 void MainWindow::on_action_Note_note_triggered() {
-    // show window in case we are using the system tray
+    // show the window in case we are using the system tray
     show();
 
-    QDateTime currentDate = QDateTime::currentDateTime();
+    QString text = ScriptingService::instance()->
+            callHandleNewNoteHeadlineHook();
 
-    // replacing ":" with "_" for Windows systems
-    QString text =
-            "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
+    // fallback if there was no QML hook to set the headline
+    if (text.isEmpty()) {
+        QDateTime currentDate = QDateTime::currentDateTime();
+
+        // replacing ":" with "_" for Windows systems
+        text = "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
+    }
+
     this->ui->searchLineEdit->setText(text);
     on_searchLineEdit_returnPressed();
 }

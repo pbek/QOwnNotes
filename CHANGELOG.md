@@ -3,6 +3,14 @@
 ## 16.06.12
 - a problem with detecting the ownCloud server if it just returns a server 
   code 302 when requesting the server url was fixed in the settings dialog 
+- there now is a new scripting hook `handleNewNoteHeadlineHook()`, that is 
+  called before a new note is created
+  (for [Issue #218](https://github.com/pbek/QOwnNotes/issues/218))
+    - it allows you to **modify the headline of a note before it is created**
+    - note that you have to take care about a unique note name, otherwise
+      the new note will not be created, it will just be found in the note list
+    - there is an example at
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-new-note-headline.qml)
 - added more Hungarian and Russian translation (thank you Fabijenna and 
   frostyland)
 

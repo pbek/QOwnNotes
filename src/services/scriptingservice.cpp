@@ -327,6 +327,46 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
     return "";
 }
 
+
+/**
+ * Calls the handleNewNoteHeadlineHook function for an object
+ * This function is called when new note gets created
+ */
+QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
+        QObject *object) {
+    if (methodExistsForObject(
+            object,
+            "handleNewNoteHeadlineHook()")) {
+
+        QVariant text;
+        QMetaObject::invokeMethod(object, "handleNewNoteHeadlineHook",
+                                  Q_RETURN_ARG(QVariant, text));
+        return text.toString();
+    }
+
+    return "";
+}
+
+/**
+ * Calls the handleNewNoteHeadlineHook function for all script components
+ */
+QString ScriptingService::callHandleNewNoteHeadlineHook() {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString text = callHandleNewNoteHeadlineHookForObject(
+                scriptComponent.object);
+        if (!text.isEmpty()) {
+            return text;
+        }
+    }
+
+    return "";
+}
+
 /**
  * Calls the noteToMarkdownHtmlHook function for an object
  */
