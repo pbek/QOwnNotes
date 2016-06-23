@@ -8,7 +8,10 @@
   (for [Issue #220](https://github.com/pbek/QOwnNotes/issues/220))
 - there now are repositories for **Fedora 24**
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora) for instructions
-    
+- relative file urls like `[manual](file://../ownCloudUserManual.pdf)` and 
+  `<file://../ownCloudUserManual.pdf>` now work in the note text edit and the
+   note preview (for [Issue #221](https://github.com/pbek/QOwnNotes/issues/221))
+ 
 ## 16.06.10
 - if there were no note folders found when QOwnNotes starts they now will 
   generated from the settings at the very beginning, this should prevent some 
