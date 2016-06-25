@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.06.13
+- there now is a **Slackware repository** for QOwnNotes (thanks a lot to 
+  @richarson for the help)
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions
+
 ## 16.06.12
 - a problem with detecting the ownCloud server if it just returns a server 
   code 302 when requesting the server url was fixed in the settings dialog 

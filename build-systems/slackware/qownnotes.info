@@ -5,6 +5,6 @@ DOWNLOAD="http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSI
 MD5SUM="ARCHIVE-MD5"
 DOWNLOAD_x86_64="http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSION-STRING.tar.xz"
 MD5SUM_x86_64="ARCHIVE-MD5"
-REQUIRES="qt5"
+REQUIRES="qt5 libproxy"
 MAINTAINER="Patrizio Bekerle"
 EMAIL="patrizio@bekerle.com"
