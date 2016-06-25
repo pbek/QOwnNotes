@@ -7,6 +7,7 @@
       the distraction free mode, because the `leave` button is in the status bar
 - there now is a **Slackware repository** for QOwnNotes (thanks a lot to 
   @richarson for the help)
+  (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions
     - I still get errors when building QOwnNotes for Slackware 14.2, maybe this 
       will work when Slackware 14.2 is released or someone else can help with
