@@ -309,6 +309,8 @@ private slots:
 
     void on_actionUse_softwrap_in_note_editor_toggled(bool arg1);
 
+    void on_actionShow_status_bar_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

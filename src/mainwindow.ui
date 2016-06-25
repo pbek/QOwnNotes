@@ -635,6 +635,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthFull"/>
     </widget>
     <addaction name="actionShow_toolbar"/>
+    <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
@@ -1464,6 +1465,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Use softwrap in note editor and preview</string>
+   </property>
+  </action>
+  <action name="actionShow_status_bar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show status bar</string>
    </property>
   </action>
  </widget>

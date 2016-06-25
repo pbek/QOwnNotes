@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.06.13
+- there now is a checkbox to disable the status bar in the windows menu
+  (for [Issue #230](https://github.com/pbek/QOwnNotes/issues/230))
+    - if you have disabled the status bar use the <kbd>Esc</kbd> key to leave 
+      the distraction free mode, because the `leave` button is in the status bar
 - there now is a **Slackware repository** for QOwnNotes (thanks a lot to 
   @richarson for the help)
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions

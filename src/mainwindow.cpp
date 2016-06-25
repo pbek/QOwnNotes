@@ -1367,6 +1367,10 @@ void MainWindow::readSettings() {
             ui->actionEditorWidthNarrow->setChecked(true);
             break;
     }
+
+    // toggle the show status bar checkbox
+    bool showStatusBar = settings.value("showStatusBar", true).toBool();
+    on_actionShow_status_bar_triggered(showStatusBar);
 }
 
 /**
@@ -5937,4 +5941,17 @@ void MainWindow::on_actionUse_softwrap_in_note_editor_toggled(bool arg1)
 
     // initialize the editor soft wrapping
     initEditorSoftWrap();
+}
+
+void MainWindow::on_actionShow_status_bar_triggered(bool checked) {
+    ui->statusBar->setVisible(checked);
+
+    const QSignalBlocker blocker(ui->actionShow_status_bar);
+    {
+        Q_UNUSED(blocker);
+        ui->actionShow_status_bar->setChecked(checked);
+    }
+
+    QSettings settings;
+    settings.setValue("showStatusBar", checked);
 }
