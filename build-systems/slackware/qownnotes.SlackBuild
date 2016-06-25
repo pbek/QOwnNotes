@@ -1,0 +1,127 @@
+#!/bin/sh
+
+# Slackware build script for qownnotes
+
+# Copyright 2015 Ricardo J. Barberis (ricardo.barberis@gmail.com)
+# All rights reserved.
+#
+# Redistribution and use of this script, with or without modification, is
+# permitted provided that the following conditions are met:
+#
+# 1. Redistributions of this script must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS" AND ANY EXPRESS OR IMPLIED
+#  WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+#  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO
+#  EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+#  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+#  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+#  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+#  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+#  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+#  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+PRGNAM=qownnotes
+VERSION=${VERSION:-VERSION-STRING}
+BUILD=${BUILD:-1}
+TAG=${TAG:-_SBo}
+
+if [ -z "$ARCH" ]; then
+  case "$( uname -m )" in
+    i?86) ARCH=i486 ;;
+    arm*) ARCH=arm ;;
+       *) ARCH=$( uname -m ) ;;
+  esac
+fi
+
+CWD=$(pwd)
+TMP=${TMP:-/tmp/SBo}
+PKG=$TMP/package-$PRGNAM
+OUTPUT=${OUTPUT:-/tmp}
+
+if [ "$ARCH" = "i486" ]; then
+  SLKCFLAGS="-O2 -march=i486 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "i686" ]; then
+  SLKCFLAGS="-O2 -march=i686 -mtune=i686"
+  LIBDIRSUFFIX=""
+elif [ "$ARCH" = "x86_64" ]; then
+  SLKCFLAGS="-O2 -fPIC"
+  LIBDIRSUFFIX="64"
+else
+  SLKCFLAGS="-O2"
+  LIBDIRSUFFIX=""
+fi
+
+set -e
+
+rm -rf $PKG
+mkdir -p $TMP $PKG $OUTPUT
+cd $TMP
+rm -rf $PRGNAM-$VERSION
+
+if [ -e $CWD/v$VERSION.tar.xz ] ; then
+  tar xvf $CWD/v$VERSION.tar.xz
+else
+  tar xvf $CWD/$PRGNAM-$VERSION.tar.xz
+fi
+
+cd $PRGNAM-$VERSION
+chown -R root:root .
+find -L . \
+ \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
+  -o -perm 511 \) -exec chmod 755 {} \; -o \
+ \( -perm 666 -o -perm 664 -o -perm 640 -o -perm 600 -o -perm 444 \
+  -o -perm 440 -o -perm 400 \) -exec chmod 644 {} \;
+
+# Set the release string to disable the update check
+echo "#define RELEASE \"SlackBuild\"" > release.h
+
+mkdir -p build
+cd build
+  qmake-qt5 ..
+  make
+#  make INSTALL_ROOT=$PKG install
+cd ..
+
+# This program doesn't have an install target, so we install files by hand
+mkdir -p $PKG/usr/{bin,share}
+install -D -m 0755 build/QOwnNotes $PKG/usr/bin/QOwnNotes
+install -D -m 0644 QOwnNotes.desktop $PKG/usr/share/applications/QOwnNotes.desktop
+install -D -m 0644 images/icons/128x128/QOwnNotes.png $PKG/usr/share/pixmaps/QOwnNotes.png
+install -D -m 0644 images/icons/16x16/QOwnNotes.png   $PKG/usr/share/icons/hicolor/16x16/apps/QOwnNotes.png
+install -D -m 0644 images/icons/24x24/QOwnNotes.png   $PKG/usr/share/icons/hicolor/24x24/apps/QOwnNotes.png
+install -D -m 0644 images/icons/32x32/QOwnNotes.png   $PKG/usr/share/icons/hicolor/32x32/apps/QOwnNotes.png
+install -D -m 0644 images/icons/48x48/QOwnNotes.png   $PKG/usr/share/icons/hicolor/48x48/apps/QOwnNotes.png
+install -D -m 0644 images/icons/64x64/QOwnNotes.png   $PKG/usr/share/icons/hicolor/64x64/apps/QOwnNotes.png
+install -D -m 0644 images/icons/96x96/QOwnNotes.png   $PKG/usr/share/icons/hicolor/96x96/apps/QOwnNotes.png
+install -D -m 0644 images/icons/128x128/QOwnNotes.png $PKG/usr/share/icons/hicolor/128x128/apps/QOwnNotes.png
+install -D -m 0644 images/icons/256x256/QOwnNotes.png $PKG/usr/share/icons/hicolor/256x256/apps/QOwnNotes.png
+install -D -m 0644 images/icons/512x512/QOwnNotes.png $PKG/usr/share/icons/hicolor/512x512/apps/QOwnNotes.png
+install -D -m 0644 languages/QOwnNotes_en.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_en.qm
+install -D -m 0644 languages/QOwnNotes_de.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_de.qm
+install -D -m 0644 languages/QOwnNotes_fr.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_fr.qm
+install -D -m 0644 languages/QOwnNotes_pl.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_pl.qm
+install -D -m 0644 languages/QOwnNotes_zh.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_zh.qm
+install -D -m 0644 languages/QOwnNotes_ru.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_ru.qm
+install -D -m 0644 languages/QOwnNotes_pt.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_pt.qm
+install -D -m 0644 languages/QOwnNotes_es.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_es.qm
+install -D -m 0644 languages/QOwnNotes_nl.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_nl.qm
+install -D -m 0644 languages/QOwnNotes_hu.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_hu.qm
+install -D -m 0644 languages/QOwnNotes_ja.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_ja.qm
+install -D -m 0644 languages/QOwnNotes_it.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_it.qm
+
+find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
+  | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
+
+mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
+cp -a CHANGELOG.md LICENSE README.md SHORTCUTS.md $PKG/usr/doc/$PRGNAM-$VERSION
+cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
+
+mkdir -p $PKG/install
+cat $CWD/slack-desc > $PKG/install/slack-desc
+cat $CWD/doinst.sh > $PKG/install/doinst.sh
+
+cd $PKG
+/sbin/makepkg -l y -c n $OUTPUT/$PRGNAM-$VERSION-$ARCH-$BUILD$TAG.${PKGTYPE:-tgz}

@@ -3,7 +3,7 @@
 # This is the build/deploy script for the Gentoo QOwnNotes overlay
 # https://github.com/pbek/qownnotes-overlay
 #
-# The QOwnNotes repository for AUR relies on our source archive on
+# The QOwnNotes repository for Gentoo relies on our source archive on
 # https://sourceforge.net/projects/qownnotes/files/src/
 #
 
