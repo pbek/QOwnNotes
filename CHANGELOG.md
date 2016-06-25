@@ -8,6 +8,9 @@
 - there now is a **Slackware repository** for QOwnNotes (thanks a lot to 
   @richarson for the help)
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions
+    - I still get errors when building QOwnNotes for Slackware 14.2, maybe this 
+      will work when Slackware 14.2 is released or someone else can help with
+      the build script or dependencies
 
 ## 16.06.12
 - a problem with detecting the ownCloud server if it just returns a server 
