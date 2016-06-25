@@ -61,20 +61,24 @@ buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 cd ../slackbuilds/14.1/qownnotes/
 cp ${buildSystemPath}/qownnotes.SlackBuild .
 cp ${buildSystemPath}/qownnotes.info .
+cp ${buildSystemPath}/dobuild.sh .
 
 # replace the version in the build file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.SlackBuild
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" qownnotes.info
+sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" dobuild.sh
 
 # replace the md5sum
 sed -i "s/ARCHIVE-MD5/$ARCHIVE_MD5/g" qownnotes.info
 
-cp qownnotes.SlackBuild ../../14.2/qownnotes
-cp qownnotes.info ../../14.2/qownnotes
+path14_2="../../14.2/qownnotes"
+cp qownnotes.SlackBuild ${path14_2}
+cp qownnotes.info ${path14_2}
+cp dobuild.sh ${path14_2}
 
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION"
-#git push
+git commit -m "releasing version $QOWNNOTES_VERSION" * ${path14_2}/*
+git push
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
