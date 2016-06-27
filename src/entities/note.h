@@ -41,7 +41,7 @@ public:
 
     static Note fetchByName(QString name);
 
-    static QList<Note> fetchAll();
+    static QList<Note> fetchAll(int limit = -1);
 
     static QList<Note> fetchAllNotTagged();
 

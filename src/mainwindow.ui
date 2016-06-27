@@ -234,25 +234,6 @@
               </column>
              </widget>
             </item>
-            <item>
-             <widget class="QListWidget" name="notesListWidget">
-              <property name="contextMenuPolicy">
-               <enum>Qt::CustomContextMenu</enum>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QListWidget {
-/*	border: 1px solid gray;*/
-}
-</string>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
-              </property>
-              <property name="selectionMode">
-               <enum>QAbstractItemView::ExtendedSelection</enum>
-              </property>
-             </widget>
-            </item>
            </layout>
           </widget>
          </item>
@@ -1521,8 +1502,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

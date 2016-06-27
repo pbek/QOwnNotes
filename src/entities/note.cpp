@@ -255,13 +255,23 @@ bool Note::fillFromQuery(QSqlQuery query) {
     return true;
 }
 
-QList<Note> Note::fetchAll() {
+QList<Note> Note::fetchAll(int limit) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     QList<Note> noteList;
+    QString sql = "SELECT * FROM note ORDER BY file_last_modified DESC";
 
-    query.prepare("SELECT * FROM note ORDER BY file_last_modified DESC");
+    if (limit >= 0) {
+        sql += " LIMIT :limit";
+    }
+
+    query.prepare(sql);
+
+    if (limit >= 0) {
+        query.bindValue(":limit", limit);
+    }
+
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
