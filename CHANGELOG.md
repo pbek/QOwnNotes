@@ -12,6 +12,8 @@
     - I still get errors when building QOwnNotes for Slackware 14.2, maybe this 
       will work when Slackware 14.2 is released or someone else can help with
       the build script or dependencies
+- added more Dutch translation (thank you Telesight)
+- fixed a wrong string in the settings dialog
 
 ## 16.06.12
 - a problem with detecting the ownCloud server if it just returns a server 

@@ -2373,11 +2373,6 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="916"/>
-        <source>Please make sure the connection to your your ownCloud server works.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.cpp" line="1135"/>
         <source>new folder</source>
         <translation type="unfinished"></translation>
@@ -2472,6 +2467,11 @@ Connection error message: </source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="899"/>
         <source>The Database was reinitialized.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="916"/>
+        <source>Please make sure the connection to your ownCloud server works.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

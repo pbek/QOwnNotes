@@ -913,7 +913,7 @@ void SettingsDialog::on_tabWidget_currentChanged(int index) {
     } else {
         ui->todoCalendarTab->setEnabled(false);
         ui->todoCalendarTab->setToolTip(
-                tr("Please make sure the connection to your your "
+                tr("Please make sure the connection to your "
                            "ownCloud server works."));
     }
 }
