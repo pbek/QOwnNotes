@@ -93,9 +93,6 @@ MainWindow::MainWindow(QWidget *parent) :
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
-    // jump to the first note
-    resetCurrentNote();
-
     noteHistory = NoteHistory();
 
     // set our signal mapper
@@ -170,8 +167,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
-    // set the first item as current item
-    ui->noteTreeWidget->topLevelItem(0)->setSelected(true);
+    // jump to the first note
+    resetCurrentNote();
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -1184,8 +1181,10 @@ void MainWindow::loadNoteDirectoryList() {
             const QSignalBlocker blocker2(ui->noteTreeWidget);
             Q_UNUSED(blocker2);
 
-            // we turn off the root decoration as long we have no sub items
-            ui->noteTreeWidget->setRootIsDecorated(false);
+            bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+
+            // turn on the root decoration if we want to show subfolders
+            ui->noteTreeWidget->setRootIsDecorated(showSubfolders);
 
             ui->noteTreeWidget->clear();
 
@@ -1765,6 +1764,13 @@ void MainWindow::buildNotesIndex() {
 
     // append the custom extensions
     filters.append(Note::customNoteFileExtensionList("*."));
+
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    if (showSubfolders) {
+        QStringList folders = notesDir.entryList(
+                QStringList("*"), QDir::Dirs, QDir::Time);
+        qDebug() << __func__ << " - 'folders': " << folders;
+    }
 
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);

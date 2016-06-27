@@ -45,6 +45,7 @@ public:
     int getActiveTagId();
     bool isShowSubfolders();
     void setShowSubfolders(bool value);
+    static bool isCurrentShowSubfolders();
 
 private:
     int id;

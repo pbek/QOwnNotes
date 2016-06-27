@@ -161,7 +161,7 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->ownCloudServerId = query.value("owncloud_server_id").toInt();
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
-    this->showSubfolders = query.value("show_subfolders").toInt();
+    this->showSubfolders = query.value("show_subfolders").toBool();
     this->activeTagId = query.value("active_tag_id").toInt();
 
     return true;
@@ -308,6 +308,14 @@ QString NoteFolder::currentLocalPath() {
     }
 
     return Utils::Misc::removeIfEndsWith(path, QDir::separator());
+}
+
+/**
+ * Checks if the subfolders should be viewed for the current note folder
+ */
+bool NoteFolder::isCurrentShowSubfolders() {
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    return noteFolder.isFetched() ? noteFolder.isShowSubfolders() : false;
 }
 
 /**
