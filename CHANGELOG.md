@@ -9,9 +9,6 @@
   @richarson for the help)
   (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Slackware) for instructions
-    - I still get errors when building QOwnNotes for Slackware 14.2, maybe this 
-      will work when Slackware 14.2 is released or someone else can help with
-      the build script or dependencies
 - fixed some `database not open` errors and possible problems with the database
   (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
 - added more Dutch translation (thank you Telesight)
