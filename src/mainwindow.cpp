@@ -162,13 +162,14 @@ MainWindow::MainWindow(QWidget *parent) :
             this,
             SLOT(notesWereModified(QString)));
     ui->searchLineEdit->installEventFilter(this);
-    ui->notesListWidget->installEventFilter(this);
+    ui->noteTreeWidget->installEventFilter(this);
     ui->noteTextEdit->installEventFilter(this);
     ui->noteTextEdit->viewport()->installEventFilter(this);
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
-    ui->notesListWidget->setCurrentRow(0);
+    // set the first item as current item
+    ui->noteTreeWidget->topLevelItem(0)->setSelected(true);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -1178,10 +1179,10 @@ void MainWindow::loadNoteDirectoryList() {
         Q_UNUSED(blocker);
 
         {
-            const QSignalBlocker blocker2(ui->notesListWidget);
+            const QSignalBlocker blocker2(ui->noteTreeWidget);
             Q_UNUSED(blocker2);
 
-            ui->notesListWidget->clear();
+            ui->noteTreeWidget->clear();
 
             bool isEditable = Note::allowDifferentFileName();
 
@@ -1195,19 +1196,21 @@ void MainWindow::loadNoteDirectoryList() {
                         continue;
                     }
 
-                    QListWidgetItem *item = new QListWidgetItem(name);
-                    setListWidgetItemToolTipForNote(item, &note);
-                    item->setIcon(QIcon::fromTheme(
+                    QTreeWidgetItem *noteItem = new QTreeWidgetItem();
+                    setTreeWidgetItemToolTipForNote(noteItem, &note);
+                    noteItem->setText(0, name);
+                    noteItem->setData(0, Qt::UserRole, note.getId());
+                    noteItem->setIcon(0, QIcon::fromTheme(
                             "text-x-generic",
                             QIcon(":icons/breeze-qownnotes/16x16/"
                                           "text-x-generic.svg")));
-                    item->setData(Qt::UserRole, note.getId());
 
                     if (isEditable) {
-                        item->setFlags(item->flags() | Qt::ItemIsEditable);
+                        noteItem->setFlags(
+                                noteItem->flags() | Qt::ItemIsEditable);
                     }
 
-                    ui->notesListWidget->addItem(item);
+                    ui->noteTreeWidget->addTopLevelItem(noteItem);
             }
 
             // clear the text edits if there are no notes
@@ -1264,7 +1267,7 @@ void MainWindow::loadNoteDirectoryList() {
 
     // sort alphabetically again if necessary
     if (sortAlphabetically) {
-        ui->notesListWidget->sortItems(Qt::AscendingOrder);
+        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
     }
 
     // setup tagging
@@ -1294,19 +1297,39 @@ void MainWindow::setListWidgetItemToolTipForNote(
 }
 
 /**
+ * Sets the tree widget tooltip for a note
+ */
+void MainWindow::setTreeWidgetItemToolTipForNote(
+        QTreeWidgetItem *item,
+        Note *note,
+        QDateTime *overrideFileLastModified) {
+    if ((item == NULL) || (note == NULL)) {
+        return;
+    }
+
+    QDateTime modified = note->getFileLastModified();
+    QDateTime *fileLastModified = (overrideFileLastModified != NULL) ?
+                                 overrideFileLastModified : &modified;
+
+    item->setToolTip(0, tr("<strong>%1</strong><br />last modified: %2")
+            .arg(note->getName(), fileLastModified->toString()));
+}
+
+/**
  * @brief makes the current note the first item in the note list without reloading the whole list
  */
 void MainWindow::makeCurrentNoteFirstInNoteList() {
     QString name = this->currentNote.getName();
-    QList<QListWidgetItem *> items =
-            this->ui->notesListWidget->findItems(name, Qt::MatchExactly);
+    QList<QTreeWidgetItem *> items =
+            this->ui->noteTreeWidget->findItems(name, Qt::MatchExactly);
     if (items.count() > 0) {
-        const QSignalBlocker blocker(this->ui->notesListWidget);
+        const QSignalBlocker blocker(this->ui->noteTreeWidget);
         Q_UNUSED(blocker);
 
-        ui->notesListWidget->takeItem(ui->notesListWidget->row(items[0]));
-        ui->notesListWidget->insertItem(0, items[0]);
-        this->ui->notesListWidget->setCurrentItem(items[0]);
+        ui->noteTreeWidget->takeTopLevelItem(
+                ui->noteTreeWidget->indexOfTopLevelItem(items[0]));
+        ui->noteTreeWidget->insertTopLevelItem(0, items[0]);
+        this->ui->noteTreeWidget->setCurrentItem(items[0]);
     }
 }
 
@@ -1855,11 +1878,11 @@ void MainWindow::jumpToWelcomeNote() {
  */
 void MainWindow::jumpToNoteName(QString name) {
     // search for the note
-    QList<QListWidgetItem *> items = ui->notesListWidget->
-            findItems(name, Qt::MatchExactly);
+    QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
+            name, Qt::MatchExactly, 0);
     if (items.count() > 0) {
         // set the welcome note as current note
-        ui->notesListWidget->setCurrentItem(items.at(0));
+        ui->noteTreeWidget->setCurrentItem(items.at(0));
     }
 }
 
@@ -1965,13 +1988,13 @@ void MainWindow::setCurrentNote(Note note,
 
     // find and set the current item
     if (updateSelectedNote) {
-        QList<QListWidgetItem *> items = this->ui->notesListWidget->findItems(
+        QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
                 name, Qt::MatchExactly);
         if (items.count() > 0) {
-            const QSignalBlocker blocker(this->ui->notesListWidget);
+            const QSignalBlocker blocker(ui->noteTreeWidget);
             Q_UNUSED(blocker);
 
-            this->ui->notesListWidget->setCurrentItem(items[0]);
+            ui->noteTreeWidget->setCurrentItem(items[0]);
         }
     }
 
@@ -2023,12 +2046,13 @@ void MainWindow::removeCurrentNote() {
                      tr("&Remove"), tr("&Cancel"), QString::null,
                      0, 1)) {
         case 0: {
-            QList<QListWidgetItem*> noteList =
-                    ui->notesListWidget->findItems(currentNote.getName(),
+            // TODO: better fetch by note id, not by name
+            QList<QTreeWidgetItem*> noteList =
+                    ui->noteTreeWidget->findItems(currentNote.getName(),
                                            Qt::MatchExactly);
 
             if (noteList.count() > 0) {
-                const QSignalBlocker blocker1(ui->notesListWidget);
+                const QSignalBlocker blocker1(ui->noteTreeWidget);
                 Q_UNUSED(blocker1);
 
                 const QSignalBlocker blocker2(ui->noteTextEdit);
@@ -2070,14 +2094,15 @@ void MainWindow::removeCurrentNote() {
  */
 void MainWindow::resetCurrentNote() {
     // set new current note
-    if (ui->notesListWidget->count() > 0) {
-        const QSignalBlocker blocker(ui->notesListWidget);
+    if (ui->noteTreeWidget->topLevelItemCount() > 0) {
+        const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker);
 
-        ui->notesListWidget->setCurrentRow(0);
+        // set the first item as current item
+        ui->noteTreeWidget->topLevelItem(0)->setSelected(true);
 
         Note note = Note::fetchByName(
-                ui->notesListWidget->currentItem()->text());
+                ui->noteTreeWidget->currentItem()->text(0));
         setCurrentNote(note, true, false);
     }
 }
@@ -5954,4 +5979,192 @@ void MainWindow::on_actionShow_status_bar_triggered(bool checked) {
 
     QSettings settings;
     settings.setValue("showStatusBar", checked);
+}
+
+void MainWindow::on_noteTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous)
+{
+    Q_UNUSED(previous);
+
+    // in case all notes were removed
+    if (current == NULL) {
+        return;
+    }
+
+    qDebug() << "currentItemChanged " << current->text(0);
+
+    Note note = Note::fetchByName(current->text(0));
+    setCurrentNote(note, true, false);
+
+    // parse the current note for markdown highlighting
+    ui->noteTextEdit->highlighter()->parse();
+
+    // let's highlight the text from the search line edit
+    searchForSearchLineTextInNoteTextEdit();
+
+    // also do a "in note search" if the widget is visible
+    if (ui->noteTextEdit->searchWidget()->isVisible()) {
+        ui->noteTextEdit->searchWidget()->doSearchDown();
+    }
+}
+
+void MainWindow::on_noteTreeWidget_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->noteTreeWidget->mapToGlobal(pos);
+    QMenu noteMenu;
+    QMenu *moveDestinationMenu = new QMenu();
+    QMenu *copyDestinationMenu = new QMenu();
+    QMenu *tagRemoveMenu = new QMenu();
+
+    QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
+
+    // show copy and move menu entries only if there
+    // is at least one other note folder
+    if (noteFolders.count() > 1) {
+        moveDestinationMenu = noteMenu.addMenu(tr("&Move notes to..."));
+        copyDestinationMenu = noteMenu.addMenu(tr("&Copy notes to..."));
+
+        Q_FOREACH(NoteFolder noteFolder, noteFolders) {
+                // don't show not existing folders or if path is empty
+                if (!noteFolder.localPathExists()) {
+                    continue;
+                }
+
+                if (noteFolder.isCurrent()) {
+                    continue;
+                }
+
+                QAction *moveAction = moveDestinationMenu->addAction(
+                        noteFolder.getName());
+                moveAction->setData(noteFolder.getLocalPath());
+                moveAction->setToolTip(noteFolder.getLocalPath());
+                moveAction->setStatusTip(noteFolder.getLocalPath());
+
+                QAction *copyAction = copyDestinationMenu->addAction(
+                        noteFolder.getName());
+                copyAction->setData(noteFolder.getLocalPath());
+                copyAction->setToolTip(noteFolder.getLocalPath());
+                copyAction->setStatusTip(noteFolder.getLocalPath());
+            }
+    }
+
+    QList<Tag> tagList = Tag::fetchAll();
+
+    // show the tagging menu if at least one tag is present
+    if (tagList.count() > 0) {
+        QMenu *tagMenu = noteMenu.addMenu(tr("&Tag selected notes with..."));
+        buildBulkNoteTagMenuTree(tagMenu);
+    }
+
+    QStringList noteNameList;
+    Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            QString name = item->text(0);
+            Note note = Note::fetchByName(name);
+            if (note.isFetched()) {
+                noteNameList << note.getName();
+            }
+        }
+
+    QList<Tag> tagRemoveList = Tag::fetchAllWithLinkToNoteNames(
+            noteNameList);
+
+    // show the remove tags menu if at least one tag is present
+    if (tagRemoveList.count() > 0) {
+        tagRemoveMenu = noteMenu.addMenu(
+                tr("&Remove tag from selected notes..."));
+
+        Q_FOREACH(Tag tag, tagRemoveList) {
+                QAction *action = tagRemoveMenu->addAction(
+                        tag.getName());
+                action->setData(tag.getId());
+                action->setToolTip(tag.getName());
+                action->setStatusTip(tag.getName());
+            }
+    }
+
+    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
+    noteMenu.addSeparator();
+    QAction *openInExternalEditorAction = noteMenu.addAction(
+            tr("Open note in external editor"));
+    QAction *showInFileManagerAction = noteMenu.addAction(
+            tr("Show note in file manager"));
+    noteMenu.addSeparator();
+    QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
+
+    QAction *selectedItem = noteMenu.exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem->parent() == moveDestinationMenu) {
+            // move notes
+            QString destinationFolder = selectedItem->data().toString();
+            moveSelectedNotesToFolder(destinationFolder);
+        } else if (selectedItem->parent() == copyDestinationMenu) {
+            // copy notes
+            QString destinationFolder = selectedItem->data().toString();
+            copySelectedNotesToFolder(destinationFolder);
+        } else if (selectedItem->parent() == tagRemoveMenu) {
+            // remove tag from notes
+            Tag tag = Tag::fetch(selectedItem->data().toInt());
+
+            if (tag.isFetched()) {
+                removeTagFromSelectedNotes(tag);
+            }
+        } else if (selectedItem == removeAction) {
+            // remove notes
+            removeSelectedNotes();
+        } else if (selectedItem == selectAllAction) {
+            // select all notes
+            selectAllNotes();
+        } else if (selectedItem == openInExternalEditorAction) {
+            // opens the current note in an external editor
+            on_action_Open_note_in_external_editor_triggered();
+        } else if (selectedItem == showInFileManagerAction) {
+            // show the current note in the file manager
+            on_actionShow_note_in_file_manager_triggered();
+        }
+    }
+}
+
+/**
+ * Renames a note file if the note was renamed in the note list widget
+ */
+void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
+{
+    Q_UNUSED(column);
+    if (item == NULL || !Note::allowDifferentFileName()) {
+        return;
+    }
+
+    int noteId = item->data(0, Qt::UserRole).toInt();
+    Note note = Note::fetch(noteId);
+    if (note.isFetched()) {
+        qDebug() << __func__ << " - 'note': " << note;
+
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        QString oldNoteName = note.getName();
+
+        if (note.renameNoteFile(item->text(0))) {
+            QString newNoteName = note.getName();
+
+            if (oldNoteName != newNoteName) {
+
+                note.refetch();
+                setCurrentNote(note);
+
+                // rename the note file names of note tag links
+                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+
+                // reload the directory list if note name has changed
+//                loadNoteDirectoryList();
+            }
+        }
+
+        const QSignalBlocker blocker2(ui->notesListWidget);
+        Q_UNUSED(blocker2);
+
+        // set old name back in case the renaming failed or the file name got
+        // altered in the renaming process
+        item->setText(0,note.getName());
+    }
 }

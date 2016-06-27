@@ -201,6 +201,7 @@ bool DatabaseService::setupTables() {
                              "id INTEGER PRIMARY KEY,"
                              "name VARCHAR(255),"
                              "file_name VARCHAR(255),"
+                             "path TEXT,"
                              "note_text TEXT,"
                              "decrypted_note_text TEXT,"
                              "has_dirty_data INTEGER DEFAULT 0,"

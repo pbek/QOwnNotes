@@ -150,10 +150,15 @@ public:
 
     QString fileBaseName(bool withFullName = false);
 
+    QString getPath();
+
+    void setPath(QString text);
+
 protected:
     int id;
     QString name;
     QString fileName;
+    QString path;
     QString noteText;
     QString decryptedNoteText;
     bool hasDirtyData;

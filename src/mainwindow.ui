@@ -214,6 +214,27 @@
              </widget>
             </item>
             <item>
+             <widget class="QTreeWidget" name="noteTreeWidget">
+              <property name="contextMenuPolicy">
+               <enum>Qt::CustomContextMenu</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+              <attribute name="headerVisible">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string notr="true">1</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+            <item>
              <widget class="QListWidget" name="notesListWidget">
               <property name="contextMenuPolicy">
                <enum>Qt::CustomContextMenu</enum>

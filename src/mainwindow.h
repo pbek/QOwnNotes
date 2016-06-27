@@ -311,6 +311,12 @@ private slots:
 
     void on_actionShow_status_bar_triggered(bool checked);
 
+    void on_noteTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
+    void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
+
+    void on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -530,4 +536,8 @@ private:
     void initEditorSoftWrap();
 
     bool isToolbarVisible();
+
+    void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, Note *note,
+                                         QDateTime *overrideFileLastModified
+                                         = 0);
 };
