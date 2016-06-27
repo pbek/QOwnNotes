@@ -43,6 +43,10 @@ int NoteFolder::getPriority() {
     return this->priority;
 }
 
+bool NoteFolder::isShowSubfolders() {
+    return showSubfolders;
+}
+
 int NoteFolder::getActiveTagId() {
     return this->activeTagId;
 }
@@ -65,6 +69,10 @@ void NoteFolder::setRemotePath(QString text) {
 
 void NoteFolder::setPriority(int value) {
     this->priority = value;
+}
+
+void NoteFolder::setShowSubfolders(bool value) {
+    showSubfolders = value;
 }
 
 void NoteFolder::setActiveTagId(int value) {
@@ -153,6 +161,7 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->ownCloudServerId = query.value("owncloud_server_id").toInt();
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
+    this->showSubfolders = query.value("show_subfolders").toInt();
     this->activeTagId = query.value("active_tag_id").toInt();
 
     return true;
@@ -189,15 +198,16 @@ bool NoteFolder::store() {
                 "UPDATE noteFolder SET name = :name, local_path = :localPath, "
                         "owncloud_server_id = :ownCloudServerId, "
                         "remote_path = :remotePath, priority = :priority, "
-                        "active_tag_id = :activeTagId "
-                        "WHERE id = :id");
+                        "active_tag_id = :activeTagId, show_subfolders = "
+                        ":showSubfolders WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO noteFolder (name, local_path, owncloud_server_id, "
-                        "remote_path, priority, active_tag_id) VALUES "
-                        "(:name, :localPath, :ownCloudServerId, :remotePath, "
-                        ":priority, :activeTagId)");
+                        "remote_path, priority, active_tag_id, show_subfolders)"
+                        " VALUES (:name, :localPath, :ownCloudServerId, "
+                        ":remotePath, :priority, :activeTagId, "
+                        ":showSubfolders)");
     }
 
     query.bindValue(":name", this->name);
@@ -206,6 +216,7 @@ bool NoteFolder::store() {
     query.bindValue(":remotePath", this->remotePath);
     query.bindValue(":priority", this->priority);
     query.bindValue(":activeTagId", this->activeTagId);
+    query.bindValue(":showSubfolders", this->showSubfolders);
 
     if (!query.exec()) {
         // on error

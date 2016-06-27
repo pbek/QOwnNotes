@@ -147,6 +147,8 @@ private slots:
 
     void on_darkModeCheckBox_toggled();
 
+    void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

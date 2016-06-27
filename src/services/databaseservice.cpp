@@ -135,7 +135,7 @@ bool DatabaseService::setupNoteFolderTables() {
 
     queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
                            "name VARCHAR(255) PRIMARY KEY, "
-                           "value VARCHAR(255));");
+                           "value VARCHAR(255))");
     int version = getAppData("database_version", "note_folder").toInt();
     int oldVersion = version;
     qDebug() << __func__ << " - 'database version': " << version;
@@ -148,7 +148,7 @@ bool DatabaseService::setupNoteFolderTables() {
                                "created DATETIME DEFAULT current_timestamp)");
 
         queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                               "tag (name);");
+                               "tag (name)");
 
         queryDisk.exec("CREATE TABLE IF NOT EXISTS noteTagLink ("
                                "id INTEGER PRIMARY KEY,"
@@ -157,22 +157,22 @@ bool DatabaseService::setupNoteFolderTables() {
                                "created DATETIME DEFAULT current_timestamp)");
 
         queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink"
-                               " ON noteTagLink (tag_id, note_file_name);");
+                               " ON noteTagLink (tag_id, note_file_name)");
 
         version = 1;
     }
 
     if (version < 2) {
-        queryDisk.exec("ALTER TABLE tag ADD parent_id INTEGER DEFAULT 0;");
+        queryDisk.exec("ALTER TABLE tag ADD parent_id INTEGER DEFAULT 0");
         queryDisk.exec("CREATE INDEX IF NOT EXISTS idxTagParent "
-                               "ON tag( parent_id );");
+                               "ON tag( parent_id )");
         version = 2;
     }
 
     if (version < 3) {
-        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag;");
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag");
         queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
-                               "tag (name, parent_id);");
+                               "tag (name, parent_id)");
         version = 3;
     }
 
@@ -190,7 +190,7 @@ bool DatabaseService::setupTables() {
 
     queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
                            "name VARCHAR(255) PRIMARY KEY, "
-                           "value VARCHAR(255));");
+                           "value VARCHAR(255))");
     int version = getAppData("database_version").toInt();
     int oldVersion = version;
     qDebug() << __func__ << " - 'database_version': " << version;
@@ -231,10 +231,10 @@ bool DatabaseService::setupTables() {
                                "modified DATETIME DEFAULT current_timestamp)");
 
         queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUrl "
-                               "ON calendarItem( url );");
-        queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME;");
+                               "ON calendarItem( url )");
+        queryDisk.exec("ALTER TABLE calendarItem ADD completed_date DATETIME");
         queryDisk.exec("ALTER TABLE calendarItem "
-                               "ADD sort_priority INTEGER DEFAULT 0;");
+                               "ADD sort_priority INTEGER DEFAULT 0");
         version = 1;
     }
 
@@ -272,7 +272,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 7) {
-        queryDisk.exec("ALTER TABLE noteFolder ADD active_tag_id INTEGER;");
+        queryDisk.exec("ALTER TABLE noteFolder ADD active_tag_id INTEGER");
         version = 7;
     }
 
@@ -284,6 +284,12 @@ bool DatabaseService::setupTables() {
                                "enabled BOOLEAN DEFAULT 1,"
                                "priority INTEGER DEFAULT 0 )");
         version = 8;
+    }
+
+    if (version < 9) {
+        queryDisk.exec("ALTER TABLE noteFolder ADD show_subfolders BOOLEAN "
+                               "DEFAULT 0");
+        version = 9;
     }
 
     if (version != oldVersion) {

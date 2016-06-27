@@ -93,6 +93,9 @@ MainWindow::MainWindow(QWidget *parent) :
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
+    // jump to the first note
+    resetCurrentNote();
+
     noteHistory = NoteHistory();
 
     // set our signal mapper
@@ -1180,6 +1183,9 @@ void MainWindow::loadNoteDirectoryList() {
         {
             const QSignalBlocker blocker2(ui->noteTreeWidget);
             Q_UNUSED(blocker2);
+
+            // we turn off the root decoration as long we have no sub items
+            ui->noteTreeWidget->setRootIsDecorated(false);
 
             ui->noteTreeWidget->clear();
 
