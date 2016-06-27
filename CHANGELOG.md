@@ -12,6 +12,8 @@
     - I still get errors when building QOwnNotes for Slackware 14.2, maybe this 
       will work when Slackware 14.2 is released or someone else can help with
       the build script or dependencies
+- fixed some `database not open` errors and possible problems with the database
+  (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
 - added more Dutch translation (thank you Telesight)
 - fixed a wrong string in the settings dialog
 

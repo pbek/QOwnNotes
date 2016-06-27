@@ -90,9 +90,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->setMainWindow(this);
     ui->encryptedNoteTextEdit->setMainWindow(this);
 
-    DatabaseService::createConnection();
-    DatabaseService::setupTables();
-
     this->firstVisibleNoteListRow = 0;
     this->noteHistory = NoteHistory();
 

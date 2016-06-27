@@ -6,6 +6,7 @@
 #include <QTranslator>
 #include <services/metricsservice.h>
 #include <dialogs/logdialog.h>
+#include <services/databaseservice.h>
 #include "libraries/singleapplication/singleapplication.h"
 #include "version.h"
 #include "release.h"
@@ -133,6 +134,9 @@ bool mainStartupMisc() {
             return false;
         }
     }
+
+    DatabaseService::createConnection();
+    DatabaseService::setupTables();
 
     // try to re-create note folders if they are missing
     NoteFolder::migrateToNoteFolders();
