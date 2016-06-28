@@ -55,6 +55,7 @@ SOURCES += main.cpp\
     dialogs/versiondialog.cpp \
     entities/calendaritem.cpp \
     entities/note.cpp \
+    entities/notesubfolder.cpp \
     entities/notehistory.cpp \
     entities/notefolder.cpp \
     entities/tag.cpp \
@@ -98,6 +99,7 @@ HEADERS  += mainwindow.h \
     libraries/singleapplication/singleapplication.h \
     entities/notehistory.h \
     entities/note.h \
+    entities/notesubfolder.h \
     entities/calendaritem.h \
     entities/notefolder.h \
     entities/tag.h \

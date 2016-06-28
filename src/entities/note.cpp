@@ -14,12 +14,14 @@
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
 #include "tag.h"
+#include "notesubfolder.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
 
 
 Note::Note() {
     this->id = 0;
+    this->noteSubFolderId = 0;
     this->hasDirtyData = false;
 }
 
@@ -51,12 +53,12 @@ QString Note::getFileName() {
     return this->fileName;
 }
 
-QString Note::getPath() {
-    return this->path;
+NoteSubFolder Note::getNoteSubFolder() {
+    return NoteSubFolder::fetch(this->noteSubFolderId);
 }
 
-void Note::setPath(QString text) {
-    this->path = text;
+void Note::setNoteSubFolder(NoteSubFolder noteSubFolder) {
+    this->noteSubFolderId = noteSubFolder.getId();
 }
 
 QString Note::getNoteText() {
@@ -241,7 +243,7 @@ bool Note::fillFromQuery(QSqlQuery query) {
     id = query.value("id").toInt();
     name = query.value("name").toString();
     fileName = query.value("file_name").toString();
-    path = query.value("path").toString();
+    noteSubFolderId = query.value("note_sub_folder_id").toInt();
     noteText = query.value("note_text").toString();
     decryptedNoteText = query.value("decrypted_note_text").toString();
     cryptoKey = query.value("crypto_key").toLongLong();
@@ -552,7 +554,7 @@ bool Note::store() {
         query.prepare("UPDATE note SET "
                               "name = :name,"
                               "file_name = :file_name,"
-                              "path = :path,"
+                              "note_sub_folder_id = :note_sub_folder_id,"
                               "note_text = :note_text,"
                               "decrypted_note_text = :decrypted_note_text,"
                               "has_dirty_data = :has_dirty_data, "
@@ -568,18 +570,18 @@ bool Note::store() {
                               "(name, file_name, note_text, has_dirty_data,"
                               "file_last_modified, file_created, crypto_key,"
                               "modified, crypto_password, decrypted_note_text, "
-                              "path) "
+                              "note_sub_folder_id) "
                               "VALUES (:name, :file_name, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
-                              ":crypto_password, :decrypted_note_text, :path)");
+                              ":crypto_password, :decrypted_note_text, :note_sub_folder_id)");
     }
 
     QDateTime modified = QDateTime::currentDateTime();
 
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
-    query.bindValue(":path", path);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
     query.bindValue(":note_text", noteText);
     query.bindValue(":decrypted_note_text", decryptedNoteText);
     query.bindValue(":has_dirty_data", hasDirtyData ? 1 : 0);

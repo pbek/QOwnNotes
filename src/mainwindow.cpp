@@ -1769,7 +1769,23 @@ void MainWindow::buildNotesIndex() {
     if (showSubfolders) {
         QStringList folders = notesDir.entryList(
                 QStringList("*"), QDir::Dirs, QDir::Time);
-        qDebug() << __func__ << " - 'folders': " << folders;
+
+        // ignore some folders
+        QStringList ignoreFolderList;
+        ignoreFolderList << "." << ".." << "media";
+
+        Q_FOREACH(QString folder, folders) {
+                if (ignoreFolderList.contains(folder)) {
+                    continue;
+                }
+
+                // create note sub folder
+                NoteSubFolder noteSubFolder;
+                noteSubFolder.setName(folder);
+                noteSubFolder.store();
+
+                qDebug() << __func__ << " - 'noteSubFolder': " << noteSubFolder;
+            }
     }
 
     // show newest entry first

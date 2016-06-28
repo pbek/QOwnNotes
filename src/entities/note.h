@@ -4,6 +4,7 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QFile>
+#include "notesubfolder.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
@@ -150,15 +151,15 @@ public:
 
     QString fileBaseName(bool withFullName = false);
 
-    QString getPath();
+    NoteSubFolder getNoteSubFolder();
 
-    void setPath(QString text);
+    void setNoteSubFolder(NoteSubFolder noteSubFolder);
 
 protected:
     int id;
     QString name;
     QString fileName;
-    QString path;
+    int noteSubFolderId;
     QString noteText;
     QString decryptedNoteText;
     bool hasDirtyData;

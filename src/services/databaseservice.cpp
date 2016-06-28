@@ -201,7 +201,7 @@ bool DatabaseService::setupTables() {
                              "id INTEGER PRIMARY KEY,"
                              "name VARCHAR(255),"
                              "file_name VARCHAR(255),"
-                             "path TEXT,"
+                             "note_sub_folder_id int,"
                              "note_text TEXT,"
                              "decrypted_note_text TEXT,"
                              "has_dirty_data INTEGER DEFAULT 0,"
@@ -209,6 +209,13 @@ bool DatabaseService::setupTables() {
                              "file_created DATETIME,"
                              "crypto_key INT64 DEFAULT 0,"
                              "crypto_password VARCHAR(255),"
+                             "created DATETIME default current_timestamp,"
+                             "modified DATETIME default current_timestamp)");
+    queryMemory.exec("CREATE TABLE IF NOT EXISTS noteSubFolder ("
+                             "id INTEGER PRIMARY KEY,"
+                             "name VARCHAR(255),"
+                             "parent_id int,"
+                             "file_last_modified DATETIME,"
                              "created DATETIME default current_timestamp,"
                              "modified DATETIME default current_timestamp)");
 
