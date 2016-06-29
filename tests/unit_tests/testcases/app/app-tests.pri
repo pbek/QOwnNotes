@@ -17,6 +17,7 @@ HEADERS  += \
     $$APP_SRC_DIR/services/cryptoservice.h \
     $$APP_SRC_DIR/dialogs/logdialog.h \
     $$APP_SRC_DIR/entities/notefolder.h \
+    $$APP_SRC_DIR/entities/notesubfolder.h \
     $$APP_SRC_DIR/entities/note.h \
     $$APP_SRC_DIR/entities/tag.h \
     $$APP_SRC_DIR/entities/calendaritem.h \
@@ -43,6 +44,7 @@ SOURCES += \
     $$APP_SRC_DIR/services/cryptoservice.cpp \
     $$APP_SRC_DIR/dialogs/logdialog.cpp \
     $$APP_SRC_DIR/entities/notefolder.cpp \
+    $$APP_SRC_DIR/entities/notesubfolder.cpp \
     $$APP_SRC_DIR/entities/note.cpp \
     $$APP_SRC_DIR/entities/tag.cpp \
     $$APP_SRC_DIR/entities/calendaritem.cpp \
