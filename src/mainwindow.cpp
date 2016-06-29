@@ -1896,8 +1896,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     QString cryptoPassword = currentNote.getCryptoPassword();
 
     if (!hasNoteSubFolder) {
-        // delete all notes in the database first
+        // first delete all notes and note sub folders in the database
         Note::deleteAll();
+        NoteSubFolder::deleteAll();
     }
 
     // create all notes from the files
@@ -1929,6 +1930,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
         currentNote.store();
     }
 
+    // build the note sub folders
     if (!hasNoteSubFolder) {
         bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
         if (showSubfolders) {
