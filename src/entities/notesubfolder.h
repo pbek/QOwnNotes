@@ -45,6 +45,12 @@ public:
 
     void setParentId(int parentId);
 
+    QString relativePath();
+
+    NoteSubFolder getParent();
+
+    static QList<NoteSubFolder> fetchAllByParentId(int parentId);
+
 protected:
     int id;
     int parentId;

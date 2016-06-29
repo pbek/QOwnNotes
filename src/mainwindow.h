@@ -356,11 +356,11 @@ private:
 
     void createSystemTrayIcon();
 
-    void loadNoteDirectoryList();
+    void loadNoteDirectoryList(QTreeWidgetItem *parentItem = 0);
 
     void readSettings();
 
-    void buildNotesIndex();
+    void buildNotesIndex(int noteSubFolderId = 0);
 
     QString selectOwnCloudNotesFolder();
 
@@ -530,4 +530,8 @@ private:
                                          = 0);
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
+
+    QTreeWidgetItem *addNoteSubFolderToNoteTreeWidget(
+            QTreeWidgetItem *parentItem,
+            NoteSubFolder noteSubFolder);
 };

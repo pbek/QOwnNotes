@@ -3,6 +3,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <utils/misc.h>
+#include <QDir>
 
 
 NoteSubFolder::NoteSubFolder() {
@@ -16,6 +17,10 @@ int NoteSubFolder::getId() {
 
 int NoteSubFolder::getParentId() {
     return this->parentId;
+}
+
+NoteSubFolder NoteSubFolder::getParent() {
+    return NoteSubFolder::fetch(parentId);
 }
 
 QString NoteSubFolder::getName() {
@@ -62,6 +67,15 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     return noteSubFolder;
 }
 
+/**
+ * Gets the relative path name of the note sub folder
+ */
+QString NoteSubFolder::relativePath() {
+    return parentId == 0 ?
+           name :
+           getParent().relativePath() + QDir::separator() + name;
+}
+
 bool NoteSubFolder::remove() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
@@ -99,7 +113,8 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     QSqlQuery query(db);
 
     QList<NoteSubFolder> noteSubFolderList;
-    QString sql = "SELECT * FROM noteSubFolder ORDER BY file_last_modified DESC";
+    QString sql = "SELECT * FROM noteSubFolder "
+            "ORDER BY file_last_modified DESC";
 
     if (limit >= 0) {
         sql += " LIMIT :limit";
@@ -110,6 +125,29 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     if (limit >= 0) {
         query.bindValue(":limit", limit);
     }
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
+            noteSubFolderList.append(noteSubFolder);
+        }
+    }
+
+    return noteSubFolderList;
+}
+
+QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<NoteSubFolder> noteSubFolderList;
+    QString sql = "SELECT * FROM noteSubFolder WHERE parent_id = "
+            ":parent_id ORDER BY file_last_modified DESC";
+
+    query.prepare(sql);
+    query.bindValue(":parent_id", parentId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -154,7 +192,7 @@ bool NoteSubFolder::store() {
     QDateTime modified = QDateTime::currentDateTime();
 
     query.bindValue(":name", name);
-    query.bindValue(":paren_id", parentId);
+    query.bindValue(":parent_id", parentId);
     query.bindValue(":file_last_modified", fileLastModified);
     query.bindValue(":modified", modified);
 

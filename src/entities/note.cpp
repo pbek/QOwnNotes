@@ -286,6 +286,29 @@ QList<Note> Note::fetchAll(int limit) {
     return noteList;
 }
 
+QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<Note> noteList;
+    QString sql = "SELECT * FROM note WHERE note_sub_folder_id = "
+            ":note_sub_folder_id ORDER BY file_last_modified DESC";
+
+    query.prepare(sql);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteList.append(note);
+        }
+    }
+
+    return noteList;
+}
+
 /**
  * Returns all notes that are not tagged
  */
@@ -1508,7 +1531,8 @@ int Note::countAll() {
 
 QDebug operator<<(QDebug dbg, const Note &note) {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
-    " <fileName>" << note.fileName <<
-    " <hasDirtyData>" << note.hasDirtyData;
+        " <fileName>" << note.fileName <<
+        " <noteSubFolderId>" << note.noteSubFolderId <<
+        " <hasDirtyData>" << note.hasDirtyData;
     return dbg.space();
 }
