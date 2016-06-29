@@ -1176,105 +1176,90 @@ void MainWindow::createSystemTrayIcon() {
 }
 
 void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
-    {
-        const QSignalBlocker blocker(ui->noteTextEdit);
-        Q_UNUSED(blocker);
+    int noteSubFolderId = 0;
 
-        {
-            const QSignalBlocker blocker2(ui->noteTreeWidget);
-            Q_UNUSED(blocker2);
+    if (parentItem != NULL) {
+        noteSubFolderId = parentItem->data(0, Qt::UserRole + 1).toInt();
+    }
 
-            bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    const QSignalBlocker blocker(ui->noteTextEdit);
+    Q_UNUSED(blocker);
 
-            // turn on the root decoration if we want to show subfolders
-            ui->noteTreeWidget->setRootIsDecorated(showSubfolders);
+    const QSignalBlocker blocker2(ui->noteTreeWidget);
+    Q_UNUSED(blocker2);
 
-            ui->noteTreeWidget->clear();
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
 
-            bool isEditable = Note::allowDifferentFileName();
+    if (parentItem == NULL) {
+        // turn on the root decoration if we want to show subfolders
+        ui->noteTreeWidget->setRootIsDecorated(showSubfolders);
 
-            int noteSubFolderId = 0;
-            if (parentItem != NULL) {
-                // TODO: what's the problem here?
-//                noteSubFolderId =
-//                        parentItem->data(0, Qt::UserRole + 1).toInt();
-                noteSubFolderId = 1;
+        ui->noteTreeWidget->clear();
+    }
+
+    bool isEditable = Note::allowDifferentFileName();
+
+    if (showSubfolders) {
+        QList<NoteSubFolder> noteSubFolderList =
+                NoteSubFolder::fetchAllByParentId(noteSubFolderId);
+
+        // build the next level of note sub folders
+        Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+                QTreeWidgetItem *noteSubFolderItem =
+                        addNoteSubFolderToNoteTreeWidget(parentItem,
+                                                         noteSubFolder);
+
+                loadNoteDirectoryList(noteSubFolderItem);
+            }
+    }
+
+    // load all notes and add them to the note list widget
+    QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
+            noteSubFolderId);
+    Q_FOREACH(Note note, noteList) {
+            QString name = note.getName();
+
+            // skip notes without name
+            if (name.isEmpty()) {
+                continue;
             }
 
-            qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+            QTreeWidgetItem *noteItem = new QTreeWidgetItem();
+            setTreeWidgetItemToolTipForNote(noteItem, &note);
+            noteItem->setText(0, name);
+            noteItem->setData(0, Qt::UserRole, note.getId());
+            noteItem->setIcon(0, QIcon::fromTheme(
+                    "text-x-generic",
+                    QIcon(":icons/breeze-qownnotes/16x16/"
+                                  "text-x-generic.svg")));
 
-            if (showSubfolders) {
-                QList<NoteSubFolder> noteSubFolderList =
-                        NoteSubFolder::fetchAllByParentId(noteSubFolderId);
-
-                qDebug() << __func__ << " - 'noteSubFolderList': " <<
-                noteSubFolderList;
-
-                Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
-                        QTreeWidgetItem *noteSubFolderItem =
-                                addNoteSubFolderToNoteTreeWidget(parentItem,
-                                                                 noteSubFolder);
-
-                        qDebug() << __func__ << " - 'noteSubFolderItem': " <<
-                                noteSubFolderItem;
-                        qDebug() << __func__ <<
-                                " - 'noteSubFolderItem->text(0)': " <<
-                                noteSubFolderItem->text(0);
-
-                        loadNoteDirectoryList(noteSubFolderItem);
-                    }
-            }
-
-            // load all notes and add them to the note list widget
-            QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
-                    noteSubFolderId);
-            Q_FOREACH(Note note, noteList) {
-                    QString name = note.getName();
-
-                    // skip notes without name
-                    if (name.isEmpty()) {
-                        continue;
-                    }
-
-                    QTreeWidgetItem *noteItem = new QTreeWidgetItem();
-                    setTreeWidgetItemToolTipForNote(noteItem, &note);
-                    noteItem->setText(0, name);
-                    noteItem->setData(0, Qt::UserRole, note.getId());
-                    noteItem->setIcon(0, QIcon::fromTheme(
-                            "text-x-generic",
-                            QIcon(":icons/breeze-qownnotes/16x16/"
-                                          "text-x-generic.svg")));
-
-                    if (isEditable) {
-                        noteItem->setFlags(
-                                noteItem->flags() | Qt::ItemIsEditable);
-                    }
-
-                    if (parentItem == NULL) {
-                        ui->noteTreeWidget->addTopLevelItem(noteItem);
-                    } else {
-                        // TODO: what's the problem here?
-                        // parentItem->addChild(noteItem);
-                    }
+            if (isEditable) {
+                noteItem->setFlags(
+                        noteItem->flags() | Qt::ItemIsEditable);
             }
 
             if (parentItem == NULL) {
-                // clear the text edits if there are no notes
-                if (noteList.isEmpty()) {
-                    ui->noteTextEdit->clear();
-                    ui->noteTextView->clear();
-                }
+                ui->noteTreeWidget->addTopLevelItem(noteItem);
+            } else {
+                parentItem->addChild(noteItem);
             }
+    }
 
-            int itemCount = noteList.count();
-            MetricsService::instance()->sendEventIfEnabled(
-                    "note/list/loaded",
-                    "note",
-                    "note list loaded",
-                    QString::number(itemCount) + " notes",
-                    itemCount);
+    if (parentItem == NULL) {
+        // clear the text edits if there are no notes
+        if (noteList.isEmpty()) {
+            ui->noteTextEdit->clear();
+            ui->noteTextView->clear();
         }
     }
+
+    int itemCount = noteList.count();
+    MetricsService::instance()->sendEventIfEnabled(
+            "note/list/loaded",
+            "note",
+            "note list loaded",
+            QString::number(itemCount) + " notes",
+            itemCount);
 
     QDir dir(this->notesPath);
 
