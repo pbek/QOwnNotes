@@ -14,12 +14,14 @@
 #include "libraries/botan/botanwrapper.h"
 #include "libraries/botan/botan.h"
 #include "tag.h"
+#include "notesubfolder.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
 
 
 Note::Note() {
     this->id = 0;
+    this->noteSubFolderId = 0;
     this->hasDirtyData = false;
 }
 
@@ -49,6 +51,14 @@ QString Note::getCryptoPassword() {
 
 QString Note::getFileName() {
     return this->fileName;
+}
+
+NoteSubFolder Note::getNoteSubFolder() {
+    return NoteSubFolder::fetch(this->noteSubFolderId);
+}
+
+void Note::setNoteSubFolder(NoteSubFolder noteSubFolder) {
+    this->noteSubFolderId = noteSubFolder.getId();
 }
 
 QString Note::getNoteText() {
@@ -164,7 +174,7 @@ bool Note::remove(bool withFile) {
 bool Note::copy(QString destinationPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
-        QFile file(getFullNoteFilePathForFile(this->fileName));
+        QFile file(fullNoteFilePath());
         QString destinationFileName =
                 destinationPath + QDir::separator() + this->fileName;
 
@@ -233,6 +243,7 @@ bool Note::fillFromQuery(QSqlQuery query) {
     id = query.value("id").toInt();
     name = query.value("name").toString();
     fileName = query.value("file_name").toString();
+    noteSubFolderId = query.value("note_sub_folder_id").toInt();
     noteText = query.value("note_text").toString();
     decryptedNoteText = query.value("decrypted_note_text").toString();
     cryptoKey = query.value("crypto_key").toLongLong();
@@ -246,13 +257,46 @@ bool Note::fillFromQuery(QSqlQuery query) {
     return true;
 }
 
-QList<Note> Note::fetchAll() {
+QList<Note> Note::fetchAll(int limit) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     QList<Note> noteList;
+    QString sql = "SELECT * FROM note ORDER BY file_last_modified DESC";
 
-    query.prepare("SELECT * FROM note ORDER BY file_last_modified DESC");
+    if (limit >= 0) {
+        sql += " LIMIT :limit";
+    }
+
+    query.prepare(sql);
+
+    if (limit >= 0) {
+        query.bindValue(":limit", limit);
+    }
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteList.append(note);
+        }
+    }
+
+    return noteList;
+}
+
+QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<Note> noteList;
+    QString sql = "SELECT * FROM note WHERE note_sub_folder_id = "
+            ":note_sub_folder_id ORDER BY file_last_modified DESC";
+
+    query.prepare(sql);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -533,6 +577,7 @@ bool Note::store() {
         query.prepare("UPDATE note SET "
                               "name = :name,"
                               "file_name = :file_name,"
+                              "note_sub_folder_id = :note_sub_folder_id,"
                               "note_text = :note_text,"
                               "decrypted_note_text = :decrypted_note_text,"
                               "has_dirty_data = :has_dirty_data, "
@@ -547,17 +592,19 @@ bool Note::store() {
         query.prepare("INSERT INTO note"
                               "(name, file_name, note_text, has_dirty_data,"
                               "file_last_modified, file_created, crypto_key,"
-                              "modified, crypto_password, decrypted_note_text) "
+                              "modified, crypto_password, decrypted_note_text, "
+                              "note_sub_folder_id) "
                               "VALUES (:name, :file_name, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
-                              ":crypto_password, :decrypted_note_text)");
+                              ":crypto_password, :decrypted_note_text, :note_sub_folder_id)");
     }
 
     QDateTime modified = QDateTime::currentDateTime();
 
     query.bindValue(":name", name);
     query.bindValue(":file_name", fileName);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
     query.bindValue(":note_text", noteText);
     query.bindValue(":decrypted_note_text", decryptedNoteText);
     query.bindValue(":has_dirty_data", hasDirtyData ? 1 : 0);
@@ -602,7 +649,7 @@ bool Note::storeNoteTextFileToDisk() {
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
     }
 
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
     bool fileExists = this->fileExists();
 
     qDebug() << "storing note file: " << this->fileName;
@@ -745,7 +792,7 @@ void Note::handleNoteTextFileName() {
 }
 
 bool Note::updateNoteTextFromDisk() {
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
 
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << file.errorString();
@@ -775,7 +822,17 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
  * Returns the full path of the note file
  */
 QString Note::fullNoteFilePath() {
-    return getFullNoteFilePathForFile(this->fileName);
+    QString fullFileName = fileName;
+
+    if (noteSubFolderId > 0) {
+        NoteSubFolder noteSubFolder = getNoteSubFolder();
+        if (noteSubFolder.isFetched()) {
+            fullFileName.prepend(noteSubFolder.relativePath() +
+                                         QDir::separator());
+        }
+    }
+
+    return getFullNoteFilePathForFile(fullFileName);
 }
 
 /**
@@ -881,7 +938,7 @@ bool Note::deleteAll() {
 // checks if file of note exists in the filesystem
 //
 bool Note::fileExists() {
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
     return file.exists();
 }
 
@@ -946,7 +1003,7 @@ bool Note::renameNoteFile(QString newName) {
     }
 
     // get the note file to rename it
-    QFile file(getFullNoteFilePathForFile(fileName));
+    QFile file(fullNoteFilePath());
 
     // store the new note file name
     fileName = newFileName;
@@ -954,7 +1011,7 @@ bool Note::renameNoteFile(QString newName) {
     store();
 
     // rename the note file name
-    return file.rename(getFullNoteFilePathForFile(newFileName));
+    return file.rename(fullNoteFilePath());
 }
 
 //
@@ -962,7 +1019,7 @@ bool Note::renameNoteFile(QString newName) {
 //
 bool Note::removeNoteFile() {
     if (this->fileExists()) {
-        QFile file(getFullNoteFilePathForFile(this->fileName));
+        QFile file(fullNoteFilePath());
         qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();
@@ -1484,7 +1541,8 @@ int Note::countAll() {
 
 QDebug operator<<(QDebug dbg, const Note &note) {
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
-    " <fileName>" << note.fileName <<
-    " <hasDirtyData>" << note.hasDirtyData;
+        " <fileName>" << note.fileName <<
+        " <noteSubFolderId>" << note.noteSubFolderId <<
+        " <hasDirtyData>" << note.hasDirtyData;
     return dbg.space();
 }

@@ -71,8 +71,6 @@ protected:
 
 private slots:
 
-    void on_notesListWidget_currentItemChanged(QListWidgetItem *current, QListWidgetItem *previous);
-
     void on_noteTextEdit_textChanged();
 
     void on_action_Quit_triggered();
@@ -120,8 +118,6 @@ private slots:
     void on_actionShow_versions_triggered();
 
     void on_actionShow_trash_triggered();
-
-    void on_notesListWidget_customContextMenuRequested(const QPoint &pos);
 
     void on_actionSelect_all_notes_triggered();
 
@@ -275,8 +271,6 @@ private slots:
 
     void on_actionAutocomplete_triggered();
 
-    void on_notesListWidget_itemChanged(QListWidgetItem *item);
-
     void setupNoteEditPane();
 
     void restoreDistractionFreeMode();
@@ -311,6 +305,12 @@ private slots:
 
     void on_actionShow_status_bar_triggered(bool checked);
 
+    void on_noteTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
+    void on_noteTreeWidget_customContextMenuRequested(const QPoint &pos);
+
+    void on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -318,7 +318,6 @@ private:
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
-    int firstVisibleNoteListRow;
     NoteDiffDialog *noteDiffDialog;
     QSignalMapper *recentNoteFolderSignalMapper;
     QSignalMapper *storeNoteBookmarkSignalMapper;
@@ -357,11 +356,11 @@ private:
 
     void createSystemTrayIcon();
 
-    void loadNoteDirectoryList();
+    void loadNoteDirectoryList(QTreeWidgetItem *parentItem = 0);
 
     void readSettings();
 
-    void buildNotesIndex();
+    void buildNotesIndex(int noteSubFolderId = 0);
 
     QString selectOwnCloudNotesFolder();
 
@@ -429,9 +428,9 @@ private:
 
     void setupUpdateAvailableButton();
 
-    void gotoNextNote(int nextRow = -1);
+    void gotoNextNote();
 
-    void gotoPreviousNote(int previousRow = -1);
+    void gotoPreviousNote();
 
     void setDistractionFreeMode(bool enabled = true);
 
@@ -466,11 +465,6 @@ private:
     void filterNotes(bool searchForText = true);
 
     bool isTagsEnabled();
-
-    void setListWidgetItemToolTipForNote(
-            QListWidgetItem *item,
-            Note *note,
-            QDateTime *overrideFileLastModified = 0);
 
     void initStyling();
 
@@ -530,4 +524,14 @@ private:
     void initEditorSoftWrap();
 
     bool isToolbarVisible();
+
+    void setTreeWidgetItemToolTipForNote(QTreeWidgetItem *item, Note *note,
+                                         QDateTime *overrideFileLastModified
+                                         = 0);
+
+    QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
+
+    QTreeWidgetItem *addNoteSubFolderToNoteTreeWidget(
+            QTreeWidgetItem *parentItem,
+            NoteSubFolder noteSubFolder);
 };

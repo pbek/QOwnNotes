@@ -87,6 +87,8 @@ set(SOURCE_FILES
     entities/calendaritem.h
     entities/note.cpp
     entities/note.h
+    entities/notesubfolder.cpp
+    entities/notesubfolder.h
     entities/notehistory.cpp
     entities/notehistory.h
     entities/notefolder.cpp

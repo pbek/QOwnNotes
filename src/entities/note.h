@@ -4,6 +4,7 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QFile>
+#include "notesubfolder.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
 #define NOTE_TEXT_ENCRYPTION_POST_STRING "-- END ENCRYPTED TEXT -->"
@@ -41,7 +42,7 @@ public:
 
     static Note fetchByName(QString name);
 
-    static QList<Note> fetchAll();
+    static QList<Note> fetchAll(int limit = -1);
 
     static QList<Note> fetchAllNotTagged();
 
@@ -150,10 +151,17 @@ public:
 
     QString fileBaseName(bool withFullName = false);
 
+    NoteSubFolder getNoteSubFolder();
+
+    void setNoteSubFolder(NoteSubFolder noteSubFolder);
+
+    static QList<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
+
 protected:
     int id;
     QString name;
     QString fileName;
+    int noteSubFolderId;
     QString noteText;
     QString decryptedNoteText;
     bool hasDirtyData;

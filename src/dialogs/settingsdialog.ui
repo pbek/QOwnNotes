@@ -189,7 +189,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="8" column="0">
+               <item row="9" column="0">
                 <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
                  <property name="toolTip">
                   <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
@@ -199,7 +199,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="10" column="0">
+               <item row="11" column="0">
                 <widget class="QFrame" name="noteFolderVerticalSpacerFrame">
                  <property name="frameShape">
                   <enum>QFrame::NoFrame</enum>
@@ -239,7 +239,7 @@
                  </layout>
                 </widget>
                </item>
-               <item row="8" column="1">
+               <item row="9" column="1">
                 <widget class="QPushButton" name="noteFolderRemotePathButton">
                  <property name="toolTip">
                   <string>Click here to select your remote note path on your ownCloud server</string>
@@ -253,7 +253,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="9" column="0" colspan="2">
+               <item row="10" column="0" colspan="2">
                 <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
                  <property name="frameShape">
                   <enum>QFrame::NoFrame</enum>
@@ -361,17 +361,17 @@
                  </property>
                 </widget>
                </item>
-               <item row="5" column="0" colspan="2">
+               <item row="6" column="0" colspan="2">
                 <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
                  <property name="text">
                   <string>ownCloud server</string>
                  </property>
                 </widget>
                </item>
-               <item row="6" column="0" colspan="2">
+               <item row="7" column="0" colspan="2">
                 <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
                </item>
-               <item row="7" column="0" colspan="2">
+               <item row="8" column="0" colspan="2">
                 <widget class="QLabel" name="label_14">
                  <property name="text">
                   <string>Path on your ownCloud server</string>
@@ -389,6 +389,16 @@
                 <widget class="QLabel" name="label_13">
                  <property name="text">
                   <string>Note folder path</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
+                 <property name="toolTip">
+                  <string>This functionality is work in progress!</string>
+                 </property>
+                 <property name="text">
+                  <string>Show subfolders in note list</string>
                  </property>
                 </widget>
                </item>

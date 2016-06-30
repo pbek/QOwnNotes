@@ -1121,6 +1121,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
                 _selectedNoteFolder.getLocalPath());
         ui->noteFolderRemotePathLineEdit->setText(
                 _selectedNoteFolder.getRemotePath());
+        ui->noteFolderShowSubfoldersCheckBox->setChecked(
+                _selectedNoteFolder.isShowSubfolders());
 
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker);
@@ -1737,8 +1739,7 @@ void SettingsDialog::on_defaultNoteFileExtensionListWidget_currentRowChanged(
 /**
  * Toggles the dark mode colors check box with the dark mode checkbox
  */
-void SettingsDialog::on_darkModeCheckBox_toggled()
-{
+void SettingsDialog::on_darkModeCheckBox_toggled() {
     bool checked = ui->darkModeCheckBox->isChecked();
 
     ui->darkModeColorsCheckBox->setEnabled(!checked);
@@ -1746,4 +1747,9 @@ void SettingsDialog::on_darkModeCheckBox_toggled()
     if (checked) {
         ui->darkModeColorsCheckBox->setChecked(true);
     }
+}
+
+void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
+    _selectedNoteFolder.setShowSubfolders(checked);
+    _selectedNoteFolder.store();
 }

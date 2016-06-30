@@ -43,6 +43,9 @@ public:
     static QString currentLocalPath();
     void setActiveTagId(int value);
     int getActiveTagId();
+    bool isShowSubfolders();
+    void setShowSubfolders(bool value);
+    static bool isCurrentShowSubfolders();
 
 private:
     int id;
@@ -52,4 +55,5 @@ private:
     QString remotePath;
     int priority;
     int activeTagId;
+    bool showSubfolders;
 };

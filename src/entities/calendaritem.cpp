@@ -330,7 +330,7 @@ QList<CalendarItem> CalendarItem::fetchAllForSystemTray(int limit) {
     query.prepare("SELECT * FROM calendarItem WHERE completed = 0 "
                           "ORDER BY priority DESC, modified DESC "
                           "LIMIT :limit");
-    query.bindValue(":limit", 10);
+    query.bindValue(":limit", limit);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
