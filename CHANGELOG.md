@@ -1,5 +1,29 @@
 # QOwnNotes Changelog
 
+## 16.06.14
+- updated the installation instruction for **Linux Mint** and 
+  **Ubuntu Linux 14.04**
+  (for [Issue #231](https://github.com/pbek/QOwnNotes/issues/231))
+	- please visit the 
+	  [QOwnNotes installation](http://www.qownnotes.org/installation#Ubuntu) 
+	  page for more information
+- first pre-alpha release of the **note sub-folder tree integration**
+  (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
+	- per default notes will be shown as a list in a new note tree widget
+	- all functionality of the old note list was integrated into the new note 
+	  tree and should work as it used to
+	- for each configured note folder you can now check a checkbox 
+	  `Show subfolders in note list` to show the subfolders of the note folder
+	- if the checkbox is checked notes of a note folder and the subfolders are 
+	  shown as tree instead of a list
+	- editing notes in subfolders should already work in most cases, but you 
+	  cannot create new notes in subfolders yet
+	- a lot more work has to be done to be able to use tags, media files, 
+	  note versioning and trash, moving notes in subfolders, updating the 
+	  position of edited notes in the tree and so on
+- added more Portuguese and Russian translation (thank you mlimacarlos and 
+  frostyland)
+
 ## 16.06.13
 - there now is a checkbox to disable the status bar in the windows menu
   (for [Issue #230](https://github.com/pbek/QOwnNotes/issues/230))
