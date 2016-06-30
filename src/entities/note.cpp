@@ -174,7 +174,7 @@ bool Note::remove(bool withFile) {
 bool Note::copy(QString destinationPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
-        QFile file(getFullNoteFilePathForFile(this->fileName));
+        QFile file(fullNoteFilePath());
         QString destinationFileName =
                 destinationPath + QDir::separator() + this->fileName;
 
@@ -649,7 +649,7 @@ bool Note::storeNoteTextFileToDisk() {
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
     }
 
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
     bool fileExists = this->fileExists();
 
     qDebug() << "storing note file: " << this->fileName;
@@ -792,7 +792,7 @@ void Note::handleNoteTextFileName() {
 }
 
 bool Note::updateNoteTextFromDisk() {
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
 
     if (!file.open(QIODevice::ReadOnly)) {
         qDebug() << file.errorString();
@@ -822,7 +822,17 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
  * Returns the full path of the note file
  */
 QString Note::fullNoteFilePath() {
-    return getFullNoteFilePathForFile(this->fileName);
+    QString fullFileName = fileName;
+
+    if (noteSubFolderId > 0) {
+        NoteSubFolder noteSubFolder = getNoteSubFolder();
+        if (noteSubFolder.isFetched()) {
+            fullFileName.prepend(noteSubFolder.relativePath() +
+                                         QDir::separator());
+        }
+    }
+
+    return getFullNoteFilePathForFile(fullFileName);
 }
 
 /**
@@ -928,7 +938,7 @@ bool Note::deleteAll() {
 // checks if file of note exists in the filesystem
 //
 bool Note::fileExists() {
-    QFile file(getFullNoteFilePathForFile(this->fileName));
+    QFile file(fullNoteFilePath());
     return file.exists();
 }
 
@@ -993,7 +1003,7 @@ bool Note::renameNoteFile(QString newName) {
     }
 
     // get the note file to rename it
-    QFile file(getFullNoteFilePathForFile(fileName));
+    QFile file(fullNoteFilePath());
 
     // store the new note file name
     fileName = newFileName;
@@ -1001,7 +1011,7 @@ bool Note::renameNoteFile(QString newName) {
     store();
 
     // rename the note file name
-    return file.rename(getFullNoteFilePathForFile(newFileName));
+    return file.rename(fullNoteFilePath());
 }
 
 //
@@ -1009,7 +1019,7 @@ bool Note::renameNoteFile(QString newName) {
 //
 bool Note::removeNoteFile() {
     if (this->fileExists()) {
-        QFile file(getFullNoteFilePathForFile(this->fileName));
+        QFile file(fullNoteFilePath());
         qDebug() << __func__ << " - 'this->fileName': " << this->fileName;
         qDebug() << __func__ << " - 'file': " << file.fileName();
         return file.remove();

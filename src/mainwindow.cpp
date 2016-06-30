@@ -1175,11 +1175,23 @@ void MainWindow::createSystemTrayIcon() {
     }
 }
 
+/**
+ * Creates the items in the note tree widget from the note and note sub
+ * folder tables
+ */
 void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
     int noteSubFolderId = 0;
+    NoteSubFolder noteSubFolder;
+    bool hasNoteSubFolder = false;
 
     if (parentItem != NULL) {
         noteSubFolderId = parentItem->data(0, Qt::UserRole + 1).toInt();
+        noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+        hasNoteSubFolder = noteSubFolder.isFetched();
+
+        if (!hasNoteSubFolder) {
+            return;
+        }
     }
 
     const QSignalBlocker blocker(ui->noteTextEdit);
@@ -1190,7 +1202,7 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
 
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
 
-    if (parentItem == NULL) {
+    if (!hasNoteSubFolder) {
         // turn on the root decoration if we want to show subfolders
         ui->noteTreeWidget->setRootIsDecorated(showSubfolders);
 
@@ -1199,15 +1211,16 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
 
     bool isEditable = Note::allowDifferentFileName();
 
+    // build the note sub folder items
     if (showSubfolders) {
         QList<NoteSubFolder> noteSubFolderList =
                 NoteSubFolder::fetchAllByParentId(noteSubFolderId);
 
         // build the next level of note sub folders
-        Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+        Q_FOREACH(NoteSubFolder loopNoteSubFolder, noteSubFolderList) {
                 QTreeWidgetItem *noteSubFolderItem =
                         addNoteSubFolderToNoteTreeWidget(parentItem,
-                                                         noteSubFolder);
+                                                         loopNoteSubFolder);
 
                 loadNoteDirectoryList(noteSubFolderItem);
             }
@@ -1224,6 +1237,7 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
                 continue;
             }
 
+            // add a note item to the tree
             QTreeWidgetItem *noteItem = new QTreeWidgetItem();
             setTreeWidgetItemToolTipForNote(noteItem, &note);
             noteItem->setText(0, name);
@@ -1238,14 +1252,14 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
                         noteItem->flags() | Qt::ItemIsEditable);
             }
 
-            if (parentItem == NULL) {
+            if (!hasNoteSubFolder) {
                 ui->noteTreeWidget->addTopLevelItem(noteItem);
             } else {
                 parentItem->addChild(noteItem);
             }
     }
 
-    if (parentItem == NULL) {
+    if (!hasNoteSubFolder) {
         // clear the text edits if there are no notes
         if (noteList.isEmpty()) {
             ui->noteTextEdit->clear();
@@ -1261,9 +1275,17 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
             QString::number(itemCount) + " notes",
             itemCount);
 
-    QDir dir(this->notesPath);
+    QString absoluteNotePath = Utils::Misc::removeIfEndsWith(
+            this->notesPath, QDir::separator());
 
-    if (parentItem == NULL) {
+    QString noteSubFolderPath = noteSubFolder.relativePath();
+    if (hasNoteSubFolder) {
+        absoluteNotePath += QDir::separator() + noteSubFolderPath;
+    }
+
+    QDir dir(absoluteNotePath);
+
+    if (!hasNoteSubFolder) {
         // clear all paths from the directory watcher
         QStringList fileList = noteDirectoryWatcher.directories() +
                 noteDirectoryWatcher.files();
@@ -1274,7 +1296,7 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
 
     if (dir.exists()) {
         // watch the notes directory for changes
-        this->noteDirectoryWatcher.addPath(this->notesPath);
+        noteDirectoryWatcher.addPath(absoluteNotePath);
     }
 
     QStringList fileNameList = Note::fetchNoteFileNames();
@@ -1291,6 +1313,10 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
             }
 #endif
 
+            if (hasNoteSubFolder) {
+                fileName.prepend(noteSubFolderPath + QDir::separator());
+            }
+
             QString path = Note::getFullNoteFilePathForFile(fileName);
             QFile file(path);
             if (file.exists()) {
@@ -1299,7 +1325,7 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
             }
     }
 
-    if (parentItem == NULL) {
+    if (!hasNoteSubFolder) {
             // sort alphabetically again if necessary
         if (sortAlphabetically) {
             ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
@@ -1323,9 +1349,9 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToNoteTreeWidget(
     item->setData(0, Qt::UserRole + 1, noteSubFolder.getId());
     item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
     item->setIcon(0, QIcon::fromTheme(
-                                "folder-new",
+                                "folder",
                                 QIcon(":icons/breeze-qownnotes/16x16/"
-                                              "folder-new.svg")));
+                                              "folder.svg")));
 
     if (parentItem == NULL) {
         ui->noteTreeWidget->addTopLevelItem(item);
@@ -1807,11 +1833,16 @@ void MainWindow::waitMsecs(int msecs) {
         QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
 }
 
+/**
+ * Builds the index of notes and note sub folders
+ */
 void MainWindow::buildNotesIndex(int noteSubFolderId) {
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
+
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
     if (noteSubFolderId == 0) {
         // make sure we destroy nothing
@@ -1826,6 +1857,8 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
         notePath += QDir::separator() + noteSubFolder.relativePath();
     }
+
+    qDebug() << __func__ << " - 'notePath': " << notePath;
 
     QDir notesDir(notePath);
 
@@ -1931,33 +1964,33 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     }
 
     // build the note sub folders
-    if (!hasNoteSubFolder) {
-        bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-        if (showSubfolders) {
-            QStringList folders = notesDir.entryList(
-                    QStringList("*"), QDir::Dirs, QDir::Time);
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    if (showSubfolders) {
+        QStringList folders = notesDir.entryList(
+                QStringList("*"), QDir::Dirs, QDir::Time);
 
-            // ignore some folders
-            QStringList ignoreFolderList;
-            ignoreFolderList << "." << ".." << "media";
+        // ignore some folders
+        QStringList ignoreFolderList;
+        ignoreFolderList << "." << ".." << "media";
 
-            Q_FOREACH(QString folder, folders) {
-                    if (ignoreFolderList.contains(folder)) {
-                        continue;
-                    }
-
-                    // create the parent note sub folder
-                    NoteSubFolder parentNoteSubFolder;
-                    parentNoteSubFolder.setName(folder);
-                    parentNoteSubFolder.setParentId(noteSubFolderId);
-                    parentNoteSubFolder.store();
-
-                    if (parentNoteSubFolder.isFetched()) {
-                        buildNotesIndex(parentNoteSubFolder.getId());
-                    }
+        Q_FOREACH(QString folder, folders) {
+                if (ignoreFolderList.contains(folder)) {
+                    continue;
                 }
-        }
 
+                // create the parent note sub folder
+                NoteSubFolder parentNoteSubFolder;
+                parentNoteSubFolder.setName(folder);
+                parentNoteSubFolder.setParentId(noteSubFolderId);
+                parentNoteSubFolder.store();
+
+                if (parentNoteSubFolder.isFetched()) {
+                    buildNotesIndex(parentNoteSubFolder.getId());
+                }
+            }
+    }
+
+    if (!hasNoteSubFolder) {
         // setup the note folder database
         DatabaseService::createNoteFolderConnection();
         DatabaseService::setupNoteFolderTables();
@@ -2079,8 +2112,7 @@ void MainWindow::setCurrentNote(Note note,
     updateWindowTitle();
 
     // set the note text edit to readonly if note file is not writable
-    QFileInfo *f = new QFileInfo(
-            this->notesPath + QDir::separator() + note.getFileName());
+    QFileInfo *f = new QFileInfo(note.fullNoteFilePath());
     ui->noteTextEdit->setReadOnly(!f->isWritable());
     ui->encryptedNoteTextEdit->setReadOnly(!f->isWritable());
 

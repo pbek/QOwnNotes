@@ -88,10 +88,10 @@ void LogDialog::storeSettings() const {
  * Adds a log entry
  */
 void LogDialog::log(LogType logType, QString text) {
+#ifndef INTEGRATION_TESTS
     QString type = "";
     QColor color = QColor(Qt::black);
 
-#ifndef INTEGRATION_TESTS
     switch (logType) {
         case DebugLogType:
             if (!ui->debugCheckBox->isChecked()) {
@@ -177,6 +177,9 @@ void LogDialog::log(LogType logType, QString text) {
         // move the text cursor to the end
         ui->logTextEdit->moveCursor(QTextCursor::End);
     }
+#else
+    Q_UNUSED(logType);
+    Q_UNUSED(text);
 #endif
 }
 
@@ -185,7 +188,7 @@ void LogDialog::log(LogType logType, QString text) {
  * The instance will be created if it doesn't exist.
  */
 LogDialog * LogDialog::instance() {
-    LogDialog *logDialog;
+    LogDialog *logDialog = nullptr;
 #ifndef INTEGRATION_TESTS
     logDialog = qApp->property("logDialog").value<LogDialog *>();
 #endif

@@ -64,6 +64,7 @@
         <file alias="16x16/format-font-size-less.svg">icons/breeze-qownnotes/16x16/format-font-size-less.svg</file>
         <file alias="16x16/format-font-size-more.svg">icons/breeze-qownnotes/16x16/format-font-size-more.svg</file>
         <file alias="16x16/folder-new.svg">icons/breeze-qownnotes/16x16/folder-new.svg</file>
+        <file alias="16x16/folder.svg">icons/breeze-qownnotes/16x16/folder.svg</file>
         <file alias="16x16/xml-attribute-delete.svg">icons/breeze-qownnotes/16x16/xml-attribute-delete.svg</file>
         <file alias="16x16/tag.svg">icons/breeze-qownnotes/16x16/tag.svg</file>
         <file alias="16x16/edit-copy.svg">icons/breeze-qownnotes/16x16/edit-copy.svg</file>
