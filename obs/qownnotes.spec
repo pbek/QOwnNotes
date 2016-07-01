@@ -1,5 +1,5 @@
 #
-# Spec file for package qownnotes for openSUSE Linux and Fedora Linux
+# Spec file for package qownnotes for openSUSE Linux ,Fedora Linux and CentOS 7
 #
 # Check for Linux distribution version numbers here:
 # https://en.opensuse.org/openSUSE:Build_Service_cross_distribution_howto
@@ -9,8 +9,8 @@
 Name:           qownnotes
 BuildRequires:  gcc gcc-c++ fdupes
 
-# This is for all Fedora
-%if 0%{?fedora}
+# This is for all Fedora CentOS 7
+%if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
 
 BuildRequires:  qt5-qtbase
 BuildRequires:  qt5-qtbase-devel
@@ -73,7 +73,7 @@ echo suse_version   0%{?suse_version}
 pushd build
 CFLAGS=$RPM_OPT_FLAGS CCFLAGS=$CFLAGS
 
-%if 0%{?fedora}
+%if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
 
 make
 
@@ -91,7 +91,7 @@ install -D -m 0755 QOwnNotes $RPM_BUILD_ROOT/%{_prefix}/bin/QOwnNotes
 popd
 
 # manually install desktop file for Fedora
-%if 0%{?fedora}
+%if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
 install -D -m 0644 QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
 %endif
 
