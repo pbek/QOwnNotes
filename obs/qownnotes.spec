@@ -1,5 +1,5 @@
 #
-# Spec file for package qownnotes for openSUSE Linux ,Fedora Linux and CentOS 7
+# Spec file for package qownnotes for openSUSE Linux, Fedora Linux and CentOS 7
 #
 # Check for Linux distribution version numbers here:
 # https://en.opensuse.org/openSUSE:Build_Service_cross_distribution_howto
@@ -26,7 +26,7 @@ Requires:       qt5-qtsvg
 # This is for all SUSE
 
 BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel
-BuildRequires:  update-desktop-files 
+BuildRequires:  update-desktop-files
 Requires:       libQt5Svg5 libQt5Declarative5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5PrintSupport5
 
 %endif
@@ -36,7 +36,7 @@ Group:          System/GUI/Productivity
 Summary:        Note-taking app and todo list manager with ownCloud integration
 Url:            http://www.qownnotes.org/
 Version:        VERSION-STRING
-Release:        1
+Release:        1%{?dist}
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source0:        %{name}-%{version}.tar.xz
 
@@ -58,7 +58,7 @@ Patrizio Bekerle <patrizio@bekerle.com>
 
 
 %prep
-%setup -q 
+%setup -q
 mkdir build
 pushd build
 qmake-qt5 ..
@@ -90,7 +90,7 @@ pushd build
 install -D -m 0755 QOwnNotes $RPM_BUILD_ROOT/%{_prefix}/bin/QOwnNotes
 popd
 
-# manually install desktop file for Fedora
+# manually install desktop file for Fedora and CentOS 7
 %if 0%{?fedora} || 0%{?rhel} >= 7 || 0%{?centos} >= 7
 install -D -m 0644 QOwnNotes.desktop $RPM_BUILD_ROOT/%{_datadir}/applications/QOwnNotes.desktop
 %endif
@@ -179,6 +179,3 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_datadir}/QOwnNotes
 
 %changelog
-
-
-
