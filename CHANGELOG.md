@@ -6,6 +6,10 @@
     - please visit the
       [QOwnNotes installation page](http://www.qownnotes.org/installation#KaOS)
       for instructions
+- there now is a repository for **SUSE Linux Enterprise 12 SP1 Backports**
+    - please visit the
+      [QOwnNotes installation page](http://www.qownnotes.org/installation#openSUSE)
+      for instructions
 
 ## 16.06.14
 - updated the installation instruction for **Linux Mint** and 
