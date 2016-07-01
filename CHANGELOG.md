@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.07.0
+- there now is a community maintained **KaOS repository** for QOwnNotes 
+  (thanks a lot to @Adurol)
+    - please visit the
+      [QOwnNotes installation page](http://www.qownnotes.org/installation#KaOS)
+      for instructions
+
 ## 16.06.14
 - updated the installation instruction for **Linux Mint** and 
   **Ubuntu Linux 14.04**
