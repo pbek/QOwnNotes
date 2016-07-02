@@ -315,6 +315,7 @@ private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
     QSplitter *_noteListSplitter;
+    QSplitter *_tagFrameSplitter;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
@@ -540,4 +541,6 @@ private:
     void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = 0);
 
     void setupNoteSubFolders();
+
+    void initTagFrameSplitter();
 };

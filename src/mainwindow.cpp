@@ -115,6 +115,7 @@ MainWindow::MainWindow(QWidget *parent) :
     createSystemTrayIcon();
     initMainSplitter();
     initNoteListSplitter();
+    initTagFrameSplitter();
     buildNotesIndex();
     loadNoteDirectoryList();
 
@@ -1113,10 +1114,31 @@ void MainWindow::initNoteListSplitter() {
 
     ui->notesListFrame->layout()->addWidget(_noteListSplitter);
 
-    // restore main splitter state
+    // restore note list splitter state
     QSettings settings;
     QByteArray state = settings.value("noteListSplitterState").toByteArray();
     _noteListSplitter->restoreState(state);
+}
+
+/**
+ * Does the initialization for the tag frame splitter
+ */
+void MainWindow::initTagFrameSplitter() {
+    _tagFrameSplitter = new QSplitter();
+    _tagFrameSplitter->setOrientation(Qt::Vertical);
+
+    ui->noteSubFolderFrame->setStyleSheet("#noteSubFolderFrame {margin: 0;}");
+    ui->tagSubFrame->setStyleSheet("#tagSubFrame {margin: 0;}");
+
+    _tagFrameSplitter->addWidget(ui->noteSubFolderFrame);
+    _tagFrameSplitter->addWidget(ui->tagSubFrame);
+
+    ui->tagFrame->layout()->addWidget(_tagFrameSplitter);
+
+    // restore tag frame splitter state
+    QSettings settings;
+    QByteArray state = settings.value("tagFrameSplitterState").toByteArray();
+    _tagFrameSplitter->restoreState(state);
 }
 
 /**
@@ -2230,6 +2252,8 @@ void MainWindow::storeSettings() {
         settings.setValue("mainSplitterSizes", mainSplitter->saveState());
         settings.setValue("noteListSplitterState",
                           _noteListSplitter->saveState());
+        settings.setValue("tagFrameSplitterState",
+                          _tagFrameSplitter->saveState());
         settings.setValue("verticalNoteFrameSplitterState",
                           _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
