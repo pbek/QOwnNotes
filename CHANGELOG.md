@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.07.0
+- there now is a new experimental **note sub folder tree** instead of the 
+  folders and notes in the same note tree
+   - notes are filtered by note sub folder when clicked on a note sub folder
+   - searching for note sub folders is not implemented yet
 - there now is a community maintained **KaOS repository** for QOwnNotes 
   (thanks a lot to @Adurol)
     - please visit the
@@ -10,6 +14,8 @@
     - please visit the
       [QOwnNotes installation page](http://www.qownnotes.org/installation#openSUSE)
       for instructions
+- added more Portuguese and Russian translation (thank you mlimacarlos and 
+  Maboroshy)
 
 ## 16.06.14
 - updated the installation instruction for **Linux Mint** and 
