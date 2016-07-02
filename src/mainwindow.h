@@ -311,6 +311,8 @@ private slots:
 
     void on_noteTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
+    void on_noteSubFolderTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -543,4 +545,6 @@ private:
     void setupNoteSubFolders();
 
     void initTagFrameSplitter();
+
+    void filterNotesByNoteSubFolders();
 };

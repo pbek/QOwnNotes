@@ -252,6 +252,15 @@ int NoteSubFolder::countAll() {
     return 0;
 }
 
+void NoteSubFolder::setAsActive() {
+    NoteSubFolder::setAsActive(id);
+}
+
+void NoteSubFolder::setAsActive(int noteSubFolderId) {
+    QSettings settings;
+    return settings.setValue("activeSubNoteFolderId", noteSubFolderId);
+}
+
 /**
  * Checks if this note sub folder is the current one
  */

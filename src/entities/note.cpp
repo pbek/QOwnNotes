@@ -310,6 +310,21 @@ QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
 }
 
 /**
+ * Gets a list of note ids from a note list
+ */
+QList<int> Note::noteIdListFromNoteList(QList<Note> noteList) {
+    QListIterator<Note> itr(noteList);
+    QList<int> idList;
+
+    while (itr.hasNext()) {
+        Note note = itr.next();
+        idList << note.getId();
+    }
+
+    return idList;
+}
+
+/**
  * Returns all notes that are not tagged
  */
 QList<Note> Note::fetchAllNotTagged() {

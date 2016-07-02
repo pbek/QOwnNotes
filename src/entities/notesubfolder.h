@@ -57,6 +57,10 @@ public:
 
     static NoteSubFolder activeNoteFolder();
 
+    static void setAsActive(int tagId);
+
+    void setAsActive();
+
 protected:
     int id;
     int parentId;

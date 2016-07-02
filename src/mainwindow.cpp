@@ -1232,8 +1232,7 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
     bool isEditable = Note::allowDifferentFileName();
 
     // load all notes and add them to the note list widget
-    QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
-            noteSubFolderId);
+    QList<Note> noteList = Note::fetchAll();
     Q_FOREACH(Note note, noteList) {
             QString name = note.getName();
 
@@ -2155,9 +2154,9 @@ void MainWindow::setCurrentNote(Note note,
 
 //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
 //            .fullNoteFilePath()).toLatin1().data());
-    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
-           currentNote.fullNoteFilePath().toLatin1().data(),
-           1);
+//    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
+//           currentNote.fullNoteFilePath().toLatin1().data(),
+//           1);
 }
 
 /**
@@ -3272,6 +3271,11 @@ void MainWindow::filterNotes(bool searchForText) {
     // filter the notes by text in the search line edit
     filterNotesBySearchLineEditText();
 
+    if (NoteFolder::isCurrentShowSubfolders()) {
+        // filter the notes by note sub folder
+        filterNotesByNoteSubFolders();
+    }
+
     if (isTagsEnabled()) {
         // filter the notes by tag
         filterNotesByTag();
@@ -3380,7 +3384,35 @@ void MainWindow::filterNotesByTag() {
     // loop through all visible notes
     while (*it) {
         // hide all notes that are not linked to the active tag
-        (*it)->setHidden(!fileNameList.contains((*it)->text(0)));
+        if (!fileNameList.contains((*it)->text(0))) {
+            (*it)->setHidden(true);
+        }
+
+        ++it;
+    }
+}
+
+/**
+ * Does the note filtering by note sub folders
+ */
+void MainWindow::filterNotesByNoteSubFolders() {
+    int subNoteFolderId = NoteSubFolder::activeSubNoteFolderId();
+
+    // get all notes of a note sub folder
+    QList<Note> noteList = Note::fetchAllByNoteSubFolderId(subNoteFolderId);
+    QList<int> noteIdList = Note::noteIdListFromNoteList(noteList);
+
+    // omit the already hidden notes
+    QTreeWidgetItemIterator it(ui->noteTreeWidget,
+                               QTreeWidgetItemIterator::NotHidden);
+
+    // loop through all visible notes
+    while (*it) {
+        // hide all notes that are not in the note sub folder
+        if (!noteIdList.contains((*it)->data(0, Qt::UserRole).toInt())) {
+            (*it)->setHidden(true);
+        }
+
         ++it;
     }
 }
@@ -6133,6 +6165,26 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
         // set old name back in case the renaming failed or the file name got
         // altered in the renaming process
-        item->setText(0,note.getName());
+        item->setText(0, note.getName());
     }
+}
+
+void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(previous);
+
+    if (current == NULL) {
+        return;
+    }
+
+    // set the note sub folder id as active
+    int noteSubFolder = current->data(0, Qt::UserRole).toInt();
+    NoteSubFolder::setAsActive(noteSubFolder);
+
+    const QSignalBlocker blocker(ui->searchLineEdit);
+    Q_UNUSED(blocker);
+
+    ui->searchLineEdit->clear();
+
+    filterNotes();
 }

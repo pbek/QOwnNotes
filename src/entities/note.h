@@ -157,6 +157,8 @@ public:
 
     static QList<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
 
+    static QList<int> noteIdListFromNoteList(QList<Note> noteList);
+
 protected:
     int id;
     QString name;
