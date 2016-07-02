@@ -2,8 +2,9 @@
 #include <QDebug>
 #include <QSqlRecord>
 #include <QSqlError>
-#include <utils/misc.h>
 #include <QDir>
+#include <QSettings>
+#include <utils/misc.h>
 
 
 NoteSubFolder::NoteSubFolder() {
@@ -249,6 +250,28 @@ int NoteSubFolder::countAll() {
     }
 
     return 0;
+}
+
+/**
+ * Checks if this note sub folder is the current one
+ */
+bool NoteSubFolder::isActive() {
+    return activeSubNoteFolderId() == id;
+}
+
+/**
+ * Returns the id of the current note sub folder in the settings
+ */
+int NoteSubFolder::activeSubNoteFolderId() {
+    QSettings settings;
+    return settings.value("activeSubNoteFolderId").toInt();
+}
+
+/**
+ * Returns the current note sub folder
+ */
+NoteSubFolder NoteSubFolder::activeNoteFolder() {
+    return NoteSubFolder::fetch(activeSubNoteFolderId());
 }
 
 QDebug operator<<(QDebug dbg, const NoteSubFolder &noteSubFolder) {

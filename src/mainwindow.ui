@@ -62,7 +62,7 @@
         <property name="frameShadow">
          <enum>QFrame::Plain</enum>
         </property>
-        <layout class="QVBoxLayout" name="tagFrameLayout">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
          <property name="spacing">
           <number>3</number>
          </property>
@@ -79,9 +79,33 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLineEdit" name="tagLineEdit">
-           <property name="styleSheet">
-            <string notr="true">QLineEdit {
+          <widget class="QFrame" name="tagSubFrame">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="tagLineEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
 	border: none;
 	padding: 2px 5px 2px 27px;
 	background-image: url(:/images/search-notes.svg);
@@ -90,39 +114,116 @@
 	margin-right: 0px;
 }
 </string>
-           </property>
-           <property name="placeholderText">
-            <string>find or create tag</string>
-           </property>
-           <property name="clearButtonEnabled">
-            <bool>true</bool>
-           </property>
+              </property>
+              <property name="placeholderText">
+               <string>find or create tag</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="tagTreeWidget">
+              <property name="contextMenuPolicy">
+               <enum>Qt::CustomContextMenu</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+              <property name="headerHidden">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string notr="true">Name</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string notr="true">Note count</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
-          <widget class="QTreeWidget" name="tagTreeWidget">
-           <property name="contextMenuPolicy">
-            <enum>Qt::CustomContextMenu</enum>
-           </property>
+          <widget class="QFrame" name="noteSubFolderFrame">
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
-           <property name="selectionMode">
-            <enum>QAbstractItemView::ExtendedSelection</enum>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
            </property>
-           <property name="headerHidden">
-            <bool>true</bool>
-           </property>
-           <column>
-            <property name="text">
-             <string notr="true">Name</string>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <property name="spacing">
+             <number>3</number>
             </property>
-           </column>
-           <column>
-            <property name="text">
-             <string notr="true">Note count</string>
+            <property name="leftMargin">
+             <number>0</number>
             </property>
-           </column>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLineEdit" name="noteSubFolderLineEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+              </property>
+              <property name="placeholderText">
+               <string>find or create note sub folder</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="noteSubFolderTreeWidget">
+              <property name="contextMenuPolicy">
+               <enum>Qt::CustomContextMenu</enum>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::ExtendedSelection</enum>
+              </property>
+              <property name="headerHidden">
+               <bool>true</bool>
+              </property>
+              <column>
+               <property name="text">
+                <string notr="true">Name</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string notr="true">Note count</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>

@@ -1177,6 +1177,7 @@ void MainWindow::createSystemTrayIcon() {
  * folder tables
  */
 void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
+    // TODO(pbek): remove note sub folder integration
     int noteSubFolderId = 0;
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
@@ -1207,21 +1208,6 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
     }
 
     bool isEditable = Note::allowDifferentFileName();
-
-    // build the note sub folder items
-    if (showSubfolders) {
-        QList<NoteSubFolder> noteSubFolderList =
-                NoteSubFolder::fetchAllByParentId(noteSubFolderId);
-
-        // build the next level of note sub folders
-        Q_FOREACH(NoteSubFolder loopNoteSubFolder, noteSubFolderList) {
-                QTreeWidgetItem *noteSubFolderItem =
-                        addNoteSubFolderToNoteTreeWidget(parentItem,
-                                                         loopNoteSubFolder);
-
-                loadNoteDirectoryList(noteSubFolderItem);
-            }
-    }
 
     // load all notes and add them to the note list widget
     QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
@@ -1331,27 +1317,30 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
         // setup tagging
         setupTags();
 
+        // setup note sub folders
+        setupNoteSubFolders();
+
         // generate the tray context menu
         generateSystemTrayContextMenu();
     }
 }
 
 /**
- * Adds a note sub folder to the note tree widget
+ * Adds a note sub folder to the note sub folder tree widget
  */
-QTreeWidgetItem *MainWindow::addNoteSubFolderToNoteTreeWidget(
+QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
         QTreeWidgetItem *parentItem, NoteSubFolder noteSubFolder) {
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, noteSubFolder.getName());
-    item->setData(0, Qt::UserRole + 1, noteSubFolder.getId());
-    item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
+    item->setData(0, Qt::UserRole, noteSubFolder.getId());
+//    item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
     item->setIcon(0, QIcon::fromTheme(
                                 "folder",
                                 QIcon(":icons/breeze-qownnotes/16x16/"
                                               "folder.svg")));
 
     if (parentItem == NULL) {
-        ui->noteTreeWidget->addTopLevelItem(item);
+        ui->noteSubFolderTreeWidget->addTopLevelItem(item);
     } else {
         parentItem->addChild(item);
     }
@@ -2141,6 +2130,12 @@ void MainWindow::setCurrentNote(Note note,
     reloadCurrentNoteTags();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
+//    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
+//            .fullNoteFilePath()).toLatin1().data());
+    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
+           currentNote.fullNoteFilePath().toLatin1().data(),
+           1);
 }
 
 /**
@@ -4856,12 +4851,71 @@ void MainWindow::reloadTagTree()
         ui->tagTreeWidget->addTopLevelItem(untaggedItem);
     }
 
-    // decorate root of there multiple levels to be able to expand them
+    // decorate root of there are multiple levels to be able to expand them
     ui->tagTreeWidget->setRootIsDecorated(
             Tag::countAllParentId(0) != Tag::countAll());
 
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
+}
+
+/**
+ * Reloads the note sub folder tree
+ */
+void MainWindow::reloadNoteSubFolderTree()
+{
+    ui->noteSubFolderTreeWidget->clear();
+    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+
+    QTreeWidgetItem *item = new QTreeWidgetItem();
+    item->setText(0, tr("Note folder"));
+    item->setData(0, Qt::UserRole, 0);
+    item->setIcon(0, QIcon::fromTheme(
+            "folder",
+            QIcon(":icons/breeze-qownnotes/16x16/"
+                          "folder.svg")));
+
+    ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+    // set the active item
+    if (activeNoteSubFolderId == 0) {
+        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+        Q_UNUSED(blocker);
+
+        ui->noteSubFolderTreeWidget->setCurrentItem(item);
+    }
+
+    // add all note sub folders recursively as items
+    buildNoteSubFolderTreeForParentItem();
+
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+}
+
+/**
+ * Populates the note sub folder tree recursively with its items
+ */
+void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
+    int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+
+    QList<NoteSubFolder> noteSubFolderList =
+            NoteSubFolder::fetchAllByParentId(parentId);
+
+    // build the next level of note sub folders
+    Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+            QTreeWidgetItem *item =
+                    addNoteSubFolderToTreeWidget(parent,
+                                                 noteSubFolder);
+            // set the active item
+            if (activeNoteSubFolderId == noteSubFolder.getId()) {
+                const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+                Q_UNUSED(blocker);
+
+                ui->noteSubFolderTreeWidget->setCurrentItem(item);
+            }
+
+            buildNoteSubFolderTreeForParentItem(item);
+        }
 }
 
 /**
@@ -5002,6 +5056,7 @@ void MainWindow::setupTags() {
     bool tagsEnabled = isTagsEnabled();
 
     ui->tagFrame->setVisible(tagsEnabled);
+    ui->tagSubFrame->setVisible(tagsEnabled);
     ui->noteTagFrame->setVisible(tagsEnabled);
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
@@ -5020,6 +5075,24 @@ void MainWindow::setupTags() {
         reloadTagTree();
         ui->tagTreeWidget->expandAll();
         reloadCurrentNoteTags();
+    }
+
+    // filter the notes again
+    filterNotes(false);
+}
+
+/**
+ * Shows or hides everything for the note sub folders
+ */
+void MainWindow::setupNoteSubFolders() {
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+
+//    ui->tagFrame->setVisible(showSubfolders);
+    ui->noteSubFolderFrame->setVisible(showSubfolders);
+
+    if (showSubfolders) {
+        reloadNoteSubFolderTree();
+        ui->noteSubFolderTreeWidget->expandAll();
     }
 
     // filter the notes again

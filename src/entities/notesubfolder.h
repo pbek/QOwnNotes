@@ -51,6 +51,12 @@ public:
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId);
 
+    bool isActive();
+
+    static int activeSubNoteFolderId();
+
+    static NoteSubFolder activeNoteFolder();
+
 protected:
     int id;
     int parentId;

@@ -531,7 +531,13 @@ private:
 
     QTreeWidgetItem *firstVisibleNoteTreeWidgetItem();
 
-    QTreeWidgetItem *addNoteSubFolderToNoteTreeWidget(
+    QTreeWidgetItem *addNoteSubFolderToTreeWidget(
             QTreeWidgetItem *parentItem,
             NoteSubFolder noteSubFolder);
+
+    void reloadNoteSubFolderTree();
+
+    void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = 0);
+
+    void setupNoteSubFolders();
 };
