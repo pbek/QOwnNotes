@@ -8,7 +8,7 @@
     - there are now tooltips and a note count for note sub folder tree items
     - new notes are now created in the correct note sub folder
     - the current note sub folder will now be stored for each note folder, so
-      that it get's remembered when note folders are switched
+      that it gets remembered when note folders are switched
 - added more Dutch translation (thank you Telesight)
 
 ## 16.07.0
