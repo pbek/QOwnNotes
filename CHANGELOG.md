@@ -3,6 +3,7 @@
 ## 16.07.1
 - added `Letter` as page size for PDF exports under Windows and OS X
   (for [Issue #234](https://github.com/pbek/QOwnNotes/issues/234))
+- added more Dutch translation (thank you Telesight)
 
 ## 16.07.0
 - there now is a new experimental **note sub folder tree** instead of the 
