@@ -323,7 +323,7 @@ bool NoteSubFolder::setAsActive(int noteSubFolderId) {
     // because we also want to get the root folder
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
     noteFolder.setActiveNoteSubFolder(noteSubFolder);
-    noteFolder.store();
+    return noteFolder.store();
 }
 
 /**
