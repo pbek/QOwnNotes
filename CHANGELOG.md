@@ -9,6 +9,7 @@
     - new notes are now created in the correct note sub folder
     - the current note sub folder will now be stored for each note folder, so
       that it gets remembered when note folders are switched
+    - you can now search for note sub folders in the note sub folder line edit
 - added more Dutch translation (thank you Telesight)
 
 ## 16.07.0

@@ -5072,40 +5072,11 @@ void MainWindow::on_tagLineEdit_returnPressed()
 }
 
 /**
- * Filters tags in the tag tree list widget
+ * Filters tags in the tag tree widget
  */
 void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
-    // get all items
-    QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
-
-    // search tags if at least one character was entered
-    if (arg1.count() >= 1) {
-        // search for items
-        QList<QTreeWidgetItem*> foundItems = ui->tagTreeWidget->
-                findItems(arg1, Qt::MatchContains | Qt::MatchRecursive);
-
-        // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                int tagId = item->data(0, Qt::UserRole).toInt();
-                item->setHidden(!foundItems.contains(item) && (tagId > 0));
-            }
-
-        // show items again that have visible children so that they are
-        // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
-            }
-    } else {
-        // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
-    }
+    searchForTextInTreeWidget(ui->tagTreeWidget, arg1);
 }
 
 /**
@@ -6204,4 +6175,48 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     ui->searchLineEdit->clear();
 
     filterNotes();
+}
+
+/**
+ * Searches for note sub folders in the note sub folder tree widget
+ */
+void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
+    searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1);
+}
+
+/**
+ * Searches for text in items of a tree widget
+ */
+void MainWindow::searchForTextInTreeWidget(QTreeWidget *treeWidget,
+                                           QString text) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = treeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (text.count() >= 1) {
+        // search for items
+        QList<QTreeWidgetItem*> foundItems = treeWidget->
+                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
+
+        // hide all not found items
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                int id = item->data(0, Qt::UserRole).toInt();
+                item->setHidden(!foundItems.contains(item) && (id > 0));
+            }
+
+        // show items again that have visible children so that they are
+        // really shown
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                if (isOneTreeWidgetItemChildVisible(item)) {
+                    item->setHidden(false);
+                    item->setExpanded(true);
+                }
+            }
+    } else {
+        // show all items otherwise
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                item->setHidden(false);
+            }
+    }
 }

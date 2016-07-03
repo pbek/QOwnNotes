@@ -313,6 +313,8 @@ private slots:
 
     void on_noteSubFolderTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
 
+    void on_noteSubFolderLineEdit_textChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -547,4 +549,6 @@ private:
     void initTagFrameSplitter();
 
     void filterNotesByNoteSubFolders();
+
+    void searchForTextInTreeWidget(QTreeWidget *treeWidget, QString text);
 };
