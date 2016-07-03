@@ -4,8 +4,11 @@
 - added `Letter` as page size for PDF exports under Windows and OS X
   (for [Issue #234](https://github.com/pbek/QOwnNotes/issues/234))
 - added more features to the **note sub folder tree**
-    - added tooltips and a note count for note sub folder tree items
+  (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
+    - there are now tooltips and a note count for note sub folder tree items
     - new notes are now created in the correct note sub folder
+    - the current note sub folder will now be stored for each note folder, so
+      that it get's remembered when note folders are switched
 - added more Dutch translation (thank you Telesight)
 
 ## 16.07.0

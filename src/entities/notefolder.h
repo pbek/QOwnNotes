@@ -2,6 +2,7 @@
 
 #include <QSqlQuery>
 #include <QStringList>
+#include "notesubfolder.h"
 
 class NoteFolder
 {
@@ -46,6 +47,8 @@ public:
     bool isShowSubfolders();
     void setShowSubfolders(bool value);
     static bool isCurrentShowSubfolders();
+    void setActiveNoteSubFolder(NoteSubFolder noteSubFolder);
+    NoteSubFolder getActiveNoteSubFolder();
 
 private:
     int id;
@@ -55,5 +58,6 @@ private:
     QString remotePath;
     int priority;
     int activeTagId;
+    QString activeNoteSubFolderData;
     bool showSubfolders;
 };

@@ -55,11 +55,17 @@ public:
 
     static int activeSubNoteFolderId();
 
-    static NoteSubFolder activeNoteFolder();
+    static NoteSubFolder activeNoteSubFolder();
 
-    static void setAsActive(int tagId);
+    static bool setAsActive(int tagId);
 
     void setAsActive();
+
+    QString pathData();
+
+    static NoteSubFolder fetchByPathData(QString pathData);
+
+    static NoteSubFolder fetchByNameAndParentId(QString name, int parentId);
 
 protected:
     int id;

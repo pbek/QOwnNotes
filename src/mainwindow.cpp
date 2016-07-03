@@ -6195,8 +6195,8 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     }
 
     // set the note sub folder id as active
-    int noteSubFolder = current->data(0, Qt::UserRole).toInt();
-    NoteSubFolder::setAsActive(noteSubFolder);
+    int noteSubFolderId = current->data(0, Qt::UserRole).toInt();
+    NoteSubFolder::setAsActive(noteSubFolderId);
 
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker);

@@ -299,6 +299,12 @@ bool DatabaseService::setupTables() {
         version = 9;
     }
 
+    if (version < 10) {
+        queryDisk.exec("ALTER TABLE noteFolder "
+                               "ADD active_note_sub_folder_data TEXT");
+        version = 10;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

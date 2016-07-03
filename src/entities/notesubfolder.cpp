@@ -1,4 +1,5 @@
 #include "entities/notesubfolder.h"
+#include "notefolder.h"
 #include <QDebug>
 #include <QSqlRecord>
 #include <QSqlError>
@@ -68,6 +69,29 @@ NoteSubFolder NoteSubFolder::fetch(int id) {
     return noteSubFolder;
 }
 
+NoteSubFolder NoteSubFolder::fetchByNameAndParentId(
+        QString name, int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    NoteSubFolder noteSubFolder;
+
+    query.prepare("SELECT * FROM noteSubFolder WHERE name = :name "
+                          "AND parent_id = :parent_id");
+    query.bindValue(":name", name);
+    query.bindValue(":parent_id", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        if (query.first()) {
+            noteSubFolder = noteSubFolderFromQuery(query);
+        }
+    }
+
+    return noteSubFolder;
+}
+
 /**
  * Gets the relative path name of the note sub folder
  */
@@ -75,6 +99,36 @@ QString NoteSubFolder::relativePath() {
     return parentId == 0 ?
            name :
            getParent().relativePath() + QDir::separator() + name;
+}
+
+/**
+ * Gets the path data of the note sub folder
+ */
+QString NoteSubFolder::pathData() {
+    return parentId == 0 ?
+           name :
+           getParent().relativePath() + "\n" + name;
+}
+
+/**
+ * Fetches a note sub folder by it's path data
+ */
+NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData) {
+    QStringList pathList = pathData.split("\n");
+    NoteSubFolder noteSubFolder;
+    QStringListIterator itr(pathList);
+
+    // loop through all names to fetch the deepest note sub folder
+    while (itr.hasNext()) {
+        QString name = itr.next();
+        noteSubFolder = NoteSubFolder::fetchByNameAndParentId(
+                name, noteSubFolder.getId());
+        if (!noteSubFolder.isFetched()) {
+            return NoteSubFolder();
+        }
+    }
+
+    return noteSubFolder;
 }
 
 bool NoteSubFolder::remove() {
@@ -256,9 +310,20 @@ void NoteSubFolder::setAsActive() {
     NoteSubFolder::setAsActive(id);
 }
 
-void NoteSubFolder::setAsActive(int noteSubFolderId) {
-    QSettings settings;
-    return settings.setValue("activeSubNoteFolderId", noteSubFolderId);
+/**
+ * Set a note sub folder as active note sub folder for the current note folder
+ */
+bool NoteSubFolder::setAsActive(int noteSubFolderId) {
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    if (!noteFolder.isFetched()) {
+        return false;
+    }
+
+    // we don't need to check if the note sub folder was really fetched
+    // because we also want to get the root folder
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+    noteFolder.setActiveNoteSubFolder(noteSubFolder);
+    noteFolder.store();
 }
 
 /**
@@ -269,18 +334,20 @@ bool NoteSubFolder::isActive() {
 }
 
 /**
- * Returns the id of the current note sub folder in the settings
+ * Returns the id of the current note sub folder of the current note folder
  */
 int NoteSubFolder::activeSubNoteFolderId() {
-    QSettings settings;
-    return settings.value("activeSubNoteFolderId").toInt();
+    return activeNoteSubFolder().getId();
 }
 
 /**
- * Returns the current note sub folder
+ * Returns the current note sub folder of the current note folder
  */
-NoteSubFolder NoteSubFolder::activeNoteFolder() {
-    return NoteSubFolder::fetch(activeSubNoteFolderId());
+NoteSubFolder NoteSubFolder::activeNoteSubFolder() {
+    // we don't need to check if the note sub folder was really fetched
+    // because we also want to get the root folder
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    return noteFolder.getActiveNoteSubFolder();
 }
 
 QDebug operator<<(QDebug dbg, const NoteSubFolder &noteSubFolder) {

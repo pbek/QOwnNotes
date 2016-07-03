@@ -1,4 +1,5 @@
 #include "notefolder.h"
+#include "notesubfolder.h"
 #include <QDebug>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -51,6 +52,10 @@ int NoteFolder::getActiveTagId() {
     return this->activeTagId;
 }
 
+NoteSubFolder NoteFolder::getActiveNoteSubFolder() {
+    return NoteSubFolder::fetchByPathData(this->activeNoteSubFolderData);
+}
+
 void NoteFolder::setName(QString text) {
     this->name = text;
 }
@@ -77,6 +82,10 @@ void NoteFolder::setShowSubfolders(bool value) {
 
 void NoteFolder::setActiveTagId(int value) {
     this->activeTagId = value;
+}
+
+void NoteFolder::setActiveNoteSubFolder(NoteSubFolder noteSubFolder) {
+    this->activeNoteSubFolderData = noteSubFolder.pathData();
 }
 
 bool NoteFolder::create(QString name, QString localPath,
@@ -163,6 +172,8 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->priority = query.value("priority").toInt();
     this->showSubfolders = query.value("show_subfolders").toBool();
     this->activeTagId = query.value("active_tag_id").toInt();
+    this->activeNoteSubFolderData =
+            query.value("active_note_sub_folder_data").toString();
 
     return true;
 }
@@ -199,15 +210,17 @@ bool NoteFolder::store() {
                         "owncloud_server_id = :ownCloudServerId, "
                         "remote_path = :remotePath, priority = :priority, "
                         "active_tag_id = :activeTagId, show_subfolders = "
-                        ":showSubfolders WHERE id = :id");
+                        ":showSubfolders, active_note_sub_folder_data = "
+                        ":activeNoteSubFolderData WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO noteFolder (name, local_path, owncloud_server_id, "
-                        "remote_path, priority, active_tag_id, show_subfolders)"
+                        "remote_path, priority, active_tag_id, "
+                        "show_subfolders, active_note_sub_folder_data)"
                         " VALUES (:name, :localPath, :ownCloudServerId, "
                         ":remotePath, :priority, :activeTagId, "
-                        ":showSubfolders)");
+                        ":showSubfolders, :activeNoteSubFolderData)");
     }
 
     query.bindValue(":name", this->name);
@@ -217,6 +230,7 @@ bool NoteFolder::store() {
     query.bindValue(":priority", this->priority);
     query.bindValue(":activeTagId", this->activeTagId);
     query.bindValue(":showSubfolders", this->showSubfolders);
+    query.bindValue(":activeNoteSubFolderData", this->activeNoteSubFolderData);
 
     if (!query.exec()) {
         // on error
