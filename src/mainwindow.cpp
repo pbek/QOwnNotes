@@ -3466,6 +3466,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         note = Note();
         note.setName(text);
         note.setNoteText(noteText);
+        note.setNoteSubFolderId(NoteSubFolder::activeSubNoteFolderId());
         note.store();
 
         // if a tag is selected add the tag to the just created note
@@ -4942,8 +4943,7 @@ void MainWindow::reloadNoteSubFolderTree()
     item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(
             "folder",
-            QIcon(":icons/breeze-qownnotes/16x16/"
-                          "folder.svg")));
+            QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
     item->setTextColor(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);

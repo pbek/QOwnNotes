@@ -58,7 +58,11 @@ NoteSubFolder Note::getNoteSubFolder() {
 }
 
 void Note::setNoteSubFolder(NoteSubFolder noteSubFolder) {
-    this->noteSubFolderId = noteSubFolder.getId();
+    setNoteSubFolderId(noteSubFolder.getId());
+}
+
+void Note::setNoteSubFolderId(int id) {
+    this->noteSubFolderId = id;
 }
 
 QString Note::getNoteText() {

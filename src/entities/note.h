@@ -155,6 +155,8 @@ public:
 
     void setNoteSubFolder(NoteSubFolder noteSubFolder);
 
+    void setNoteSubFolderId(int id);
+
     static QList<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
 
     static QList<int> noteIdListFromNoteList(QList<Note> noteList);
