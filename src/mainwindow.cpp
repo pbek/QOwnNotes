@@ -3073,12 +3073,12 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     // select the page size
     QStringList pageSizeStrings;
     pageSizeStrings << "A0" << "A1" << "A2" << "A3" << "A4" << "A5"
-        << "A6" << "A7" << "A8" << "A9";
+        << "A6" << "A7" << "A8" << "A9" << tr("Letter");
     QList<QPageSize::PageSizeId> pageSizes;
     pageSizes << QPageSize::A0 << QPageSize::A1 << QPageSize::A2 <<
             QPageSize::A3 << QPageSize::A4 << QPageSize::A5 <<
             QPageSize::A6 << QPageSize::A7 << QPageSize::A8 <<
-            QPageSize::A9;
+            QPageSize::A9 << QPageSize::Letter;
 
     bool ok;
     QString pageSizeString = QInputDialog::getItem(
