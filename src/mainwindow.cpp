@@ -1351,14 +1351,23 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
  */
 QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
         QTreeWidgetItem *parentItem, NoteSubFolder noteSubFolder) {
+    int id = noteSubFolder.getId();
+    QString name = noteSubFolder.getName();
+    int linkCount = Note::countByNoteSubFolderId(id);
+    QString toolTip = tr("show notes in folder '%1' (%2)")
+            .arg(name, QString::number(linkCount));
+
     QTreeWidgetItem *item = new QTreeWidgetItem();
-    item->setText(0, noteSubFolder.getName());
-    item->setData(0, Qt::UserRole, noteSubFolder.getId());
-//    item->setFlags(item->flags() & ~Qt::ItemIsSelectable);
+    item->setText(0, name);
+    item->setData(0, Qt::UserRole, id);
+    item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(
                                 "folder",
                                 QIcon(":icons/breeze-qownnotes/16x16/"
                                               "folder.svg")));
+    item->setTextColor(1, QColor(Qt::gray));
+    item->setText(1, QString::number(linkCount));
+    item->setToolTip(1, toolTip);
 
     if (parentItem == NULL) {
         ui->noteSubFolderTreeWidget->addTopLevelItem(item);
@@ -4923,13 +4932,21 @@ void MainWindow::reloadNoteSubFolderTree()
     ui->noteSubFolderTreeWidget->clear();
     int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
 
+    int linkCount = Note::countByNoteSubFolderId(0);
+    QString toolTip = tr("show notes in note root folder (%1)")
+            .arg(QString::number(linkCount));
+
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, tr("Note folder"));
     item->setData(0, Qt::UserRole, 0);
+    item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(
             "folder",
             QIcon(":icons/breeze-qownnotes/16x16/"
                           "folder.svg")));
+    item->setTextColor(1, QColor(Qt::gray));
+    item->setText(1, QString::number(linkCount));
+    item->setToolTip(1, toolTip);
 
     ui->noteSubFolderTreeWidget->addTopLevelItem(item);
     // set the active item

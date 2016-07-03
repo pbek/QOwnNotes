@@ -159,6 +159,8 @@ public:
 
     static QList<int> noteIdListFromNoteList(QList<Note> noteList);
 
+    static int countByNoteSubFolderId(int noteSubFolderId = 0);
+
 protected:
     int id;
     QString name;

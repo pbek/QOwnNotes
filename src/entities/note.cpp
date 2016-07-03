@@ -1548,6 +1548,26 @@ int Note::countAll() {
 }
 
 /**
+ * Counts all notes by note sub folder id
+ */
+int Note::countByNoteSubFolderId(int noteSubFolderId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM note WHERE note_sub_folder_id "
+                          "= :note_sub_folder_id");
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
+/**
  * Fetches all tags of the note
  */
 //QList<Tag> Note::tags() {
