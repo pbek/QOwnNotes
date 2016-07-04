@@ -1198,33 +1198,12 @@ void MainWindow::createSystemTrayIcon() {
  * Creates the items in the note tree widget from the note and note sub
  * folder tables
  */
-void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
-    // TODO(pbek): remove note sub folder integration
-    int noteSubFolderId = 0;
-    NoteSubFolder noteSubFolder;
-    bool hasNoteSubFolder = false;
-
-    if (parentItem != NULL) {
-        noteSubFolderId = parentItem->data(0, Qt::UserRole + 1).toInt();
-        noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
-        hasNoteSubFolder = noteSubFolder.isFetched();
-
-        if (!hasNoteSubFolder) {
-            return;
-        }
-    }
-
+void MainWindow::loadNoteDirectoryList() {
     const QSignalBlocker blocker(ui->noteTextEdit);
     Q_UNUSED(blocker);
 
     const QSignalBlocker blocker2(ui->noteTreeWidget);
     Q_UNUSED(blocker2);
-
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-
-    if (!hasNoteSubFolder) {
-        ui->noteTreeWidget->clear();
-    }
 
     bool isEditable = Note::allowDifferentFileName();
 
@@ -1249,23 +1228,16 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
                                   "text-x-generic.svg")));
 
             if (isEditable) {
-                noteItem->setFlags(
-                        noteItem->flags() | Qt::ItemIsEditable);
+                noteItem->setFlags( noteItem->flags() | Qt::ItemIsEditable);
             }
 
-            if (!hasNoteSubFolder) {
-                ui->noteTreeWidget->addTopLevelItem(noteItem);
-            } else {
-                parentItem->addChild(noteItem);
-            }
+            ui->noteTreeWidget->addTopLevelItem(noteItem);
     }
 
-    if (!hasNoteSubFolder) {
-        // clear the text edits if there are no notes
-        if (noteList.isEmpty()) {
-            ui->noteTextEdit->clear();
-            ui->noteTextView->clear();
-        }
+    // clear the text edits if there are no notes
+    if (noteList.isEmpty()) {
+        ui->noteTextEdit->clear();
+        ui->noteTextView->clear();
     }
 
     int itemCount = noteList.count();
@@ -1276,71 +1248,19 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
             QString::number(itemCount) + " notes",
             itemCount);
 
-    QString absoluteNotePath = Utils::Misc::removeIfEndsWith(
-            this->notesPath, QDir::separator());
-
-    QString noteSubFolderPath = noteSubFolder.relativePath();
-    if (hasNoteSubFolder) {
-        absoluteNotePath += QDir::separator() + noteSubFolderPath;
+    // sort alphabetically again if necessary
+    if (sortAlphabetically) {
+        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
     }
 
-    QDir dir(absoluteNotePath);
+    // setup tagging
+    setupTags();
 
-    if (!hasNoteSubFolder) {
-        // clear all paths from the directory watcher
-        QStringList fileList = noteDirectoryWatcher.directories() +
-                noteDirectoryWatcher.files();
-        if (fileList.count() > 0) {
-            noteDirectoryWatcher.removePaths(fileList);
-        }
-    }
+    // setup note sub folders
+    setupNoteSubFolders();
 
-    if (dir.exists()) {
-        // watch the notes directory for changes
-        noteDirectoryWatcher.addPath(absoluteNotePath);
-    }
-
-    QStringList fileNameList = Note::fetchNoteFileNames();
-
-    // watch all the notes for changes
-    int count = 0;
-    Q_FOREACH(QString fileName, fileNameList) {
-#ifdef Q_OS_LINUX
-            // only add the last first 200 notes to the file watcher to
-            // prevent that nothing is watched at all because of too many
-            // open files
-            if (count > 200) {
-                break;
-            }
-#endif
-
-            if (hasNoteSubFolder) {
-                fileName.prepend(noteSubFolderPath + QDir::separator());
-            }
-
-            QString path = Note::getFullNoteFilePathForFile(fileName);
-            QFile file(path);
-            if (file.exists()) {
-                this->noteDirectoryWatcher.addPath(path);
-                count++;
-            }
-    }
-
-    if (!hasNoteSubFolder) {
-            // sort alphabetically again if necessary
-        if (sortAlphabetically) {
-            ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
-        }
-
-        // setup tagging
-        setupTags();
-
-        // setup note sub folders
-        setupNoteSubFolders();
-
-        // generate the tray context menu
-        generateSystemTrayContextMenu();
-    }
+    // generate the tray context menu
+    generateSystemTrayContextMenu();
 }
 
 /**
@@ -2007,7 +1927,76 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
         // setup the note folder database
         DatabaseService::createNoteFolderConnection();
         DatabaseService::setupNoteFolderTables();
+
+        // update the note directory watcher
+        updateNoteDirectoryWatcher();
     }
+}
+
+/**
+ * Updates the note directory watcher
+ */
+void MainWindow::updateNoteDirectoryWatcher() {
+    // clear all paths from the directory watcher
+    QStringList fileList = noteDirectoryWatcher.directories() +
+                           noteDirectoryWatcher.files();
+    if (fileList.count() > 0) {
+        noteDirectoryWatcher.removePaths(fileList);
+    }
+
+    QString notePath = Utils::Misc::removeIfEndsWith(
+            this->notesPath, QDir::separator());
+
+    QDir notesDir(notePath);
+
+    if (notesDir.exists()) {
+        // watch the notes directory for changes
+        noteDirectoryWatcher.addPath(notePath);
+    }
+
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    if (showSubfolders) {
+        QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAll();
+        Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+                QString path = notePath + QDir::separator() +
+                        noteSubFolder.relativePath();
+
+                QDir folderDir(path);
+
+                if (folderDir.exists()) {
+                    // watch the note sub folder path for changes
+                    noteDirectoryWatcher.addPath(path);
+                }
+            }
+    }
+
+    int count = 0;
+    QList<Note> noteList = Note::fetchAll();
+    Q_FOREACH(Note note, noteList) {
+#ifdef Q_OS_LINUX
+            // only add the last first 200 notes to the file watcher to
+            // prevent that nothing is watched at all because of too many
+            // open files
+            if (count > 200) {
+                break;
+            }
+#endif
+            QString path = note.fullNoteFilePath();
+            QFile file(path);
+
+            if (file.exists()) {
+                // watch the note for changes
+                noteDirectoryWatcher.addPath(path);
+
+                count++;
+            }
+        }
+
+//    qDebug() << __func__ << " - 'noteDirectoryWatcher.files()': " <<
+//    noteDirectoryWatcher.files();
+//
+//    qDebug() << __func__ << " - 'noteDirectoryWatcher.directories()': " <<
+//    noteDirectoryWatcher.directories();
 }
 
 /**
@@ -5052,8 +5041,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
 /**
  * Creates a new tag
  */
-void MainWindow::on_tagLineEdit_returnPressed()
-{
+void MainWindow::on_tagLineEdit_returnPressed() {
     QString name = ui->tagLineEdit->text();
     if (name.isEmpty()) {
         return;
@@ -5421,8 +5409,8 @@ void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
 /**
  * Stores the tag after it was edited
  */
-void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
-{
+void MainWindow::on_tagTreeWidget_itemChanged(
+        QTreeWidgetItem *item, int column) {
     Q_UNUSED(column);
 
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
@@ -5447,8 +5435,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column)
  * Sets a new active tag
  */
 void MainWindow::on_tagTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous)
-{
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
     if (current == NULL) {
@@ -5470,8 +5457,8 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
 /**
  * Creates a context menu for the tag tree widget
  */
-void MainWindow::on_tagTreeWidget_customContextMenuRequested(const QPoint &pos)
-{
+void MainWindow::on_tagTreeWidget_customContextMenuRequested(
+        const QPoint &pos) {
     // don't open the context menu if no tags are selected
     if (ui->tagTreeWidget->selectedItems().count() == 0) {
         return;

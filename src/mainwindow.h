@@ -361,7 +361,7 @@ private:
 
     void createSystemTrayIcon();
 
-    void loadNoteDirectoryList(QTreeWidgetItem *parentItem = 0);
+    void loadNoteDirectoryList();
 
     void readSettings();
 
@@ -551,4 +551,6 @@ private:
     void filterNotesByNoteSubFolders();
 
     void searchForTextInTreeWidget(QTreeWidget *treeWidget, QString text);
+
+    void updateNoteDirectoryWatcher();
 };
