@@ -1223,9 +1223,6 @@ void MainWindow::loadNoteDirectoryList(QTreeWidgetItem *parentItem) {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
 
     if (!hasNoteSubFolder) {
-        // turn on the root decoration if we want to show subfolders
-        ui->noteTreeWidget->setRootIsDecorated(showSubfolders);
-
         ui->noteTreeWidget->clear();
     }
 
