@@ -78,12 +78,9 @@ find -L . \
 # Set the release string to disable the update check
 echo "#define RELEASE \"SlackBuild\"" > release.h
 
-mkdir -p build
-cd build
-  qmake-qt5 ..
-  make
-  make INSTALL_ROOT=$PKG install
-cd ..
+qmake-qt5
+make
+make INSTALL_ROOT=$PKG install
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true
