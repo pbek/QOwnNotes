@@ -8,6 +8,8 @@
     - improved the column width setup of the note sub folder tree 
 - on Linux a `make install` should now install the application after it was 
   built (thank you to Crazy for the improvements on the qmake project file)
+- added more Russian, Dutch, Hungarian and German translation (thank you 
+  frostyland, Fabijenna and bigant)
 
 ## 16.07.1
 - added `Letter` as page size for PDF exports under Windows and OS X
