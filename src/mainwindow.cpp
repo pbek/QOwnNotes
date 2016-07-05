@@ -1271,11 +1271,14 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     const QSignalBlocker blocker(ui->noteTreeWidget);
     Q_UNUSED(blocker);
 
-    if (sortAlphabetically) {
-        ui->noteTreeWidget->addTopLevelItem(noteItem);
-    } else {
-        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
-    }
+    // strange things happen if we insert with insertTopLevelItem
+    ui->noteTreeWidget->addTopLevelItem(noteItem);
+
+//    if (sortAlphabetically) {
+//        ui->noteTreeWidget->addTopLevelItem(noteItem);
+//    } else {
+//        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
+//    }
 
     return true;
 }
@@ -3507,7 +3510,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         ui->noteTreeWidget->sortColumn();
 
 //        buildNotesIndex();
-//        loadNoteDirectoryList();
+        loadNoteDirectoryList();
 
         // fetch note new (because all the IDs have changed after
         // the buildNotesIndex()
