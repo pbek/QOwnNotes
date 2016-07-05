@@ -35,9 +35,9 @@ package() {
     install -D -m644 QOwnNotes.desktop "${pkgdir}/usr/share/applications/QOwnNotes.desktop"
     install -D -m644 "images/icons/128x128/QOwnNotes.png" "${pkgdir}/usr/share/pixmaps/QOwnNotes.png"
     for format in {16x16,24x24,32x32,48x48,64x64,96x96,128x128,256x256,512x512}; do
-        install -D -m644 "images/icons/${format}/QOwnNotes.png" "${pkgdir}/usr/share/icons/hicolor/$format/apps/QOwnNotes.png"
+        install -D -m644 "images/icons/${format}/apps/QOwnNotes.png" "${pkgdir}/usr/share/icons/hicolor/$format/apps/QOwnNotes.png"
     done
-    install -D -m644 "images/icons/scalable/QOwnNotes.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg"
+    install -D -m644 "images/icons/scalable/apps/QOwnNotes.svg" "${pkgdir}/usr/share/icons/hicolor/scalable/apps/QOwnNotes.svg"
 
     # install languages
     install -d "${pkgdir}/usr/share/QOwnNotes/languages/"

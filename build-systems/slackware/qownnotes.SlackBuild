@@ -82,35 +82,8 @@ mkdir -p build
 cd build
   qmake-qt5 ..
   make
-#  make INSTALL_ROOT=$PKG install
+  make INSTALL_ROOT=$PKG install
 cd ..
-
-# This program doesn't have an install target, so we install files by hand
-mkdir -p $PKG/usr/{bin,share}
-install -D -m 0755 build/QOwnNotes $PKG/usr/bin/QOwnNotes
-install -D -m 0644 QOwnNotes.desktop $PKG/usr/share/applications/QOwnNotes.desktop
-install -D -m 0644 images/icons/128x128/QOwnNotes.png $PKG/usr/share/pixmaps/QOwnNotes.png
-install -D -m 0644 images/icons/16x16/QOwnNotes.png   $PKG/usr/share/icons/hicolor/16x16/apps/QOwnNotes.png
-install -D -m 0644 images/icons/24x24/QOwnNotes.png   $PKG/usr/share/icons/hicolor/24x24/apps/QOwnNotes.png
-install -D -m 0644 images/icons/32x32/QOwnNotes.png   $PKG/usr/share/icons/hicolor/32x32/apps/QOwnNotes.png
-install -D -m 0644 images/icons/48x48/QOwnNotes.png   $PKG/usr/share/icons/hicolor/48x48/apps/QOwnNotes.png
-install -D -m 0644 images/icons/64x64/QOwnNotes.png   $PKG/usr/share/icons/hicolor/64x64/apps/QOwnNotes.png
-install -D -m 0644 images/icons/96x96/QOwnNotes.png   $PKG/usr/share/icons/hicolor/96x96/apps/QOwnNotes.png
-install -D -m 0644 images/icons/128x128/QOwnNotes.png $PKG/usr/share/icons/hicolor/128x128/apps/QOwnNotes.png
-install -D -m 0644 images/icons/256x256/QOwnNotes.png $PKG/usr/share/icons/hicolor/256x256/apps/QOwnNotes.png
-install -D -m 0644 images/icons/512x512/QOwnNotes.png $PKG/usr/share/icons/hicolor/512x512/apps/QOwnNotes.png
-install -D -m 0644 languages/QOwnNotes_en.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_en.qm
-install -D -m 0644 languages/QOwnNotes_de.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_de.qm
-install -D -m 0644 languages/QOwnNotes_fr.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_fr.qm
-install -D -m 0644 languages/QOwnNotes_pl.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_pl.qm
-install -D -m 0644 languages/QOwnNotes_zh.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_zh.qm
-install -D -m 0644 languages/QOwnNotes_ru.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_ru.qm
-install -D -m 0644 languages/QOwnNotes_pt.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_pt.qm
-install -D -m 0644 languages/QOwnNotes_es.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_es.qm
-install -D -m 0644 languages/QOwnNotes_nl.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_nl.qm
-install -D -m 0644 languages/QOwnNotes_hu.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_hu.qm
-install -D -m 0644 languages/QOwnNotes_ja.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_ja.qm
-install -D -m 0644 languages/QOwnNotes_it.qm $PKG/usr/share/QOwnNotes/languages/QOwnNotes_it.qm
 
 find $PKG -print0 | xargs -0 file | grep -e "executable" -e "shared object" | grep ELF \
   | cut -f 1 -d : | xargs strip --strip-unneeded 2> /dev/null || true

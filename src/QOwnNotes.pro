@@ -161,6 +161,36 @@ include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
 include(libraries/botan/botan.pri)
 
+
+unix {
+
+  isEmpty(PREFIX) {
+    PREFIX = /usr
+  }
+
+  isEmpty(BINDIR) {
+    BINDIR = $$PREFIX/bin
+  }
+
+  isEmpty(DATADIR) {
+    DATADIR = $$PREFIX/share
+  }
+
+  INSTALLS += target desktop i18n icons
+
+  target.path = $$BINDIR
+  target.files += QOwnNotes
+
+  desktop.path = $$DATADIR/applications
+  desktop.files += QOwnNotes.desktop
+
+  i18n.path = $$DATADIR/QOwnNotes/languages
+  i18n.files += languages/*.qm
+
+  icons.path = $$DATADIR/icons/hicolor
+  icons.files += images/icons/*
+}
+
 CONFIG(debug, debug|release) {
 #    QMAKE_CXXFLAGS_DEBUG += -g3 -O0
     message("Currently in DEBUG mode.")

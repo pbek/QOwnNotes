@@ -50,7 +50,7 @@ src_install() {
 	doins languages/*.qm
 
 	insinto /usr/share/applications
-	doicon -s 128 images/icons/128x128/QOwnNotes.png
-	doicon -s scalable images/icons/scalable/QOwnNotes.svg
+	doicon -s 128 images/icons/128x128/apps/QOwnNotes.png
+	doicon -s scalable images/icons/scalable/apps/QOwnNotes.svg
 	doins QOwnNotes.desktop
 }
