@@ -5,6 +5,7 @@
   (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
     - the tree decoration was removed in the note list since it should not be
       a tree any more
+    - improved the column width setup of the note sub folder tree 
 
 ## 16.07.1
 - added `Letter` as page size for PDF exports under Windows and OS X

@@ -4432,6 +4432,8 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
     ui->encryptedNoteTextEdit->setPaperMargins(event->size().width());
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
 }
 
 /**
