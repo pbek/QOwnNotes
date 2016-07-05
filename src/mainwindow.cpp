@@ -1205,34 +1205,13 @@ void MainWindow::loadNoteDirectoryList() {
     const QSignalBlocker blocker2(ui->noteTreeWidget);
     Q_UNUSED(blocker2);
 
-    bool isEditable = Note::allowDifferentFileName();
+    ui->noteTreeWidget->clear();
 
     // load all notes and add them to the note list widget
     QList<Note> noteList = Note::fetchAll();
     Q_FOREACH(Note note, noteList) {
-            QString name = note.getName();
-
-            // skip notes without name
-            if (name.isEmpty()) {
-                continue;
-            }
-
-            // add a note item to the tree
-            QTreeWidgetItem *noteItem = new QTreeWidgetItem();
-            setTreeWidgetItemToolTipForNote(noteItem, &note);
-            noteItem->setText(0, name);
-            noteItem->setData(0, Qt::UserRole, note.getId());
-            noteItem->setIcon(0, QIcon::fromTheme(
-                    "text-x-generic",
-                    QIcon(":icons/breeze-qownnotes/16x16/"
-                                  "text-x-generic.svg")));
-
-            if (isEditable) {
-                noteItem->setFlags( noteItem->flags() | Qt::ItemIsEditable);
-            }
-
-            ui->noteTreeWidget->addTopLevelItem(noteItem);
-    }
+            addNoteToNoteTreeWidget(note);
+        }
 
     // clear the text edits if there are no notes
     if (noteList.isEmpty()) {
@@ -1261,6 +1240,44 @@ void MainWindow::loadNoteDirectoryList() {
 
     // generate the tray context menu
     generateSystemTrayContextMenu();
+}
+
+/**
+ * Adds a note to the note tree widget
+ */
+bool MainWindow::addNoteToNoteTreeWidget(Note note) {
+    QString name = note.getName();
+
+    // skip notes without name
+    if (name.isEmpty()) {
+        return false;
+    }
+
+    // add a note item to the tree
+    QTreeWidgetItem *noteItem = new QTreeWidgetItem();
+    setTreeWidgetItemToolTipForNote(noteItem, &note);
+    noteItem->setText(0, name);
+    noteItem->setData(0, Qt::UserRole, note.getId());
+    noteItem->setIcon(0, QIcon::fromTheme(
+                    "text-x-generic",
+                    QIcon(":icons/breeze-qownnotes/16x16/"
+                                  "text-x-generic.svg")));
+
+    bool isEditable = Note::allowDifferentFileName();
+    if (isEditable) {
+        noteItem->setFlags(noteItem->flags() | Qt::ItemIsEditable);
+    }
+
+    const QSignalBlocker blocker(ui->noteTreeWidget);
+    Q_UNUSED(blocker);
+
+    if (sortAlphabetically) {
+        ui->noteTreeWidget->addTopLevelItem(noteItem);
+    } else {
+        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
+    }
+
+    return true;
 }
 
 /**
@@ -3434,7 +3451,7 @@ void MainWindow::on_searchLineEdit_returnPressed() {
     // add the current search text to the saved searches
     storeSavedSearch();
 
-    QString text = this->ui->searchLineEdit->text();
+    QString text = ui->searchLineEdit->text();
     text = text.trimmed();
 
     // first let us search for the entered text
@@ -3463,20 +3480,38 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
         // store the note to disk
         {
-            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            const QSignalBlocker blocker(noteDirectoryWatcher);
             Q_UNUSED(blocker);
 
             note.storeNoteTextFileToDisk();
             showStatusBarMessage(
                     tr("stored current note to disk"), 3000);
+
+            // add the file to the note directory watcher
+            noteDirectoryWatcher.addPath(note.fullNoteFilePath());
         }
 
-        buildNotesIndex();
-        loadNoteDirectoryList();
+        {
+            const QSignalBlocker blocker(ui->noteTreeWidget);
+            Q_UNUSED(blocker);
+
+            // adds the note to the note tree widget
+            MainWindow::addNoteToNoteTreeWidget(note);
+        }
+
+        qDebug() << __func__ <<
+        " - 'ui->noteTreeWidget->isSortingEnabled()': " <<
+            ui->noteTreeWidget->isSortingEnabled();
+
+        qDebug() << __func__ << " - 'ui->noteTreeWidget->sortColumn()': " <<
+        ui->noteTreeWidget->sortColumn();
+
+//        buildNotesIndex();
+//        loadNoteDirectoryList();
 
         // fetch note new (because all the IDs have changed after
         // the buildNotesIndex()
-        note.refetch();
+//        note.refetch();
 
         // clear search line edit so all notes will be viewed again
         ui->searchLineEdit->clear();

@@ -553,4 +553,6 @@ private:
     void searchForTextInTreeWidget(QTreeWidget *treeWidget, QString text);
 
     void updateNoteDirectoryWatcher();
+
+    bool addNoteToNoteTreeWidget(Note note);
 };
