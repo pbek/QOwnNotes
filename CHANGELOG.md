@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.3
+- fixed the install process in the Slackware repository
+  (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
+ 
 ## 16.07.2
 - added more features to the **note sub folder tree**
   (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
