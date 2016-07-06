@@ -21,6 +21,7 @@
 #include <entities/script.h>
 #include <services/scriptingservice.h>
 #include <QInputDialog>
+#include <QFontDatabase>
 #include <utils/misc.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
@@ -952,8 +953,7 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
     }
 }
 
-void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
-{
+void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked) {
     if (checked) {
         int reply;
         reply = QMessageBox::question(
@@ -976,8 +976,7 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked)
 /**
  * Allows the user to clear all settings and the database and exit the app
  */
-void SettingsDialog::on_clearAppDataAndExitButton_clicked()
-{
+void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
     if (QMessageBox::information(
             this, tr("Clear app data and exit"),
             tr("Do you really want to clear all settings, remove the "
@@ -995,8 +994,7 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked()
 /**
  * Resets the font for the note text edit
  */
-void SettingsDialog::on_noteTextEditResetButton_clicked()
-{
+void SettingsDialog::on_noteTextEditResetButton_clicked() {
     QTextEdit textEdit;
     noteTextEditFont = textEdit.font();
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
@@ -1005,19 +1003,15 @@ void SettingsDialog::on_noteTextEditResetButton_clicked()
 /**
  * Resets the font for the note text code edit
  */
-void SettingsDialog::on_noteTextEditCodeResetButton_clicked()
-{
-    QTextEdit textEdit;
-    noteTextEditCodeFont = textEdit.font();
-    noteTextEditCodeFont.setFamily("Courier");
+void SettingsDialog::on_noteTextEditCodeResetButton_clicked() {
+    noteTextEditCodeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
 }
 
 /**
  * Resets the font for the note markdown view
  */
-void SettingsDialog::on_noteTextViewResetButton_clicked()
-{
+void SettingsDialog::on_noteTextViewResetButton_clicked() {
     QTextBrowser textView;
     noteTextViewFont = textView.font();
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
@@ -1026,19 +1020,15 @@ void SettingsDialog::on_noteTextViewResetButton_clicked()
 /**
  * Resets the font for the note markdown code view
  */
-void SettingsDialog::on_noteTextViewCodeResetButton_clicked()
-{
-    QTextBrowser textView;
-    noteTextViewCodeFont = textView.font();
-    noteTextViewCodeFont.setFamily("Courier");
+void SettingsDialog::on_noteTextViewCodeResetButton_clicked() {
+    noteTextViewCodeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
 }
 
 /**
  * Sets a path to an external editor
  */
-void SettingsDialog::on_setExternalEditorPathToolButton_clicked()
-{
+void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
     QStringList mimeTypeFilters;
     mimeTypeFilters << "application/x-executable" << "application/octet-stream";
 
@@ -1061,8 +1051,7 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked()
     }
 }
 
-void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked)
-{
+void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked) {
     ui->letsEncryptInfoLabel->setVisible(checked);
 }
 

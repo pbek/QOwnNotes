@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QRegularExpression>
 #include <QMimeData>
+#include <QFontDatabase>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
@@ -106,8 +107,8 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
         // set the code font
         codeFont.fromString(fontString);
     } else {
-        // choose Courier as font family
-        codeFont.setFamily("Courier");
+        codeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
+
         // store the default settings
         settings.setValue(
                 "MainWindow/noteTextEdit.code.font", codeFont.toString());

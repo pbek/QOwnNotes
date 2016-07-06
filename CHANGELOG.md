@@ -2,7 +2,9 @@
 
 ## 16.07.3
 - fixed a bug with searching for multiple words like `"more words"` where the
-  app didn't respond any more 
+  app didn't respond any more
+- the default code font for the note editor and the markdown preview is now the 
+  system fixed font instead of Courier
 - fixed the install process in the Slackware repository
   (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
 - the package signature of the ownCloud app QOwnNotesAPI was fixed
