@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.07.3
+- fixed a bug with searching for multiple words like `"more words"` where the
+  app didn't respond any more 
 - fixed the install process in the Slackware repository
   (for [Issue #226](https://github.com/pbek/QOwnNotes/issues/226))
 - the package signature of the ownCloud app QOwnNotesAPI was fixed

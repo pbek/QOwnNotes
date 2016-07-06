@@ -485,6 +485,12 @@ QStringList Note::buildQueryStringList(QString searchString) {
     // add the remaining strings
     queryStrings.append(searchString.split(" "));
 
+    // remove empty items, so the search will not run amok
+    queryStrings.removeAll("");
+
+    // remove duplicate query items
+    queryStrings.removeDuplicates();
+
     return queryStrings;
 }
 
