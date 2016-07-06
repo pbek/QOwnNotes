@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QOwnNotes
+Comment=Plain text notepad and todo list manager with markdown support that works together with ownCloud
+Exec=usr/bin/QOwnNotes
+Icon=${SNAP}/meta/gui/QOwnNotes.png
+Type=Application
+Terminal=false
+StartupNotify=true
+Encoding=UTF-8
+Categories=Qt;TextEditor;Todo;

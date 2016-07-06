@@ -11,7 +11,7 @@ confinement: devmode  # use "strict" to enforce system access only via declared 
 
 apps:
   qownnotes:
-    command: desktop-launch qownnotes
+    command: desktop-launch usr/bin/QOwnNotes
     plugs:
       - x11
       - network
