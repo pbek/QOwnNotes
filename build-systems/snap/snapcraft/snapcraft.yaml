@@ -1,5 +1,5 @@
 name: qownnotes
-version: 16.07.2
+version: VERSION-STRING
 summary: Plain-text file notepad with markdown support and ownCloud integration
 description: |
   QOwnNotes is the open source (GPL) plain-text file notepad with markdown support 
@@ -7,7 +7,8 @@ description: |
   together with the notes application of ownCloud.
   http://www.qownnotes.org/
 
-confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+confinement: strict
+#confinement: devmode  # use "strict" to enforce system access only via declared interfaces
 
 apps:
   qownnotes:
@@ -19,7 +20,7 @@ apps:
 
 parts:
   qownnotes:
-    source: http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-16.07.2.tar.xz
+    source: http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
     source-type: tar
     plugin: qmake
     qt-version: qt5
