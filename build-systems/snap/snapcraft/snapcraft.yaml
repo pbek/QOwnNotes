@@ -1,18 +1,21 @@
 name: qownnotes
 version: VERSION-STRING
 summary: Plain-text file notepad with markdown support and ownCloud integration
+confinement: strict
+#confinement: devmode
 description: |
   QOwnNotes is the open source (GPL) plain-text file notepad with markdown support 
   and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works 
   together with the notes application of ownCloud.
   http://www.qownnotes.org/
 
+# Launchpad is complaining about the existance of the property `confinement`
 #confinement: strict
 #confinement: devmode  # use "strict" to enforce system access only via declared interfaces
 
 apps:
   qownnotes:
-    command: desktop-launch usr/bin/QOwnNotes
+    command: desktop-launch $SNAP/usr/bin/QOwnNotes
     plugs:
       - x11
       - network
