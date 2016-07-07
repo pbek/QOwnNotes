@@ -7,7 +7,7 @@ description: |
   together with the notes application of ownCloud.
   http://www.qownnotes.org/
 
-confinement: strict
+#confinement: strict
 #confinement: devmode  # use "strict" to enforce system access only via declared interfaces
 
 apps:

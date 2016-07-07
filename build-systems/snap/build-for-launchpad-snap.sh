@@ -4,7 +4,7 @@
 # https://launchpad.net/qownnotes-snap
 #
 # We need a ssh key to push to the git repository
-# git+ssh://pbek@git.launchpad.net/qownnotes-snap
+# git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap
 #
 # The QOwnNotes repository for Launchpad Snap relies on our source archive on
 # https://sourceforge.net/projects/qownnotes/files/src/
@@ -32,8 +32,8 @@ cd $PROJECT_PATH
 
 echo "Project path: $PROJECT_PATH"
 
-# checkout AUR repository
-git clone --depth=5 git+ssh://pbek@git.launchpad.net/qownnotes-snap snap
+# checkout Launchpad Snap repository
+git clone --depth=5 git+ssh://pbek@git.launchpad.net/~pbek/qownnotes-snap snap
 
 # checkout the source code
 git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
