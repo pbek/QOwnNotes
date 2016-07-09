@@ -1,9 +1,9 @@
 # [QOwnNotes snapcraft](http://www.qownnotes.org "QOwnNotes Offical Site") 
 
 [Installation](http://www.qownnotes.org/installation) | 
-[Changelog](https://github.com/pbek/QOwnNotes/blob/develop/CHANGELOG.md) | 
+[Changelog](http://www.qownnotes.org/changelog/QOwnNotes) | 
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
-[Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
+[Shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes) |
 [Knowledge base](http://www.qownnotes.org/Knowledge-base) |
 [Screenshots](http://www.qownnotes.org) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
