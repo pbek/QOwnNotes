@@ -4,3 +4,6 @@
 [submodule "src/libraries/piwiktracker"]
 	path = src/libraries/piwiktracker
 	url = https://github.com/pbek/qt-piwik-tracker.git
+[submodule "src/libraries/sonnet"]
+	path = src/libraries/sonnet
+	url = https://github.com/KDE/sonnet.git

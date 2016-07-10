@@ -81,7 +81,6 @@ SOURCES += main.cpp\
     dialogs/logdialog.cpp \
     widgets/combobox.cpp
 
-
 HEADERS  += mainwindow.h \
     build_number.h \
     version.h \
@@ -134,6 +133,35 @@ HEADERS  += mainwindow.h \
     dialogs/logdialog.h \
     widgets/combobox.h
 
+INCLUDEPATH += $$PWD/libraries/sonnet/src/core
+#INCLUDEPATH += libraries/sonnet/src
+
+DEFINES += SONNETUI_EXPORT=""
+DEFINES += SONNETCORE_EXPORT=""
+DEFINES += INSTALLATION_PLUGIN_PATH=""
+DEFINES += SONNET_STATIC
+
+SOURCES += libraries/sonnet/src/core/loader.cpp \
+           libraries/sonnet/src/core/client.cpp \
+           libraries/sonnet/src/core/spellerplugin.cpp \
+           libraries/sonnet/src/core/speller.cpp \
+           libraries/sonnet/src/core/settings.cpp \
+           libraries/sonnet/src/core/backgroundchecker.cpp \
+           libraries/sonnet/src/core/guesslanguage.cpp \
+           libraries/sonnet/src/core/textbreaks.cpp \
+           libraries/sonnet/src/core/tokenizer.cpp \
+           libraries/sonnet/src/core/languagefilter.cpp \
+           libraries/sonnet/src/ui/highlighter.cpp
+
+HEADERS += libraries/sonnet/src/core/client_p.h \
+           libraries/sonnet/src/core/loader_p.h \
+           libraries/sonnet/src/ui/highlighter.h
+
+unix:system("touch sonnetcore_export.h")
+unix:system("touch sonnetui_export.h")
+win32:system("type nul > sonnetcore_export.h")
+win32:system("type nul > sonnetui_export.h")
+
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
     dialogs/aboutdialog.ui \
@@ -160,6 +188,8 @@ RESOURCES += \
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
 include(libraries/botan/botan.pri)
+#include(libraries/sonnet/src/plugins/hunspell/hunspell.pro)
+#include(libraries/sonnet/src/core/sonnet-core.pro)
 
 
 unix {
