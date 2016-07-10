@@ -126,8 +126,8 @@ set(SOURCE_FILES
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c
     libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h
-    libraries/qmarkdowntextedit/highlighter.cpp
-    libraries/qmarkdowntextedit/highlighter.h
+    libraries/qmarkdowntextedit/markdownhighlighter.cpp
+    libraries/qmarkdowntextedit/markdownhighlighter.h
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp
     libraries/qmarkdowntextedit/qmarkdowntextedit.h
     libraries/qmarkdowntextedit/qtexteditsearchwidget.cpp
