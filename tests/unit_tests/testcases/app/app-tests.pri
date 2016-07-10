@@ -30,7 +30,7 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.h
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.h
 
 SOURCES += \
     $$PWD/test_*.cpp \
@@ -56,7 +56,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c \
-    $$APP_SRC_DIR/libraries/qmarkdowntextedit/highlighter.cpp
+    $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.cpp
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)
 
