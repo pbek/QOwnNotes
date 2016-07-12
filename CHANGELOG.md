@@ -1,5 +1,21 @@
 # QOwnNotes Changelog
 
+## 16.07.4
+- there is now is a **snap** `qownnotes` publicly available for QOwnNotes
+  (thanks a lot to @dholbach and @kyrofa for the help)
+    - snaps are working on many Linux distributions like Arch Linux, Debian, 
+      Fedora, Gentoo Linux and Ubuntu
+    - please visit the
+      [QOwnNotes installation page](http://www.qownnotes.org/installation#snap)
+      for instructions
+- there now are community-created packages for **CentOS 7** for QOwnNotes 
+  (thanks a lot to Jörg Woll)
+    - please visit the
+      [QOwnNotes installation page](http://www.qownnotes.org/installation#CentOS)
+      for instructions
+- added more Russian, Italian, Hungarian and German translation (thank you 
+  Maboroshy, mlocati, Fabijenna and bigant)
+
 ## 16.07.3
 - fixed a bug with searching for multiple words like `"more words"` where the
   app didn't respond any more

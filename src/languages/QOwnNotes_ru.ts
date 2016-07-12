@@ -975,7 +975,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4906"/>
       <source>Untagged notes</source>
-      <translation>Непомеченные заметки</translation>
+      <translation>Заметки без тега</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5785"/>

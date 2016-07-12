@@ -40,7 +40,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;jegyzetek keresése vagy új jegyzet létrehozása szöveg beadása által, majd nyomja le a Return gombot/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;keress meg egy jegyzetet vagy adj be szöveget, ami által létre hozol egy új jegyzetet, majd kattints a vissza gombra&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
@@ -1225,9 +1225,9 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="4560"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>átugorja %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
-        <numerusform>skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
+        <numerusform>kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
       </translation>
     </message>
     <message>

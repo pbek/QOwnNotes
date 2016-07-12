@@ -328,7 +328,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1015"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;zurück in Notiz Verlauf</translation>
+      <translation>&amp;Zurück im Notiz-Verlauf</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1027"/>
@@ -363,7 +363,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1090"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>Notiz als PDF &amp;exportiern (text)</translation>
+      <translation>Notiz als PDF &amp;exportieren (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1099"/>
