@@ -315,6 +315,10 @@ private slots:
 
     void on_noteSubFolderLineEdit_textChanged(const QString &arg1);
 
+    void on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item);
+
+    void on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

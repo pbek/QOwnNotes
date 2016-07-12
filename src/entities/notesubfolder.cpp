@@ -350,6 +350,52 @@ NoteSubFolder NoteSubFolder::activeNoteSubFolder() {
     return noteFolder.getActiveNoteSubFolder();
 }
 
+/**
+ * Saves the expand status of the item
+ */
+void NoteSubFolder::saveTreeWidgetExpandState(bool expanded) {
+    QSettings settings;
+    QString settingsKey = treeWidgetExpandStateSettingsKey();
+
+    // load the settings
+    QStringList pathList = settings.value(settingsKey).toStringList();
+    QString path = relativePath();
+
+    if (!expanded) {
+        // if item is not expanded remove the path from the list
+        pathList.removeAll(path);
+    } else if (!pathList.contains(path)) {
+        // if item is collapsed and not already exists in the list then add it
+        pathList.append(path);
+    }
+
+    // store the settings again
+    settings.setValue(settingsKey, pathList);
+}
+
+/**
+ * Fetches the expand status of the item
+ */
+bool NoteSubFolder::treeWidgetExpandState() {
+    QSettings settings;
+    QString settingsKey = treeWidgetExpandStateSettingsKey();
+
+    // load the settings
+    QStringList pathList = settings.value(settingsKey).toStringList();
+    QString path = relativePath();
+
+    return pathList.contains(path);
+}
+
+/**
+ * Returns the tree widget expand status settings key
+ */
+QString NoteSubFolder::treeWidgetExpandStateSettingsKey() {
+    int noteFolderId = NoteFolder::currentNoteFolderId();
+    return "MainWindow/noteSubFolderTreeWidgetExpandState-" +
+            QString(noteFolderId);
+}
+
 QDebug operator<<(QDebug dbg, const NoteSubFolder &noteSubFolder) {
     dbg.nospace() << "NoteSubFolder: <id>" << noteSubFolder.id <<
             " <name>" << noteSubFolder.name <<

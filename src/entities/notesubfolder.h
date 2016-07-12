@@ -67,6 +67,12 @@ public:
 
     static NoteSubFolder fetchByNameAndParentId(QString name, int parentId);
 
+    void saveTreeWidgetExpandState(bool expanded);
+
+    bool treeWidgetExpandState();
+
+    static QString treeWidgetExpandStateSettingsKey();
+
 protected:
     int id;
     int parentId;

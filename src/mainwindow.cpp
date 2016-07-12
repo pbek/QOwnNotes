@@ -5005,6 +5005,10 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             }
 
             buildNoteSubFolderTreeForParentItem(item);
+
+            // set the expanded state
+            bool isExpanded = noteSubFolder.treeWidgetExpandState();
+            item->setExpanded(isExpanded);
         }
 }
 
@@ -5155,7 +5159,6 @@ void MainWindow::setupNoteSubFolders() {
 
     if (showSubfolders) {
         reloadNoteSubFolderTree();
-        ui->noteSubFolderTreeWidget->expandAll();
     }
 
     // filter the notes again
@@ -6237,4 +6240,22 @@ void MainWindow::searchForTextInTreeWidget(QTreeWidget *treeWidget,
                 item->setHidden(false);
             }
     }
+}
+
+/**
+ * Saves the expand status of the an item
+ */
+void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item)
+{
+    int noteSubFolderId = item->data(0, Qt::UserRole).toInt();
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+    if (noteSubFolder.isFetched()) {
+        noteSubFolder.saveTreeWidgetExpandState(
+                item->isExpanded());
+    }
+}
+
+void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item)
+{
+    on_noteSubFolderTreeWidget_itemExpanded(item);
 }
