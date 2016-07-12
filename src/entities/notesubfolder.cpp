@@ -393,7 +393,7 @@ bool NoteSubFolder::treeWidgetExpandState() {
 QString NoteSubFolder::treeWidgetExpandStateSettingsKey() {
     int noteFolderId = NoteFolder::currentNoteFolderId();
     return "MainWindow/noteSubFolderTreeWidgetExpandState-" +
-            QString(noteFolderId);
+            QString::number(noteFolderId);
 }
 
 QDebug operator<<(QDebug dbg, const NoteSubFolder &noteSubFolder) {
