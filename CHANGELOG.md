@@ -6,6 +6,8 @@
 - the expand/collapsed state in the note subfolder tree is now stored and 
   will be restored when the note subfolders are loaded
   (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
+- fixed the theme icon of the down button in the search widget of the 
+  markdown editor
 - there is now is a **snap** `qownnotes` publicly available for QOwnNotes
   (thanks a lot to @dholbach and @kyrofa for the help)
     - snaps are working on many Linux distributions like Arch Linux, Debian, 
