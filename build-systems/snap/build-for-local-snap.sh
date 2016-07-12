@@ -57,6 +57,7 @@ snapcraft upload qownnotes_${QOWNNOTES_VERSION}_amd64.snap
 
 # this may work in the future (we need to set a channel when releasing)
 #snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release=Stable
+#snapcraft release <snap-name> <revision> <channel-name>
 
 # remove everything after we are done
 if [ -d $PROJECT_PATH ]; then
