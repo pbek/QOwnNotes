@@ -16,6 +16,7 @@
 #include <utils/misc.h>
 #include <QJSEngine>
 #include <QJSValueIterator>
+#include <QCoreApplication>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
@@ -799,6 +800,9 @@ void OwnCloudService::loadTodoItems(QString &data) {
 
     // loop all response blocks
     for (int i = 0; i < responseNodesCount; ++i) {
+        // update the UI
+        QCoreApplication::processEvents();
+
         QDomNode responseNode = responseNodes.at(i);
         if (responseNode.isElement()) {
             QDomElement elem = responseNode.toElement();

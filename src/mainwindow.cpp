@@ -27,6 +27,7 @@
 #include <QCompleter>
 #include <QTreeWidgetItem>
 #include <QShortcut>
+#include <QCoreApplication>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -410,7 +411,6 @@ void MainWindow::reloadTodoLists() {
         // generate the system tray context menu to show modified tasks
         // in 15 sec (because we don't know when all new tasks will be loaded)
         QTimer::singleShot(15000, this, SLOT(generateSystemTrayContextMenu()));
-
     }
 }
 
@@ -1903,6 +1903,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
                 note.setNoteSubFolder(noteSubFolder);
                 note.store();
             }
+
+            // update the UI
+            QCoreApplication::processEvents();
         }
 
     // re-fetch current note (because all the IDs have changed after the
@@ -1939,6 +1942,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
                 if (parentNoteSubFolder.isFetched()) {
                     buildNotesIndex(parentNoteSubFolder.getId());
+
+                    // update the UI
+                    QCoreApplication::processEvents();
                 }
             }
     }
@@ -4140,8 +4146,8 @@ void MainWindow::on_action_Encrypt_note_triggered()
         return;
     }
 
-    QString labelText =
-            tr("Please enter your <strong>password</strong> to encrypt the note."
+    QString labelText = tr(
+            "Please enter your <strong>password</strong> to encrypt the note."
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
            "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
@@ -4165,8 +4171,7 @@ void MainWindow::on_action_Encrypt_note_triggered()
 /**
  * Enables or disables the encrypt note buttons
  */
-void MainWindow::updateEncryptNoteButtons()
-{
+void MainWindow::updateEncryptNoteButtons() {
     currentNote.refetch();
     bool hasEncryptedNoteText = currentNote.hasEncryptedNoteText();
 
@@ -4178,8 +4183,7 @@ void MainWindow::updateEncryptNoteButtons()
 /**
  * Attempt to decrypt note text
  */
-void MainWindow::on_actionDecrypt_note_triggered()
-{
+void MainWindow::on_actionDecrypt_note_triggered() {
     currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
@@ -4209,8 +4213,7 @@ void MainWindow::on_actionDecrypt_note_triggered()
 /**
  * Lets the user edit an encrypted note text in a 2nd text edit
  */
-void MainWindow::on_actionEdit_encrypted_note_triggered()
-{
+void MainWindow::on_actionEdit_encrypted_note_triggered() {
     currentNote.refetch();
     if (!currentNote.hasEncryptedNoteText()) {
         return;
@@ -4234,16 +4237,14 @@ void MainWindow::on_actionEdit_encrypted_note_triggered()
 /**
  * Puts the encrypted text back to the note text edit
  */
-void MainWindow::on_encryptedNoteTextEdit_textChanged()
-{
+void MainWindow::on_encryptedNoteTextEdit_textChanged() {
     currentNote.storeNewDecryptedText(ui->encryptedNoteTextEdit->toPlainText());
 }
 
 /**
  * Opens the current note in an external editor
  */
-void MainWindow::on_action_Open_note_in_external_editor_triggered()
-{
+void MainWindow::on_action_Open_note_in_external_editor_triggered() {
     QSettings settings;
     QString externalEditorPath =
             settings.value("externalEditorPath").toString();
@@ -4271,8 +4272,7 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered()
 /**
  * Exports the current note as markdown file
  */
-void MainWindow::on_action_Export_note_as_markdown_triggered()
-{
+void MainWindow::on_action_Export_note_as_markdown_triggered() {
     QFileDialog dialog;
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
@@ -4778,16 +4778,14 @@ void MainWindow::pasteMediaIntoNote() {
     handleInsertingFromMimeData(mimeData);
 }
 
-void MainWindow::on_actionShow_note_in_file_manager_triggered()
-{
+void MainWindow::on_actionShow_note_in_file_manager_triggered() {
     Utils::Misc::openFolderSelect(currentNote.fullNoteFilePath());
 }
 
 /**
  * Inserts a bold block at the current cursor position
  */
-void MainWindow::on_actionFormat_text_bold_triggered()
-{
+void MainWindow::on_actionFormat_text_bold_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = textEdit->textCursor().selectedText();
@@ -4804,8 +4802,7 @@ void MainWindow::on_actionFormat_text_bold_triggered()
 /**
  * Inserts an italic block at the current cursor position
  */
-void MainWindow::on_actionFormat_text_italic_triggered()
-{
+void MainWindow::on_actionFormat_text_italic_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = textEdit->textCursor().selectedText();
@@ -4822,8 +4819,7 @@ void MainWindow::on_actionFormat_text_italic_triggered()
 /**
  * Increases the note text font size by one
  */
-void MainWindow::on_action_Increase_note_text_size_triggered()
-{
+void MainWindow::on_action_Increase_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
     ui->encryptedNoteTextEdit->setStyles();
@@ -4835,8 +4831,7 @@ void MainWindow::on_action_Increase_note_text_size_triggered()
 /**
  * Decreases the note text font size by one
  */
-void MainWindow::on_action_Decrease_note_text_size_triggered()
-{
+void MainWindow::on_action_Decrease_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
     ui->encryptedNoteTextEdit->setStyles();
@@ -4848,8 +4843,7 @@ void MainWindow::on_action_Decrease_note_text_size_triggered()
 /**
  * Resets the note text font size
  */
-void MainWindow::on_action_Reset_note_text_size_triggered()
-{
+void MainWindow::on_action_Reset_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
     ui->encryptedNoteTextEdit->setStyles();
@@ -4866,8 +4860,7 @@ void MainWindow::on_action_Reset_note_text_size_triggered()
 /**
  * Sets the note folder from the recent note folder combobox
  */
-void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index)
-{
+void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     int noteFolderId = ui->noteFolderComboBox->itemData(index).toInt();
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (noteFolder.isFetched()) {
@@ -4891,8 +4884,7 @@ void MainWindow::hideNoteFolderComboBoxIfNeeded() const {
 /**
  * Reloads the tag tree
  */
-void MainWindow::reloadTagTree()
-{
+void MainWindow::reloadTagTree() {
     qDebug() << __func__;
 
     ui->tagTreeWidget->clear();
@@ -4954,8 +4946,7 @@ void MainWindow::reloadTagTree()
 /**
  * Reloads the note sub folder tree
  */
-void MainWindow::reloadNoteSubFolderTree()
-{
+void MainWindow::reloadNoteSubFolderTree() {
     ui->noteSubFolderTreeWidget->clear();
     int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
 
@@ -5039,6 +5030,9 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
             // recursively populate the next level
             buildTagTreeForParentItem(item);
         }
+
+    // update the UI
+    QCoreApplication::processEvents();
 }
 
 /**

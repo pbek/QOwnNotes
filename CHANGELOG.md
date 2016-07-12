@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.07.4
+- significantly improved the responsiveness of the app's user interface while 
+  loading many notes, subfolders, tags or tasks 
 - there is now is a **snap** `qownnotes` publicly available for QOwnNotes
   (thanks a lot to @dholbach and @kyrofa for the help)
     - snaps are working on many Linux distributions like Arch Linux, Debian, 
