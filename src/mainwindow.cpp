@@ -1905,8 +1905,20 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
             }
 
             // update the UI
-            QCoreApplication::processEvents();
+            // this causes to show notes twice in the ui->noteTreeWidget if a
+            // not selected note is modified externally
+            // https://github.com/pbek/QOwnNotes/issues/242
+            // using a blocker on noteTreeWidget or just processing every 10th
+            // time doesn't work neither
+//            QCoreApplication::processEvents();
+
+            // we try these two instead to update the UI
+            QCoreApplication::flush();
+            QCoreApplication::sendPostedEvents();
         }
+
+    // update the UI and get user input after all the notes were loaded
+    QCoreApplication::processEvents();
 
     // re-fetch current note (because all the IDs have changed after the
     // buildNotesIndex()
@@ -1942,6 +1954,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
                 if (parentNoteSubFolder.isFetched()) {
                     buildNotesIndex(parentNoteSubFolder.getId());
+
+//                    const QSignalBlocker blocker(ui->noteTreeWidget);
+//                    Q_UNUSED(blocker);
 
                     // update the UI
                     QCoreApplication::processEvents();

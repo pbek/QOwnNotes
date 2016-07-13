@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.5
+- fixed a duplicate file listings problem
+  (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
+
 ## 16.07.4
 - the **responsiveness of the app's user interface** while loading many notes, 
   note subfolders, tags or tasks was **significantly improved**
