@@ -13,6 +13,8 @@ QtObject {
      * @returns the string that should be inserted instead of the text from the QMimeData object
      */
     function insertingFromMimeDataHook(text, html) {
+        text = text.trim();
+
         // http://www.regexpal.com is your friend
         // check if the pasted text is a GitHub issue url
         var re = /^http[s]?:\/\/github\.com.+\/issues\//igm;
