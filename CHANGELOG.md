@@ -1,8 +1,11 @@
 # QOwnNotes Changelog
 
 ## 16.07.5
-- fixed a duplicate file listings problem
+- fixed a duplicate file and subfolder listings problem
   (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
+- the columns in the note subfolder tree will now be resized when a folder was 
+  expanded or collapsed
+  (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
 
 ## 16.07.4
 - the **responsiveness of the app's user interface** while loading many notes, 

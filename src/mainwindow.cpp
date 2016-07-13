@@ -1955,11 +1955,15 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
                 if (parentNoteSubFolder.isFetched()) {
                     buildNotesIndex(parentNoteSubFolder.getId());
 
-//                    const QSignalBlocker blocker(ui->noteTreeWidget);
-//                    Q_UNUSED(blocker);
-
                     // update the UI
-                    QCoreApplication::processEvents();
+                    // this causes to show sub note folders twice in the
+                    // ui->noteSubFolderTreeWidget if a
+                    // not selected note is modified externally
+//                    QCoreApplication::processEvents();
+
+                    // we try these two instead to update the UI
+                    QCoreApplication::flush();
+                    QCoreApplication::sendPostedEvents();
                 }
             }
     }
@@ -6268,6 +6272,10 @@ void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item)
         noteSubFolder.saveTreeWidgetExpandState(
                 item->isExpanded());
     }
+
+    // resize columns so long folder names get displayed
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
+    ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
 }
 
 void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item)
