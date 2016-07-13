@@ -30,7 +30,7 @@ cd $PROJECT_PATH
 
 echo "Project path: $PROJECT_PATH"
 
-# checkout AUR repository
+# checkout slackbuilds repository
 git clone --depth=5 git@github.com:pbek/qownnotes-slackbuilds.git slackbuilds
 
 # checkout the source code
