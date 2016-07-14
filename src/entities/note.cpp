@@ -57,6 +57,10 @@ NoteSubFolder Note::getNoteSubFolder() {
     return NoteSubFolder::fetch(this->noteSubFolderId);
 }
 
+int Note::getNoteSubFolderId() {
+    return this->noteSubFolderId;
+}
+
 void Note::setNoteSubFolder(NoteSubFolder noteSubFolder) {
     setNoteSubFolderId(noteSubFolder.getId());
 }

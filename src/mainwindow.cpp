@@ -1582,7 +1582,11 @@ void MainWindow::notesWereModified(const QString &str) {
                     // do nothing
                     break;
             }
-        } else {
+        } else if (currentNote.getNoteSubFolderId() == 0) {
+            // only allow the check if current note was removed externally in
+            // the root note folder, because it gets triggered every time
+            // a note gets renamed in subfolders
+
             qDebug() << "Current note was removed externally!";
 
             switch (QMessageBox::information(
@@ -1997,6 +2001,11 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.removePaths(fileList);
     }
 
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+//    if (showSubfolders) {
+//        return;
+//    }
+
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
 
@@ -2007,7 +2016,6 @@ void MainWindow::updateNoteDirectoryWatcher() {
         noteDirectoryWatcher.addPath(notePath);
     }
 
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
     if (showSubfolders) {
         QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAll();
         Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {

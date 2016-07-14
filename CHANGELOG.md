@@ -5,6 +5,9 @@
   (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
 - the expand/collapsed state settings for the note subfolder tree will now be
   removed if the note folder is removed
+- renaming notes in note subfolders should now work without the "externally 
+  removed" error message
+  (for [Issue #183](https://github.com/pbek/QOwnNotes/issues/183))
 
 ## 16.07.5
 - fixed a duplicate file and subfolder listings problem

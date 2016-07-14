@@ -163,6 +163,8 @@ public:
 
     static int countByNoteSubFolderId(int noteSubFolderId = 0);
 
+    int getNoteSubFolderId();
+
 protected:
     int id;
     QString name;
