@@ -1914,7 +1914,11 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
             // we try these two instead to update the UI
             QCoreApplication::flush();
+
+            // this still causes double entries on OS X
+#ifndef Q_OS_MAC
             QCoreApplication::sendPostedEvents();
+#endif
         }
 
     // update the UI and get user input after all the notes were loaded
@@ -1963,7 +1967,11 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
                     // we try these two instead to update the UI
                     QCoreApplication::flush();
+
+                    // this still causes double entries on OS X
+        #ifndef Q_OS_MAC
                     QCoreApplication::sendPostedEvents();
+        #endif
                 }
             }
     }
