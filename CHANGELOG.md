@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.6
+- more fixes for the duplicate file and subfolder listings problem under OS X
+  (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
+
 ## 16.07.5
 - fixed a duplicate file and subfolder listings problem
   (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
