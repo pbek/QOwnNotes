@@ -15,7 +15,6 @@ apps:
     plugs:
       - x11
       - network
-      - network-bind
       - home
 
 parts:
