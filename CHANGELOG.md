@@ -3,6 +3,8 @@
 ## 16.07.6
 - more fixes for the duplicate file and subfolder listings problem under OS X
   (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))
+- the expand/collapsed state settings for the note subfolder tree will now be
+  removed if the note folder is removed
 
 ## 16.07.5
 - fixed a duplicate file and subfolder listings problem

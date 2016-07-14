@@ -71,7 +71,7 @@ public:
 
     bool treeWidgetExpandState();
 
-    static QString treeWidgetExpandStateSettingsKey();
+    static QString treeWidgetExpandStateSettingsKey(int noteFolderId = 0);
 
 protected:
     int id;

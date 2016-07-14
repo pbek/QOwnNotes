@@ -390,8 +390,11 @@ bool NoteSubFolder::treeWidgetExpandState() {
 /**
  * Returns the tree widget expand status settings key
  */
-QString NoteSubFolder::treeWidgetExpandStateSettingsKey() {
-    int noteFolderId = NoteFolder::currentNoteFolderId();
+QString NoteSubFolder::treeWidgetExpandStateSettingsKey(int noteFolderId) {
+    if (noteFolderId == 0) {
+        noteFolderId = NoteFolder::currentNoteFolderId();
+    }
+
     return "MainWindow/noteSubFolderTreeWidgetExpandState-" +
             QString::number(noteFolderId);
 }
