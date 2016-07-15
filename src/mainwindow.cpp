@@ -5071,7 +5071,8 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
         }
 
     // update the UI
-    QCoreApplication::processEvents();
+    // this will crash the app sporadicly
+    //QCoreApplication::processEvents();
 }
 
 /**
