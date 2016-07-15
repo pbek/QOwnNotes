@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.7
+- fixed a possible crash after removing the last script in the settings dialog
+  (for [Issue #247](https://github.com/pbek/QOwnNotes/issues/247))
+
 ## 16.07.6
 - more fixes for the duplicate file and subfolder listings problem under OS X
   (for [Issue #242](https://github.com/pbek/QOwnNotes/issues/242))

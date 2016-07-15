@@ -1505,9 +1505,12 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
         ui->scriptListWidget->takeItem(
                 ui->scriptListWidget->currentRow());
 
+        bool scriptsAvailable = ui->scriptListWidget->count() > 0;
         // disable the remove button if there is only no item left
-        ui->scriptRemoveButton->setEnabled(
-                ui->scriptListWidget->count() > 0);
+        ui->scriptRemoveButton->setEnabled(scriptsAvailable);
+
+        // disable the edit frame if there is no item
+        ui->scriptEditFrame->setEnabled(scriptsAvailable);
 
         // reload the scripting engine
         ScriptingService::instance()->reloadEngine();
