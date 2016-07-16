@@ -3,8 +3,12 @@
 ## 16.07.7
 - fixed a possible crash after removing the last script in the settings dialog
   (for [Issue #247](https://github.com/pbek/QOwnNotes/issues/247))
-- tried to fix an optimization crash that happend sporadicly when building the
-  tag tree
+- tried to fix an optimization crash that happened sporadically when building 
+  the tag tree
+- the build issues with snapcraft 2.12.1 are now fixed
+  (for [Snappy playpen issue #145](https://github.com/ubuntu/snappy-playpen/issues/145))
+- tried to fix the duplicate file and subfolder listings problem under Windows
+  (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))
 
 ## 16.07.6
 - more fixes for the duplicate file and subfolder listings problem under OS X
