@@ -12,7 +12,7 @@
 
 
 # uncomment this if you want to force a version
-#QOWNNOTES_VERSION=16.07.3
+#QOWNNOTES_VERSION=16.07.6
 
 BRANCH=develop
 #BRANCH=master
