@@ -1,20 +1,20 @@
-# doc: https://developer.ubuntu.com/en/snappy/build-apps/snapcraft-syntax/
 name: qownnotes
 version: VERSION-STRING
 summary: Plain-text file notepad with markdown support and ownCloud integration
 confinement: strict
 description: |
-  QOwnNotes is the open source (GPL) plain-text file notepad with markdown support 
-  and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works 
+  QOwnNotes is the open source (GPL) plain-text file notepad with markdown support
+  and todo list manager for GNU/Linux, Mac OS X and Windows, that (optionally) works
   together with the notes application of ownCloud.
   http://www.qownnotes.org/
 
 apps:
   qownnotes:
-    command: desktop-launch $SNAP/usr/bin/QOwnNotes
+    command: ./wrapper.sh
     plugs:
       - x11
       - network
+      - network-bind
       - home
 
 parts:
@@ -29,6 +29,8 @@ parts:
       - qtdeclarative5-dev
       - libqt5svg5-dev
       - qttools5-dev-tools
+    stage:
+      - -usr/share/pkgconfig
     after: [desktop/qt5]
   env:
     plugin: nil
@@ -43,4 +45,10 @@ parts:
       - libqt5xml5
       - libqt5printsupport5
       - libqt5declarative5
-    after: [qt5conf]
+    stage:
+      - -usr/share/pkgconfig
+    after: [desktop/qt5]
+  launcher:
+    plugin: copy
+    files:
+      wrapper.sh: wrapper.sh
