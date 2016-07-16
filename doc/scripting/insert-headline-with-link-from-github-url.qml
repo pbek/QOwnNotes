@@ -25,11 +25,11 @@ QtObject {
             var output = script.downloadUrlToString(text);
 
             // parse the headline
-            var re2 = /<span class="js-issue-title">([^>]+)<\/span>/igm
+            var re2 = /<span class="\s*js-issue-title">([^>]+)<\/span>/igm
             var result2 = re2.exec(output);
 
             if (result2 !== null) {
-                var headline = result2[1];
+                var headline = result2[1].trim();
                 script.log("found headline: " + headline);
 
                 // generate markdown to paste
