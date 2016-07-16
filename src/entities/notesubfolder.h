@@ -75,6 +75,8 @@ public:
 
     static QString treeWidgetExpandStateSettingsKey(int noteFolderId = 0);
 
+    bool removeFromFileSystem();
+
 protected:
     int id;
     int parentId;

@@ -154,6 +154,18 @@ bool NoteSubFolder::remove() {
     }
 }
 
+/**
+ * Removes the directory recursivley from the file system
+ */
+bool NoteSubFolder::removeFromFileSystem() {
+    QDir dir(fullPath());
+    if (dir.exists()) {
+        return dir.removeRecursively();
+    }
+
+    return false;
+}
+
 NoteSubFolder NoteSubFolder::noteSubFolderFromQuery(QSqlQuery query) {
     NoteSubFolder noteSubFolder;
     noteSubFolder.fillFromQuery(query);

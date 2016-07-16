@@ -319,6 +319,8 @@ private slots:
 
     void on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item);
 
+    void on_noteSubFolderTreeWidget_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -560,4 +562,8 @@ private:
     void updateNoteDirectoryWatcher();
 
     bool addNoteToNoteTreeWidget(Note note);
+
+    void removeSelectedNoteSubFolders();
+
+    bool createNewNoteSubFolder();
 };

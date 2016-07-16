@@ -2715,16 +2715,46 @@ void MainWindow::removeSelectedNotes() {
         Q_UNUSED(blocker4);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-            QString name = item->text(0);
-            Note note = Note::fetchByName(name);
+            int id = item->data(0, Qt::UserRole).toInt();
+            Note note = Note::fetch(id);
             note.remove(true);
-            qDebug() << "Removed note " << name;
+            qDebug() << "Removed note " << note.getName();
         }
 
         loadNoteDirectoryList();
 
         // set a new first note
         resetCurrentNote();
+    }
+}
+
+/**
+ * Removes selected note subfolders after a confirmation
+ */
+void MainWindow::removeSelectedNoteSubFolders() {
+    int selectedItemsCount =
+            ui->noteSubFolderTreeWidget->selectedItems().size();
+
+    if (selectedItemsCount == 0) {
+        return;
+    }
+
+    if (QMessageBox::information(
+            this,
+            tr("Remove selected folders"),
+            tr("Remove <strong>%n</strong> selected folder(s)?\n"
+               "All notes in the folders will be gone!",
+               "", selectedItemsCount),
+             tr("&Remove"), tr("&Cancel"), QString::null,
+             0, 1) == 0) {
+
+        Q_FOREACH(QTreeWidgetItem *item,
+                  ui->noteSubFolderTreeWidget->selectedItems()) {
+                int id = item->data(0, Qt::UserRole).toInt();
+                NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
+                noteSubFolder.removeFromFileSystem();
+                qDebug() << "Removed folder " << noteSubFolder.getName();
+        }
     }
 }
 
@@ -6298,8 +6328,8 @@ void MainWindow::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 /**
  * Saves the expand status of the an item
  */
-void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item)
-{
+void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(
+        QTreeWidgetItem *item) {
     int noteSubFolderId = item->data(0, Qt::UserRole).toInt();
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
     if (noteSubFolder.isFetched()) {
@@ -6312,7 +6342,62 @@ void MainWindow::on_noteSubFolderTreeWidget_itemExpanded(QTreeWidgetItem *item)
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
 }
 
-void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(QTreeWidgetItem *item)
-{
+void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
+        QTreeWidgetItem *item) {
     on_noteSubFolderTreeWidget_itemExpanded(item);
+}
+
+/**
+ * Shows the context menu for the note subfolder tree
+ */
+void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
+        const QPoint &pos) {
+    QPoint globalPos = ui->noteSubFolderTreeWidget->mapToGlobal(pos);
+    QMenu menu;
+
+    QAction *newNoteAction = menu.addAction(tr("New note"));
+    QAction *newAction = menu.addAction(tr("New subfolder"));
+    QAction *removeAction = menu.addAction(tr("Remove selected folders"));
+    QAction *showInFileManagerAction = menu.addAction(
+            tr("Show folder in file manager"));
+
+    QAction *selectedItem = menu.exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == newNoteAction) {
+            // create a new note
+            on_action_Note_note_triggered();
+        } else if (selectedItem == newAction) {
+            // create a new folder
+            createNewNoteSubFolder();
+        } else if (selectedItem == removeAction) {
+            // remove folders
+            removeSelectedNoteSubFolders();
+        } else if (selectedItem == showInFileManagerAction) {
+            NoteSubFolder noteSubFolder =
+                    NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+
+            // show the current folder in the file manager
+            Utils::Misc::openFolderSelect(noteSubFolder.fullPath());
+        }
+    }
+}
+
+/**
+ * Creates a new note subfolder in the current subfolder
+ */
+bool MainWindow::createNewNoteSubFolder() {
+    bool ok;
+    QString folderName = QInputDialog::getText(
+            this, tr("Create a new folder"), tr("Folder name:"),
+            QLineEdit::Normal, "", &ok);
+
+    if (!ok || folderName.isEmpty()) {
+        return false;
+    }
+
+    NoteSubFolder noteSubFolder =
+            NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
+    QString path = noteSubFolder.fullPath() + QDir::separator() + folderName;
+    QDir directory;
+    return directory.mkpath(path);
 }

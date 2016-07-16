@@ -13,6 +13,12 @@
   the note index (for [Issue #248](https://github.com/pbek/QOwnNotes/issues/248))
    - on some occasions it only works after a first note was created after 
      QOwnNotes was started
+- there now is a context menu in the note subfolder tree where you can
+  (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
+    - create new notes
+    - create new subfolders
+    - remove selected subfolders
+    - show the subfolder in the file manager
 
 ## 16.07.6
 - more fixes for the duplicate file and subfolder listings problem under OS X
