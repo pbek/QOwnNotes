@@ -9,6 +9,10 @@
   (for [Snappy playpen issue #145](https://github.com/ubuntu/snappy-playpen/issues/145))
 - tried to fix the duplicate file and subfolder listings problem under Windows
   (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))
+- creating a note in a note sub folder will now not trigger a full rebuild of
+  the note index (for [Issue #248](https://github.com/pbek/QOwnNotes/issues/248))
+   - on some occasions it only works after a first note was created after 
+     QOwnNotes was started
 
 ## 16.07.6
 - more fixes for the duplicate file and subfolder listings problem under OS X

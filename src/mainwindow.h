@@ -358,6 +358,7 @@ private:
     QHash<int, QString> _activeNoteFolderNoteNames;
     QHash<int, int> _activeNoteFolderNotePositions;
     bool _searchLineEditFromCompleter;
+    bool _isNotesDirectoryWasModifiedDisabled;
 
     void initMainSplitter();
 

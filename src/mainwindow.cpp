@@ -70,6 +70,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
+    _isNotesDirectoryWasModifiedDisabled = false;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -1638,6 +1639,11 @@ void MainWindow::notesWereModified(const QString &str) {
 }
 
 void MainWindow::notesDirectoryWasModified(const QString &str) {
+    // workaround when signal block doesn't work correctly
+    if (_isNotesDirectoryWasModifiedDisabled) {
+        return;
+    }
+
     qDebug() << "notesDirectoryWasModified: " << str;
     showStatusBarMessage(tr("notes directory was modified externally"), 5000);
 
@@ -3453,7 +3459,7 @@ void MainWindow::filterNotesByTag() {
  * Does the note filtering by note sub folders
  */
 void MainWindow::filterNotesByNoteSubFolders() {
-    int subNoteFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int subNoteFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     // get all notes of a note sub folder
     QList<Note> noteList = Note::fetchAllByNoteSubFolderId(subNoteFolderId);
@@ -3493,6 +3499,10 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         return;
     }
 
+    // this doen't seem to work with note sub folders
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
     // add the current search text to the saved searches
     storeSavedSearch();
 
@@ -3511,45 +3521,41 @@ void MainWindow::on_searchLineEdit_returnPressed() {
         }
         noteText.append("\n\n");
 
+        NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
+        QString noteSubFolderPath = noteSubFolder.fullPath();
+
         note = Note();
         note.setName(text);
         note.setNoteText(noteText);
-        note.setNoteSubFolderId(NoteSubFolder::activeSubNoteFolderId());
+        note.setNoteSubFolderId(noteSubFolder.getId());
         note.store();
 
+        // workaround when signal block doesn't work correctly
+        _isNotesDirectoryWasModifiedDisabled = true;
+
+        // we even need a 2nd workaround because something triggers that the
+        // note folder was modified
+        noteDirectoryWatcher.removePath(notesPath);
+        noteDirectoryWatcher.removePath(noteSubFolderPath);
+
+        // store the note to disk
         // if a tag is selected add the tag to the just created note
         Tag tag = Tag::activeTag();
         if (tag.isFetched()) {
             tag.linkToNote(note);
         }
 
-        // store the note to disk
-        {
-            const QSignalBlocker blocker(noteDirectoryWatcher);
-            Q_UNUSED(blocker);
-
-            note.storeNoteTextFileToDisk();
-            showStatusBarMessage(
-                    tr("stored current note to disk"), 3000);
-
-            // add the file to the note directory watcher
-            noteDirectoryWatcher.addPath(note.fullNoteFilePath());
-        }
+        note.storeNoteTextFileToDisk();
+        showStatusBarMessage(
+                tr("stored current note to disk"), 3000);
 
         {
-            const QSignalBlocker blocker(ui->noteTreeWidget);
-            Q_UNUSED(blocker);
+            const QSignalBlocker blocker2(ui->noteTreeWidget);
+            Q_UNUSED(blocker2);
 
             // adds the note to the note tree widget
             MainWindow::addNoteToNoteTreeWidget(note);
         }
-
-        qDebug() << __func__ <<
-        " - 'ui->noteTreeWidget->isSortingEnabled()': " <<
-            ui->noteTreeWidget->isSortingEnabled();
-
-        qDebug() << __func__ << " - 'ui->noteTreeWidget->sortColumn()': " <<
-        ui->noteTreeWidget->sortColumn();
 
 //        buildNotesIndex();
         loadNoteDirectoryList();
@@ -3560,6 +3566,16 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
         // clear search line edit so all notes will be viewed again
         ui->searchLineEdit->clear();
+
+        // add the file to the note directory watcher
+        noteDirectoryWatcher.addPath(note.fullNoteFilePath());
+
+        // add the paths from the workaround
+        noteDirectoryWatcher.addPath(notesPath);
+        noteDirectoryWatcher.addPath(noteSubFolderPath);
+
+        // turn on the method again
+        _isNotesDirectoryWasModifiedDisabled = false;
     }
 
     // jump to the found or created note
@@ -4984,7 +5000,7 @@ void MainWindow::reloadTagTree() {
  */
 void MainWindow::reloadNoteSubFolderTree() {
     ui->noteSubFolderTreeWidget->clear();
-    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     int linkCount = Note::countByNoteSubFolderId(0);
     QString toolTip = tr("show notes in note root folder (%1)")
@@ -5022,7 +5038,7 @@ void MainWindow::reloadNoteSubFolderTree() {
  */
 void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
-    int activeNoteSubFolderId = NoteSubFolder::activeSubNoteFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
     QList<NoteSubFolder> noteSubFolderList =
             NoteSubFolder::fetchAllByParentId(parentId);

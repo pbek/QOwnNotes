@@ -47,13 +47,15 @@ public:
 
     QString relativePath();
 
+    QString fullPath();
+
     NoteSubFolder getParent();
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId);
 
     bool isActive();
 
-    static int activeSubNoteFolderId();
+    static int activeNoteSubFolderId();
 
     static NoteSubFolder activeNoteSubFolder();
 

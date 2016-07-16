@@ -1,5 +1,6 @@
 #include "entities/notesubfolder.h"
 #include "notefolder.h"
+#include "note.h"
 #include <QDebug>
 #include <QSqlRecord>
 #include <QSqlError>
@@ -99,6 +100,13 @@ QString NoteSubFolder::relativePath() {
     return parentId == 0 ?
            name :
            getParent().relativePath() + QDir::separator() + name;
+}
+
+/**
+ * Gets the relative path name of the note sub folder
+ */
+QString NoteSubFolder::fullPath() {
+    return  Note::getFullNoteFilePathForFile(relativePath());
 }
 
 /**
@@ -330,13 +338,13 @@ bool NoteSubFolder::setAsActive(int noteSubFolderId) {
  * Checks if this note sub folder is the current one
  */
 bool NoteSubFolder::isActive() {
-    return activeSubNoteFolderId() == id;
+    return activeNoteSubFolderId() == id;
 }
 
 /**
  * Returns the id of the current note sub folder of the current note folder
  */
-int NoteSubFolder::activeSubNoteFolderId() {
+int NoteSubFolder::activeNoteSubFolderId() {
     return activeNoteSubFolder().getId();
 }
 
