@@ -851,17 +851,27 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
  * Returns the full path of the note file
  */
 QString Note::fullNoteFilePath() {
+    return getFullNoteFilePathForFile(relativeNoteFilePath());
+}
+
+/**
+ * Returns the relative path of the note file
+ */
+QString Note::relativeNoteFilePath(QString separator) {
     QString fullFileName = fileName;
+
+    if (separator.isEmpty()) {
+        separator = QDir::separator();
+    }
 
     if (noteSubFolderId > 0) {
         NoteSubFolder noteSubFolder = getNoteSubFolder();
         if (noteSubFolder.isFetched()) {
-            fullFileName.prepend(noteSubFolder.relativePath() +
-                                         QDir::separator());
+            fullFileName.prepend(noteSubFolder.relativePath() + separator);
         }
     }
 
-    return getFullNoteFilePathForFile(fullFileName);
+    return fullFileName;
 }
 
 /**

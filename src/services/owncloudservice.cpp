@@ -510,14 +510,15 @@ void OwnCloudService::loadVersions(QString fileName, MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + versionListPath);
-    QString serverNotesPath = NoteFolder::currentRemotePath();
+    QString serverPath = NoteFolder::currentRemotePath() + fileName;
+    qDebug() << __func__ << " - 'serverPath': " << serverPath;
 
     url.setUserName(userName);
     url.setPassword(password);
 
     QUrlQuery q;
     q.addQueryItem("format", format);
-    q.addQueryItem("file_name", serverNotesPath + fileName);
+    q.addQueryItem("file_name", serverPath);
     url.setQuery(q);
 
     QNetworkRequest r(url);

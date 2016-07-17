@@ -3981,7 +3981,7 @@ void MainWindow::on_actionShow_versions_triggered() {
             20000);
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->loadVersions(this->currentNote.getFileName(), this);
+    ownCloud->loadVersions(this->currentNote.relativeNoteFilePath("/"), this);
 }
 
 void MainWindow::enableShowVersionsButton() {

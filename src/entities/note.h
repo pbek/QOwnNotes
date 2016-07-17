@@ -165,6 +165,8 @@ public:
 
     int getNoteSubFolderId();
 
+    QString relativeNoteFilePath(QString separator = "");
+
 protected:
     int id;
     QString name;

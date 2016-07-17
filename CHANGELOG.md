@@ -16,6 +16,8 @@
 - the informational text-block with the links to the examples is now always 
   accessible in the scripting settings tab  
   (for [Issue #251](https://github.com/pbek/QOwnNotes/issues/251))
+- viewing and restoring of note versions from your ownCloud server now works 
+  for notes in note subfolders
 - added more Hungarian and Japanese translation (thank you Fabijenna and piyo)
 
 ## 16.07.7
