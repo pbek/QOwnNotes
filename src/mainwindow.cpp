@@ -2741,22 +2741,39 @@ void MainWindow::removeSelectedNoteSubFolders() {
         return;
     }
 
+    // gather the folders that are about to be deleted
+    QStringList noteSubFolderPathList;
+    QList<NoteSubFolder> noteSubFolderList;
+    Q_FOREACH(QTreeWidgetItem *item,
+              ui->noteSubFolderTreeWidget->selectedItems()) {
+            int id = item->data(0, Qt::UserRole).toInt();
+            NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
+            if (noteSubFolder.isFetched()) {
+                noteSubFolderList << noteSubFolder;
+                noteSubFolderPathList << noteSubFolder.fullPath();
+            }
+    }
+
+    if (noteSubFolderList.count() == 0) {
+        return;
+    }
+
     if (QMessageBox::information(
             this,
             tr("Remove selected folders"),
-            tr("Remove <strong>%n</strong> selected folder(s)?\n"
-               "All notes in the folders will be gone!",
-               "", selectedItemsCount),
+            tr("Remove <strong>%n</strong> selected folder(s)?"
+                   "<ul><li>%1</li></ul>"
+                   "All files and folders in these folders will be gone!",
+               "", selectedItemsCount).arg(noteSubFolderPathList.join(
+                    "</li><li>")),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
-
-        Q_FOREACH(QTreeWidgetItem *item,
-                  ui->noteSubFolderTreeWidget->selectedItems()) {
-                int id = item->data(0, Qt::UserRole).toInt();
-                NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
-                if (noteSubFolder.isFetched()) {
-                    noteSubFolder.removeFromFileSystem();
-                    qDebug() << "Removed folder " << noteSubFolder.getName();
+        // delete the note subfolders
+        Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+                // remove the directory recursively from the file system
+                if (noteSubFolder.removeFromFileSystem()) {
+                    showStatusBarMessage(tr("removed note subfolder: %1").arg(
+                            noteSubFolder.fullPath()));
                 }
         }
     }
