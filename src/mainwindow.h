@@ -321,6 +321,8 @@ private slots:
 
     void on_noteSubFolderTreeWidget_customContextMenuRequested(const QPoint &pos);
 
+    void on_noteSubFolderLineEdit_returnPressed();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -565,5 +567,5 @@ private:
 
     void removeSelectedNoteSubFolders();
 
-    bool createNewNoteSubFolder();
+    bool createNewNoteSubFolder(QString folderName = "");
 };

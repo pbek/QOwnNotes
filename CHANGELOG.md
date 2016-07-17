@@ -3,6 +3,9 @@
 ## 16.07.8
 - added an other fix to a duplicate note subfolder listing problem
   (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))
+- you can now also create note subfolders by typing it into the search field 
+  and pressing <kbd>Return</kbd>
+  (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 
 ## 16.07.7
 - fixed a possible crash after removing the last script in the settings dialog

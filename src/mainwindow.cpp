@@ -6386,11 +6386,14 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
 /**
  * Creates a new note subfolder in the current subfolder
  */
-bool MainWindow::createNewNoteSubFolder() {
-    bool ok;
-    QString folderName = QInputDialog::getText(
-            this, tr("Create a new folder"), tr("Folder name:"),
-            QLineEdit::Normal, "", &ok);
+bool MainWindow::createNewNoteSubFolder(QString folderName) {
+    bool ok = true;
+
+    if (folderName.isEmpty()) {
+        folderName = QInputDialog::getText(
+                this, tr("Create a new folder"), tr("Folder name:"),
+                QLineEdit::Normal, "", &ok);
+    }
 
     if (!ok || folderName.isEmpty()) {
         return false;
@@ -6401,4 +6404,12 @@ bool MainWindow::createNewNoteSubFolder() {
     QString path = noteSubFolder.fullPath() + QDir::separator() + folderName;
     QDir directory;
     return directory.mkpath(path);
+}
+
+/**
+ * Creates a new sufolder with a name already entered
+ */
+void MainWindow::on_noteSubFolderLineEdit_returnPressed()
+{
+    createNewNoteSubFolder(ui->noteSubFolderLineEdit->text());
 }
