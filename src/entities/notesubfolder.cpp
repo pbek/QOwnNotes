@@ -115,7 +115,7 @@ QString NoteSubFolder::fullPath() {
 QString NoteSubFolder::pathData() {
     return parentId == 0 ?
            name :
-           getParent().relativePath() + "\n" + name;
+           getParent().pathData() + "\n" + name;
 }
 
 /**

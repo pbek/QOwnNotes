@@ -3,8 +3,9 @@
 ## 16.07.8
 - added an other fix to a duplicate note subfolder listing problem
   (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))
-- you can now also create note subfolders by typing it into the search field 
+- you can now also create a note subfolder by typing it into the search field 
   and pressing <kbd>Return</kbd>
+- note subfolders deeper than 2nd level can now be used
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 
 ## 16.07.7
