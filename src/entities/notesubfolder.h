@@ -3,6 +3,7 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QDebug>
+#include <QDir>
 
 
 class NoteSubFolder {
@@ -76,6 +77,8 @@ public:
     static QString treeWidgetExpandStateSettingsKey(int noteFolderId = 0);
 
     bool removeFromFileSystem();
+
+    QDir dir();
 
 protected:
     int id;

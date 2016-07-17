@@ -323,6 +323,8 @@ private slots:
 
     void on_noteSubFolderLineEdit_returnPressed();
 
+    void on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

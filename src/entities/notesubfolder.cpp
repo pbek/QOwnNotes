@@ -106,7 +106,14 @@ QString NoteSubFolder::relativePath() {
  * Gets the relative path name of the note sub folder
  */
 QString NoteSubFolder::fullPath() {
-    return  Note::getFullNoteFilePathForFile(relativePath());
+    return Note::getFullNoteFilePathForFile(relativePath());
+}
+
+/**
+ * Gets the relative path name of the note sub folder
+ */
+QDir NoteSubFolder::dir() {
+    return QDir(fullPath());
 }
 
 /**

@@ -1306,6 +1306,7 @@ QTreeWidgetItem *MainWindow::addNoteSubFolderToTreeWidget(
     item->setTextColor(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
+    item->setFlags(item->flags() | Qt::ItemIsEditable);
 
     if (parentItem == NULL) {
         ui->noteSubFolderTreeWidget->addTopLevelItem(item);
@@ -5119,7 +5120,7 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
         }
 
     // update the UI
-    // this will crash the app sporadicly
+    // this will crash the app sporadically
     //QCoreApplication::processEvents();
 }
 
@@ -6407,9 +6408,35 @@ bool MainWindow::createNewNoteSubFolder(QString folderName) {
 }
 
 /**
- * Creates a new sufolder with a name already entered
+ * Creates a new subfolder with a name already entered
  */
-void MainWindow::on_noteSubFolderLineEdit_returnPressed()
-{
+void MainWindow::on_noteSubFolderLineEdit_returnPressed() {
     createNewNoteSubFolder(ui->noteSubFolderLineEdit->text());
+}
+
+/**
+ * Renames a note subfolder
+ */
+void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
+        QTreeWidgetItem *item, int column) {
+    Q_UNUSED(column);
+
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
+            item->data(0, Qt::UserRole).toInt());
+    if (noteSubFolder.isFetched()) {
+        QString name = item->text(0);
+
+        if (!name.isEmpty()) {
+            QString oldPath = noteSubFolder.fullPath();
+            noteSubFolder.setName(name);
+            noteSubFolder.store();
+            QString newPath = noteSubFolder.fullPath();
+
+            // rename the note subfolder
+            noteSubFolder.dir().rename(oldPath, newPath);
+        }
+
+        // reload tags, note subfolder and notes
+        on_action_Reload_note_folder_triggered();
+    }
 }

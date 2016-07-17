@@ -7,6 +7,7 @@
   and pressing <kbd>Return</kbd>
 - note subfolders deeper than 2nd level can now be used
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
+- note subfolders can now be renamed in the note subfolder tree
 
 ## 16.07.7
 - fixed a possible crash after removing the last script in the settings dialog
