@@ -1931,11 +1931,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 #endif
         }
 
-    // this still can cause duplicate note subfolders to be viewed under Windows
-#ifndef Q_OS_WIN
     // update the UI and get user input after all the notes were loaded
-    QCoreApplication::processEvents();
-#endif
+    // this still can cause duplicate note subfolders to be viewed
+//    QCoreApplication::processEvents();
 
     // re-fetch current note (because all the IDs have changed after the
     // buildNotesIndex()

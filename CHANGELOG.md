@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.8
+- added an other fix to a duplicate note subfolder listing problem
+  (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))
+
 ## 16.07.7
 - fixed a possible crash after removing the last script in the settings dialog
   (for [Issue #247](https://github.com/pbek/QOwnNotes/issues/247))
