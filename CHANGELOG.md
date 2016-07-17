@@ -13,6 +13,7 @@
 - the folders that are about to be delete when removing a note subfolder 
   will now be viewed in the confirmation dialog to make it more clear what 
   will happen (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
+- added more Hungarian and Japanese translation (thank you Fabijenna and piyo)
 
 ## 16.07.7
 - fixed a possible crash after removing the last script in the settings dialog
