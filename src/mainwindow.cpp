@@ -2674,8 +2674,7 @@ void MainWindow::createNewNote(QString name, QString text) {
  */
 void MainWindow::restoreTrashedNoteOnServer(QString fileName, int timestamp) {
     OwnCloudService *ownCloud = new OwnCloudService(this);
-    ownCloud->restoreTrashedNoteOnServer(
-            this->notesPath, fileName, timestamp, this);
+    ownCloud->restoreTrashedNoteOnServer(fileName, timestamp, this);
 }
 
 /**

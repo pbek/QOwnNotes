@@ -18,6 +18,8 @@
   (for [Issue #251](https://github.com/pbek/QOwnNotes/issues/251))
 - viewing and restoring of note versions from your ownCloud server now works 
   for notes in note subfolders
+- viewing trashed notes on your ownCloud server now works in note subfolders,
+  as well as restoring them on your server or downloading them directly
 - added more Hungarian and Japanese translation (thank you Fabijenna and piyo)
 
 ## 16.07.7

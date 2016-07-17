@@ -476,14 +476,15 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
 /**
  * @brief Restores a note on the server
  */
-void OwnCloudService::restoreTrashedNoteOnServer(QString notesPath,
-                                                 QString fileName,
+void OwnCloudService::restoreTrashedNoteOnServer(QString fileName,
                                                  int timestamp,
                                                  MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + restoreTrashedNotePath);
-    QString serverNotesPath = NoteFolder::currentRemotePath();
+    QString serverNotesPath = Utils::Misc::appendIfDoesNotEndWith(
+            NoteFolder::currentRemotePath() +
+            NoteSubFolder::activeNoteSubFolder().relativePath("/"), "/");
 
     url.setUserName(userName);
     url.setPassword(password);
@@ -535,7 +536,8 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
     this->mainWindow = mainWindow;
 
     QUrl url(serverUrl + trashListPath);
-    QString serverNotesPath = NoteFolder::currentRemotePath();
+    QString serverNotesPath = NoteFolder::currentRemotePath() +
+        NoteSubFolder::activeNoteSubFolder().relativePath("/");
 
     url.setUserName(userName);
     url.setPassword(password);

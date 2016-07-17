@@ -96,10 +96,14 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(
 /**
  * Gets the relative path name of the note sub folder
  */
-QString NoteSubFolder::relativePath() {
+QString NoteSubFolder::relativePath(QString separator) {
+    if (separator.isEmpty()) {
+        separator = QDir::separator();
+    }
+
     return parentId == 0 ?
            name :
-           getParent().relativePath() + QDir::separator() + name;
+           getParent().relativePath(separator) + separator + name;
 }
 
 /**

@@ -149,7 +149,8 @@ void TrashDialog::dialogButtonClicked(QAbstractButton *button) {
 
         switch (actionRole) {
             case Download: {
-                QString text = dataList->value(ui->trashListWidget->currentRow());
+                QString text = dataList->value(
+                        ui->trashListWidget->currentRow());
                 mainWindow->createNewNote(name, text);
                 break;
             }

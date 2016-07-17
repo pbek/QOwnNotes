@@ -29,7 +29,7 @@ public:
 
     void loadTrash(MainWindow *mainWindow);
 
-    void restoreTrashedNoteOnServer(QString notesPath, QString fileName,
+    void restoreTrashedNoteOnServer(QString fileName,
                                     int timestamp, MainWindow *mainWindow);
 
     void settingsGetCalendarList(SettingsDialog *dialog);
