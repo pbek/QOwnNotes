@@ -80,6 +80,8 @@ public:
 
     QDir dir();
 
+    bool rename(QString newName);
+
 protected:
     int id;
     int parentId;

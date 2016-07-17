@@ -103,14 +103,14 @@ QString NoteSubFolder::relativePath() {
 }
 
 /**
- * Gets the relative path name of the note sub folder
+ * Gets the full path of the note sub folder
  */
 QString NoteSubFolder::fullPath() {
     return Note::getFullNoteFilePathForFile(relativePath());
 }
 
 /**
- * Gets the relative path name of the note sub folder
+ * Gets the full path of the note sub folder as QDir
  */
 QDir NoteSubFolder::dir() {
     return QDir(fullPath());
@@ -162,12 +162,31 @@ bool NoteSubFolder::remove() {
 }
 
 /**
- * Removes the directory recursivley from the file system
+ * Removes the directory recursively from the file system
  */
 bool NoteSubFolder::removeFromFileSystem() {
-    QDir dir(fullPath());
+    QDir dir = this->dir();
+
     if (dir.exists()) {
         return dir.removeRecursively();
+    }
+
+    return false;
+}
+
+/**
+ * Renames the note subfolder in the file system
+ */
+bool NoteSubFolder::rename(QString newName) {
+    QDir dir = this->dir();
+
+    if (dir.exists() && !newName.isEmpty()) {
+        QString oldPath = fullPath();
+        setName(newName);
+        QString newPath = fullPath();
+
+        // rename the note subfolder
+        return dir.rename(oldPath, newPath);
     }
 
     return false;

@@ -2754,8 +2754,10 @@ void MainWindow::removeSelectedNoteSubFolders() {
                   ui->noteSubFolderTreeWidget->selectedItems()) {
                 int id = item->data(0, Qt::UserRole).toInt();
                 NoteSubFolder noteSubFolder = NoteSubFolder::fetch(id);
-                noteSubFolder.removeFromFileSystem();
-                qDebug() << "Removed folder " << noteSubFolder.getName();
+                if (noteSubFolder.isFetched()) {
+                    noteSubFolder.removeFromFileSystem();
+                    qDebug() << "Removed folder " << noteSubFolder.getName();
+                }
         }
     }
 }
@@ -6426,15 +6428,8 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
     if (noteSubFolder.isFetched()) {
         QString name = item->text(0);
 
-        if (!name.isEmpty()) {
-            QString oldPath = noteSubFolder.fullPath();
-            noteSubFolder.setName(name);
-            noteSubFolder.store();
-            QString newPath = noteSubFolder.fullPath();
-
-            // rename the note subfolder
-            noteSubFolder.dir().rename(oldPath, newPath);
-        }
+        // rename the note subfolder in the file system
+        noteSubFolder.rename(name);
 
         // reload tags, note subfolder and notes
         on_action_Reload_note_folder_triggered();
