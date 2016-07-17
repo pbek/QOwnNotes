@@ -10,7 +10,7 @@
 - note subfolders can now be renamed in the note subfolder tree
 - now the root note folder cannot be removed in the note subfolder tree  
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
-- the folders that are about to be delete when removing a note subfolder 
+- the folders that are about to be deleted when removing a note subfolder 
   will now be viewed in the confirmation dialog to make it more clear what 
   will happen (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 - the informational text-block with the links to the examples is now always 
