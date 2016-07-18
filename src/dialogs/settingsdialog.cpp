@@ -510,7 +510,8 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Current architecture",
                                           QSysInfo::currentCpuArchitecture());
 #endif
-    output += prepareDebugInformationLine("Release", QString(RELEASE));
+    output += prepareDebugInformationLine("Release",
+                                          qApp->property("release").toString());
     output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
     output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
 

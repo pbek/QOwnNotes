@@ -59,7 +59,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     }
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    q.addQueryItem("r", QString(RELEASE) + " (" +
+    q.addQueryItem("r", qApp->property("release").toString() + " (" +
                         QSysInfo::buildCpuArchitecture() + ")");
 
     QString operatingSystem = QSysInfo::prettyProductName();
@@ -69,7 +69,7 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
 
     q.addQueryItem("o", operatingSystem);
 #else
-    q.addQueryItem("r", QString(RELEASE) );
+    q.addQueryItem("r", qApp->property("release").toString() );
 #endif
 
     url.setQuery(q);

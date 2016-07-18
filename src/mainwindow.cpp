@@ -1426,7 +1426,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
     // disable the automatic update dialog per default for repositories and
     // self-builds
     if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
-        QString release = QString(RELEASE);
+        QString release = qApp->property("release").toString();
         bool enabled =
                 release.contains("Travis") || release.contains("AppVeyor");
         settings.setValue("disableAutomaticUpdateDialog", !enabled);
@@ -1806,7 +1806,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
 
-    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+//    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
     if (noteSubFolderId == 0) {
         // make sure we destroy nothing
@@ -1822,7 +1822,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
         notePath += QDir::separator() + noteSubFolder.relativePath();
     }
 
-    qDebug() << __func__ << " - 'notePath': " << notePath;
+//    qDebug() << __func__ << " - 'notePath': " << notePath;
 
     QDir notesDir(notePath);
 
@@ -1835,7 +1835,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
     // show newest entry first
     QStringList files = notesDir.entryList(filters, QDir::Files, QDir::Time);
-    qDebug() << __func__ << " - 'files': " << files;
+//    qDebug() << __func__ << " - 'files': " << files;
 
     bool createDemoNotes = (files.count() == 0) && !hasNoteSubFolder;
 

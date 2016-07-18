@@ -45,14 +45,14 @@ if [ -z $QOWNNOTES_VERSION ]; then
 fi
 
 cd ../snap
-cp ../QOwnNotes/build-systems/snap/snapcraft/snapcraft.yaml .
+cp ../QOwnNotes/build-systems/snap/snapcraft/* . -R
 
 # replace the version in the snapcraft.yaml file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" snapcraft.yaml
 
 
 echo "Committing changes..."
-git commit -m "releasing version $QOWNNOTES_VERSION" snapcraft.yaml
+git commit -m "releasing version $QOWNNOTES_VERSION" -a
 git push
 
 # remove everything after we are done

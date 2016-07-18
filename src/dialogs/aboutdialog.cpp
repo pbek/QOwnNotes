@@ -19,7 +19,7 @@ AboutDialog::AboutDialog(QWidget *parent) :
         QString html = istream.readAll();
         QDate date = QDate::currentDate();
 
-        QString release = QString(RELEASE);
+        QString release = qApp->property("release").toString();
         if (release.isEmpty()) {
             release = "generic";
         }

@@ -212,7 +212,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                         todoDialog->reloadTodoListItems();
                     }
 
-                    qDebug() << __func__ << " - 'calItem': " << calItem;
+//                    qDebug() << __func__ << " - 'calItem': " << calItem;
                 }
             } else {
                 // this should be the reply of a calendar item list request
@@ -837,7 +837,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                 if (etagNodes.length()) {
                     QString etag = etagNodes.at(0).toElement().text();
                     etag.replace("\"", "");
-                    qDebug() << __func__ << " - 'etag': " << etag;
+//                    qDebug() << __func__ << " - 'etag': " << etag;
 
                     // check if we have a last modified date
                     QDomNodeList lastModifiedNodes = elem.elementsByTagNameNS(

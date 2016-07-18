@@ -82,7 +82,8 @@ bool mainStartupMisc() {
     metricsService->sendEventIfEnabled(
             "app/theme", "app", "theme", QIcon::themeName());
     metricsService->sendEventIfEnabled(
-            "app/release", "app", "release", QString(RELEASE));
+            "app/release", "app", "release",
+            qApp->property("release").toString());
 
     QString productType;
 
@@ -145,6 +146,16 @@ bool mainStartupMisc() {
 }
 
 int main(int argc, char *argv[]) {
+    QString release = RELEASE;
+
+    // override the release string for snaps
+    for (int i = 0; i < argc; ++i) {
+        if (QString(argv[i]) == "--snap") {
+            release = "Snapcraft";
+            break;
+        }
+    }
+
     // don't log SSL warnings in releases on OS X
 #if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
     qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
@@ -177,7 +188,7 @@ int main(int argc, char *argv[]) {
     appVersion += " Qt " + QString(QT_VERSION_STR);
 #endif
 
-    appVersion += " " + QString(RELEASE);
+    appVersion += " " + QString(release);
 
 #ifdef QT_DEBUG
     appVersion += " Debug";
@@ -218,6 +229,8 @@ int main(int argc, char *argv[]) {
     // if only one app instance is allowed use SingleApplication
     if (allowOnlyOneAppInstance) {
         SingleApplication app(argc, argv);
+        app.setProperty("release", release);
+
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
 #endif
@@ -255,6 +268,7 @@ int main(int argc, char *argv[]) {
         // use a normal QApplication if multiple instances of the app are
         // allowed
         QApplication app(argc, argv);
+        app.setProperty("release", release);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
