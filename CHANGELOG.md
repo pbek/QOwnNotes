@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 16.07.9
+- some debug output was added when the calendar list is reloaded in the 
+  settings dialog, because there were some people who had some troubles to 
+  connect to their ownCloud calendars
+    - please read [My calendars cannot be fetched from my ownCloud server](http://www.qownnotes.org/Knowledge-base/My-calendars-cannot-be-fetched-from-my-ownCloud-server)
+      for instructions
+- there are now QOwnNotes snap packages available for `amd64`, `i386`, `arm64` 
+  and `armhf`
+    - please visit the
+      [QOwnNotes installation page](http://www.qownnotes.org/installation#snap)
+      for instructions
+
 ## 16.07.8
 - added an other fix to a duplicate note subfolder listing problem
   (for [Issue #243](https://github.com/pbek/QOwnNotes/issues/243))

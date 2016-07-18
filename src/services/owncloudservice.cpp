@@ -148,12 +148,21 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             return;
         } else if (reply->url().path().endsWith(serverUrlPath + calendarPath)) {
-            qDebug() << "Reply from ownCloud calendar page";
-            // qDebug() << data;
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+            qInfo() << "Reply from ownCloud calendar page: " << data;
+#else
+            qDebug() << "Reply from ownCloud calendar page" << data;
+#endif
 
             QStringList calendarHrefList = parseCalendarHrefList(data);
-            settingsDialog->refreshTodoCalendarList(calendarHrefList);
 
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+            qInfo() << "calendarHrefList: " << calendarHrefList;
+#else
+            qDebug() << "calendarHrefList: " << calendarHrefList;
+#endif
+
+            settingsDialog->refreshTodoCalendarList(calendarHrefList);
             return;
         } else if (reply->url().path()
                 .startsWith(serverUrlPath + calendarPath)) {
