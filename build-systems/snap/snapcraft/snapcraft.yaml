@@ -10,7 +10,7 @@ description: |
 
 apps:
   qownnotes:
-    command: ./wrapper.sh
+    command: desktop-launch $SNAP/usr/bin/QOwnNotes --snap
     plugs:
       - x11
       - network
@@ -29,11 +29,6 @@ parts:
       - qtdeclarative5-dev
       - libqt5svg5-dev
       - qttools5-dev-tools
-    stage:
-      - -usr/share/pkgconfig
-    after: [desktop/qt5]
-  env:
-    plugin: nil
     stage-packages:
       - libqt5gui5
       - libqt5sql5
@@ -48,7 +43,3 @@ parts:
     stage:
       - -usr/share/pkgconfig
     after: [desktop/qt5]
-  launcher:
-    plugin: copy
-    files:
-      wrapper.sh: wrapper.sh
