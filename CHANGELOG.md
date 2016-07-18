@@ -11,6 +11,8 @@
     - please visit the
       [QOwnNotes installation page](http://www.qownnotes.org/installation#snap)
       for instructions
+- added more Dutch, Portuguese and Russian translation (thank you hartwin,
+  mlimacarlos and Maboroshy)
 
 ## 16.07.8
 - added an other fix to a duplicate note subfolder listing problem

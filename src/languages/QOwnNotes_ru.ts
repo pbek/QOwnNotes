@@ -750,7 +750,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2763"/>
       <location filename="../mainwindow.cpp" line="6381"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Удалить выбранные папки</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2794"/>
@@ -979,22 +979,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6380"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Новая подпапка</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6383"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Показывать папку в файл-менеджере</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6414"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Создать новую папку</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6414"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Имя папки:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5025"/>
@@ -1234,16 +1234,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2764"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
+      <translation>
+        <numerusform>Удалить выбранную папку? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Все файлы и папки в этих папках будет удалены!</numerusform>
+        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Все файлы и папки в этих папках будет удалены!</numerusform>
+        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Все файлы и папки в этих папках будет удалены!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2775"/>
       <source>removed note subfolder: %1</source>
-      <translation type="unfinished">removed note subfolder: %1</translation>
+      <translation>удалено подпапок: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3305"/>

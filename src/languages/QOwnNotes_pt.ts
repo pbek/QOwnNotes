@@ -136,7 +136,7 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>find or create note sub folder</source>
-      <translation type="unfinished">find or create note sub folder</translation>
+      <translation>pesquisar ou criar um subdiretório</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
@@ -744,7 +744,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
       <location filename="../mainwindow.cpp" line="2763"/>
       <location filename="../mainwindow.cpp" line="6381"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Excluir os diretórios selecionados</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2794"/>
@@ -879,7 +879,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="3190"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>Carta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3216"/>
@@ -945,12 +945,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="5057"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>mostrar notas na pasta raiz (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5061"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Diretório de Notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6201"/>
@@ -965,22 +965,22 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="6380"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Nova subpasta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6383"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Mostre o diretório no Gerenciador de Arquivos</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6414"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Criar um novo diretório</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6414"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Nome da pasta:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5025"/>
@@ -1200,7 +1200,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="1295"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>mostrar notas na pasta '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1335"/>
@@ -1220,15 +1220,15 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2764"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
+      <translation>
+        <numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; pasta selecionada (s)? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Todos os arquivos e pastas nestas pastas deixarão de existir!</numerusform>
+        <numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; pasta selecionada (s)? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Todos os arquivos e pastas nestas pastas deixarão de existir!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2775"/>
       <source>removed note subfolder: %1</source>
-      <translation type="unfinished">removed note subfolder: %1</translation>
+      <translation>remover o sub diretório: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3305"/>
