@@ -9,6 +9,7 @@
     sensitive usernames and the ownCloud server itself uses case insensitive 
     usernames, so please use the right case in when typing in your username 
     in the ownCloud settings tab of QOwnNotes 
+- added more Dutch and German translation (thank you hartwin and bigant)
 
 ## 16.07.9
 - some debug output was added when the calendar list is reloaded in the 
