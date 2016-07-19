@@ -515,6 +515,13 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
     output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
 
+    QString debug = "0";
+#ifdef QT_DEBUG
+    debug = "1";
+#endif
+
+    output += prepareDebugInformationLine("Qt Debug", debug);
+
     output += prepareDebugInformationLine("Locale (system)",
                                           QLocale::system().name());
     output += prepareDebugInformationLine("Locale (interface)",

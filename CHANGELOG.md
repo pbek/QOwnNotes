@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.07.10
+- added more information to the settings debug tab
+
 ## 16.07.9
 - some debug output was added when the calendar list is reloaded in the 
   settings dialog, because there were some people who had some troubles to 
