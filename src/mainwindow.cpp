@@ -6397,7 +6397,7 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
                     NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
 
             // show the current folder in the file manager
-            Utils::Misc::openFolderSelect(noteSubFolder.fullPath());
+            Utils::Misc::openPath(noteSubFolder.fullPath());
         }
     }
 }
