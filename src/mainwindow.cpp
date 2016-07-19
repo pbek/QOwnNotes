@@ -2254,26 +2254,24 @@ void MainWindow::removeCurrentNote() {
                      tr("&Remove"), tr("&Cancel"), QString::null,
                      0, 1)) {
         case 0: {
-            // TODO: better fetch by note id, not by name
-            QList<QTreeWidgetItem*> noteList =
-                    ui->noteTreeWidget->findItems(currentNote.getName(),
-                                           Qt::MatchExactly);
+            const QSignalBlocker blocker2(ui->noteTextEdit);
+            Q_UNUSED(blocker2);
 
-            if (noteList.count() > 0) {
+            const QSignalBlocker blocker3(ui->noteTextView);
+            Q_UNUSED(blocker3);
+
+            const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
+            Q_UNUSED(blocker4);
+
+            const QSignalBlocker blocker5(noteDirectoryWatcher);
+            Q_UNUSED(blocker5);
+
+            // we try to fix problems with note subfolders
+            _isNotesDirectoryWasModifiedDisabled = true;
+
+            {
                 const QSignalBlocker blocker1(ui->noteTreeWidget);
                 Q_UNUSED(blocker1);
-
-                const QSignalBlocker blocker2(ui->noteTextEdit);
-                Q_UNUSED(blocker2);
-
-                const QSignalBlocker blocker3(ui->noteTextView);
-                Q_UNUSED(blocker3);
-
-                const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
-                Q_UNUSED(blocker4);
-
-                const QSignalBlocker blocker5(noteDirectoryWatcher);
-                Q_UNUSED(blocker5);
 
                 // delete note in database and on file system
                 currentNote.remove(true);
@@ -2282,12 +2280,18 @@ void MainWindow::removeCurrentNote() {
                 ui->noteTextView->clear();
                 ui->encryptedNoteTextEdit->clear();
 
-                // delete item in note list widget
-                delete noteList[0];
-
-                // set a new first note
-                resetCurrentNote();
+                loadNoteDirectoryList();
             }
+
+            // set a new first note
+            resetCurrentNote();
+
+            // we try to fix problems with note subfolders
+            // we need to wait some time to turn the watcher on again because
+            // something is happening after this method that reloads the
+            // note folder
+            waitMsecs(200);
+            _isNotesDirectoryWasModifiedDisabled = false;
 
             break;
         }
@@ -2703,10 +2707,7 @@ void MainWindow::removeSelectedNotes() {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        const QSignalBlocker blocker1(ui->noteTreeWidget);
-        Q_UNUSED(blocker1);
-
-        const QSignalBlocker blocker2(ui->noteTextEdit);
+        const QSignalBlocker blocker2(activeNoteTextEdit());
         Q_UNUSED(blocker2);
 
         const QSignalBlocker blocker3(ui->noteTextView);
@@ -2715,17 +2716,34 @@ void MainWindow::removeSelectedNotes() {
         const QSignalBlocker blocker4(ui->encryptedNoteTextEdit);
         Q_UNUSED(blocker4);
 
-        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-            int id = item->data(0, Qt::UserRole).toInt();
-            Note note = Note::fetch(id);
-            note.remove(true);
-            qDebug() << "Removed note " << note.getName();
-        }
+        // we try to fix problems with note subfolders
+        _isNotesDirectoryWasModifiedDisabled = true;
 
-        loadNoteDirectoryList();
+        {
+            const QSignalBlocker blocker1(ui->noteTreeWidget);
+            Q_UNUSED(blocker1);
+
+            Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                    int id = item->data(0, Qt::UserRole).toInt();
+                    Note note = Note::fetch(id);
+                    note.remove(true);
+                    qDebug() << "Removed note " << note.getName();
+                }
+
+            // clear the text edit so it stays clear after removing the last note
+            activeNoteTextEdit()->clear();
+
+            loadNoteDirectoryList();
+        }
 
         // set a new first note
         resetCurrentNote();
+
+        // we try to fix problems with note subfolders
+        // we need to wait some time to turn the watcher on again because
+        // something is happening after this method that reloads the note folder
+        waitMsecs(200);
+        _isNotesDirectoryWasModifiedDisabled = false;
     }
 }
 

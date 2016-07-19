@@ -12,6 +12,8 @@
 - when opening a note subfolder in the file manager the folder will be opened
   instead of the parent folder with the subfolder selected
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
+- fixed troubles with deleting the last note in a note folder or note 
+  subfolder (for [Issue #253](https://github.com/pbek/QOwnNotes/issues/253))
 - added more Dutch and German translation (thank you hartwin and bigant)
 
 ## 16.07.9
