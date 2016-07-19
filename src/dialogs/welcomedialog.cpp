@@ -1,6 +1,7 @@
 #include "QDebug"
 #include <QSettings>
 #include <QFileDialog>
+#include <utils/misc.h>
 #include "welcomedialog.h"
 #include "ui_welcomedialog.h"
 #include "settingsdialog.h"
@@ -8,34 +9,29 @@
 
 WelcomeDialog::WelcomeDialog(QWidget *parent) :
         MasterDialog(parent),
-    ui(new Ui::WelcomeDialog)
-{
+    ui(new Ui::WelcomeDialog) {
     ui->setupUi(this);
     ui->finishButton->setEnabled(false);
     ui->backButton->setEnabled(false);
     ui->errorMessageLabel->setVisible(false);
 
-    _notesPath = QDir::homePath() + QDir::separator() +
-           "ownCloud" + QDir::separator() + "Notes";
+    _notesPath = Utils::Misc::defaultNotesPath();
     ui->noteFolderLineEdit->setText(_notesPath);
 
     ui->stackedWidget->setCurrentIndex(WelcomePages::NoteFolderPage);
 }
 
-WelcomeDialog::~WelcomeDialog()
-{
+WelcomeDialog::~WelcomeDialog() {
     delete ui;
 }
 
-void WelcomeDialog::on_cancelButton_clicked()
-{
+void WelcomeDialog::on_cancelButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/cancel");
 
     done(QDialog::Rejected);
 }
 
-void WelcomeDialog::on_nextButton_clicked()
-{
+void WelcomeDialog::on_nextButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/next");
 
     int index = ui->stackedWidget->currentIndex();
@@ -115,8 +111,7 @@ void WelcomeDialog::storeNoteFolderSettings() {
     settings.setValue("notesPath", _notesPath);
 }
 
-void WelcomeDialog::on_backButton_clicked()
-{
+void WelcomeDialog::on_backButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/back");
 
     int index = ui->stackedWidget->currentIndex();
@@ -130,8 +125,7 @@ void WelcomeDialog::on_backButton_clicked()
     ui->backButton->setEnabled(index > 0);
 }
 
-void WelcomeDialog::on_finishButton_clicked()
-{
+void WelcomeDialog::on_finishButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/finished");
     storeNoteFolderSettings();
 
@@ -141,8 +135,7 @@ void WelcomeDialog::on_finishButton_clicked()
     done(QDialog::Accepted);
 }
 
-void WelcomeDialog::on_noteFolderButton_clicked()
-{
+void WelcomeDialog::on_noteFolderButton_clicked() {
     MetricsService::instance()
             ->sendVisitIfEnabled("welcome-dialog/set-note-folder");
 
@@ -160,8 +153,7 @@ void WelcomeDialog::on_noteFolderButton_clicked()
     }
 }
 
-void WelcomeDialog::on_ownCloudSettingsButton_clicked()
-{
+void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
     MetricsService::instance()
             ->sendVisitIfEnabled("welcome-dialog/owncloud-settings");
 
@@ -170,8 +162,7 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked()
     dialog->exec();
 }
 
-void WelcomeDialog::on_networkSettingsButton_clicked()
-{
+void WelcomeDialog::on_networkSettingsButton_clicked() {
     MetricsService::instance()
             ->sendVisitIfEnabled("welcome-dialog/network-settings");
 

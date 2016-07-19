@@ -1095,8 +1095,7 @@ void SettingsDialog::setupNoteFolderTab() {
 
     // set local path placeholder text
     ui->noteFolderLocalPathLineEdit->setPlaceholderText(
-            QDir::homePath() + QDir::separator() + "ownCloud" +
-                    QDir::separator() + "Notes");
+            Utils::Misc::defaultNotesPath());
 
     noteFolderRemotePathTreeStatusBar = new QStatusBar();
     ui->noteFolderRemotePathTreeWidgetFrame->layout()->addWidget(
@@ -1133,8 +1132,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
     _selectedNoteFolder = NoteFolder();
     _selectedNoteFolder.setName(tr("new folder"));
     _selectedNoteFolder.setLocalPath(
-            QDir::homePath() + QDir::separator() + "ownCloud" +
-                    QDir::separator() + "Notes");
+            Utils::Misc::defaultNotesPath());
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
     _selectedNoteFolder.setOwnCloudServerId(1);
     _selectedNoteFolder.store();

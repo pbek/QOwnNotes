@@ -18,8 +18,7 @@
 
 /*  Miscellaneous functions that can be useful */
 
-namespace Utils
-{
+namespace Utils {
     namespace Misc {
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
@@ -30,5 +29,6 @@ namespace Utils
         bool startDetachedProcess(
                 QString executablePath, QStringList parameters);
         QString shorten(QString text, int length, QString sequence = "...");
+        QString defaultNotesPath();
     }
 }

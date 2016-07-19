@@ -2093,8 +2093,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     QString path = this->notesPath;
 
     if (path == "") {
-        path = QDir::homePath() + QDir::separator() +
-                "ownCloud" + QDir::separator() + "Notes";
+        path = Utils::Misc::defaultNotesPath();
     }
 
     // TODO(pbek): We sometimes seem to get a "QCoreApplication::postEvent:

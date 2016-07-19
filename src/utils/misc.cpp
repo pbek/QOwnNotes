@@ -217,3 +217,13 @@ bool Utils::Misc::startDetachedProcess(
     return process.startDetached(executablePath, parameters);
 #endif
 }
+
+QString Utils::Misc::defaultNotesPath() {
+    QString path = QDir::homePath() + QDir::separator() + "ownCloud" +
+            QDir::separator() + "Notes";
+
+    // remove the snap path for Snapcraft builds
+    path.remove(QRegularExpression("snap\\/qownnotes\\/\\w\\d+\\/"));
+
+    return path;
+}

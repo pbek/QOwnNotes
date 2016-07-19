@@ -14,6 +14,10 @@
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 - fixed troubles with deleting the last note in a note folder or note 
   subfolder (for [Issue #253](https://github.com/pbek/QOwnNotes/issues/253))
+- removed the snap part from the default notes folder path to access the 
+  notes in the real home directory and not in the snap home directory for 
+  Snapcraft builds 
+  (for [Snappy playpen issue #145](https://github.com/ubuntu/snappy-playpen/issues/145))
 - added more Dutch and German translation (thank you hartwin and bigant)
 
 ## 16.07.9
