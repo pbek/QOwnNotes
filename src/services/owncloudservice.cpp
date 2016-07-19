@@ -744,8 +744,45 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 
 QStringList OwnCloudService::parseCalendarHrefList(QString &data) {
     QStringList resultList;
+
+    // check if there was nothing returned at all from the CalDAV server
+    if (data.isEmpty()) {
+        QMessageBox::critical(
+                0, tr("Error while loading todo lists!"),
+                tr("Your ownCloud CalDAV server didn't reply anything!"));
+
+        return resultList;
+    }
+
     QDomDocument doc;
     doc.setContent(data, true);
+
+    QDomNodeList errorNodes = doc.elementsByTagNameNS(NS_DAV, "error");
+
+    // check if there was an error returned by the CalDAV server
+    for (int i = 0; i < errorNodes.length(); ++i) {
+        QDomNode responseNode = errorNodes.at(i);
+        if (responseNode.isElement()) {
+            QDomElement elem = responseNode.toElement();
+
+            if (elem.childNodes().length()) {
+                QDomNodeList typeNodes = elem.childNodes();
+                for (int j = 0; j < typeNodes.length(); ++j) {
+                    QDomNode typeNode = typeNodes.at(j);
+                    QString typeString = typeNode.toElement().tagName();
+                    if (typeString == "message") {
+                        QMessageBox::critical(
+                                0, tr("Error while loading todo lists!"),
+                                tr("Error message from your ownCloud "
+                                           "CalDAV server: <strong>%1</strong>")
+                                        .arg(typeNode.toElement().text()));
+
+                        return resultList;
+                    }
+                }
+            }
+        }
+    }
 
     // loop all response blocks
     QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, "response");

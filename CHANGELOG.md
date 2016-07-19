@@ -2,6 +2,13 @@
 
 ## 16.07.10
 - added more information to the settings debug tab
+- there now are error messages when something went wrong while loading your 
+  ownCloud todo lists in the `Todo` tab of the settings dialog
+  (for [Issue #229](https://github.com/pbek/QOwnNotes/issues/229))
+    - for example keep in mind that the ownCloud calendar service uses case 
+    sensitive usernames and the ownCloud server itself uses case insensitive 
+    usernames, so please use the right case in when typing in your username 
+    in the ownCloud settings tab of QOwnNotes 
 
 ## 16.07.9
 - some debug output was added when the calendar list is reloaded in the 
