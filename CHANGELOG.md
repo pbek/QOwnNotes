@@ -5,6 +5,8 @@
   (for [Issue #256](https://github.com/pbek/QOwnNotes/issues/256))
 - improved the demo script `insert-headline-with-link-from-github-url.qml` to
   decode html entities
+- added an option to use GitHub line breaks for the debug output in the 
+  settings dialog 
 
 ## 16.07.10
 - added more information to the settings debug tab

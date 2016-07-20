@@ -644,8 +644,11 @@ void SettingsDialog::outputSettings() {
  */
 QString SettingsDialog::prepareDebugInformationLine(QString headline,
                                                     QString data) {
+    // add two spaces if we don't want GitHub line breaks
+    QString spaces = ui->gitHubLineBreaksCheckBox->isChecked() ? "" : "  ";
+
     data = (data == "") ? "*empty*" : "`" + data + "`";
-    return "**" + headline + "**: " + data + "  \n";
+    return "**" + headline + "**: " + data + spaces + "\n";
 }
 
 /**
@@ -1756,4 +1759,12 @@ void SettingsDialog::on_darkModeCheckBox_toggled() {
 void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
     _selectedNoteFolder.setShowSubfolders(checked);
     _selectedNoteFolder.store();
+}
+
+/**
+ * Toggles the line breaks in the debug output
+ */
+void SettingsDialog::on_gitHubLineBreaksCheckBox_toggled(bool checked) {
+    Q_UNUSED(checked);
+    outputSettings();
 }

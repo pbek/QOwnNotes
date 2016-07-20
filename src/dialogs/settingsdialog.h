@@ -149,6 +149,8 @@ private slots:
 
     void on_noteFolderShowSubfoldersCheckBox_toggled(bool checked);
 
+    void on_gitHubLineBreaksCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

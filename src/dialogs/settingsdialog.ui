@@ -2581,7 +2581,7 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
-            <item row="3" column="0">
+            <item row="5" column="0">
              <widget class="QPushButton" name="saveDebugInfoButton">
               <property name="text">
                <string>&amp;Save debug information</string>
@@ -2592,13 +2592,26 @@ p, li { white-space: pre-wrap; }
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item row="3" column="0">
              <widget class="QFrame" name="debugInfoTextEditSearchFrame">
               <property name="frameShape">
                <enum>QFrame::NoFrame</enum>
               </property>
               <property name="lineWidth">
                <number>0</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QCheckBox" name="gitHubLineBreaksCheckBox">
+              <property name="toolTip">
+               <string>No two spaces to do a line break are added here if checked</string>
+              </property>
+              <property name="text">
+               <string>Use GitHub line breaks</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
