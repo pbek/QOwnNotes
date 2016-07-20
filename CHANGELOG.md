@@ -3,6 +3,8 @@
 ## 16.07.11
 - fixed a character set problem when storing tasks in the todo list dialog
   (for [Issue #256](https://github.com/pbek/QOwnNotes/issues/256))
+- improved the demo script `insert-headline-with-link-from-github-url.qml` to
+  decode html entities
 
 ## 16.07.10
 - added more information to the settings debug tab
