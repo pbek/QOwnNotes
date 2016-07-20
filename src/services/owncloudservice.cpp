@@ -398,7 +398,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
             </d:prop> \
           </d:propfind>";
 
-    QByteArray *dataToSend = new QByteArray(body.toLatin1());
+    QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
@@ -457,7 +457,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
             </c:filter> \
         </c:calendar-query>";
 
-    QByteArray *dataToSend = new QByteArray(body.toLatin1());
+    QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
@@ -1031,7 +1031,7 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
     // build the request body
     QString body = calendarItem.getICSData();
 
-    QByteArray *dataToSend = new QByteArray(body.toLatin1());
+    QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
@@ -1078,6 +1078,8 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
 
         // set the new ics data
         calItem->setICSData(icsData);
+        qDebug() << __func__ << " - 'calItem': " << calItem;
+
 
         return true;
     }
@@ -1105,7 +1107,7 @@ void OwnCloudService::settingsGetFileList(
                 "</a:prop>"
             "</a:propfind>";
 
-    QByteArray *dataToSend = new QByteArray(body.toLatin1());
+    QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 

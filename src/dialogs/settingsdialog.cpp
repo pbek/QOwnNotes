@@ -790,7 +790,7 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
         QString name = match.captured(1);
 
         // remove percent encoding
-        name = QUrl::fromPercentEncoding(name.toLatin1());
+        name = QUrl::fromPercentEncoding(name.toUtf8());
 
         // skip the contact birthdays calendar
         if (name == "contact_birthdays") {

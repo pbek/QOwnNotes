@@ -415,6 +415,8 @@ void TodoDialog::on_saveButton_clicked() {
     MetricsService::instance()->sendVisitIfEnabled("todo/item/stored");
 
     updateCurrentCalendarItemWithFormData();
+    qDebug() << __func__ << " - 'currentCalendarItem': " << currentCalendarItem;
+
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
 
