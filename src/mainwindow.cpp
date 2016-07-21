@@ -26,7 +26,6 @@
 #include <QInputDialog>
 #include <QCompleter>
 #include <QTreeWidgetItem>
-#include <QShortcut>
 #include <QCoreApplication>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
@@ -224,8 +223,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->action_Forward_in_note_history->
             setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
 
-    // add an other shortcut for the autocompleter
+    // add an other shortcut for the auto-completer
     ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
+
+    // add an other shortcut for inserting media
+    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
 #endif
 
     // adding some alternate shortcuts for changing the current note

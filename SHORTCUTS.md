@@ -105,7 +105,7 @@ Important Shortcuts
     - you can also close it with <kbd>Esc</kbd>
 - <kbd>⌘</kbd> + <kbd>P</kbd> prints the current note as text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
+- <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
