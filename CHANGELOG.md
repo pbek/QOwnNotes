@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.07.12
+- the expand/collapse state of the items in the note subfolder tree will not 
+  be stored while searching and restored when the search field is cleared
+  (for [Issue #254](https://github.com/pbek/QOwnNotes/issues/254))
+    - after a subfolder was created by the search field it will be cleared
+
 ## 16.07.11
 - fixed a character set problem when storing tasks in the todo list dialog
   (for [Issue #256](https://github.com/pbek/QOwnNotes/issues/256))

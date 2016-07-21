@@ -5212,7 +5212,15 @@ void MainWindow::on_tagLineEdit_returnPressed() {
 
     Tag tag;
     tag.setName(name);
-    tag.store();
+
+    if (tag.store()) {
+        const QSignalBlocker blocker2(ui->tagLineEdit);
+        Q_UNUSED(blocker2);
+
+        // clear the line edit if the tag was stored
+        ui->tagLineEdit->clear();
+    }
+
     reloadTagTree();
 }
 
@@ -6324,7 +6332,19 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
  * Searches for note sub folders in the note sub folder tree widget
  */
 void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
-    searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1);
+    if (arg1.isEmpty()) {
+        // reload the note subfolder tree, so that the expand/collapse state
+        // of the items gets restored
+        reloadNoteSubFolderTree();
+    } else {
+        // block the events because we don't want the expand/collapse state
+        // of the items get stored while searching
+        const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
+        Q_UNUSED(blocker);
+
+        // search for the text
+        searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1);
+    }
 }
 
 /**
@@ -6456,7 +6476,10 @@ bool MainWindow::createNewNoteSubFolder(QString folderName) {
  * Creates a new subfolder with a name already entered
  */
 void MainWindow::on_noteSubFolderLineEdit_returnPressed() {
-    createNewNoteSubFolder(ui->noteSubFolderLineEdit->text());
+    if (createNewNoteSubFolder(ui->noteSubFolderLineEdit->text())) {
+        // clear the line edit on success
+        ui->noteSubFolderLineEdit->clear();
+    }
 }
 
 /**
