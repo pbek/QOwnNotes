@@ -11,6 +11,7 @@
   tree after it was created
 - OSX: added a new shortcut <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>V</kbd> to 
   paste notes, images and html from the clipboard
+- added more Portuguese translation (thank you mlimacarlos)
 
 ## 16.07.10
 - added more information to the settings debug tab
