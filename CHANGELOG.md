@@ -7,6 +7,8 @@
   decode html entities
 - added an option to use GitHub line breaks for the debug output in the 
   settings dialog 
+- fixed a problem where a subfolder will not be viewed in the note subfolder 
+  tree after it was created
 
 ## 16.07.10
 - added more information to the settings debug tab

@@ -6439,7 +6439,15 @@ bool MainWindow::createNewNoteSubFolder(QString folderName) {
             NoteFolder::currentNoteFolder().getActiveNoteSubFolder();
     QString path = noteSubFolder.fullPath() + QDir::separator() + folderName;
     QDir directory;
-    return directory.mkpath(path);
+    bool success = directory.mkpath(path);
+
+    // rebuild the index of the note subfolders
+    buildNotesIndex();
+
+    // reload note subfolders
+    setupNoteSubFolders();
+
+    return success;
 }
 
 /**
