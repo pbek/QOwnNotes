@@ -173,5 +173,5 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
 
 void WelcomeDialog::closeEvent(QCloseEvent *event) {
     MetricsService::instance()->sendVisitIfEnabled("welcome-dialog/close");
-    WelcomeDialog::closeEvent(event);
+    MasterDialog::closeEvent(event);
 }

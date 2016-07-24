@@ -1078,8 +1078,6 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
 
         // set the new ics data
         calItem->setICSData(icsData);
-        qDebug() << __func__ << " - 'calItem': " << calItem;
-
 
         return true;
     }
