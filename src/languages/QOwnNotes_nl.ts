@@ -1476,17 +1476,17 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../services/owncloudservice.cpp" line="751"/>
       <location filename="../services/owncloudservice.cpp" line="775"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Fout tijdens het laden van de takenlijsten!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="752"/>
       <source>Your ownCloud CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your ownCloud CalDAV server didn't reply anything!</translation>
+      <translation>Uw ownCloud CalDAV server gaf geen enkel antwoord!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="776"/>
       <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Foutmelding van uw ownCloud CalDAv server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -2018,12 +2018,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Indien aangevinkt dan worden er geen twee spaties toegevoegd voor een regeleinde.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2611"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Gebruik de GitHub regeleinden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1548"/>

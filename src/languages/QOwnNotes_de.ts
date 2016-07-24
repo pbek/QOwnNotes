@@ -1477,17 +1477,17 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       <location filename="../services/owncloudservice.cpp" line="751"/>
       <location filename="../services/owncloudservice.cpp" line="775"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Fehler beim Laden der Aufgabenlisten!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="752"/>
       <source>Your ownCloud CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your ownCloud CalDAV server didn't reply anything!</translation>
+      <translation>Keine Antwort von Ihrem ownCloud CalDAV-Server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="776"/>
       <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Fehlermeldung Ihres ownCloud CalDAV-Servers: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -2019,12 +2019,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Wenn angehakt werden keine zwei Leerzeichen am Ende der Zeile angehängt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2611"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>GitHub Zeilenumbrüche verwenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1548"/>

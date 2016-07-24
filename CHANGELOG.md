@@ -5,6 +5,7 @@
   be stored while searching and restored when the search field is cleared
   (for [Issue #254](https://github.com/pbek/QOwnNotes/issues/254))
     - after a subfolder was created by the search field it will be cleared
+- added more German and Dutch translation (thank you bigant and Telesight)
 
 ## 16.07.11
 - fixed a character set problem when storing tasks in the todo list dialog
@@ -61,13 +62,13 @@
 - note subfolders deeper than 2nd level can now be used
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 - note subfolders can now be renamed in the note subfolder tree
-- now the root note folder cannot be removed in the note subfolder tree  
+- now the root note folder cannot be removed in the note subfolder tree
   (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 - the folders that are about to be deleted when removing a note subfolder 
   will now be viewed in the confirmation dialog to make it more clear what 
   will happen (for [Issue #246](https://github.com/pbek/QOwnNotes/issues/246))
 - the informational text-block with the links to the examples is now always 
-  accessible in the scripting settings tab  
+  accessible in the scripting settings tab
   (for [Issue #251](https://github.com/pbek/QOwnNotes/issues/251))
 - viewing and restoring of note versions from your ownCloud server now works 
   for notes in note subfolders
