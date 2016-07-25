@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.13
+- quotes will now be shown in the markdown preview
+  (for [Issue #261](https://github.com/pbek/QOwnNotes/issues/261))
+
 ## 16.07.12
 - the expand/collapse state of the items in the note subfolder tree will not 
   be stored while searching and restored when the search field is cleared
