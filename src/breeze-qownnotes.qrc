@@ -75,5 +75,6 @@
         <file alias="16x16/list-add.svg">icons/breeze-qownnotes/16x16/list-add.svg</file>
         <file alias="16x16/list-remove.svg">icons/breeze-qownnotes/16x16/list-remove.svg</file>
         <file alias="16x16/im-user-online.svg">icons/breeze-qownnotes/16x16/im-user-online.svg</file>
+        <file alias="16x16/document-share.svg">icons/breeze-qownnotes/16x16/document-share.svg</file>
     </qresource>
 </RCC>

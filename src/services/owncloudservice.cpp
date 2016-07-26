@@ -467,6 +467,13 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 }
 
 /**
+ * Shares a note on ownCloud
+ */
+void OwnCloudService::shareNote(Note note) {
+    qDebug() << __func__ << " - 'note': " << note;
+}
+
+/**
  * @brief Removes a todo list item from the ownCloud server
  */
 void OwnCloudService::removeCalendarItem(CalendarItem calItem,

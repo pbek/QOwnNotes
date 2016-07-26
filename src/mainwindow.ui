@@ -664,6 +664,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Open_note_in_external_editor"/>
     <addaction name="actionShow_note_in_file_manager"/>
+    <addaction name="actionShare_note"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="action_Reload_note_folder"/>
@@ -1579,6 +1580,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Show status bar</string>
+   </property>
+  </action>
+  <action name="actionShare_note">
+   <property name="icon">
+    <iconset theme="document-share" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Share note</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Alt+S</string>
    </property>
   </action>
  </widget>

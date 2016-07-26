@@ -47,6 +47,8 @@ public:
 
     static bool hasOwnCloudSettings();
 
+    void shareNote(Note note);
+
 private:
     QString serverUrl;
     QString serverUrlPath;

@@ -6501,3 +6501,10 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
         on_action_Reload_note_folder_triggered();
     }
 }
+
+void MainWindow::on_actionShare_note_triggered() {
+    OwnCloudService *ownCloud = new OwnCloudService(this);
+
+    // TODO(pbek): Check if ownCloud is configured
+    ownCloud->shareNote(currentNote);
+}

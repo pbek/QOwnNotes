@@ -325,6 +325,8 @@ private slots:
 
     void on_noteSubFolderTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
+    void on_actionShare_note_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
