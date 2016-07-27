@@ -128,7 +128,8 @@ void SettingsDialog::loadProxySettings() {
     QSettings settings;
 
     // load current proxy settings
-    int type = settings.value("networking/proxyType").toInt();
+    int type = settings.value("networking/proxyType",
+                              QNetworkProxy::NoProxy).toInt();
     switch (type) {
         case QNetworkProxy::NoProxy:
             ui->noProxyRadioButton->setChecked(true);

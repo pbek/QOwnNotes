@@ -3,6 +3,9 @@
 ## 16.07.13
 - quotes will now be shown in the markdown preview
   (for [Issue #261](https://github.com/pbek/QOwnNotes/issues/261))
+- no network proxy will now be used by default to prevent issues with 
+  the networking stack on some operating systems
+  (for [Issue #258](https://github.com/pbek/QOwnNotes/issues/258))
 
 ## 16.07.12
 - the expand/collapse state of the items in the note subfolder tree will not 
