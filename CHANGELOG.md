@@ -6,6 +6,8 @@
 - no network proxy will now be used by default to prevent issues with 
   the networking stack on some operating systems
   (for [Issue #258](https://github.com/pbek/QOwnNotes/issues/258))
+- some more SSL errors are now ignored
+  (for [Issue #264](https://github.com/pbek/QOwnNotes/issues/264))
 
 ## 16.07.12
 - the expand/collapse state of the items in the note subfolder tree will not 
