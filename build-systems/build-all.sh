@@ -18,7 +18,7 @@ COMMANDS=("$DIR/../ubuntu-launchpad/build-for-launchpad.sh" "$DIR/../obs/build-f
 # KDS=$(org.kde.konsole)    # This is found in some examples but is incomplete
 
 qdbus >/tmp/q0              # Get the current list of konsoles
-/usr/bin/konsole            # Launch a new konsole
+/usr/bin/konsole &          # Launch a new konsole
 # PID=$!                    # And get its PID - But for some reason this is off by a few
 sleep 1
 qdbus >/tmp/q1              # Get the new list of konsoles
