@@ -1334,8 +1334,15 @@ void MainWindow::setTreeWidgetItemToolTipForNote(
     QDateTime *fileLastModified = (overrideFileLastModified != NULL) ?
                                  overrideFileLastModified : &modified;
 
-    item->setToolTip(0, tr("<strong>%1</strong><br />last modified: %2")
-            .arg(note->getName(), fileLastModified->toString()));
+    QString toolTipText = tr("<strong>%1</strong><br />last modified: %2")
+            .arg(note->getName(), fileLastModified->toString());
+
+    NoteSubFolder noteSubFolder = note->getNoteSubFolder();
+    if (noteSubFolder.isFetched()) {
+        toolTipText += tr("<br />path: %1").arg(noteSubFolder.relativePath());
+    }
+
+    item->setToolTip(0, toolTipText);
 }
 
 /**

@@ -488,6 +488,7 @@ bool Tag::removeAllLinksToNote(Note note) {
 bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
+    // TODO(pbek): we need to heed note subfolders here
     query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
                           "note_file_name = :oldFileName");
 

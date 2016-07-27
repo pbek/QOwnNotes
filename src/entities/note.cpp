@@ -221,14 +221,20 @@ bool Note::move(QString destinationPath) {
     return false;
 }
 
-Note Note::fetchByName(QString name) {
+Note Note::fetchByName(QString name, int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
-
     Note note;
 
-    query.prepare("SELECT * FROM note WHERE name = :name");
+    // get the active note subfolder id if none was set
+    if (noteSubFolderId == -1) {
+        noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
+
+    query.prepare("SELECT * FROM note WHERE name = :name AND "
+                          "note_sub_folder_id = :note_sub_folder_id");
     query.bindValue(":name", name);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -434,11 +440,16 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
  * You can search for longer texts by using quotes, `"this word1" word2`
  * will find all notes that are containing `this word1` and `word2`
  */
-QList<int> Note::searchInNotes(QString search) {
+QList<int> Note::searchInNotes(QString search, int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
     QList<int> noteIdList;
     QStringList sqlList;
+
+    // get the active note subfolder id if none was set
+    if (noteSubFolderId == -1) {
+        noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
 
     // build the string list of the search string
     QStringList queryStrings = buildQueryStringList(search);
@@ -447,12 +458,14 @@ QList<int> Note::searchInNotes(QString search) {
         sqlList.append("note_text LIKE ?");
     }
 
-    QString sql = "SELECT id FROM note WHERE " + sqlList.join( " AND " );
+    QString sql = "SELECT id FROM note WHERE note_sub_folder_id = "
+                          ":note_sub_folder_id AND " + sqlList.join(" AND ");
     query.prepare(sql);
+    query.bindValue(0, noteSubFolderId);
 
     // add the values to the query
     for (int i = 0; i < queryStrings.count(); i++) {
-        query.bindValue(i, "%" + queryStrings[i] + "%");
+        query.bindValue(i + 1, "%" + queryStrings[i] + "%");
     }
 
     if (!query.exec()) {
@@ -626,7 +639,8 @@ bool Note::store() {
                               "VALUES (:name, :file_name, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
-                              ":crypto_password, :decrypted_note_text, :note_sub_folder_id)");
+                              ":crypto_password, :decrypted_note_text,"
+                              ":note_sub_folder_id)");
     }
 
     QDateTime modified = QDateTime::currentDateTime();
@@ -675,6 +689,7 @@ bool Note::storeNoteTextFileToDisk() {
 
     // assign the tags to the new name if the name has changed
     if (oldName != newName) {
+        // TODO(pbek): we need to heed note subfolders here
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
     }
 

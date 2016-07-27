@@ -8,6 +8,9 @@
   (for [Issue #258](https://github.com/pbek/QOwnNotes/issues/258))
 - some more SSL errors are now ignored
   (for [Issue #264](https://github.com/pbek/QOwnNotes/issues/264))
+- added more support for same note names in different note subfolders
+  (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
+    - there still has to be done more here
 
 ## 16.07.12
 - the expand/collapse state of the items in the note subfolder tree will not 

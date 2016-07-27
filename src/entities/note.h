@@ -40,7 +40,7 @@ public:
 
     static Note fetchByFileName(QString fileName);
 
-    static Note fetchByName(QString name);
+    static Note fetchByName(QString name, int noteSubFolderId = -1);
 
     static QList<Note> fetchAll(int limit = -1);
 
@@ -145,7 +145,7 @@ public:
 
     bool modifyNoteTextFileNameFromQMLHook();
 
-    static QList<int> searchInNotes(QString query);
+    static QList<int> searchInNotes(QString query, int noteSubFolderId = -1);
 
     static QStringList buildQueryStringList(QString searchString);
 
