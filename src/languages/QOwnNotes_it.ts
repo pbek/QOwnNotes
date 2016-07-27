@@ -603,13 +603,8 @@
         <translation>Mostra barra di stato</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1591"/>
-        <source>Share note</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1594"/>
-        <source>Ctrl+Alt+S</source>
+        <source>Share note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

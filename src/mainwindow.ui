@@ -1583,6 +1583,9 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionShare_note">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset theme="document-share" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
@@ -1591,7 +1594,7 @@ p, li { white-space: pre-wrap; }
     <string>Share note</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Alt+S</string>
+    <string notr="true">Ctrl+Alt+S</string>
    </property>
   </action>
  </widget>
