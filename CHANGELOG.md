@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.07.14
+- added more Portuguese and German translation (thank you mlimacarlos
+  and bigant)
+
 ## 16.07.13
 - quotes will now be shown in the markdown preview
   (for [Issue #261](https://github.com/pbek/QOwnNotes/issues/261))
