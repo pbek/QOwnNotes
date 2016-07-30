@@ -126,18 +126,31 @@ Note Note::fetch(int id) {
     return note;
 }
 
-Note Note::fetchByFileName(QString fileName) {
+Note Note::fetchByFileName(QString fileName, int noteSubFolderId) {
     Note note;
-    note.fillByFileName(fileName);
+
+    // get the active note subfolder id if none was set
+    if (noteSubFolderId == -1) {
+        noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
+
+    note.fillByFileName(fileName, noteSubFolderId);
     return note;
 }
 
-bool Note::fillByFileName(QString fileName) {
+bool Note::fillByFileName(QString fileName, int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
-    query.prepare("SELECT * FROM note WHERE file_name = :file_name");
+    // get the active note subfolder id if none was set
+    if (noteSubFolderId == -1) {
+        noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    }
+
+    query.prepare("SELECT * FROM note WHERE file_name = :file_name AND "
+                          "note_sub_folder_id = :note_sub_folder_id");
     query.bindValue(":file_name", fileName);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -903,7 +916,8 @@ QUrl Note::fullNoteFileUrl() {
     return QUrl("file://" + windowsSlash + fullNoteFilePath());
 }
 
-int Note::storeDirtyNotesToDisk(Note &currentNote) {
+int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
+                                bool *noteWasRenamed) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
     ScriptingService* scriptingService = ScriptingService::instance();
@@ -918,9 +932,15 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
         int count = 0;
         for (int r = 0; query.next(); r++) {
             note = noteFromQuery(query);
-            QString oldFileName = note.getFileName();
+            QString oldName = note.getName();
             note.storeNoteTextFileToDisk();
-            QString newFileName = note.getFileName();
+            QString newName = note.getName();
+
+            if (oldName != newName) {
+                // rename the note file names of note tag links
+                Tag::renameNoteFileNamesOfLinks(oldName, newName);
+                *noteWasRenamed = true;
+            }
 
             // emit the signal for the QML that the note was stored
             emit scriptingService->noteStored(
@@ -928,11 +948,8 @@ int Note::storeDirtyNotesToDisk(Note &currentNote) {
                             static_cast<QObject*>(NoteApi::fromNote(note))));
 
             // reassign currentNote if filename of currentNote has changed
-            if ((oldFileName == currentNote.getFileName()) &&
-                (oldFileName != newFileName)) {
-                currentNote = note;
-                qDebug() << "filename of currentNote has changed to: "
-                << newFileName;
+            if (note.isSameFile(currentNote)) {
+                *currentNoteChanged = true;
             }
 
             qDebug() << "stored note: " << note;
@@ -1008,7 +1025,7 @@ bool Note::exists() {
 // reloads the current Note (by fileName)
 //
 bool Note::refetch() {
-    return this->fillByFileName(this->fileName);
+    return this->fillByFileName(fileName, noteSubFolderId);
 }
 
 /**
@@ -1133,8 +1150,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
     // get markdown html
     QString result = QString::fromUtf8((char *) html->data, html->size);
 
-    qDebug() << __func__ << " - 'result': " << result;
-
+//    qDebug() << __func__ << " - 'result': " << result;
 
     /* Cleanup */
     free(sequence);
@@ -1614,6 +1630,17 @@ int Note::countByNoteSubFolderId(int noteSubFolderId) {
 }
 
 /**
+ * Checks if the notes are the same (by file)
+ *
+ * @param note
+ * @return
+ */
+bool Note::isSameFile(Note note) {
+    return (id == note.getId()) &&
+            (noteSubFolderId == note.getNoteSubFolderId());
+}
+
+/**
  * Fetches all tags of the note
  */
 //QList<Tag> Note::tags() {
@@ -1621,9 +1648,11 @@ int Note::countByNoteSubFolderId(int noteSubFolderId) {
 //}
 
 QDebug operator<<(QDebug dbg, const Note &note) {
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(note.noteSubFolderId);
     dbg.nospace() << "Note: <id>" << note.id << " <name>" << note.name <<
         " <fileName>" << note.fileName <<
         " <noteSubFolderId>" << note.noteSubFolderId <<
+        " <relativePath>" << noteSubFolder.relativePath() <<
         " <hasDirtyData>" << note.hasDirtyData;
     return dbg.space();
 }

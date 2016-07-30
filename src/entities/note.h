@@ -38,7 +38,7 @@ public:
 
     static Note fetch(int id);
 
-    static Note fetchByFileName(QString fileName);
+    static Note fetchByFileName(QString fileName, int noteSubFolderId = -1);
 
     static Note fetchByName(QString name, int noteSubFolderId = -1);
 
@@ -73,7 +73,9 @@ public:
 
     static QString getFullNoteFilePathForFile(QString fileName);
 
-    static int storeDirtyNotesToDisk(Note &currentNote);
+    static int storeDirtyNotesToDisk(Note &currentNote,
+                                     bool *currentNoteChanged = Q_NULLPTR,
+                                     bool *noteWasRenamed = Q_NULLPTR);
 
     bool updateNoteTextFromDisk();
 
@@ -91,7 +93,7 @@ public:
 
     bool fillFromQuery(QSqlQuery query);
 
-    bool fillByFileName(QString fileName);
+    bool fillByFileName(QString fileName, int noteSubFolderId = -1);
 
     bool removeNoteFile();
 
@@ -166,6 +168,8 @@ public:
     int getNoteSubFolderId();
 
     QString relativeNoteFilePath(QString separator = "");
+
+    bool isSameFile(Note note);
 
 protected:
     int id;

@@ -572,4 +572,6 @@ private:
     void removeSelectedNoteSubFolders();
 
     bool createNewNoteSubFolder(QString folderName = "");
+
+    QTreeWidgetItem *findNoteInNoteTreeWidget(Note note);
 };

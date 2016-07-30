@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.07.14
+- did a lot of improvements for support of same note names in different 
+  note subfolders and general note storing, loading, tagging and
+  renaming
+  (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
 - added more Portuguese and German translation (thank you mlimacarlos
   and bigant)
 

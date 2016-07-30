@@ -74,6 +74,10 @@ MainWindow::MainWindow(QWidget *parent) :
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
 
+    qApp->setProperty(
+            "mainWindow",
+            QVariant::fromValue<MainWindow *>(this));
+
     ClientProxy proxy;
     // refresh the Qt proxy settings
     proxy.setupQtProxyFromSettings();
@@ -1349,17 +1353,42 @@ void MainWindow::setTreeWidgetItemToolTipForNote(
  * @brief makes the current note the first item in the note list without reloading the whole list
  */
 void MainWindow::makeCurrentNoteFirstInNoteList() {
-    QString name = this->currentNote.getName();
-    QList<QTreeWidgetItem *> items =
-            this->ui->noteTreeWidget->findItems(name, Qt::MatchExactly);
-    if (items.count() > 0) {
-        const QSignalBlocker blocker(this->ui->noteTreeWidget);
+    QTreeWidgetItem *item = findNoteInNoteTreeWidget(currentNote);
+
+    if (item != Q_NULLPTR) {
+        const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker);
 
         ui->noteTreeWidget->takeTopLevelItem(
-                ui->noteTreeWidget->indexOfTopLevelItem(items[0]));
-        ui->noteTreeWidget->insertTopLevelItem(0, items[0]);
-        this->ui->noteTreeWidget->setCurrentItem(items[0]);
+                ui->noteTreeWidget->indexOfTopLevelItem(item));
+        ui->noteTreeWidget->insertTopLevelItem(0, item);
+
+        bool isInActiveNoteSubFolder =
+                NoteSubFolder::activeNoteSubFolderId() ==
+                        currentNote.getNoteSubFolderId();
+
+        if (!isInActiveNoteSubFolder) {
+            item->setHidden(true);
+        } else {
+            ui->noteTreeWidget->setCurrentItem(item);
+        }
+    }
+}
+
+/**
+ * Finds a note in the note tree widget and returns its item
+ *
+ * @param note
+ * @return
+ */
+QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(Note note) {
+    int noteId = note.getId();
+
+    for (int i = 0; i < ui->noteTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *item = ui->noteTreeWidget->topLevelItem(i);
+        if (item->data(0, Qt::UserRole).toInt() == noteId) {
+            return item;
+        }
     }
 }
 
@@ -1693,15 +1722,20 @@ void MainWindow::noteViewUpdateTimerSlot() {
 
 void MainWindow::storeUpdatedNotesToDisk() {
     {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        QString oldNoteName = this->currentNote.getName();
+        QString oldNoteName = currentNote.getName();
+        int oldNoteSubFolderId = currentNote.getNoteSubFolderId();
 
         // For some reason this->noteDirectoryWatcher gets an event from this.
         // I didn't find an other solution than to wait yet.
         // All flushing and syncing didn't help.
-        int count = Note::storeDirtyNotesToDisk(this->currentNote);
+        bool currentNoteChanged = false;
+        bool noteWasRenamed = false;
+        int count = Note::storeDirtyNotesToDisk(currentNote,
+                                                &currentNoteChanged,
+                                                &noteWasRenamed);
 
         if (count > 0) {
             _noteViewNeedsUpdate = true;
@@ -1724,24 +1758,17 @@ void MainWindow::storeUpdatedNotesToDisk() {
             // is opened, otherwise we get the event
             waitMsecs(100);
 
-            // just to make sure everything is up-to-date
-            this->currentNote.refetch();
+            if (currentNoteChanged) {
+                // just to make sure everything is up-to-date
+                currentNote.refetch();
 
-            QString newNoteName = this->currentNote.getName();
-            if (oldNoteName == newNoteName) {
-                if ( !sortAlphabetically ) {
-                    // if note name has not changed makes the current note
-                    // the first item in the note list without
-                    // reloading the whole list
-                    makeCurrentNoteFirstInNoteList();
+                if (oldNoteName != currentNote.getName()) {
+                    // just to make sure the window title is set correctly
+                    updateWindowTitle();
                 }
-            } else {
-                // rename the note file names of note tag links
-                Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+            }
 
-                // just to make sure the window title is set correctly
-                updateWindowTitle();
-
+            if (noteWasRenamed) {
                 // reload the directory list if note name has changed
                 loadNoteDirectoryList();
             }
@@ -2867,6 +2894,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
         Q_UNUSED(blocker);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                // TODO(pbek): use note id here and heed the note subfolders!
                 QString name = item->text(0);
                 Note note = Note::fetchByName(name);
 
@@ -2916,6 +2944,7 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
             tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                // TODO(pbek): use note id here and heed the note subfolder!
                 QString name = item->text(0);
                 Note note = Note::fetchByName(name);
 
@@ -2950,6 +2979,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
             tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                // TODO(pbek): use note id here and heed the note subfolder!
                 QString name = item->text(0);
                 Note note = Note::fetchByName(name);
 
@@ -2983,6 +3013,7 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
             tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                // TODO(pbek): use note id here and heed the note subfolder!
                 QString name = item->text(0);
                 Note note = Note::fetchByName(name);
 
@@ -3372,6 +3403,10 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
         updateEncryptNoteButtons();
 
+        if (!sortAlphabetically) {
+            makeCurrentNoteFirstInNoteList();
+        }
+
         const QSignalBlocker blocker(ui->noteTreeWidget);
         Q_UNUSED(blocker);
 
@@ -3523,6 +3558,7 @@ void MainWindow::filterNotesByTag() {
     // loop through all visible notes
     while (*it) {
         // hide all notes that are not linked to the active tag
+        // TODO(pbek): heed the note subfolder, note names are now not unique
         if (!fileNameList.contains((*it)->text(0))) {
             (*it)->setHidden(true);
         }
@@ -6137,9 +6173,10 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
         return;
     }
 
-    qDebug() << "currentItemChanged " << current->text(0);
+    int noteId = current->data(0, Qt::UserRole).toInt();
+    Note note = Note::fetch(noteId);
+    qDebug() << "currentItemChanged " << note;
 
-    Note note = Note::fetchByName(current->text(0));
     setCurrentNote(note, true, false);
 
     // parse the current note for markdown highlighting
@@ -6204,6 +6241,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
 
     QStringList noteNameList;
     Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            // TODO(pbek): use note id here and heed the note subfolder id!
             QString name = item->text(0);
             Note note = Note::fetchByName(name);
             if (note.isFetched()) {
@@ -6290,11 +6328,11 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
         QString oldNoteName = note.getName();
 
+        // TODO(pbek): use note id here!
         if (note.renameNoteFile(item->text(0))) {
             QString newNoteName = note.getName();
 
             if (oldNoteName != newNoteName) {
-
                 note.refetch();
                 setCurrentNote(note);
 
