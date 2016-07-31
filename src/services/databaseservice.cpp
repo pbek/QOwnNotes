@@ -176,6 +176,11 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 3;
     }
 
+    if (version < 4) {
+        queryDisk.exec("ALTER TABLE noteTagLink ADD note_sub_folder_path TEXT");
+        version = 4;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

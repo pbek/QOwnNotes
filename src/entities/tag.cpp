@@ -225,9 +225,12 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 
     query.prepare("SELECT t.* FROM tag t "
                           "JOIN noteTagLink l ON t.id = l.tag_id "
-                          "WHERE l.note_file_name = :fileName "
+                          "WHERE l.note_file_name = :fileName AND "
+                          "l.note_sub_folder_path = :noteSubFolderPath "
                           "ORDER BY t.priority ASC, t.name ASC");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -249,8 +252,11 @@ int Tag::countAllOfNote(Note note) {
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
-                          "WHERE note_file_name = :fileName");
+                          "WHERE note_file_name = :fileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -269,9 +275,12 @@ bool Tag::isLinkedToNote(Note note) {
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(*) AS cnt FROM noteTagLink "
-                          "WHERE note_file_name = :fileName "
+                          "WHERE note_file_name = :fileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath "
                           "AND tag_id = :tagId");
     query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
     query.bindValue(":tagId", id);
 
     if (!query.exec()) {
@@ -295,12 +304,16 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
     QString sql = QString(
             "SELECT t.* FROM tag t "
                 "JOIN noteTagLink l ON t.id = l.tag_id "
-                "WHERE l.note_file_name IN ('%1') "
+                "WHERE l.note_file_name IN ('%1') AND "
+                    "l.note_sub_folder_path = :noteSubFolderPath "
                 "GROUP BY t.id "
                 "ORDER BY t.priority ASC, t.name ASC")
             .arg(noteIdListString);
+    query.prepare(sql);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
-    if (!query.exec(sql)) {
+    if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
         for (int r = 0; query.next(); r++) {
@@ -321,8 +334,11 @@ QStringList Tag::fetchAllLinkedNoteFileNames() {
 
     QStringList fileNameList;
 
-    query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
+    query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+                          "AND note_sub_folder_path = :noteSubFolderPath");
     query.bindValue(":id", this->id);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -365,8 +381,11 @@ int Tag::countLinkedNoteFileNames() {
     QSqlQuery query(db);
 
     query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
-                          "WHERE tag_id = :id");
+                          "WHERE tag_id = :id AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
     query.bindValue(":id", this->id);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -422,11 +441,15 @@ bool Tag::linkToNote(Note note) {
 
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-    query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name) "
-                           "VALUES (:tagId, :noteFileName)");
+    query.prepare("INSERT INTO noteTagLink (tag_id, note_file_name, "
+                          "note_sub_folder_path) "
+                          "VALUES (:tagId, :noteFileName, "
+                          ":noteSubFolderPath)");
 
     query.bindValue(":tagId", this->id);
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error
@@ -448,10 +471,13 @@ bool Tag::removeLinkToNote(Note note) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE tag_id = :tagId AND "
-                          "note_file_name = :noteFileName");
+                          "note_file_name = :noteFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
 
     query.bindValue(":tagId", this->id);
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error
@@ -469,9 +495,12 @@ bool Tag::removeAllLinksToNote(Note note) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     query.prepare("DELETE FROM noteTagLink WHERE "
-                          "note_file_name = :noteFileName");
+                          "note_file_name = :noteFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
 
     query.bindValue(":noteFileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error
@@ -488,12 +517,14 @@ bool Tag::removeAllLinksToNote(Note note) {
 bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-    // TODO(pbek): we need to heed note subfolders here
     query.prepare("UPDATE noteTagLink SET note_file_name = :newFileName WHERE "
-                          "note_file_name = :oldFileName");
+                          "note_file_name = :oldFileName AND "
+                          "note_sub_folder_path = :noteSubFolderPath");
 
     query.bindValue(":oldFileName", oldFileName);
     query.bindValue(":newFileName", newFileName);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         // on error

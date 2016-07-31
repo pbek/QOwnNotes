@@ -5,6 +5,8 @@
   note subfolders and general note storing, loading, tagging and
   renaming
   (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
+- added support for tagging in note subfolders
+  (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
 - added more Portuguese, German, Russian, Hungarian, Dutch translation
   (thank you mlimacarlos, bigant, frostyland, Maboroshy and Fabijenna)
 
