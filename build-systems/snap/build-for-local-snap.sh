@@ -53,7 +53,10 @@ echo "Building snap..."
 snapcraft
 
 echo "Uploading snap..."
-snapcraft upload qownnotes_${QOWNNOTES_VERSION}_amd64.snap
+snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release stable
+
+#echo "Releasing snap..."
+# snapcraft release qownnotes --release ${REVISION} stable
 
 # this may work in the future (we need to set a channel when releasing)
 #snapcraft push qownnotes_${QOWNNOTES_VERSION}_amd64.snap --release=Stable
