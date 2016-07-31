@@ -63,7 +63,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="55"/>
       <source>Fatal</source>
-      <translation>Fatale</translation>
+      <translation>Fataal</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="87"/>
@@ -73,7 +73,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="24"/>
       <source>Critical</source>
-      <translation>Kritische</translation>
+      <translation>Kritisch</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="48"/>
@@ -295,13 +295,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="972"/>
-      <location filename="../mainwindow.cpp" line="6238"/>
+      <location filename="../mainwindow.cpp" line="6275"/>
       <source>Select &amp;all notes</source>
       <translation>Selecteer &amp;alle notities</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="981"/>
-      <location filename="../mainwindow.cpp" line="4046"/>
+      <location filename="../mainwindow.cpp" line="4081"/>
       <source>Insert &amp;link</source>
       <translation>Voeg &amp;link in</translation>
     </message>
@@ -608,55 +608,55 @@
       <translation type="unfinished">Share note</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1573"/>
-      <location filename="../mainwindow.cpp" line="1619"/>
-      <location filename="../mainwindow.cpp" line="3626"/>
+      <location filename="../mainwindow.cpp" line="1602"/>
+      <location filename="../mainwindow.cpp" line="1648"/>
+      <location filename="../mainwindow.cpp" line="3661"/>
       <source>stored current note to disk</source>
       <translation>huidige notitie is opgeslagen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1604"/>
+      <location filename="../mainwindow.cpp" line="1633"/>
       <source>Note was removed externally!</source>
       <translation>Notitie werd extern verwijderd!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1605"/>
+      <location filename="../mainwindow.cpp" line="1634"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>Huidige notitie werd buiten deze toepassing verwijderd! Actuele notitie herstellen?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1607"/>
+      <location filename="../mainwindow.cpp" line="1636"/>
       <source>&amp;Restore</source>
       <translation>&amp;Herstellen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1607"/>
-      <location filename="../mainwindow.cpp" line="2262"/>
-      <location filename="../mainwindow.cpp" line="2713"/>
-      <location filename="../mainwindow.cpp" line="2794"/>
-      <location filename="../mainwindow.cpp" line="2823"/>
-      <location filename="../mainwindow.cpp" line="2864"/>
-      <location filename="../mainwindow.cpp" line="2916"/>
-      <location filename="../mainwindow.cpp" line="2950"/>
-      <location filename="../mainwindow.cpp" line="2983"/>
-      <location filename="../mainwindow.cpp" line="3334"/>
-      <location filename="../mainwindow.cpp" line="4326"/>
+      <location filename="../mainwindow.cpp" line="1636"/>
+      <location filename="../mainwindow.cpp" line="2288"/>
+      <location filename="../mainwindow.cpp" line="2739"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2849"/>
+      <location filename="../mainwindow.cpp" line="2890"/>
+      <location filename="../mainwindow.cpp" line="2943"/>
+      <location filename="../mainwindow.cpp" line="2978"/>
+      <location filename="../mainwindow.cpp" line="3012"/>
+      <location filename="../mainwindow.cpp" line="3364"/>
+      <location filename="../mainwindow.cpp" line="4361"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Annuleren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1642"/>
+      <location filename="../mainwindow.cpp" line="1671"/>
       <source>note was modified externally: %1</source>
       <translation>notitie is extern bewerkt: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1658"/>
+      <location filename="../mainwindow.cpp" line="1687"/>
       <source>notes directory was modified externally</source>
       <translation>notities map is extern bewerkt</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1720"/>
+      <location filename="../mainwindow.cpp" line="1754"/>
       <source>stored %n note(s) to disk</source>
       <translation>
         <numerusform>%n notitie opgeslagen</numerusform>
@@ -664,76 +664,76 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1779"/>
+      <location filename="../mainwindow.cpp" line="1805"/>
       <source>click here to see what has changed and to be able to download the latest version</source>
       <translation>klik hier om te zien wat er is veranderd en om de laatste versie te downloaden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1795"/>
+      <location filename="../mainwindow.cpp" line="1821"/>
       <source>new version %1 available</source>
       <translation>nieuwe versie %1 beschikbaar</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2134"/>
+      <location filename="../mainwindow.cpp" line="2160"/>
       <source>No folder was selected</source>
       <translation>Geen map geselecteerd</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2135"/>
+      <location filename="../mainwindow.cpp" line="2161"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Je moet je ownCloud notitie map selecteren om deze software te laten werken!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2137"/>
+      <location filename="../mainwindow.cpp" line="2163"/>
       <source>&amp;Retry</source>
       <translation>&amp;opnieuw proberen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2137"/>
+      <location filename="../mainwindow.cpp" line="2163"/>
       <source>&amp;Exit</source>
       <translation>&amp;Afsluiten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2259"/>
+      <location filename="../mainwindow.cpp" line="2285"/>
       <source>Remove current note</source>
       <translation>Huidige notitie verwijderen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2260"/>
+      <location filename="../mainwindow.cpp" line="2286"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Verwijder huidige notitie: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2262"/>
-      <location filename="../mainwindow.cpp" line="2713"/>
-      <location filename="../mainwindow.cpp" line="2794"/>
-      <location filename="../mainwindow.cpp" line="2823"/>
-      <location filename="../mainwindow.cpp" line="2983"/>
+      <location filename="../mainwindow.cpp" line="2288"/>
+      <location filename="../mainwindow.cpp" line="2739"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2849"/>
+      <location filename="../mainwindow.cpp" line="3012"/>
       <source>&amp;Remove</source>
       <translation>&amp;Verwijderen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2564"/>
+      <location filename="../mainwindow.cpp" line="2590"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Voer aub het &lt;strong&gt;wachtwoord&lt;/strong&gt; van deze gecodeerde notitie in.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2588"/>
+      <location filename="../mainwindow.cpp" line="2614"/>
       <source>Note can't be decrypted!</source>
       <translation>Notitie kan niet worden gedecodeerd!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2589"/>
+      <location filename="../mainwindow.cpp" line="2615"/>
       <source>It seems that your password is not valid!</source>
       <translation>Het lijkt erop dat uw wachtwoord niet geldig is!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2707"/>
+      <location filename="../mainwindow.cpp" line="2733"/>
       <source>Remove selected notes</source>
       <translation>Verwijder geselecteerde notities</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2708"/>
+      <location filename="../mainwindow.cpp" line="2734"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -747,18 +747,18 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2788"/>
-      <location filename="../mainwindow.cpp" line="6426"/>
+      <location filename="../mainwindow.cpp" line="2814"/>
+      <location filename="../mainwindow.cpp" line="6463"/>
       <source>Remove selected folders</source>
       <translation>Geselecteerde mappen verwijderen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2819"/>
+      <location filename="../mainwindow.cpp" line="2845"/>
       <source>Remove selected tags</source>
       <translation>Verwijder geselecteerde labels</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2846"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>geselecteerde label verwijderen? In dit proces worden geen notities verwijderd.</numerusform>
@@ -766,12 +766,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2861"/>
+      <location filename="../mainwindow.cpp" line="2887"/>
       <source>Move selected notes</source>
       <translation>Verplaats geselecteerde notities</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2862"/>
+      <location filename="../mainwindow.cpp" line="2888"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Verplaats %n geselecteerde notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -779,17 +779,17 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2864"/>
+      <location filename="../mainwindow.cpp" line="2890"/>
       <source>&amp;Move</source>
       <translation>&amp;Verplaats</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2913"/>
+      <location filename="../mainwindow.cpp" line="2940"/>
       <source>Copy selected notes</source>
       <translation>Kopieer geselecteerde notities</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2914"/>
+      <location filename="../mainwindow.cpp" line="2941"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Kopiëer een geselecteerde notitie naar &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -797,18 +797,18 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2916"/>
+      <location filename="../mainwindow.cpp" line="2943"/>
       <source>&amp;Copy</source>
       <translation>&amp;Kopiëer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2933"/>
-      <location filename="../mainwindow.cpp" line="3001"/>
+      <location filename="../mainwindow.cpp" line="2961"/>
+      <location filename="../mainwindow.cpp" line="3031"/>
       <source>Done</source>
       <translation>Klaar</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2934"/>
+      <location filename="../mainwindow.cpp" line="2962"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>Een notitie is gekopiëerd naar &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -816,12 +816,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2947"/>
+      <location filename="../mainwindow.cpp" line="2975"/>
       <source>Tag selected notes</source>
       <translation>Geselecteerde notities labelen</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2948"/>
+      <location filename="../mainwindow.cpp" line="2976"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Label de geselecteerde notitie &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -829,12 +829,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2950"/>
+      <location filename="../mainwindow.cpp" line="2978"/>
       <source>&amp;Tag</source>
       <translation>&amp;Label</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2967"/>
+      <location filename="../mainwindow.cpp" line="2996"/>
       <source>%n note(s) were tagged with &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>Een notitie is met &lt;strong&gt;%2&lt;/strong&gt; gelabeld.</numerusform>
@@ -842,12 +842,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2980"/>
+      <location filename="../mainwindow.cpp" line="3009"/>
       <source>Remove tag from selected notes</source>
       <translation>Label verwijderen van geselecteerde notities</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2981"/>
+      <location filename="../mainwindow.cpp" line="3010"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; verwijderen van %n geselecteerde notities?</numerusform>
@@ -855,7 +855,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3002"/>
+      <location filename="../mainwindow.cpp" line="3032"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>Label &lt;strong&gt;%1&lt;/strong&gt; werd verwijderd van een notitie</numerusform>
@@ -863,373 +863,373 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3012"/>
+      <location filename="../mainwindow.cpp" line="3042"/>
       <source>Current notes folder: </source>
       <translation>Huidige notities map:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3014"/>
+      <location filename="../mainwindow.cpp" line="3044"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>Stel de notities map in. Huidige notities map:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3073"/>
+      <location filename="../mainwindow.cpp" line="3103"/>
       <source>Link to an url or note</source>
       <translation>Link naar een URL of notitie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3184"/>
+      <location filename="../mainwindow.cpp" line="3214"/>
       <source>Print note</source>
       <translation>Druk notitie af</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3215"/>
+      <location filename="../mainwindow.cpp" line="3245"/>
       <source>Letter</source>
       <translation>Brief</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3241"/>
+      <location filename="../mainwindow.cpp" line="3271"/>
       <source>Portrait</source>
       <translation>Portret</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3241"/>
+      <location filename="../mainwindow.cpp" line="3271"/>
       <source>Landscape</source>
       <translation>Landschap</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3246"/>
+      <location filename="../mainwindow.cpp" line="3276"/>
       <source>Orientation</source>
       <translation>Afdrukstand</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3246"/>
+      <location filename="../mainwindow.cpp" line="3276"/>
       <source>Orientation:</source>
       <translation>Afdrukstand:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3266"/>
+      <location filename="../mainwindow.cpp" line="3296"/>
       <source>PDF files (*.pdf)</source>
       <translation>PDF-bestanden (* .pdf)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3267"/>
+      <location filename="../mainwindow.cpp" line="3297"/>
       <source>Export current note as PDF</source>
       <translation>Export huidige notitie als PDF</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3875"/>
+      <location filename="../mainwindow.cpp" line="3910"/>
       <source>Open QOwnNotes</source>
       <translation>Open QOwnNotes</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3884"/>
-      <location filename="../mainwindow.cpp" line="6424"/>
+      <location filename="../mainwindow.cpp" line="3919"/>
+      <location filename="../mainwindow.cpp" line="6461"/>
       <source>New note</source>
       <translation>Nieuwe notitie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3900"/>
+      <location filename="../mainwindow.cpp" line="3935"/>
       <source>Recent notes</source>
       <translation>Recente notities</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3930"/>
+      <location filename="../mainwindow.cpp" line="3965"/>
       <source>Show todo lists</source>
       <translation>Toon takenlijsten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3941"/>
+      <location filename="../mainwindow.cpp" line="3976"/>
       <source>Recent tasks</source>
       <translation>Recente taken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3973"/>
+      <location filename="../mainwindow.cpp" line="4008"/>
       <source>Quit</source>
       <translation>Afsluiten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5082"/>
+      <location filename="../mainwindow.cpp" line="5117"/>
       <source>show notes in note root folder (%1)</source>
       <translation>notities weergeven in de hoofdmap van de notitie (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5086"/>
+      <location filename="../mainwindow.cpp" line="5121"/>
       <source>Note folder</source>
       <translation>Notitie map</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6234"/>
+      <location filename="../mainwindow.cpp" line="6271"/>
       <source>Open note in external editor</source>
       <translation>Open notitie in externe editor</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6236"/>
+      <location filename="../mainwindow.cpp" line="6273"/>
       <source>Show note in file manager</source>
       <translation>Toon notitie in bestandsmanager</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6425"/>
+      <location filename="../mainwindow.cpp" line="6462"/>
       <source>New subfolder</source>
       <translation>Nieuwe submap</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6428"/>
+      <location filename="../mainwindow.cpp" line="6465"/>
       <source>Show folder in file manager</source>
       <translation>Map weergeven in bestandsbeheerder</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6459"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
       <source>Create a new folder</source>
       <translation>Maak een nieuwe map</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6459"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
       <source>Folder name:</source>
       <translation>De naam van de map:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5050"/>
+      <location filename="../mainwindow.cpp" line="5085"/>
       <source>show all untagged notes (%1)</source>
       <translation>Toon alle ongelabelde notities (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5053"/>
+      <location filename="../mainwindow.cpp" line="5088"/>
       <source>Untagged notes</source>
       <translation>Niet-gelabelde notities</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5914"/>
+      <location filename="../mainwindow.cpp" line="5949"/>
       <source>an url was opened at the current cursor position</source>
       <translation>een URL is geopend op de huidige cursorpositie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5980"/>
+      <location filename="../mainwindow.cpp" line="6015"/>
       <source>the scripting engine was reloaded</source>
       <translation>de script-engine is herladen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5995"/>
+      <location filename="../mainwindow.cpp" line="6030"/>
       <source>HTML files (*.html)</source>
       <translation>HTML-bestanden (*.html)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5996"/>
+      <location filename="../mainwindow.cpp" line="6031"/>
       <source>Export current note as HTML file</source>
       <translation>De huidige notitie exporteren als HTML-bestand</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3224"/>
+      <location filename="../mainwindow.cpp" line="3254"/>
       <source>Page size</source>
       <translation>Paginagrootte</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="411"/>
+      <location filename="../mainwindow.cpp" line="415"/>
       <source>your tasks are being loaded from your ownCloud server</source>
       <translation>uw taken worden geladen vanaf uw ownCloud-server</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="481"/>
+      <location filename="../mainwindow.cpp" line="485"/>
       <source>quit toolbar</source>
       <translation>werkbalk afsluiten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="593"/>
       <source>Show menu bar item</source>
       <translation>Toon het menubalk item</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3224"/>
+      <location filename="../mainwindow.cpp" line="3254"/>
       <source>Page size:</source>
       <translation>Paginagrootte:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3305"/>
+      <location filename="../mainwindow.cpp" line="3335"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>Quotes zal anonieme gebruiksgegevens volgen, dat helpt om te bepalen welke delen van QOwnNotes te verbeteren zijn en om bugs te vinden en op te lossen. U kunt dit gedrag in de instellingen uitschakelen.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3309"/>
+      <location filename="../mainwindow.cpp" line="3339"/>
       <source>&amp;Ok</source>
       <translation>&amp;OK</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4005"/>
+      <location filename="../mainwindow.cpp" line="4040"/>
       <source>note versions are currently loaded from your ownCloud server</source>
       <translation>notitie versies zijn van je ownCloud server geladen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4019"/>
+      <location filename="../mainwindow.cpp" line="4054"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
       <translation>Verwijderde notities zijn van je ownCloud server geladen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6170"/>
+      <location filename="../mainwindow.cpp" line="6206"/>
       <source>&amp;Move notes to...</source>
       <translation>&amp;Verplaats notities naar...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6171"/>
+      <location filename="../mainwindow.cpp" line="6207"/>
       <source>&amp;Copy notes to...</source>
       <translation>&amp;Kopieer notities naar...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6201"/>
+      <location filename="../mainwindow.cpp" line="6237"/>
       <source>&amp;Tag selected notes with...</source>
       <translation>&amp;Label geselecteerde notities met...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6220"/>
+      <location filename="../mainwindow.cpp" line="6257"/>
       <source>&amp;Remove tag from selected notes...</source>
       <translation>&amp;Label verwijderen van geselecteerde notities...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6231"/>
+      <location filename="../mainwindow.cpp" line="6268"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Verwijder notities</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4046"/>
+      <location filename="../mainwindow.cpp" line="4081"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Link geselecteerde tekst</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4050"/>
+      <location filename="../mainwindow.cpp" line="4085"/>
       <source>Paste HTML or media</source>
       <translation>Plak HTML of media</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5022"/>
+      <location filename="../mainwindow.cpp" line="5057"/>
       <source>show all notes (%1)</source>
       <translation>toon alle notities (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5025"/>
+      <location filename="../mainwindow.cpp" line="5060"/>
       <source>All notes</source>
       <translation>Alle notities</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5645"/>
+      <location filename="../mainwindow.cpp" line="5680"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Label toevoegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5652"/>
+      <location filename="../mainwindow.cpp" line="5687"/>
       <source>&amp;Move tags to...</source>
       <translation>&amp;Labels verplaatsen naar...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5684"/>
+      <location filename="../mainwindow.cpp" line="5719"/>
       <source>Tag could not be created!</source>
       <translation>Label kan niet worden gemaakt!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5738"/>
+      <location filename="../mainwindow.cpp" line="5773"/>
       <source>Move to the root</source>
       <translation>Verplaatsen naar de hoofdmap</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5738"/>
+      <location filename="../mainwindow.cpp" line="5773"/>
       <source>Move to this tag</source>
       <translation>Verplaatsen naar dit label</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5788"/>
+      <location filename="../mainwindow.cpp" line="5823"/>
       <source>Tag this</source>
       <translation>Label dit</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5818"/>
+      <location filename="../mainwindow.cpp" line="5853"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Kan label '%1' niet naar dit label verplaatsen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5826"/>
+      <location filename="../mainwindow.cpp" line="5861"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>Label '%1' verplaatst naar nieuw label</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5936"/>
+      <location filename="../mainwindow.cpp" line="5971"/>
       <source>no equation was found in front of the cursor</source>
       <translation>Er is geen vergelijking gevonden voor de cursorlokatie</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5955"/>
+      <location filename="../mainwindow.cpp" line="5990"/>
       <source>result for equation: %1 = %2</source>
       <translation>resultaat voor vergelijking: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5185"/>
+      <location filename="../mainwindow.cpp" line="5220"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>toon alle notities die gelabeld zijn met '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5489"/>
+      <location filename="../mainwindow.cpp" line="5524"/>
       <source>remove tag '%1' from note</source>
       <translation>Label '%1' van notitie verwijderen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5647"/>
+      <location filename="../mainwindow.cpp" line="5682"/>
       <source>&amp;Edit tag</source>
       <translation>&amp;Label bewerken</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5649"/>
+      <location filename="../mainwindow.cpp" line="5684"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Labels verwijderen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3329"/>
+      <location filename="../mainwindow.cpp" line="3359"/>
       <source>No selected todo lists!</source>
       <translation>Geen geselecteerde takenlijsten!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="445"/>
+      <location filename="../mainwindow.cpp" line="449"/>
       <source>formatting toolbar</source>
       <translation>Opmaak werkbalk</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="452"/>
+      <location filename="../mainwindow.cpp" line="456"/>
       <source>inserting toolbar</source>
       <translation>werkbalk invoegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="459"/>
+      <location filename="../mainwindow.cpp" line="463"/>
       <source>encryption toolbar</source>
       <translation>werkbalk codering</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="467"/>
+      <location filename="../mainwindow.cpp" line="471"/>
       <source>window toolbar</source>
       <translation>werkbalk venster</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1297"/>
+      <location filename="../mainwindow.cpp" line="1301"/>
       <source>show notes in folder '%1' (%2)</source>
       <translation>notities weergeven in de map '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1337"/>
+      <location filename="../mainwindow.cpp" line="1341"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;laatst bewerkt: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1342"/>
+      <location filename="../mainwindow.cpp" line="1346"/>
       <source>&lt;br /&gt;path: %1</source>
       <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1546"/>
+      <location filename="../mainwindow.cpp" line="1575"/>
       <source>current note was modified externally</source>
       <translation>huidige notitie is extern bewerkt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2112"/>
+      <location filename="../mainwindow.cpp" line="2138"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Selecteer de map waar uw notities zullen worden opgeslagen</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2789"/>
+      <location filename="../mainwindow.cpp" line="2815"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</source>
       <translation>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; geselecteerde map verwijderen? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Alle notities in de map zullen verloren zijn!</numerusform>
@@ -1237,29 +1237,29 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2800"/>
+      <location filename="../mainwindow.cpp" line="2826"/>
       <source>removed note subfolder: %1</source>
       <translation>submap met notities verwijderd: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3330"/>
+      <location filename="../mainwindow.cpp" line="3360"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
       <translation> U heeft geen takenlijsten gekozen. Controleer aub de &lt;strong&gt;Taken&lt;/strong&gt;configuratie in de instelingen!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4680"/>
-      <location filename="../mainwindow.cpp" line="4742"/>
+      <location filename="../mainwindow.cpp" line="4715"/>
+      <location filename="../mainwindow.cpp" line="4777"/>
       <source>inserting image</source>
       <translation>afbeelding invoegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4685"/>
-      <location filename="../mainwindow.cpp" line="4745"/>
+      <location filename="../mainwindow.cpp" line="4720"/>
+      <location filename="../mainwindow.cpp" line="4780"/>
       <source>done inserting image</source>
       <translation>klaar met het invoegen van de afbeelding</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4696"/>
+      <location filename="../mainwindow.cpp" line="4731"/>
       <source>copied %n note(s) to %1</source>
       <translation>
         <numerusform>%n notities gekopieerd naar %1</numerusform>
@@ -1267,7 +1267,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4705"/>
+      <location filename="../mainwindow.cpp" line="4740"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>kan notitie niet kopiëren (waarschijnlijk reeds bestaand)</numerusform>
@@ -1275,7 +1275,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4715"/>
+      <location filename="../mainwindow.cpp" line="4750"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>kopiëren van de notitie overgeslagen (geen markdown of tekst bestand, of niet leesbaar)</numerusform>
@@ -1283,108 +1283,108 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4729"/>
+      <location filename="../mainwindow.cpp" line="4764"/>
       <source>saving temporary image</source>
       <translation>tijdelijke afbeelding opslaan</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4748"/>
+      <location filename="../mainwindow.cpp" line="4783"/>
       <source>temporary file can't be opened</source>
       <translation>tijdelijke bestand kan niet worden geopend</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4825"/>
+      <location filename="../mainwindow.cpp" line="4860"/>
       <source>downloading %1</source>
       <translation>%1 aan het downloaden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4855"/>
+      <location filename="../mainwindow.cpp" line="4890"/>
       <source>done downloading images</source>
       <translation>klaar met afbeeldingen downloaden</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4956"/>
+      <location filename="../mainwindow.cpp" line="4991"/>
       <source>Increased font size to %1 pt</source>
       <translation>Verhoog tekengrootte naar %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4968"/>
+      <location filename="../mainwindow.cpp" line="5003"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Verklein lettergrootte naar %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4979"/>
+      <location filename="../mainwindow.cpp" line="5014"/>
       <source>Reset font size to %1 pt</source>
       <translation>Stel lettergrootte in op %1 pt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3310"/>
-      <location filename="../mainwindow.cpp" line="3333"/>
+      <location filename="../mainwindow.cpp" line="3340"/>
+      <location filename="../mainwindow.cpp" line="3363"/>
       <source>Open &amp;settings</source>
       <translation>Open &amp;instellingen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="716"/>
+      <location filename="../mainwindow.cpp" line="720"/>
       <source>leave</source>
       <translation>verlaten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="719"/>
+      <location filename="../mainwindow.cpp" line="723"/>
       <source>leave distraction free mode</source>
       <translation>afleidingsvrije modus verlaten</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4154"/>
+      <location filename="../mainwindow.cpp" line="4189"/>
       <source>Image files (*.jpg *.png *.gif)</source>
       <translation>Beeldbestanden (*.jpg *.png *.gif) </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4155"/>
+      <location filename="../mainwindow.cpp" line="4190"/>
       <source>Select image to insert</source>
       <translation>Selecteer afbeelding om in te voegen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4277"/>
+      <location filename="../mainwindow.cpp" line="4312"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>voer aub je&lt;strong&gt;wachtwoord&lt;/strong&gt; in om de notitie te decoderen.&lt;br /&gt;Herinner &lt;strong&gt; je &lt;/strong&gt; wachtwoord om de inhoud van de notitie te lezen &lt;br /&gt; en herinner dat je dat &lt;strong&gt;alleen kunt in&lt;/strong&gt; &lt;strong&gt; QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4321"/>
+      <location filename="../mainwindow.cpp" line="4356"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Notitie decoderen en opslaan als tekst zonder opmaak</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4322"/>
+      <location filename="../mainwindow.cpp" line="4357"/>
       <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>Je notitie wordt gedecodeerd en opgeslagen als platte tekst. Houd in gedachten dat de ongecodeerde notitie eventueel zal worden gesynchroniseerd met je server en gevoelige teksten kunnen worden blootgesteld!&lt;br /&gt;Wilt u uw notitie decoderen?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4326"/>
+      <location filename="../mainwindow.cpp" line="4361"/>
       <source>&amp;Decrypt</source>
       <translation>Decodeer</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4351"/>
+      <location filename="../mainwindow.cpp" line="4386"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt;br /&gt;Je zult in staat zijn om uw gecodeerde notitie te bewerken </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4408"/>
+      <location filename="../mainwindow.cpp" line="4443"/>
       <source>Markdown files (*.md)</source>
       <translation> Markdown bestanden (*.md)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4409"/>
+      <location filename="../mainwindow.cpp" line="4444"/>
       <source>Export current note as Markdown file</source>
       <translation>Export huidige notitie als Markdown bestand</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4464"/>
+      <location filename="../mainwindow.cpp" line="4499"/>
       <source>bookmarked note position at slot %1</source>
       <translation>bookmark notitie op positie 1%</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4480"/>
+      <location filename="../mainwindow.cpp" line="4515"/>
       <source>jumped to bookmark position at slot %1</source>
       <translation>sprong naar bookmark positie op slot 1%</translation>
     </message>
@@ -1646,7 +1646,7 @@ Are the folder and the file writeable?</source>
   <context>
     <name>ScriptingService</name>
     <message>
-      <location filename="../services/scriptingservice.cpp" line="133"/>
+      <location filename="../services/scriptingservice.cpp" line="136"/>
       <source>file doesn't exist</source>
       <translation>bestand bestaat niet</translation>
     </message>
@@ -2189,12 +2189,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2126"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>U moet herladen van de script-engine, als u een scriptbestand wil wijzigen</translation>
+      <translation>Je moet de script-engine herladen als je een scriptbestand wilt wijzigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2129"/>
       <source>Reload scripting engine</source>
-      <translation>Reload script-engine</translation>
+      <translation>Herlaad script-engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2136"/>
@@ -2333,7 +2333,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1964"/>
       <source>&amp;Add script</source>
-      <translation>Voeg script toe</translation>
+      <translation>&amp;Voeg script toe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1988"/>
@@ -2398,12 +2398,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2365"/>
       <source>Add a custom file extension</source>
-      <translation>Toevoegen van een aangepaste bestanden met de extensie</translation>
+      <translation>Voeg een aangepaste bestandsextensie toe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2379"/>
       <source>Remove a custom file extension</source>
-      <translation>Verwijderen van een aangepaste bestanden met de extensie</translation>
+      <translation>Verwijder een aangepaste bestandsextensie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2418"/>

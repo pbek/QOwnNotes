@@ -25,7 +25,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="47"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;add meg a URL címet&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;add meg az URL címet &lt;/p&gt;&lt;body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
@@ -45,7 +45,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>search for a note to link to</source>
-      <translation>keressen egy belinkelésre kerülő jegyzetet</translation>
+      <translation>találj egy belinkelni való jegyzetet</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="183"/>
@@ -295,13 +295,13 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="972"/>
-      <location filename="../mainwindow.cpp" line="6238"/>
+      <location filename="../mainwindow.cpp" line="6275"/>
       <source>Select &amp;all notes</source>
       <translation>Válassza ki az &amp;összes jegyzetet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="981"/>
-      <location filename="../mainwindow.cpp" line="4046"/>
+      <location filename="../mainwindow.cpp" line="4081"/>
       <source>Insert &amp;link</source>
       <translation>&amp;Link beszúrás</translation>
     </message>
@@ -605,58 +605,58 @@
     <message>
       <location filename="../mainwindow.ui" line="1597"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Megosztom a jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1573"/>
-      <location filename="../mainwindow.cpp" line="1619"/>
-      <location filename="../mainwindow.cpp" line="3626"/>
+      <location filename="../mainwindow.cpp" line="1602"/>
+      <location filename="../mainwindow.cpp" line="1648"/>
+      <location filename="../mainwindow.cpp" line="3661"/>
       <source>stored current note to disk</source>
       <translation>lemezen tárolt aktuális jegyzet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1604"/>
+      <location filename="../mainwindow.cpp" line="1633"/>
       <source>Note was removed externally!</source>
       <translation>A jegyzetet az alkalmazáson kívül törölték!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1605"/>
+      <location filename="../mainwindow.cpp" line="1634"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
       <translation>A jegyzetet az alkalmazáson kívül törölték! Visszaállítja az aktuális jegyzetet?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1607"/>
+      <location filename="../mainwindow.cpp" line="1636"/>
       <source>&amp;Restore</source>
       <translation>&amp;Visszaállítás</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1607"/>
-      <location filename="../mainwindow.cpp" line="2262"/>
-      <location filename="../mainwindow.cpp" line="2713"/>
-      <location filename="../mainwindow.cpp" line="2794"/>
-      <location filename="../mainwindow.cpp" line="2823"/>
-      <location filename="../mainwindow.cpp" line="2864"/>
-      <location filename="../mainwindow.cpp" line="2916"/>
-      <location filename="../mainwindow.cpp" line="2950"/>
-      <location filename="../mainwindow.cpp" line="2983"/>
-      <location filename="../mainwindow.cpp" line="3334"/>
-      <location filename="../mainwindow.cpp" line="4326"/>
+      <location filename="../mainwindow.cpp" line="1636"/>
+      <location filename="../mainwindow.cpp" line="2288"/>
+      <location filename="../mainwindow.cpp" line="2739"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2849"/>
+      <location filename="../mainwindow.cpp" line="2890"/>
+      <location filename="../mainwindow.cpp" line="2943"/>
+      <location filename="../mainwindow.cpp" line="2978"/>
+      <location filename="../mainwindow.cpp" line="3012"/>
+      <location filename="../mainwindow.cpp" line="3364"/>
+      <location filename="../mainwindow.cpp" line="4361"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Mégse</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1642"/>
+      <location filename="../mainwindow.cpp" line="1671"/>
       <source>note was modified externally: %1</source>
       <translation>a jegyzet külsőleg módosításra került: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1658"/>
+      <location filename="../mainwindow.cpp" line="1687"/>
       <source>notes directory was modified externally</source>
       <translation>a jegyzék címtár külsőleg módosult</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="1720"/>
+      <location filename="../mainwindow.cpp" line="1754"/>
       <source>stored %n note(s) to disk</source>
       <translation>
         <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
@@ -664,76 +664,76 @@ Restore current note?</source>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1779"/>
+      <location filename="../mainwindow.cpp" line="1805"/>
       <source>click here to see what has changed and to be able to download the latest version</source>
       <translation>kattintson ide, hogy lássa, mi változott, és letölthetsse a legfrissebb változatot</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1795"/>
+      <location filename="../mainwindow.cpp" line="1821"/>
       <source>new version %1 available</source>
       <translation>új rendelkezésre álló változat %1 </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2134"/>
+      <location filename="../mainwindow.cpp" line="2160"/>
       <source>No folder was selected</source>
       <translation>Nincs mappa kijelölve</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2135"/>
+      <location filename="../mainwindow.cpp" line="2161"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
       <translation>Válassza ki a saját ownCloud jegyzetmappáját, hogy ez a szoftver működjön!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2137"/>
+      <location filename="../mainwindow.cpp" line="2163"/>
       <source>&amp;Retry</source>
       <translation>&amp;Újra</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2137"/>
+      <location filename="../mainwindow.cpp" line="2163"/>
       <source>&amp;Exit</source>
       <translation>&amp;Kilépés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2259"/>
+      <location filename="../mainwindow.cpp" line="2285"/>
       <source>Remove current note</source>
       <translation>Eltávolítom az aktuális jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2260"/>
+      <location filename="../mainwindow.cpp" line="2286"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; jegyzetet?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2262"/>
-      <location filename="../mainwindow.cpp" line="2713"/>
-      <location filename="../mainwindow.cpp" line="2794"/>
-      <location filename="../mainwindow.cpp" line="2823"/>
-      <location filename="../mainwindow.cpp" line="2983"/>
+      <location filename="../mainwindow.cpp" line="2288"/>
+      <location filename="../mainwindow.cpp" line="2739"/>
+      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2849"/>
+      <location filename="../mainwindow.cpp" line="3012"/>
       <source>&amp;Remove</source>
       <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2564"/>
+      <location filename="../mainwindow.cpp" line="2590"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
       <translation>Kérjük, írja be a &lt;strong&gt;jelszót&lt;/strong&gt; a titkosított jegyzet eléréséhez.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2588"/>
+      <location filename="../mainwindow.cpp" line="2614"/>
       <source>Note can't be decrypted!</source>
       <translation>A jegyzet nem titkosítható!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2589"/>
+      <location filename="../mainwindow.cpp" line="2615"/>
       <source>It seems that your password is not valid!</source>
       <translation>Úgy tűnik, hogy a jelszava nem érvényes!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2707"/>
+      <location filename="../mainwindow.cpp" line="2733"/>
       <source>Remove selected notes</source>
       <translation>Távolítsa el a kijelölt jegyzeteket</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2708"/>
+      <location filename="../mainwindow.cpp" line="2734"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -747,18 +747,18 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2788"/>
-      <location filename="../mainwindow.cpp" line="6426"/>
+      <location filename="../mainwindow.cpp" line="2814"/>
+      <location filename="../mainwindow.cpp" line="6463"/>
       <source>Remove selected folders</source>
       <translation>Eltávolítja a kiválasztott mappákat</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2819"/>
+      <location filename="../mainwindow.cpp" line="2845"/>
       <source>Remove selected tags</source>
       <translation>Kijelölt címkék eltávolítása</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2820"/>
+      <location filename="../mainwindow.cpp" line="2846"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
         <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
@@ -766,12 +766,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2861"/>
+      <location filename="../mainwindow.cpp" line="2887"/>
       <source>Move selected notes</source>
       <translation>Áthelyezem  a kijelölt megjegyzéseket</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2862"/>
+      <location filename="../mainwindow.cpp" line="2888"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>%n kijelölt jegyzet(et) áthelyez ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -779,17 +779,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2864"/>
+      <location filename="../mainwindow.cpp" line="2890"/>
       <source>&amp;Move</source>
       <translation>&amp;Áthelyezés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2913"/>
+      <location filename="../mainwindow.cpp" line="2940"/>
       <source>Copy selected notes</source>
       <translation>Másolom a kijelölt jegyzetetket</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2914"/>
+      <location filename="../mainwindow.cpp" line="2941"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>%n kijelölt jegyzet áthelyezése ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -797,18 +797,18 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2916"/>
+      <location filename="../mainwindow.cpp" line="2943"/>
       <source>&amp;Copy</source>
       <translation>&amp;Másolás</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2933"/>
-      <location filename="../mainwindow.cpp" line="3001"/>
+      <location filename="../mainwindow.cpp" line="2961"/>
+      <location filename="../mainwindow.cpp" line="3031"/>
       <source>Done</source>
       <translation>Kész</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2934"/>
+      <location filename="../mainwindow.cpp" line="2962"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n jegyzet ide: &lt;strong&gt;%2&lt;/strong&gt; lett másolva.</numerusform>
@@ -816,12 +816,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2947"/>
+      <location filename="../mainwindow.cpp" line="2975"/>
       <source>Tag selected notes</source>
       <translation>Címkézem a kijelölt jegyzeteket</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2948"/>
+      <location filename="../mainwindow.cpp" line="2976"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
         <numerusform>Címkézzek %n kijelölt jegyzetet &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -829,12 +829,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2950"/>
+      <location filename="../mainwindow.cpp" line="2978"/>
       <source>&amp;Tag</source>
       <translation>&amp;Tag</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2967"/>
+      <location filename="../mainwindow.cpp" line="2996"/>
       <source>%n note(s) were tagged with &lt;strong&gt;%2&lt;/strong&gt;.</source>
       <translation>
         <numerusform>%n jegyzet lett ellátva címkével &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -842,12 +842,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2980"/>
+      <location filename="../mainwindow.cpp" line="3009"/>
       <source>Remove tag from selected notes</source>
       <translation>Tag eltávolítása a kijelölt jegyzetben</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2981"/>
+      <location filename="../mainwindow.cpp" line="3010"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
       <translation>
         <numerusform>Távolítsam el a címkét&lt;strong&gt;%1&lt;/strong&gt; %n kijelölt jegyzetben?</numerusform>
@@ -855,7 +855,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="3002"/>
+      <location filename="../mainwindow.cpp" line="3032"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
       <translation>
         <numerusform>&lt;strong&gt;%1&lt;/strong&gt; címke  el lett távolítva %n jegyzetböl</numerusform>
@@ -863,403 +863,403 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3012"/>
+      <location filename="../mainwindow.cpp" line="3042"/>
       <source>Current notes folder: </source>
       <translation>Jelenlegi jegyzet mappa: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3014"/>
+      <location filename="../mainwindow.cpp" line="3044"/>
       <source>Set the notes folder. Current notes folder: </source>
       <translation>A jeygzet mappa beállítása. Jelenlegi jegyzet mappa: </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3073"/>
+      <location filename="../mainwindow.cpp" line="3103"/>
       <source>Link to an url or note</source>
       <translation>Egy linket csatolok egy URL-hoz vagy jegyzethet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3184"/>
+      <location filename="../mainwindow.cpp" line="3214"/>
       <source>Print note</source>
       <translation>Jegyzet nyomtatása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3215"/>
+      <location filename="../mainwindow.cpp" line="3245"/>
       <source>Letter</source>
       <translation>Levél</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3241"/>
+      <location filename="../mainwindow.cpp" line="3271"/>
       <source>Portrait</source>
       <translation>Portré</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3241"/>
+      <location filename="../mainwindow.cpp" line="3271"/>
       <source>Landscape</source>
       <translation>Táj</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3246"/>
+      <location filename="../mainwindow.cpp" line="3276"/>
       <source>Orientation</source>
       <translation>Tájékozódás</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3246"/>
+      <location filename="../mainwindow.cpp" line="3276"/>
       <source>Orientation:</source>
       <translation>Tájékozódás:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3266"/>
+      <location filename="../mainwindow.cpp" line="3296"/>
       <source>PDF files (*.pdf)</source>
       <translation>PDF-fájlok (*.pdf)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3267"/>
+      <location filename="../mainwindow.cpp" line="3297"/>
       <source>Export current note as PDF</source>
       <translation>Aktuális jegyzet exportálása PDF-ként</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3875"/>
+      <location filename="../mainwindow.cpp" line="3910"/>
       <source>Open QOwnNotes</source>
       <translation>Nyítja a QOwnNotes-t</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3884"/>
-      <location filename="../mainwindow.cpp" line="6424"/>
+      <location filename="../mainwindow.cpp" line="3919"/>
+      <location filename="../mainwindow.cpp" line="6461"/>
       <source>New note</source>
       <translation>Új jegyzet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3900"/>
+      <location filename="../mainwindow.cpp" line="3935"/>
       <source>Recent notes</source>
       <translation>Legutóbbi jegyzet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3930"/>
+      <location filename="../mainwindow.cpp" line="3965"/>
       <source>Show todo lists</source>
       <translation>Todo-listák megjelenítése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3941"/>
+      <location filename="../mainwindow.cpp" line="3976"/>
       <source>Recent tasks</source>
       <translation>Legfrissebb feladatok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3973"/>
+      <location filename="../mainwindow.cpp" line="4008"/>
       <source>Quit</source>
       <translation>Lépjen ki</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5082"/>
+      <location filename="../mainwindow.cpp" line="5117"/>
       <source>show notes in note root folder (%1)</source>
       <translation>megmutatja a jegyzeteket a jegyzetek alapértelmezett mappában (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5086"/>
+      <location filename="../mainwindow.cpp" line="5121"/>
       <source>Note folder</source>
       <translation>Jegyzet mappa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6234"/>
+      <location filename="../mainwindow.cpp" line="6271"/>
       <source>Open note in external editor</source>
       <translation>&amp;Megynyitom a Jegyzetet külső szerkesztőben</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6236"/>
+      <location filename="../mainwindow.cpp" line="6273"/>
       <source>Show note in file manager</source>
       <translation>Megjegyzés megjelenítése a fájlkezelőben</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6425"/>
+      <location filename="../mainwindow.cpp" line="6462"/>
       <source>New subfolder</source>
       <translation>Új almappa</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6428"/>
+      <location filename="../mainwindow.cpp" line="6465"/>
       <source>Show folder in file manager</source>
       <translation>Mappájának megjelenítése a fájlkezelőben</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6459"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
       <source>Create a new folder</source>
       <translation>Hozzon létre egy új mappát</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6459"/>
+      <location filename="../mainwindow.cpp" line="6496"/>
       <source>Folder name:</source>
       <translation>Mappa neve:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5050"/>
+      <location filename="../mainwindow.cpp" line="5085"/>
       <source>show all untagged notes (%1)</source>
       <translation>megmutatja az összes címkézetlen bejegyzést (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5053"/>
+      <location filename="../mainwindow.cpp" line="5088"/>
       <source>Untagged notes</source>
       <translation>Címkézetlen bejegyzések</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5914"/>
+      <location filename="../mainwindow.cpp" line="5949"/>
       <source>an url was opened at the current cursor position</source>
       <translation>egy url-t nyitott meg az aktuális kurzorpozícióban</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5980"/>
+      <location filename="../mainwindow.cpp" line="6015"/>
       <source>the scripting engine was reloaded</source>
       <translation>a parancsfájl-végrehajtó újratöltve</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5995"/>
+      <location filename="../mainwindow.cpp" line="6030"/>
       <source>HTML files (*.html)</source>
       <translation>HTML-fájlok (*.html)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5996"/>
+      <location filename="../mainwindow.cpp" line="6031"/>
       <source>Export current note as HTML file</source>
       <translation>HTML fájlként exportálhatja az aktuális feljegyzéshez</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3224"/>
+      <location filename="../mainwindow.cpp" line="3254"/>
       <source>Page size</source>
       <translation>Lapméret</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="411"/>
+      <location filename="../mainwindow.cpp" line="415"/>
       <source>your tasks are being loaded from your ownCloud server</source>
       <translation>a feladatok betöltése az ownCloud szerveren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="481"/>
+      <location filename="../mainwindow.cpp" line="485"/>
       <source>quit toolbar</source>
       <translation>kilép az eszköztárból</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="589"/>
+      <location filename="../mainwindow.cpp" line="593"/>
       <source>Show menu bar item</source>
       <translation>Menüelem megjelenítése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3224"/>
+      <location filename="../mainwindow.cpp" line="3254"/>
       <source>Page size:</source>
       <translation>Lapméret:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3305"/>
+      <location filename="../mainwindow.cpp" line="3335"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation>QOwnNotes követi a névtelen használati adatot, amely segít eldönteni, hogy a QOwnNotes melyik részeit javítsjuk tovább és szereljük meg. Letilthatja ezt a funkciót a beállításoknál.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3309"/>
+      <location filename="../mainwindow.cpp" line="3339"/>
       <source>&amp;Ok</source>
       <translation>&amp;Oké</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4005"/>
+      <location filename="../mainwindow.cpp" line="4040"/>
       <source>note versions are currently loaded from your ownCloud server</source>
       <translation>a jelenleg betöltött jegyzetverzió az ownCloud szerveren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4019"/>
+      <location filename="../mainwindow.cpp" line="4054"/>
       <source>trashed notes are currently loaded from your ownCloud server</source>
       <translation>a törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6170"/>
+      <location filename="../mainwindow.cpp" line="6206"/>
       <source>&amp;Move notes to...</source>
       <translation>&amp;Áthelyezem a jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6171"/>
+      <location filename="../mainwindow.cpp" line="6207"/>
       <source>&amp;Copy notes to...</source>
       <translation>&amp;Ide másolom a jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6201"/>
+      <location filename="../mainwindow.cpp" line="6237"/>
       <source>&amp;Tag selected notes with...</source>
       <translation>&amp;címkézi a kijelölt jegyzeteket...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6220"/>
+      <location filename="../mainwindow.cpp" line="6257"/>
       <source>&amp;Remove tag from selected notes...</source>
       <translation>Címke eltávolítása a kijelölt jegyzetben...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="6231"/>
+      <location filename="../mainwindow.cpp" line="6268"/>
       <source>&amp;Remove notes</source>
       <translation>&amp;Jegyzetek eltávolítása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4046"/>
+      <location filename="../mainwindow.cpp" line="4081"/>
       <source>&amp;Link selected text</source>
       <translation>&amp;Linkelje be a kijelölt szöveget</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4050"/>
+      <location filename="../mainwindow.cpp" line="4085"/>
       <source>Paste HTML or media</source>
       <translation>Beillesztés HTML vagy média</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5022"/>
+      <location filename="../mainwindow.cpp" line="5057"/>
       <source>show all notes (%1)</source>
       <translation>mutassa meg az összes jegyzetet (%1)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5025"/>
+      <location filename="../mainwindow.cpp" line="5060"/>
       <source>All notes</source>
       <translation>Az összes jegyzet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5645"/>
+      <location filename="../mainwindow.cpp" line="5680"/>
       <source>&amp;Add tag</source>
       <translation>&amp;Címke hozzáadása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5652"/>
+      <location filename="../mainwindow.cpp" line="5687"/>
       <source>&amp;Move tags to...</source>
       <translation>&amp;Címkék áthelyezése...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5684"/>
+      <location filename="../mainwindow.cpp" line="5719"/>
       <source>Tag could not be created!</source>
       <translation>Nem hozható létre a tag!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5738"/>
+      <location filename="../mainwindow.cpp" line="5773"/>
       <source>Move to the root</source>
       <translation>A root-ba való áthelyezés</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5738"/>
+      <location filename="../mainwindow.cpp" line="5773"/>
       <source>Move to this tag</source>
       <translation>Ezt a címkét áthelyezem</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5788"/>
+      <location filename="../mainwindow.cpp" line="5823"/>
       <source>Tag this</source>
       <translation>Ez címkézem</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5818"/>
+      <location filename="../mainwindow.cpp" line="5853"/>
       <source>Cannot move tag '%1' to this tag</source>
       <translation>Ez a címke '%1' nem helyezhető át</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5826"/>
+      <location filename="../mainwindow.cpp" line="5861"/>
       <source>Moved tag '%1' to new tag</source>
       <translation>'%1' címke új helyre került</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5936"/>
+      <location filename="../mainwindow.cpp" line="5971"/>
       <source>no equation was found in front of the cursor</source>
       <translation>nincs egyenlet a kurzor előtt</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5955"/>
+      <location filename="../mainwindow.cpp" line="5990"/>
       <source>result for equation: %1 = %2</source>
       <translation>egyenlet eredménye: %1 = %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5185"/>
+      <location filename="../mainwindow.cpp" line="5220"/>
       <source>show all notes tagged with '%1' (%2)</source>
       <translation>megmutat minden "%1" (%2) -el jelölt jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5489"/>
+      <location filename="../mainwindow.cpp" line="5524"/>
       <source>remove tag '%1' from note</source>
       <translation>'%1' címke eltávolítása jegyzetből</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5647"/>
+      <location filename="../mainwindow.cpp" line="5682"/>
       <source>&amp;Edit tag</source>
       <translation>&amp;Címke szerkesztése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5649"/>
+      <location filename="../mainwindow.cpp" line="5684"/>
       <source>&amp;Remove tags</source>
       <translation>&amp;Címkék eltávolítása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3329"/>
+      <location filename="../mainwindow.cpp" line="3359"/>
       <source>No selected todo lists!</source>
       <translation>Nincsenek kijelölt teendőlisták!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="445"/>
+      <location filename="../mainwindow.cpp" line="449"/>
       <source>formatting toolbar</source>
       <translation>az eszköztár formatálása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="452"/>
+      <location filename="../mainwindow.cpp" line="456"/>
       <source>inserting toolbar</source>
       <translation>az eszköztár behelyezése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="459"/>
+      <location filename="../mainwindow.cpp" line="463"/>
       <source>encryption toolbar</source>
       <translation>az eszköztár titkosítása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="467"/>
+      <location filename="../mainwindow.cpp" line="471"/>
       <source>window toolbar</source>
       <translation>ablak eszköztár</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1297"/>
+      <location filename="../mainwindow.cpp" line="1301"/>
       <source>show notes in folder '%1' (%2)</source>
       <translation>megmutatja a jegyzeteket a mappában '%1' (%2)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1337"/>
+      <location filename="../mainwindow.cpp" line="1341"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
       <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; utolsó módosítás: %2</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1342"/>
+      <location filename="../mainwindow.cpp" line="1346"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt; br /&gt;elérési út: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="1546"/>
+      <location filename="../mainwindow.cpp" line="1575"/>
       <source>current note was modified externally</source>
       <translation>az aktuális jegyzet külsőleg módosított</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2112"/>
+      <location filename="../mainwindow.cpp" line="2138"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="2789"/>
+      <location filename="../mainwindow.cpp" line="2815"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
+      <translation>
+        <numerusform>Eltávolít &lt;strong&gt;%n&lt;/strong&gt; kijelölt mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Az összes fájl és mappa ezekben a mappákban törlődik!</numerusform>
+        <numerusform>Eltávolít &lt;strong&gt;%n&lt;/strong&gt; kijelölt mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Az összes fájl és mappa ezekben a mappákban törlődik!</numerusform>
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="2800"/>
+      <location filename="../mainwindow.cpp" line="2826"/>
       <source>removed note subfolder: %1</source>
-      <translation type="unfinished">removed note subfolder: %1</translation>
+      <translation>törölt jegyzet almappa: %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3330"/>
+      <location filename="../mainwindow.cpp" line="3360"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
       <translation>Nem választott ki teendőlistát. &lt;br /&gt;Kérjük, ellenőrizze a &lt;strong&gt;Teendők&lt;/strong&gt; konfigurációs beállításait!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4680"/>
-      <location filename="../mainwindow.cpp" line="4742"/>
+      <location filename="../mainwindow.cpp" line="4715"/>
+      <location filename="../mainwindow.cpp" line="4777"/>
       <source>inserting image</source>
       <translation>kép beszúrása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4685"/>
-      <location filename="../mainwindow.cpp" line="4745"/>
+      <location filename="../mainwindow.cpp" line="4720"/>
+      <location filename="../mainwindow.cpp" line="4780"/>
       <source>done inserting image</source>
       <translation>kép beillesztése</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4696"/>
+      <location filename="../mainwindow.cpp" line="4731"/>
       <source>copied %n note(s) to %1</source>
       <translation>
         <numerusform>%n jegyzet(et) másolt át %1</numerusform>
@@ -1267,7 +1267,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4705"/>
+      <location filename="../mainwindow.cpp" line="4740"/>
       <source>failed to copy %n note(s) (most likely already existing)</source>
       <translation>
         <numerusform>nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
@@ -1275,7 +1275,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="4715"/>
+      <location filename="../mainwindow.cpp" line="4750"/>
       <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
       <translation>
         <numerusform>kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
@@ -1283,108 +1283,108 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4729"/>
+      <location filename="../mainwindow.cpp" line="4764"/>
       <source>saving temporary image</source>
       <translation>kép mentése</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4748"/>
+      <location filename="../mainwindow.cpp" line="4783"/>
       <source>temporary file can't be opened</source>
       <translation>ideiglenes fájl nem nyitható meg</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4825"/>
+      <location filename="../mainwindow.cpp" line="4860"/>
       <source>downloading %1</source>
       <translation>letöltés %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4855"/>
+      <location filename="../mainwindow.cpp" line="4890"/>
       <source>done downloading images</source>
       <translation>képek letöltése kész</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4956"/>
+      <location filename="../mainwindow.cpp" line="4991"/>
       <source>Increased font size to %1 pt</source>
       <translation>Nagyobb betűméret: pt-%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4968"/>
+      <location filename="../mainwindow.cpp" line="5003"/>
       <source>Decreased font size to %1 pt</source>
       <translation>Csökkent betűméret: pt-%1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4979"/>
+      <location filename="../mainwindow.cpp" line="5014"/>
       <source>Reset font size to %1 pt</source>
       <translation>%1 pt betűméret visszaállítása</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="3310"/>
-      <location filename="../mainwindow.cpp" line="3333"/>
+      <location filename="../mainwindow.cpp" line="3340"/>
+      <location filename="../mainwindow.cpp" line="3363"/>
       <source>Open &amp;settings</source>
       <translation>Nyílt &amp; beállítások</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="716"/>
+      <location filename="../mainwindow.cpp" line="720"/>
       <source>leave</source>
       <translation>kilép</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="719"/>
+      <location filename="../mainwindow.cpp" line="723"/>
       <source>leave distraction free mode</source>
       <translation>elhagyja a figyelemelterelésmentes módot</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4154"/>
+      <location filename="../mainwindow.cpp" line="4189"/>
       <source>Image files (*.jpg *.png *.gif)</source>
       <translation>Képfájlok (*.jpg *.png *.gif)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4155"/>
+      <location filename="../mainwindow.cpp" line="4190"/>
       <source>Select image to insert</source>
       <translation>Válassza ki a beszúrása kerülő képet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4277"/>
+      <location filename="../mainwindow.cpp" line="4312"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
       <translation>Kérjük, írja be a &lt;strong&gt;jelszavát&lt;/strong&gt;-t, hogy titkosítsa a jegyzetet. &lt;br /&gt;Ne feledje &lt;strong&gt;megjegyezni&lt;/strong&gt;a jelszavát hogy a jegyzet tartalmához hozzá juthasson&lt; br /&gt; és hogy &lt;strong&gt;csak&lt;/strong&gt; a jelszavával teheti ezt a&lt;strong&gt;QOwnNotes&lt;/strong&gt;-ban!</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4321"/>
+      <location filename="../mainwindow.cpp" line="4356"/>
       <source>Decrypt note and store it as plain text</source>
       <translation>Jelenítse meg a jegyzetet, és tárolja azt egyszerű szövegként</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4322"/>
+      <location filename="../mainwindow.cpp" line="4357"/>
       <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
       <translation>A jegyzet meg lesz jelenítve és egyszerű szövegként tárolásra kerül. Ne feledje, hogy a titkosítatlan jegyzet esetleg szinkronizálva lesz a kiszolgálón és a bizalmas szöveg megjelenhet! &lt; br /&gt; Kívánja megjeleníteni a jegyzetet?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4326"/>
+      <location filename="../mainwindow.cpp" line="4361"/>
       <source>&amp;Decrypt</source>
       <translation>&amp;Megjelenít</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4351"/>
+      <location filename="../mainwindow.cpp" line="4386"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
       <translation>&lt; br /&gt;Tudja majd szerkeszteni a titkosított jegyzetet.</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4408"/>
+      <location filename="../mainwindow.cpp" line="4443"/>
       <source>Markdown files (*.md)</source>
       <translation>Markdown-fájlok (*.md)</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4409"/>
+      <location filename="../mainwindow.cpp" line="4444"/>
       <source>Export current note as Markdown file</source>
       <translation>Markdown fájlként exportálhatja az aktuális jegyzetet</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4464"/>
+      <location filename="../mainwindow.cpp" line="4499"/>
       <source>bookmarked note position at slot %1</source>
       <translation>könyvjelzővel megjelölt jegyzet helyzete a slot %1</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="4480"/>
+      <location filename="../mainwindow.cpp" line="4515"/>
       <source>jumped to bookmark position at slot %1</source>
       <translation>ugrott az %1-es könyvjelző helyzethez</translation>
     </message>
@@ -1486,17 +1486,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../services/owncloudservice.cpp" line="758"/>
       <location filename="../services/owncloudservice.cpp" line="782"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Hiba a teendő lista betöltésekor!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="759"/>
       <source>Your ownCloud CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your ownCloud CalDAV server didn't reply anything!</translation>
+      <translation>OwnCloud CalDAV kiszolgálója egyáltalán nem válaszolt!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="783"/>
       <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>OwnCloud CalDAV szerver hiba üzenet: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -1646,7 +1646,7 @@ Are the folder and the file writeable?</source>
   <context>
     <name>ScriptingService</name>
     <message>
-      <location filename="../services/scriptingservice.cpp" line="133"/>
+      <location filename="../services/scriptingservice.cpp" line="136"/>
       <source>file doesn't exist</source>
       <translation>fájl nem létezik</translation>
     </message>
@@ -2028,12 +2028,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Ha bejelöli, két szóköz nélkül tör sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2611"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Használja a GitHub sortöréseket</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1548"/>
