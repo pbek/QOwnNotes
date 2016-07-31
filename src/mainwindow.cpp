@@ -1733,6 +1733,8 @@ void MainWindow::storeUpdatedNotesToDisk() {
         // All flushing and syncing didn't help.
         bool currentNoteChanged = false;
         bool noteWasRenamed = false;
+
+        // currentNote will be set by this method if the filename has changed
         int count = Note::storeDirtyNotesToDisk(currentNote,
                                                 &currentNoteChanged,
                                                 &noteWasRenamed);

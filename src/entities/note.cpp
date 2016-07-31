@@ -852,7 +852,8 @@ bool Note::updateNoteTextFromDisk() {
     QFile file(fullNoteFilePath());
 
     if (!file.open(QIODevice::ReadOnly)) {
-        qDebug() << file.errorString();
+        qDebug() << __func__ << " - 'file': " << file.fileName();
+        qDebug() << __func__ << " - " << file.errorString();
         return false;
     }
 
@@ -916,6 +917,15 @@ QUrl Note::fullNoteFileUrl() {
     return QUrl("file://" + windowsSlash + fullNoteFilePath());
 }
 
+/**
+ * Stores all notes that were changed to disk
+ *
+ * @param currentNote will be set by this method if the filename of the current
+ * note has changed
+ * @param currentNoteChanged true if current note was changed
+ * @param noteWasRenamed true if a note was renamed
+ * @return amount of notes that were saved
+ */
 int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
                                 bool *noteWasRenamed) {
     QSqlDatabase db = QSqlDatabase::database("memory");
@@ -936,10 +946,14 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
             note.storeNoteTextFileToDisk();
             QString newName = note.getName();
 
+            // check if the file name has changed
             if (oldName != newName) {
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldName, newName);
                 *noteWasRenamed = true;
+
+                // override the current note because the file name has changed
+                currentNote = note;
             }
 
             // emit the signal for the QML that the note was stored
