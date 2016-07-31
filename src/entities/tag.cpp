@@ -331,7 +331,6 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
 QStringList Tag::fetchAllLinkedNoteFileNames() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-
     QStringList fileNameList;
 
     query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "

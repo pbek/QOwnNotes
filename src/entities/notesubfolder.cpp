@@ -12,6 +12,7 @@
 NoteSubFolder::NoteSubFolder() {
     this->id = 0;
     this->parentId = 0;
+    this->name = "";
 }
 
 int NoteSubFolder::getId() {

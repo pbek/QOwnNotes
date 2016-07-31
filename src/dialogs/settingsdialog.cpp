@@ -1759,6 +1759,12 @@ void SettingsDialog::on_darkModeCheckBox_toggled() {
 
 void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
     _selectedNoteFolder.setShowSubfolders(checked);
+
+    // reset the active note subfolder if showing subfolders was turned off
+    if (!checked) {
+        _selectedNoteFolder.resetActiveNoteSubFolder();
+    }
+
     _selectedNoteFolder.store();
 }
 

@@ -88,6 +88,10 @@ void NoteFolder::setActiveNoteSubFolder(NoteSubFolder noteSubFolder) {
     this->activeNoteSubFolderData = noteSubFolder.pathData();
 }
 
+void NoteFolder::resetActiveNoteSubFolder() {
+    this->activeNoteSubFolderData.clear();
+}
+
 bool NoteFolder::create(QString name, QString localPath,
                         int ownCloudServerId, QString remotePath) {
     QSqlDatabase db = QSqlDatabase::database("disk");

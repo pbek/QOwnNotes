@@ -49,6 +49,7 @@ public:
     static bool isCurrentShowSubfolders();
     void setActiveNoteSubFolder(NoteSubFolder noteSubFolder);
     NoteSubFolder getActiveNoteSubFolder();
+    void resetActiveNoteSubFolder();
 
 private:
     int id;

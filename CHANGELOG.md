@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.07.15
+- tagging of notes in non-subfolder mode is working again 
+  (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
+- if showing of note subfolders is turned off in the settings the 
+  active note subfolder will now be reset to prevent problems
+
 ## 16.07.14
 - did a lot of improvements for support of same note names in different 
   note subfolders and general note storing, loading, tagging and

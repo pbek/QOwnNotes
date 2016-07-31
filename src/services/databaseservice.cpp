@@ -189,6 +189,30 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 5;
     }
 
+    if (version < 6) {
+        // we need to add a `DEFAULT ''` to column note_sub_folder_path
+        queryDisk.exec("ALTER TABLE noteTagLink RENAME TO _noteTagLink");
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS noteTagLink ("
+                               "id INTEGER PRIMARY KEY,"
+                               "tag_id INTEGER,"
+                               "note_file_name VARCHAR(255) DEFAULT '',"
+                               "note_sub_folder_path TEXT DEFAULT '',"
+                               "created DATETIME DEFAULT current_timestamp)");
+        queryDisk.exec("INSERT INTO noteTagLink (tag_id, note_file_name, "
+                               "note_sub_folder_path, created) "
+                               "SELECT tag_id, note_file_name, "
+                               "note_sub_folder_path, created "
+                               "FROM _noteTagLink ORDER BY id");
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTagNoteLink");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTagNoteLink "
+                               "ON noteTagLink (tag_id, note_file_name, "
+                               "note_sub_folder_path)");
+        queryDisk.exec("DROP TABLE _noteTagLink");
+        queryDisk.exec("UPDATE noteTagLink SET note_sub_folder_path = '' "
+                               "WHERE note_sub_folder_path IS NULL");
+        version = 6;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");
