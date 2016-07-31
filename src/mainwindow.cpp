@@ -1721,59 +1721,56 @@ void MainWindow::noteViewUpdateTimerSlot() {
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
-    {
-        const QSignalBlocker blocker(noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+    const QSignalBlocker blocker(noteDirectoryWatcher);
+    Q_UNUSED(blocker);
 
-        QString oldNoteName = currentNote.getName();
-        int oldNoteSubFolderId = currentNote.getNoteSubFolderId();
+    QString oldNoteName = currentNote.getName();
 
-        // For some reason this->noteDirectoryWatcher gets an event from this.
-        // I didn't find an other solution than to wait yet.
-        // All flushing and syncing didn't help.
-        bool currentNoteChanged = false;
-        bool noteWasRenamed = false;
+    // For some reason this->noteDirectoryWatcher gets an event from this.
+    // I didn't find an other solution than to wait yet.
+    // All flushing and syncing didn't help.
+    bool currentNoteChanged = false;
+    bool noteWasRenamed = false;
 
-        // currentNote will be set by this method if the filename has changed
-        int count = Note::storeDirtyNotesToDisk(currentNote,
-                                                &currentNoteChanged,
-                                                &noteWasRenamed);
+    // currentNote will be set by this method if the filename has changed
+    int count = Note::storeDirtyNotesToDisk(currentNote,
+                                            &currentNoteChanged,
+                                            &noteWasRenamed);
 
-        if (count > 0) {
-            _noteViewNeedsUpdate = true;
+    if (count > 0) {
+        _noteViewNeedsUpdate = true;
 
-            MetricsService::instance()
-                    ->sendEventIfEnabled(
-                            "note/notes/stored",
-                            "note",
-                            "notes stored",
-                            QString::number(count) + " notes",
-                            count);
+        MetricsService::instance()
+                ->sendEventIfEnabled(
+                        "note/notes/stored",
+                        "note",
+                        "notes stored",
+                        QString::number(count) + " notes",
+                        count);
 
-            qDebug() << __func__ << " - 'count': " << count;
+        qDebug() << __func__ << " - 'count': " << count;
 
-            showStatusBarMessage(
-                    tr("stored %n note(s) to disk", "", count),
-                    3000);
+        showStatusBarMessage(
+                tr("stored %n note(s) to disk", "", count),
+                3000);
 
-            // wait 100ms before the block on this->noteDirectoryWatcher
-            // is opened, otherwise we get the event
-            waitMsecs(100);
+        // wait 100ms before the block on this->noteDirectoryWatcher
+        // is opened, otherwise we get the event
+        waitMsecs(100);
 
-            if (currentNoteChanged) {
-                // just to make sure everything is up-to-date
-                currentNote.refetch();
+        if (currentNoteChanged) {
+            // just to make sure everything is up-to-date
+            currentNote.refetch();
 
-                if (oldNoteName != currentNote.getName()) {
-                    // just to make sure the window title is set correctly
-                    updateWindowTitle();
-                }
+            if (oldNoteName != currentNote.getName()) {
+                // just to make sure the window title is set correctly
+                updateWindowTitle();
             }
+        }
 
-            if (noteWasRenamed) {
-                // reload the directory list if note name has changed
-                loadNoteDirectoryList();
-            }
+        if (noteWasRenamed) {
+            // reload the directory list if note name has changed
+            loadNoteDirectoryList();
         }
     }
 }
