@@ -1390,6 +1390,8 @@ QTreeWidgetItem *MainWindow::findNoteInNoteTreeWidget(Note note) {
             return item;
         }
     }
+
+    return Q_NULLPTR;
 }
 
 void MainWindow::readSettings() {
