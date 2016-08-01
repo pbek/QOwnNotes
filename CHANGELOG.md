@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.08.0
+- tagging, removing tags, moving and copying multiple notes in note 
+  subfolders now works correctly if notes with the same name exist 
+  in other note subfolders
+  (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
+
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 
   (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))

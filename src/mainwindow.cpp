@@ -147,7 +147,7 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(noteViewUpdateTimerSlot()));
     _noteViewUpdateTimer->start(2000);
 
-    // check if we have a todo reminder every minute
+    // check if we have a tasks reminder every minute
     this->todoReminderTimer = new QTimer(this);
     QObject::connect(
             this->todoReminderTimer,
@@ -2895,9 +2895,12 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
         Q_UNUSED(blocker);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                // TODO(pbek): use note id here and heed the note subfolders!
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // remove note path form directory watcher
                 this->noteDirectoryWatcher.removePath(note.fullNoteFilePath());
@@ -2945,9 +2948,12 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
             tr("&Copy"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int copyCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                // TODO(pbek): use note id here and heed the note subfolder!
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // copy note
                 bool result = note.copy(destinationFolder);
@@ -2980,9 +2986,12 @@ void MainWindow::tagSelectedNotes(Tag tag) {
             tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                // TODO(pbek): use note id here and heed the note subfolder!
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // tag note
                 bool result = tag.linkToNote(note);
@@ -3014,9 +3023,12 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
             tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-                // TODO(pbek): use note id here and heed the note subfolder!
-                QString name = item->text(0);
-                Note note = Note::fetchByName(name);
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
 
                 // tag note
                 bool result = tag.removeLinkToNote(note);
@@ -3347,7 +3359,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
 }
 
 /**
- * Opens the todo list dialog
+ * Opens the task list dialog
  */
 void MainWindow::openTodoDialog(QString taskUid) {
     QSettings settings;
@@ -3355,7 +3367,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
             settings.value("ownCloud/todoCalendarEnabledUrlList")
                     .toStringList();
 
-    // check if we have got any todo list enabled
+    // check if we have got any task list enabled
     if (todoCalendarEnabledUrlList.count() == 0) {
         if (QMessageBox::warning(
                 0, tr("No selected todo lists!"),
@@ -3559,7 +3571,9 @@ void MainWindow::filterNotesByTag() {
     // loop through all visible notes
     while (*it) {
         // hide all notes that are not linked to the active tag
-        // TODO(pbek): heed the note subfolder, note names are now not unique
+        // note subfolder are not taken into account here (note names are now
+        // not unique), but it should be ok because they are filtered by
+        // filterNotesByNoteSubFolders
         if (!fileNameList.contains((*it)->text(0))) {
             (*it)->setHidden(true);
         }
@@ -6242,7 +6256,9 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
 
     QStringList noteNameList;
     Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
-            // TODO(pbek): use note id here and heed the note subfolder id!
+            // the note names are not unique any more but the note subfolder
+            // path will be taken into account in
+            // Tag::fetchAllWithLinkToNoteNames
             QString name = item->text(0);
             Note note = Note::fetchByName(name);
             if (note.isFetched()) {
@@ -6310,7 +6326,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
 }
 
 /**
- * Renames a note file if the note was renamed in the note list widget
+ * Renames a note file if the note was renamed in the note tree widget
  */
 void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
                                                int column) {
@@ -6329,7 +6345,6 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
         QString oldNoteName = note.getName();
 
-        // TODO(pbek): use note id here!
         if (note.renameNoteFile(item->text(0))) {
             QString newNoteName = note.getName();
 
