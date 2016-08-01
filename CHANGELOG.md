@@ -30,7 +30,6 @@
         - if you are doing this don't forget to allow the note
           headline to be different from the note filename in the
           general settings
-          
 
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 
