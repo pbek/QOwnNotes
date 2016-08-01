@@ -3621,13 +3621,20 @@ void MainWindow::on_action_Find_note_triggered() {
 // jump to found note or create a new one if not found
 //
 void MainWindow::on_searchLineEdit_returnPressed() {
+    jumpToNoteOrCreateNew();
+}
+
+/**
+ * Jumps to found note or create a new one if not found
+ */
+void MainWindow::jumpToNoteOrCreateNew() {
     // ignore if `return` was pressed in the completer
     if (_searchLineEditFromCompleter) {
         _searchLineEditFromCompleter = false;
         return;
     }
 
-    // this doen't seem to work with note sub folders
+    // this doesn't seem to work with note sub folders
     const QSignalBlocker blocker(noteDirectoryWatcher);
     Q_UNUSED(blocker);
 
@@ -3642,11 +3649,22 @@ void MainWindow::on_searchLineEdit_returnPressed() {
 
     // if we can't find a note we create a new one
     if (note.getId() == 0) {
-        // create a headline in new notes by adding "=====" as second line
-        QString noteText = text + "\n";
-        for (int i = 0; i < text.length(); i++) {
-            noteText.append("=");
+        // check if a hook wants to set the text
+        QString noteText = ScriptingService::instance()->
+            callHandleNewNoteHeadlineHook(text);
+
+        // check if a hook changed the text
+        if (noteText.isEmpty()) {
+            // fallback to the old text if no hook changed the text
+            noteText = text;
+
+            // create a headline in new notes by adding "=====" as second line
+            noteText.append("\n");
+            for (int i = 0; i < text.length(); i++) {
+                noteText.append("=");
+            }
         }
+
         noteText.append("\n\n");
 
         NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
@@ -3729,19 +3747,16 @@ void MainWindow::on_action_Note_note_triggered() {
     // show the window in case we are using the system tray
     show();
 
-    QString text = ScriptingService::instance()->
-            callHandleNewNoteHeadlineHook();
+    QDateTime currentDate = QDateTime::currentDateTime();
 
-    // fallback if there was no QML hook to set the headline
-    if (text.isEmpty()) {
-        QDateTime currentDate = QDateTime::currentDateTime();
-
-        // replacing ":" with "_" for Windows systems
-        text = "Note " + currentDate.toString(Qt::ISODate).replace(":", ".");
-    }
+    // replacing ":" with "_" for Windows systems
+    QString text = "Note " + currentDate.toString(Qt::ISODate)
+                                     .replace(":", ".");
 
     this->ui->searchLineEdit->setText(text);
-    on_searchLineEdit_returnPressed();
+
+    // create a new note
+    jumpToNoteOrCreateNew();
 }
 
 /*

@@ -12,10 +12,18 @@ QtObject {
      * Note that you have to take care about a unique note name, otherwise
      * the new note will not be created, it will just be found in the note list
      * 
+     * @param headline text that would be used to create the headline
      * @return {string} the headline of the note
      */
-    function handleNewNoteHeadlineHook() {
-        var date = new Date();
-        return "My custom note name " + date.toISOString();
+    function handleNewNoteHeadlineHook(headline) {
+        var text = headline + " - my custom note name " + "\n";
+        var underline = "";
+
+        // add the underline
+        for (var i = 0; i < (text.length - 1); i++) {
+            underline += "=";
+        }
+
+        return text + underline;
     }
 }

@@ -578,4 +578,6 @@ private:
     bool createNewNoteSubFolder(QString folderName = "");
 
     QTreeWidgetItem *findNoteInNoteTreeWidget(Note note);
+
+    void jumpToNoteOrCreateNew();
 };

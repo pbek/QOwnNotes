@@ -44,8 +44,9 @@ public:
     QString callHandleNoteTextFileNameHook(Note *note);
     QString callNoteToMarkdownHtmlHook(Note *note, QString html);
 
-    QString callHandleNewNoteHeadlineHookForObject(QObject *object);
-    QString callHandleNewNoteHeadlineHook();
+    QString callHandleNewNoteHeadlineHookForObject(QObject *object,
+                                                   QString headline);
+    QString callHandleNewNoteHeadlineHook(QString headline);
 
 private:
     QQmlEngine *_engine;

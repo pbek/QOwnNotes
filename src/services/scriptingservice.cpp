@@ -336,14 +336,15 @@ QString ScriptingService::callHandleNoteTextFileNameHook(
  * This function is called when new note gets created
  */
 QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
-        QObject *object) {
+        QObject *object, QString headline) {
     if (methodExistsForObject(
             object,
-            "handleNewNoteHeadlineHook()")) {
+            "handleNewNoteHeadlineHook(QVariant)")) {
 
         QVariant text;
         QMetaObject::invokeMethod(object, "handleNewNoteHeadlineHook",
-                                  Q_RETURN_ARG(QVariant, text));
+                                  Q_RETURN_ARG(QVariant, text),
+                                  Q_ARG(QVariant, headline));
         return text.toString();
     }
 
@@ -353,7 +354,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
 /**
  * Calls the handleNewNoteHeadlineHook function for all script components
  */
-QString ScriptingService::callHandleNewNoteHeadlineHook() {
+QString ScriptingService::callHandleNewNoteHeadlineHook(QString headline) {
     QHashIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
@@ -361,7 +362,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHook() {
         ScriptComponent scriptComponent = i.value();
 
         QString text = callHandleNewNoteHeadlineHookForObject(
-                scriptComponent.object);
+                scriptComponent.object, headline);
         if (!text.isEmpty()) {
             return text;
         }

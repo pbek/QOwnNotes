@@ -12,6 +12,25 @@
 - added a link to the QOwnNotes markdown cheatsheet to the help menu
     - the markdown file will also be created as a note the first time 
       QOwnNotes starts with an empty note folder
+- the scripting hook `handleNewNoteHeadlineHook()` now has a parameter
+  to pass the text that would be used to create the headline
+  (for [Issue #272](https://github.com/pbek/QOwnNotes/issues/272))
+    - the hook will now also be called when using the search line edit 
+    - if you are using the hook you have to add the parameter to the
+      function in your script, so that the scripting engine will find
+      your function call
+    - if the headline text was modified by the hook no underline 
+      characters `===` will be added automatically, you have to do that
+      in your script
+    - take a look at the updated example at
+      [custom-new-note-headline.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-new-note-headline.qml)
+    - you now can use the hook to create your own headline styles, 
+      for example using `# headline` instead of `headline`, followed by
+      `==========`
+        - if you are doing this don't forget to allow the note
+          headline to be different from the note filename in the
+          general settings
+          
 
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 
