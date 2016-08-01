@@ -705,6 +705,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionFormat_text_bold"/>
     <addaction name="actionFormat_text_italic"/>
+    <addaction name="actionToggle_text_case"/>
     <addaction name="separator"/>
     <addaction name="actionPaste_image"/>
     <addaction name="separator"/>
@@ -886,7 +887,7 @@ p, li { white-space: pre-wrap; }
     <string>Check for &amp;updates</string>
    </property>
    <property name="shortcut">
-    <string notr="true">Ctrl+Shift+U</string>
+    <string notr="true">Alt+Shift+U</string>
    </property>
   </action>
   <action name="actionReport_problems_or_ideas">
@@ -1601,6 +1602,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="visible">
     <bool>false</bool>
+   </property>
+  </action>
+  <action name="actionToggle_text_case">
+   <property name="icon">
+    <iconset theme="format-text-capitalize" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Toggle text case</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+U</string>
    </property>
   </action>
  </widget>

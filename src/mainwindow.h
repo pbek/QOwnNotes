@@ -327,6 +327,8 @@ private slots:
 
     void on_actionShare_note_triggered();
 
+    void on_actionToggle_text_case_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

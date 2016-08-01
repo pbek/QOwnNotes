@@ -6569,3 +6569,26 @@ void MainWindow::on_actionShare_note_triggered() {
     // TODO(pbek): Check if ownCloud is configured
     ownCloud->shareNote(currentNote);
 }
+
+/**
+ * Toggles the case of the selected text
+ */
+void MainWindow::on_actionToggle_text_case_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    if (selectedText.isEmpty()) {
+        return;
+    }
+
+    // insert the text in uppercase or lowercase
+    c.insertText(selectedText == selectedText.toLower() ?
+                 selectedText.toUpper() :
+                 selectedText.toLower());
+
+    // select the text again to maybe do an other operation on it
+    c.movePosition(
+            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
+    textEdit->setTextCursor(c);
+}

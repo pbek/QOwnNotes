@@ -12,7 +12,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> shows the current note in the file manager
@@ -59,6 +59,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item
@@ -93,7 +94,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
@@ -140,6 +141,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic 
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item

@@ -5,6 +5,10 @@
   subfolders now works correctly if notes with the same name exist 
   in other note subfolders
   (for [Issue #263](https://github.com/pbek/QOwnNotes/issues/263))
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> now toggles the case 
+  of the selected text
+    - the shortcut for checking for updates now moved to 
+      <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> 
 
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 
