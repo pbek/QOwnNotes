@@ -1894,6 +1894,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
         QStringList filenames = QStringList() <<
                 "Markdown Showcase.md" <<
                 "GitHub Flavored Markdown.md" <<
+                "Markdown Cheatsheet.md" <<
                 "Welcome to QOwnNotes.md";
         QString filename;
         QString destinationFile;
@@ -6591,4 +6592,13 @@ void MainWindow::on_actionToggle_text_case_triggered() {
     c.movePosition(
             QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
     textEdit->setTextCursor(c);
+}
+
+/**
+ * Opens the Markdown Cheatsheet webpage
+ */
+void MainWindow::on_actionMarkdown_cheatsheet_triggered() {
+    QDesktopServices::openUrl(
+            QUrl("https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes"
+                         "/Markdown%20Cheatsheet.md"));
 }

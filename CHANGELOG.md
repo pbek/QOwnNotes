@@ -9,6 +9,9 @@
   of the selected text
     - the shortcut for checking for updates now moved to 
       <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> 
+- added a link to the QOwnNotes markdown cheatsheet to the help menu
+    - the markdown file will also be created as a note the first time 
+      QOwnNotes starts with an empty note folder
 
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 

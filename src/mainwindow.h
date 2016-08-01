@@ -329,6 +329,8 @@ private slots:
 
     void on_actionToggle_text_case_triggered();
 
+    void on_actionMarkdown_cheatsheet_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

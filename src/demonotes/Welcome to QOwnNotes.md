@@ -10,5 +10,6 @@ Welcome to your installation of **QOwnnotes**!
 ## Later
 - Check out the [Important-Shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes) with a `Ctrl + Click` (or `Cmd + Click` on OSX) for more productivity.
 - Visit <http://www.qownnotes.org> for new releases of **QOwnNotes**.
+- Use the <note://Markdown-Cheatsheet> to explore the **Markdown syntax**.
 - Test the **Markdown view** on **linked notes** like <note://GitHub-Flavored-Markdown>.
     - There is an other showcase here: <note://Markdown-Showcase>

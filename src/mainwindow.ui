@@ -682,6 +682,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionShow_changelog"/>
     <addaction name="action_Shortcuts"/>
+    <addaction name="actionMarkdown_cheatsheet"/>
     <addaction name="action_Knowledge_base"/>
     <addaction name="actionGet_invloved"/>
     <addaction name="actionOpen_IRC_Channel"/>
@@ -1614,6 +1615,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+U</string>
+   </property>
+  </action>
+  <action name="actionMarkdown_cheatsheet">
+   <property name="icon">
+    <iconset theme="text-x-markdown" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Markdown cheatsheet</string>
    </property>
   </action>
  </widget>
