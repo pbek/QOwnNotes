@@ -331,6 +331,8 @@ private slots:
 
     void on_actionMarkdown_cheatsheet_triggered();
 
+    void on_actionStrike_out_text_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -30,6 +30,11 @@
         - if you are doing this don't forget to allow the note
           headline to be different from the note filename in the
           general settings
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> now adds the `~~`
+  characters to symbolize a strikeout of the selected text
+  (for [Issue #274](https://github.com/pbek/QOwnNotes/issues/274))
+    - there also is a new button in the formatting toolbar for strikeout
+    - strikeout now works in the markdown preview
 
 ## 16.07.15
 - tagging of notes in non-subfolder mode is working again 

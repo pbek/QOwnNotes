@@ -706,6 +706,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionFormat_text_bold"/>
     <addaction name="actionFormat_text_italic"/>
+    <addaction name="actionStrike_out_text"/>
     <addaction name="actionToggle_text_case"/>
     <addaction name="separator"/>
     <addaction name="actionPaste_image"/>
@@ -1624,6 +1625,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Markdown cheatsheet</string>
+   </property>
+  </action>
+  <action name="actionStrike_out_text">
+   <property name="icon">
+    <iconset theme="format-text-strikethrough" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Strike out text</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+S</string>
    </property>
   </action>
  </widget>

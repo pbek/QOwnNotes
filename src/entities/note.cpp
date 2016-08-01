@@ -1203,16 +1203,19 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
     result.replace("<pre><code>", "<pre>")
             .replace("</code></pre>", "</pre>");
 
+    // correct the strikeout tag
+    result.replace(QRegularExpression("<del>([^<]+)<\\/del>"), "<s>\\1</s>");
+
     if (forExport) {
         // get defined body font from settings
-        QString bodyfontString = settings.value("MainWindow/noteTextView.font")
+        QString bodyFontString = settings.value("MainWindow/noteTextView.font")
                 .toString();
 
         // create export stylesheet
         QString exportStyleSheet = "";
-        if (bodyfontString != "") {
+        if (bodyFontString != "") {
             QFont bodyFont;
-            bodyFont.fromString(bodyfontString);
+            bodyFont.fromString(bodyFontString);
 
             exportStyleSheet = QString(
                     "body { %1; }").arg(encodeCssFont(bodyFont));

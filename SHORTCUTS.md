@@ -59,6 +59,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
@@ -141,6 +142,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic 
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text

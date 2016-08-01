@@ -449,6 +449,7 @@ void MainWindow::initToolbars() {
     _formattingToolbar = new QToolBar(tr("formatting toolbar"), this);
     _formattingToolbar->addAction(ui->actionFormat_text_bold);
     _formattingToolbar->addAction(ui->actionFormat_text_italic);
+    _formattingToolbar->addAction(ui->actionStrike_out_text);
     _formattingToolbar->addAction(ui->actionInset_code_block);
     _formattingToolbar->setObjectName("formattingToolbar");
     addToolBar(_formattingToolbar);
@@ -6616,4 +6617,21 @@ void MainWindow::on_actionMarkdown_cheatsheet_triggered() {
     QDesktopServices::openUrl(
             QUrl("https://github.com/pbek/QOwnNotes/blob/develop/src/demonotes"
                          "/Markdown%20Cheatsheet.md"));
+}
+
+/**
+ * Strikes out the selected text
+ */
+void MainWindow::on_actionStrike_out_text_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText("~~~~");
+        c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
+        textEdit->setTextCursor(c);
+    } else {
+        c.insertText("~~" + selectedText + "~~");
+    }
 }
