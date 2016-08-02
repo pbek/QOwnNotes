@@ -41,7 +41,7 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
             if (ui->todoListSelector->currentText() != calendar) {
                 ui->todoListSelector->setCurrentText(calendar);
             } else {
-                // jump to the correct todo list item
+                // jump to the correct task list item
                 jumpToTodoListItem();
             }
         }
@@ -75,7 +75,7 @@ void TodoDialog::setupUi() {
         const QSignalBlocker blocker(ui->todoListSelector);
         Q_UNUSED(blocker);
 
-        // set the index of the todo list selector if we found it
+        // set the index of the task list selector if we found it
         ui->todoListSelector->setCurrentIndex(index);
     } else {
         // if we didn't find the index store the new current item
@@ -86,7 +86,7 @@ void TodoDialog::setupUi() {
     // hide the reminder date time select
     ui->reminderDateTimeEdit->hide();
 
-    // now load the todo list items
+    // now load the task list items
     reloadTodoList();
 
     ui->newItemEdit->installEventFilter(this);
@@ -124,7 +124,7 @@ void TodoDialog::setupMainSplitter() {
 }
 
 /**
- * @brief Loads the calendar items from the settings to the todo list selector
+ * @brief Loads the calendar items from the settings to the task list selector
  */
 void TodoDialog::loadTodoListData() {
     const QSignalBlocker blocker(ui->todoListSelector);
@@ -137,7 +137,7 @@ void TodoDialog::loadTodoListData() {
 }
 
 /**
- * @brief Fetches the items of the current todo list from ownCloud
+ * @brief Fetches the items of the current task list from ownCloud
  */
 void TodoDialog::reloadTodoList() {
     ui->todoItemLoadingProgressBar->setValue(0);
@@ -147,7 +147,7 @@ void TodoDialog::reloadTodoList() {
 }
 
 /**
- * Reloads the todo list from the SQLite database
+ * Reloads the task list from the SQLite database
  */
 void TodoDialog::reloadTodoListItems() {
     QList<CalendarItem> calendarItemList = CalendarItem::fetchAllByCalendar(
@@ -201,7 +201,7 @@ void TodoDialog::reloadTodoListItems() {
         }
     }
 
-    // set the current row of the todo list to the first row
+    // set the current row of the task list to the first row
     jumpToTodoListItem();
 
     // set the focus to the description edit if we wanted to
@@ -212,10 +212,10 @@ void TodoDialog::reloadTodoListItems() {
 }
 
 /**
- * Jumps to the correct todo list item
+ * Jumps to the correct task list item
  */
 void TodoDialog::jumpToTodoListItem() {
-    // set the current row of the todo list to the first row
+    // set the current row of the task list to the first row
     if (ui->todoList->count() > 0) {
         int row = -1;
 
@@ -270,9 +270,9 @@ void TodoDialog::resetEditFrameControls() {
 }
 
 /**
- * @brief Searches a todo item by uid in the todo list
+ * @brief Searches a task item by uid in the task list
  * @param uid
- * @return Returns the row of the todo item in the todo list, returns -1 if not found
+ * @return Returns the row of the task item in the task list, returns -1 if not found
  */
 int TodoDialog::findTodoItemRowByUID(QString uid) {
     int count = ui->todoList->count();
@@ -334,7 +334,7 @@ void TodoDialog::on_todoListSelector_currentIndexChanged(const QString &arg1) {
     // store the todoListSelectorSelectedItem
     storeSettings();
 
-    // reload the todo list items
+    // reload the task list items
     reloadTodoList();
 }
 
@@ -502,7 +502,7 @@ void TodoDialog::on_removeButton_clicked() {
         calItem.remove();
 
         // remove the calendar item from the ownCloud server
-        // (this will reload the todo list as well)
+        // (this will reload the task list as well)
         OwnCloudService *ownCloud = new OwnCloudService(this);
         ownCloud->removeCalendarItem(calItem, this);
     }
@@ -622,14 +622,14 @@ void TodoDialog::searchInDescriptionTextEdit(QString &str) {
 }
 
 /**
- * Event filters on the Todo Dialog
+ * Event filters on the task dialog
  */
 bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {
         QKeyEvent *keyEvent = static_cast<QKeyEvent *>(event);
 
         if (obj == ui->newItemEdit) {
-            // set focus to the todo list if Key_Down or Key_Tab
+            // set focus to the task list if Key_Down or Key_Tab
             // were pressed in the new item edit
             if ((keyEvent->key() == Qt::Key_Down) ||
                     (keyEvent->key() == Qt::Key_Tab)) {
@@ -640,7 +640,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
                     ui->todoList->setCurrentRow(firstVisibleTodoListRow);
                 }
 
-                // give the keyboard focus to the todo list widget
+                // give the keyboard focus to the task list widget
                 ui->todoList->setFocus();
                 return true;
             }
