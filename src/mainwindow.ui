@@ -752,6 +752,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_tag_pane"/>
     <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
+    <addaction name="actionToggle_between_edit_and_preview"/>
     <addaction name="actionUse_vertical_preview_layout"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
@@ -1637,6 +1638,17 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+S</string>
+   </property>
+  </action>
+  <action name="actionToggle_between_edit_and_preview">
+   <property name="text">
+    <string>Toggle between edit and preview</string>
+   </property>
+   <property name="toolTip">
+    <string>Toggle between edit and preview</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+P</string>
    </property>
   </action>
  </widget>

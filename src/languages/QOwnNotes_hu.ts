@@ -189,437 +189,443 @@
         <translation>Szerkesztő szélessége</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="766"/>
+        <location filename="../mainwindow.ui" line="767"/>
         <source>Tag</source>
         <translation>Címke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="772"/>
+        <location filename="../mainwindow.ui" line="773"/>
         <source>Scripting</source>
         <translation>Scripting</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="786"/>
+        <location filename="../mainwindow.ui" line="787"/>
         <source>main toolbar</source>
         <translation>fő eszköztár</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="817"/>
+        <location filename="../mainwindow.ui" line="818"/>
         <source>&amp;Quit</source>
         <translation>&amp;Kilép</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="832"/>
+        <location filename="../mainwindow.ui" line="833"/>
         <source>&amp;Setup note folders</source>
         <translation>Jegyzet mappák &amp;beállítása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="841"/>
+        <location filename="../mainwindow.ui" line="842"/>
         <source>&amp;Find note</source>
         <translation>&amp;Jegyzet megkeresése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="853"/>
+        <location filename="../mainwindow.ui" line="854"/>
         <source>&amp;Remove current note</source>
         <translation>Eltávolítom az aktuális jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="865"/>
+        <location filename="../mainwindow.ui" line="866"/>
         <source>About &amp;QOwnNotes...</source>
         <translation>A &amp;QOwnNotes-ról...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="877"/>
+        <location filename="../mainwindow.ui" line="878"/>
         <source>&amp;New note</source>
         <translation>&amp;Új Megjegyzés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="889"/>
+        <location filename="../mainwindow.ui" line="890"/>
         <source>Check for &amp;updates</source>
         <translation>Ellenőrizze a &amp;frissítéseket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="901"/>
+        <location filename="../mainwindow.ui" line="902"/>
         <source>Report &amp;issues or ideas</source>
         <translation>Közölj &amp;kérdéseket vagy ötleteket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="909"/>
+        <location filename="../mainwindow.ui" line="910"/>
         <source>Alphabetical</source>
         <translation>ABC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="912"/>
+        <location filename="../mainwindow.ui" line="913"/>
         <source>Sort alphabetical</source>
         <translation>Betűrendes rendezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="920"/>
+        <location filename="../mainwindow.ui" line="921"/>
         <source>By date</source>
         <translation>Dátum szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="923"/>
+        <location filename="../mainwindow.ui" line="924"/>
         <source>Sort by date</source>
         <translation>Dátum szerinti rendezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="931"/>
+        <location filename="../mainwindow.ui" line="932"/>
         <source>Sh&amp;ow in system tray</source>
         <translation>&amp;Megjelenítése a tálcán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="940"/>
+        <location filename="../mainwindow.ui" line="941"/>
         <source>&amp;Settings</source>
         <translation>&amp;Beállítások</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="955"/>
+        <location filename="../mainwindow.ui" line="956"/>
         <source>Show note &amp;versions</source>
         <translation>Jegyzet &amp;változatokat megmutat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="958"/>
+        <location filename="../mainwindow.ui" line="959"/>
         <source>Show note versions on server</source>
         <translation>Jegyzet változatokat megmutat a szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="967"/>
+        <location filename="../mainwindow.ui" line="968"/>
         <source>Show &amp;trash</source>
         <translation>Megmutatja a &amp;kukát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="970"/>
+        <location filename="../mainwindow.ui" line="971"/>
         <source>Show trashed notes on server</source>
         <translation>Mutassa meg a törölt jegyzeteket a szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="975"/>
+        <location filename="../mainwindow.ui" line="976"/>
         <location filename="../mainwindow.cpp" line="6310"/>
         <source>Select &amp;all notes</source>
         <translation>Válassza ki az &amp;összes jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="984"/>
+        <location filename="../mainwindow.ui" line="985"/>
         <location filename="../mainwindow.cpp" line="4114"/>
         <source>Insert &amp;link</source>
         <translation>&amp;Link beszúrás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="987"/>
+        <location filename="../mainwindow.ui" line="988"/>
         <source>Insert link to an url or a note</source>
         <translation>Egy URL vagy jegyzet hivatkozás beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="999"/>
+        <location filename="../mainwindow.ui" line="1000"/>
         <source>&amp;Find in current note</source>
         <translation>&amp;Találd meg az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1002"/>
+        <location filename="../mainwindow.ui" line="1003"/>
         <source>Find text in current note</source>
         <translation>Szöveg keresése az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1010"/>
+        <location filename="../mainwindow.ui" line="1011"/>
         <source>&amp;Duplicate text</source>
         <translation>&amp;Ismétlődő szöveg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1022"/>
+        <location filename="../mainwindow.ui" line="1023"/>
         <source>&amp;Back in note history</source>
         <translation>&amp;Vissza a jegyzettörténelemben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1034"/>
+        <location filename="../mainwindow.ui" line="1035"/>
         <source>Forward in note history</source>
         <translation>Előre a jegyzettörténelemben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1046"/>
+        <location filename="../mainwindow.ui" line="1047"/>
         <source>Show shortcuts</source>
         <translation>Megmutatja a rövidítéseket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1055"/>
+        <location filename="../mainwindow.ui" line="1056"/>
         <source>&amp;Knowledge base</source>
         <translation>&amp;Tudásbázis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1064"/>
+        <location filename="../mainwindow.ui" line="1065"/>
         <source>Insert current &amp;time</source>
         <translation>Jelenlegi &amp;idő beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1076"/>
+        <location filename="../mainwindow.ui" line="1077"/>
         <source>Show &amp;Todo List</source>
         <translation>Mutasd a &amp;tennivalók listáját</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1088"/>
+        <location filename="../mainwindow.ui" line="1089"/>
         <source>&amp;Export note as PDF (markdown)</source>
         <translation>&amp;Jegyzet exportálása PDF-ként (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1097"/>
+        <location filename="../mainwindow.ui" line="1098"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation>&amp;Jegyzet exportálása PDF-ként (szöveg)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
+        <location filename="../mainwindow.ui" line="1107"/>
         <source>&amp;Print note (text)</source>
         <translation>Jegyzet &amp;nyomtatása (szövegként)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1118"/>
+        <location filename="../mainwindow.ui" line="1119"/>
         <source>&amp;Print note (markdown)</source>
         <translation>Jegyzet &amp;nyomtatása (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1130"/>
+        <location filename="../mainwindow.ui" line="1131"/>
         <source>Insert &amp;image</source>
         <translation>&amp;Kép beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1133"/>
+        <location filename="../mainwindow.ui" line="1134"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation>Kép beszúrása (a kép bekerül a &quot;média&quot; dosszié-ban a jelenlegi jegyzetek dossziéba)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1145"/>
+        <location filename="../mainwindow.ui" line="1146"/>
         <source>Show &amp;changelog</source>
         <translation>Megmutatja a &amp;changelog-ot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1154"/>
+        <location filename="../mainwindow.ui" line="1155"/>
         <source>&amp;Encrypt note</source>
         <translation>&amp;Titkosítja a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1163"/>
+        <location filename="../mainwindow.ui" line="1164"/>
         <source>Edit encrypted note</source>
         <translation>Titkosított jegyzet szerkesztése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1175"/>
+        <location filename="../mainwindow.ui" line="1176"/>
         <source>Decrypt note</source>
         <translation>Megjeleníti a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1184"/>
+        <location filename="../mainwindow.ui" line="1185"/>
         <source>&amp;Open note in external editor</source>
         <translation>&amp;Megynyitom a jegyzetet külső szerkesztőben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1196"/>
+        <location filename="../mainwindow.ui" line="1197"/>
         <source>&amp;Export note as markdown file</source>
         <translation>&amp;Markdown fájlként exportálhatja a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1205"/>
+        <location filename="../mainwindow.ui" line="1206"/>
         <source>&amp;Get involved</source>
         <translation>&amp;Végy részt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1214"/>
+        <location filename="../mainwindow.ui" line="1215"/>
         <source>Insert &amp;code block</source>
         <translation>&amp;Kód blokk beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1226"/>
+        <location filename="../mainwindow.ui" line="1227"/>
         <source>Next note</source>
         <translation>Következő jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1238"/>
+        <location filename="../mainwindow.ui" line="1239"/>
         <source>Previous note</source>
         <translation>Előző jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1250"/>
+        <location filename="../mainwindow.ui" line="1251"/>
         <source>&amp;Distraction free mode</source>
         <translation>&amp;Figyelemelterelésmentes mód</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1253"/>
+        <location filename="../mainwindow.ui" line="1254"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation>Figyelemelterelésmentes mód, a jobb alsó sarokban található gombbal hagyhatja el</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1264"/>
+        <location filename="../mainwindow.ui" line="1265"/>
         <source>Show &amp;toolbar</source>
         <translation>&amp;Eszköztár megmutatása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1272"/>
+        <location filename="../mainwindow.ui" line="1273"/>
         <source>Narrow</source>
         <translation>Keskeny</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1283"/>
+        <location filename="../mainwindow.ui" line="1284"/>
         <source>Medium</source>
         <translation>Közepes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1294"/>
+        <location filename="../mainwindow.ui" line="1295"/>
         <source>Wide</source>
         <translation>Széles</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1305"/>
+        <location filename="../mainwindow.ui" line="1306"/>
         <source>Full</source>
         <translation>Teljes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1317"/>
+        <location filename="../mainwindow.ui" line="1318"/>
         <source>Paste html or media</source>
         <translation>Beilleszti a html-t vagy médiát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1320"/>
-        <location filename="../mainwindow.ui" line="1323"/>
+        <location filename="../mainwindow.ui" line="1321"/>
+        <location filename="../mainwindow.ui" line="1324"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation>Illessze be a képeket, a jegyzeteket és a html-t a vágólapról</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1335"/>
+        <location filename="../mainwindow.ui" line="1336"/>
         <source>Show note in &amp;file manager</source>
         <translation>Megmutatja a jegyzetet a &amp;fájl igazgatóban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1347"/>
+        <location filename="../mainwindow.ui" line="1348"/>
         <source>Format text &amp;bold</source>
         <translation>Szöveg formázása &amp;vastag betű</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1359"/>
+        <location filename="../mainwindow.ui" line="1360"/>
         <source>Format text &amp;italic</source>
         <translation>Szöveg formázása &amp;dőlt betű</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1371"/>
+        <location filename="../mainwindow.ui" line="1372"/>
         <source>&amp;Increase note text size</source>
         <translation>Jegyzet &amp;szövegméret növelése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1383"/>
+        <location filename="../mainwindow.ui" line="1384"/>
         <source>&amp;Decrease note text size</source>
         <translation>Jegyzet &amp;szövegméret csökkentése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1395"/>
+        <location filename="../mainwindow.ui" line="1396"/>
         <source>&amp;Reset note text size</source>
         <translation>Jegyzet szövegméret &amp;visszaállítása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1407"/>
+        <location filename="../mainwindow.ui" line="1408"/>
         <source>&amp;Add tag to note</source>
         <translation>Jegyzet címke &amp;hozzáadása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1422"/>
+        <location filename="../mainwindow.ui" line="1423"/>
         <source>&amp;Toggle tag pane</source>
         <translation>&amp;Ablakváltás tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1434"/>
+        <location filename="../mainwindow.ui" line="1435"/>
         <source>&amp;Reload note folder</source>
         <translation>&amp;Újratölti a jegyzetmappát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1449"/>
+        <location filename="../mainwindow.ui" line="1450"/>
         <source>Toggle markdown preview</source>
         <translation>Markdown-előnézet ki-/ bekapcsolása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1464"/>
+        <location filename="../mainwindow.ui" line="1465"/>
         <source>Toggle note edit pane</source>
         <translation>Jegyzet szerkesztése ablaktábla</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1475"/>
+        <location filename="../mainwindow.ui" line="1476"/>
         <source>Use &amp;vertical preview layout</source>
         <translation>Használata &amp;függőleges minta elrendezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1484"/>
+        <location filename="../mainwindow.ui" line="1485"/>
         <source>Replace in current note</source>
         <translation>Kicserélem az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1492"/>
+        <location filename="../mainwindow.ui" line="1493"/>
         <source>Solve equation or open URL</source>
         <translation>Megfejteni az egyenletet vagy megnyit egy URL-t</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1495"/>
+        <location filename="../mainwindow.ui" line="1496"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation>Megoldok egy egyszerű egyenletet, mint &apos;(2+3) * 6 = &quot;az aktuális sorban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1503"/>
+        <location filename="../mainwindow.ui" line="1504"/>
         <source>Select note folder</source>
         <translation>Megjegyzés: mappa kiválasztása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1518"/>
+        <location filename="../mainwindow.ui" line="1519"/>
         <source>Reload scripting engine</source>
         <translation>Újratölti a parancsfájl-végrehajtót</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1530"/>
+        <location filename="../mainwindow.ui" line="1531"/>
         <source>Show log dialog</source>
         <translation>Megjelenítem a bejelentkezés párbeszédpanel-t</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1539"/>
+        <location filename="../mainwindow.ui" line="1540"/>
         <source>Export note as HTML (markdown)</source>
         <translation>Exportálom a jegyzetet mint HTML (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1548"/>
+        <location filename="../mainwindow.ui" line="1549"/>
         <source>Open chat</source>
         <translation>Nyitom a csevegőt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1551"/>
-        <location filename="../mainwindow.ui" line="1554"/>
+        <location filename="../mainwindow.ui" line="1552"/>
+        <location filename="../mainwindow.ui" line="1555"/>
         <source>Open the #qownnotes IRC channel</source>
         <translation>Nyissa meg a #qownnotes IRC csatornát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1563"/>
+        <location filename="../mainwindow.ui" line="1564"/>
         <source>Insert headline from note filename</source>
         <translation>Megjegyzés: főcím beszúrása a fáljlnévből</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1577"/>
+        <location filename="../mainwindow.ui" line="1578"/>
         <source>Use softwrap in note editor and preview</source>
         <translation>Szoftver használata a jegyzet szerkesztőben és az előnézetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1585"/>
+        <location filename="../mainwindow.ui" line="1586"/>
         <source>Show status bar</source>
         <translation>Állapotsor megjelenítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1600"/>
+        <location filename="../mainwindow.ui" line="1601"/>
         <source>Share note</source>
         <translation>Megosztom a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1615"/>
+        <location filename="../mainwindow.ui" line="1616"/>
         <source>Toggle text case</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1627"/>
+        <location filename="../mainwindow.ui" line="1628"/>
         <source>Markdown cheatsheet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1636"/>
+        <location filename="../mainwindow.ui" line="1637"/>
         <source>Strike out text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="1645"/>
+        <location filename="../mainwindow.ui" line="1648"/>
+        <source>Toggle between edit and preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

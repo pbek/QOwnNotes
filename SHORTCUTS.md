@@ -10,6 +10,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> toggles between note edit and preview
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
@@ -90,18 +91,19 @@ Important Shortcuts
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> toggles the tag panes
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> toggles the markdown view mode
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> toggles the note edit pane
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> toggles between note edit and preview
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
-- <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
+- <kbd>Opt</kbd> + <kbd>R</kbd> removes the current note
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
-- <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
+- <kbd>Opt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgUp</kbd>
-- <kbd>Alt</kbd> + <kbd>Down</kbd> jumps to the next visible note
+- <kbd>Opt</kbd> + <kbd>Down</kbd> jumps to the next visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgDown</kbd>
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>D</kbd> toggles the distraction free mode
     - you can also close it with <kbd>Esc</kbd>
@@ -109,9 +111,9 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> prints the current note as markdown
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>V</kbd> pastes notes, images and html from the clipboard
 - <kbd>⌘</kbd> + <kbd>,</kbd> opens the settings
-- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> adds a new tag to a note
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
-- <kbd>⌘</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
+- <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>F</kbd> lets you select a different note folder
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> reloads the scripting engine 
 
 ### In the note search bar

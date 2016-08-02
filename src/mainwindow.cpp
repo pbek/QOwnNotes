@@ -6635,3 +6635,18 @@ void MainWindow::on_actionStrike_out_text_triggered() {
         c.insertText("~~" + selectedText + "~~");
     }
 }
+
+/**
+ * Toggles between note edid mode and preview
+ */
+void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
+    // if we use toggle() the widget sizes are stored correctly
+    ui->actionToggle_markdown_preview->toggle();
+
+    bool hasPreview = ui->actionToggle_markdown_preview->isChecked();
+    bool hasEdit = ui->actionToggle_note_edit_pane->isChecked();
+
+    if (hasPreview == hasEdit) {
+        ui->actionToggle_note_edit_pane->toggle();
+    }
+}

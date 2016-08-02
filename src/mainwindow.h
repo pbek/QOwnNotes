@@ -333,6 +333,8 @@ private slots:
 
     void on_actionStrike_out_text_triggered();
 
+    void on_actionToggle_between_edit_and_preview_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

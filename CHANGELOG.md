@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.08.1
+- you can now toggle between the note edit mode and the preview with
+  <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>
+  (for [Issue #269](https://github.com/pbek/QOwnNotes/issues/269))
+
 ## 16.08.0
 - tagging, removing tags, moving and copying multiple notes in note 
   subfolders now works correctly if notes with the same name exist 
