@@ -626,7 +626,7 @@
       <location filename="../mainwindow.ui" line="1645"/>
       <location filename="../mainwindow.ui" line="1648"/>
       <source>Toggle between edit and preview</source>
-      <translation type="unfinished">Toggle between edit and preview</translation>
+      <translation>Переключиться между редактированием и просмотром</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1605"/>

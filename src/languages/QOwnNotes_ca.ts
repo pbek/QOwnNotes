@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="14"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Registres</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="55"/>
@@ -78,17 +78,17 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="48"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Depuració</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="94"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informació</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="62"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Estat</translation>
     </message>
     <message>
       <location filename="../dialogs/logdialog.ui" line="69"/>
@@ -98,7 +98,7 @@
     <message>
       <location filename="../dialogs/logdialog.ui" line="76"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Buida el registre</translation>
     </message>
   </context>
   <context>
@@ -136,12 +136,12 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>find or create note sub folder</source>
-      <translation type="unfinished">find or create note sub folder</translation>
+      <translation>troba o crea una subcarpeta de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>search for notes or create new notes by entering text and pressing return</source>
-      <translation>cerca notes o en crea de noves escrivint text i prement Retorn</translation>
+      <translation>cerca notes o crea de noves escrivint text i prement Retorn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="378"/>
