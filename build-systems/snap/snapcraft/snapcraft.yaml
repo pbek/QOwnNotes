@@ -29,6 +29,7 @@ parts:
       - qtdeclarative5-dev
       - libqt5svg5-dev
       - qttools5-dev-tools
+      - libqt5xmlpatterns5-dev
     stage-packages:
       - libqt5gui5
       - libqt5sql5
