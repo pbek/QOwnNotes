@@ -6584,7 +6584,9 @@ void MainWindow::on_actionShare_note_triggered() {
     OwnCloudService *ownCloud = new OwnCloudService(this);
 
     // TODO(pbek): Check if ownCloud is configured
-    ownCloud->shareNote(currentNote);
+//    ownCloud->shareNote(currentNote);
+
+    ownCloud->fetchShares();
 }
 
 /**

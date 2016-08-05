@@ -17,6 +17,8 @@
 #include <QJSEngine>
 #include <QJSValueIterator>
 #include <QCoreApplication>
+#include <QXmlQuery>
+#include <QXmlResultItems>
 #include "libraries/versionnumber/versionnumber.h"
 #include "entities/calendaritem.h"
 #include "cryptoservice.h"
@@ -58,6 +60,7 @@ void OwnCloudService::readSettings() {
     ownCloudTestPath = "/ocs/v1.php";
     restoreTrashedNotePath = rootPath + "note/restore_trashed";
     webdavPath = "/remote.php/webdav";
+    sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
 
     int calendarBackend = settings.value(
             "ownCloud/todoCalendarBackend").toInt();
@@ -229,6 +232,15 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             // load the directories
             loadDirectory(data);
+
+            return;
+        } else if (reply->url().path().endsWith(sharePath)) {
+            qDebug() << "Reply from share api";
+
+            qDebug() << __func__ << " - 'data': " << data;
+
+            // update the share status of the notes
+            updateNoteShareStatus(data);
 
             return;
         } else if (reply->url().toString() == serverUrl) {
@@ -474,7 +486,31 @@ void OwnCloudService::shareNote(Note note) {
 }
 
 /**
- * @brief Removes a todo list item from the ownCloud server
+ * Fetches the shares from ownCloud
+ *
+ * To fetch the shares of all notes we have to fetch all shares from the
+ * account and search for our note folder
+ */
+void OwnCloudService::fetchShares(QString path) {
+    QUrl url(serverUrl + sharePath);
+
+    if (!path.isEmpty()) {
+        QUrlQuery q;
+        q.addQueryItem("path", path);
+        url.setQuery(q);
+    }
+
+    qDebug() << url;
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    QNetworkReply *reply = networkManager->get(r);
+    ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * @brief Removes a task list item from the ownCloud server
  */
 void OwnCloudService::removeCalendarItem(CalendarItem calItem,
                                          TodoDialog *dialog) {
@@ -735,10 +771,10 @@ void OwnCloudService::handleTrashedLoading(QString data) {
         return;
     }
 
-    // get the versions
+    // get the notes
     QJSValue notes = result.property(0).property("notes");
 
-    // check if we got no usefull data
+    // check if we got no useful data
     if (notes.toString() == "") {
         QMessageBox::information(0, "no other version",
                                  "There are no trashed notes on the server.");
@@ -962,6 +998,158 @@ void OwnCloudService::loadTodoItems(QString &data) {
         // reload the existing items
         todoDialog->reloadTodoListItems();
     }
+}
+
+/**
+ * Updates the share status of the notes
+ *
+ * @param data
+ */
+void OwnCloudService::updateNoteShareStatus(QString &data) {
+    QXmlQuery query;
+    QDomDocument doc;
+    doc.setContent(data, true);
+
+    if (data.isEmpty()) {
+        showOwnCloudServerErrorMessage("", false);
+    }
+
+    QStringList pathList;
+    QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, "element");
+
+//    QJSEngine engine;
+//    QJSValue result = engine.evaluate(data);
+//
+//
+//    QJSValue versions = result.property(0).property("data");
+//
+//
+//    qDebug() << __func__ << " - 'versions': " << versions.toString();
+
+    query.setFocus(data);
+    query.setQuery("ocs/data/element");
+
+    if (!query.isValid()) {
+        return;
+    }
+
+    qDebug() << __func__ << " - 'query.isValid()': " << query.isValid();
+    QXmlResultItems results;
+    query.evaluateTo(&results);
+
+    if (results.hasError()) {
+        return;
+    }
+
+    QString serverNotesPath = NoteFolder::currentRemotePath();
+    qDebug() << __func__ << " - 'serverNotesPath': " << serverNotesPath;
+
+
+    while (!results.next().isNull()) {
+        query.setFocus(results.current());
+
+        query.setQuery("share_type/text()");
+        QString shareType;
+        query.evaluateTo(&shareType);
+
+        // we only want public shares
+        if (shareType.trimmed() != "3") {
+            continue;
+        }
+
+        query.setQuery("item_type/text()");
+        QString itemType;
+        query.evaluateTo(&itemType);
+
+        // we only want file shares
+        if (itemType.trimmed() != "file") {
+            continue;
+        }
+
+        query.setQuery("path/text()");
+        QString path;
+        query.evaluateTo(&path);
+        path = path.trimmed();
+
+        // we only want shares in our note folder
+        if (!path.startsWith(serverNotesPath)) {
+            continue;
+        }
+
+        // remove the note path from the path
+        path = Utils::Misc::removeIfStartsWith(path, serverNotesPath);
+
+        qDebug() << __func__ << " - 'path': " << path;
+        QFileInfo fileInfo(path);
+
+        QString fileName = fileInfo.fileName();
+        QString fileParentPath = fileInfo.dir().path();
+        if (fileParentPath == ".") {
+            fileParentPath = "";
+        }
+
+        qDebug() << __func__ << " - 'fileName': "
+                 << fileName;
+        qDebug() << __func__ << " - 'fileParentPath': "
+                 << fileParentPath;
+    }
+
+//    if (output == Q_NULLPTR) {
+//        return;
+//    }
+//
+//    qDebug() << __func__ << " - 'output': " << output;
+
+    return;
+
+
+    for (int i = 0; i < responseNodes.count(); i++) {
+        QDomNode responseNode = responseNodes.at(i);
+        if (responseNode.isElement()) {
+            QDomElement elem = responseNode.toElement();
+
+            bool isFolder = false;
+            QDomNodeList resourceTypeNodes =
+                    elem.elementsByTagNameNS(NS_DAV, "resourcetype");
+            if (resourceTypeNodes.length()) {
+                QDomNodeList typeNodes = resourceTypeNodes.at(0).childNodes();
+                for (int j = 0; j < typeNodes.length(); ++j) {
+                    QDomNode typeNode = typeNodes.at(j);
+                    QString typeString = typeNode.toElement().tagName();
+
+                    if (typeString == "collection") {
+                        isFolder = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!isFolder) {
+                continue;
+            }
+
+            // check if we have an url
+            QDomNodeList urlPartNodes = elem.elementsByTagNameNS(NS_DAV,
+                                                                 "href");
+            if (urlPartNodes.length()) {
+                QString urlPart = urlPartNodes.at(0).toElement().text();
+
+                QRegularExpression re(
+                    QRegularExpression::escape(webdavPath) + "\\/(.+)\\/$");
+
+                QRegularExpressionMatch match = re.match(urlPart);
+                QString folderString =
+                        match.hasMatch() ? match.captured(1) : "";
+
+                if (!folderString.isEmpty()) {
+                    pathList << QUrl::fromPercentEncoding(
+                            folderString.toUtf8());
+                }
+            }
+        }
+    }
+
+    settingsDialog->setNoteFolderRemotePathList(pathList);
 }
 
 void OwnCloudService::loadDirectory(QString &data) {

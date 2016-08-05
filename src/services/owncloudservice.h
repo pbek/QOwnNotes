@@ -49,6 +49,8 @@ public:
 
     void shareNote(Note note);
 
+    void fetchShares(QString path = "");
+
 private:
     QString serverUrl;
     QString serverUrlPath;
@@ -67,6 +69,7 @@ private:
     QString restoreTrashedNotePath;
     QString calendarPath;
     QString webdavPath;
+    QString sharePath;
     SettingsDialog *settingsDialog;
     TodoDialog *todoDialog;
     QString calendarName;
@@ -91,6 +94,8 @@ private:
 
     void showOwnCloudServerErrorMessage(
             QString message = QString(""), bool withSettingsButton = true);
+
+    void updateNoteShareStatus(QString &data);
 
 signals:
 
