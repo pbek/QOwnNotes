@@ -19,8 +19,9 @@ BuildRequires:  qt5-qtbase-gui
 BuildRequires:  qt5-qttools qt5-qttools-devel
 BuildRequires:  qt5-qtsvg-devel
 BuildRequires:  qt5-qtdeclarative-devel
+BuildRequires:  qt5-qtxmlpatterns-devel
 BuildRequires:  desktop-file-utils
-Requires:       qt5-qtsvg
+Requires:       qt5-qtsvg qt5-qtxmlpatterns
 
 %else
 # This is for all SUSE
