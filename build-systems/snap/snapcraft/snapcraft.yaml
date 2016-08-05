@@ -38,6 +38,7 @@ parts:
       - libqt5svg5
       - libqt5network5
       - libqt5xml5
+      - libqt5xmlpatterns5
       - libqt5printsupport5
       - libqt5declarative5
     stage:
