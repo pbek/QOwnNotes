@@ -171,6 +171,16 @@ public:
 
     bool isSameFile(Note note);
 
+    QString getShareUrl();
+
+    void setShareUrl(QString url);
+
+    int getShareId();
+
+    void setShareId(int id);
+
+    bool isShared();
+
 protected:
     int id;
     QString name;
@@ -185,6 +195,8 @@ protected:
     QDateTime modified;
     qint64 cryptoKey;
     QString cryptoPassword;
+    QString shareUrl;
+    int shareId;
     void handleNoteTextFileName();
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();

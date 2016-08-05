@@ -56,6 +56,7 @@
 #include <QQmlApplicationEngine>
 #include <services/scriptingservice.h>
 #include <dialogs/logdialog.h>
+#include <dialogs/sharedialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -2035,6 +2036,10 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
         // update the note directory watcher
         updateNoteDirectoryWatcher();
+
+        // update the information about shared notes
+        OwnCloudService *ownCloud = new OwnCloudService(this);
+        ownCloud->fetchShares();
     }
 }
 
@@ -2240,7 +2245,7 @@ void MainWindow::setCurrentNote(Note note,
 
     // update the text of the text edit
     if (updateNoteText) {
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
+        const QSignalBlocker blocker(ui->noteTextEdit);
         Q_UNUSED(blocker);
 
         this->setNoteTextFromNote(&note);
@@ -2254,6 +2259,11 @@ void MainWindow::setCurrentNote(Note note,
     reloadCurrentNoteTags();
 
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
+    // update the share button
+    const QSignalBlocker blocker(ui->actionShare_note);
+    Q_UNUSED(blocker);
+    ui->actionShare_note->setChecked(note.isShared());
 
 //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
 //            .fullNoteFilePath()).toLatin1().data());
@@ -6581,12 +6591,12 @@ void MainWindow::on_noteSubFolderTreeWidget_itemChanged(
 }
 
 void MainWindow::on_actionShare_note_triggered() {
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    const QSignalBlocker blocker(ui->actionShare_note);
+    Q_UNUSED(blocker);
+    ui->actionShare_note->setChecked(currentNote.isShared());
 
-    // TODO(pbek): Check if ownCloud is configured
-//    ownCloud->shareNote(currentNote);
-
-    ownCloud->fetchShares();
+    ShareDialog *dialog = new ShareDialog(currentNote, this);
+    dialog->exec();
 }
 
 /**

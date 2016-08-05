@@ -805,6 +805,7 @@ p, li { white-space: pre-wrap; }
    <addaction name="separator"/>
    <addaction name="actionShow_versions"/>
    <addaction name="actionShow_trash"/>
+   <addaction name="actionShare_note"/>
    <addaction name="separator"/>
    <addaction name="actionOpen_List"/>
   </widget>
@@ -1591,7 +1592,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="icon">
     <iconset theme="document-share" resource="breeze-qownnotes.qrc">
@@ -1604,7 +1605,10 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Alt+S</string>
    </property>
    <property name="visible">
-    <bool>false</bool>
+    <bool>true</bool>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
    </property>
   </action>
   <action name="actionToggle_text_case">

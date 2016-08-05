@@ -66,7 +66,8 @@ public:
 
     QString pathData();
 
-    static NoteSubFolder fetchByPathData(QString pathData);
+    static NoteSubFolder fetchByPathData(QString pathData,
+                                         QString separator = "\n");
 
     static NoteSubFolder fetchByNameAndParentId(QString name, int parentId);
 

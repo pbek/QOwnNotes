@@ -22,6 +22,7 @@
 Note::Note() {
     this->id = 0;
     this->noteSubFolderId = 0;
+    this->shareId = 0;
     this->hasDirtyData = false;
 }
 
@@ -47,6 +48,18 @@ qint64 Note::getCryptoKey() {
 
 QString Note::getCryptoPassword() {
     return this->cryptoPassword;
+}
+
+QString Note::getShareUrl() {
+    return this->shareUrl;
+}
+
+int Note::getShareId() {
+    return this->shareId;
+}
+
+bool Note::isShared() {
+    return this->shareId > 0;
 }
 
 QString Note::getFileName() {
@@ -79,6 +92,14 @@ bool Note::getHasDirtyData() {
 
 void Note::setName(QString text) {
     this->name = text;
+}
+
+void Note::setShareUrl(QString url) {
+    this->shareUrl = url;
+}
+
+void Note::setShareId(int id) {
+    this->shareId = id;
 }
 
 void Note::setCryptoKey(qint64 cryptoKey) {
@@ -270,6 +291,8 @@ bool Note::fillFromQuery(QSqlQuery query) {
     id = query.value("id").toInt();
     name = query.value("name").toString();
     fileName = query.value("file_name").toString();
+    shareUrl = query.value("share_url").toString();
+    shareId = query.value("share_id").toInt();
     noteSubFolderId = query.value("note_sub_folder_id").toInt();
     noteText = query.value("note_text").toString();
     decryptedNoteText = query.value("decrypted_note_text").toString();
@@ -631,6 +654,8 @@ bool Note::store() {
     if (id > 0) {
         query.prepare("UPDATE note SET "
                               "name = :name,"
+                              "share_url = :share_url,"
+                              "share_id = :share_id,"
                               "file_name = :file_name,"
                               "note_sub_folder_id = :note_sub_folder_id,"
                               "note_text = :note_text,"
@@ -645,11 +670,13 @@ bool Note::store() {
         query.bindValue(":id", id);
     } else {
         query.prepare("INSERT INTO note"
-                              "(name, file_name, note_text, has_dirty_data,"
+                              "(name, share_url, share_id, file_name, "
+                              "note_text, has_dirty_data, "
                               "file_last_modified, file_created, crypto_key,"
                               "modified, crypto_password, decrypted_note_text, "
                               "note_sub_folder_id) "
-                              "VALUES (:name, :file_name, :note_text,"
+                              "VALUES (:name, :share_url, :share_id, "
+                              ":file_name, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
                               ":crypto_password, :decrypted_note_text,"
@@ -659,6 +686,8 @@ bool Note::store() {
     QDateTime modified = QDateTime::currentDateTime();
 
     query.bindValue(":name", name);
+    query.bindValue(":share_url", shareUrl);
+    query.bindValue(":share_id", shareId);
     query.bindValue(":file_name", fileName);
     query.bindValue(":note_sub_folder_id", noteSubFolderId);
     query.bindValue(":note_text", noteText);
@@ -678,7 +707,7 @@ bool Note::store() {
         id = query.lastInsertId().toInt();
     }
 
-    modified = modified;
+    this->modified = modified;
     return true;
 }
 

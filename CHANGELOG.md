@@ -4,6 +4,10 @@
 - you can now toggle between the note edit mode and the preview with
   <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>
   (for [Issue #269](https://github.com/pbek/QOwnNotes/issues/269))
+- there now is a new button to **share your notes** on your ownCloud server
+    - currently you can only see if your note is shared publicly and 
+      copy the share url from the share dialog
+    - actual sharing of notes is work in progress
 - added more Portuguese, Russian, Hungarian, Dutch and Japanese
   translation (thank you mlimacarlos, frostyland, Fabijenna and piyo)
 

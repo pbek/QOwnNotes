@@ -84,6 +84,9 @@ set(SOURCE_FILES
     dialogs/tagadddialog.cpp
     dialogs/tagadddialog.h
     dialogs/tagadddialog.ui
+    dialogs/sharedialog.cpp
+    dialogs/sharedialog.h
+    dialogs/sharedialog.ui
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp

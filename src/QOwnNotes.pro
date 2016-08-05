@@ -79,7 +79,8 @@ SOURCES += main.cpp\
     api/noteapi.cpp \
     api/tagapi.cpp \
     dialogs/logdialog.cpp \
-    widgets/combobox.cpp
+    widgets/combobox.cpp \
+    dialogs/sharedialog.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -132,7 +133,8 @@ HEADERS  += mainwindow.h \
     api/noteapi.h \
     api/tagapi.h \
     dialogs/logdialog.h \
-    widgets/combobox.h
+    widgets/combobox.h \
+    dialogs/sharedialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -146,7 +148,8 @@ FORMS    += mainwindow.ui \
     dialogs/passworddialog.ui \
     dialogs/welcomedialog.ui \
     dialogs/tagadddialog.ui \
-    dialogs/logdialog.ui
+    dialogs/logdialog.ui \
+    dialogs/sharedialog.ui
 
 RESOURCES += \
     images.qrc \

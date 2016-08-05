@@ -131,10 +131,12 @@ QString NoteSubFolder::pathData() {
 }
 
 /**
- * Fetches a note sub folder by it's path data
+ * Fetches a note sub folder by its path data
  */
-NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData) {
-    QStringList pathList = pathData.split("\n");
+NoteSubFolder NoteSubFolder::fetchByPathData(QString pathData,
+                                             QString separator) {
+    pathData = Utils::Misc::removeIfStartsWith(pathData, separator);
+    QStringList pathList = pathData.split(separator);
     NoteSubFolder noteSubFolder;
     QStringListIterator itr(pathList);
 
