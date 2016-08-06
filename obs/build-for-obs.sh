@@ -61,10 +61,6 @@ sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/PKGBUILD
 # replace the version in the dsc file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" obs/qownnotes.dsc
 
-# replace the qtxmlpatterns5-dev-tools package
-# it works with Ubuntu Launchpad, but not with OBS
-sed -i "s/libqt5xmlpatterns5-dev/qtxmlpatterns5-dev-tools/g" src/debian/control
-
 changelogText="Released version $QOWNNOTES_VERSION"
 
 echo "Using version $QOWNNOTES_VERSION..."
