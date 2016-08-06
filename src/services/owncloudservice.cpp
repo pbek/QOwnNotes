@@ -33,6 +33,8 @@ OwnCloudService::OwnCloudService(QObject *parent)
     readSettings();
     settingsDialog = Q_NULLPTR;
     todoDialog = Q_NULLPTR;
+    mainWindow = Q_NULLPTR;
+    shareDialog = Q_NULLPTR;
 }
 
 void OwnCloudService::readSettings() {
@@ -85,7 +87,8 @@ void OwnCloudService::slotAuthenticationRequired(
 
     if (settingsDialog != Q_NULLPTR) {
         settingsDialog->setOKLabelData(3, "incorrect", SettingsDialog::Failure);
-        settingsDialog->setOKLabelData(4, "not connected", SettingsDialog::Failure);
+        settingsDialog->setOKLabelData(4, "not connected",
+                                       SettingsDialog::Failure);
     }
 
     reply->abort();
@@ -238,7 +241,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from share api";
 
             // update the share status of the notes
-            updateNoteShareStatus(data);
+            handleNoteShareReply(data);
+            return;
+        } else if (reply->url().path().startsWith(sharePath)) {
+            qDebug() << "Reply from delete share api";
+
+            // update the share status of the notes
+            handleDeleteNoteShareReply(reply->url().path(), data);
             return;
         } else if (reply->url().toString() == serverUrl) {
             qDebug() << "Reply from main server url";
@@ -478,8 +487,61 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 /**
  * Shares a note on ownCloud
  */
-void OwnCloudService::shareNote(Note note) {
+void OwnCloudService::shareNote(Note note, ShareDialog *shareDialog) {
+    this->shareDialog = shareDialog;
     qDebug() << __func__ << " - 'note': " << note;
+
+    // return if no settings are set
+    if (!hasOwnCloudSettings()) {
+        showOwnCloudMessage("", "You need to setup your ownCloud server "
+                "to share notes");
+        return;
+    }
+
+    QUrl url(serverUrl + sharePath);
+    QString path = NoteFolder::currentRemotePath() +
+            note.relativeNoteFilePath("/");
+
+    QByteArray postData;
+    // set to public link
+    postData.append("shareType=3&");
+    postData.append("path=" + QUrl::toPercentEncoding(path));
+
+    qDebug() << __func__ << " - 'url': " << url;
+    qDebug() << __func__ << " - 'postData': " << postData;
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
+
+    QNetworkReply *reply = networkManager->post(r, postData);
+    ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * Removes a note shares on ownCloud
+ */
+void OwnCloudService::removeNoteShare(Note note, ShareDialog *shareDialog) {
+    this->shareDialog = shareDialog;
+    qDebug() << __func__ << " - 'note': " << note;
+
+    // return if no settings are set
+    if (!hasOwnCloudSettings()) {
+        showOwnCloudMessage("", "You need to setup your ownCloud server "
+                "to remove a note share");
+        return;
+    }
+
+    QUrl url(serverUrl + sharePath + "/" + QString::number(note.getShareId()));
+
+    qDebug() << __func__ << " - 'url': " << url;
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
+    ignoreSslErrorsIfAllowed(reply);
 }
 
 /**
@@ -659,17 +721,36 @@ void OwnCloudService::showOwnCloudServerErrorMessage(
             tr("ownCloud server error: <strong>%1</strong><br />"
             "Please check your ownCloud configuration.").arg(message);
 
+    showOwnCloudMessage(headline, text, withSettingsButton);
+}
+
+/**
+ * Shows a ownCloud message dialog
+ */
+void OwnCloudService::showOwnCloudMessage(
+        QString headline, QString message, bool withSettingsButton) {
+    if (headline.isEmpty()) {
+        headline = "ownCloud";
+    }
+
+    if (message.isEmpty()) {
+        message = tr("You need to setup your ownCloud server!");
+    }
+
     if (withSettingsButton) {
         if (QMessageBox::warning(
-                0, headline, text,
+                0, headline, message,
                 tr("Open &settings"), tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
+            MainWindow *mainWindow =
+                    qApp->property("mainWindow").value<MainWindow *>();
+
             if (mainWindow != NULL) {
                 mainWindow->openSettingsDialog(SettingsDialog::OwnCloudTab);
             }
         }
     } else {
-        QMessageBox::warning(0, headline, text);
+        QMessageBox::warning(0, headline, message);
     }
 }
 
@@ -1007,7 +1088,109 @@ void OwnCloudService::loadTodoItems(QString &data) {
  *
  * @param data
  */
-void OwnCloudService::updateNoteShareStatus(QString &data) {
+void OwnCloudService::handleNoteShareReply(QString &data) {
+    // return if we didn't get any data
+    if (data.isEmpty()) {
+        return;
+    }
+
+    updateNoteShareStatusFromShare(data);
+    updateNoteShareStatusFromFetchAll(data);
+}
+
+/**
+ * Updates the share status of the notes
+ */
+void OwnCloudService::handleDeleteNoteShareReply(QString urlPart,
+                                                 QString &data) {
+    // return if we didn't get any data
+    if (data.isEmpty()) {
+        return;
+    }
+
+    QRegularExpression re(
+            QRegularExpression::escape(sharePath) + "\\/(\\d+)$");
+
+    QRegularExpressionMatch match = re.match(urlPart);
+    int shareId = match.hasMatch() ? match.captured(1).toInt() : 0;
+    qDebug() << __func__ << " - 'shareId': " << shareId;
+
+    if (shareId == 0) {
+        return;
+    }
+
+    Note note = Note::fetchByShareId(shareId);
+    qDebug() << __func__ << " - 'note': " << note;
+
+    if (!note.isFetched()) {
+        return;
+    }
+
+    QXmlQuery query;
+    query.setFocus(data);
+    query.setQuery("ocs/meta/status/text()");
+    QString status;
+    query.evaluateTo(&status);
+
+    qDebug() << __func__ << " - 'status': " << status;
+
+    if (status.trimmed() != "ok") {
+        query.setQuery("ocs/meta/message/text()");
+        QString message;
+        query.evaluateTo(&message);
+
+        showOwnCloudServerErrorMessage(message.trimmed());
+        return;
+    }
+
+    note.setShareUrl("");
+    note.setShareId(0);
+    note.store();
+
+    // update the share dialog to show the share url
+    if (shareDialog != Q_NULLPTR) {
+        shareDialog->updateDialog();
+    }
+}
+
+/**
+ * Updates the share status of the notes
+ *
+ * @param data
+ */
+void OwnCloudService::updateNoteShareStatusFromShare(QString &data) {
+    // return if we didn't get any data
+    if (data.isEmpty()) {
+        return;
+    }
+
+    QXmlQuery query;
+    query.setFocus(data);
+    query.setQuery("ocs/meta/status/text()");
+    QString status;
+    query.evaluateTo(&status);
+
+    qDebug() << __func__ << " - 'status': " << status;
+
+    if (status.trimmed() != "ok") {
+        query.setQuery("ocs/meta/message/text()");
+        QString message;
+        query.evaluateTo(&message);
+
+        showOwnCloudServerErrorMessage(message.trimmed());
+        return;
+    }
+
+    query.setQuery("ocs/data");
+    updateNoteShareStatus(query, true);
+}
+
+/**
+ * Updates the share status of the notes
+ *
+ * @param data
+ */
+void OwnCloudService::updateNoteShareStatusFromFetchAll(QString &data) {
     // return if we didn't get any data
     if (data.isEmpty()) {
         return;
@@ -1021,6 +1204,11 @@ void OwnCloudService::updateNoteShareStatus(QString &data) {
         return;
     }
 
+    updateNoteShareStatus(query);
+}
+
+void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
+                                            bool updateShareDialog) {
     QXmlResultItems results;
     query.evaluateTo(&results);
 
@@ -1094,6 +1282,11 @@ void OwnCloudService::updateNoteShareStatus(QString &data) {
             note.setShareUrl(url.trimmed());
 
             note.store();
+
+            // update the share dialog to show the share url
+            if (updateShareDialog && (shareDialog != Q_NULLPTR)) {
+                shareDialog->updateDialog();
+            }
         }
     }
 }

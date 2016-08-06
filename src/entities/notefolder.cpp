@@ -291,7 +291,7 @@ NoteFolder NoteFolder::currentNoteFolder() {
 /**
  * Fetches the current remote path for the ownCloud service
  */
-QString NoteFolder::currentRemotePath() {
+QString NoteFolder::currentRemotePath(bool addTrailingSlash) {
     QString remotePath;
     NoteFolder noteFolder = currentNoteFolder();
 
@@ -302,8 +302,13 @@ QString NoteFolder::currentRemotePath() {
     // add a leading "/"
     remotePath = Utils::Misc::prependIfDoesNotStartWith(remotePath, "/");
 
-    // add a trailing "/"
-    remotePath = Utils::Misc::appendIfDoesNotEndWith(remotePath, "/");
+    if (addTrailingSlash) {
+        // add a trailing "/"
+        remotePath = Utils::Misc::appendIfDoesNotEndWith(remotePath, "/");
+    } else {
+        // remove a trailing "/"
+        remotePath = Utils::Misc::removeIfEndsWith(remotePath, "/");
+    }
 
     return remotePath;
 }

@@ -584,4 +584,6 @@ private:
     QTreeWidgetItem *findNoteInNoteTreeWidget(Note note);
 
     void jumpToNoteOrCreateNew();
+
+    void updateShareButton();
 };

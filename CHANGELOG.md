@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.08.2
+- you can now **share notes** and **remove note shares** on your 
+  ownCloud server in the note share dialog
+
 ## 16.08.1
 - you can now toggle between the note edit mode and the preview with
   <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd>

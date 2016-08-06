@@ -255,6 +255,31 @@ bool Note::move(QString destinationPath) {
     return false;
 }
 
+/**
+ * Fetches a note by its share id
+ *
+ * @param shareId
+ * @return
+ */
+Note Note::fetchByShareId(int shareId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+    Note note;
+
+    query.prepare("SELECT * FROM note WHERE share_id = :share_id");
+    query.bindValue(":share_id", shareId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        if (query.first()) {
+            note = noteFromQuery(query);
+        }
+    }
+
+    return note;
+}
+
 Note Note::fetchByName(QString name, int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);

@@ -181,6 +181,8 @@ public:
 
     bool isShared();
 
+    static Note fetchByShareId(int shareId);
+
 protected:
     int id;
     QString name;

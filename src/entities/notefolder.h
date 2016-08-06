@@ -40,7 +40,7 @@ public:
     bool localPathExists();
     QString suggestRemotePath();
     QString fixRemotePath();
-    static QString currentRemotePath();
+    static QString currentRemotePath(bool addTrailingSlash = true);
     static QString currentLocalPath();
     void setActiveTagId(int value);
     int getActiveTagId();

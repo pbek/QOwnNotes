@@ -5,6 +5,8 @@
 #include <QAuthenticator>
 #include <QNetworkReply>
 #include <QObject>
+#include <QXmlQuery>
+#include <dialogs/sharedialog.h>
 #include "mainwindow.h"
 #include "dialogs/settingsdialog.h"
 #include "dialogs/tododialog.h"
@@ -47,9 +49,11 @@ public:
 
     static bool hasOwnCloudSettings();
 
-    void shareNote(Note note);
+    void shareNote(Note note, ShareDialog *shareDialog);
 
     void fetchShares(QString path = "");
+
+    void removeNoteShare(Note note, ShareDialog *shareDialog);
 
 private:
     QString serverUrl;
@@ -59,6 +63,7 @@ private:
     QString password;
     QNetworkAccessManager *networkManager;
     MainWindow *mainWindow;
+    ShareDialog *shareDialog;
     static const QString rootPath;
     static const QString format;
     QString versionListPath;
@@ -95,7 +100,20 @@ private:
     void showOwnCloudServerErrorMessage(
             QString message = QString(""), bool withSettingsButton = true);
 
-    void updateNoteShareStatus(QString &data);
+    void showOwnCloudMessage(
+            QString headline = QString(""), QString message = QString(""),
+            bool withSettingsButton = true);
+
+    void updateNoteShareStatusFromShare(QString &data);
+
+    void updateNoteShareStatusFromFetchAll(QString &data);
+
+    void handleNoteShareReply(QString &data);
+
+    void updateNoteShareStatus(QXmlQuery &query,
+                               bool updateShareDialog = false);
+
+    void handleDeleteNoteShareReply(QString urlPart, QString &data);
 
 signals:
 

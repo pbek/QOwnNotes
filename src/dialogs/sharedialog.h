@@ -16,6 +16,8 @@ public:
     explicit ShareDialog(Note note, QWidget *parent = 0);
     ~ShareDialog();
 
+    void updateDialog();
+
 private slots:
     void on_linkCheckBox_toggled(bool checked);
 

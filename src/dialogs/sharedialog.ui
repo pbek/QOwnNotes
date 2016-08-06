@@ -7,18 +7,25 @@
     <x>0</x>
     <y>0</y>
     <width>650</width>
-    <height>136</height>
+    <height>120</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Share note</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="document-share" resource="../breeze-qownnotes.qrc">
+    <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
+  </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
     <widget class="QCheckBox" name="linkCheckBox">
-     <property name="toolTip">
-      <string notr="true">This doesn't yet do anything!</string>
-     </property>
      <property name="text">
       <string>Share note on ownCloud</string>
      </property>
@@ -49,6 +56,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections/>
 </ui>

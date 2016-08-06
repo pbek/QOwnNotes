@@ -1,3 +1,4 @@
+#include <services/owncloudservice.h>
 #include "sharedialog.h"
 #include "ui_sharedialog.h"
 
@@ -6,37 +7,49 @@ ShareDialog::ShareDialog(Note note, QWidget *parent) :
     ui(new Ui::ShareDialog) {
     ui->setupUi(this);
     this->note = note;
-    QString shareUrl = note.getShareUrl();
 
-    const QSignalBlocker blocker(ui->linkCheckBox);
-    Q_UNUSED(blocker);
-    const QSignalBlocker blocker2(ui->linkUrlLineEdit);
-    Q_UNUSED(blocker2);
-
-    // init the share link checkbox and link url line edit
-    bool isShared = note.isShared();
-    ui->linkCheckBox->setChecked(isShared);
-    ui->linkUrlLineEdit->setVisible(isShared);
-    ui->linkUrlLineEdit->setText(shareUrl);
+    // update the share link checkbox and link url line edit
+    updateDialog();
 }
 
 ShareDialog::~ShareDialog() {
     delete ui;
 }
 
-void ShareDialog::on_linkCheckBox_toggled(bool checked) {
+/**
+ * Updates the share link checkbox and link url line edit
+ */
+void ShareDialog::updateDialog() {
+    note.refetch();
+    qDebug() << __func__ << " - 'note': " << note;
+
     const QSignalBlocker blocker(ui->linkCheckBox);
     Q_UNUSED(blocker);
     const QSignalBlocker blocker2(ui->linkUrlLineEdit);
     Q_UNUSED(blocker2);
 
-    // TODO(pbek): remove this when we actually do something here
+    ui->linkCheckBox->setChecked(note.isShared());
+    ui->linkUrlLineEdit->setVisible(note.isShared());
+    ui->linkUrlLineEdit->setText(note.getShareUrl());
+}
+
+/**
+ * Shares or removes the share from the current note
+ */
+void ShareDialog::on_linkCheckBox_toggled(bool checked) {
+    OwnCloudService *ownCloud = new OwnCloudService(this);
+
+    const QSignalBlocker blocker(ui->linkCheckBox);
+    Q_UNUSED(blocker);
+
+    // the checked status will be set by the callback function updateDialog()
     ui->linkCheckBox->setChecked(!checked);
 
     if (checked) {
-        // TODO(pbek): share the file
+        // share the note file
+        ownCloud->shareNote(note, this);
     } else {
-        // TODO(pbek): remove the share
-//        ui->linkUrlLineEdit->setVisible(false);
+        // remove the share
+        ownCloud->removeNoteShare(note, this);
     }
 }

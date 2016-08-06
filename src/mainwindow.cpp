@@ -2261,15 +2261,22 @@ void MainWindow::setCurrentNote(Note note,
     ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
 
     // update the share button
-    const QSignalBlocker blocker(ui->actionShare_note);
-    Q_UNUSED(blocker);
-    ui->actionShare_note->setChecked(note.isShared());
+    updateShareButton();
 
 //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
 //            .fullNoteFilePath()).toLatin1().data());
 //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
 //           currentNote.fullNoteFilePath().toLatin1().data(),
 //           1);
+}
+
+/**
+ * Updates the share button
+ */
+void MainWindow::updateShareButton() {
+    const QSignalBlocker blocker(ui->actionShare_note);
+    Q_UNUSED(blocker);
+    ui->actionShare_note->setChecked(currentNote.isShared());
 }
 
 /**
@@ -6597,6 +6604,11 @@ void MainWindow::on_actionShare_note_triggered() {
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
     dialog->exec();
+
+    currentNote.refetch();
+
+    // update the share button
+    updateShareButton();
 }
 
 /**
