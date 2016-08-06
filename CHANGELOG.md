@@ -3,6 +3,8 @@
 ## 16.08.2
 - you can now **share notes** and **remove note shares** on your 
   ownCloud server in the note share dialog
+- added more Hungarian, Dutch and Japanese translation (thank you 
+  Fabijenna and piyo)
 
 ## 16.08.1
 - you can now toggle between the note edit mode and the preview with
@@ -12,8 +14,8 @@
     - currently you can only see if your note is shared publicly and 
       copy the share url from the share dialog
     - actual sharing of notes is work in progress
-- added more Hungarian, Dutch and Japanese translation (thank you 
-  Fabijenna and piyo)
+- added more Portuguese, Russian, Hungarian, Dutch and Japanese
+  translation (thank you mlimacarlos, frostyland, Fabijenna and piyo)
 
 ## 16.08.0
 - tagging, removing tags, moving and copying multiple notes in note 
