@@ -61,7 +61,8 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
     - [YOUR help](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
       is needed to maintain these translations or to translate QOwnNotes 
       in more languages
-- tagging of notes
+- support for hierarchical note tagging and note subfolders
+- support for sharing notes on your ownCloud server
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
