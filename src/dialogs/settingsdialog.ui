@@ -1886,6 +1886,33 @@
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="shortcutTab">
+        <attribute name="title">
+         <string>Shortcuts</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_38">
+         <item row="0" column="0">
+          <widget class="QTreeWidget" name="shortcutTreeWidget">
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="headerStretchLastSection">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string notr="true">title</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string notr="true">shortcut</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
        <widget class="QWidget" name="scriptingTab">
         <attribute name="title">
          <string>Scripting</string>

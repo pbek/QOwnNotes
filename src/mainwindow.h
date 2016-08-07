@@ -62,6 +62,10 @@ public:
 
     QMarkdownTextEdit *activeNoteTextEdit();
 
+    static MainWindow *instance();
+
+    QList<QMenu *> menuList();
+
 protected:
     void closeEvent(QCloseEvent *event);
 

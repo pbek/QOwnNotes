@@ -207,6 +207,8 @@ private:
 
     QListWidgetItem *addCustomeNoteFileExtension(
             const QString &fileExtension);
+
+    void loadShortcutSettings() const;
 };
 
 #endif // SETTINGSDIALOG_H

@@ -380,6 +380,20 @@ MainWindow::~MainWindow() {
  */
 
 /**
+ * Returns all menus from the menu bar
+ */
+QList<QMenu *> MainWindow::menuList() {
+    return ui->menuBar->findChildren<QMenu*>();
+}
+
+/**
+ * Returns the global main window instance
+ */
+MainWindow *MainWindow::instance() {
+    return qApp->property("mainWindow").value<MainWindow *>();
+}
+
+/**
  * Initializes the editor soft wrapping
  */
 void MainWindow::initEditorSoftWrap() {

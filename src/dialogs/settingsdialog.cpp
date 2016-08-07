@@ -12,6 +12,8 @@
 #include <QDesktopServices>
 #include <QFontDialog>
 #include <QMessageBox>
+#include <QMenu>
+#include <QAction>
 #include <services/metricsservice.h>
 #include "helpers/clientproxy.h"
 #include <QtNetwork/qnetworkproxy.h>
@@ -23,6 +25,8 @@
 #include <QInputDialog>
 #include <QFontDatabase>
 #include <utils/misc.h>
+#include <QKeySequence>
+#include <QKeySequenceEdit>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -441,6 +445,64 @@ void SettingsDialog::readSettings() {
 
     // load the proxy settings
     loadProxySettings();
+
+    // load the shortcut settings
+    loadShortcutSettings();
+}
+
+/**
+ * Loads the shortcut settings
+ */
+void SettingsDialog::loadShortcutSettings() const {
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow == Q_NULLPTR) {
+        return;
+    }
+
+    QList<QMenu*> menus = mainWindow->menuList();
+    ui->shortcutTreeWidget->setColumnCount(2);
+
+    // loop through all menus
+    foreach(QMenu* menu, menus) {
+            QTreeWidgetItem *menuItem = new QTreeWidgetItem();
+            int actionCount = 0;
+
+            // loop through all actions of the menu
+            foreach(QAction* action, menu->actions()) {
+                    // we don't need empty objects
+                    if (action->objectName().isEmpty()) {
+                        continue;
+                    }
+
+                    QTreeWidgetItem *actionItem = new QTreeWidgetItem();
+                    actionItem->setText(0, action->text().remove("&"));
+                    actionItem->setToolTip(0, action->objectName());
+                    menuItem->addChild(actionItem);
+
+                    QKeySequenceEdit *keySequenceEdit = new QKeySequenceEdit();
+                    keySequenceEdit->setFixedWidth(200);
+                    keySequenceEdit->setKeySequence(action->shortcut());
+                    ui->shortcutTreeWidget->setItemWidget(
+                            actionItem, 1, keySequenceEdit);
+
+                    actionCount++;
+
+//                    if (action->objectName() == "action_new_tag") {
+//                        action->setShortcut(QKeySequence("Ctrl+M"));
+//                    }
+            }
+
+            if (actionCount > 0) {
+                menuItem->setText(0, menu->title().remove("&"));
+                menuItem->setToolTip(0, menu->objectName());
+                ui->shortcutTreeWidget->addTopLevelItem(menuItem);
+                menuItem->setExpanded(true);
+            }
+    }
+
+    ui->shortcutTreeWidget->resizeColumnToContents(0);
+//    ui->shortcutTreeWidget->resizeColumnToContents(1);
 }
 
 /**

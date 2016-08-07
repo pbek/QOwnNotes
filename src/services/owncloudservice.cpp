@@ -742,8 +742,7 @@ void OwnCloudService::showOwnCloudMessage(
                 0, headline, message,
                 tr("Open &settings"), tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
-            MainWindow *mainWindow =
-                    qApp->property("mainWindow").value<MainWindow *>();
+            MainWindow *mainWindow = MainWindow::instance();
 
             if (mainWindow != NULL) {
                 mainWindow->openSettingsDialog(SettingsDialog::OwnCloudTab);
