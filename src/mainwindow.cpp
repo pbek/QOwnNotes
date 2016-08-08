@@ -362,6 +362,9 @@ MainWindow::MainWindow(QWidget *parent) :
     MetricsService::instance()->sendEventIfEnabled(
             "app/has-owncloud-settings", "app", "has owncloud settings",
             OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
+
+    // initialize the shortcuts for the actions
+    initShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -383,7 +386,27 @@ MainWindow::~MainWindow() {
  * Returns all menus from the menu bar
  */
 QList<QMenu *> MainWindow::menuList() {
-    return ui->menuBar->findChildren<QMenu*>();
+    return ui->menuBar->findChildren<QMenu *>();
+}
+
+/**
+ * Returns all menus from the menu bar
+ */
+QAction *MainWindow::findAction(QString objectName) {
+    QList<QMenu*> menus = menuList();
+
+    // loop through all menus because we were not able to find the action with
+    // ui->menuBar->findChild<QAction *>(objectName);
+    foreach(QMenu* menu, menus) {
+            // loop through all actions of the menu
+            foreach(QAction* action, menu->actions()) {
+                    if (action->objectName() == objectName) {
+                        return action;
+                    }
+            }
+    }
+
+    return Q_NULLPTR;
 }
 
 /**
@@ -6686,5 +6709,32 @@ void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
 
     if (hasPreview == hasEdit) {
         ui->actionToggle_note_edit_pane->toggle();
+    }
+}
+
+/**
+ * Initializes the shortcuts for the actions
+ *
+ * @param setDefaultShortcut
+ */
+void MainWindow::initShortcuts(bool setDefaultShortcut) {
+    QList<QMenu*> menus = menuList();
+
+    // loop through all menus
+    foreach(QMenu* menu, menus) {
+            // loop through all actions of the menu
+            foreach(QAction* action, menu->actions()) {
+                    // we don't need empty objects
+                    if (action->objectName().isEmpty()) {
+                        continue;
+                    }
+
+                    if (setDefaultShortcut) {
+                        // set the default shortcut
+                        action->setData(action->shortcut().toString());
+                    }
+
+                    // TODO(pbek): load shortcut from the settings
+            }
     }
 }

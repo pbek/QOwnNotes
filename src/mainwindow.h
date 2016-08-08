@@ -66,6 +66,8 @@ public:
 
     QList<QMenu *> menuList();
 
+    QAction *findAction(QString objectName);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -590,4 +592,6 @@ private:
     void jumpToNoteOrCreateNew();
 
     void updateShareButton();
+
+    void initShortcuts(bool setDefaultShortcut = true);
 };

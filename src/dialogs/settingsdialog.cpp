@@ -27,6 +27,7 @@
 #include <utils/misc.h>
 #include <QKeySequence>
 #include <QKeySequenceEdit>
+#include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
@@ -453,13 +454,14 @@ void SettingsDialog::readSettings() {
 /**
  * Loads the shortcut settings
  */
-void SettingsDialog::loadShortcutSettings() const {
+void SettingsDialog::loadShortcutSettings() {
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow == Q_NULLPTR) {
         return;
     }
 
+    _keyWidgetSignalMapper = new QSignalMapper(this);
     QList<QMenu*> menus = mainWindow->menuList();
     ui->shortcutTreeWidget->setColumnCount(2);
 
@@ -478,13 +480,36 @@ void SettingsDialog::loadShortcutSettings() const {
                     QTreeWidgetItem *actionItem = new QTreeWidgetItem();
                     actionItem->setText(0, action->text().remove("&"));
                     actionItem->setToolTip(0, action->objectName());
+                    actionItem->setData(Qt::UserRole, 1, action->shortcut());
                     menuItem->addChild(actionItem);
 
-                    QKeySequenceEdit *keySequenceEdit = new QKeySequenceEdit();
-                    keySequenceEdit->setFixedWidth(200);
-                    keySequenceEdit->setKeySequence(action->shortcut());
+                    QKeySequenceWidget *keyWidget =
+                            new QKeySequenceWidget(action->shortcut(),
+                                                   tr("Undefined key"));
+                    keyWidget->setFixedWidth(250);
+                    keyWidget->setClearButtonIcon(QIcon::fromTheme(
+                            "edit-clear",
+                            QIcon(":/icons/breeze-qownnotes/16x16/"
+                                          "edit-clear.svg")));
+//                    keyWidget->setData(Qt::UserRole, 1, action->shortcut());
+
+                    connect(keyWidget, SIGNAL(keySequenceCleared()),
+                            _keyWidgetSignalMapper, SLOT(map()));
+                    _keyWidgetSignalMapper->setMapping(
+                            keyWidget,
+                            action->objectName());
+//                    _keyWidgetSignalMapper->setMapping(
+//                            keyWidget,
+//                            keyWidget);
+
                     ui->shortcutTreeWidget->setItemWidget(
-                            actionItem, 1, keySequenceEdit);
+                            actionItem, 1, keyWidget);
+
+//                    QKeySequenceEdit *keySequenceEdit = new QKeySequenceEdit();
+//                    keySequenceEdit->setFixedWidth(200);
+//                    keySequenceEdit->setKeySequence(action->shortcut());
+//                    ui->shortcutTreeWidget->setItemWidget(
+//                            actionItem, 1, keySequenceEdit);
 
                     actionCount++;
 
@@ -501,8 +526,41 @@ void SettingsDialog::loadShortcutSettings() const {
             }
     }
 
+//    connect(_keyWidgetSignalMapper, SIGNAL(mapped(QTreeWidgetItem)),
+//            this, SLOT(resetKeyWidgetKey(QTreeWidgetItem)));
+
+    connect(_keyWidgetSignalMapper, SIGNAL(mapped(QString)),
+            this, SLOT(resetKeyWidgetKey(QString)));
+
     ui->shortcutTreeWidget->resizeColumnToContents(0);
 //    ui->shortcutTreeWidget->resizeColumnToContents(1);
+}
+
+//void SettingsDialog::resetKeyWidgetKey(QKeySequenceWidget keyWidget) {
+//    qDebug() << __func__ << " - 'keyWidget': " << keyWidget.toolTip();
+//
+//}
+
+void SettingsDialog::resetKeyWidgetKey(QString actionObjectName) {
+    qDebug() << __func__ << " - 'actionObjectName': " << actionObjectName;
+
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return;
+    }
+
+    QAction *action = mainWindow->findAction(actionObjectName);
+    if (action == Q_NULLPTR) {
+        return;
+    }
+
+    qDebug() << __func__ << " - 'action objectName': "
+             << action->objectName();
+    qDebug() << __func__ << " - 'action data': " << action->data();
+
+    // TODO(pbek): remove the shortcut setting
+    // TODO(pbek): maybe reset the shortcut in the action
+    // TODO(pbek): set the correct default shortcut in the keyWidget
 }
 
 /**

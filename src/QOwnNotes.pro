@@ -158,11 +158,13 @@ RESOURCES += \
     breeze-dark-qownnotes.qrc \
     qownnotes.qrc \
     demonotes.qrc \
-    libraries/qdarkstyle/style.qrc
+    libraries/qdarkstyle/style.qrc \
+    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
 include(libraries/botan/botan.pri)
+include(libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.pri)
 
 
 unix {

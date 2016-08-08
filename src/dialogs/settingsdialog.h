@@ -7,6 +7,7 @@
 #include <QListWidget>
 #include <QTreeWidgetItem>
 #include <QStatusBar>
+#include <QSignalMapper>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include "masterdialog.h"
@@ -151,6 +152,10 @@ private slots:
 
     void on_gitHubLineBreaksCheckBox_toggled(bool checked);
 
+//    void resetKeyWidgetKey(QKeySequenceWidget keyWidget);
+
+    void resetKeyWidgetKey(QString actionObjectName);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -165,6 +170,7 @@ private:
     QString connectionErrorMessage;
     NoteFolder _selectedNoteFolder;
     Script _selectedScript;
+    QSignalMapper *_keyWidgetSignalMapper;
 
     void readSettings();
 
@@ -208,7 +214,7 @@ private:
     QListWidgetItem *addCustomeNoteFileExtension(
             const QString &fileExtension);
 
-    void loadShortcutSettings() const;
+    void loadShortcutSettings();
 };
 
 #endif // SETTINGSDIALOG_H

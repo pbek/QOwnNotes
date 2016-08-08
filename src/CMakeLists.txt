@@ -41,6 +41,7 @@ set(RESOURCE_FILES
         texts.qrc
         libraries/qmarkdowntextedit/media.qrc
         libraries/qdarkstyle/style.qrc
+        libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
         )
 
 qt5_add_resources(RESOURCE_ADDED ${RESOURCE_FILES})
@@ -161,6 +162,9 @@ set(SOURCE_FILES
     libraries/botan/botan.cpp
     libraries/botan/botanwrapper.h
     libraries/botan/botanwrapper.cpp
+    libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget_p.h
+    libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h
+    libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.cpp
     widgets/qownnotesmarkdowntextedit.cpp
     widgets/qownnotesmarkdowntextedit.h
     widgets/navigationwidget.cpp
