@@ -490,7 +490,6 @@ void SettingsDialog::loadShortcutSettings() {
                             QIcon(":/icons/breeze-qownnotes/16x16/"
                                           "edit-clear.svg")));
 //                    keyWidget->setData(Qt::UserRole, 1, action->shortcut());
-                    keyWidget->setAction(action);
                     keyWidget->setNoneText(tr("Undefined key"));
                     keyWidget->setDefaultKeySequence(action->data().toString());
                     keyWidget->setKeySequence(action->shortcut());
