@@ -461,6 +461,17 @@ void SettingsDialog::loadShortcutSettings() {
         return;
     }
 
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+
+    QPalette palette;
+    QColor shortcutButtonActiveColor = darkMode ?
+                                       Qt::white :
+                                       palette.color(QPalette::ButtonText);
+    QColor shortcutButtonInactiveColor = darkMode ?
+                                         Qt::darkGray :
+                                         palette.color(QPalette::Mid);
+
     _keyWidgetSignalMapper = new QSignalMapper(this);
     QList<QMenu*> menus = mainWindow->menuList();
     ui->shortcutTreeWidget->setColumnCount(2);
@@ -491,10 +502,14 @@ void SettingsDialog::loadShortcutSettings() {
                                           "edit-clear.svg")));
 //                    keyWidget->setData(Qt::UserRole, 1, action->shortcut());
                     keyWidget->setNoneText(tr("Undefined key"));
-                    keyWidget->setDefaultKeySequence(action->data().toString());
-                    keyWidget->setKeySequence(action->shortcut());
+                    keyWidget->setShortcutButtonActiveColor(
+                            shortcutButtonActiveColor);
+                    keyWidget->setShortcutButtonInactiveColor(
+                            shortcutButtonInactiveColor);
                     keyWidget->setToolTip(tr("Assign a new key"),
                                           tr("Reset to default key"));
+                    keyWidget->setDefaultKeySequence(action->data().toString());
+                    keyWidget->setKeySequence(action->shortcut());
 
                     connect(keyWidget, SIGNAL(keySequenceCleared()),
                             _keyWidgetSignalMapper, SLOT(map()));
