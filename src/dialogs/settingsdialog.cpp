@@ -483,15 +483,19 @@ void SettingsDialog::loadShortcutSettings() {
                     actionItem->setData(Qt::UserRole, 1, action->shortcut());
                     menuItem->addChild(actionItem);
 
-                    QKeySequenceWidget *keyWidget =
-                            new QKeySequenceWidget(action->shortcut(),
-                                                   tr("Undefined key"));
+                    QKeySequenceWidget *keyWidget = new QKeySequenceWidget();
                     keyWidget->setFixedWidth(250);
                     keyWidget->setClearButtonIcon(QIcon::fromTheme(
                             "edit-clear",
                             QIcon(":/icons/breeze-qownnotes/16x16/"
                                           "edit-clear.svg")));
 //                    keyWidget->setData(Qt::UserRole, 1, action->shortcut());
+                    keyWidget->setAction(action);
+                    keyWidget->setNoneText(tr("Undefined key"));
+                    keyWidget->setDefaultKeySequence(action->data().toString());
+                    keyWidget->setKeySequence(action->shortcut());
+                    keyWidget->setToolTip(tr("Assign a new key"),
+                                          tr("Reset to default key"));
 
                     connect(keyWidget, SIGNAL(keySequenceCleared()),
                             _keyWidgetSignalMapper, SLOT(map()));
@@ -505,17 +509,7 @@ void SettingsDialog::loadShortcutSettings() {
                     ui->shortcutTreeWidget->setItemWidget(
                             actionItem, 1, keyWidget);
 
-//                    QKeySequenceEdit *keySequenceEdit = new QKeySequenceEdit();
-//                    keySequenceEdit->setFixedWidth(200);
-//                    keySequenceEdit->setKeySequence(action->shortcut());
-//                    ui->shortcutTreeWidget->setItemWidget(
-//                            actionItem, 1, keySequenceEdit);
-
                     actionCount++;
-
-//                    if (action->objectName() == "action_new_tag") {
-//                        action->setShortcut(QKeySequence("Ctrl+M"));
-//                    }
             }
 
             if (actionCount > 0) {
