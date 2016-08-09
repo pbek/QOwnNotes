@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.08.3
+- added more Portuguese, Russian, Hungarian, Dutch and Italian
+  translation (thank you mlimacarlos, frostyland, Fabijenna and vpistis)
+
 ## 16.08.2
 - you can now **share notes** and **remove note shares** on your 
   ownCloud server in the note share dialog
