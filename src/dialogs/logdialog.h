@@ -1,12 +1,13 @@
 #pragma once
 
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class LogDialog;
 }
 
-class LogDialog : public QDialog
+class LogDialog : public MasterDialog
 {
     Q_OBJECT
 

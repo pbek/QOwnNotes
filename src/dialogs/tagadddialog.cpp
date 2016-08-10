@@ -2,7 +2,7 @@
 #include "ui_tagadddialog.h"
 
 TagAddDialog::TagAddDialog(QWidget *parent) :
-    QDialog(parent),
+        MasterDialog(parent),
     ui(new Ui::TagAddDialog)
 {
     ui->setupUi(this);

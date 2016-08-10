@@ -5,6 +5,11 @@
   assign custom shortcuts for menu items of the main window
   (for [Issue #194](https://github.com/pbek/QOwnNotes/issues/194))
     - you can also search for shortcuts
+- fixed a problem with XFCE where the settings dialog had a geometry
+  of 1x1 pixels
+  (for [Issue #279](https://github.com/pbek/QOwnNotes/issues/279))
+    - additionally now the geometry of all dialogs will be saved when 
+      the window is resized and restored when the dialog is opened
 - added more Portuguese, Russian, Hungarian, Dutch and Italian
   translation (thank you mlimacarlos, frostyland, Fabijenna, vpistis
   and mlocati)

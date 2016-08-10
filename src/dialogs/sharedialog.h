@@ -3,12 +3,13 @@
 
 #include <QDialog>
 #include <entities/note.h>
+#include "masterdialog.h"
 
 namespace Ui {
 class ShareDialog;
 }
 
-class ShareDialog : public QDialog
+class ShareDialog : public MasterDialog
 {
     Q_OBJECT
 

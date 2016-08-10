@@ -32,7 +32,9 @@
 SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
         ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
-    resize(1, 1);
+
+    // we must not do that because XFCE really resizes the window to 1x1
+//    resize(1, 1);
 
     ui->connectionTestLabel->hide();
     ui->connectButton->setDefault(true);

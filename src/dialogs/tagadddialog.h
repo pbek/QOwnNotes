@@ -2,12 +2,13 @@
 #define TAGADDDIALOG_H
 
 #include <QDialog>
+#include "masterdialog.h"
 
 namespace Ui {
 class TagAddDialog;
 }
 
-class TagAddDialog : public QDialog
+class TagAddDialog : public MasterDialog
 {
     Q_OBJECT
 

@@ -9,7 +9,7 @@
 #endif
 
 LogDialog::LogDialog(QWidget *parent) :
-    QDialog(parent)
+        MasterDialog(parent)
 #ifndef INTEGRATION_TESTS
         ,ui(new Ui::LogDialog)
 #endif

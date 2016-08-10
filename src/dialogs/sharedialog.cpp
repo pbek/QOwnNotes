@@ -3,7 +3,7 @@
 #include "ui_sharedialog.h"
 
 ShareDialog::ShareDialog(Note note, QWidget *parent) :
-    QDialog(parent),
+        MasterDialog(parent),
     ui(new Ui::ShareDialog) {
     ui->setupUi(this);
     this->note = note;
