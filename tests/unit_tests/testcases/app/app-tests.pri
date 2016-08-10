@@ -15,6 +15,7 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
     $$APP_SRC_DIR/services/metricsservice.h \
     $$APP_SRC_DIR/services/cryptoservice.h \
+    $$APP_SRC_DIR/dialogs/masterdialog.h \
     $$APP_SRC_DIR/dialogs/logdialog.h \
     $$APP_SRC_DIR/entities/notefolder.h \
     $$APP_SRC_DIR/entities/notesubfolder.h \
@@ -42,6 +43,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \
     $$APP_SRC_DIR/services/metricsservice.cpp \
     $$APP_SRC_DIR/services/cryptoservice.cpp \
+    $$APP_SRC_DIR/dialogs/masterdialog.cpp \
     $$APP_SRC_DIR/dialogs/logdialog.cpp \
     $$APP_SRC_DIR/entities/notefolder.cpp \
     $$APP_SRC_DIR/entities/notesubfolder.cpp \
