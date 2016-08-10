@@ -1891,24 +1891,54 @@
          <string>Shortcuts</string>
         </attribute>
         <layout class="QGridLayout" name="gridLayout_38">
-         <item row="0" column="0">
-          <widget class="QTreeWidget" name="shortcutTreeWidget">
-           <attribute name="headerVisible">
-            <bool>false</bool>
-           </attribute>
-           <attribute name="headerStretchLastSection">
-            <bool>false</bool>
-           </attribute>
-           <column>
-            <property name="text">
-             <string notr="true">title</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string notr="true">shortcut</string>
-            </property>
-           </column>
+         <item row="1" column="0">
+          <widget class="QGroupBox" name="groupBox_15">
+           <property name="title">
+            <string>Main window shortcuts</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLineEdit" name="shortcutSearchLineEdit">
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+              </property>
+              <property name="placeholderText">
+               <string>search shortcut</string>
+              </property>
+              <property name="clearButtonEnabled">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTreeWidget" name="shortcutTreeWidget">
+              <attribute name="headerVisible">
+               <bool>false</bool>
+              </attribute>
+              <attribute name="headerStretchLastSection">
+               <bool>false</bool>
+              </attribute>
+              <column>
+               <property name="text">
+                <string notr="true">title</string>
+               </property>
+              </column>
+              <column>
+               <property name="text">
+                <string notr="true">shortcut</string>
+               </property>
+              </column>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>

@@ -68,6 +68,11 @@ public:
 
     QAction *findAction(QString objectName);
 
+    static bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
+
+    static void searchForTextInTreeWidget(QTreeWidget *treeWidget,
+                                          QString text);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -101,7 +106,7 @@ private slots:
 
     void on_actionAbout_QOwnNotes_triggered();
 
-    void on_action_Note_note_triggered();
+    void on_action_New_note_triggered();
 
     void changeNoteFolder(int noteFolderId, bool forceChange = false);
 
@@ -381,6 +386,7 @@ private:
     QHash<int, int> _activeNoteFolderNotePositions;
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
+    bool _isDefaultShortcutInitialized;
 
     void initMainSplitter();
 
@@ -519,8 +525,6 @@ private:
     void buildTagMoveMenuTree(QMenu *parentMenu,
                               int parentTagId = 0);
 
-    bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
-
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
@@ -577,8 +581,6 @@ private:
 
     void filterNotesByNoteSubFolders();
 
-    void searchForTextInTreeWidget(QTreeWidget *treeWidget, QString text);
-
     void updateNoteDirectoryWatcher();
 
     bool addNoteToNoteTreeWidget(Note note);
@@ -593,5 +595,5 @@ private:
 
     void updateShareButton();
 
-    void initShortcuts(bool setDefaultShortcut = true);
+    void initShortcuts();
 };

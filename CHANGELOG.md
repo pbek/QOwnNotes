@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.08.3
+- there now is a new **Shortcuts** tab in the settings where you can 
+  assign custom shortcuts for menu items of the main window
+  (for [Issue #194](https://github.com/pbek/QOwnNotes/issues/194))
+    - you can also search for shortcuts
 - added more Portuguese, Russian, Hungarian, Dutch and Italian
   translation (thank you mlimacarlos, frostyland, Fabijenna and vpistis)
 

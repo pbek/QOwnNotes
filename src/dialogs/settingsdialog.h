@@ -33,6 +33,7 @@ public:
         NetworkTab,
         TodoTab,
         InterfaceTab,
+        ShortcutTab,
         ScriptingTab,
         GeneralTab,
         DebugTab
@@ -152,9 +153,7 @@ private slots:
 
     void on_gitHubLineBreaksCheckBox_toggled(bool checked);
 
-//    void resetKeyWidgetKey(QKeySequenceWidget keyWidget);
-
-    void resetKeyWidgetKey(QString actionObjectName);
+    void on_shortcutSearchLineEdit_textChanged(const QString &arg1);
 
 private:
 
@@ -215,6 +214,8 @@ private:
             const QString &fileExtension);
 
     void loadShortcutSettings();
+
+    void storeShortcutSettings();
 };
 
 #endif // SETTINGSDIALOG_H

@@ -71,6 +71,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;
+    _isDefaultShortcutInitialized = false;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -362,9 +363,6 @@ MainWindow::MainWindow(QWidget *parent) :
     MetricsService::instance()->sendEventIfEnabled(
             "app/has-owncloud-settings", "app", "has owncloud settings",
             OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
-
-    // initialize the shortcuts for the actions
-    initShortcuts();
 }
 
 MainWindow::~MainWindow() {
@@ -594,7 +592,6 @@ void MainWindow::initStyling() {
         QColor color = palette.color(QPalette::Base);
         colorName = color.name();
     }
-
 
     QString textEditStyling = QString("QTextEdit {background-color: %1;}")
             .arg(colorName);
@@ -1572,6 +1569,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
             QRegularExpression("background-image: url\\(:.+\\);"),
             QString("background-image: url(:/images/%1);").arg(fileName));
     ui->searchLineEdit->setStyleSheet(styleSheet);
+
+    // initialize the shortcuts for the actions
+    initShortcuts();
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {
@@ -3798,7 +3798,7 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered() {
 //
 // Triggered by the shortcut to create new note with date in the headline
 //
-void MainWindow::on_action_Note_note_triggered() {
+void MainWindow::on_action_New_note_triggered() {
     // show the window in case we are using the system tray
     show();
 
@@ -4009,7 +4009,7 @@ void MainWindow::generateSystemTrayContextMenu() {
             QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
 
     connect(createNoteAction, SIGNAL(triggered()),
-            this, SLOT(on_action_Note_note_triggered()));
+            this, SLOT(on_action_New_note_triggered()));
 
     int maxNotes = Note::countAll();
 
@@ -6556,7 +6556,7 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
     if (selectedItem) {
         if (selectedItem == newNoteAction) {
             // create a new note
-            on_action_Note_note_triggered();
+            on_action_New_note_triggered();
         } else if (selectedItem == newAction) {
             // create a new folder
             createNewNoteSubFolder();
@@ -6717,8 +6717,9 @@ void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
  *
  * @param setDefaultShortcut
  */
-void MainWindow::initShortcuts(bool setDefaultShortcut) {
+void MainWindow::initShortcuts() {
     QList<QMenu*> menus = menuList();
+    QSettings settings;
 
     // loop through all menus
     foreach(QMenu* menu, menus) {
@@ -6729,12 +6730,23 @@ void MainWindow::initShortcuts(bool setDefaultShortcut) {
                         continue;
                     }
 
-                    if (setDefaultShortcut) {
+                    if (!_isDefaultShortcutInitialized) {
                         // set the default shortcut
                         action->setData(action->shortcut().toString());
                     }
 
-                    // TODO(pbek): load shortcut from the settings
+                    // try to load a key sequence from the settings
+                    QKeySequence shortcut = QKeySequence(settings.value(
+                                    "Shortcuts/MainWindow-" +
+                                            action->objectName()).toString());
+
+                    if (!shortcut.isEmpty()) {
+                        action->setShortcut(shortcut);
+                    }
             }
+    }
+
+    if (!_isDefaultShortcutInitialized) {
+        _isDefaultShortcutInitialized = true;
     }
 }

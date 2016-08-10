@@ -77,6 +77,13 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
     ui->appInstanceGroupBox->setVisible(false);
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(false);
 #endif
+
+    MainWindow *mainWindow = MainWindow::instance();
+
+    // disable the shortcut tab if there is no main window yet
+    if (mainWindow == Q_NULLPTR) {
+        ui->shortcutTab->setDisabled(true);
+    }
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -333,6 +340,9 @@ void SettingsDialog::storeSettings() {
 
     // store the enabled state of the scripts
     storeScriptListEnabledState();
+
+    // store the shortcut settings
+    storeShortcutSettings();
 }
 
 void SettingsDialog::readSettings() {
@@ -488,19 +498,20 @@ void SettingsDialog::loadShortcutSettings() {
                         continue;
                     }
 
+                    // create the tree widget item
                     QTreeWidgetItem *actionItem = new QTreeWidgetItem();
                     actionItem->setText(0, action->text().remove("&"));
                     actionItem->setToolTip(0, action->objectName());
-                    actionItem->setData(Qt::UserRole, 1, action->shortcut());
+                    actionItem->setData(Qt::UserRole, 1, action->objectName());
                     menuItem->addChild(actionItem);
 
+                    // create the key widget
                     QKeySequenceWidget *keyWidget = new QKeySequenceWidget();
-                    keyWidget->setFixedWidth(250);
+                    keyWidget->setFixedWidth(300);
                     keyWidget->setClearButtonIcon(QIcon::fromTheme(
                             "edit-clear",
                             QIcon(":/icons/breeze-qownnotes/16x16/"
                                           "edit-clear.svg")));
-//                    keyWidget->setData(Qt::UserRole, 1, action->shortcut());
                     keyWidget->setNoneText(tr("Undefined key"));
                     keyWidget->setShortcutButtonActiveColor(
                             shortcutButtonActiveColor);
@@ -510,15 +521,6 @@ void SettingsDialog::loadShortcutSettings() {
                                           tr("Reset to default key"));
                     keyWidget->setDefaultKeySequence(action->data().toString());
                     keyWidget->setKeySequence(action->shortcut());
-
-                    connect(keyWidget, SIGNAL(keySequenceCleared()),
-                            _keyWidgetSignalMapper, SLOT(map()));
-                    _keyWidgetSignalMapper->setMapping(
-                            keyWidget,
-                            action->objectName());
-//                    _keyWidgetSignalMapper->setMapping(
-//                            keyWidget,
-//                            keyWidget);
 
                     ui->shortcutTreeWidget->setItemWidget(
                             actionItem, 1, keyWidget);
@@ -534,41 +536,44 @@ void SettingsDialog::loadShortcutSettings() {
             }
     }
 
-//    connect(_keyWidgetSignalMapper, SIGNAL(mapped(QTreeWidgetItem)),
-//            this, SLOT(resetKeyWidgetKey(QTreeWidgetItem)));
-
-    connect(_keyWidgetSignalMapper, SIGNAL(mapped(QString)),
-            this, SLOT(resetKeyWidgetKey(QString)));
-
     ui->shortcutTreeWidget->resizeColumnToContents(0);
-//    ui->shortcutTreeWidget->resizeColumnToContents(1);
 }
 
-//void SettingsDialog::resetKeyWidgetKey(QKeySequenceWidget keyWidget) {
-//    qDebug() << __func__ << " - 'keyWidget': " << keyWidget.toolTip();
-//
-//}
+/**
+ * Stores the shortcut settings
+ */
+void SettingsDialog::storeShortcutSettings() {
+    QSettings settings;
 
-void SettingsDialog::resetKeyWidgetKey(QString actionObjectName) {
-    qDebug() << __func__ << " - 'actionObjectName': " << actionObjectName;
+    // loop all top level tree widget items (menus)
+    for (int i = 0; i < ui->shortcutTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *menuItem = ui->shortcutTreeWidget->topLevelItem(i);
 
-    MainWindow *mainWindow = MainWindow::instance();
-    if (mainWindow == Q_NULLPTR) {
-        return;
+        // loop all tree widget items of the menu (action shortcuts)
+        for (int j = 0; j < menuItem->childCount(); j++) {
+            QTreeWidgetItem *shortcutItem = menuItem->child(j);
+            QKeySequenceWidget *keyWidget =
+                    static_cast<QKeySequenceWidget *>(
+                            ui->shortcutTreeWidget->itemWidget(
+                                    shortcutItem, 1));
+
+            if (keyWidget == Q_NULLPTR) {
+                continue;
+            }
+
+            QKeySequence keySequence = keyWidget->keySequence();
+            QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
+
+            // store the setting for the shortcut if it's not default
+            if (!keySequence.isEmpty() && (keySequence != defaultKeySequence)) {
+                QString actionObjectName =
+                        shortcutItem->data(Qt::UserRole, 1).toString();
+
+                settings.setValue("Shortcuts/MainWindow-" + actionObjectName,
+                                  keySequence);
+            }
+        }
     }
-
-    QAction *action = mainWindow->findAction(actionObjectName);
-    if (action == Q_NULLPTR) {
-        return;
-    }
-
-    qDebug() << __func__ << " - 'action objectName': "
-             << action->objectName();
-    qDebug() << __func__ << " - 'action data': " << action->data();
-
-    // TODO(pbek): remove the shortcut setting
-    // TODO(pbek): maybe reset the shortcut in the action
-    // TODO(pbek): set the correct default shortcut in the keyWidget
 }
 
 /**
@@ -1902,4 +1907,56 @@ void SettingsDialog::on_noteFolderShowSubfoldersCheckBox_toggled(bool checked) {
 void SettingsDialog::on_gitHubLineBreaksCheckBox_toggled(bool checked) {
     Q_UNUSED(checked);
     outputSettings();
+}
+
+/**
+ * Searches in the description and in the shortcut for a entered text
+ *
+ * @param arg1
+ */
+void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
+        const QString &arg1) {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = ui->shortcutTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (arg1.count() >= 1) {
+        // search for items in the description
+        QList<QTreeWidgetItem*> foundItems = ui->shortcutTreeWidget->
+                findItems(arg1, Qt::MatchContains | Qt::MatchRecursive);
+
+        // hide all not found items
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                bool foundKeySequence = false;
+
+                QKeySequenceWidget *keyWidget =
+                        static_cast<QKeySequenceWidget *>(
+                                ui->shortcutTreeWidget->itemWidget(
+                                        item, 1));
+
+                // search in the shortcut text
+                if (keyWidget != Q_NULLPTR) {
+                    QKeySequence keySequence = keyWidget->keySequence();
+                    foundKeySequence = keySequence.toString().contains(arg1);
+                }
+
+                item->setHidden(!foundItems.contains(item) &&
+                                        !foundKeySequence);
+            }
+
+        // show items again that have visible children so that they are
+        // really shown
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                if (MainWindow::isOneTreeWidgetItemChildVisible(item)) {
+                    item->setHidden(false);
+                    item->setExpanded(true);
+                }
+            }
+    } else {
+        // show all items otherwise
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                item->setHidden(false);
+            }
+    }
 }
