@@ -6,7 +6,8 @@
   (for [Issue #194](https://github.com/pbek/QOwnNotes/issues/194))
     - you can also search for shortcuts
 - added more Portuguese, Russian, Hungarian, Dutch and Italian
-  translation (thank you mlimacarlos, frostyland, Fabijenna and vpistis)
+  translation (thank you mlimacarlos, frostyland, Fabijenna, vpistis
+  and mlocati)
 
 ## 16.08.2
 - you can now **share notes** and **remove note shares** on your 
