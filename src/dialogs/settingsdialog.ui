@@ -1901,6 +1901,7 @@
              <widget class="QLineEdit" name="shortcutSearchLineEdit">
               <property name="styleSheet">
                <string notr="true">QLineEdit {
+        /* the background image doesn't work without the border definition */
 	border: none;
 	padding: 2px 5px 2px 27px;
 	background-image: url(:/images/search-notes.svg);

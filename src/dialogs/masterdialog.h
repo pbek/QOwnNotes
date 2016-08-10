@@ -13,6 +13,12 @@ public Q_SLOTS:
 
 protected:
     void resizeEvent(QResizeEvent *event);
+
+    const QString getGeometrySettingKey() const;
+
+    void storeGeometrySettings() const;
+
+    bool eventFilter(QObject *obj, QEvent *event);
 };
 
 #endif // MASTERDIALOG_H

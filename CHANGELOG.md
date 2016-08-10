@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.08.4
+- fixed an issue with the positioning of dialogs if there was
+  no stored geometry for them
+  (for [Issue #279](https://github.com/pbek/QOwnNotes/issues/279))
+    - the geometry (along will the dialog position) will now also be 
+      stored if the dialog was moved
+
 ## 16.08.3
 - there now is a new **Shortcuts** tab in the settings where you can 
   assign custom shortcuts for menu items of the main window
