@@ -109,7 +109,7 @@ bool LinkDialog::eventFilter(QObject *obj, QEvent *event) {
         return false;
     }
 
-    return LinkDialog::eventFilter(obj, event);
+    return MasterDialog::eventFilter(obj, event);
 }
 
 void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
