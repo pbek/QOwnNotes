@@ -6,6 +6,7 @@
   (for [Issue #194](https://github.com/pbek/QOwnNotes/issues/194))
   - the note edit context menu shortcuts now also load the custom
     shortcut settings
+- changed some icons in the font settings
 
 ## 16.08.5
 - fixed a crash when opening the link dialog

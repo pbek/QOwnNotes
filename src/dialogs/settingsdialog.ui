@@ -1752,8 +1752,8 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                 <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -1766,8 +1766,8 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                 <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -1846,8 +1846,8 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                 <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                 </property>
                </widget>
               </item>
@@ -1860,8 +1860,8 @@
                  <string notr="true">...</string>
                 </property>
                 <property name="icon">
-                 <iconset theme="dialog-cancel" resource="../breeze-qownnotes.qrc">
-                  <normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</normaloff>:/icons/breeze-qownnotes/16x16/dialog-cancel.svg</iconset>
+                 <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                  <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                 </property>
                </widget>
               </item>
