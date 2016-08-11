@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.08.6
+- some dynamically set shortcuts are now set at the right time
+  so they don't show up as custom shortcuts
+  (for [Issue #194](https://github.com/pbek/QOwnNotes/issues/194))
+  - the note edit context menu shortcuts now also load the custom
+    shortcut settings
+
 ## 16.08.5
 - fixed a crash when opening the link dialog
 - resetting of shortcuts works now

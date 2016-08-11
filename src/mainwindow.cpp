@@ -108,6 +108,29 @@ MainWindow::MainWindow(QWidget *parent) :
     // initialize the toolbars
     initToolbars();
 
+#ifdef Q_OS_MAC
+    // add some different shortcuts for the note history on the mac
+    ui->action_Back_in_note_history->
+            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
+    ui->action_Forward_in_note_history->
+            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
+
+    // add an other shortcut for the auto-completer
+    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
+
+    // add an other shortcut for inserting media
+    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
+#endif
+
+    // adding some alternate shortcuts for changing the current note
+    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+PgDown"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionNext_note_triggered()));
+    shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
+    QObject::connect(shortcut, SIGNAL(activated()),
+                     this, SLOT(on_actionPrevious_Note_triggered()));
+
+    // read the settings (shortcuts have to be defined before that)
     readSettings();
 
     initScriptingEngine();
@@ -221,28 +244,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
-
-#ifdef Q_OS_MAC
-    // add some different shortcuts for the note history on the mac
-    ui->action_Back_in_note_history->
-            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Left);
-    ui->action_Forward_in_note_history->
-            setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_Right);
-
-    // add an other shortcut for the auto-completer
-    ui->actionAutocomplete->setShortcut(Qt::META + Qt::Key_Space);
-
-    // add an other shortcut for inserting media
-    ui->actionPaste_image->setShortcut(Qt::CTRL + Qt::ALT + Qt::Key_V);
-#endif
-
-    // adding some alternate shortcuts for changing the current note
-    QShortcut *shortcut = new QShortcut(QKeySequence("Ctrl+PgDown"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_actionNext_note_triggered()));
-    shortcut = new QShortcut(QKeySequence("Ctrl+PgUp"), this);
-    QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_actionPrevious_Note_triggered()));
 
     // show the app metrics notification if not already shown
     showAppMetricsNotificationIfNeeded();
@@ -4167,10 +4168,10 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
             ui->noteTextEdit->textCursor().selectedText() != "" ?
                 tr("&Link selected text") : tr("Insert &link");
     QAction *linkTextAction = menu->addAction(linkTextActionName);
-    linkTextAction->setShortcut(QKeySequence("Ctrl+L"));
+    linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
 
     QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
-    pasteMediaAction->setShortcut(QKeySequence("Ctrl+Shift+V"));
+    pasteMediaAction->setShortcut(ui->actionPaste_image->shortcut());
 
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
