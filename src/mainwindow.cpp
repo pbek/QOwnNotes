@@ -5464,7 +5464,7 @@ void MainWindow::setupNoteEditPane() {
  */
 void MainWindow::setupOneColumnMode() {
     QSettings settings;
-    bool modeEnabled = settings.value("oneColumnModeEnabled", true).toBool();
+    bool modeEnabled = settings.value("oneColumnModeEnabled", false).toBool();
 
     if (modeEnabled) {
         ui->actionUse_one_column_mode->setChecked(true);

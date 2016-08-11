@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.08.7
+- the one column mode is now turned off by default, it was
+  accidentally turned on by default
+  (for [Issue #281](https://github.com/pbek/QOwnNotes/issues/281))
+
 ## 16.08.6
 - there now is a **one column minimal mode**, like NVAlt has
   (for [Issue #281](https://github.com/pbek/QOwnNotes/issues/281))

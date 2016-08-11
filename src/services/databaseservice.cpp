@@ -344,6 +344,15 @@ bool DatabaseService::setupTables() {
         version = 10;
     }
 
+    if (version < 11) {
+        QSettings settings;
+        // remove the oneColumnModeEnabled setting, that wrongly
+        // was turned on by default
+        settings.remove("oneColumnModeEnabled");
+
+        version = 11;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }
