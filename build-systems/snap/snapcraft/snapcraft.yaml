@@ -20,7 +20,6 @@ apps:
 parts:
   qownnotes:
     source: http://downloads.sourceforge.net/project/qownnotes/src/qownnotes-VERSION-STRING.tar.xz
-    source-type: tar
     plugin: qmake
     qt-version: qt5
     build-packages:
