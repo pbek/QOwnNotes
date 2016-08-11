@@ -565,14 +565,16 @@ void SettingsDialog::storeShortcutSettings() {
 
             QKeySequence keySequence = keyWidget->keySequence();
             QKeySequence defaultKeySequence = keyWidget->defaultKeySequence();
+            QString actionObjectName =
+                    shortcutItem->data(Qt::UserRole, 1).toString();
 
-            // store the setting for the shortcut if it's not default
-            if (!keySequence.isEmpty() && (keySequence != defaultKeySequence)) {
-                QString actionObjectName =
-                        shortcutItem->data(Qt::UserRole, 1).toString();
+            QString settingsKey = "Shortcuts/MainWindow-" + actionObjectName;
 
-                settings.setValue("Shortcuts/MainWindow-" + actionObjectName,
-                                  keySequence);
+            // remove or store the setting for the shortcut if it's not default
+            if (keySequence == defaultKeySequence) {
+                settings.remove(settingsKey);
+            } else if (!keySequence.isEmpty()) {
+                settings.setValue(settingsKey, keySequence);
             }
         }
     }

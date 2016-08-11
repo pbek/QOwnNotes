@@ -6730,18 +6730,28 @@ void MainWindow::initShortcuts() {
                         continue;
                     }
 
-                    if (!_isDefaultShortcutInitialized) {
-                        // set the default shortcut
-                        action->setData(action->shortcut().toString());
-                    }
+                    QString oldShortcut = action->shortcut().toString();
 
                     // try to load a key sequence from the settings
                     QKeySequence shortcut = QKeySequence(settings.value(
                                     "Shortcuts/MainWindow-" +
                                             action->objectName()).toString());
 
-                    if (!shortcut.isEmpty()) {
-                        action->setShortcut(shortcut);
+                    // do we can this method the first time?
+                    if (!_isDefaultShortcutInitialized) {
+                        // set the default shortcut
+                        action->setData(oldShortcut);
+
+                        // if there was a shortcut set use the new shortcut
+                        if (!shortcut.isEmpty()) {
+                            action->setShortcut(shortcut);
+                        }
+                    } else {
+                        // set to the default shortcut if no shortcut was found,
+                        // otherwise store the new shortcut
+                        action->setShortcut(shortcut.isEmpty()
+                                            ? action->data().toString()
+                                            : shortcut);
                     }
             }
     }

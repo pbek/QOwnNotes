@@ -2,6 +2,8 @@
 
 ## 16.08.5
 - fixed a crash when opening the link dialog
+- resetting of shortcuts works now
+  (for [Issue #282](https://github.com/pbek/QOwnNotes/issues/282))
 - added more Portuguese, German and Japanese translation (thank you
   mlimacarlos, bigant and piyo)
 
