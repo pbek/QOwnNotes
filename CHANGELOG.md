@@ -14,6 +14,8 @@
   - the note edit context menu shortcuts now also load the custom
     shortcut settings
 - changed some icons in the font settings
+- the `Add tag` button now sicks to the right of the note edit pane
+  (for jd6661 on the IRC channel) 
 - added more Italian translation (thank you mlocati)
 
 ## 16.08.5
