@@ -6792,6 +6792,11 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
     ui->navigationFrame->setHidden(arg1);
 
     if (arg1) {
+        // turn on the note edit pane if not active
+        if (!ui->actionToggle_note_edit_pane->isChecked()) {
+            ui->actionToggle_note_edit_pane->toggle();
+        }
+
         // turn off the tag pane if active
         if (ui->actionToggle_tag_pane->isChecked()) {
             ui->actionToggle_tag_pane->toggle();
@@ -6805,6 +6810,8 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
         // add the edit frame to the note list splitter in one column mode
         ui->noteEditFrame->setStyleSheet("#navigationFrame {margin: 0;}");
         _noteListSplitter->addWidget(ui->noteEditFrame);
+
+        // TODO: check if size of note edit pane is really visible
     } else {
         // restore the main splitter to get out of the one column mode
         setupMainSplitter();
