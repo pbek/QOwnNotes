@@ -14,6 +14,7 @@
   - the note edit context menu shortcuts now also load the custom
     shortcut settings
 - changed some icons in the font settings
+- added more Italian translation (thank you mlocati)
 
 ## 16.08.5
 - fixed a crash when opening the link dialog
