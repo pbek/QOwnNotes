@@ -274,6 +274,9 @@ MainWindow::MainWindow(QWidget *parent) :
         QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
     }
 
+    // setup the one column mode if needed
+    setupOneColumnMode();
+
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
             this, SLOT(trackAction(QAction *)));
@@ -547,6 +550,11 @@ bool MainWindow::isInDistractionFreeMode() {
  * Toggles the distraction free mode
  */
 void MainWindow::toggleDistractionFreeMode() {
+    // leave the one column mode if active
+    if (ui->actionUse_one_column_mode->isChecked()) {
+        ui->actionUse_one_column_mode->toggle();
+    }
+
     QSettings settings;
     bool isInDistractionFreeMode = this->isInDistractionFreeMode();
 
@@ -5452,6 +5460,18 @@ void MainWindow::setupNoteEditPane() {
 }
 
 /**
+ * Sets up the one column mode
+ */
+void MainWindow::setupOneColumnMode() {
+    QSettings settings;
+    bool modeEnabled = settings.value("oneColumnModeEnabled", true).toBool();
+
+    if (modeEnabled) {
+        ui->actionUse_one_column_mode->setChecked(true);
+    }
+}
+
+/**
  * Returns the key for storing and restoring the main splitter state
  */
 QString MainWindow::getMainSplitterStateKey(
@@ -6760,4 +6780,30 @@ void MainWindow::initShortcuts() {
     if (!_isDefaultShortcutInitialized) {
         _isDefaultShortcutInitialized = true;
     }
+}
+
+/**
+ * Toggles the one column mode
+ *
+ * @param arg1
+ */
+void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
+    // hide the navigation frame in one column mode
+    ui->navigationFrame->setHidden(arg1);
+
+    if (arg1) {
+        // add the edit frame to the note list splitter in one column mode
+        ui->noteEditFrame->setStyleSheet("#navigationFrame {margin: 0;}");
+        _noteListSplitter->addWidget(ui->noteEditFrame);
+    } else {
+        // restore the main splitter to get out of the one column mode
+        setupMainSplitter();
+    }
+
+    QSettings settings;
+    settings.setValue("oneColumnModeEnabled", arg1);
+
+    // restore the splitter state
+    QByteArray state = settings.value("noteListSplitterState").toByteArray();
+    _noteListSplitter->restoreState(state);
 }

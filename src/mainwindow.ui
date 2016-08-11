@@ -754,6 +754,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_markdown_preview"/>
     <addaction name="actionToggle_between_edit_and_preview"/>
     <addaction name="actionUse_vertical_preview_layout"/>
+    <addaction name="actionUse_one_column_mode"/>
+    <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_distraction_free_mode"/>
@@ -1476,6 +1478,12 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Use &amp;vertical preview layout</string>
    </property>
+   <property name="toolTip">
+    <string>The note edit panel will be above the preview panel</string>
+   </property>
+   <property name="statusTip">
+    <string>The note edit panel will be above the preview panel</string>
+   </property>
   </action>
   <action name="actionReplace_in_current_note">
    <property name="icon">
@@ -1653,6 +1661,20 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionUse_one_column_mode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Use one column mode</string>
+   </property>
+   <property name="toolTip">
+    <string>Use a one column minimal mode (like NVAlt)</string>
+   </property>
+   <property name="statusTip">
+    <string>Use a one column minimal mode (like NVAlt)</string>
    </property>
   </action>
  </widget>

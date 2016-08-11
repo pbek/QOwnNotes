@@ -346,6 +346,8 @@ private slots:
 
     void on_actionToggle_between_edit_and_preview_triggered();
 
+    void on_actionUse_one_column_mode_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -596,4 +598,6 @@ private:
     void updateShareButton();
 
     void initShortcuts();
+
+    void setupOneColumnMode();
 };
