@@ -4,8 +4,8 @@
 - there now is a **one column minimal mode**, like NVAlt has
   (for [Issue #281](https://github.com/pbek/QOwnNotes/issues/281))
     - you can activate it in the window menu
-    - it turns off the navigation pane and puts the edit pane beyond
-      the note list
+    - it turns off the navigation pane, the tag pane and the preview 
+      pane and puts the edit pane beyond the note list
     - the setting will be remembered when you exit the app
     - entering the distraction free mode turns the one column mode off
 - some dynamically set shortcuts are now set at the right time
