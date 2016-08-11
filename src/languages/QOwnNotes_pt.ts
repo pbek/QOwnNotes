@@ -2058,12 +2058,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Atalhos da janela principal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
+      <translation>pesquisar atalho</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2665"/>

@@ -1461,7 +1461,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     <message>
       <location filename="../services/owncloudservice.cpp" line="737"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>あなたの ownCloud サーバーを構成する必要があります！</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="743"/>
@@ -2040,17 +2040,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1891"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>ショートカット</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>メイン ウィンドウ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
+      <translation>検索</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2665"/>
@@ -2501,17 +2501,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="515"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>未定義</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="520"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>新しいキーを割り当て</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="521"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>既定に戻す</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="807"/>

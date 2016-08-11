@@ -610,23 +610,23 @@
     <message>
       <location filename="../mainwindow.ui" line="1620"/>
       <source>Toggle text case</source>
-      <translation type="unfinished">Toggle text case</translation>
+      <translation>Groß-/Kleinschreibung umschalten</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1632"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Markdown-Schnellübersicht</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1641"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>Text durchstreichen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1649"/>
       <location filename="../mainwindow.ui" line="1652"/>
       <source>Toggle between edit and preview</source>
-      <translation type="unfinished">Toggle between edit and preview</translation>
+      <translation>Zwischen Bearbeiten und Vorschau umschalten</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1643"/>
@@ -1238,7 +1238,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="1382"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt;Pfad: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1616"/>
@@ -1477,7 +1477,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../services/owncloudservice.cpp" line="737"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Ihr ownCloud-Server muss konfiguriert werden!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="743"/>
@@ -2055,17 +2055,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1891"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>Tastaturbefehle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Hauptfenster-Tastaturkürzel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1914"/>
       <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
+      <translation>Tastaturbefehl suchen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2665"/>
@@ -2516,17 +2516,17 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="515"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Nicht definierte Taste</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="520"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>Neue Taste zuweisen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="521"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>Auf Standard-Taste zurücksetzen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="807"/>
@@ -2702,17 +2702,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Notiz teilen</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>Notiz teilen auf ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>Die öffentliche URL Ihrer Notiz</translation>
     </message>
   </context>
   <context>

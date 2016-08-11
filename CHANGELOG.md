@@ -2,6 +2,8 @@
 
 ## 16.08.5
 - fixed a crash when opening the link dialog
+- added more Portuguese, German and Japanese translation (thank you
+  mlimacarlos, bigant and piyo)
 
 ## 16.08.4
 - fixed an issue with the positioning of dialogs if there was
