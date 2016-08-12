@@ -990,6 +990,12 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
     // reload notes if notes folder was changed
     if (oldPath != folderName) {
+        const QSignalBlocker blocker2(this->ui->searchLineEdit);
+        {
+            Q_UNUSED(blocker2);
+            ui->searchLineEdit->clear();
+        }
+
         // store everything before changing folder
         storeUpdatedNotesToDisk();
 
@@ -1018,12 +1024,6 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
             ui->noteTextEdit->clear();
             ui->noteTextEdit->show();
             ui->encryptedNoteTextEdit->hide();
-        }
-
-        const QSignalBlocker blocker2(this->ui->searchLineEdit);
-        {
-            Q_UNUSED(blocker2);
-            ui->searchLineEdit->clear();
         }
 
         this->ui->noteTextView->clear();

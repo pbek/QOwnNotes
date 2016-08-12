@@ -6,6 +6,8 @@
   (for [Issue #281](https://github.com/pbek/QOwnNotes/issues/281))
     - when the one column mode is turned off we now try to make sure 
       the navigation pane is visible again
+- fixed a problem where notes were filtered when switching note folders 
+  while there was a text in the note search line edit
 - added a missing demo markdown file
 - added more Russian, Dutch and Italian translation (thank you 
   frostyland, Fabijenna and mlocati)
