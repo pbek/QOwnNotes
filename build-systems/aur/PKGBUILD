@@ -15,12 +15,12 @@ source=("http://downloads.sourceforge.net/project/${pkgname}/src/${pkgname}-${pk
 sha256sums=('ARCHIVE-SHA256')
 
 prepare() {
-	cd "${pkgname}-${pkgver}"
+    cd "${pkgname}-${pkgver}"
     echo "#define RELEASE \"AUR\"" > release.h
 }
 
 build() {
-	cd "${pkgname}-${pkgver}"
+    cd "${pkgname}-${pkgver}"
     qmake
     make
 }
