@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.08.8
+- when the one column mode is turned on we now try to make sure the 
+  note edit pane is visible
+  (for [Issue #281](https://github.com/pbek/QOwnNotes/issues/281))
+    - when the one column mode is turned off we now try to make sure 
+      the navigation pane is visible again
+
 ## 16.08.7
 - the one column mode is now turned off by default, it was
   accidentally turned on by default

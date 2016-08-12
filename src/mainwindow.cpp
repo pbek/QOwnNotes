@@ -6810,8 +6810,6 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
         // add the edit frame to the note list splitter in one column mode
         ui->noteEditFrame->setStyleSheet("#navigationFrame {margin: 0;}");
         _noteListSplitter->addWidget(ui->noteEditFrame);
-
-        // TODO: check if size of note edit pane is really visible
     } else {
         // restore the main splitter to get out of the one column mode
         setupMainSplitter();
@@ -6823,4 +6821,26 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
     // restore the splitter state
     QByteArray state = settings.value("noteListSplitterState").toByteArray();
     _noteListSplitter->restoreState(state);
+
+    if (arg1) {
+        // try to set the height of the note edit frame if it is smaller
+        // than 300px to make sure it is visible when the one column mode is
+        // turned on
+        if (ui->noteEditFrame->height() < 300) {
+            // this doesn't work
+//        ui->noteEditFrame->resize(ui->noteEditFrame->width(), 300);
+
+            QList<int> sizes = _noteListSplitter->sizes();
+            sizes[2] = 300;
+            _noteListSplitter->setSizes(sizes);
+        }
+    } else {
+        // show the navigation frame again when the one column mode is
+        // turned off
+        if (ui->navigationFrame->height() < 200) {
+            QList<int> sizes = _noteListSplitter->sizes();
+            sizes[1] = 200;
+            _noteListSplitter->setSizes(sizes);
+        }
+    }
 }
