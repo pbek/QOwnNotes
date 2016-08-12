@@ -545,7 +545,7 @@
       <location filename="../mainwindow.ui" line="1482"/>
       <location filename="../mainwindow.ui" line="1485"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Панель редактирования заметок будет выше панели предварительного просмотра</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -637,13 +637,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Использовать режим в один столбец</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1674"/>
       <location filename="../mainwindow.ui" line="1677"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Использовать минимальный режим в один столбец (как nvALT)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1644"/>
@@ -2093,12 +2093,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Горячие клавиши для главного окна</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1915"/>
       <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
+      <translation>искать горячую клавишу</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2666"/>
@@ -2549,17 +2549,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="517"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Не определенная клавиша</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="522"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>Назначить новую клавишу</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="523"/>
       <source>Reset to default key</source>
-      <translation type="unfinished">Reset to default key</translation>
+      <translation>Восстановить клавишу по умолчанию</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="811"/>

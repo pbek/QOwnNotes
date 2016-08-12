@@ -545,7 +545,7 @@
       <location filename="../mainwindow.ui" line="1482"/>
       <location filename="../mainwindow.ui" line="1485"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>Il pannello di modifica delle note sarà sopra il pannello di anteprima</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -637,13 +637,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Usa modalità a colonna unica</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1674"/>
       <location filename="../mainwindow.ui" line="1677"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Usa la modalità minimale a una colonna (come NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1644"/>

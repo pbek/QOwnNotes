@@ -7,6 +7,8 @@
     - when the one column mode is turned off we now try to make sure 
       the navigation pane is visible again
 - added a missing demo markdown file
+- added more Russian, Dutch and Italian translation (thank you 
+  frostyland, Fabijenna and mlocati)
 
 ## 16.08.7
 - the one column mode is now turned off by default, it was
