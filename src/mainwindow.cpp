@@ -1502,7 +1502,10 @@ void MainWindow::readSettings() {
     on_actionShow_status_bar_triggered(showStatusBar);
 
     // toggle the show menu bar checkbox
-    bool showMenuBar = settings.value("showMenuBar", true).toBool();
+    // use the current menu bar visibility as default (so it will not be
+    // shown by default on Unity desktop)
+    bool showMenuBar =
+            settings.value("showMenuBar", !ui->menuBar->isHidden()).toBool();
     on_actionShow_menu_bar_triggered(showMenuBar);
 }
 
