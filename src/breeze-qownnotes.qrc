@@ -78,5 +78,6 @@
         <file alias="16x16/document-share.svg">icons/breeze-qownnotes/16x16/document-share.svg</file>
         <file alias="16x16/format-text-capitalize.svg">icons/breeze-qownnotes/16x16/format-text-capitalize.svg</file>
         <file alias="16x16/format-text-strikethrough.svg">icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</file>
+        <file alias="16x16/application-menu.svg">icons/breeze-qownnotes/16x16/application-menu.svg</file>
     </qresource>
 </RCC>

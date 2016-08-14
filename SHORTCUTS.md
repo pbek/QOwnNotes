@@ -31,6 +31,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F</kbd> lets you select a different note folder
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> reloads the scripting engine 
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 
 ### In the note search bar
 
@@ -115,6 +116,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>R</kbd> reloads the current note folder 
 - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>F</kbd> lets you select a different note folder
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> reloads the scripting engine 
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 
 ### In the note search bar
 

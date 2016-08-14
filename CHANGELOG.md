@@ -1,9 +1,14 @@
 # QOwnNotes Changelog
 
 ## 16.08.9
-- all shortcuts from the main menu should now also work if your desktop
-  environment doesn't show the main menu bar (like Unity does)
+- all **shortcuts** from the main menu should now also **work** if your
+  desktop environment doesn't show the main menu bar (like **Unity** does)
   (for [Issue #288](https://github.com/pbek/QOwnNotes/issues/288))
+- there now is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + 
+  <kbd>M</kbd> to **hide the main menu bar** 
+  (for [Issue #287](https://github.com/pbek/QOwnNotes/issues/287))
+  - if the menu bar is hidden a new button will be added to the window 
+    toolbar to show the main menu bar again
 
 ## 16.08.8
 - when the one column mode is turned on we now try to make sure the 

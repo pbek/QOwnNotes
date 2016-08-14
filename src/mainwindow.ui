@@ -744,6 +744,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthWide"/>
      <addaction name="actionEditorWidthFull"/>
     </widget>
+    <addaction name="actionShow_menu_bar"/>
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
@@ -1675,6 +1676,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Use a one column minimal mode (like NVAlt)</string>
+   </property>
+  </action>
+  <action name="actionShow_menu_bar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="application-menu" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Show menu bar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+M</string>
    </property>
   </action>
  </widget>

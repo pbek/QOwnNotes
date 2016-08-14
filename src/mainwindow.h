@@ -349,6 +349,8 @@ private slots:
 
     void on_actionUse_one_column_mode_toggled(bool arg1);
 
+    void on_actionShow_menu_bar_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

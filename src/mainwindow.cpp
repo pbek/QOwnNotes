@@ -1500,6 +1500,10 @@ void MainWindow::readSettings() {
     // toggle the show status bar checkbox
     bool showStatusBar = settings.value("showStatusBar", true).toBool();
     on_actionShow_status_bar_triggered(showStatusBar);
+
+    // toggle the show menu bar checkbox
+    bool showMenuBar = settings.value("showMenuBar", true).toBool();
+    on_actionShow_menu_bar_triggered(showMenuBar);
 }
 
 /**
@@ -6741,7 +6745,16 @@ void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
 void MainWindow::initShortcuts() {
     QList<QMenu*> menus = menuList();
     QSettings settings;
+
+    // we also have to clear the shortcuts directly, just removing the
+    // objects didn't remove the shortcut
+    foreach(QShortcut* menuShortcut, _menuShortcuts) {
+            menuShortcut->setKey(QKeySequence());
+        }
+
+    // remove all menu shortcuts to create new ones
     _menuShortcuts.clear();
+
     bool menuBarIsVisible = !ui->menuBar->isHidden();
     qDebug() << __func__ << " - 'menuBarIsVisible': " << menuBarIsVisible;
 
@@ -6859,4 +6872,33 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
             _noteListSplitter->setSizes(sizes);
         }
     }
+}
+
+/**
+ * Shows or hides the main menu bar
+ *
+ * @param checked
+ */
+void MainWindow::on_actionShow_menu_bar_triggered(bool checked) {
+    ui->menuBar->setVisible(checked);
+
+    const QSignalBlocker blocker(ui->actionShow_menu_bar);
+    {
+        Q_UNUSED(blocker);
+        ui->actionShow_menu_bar->setChecked(checked);
+    }
+
+    QSettings settings;
+    settings.setValue("showMenuBar", checked);
+
+    // show the action in the toolbar if the main menu isn't shown
+    if (checked) {
+        _windowToolbar->removeAction(ui->actionShow_menu_bar);
+    } else {
+        _windowToolbar->addAction(ui->actionShow_menu_bar);
+    }
+
+    // init the shortcuts again to create or remove the menu bar shortcut
+    // workaround
+    initShortcuts();
 }
