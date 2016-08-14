@@ -9,6 +9,8 @@
   (for [Issue #287](https://github.com/pbek/QOwnNotes/issues/287))
   - if the menu bar is hidden a new button will be added to the window 
     toolbar to show the main menu bar again
+- fixed an UI glitch under OS X where the `add tag` button stuck to 
+  the right corner
 - added more Spanish and Hungarian translation (thank you richarson 
   and Fabijenna)
 
