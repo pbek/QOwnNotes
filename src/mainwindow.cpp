@@ -640,7 +640,7 @@ void MainWindow::initStyling() {
     // add a padding for the note tag frame so the `add tag` button doesn't
     // stick to the right corner
     ui->noteTagFrame->setStyleSheet(
-            "QFrame {border: none; padding-right: 4px;}");
+            "QFrame {border: none; padding-right: 5px;}");
 #endif
 
     // move the note view scrollbar when the note edit scrollbar was moved
