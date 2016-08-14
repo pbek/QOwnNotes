@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.08.9
+- all shortcuts from the main menu should now also work if your desktop
+  environment doesn't show the main menu bar (like Unity does)
+  (for [Issue #288](https://github.com/pbek/QOwnNotes/issues/288))
+
 ## 16.08.8
 - when the one column mode is turned on we now try to make sure the 
   note edit pane is visible

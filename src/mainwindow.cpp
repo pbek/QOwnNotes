@@ -6741,6 +6741,9 @@ void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
 void MainWindow::initShortcuts() {
     QList<QMenu*> menus = menuList();
     QSettings settings;
+    _menuShortcuts.clear();
+    bool menuBarIsVisible = !ui->menuBar->isHidden();
+    qDebug() << __func__ << " - 'menuBarIsVisible': " << menuBarIsVisible;
 
     // loop through all menus
     foreach(QMenu* menu, menus) {
@@ -6773,6 +6776,19 @@ void MainWindow::initShortcuts() {
                         action->setShortcut(shortcut.isEmpty()
                                             ? action->data().toString()
                                             : shortcut);
+                    }
+
+                    // if the menu bar is not visible (like for the Unity
+                    // desktop) create a workaround with a QShortcut so the
+                    // shortcuts are still working
+                    if (!menuBarIsVisible) {
+                        shortcut = action->shortcut();
+                        action->setShortcut(QKeySequence());
+
+                        QShortcut *shortcutItem = new QShortcut(shortcut, this);
+                        connect(shortcutItem, SIGNAL(activated()),
+                                action, SLOT(trigger()));
+                        _menuShortcuts.append(shortcutItem);
                     }
             }
     }

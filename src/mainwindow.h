@@ -13,6 +13,7 @@
 #include <QFile>
 #include <QToolBar>
 #include <QTreeWidgetItem>
+#include <QShortcut>
 #include <entities/note.h>
 #include <entities/notefolder.h>
 #include <entities/tag.h>
@@ -389,6 +390,7 @@ private:
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
     bool _isDefaultShortcutInitialized;
+    QList<QShortcut *> _menuShortcuts;
 
     void initMainSplitter();
 
