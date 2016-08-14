@@ -9,6 +9,8 @@
   (for [Issue #287](https://github.com/pbek/QOwnNotes/issues/287))
   - if the menu bar is hidden a new button will be added to the window 
     toolbar to show the main menu bar again
+- added more Spanish and Hungarian translation (thank you richarson 
+  and Fabijenna)
 
 ## 16.08.8
 - when the one column mode is turned on we now try to make sure the 

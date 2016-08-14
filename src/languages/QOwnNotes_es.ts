@@ -15,7 +15,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Enlazar un LRU o nota</translation>
+      <translation>Enlazar una url o nota</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
@@ -136,7 +136,7 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>find or create note sub folder</source>
-      <translation type="unfinished">find or create note sub folder</translation>
+      <translation>buscar o crear subcarpeta de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
@@ -545,7 +545,7 @@
       <location filename="../mainwindow.ui" line="1482"/>
       <location filename="../mainwindow.ui" line="1485"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>El panel de edición de notas irá arriba del panel de previsualización</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -606,12 +606,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1595"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>Mostrar barra de estado</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1610"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Compartir nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1628"/>
@@ -626,7 +626,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1649"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>Tachar texto</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1657"/>
@@ -637,13 +637,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1671"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Usar modo de una columna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1674"/>
       <location filename="../mainwindow.ui" line="1677"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Usar modo minimalista de una columna (como NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1644"/>
@@ -788,7 +788,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../mainwindow.cpp" line="2873"/>
       <location filename="../mainwindow.cpp" line="6552"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Eliminar las carpetas seleccionadas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2904"/>
@@ -989,12 +989,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5205"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>mostrar notas en la carpeta raíz de la nota (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5209"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Carpeta de notas</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6361"/>
@@ -1009,22 +1009,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="6551"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Nueva subcarpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6554"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Mostrar carpeta en gestor de archivos</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6585"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Crear nueva carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6585"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Nombre de la carpeta:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5173"/>
@@ -1244,7 +1244,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="1338"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>mostrar notas en la carpeta '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1378"/>
@@ -1254,7 +1254,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="1383"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt;ruta: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1617"/>
@@ -1269,15 +1269,15 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2874"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</source>
-      <translation type="unfinished">
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
-        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be gone!</numerusform>
+      <translation>
+        <numerusform>¿Eliminar la carpeta seleccionada? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; ¡Todos los archivos y carpetas dentro de esta carpeta desaparecerán!</numerusform>
+        <numerusform>¿Eliminar las &lt;strong&gt;%n&lt;/strong&gt; carpetas seleccionadas? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; ¡Todos los archivos y carpetas dentro de estas carpetas desaparecerán!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2885"/>
       <source>removed note subfolder: %1</source>
-      <translation type="unfinished">removed note subfolder: %1</translation>
+      <translation>eliminar la subcarpeta de notas: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3431"/>
@@ -1493,7 +1493,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../services/owncloudservice.cpp" line="737"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>¡Tienes que configurar tu servidor ownCloud!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="743"/>
@@ -1529,17 +1529,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../services/owncloudservice.cpp" line="876"/>
       <location filename="../services/owncloudservice.cpp" line="900"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Error al cargar las listas de tareas!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="877"/>
       <source>Your ownCloud CalDAV server didn't reply anything!</source>
-      <translation type="unfinished">Your ownCloud CalDAV server didn't reply anything!</translation>
+      <translation>¡El servidor CalDAV de ownCloud no devolvió nada!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="901"/>
       <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation type="unfinished">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation>Mensaje de error del servidor CalDAV de ownCloud: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -1911,12 +1911,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="398"/>
       <source>This functionality is work in progress!</source>
-      <translation type="unfinished">This functionality is work in progress!</translation>
+      <translation>¡Esta funcionalidad está en progreso!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="401"/>
       <source>Show subfolders in note list</source>
-      <translation type="unfinished">Show subfolders in note list</translation>
+      <translation>Mostrar subcarpetas en la lista de notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
@@ -2071,27 +2071,27 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1891"/>
       <source>Shortcuts</source>
-      <translation type="unfinished">Shortcuts</translation>
+      <translation>Atajos de teclado</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1897"/>
       <source>Main window shortcuts</source>
-      <translation type="unfinished">Main window shortcuts</translation>
+      <translation>Atajos de la ventana principal</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1915"/>
       <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
+      <translation>buscar atajo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2666"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
+      <translation>Tilda aquí para no añadir dos espacios como salto de línea</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2669"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Utilizar saltos de línea de GitHub</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1548"/>
@@ -2662,7 +2662,7 @@ Mensaje de error de conexión: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1066"/>
       <source>Please make sure the connection to your ownCloud server works.</source>
-      <translation type="unfinished">Please make sure the connection to your ownCloud server works.</translation>
+      <translation>Por favor asegúrate que la conexión a tu servidor ownCloud funciona.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
@@ -2715,17 +2715,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Compartir nota</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>Compartir nota en ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>La url pública de tu nota</translation>
     </message>
   </context>
   <context>
