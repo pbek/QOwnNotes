@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.08.10
+- there now is a checkbox in the Interface settings where you can 
+  turn off the markdown highlighting
+  (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
+
 ## 16.08.9
 - all **shortcuts** from the main menu should now also **work** if your
   desktop environment doesn't show the main menu bar (like **Unity** does)

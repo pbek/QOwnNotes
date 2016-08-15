@@ -155,6 +155,8 @@ private slots:
 
     void on_shortcutSearchLineEdit_textChanged(const QString &arg1);
 
+    void on_markdownHighlightingCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -170,6 +172,7 @@ private:
     NoteFolder _selectedNoteFolder;
     Script _selectedScript;
     QSignalMapper *_keyWidgetSignalMapper;
+    static const int _defaultMarkdownHighlightingInterval = 200;
 
     void readSettings();
 

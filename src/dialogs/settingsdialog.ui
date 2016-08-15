@@ -1429,7 +1429,20 @@
                  <string>Markdown highlighting</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_35">
-                 <item row="0" column="1">
+                 <item row="1" column="3">
+                  <spacer name="horizontalSpacer_7">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item row="1" column="1">
                   <widget class="QLabel" name="markdownHighlightingIntervalLabel">
                    <property name="text">
                     <string>Highlighting interval [ms]:</string>
@@ -1439,7 +1452,7 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="2">
+                 <item row="1" column="2">
                   <widget class="QSpinBox" name="markdownHighlightingIntervalSpinBox">
                    <property name="toolTip">
                     <string/>
@@ -1452,18 +1465,12 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="0" column="3">
-                  <spacer name="horizontalSpacer_7">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
+                 <item row="0" column="1" colspan="3">
+                  <widget class="QCheckBox" name="markdownHighlightingCheckBox">
+                   <property name="text">
+                    <string>Enable markdown highlighting</string>
                    </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
+                  </widget>
                  </item>
                 </layout>
                </widget>

@@ -273,7 +273,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
     settings.setValue("markdownHighlightingInterval",
-                      ui->markdownHighlightingIntervalSpinBox->value());
+                      ui->markdownHighlightingCheckBox->isChecked() ?
+                      ui->markdownHighlightingIntervalSpinBox->value() : 0);
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -365,8 +366,18 @@ void SettingsDialog::readSettings() {
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
+
+    const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
+    Q_UNUSED(blocker3);
+    int markdownHighlightingInterval =
+            settings.value("markdownHighlightingInterval",
+                           _defaultMarkdownHighlightingInterval).toInt();
+    bool markdownHighlightingEnabled = markdownHighlightingInterval > 0;
+    ui->markdownHighlightingCheckBox->setChecked(markdownHighlightingEnabled);
     ui->markdownHighlightingIntervalSpinBox->setValue(
-            settings.value("markdownHighlightingInterval", 200).toInt());
+            markdownHighlightingInterval);
+    on_markdownHighlightingCheckBox_toggled(markdownHighlightingEnabled);
+
     ui->showNoteFolderCheckBox->setChecked(settings.value(
             "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
@@ -1962,5 +1973,20 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
                 item->setHidden(false);
             }
+    }
+}
+
+/**
+ * Turn the markdown highlighter interval spin box on or off
+ *
+ * @param checked
+ */
+void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
+    ui->markdownHighlightingIntervalSpinBox->setEnabled(checked);
+    ui->markdownHighlightingIntervalLabel->setEnabled(checked);
+
+    if (checked && (ui->markdownHighlightingIntervalSpinBox->value() == 0)) {
+        ui->markdownHighlightingIntervalSpinBox->setValue(
+                _defaultMarkdownHighlightingInterval);
     }
 }
