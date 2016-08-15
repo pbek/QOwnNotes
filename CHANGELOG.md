@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.08.10
-- there now is a checkbox in the Interface settings where you can 
-  turn off the markdown highlighting
+- now you can **copy and move notes to a note subfolder** from the note 
+  context menu (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- there now is a checkbox in the interface settings where you can 
+  **disable the markdown highlighting**
   (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
 - added more Spanish and Polish translation (thank you richarson 
   and kamilko)

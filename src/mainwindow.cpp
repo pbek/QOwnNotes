@@ -3081,7 +3081,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
             }
 
         showStatusBarMessage(
-                tr("%n note(s) were tagged with <strong>%2</strong>.", "",
+                tr("%n note(s) were tagged with \"%2\"", "",
                    tagCount).arg(tag.getName()), 5000);
     }
 }
@@ -6000,6 +6000,188 @@ void MainWindow::tagSelectedNotesToTagId(int tagId) {
 }
 
 /**
+ * Populates a subfolder menu tree for bulk note moving or copying
+ */
+void MainWindow::buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy,
+                                                int parentNoteSubFolderId) {
+    QList<NoteSubFolder> noteSubFolderList = NoteSubFolder::fetchAllByParentId(
+            parentNoteSubFolderId);
+    QSignalMapper *signalMapper = new QSignalMapper(this);
+
+    Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
+            int noteSubFolderId = noteSubFolder.getId();
+            QString name = noteSubFolder.getName();
+
+            int count = NoteSubFolder::countAllParentId(noteSubFolderId);
+            if (count > 0) {
+                // if there are sub-noteSubFolder build a new menu level
+                QMenu *noteSubFolderMenu = parentMenu->addMenu(name);
+                buildBulkNoteSubFolderMenuTree(noteSubFolderMenu, doCopy,
+                                               noteSubFolderId);
+            } else {
+                // if there are no sub-noteSubFolders just create a named action
+                QAction *action = parentMenu->addAction(name);
+
+                QObject::connect(
+                        action, SIGNAL(triggered()),
+                        signalMapper, SLOT(map()));
+
+                signalMapper->setMapping(
+                        action, noteSubFolderId);
+            }
+        }
+
+    // add an action to copy or move to this subfolder
+    parentMenu->addSeparator();
+    QString text = (parentNoteSubFolderId == 0) ?
+                   (doCopy ? tr("Copy to note folder") :
+                             tr("Move to note folder")) :
+                   (doCopy ? tr("Copy to this subfolder") :
+                             tr("Move to this subfolder"));
+    QAction *action = parentMenu->addAction(text);
+    action->setData(parentNoteSubFolderId);
+
+    QObject::connect(
+            action, SIGNAL(triggered()),
+            signalMapper, SLOT(map()));
+
+    signalMapper->setMapping(
+            action, parentNoteSubFolderId);
+
+    // connect the signal mapper
+    QObject::connect(signalMapper,
+                     SIGNAL(mapped(int)),
+                     this,
+                     doCopy ?
+                     SLOT(copySelectedNotesToNoteSubFolderId(int)) :
+                     SLOT(moveSelectedNotesToNoteSubFolderId(int)));
+}
+
+/**
+ * Moves selected notes to a note subfolder id
+ */
+void MainWindow::moveSelectedNotesToNoteSubFolderId(int noteSubFolderId) {
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+
+    // move selected notes to note subfolder
+    if (noteSubFolder.isFetched()) {
+        moveSelectedNotesToNoteSubFolder(noteSubFolder);
+    }
+}
+
+/**
+ * Copies selected notes to a note subfolder id
+ */
+void MainWindow::copySelectedNotesToNoteSubFolderId(int noteSubFolderId) {
+    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
+
+    // copy selected notes to note subfolder
+    if (noteSubFolder.isFetched()) {
+        copySelectedNotesToNoteSubFolder(noteSubFolder);
+    }
+}
+
+/**
+ * Moves selected notes to a note subfolder
+ */
+void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    QString text = tr("Move %n selected note(s) to note subfolder "
+                              "<strong>%2</strong>?", "",
+                      selectedItemsCount).arg(noteSubFolder.getName());
+    text += " " + tr("Tagging information will be lost at the destination.");
+
+    if (QMessageBox::information(
+            this,
+            tr("Move selected notes"),
+            text,
+            tr("Move"), tr("Cancel"), QString::null, 0, 1) == 0) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        int noteSubFolderCount = 0;
+        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                // move note
+                bool result = note.move(noteSubFolder.fullPath());
+                if (result) {
+                    noteSubFolderCount++;
+                    qDebug() << "Note was moved:" << note.getName();
+                } else {
+                    qWarning() << "Could not move note:" << note.getName();
+                }
+            }
+
+        // rebuild the index after the move
+        if (noteSubFolderCount > 0) {
+            buildNotesIndex();
+            loadNoteDirectoryList();
+        }
+
+        showStatusBarMessage(
+                tr("%n note(s) were moved to note subfolder \"%2\"", "",
+                   noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
+    }
+}
+
+/**
+ * Copies selected notes to a note subfolder
+ */
+void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
+    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    QString text = tr("Copy %n selected note(s) to note subfolder "
+                       "<strong>%2</strong>?", "",
+                      selectedItemsCount).arg(noteSubFolder.getName());
+    text += " " + tr("Tagging information will be lost at the destination.");
+
+    if (QMessageBox::information(
+            this,
+            tr("Copy selected notes"),
+            text,
+            tr("Copy"), tr("Cancel"), QString::null, 0, 1) == 0) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        int noteSubFolderCount = 0;
+        Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+                int noteId = item->data(0, Qt::UserRole).toInt();
+                Note note = Note::fetch(noteId);
+
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                // copy note
+                bool result = note.copy(noteSubFolder.fullPath());
+                if (result) {
+                    noteSubFolderCount++;
+                    qDebug() << "Note was copied:" << note.getName();
+                } else {
+                    qWarning() << "Could not copy note:" << note.getName();
+                }
+            }
+
+        // rebuild the index after the copy
+        if (noteSubFolderCount > 0) {
+            buildNotesIndex();
+            loadNoteDirectoryList();
+        }
+
+        showStatusBarMessage(
+                tr("%n note(s) were copied to note subfolder \"%2\"", "",
+                   noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
+    }
+}
+
+/**
  * Opens the widget to replace text in the current note
  */
 void MainWindow::on_actionReplace_in_current_note_triggered() {
@@ -6348,6 +6530,17 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
                 copyAction->setToolTip(noteFolder.getLocalPath());
                 copyAction->setStatusTip(noteFolder.getLocalPath());
             }
+    }
+
+    bool showSubFolders = NoteFolder::isCurrentShowSubfolders();
+    if (showSubFolders) {
+        QMenu *subFolderMoveMenu = noteMenu.addMenu(
+                tr("Move notes to subfolder..."));
+        buildBulkNoteSubFolderMenuTree(subFolderMoveMenu, false);
+
+        QMenu *subFolderCopyMenu = noteMenu.addMenu(
+                tr("Copy notes to subfolder..."));
+        buildBulkNoteSubFolderMenuTree(subFolderCopyMenu, true);
     }
 
     QList<Tag> tagList = Tag::fetchAll();

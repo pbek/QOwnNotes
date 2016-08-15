@@ -359,6 +359,26 @@ int NoteSubFolder::countAll() {
     return 0;
 }
 
+/**
+ * Counts all notes of a parent
+ */
+int NoteSubFolder::countAllParentId(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(*) AS cnt FROM noteSubFolder "
+                          "WHERE parent_id = :parentId ");
+    query.bindValue(":parentId", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt();
+    }
+
+    return 0;
+}
+
 void NoteSubFolder::setAsActive() {
     NoteSubFolder::setAsActive(id);
 }

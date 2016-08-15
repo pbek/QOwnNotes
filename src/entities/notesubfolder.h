@@ -83,6 +83,8 @@ public:
 
     bool rename(QString newName);
 
+    static int countAllParentId(int parentId);
+
 protected:
     int id;
     int parentId;

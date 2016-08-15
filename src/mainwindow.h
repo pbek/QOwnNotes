@@ -351,6 +351,10 @@ private slots:
 
     void on_actionShow_menu_bar_triggered(bool checked);
 
+    void moveSelectedNotesToNoteSubFolderId(int noteSubFolderId);
+
+    void copySelectedNotesToNoteSubFolderId(int noteSubFolderId);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -604,4 +608,11 @@ private:
     void initShortcuts();
 
     void setupOneColumnMode();
+
+    void buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy = true,
+                                        int parentNoteSubFolderId = 0);
+
+    void moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
+
+    void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 };

@@ -1690,7 +1690,7 @@ p, li { white-space: pre-wrap; }
     <string>Show menu bar</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+M</string>
+    <string notr="true">Ctrl+Shift+M</string>
    </property>
   </action>
  </widget>
@@ -1718,8 +1718,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
