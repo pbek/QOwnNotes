@@ -6,8 +6,8 @@
 - there now is a checkbox in the interface settings where you can 
   **disable the markdown highlighting**
   (for [Issue #197](https://github.com/pbek/QOwnNotes/issues/197))
-- added more Spanish and Polish translation (thank you richarson 
-  and kamilko)
+- added more Spanish, Polish, Hungarian and Dutch translation
+  (thank you richarson, kamilko and Fabijenna)
 
 ## 16.08.9
 - all **shortcuts** from the main menu should now also **work** if your
