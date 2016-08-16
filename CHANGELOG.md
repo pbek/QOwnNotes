@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.08.12
+- when splitting notes a link to the new note will be added at the 
+  end of the old note 
+  (for [Issue #290](https://github.com/pbek/QOwnNotes/issues/290))
+
 ## 16.08.11
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>
   to **split the current note** into two notes at the current cursor position

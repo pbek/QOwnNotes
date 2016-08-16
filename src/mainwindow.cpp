@@ -7137,8 +7137,17 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     c.removeSelectedText();
     textEdit->setTextCursor(c);
 
+    Note previousNote = currentNote;
+
     // create a new note
     createNewNote(name);
+
+    // adding a link to new note into the old note
+    previousNote.refetch();
+    QString noteNameForLink = Note::generateTextForLink(currentNote.getName());
+    QString previousNoteText = previousNote.getNoteText();
+    previousNoteText += "\n\n<note://" + noteNameForLink + ">";
+    previousNote.storeNewText(previousNoteText);
 
     // add the previously removed text
     textEdit = activeNoteTextEdit();
