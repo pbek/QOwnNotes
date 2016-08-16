@@ -11,7 +11,12 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     setStyles();
 }
 
-#define STY(type, format) styles->append((HighlightingStyle){type, format})
+// The initial define causes an error with Visual Studio 2015:
+// "error C4576: a parenthesized type followed by an initializer list is
+// a non-standard explicit type conversion syntax"
+// The replacement works, probably also on other platforms (to be tested)
+//#define STY(type, format) styles->append((HighlightingStyle){type, format})
+#define STY(type, format) styles->append({type, format})
 
 /**
  * Sets the highlighting styles for the text edit
