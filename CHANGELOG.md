@@ -11,6 +11,8 @@
   - the new note will get the tags from the old noted
 - fixed a build problem with MSVC19 (thank you @rwiesenfarth)
   (for [Issue #292](https://github.com/pbek/QOwnNotes/issues/292))
+- added more Spanish, Italian, Japanese, Hungarian and Dutch translation
+  (thank you richarson, mlocati, kamilko, piyo and Fabijenna)
 
 ## 16.08.10
 - now you can **copy and move notes to a note subfolder** from the note 
