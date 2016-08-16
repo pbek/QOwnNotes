@@ -6,7 +6,7 @@
   (for [Issue #290](https://github.com/pbek/QOwnNotes/issues/290))
   - the name of the current note plus the current timestamp will be
     used as name for the new note
-  - the new note will get the tags from the old note
+  - the new note will be tagged with the same tags as the old note
 - note subfolders are now turned off by default when a new note folder 
   is created
 - fixed a build problem with MSVC19 (thank you @rwiesenfarth)
