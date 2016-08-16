@@ -394,9 +394,6 @@
                </item>
                <item row="5" column="0" colspan="2">
                 <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
-                 <property name="toolTip">
-                  <string>This functionality is work in progress!</string>
-                 </property>
                  <property name="text">
                   <string>Show subfolders in note list</string>
                  </property>

@@ -6140,7 +6140,8 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
     QString text = tr("Copy %n selected note(s) to note subfolder "
                        "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
-    text += " " + tr("Tagging information will be lost at the destination.");
+    text += " " + tr("Tagging information of these notes will be lost at the "
+                             "destination.");
 
     if (QMessageBox::information(
             this,
