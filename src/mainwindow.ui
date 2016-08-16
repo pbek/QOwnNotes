@@ -712,6 +712,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionPaste_image"/>
     <addaction name="separator"/>
     <addaction name="action_Remove_note"/>
+    <addaction name="actionSplit_note_at_cursor_position"/>
     <addaction name="actionShow_versions"/>
     <addaction name="separator"/>
     <addaction name="action_Encrypt_note"/>
@@ -1691,6 +1692,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+M</string>
+   </property>
+  </action>
+  <action name="actionSplit_note_at_cursor_position">
+   <property name="icon">
+    <iconset theme="split" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/split.svg</normaloff>:/icons/breeze-qownnotes/16x16/split.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Split note at cursor position</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+X</string>
    </property>
   </action>
  </widget>

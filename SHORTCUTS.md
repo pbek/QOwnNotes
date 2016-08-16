@@ -78,6 +78,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>/</kbd> resets the note text font size
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 
 ### In the Todo list
 
@@ -163,6 +164,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>/</kbd> resets the note text font size
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 
 ### In the Todo list
 

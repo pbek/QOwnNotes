@@ -355,6 +355,8 @@ private slots:
 
     void copySelectedNotesToNoteSubFolderId(int noteSubFolderId);
 
+    void on_actionSplit_note_at_cursor_position_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -615,4 +617,6 @@ private:
     void moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 
     void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
+
+    void createNewNote(QString noteName = "");
 };
