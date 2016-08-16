@@ -1,14 +1,14 @@
 # QOwnNotes Changelog
 
 ## 16.08.11
-- note subfolders are now turned off by default when a new note folder 
-  is created
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>
   to **split the current note** into two notes at the current cursor position
   (for [Issue #290](https://github.com/pbek/QOwnNotes/issues/290))
   - the name of the current note plus the current timestamp will be
     used as name for the new note
-  - the new note will get the tags from the old noted
+  - the new note will get the tags from the old note
+- note subfolders are now turned off by default when a new note folder 
+  is created
 - fixed a build problem with MSVC19 (thank you @rwiesenfarth)
   (for [Issue #292](https://github.com/pbek/QOwnNotes/issues/292))
 - added more Spanish, Italian, Japanese, Hungarian and Dutch translation
