@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.08.11
+- fixed a build problem with MSVC19 (thank you @rwiesenfarth)
+  (for [Issue #292](https://github.com/pbek/QOwnNotes/issues/292))
+
 ## 16.08.10
 - now you can **copy and move notes to a note subfolder** from the note 
   context menu (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
