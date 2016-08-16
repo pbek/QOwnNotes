@@ -18,6 +18,7 @@ NoteFolder::NoteFolder() {
     remotePath = "";
     priority = 0;
     activeTagId = 0;
+    showSubfolders = false;
 }
 
 int NoteFolder::getId() {
