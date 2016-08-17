@@ -501,14 +501,15 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
  * You can search for longer texts by using quotes, `"this word1" word2`
  * will find all notes that are containing `this word1` and `word2`
  */
-QList<int> Note::searchInNotes(QString search, int noteSubFolderId) {
+QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
+                               int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
     QList<int> noteIdList;
     QStringList sqlList;
 
     // get the active note subfolder id if none was set
-    if (noteSubFolderId == -1) {
+    if ((noteSubFolderId == -1) && !ignoreNoteSubFolder) {
         noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
     }
 
@@ -519,14 +520,23 @@ QList<int> Note::searchInNotes(QString search, int noteSubFolderId) {
         sqlList.append("note_text LIKE ?");
     }
 
-    QString sql = "SELECT id FROM note WHERE note_sub_folder_id = "
-                          ":note_sub_folder_id AND " + sqlList.join(" AND ");
-    query.prepare(sql);
-    query.bindValue(0, noteSubFolderId);
+    QString sql;
+
+    // build the query
+    if (ignoreNoteSubFolder) {
+        sql = "SELECT id FROM note WHERE " + sqlList.join(" AND ");
+        query.prepare(sql);
+    } else {
+        sql = "SELECT id FROM note WHERE note_sub_folder_id = "
+                      ":note_sub_folder_id AND " + sqlList.join(" AND ");
+        query.prepare(sql);
+        query.bindValue(0, noteSubFolderId);
+    }
 
     // add the values to the query
     for (int i = 0; i < queryStrings.count(); i++) {
-        query.bindValue(i + 1, "%" + queryStrings[i] + "%");
+        int pos = ignoreNoteSubFolder ? i : i + 1;
+        query.bindValue(pos, "%" + queryStrings[i] + "%");
     }
 
     if (!query.exec()) {

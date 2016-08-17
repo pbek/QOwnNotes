@@ -399,6 +399,7 @@ private:
     bool _isNotesDirectoryWasModifiedDisabled;
     bool _isDefaultShortcutInitialized;
     QList<QShortcut *> _menuShortcuts;
+    bool _showNotesFromAllNoteSubFolders;
 
     void initMainSplitter();
 

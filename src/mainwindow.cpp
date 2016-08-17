@@ -72,6 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;
     _isDefaultShortcutInitialized = false;
+    _showNotesFromAllNoteSubFolders = false;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -3535,7 +3536,8 @@ void MainWindow::filterNotes(bool searchForText) {
     // filter the notes by text in the search line edit
     filterNotesBySearchLineEditText();
 
-    if (NoteFolder::isCurrentShowSubfolders()) {
+    if (NoteFolder::isCurrentShowSubfolders() &&
+            !_showNotesFromAllNoteSubFolders) {
         // filter the notes by note sub folder
         filterNotesByNoteSubFolders();
     }
@@ -3593,7 +3595,8 @@ void MainWindow::filterNotesBySearchLineEditText() {
 
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
-        QList<int> noteIdList = Note::searchInNotes(arg1);
+        QList<int> noteIdList = Note::searchInNotes(
+                arg1, _showNotesFromAllNoteSubFolders);
 
         while (*it) {
             // hide all filtered notes
@@ -5235,8 +5238,27 @@ void MainWindow::reloadNoteSubFolderTree() {
     ui->noteSubFolderTreeWidget->clear();
     int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
-    int linkCount = Note::countByNoteSubFolderId(0);
-    QString toolTip = tr("show notes in note root folder (%1)")
+    // add the "all notes" item
+    int linkCount = Note::countAll();
+    QString toolTip = tr("show notes from all note subfolders (%1)")
+            .arg(QString::number(linkCount));
+
+    QTreeWidgetItem *allItem = new QTreeWidgetItem();
+    allItem->setText(0, tr("All notes"));
+    allItem->setData(0, Qt::UserRole, -1);
+    allItem->setToolTip(0, toolTip);
+    allItem->setIcon(0, QIcon::fromTheme(
+            "edit-copy",
+            QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+    allItem->setTextColor(1, QColor(Qt::gray));
+    allItem->setText(1, QString::number(linkCount));
+    allItem->setToolTip(1, toolTip);
+    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    ui->noteSubFolderTreeWidget->addTopLevelItem(allItem);
+
+    // add the "note folder" item
+    linkCount = Note::countByNoteSubFolderId(0);
+    toolTip = tr("show notes in note root folder (%1)")
             .arg(QString::number(linkCount));
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
@@ -5249,8 +5271,8 @@ void MainWindow::reloadNoteSubFolderTree() {
     item->setTextColor(1, QColor(Qt::gray));
     item->setText(1, QString::number(linkCount));
     item->setToolTip(1, toolTip);
-
     ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+
     // set the active item
     if (activeNoteSubFolderId == 0) {
         const QSignalBlocker blocker(ui->noteSubFolderTreeWidget);
@@ -6691,7 +6713,10 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
 
     // set the note sub folder id as active
     int noteSubFolderId = current->data(0, Qt::UserRole).toInt();
-    NoteSubFolder::setAsActive(noteSubFolderId);
+    _showNotesFromAllNoteSubFolders = noteSubFolderId == -1;
+
+    NoteSubFolder::setAsActive(_showNotesFromAllNoteSubFolders ?
+                               0 : noteSubFolderId);
 
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker);
@@ -6784,6 +6809,11 @@ void MainWindow::on_noteSubFolderTreeWidget_itemCollapsed(
  */
 void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
+    // don't open the context menu if no subfolders are selected
+    if (ui->noteSubFolderTreeWidget->selectedItems().count() == 0) {
+        return;
+    }
+
     QPoint globalPos = ui->noteSubFolderTreeWidget->mapToGlobal(pos);
     QMenu menu;
 

@@ -147,7 +147,9 @@ public:
 
     bool modifyNoteTextFileNameFromQMLHook();
 
-    static QList<int> searchInNotes(QString query, int noteSubFolderId = -1);
+    static QList<int> searchInNotes(QString query,
+                                    bool ignoreNoteSubFolder = false,
+                                    int noteSubFolderId = -1);
 
     static QStringList buildQueryStringList(QString searchString);
 
