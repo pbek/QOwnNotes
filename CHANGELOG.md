@@ -1,14 +1,17 @@
 # QOwnNotes Changelog
 
 ## 16.08.12
-- when splitting notes a link to the new note will be added at the 
-  end of the old note 
-  (for [Issue #290](https://github.com/pbek/QOwnNotes/issues/290))
-- there now is a new item `All notes` in the note subfolder tree that 
-  you can use to search for notes in all subfolders
+- there now is a new item **`All notes`** in the **note subfolder** 
+  tree that you can use to search for notes in all subfolders
   (for [Issue #186](https://github.com/pbek/QOwnNotes/issues/186))
     - if you create a new note while having that item selected the note 
       will be created in the root note folder
+- when splitting notes now a link to the new note will be added at the 
+  end of the old note 
+  (for [Issue #290](https://github.com/pbek/QOwnNotes/issues/290))
+- in a note subfolder now links to notes in the same subfolder work
+    - when linking to notes only notes from the current subfolder will 
+      be viewed in the link dialog
 
 ## 16.08.11
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>

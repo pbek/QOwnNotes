@@ -3934,7 +3934,8 @@ void MainWindow::openLocalUrl(QString urlString) {
 
         // we need to search for the case sensitive filename,
         // we only get it lowercase by QUrl
-        QDir currentDir = QDir(this->notesPath);
+        QDir currentDir = QDir(NoteSubFolder::activeNoteSubFolder().fullPath());
+
         QStringList files;
         QStringList fileSearchList =
                 QStringList() << fileName + ".txt" << fileName + ".md";

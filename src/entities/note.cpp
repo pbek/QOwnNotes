@@ -475,11 +475,13 @@ QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
 
     QList<QString> nameList;
     QString textSearchSql = !searchInNameOnly ? "OR note_text LIKE :text " : "";
+    int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
-    query.prepare("SELECT name FROM note WHERE name LIKE :text " +
-            textSearchSql +
+    query.prepare("SELECT name FROM note WHERE (name LIKE :text " +
+            textSearchSql + ") AND note_sub_folder_id = :note_sub_folder_id "
             "ORDER BY file_last_modified DESC");
     query.bindValue(":text", "%" + text + "%");
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -587,9 +589,13 @@ QStringList Note::fetchNoteNames() {
     QSqlQuery query(db);
 
     QStringList list;
+    int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
 
-    query.prepare(
-            "SELECT DISTINCT(name) FROM note ORDER BY file_last_modified DESC");
+    query.prepare("SELECT DISTINCT(name) FROM note WHERE "
+                          "note_sub_folder_id = :note_sub_folder_id "
+                          "ORDER BY file_last_modified DESC");
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
