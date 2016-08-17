@@ -12,6 +12,10 @@
 - in a note subfolder now links to notes in the same subfolder work
     - when linking to notes only notes from the current subfolder will 
       be viewed in the link dialog
+- if you are in the last line and press cursor down the cursor will now
+  jump to the end of the line (for jd6661 on the IRC channel)
+    - if you are in the first line and press cursor up the cursor will 
+      now jump to the start of the line
 
 ## 16.08.11
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>
@@ -1955,6 +1959,6 @@
 - menu - toolbar
 
 ## 0.18
-- fixed some troubles with the Windows package.
+- fixed some troubles with the Windows package
 - added a hotkey to create new note with date in name
 - turned off pasting of rich text in the note text edit box to avoid troubles
