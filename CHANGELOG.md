@@ -16,6 +16,8 @@
   jump to the end of the line (for jd6661 on the IRC channel)
     - if you are in the first line and press cursor up the cursor will 
       now jump to the start of the line
+- added more Spanish, Italian, Japanese, Portuguese, Hungarian and Dutch
+  translation (thank you richarson, vpistis, piyo, mlimacarlos and Fabijenna)
 
 ## 16.08.11
 - there now is a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd>
