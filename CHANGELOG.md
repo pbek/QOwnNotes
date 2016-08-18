@@ -1,14 +1,18 @@
 # QOwnNotes Changelog
 
 ## 16.08.13
-- the reloading speed of the note folder and note subfolders has been 
-  dramatically improved (for [Issue #291](https://github.com/pbek/QOwnNotes/issues/291))
+- the **reloading speed** of the **note folder** and note subfolders has
+  been **dramatically improved**
+  (for [Issue #291](https://github.com/pbek/QOwnNotes/issues/291))
     - when a reload is triggered now only modified notes and folders 
       will be loaded again
     - a reload happens for example if a file, that wasn't watched by 
       QOwnNotes was modified outside the application
 - it's now possible to copy/move notes from a note subfolder to the note 
   folder (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- added more Spanish, Italian, Russian, Portuguese, French, Hungarian 
+  and Dutch translation (thank you eemantsal, mlocati, frostyland,
+  mlimacarlos, Loelo and Fabijenna)
 
 ## 16.08.12
 - there now is a new item **`All notes`** in the **note subfolder** 
