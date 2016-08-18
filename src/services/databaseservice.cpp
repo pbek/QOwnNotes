@@ -238,6 +238,7 @@ bool DatabaseService::setupTables() {
                              "id INTEGER PRIMARY KEY,"
                              "name VARCHAR(255),"
                              "file_name VARCHAR(255),"
+                             "file_size INT64 DEFAULT 0,"
                              "note_sub_folder_id int,"
                              "note_text TEXT,"
                              "decrypted_note_text TEXT,"

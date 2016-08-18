@@ -1898,7 +1898,7 @@ void MainWindow::waitMsecs(int msecs) {
 /**
  * Builds the index of notes and note sub folders
  */
-void MainWindow::buildNotesIndex(int noteSubFolderId) {
+void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
     NoteSubFolder noteSubFolder;
@@ -1909,6 +1909,13 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     if (noteSubFolderId == 0) {
         // make sure we destroy nothing
         storeUpdatedNotesToDisk();
+
+        // init the lists to check for removed items
+        _buildNotesIndexBeforeNoteIdList = Note::fetchAllIds();
+        _buildNotesIndexBeforeNoteSubFolderIdList =
+                NoteSubFolder::fetchAllIds();
+        _buildNotesIndexAfterNoteIdList.clear();
+        _buildNotesIndexAfterNoteSubFolderIdList.clear();
     } else {
         noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
         hasNoteSubFolder = noteSubFolder.isFetched();
@@ -1991,8 +1998,9 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     qint64 cryptoKey = currentNote.getCryptoKey();
     QString cryptoPassword = currentNote.getCryptoPassword();
 
-    if (!hasNoteSubFolder) {
-        // first delete all notes and note sub folders in the database
+    if (!hasNoteSubFolder && forceRebuild) {
+        // first delete all notes and note sub folders in the database if a
+        // rebuild was forced
         Note::deleteAll();
         NoteSubFolder::deleteAll();
     }
@@ -2006,13 +2014,12 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
 
             // fetching the content of the file
             QFile file(Note::getFullNoteFilePathForFile(fileName));
-            Note note;
-            note.createFromFile(file);
 
-            if (note.isFetched() && hasNoteSubFolder) {
-                note.setNoteSubFolder(noteSubFolder);
-                note.store();
-            }
+            // update or create a note from the file
+            Note note = Note::updateOrCreateFromFile(file, noteSubFolder);
+
+            // add the note id to in the end check if notes need to be removed
+            _buildNotesIndexAfterNoteIdList << note.getId();
 
             // update the UI
             // this causes to show notes twice in the ui->noteTreeWidget if a
@@ -2061,13 +2068,23 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
                     continue;
                 }
 
-                // create the parent note sub folder
-                NoteSubFolder parentNoteSubFolder;
-                parentNoteSubFolder.setName(folder);
-                parentNoteSubFolder.setParentId(noteSubFolderId);
-                parentNoteSubFolder.store();
+                // fetch or create the parent note sub folder
+                NoteSubFolder parentNoteSubFolder =
+                        NoteSubFolder::fetchByNameAndParentId(folder,
+                                                              noteSubFolderId);
+                if (!parentNoteSubFolder.isFetched()) {
+                    parentNoteSubFolder.setName(folder);
+                    parentNoteSubFolder.setParentId(noteSubFolderId);
+                    parentNoteSubFolder.store();
+                }
 
                 if (parentNoteSubFolder.isFetched()) {
+                    // add the note id to in the end check if notes need to
+                    // be removed
+                    _buildNotesIndexAfterNoteSubFolderIdList
+                            << parentNoteSubFolder.getId();
+
+                    // build the notes index for the note subfolder
                     buildNotesIndex(parentNoteSubFolder.getId());
 
                     // update the UI
@@ -2089,6 +2106,33 @@ void MainWindow::buildNotesIndex(int noteSubFolderId) {
     }
 
     if (!hasNoteSubFolder) {
+        // check for removed notes
+        QList<int> removedNoteIdList = _buildNotesIndexBeforeNoteIdList.toSet()
+                .subtract(_buildNotesIndexAfterNoteIdList.toSet()).toList();
+
+        // remove all missing notes
+        Q_FOREACH(int noteId, removedNoteIdList) {
+                Note note = Note::fetch(noteId);
+                if (note.isFetched()) {
+                    note.remove();
+                }
+            }
+
+        // check for removed note subfolders
+        QList<int> removedNoteSubFolderIdList =
+                _buildNotesIndexBeforeNoteSubFolderIdList.toSet()
+                .subtract(_buildNotesIndexAfterNoteSubFolderIdList.toSet())
+                        .toList();
+
+        // remove all missing note subfolders
+        Q_FOREACH(int noteSubFolderId, removedNoteSubFolderIdList) {
+                NoteSubFolder noteSubFolder = NoteSubFolder::fetch(
+                        noteSubFolderId);
+                if (noteSubFolder.isFetched()) {
+                    noteSubFolder.remove();
+                }
+            }
+
         // setup the note folder database
         DatabaseService::createNoteFolderConnection();
         DatabaseService::setupNoteFolderTables();
@@ -2894,7 +2938,8 @@ void MainWindow::removeSelectedNoteSubFolders() {
             tr("Remove selected folders"),
             tr("Remove <strong>%n</strong> selected folder(s)?"
                    "<ul><li>%1</li></ul>"
-                   "All files and folders in these folders will be gone!",
+                   "All files and folders in these folders will be removed as"
+                       " well!",
                "", selectedItemsCount).arg(noteSubFolderPathList.join(
                     "</li><li>")),
              tr("&Remove"), tr("&Cancel"), QString::null,
@@ -5724,7 +5769,7 @@ void MainWindow::on_action_new_tag_triggered() {
  * Reloads the current note folder
  */
 void MainWindow::on_action_Reload_note_folder_triggered() {
-    buildNotesIndex();
+    buildNotesIndex(0, true);
     loadNoteDirectoryList();
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);

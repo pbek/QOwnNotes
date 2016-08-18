@@ -246,6 +246,27 @@ QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     return noteSubFolderList;
 }
 
+QList<int> NoteSubFolder::fetchAllIds() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<int> idList;
+    QString sql = "SELECT * FROM noteSubFolder";
+
+    query.prepare(sql);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
+            idList.append(noteSubFolder.getId());
+        }
+    }
+
+    return idList;
+}
+
 QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);

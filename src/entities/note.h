@@ -81,7 +81,7 @@ public:
 
     friend QDebug operator<<(QDebug dbg, const Note &note);
 
-    void createFromFile(QFile &file);
+    void createFromFile(QFile &file, int noteSubFolderId = 0);
 
     static bool deleteAll();
 
@@ -97,7 +97,7 @@ public:
 
     bool removeNoteFile();
 
-    bool remove(bool withFile);
+    bool remove(bool withFile = false);
 
     QString toMarkdownHtml(QString notesPath, int maxImageWidth = 980, bool forExport = false);
 
@@ -185,10 +185,18 @@ public:
 
     static Note fetchByShareId(int shareId);
 
+    qint64 getFileSize();
+
+    static Note updateOrCreateFromFile(QFile &file,
+                                       NoteSubFolder noteSubFolder);
+
+    static QList<int> fetchAllIds();
+
 protected:
     int id;
     QString name;
     QString fileName;
+    qint64 fileSize;
     int noteSubFolderId;
     QString noteText;
     QString decryptedNoteText;

@@ -85,6 +85,8 @@ public:
 
     static int countAllParentId(int parentId);
 
+    static QList<int> fetchAllIds();
+
 protected:
     int id;
     int parentId;

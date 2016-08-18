@@ -24,6 +24,7 @@ Note::Note() {
     this->noteSubFolderId = 0;
     this->shareId = 0;
     this->hasDirtyData = false;
+    this->fileSize = 0;
 }
 
 int Note::getId() {
@@ -56,6 +57,10 @@ QString Note::getShareUrl() {
 
 int Note::getShareId() {
     return this->shareId;
+}
+
+qint64 Note::getFileSize() {
+    return this->fileSize;
 }
 
 bool Note::isShared() {
@@ -322,6 +327,7 @@ bool Note::fillFromQuery(QSqlQuery query) {
     noteText = query.value("note_text").toString();
     decryptedNoteText = query.value("decrypted_note_text").toString();
     cryptoKey = query.value("crypto_key").toLongLong();
+    fileSize = query.value("file_size").toLongLong();
     cryptoPassword = query.value("crypto_password").toString();
     hasDirtyData = query.value("has_dirty_data").toInt() == 1;
     fileCreated = query.value("file_created").toDateTime();
@@ -359,6 +365,27 @@ QList<Note> Note::fetchAll(int limit) {
     }
 
     return noteList;
+}
+
+QList<int> Note::fetchAllIds() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<int> noteIdList;
+    QString sql = "SELECT * FROM note";
+
+    query.prepare(sql);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteIdList.append(note.getId());
+        }
+    }
+
+    return noteIdList;
 }
 
 QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
@@ -698,6 +725,7 @@ bool Note::store() {
                               "share_url = :share_url,"
                               "share_id = :share_id,"
                               "file_name = :file_name,"
+                              "file_size = :file_size,"
                               "note_sub_folder_id = :note_sub_folder_id,"
                               "note_text = :note_text,"
                               "decrypted_note_text = :decrypted_note_text,"
@@ -712,12 +740,12 @@ bool Note::store() {
     } else {
         query.prepare("INSERT INTO note"
                               "(name, share_url, share_id, file_name, "
-                              "note_text, has_dirty_data, "
+                              "file_size, note_text, has_dirty_data, "
                               "file_last_modified, file_created, crypto_key,"
                               "modified, crypto_password, decrypted_note_text, "
                               "note_sub_folder_id) "
                               "VALUES (:name, :share_url, :share_id, "
-                              ":file_name, :note_text,"
+                              ":file_name, :file_size, :note_text,"
                               ":has_dirty_data, :file_last_modified,"
                               ":file_created, :crypto_key, :modified,"
                               ":crypto_password, :decrypted_note_text,"
@@ -726,10 +754,15 @@ bool Note::store() {
 
     QDateTime modified = QDateTime::currentDateTime();
 
+    // get the size of the note text
+    QByteArray bytes = noteText.toUtf8();
+    fileSize = bytes.size();
+
     query.bindValue(":name", name);
     query.bindValue(":share_url", shareUrl);
     query.bindValue(":share_id", shareId);
     query.bindValue(":file_name", fileName);
+    query.bindValue(":file_size", fileSize);
     query.bindValue(":note_sub_folder_id", noteSubFolderId);
     query.bindValue(":note_text", noteText);
     query.bindValue(":decrypted_note_text", decryptedNoteText);
@@ -1044,7 +1077,7 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
     }
 }
 
-void Note::createFromFile(QFile &file) {
+void Note::createFromFile(QFile &file, int noteSubFolderId) {
     if (file.open(QIODevice::ReadOnly)) {
         QTextStream in(&file);
         in.setCodec("UTF-8");
@@ -1065,11 +1098,37 @@ void Note::createFromFile(QFile &file) {
 
         this->name = name;
         this->fileName = fileInfo.fileName();
+        this->noteSubFolderId = noteSubFolderId;
         this->noteText = noteText;
         this->fileCreated = fileInfo.created();
         this->fileLastModified = fileInfo.lastModified();
         this->store();
     }
+}
+
+/**
+ * Updates or creates a note from a file
+ *
+ * @param file
+ * @param noteSubFolder
+ * @return
+ */
+Note Note::updateOrCreateFromFile(QFile &file, NoteSubFolder noteSubFolder) {
+    QFileInfo fileInfo(file);
+    Note note = fetchByFileName(fileInfo.fileName(), noteSubFolder.getId());
+
+    // regardless if the file was found or not, if the size differs or the
+    // file was modified after the internal note was modified we want to load
+    // the note content again
+    if ((fileInfo.size() != note.getFileSize()) ||
+                (fileInfo.lastModified() > note.getModified())) {
+        // load file data and store note
+        note.createFromFile(file, noteSubFolder.getId());
+
+//        qDebug() << __func__ << " - 'file modified': " << file.fileName();
+    }
+
+    return note;
 }
 
 //

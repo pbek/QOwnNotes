@@ -400,6 +400,10 @@ private:
     bool _isDefaultShortcutInitialized;
     QList<QShortcut *> _menuShortcuts;
     bool _showNotesFromAllNoteSubFolders;
+    QList<int> _buildNotesIndexBeforeNoteIdList;
+    QList<int> _buildNotesIndexBeforeNoteSubFolderIdList;
+    QList<int> _buildNotesIndexAfterNoteIdList;
+    QList<int> _buildNotesIndexAfterNoteSubFolderIdList;
 
     void initMainSplitter();
 
@@ -411,7 +415,7 @@ private:
 
     void readSettings();
 
-    void buildNotesIndex(int noteSubFolderId = 0);
+    void buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
 
     QString selectOwnCloudNotesFolder();
 

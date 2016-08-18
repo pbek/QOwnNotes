@@ -1264,7 +1264,7 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
 
         // fetch the note
         Note note = Note::fetchByFileName(fileName, noteSubFolder.getId());
-        qDebug() << __func__ << " - 'note': " << note;
+//        qDebug() << __func__ << " - 'note': " << note;
 
         // store the share url for the note
         if (note.isFetched()) {
