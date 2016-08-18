@@ -5561,7 +5561,11 @@ void MainWindow::setupOneColumnMode() {
     bool modeEnabled = settings.value("oneColumnModeEnabled", false).toBool();
 
     if (modeEnabled) {
+        const QSignalBlocker blocker(ui->actionUse_one_column_mode);
+        Q_UNUSED(blocker);
+
         ui->actionUse_one_column_mode->setChecked(true);
+        toggleOneColumnMode(true, false);
     }
 }
 
@@ -7106,26 +7110,29 @@ void MainWindow::initShortcuts() {
 /**
  * Toggles the one column mode
  *
- * @param arg1
+ * @param activated
+ * @param toggleOtherPanes
  */
-void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
+void MainWindow::toggleOneColumnMode(bool activated, bool toggleOtherPanes) {
     // hide the navigation frame in one column mode
-    ui->navigationFrame->setHidden(arg1);
+    ui->navigationFrame->setHidden(activated);
 
-    if (arg1) {
-        // turn on the note edit pane if not active
-        if (!ui->actionToggle_note_edit_pane->isChecked()) {
-            ui->actionToggle_note_edit_pane->toggle();
-        }
+    if (activated) {
+        if (toggleOtherPanes) {
+            // turn on the note edit pane if not active
+            if (!ui->actionToggle_note_edit_pane->isChecked()) {
+                ui->actionToggle_note_edit_pane->toggle();
+            }
 
-        // turn off the tag pane if active
-        if (ui->actionToggle_tag_pane->isChecked()) {
-            ui->actionToggle_tag_pane->toggle();
-        }
+            // turn off the tag pane if active
+            if (ui->actionToggle_tag_pane->isChecked()) {
+                ui->actionToggle_tag_pane->toggle();
+            }
 
-        // turn off the preview pane if active
-        if (ui->actionToggle_markdown_preview->isChecked()) {
-            ui->actionToggle_markdown_preview->toggle();
+            // turn off the preview pane if active
+            if (ui->actionToggle_markdown_preview->isChecked()) {
+                ui->actionToggle_markdown_preview->toggle();
+            }
         }
 
         // add the edit frame to the note list splitter in one column mode
@@ -7137,13 +7144,13 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
     }
 
     QSettings settings;
-    settings.setValue("oneColumnModeEnabled", arg1);
+    settings.setValue("oneColumnModeEnabled", activated);
 
     // restore the splitter state
     QByteArray state = settings.value("noteListSplitterState").toByteArray();
     _noteListSplitter->restoreState(state);
 
-    if (arg1) {
+    if (activated) {
         // try to set the height of the note edit frame if it is smaller
         // than 300px to make sure it is visible when the one column mode is
         // turned on
@@ -7164,6 +7171,15 @@ void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
             _noteListSplitter->setSizes(sizes);
         }
     }
+}
+
+/**
+ * Toggles the one column mode
+ *
+ * @param arg1
+ */
+void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
+    toggleOneColumnMode(arg1, true);
 }
 
 /**

@@ -10,6 +10,10 @@
       QOwnNotes was modified outside the application
 - it's now possible to copy/move notes from a note subfolder to the note 
   folder (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- when in *one column mode* the other panes will now not be hidden when 
+  QOwnNotes is restarted
+  (for [Issue #295](https://github.com/pbek/QOwnNotes/issues/295)
+    - they still will be hidden when the mode is manually entered 
 - added more Spanish, Italian, Russian, Portuguese, French, Hungarian 
   and Dutch translation (thank you eemantsal, mlocati, frostyland,
   mlimacarlos, Loelo and Fabijenna)

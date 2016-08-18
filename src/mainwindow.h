@@ -624,4 +624,6 @@ private:
     void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 
     void createNewNote(QString noteName = "");
+
+    void toggleOneColumnMode(bool activated, bool toggleOtherPanes = false);
 };
