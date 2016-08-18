@@ -6147,7 +6147,7 @@ void MainWindow::moveSelectedNotesToNoteSubFolderId(int noteSubFolderId) {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
 
     // move selected notes to note subfolder
-    if (noteSubFolder.isFetched()) {
+    if (noteSubFolder.isFetched() || (noteSubFolderId == 0)) {
         moveSelectedNotesToNoteSubFolder(noteSubFolder);
     }
 }
@@ -6160,7 +6160,7 @@ void MainWindow::copySelectedNotesToNoteSubFolderId(int noteSubFolderId) {
     NoteSubFolder noteSubFolder = NoteSubFolder::fetch(noteSubFolderId);
 
     // copy selected notes to note subfolder
-    if (noteSubFolder.isFetched()) {
+    if (noteSubFolder.isFetched() || (noteSubFolderId == 0)) {
         copySelectedNotesToNoteSubFolder(noteSubFolder);
     }
 }
