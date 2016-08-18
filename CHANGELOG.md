@@ -8,6 +8,8 @@
       will be loaded again
     - a reload happens for example if a file, that wasn't watched by 
       QOwnNotes was modified outside the application
+    - when the note folder is reloaded manually with <kbd>Ctrl</kbd> +
+      <kbd>⇧</kbd> + <kbd>R</kbd> every note and note folder will be reloaded
 - it's now possible to copy/move notes from a note subfolder to the note 
   folder (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
 - when in *one column mode* the other panes will now not be hidden when 
