@@ -1072,7 +1072,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="6181"/>
       <source>Tagging information of these notes will be lost at the destination.</source>
-      <translation type="unfinished">Tagging information of these notes will be lost at the destination.</translation>
+      <translation>Schlagwort-Information dieser Notizen gehen am Zielort verloren.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6188"/>
@@ -1205,7 +1205,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="6132"/>
       <source>Tagging information will be lost at the destination.</source>
-      <translation type="unfinished">Tagging information will be lost at the destination.</translation>
+      <translation>Schlagwort-Information geht am Zielort verloren.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6547"/>
@@ -1381,9 +1381,9 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3086"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
-        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+      <translation>
+        <numerusform>%n Notiz(en) verschlagwortet mit »%2«</numerusform>
+        <numerusform>%n Notiz(en) verschlagwortet mit »%2«</numerusform>
       </translation>
     </message>
     <message>

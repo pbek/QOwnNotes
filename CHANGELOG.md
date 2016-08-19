@@ -8,6 +8,8 @@
 - fixed a problem with copying/moving notes from a note subfolder to the
   main note folder where not all changes were viewed in the user interface 
   (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- added more Spanish, Italian, German and Portuguese translation
+  (thank you richarson, mlocati, bigant and mlimacarlos)
 
 ## 16.08.13
 - the **reloading speed** of the **note folder** and note subfolders has
