@@ -147,8 +147,7 @@ MainWindow::MainWindow(QWidget *parent) :
     initMainSplitter();
     initNoteListSplitter();
     initTagFrameSplitter();
-    buildNotesIndex();
-    loadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList();
 
     // setup the update available button
     setupUpdateAvailableButton();
@@ -410,6 +409,21 @@ QAction *MainWindow::findAction(QString objectName) {
     }
 
     return Q_NULLPTR;
+}
+
+/**
+ * Builds the note index and loads the note directory list
+ *
+ * @param forceBuild
+ * @param forceLoad
+ */
+void MainWindow::buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild,
+                                                         bool forceLoad) {
+    bool wasBuilt = buildNotesIndex(0, forceBuild);
+
+    if (wasBuilt || forceLoad) {
+        loadNoteDirectoryList();
+    }
 }
 
 /**
@@ -1021,8 +1035,7 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
         // switching to an other note folder
         currentNote = Note();
 
-        buildNotesIndex();
-        loadNoteDirectoryList();
+        buildNotesIndexAndLoadNoteDirectoryList();
 
         const QSignalBlocker blocker(this->ui->noteTextEdit);
         {
@@ -1711,8 +1724,7 @@ void MainWindow::notesWereModified(const QString &str) {
                             tr("stored current note to disk"), 3000);
 
                     // rebuild and reload the notes directory list
-                    buildNotesIndex();
-                    loadNoteDirectoryList();
+                    buildNotesIndexAndLoadNoteDirectoryList();
 
                     // fetch note new (because all the IDs have changed
                     // after the buildNotesIndex()
@@ -1734,8 +1746,7 @@ void MainWindow::notesWereModified(const QString &str) {
                 tr("note was modified externally: %1").arg(str), 5000);
 
         // rebuild and reload the notes directory list
-        buildNotesIndex();
-        loadNoteDirectoryList();
+        buildNotesIndexAndLoadNoteDirectoryList();
         setCurrentNote(this->currentNote, false);
     }
 }
@@ -1750,8 +1761,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     showStatusBarMessage(tr("notes directory was modified externally"), 5000);
 
     // rebuild and reload the notes directory list
-    buildNotesIndex();
-    loadNoteDirectoryList();
+    buildNotesIndexAndLoadNoteDirectoryList();
 
 #ifdef Q_OS_LINUX
     // check if the current note was modified
@@ -1898,11 +1908,12 @@ void MainWindow::waitMsecs(int msecs) {
 /**
  * Builds the index of notes and note sub folders
  */
-void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
+bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
     QString notePath = Utils::Misc::removeIfEndsWith(
             this->notesPath, QDir::separator());
     NoteSubFolder noteSubFolder;
     bool hasNoteSubFolder = false;
+    bool wasModified = false;
 
 //    qDebug() << __func__ << " - 'noteSubFolderId': " << noteSubFolderId;
 
@@ -1921,7 +1932,7 @@ void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         hasNoteSubFolder = noteSubFolder.isFetched();
 
         if (!hasNoteSubFolder) {
-            return;
+            return false;
         }
 
         notePath += QDir::separator() + noteSubFolder.relativePath();
@@ -2021,6 +2032,10 @@ void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
             // add the note id to in the end check if notes need to be removed
             _buildNotesIndexAfterNoteIdList << note.getId();
 
+            if (!_buildNotesIndexBeforeNoteIdList.contains(note.getId())) {
+                wasModified = true;
+            }
+
             // update the UI
             // this causes to show notes twice in the ui->noteTreeWidget if a
             // not selected note is modified externally
@@ -2076,6 +2091,8 @@ void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                     parentNoteSubFolder.setName(folder);
                     parentNoteSubFolder.setParentId(noteSubFolderId);
                     parentNoteSubFolder.store();
+
+                    wasModified = true;
                 }
 
                 if (parentNoteSubFolder.isFetched()) {
@@ -2085,7 +2102,10 @@ void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                             << parentNoteSubFolder.getId();
 
                     // build the notes index for the note subfolder
-                    buildNotesIndex(parentNoteSubFolder.getId());
+                    bool result = buildNotesIndex(parentNoteSubFolder.getId());
+                    if (result) {
+                        wasModified = true;
+                    }
 
                     // update the UI
                     // this causes to show sub note folders twice in the
@@ -2144,6 +2164,8 @@ void MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         OwnCloudService *ownCloud = new OwnCloudService(this);
         ownCloud->fetchShares();
     }
+
+    return wasModified;
 }
 
 /**
@@ -5773,8 +5795,8 @@ void MainWindow::on_action_new_tag_triggered() {
  * Reloads the current note folder
  */
 void MainWindow::on_action_Reload_note_folder_triggered() {
-    buildNotesIndex(0, true);
-    loadNoteDirectoryList();
+    // force build and load
+    buildNotesIndexAndLoadNoteDirectoryList(true, true);
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
 }
@@ -6208,8 +6230,10 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
 
         // rebuild the index after the move
         if (noteSubFolderCount > 0) {
-            buildNotesIndex();
-            loadNoteDirectoryList();
+            // for some reason this only works with a small delay, otherwise
+            // not all changes will be recognized
+            QTimer::singleShot(150, this,
+                               SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
         }
 
         showStatusBarMessage(
@@ -6258,8 +6282,10 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
 
         // rebuild the index after the copy
         if (noteSubFolderCount > 0) {
-            buildNotesIndex();
-            loadNoteDirectoryList();
+            // for some reason this only works with a small delay, otherwise
+            // not all changes will be recognized
+            QTimer::singleShot(150, this,
+                               SLOT(buildNotesIndexAndLoadNoteDirectoryList()));
         }
 
         showStatusBarMessage(

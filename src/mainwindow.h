@@ -357,6 +357,9 @@ private slots:
 
     void on_actionSplit_note_at_cursor_position_triggered();
 
+    void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false,
+                                                 bool forceLoad = false);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -415,7 +418,7 @@ private:
 
     void readSettings();
 
-    void buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
+    bool buildNotesIndex(int noteSubFolderId = 0, bool forceRebuild = false);
 
     QString selectOwnCloudNotesFolder();
 

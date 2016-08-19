@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.08.14
+- when the notes are reloaded the note list and the note subfolder tree
+  will now only be refreshed in the user interface if a note or a note
+  subfolder was really modified
+  (for [Issue #291](https://github.com/pbek/QOwnNotes/issues/291))
+- fixed a problem with copying/moving notes from a note subfolder to the
+  main note folder where not all changes were viewed in the user interface 
+  (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+
 ## 16.08.13
 - the **reloading speed** of the **note folder** and note subfolders has
   been **dramatically improved**
