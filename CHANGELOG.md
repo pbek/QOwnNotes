@@ -3,6 +3,9 @@
 ## 16.08.15
 - fixed a problem under OSX where the shortcuts will not be viewed
   in the menu and the settings
+- fixed a problem where the note list and the note subfolder list where
+  not refreshed when a note or a note subfolder was removed
+  (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
 
 ## 16.08.14
 - when the notes are reloaded the note list and the note subfolder tree

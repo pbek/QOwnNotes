@@ -2135,6 +2135,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                 Note note = Note::fetch(noteId);
                 if (note.isFetched()) {
                     note.remove();
+                    wasModified = true;
                 }
             }
 
@@ -2150,6 +2151,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
                         noteSubFolderId);
                 if (noteSubFolder.isFetched()) {
                     noteSubFolder.remove();
+                    wasModified = true;
                 }
             }
 
