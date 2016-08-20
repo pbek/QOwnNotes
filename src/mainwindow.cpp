@@ -7077,8 +7077,10 @@ void MainWindow::initShortcuts() {
     // remove all menu shortcuts to create new ones
     _menuShortcuts.clear();
 
+#ifndef Q_OS_MAC
     bool menuBarIsVisible = !ui->menuBar->isHidden();
     qDebug() << __func__ << " - 'menuBarIsVisible': " << menuBarIsVisible;
+#endif
 
     // loop through all menus
     foreach(QMenu* menu, menus) {
@@ -7113,9 +7115,12 @@ void MainWindow::initShortcuts() {
                                             : shortcut);
                     }
 
+#ifndef Q_OS_MAC
                     // if the menu bar is not visible (like for the Unity
                     // desktop) create a workaround with a QShortcut so the
                     // shortcuts are still working
+                    // we don't do that under OS X, it causes all shortcuts
+                    // to not be viewed
                     if (!menuBarIsVisible) {
                         shortcut = action->shortcut();
                         action->setShortcut(QKeySequence());
@@ -7125,6 +7130,7 @@ void MainWindow::initShortcuts() {
                                 action, SLOT(trigger()));
                         _menuShortcuts.append(shortcutItem);
                     }
+#endif
             }
     }
 

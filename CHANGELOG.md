@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.08.15
+- fixed a problem under OSX where the shortcuts will not be viewed
+  in the menu and the settings
+
 ## 16.08.14
 - when the notes are reloaded the note list and the note subfolder tree
   will now only be refreshed in the user interface if a note or a note
