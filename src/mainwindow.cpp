@@ -367,6 +367,9 @@ MainWindow::MainWindow(QWidget *parent) :
     MetricsService::instance()->sendEventIfEnabled(
             "app/has-owncloud-settings", "app", "has owncloud settings",
             OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
+
+    // init the showing of the tag pane under the navigation pane
+    initShowTagPaneUnderNavigationPane();
 }
 
 MainWindow::~MainWindow() {
@@ -7283,4 +7286,35 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     Q_FOREACH(Tag tag, tags) {
             tag.linkToNote(currentNote);
         }
+}
+
+/**
+ * Toggles the showing of the tag pane under the navigation pane
+ *
+ * @param arg1
+ */
+void MainWindow::on_actionShow_tag_pane_under_navigation_pane_toggled(
+        bool arg1) {
+    saveMainSplitterState(false, false, false, false);
+
+    if (arg1) {
+        _noteListSplitter->addWidget(ui->tagFrame);
+    } else {
+        mainSplitter->insertWidget(0, ui->tagFrame);
+    }
+
+    restoreMainSplitterState();
+
+    QSettings settings;
+    settings.setValue("showTagPaneUnderNavigationPane", arg1);
+}
+
+/**
+ * Inits the showing of the tag pane under the navigation pane
+ */
+void MainWindow::initShowTagPaneUnderNavigationPane() {
+    QSettings settings;
+    if (settings.value("showTagPaneUnderNavigationPane", false).toBool()) {
+        ui->actionShow_tag_pane_under_navigation_pane->setChecked(true);
+    }
 }

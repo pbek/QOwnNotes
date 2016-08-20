@@ -6,6 +6,9 @@
 - fixed a problem where the note list and the note subfolder list where
   not refreshed when a note or a note subfolder was removed
   (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- you are now able to show the tag pane under the navigation pane with
+  a checkbox in the window menu (for nothinbuttherain on 
+  [reddit](https://www.reddit.com/r/linux/comments/4xto4y/4_open_source_alternatives_to_evernote/#thing_t1_d6jlppu))
 
 ## 16.08.14
 - when the notes are reloaded the note list and the note subfolder tree

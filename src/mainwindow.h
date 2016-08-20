@@ -360,6 +360,8 @@ private slots:
     void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false,
                                                  bool forceLoad = false);
 
+    void on_actionShow_tag_pane_under_navigation_pane_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -629,4 +631,6 @@ private:
     void createNewNote(QString noteName = "");
 
     void toggleOneColumnMode(bool activated, bool toggleOtherPanes = false);
+
+    void initShowTagPaneUnderNavigationPane();
 };
