@@ -8,7 +8,7 @@
       [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml)
     - there is a small documentation about the `registerCustomAction`
       function at
-      [README.md](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
+      [README.md](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
