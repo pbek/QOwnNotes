@@ -12,7 +12,10 @@
 #include <dialogs/logdialog.h>
 #include <QTimer>
 #include <QVariant>
+
+#ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+#endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -107,11 +110,13 @@ void ScriptingService::initComponent(Script script) {
  * Reloads all script components
  */
 void ScriptingService::reloadScriptComponents() {
+#ifndef INTEGRATION_TESTS
     // do some things in the main window (like clearing the custom actions)
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
         mainWindow->preReloadScriptingEngine();
     }
+#endif
 
     QHashIterator<int, ScriptComponent> i(_scriptComponents);
 
@@ -546,8 +551,10 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText) {
+#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
         mainWindow->addCustomAction(identifier, menuText, buttonText);
     }
+#endif
 }
