@@ -74,6 +74,11 @@ public:
     static void searchForTextInTreeWidget(QTreeWidget *treeWidget,
                                           QString text);
 
+    void addCustomAction(QString identifier, QString menuText,
+                         QString buttonText = "");
+
+    void preReloadScriptingEngine();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -362,6 +367,8 @@ private slots:
 
     void on_actionShow_tag_pane_under_navigation_pane_toggled(bool arg1);
 
+    void onCustomActionInvoked(QString identifier);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -374,6 +381,7 @@ private:
     QSignalMapper *recentNoteFolderSignalMapper;
     QSignalMapper *storeNoteBookmarkSignalMapper;
     QSignalMapper *gotoNoteBookmarkSignalMapper;
+    QSignalMapper *_customActionSignalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
     bool showSystemTray;
@@ -391,6 +399,7 @@ private:
     QPushButton *_updateAvailableButton;
     QPushButton *_leaveDistractionFreeModeButton;
     QToolBar *_formattingToolbar;
+    QToolBar *_customActionsToolbar;
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
     QToolBar *_windowToolbar;

@@ -777,7 +777,13 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>Scripting</string>
     </property>
+    <widget class="QMenu" name="menuCustom_actions">
+     <property name="title">
+      <string>Custom actions</string>
+     </property>
+    </widget>
     <addaction name="actionReload_scripting_engine"/>
+    <addaction name="menuCustom_actions"/>
    </widget>
    <addaction name="menuQOwnNotes"/>
    <addaction name="menuEdit"/>

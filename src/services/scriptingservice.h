@@ -36,6 +36,8 @@ public:
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
+    Q_INVOKABLE void registerCustomAction(QString identifier, QString menuText,
+                                          QString buttonText = "");
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);
@@ -68,4 +70,7 @@ signals:
 public slots:
     void onCurrentNoteChanged(Note *note);
     void reloadEngine();
+    void onCustomActionInvoked(QString identifier);
+
+    void callCustomActionInvokedForObject(QObject *object, QString identifier);
 };

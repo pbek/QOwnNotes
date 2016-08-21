@@ -11,7 +11,8 @@
 #include <services/metricsservice.h>
 #include <dialogs/logdialog.h>
 #include <QTimer>
-// #include <mainwindow.h>
+#include <QVariant>
+#include <mainwindow.h>
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
@@ -106,6 +107,11 @@ void ScriptingService::initComponent(Script script) {
  * Reloads all script components
  */
 void ScriptingService::reloadScriptComponents() {
+    // do some things in the main window (like clearing the custom actions)
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->preReloadScriptingEngine();
+    }
 
     QHashIterator<int, ScriptComponent> i(_scriptComponents);
 
@@ -445,6 +451,31 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
 }
 
 /**
+ * Calls the customActionInvoked function in all scripts
+ */
+void ScriptingService::onCustomActionInvoked(QString identifier) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        callCustomActionInvokedForObject(scriptComponent.object, identifier);
+    }
+}
+
+/**
+ * Calls the customActionInvoked function for an object
+ */
+void ScriptingService::callCustomActionInvokedForObject(QObject *object,
+                                                        QString identifier) {
+    if (methodExistsForObject(object, "customActionInvoked(QVariant)")) {
+        QMetaObject::invokeMethod(object, "customActionInvoked",
+                                  Q_ARG(QVariant, identifier));
+    }
+}
+
+/**
  * QML wrapper to get the current note
  *
  * @return {NoteApi} the the current note
@@ -502,4 +533,21 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
 
     // timer elapsed, no reply from network request or empty data
     return "";
+}
+
+/**
+ * Registers a custom action
+ *
+ * @param identifier the identifier of the action
+ * @param menuText the text shown in the menu
+ * @param buttonText the text shown in the button
+ *                   (no button will be viewed if empty)
+ */
+void ScriptingService::registerCustomAction(QString identifier,
+                                            QString menuText,
+                                            QString buttonText) {
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->addCustomAction(identifier, menuText, buttonText);
+    }
 }

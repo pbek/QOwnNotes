@@ -292,6 +292,8 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(toolbarVisibilityChanged(bool)));
     connect(_formattingToolbar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(toolbarVisibilityChanged(bool)));
+    connect(_customActionsToolbar, SIGNAL(visibilityChanged(bool)),
+            this, SLOT(toolbarVisibilityChanged(bool)));
     connect(_insertingToolbar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(toolbarVisibilityChanged(bool)));
     connect(_encryptionToolbar, SIGNAL(visibilityChanged(bool)),
@@ -483,11 +485,33 @@ void MainWindow::reloadTodoLists() {
  * Initializes the scripting engine
  */
 void MainWindow::initScriptingEngine() {
+    _customActionSignalMapper = new QSignalMapper(this);
+    ui->menuCustom_actions->hide();
+    _customActionsToolbar->hide();
+
+    // connect the custom action signal mapper
+    QObject::connect(_customActionSignalMapper,
+                     SIGNAL(mapped(QString)),
+                     this,
+                     SLOT(onCustomActionInvoked(QString)));
+
     ScriptingService* scriptingService = ScriptingService::createInstance(this);
     QQmlEngine* engine = scriptingService->engine();
 //    engine->setObjectOwnership(ui->noteTextEdit, QQmlEngine::CppOwnership);
     engine->rootContext()->setContextProperty("noteTextEdit", ui->noteTextEdit);
     scriptingService->initComponents();
+}
+
+/**
+ * Invokes the custom action in the scripting service
+ *
+ * @param identifier
+ */
+void MainWindow::onCustomActionInvoked(QString identifier) {
+    ScriptingService *scriptingService = ScriptingService::instance();
+    if (scriptingService != Q_NULLPTR) {
+        scriptingService->onCustomActionInvoked(identifier);
+    }
 }
 
 /**
@@ -511,6 +535,11 @@ void MainWindow::initToolbars() {
     _formattingToolbar->addAction(ui->actionInset_code_block);
     _formattingToolbar->setObjectName("formattingToolbar");
     addToolBar(_formattingToolbar);
+
+    _customActionsToolbar = new QToolBar(tr("custom action toolbar"), this);
+    _customActionsToolbar->setObjectName("customActionsToolbar");
+    _customActionsToolbar->hide();
+    addToolBar(_customActionsToolbar);
 
     _insertingToolbar = new QToolBar(tr("inserting toolbar"), this);
     _insertingToolbar->addAction(ui->actionInsert_Link_to_note);
@@ -750,6 +779,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the toolbars
         ui->mainToolBar->hide();
         _formattingToolbar->hide();
+        _customActionsToolbar->hide();
         _insertingToolbar->hide();
         _encryptionToolbar->hide();
         _windowToolbar->hide();
@@ -1588,6 +1618,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
         _formattingToolbar->setIconSize(size);
+        _customActionsToolbar->setIconSize(size);
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
         _windowToolbar->setIconSize(size);
@@ -4803,6 +4834,7 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
 void MainWindow::on_actionShow_toolbar_triggered(bool checked) {
     ui->mainToolBar->setVisible(checked);
     _formattingToolbar->setVisible(checked);
+    _customActionsToolbar->setVisible(checked);
     _insertingToolbar->setVisible(checked);
     _encryptionToolbar->setVisible(checked);
     _windowToolbar->setVisible(checked);
@@ -4828,6 +4860,7 @@ void MainWindow::toolbarVisibilityChanged(bool visible) {
 bool MainWindow::isToolbarVisible() {
     return ui->mainToolBar->isVisible() ||
             _formattingToolbar->isVisible() ||
+            _customActionsToolbar->isVisible() ||
             _insertingToolbar->isVisible() ||
             _encryptionToolbar->isVisible() ||
             _windowToolbar->isVisible() ||
@@ -6464,6 +6497,18 @@ void MainWindow::on_actionReload_scripting_engine_triggered() {
     showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
 }
 
+/**
+ * Things to do before the scripting engine will be reloaded
+ * Will be invoked by the ScriptingService
+ */
+void MainWindow::preReloadScriptingEngine() {
+    // clear and hide the custom actions
+    ui->menuCustom_actions->clear();
+    ui->menuCustom_actions->hide();
+    _customActionsToolbar->clear();
+    _customActionsToolbar->hide();
+}
+
 void MainWindow::on_actionShow_log_dialog_triggered() {
     showLogDialog();
 }
@@ -7346,4 +7391,26 @@ void MainWindow::initShowTagPaneUnderNavigationPane() {
     if (settings.value("showTagPaneUnderNavigationPane", false).toBool()) {
         ui->actionShow_tag_pane_under_navigation_pane->setChecked(true);
     }
+}
+
+/**
+ * Adds a custom action as menu item and button
+ */
+void MainWindow::addCustomAction(QString identifier, QString menuText,
+                                 QString buttonText) {
+    ui->menuCustom_actions->show();
+    QAction *action = ui->menuCustom_actions->addAction(menuText);
+    action->setObjectName("customAction_" + identifier);
+    action->setData(identifier);
+
+    if (!buttonText.isEmpty()) {
+        action->setIconText(buttonText);
+        _customActionsToolbar->show();
+        _customActionsToolbar->addAction(action);
+    }
+
+    // connect to the custom action signal mapper
+    QObject::connect(action, SIGNAL(triggered()),
+                     _customActionSignalMapper, SLOT(map()));
+    _customActionSignalMapper->setMapping(action, identifier);
 }

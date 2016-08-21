@@ -109,6 +109,31 @@ QString downloadUrlToString(QUrl url);
 script.downloadUrlToString("http://www.qownnotes.org");
 ```
 
+
+### Register a custom action
+
+#### Parameters
+
+```cpp
+/**
+ * Registers a custom action
+ * 
+ * @param identifier the identifier of the action 
+ * @param menuText the text shown in the menu
+ * @param buttonText the text shown in the button
+ *                   (no button will be viewed if empty)
+ */
+void ScriptingService::registerCustomAction(QString identifier,
+                                            QString menuText,
+                                            QString buttonText);
+```
+
+#### Usage in QML
+
+```javascript
+script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+```
+
 ## Exposed classes
 
 ### Note
