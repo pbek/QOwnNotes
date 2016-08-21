@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.08.16
-- you are now able to define custom actions that will be shown as menu 
-  entry in the scripting menu and optionally in the toolbar as button
-  (for [Issue #296](https://github.com/pbek/QOwnNotes/issues/296) and
-  for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
+- you are now able to define **custom actions** that will be shown as
+  **menu entry** in the scripting menu and optionally in the toolbar
+  as **button** (for [Issue #296](https://github.com/pbek/QOwnNotes/issues/296)
+  and for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
     - there is an example for opening the current note with KWrite
       and to create a new note with a custom text at
       [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml)
