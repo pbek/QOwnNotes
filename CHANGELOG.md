@@ -27,6 +27,8 @@
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
+- added more Italian, Portuguese, Dutch and Hungarian translation
+  (thank you mlocati, mlimacarlos and Fabijenna)
 
 ## 16.08.15
 - fixed a problem under OSX where the shortcuts will not be viewed
