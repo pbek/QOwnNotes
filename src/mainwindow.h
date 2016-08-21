@@ -43,7 +43,7 @@ public:
 
     void setCurrentNoteText(QString text);
 
-    void createNewNote(QString name, QString text);
+    void createNewNote(QString name, QString text, bool cursorAtEnd = false);
 
     void openSettingsDialog(int tab = 0);
 

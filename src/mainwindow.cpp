@@ -2859,8 +2859,9 @@ void MainWindow::setCurrentNoteText(QString text) {
  * @brief MainWindow::createNewNote
  * @param name
  * @param text
+ * @param cursorAtEnd
  */
-void MainWindow::createNewNote(QString name, QString text) {
+void MainWindow::createNewNote(QString name, QString text, bool cursorAtEnd) {
     QString extension = Note::defaultNoteFileExtension();
     QFile *f = new QFile(this->notesPath + QDir::separator() + name + "."
                          + extension);
@@ -2883,6 +2884,13 @@ void MainWindow::createNewNote(QString name, QString text) {
     ui->searchLineEdit->setText(name);
     on_searchLineEdit_returnPressed();
     ui->noteTextEdit->setText(text);
+
+    // move the cursor to the end of the note
+    if (cursorAtEnd) {
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+        ui->noteTextEdit->setTextCursor(c);
+    }
 }
 
 /**

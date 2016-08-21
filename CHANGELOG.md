@@ -5,15 +5,22 @@
   entry in the scripting menu and optionally in the toolbar as button
   (for [Issue #296](https://github.com/pbek/QOwnNotes/issues/296) and
   for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
-    - take a look at the examples at
+    - there is an example for opening the current note with KWrite
+      and to create a new note with a custom text at
       [custom-actions.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml)
-        - there is an example for opening the current note with KWrite
-          and to create a new note with a custom text
-    - there is a small documentation about the `registerCustomAction`
-      function at
-      [README.md](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
-    - you can assign shortcuts for your custom actions in the 
+    - there is a small documentation about the function
+      `registerCustomAction` and other functions in the
+      [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
+    - you can also assign shortcuts for your custom actions in the 
       shortcut settings
+- added new methods to the scripting engine
+    - you can now also get the full file path of the current note
+      with `script.currentNote().fullNoteFilePath`
+    - you can now register a custom action with `script.registerCustomAction()`
+    - you can now create a new note with `script.createNote()`
+    - you can now access the clipboard with `script.clipboard()`
+    - take a look at the [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
+      for more information
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))

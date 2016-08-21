@@ -12,6 +12,9 @@
 #include <dialogs/logdialog.h>
 #include <QTimer>
 #include <QVariant>
+#include <QApplication>
+#include <QClipboard>
+#include <QMimeData>
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -553,6 +556,7 @@ void ScriptingService::registerCustomAction(QString identifier,
                                             QString buttonText) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
+
     if (mainWindow != Q_NULLPTR) {
         mainWindow->addCustomAction(identifier, menuText, buttonText);
     }
@@ -567,11 +571,26 @@ void ScriptingService::registerCustomAction(QString identifier,
 void ScriptingService::createNote(QString text) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
+
     if (mainWindow != Q_NULLPTR) {
+        // create a temporary name for the note
         QDateTime currentDate = QDateTime::currentDateTime();
         QString name = "Note " +
                 currentDate.toString(Qt::ISODate).replace(":", ".");
-        mainWindow->createNewNote(name, text);
+
+        // create the new note and move the cursor to the end
+        mainWindow->createNewNote(name, text, true);
     }
 #endif
+}
+
+/**
+ * Returns the content of the clipboard as text or html
+ *
+ * @param asHtml returns the clipboard content as html instead of text
+ */
+QString ScriptingService::clipboard(bool asHtml) {
+    QClipboard *clipboard = QApplication::clipboard();
+    const QMimeData *mimeData = clipboard->mimeData(QClipboard::Clipboard);
+    return asHtml ? mimeData->html() : mimeData->text();
 }

@@ -138,6 +138,53 @@ You may then want to use the identifier with function `customActionInvoked`
 in a script like [custom-actions.qml](custom-actions.qml).
 
 
+### Create a new note
+
+#### Parameters
+
+```cpp
+/**
+ * Creates a new note
+ *
+ * @param text the note text
+ */
+void ScriptingService::createNote(QString text);
+```
+
+#### Usage in QML
+
+```javascript
+script.createNote("My note headline\n===\n\nMy text");
+```
+
+You may want to take a look at the example in
+[custom-actions.qml](custom-actions.qml).
+
+
+### Accessing the clipboard
+
+#### Parameters
+
+```cpp
+/**
+ * Returns the content of the clipboard as text or html
+ *
+ * @param asHtml returns the clipboard content as html instead of text
+ */
+QString ScriptingService::clipboard(bool asHtml);
+```
+
+#### Usage in QML
+
+```javascript
+var clipboardText = script.clipboard();
+var clipboardHtml = script.clipboard(true);
+```
+
+You may want to take a look at the example in
+[custom-actions.qml](custom-actions.qml).
+
+
 ## Exposed classes
 
 ### Note
@@ -147,6 +194,8 @@ class NoteApi {
     Q_PROPERTY(int id)
     Q_PROPERTY(QString name)
     Q_PROPERTY(QString fileName)
+    Q_PROPERTY(QString fullNoteFilePath)
+    Q_PROPERTY(int noteSubFolderId)
     Q_PROPERTY(QString noteText)
     Q_PROPERTY(QString decryptedNoteText)
     Q_PROPERTY(bool hasDirtyData)

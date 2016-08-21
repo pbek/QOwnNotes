@@ -53,6 +53,9 @@ QtObject {
                 // add some text to our meeting note
                 text += underline + "\n\n## Important points\n\n\n## Things to remember\n\n";
 
+                // add the text that is currently in the clipboard
+                text += script.clipboard();
+
                 // create a new note
                 script.createNote(text);
                 break;

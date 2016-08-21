@@ -39,6 +39,7 @@ public:
     Q_INVOKABLE void registerCustomAction(QString identifier, QString menuText,
                                           QString buttonText = "");
     Q_INVOKABLE void createNote(QString text);
+    Q_INVOKABLE QString clipboard(bool asHtml = false);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
@@ -73,6 +74,5 @@ public slots:
     void onCurrentNoteChanged(Note *note);
     void reloadEngine();
     void onCustomActionInvoked(QString identifier);
-
     void callCustomActionInvokedForObject(QObject *object, QString identifier);
 };
