@@ -120,7 +120,7 @@ script.downloadUrlToString("http://www.qownnotes.org");
  * 
  * @param identifier the identifier of the action 
  * @param menuText the text shown in the menu
- * @param buttonText the text shown in the button
+ * @param buttonText the text shown on the button
  *                   (no button will be viewed if empty)
  */
 void ScriptingService::registerCustomAction(QString identifier,
@@ -133,6 +133,10 @@ void ScriptingService::registerCustomAction(QString identifier,
 ```javascript
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
 ```
+
+You may then want to use the identifier with function `customActionInvoked`
+in a script like [custom-actions.qml](custom-actions.qml).
+
 
 ## Exposed classes
 
