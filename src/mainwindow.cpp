@@ -292,7 +292,7 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(toolbarVisibilityChanged(bool)));
     connect(_formattingToolbar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_customActionsToolbar, SIGNAL(visibilityChanged(bool)),
+    connect(_customActionToolbar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(toolbarVisibilityChanged(bool)));
     connect(_insertingToolbar, SIGNAL(visibilityChanged(bool)),
             this, SLOT(toolbarVisibilityChanged(bool)));
@@ -487,7 +487,7 @@ void MainWindow::reloadTodoLists() {
 void MainWindow::initScriptingEngine() {
     _customActionSignalMapper = new QSignalMapper(this);
     ui->menuCustom_actions->hide();
-    _customActionsToolbar->hide();
+    _customActionToolbar->hide();
 
     // connect the custom action signal mapper
     QObject::connect(_customActionSignalMapper,
@@ -536,11 +536,6 @@ void MainWindow::initToolbars() {
     _formattingToolbar->setObjectName("formattingToolbar");
     addToolBar(_formattingToolbar);
 
-    _customActionsToolbar = new QToolBar(tr("custom action toolbar"), this);
-    _customActionsToolbar->setObjectName("customActionsToolbar");
-    _customActionsToolbar->hide();
-    addToolBar(_customActionsToolbar);
-
     _insertingToolbar = new QToolBar(tr("inserting toolbar"), this);
     _insertingToolbar->addAction(ui->actionInsert_Link_to_note);
     _insertingToolbar->addAction(ui->actionInsert_image);
@@ -568,6 +563,11 @@ void MainWindow::initToolbars() {
     _windowToolbar->addAction(ui->action_Reset_note_text_size);
     _windowToolbar->setObjectName("windowToolbar");
     addToolBar(_windowToolbar);
+
+    _customActionToolbar = new QToolBar(tr("custom action toolbar"), this);
+    _customActionToolbar->setObjectName("customActionsToolbar");
+    _customActionToolbar->hide();
+    addToolBar(_customActionToolbar);
 
     _quitToolbar =
             new QToolBar(tr("quit toolbar"), this);
@@ -779,7 +779,7 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the toolbars
         ui->mainToolBar->hide();
         _formattingToolbar->hide();
-        _customActionsToolbar->hide();
+        _customActionToolbar->hide();
         _insertingToolbar->hide();
         _encryptionToolbar->hide();
         _windowToolbar->hide();
@@ -1618,7 +1618,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
         _formattingToolbar->setIconSize(size);
-        _customActionsToolbar->setIconSize(size);
+        _customActionToolbar->setIconSize(size);
         _insertingToolbar->setIconSize(size);
         _encryptionToolbar->setIconSize(size);
         _windowToolbar->setIconSize(size);
@@ -4842,7 +4842,7 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
 void MainWindow::on_actionShow_toolbar_triggered(bool checked) {
     ui->mainToolBar->setVisible(checked);
     _formattingToolbar->setVisible(checked);
-    _customActionsToolbar->setVisible(checked);
+    _customActionToolbar->setVisible(checked);
     _insertingToolbar->setVisible(checked);
     _encryptionToolbar->setVisible(checked);
     _windowToolbar->setVisible(checked);
@@ -4868,7 +4868,7 @@ void MainWindow::toolbarVisibilityChanged(bool visible) {
 bool MainWindow::isToolbarVisible() {
     return ui->mainToolBar->isVisible() ||
             _formattingToolbar->isVisible() ||
-            _customActionsToolbar->isVisible() ||
+            _customActionToolbar->isVisible() ||
             _insertingToolbar->isVisible() ||
             _encryptionToolbar->isVisible() ||
             _windowToolbar->isVisible() ||
@@ -6513,8 +6513,8 @@ void MainWindow::preReloadScriptingEngine() {
     // clear and hide the custom actions
     ui->menuCustom_actions->clear();
     ui->menuCustom_actions->hide();
-    _customActionsToolbar->clear();
-    _customActionsToolbar->hide();
+    _customActionToolbar->clear();
+    _customActionToolbar->hide();
 }
 
 void MainWindow::on_actionShow_log_dialog_triggered() {
@@ -7413,8 +7413,8 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
 
     if (!buttonText.isEmpty()) {
         action->setIconText(buttonText);
-        _customActionsToolbar->show();
-        _customActionsToolbar->addAction(action);
+        _customActionToolbar->show();
+        _customActionToolbar->addAction(action);
     }
 
     // connect to the custom action signal mapper

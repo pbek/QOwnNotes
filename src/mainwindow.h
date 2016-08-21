@@ -399,7 +399,7 @@ private:
     QPushButton *_updateAvailableButton;
     QPushButton *_leaveDistractionFreeModeButton;
     QToolBar *_formattingToolbar;
-    QToolBar *_customActionsToolbar;
+    QToolBar *_customActionToolbar;
     QToolBar *_insertingToolbar;
     QToolBar *_encryptionToolbar;
     QToolBar *_windowToolbar;

@@ -21,6 +21,9 @@
     - you can now access the clipboard with `script.clipboard()`
     - take a look at the [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
       for more information
+- there now is a new example to create a note from a 5pm email with a 
+  custom action at
+  [note-from-5pm-mail.qml](https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/note-from-5pm-mail.qml)
 - the warning about tags when copying or moving notes to a note
   subfolder will now be only displayed if one of the selected notes has
   a tag assigned (for [Issue #289](https://github.com/pbek/QOwnNotes/issues/289))
