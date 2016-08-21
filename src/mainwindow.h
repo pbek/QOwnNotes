@@ -633,4 +633,6 @@ private:
     void toggleOneColumnMode(bool activated, bool toggleOtherPanes = false);
 
     void initShowTagPaneUnderNavigationPane();
+
+    bool selectedNotesHaveTags();
 };

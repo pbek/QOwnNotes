@@ -6204,7 +6204,11 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
     QString text = tr("Move %n selected note(s) to note subfolder "
                               "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
-    text += " " + tr("Tagging information will be lost at the destination.");
+
+    if (selectedNotesHaveTags()) {
+        text += " " + tr("Tagging information of these notes will be lost at "
+                                 "the destination.");
+    }
 
     if (QMessageBox::information(
             this,
@@ -6255,8 +6259,11 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
     QString text = tr("Copy %n selected note(s) to note subfolder "
                        "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
-    text += " " + tr("Tagging information of these notes will be lost at the "
-                             "destination.");
+
+    if (selectedNotesHaveTags()) {
+        text += " " + tr("Tagging information of these notes will be lost at "
+                                 "the destination.");
+    }
 
     if (QMessageBox::information(
             this,
@@ -6297,6 +6304,28 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                 tr("%n note(s) were copied to note subfolder \"%2\"", "",
                    noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
     }
+}
+
+/**
+ * Retruns true if one of the selected notes has a linked tag
+ *
+ * @return
+ */
+bool MainWindow::selectedNotesHaveTags() {
+    Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            int noteId = item->data(0, Qt::UserRole).toInt();
+            Note note = Note::fetch(noteId);
+
+            if (!note.isFetched()) {
+                continue;
+            }
+
+            if (Tag::countAllOfNote(note) > 0) {
+                return true;
+            }
+        }
+
+    return false;
 }
 
 /**
