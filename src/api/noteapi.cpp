@@ -10,6 +10,7 @@ NoteApi* NoteApi::fetch(int id) {
         fileName = note.getFileName();
         noteText = note.getNoteText();
         hasDirtyData = note.getHasDirtyData();
+        noteSubFolderId = note.getNoteSubFolderId();
         decryptedNoteText = note.getDecryptedNoteText();
     }
 
