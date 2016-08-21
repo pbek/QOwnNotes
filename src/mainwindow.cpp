@@ -7398,7 +7398,7 @@ void MainWindow::initShowTagPaneUnderNavigationPane() {
  */
 void MainWindow::addCustomAction(QString identifier, QString menuText,
                                  QString buttonText) {
-    ui->menuCustom_actions->show();
+//    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName("customAction_" + identifier);
     action->setData(identifier);

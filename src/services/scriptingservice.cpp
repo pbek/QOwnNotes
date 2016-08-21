@@ -558,3 +558,20 @@ void ScriptingService::registerCustomAction(QString identifier,
     }
 #endif
 }
+
+/**
+ * Creates a new note
+ *
+ * @param text the note text
+ */
+void ScriptingService::createNote(QString text) {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QDateTime currentDate = QDateTime::currentDateTime();
+        QString name = "Note " +
+                currentDate.toString(Qt::ISODate).replace(":", ".");
+        mainWindow->createNewNote(name, text);
+    }
+#endif
+}

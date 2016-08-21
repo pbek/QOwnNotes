@@ -38,6 +38,8 @@ public:
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
     Q_INVOKABLE void registerCustomAction(QString identifier, QString menuText,
                                           QString buttonText = "");
+    Q_INVOKABLE void createNote(QString text);
+
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);
