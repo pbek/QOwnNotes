@@ -6,6 +6,8 @@
   (for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
     - for more information please take a look at the 
       [registerCustomAction documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
+- fixed a problem with selecting text
+  (for [Issue #300](https://github.com/pbek/QOwnNotes/issues/300))
 
 ## 16.08.16
 - you are now able to define **custom actions** that will be shown as
