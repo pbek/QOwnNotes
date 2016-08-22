@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.08.17
+- when creating custom action buttons you now can define a button icon
+  from your freedesktop theme icons or a local file 
+  (for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
+    - for more information please take a look at the 
+      [registerCustomAction documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
+
 ## 16.08.16
 - you are now able to define **custom actions** that will be shown as
   **menu entry** in the scripting menu and optionally in the toolbar

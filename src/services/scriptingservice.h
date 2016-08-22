@@ -36,8 +36,10 @@ public:
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
-    Q_INVOKABLE void registerCustomAction(QString identifier, QString menuText,
-                                          QString buttonText = "");
+    Q_INVOKABLE void registerCustomAction(QString identifier,
+                                          QString menuText,
+                                          QString buttonText = "",
+                                          QString icon = "");
     Q_INVOKABLE void createNote(QString text);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
 

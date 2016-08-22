@@ -13,8 +13,8 @@ QtObject {
         // create a menu entry "Open with KWrite" with a button "KWrite"
         script.registerCustomAction("openWithKWrite", "Open with KWrite", "KWrite");
 
-        // create a menu entry "Create meeting note" with a button "Meeting note"
-        script.registerCustomAction("createMeetingNote", "Create meeting note", "Meeting note");
+        // create a menu entry "Create meeting note" with a button and a freedesktop theme icon
+        script.registerCustomAction("createMeetingNote", "Create meeting note", "Meeting note", "task-new");
 
         // create a menu entry "No button here", but no button for it
         script.registerCustomAction("noButtonAction", "No button here");

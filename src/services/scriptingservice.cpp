@@ -439,6 +439,9 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
  */
 bool ScriptingService::startDetachedProcess(QString executablePath,
                                             QStringList parameters) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     return Utils::Misc::startDetachedProcess(executablePath, parameters);
 }
 
@@ -489,6 +492,9 @@ void ScriptingService::callCustomActionInvokedForObject(QObject *object,
  * @return {NoteApi} the the current note
  */
 NoteApi* ScriptingService::currentNote() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     return _currentNoteAPi;
 }
 
@@ -498,6 +504,9 @@ NoteApi* ScriptingService::currentNote() {
  * @param text
  */
 void ScriptingService::log(QString text) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     LogDialog::instance()->log(LogDialog::ScriptingLogType, text);
 }
 
@@ -509,6 +518,9 @@ void ScriptingService::log(QString text) {
  * @return {QString} the content of the downloaded url
  */
 QString ScriptingService::downloadUrlToString(QUrl url) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
     QEventLoop loop;
     QTimer timer;
@@ -550,15 +562,20 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
  * @param menuText the text shown in the menu
  * @param buttonText the text shown in the button
  *                   (no button will be viewed if empty)
+ * @param icon the icon file path or the name of a freedesktop theme icon
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
-                                            QString buttonText) {
+                                            QString buttonText,
+                                            QString icon) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
-        mainWindow->addCustomAction(identifier, menuText, buttonText);
+        MetricsService::instance()->sendVisitIfEnabled(
+                "scripting/" + QString(__func__));
+
+        mainWindow->addCustomAction(identifier, menuText, buttonText, icon);
     }
 #endif
 }
@@ -573,6 +590,9 @@ void ScriptingService::createNote(QString text) {
     MainWindow *mainWindow = MainWindow::instance();
 
     if (mainWindow != Q_NULLPTR) {
+        MetricsService::instance()->sendVisitIfEnabled(
+                "scripting/" + QString(__func__));
+
         // create a temporary name for the note
         QDateTime currentDate = QDateTime::currentDateTime();
         QString name = "Note " +
@@ -590,6 +610,9 @@ void ScriptingService::createNote(QString text) {
  * @param asHtml returns the clipboard content as html instead of text
  */
 QString ScriptingService::clipboard(bool asHtml) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData *mimeData = clipboard->mimeData(QClipboard::Clipboard);
     return asHtml ? mimeData->html() : mimeData->text();

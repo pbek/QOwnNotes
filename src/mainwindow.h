@@ -74,8 +74,8 @@ public:
     static void searchForTextInTreeWidget(QTreeWidget *treeWidget,
                                           QString text);
 
-    void addCustomAction(QString identifier, QString menuText,
-                         QString buttonText = "");
+    void addCustomAction(QString identifier, QString menuText, QString buttonText,
+                             QString icon);
 
     void preReloadScriptingEngine();
 

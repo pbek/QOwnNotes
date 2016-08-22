@@ -122,16 +122,28 @@ script.downloadUrlToString("http://www.qownnotes.org");
  * @param menuText the text shown in the menu
  * @param buttonText the text shown on the button
  *                   (no button will be viewed if empty)
+ * @param icon the icon file path or the name of a freedesktop theme icon
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
-                                            QString buttonText);
+                                            QString buttonText,
+                                            QString icon);
 ```
 
 #### Usage in QML
 
 ```javascript
+// add a custom action without a button
+script.registerCustomAction("mycustomaction1", "Menu text");
+
+// add a custom action with a button
 script.registerCustomAction("mycustomaction1", "Menu text", "Button text");
+
+// add a custom action with a button and freedesktop theme icon 
+script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "task-new");
+
+// add a custom action with a button and an icon from a file 
+script.registerCustomAction("mycustomaction1", "Menu text", "Button text", "/usr/share/icons/breeze/actions/24/view-calendar-tasks.svg");
 ```
 
 You may then want to use the identifier with function `customActionInvoked`

@@ -7405,14 +7405,27 @@ void MainWindow::initShowTagPaneUnderNavigationPane() {
  * Adds a custom action as menu item and button
  */
 void MainWindow::addCustomAction(QString identifier, QString menuText,
-                                 QString buttonText) {
+                                 QString buttonText, QString icon) {
 //    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName("customAction_" + identifier);
     action->setData(identifier);
 
+    // try to add an icon
+    if (!icon.isEmpty()) {
+        QFile file(icon);
+        // if no icon file was found set it as freedesktop theme icon
+        QIcon i = file.exists() ? QIcon(icon) : QIcon::fromTheme(icon);
+        action->setIcon(i);
+    }
+
+    // set a button text if not empty
     if (!buttonText.isEmpty()) {
         action->setIconText(buttonText);
+    }
+
+    // add a button to the custom action toolbar
+    if (!buttonText.isEmpty() || !icon.isEmpty()) {
         _customActionToolbar->show();
         _customActionToolbar->addAction(action);
     }

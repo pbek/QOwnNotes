@@ -2,16 +2,17 @@ import QtQml 2.0
 import com.qownnotes.noteapi 1.0
 
 /**
- * This script parses the text that was copied from a task email of the webservice 5pm 
- * and creates a new note with a headline, the link to the task and the description
+ * This script creates a menu item and a button that parses the text that was copied 
+ * from a task email of the webservice 5pm and creates a new note with a headline,
+ * the link to the task and the description
  */
 QtObject {
     /**
      * Initializes the custom action
      */
     function init() {
-        // create a menu entry "New 5pm note" with a button "5pm"
-        script.registerCustomAction("new5pmNote", "New 5pm note", "5pm");
+        // create a menu entry "New 5pm note" with a button and a freedesktop theme icon
+         script.registerCustomAction("new5pmNote", "New 5pm note", "5pm", "task-new");
     }
 
     /**
