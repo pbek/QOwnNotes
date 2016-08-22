@@ -7233,6 +7233,10 @@ void MainWindow::initShortcuts() {
  * @param toggleOtherPanes
  */
 void MainWindow::toggleOneColumnMode(bool activated, bool toggleOtherPanes) {
+    // turn off the vertical preview layout because the two don't work well
+    // together (also when one column mode is deactivated)
+    ui->actionUse_vertical_preview_layout->setChecked(false);
+
     // hide the navigation frame in one column mode
     ui->navigationFrame->setHidden(activated);
 

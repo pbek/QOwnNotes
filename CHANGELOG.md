@@ -10,6 +10,9 @@
       [freedesktop icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
 - fixed a problem with selecting text
   (for [Issue #300](https://github.com/pbek/QOwnNotes/issues/300))
+- fixed a problem with the one column mode while in vertical preview
+  layout mode
+  (for [Issue #295](https://github.com/pbek/QOwnNotes/issues/295))
 
 ## 16.08.16
 - you are now able to define **custom actions** that will be shown as
