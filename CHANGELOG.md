@@ -11,14 +11,15 @@
 - fixed a problem with selecting text
   (for [Issue #300](https://github.com/pbek/QOwnNotes/issues/300))
 - fixed a problem with the one column mode while in vertical preview
-  layout mode
-  (for [Issue #295](https://github.com/pbek/QOwnNotes/issues/295))
+  layout mode (for [Issue #295](https://github.com/pbek/QOwnNotes/issues/295))
 - you can now turn off the refreshing of the note list on external note
   folder changes completely in the general settings if for example you
   have so many notes, that even the checking for file-time and file-size
   changes is taking too long
   (for [Issue #291](https://github.com/pbek/QOwnNotes/issues/291))
     - use this at your own risk!
+- added more Italian, Spanish and Polish translation (thank you mlocati,
+  richarson and lucjan)
 
 ## 16.08.16
 - you are now able to define **custom actions** that will be shown as
