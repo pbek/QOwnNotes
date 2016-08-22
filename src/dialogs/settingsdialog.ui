@@ -298,7 +298,7 @@
                         <string>Click here to use the selected folder from your server as note folder</string>
                        </property>
                        <property name="text">
-                        <string>&amp;use as ownCloud path</string>
+                        <string>&amp;Use as ownCloud path</string>
                        </property>
                        <property name="icon">
                         <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
@@ -337,7 +337,7 @@
                   <item row="0" column="0">
                    <widget class="QLabel" name="label_6">
                     <property name="text">
-                     <string>Please select your note folder on your ownCloud server</string>
+                     <string>Please select your note folder on your ownCloud server:</string>
                     </property>
                    </widget>
                   </item>
@@ -364,7 +364,7 @@
                <item row="6" column="0" colspan="2">
                 <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
                  <property name="text">
-                  <string>ownCloud server</string>
+                  <string>ownCloud server:</string>
                  </property>
                 </widget>
                </item>
@@ -374,21 +374,21 @@
                <item row="8" column="0" colspan="2">
                 <widget class="QLabel" name="label_14">
                  <property name="text">
-                  <string>Path on your ownCloud server</string>
+                  <string>Path on your ownCloud server:</string>
                  </property>
                 </widget>
                </item>
                <item row="0" column="0" colspan="2">
                 <widget class="QLabel" name="label_12">
                  <property name="text">
-                  <string>Name</string>
+                  <string>Name:</string>
                  </property>
                 </widget>
                </item>
                <item row="3" column="0" colspan="2">
                 <widget class="QLabel" name="label_13">
                  <property name="text">
-                  <string>Note folder path</string>
+                  <string>Note folder path:</string>
                  </property>
                 </widget>
                </item>
@@ -474,7 +474,7 @@
               <item row="2" column="0">
                <widget class="QLabel" name="label_3">
                 <property name="text">
-                 <string>username:</string>
+                 <string>Username:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -509,7 +509,7 @@
               <item row="3" column="0">
                <widget class="QLabel" name="label_5">
                 <property name="text">
-                 <string>password:</string>
+                 <string>Password:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -565,7 +565,7 @@
                  <string notr="true">QPushButton { font-weight: bold; }</string>
                 </property>
                 <property name="text">
-                 <string>&amp;connect to ownCloud server</string>
+                 <string>&amp;Connect to ownCloud server</string>
                 </property>
                 <property name="icon">
                  <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
@@ -592,7 +592,7 @@
                  <string notr="true">font-weight: bold;</string>
                 </property>
                 <property name="text">
-                 <string>connection status</string>
+                 <string>Connection status</string>
                 </property>
                </widget>
               </item>
@@ -770,7 +770,7 @@
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                 <property name="text">
-                 <string>open your ownCloud server &amp;Apps page</string>
+                 <string>Open your ownCloud server &amp;Apps page</string>
                 </property>
                 <property name="icon">
                  <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
@@ -1265,7 +1265,7 @@
                <string notr="true"/>
               </property>
               <property name="text">
-               <string>&amp;reload calendar list</string>
+               <string>&amp;Reload calendar list</string>
               </property>
               <property name="icon">
                <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
@@ -1730,7 +1730,7 @@
               <item row="2" column="0">
                <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
                 <property name="text">
-                 <string>font in note markdown view:</string>
+                 <string>Font in note markdown view:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1740,7 +1740,7 @@
               <item row="0" column="0">
                <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
                 <property name="text">
-                 <string>default font in markdown text edits:</string>
+                 <string>Default font in markdown text edits:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1792,7 +1792,7 @@
               <item row="1" column="0">
                <widget class="QLabel" name="noteTextEditCodeFontHeadlineLabel">
                 <property name="text">
-                 <string>code font in markdown text edits:</string>
+                 <string>Code font in markdown text edits:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1802,7 +1802,7 @@
               <item row="3" column="0">
                <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
                 <property name="text">
-                 <string>code font in note markdown view:</string>
+                 <string>Code font in note markdown view:</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2106,14 +2106,14 @@
                   <item row="3" column="0" colspan="2">
                    <widget class="QLabel" name="label_18">
                     <property name="text">
-                     <string>Script path</string>
+                     <string>Script path:</string>
                     </property>
                    </widget>
                   </item>
                   <item row="1" column="0" colspan="2">
                    <widget class="QLabel" name="label_17">
                     <property name="text">
-                     <string>Name</string>
+                     <string>Name:</string>
                     </property>
                    </widget>
                   </item>

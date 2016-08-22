@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.08.18
+- lots of text correction in the main window and the settings dialog
+
 ## 16.08.17
 - when creating custom action buttons you now can define a button icon
   from your freedesktop theme icons or a local file

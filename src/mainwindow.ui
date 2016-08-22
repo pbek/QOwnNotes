@@ -766,6 +766,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Increase_note_text_size"/>
     <addaction name="action_Decrease_note_text_size"/>
+    <addaction name="action_Reset_note_text_size"/>
    </widget>
    <widget class="QMenu" name="menuTag">
     <property name="title">
@@ -1746,8 +1747,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>
