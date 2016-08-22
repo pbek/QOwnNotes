@@ -2,10 +2,12 @@
 
 ## 16.08.17
 - when creating custom action buttons you now can define a button icon
-  from your freedesktop theme icons or a local file 
+  from your freedesktop theme icons or a local file
   (for [Issue #297](https://github.com/pbek/QOwnNotes/issues/297))
     - for more information please take a look at the 
       [registerCustomAction documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#register-a-custom-action)
+    - you will find a list of icons at
+      [freedesktop icons](https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html)
 - fixed a problem with selecting text
   (for [Issue #300](https://github.com/pbek/QOwnNotes/issues/300))
 

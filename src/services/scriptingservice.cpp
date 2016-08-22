@@ -563,6 +563,8 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
  * @param buttonText the text shown in the button
  *                   (no button will be viewed if empty)
  * @param icon the icon file path or the name of a freedesktop theme icon
+ *             you will find a list of icons here:
+ *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
