@@ -2271,31 +2271,7 @@
               <string>Notes</string>
              </property>
              <layout class="QGridLayout" name="gridLayout_5">
-              <item row="2" column="1">
-               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                <property name="toolTip">
-                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                </property>
-                <property name="text">
-                 <string>note save interval time [sec]</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0" colspan="2">
-               <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                <property name="toolTip">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-                <property name="layoutDirection">
-                 <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                 <string>Notify about all external modifications of the current note</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
+              <item row="3" column="0">
                <widget class="QSpinBox" name="noteSaveIntervalTime">
                 <property name="toolTip">
                  <string/>
@@ -2314,7 +2290,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                </widget>
               </item>
-              <item row="3" column="0" colspan="2">
+              <item row="4" column="0" colspan="2">
                <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                 <property name="toolTip">
                  <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
@@ -2324,6 +2300,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                 <property name="text">
                  <string>Allow note file name to be different from headline</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                <property name="toolTip">
+                 <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                </property>
+                <property name="text">
+                 <string>note save interval time [sec]</string>
                 </property>
                </widget>
               </item>
@@ -2337,6 +2324,29 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </property>
                 <property name="text">
                  <string>Ignore all external modifications of the current note</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" colspan="2">
+               <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                 <string>Notify about all external modifications of the current note</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
+                <property name="toolTip">
+                 <string>Do this at your own risk!</string>
+                </property>
+                <property name="text">
+                 <string>Ignore all external note folder changes</string>
                 </property>
                </widget>
               </item>

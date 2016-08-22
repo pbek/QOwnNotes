@@ -1791,6 +1791,12 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
         return;
     }
 
+    // if we should ignore all changes return here
+    QSettings settings;
+    if (settings.value("ignoreAllExternalNoteFolderChanges").toBool()) {
+        return;
+    }
+
     qDebug() << "notesDirectoryWasModified: " << str;
     showStatusBarMessage(tr("notes directory was modified externally"), 5000);
 
@@ -2947,14 +2953,16 @@ void MainWindow::removeSelectedNotes() {
             const QSignalBlocker blocker1(ui->noteTreeWidget);
             Q_UNUSED(blocker1);
 
-            Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            Q_FOREACH(QTreeWidgetItem *item,
+                      ui->noteTreeWidget->selectedItems()) {
                     int id = item->data(0, Qt::UserRole).toInt();
                     Note note = Note::fetch(id);
                     note.remove(true);
                     qDebug() << "Removed note " << note.getName();
                 }
 
-            // clear the text edit so it stays clear after removing the last note
+            // clear the text edit so it stays clear after removing the
+            // last note
             activeNoteTextEdit()->clear();
 
             loadNoteDirectoryList();

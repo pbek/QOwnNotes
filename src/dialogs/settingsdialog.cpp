@@ -247,6 +247,9 @@ void SettingsDialog::storeSettings() {
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
     settings.setValue("ignoreAllExternalModifications",
                       ui->ignoreAllExternalModificationsCheckBox->isChecked());
+    settings.setValue("ignoreAllExternalNoteFolderChanges",
+                      ui->ignoreAllExternalNoteFolderChangesCheckBox
+                              ->isChecked());
     settings.setValue("allowDifferentNoteFileName",
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
@@ -362,6 +365,8 @@ void SettingsDialog::readSettings() {
             settings.value("notifyAllExternalModifications").toBool());
     ui->ignoreAllExternalModificationsCheckBox->setChecked(
             settings.value("ignoreAllExternalModifications").toBool());
+    ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
+            settings.value("ignoreAllExternalNoteFolderChanges").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
