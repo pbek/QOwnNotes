@@ -3259,11 +3259,11 @@ void MainWindow::updateCurrentFolderTooltip() {
 /**
  * @brief Opens the settings dialog
  */
-void MainWindow::openSettingsDialog(int tab) {
+void MainWindow::openSettingsDialog(int page) {
     int currentNoteFolderId = NoteFolder::currentNoteFolderId();
 
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog(tab, this);
+    SettingsDialog *dialog = new SettingsDialog(page, this);
     int dialogResult = dialog->exec();
 
     if (dialogResult == QDialog::Accepted) {
@@ -3550,7 +3550,7 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
                 tr("&Ok"),
                 tr("Open &settings"),
                 QString::null, 0, 1) == 1) {
-            openSettingsDialog(SettingsDialog::NetworkTab);
+            openSettingsDialog(SettingsDialog::NetworkPage);
         }
     }
 }
@@ -3574,7 +3574,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
                 tr("Open &settings"),
                 tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
-            openSettingsDialog(SettingsDialog::TodoTab);
+            openSettingsDialog(SettingsDialog::TodoPage);
         }
 
         return;
@@ -3640,7 +3640,7 @@ void MainWindow::on_actionSet_ownCloud_Folder_triggered() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    openSettingsDialog(SettingsDialog::NoteFolderTab);
+    openSettingsDialog(SettingsDialog::NoteFolderPage);
 }
 
 void MainWindow::on_searchLineEdit_textChanged(const QString &arg1) {

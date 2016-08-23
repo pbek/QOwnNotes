@@ -45,7 +45,7 @@ public:
 
     void createNewNote(QString name, QString text, bool cursorAtEnd = false);
 
-    void openSettingsDialog(int tab = 0);
+    void openSettingsDialog(int page = 0);
 
     void restoreTrashedNoteOnServer(QString fileName, int timestamp);
 

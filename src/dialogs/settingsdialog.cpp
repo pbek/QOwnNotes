@@ -29,8 +29,8 @@
 #include <QKeySequenceEdit>
 #include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 
-SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
-        ui(new Ui::SettingsDialog) {
+SettingsDialog::SettingsDialog(int page, QWidget *parent) :
+        MasterDialog(parent), ui(new Ui::SettingsDialog) {
     ui->setupUi(this);
 
     // we must not do that because XFCE really resizes the window to 1x1
@@ -52,13 +52,13 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
     ui->installInfoTextLabel1->setText(html);
 
     // do the network proxy tab setup
-    setupProxyTab();
+    setupProxyPage();
 
     // setup the note folder tab
-    setupNoteFolderTab();
+    setupNoteFolderPage();
 
     // setup the scripting tab
-    setupScriptingTab();
+    setupScriptingPage();
 
     readSettings();
 
@@ -72,7 +72,12 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
 
     // must be done in the end so that the settings are loaded first when
     // doing a connection test
-    ui->tabWidget->setCurrentIndex(tab);
+    ui->settingsStackedWidget->setCurrentIndex(page);
+
+    // update other stuff for the settings tree widget
+    if (ui->settingsStackedWidget->currentIndex() == page) {
+        on_settingsStackedWidget_currentChanged(page);
+    }
 
 #ifdef Q_OS_MAC
     // we don't need app instance settings on OS X
@@ -82,9 +87,12 @@ SettingsDialog::SettingsDialog(int tab, QWidget *parent) : MasterDialog(parent),
 
     MainWindow *mainWindow = MainWindow::instance();
 
-    // disable the shortcut tab if there is no main window yet
+    // disable the shortcut page if there is no main window yet
     if (mainWindow == Q_NULLPTR) {
-        ui->shortcutTab->setDisabled(true);
+        QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(ShortcutPage);
+        if (item != Q_NULLPTR) {
+            item->setDisabled(true);
+        }
     }
 }
 
@@ -93,9 +101,9 @@ SettingsDialog::~SettingsDialog() {
 }
 
 /**
- * Does the network proxy tab setup
+ * Does the network proxy page setup
  */
-void SettingsDialog::setupProxyTab() {
+void SettingsDialog::setupProxyPage() {
     ui->hostLineEdit->setPlaceholderText(tr("hostname of proxy server"));
     ui->userLineEdit->setPlaceholderText(tr("username for proxy server"));
     ui->passwordLineEdit->setPlaceholderText(tr("password for proxy server"));
@@ -317,7 +325,7 @@ void SettingsDialog::storeSettings() {
         }
     }
 
-    // store the todo calendar data to the settings
+    // store the tasks calendar data to the settings
     settings.setValue("ownCloud/todoCalendarUrlList", todoCalendarUrlList);
     settings.setValue("ownCloud/todoCalendarEnabledList",
                       todoCalendarEnabledList);
@@ -454,7 +462,7 @@ void SettingsDialog::readSettings() {
 
     QStringList todoCalendarUrlList = settings.value(
             "ownCloud/todoCalendarUrlList").toStringList();
-    // load the todo calendar list and set the checked state
+    // load the tasks calendar list and set the checked state
     refreshTodoCalendarList(todoCalendarUrlList, true);
 
     // loads the custom note file extensions
@@ -906,11 +914,11 @@ void SettingsDialog::setOKLabelData(int number, QString text,
 void SettingsDialog::refreshTodoCalendarList(QStringList items,
                                              bool forceReadCheckedState) {
     // we want to read the checked state from the settings if the
-    // todo calendar list was not empty
+    // tasks calendar list was not empty
     bool readCheckedState = forceReadCheckedState ? true :
                             ui->todoCalendarListWidget->count() > 0;
 
-    // clear the todo calendar list
+    // clear the tasks calendar list
     ui->todoCalendarListWidget->clear();
 
     QSettings settings;
@@ -960,7 +968,7 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
         }
 
         // create the list widget item and add it to the
-        // todo calendar list widget
+        // tasks calendar list widget
         QListWidgetItem *item = new QListWidgetItem(name);
 
         // eventually check if item was checked
@@ -1063,24 +1071,6 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
 
         QMessageBox::information(this, tr("Database"),
                                  tr("The Database was reinitialized."));
-    }
-}
-
-void SettingsDialog::on_tabWidget_currentChanged(int index) {
-    if (index == DebugTab) {
-        outputSettings();
-    } else if (index == OwnCloudTab) {
-        on_connectButton_clicked();
-    }
-
-    if (OwnCloudService::hasOwnCloudSettings()) {
-        ui->todoCalendarTab->setEnabled(true);
-        ui->todoCalendarTab->setToolTip("");
-    } else {
-        ui->todoCalendarTab->setEnabled(false);
-        ui->todoCalendarTab->setToolTip(
-                tr("Please make sure the connection to your "
-                           "ownCloud server works."));
     }
 }
 
@@ -1221,9 +1211,9 @@ void SettingsDialog::on_ignoreSSLErrorsCheckBox_toggled(bool checked) {
 }
 
 /**
- * Does the note folder tab setup
+ * Does the note folder page setup
  */
-void SettingsDialog::setupNoteFolderTab() {
+void SettingsDialog::setupNoteFolderPage() {
     // hide the owncloud server settings
     ui->noteFolderOwnCloudServerLabel->setVisible(false);
     ui->noteFolderOwnCloudServerComboBox->setVisible(false);
@@ -1576,9 +1566,9 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
 }
 
 /**
- * Does the scripting tab setup
+ * Does the scripting page setup
  */
-void SettingsDialog::setupScriptingTab() {
+void SettingsDialog::setupScriptingPage() {
     QList<Script> scripts = Script::fetchAll();
     int scriptsCount = scripts.count();
 
@@ -1994,4 +1984,63 @@ void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
         ui->markdownHighlightingIntervalSpinBox->setValue(
                 _defaultMarkdownHighlightingInterval);
     }
+}
+
+void SettingsDialog::on_settingsTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(previous);
+    ui->settingsStackedWidget->setCurrentIndex(current->whatsThis(0).toInt());
+}
+
+void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
+    QTreeWidgetItem *item = findSettingsTreeWidgetItemByPage(index);
+    if (item != Q_NULLPTR) {
+        const QSignalBlocker blocker(ui->settingsTreeWidget);
+        Q_UNUSED(blocker);
+
+        ui->settingsTreeWidget->setCurrentItem(item);
+        ui->headlineLabel->setText(item->text(0));
+    }
+
+    if (index == DebugPage) {
+        outputSettings();
+    } else if (index == OwnCloudPage) {
+        on_connectButton_clicked();
+    }
+
+    // turn off the tasks page if no ownCloud settings are available
+    QTreeWidgetItem *todoItem = findSettingsTreeWidgetItemByPage(TodoPage);
+    if (todoItem != Q_NULLPTR) {
+        if (OwnCloudService::hasOwnCloudSettings()) {
+            todoItem->setDisabled(false);
+            todoItem->setToolTip(0, "");
+        } else {
+            todoItem->setDisabled(true);
+            todoItem->setToolTip(0, tr("Please make sure the connection to "
+                                               "your ownCloud server works."));
+        }
+    }
+}
+
+/**
+ * Returns the settings tree widget item corresponding to a page
+ *
+ * @param page
+ * @return
+ */
+QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
+    // search for items
+    QList<QTreeWidgetItem*> allItems = ui->settingsTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // hide all not found items
+    Q_FOREACH(QTreeWidgetItem *item, allItems) {
+            int id = item->whatsThis(0).toInt();
+
+            if (id == page) {
+                return item;
+            }
+        }
+
+    return Q_NULLPTR;
 }

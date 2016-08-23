@@ -745,7 +745,7 @@ void OwnCloudService::showOwnCloudMessage(
             MainWindow *mainWindow = MainWindow::instance();
 
             if (mainWindow != NULL) {
-                mainWindow->openSettingsDialog(SettingsDialog::OwnCloudTab);
+                mainWindow->openSettingsDialog(SettingsDialog::OwnCloudPage);
             }
         }
     } else {

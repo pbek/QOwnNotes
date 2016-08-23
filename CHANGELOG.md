@@ -5,6 +5,8 @@
 - the navigation pane can now also show unrecognized headlines, like
   `# Header [link](http://url)`
   (for [Issue #302](https://github.com/pbek/QOwnNotes/issues/302))
+- the settings page was redone to get more structure in it
+    - there now is a tree on the left to select the proper settings page
 
 ## 16.08.17
 - when creating custom action buttons you now can define a button icon

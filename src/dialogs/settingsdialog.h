@@ -27,19 +27,20 @@ public:
         Failure,
     };
 
-    enum SettingsTabs {
-        NoteFolderTab,
-        OwnCloudTab,
-        NetworkTab,
-        TodoTab,
-        InterfaceTab,
-        ShortcutTab,
-        ScriptingTab,
-        GeneralTab,
-        DebugTab
+    enum SettingsPages {
+        NoteFolderPage,
+        OwnCloudPage,
+        NetworkPage,
+        TodoPage,
+        InterfacePage,
+        ShortcutPage,
+        ScriptingPage,
+        GeneralPage,
+        DebugPage
     };
 
-    explicit SettingsDialog(int tab = 0, QWidget *parent = 0);
+    explicit SettingsDialog(int page = 0,
+                            QWidget *parent = 0);
 
     ~SettingsDialog();
 
@@ -72,8 +73,6 @@ private slots:
     void on_defaultOwnCloudCalendarRadioButton_toggled(bool checked);
 
     void on_reinitializeDatabaseButton_clicked();
-
-    void on_tabWidget_currentChanged(int index);
 
     void on_saveDebugInfoButton_clicked();
 
@@ -157,6 +156,11 @@ private slots:
 
     void on_markdownHighlightingCheckBox_toggled(bool checked);
 
+    void on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *current,
+                                                  QTreeWidgetItem *previous);
+
+    void on_settingsStackedWidget_currentChanged(int index);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -190,11 +194,11 @@ private:
 
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
-    void setupProxyTab();
+    void setupProxyPage();
 
     void loadProxySettings();
 
-    void setupNoteFolderTab();
+    void setupNoteFolderPage();
 
     QTreeWidgetItem *findNoteFolderRemotePathTreeWidgetItem(
             QTreeWidgetItem *parent, QString text);
@@ -207,7 +211,7 @@ private:
 
     void setNoteFolderRemotePathTreeWidgetFrameVisibility(bool visi);
 
-    void setupScriptingTab();
+    void setupScriptingPage();
 
     void storeScriptListEnabledState();
 
@@ -219,6 +223,8 @@ private:
     void loadShortcutSettings();
 
     void storeShortcutSettings();
+
+    QTreeWidgetItem *findSettingsTreeWidgetItemByPage(int page);
 };
 
 #endif // SETTINGSDIALOG_H

@@ -158,7 +158,7 @@ void WelcomeDialog::on_ownCloudSettingsButton_clicked() {
             ->sendVisitIfEnabled("welcome-dialog/owncloud-settings");
 
     SettingsDialog *dialog = new SettingsDialog(
-            SettingsDialog::OwnCloudTab, this);
+            SettingsDialog::OwnCloudPage, this);
     dialog->exec();
 }
 
@@ -167,7 +167,7 @@ void WelcomeDialog::on_networkSettingsButton_clicked() {
             ->sendVisitIfEnabled("welcome-dialog/network-settings");
 
     SettingsDialog *dialog = new SettingsDialog(
-            SettingsDialog::NetworkTab, this);
+            SettingsDialog::NetworkPage, this);
     dialog->exec();
 }
 
