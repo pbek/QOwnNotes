@@ -2,6 +2,9 @@
 
 ## 16.08.18
 - lots of text correction in the main window and the settings dialog
+- the navigation pane can now also show unrecognized headlines, like
+  `# Header [link](http://url)`
+  (for [Issue #302](https://github.com/pbek/QOwnNotes/issues/302))
 
 ## 16.08.17
 - when creating custom action buttons you now can define a button icon

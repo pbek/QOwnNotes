@@ -63,13 +63,23 @@ void NavigationWidget::parse(QTextDocument *document) {
     for (int i = 0; i < document->blockCount(); i++) {
         QTextBlock block = document->findBlockByNumber(i);
         int elementType = block.userState();
+        QString text = block.text();
+
+        // check for unrecognized headlines, like `# Header [link](http://url)`
+        if (text.startsWith("#") && elementType != -1) {
+            QRegularExpressionMatch match =
+                    QRegularExpression("^(#+)").match(text);
+
+            if (match.hasMatch()) {
+                // override the element type
+                elementType = pmh_H1 + match.captured(1).count() - 1;
+            }
+        }
 
         // ignore all non headline types
         if ((elementType < pmh_H1) || (elementType > pmh_H6)) {
             continue;
         }
-
-        QString text = block.text();
 
         text.remove(QRegularExpression("^#+"))
                 .remove(QRegularExpression("#+$"))
