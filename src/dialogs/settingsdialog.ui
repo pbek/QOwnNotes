@@ -124,8 +124,8 @@
              <string notr="true">1</string>
             </property>
             <property name="icon">
-             <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
-              <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
+             <iconset theme="folder-cloud" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder-cloud.svg</iconset>
             </property>
            </item>
            <item>
@@ -160,8 +160,8 @@
              <string notr="true">4</string>
             </property>
             <property name="icon">
-             <iconset theme="format-text-bold" resource="../breeze-qownnotes.qrc">
-              <normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</iconset>
+             <iconset theme="edit-guides" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</iconset>
             </property>
            </item>
            <item>
