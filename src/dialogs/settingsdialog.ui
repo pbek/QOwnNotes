@@ -111,6 +111,10 @@
             <property name="whatsThis">
              <string notr="true">0</string>
             </property>
+            <property name="icon">
+             <iconset theme="folder" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</normaloff>:/icons/breeze-qownnotes/16x16/folder.svg</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
@@ -118,6 +122,10 @@
             </property>
             <property name="whatsThis">
              <string notr="true">1</string>
+            </property>
+            <property name="icon">
+             <iconset theme="text-html" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-html.svg</iconset>
             </property>
            </item>
            <item>
@@ -127,6 +135,10 @@
             <property name="whatsThis">
              <string notr="true">2</string>
             </property>
+            <property name="icon">
+             <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
@@ -134,6 +146,10 @@
             </property>
             <property name="whatsThis">
              <string notr="true">3</string>
+            </property>
+            <property name="icon">
+             <iconset theme="view-calendar-tasks" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/view-calendar-tasks.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-calendar-tasks.svg</iconset>
             </property>
            </item>
            <item>
@@ -143,6 +159,10 @@
             <property name="whatsThis">
              <string notr="true">4</string>
             </property>
+            <property name="icon">
+             <iconset theme="format-text-bold" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-bold.svg</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
@@ -150,6 +170,10 @@
             </property>
             <property name="whatsThis">
              <string notr="true">5</string>
+            </property>
+            <property name="icon">
+             <iconset theme="configure-shortcuts" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/configure-shortcuts.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure-shortcuts.svg</iconset>
             </property>
            </item>
            <item>
@@ -159,6 +183,10 @@
             <property name="whatsThis">
              <string notr="true">6</string>
             </property>
+            <property name="icon">
+             <iconset theme="code-context" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</normaloff>:/icons/breeze-qownnotes/16x16/code-context.svg</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
@@ -167,6 +195,10 @@
             <property name="whatsThis">
              <string notr="true">7</string>
             </property>
+            <property name="icon">
+             <iconset resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
+            </property>
            </item>
            <item>
             <property name="text">
@@ -174,6 +206,10 @@
             </property>
             <property name="whatsThis">
              <string notr="true">8</string>
+            </property>
+            <property name="icon">
+             <iconset theme="face-smile" resource="../breeze-qownnotes.qrc">
+              <normaloff>:/icons/breeze-qownnotes/16x16/face-smile.svg</normaloff>:/icons/breeze-qownnotes/16x16/face-smile.svg</iconset>
             </property>
            </item>
           </widget>

@@ -81,5 +81,6 @@
         <file alias="16x16/application-menu.svg">icons/breeze-dark-qownnotes/16x16/application-menu.svg</file>
         <file alias="16x16/split.svg">icons/breeze-dark-qownnotes/16x16/split.svg</file>
         <file alias="16x16/taxes-finances.svg">icons/breeze-dark-qownnotes/16x16/taxes-finances.svg</file>
+        <file alias="16x16/configure-shortcuts.svg">icons/breeze-dark-qownnotes/16x16/configure-shortcuts.svg</file>
     </qresource>
 </RCC>
