@@ -218,7 +218,7 @@
          <item row="0" column="1">
           <widget class="QPushButton" name="foregroundColorButton">
            <property name="styleSheet">
-            <string notr="true">* {background: red}</string>
+            <string notr="true">* {background: red; border: none}</string>
            </property>
            <property name="text">
             <string notr="true"/>

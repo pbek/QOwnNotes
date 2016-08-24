@@ -1,3 +1,5 @@
+#include <QColorDialog>
+#include <QDebug>
 #include <QTreeWidgetItem>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
@@ -17,4 +19,9 @@ FontColorWidget::FontColorWidget(QWidget *parent) :
 
 FontColorWidget::~FontColorWidget() {
     delete ui;
+}
+
+void FontColorWidget::on_foregroundColorButton_clicked() {
+    QColor color = QColorDialog::getColor();
+    ui->foregroundColorButton->setStyleSheet(QString("* {background: %1, border: none;}").arg(color.name()));
 }
