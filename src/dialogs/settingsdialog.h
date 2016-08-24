@@ -8,6 +8,7 @@
 #include <QTreeWidgetItem>
 #include <QStatusBar>
 #include <QSignalMapper>
+#include <QSplitter>
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include "masterdialog.h"
@@ -55,6 +56,9 @@ public:
                                  bool forceReadCheckedState = false);
 
     void setNoteFolderRemotePathList(QStringList pathList);
+
+protected:
+    void closeEvent(QCloseEvent *event);
 
 private slots:
 
@@ -177,6 +181,7 @@ private:
     Script _selectedScript;
     QSignalMapper *_keyWidgetSignalMapper;
     static const int _defaultMarkdownHighlightingInterval = 200;
+    QSplitter *_mainSplitter;
 
     void readSettings();
 
@@ -225,6 +230,10 @@ private:
     void storeShortcutSettings();
 
     QTreeWidgetItem *findSettingsTreeWidgetItemByPage(int page);
+
+    void initMainSplitter();
+
+    void storeSplitterSettings();
 };
 
 #endif // SETTINGSDIALOG_H

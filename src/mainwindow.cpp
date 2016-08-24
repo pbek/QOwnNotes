@@ -7447,3 +7447,11 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
                      _customActionSignalMapper, SLOT(map()));
     _customActionSignalMapper->setMapping(action, identifier);
 }
+
+/**
+ * Opens the donation page
+ */
+void MainWindow::on_actionDonate_triggered() {
+    QDesktopServices::openUrl(
+            QUrl("http://www.qownnotes.org/donate"));
+}

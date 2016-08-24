@@ -94,6 +94,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             item->setDisabled(true);
         }
     }
+
+    // initializes the main splitter
+    initMainSplitter();
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -357,6 +360,9 @@ void SettingsDialog::storeSettings() {
 
     // store the shortcut settings
     storeShortcutSettings();
+
+    // store the splitter settings
+    storeSplitterSettings();
 }
 
 void SettingsDialog::readSettings() {
@@ -1999,7 +2005,7 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
         Q_UNUSED(blocker);
 
         ui->settingsTreeWidget->setCurrentItem(item);
-        ui->headlineLabel->setText(item->text(0));
+        ui->headlineLabel->setText("<h3>" + item->text(0) + "</h3>");
     }
 
     if (index == DebugPage) {
@@ -2043,4 +2049,38 @@ QTreeWidgetItem *SettingsDialog::findSettingsTreeWidgetItemByPage(int page) {
         }
 
     return Q_NULLPTR;
+}
+
+/**
+ * Does the initialization for the main splitter
+ */
+void SettingsDialog::initMainSplitter() {
+    _mainSplitter = new QSplitter();
+    _mainSplitter->setOrientation(Qt::Horizontal);
+    ui->leftSideFrame->setStyleSheet("#leftSideFrame {margin-right: 5px;}");
+
+    _mainSplitter->addWidget(ui->leftSideFrame);
+    _mainSplitter->addWidget(ui->settingsFrame);
+
+    ui->mainFrame->layout()->addWidget(_mainSplitter);
+
+    // restore tag frame splitter state
+    QSettings settings;
+    QByteArray state = settings.value(
+            "SettingsDialog/mainSplitterState").toByteArray();
+    _mainSplitter->restoreState(state);
+}
+
+void SettingsDialog::closeEvent(QCloseEvent *event) {
+    // store the splitter settings
+    storeSplitterSettings();
+}
+
+/**
+ * Stores the splitter settings
+ */
+void SettingsDialog::storeSplitterSettings() {
+    QSettings settings;
+    settings.setValue("SettingsDialog/mainSplitterState",
+                      _mainSplitter->saveState());
 }

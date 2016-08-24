@@ -369,6 +369,8 @@ private slots:
 
     void onCustomActionInvoked(QString identifier);
 
+    void on_actionDonate_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -1840,22 +1840,22 @@ Are the folder and the file writeable?</source>
         <translation>Настройки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="56"/>
+        <location filename="../dialogs/settingsdialog.ui" line="71"/>
         <source>Note folders</source>
         <translation>Папки заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="166"/>
+        <location filename="../dialogs/settingsdialog.ui" line="193"/>
         <source>Your note folders</source>
         <translation>Ваши папки заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="233"/>
+        <location filename="../dialogs/settingsdialog.ui" line="260"/>
         <source>&amp;Add folder</source>
         <translation>&amp;Добавить папку</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="257"/>
+        <location filename="../dialogs/settingsdialog.ui" line="284"/>
         <source>&amp;Remove folder</source>
         <translation>&amp;Удалить папку</translation>
     </message>
@@ -1868,17 +1868,17 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">Путь до сервера ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="468"/>
+        <location filename="../dialogs/settingsdialog.ui" line="495"/>
         <source>This name will be viewed in all the menus.</source>
         <translation>Это имя будет отображаться во всех меню.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="471"/>
+        <location filename="../dialogs/settingsdialog.ui" line="498"/>
         <source>a name you will recognize</source>
         <translation>имя, которое вы узнаете</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="313"/>
+        <location filename="../dialogs/settingsdialog.ui" line="340"/>
         <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
         <translation>Установите путь до папки на сервере ownCloud, где будут синхронизироваться заметки.</translation>
     </message>
@@ -1891,32 +1891,32 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">Сервер ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="478"/>
+        <location filename="../dialogs/settingsdialog.ui" line="505"/>
         <source>Use as active note folder</source>
         <translation>Использовать, как активную папку заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="540"/>
+        <location filename="../dialogs/settingsdialog.ui" line="579"/>
         <source>Your ownCloud server</source>
         <translation>Сервер OwnCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="554"/>
+        <location filename="../dialogs/settingsdialog.ui" line="593"/>
         <source>ownCloud server url:</source>
         <translation>Адрес сервера ownCloud:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="576"/>
+        <location filename="../dialogs/settingsdialog.ui" line="615"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите адрес своего сервера ownCloud, например: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="614"/>
+        <location filename="../dialogs/settingsdialog.ui" line="653"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите имя пользователя на сервере ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="656"/>
         <source>your ownCloud username</source>
         <translation>ваше имя пользователя ownCloud</translation>
     </message>
@@ -1925,12 +1925,12 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">имя пользователя:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="649"/>
+        <location filename="../dialogs/settingsdialog.ui" line="688"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите пароль.&lt;br/&gt;Пароль хранится зашифрованным с остальными настройками, хотя это и не совсем безопасно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="655"/>
+        <location filename="../dialogs/settingsdialog.ui" line="694"/>
         <source>your ownCloud password</source>
         <translation>ваш пароль ownCloud</translation>
     </message>
@@ -1939,38 +1939,38 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">пароль:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="727"/>
+        <location filename="../dialogs/settingsdialog.ui" line="766"/>
         <source>connection to web server</source>
         <translation>подключение к веб-серверу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="783"/>
         <source>ownCloud server detected</source>
         <translation>обнаружен сервер ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="778"/>
+        <location filename="../dialogs/settingsdialog.ui" line="817"/>
         <source>connection to QOwnNotesAPI</source>
         <translation>подключение к QOwnNotesAPI</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="761"/>
+        <location filename="../dialogs/settingsdialog.ui" line="800"/>
         <source>username and password correct</source>
         <translation>имя пользователя и пароль верны</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="717"/>
-        <location filename="../dialogs/settingsdialog.ui" line="734"/>
-        <location filename="../dialogs/settingsdialog.ui" line="751"/>
-        <location filename="../dialogs/settingsdialog.ui" line="768"/>
-        <location filename="../dialogs/settingsdialog.ui" line="785"/>
-        <location filename="../dialogs/settingsdialog.ui" line="802"/>
-        <location filename="../dialogs/settingsdialog.ui" line="819"/>
+        <location filename="../dialogs/settingsdialog.ui" line="756"/>
+        <location filename="../dialogs/settingsdialog.ui" line="773"/>
+        <location filename="../dialogs/settingsdialog.ui" line="790"/>
+        <location filename="../dialogs/settingsdialog.ui" line="807"/>
+        <location filename="../dialogs/settingsdialog.ui" line="824"/>
+        <location filename="../dialogs/settingsdialog.ui" line="841"/>
+        <location filename="../dialogs/settingsdialog.ui" line="858"/>
         <source>unknown</source>
         <translation>неизвестно</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="677"/>
+        <location filename="../dialogs/settingsdialog.ui" line="716"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажните для проверки подключения к серверу ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -1983,27 +1983,27 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">состояние подключения</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="795"/>
+        <location filename="../dialogs/settingsdialog.ui" line="834"/>
         <source>versions app enabled on server</source>
         <translation>приложение Versions доступно на сервере</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="812"/>
+        <location filename="../dialogs/settingsdialog.ui" line="851"/>
         <source>trash app enabled on server</source>
         <translation>приложение Deleted files доступно на сервере</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="868"/>
         <source>notes path found on server</source>
         <translation>путь к заметкам на сервере найден</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="885"/>
+        <location filename="../dialogs/settingsdialog.ui" line="924"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открыть в браузере страницу &lt;span style=&quot; font-weight:600;&quot;&gt;Приложения&lt;/span&gt; на сервере ownCloud, чтобы установить или обновить QOwnNotesAPI и включить стандартные приложения &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; и &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="477"/>
         <source>path</source>
         <translation>путь</translation>
     </message>
@@ -2012,22 +2012,22 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">&amp;использовать в качестве пути к серверу ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="289"/>
+        <location filename="../dialogs/settingsdialog.ui" line="316"/>
         <source>Click here to select your local note path</source>
         <translation>Нажмите для выбора локального пути к заметке</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="306"/>
+        <location filename="../dialogs/settingsdialog.ui" line="333"/>
         <source>path where your notes are stored locally</source>
         <translation>путь, где ваши заметки хранятся локально</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="363"/>
+        <location filename="../dialogs/settingsdialog.ui" line="390"/>
         <source>Click here to select your remote note path on your ownCloud server</source>
         <translation>Нажмите для выбора пути к заметке на сервере ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="416"/>
+        <location filename="../dialogs/settingsdialog.ui" line="443"/>
         <source>Click here to use the selected folder from your server as note folder</source>
         <translation>Нажмите, чтобы использовать выбранную папку с сервера ownCloud, как папку для ваших заметок</translation>
     </message>
@@ -2036,22 +2036,22 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">Пожалуйста, выберите вашу папку заметок на сервере ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="516"/>
+        <location filename="../dialogs/settingsdialog.ui" line="543"/>
         <source>Show subfolders in note list</source>
         <translation>Показать вложенные папки в списке заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="840"/>
+        <location filename="../dialogs/settingsdialog.ui" line="879"/>
         <source>Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
         <translation>Пожалуйста, установите последнюю версию &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt; &lt;span style=&quot;font-weight:600;&quot;&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (по крайней мере версию QOWNNOTESAPI_MIN_VERSION) на сервере ownCloud, если вы хотите иметь возможность доступа к удаленным заметкам и их истории.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="853"/>
+        <location filename="../dialogs/settingsdialog.ui" line="892"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходимо запустить 2 основных приложения на сервере ownCloud: &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; и &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; (они по умолчанию должны быть включены, проверьте).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="866"/>
+        <location filename="../dialogs/settingsdialog.ui" line="905"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходим &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;клиент синхронизации ownCloud&lt;/span&gt;&lt;/a&gt; (или другой идентичный) для синхронизации заметок!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -2060,77 +2060,77 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">открыть страницу &amp;Приложения на сервере ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="932"/>
+        <location filename="../dialogs/settingsdialog.ui" line="971"/>
         <source>Error Message</source>
         <translation>Сообщение об ошибке</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="72"/>
+        <location filename="../dialogs/settingsdialog.ui" line="87"/>
         <source>Network</source>
         <translation>Сеть</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="958"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1009"/>
         <source>Proxy Settings</source>
         <translation>Параметры прокси</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="964"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1015"/>
         <source>No Proxy</source>
         <translation>Без прокси</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="974"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1025"/>
         <source>Use system proxy</source>
         <translation>Использовать системное прокси</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="981"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1032"/>
         <source>Specify proxy manually as</source>
         <translation>Указать прокси вручную</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1006"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1057"/>
         <source>Host</source>
         <translation>Хост</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1057"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1108"/>
         <source>Proxy server requires authentication</source>
         <translation>Прокси-сервер требует аутентификации</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1108"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1159"/>
         <source>SSL Settings</source>
         <translation>Настройки SSL</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1114"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1165"/>
         <source>Ignore SSL errors</source>
         <translation>Игнорировать ошибки SSL</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="80"/>
+        <location filename="../dialogs/settingsdialog.ui" line="95"/>
         <source>Todo</source>
         <translation>Список задач</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1305"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1368"/>
         <source>Which ownCloud calendar backend do you want to use?</source>
         <translation>Предпочитаемая версия календаря ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1317"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1380"/>
         <source>Default ownCloud calendar</source>
         <translation>Стандартный календарь ownCloud</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1404"/>
         <source>Select the calendars you want to use for the TODO list</source>
         <translation>Выберите календари для работы со списком задач</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1362"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1425"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Щёлкните для обновления списка календарей с сервера ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -2139,197 +2139,197 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">&amp;обновить список календарей</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="88"/>
+        <location filename="../dialogs/settingsdialog.ui" line="103"/>
         <source>Interface</source>
         <translation>Интерфейс</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1428"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1503"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Только некоторые цвета будут адаптированы, темы рабочего стола будет контролировать остальные. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1438"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1513"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Это включает &quot;темный режим&quot;, интерфейс и значки будут изменены. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1441"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1516"/>
         <source>Enable dark mode</source>
         <translation>Включить &quot;темный режим&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1520"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1595"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
         <translation>Необходимо перезапустить приложение, чтобы изменения вступили в силу. Если подсветка markdown установлена в 0, она будет отключена.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1523"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1598"/>
         <source>Markdown highlighting</source>
         <translation>Подсветка markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1542"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1617"/>
         <source>Highlighting interval [ms]:</source>
         <translation>Интервал подсветки [мсек]:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1565"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1640"/>
         <source>Enable markdown highlighting</source>
         <translation>Включить выделение markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1618"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1693"/>
         <source>Interface language</source>
         <translation>Язык интерфейса</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1638"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1713"/>
         <source>Automatic</source>
         <translation>По умолчанию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1660"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1735"/>
         <source>English</source>
         <translation>English (Английский)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="96"/>
+        <location filename="../dialogs/settingsdialog.ui" line="111"/>
         <source>Shortcuts</source>
         <translation>Горячие клавиши</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1995"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2082"/>
         <source>Main window shortcuts</source>
         <translation>Горячие клавиши для главного окна</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2013"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2100"/>
         <source>search shortcut</source>
         <translation>искать горячую клавишу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2434"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2545"/>
         <source>Do this at your own risk!</source>
         <translation type="unfinished">Do this at your own risk!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2437"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2548"/>
         <source>Ignore all external note folder changes</source>
         <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2765"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2888"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Отсутствуют два пробела для создания разрыва строки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2768"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2891"/>
         <source>Use GitHub line breaks</source>
         <translation>Использовать GitHub разрывы строки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1649"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1724"/>
         <source>German</source>
         <translation>Deutsch (Немецкий)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1682"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1757"/>
         <source>French</source>
         <translation>Français (Французский)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1737"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1812"/>
         <source>Polish</source>
         <translation>Polski (Польский)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1770"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1845"/>
         <source>Chinese</source>
         <translation>漢語 (Китайский)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1748"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1823"/>
         <source>Portuguese</source>
         <translation>Português (Португальский)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1726"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1801"/>
         <source>Dutch</source>
         <translation>Голландский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1704"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1779"/>
         <source>Hungarian</source>
         <translation>Венгерский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1671"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1746"/>
         <source>Spanish</source>
         <translation>Испанский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1624"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1699"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если вы хотите помочь с переводом QOwnNotes, пожалуйста, прочтите: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;Как помочь с переводом QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1422"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1497"/>
         <source>Dark mode</source>
         <translation>Темный режим</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1431"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1506"/>
         <source>Optimize colors for dark mode desktop themes</source>
         <translation>Оптимизация цветов для темы рабочего стола &quot;Темный режим&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2653"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2764"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
         <translation>Сделать это только в случае проблем с режимом &quot;Список задач&quot;. Имейте в виду, что будут также удалены сконфигурированные папки заметок!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1532"/>
         <source>Notes folders</source>
         <translation>Папки заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1463"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1538"/>
         <source>Show note folders in main area</source>
         <translation>Показать папки заметок в основной области</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1168"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1219"/>
         <source>Disable tracking of usage data</source>
         <translation>Запретить сбор данных об использовании</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1212"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1263"/>
         <source>Usage tracking is done on a private Piwik server.</source>
         <translation>Использование отслеживания организовано на приватном сервере Piwik.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1272"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1323"/>
         <source>Disable heartbeat</source>
         <translation>Запретить контрольные пакеты</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1759"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1834"/>
         <source>Russian</source>
         <translation>Русский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1121"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1172"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Вы можете воспользоваться возможностью получения бесплатного SSL-сертификата от проекта &lt;a href=&quot;https://letsencrypt.org/&quot;&gt; Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1781"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1856"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Для замены языка интерфейса нужно перезагрузить программу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1803"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1878"/>
         <source>Font settings</source>
         <translation>Настройки шрифта</translation>
     </message>
@@ -2342,10 +2342,10 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">шрифт заметки в режиме редактирования:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1878"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1912"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1930"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1972"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1953"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1987"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2005"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2047"/>
         <source>set a new font</source>
         <translation>выбрать новый шрифт</translation>
     </message>
@@ -2354,10 +2354,10 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">моноширинный шрифт заметки в режиме редактирования:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1850"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1864"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1944"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1958"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1925"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1939"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2019"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2033"/>
         <source>reset font</source>
         <translation>сбросить шрифт</translation>
     </message>
@@ -2366,167 +2366,167 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">моноширинный шрифт заметки в режиме простора:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1479"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1554"/>
         <source>Toolbar</source>
         <translation>Панель инструментов</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1485"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1560"/>
         <source>Icon size:</source>
         <translation>Размер пиктограммы:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2279"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2378"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Требуется перезагрузить скриптовый движок, если файл сценария изменился</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2282"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2381"/>
         <source>Reload scripting engine</source>
         <translation>Перезагрузить скриптовый движок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2289"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2388"/>
         <source>Validate script</source>
         <translation>Проверка сценария</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="112"/>
+        <location filename="../dialogs/settingsdialog.ui" line="127"/>
         <source>General</source>
         <translation>Общее</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2359"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2470"/>
         <source>Notes</source>
         <translation>Заметки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2421"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2532"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если выбрано, то уведомления об изменениях внешними программами будут появляться, даже если текущая заметка не будет отредактирована. Рекомендуемое значение: &lt;span style=&quot; font-style:italic;&quot;&gt;отключить&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2397"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2508"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>В более старых версиях ownCloud sync могут появиться проблемы синхронизации, если установить значение меньше 10 секунд.
 Подберите значение интервала, при котором не будут возникать конфликты.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1715"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1790"/>
         <source>Japanese</source>
         <translation>Японский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2401"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2512"/>
         <source>note save interval time [sec]</source>
         <translation>период сохранения заметок (секунды)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2538"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Уведомлять обо всех внешних изменениях текущей заметки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2647"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2758"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1063"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1072"/>
         <source>Database</source>
         <translation>База данных</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2663"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2774"/>
         <source>Reinitialize Database</source>
         <translation>Инициализация базы данных</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2447"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2558"/>
         <source>Clear application data and exit</source>
         <translation>Удалить данные приложения и выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2453"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2564"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Нажатие этой кнопки приведёт к удалению всех настроек, локальной базы данных списка задач и выходу из QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2463"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2574"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1136"/>
         <source>Clear app data and exit</source>
         <translation>Удалить данные приложения и выйти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2673"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2784"/>
         <source>Update dialog</source>
         <translation>Диалог обновления</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2519"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2630"/>
         <source>Default note file extension</source>
         <translation>Расширение файлов заметок</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2604"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2715"/>
         <source>External editor</source>
         <translation>Внешний редактор</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2728"/>
         <source>path to external editor, leave empty for default</source>
         <translation>путь ко внешнему редактору, по умолчанию пусто</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2624"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2735"/>
         <source>set external editor</source>
         <translation>выбрать внешний редактор</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1137"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1188"/>
         <source>App metrics</source>
         <translation>Метрики приложения</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1155"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1206"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
         <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить какие части программы нуждаются в улучшении и исправлении ошибок. Пожалуйста, отключайте только при необходимости.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1187"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1238"/>
         <source>This data includes anonymous information about what features of the app are used.</source>
         <translation>Данные содержать анонимную информацию об используемых частях приложения.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1241"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1292"/>
         <source>App heartbeat</source>
         <translation>Контрольный пакет</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1259"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1310"/>
         <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
         <translation>Во время работы QOwnNotes периодически отправляется небольшой контрольный пакет. Разработчику приятно осознавать, что кто-то использует QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1693"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1768"/>
         <source>Italian</source>
         <translation>Итальянский</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="104"/>
+        <location filename="../dialogs/settingsdialog.ui" line="119"/>
         <source>Scripting</source>
         <translation>Создание сценариев</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2050"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2149"/>
         <source>Your scripts</source>
         <translation>Ваши сценарии</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2117"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
         <source>&amp;Add script</source>
         <translation>&amp;Добавить сценарий</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2141"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2240"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Удалить сценарий</translation>
     </message>
@@ -2535,193 +2535,188 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="obsolete">Путь к сценарию</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2244"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2343"/>
         <source>Click here to select your QML script</source>
         <translation>Нажмите здесь, чтобы выбрать ваш QML-сценарий</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2237"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2336"/>
         <source>path to your QML file</source>
         <translation>путь к файлу QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="64"/>
-        <source>ownCloud</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="419"/>
+        <location filename="../dialogs/settingsdialog.ui" line="446"/>
         <source>&amp;Use as ownCloud path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="458"/>
+        <location filename="../dialogs/settingsdialog.ui" line="485"/>
         <source>Please select your note folder on your ownCloud server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="485"/>
+        <location filename="../dialogs/settingsdialog.ui" line="512"/>
         <source>ownCloud server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="495"/>
+        <location filename="../dialogs/settingsdialog.ui" line="522"/>
         <source>Path on your ownCloud server:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="502"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2207"/>
+        <location filename="../dialogs/settingsdialog.ui" line="529"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2306"/>
         <source>Name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="536"/>
         <source>Note folder path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="592"/>
+        <location filename="../dialogs/settingsdialog.ui" line="631"/>
         <source>Username:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="627"/>
+        <location filename="../dialogs/settingsdialog.ui" line="666"/>
         <source>Password:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="683"/>
+        <location filename="../dialogs/settingsdialog.ui" line="722"/>
         <source>&amp;Connect to ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="710"/>
+        <location filename="../dialogs/settingsdialog.ui" line="749"/>
         <source>Connection status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="888"/>
+        <location filename="../dialogs/settingsdialog.ui" line="927"/>
         <source>Open your ownCloud server &amp;Apps page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1368"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1431"/>
         <source>&amp;Reload calendar list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1830"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1905"/>
         <source>Font in note markdown view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1840"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1915"/>
         <source>Default font in markdown text edits:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1892"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1967"/>
         <source>Code font in markdown text edits:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1902"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1977"/>
         <source>Code font in note markdown view:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2200"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2299"/>
         <source>Script path:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2227"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2326"/>
         <source>script name</source>
         <translation>имя сценария</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2384"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2495"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation>Разрешить имени файла заметки отличаться от заголовка. &lt;br&gt;Имейте в виду, что ownCloud требует совпадения!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2390"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2501"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Разрешить имени файла заметки отличаться от заголовка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2408"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2519"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Отметьте, если вы хотите игнорировать все внешние изменения при редактировании текущей заметки.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2525"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Игнорировать все внешние изменения текущей заметки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2473"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2584"/>
         <source>App instance</source>
         <translation>Экземпляр приложения</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2479"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2590"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Разрешить только один экземпляр приложения одновременно</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2486"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2597"/>
         <source>You need to restart the application to let these changes take action.</source>
         <translation>Необходимо перезапустить приложение, чтобы изменения вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2525"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2636"/>
         <source>Add a custom file extension</source>
         <translation>Добавьте пользовательское расширение файла</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2539"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2650"/>
         <source>Remove a custom file extension</source>
         <translation>Удалить пользовательское расширение файла</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2578"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2689"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>При добавлении пользовательских расширений просто введите название, вроде «taskpaper».</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2582"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2693"/>
         <source>Text file (txt)</source>
         <translation>Текстовый файл (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2610"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2721"/>
         <source>Path to external editor:</source>
         <translation>Путь ко внешнему редактору:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2679"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2790"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Не показывать диалоговое окно обновления автоматически</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="135"/>
         <source>Debug</source>
         <translation>Отладка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2708"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
         <source>Debug information</source>
         <translation>Отладочная информация</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2731"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2854"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можно &lt;span style=&quot; font-weight:600;&quot;&gt;скопировать и вставить&lt;/span&gt; этот текст (или его части) в &lt;span style=&quot; font-weight:600;&quot;&gt;сообщение о проблеме&lt;/span&gt; на &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;странице проблем QOwnNotes&lt;/a&gt;, если у вас есть &lt;span style=&quot; font-weight:600;&quot;&gt;вопросы или проблемы&lt;/span&gt; с QOwnNotes. Важные данные не выводятся в это информационное поле.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2867"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Сохранить отладочную информацию</translation>
     </message>

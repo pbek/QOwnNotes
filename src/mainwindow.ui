@@ -687,6 +687,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionGet_invloved"/>
     <addaction name="actionOpen_IRC_Channel"/>
     <addaction name="actionReport_problems_or_ideas"/>
+    <addaction name="actionDonate"/>
     <addaction name="separator"/>
     <addaction name="actionAbout_QOwnNotes"/>
    </widget>
@@ -1720,6 +1721,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Show tag pane under navigation pane</string>
+   </property>
+  </action>
+  <action name="actionDonate">
+   <property name="icon">
+    <iconset resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/taxes-finances.svg</normaloff>:/icons/breeze-qownnotes/16x16/taxes-finances.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Donate</string>
    </property>
   </action>
  </widget>

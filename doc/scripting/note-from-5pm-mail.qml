@@ -88,6 +88,14 @@ QtObject {
                     text += "\n\n" + description
                 }
 
+                // add a date headline
+                var m = new Date();
+                var dateString =
+                    ("0" + m.getDate()).slice(-2) + "." +
+                    ("0" + (m.getMonth()+1)).slice(-2) + "." +
+                    (" " + m.getFullYear()).slice(-2);
+                text += "\n\n## " + dateString + "\n\n";
+
                 // create a new note
                 script.createNote(text);
                 break;

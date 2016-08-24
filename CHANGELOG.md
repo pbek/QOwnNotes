@@ -7,6 +7,9 @@
   (for [Issue #302](https://github.com/pbek/QOwnNotes/issues/302))
 - the settings page was redone to get more structure in it
     - there now is a tree on the left to select the proper settings page
+- added a donate menu item to the help menu
+    - since I've been repeatably asked where to deposit donations there
+      now is a donation page at [donations](http://www.qownnotes.org/donate)
 
 ## 16.08.17
 - when creating custom action buttons you now can define a button icon
