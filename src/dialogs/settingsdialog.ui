@@ -41,8 +41,23 @@
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_13">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QTreeWidget" name="settingsTreeWidget">
+          <property name="indentation">
+           <number>5</number>
+          </property>
           <attribute name="headerVisible">
            <bool>false</bool>
           </attribute>
@@ -61,7 +76,7 @@
           </item>
           <item>
            <property name="text">
-            <string>ownCloud</string>
+            <string notr="true">ownCloud</string>
            </property>
            <property name="whatsThis">
             <string notr="true">1</string>
@@ -137,6 +152,18 @@
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_12">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
         <item>
          <widget class="QLabel" name="headlineLabel">
           <property name="text">
@@ -527,6 +554,18 @@
           </widget>
           <widget class="QWidget" name="ownCloudPage">
            <layout class="QGridLayout" name="gridLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="0" column="0">
              <widget class="QGroupBox" name="ownCloudGroupBox">
               <property name="font">
@@ -949,6 +988,18 @@
           </widget>
           <widget class="QWidget" name="networkPage">
            <layout class="QGridLayout" name="gridLayout_17">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="0" column="0" colspan="2">
              <widget class="QGroupBox" name="proxyGroupBox">
               <property name="enabled">
@@ -1293,6 +1344,18 @@
           </widget>
           <widget class="QWidget" name="todoPage">
            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QGroupBox" name="calendarBackendGroupBox">
               <property name="minimumSize">
@@ -1393,6 +1456,18 @@
           </widget>
           <widget class="QWidget" name="interfacePage">
            <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <layout class="QGridLayout" name="gridLayout_29">
               <item row="1" column="1" rowspan="3">
@@ -1989,6 +2064,18 @@
           </widget>
           <widget class="QWidget" name="shortcutsPage">
            <layout class="QGridLayout" name="gridLayout_38">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="1" column="0">
              <widget class="QGroupBox" name="groupBox_15">
               <property name="title">
@@ -2044,6 +2131,18 @@
           </widget>
           <widget class="QWidget" name="scriptingPage">
            <layout class="QGridLayout" name="gridLayout_37">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="0" column="0">
              <widget class="QGroupBox" name="groupBox_16">
               <property name="title">
@@ -2342,6 +2441,18 @@
           </widget>
           <widget class="QWidget" name="generalPage">
            <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0">
               <property name="leftMargin">
@@ -2702,6 +2813,18 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
           </widget>
           <widget class="QWidget" name="debugPage">
            <layout class="QGridLayout" name="gridLayout_9">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <item row="0" column="0">
              <widget class="QGroupBox" name="groupBox_5">
               <property name="title">
