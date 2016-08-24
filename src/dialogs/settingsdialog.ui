@@ -163,6 +163,18 @@
              <iconset theme="edit-guides" resource="../breeze-qownnotes.qrc">
               <normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-guides.svg</iconset>
             </property>
+            <item>
+             <property name="text">
+              <string>Editor font &amp; colors</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">9</string>
+             </property>
+             <property name="icon">
+              <iconset theme="gtk-select-font" resource="../breeze-dark-qownnotes.qrc">
+               <normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -253,6 +265,9 @@
          </item>
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
+           <property name="currentIndex">
+            <number>4</number>
+           </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
              <property name="leftMargin">
@@ -2980,6 +2995,32 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="editorFontColorPage">
+            <layout class="QGridLayout" name="gridLayout">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="1" column="0">
+              <widget class="FontColorWidget" name="editorFontColorWidget">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -2996,9 +3037,16 @@ p, li { white-space: pre-wrap; }
    <extends>QTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
+  <customwidget>
+   <class>FontColorWidget</class>
+   <extends>QFrame</extends>
+   <header location="global">widgets/fontcolorwidget.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -37,7 +37,8 @@ public:
         ShortcutPage,
         ScriptingPage,
         GeneralPage,
-        DebugPage
+        DebugPage,
+        EditorFontColorPage
     };
 
     explicit SettingsDialog(int page = 0,

@@ -97,6 +97,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // initializes the main splitter
     initMainSplitter();
+
+    // expand all items in the settings tree widget
+    ui->settingsTreeWidget->expandAll();
 }
 
 SettingsDialog::~SettingsDialog() {

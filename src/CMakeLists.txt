@@ -29,6 +29,7 @@ qt5_wrap_ui(dialogs/ui_notediffdialog.h notediffdialog.ui)
 qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
 qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
+qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
 qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
         libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
 
@@ -173,6 +174,9 @@ set(SOURCE_FILES
     widgets/notepreviewwidget.h
     widgets/combobox.cpp
     widgets/combobox.h
+    widgets/fontcolorwidget.ui
+    widgets/fontcolorwidget.cpp
+    widgets/fontcolorwidget.h
     utils/misc.cpp
     utils/misc.h
     build_number.h

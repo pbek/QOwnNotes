@@ -80,7 +80,8 @@ SOURCES += main.cpp\
     api/tagapi.cpp \
     dialogs/logdialog.cpp \
     widgets/combobox.cpp \
-    dialogs/sharedialog.cpp
+    dialogs/sharedialog.cpp \
+    widgets/fontcolorwidget.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -134,7 +135,8 @@ HEADERS  += mainwindow.h \
     api/tagapi.h \
     dialogs/logdialog.h \
     widgets/combobox.h \
-    dialogs/sharedialog.h
+    dialogs/sharedialog.h \
+    widgets/fontcolorwidget.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -149,7 +151,8 @@ FORMS    += mainwindow.ui \
     dialogs/welcomedialog.ui \
     dialogs/tagadddialog.ui \
     dialogs/logdialog.ui \
-    dialogs/sharedialog.ui
+    dialogs/sharedialog.ui \
+    widgets/fontcolorwidget.ui
 
 RESOURCES += \
     images.qrc \
