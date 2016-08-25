@@ -40,6 +40,7 @@ set(RESOURCE_FILES
         demonotes.qrc
         images.qrc
         texts.qrc
+        configurations.qrc
         libraries/qmarkdowntextedit/media.qrc
         libraries/qdarkstyle/style.qrc
         libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc

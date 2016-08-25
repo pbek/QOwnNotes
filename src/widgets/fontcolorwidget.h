@@ -18,8 +18,21 @@ public:
 private slots:
     void on_foregroundColorButton_clicked();
 
+    void on_colorSchemeComboBox_currentIndexChanged(int index);
+
 private:
     Ui::FontColorWidget *ui;
+    QStringList _defaultSchemaKeys;
+    QString _currentSchemaKey;
+    bool _currentSchemaIsDefault;
+
+    void addTextTreeWidgetItem(QString text, int id);
+
+    void initTextTreeWidgetItems();
+
+    void initSchemaSelector();
+
+    void updateSchemeEditFrame();
 };
 
 #endif // FONTCOLORWIDGET_H

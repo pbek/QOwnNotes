@@ -162,7 +162,8 @@ RESOURCES += \
     qownnotes.qrc \
     demonotes.qrc \
     libraries/qdarkstyle/style.qrc \
-    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc
+    libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.qrc \
+    configurations.qrc
 
 include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
