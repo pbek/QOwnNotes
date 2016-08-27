@@ -84,5 +84,7 @@
         <file alias="16x16/configure-shortcuts.svg">icons/breeze-dark-qownnotes/16x16/configure-shortcuts.svg</file>
         <file alias="16x16/folder-cloud.svg">icons/breeze-dark-qownnotes/16x16/folder-cloud.svg</file>
         <file alias="16x16/edit-guides.svg">icons/breeze-dark-qownnotes/16x16/edit-guides.svg</file>
+        <file alias="16x16/document-import.svg">icons/breeze-dark-qownnotes/16x16/document-import.svg</file>
+        <file alias="16x16/document-export.svg">icons/breeze-dark-qownnotes/16x16/document-export.svg</file>
     </qresource>
 </RCC>

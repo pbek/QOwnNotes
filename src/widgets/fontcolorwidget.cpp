@@ -2,6 +2,8 @@
 #include <QDebug>
 #include <QTreeWidgetItem>
 #include <QSettings>
+#include <QtWidgets/QInputDialog>
+#include <QUuid>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h"
@@ -29,35 +31,75 @@ void FontColorWidget::initSchemaSelector() {
     //
     QSettings schemaSettings(":/configurations/schemes.conf",
                              QSettings::IniFormat);
-    QStringList defaultSchemes =
-            schemaSettings.value("Editor/DefaultColorSchemes")
-                    .toStringList();
+    _defaultSchemaKeys = schemaSettings.value("Editor/DefaultColorSchemes")
+            .toStringList();
 
-    _defaultSchemaKeys.clear();
-    Q_FOREACH(QString schemaKey, defaultSchemes) {
-            QString name = schemaSettings.value(schemaKey + "/Name").toString();
-            _defaultSchemaKeys << schemaKey;
+    QSettings settings;
+    QString currentSchemaKey = settings.value("Editor/CurrentSchemaKey",
+                                       _defaultSchemaKeys.length() > 0 ?
+                                       _defaultSchemaKeys[0] : "").toString();
+    int index = 0;
+    int currentIndex = 0;
 
+    Q_FOREACH(QString schemaKey, _defaultSchemaKeys) {
+            schemaSettings.beginGroup(schemaKey);
+            QString name = schemaSettings.value("Name").toString();
             ui->colorSchemeComboBox->addItem(name, schemaKey);
+            schemaSettings.endGroup();
+
+            if (currentSchemaKey == schemaKey) {
+                currentIndex = index;
+            }
+            index++;
     }
+
+    //
+    // load the custom schemes
+    //
+    QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
+    Q_FOREACH(QString schemaKey, schemes) {
+            settings.beginGroup(schemaKey);
+            QString name = settings.value("Name").toString();
+            ui->colorSchemeComboBox->addItem(name, schemaKey);
+            schemaSettings.endGroup();
+
+            if (currentSchemaKey == schemaKey) {
+                currentIndex = index;
+            }
+            index++;
+    }
+
+    // set the current color schema
+    ui->colorSchemeComboBox->setCurrentIndex(currentIndex);
 }
 
 FontColorWidget::~FontColorWidget() {
     delete ui;
 }
 
+/**
+ * Sets a new foreground color
+ */
 void FontColorWidget::on_foregroundColorButton_clicked() {
-    QColor color = QColorDialog::getColor();
+    QString key = "ForegroundColor";
+    QColor color = getSchemaValue(textSettingsKey(key)).value<QColor>();
+    color = QColorDialog::getColor(color);
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none}").arg(color.name()));
-    qDebug() << __func__ << " - 'ui->foregroundColorButton': "
-             << ui->foregroundColorButton->styleSheet();
-    QSettings settings;
-    settings.setValue("TempColor", color);
+    setSchemaValue(textSettingsKey(key), color);
 }
 
-//void FontColorWidget::createDefaultSetting(int schemeId, ) {
-//}
+/**
+ * Sets a new background color
+ */
+void FontColorWidget::on_backgroundColorButton_clicked() {
+    QString key = "BackgroundColor";
+    QColor color = getSchemaValue(textSettingsKey(key)).value<QColor>();
+    color = QColorDialog::getColor(color);
+    ui->backgroundColorButton->setStyleSheet(
+            QString("* {background: %1; border: none}").arg(color.name()));
+    setSchemaValue(textSettingsKey(key), color);
+}
 
 /**
  * Initializes the text tree widget items
@@ -102,17 +144,73 @@ void FontColorWidget::addTextTreeWidgetItem(QString text, int id) {
     ui->textTreeWidget->addTopLevelItem(item);
 }
 
+/**
+ * Updates the schema edit frame for the currently selected text item
+ */
 void FontColorWidget::updateSchemeEditFrame() {
-    QSettings *settings = _currentSchemaIsDefault ?
-        new QSettings() :
-        new QSettings(":/configurations/schemes.conf", QSettings::IniFormat);
-
-    QColor color =
-            settings->value(
-                    _currentSchemaKey + "/Text_" + "-1" +
-                                    "_ForegroundColor").value<QColor>();
+    QColor color = getSchemaValue(textSettingsKey(
+            "ForegroundColor")).value<QColor>();
     ui->foregroundColorButton->setStyleSheet(
-            QString("* {background: %1; border: none}").arg(color.name()));
+            QString("* {background: %1; border: none;}").arg(color.name()));
+
+    color = getSchemaValue(textSettingsKey(
+            "BackgroundColor")).value<QColor>();
+    ui->backgroundColorButton->setStyleSheet(
+            QString("* {background: %1; border: none;}").arg(color.name()));
+}
+
+/**
+ * Returns the text settings key for the currently selected text
+ *
+ * @param key
+ * @return
+ */
+QString FontColorWidget::textSettingsKey(QString key) {
+    QTreeWidgetItem* item = ui->textTreeWidget->currentItem();
+    int index = item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
+    return key + "_" + QString::number(index);
+}
+
+/**
+ * Returns a value of the current schema
+ *
+ * @param key
+ * @param defaultValue
+ * @return
+ */
+QVariant FontColorWidget::getSchemaValue(QString key, QVariant defaultValue) {
+    QSettings *settings = getSchemaSettings();
+    settings->beginGroup(_currentSchemaKey);
+    return settings->value(key, defaultValue);
+}
+
+/**
+ * Sets a schema value
+ *
+ * @param schemaKey
+ * @param key
+ * @param value
+ */
+void FontColorWidget::setSchemaValue(QString key, QVariant value,
+                                     QString schemaKey) {
+    if (schemaKey.isEmpty()) {
+        schemaKey = _currentSchemaKey;
+    }
+
+    QSettings(settings);
+    settings.beginGroup(schemaKey);
+    return settings.setValue(key, value);
+}
+
+/**
+ * Returns the current schema settings
+ *
+ * @return
+ */
+QSettings* FontColorWidget::getSchemaSettings() {
+    return _currentSchemaIsDefault ?
+        new QSettings(":/configurations/schemes.conf", QSettings::IniFormat) :
+        new QSettings();
 }
 
 /**
@@ -125,9 +223,63 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
     _currentSchemaIsDefault = _defaultSchemaKeys.contains(_currentSchemaKey);
 
     ui->deleteSchemeButton->setEnabled(!_currentSchemaIsDefault);
-//    ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
+    ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
-//    updateSchemeEditFrame();
+    QSettings settings;
+    settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
+
+    updateSchemeEditFrame();
 }
 
 // TODO(pbek): updateSchemeEditFrame() when selecting a text
+
+void FontColorWidget::on_textTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(current);
+    Q_UNUSED(previous);
+    updateSchemeEditFrame();
+}
+
+/**
+ * Copies a color schema
+ */
+void FontColorWidget::on_copySchemeButton_clicked() {
+    // ask the user for a new schema name
+    QString name = QInputDialog::getText(this, tr("Copy color schema"),
+                          tr("Color schema name"), QLineEdit::Normal,
+                          ui->colorSchemeComboBox->currentText() + " (" +
+                                  tr("Copy") + ")");
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    QSettings *schemaSettings = getSchemaSettings();
+    schemaSettings->beginGroup(_currentSchemaKey);
+
+    QStringList keys = schemaSettings->allKeys();
+    QString uuid = QUuid::createUuid().toString();
+    uuid.replace("{", "").replace("}", "");
+    QString schemaKey = "EditorColorSchema-" + uuid;
+
+    // store the new color schema data
+    Q_FOREACH(QString key, keys) {
+            QVariant value = key == "Name" ?
+                             QVariant(name) : getSchemaValue(key);
+            setSchemaValue(key, value, schemaKey);
+        }
+
+    // add the new color schema to the color schemes list in the settings
+    QSettings settings;
+    QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
+    schemes << schemaKey;
+    settings.setValue("Editor/ColorSchemes", schemes);
+
+    // reload the schema selector
+    initSchemaSelector();
+
+    // set the index to the (new) last item
+    ui->colorSchemeComboBox->setCurrentIndex(
+            ui->colorSchemeComboBox->count() - 1);
+}
+

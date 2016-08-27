@@ -2,6 +2,8 @@
 #define FONTCOLORWIDGET_H
 
 #include <QFrame>
+#include <QTreeWidgetItem>
+#include <QSettings>
 
 namespace Ui {
 class FontColorWidget;
@@ -20,6 +22,12 @@ private slots:
 
     void on_colorSchemeComboBox_currentIndexChanged(int index);
 
+    void on_textTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
+    void on_copySchemeButton_clicked();
+
+    void on_backgroundColorButton_clicked();
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
@@ -33,6 +41,14 @@ private:
     void initSchemaSelector();
 
     void updateSchemeEditFrame();
+
+    QVariant getSchemaValue(QString key, QVariant defaultValue = QVariant());
+
+    QSettings* getSchemaSettings();
+
+    void setSchemaValue(QString key, QVariant value, QString schemaKey = "");
+
+    QString textSettingsKey(QString key);
 };
 
 #endif // FONTCOLORWIDGET_H

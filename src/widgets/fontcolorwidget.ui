@@ -104,11 +104,14 @@
    <item row="1" column="0">
     <widget class="QGroupBox" name="groupBox_19">
      <property name="title">
-      <string>Color scheme</string>
+      <string>Color schema</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <item row="0" column="2">
        <widget class="QPushButton" name="deleteSchemeButton">
+        <property name="toolTip">
+         <string>Delete schema</string>
+        </property>
         <property name="text">
          <string>Delete</string>
         </property>
@@ -120,6 +123,9 @@
       </item>
       <item row="0" column="1">
        <widget class="QPushButton" name="copySchemeButton">
+        <property name="toolTip">
+         <string>Copy schema</string>
+        </property>
         <property name="text">
          <string>Copy</string>
         </property>
@@ -147,7 +153,21 @@
         </column>
        </widget>
       </item>
-      <item row="1" column="1" colspan="2">
+      <item row="0" column="3">
+       <widget class="QPushButton" name="exportSchemeButton">
+        <property name="toolTip">
+         <string>Export schema</string>
+        </property>
+        <property name="text">
+         <string>Export</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-export" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/document-export.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-export.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="3">
        <widget class="QFrame" name="schemeEditFrame">
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>
