@@ -1,5 +1,18 @@
-#ifndef FONTCOLORWIDGET_H
-#define FONTCOLORWIDGET_H
+/*
+ * Copyright (C) 2016 Patrizio Bekerle -- http://www.bekerle.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ */
+
+#pragma once
 
 #include <QFrame>
 #include <QTreeWidgetItem>
@@ -28,6 +41,10 @@ private slots:
 
     void on_backgroundColorButton_clicked();
 
+    void on_foregroundColorCheckBox_toggled(bool checked);
+
+    void on_backgroundColorCheckBox_toggled(bool checked);
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
@@ -42,13 +59,13 @@ private:
 
     void updateSchemeEditFrame();
 
-    QVariant getSchemaValue(QString key, QVariant defaultValue = QVariant());
-
-    QSettings* getSchemaSettings();
-
     void setSchemaValue(QString key, QVariant value, QString schemaKey = "");
 
-    QString textSettingsKey(QString key);
-};
+    QString textSettingsKey(QString key, QTreeWidgetItem *item = Q_NULLPTR);
 
-#endif // FONTCOLORWIDGET_H
+    void updateTextItem(QTreeWidgetItem *item = Q_NULLPTR);
+
+    void updateForegroundColorCheckBox(bool checked, bool store = false);
+
+    void updateBackgroundColorCheckBox(bool checked, bool store = false);
+};

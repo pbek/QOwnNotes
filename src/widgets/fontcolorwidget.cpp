@@ -1,11 +1,27 @@
+/*
+ * Copyright (C) 2016 Patrizio Bekerle -- http://www.bekerle.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 2 of the License.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ */
+
 #include <QColorDialog>
 #include <QDebug>
 #include <QTreeWidgetItem>
 #include <QSettings>
 #include <QtWidgets/QInputDialog>
 #include <QUuid>
+#include <QTextEdit>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
+#include "utils/schema.h"
 #include "libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h"
 
 FontColorWidget::FontColorWidget(QWidget *parent) :
@@ -82,11 +98,15 @@ FontColorWidget::~FontColorWidget() {
  */
 void FontColorWidget::on_foregroundColorButton_clicked() {
     QString key = "ForegroundColor";
-    QColor color = getSchemaValue(textSettingsKey(key)).value<QColor>();
+    QColor color = Utils::Schema::getSchemaValue(
+            textSettingsKey(key)).value<QColor>();
     color = QColorDialog::getColor(color);
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none}").arg(color.name()));
     setSchemaValue(textSettingsKey(key), color);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
 }
 
 /**
@@ -94,11 +114,15 @@ void FontColorWidget::on_foregroundColorButton_clicked() {
  */
 void FontColorWidget::on_backgroundColorButton_clicked() {
     QString key = "BackgroundColor";
-    QColor color = getSchemaValue(textSettingsKey(key)).value<QColor>();
+    QColor color = Utils::Schema::getSchemaValue(
+            textSettingsKey(key)).value<QColor>();
     color = QColorDialog::getColor(color);
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none}").arg(color.name()));
     setSchemaValue(textSettingsKey(key), color);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
 }
 
 /**
@@ -141,6 +165,10 @@ void FontColorWidget::addTextTreeWidgetItem(QString text, int id) {
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, text);
     item->setData(0, Qt::UserRole, id);
+
+    // update the styling of the text tree widget item
+    updateTextItem(item);
+
     ui->textTreeWidget->addTopLevelItem(item);
 }
 
@@ -148,13 +176,32 @@ void FontColorWidget::addTextTreeWidgetItem(QString text, int id) {
  * Updates the schema edit frame for the currently selected text item
  */
 void FontColorWidget::updateSchemeEditFrame() {
-    QColor color = getSchemaValue(textSettingsKey(
-            "ForegroundColor")).value<QColor>();
+    QTreeWidgetItem *item = ui->textTreeWidget->currentItem();
+
+    if (item == Q_NULLPTR) {
+        // select a current item if none was selected
+        ui->textTreeWidget->setCurrentItem(ui->textTreeWidget->topLevelItem(0));
+        return;
+    }
+
+    // check if we are not viewing a default schema
+    ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
+
+    bool enabled = Utils::Schema::getSchemaValue(
+            textSettingsKey("ForegroundColorEnabled")).toBool();
+    updateForegroundColorCheckBox(enabled);
+
+    QColor color = Utils::Schema::getSchemaValue(
+            textSettingsKey("ForegroundColor")).value<QColor>();
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 
-    color = getSchemaValue(textSettingsKey(
-            "BackgroundColor")).value<QColor>();
+    enabled = Utils::Schema::getSchemaValue(
+            textSettingsKey("BackgroundColorEnabled")).toBool();
+    updateBackgroundColorCheckBox(enabled);
+
+    color = Utils::Schema::getSchemaValue(
+            textSettingsKey("BackgroundColor")).value<QColor>();
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 }
@@ -163,25 +210,16 @@ void FontColorWidget::updateSchemeEditFrame() {
  * Returns the text settings key for the currently selected text
  *
  * @param key
+ * @param item
  * @return
  */
-QString FontColorWidget::textSettingsKey(QString key) {
-    QTreeWidgetItem* item = ui->textTreeWidget->currentItem();
-    int index = item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
-    return key + "_" + QString::number(index);
-}
+QString FontColorWidget::textSettingsKey(QString key, QTreeWidgetItem *item) {
+    if (item == Q_NULLPTR) {
+        item = ui->textTreeWidget->currentItem();
+    }
 
-/**
- * Returns a value of the current schema
- *
- * @param key
- * @param defaultValue
- * @return
- */
-QVariant FontColorWidget::getSchemaValue(QString key, QVariant defaultValue) {
-    QSettings *settings = getSchemaSettings();
-    settings->beginGroup(_currentSchemaKey);
-    return settings->value(key, defaultValue);
+    int index = item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
+    return Utils::Schema::textSettingsKey(key, index);
 }
 
 /**
@@ -203,17 +241,6 @@ void FontColorWidget::setSchemaValue(QString key, QVariant value,
 }
 
 /**
- * Returns the current schema settings
- *
- * @return
- */
-QSettings* FontColorWidget::getSchemaSettings() {
-    return _currentSchemaIsDefault ?
-        new QSettings(":/configurations/schemes.conf", QSettings::IniFormat) :
-        new QSettings();
-}
-
-/**
  * Selects the current scheme
  *
  * @param index
@@ -229,15 +256,71 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
     settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
 
     updateSchemeEditFrame();
+
+    // update all text items
+    for (int i = 0; i < ui->textTreeWidget->topLevelItemCount(); i++) {
+        QTreeWidgetItem *item = ui->textTreeWidget->topLevelItem(i);
+        updateTextItem(item);
+    }
 }
 
-// TODO(pbek): updateSchemeEditFrame() when selecting a text
-
+/**
+ * Updates the styling of certain items when the current text tree widget
+ * item changes
+ *
+ * @param current
+ * @param previous
+ */
 void FontColorWidget::on_textTreeWidget_currentItemChanged(
         QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(current);
     Q_UNUSED(previous);
+
+    // update the schema edit frame for the current item
     updateSchemeEditFrame();
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+}
+
+/**
+ * Updates the styling of a text tree widget item
+ * @param item
+ */
+void FontColorWidget::updateTextItem(QTreeWidgetItem *item) {
+    if (item == Q_NULLPTR) {
+        item = ui->textTreeWidget->currentItem();
+    }
+
+    if (item == Q_NULLPTR) {
+        return;
+    }
+
+    QTextEdit defaultItem;
+
+    // set the foreground color
+    bool enabled = Utils::Schema::getSchemaValue(
+            textSettingsKey("ForegroundColorEnabled", item)).toBool();
+    QColor color = enabled ? Utils::Schema::getSchemaValue(
+            textSettingsKey("ForegroundColor", item)).value<QColor>() :
+                   defaultItem.textColor();
+    QBrush brush = item->foreground(0);
+    brush.setColor(color);
+    item->setForeground(0, brush);
+
+    // set the background color
+    enabled = Utils::Schema::getSchemaValue(
+            textSettingsKey("BackgroundColorEnabled", item)).toBool();
+    color = enabled ? Utils::Schema::getSchemaValue(
+            textSettingsKey("BackgroundColor", item)).value<QColor>() :
+                   QColor(Qt::white);
+    qDebug() << __func__ << " - 'BackgroundColor': " << color;
+    brush = item->background(0);
+    brush.setColor(color);
+    brush.setStyle(Qt::SolidPattern);
+    item->setBackground(0, brush);
+
+    // TODO(pbek): load foreground and background color with Utils::Schema::getDefaultTextSchemaValue
 }
 
 /**
@@ -254,7 +337,7 @@ void FontColorWidget::on_copySchemeButton_clicked() {
         return;
     }
 
-    QSettings *schemaSettings = getSchemaSettings();
+    QSettings *schemaSettings = Utils::Schema::getSchemaSettings();
     schemaSettings->beginGroup(_currentSchemaKey);
 
     QStringList keys = schemaSettings->allKeys();
@@ -265,7 +348,7 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     // store the new color schema data
     Q_FOREACH(QString key, keys) {
             QVariant value = key == "Name" ?
-                             QVariant(name) : getSchemaValue(key);
+                             QVariant(name) : Utils::Schema::getSchemaValue(key);
             setSchemaValue(key, value, schemaKey);
         }
 
@@ -283,3 +366,40 @@ void FontColorWidget::on_copySchemeButton_clicked() {
             ui->colorSchemeComboBox->count() - 1);
 }
 
+void FontColorWidget::on_foregroundColorCheckBox_toggled(bool checked) {
+    updateForegroundColorCheckBox(checked, true);
+}
+
+void FontColorWidget::updateForegroundColorCheckBox(bool checked, bool store) {
+    const QSignalBlocker blocker(ui->foregroundColorCheckBox);
+    Q_UNUSED(blocker);
+
+    ui->foregroundColorCheckBox->setChecked(checked);
+    ui->foregroundColorButton->setEnabled(checked);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+
+    if (store && !_currentSchemaIsDefault) {
+        setSchemaValue(textSettingsKey("ForegroundColorEnabled"), checked);
+    }
+}
+
+void FontColorWidget::on_backgroundColorCheckBox_toggled(bool checked) {
+    updateBackgroundColorCheckBox(checked, true);
+}
+
+void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
+    const QSignalBlocker blocker(ui->backgroundColorCheckBox);
+    Q_UNUSED(blocker);
+
+    ui->backgroundColorCheckBox->setChecked(checked);
+    ui->backgroundColorButton->setEnabled(checked);
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+
+    if (store && !_currentSchemaIsDefault) {
+        setSchemaValue(textSettingsKey("BackgroundColorEnabled"), checked);
+    }
+}

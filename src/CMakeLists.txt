@@ -180,6 +180,8 @@ set(SOURCE_FILES
     widgets/fontcolorwidget.h
     utils/misc.cpp
     utils/misc.h
+    utils/schema.cpp
+    utils/schema.h
     build_number.h
     main.cpp
     mainwindow.cpp
