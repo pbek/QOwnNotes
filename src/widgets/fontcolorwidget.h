@@ -70,4 +70,10 @@ private:
     void updateForegroundColorCheckBox(bool checked, bool store = false);
 
     void updateBackgroundColorCheckBox(bool checked, bool store = false);
+
+    int textSettingsIndex(QTreeWidgetItem *item = Q_NULLPTR);
+
+    void updateAllTextItems();
+
+    void updateTextItems(int index);
 };

@@ -18,9 +18,12 @@
 #include <QStringList>
 #include <QSettings>
 #include <QVariant>
+#include <QTextCharFormat>
 
 namespace Utils {
     namespace Schema {
+        const int TextIndex = -1;
+
         QStringList defaultSchemaKeys();
 
         QString currentSchemaKey();
@@ -34,6 +37,13 @@ namespace Utils {
 
         QString textSettingsKey(QString key, int index);
 
-        QVariant getDefaultTextSchemaValue(QString key, QVariant defaultValue);
+        QVariant getDefaultTextSchemaValue(QString key,
+                                           QVariant defaultValue = QVariant());
+
+        QColor getForegroundColor(int index);
+
+        QColor getBackgroundColor(int index);
+
+        void setFormatColors(int index, QTextCharFormat &format);
     }
 }

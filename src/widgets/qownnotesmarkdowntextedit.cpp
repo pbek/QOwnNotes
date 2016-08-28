@@ -4,6 +4,7 @@
 #include <QRegularExpression>
 #include <QMimeData>
 #include <QFontDatabase>
+#include <utils/schema.h>
 #include "qownnotesmarkdowntextedit.h"
 
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
@@ -48,61 +49,56 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
 
     QTextCharFormat headers;
-    headers.setForeground(QBrush(darkModeColors ?
-                                 QColor(158, 182, 255) : QColor(0, 49, 110)));
-
-    if (!darkModeColors) {
-        headers.setBackground(QBrush(QColor(235, 235, 240)));
-    }
     headers.setFontWeight(QFont::Bold);
     headers.setFontPointSize(defaultFontSize * 1.2);
+    Utils::Schema::setFormatColors(pmh_H1, headers);
     STY(pmh_H1, headers);
 
     headers.setFontPointSize(defaultFontSize * 1.1);
+    Utils::Schema::setFormatColors(pmh_H2, headers);
     STY(pmh_H2, headers);
 
     headers.setFontPointSize(defaultFontSize);
+    Utils::Schema::setFormatColors(pmh_H3, headers);
     STY(pmh_H3, headers);
+    Utils::Schema::setFormatColors(pmh_H4, headers);
     STY(pmh_H4, headers);
+    Utils::Schema::setFormatColors(pmh_H5, headers);
     STY(pmh_H5, headers);
+    Utils::Schema::setFormatColors(pmh_H6, headers);
     STY(pmh_H6, headers);
 
     QTextCharFormat hrule;
-    hrule.setForeground(QBrush(Qt::darkGray));
-    hrule.setBackground(QBrush(Qt::lightGray));
+    Utils::Schema::setFormatColors(pmh_HRULE, hrule);
     STY(pmh_HRULE, hrule);
 
     /* <ul> */
     QTextCharFormat list;
-    list.setForeground(QBrush(darkModeColors ? Qt::yellow : QColor(163, 0, 123)));
+    Utils::Schema::setFormatColors(pmh_LIST_BULLET, list);
     STY(pmh_LIST_BULLET, list);
+    Utils::Schema::setFormatColors(pmh_LIST_ENUMERATOR, list);
     STY(pmh_LIST_ENUMERATOR, list);
 
     /* <a href> */
     QTextCharFormat link;
-    link.setForeground(QBrush(QColor(252, 126, 0)));
-    link.setBackground(QBrush(darkModeColors ?
-                              QColor(51, 51, 51) : QColor(255, 242, 228)));
+    Utils::Schema::setFormatColors(pmh_LINK, link);
     STY(pmh_LINK, link);
+    Utils::Schema::setFormatColors(pmh_AUTO_LINK_URL, link);
     STY(pmh_AUTO_LINK_URL, link);
+    Utils::Schema::setFormatColors(pmh_AUTO_LINK_EMAIL, link);
     STY(pmh_AUTO_LINK_EMAIL, link);
 
     /* <img> */
     QTextCharFormat image;
-    image.setForeground(QBrush(QColor(0, 191, 0)));
-    image.setBackground(QBrush(QColor(228, 255, 228)));
+    Utils::Schema::setFormatColors(pmh_IMAGE, image);
     STY(pmh_IMAGE, image);
 
     QTextCharFormat ref;
-    ref.setForeground(QBrush(QColor(213, 178, 178)));
+    Utils::Schema::setFormatColors(pmh_REFERENCE, ref);
     STY(pmh_REFERENCE, ref);
 
     /* <pre> */
     QTextCharFormat code;
-    code.setForeground(QBrush(darkModeColors ? Qt::green : Qt::darkGreen));
-    code.setBackground(QBrush(darkModeColors ?
-                              QColor(51, 51, 51) : QColor(226, 231, 226)));
-
     QFont codeFont = this->font();
 
     fontString = settings.value(
@@ -121,30 +117,42 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     code.setFont(codeFont);
 
+    Utils::Schema::setFormatColors(pmh_CODE, code);
     STY(pmh_CODE, code);
+    Utils::Schema::setFormatColors(pmh_VERBATIM, code);
     STY(pmh_VERBATIM, code);
 
     /* <em> */
     QTextCharFormat emph;
-    emph.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) : QColor(0, 87, 174)));
     emph.setFontItalic(true);
+    Utils::Schema::setFormatColors(pmh_EMPH, emph);
     STY(pmh_EMPH, emph);
 
     /* <strong> */
     QTextCharFormat strong;
-    strong.setForeground(QBrush(darkModeColors ?
-                              QColor(158, 182, 255) : QColor(0, 66, 138)));
     strong.setFontWeight(QFont::Bold);
+    Utils::Schema::setFormatColors(pmh_STRONG, strong);
     STY(pmh_STRONG, strong);
 
     QTextCharFormat comment;
-    comment.setForeground(QBrush(Qt::gray));
+    Utils::Schema::setFormatColors(pmh_COMMENT, comment);
     STY(pmh_COMMENT, comment);
 
     QTextCharFormat blockquote;
-    blockquote.setForeground(QBrush(Qt::darkRed));
+    Utils::Schema::setFormatColors(pmh_BLOCKQUOTE, blockquote);
     STY(pmh_BLOCKQUOTE, blockquote);
+
+    QTextCharFormat html;
+    Utils::Schema::setFormatColors(pmh_HTML, html);
+    STY(pmh_HTML, html);
+    Utils::Schema::setFormatColors(pmh_HTML_ENTITY, html);
+    STY(pmh_HTML_ENTITY, html);
+    Utils::Schema::setFormatColors(pmh_HTMLBLOCK, html);
+    STY(pmh_HTMLBLOCK, html);
+
+    QTextCharFormat note;
+    Utils::Schema::setFormatColors(pmh_NOTE, note);
+    STY(pmh_NOTE, note);
 
     _highlighter->setStyles(*styles);
 }

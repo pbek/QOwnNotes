@@ -18,6 +18,7 @@
 #include <QDebug>
 #include <QSettings>
 #include <QStringList>
+#include <QTextEdit>
 #include "schema.h"
 
 
@@ -101,5 +102,84 @@ QString Utils::Schema::textSettingsKey(QString key, int index) {
 QVariant Utils::Schema::getDefaultTextSchemaValue(
         QString key, QVariant defaultValue) {
     return Utils::Schema::getSchemaValue(
-            Utils::Schema::textSettingsKey(key, -1), defaultValue);
+            Utils::Schema::textSettingsKey(key, TextIndex), defaultValue);
+}
+
+/**
+ * Trys to fetch the correct foreground color for an index
+ *
+ * @param index
+ * @return
+ */
+QColor Utils::Schema::getForegroundColor(int index) {
+    // get the foreground color
+    bool enabled = getSchemaValue(
+            textSettingsKey("ForegroundColorEnabled", index)).toBool();
+    QColor color;
+
+    // if the foreground color is enabled try to fetch it
+    if (enabled) {
+        color = getSchemaValue(
+                textSettingsKey("ForegroundColor", index)).value<QColor>();
+    }
+
+    // if the color was not valid, try to fetch the color for "Text"
+    if (!color.isValid() && (index >= 0)) {
+        color = getForegroundColor(TextIndex);
+    }
+
+    // if the color still was not valid, try to fetch the color from a QTextEdit
+    if (!color.isValid()) {
+        QTextEdit textEdit;
+        color = textEdit.textColor();
+    }
+
+    // if the color still was not valid, use black
+    if (!color.isValid()) {
+        color = QColor(Qt::black);
+    }
+
+    return color;
+}
+
+/**
+ * Trys to fetch the correct background color for an index
+ *
+ * @param index
+ * @return
+ */
+QColor Utils::Schema::getBackgroundColor(int index) {
+    // get the foreground color
+    bool enabled = getSchemaValue(
+            textSettingsKey("BackgroundColorEnabled", index)).toBool();
+    QColor color;
+
+    // if the foreground color is enabled try to fetch it
+    if (enabled) {
+        color = getSchemaValue(
+                textSettingsKey("BackgroundColor", index)).value<QColor>();
+    }
+
+    // if the color was not valid, try to fetch the color for "Text"
+    if (!color.isValid() && (index >= 0)) {
+        color = getBackgroundColor(TextIndex);
+    }
+
+    // if the color still was not valid, use black
+    if (!color.isValid()) {
+        color = QColor(Qt::white);
+    }
+
+    return color;
+}
+
+/**
+ * Sets the foreground and background color for an format
+ *
+ * @param format
+ * @param index
+ */
+void Utils::Schema::setFormatColors(int index, QTextCharFormat &format) {
+    format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));
+    format.setBackground(QBrush(Utils::Schema::getBackgroundColor(index)));
 }

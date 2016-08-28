@@ -67,6 +67,7 @@ void FontColorWidget::initSchemaSelector() {
             if (currentSchemaKey == schemaKey) {
                 currentIndex = index;
             }
+
             index++;
     }
 
@@ -78,11 +79,12 @@ void FontColorWidget::initSchemaSelector() {
             settings.beginGroup(schemaKey);
             QString name = settings.value("Name").toString();
             ui->colorSchemeComboBox->addItem(name, schemaKey);
-            schemaSettings.endGroup();
+            settings.endGroup();
 
             if (currentSchemaKey == schemaKey) {
                 currentIndex = index;
             }
+
             index++;
     }
 
@@ -98,32 +100,57 @@ FontColorWidget::~FontColorWidget() {
  * Sets a new foreground color
  */
 void FontColorWidget::on_foregroundColorButton_clicked() {
-    QString key = "ForegroundColor";
-    QColor color = Utils::Schema::getSchemaValue(
-            textSettingsKey(key)).value<QColor>();
-    color = QColorDialog::getColor(color);
+    int index = textSettingsIndex();
+    QColor color = Utils::Schema::getForegroundColor(index);
+    QColor newColor = QColorDialog::getColor(color);
+
+    if (newColor.isValid()) {
+        color = newColor;
+    }
+
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none}").arg(color.name()));
-    setSchemaValue(textSettingsKey(key), color);
 
-    // update the styling of the current text tree widget item
-    updateTextItem();
+    setSchemaValue(textSettingsKey("ForegroundColor"), color);
+
+    // update the current or all text items, depending on the index
+    updateTextItems(index);
 }
 
 /**
  * Sets a new background color
  */
 void FontColorWidget::on_backgroundColorButton_clicked() {
-    QString key = "BackgroundColor";
-    QColor color = Utils::Schema::getSchemaValue(
-            textSettingsKey(key)).value<QColor>();
-    color = QColorDialog::getColor(color);
+    int index = textSettingsIndex();
+    QColor color = Utils::Schema::getBackgroundColor(index);
+    QColor newColor = QColorDialog::getColor(color);
+
+    if (newColor.isValid()) {
+        color = newColor;
+    }
+
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none}").arg(color.name()));
-    setSchemaValue(textSettingsKey(key), color);
 
-    // update the styling of the current text tree widget item
-    updateTextItem();
+    setSchemaValue(textSettingsKey("BackgroundColor"), color);
+
+    // update the current or all text items, depending on the index
+    updateTextItems(index);
+}
+
+/**
+ * Updates the current or all text items, depending on the index
+ *
+ * @param index
+ */
+void FontColorWidget::updateTextItems(int index) {
+    if (index < 0) {
+        // update all text items
+        updateAllTextItems();
+    } else {
+        // update the styling of the current text tree widget item
+        updateTextItem();
+    }
 }
 
 /**
@@ -132,7 +159,7 @@ void FontColorWidget::on_backgroundColorButton_clicked() {
  * @see src/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h
  */
 void FontColorWidget::initTextTreeWidgetItems() {
-    addTextTreeWidgetItem(tr("Text"), -1);
+    addTextTreeWidgetItem(tr("Text"), Utils::Schema::TextIndex);
     addTextTreeWidgetItem(tr("Explicit link"), pmh_LINK);
     addTextTreeWidgetItem(tr("Implicit URL link"), pmh_AUTO_LINK_URL);
     addTextTreeWidgetItem(tr("Implicit email link"), pmh_AUTO_LINK_EMAIL);
@@ -192,8 +219,7 @@ void FontColorWidget::updateSchemeEditFrame() {
             textSettingsKey("ForegroundColorEnabled")).toBool();
     updateForegroundColorCheckBox(enabled);
 
-    QColor color = Utils::Schema::getSchemaValue(
-            textSettingsKey("ForegroundColor")).value<QColor>();
+    QColor color = Utils::Schema::getForegroundColor(textSettingsIndex());
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 
@@ -201,8 +227,7 @@ void FontColorWidget::updateSchemeEditFrame() {
             textSettingsKey("BackgroundColorEnabled")).toBool();
     updateBackgroundColorCheckBox(enabled);
 
-    color = Utils::Schema::getSchemaValue(
-            textSettingsKey("BackgroundColor")).value<QColor>();
+    color = Utils::Schema::getBackgroundColor(textSettingsIndex());
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 }
@@ -215,12 +240,21 @@ void FontColorWidget::updateSchemeEditFrame() {
  * @return
  */
 QString FontColorWidget::textSettingsKey(QString key, QTreeWidgetItem *item) {
+    return Utils::Schema::textSettingsKey(key, textSettingsIndex(item));
+}
+
+/**
+ * Returns the text settings index for the currently selected text
+ *
+ * @param item
+ * @return
+ */
+int FontColorWidget::textSettingsIndex(QTreeWidgetItem *item) {
     if (item == Q_NULLPTR) {
         item = ui->textTreeWidget->currentItem();
     }
 
-    int index = item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
-    return Utils::Schema::textSettingsKey(key, index);
+    return item == Q_NULLPTR ? -1000 : item->data(0, Qt::UserRole).toInt();
 }
 
 /**
@@ -258,6 +292,14 @@ void FontColorWidget::on_colorSchemeComboBox_currentIndexChanged(int index) {
 
     updateSchemeEditFrame();
 
+    // update all text items
+    updateAllTextItems();
+}
+
+/**
+ * Updates all text items
+ */
+void FontColorWidget::updateAllTextItems() {
     // update all text items
     for (int i = 0; i < ui->textTreeWidget->topLevelItemCount(); i++) {
         QTreeWidgetItem *item = ui->textTreeWidget->topLevelItem(i);
@@ -297,31 +339,19 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem *item) {
         return;
     }
 
-    QTextEdit defaultItem;
-
     // set the foreground color
-    bool enabled = Utils::Schema::getSchemaValue(
-            textSettingsKey("ForegroundColorEnabled", item)).toBool();
-    QColor color = enabled ? Utils::Schema::getSchemaValue(
-            textSettingsKey("ForegroundColor", item)).value<QColor>() :
-                   defaultItem.textColor();
+    QColor color = Utils::Schema::getForegroundColor(textSettingsIndex(item));
     QBrush brush = item->foreground(0);
     brush.setColor(color);
     item->setForeground(0, brush);
 
     // set the background color
-    enabled = Utils::Schema::getSchemaValue(
-            textSettingsKey("BackgroundColorEnabled", item)).toBool();
-    color = enabled ? Utils::Schema::getSchemaValue(
-            textSettingsKey("BackgroundColor", item)).value<QColor>() :
-                   QColor(Qt::white);
+    color = Utils::Schema::getBackgroundColor(textSettingsIndex(item));
     qDebug() << __func__ << " - 'BackgroundColor': " << color;
     brush = item->background(0);
     brush.setColor(color);
     brush.setStyle(Qt::SolidPattern);
     item->setBackground(0, brush);
-
-    // TODO(pbek): load foreground and background color with Utils::Schema::getDefaultTextSchemaValue
 }
 
 /**
@@ -349,7 +379,8 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     // store the new color schema data
     Q_FOREACH(QString key, keys) {
             QVariant value = key == "Name" ?
-                             QVariant(name) : Utils::Schema::getSchemaValue(key);
+                             QVariant(name) :
+                             Utils::Schema::getSchemaValue(key);
             setSchemaValue(key, value, schemaKey);
         }
 
@@ -367,8 +398,19 @@ void FontColorWidget::on_copySchemeButton_clicked() {
             ui->colorSchemeComboBox->count() - 1);
 }
 
+/**
+ * Takes the proper actions if the foreground enabler was toggled
+ *
+ * @param checked
+ */
 void FontColorWidget::on_foregroundColorCheckBox_toggled(bool checked) {
     updateForegroundColorCheckBox(checked, true);
+
+    // update the current or all text items, depending on the index
+    updateTextItems(textSettingsIndex());
+
+    // update the scheme edit frame
+    updateSchemeEditFrame();
 }
 
 void FontColorWidget::updateForegroundColorCheckBox(bool checked, bool store) {
@@ -386,8 +428,19 @@ void FontColorWidget::updateForegroundColorCheckBox(bool checked, bool store) {
     }
 }
 
+/**
+ * Takes the proper actions if the background enabler was toggled
+ *
+ * @param checked
+ */
 void FontColorWidget::on_backgroundColorCheckBox_toggled(bool checked) {
     updateBackgroundColorCheckBox(checked, true);
+
+    // update the current or all text items, depending on the index
+    updateTextItems(textSettingsIndex());
+
+    // update the scheme edit frame
+    updateSchemeEditFrame();
 }
 
 void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
