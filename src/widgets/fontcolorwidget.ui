@@ -196,7 +196,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="2">
+         <item row="4" column="2">
           <spacer name="verticalSpacer">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -241,6 +241,16 @@
           <widget class="QCheckBox" name="backgroundColorCheckBox">
            <property name="text">
             <string>Background</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="3">
+          <widget class="QLabel" name="restartInfoLabel">
+           <property name="text">
+            <string>You might need to restart the application to let these changes take effect.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
