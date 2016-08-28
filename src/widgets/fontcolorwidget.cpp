@@ -16,9 +16,10 @@
 #include <QDebug>
 #include <QTreeWidgetItem>
 #include <QSettings>
-#include <QtWidgets/QInputDialog>
+#include <QInputDialog>
 #include <QUuid>
 #include <QTextEdit>
+#include <QMessageBox>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -402,4 +403,35 @@ void FontColorWidget::updateBackgroundColorCheckBox(bool checked, bool store) {
     if (store && !_currentSchemaIsDefault) {
         setSchemaValue(textSettingsKey("BackgroundColorEnabled"), checked);
     }
+}
+
+/**
+ * Removes the current schema
+ */
+void FontColorWidget::on_deleteSchemeButton_clicked() {
+    if (_currentSchemaKey == "") {
+        return;
+    }
+
+    if (QMessageBox::information(
+            this,
+            tr("Remove schema"),
+            tr("Remove current schema? This cannot be undone!"),
+             tr("Remove"), tr("Cancel"), QString::null,
+             0, 1) != 0) {
+        return;
+    }
+
+    QSettings settings;
+    settings.beginGroup(_currentSchemaKey);
+    // remove the group and all its keys
+    settings.remove("");
+    settings.endGroup();
+
+    // remove the current schema from the list of schemas
+    QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
+    schemes.removeAll(_currentSchemaKey);
+    settings.setValue("Editor/ColorSchemes", schemes);
+
+    initSchemaSelector();
 }

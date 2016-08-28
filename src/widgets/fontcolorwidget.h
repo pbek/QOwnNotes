@@ -45,6 +45,8 @@ private slots:
 
     void on_backgroundColorCheckBox_toggled(bool checked);
 
+    void on_deleteSchemeButton_clicked();
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
