@@ -21,6 +21,7 @@
 #include <QTextEdit>
 #include <QMessageBox>
 #include <QFileDialog>
+#include <QKeyEvent>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -430,11 +431,15 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
 
     // reload the schema selector
-    initSchemaSelector();
+//    initSchemaSelector();
+
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_End,
+                                     Qt::NoModifier);
+    QApplication::postEvent(ui->colorSchemeComboBox, event);
 
     // set the index to the (new) last item
-    ui->colorSchemeComboBox->setCurrentIndex(
-            ui->colorSchemeComboBox->count() - 1);
+//    ui->colorSchemeComboBox->setCurrentIndex(
+//            ui->colorSchemeComboBox->count() - 1);
 }
 
 /**
