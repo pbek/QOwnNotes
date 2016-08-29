@@ -13,6 +13,8 @@
       these files
         - if you come up with a good and proven color theme, that should
           be included by default, please let me know 
+- added more Spanish, Russian and German translation (thank you
+  richarson, frostyland and bigant)
 
 ## 16.08.18
 - lots of text corrections in the main window and the settings dialog
