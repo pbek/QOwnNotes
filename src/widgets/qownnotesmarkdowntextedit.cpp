@@ -39,7 +39,6 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     }
 
     int defaultFontSize = font.pointSize();
-    bool darkModeColors = settings.value("darkModeColors").toBool();
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
