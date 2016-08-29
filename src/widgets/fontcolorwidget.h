@@ -47,6 +47,16 @@ private slots:
 
     void on_deleteSchemeButton_clicked();
 
+    void on_boldCheckBox_toggled(bool checked);
+
+    void on_italicCheckBox_toggled(bool checked);
+
+    void on_underlineCheckBox_toggled(bool checked);
+
+    void on_exportSchemeButton_clicked();
+
+    void on_importSchemeButton_clicked();
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
@@ -76,4 +86,6 @@ private:
     void updateAllTextItems();
 
     void updateTextItems(int index);
+
+    void storeCheckBoxState(QString name, bool checked);
 };

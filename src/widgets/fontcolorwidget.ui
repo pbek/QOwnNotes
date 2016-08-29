@@ -107,37 +107,6 @@
       <string>Color schema</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="0" column="2">
-       <widget class="QPushButton" name="deleteSchemeButton">
-        <property name="toolTip">
-         <string>Delete schema</string>
-        </property>
-        <property name="text">
-         <string>Delete</string>
-        </property>
-        <property name="icon">
-         <iconset resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QPushButton" name="copySchemeButton">
-        <property name="toolTip">
-         <string>Copy schema</string>
-        </property>
-        <property name="text">
-         <string>Copy</string>
-        </property>
-        <property name="icon">
-         <iconset resource="../breeze-qownnotes.qrc">
-          <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QComboBox" name="colorSchemeComboBox"/>
-      </item>
       <item row="1" column="0">
        <widget class="QTreeWidget" name="textTreeWidget">
         <property name="rootIsDecorated">
@@ -151,6 +120,20 @@
           <string notr="true">1</string>
          </property>
         </column>
+       </widget>
+      </item>
+      <item row="0" column="2">
+       <widget class="QPushButton" name="deleteSchemeButton">
+        <property name="toolTip">
+         <string>Delete schema</string>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+        </property>
        </widget>
       </item>
       <item row="0" column="3">
@@ -167,7 +150,38 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="1" colspan="3">
+      <item row="0" column="0">
+       <widget class="QComboBox" name="colorSchemeComboBox"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QPushButton" name="copySchemeButton">
+        <property name="toolTip">
+         <string>Copy schema</string>
+        </property>
+        <property name="text">
+         <string>Copy</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-copy.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
+       <widget class="QPushButton" name="importSchemeButton">
+        <property name="toolTip">
+         <string>Import schema</string>
+        </property>
+        <property name="text">
+         <string>Import</string>
+        </property>
+        <property name="icon">
+         <iconset theme="document-import" resource="../breeze-qownnotes.qrc">
+          <normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</iconset>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="4">
        <widget class="QFrame" name="schemeEditFrame">
         <property name="frameShape">
          <enum>QFrame::NoFrame</enum>

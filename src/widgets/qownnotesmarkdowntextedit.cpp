@@ -48,52 +48,51 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
 
     QTextCharFormat headers;
-    headers.setFontWeight(QFont::Bold);
     headers.setFontPointSize(defaultFontSize * 1.2);
-    Utils::Schema::setFormatColors(pmh_H1, headers);
+    Utils::Schema::setFormatStyle(pmh_H1, headers);
     STY(pmh_H1, headers);
 
     headers.setFontPointSize(defaultFontSize * 1.1);
-    Utils::Schema::setFormatColors(pmh_H2, headers);
+    Utils::Schema::setFormatStyle(pmh_H2, headers);
     STY(pmh_H2, headers);
 
     headers.setFontPointSize(defaultFontSize);
-    Utils::Schema::setFormatColors(pmh_H3, headers);
+    Utils::Schema::setFormatStyle(pmh_H3, headers);
     STY(pmh_H3, headers);
-    Utils::Schema::setFormatColors(pmh_H4, headers);
+    Utils::Schema::setFormatStyle(pmh_H4, headers);
     STY(pmh_H4, headers);
-    Utils::Schema::setFormatColors(pmh_H5, headers);
+    Utils::Schema::setFormatStyle(pmh_H5, headers);
     STY(pmh_H5, headers);
-    Utils::Schema::setFormatColors(pmh_H6, headers);
+    Utils::Schema::setFormatStyle(pmh_H6, headers);
     STY(pmh_H6, headers);
 
     QTextCharFormat hrule;
-    Utils::Schema::setFormatColors(pmh_HRULE, hrule);
+    Utils::Schema::setFormatStyle(pmh_HRULE, hrule);
     STY(pmh_HRULE, hrule);
 
     /* <ul> */
     QTextCharFormat list;
-    Utils::Schema::setFormatColors(pmh_LIST_BULLET, list);
+    Utils::Schema::setFormatStyle(pmh_LIST_BULLET, list);
     STY(pmh_LIST_BULLET, list);
-    Utils::Schema::setFormatColors(pmh_LIST_ENUMERATOR, list);
+    Utils::Schema::setFormatStyle(pmh_LIST_ENUMERATOR, list);
     STY(pmh_LIST_ENUMERATOR, list);
 
     /* <a href> */
     QTextCharFormat link;
-    Utils::Schema::setFormatColors(pmh_LINK, link);
+    Utils::Schema::setFormatStyle(pmh_LINK, link);
     STY(pmh_LINK, link);
-    Utils::Schema::setFormatColors(pmh_AUTO_LINK_URL, link);
+    Utils::Schema::setFormatStyle(pmh_AUTO_LINK_URL, link);
     STY(pmh_AUTO_LINK_URL, link);
-    Utils::Schema::setFormatColors(pmh_AUTO_LINK_EMAIL, link);
+    Utils::Schema::setFormatStyle(pmh_AUTO_LINK_EMAIL, link);
     STY(pmh_AUTO_LINK_EMAIL, link);
 
     /* <img> */
     QTextCharFormat image;
-    Utils::Schema::setFormatColors(pmh_IMAGE, image);
+    Utils::Schema::setFormatStyle(pmh_IMAGE, image);
     STY(pmh_IMAGE, image);
 
     QTextCharFormat ref;
-    Utils::Schema::setFormatColors(pmh_REFERENCE, ref);
+    Utils::Schema::setFormatStyle(pmh_REFERENCE, ref);
     STY(pmh_REFERENCE, ref);
 
     /* <pre> */
@@ -116,41 +115,39 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     code.setFont(codeFont);
 
-    Utils::Schema::setFormatColors(pmh_CODE, code);
+    Utils::Schema::setFormatStyle(pmh_CODE, code);
     STY(pmh_CODE, code);
-    Utils::Schema::setFormatColors(pmh_VERBATIM, code);
+    Utils::Schema::setFormatStyle(pmh_VERBATIM, code);
     STY(pmh_VERBATIM, code);
 
     /* <em> */
     QTextCharFormat emph;
-    emph.setFontItalic(true);
-    Utils::Schema::setFormatColors(pmh_EMPH, emph);
+    Utils::Schema::setFormatStyle(pmh_EMPH, emph);
     STY(pmh_EMPH, emph);
 
     /* <strong> */
     QTextCharFormat strong;
-    strong.setFontWeight(QFont::Bold);
-    Utils::Schema::setFormatColors(pmh_STRONG, strong);
+    Utils::Schema::setFormatStyle(pmh_STRONG, strong);
     STY(pmh_STRONG, strong);
 
     QTextCharFormat comment;
-    Utils::Schema::setFormatColors(pmh_COMMENT, comment);
+    Utils::Schema::setFormatStyle(pmh_COMMENT, comment);
     STY(pmh_COMMENT, comment);
 
     QTextCharFormat blockquote;
-    Utils::Schema::setFormatColors(pmh_BLOCKQUOTE, blockquote);
+    Utils::Schema::setFormatStyle(pmh_BLOCKQUOTE, blockquote);
     STY(pmh_BLOCKQUOTE, blockquote);
 
     QTextCharFormat html;
-    Utils::Schema::setFormatColors(pmh_HTML, html);
+    Utils::Schema::setFormatStyle(pmh_HTML, html);
     STY(pmh_HTML, html);
-    Utils::Schema::setFormatColors(pmh_HTML_ENTITY, html);
+    Utils::Schema::setFormatStyle(pmh_HTML_ENTITY, html);
     STY(pmh_HTML_ENTITY, html);
-    Utils::Schema::setFormatColors(pmh_HTMLBLOCK, html);
+    Utils::Schema::setFormatStyle(pmh_HTMLBLOCK, html);
     STY(pmh_HTMLBLOCK, html);
 
     QTextCharFormat note;
-    Utils::Schema::setFormatColors(pmh_NOTE, note);
+    Utils::Schema::setFormatStyle(pmh_NOTE, note);
     STY(pmh_NOTE, note);
 
     _highlighter->setStyles(*styles);

@@ -20,6 +20,7 @@
 #include <QUuid>
 #include <QTextEdit>
 #include <QMessageBox>
+#include <QFileDialog>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -212,6 +213,8 @@ void FontColorWidget::updateSchemeEditFrame() {
         return;
     }
 
+    int index = textSettingsIndex();
+
     // check if we are not viewing a default schema
     ui->schemeEditFrame->setEnabled(!_currentSchemaIsDefault);
 
@@ -219,7 +222,7 @@ void FontColorWidget::updateSchemeEditFrame() {
             textSettingsKey("ForegroundColorEnabled")).toBool();
     updateForegroundColorCheckBox(enabled);
 
-    QColor color = Utils::Schema::getForegroundColor(textSettingsIndex());
+    QColor color = Utils::Schema::getForegroundColor(index);
     ui->foregroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 
@@ -227,9 +230,36 @@ void FontColorWidget::updateSchemeEditFrame() {
             textSettingsKey("BackgroundColorEnabled")).toBool();
     updateBackgroundColorCheckBox(enabled);
 
-    color = Utils::Schema::getBackgroundColor(textSettingsIndex());
+    color = Utils::Schema::getBackgroundColor(index);
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
+
+    ui->boldCheckBox->setVisible(index >= 0);
+    ui->italicCheckBox->setVisible(index >= 0);
+    ui->underlineCheckBox->setVisible(index >= 0);
+
+    if (index >= 0) {
+        const QSignalBlocker blocker(ui->boldCheckBox);
+        Q_UNUSED(blocker);
+
+        ui->boldCheckBox->setChecked(
+                Utils::Schema::getSchemaValue(
+                        textSettingsKey("Bold")).toBool());
+
+        const QSignalBlocker blocker2(ui->italicCheckBox);
+        Q_UNUSED(blocker2);
+
+        ui->italicCheckBox->setChecked(
+                Utils::Schema::getSchemaValue(
+                        textSettingsKey("Italic")).toBool());
+
+        const QSignalBlocker blocker3(ui->underlineCheckBox);
+        Q_UNUSED(blocker3);
+
+        ui->underlineCheckBox->setChecked(
+                Utils::Schema::getSchemaValue(
+                        textSettingsKey("Underline")).toBool());
+    }
 }
 
 /**
@@ -351,6 +381,15 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem *item) {
     brush.setColor(color);
     brush.setStyle(Qt::SolidPattern);
     item->setBackground(0, brush);
+
+    QFont font = item->font(0);
+    font.setBold(Utils::Schema::getSchemaValue(
+            textSettingsKey("Bold", item)).toBool());
+    font.setItalic(Utils::Schema::getSchemaValue(
+            textSettingsKey("Italic", item)).toBool());
+    font.setUnderline(Utils::Schema::getSchemaValue(
+                    textSettingsKey("Underline", item)).toBool());
+    item->setFont(0, font);
 }
 
 /**
@@ -487,4 +526,123 @@ void FontColorWidget::on_deleteSchemeButton_clicked() {
     settings.setValue("Editor/ColorSchemes", schemes);
 
     initSchemaSelector();
+}
+
+void FontColorWidget::storeCheckBoxState(QString name, bool checked) {
+    if (!_currentSchemaIsDefault) {
+        setSchemaValue(textSettingsKey(name), checked);
+    }
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
+}
+
+void FontColorWidget::on_boldCheckBox_toggled(bool checked) {
+    storeCheckBoxState("Bold", checked);
+}
+
+void FontColorWidget::on_italicCheckBox_toggled(bool checked) {
+    storeCheckBoxState("Italic", checked);
+}
+
+void FontColorWidget::on_underlineCheckBox_toggled(bool checked) {
+    storeCheckBoxState("Underline", checked);
+}
+
+/**
+ * Exports the current color schema to a file
+ */
+void FontColorWidget::on_exportSchemeButton_clicked() {
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptSave);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setNameFilter(tr("INI files (*.ini)"));
+    dialog.setWindowTitle(tr("Export schema"));
+    dialog.selectFile(ui->colorSchemeComboBox->currentText() + ".ini");
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.count() > 0) {
+            QString fileName = fileNames.at(0);
+
+            if (QFileInfo(fileName).suffix().isEmpty()) {
+                fileName.append(".ini");
+            }
+
+            QSettings *exportSettings =
+                    new QSettings(fileName, QSettings::IniFormat);
+            QSettings *schemaSettings = Utils::Schema::getSchemaSettings();
+
+            // store the schema key
+            exportSettings->setValue("Export/SchemaKey", _currentSchemaKey);
+
+            schemaSettings->beginGroup(_currentSchemaKey);
+            exportSettings->beginGroup(_currentSchemaKey);
+            QStringList keys = schemaSettings->allKeys();
+
+            // store the color schema data to the export settings
+            Q_FOREACH(QString key, keys) {
+                    QVariant value = Utils::Schema::getSchemaValue(key);
+                    exportSettings->setValue(key, value);
+                }
+        }
+    }
+}
+
+/**
+ * Imports a schema from a file
+ */
+void FontColorWidget::on_importSchemeButton_clicked() {
+    QFileDialog dialog;
+    dialog.setFileMode(QFileDialog::ExistingFiles);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setDirectory(QDir::homePath());
+    dialog.setNameFilter(tr("INI files (*.ini)"));
+    dialog.setWindowTitle(tr("Import schema"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QStringList fileNames = dialog.selectedFiles();
+        if (fileNames.count() > 0) {
+            Q_FOREACH(QString fileName, fileNames) {
+                    QSettings *settings = new QSettings();
+                    QSettings *importSettings =
+                            new QSettings(fileName, QSettings::IniFormat);
+                    QString schemaKey = importSettings->value(
+                            "Export/SchemaKey").toString();
+
+                    // create a new schema key for the import
+                    QString uuid = QUuid::createUuid().toString();
+                    uuid.replace("{", "").replace("}", "");
+                    _currentSchemaKey = "EditorColorSchema-" + uuid;
+
+                    QStringList schemes = settings->value(
+                            "Editor/ColorSchemes").toStringList();
+                    schemes << _currentSchemaKey;
+                    settings->setValue("Editor/ColorSchemes", schemes);
+                    settings->setValue("Editor/CurrentSchemaKey",
+                                       _currentSchemaKey);
+
+                    settings->beginGroup(_currentSchemaKey);
+                    importSettings->beginGroup(schemaKey);
+                    QStringList keys = importSettings->allKeys();
+
+                    // store the color schema data to the settings
+                    Q_FOREACH(QString key, keys) {
+                            QVariant value = importSettings->value(key);
+                            settings->setValue(key, value);
+                        }
+
+                    // reload the schema selector
+                    initSchemaSelector();
+
+                    // set the index to the (new) last item
+                    ui->colorSchemeComboBox->setCurrentIndex(
+                            ui->colorSchemeComboBox->count() - 1);
+                }
+
+        }
+    }
 }

@@ -179,7 +179,23 @@ QColor Utils::Schema::getBackgroundColor(int index) {
  * @param format
  * @param index
  */
-void Utils::Schema::setFormatColors(int index, QTextCharFormat &format) {
+void Utils::Schema::setFormatStyle(int index, QTextCharFormat &format) {
+    // set the foreground color
     format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));
+
+    // set the background color
     format.setBackground(QBrush(Utils::Schema::getBackgroundColor(index)));
+
+    // set the bold state
+    format.setFontWeight(Utils::Schema::getSchemaValue(
+            Utils::Schema::textSettingsKey("Bold", index)).toBool() ?
+                         QFont::Bold : QFont::Normal);
+
+    // set the italic state
+    format.setFontItalic(Utils::Schema::getSchemaValue(
+            Utils::Schema::textSettingsKey("Italic", index)).toBool());
+
+    // set the underline state
+    format.setFontUnderline(Utils::Schema::getSchemaValue(
+            Utils::Schema::textSettingsKey("Underline", index)).toBool());
 }

@@ -44,6 +44,6 @@ namespace Utils {
 
         QColor getBackgroundColor(int index);
 
-        void setFormatColors(int index, QTextCharFormat &format);
+        void setFormatStyle(int index, QTextCharFormat &format);
     }
 }
