@@ -38,6 +38,9 @@ protected:
 
 private:
     MainWindow *mainWindow;
+
+    void setFormatStyle(pmh_element_type index,
+                        QVector<HighlightingStyle> *styles);
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H

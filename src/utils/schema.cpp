@@ -20,7 +20,6 @@
 #include <QStringList>
 #include <QTextEdit>
 #include <QFontDatabase>
-#include <libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h>
 #include "schema.h"
 
 
@@ -181,9 +180,29 @@ QColor Utils::Schema::getBackgroundColor(int index) {
  * @param format
  * @param index
  */
-void Utils::Schema::setFormatStyle(int index, QTextCharFormat &format) {
-    // set the font for the format
-    format.setFont(getEditorFont(index));
+void Utils::Schema::setFormatStyle(pmh_element_type index,
+                                   QTextCharFormat &format) {
+    // get the correct font
+    QFont font = getEditorFont(index);
+
+    // set the font
+    format.setFont(font);
+
+    int fontSize = font.pointSize();
+
+    switch (index) {
+        case pmh_H1:
+            fontSize *= 1.2;
+            break;
+        case pmh_H2:
+            fontSize *= 1.1;
+            break;
+        default:
+            break;
+    }
+
+    // override the font size
+    format.setFontPointSize(fontSize);
 
     // set the foreground color
     format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));

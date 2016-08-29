@@ -12,19 +12,31 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
     setStyles();
 }
 
+/**
+ * Sets the format style
+ *
+ * @param index
+ * @param styles
+ */
+void QOwnNotesMarkdownTextEdit::setFormatStyle(
+        pmh_element_type index, QVector<HighlightingStyle> *styles) {
+    QTextCharFormat format;
+    Utils::Schema::setFormatStyle(index, format);
+    styles->append({index, format});
+
 // The initial define causes an error with Visual Studio 2015:
 // "error C4576: a parenthesized type followed by an initializer list is
 // a non-standard explicit type conversion syntax"
 // The replacement works, probably also on other platforms (to be tested)
-//#define STY(type, format) styles->append((HighlightingStyle){type, format})
-#define STY(type, format) styles->append({type, format})
+// styles->append((HighlightingStyle){index, format});
+}
 
 /**
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
     QFont font = Utils::Schema::getEditorTextFont();
-    int defaultFontSize = font.pointSize();
+    setFont(font);
 
     // set the tab stop to the width of 4 spaces in the editor
     const int tabStop = 4;
@@ -33,90 +45,47 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
 
-    QTextCharFormat headers;
-    headers.setFontPointSize(defaultFontSize * 1.2);
-    Utils::Schema::setFormatStyle(pmh_H1, headers);
-    STY(pmh_H1, headers);
+    setFormatStyle(pmh_H1, styles);
+    setFormatStyle(pmh_H2, styles);
+    setFormatStyle(pmh_H3, styles);
+    setFormatStyle(pmh_H4, styles);
+    setFormatStyle(pmh_H5, styles);
+    setFormatStyle(pmh_H6, styles);
 
-    headers.setFontPointSize(defaultFontSize * 1.1);
-    Utils::Schema::setFormatStyle(pmh_H2, headers);
-    STY(pmh_H2, headers);
-
-    headers.setFontPointSize(defaultFontSize);
-    Utils::Schema::setFormatStyle(pmh_H3, headers);
-    STY(pmh_H3, headers);
-    Utils::Schema::setFormatStyle(pmh_H4, headers);
-    STY(pmh_H4, headers);
-    Utils::Schema::setFormatStyle(pmh_H5, headers);
-    STY(pmh_H5, headers);
-    Utils::Schema::setFormatStyle(pmh_H6, headers);
-    STY(pmh_H6, headers);
-
-    QTextCharFormat hrule;
-    Utils::Schema::setFormatStyle(pmh_HRULE, hrule);
-    STY(pmh_HRULE, hrule);
+    setFormatStyle(pmh_HRULE, styles);
 
     /* <ul> */
-    QTextCharFormat list;
-    Utils::Schema::setFormatStyle(pmh_LIST_BULLET, list);
-    STY(pmh_LIST_BULLET, list);
-    Utils::Schema::setFormatStyle(pmh_LIST_ENUMERATOR, list);
-    STY(pmh_LIST_ENUMERATOR, list);
+    setFormatStyle(pmh_LIST_BULLET, styles);
+    setFormatStyle(pmh_LIST_ENUMERATOR, styles);
 
     /* <a href> */
-    QTextCharFormat link;
-    Utils::Schema::setFormatStyle(pmh_LINK, link);
-    STY(pmh_LINK, link);
-    Utils::Schema::setFormatStyle(pmh_AUTO_LINK_URL, link);
-    STY(pmh_AUTO_LINK_URL, link);
-    Utils::Schema::setFormatStyle(pmh_AUTO_LINK_EMAIL, link);
-    STY(pmh_AUTO_LINK_EMAIL, link);
+    setFormatStyle(pmh_LINK, styles);
+    setFormatStyle(pmh_AUTO_LINK_URL, styles);
+    setFormatStyle(pmh_AUTO_LINK_EMAIL, styles);
 
     /* <img> */
-    QTextCharFormat image;
-    Utils::Schema::setFormatStyle(pmh_IMAGE, image);
-    STY(pmh_IMAGE, image);
+    setFormatStyle(pmh_IMAGE, styles);
 
-    QTextCharFormat ref;
-    Utils::Schema::setFormatStyle(pmh_REFERENCE, ref);
-    STY(pmh_REFERENCE, ref);
+    setFormatStyle(pmh_REFERENCE, styles);
 
     /* <pre> */
-    QTextCharFormat code;
-    Utils::Schema::setFormatStyle(pmh_CODE, code);
-    STY(pmh_CODE, code);
-    Utils::Schema::setFormatStyle(pmh_VERBATIM, code);
-    STY(pmh_VERBATIM, code);
+    setFormatStyle(pmh_CODE, styles);
+    setFormatStyle(pmh_VERBATIM, styles);
 
     /* <em> */
-    QTextCharFormat emph;
-    Utils::Schema::setFormatStyle(pmh_EMPH, emph);
-    STY(pmh_EMPH, emph);
+    setFormatStyle(pmh_EMPH, styles);
 
     /* <strong> */
-    QTextCharFormat strong;
-    Utils::Schema::setFormatStyle(pmh_STRONG, strong);
-    STY(pmh_STRONG, strong);
+    setFormatStyle(pmh_STRONG, styles);
 
-    QTextCharFormat comment;
-    Utils::Schema::setFormatStyle(pmh_COMMENT, comment);
-    STY(pmh_COMMENT, comment);
+    setFormatStyle(pmh_COMMENT, styles);
+    setFormatStyle(pmh_BLOCKQUOTE, styles);
 
-    QTextCharFormat blockquote;
-    Utils::Schema::setFormatStyle(pmh_BLOCKQUOTE, blockquote);
-    STY(pmh_BLOCKQUOTE, blockquote);
+    setFormatStyle(pmh_HTML, styles);
+    setFormatStyle(pmh_HTML_ENTITY, styles);
+    setFormatStyle(pmh_HTMLBLOCK, styles);
 
-    QTextCharFormat html;
-    Utils::Schema::setFormatStyle(pmh_HTML, html);
-    STY(pmh_HTML, html);
-    Utils::Schema::setFormatStyle(pmh_HTML_ENTITY, html);
-    STY(pmh_HTML_ENTITY, html);
-    Utils::Schema::setFormatStyle(pmh_HTMLBLOCK, html);
-    STY(pmh_HTMLBLOCK, html);
-
-    QTextCharFormat note;
-    Utils::Schema::setFormatStyle(pmh_NOTE, note);
-    STY(pmh_NOTE, note);
+    setFormatStyle(pmh_NOTE, styles);
 
     _highlighter->setStyles(*styles);
 }
