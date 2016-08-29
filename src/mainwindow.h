@@ -371,6 +371,8 @@ private slots:
 
     void on_actionDonate_triggered();
 
+    void on_actionFind_notes_in_all_subfolders_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

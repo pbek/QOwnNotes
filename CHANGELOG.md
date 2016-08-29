@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.08.20
+- if you have note subfolders activated for a note folder there now is
+  a new menu entry `Find notes in all subfolders` in the note menu
+  (for [Issue #305](https://github.com/pbek/QOwnNotes/issues/305))
+    - triggering it jumps to `All notes` in the note subfolder tree 
+      and triggers a `Find note`
+
 ## 16.08.19
 - finally there are configurable **editor color schemes**
   (for [Issue #280](https://github.com/pbek/QOwnNotes/issues/280))

@@ -90,6 +90,9 @@ MainWindow::MainWindow(QWidget *parent) :
     sorting->addAction(ui->actionBy_date);
     sorting->setExclusive(true);
 
+    // we only want to see that menu entry if there are note subfolders
+    ui->actionFind_notes_in_all_subfolders->setVisible(false);
+
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
 
@@ -1040,6 +1043,10 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
     QString folderName = noteFolder.getLocalPath();
     QString oldPath = this->notesPath;
+
+    // we only want to see that menu entry if there are note subfolders
+    ui->actionFind_notes_in_all_subfolders->setVisible(
+            noteFolder.isShowSubfolders());
 
     // reload notes if notes folder was changed
     if (oldPath != folderName) {
@@ -5589,6 +5596,9 @@ void MainWindow::setupNoteSubFolders() {
 //    ui->tagFrame->setVisible(showSubfolders);
     ui->noteSubFolderFrame->setVisible(showSubfolders);
 
+    // we only want to see that menu entry if there are note subfolders
+    ui->actionFind_notes_in_all_subfolders->setVisible(showSubfolders);
+
     if (showSubfolders) {
         reloadNoteSubFolderTree();
     }
@@ -7448,4 +7458,18 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
 void MainWindow::on_actionDonate_triggered() {
     QDesktopServices::openUrl(
             QUrl("http://www.qownnotes.org/donate"));
+}
+
+/**
+ * Jumps to "All notes" in the note subfolder tree widget and triggers
+ * a "Find note"
+ */
+void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
+    // send an event to jump to "All notes" in the note subfolder tree widget
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                     Qt::NoModifier);
+    QApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+
+    // trigger a "Find note"
+    on_action_Find_note_triggered();
 }
