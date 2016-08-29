@@ -1717,7 +1717,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
                     // wait 100ms before the block on this->noteDirectoryWatcher
                     // is opened, otherwise we get the event
-                    waitMsecs(100);
+                    Utils::Misc::waitMsecs(100);
                 }
                     break;
 
@@ -1869,7 +1869,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
 
         // wait 100ms before the block on this->noteDirectoryWatcher
         // is opened, otherwise we get the event
-        waitMsecs(100);
+        Utils::Misc::waitMsecs(100);
 
         if (currentNoteChanged) {
             // just to make sure everything is up-to-date
@@ -1937,12 +1937,6 @@ void MainWindow::showUpdateAvailableButton(QString version) {
 
 void MainWindow::hideUpdateAvailableButton() {
     _updateAvailableButton->hide();
-}
-
-void MainWindow::waitMsecs(int msecs) {
-    QTime dieTime = QTime::currentTime().addMSecs(msecs);
-    while (QTime::currentTime() < dieTime)
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
 }
 
 /**
@@ -2512,7 +2506,7 @@ void MainWindow::removeCurrentNote() {
             // we need to wait some time to turn the watcher on again because
             // something is happening after this method that reloads the
             // note folder
-            waitMsecs(200);
+            Utils::Misc::waitMsecs(200);
             _isNotesDirectoryWasModifiedDisabled = false;
 
             break;
@@ -2974,7 +2968,7 @@ void MainWindow::removeSelectedNotes() {
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
         // something is happening after this method that reloads the note folder
-        waitMsecs(200);
+        Utils::Misc::waitMsecs(200);
         _isNotesDirectoryWasModifiedDisabled = false;
     }
 }

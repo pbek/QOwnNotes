@@ -445,8 +445,6 @@ private:
 
     void removeCurrentNote();
 
-    void waitMsecs(int msecs);
-
     void searchInNoteTextEdit(QString &str);
 
     void searchForSearchLineTextInNoteTextEdit();

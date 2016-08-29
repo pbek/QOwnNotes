@@ -30,5 +30,6 @@ namespace Utils {
                 QString executablePath, QStringList parameters);
         QString shorten(QString text, int length, QString sequence = "...");
         QString defaultNotesPath();
+        void waitMsecs(int msecs);
     }
 }

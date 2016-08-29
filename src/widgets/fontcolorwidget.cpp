@@ -373,21 +373,22 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     QStringList keys = schemaSettings->allKeys();
     QString uuid = QUuid::createUuid().toString();
     uuid.replace("{", "").replace("}", "");
-    QString schemaKey = "EditorColorSchema-" + uuid;
+    _currentSchemaKey = "EditorColorSchema-" + uuid;
 
     // store the new color schema data
     Q_FOREACH(QString key, keys) {
             QVariant value = key == "Name" ?
                              QVariant(name) :
                              Utils::Schema::getSchemaValue(key);
-            setSchemaValue(key, value, schemaKey);
+            setSchemaValue(key, value, _currentSchemaKey);
         }
 
     // add the new color schema to the color schemes list in the settings
     QSettings settings;
     QStringList schemes = settings.value("Editor/ColorSchemes").toStringList();
-    schemes << schemaKey;
+    schemes << _currentSchemaKey;
     settings.setValue("Editor/ColorSchemes", schemes);
+    settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
 
     // reload the schema selector
     initSchemaSelector();

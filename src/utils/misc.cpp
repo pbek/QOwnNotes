@@ -18,6 +18,8 @@
 #include <QUrl>
 #include <QRegularExpression>
 #include <QDebug>
+#include <QTime>
+#include <QCoreApplication>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -226,4 +228,10 @@ QString Utils::Misc::defaultNotesPath() {
     path.remove(QRegularExpression("snap\\/qownnotes\\/\\w\\d+\\/"));
 
     return path;
+}
+
+void Utils::Misc::waitMsecs(int msecs) {
+    QTime dieTime = QTime::currentTime().addMSecs(msecs);
+    while (QTime::currentTime() < dieTime)
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
 }
