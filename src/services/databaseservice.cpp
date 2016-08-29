@@ -354,6 +354,19 @@ bool DatabaseService::setupTables() {
         version = 11;
     }
 
+    if (version < 12) {
+        QSettings settings;
+        bool darkModeColors = settings.value("darkModeColors").toBool();
+
+        // set an initial schema key
+        QString schemaKey = darkModeColors ?
+                "EditorColorSchema-cdbf28fc-1ddc-4d13-bb21-6a4043316a2f":
+                "EditorColorSchema-6033d61b-cb96-46d5-a3a8-20d5172017eb";
+        settings.setValue("Editor/CurrentSchemaKey", schemaKey);
+
+        version = 12;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }
