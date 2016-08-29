@@ -165,7 +165,7 @@
             </property>
             <item>
              <property name="text">
-              <string>Editor font &amp; colors</string>
+              <string>Editor fonts &amp; colors</string>
              </property>
              <property name="whatsThis">
               <string notr="true">9</string>
@@ -1970,7 +1970,7 @@
                   </sizepolicy>
                  </property>
                  <property name="title">
-                  <string>Font settings</string>
+                  <string>Preview font settings</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
                   <item row="0" column="1">
@@ -1983,7 +1983,7 @@
                   <item row="0" column="0">
                    <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
                     <property name="text">
-                     <string>Font in note markdown view:</string>
+                     <string>Default font:</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2007,7 +2007,7 @@
                   <item row="1" column="0">
                    <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
                     <property name="text">
-                     <string>Code font in note markdown view:</string>
+                     <string>Code font:</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

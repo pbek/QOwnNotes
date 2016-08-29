@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 16.08.19
+- finally there are configurable **editor color schemes**
+  (for [Issue #280](https://github.com/pbek/QOwnNotes/issues/280))
+    - there are two default schemes called `Default` and `Dark` that
+      are mimicking the current default mode and the dark mode colors
+    - you can create as many schemes as you like by copying and
+      modifying them
+    - you can change the foreground color, background color, bold state,
+      italic state and underline state
+    - you can export schemes to files and import them again from 
+      these files
+        - if you come up with a good and proven color theme, that should
+          be included by default, please let me know 
+
 ## 16.08.18
 - lots of text corrections in the main window and the settings dialog
 - the navigation pane can now also show unrecognized headlines, like

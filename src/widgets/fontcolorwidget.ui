@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Frame</string>
+   <string notr="true">Font and colors</string>
   </property>
   <property name="frameShape">
    <enum>QFrame::NoFrame</enum>
@@ -38,7 +38,7 @@
       <string>Text font</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="6">
+      <item row="0" column="5">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -85,20 +85,6 @@
        <widget class="QFontComboBox" name="fontFamilyComboBox"/>
       </item>
       <item row="0" column="4">
-       <widget class="QComboBox" name="fontSizeComboBox">
-        <item>
-         <property name="text">
-          <string>6</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>7</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="5">
        <widget class="QSpinBox" name="fontSizeSpinBox">
         <property name="minimum">
          <number>5</number>
