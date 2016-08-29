@@ -273,14 +273,6 @@ void SettingsDialog::storeSettings() {
                               ui->defaultNoteFileExtensionListWidget));
     settings.setValue("externalEditorPath",
                       ui->externalEditorPathLineEdit->text());
-    settings.setValue("MainWindow/noteTextEdit.font",
-                      noteTextEditFont.toString());
-    settings.setValue("MainWindow/noteTextEdit.code.font",
-                      noteTextEditCodeFont.toString());
-    settings.setValue("MainWindow/noteTextView.font",
-                      noteTextViewFont.toString());
-    settings.setValue("MainWindow/noteTextView.code.font",
-                      noteTextViewCodeFont.toString());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       QString::number(ui->toolbarIconSizeSpinBox->value()));
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
@@ -355,6 +347,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("customNoteFileExtensionList",
                       customNoteFileExtensionList);
 
+    // store the font settings
+    storeFontSettings();
+
     // store the proxy settings
     storeProxySettings();
 
@@ -366,6 +361,21 @@ void SettingsDialog::storeSettings() {
 
     // store the splitter settings
     storeSplitterSettings();
+}
+
+/**
+ * Stores the font settings
+ */
+void SettingsDialog::storeFontSettings() {
+    QSettings settings;
+    settings.setValue("MainWindow/noteTextEdit.font",
+                      noteTextEditFont.toString());
+    settings.setValue("MainWindow/noteTextEdit.code.font",
+                      noteTextEditCodeFont.toString());
+    settings.setValue("MainWindow/noteTextView.font",
+                      noteTextViewFont.toString());
+    settings.setValue("MainWindow/noteTextView.code.font",
+                      noteTextViewCodeFont.toString());
 }
 
 void SettingsDialog::readSettings() {
@@ -1018,6 +1028,12 @@ void SettingsDialog::on_noteTextEditButton_clicked() {
     if (ok) {
         noteTextEditFont = font;
         setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
+
+        // store the font settings
+        storeFontSettings();
+
+        // update the text items after the font was changed
+        ui->editorFontColorWidget->updateAllTextItems();
     }
 }
 
@@ -1030,6 +1046,12 @@ void SettingsDialog::on_noteTextEditCodeButton_clicked()
     if (ok) {
         noteTextEditCodeFont = font;
         setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
+
+        // store the font settings
+        storeFontSettings();
+
+        // update the text items after the font was changed
+        ui->editorFontColorWidget->updateAllTextItems();
     }
 }
 
@@ -1162,6 +1184,12 @@ void SettingsDialog::on_noteTextEditResetButton_clicked() {
     QTextEdit textEdit;
     noteTextEditFont = textEdit.font();
     setFontLabel(ui->noteTextEditFontLabel, noteTextEditFont);
+
+    // store the font settings
+    storeFontSettings();
+
+    // update the text items after the font was changed
+    ui->editorFontColorWidget->updateAllTextItems();
 }
 
 /**
@@ -1170,6 +1198,12 @@ void SettingsDialog::on_noteTextEditResetButton_clicked() {
 void SettingsDialog::on_noteTextEditCodeResetButton_clicked() {
     noteTextEditCodeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
+
+    // store the font settings
+    storeFontSettings();
+
+    // update the text items after the font was changed
+    ui->editorFontColorWidget->updateAllTextItems();
 }
 
 /**

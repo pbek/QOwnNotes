@@ -19,6 +19,8 @@
 #include <QSettings>
 #include <QStringList>
 #include <QTextEdit>
+#include <QFontDatabase>
+#include <libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h>
 #include "schema.h"
 
 
@@ -102,7 +104,7 @@ QString Utils::Schema::textSettingsKey(QString key, int index) {
 QVariant Utils::Schema::getDefaultTextSchemaValue(
         QString key, QVariant defaultValue) {
     return Utils::Schema::getSchemaValue(
-            Utils::Schema::textSettingsKey(key, TextIndex), defaultValue);
+            Utils::Schema::textSettingsKey(key, TextPresetIndex), defaultValue);
 }
 
 /**
@@ -125,7 +127,7 @@ QColor Utils::Schema::getForegroundColor(int index) {
 
     // if the color was not valid, try to fetch the color for "Text"
     if (!color.isValid() && (index >= 0)) {
-        color = getForegroundColor(TextIndex);
+        color = getForegroundColor(TextPresetIndex);
     }
 
     // if the color still was not valid, try to fetch the color from a QTextEdit
@@ -162,7 +164,7 @@ QColor Utils::Schema::getBackgroundColor(int index) {
 
     // if the color was not valid, try to fetch the color for "Text"
     if (!color.isValid() && (index >= 0)) {
-        color = getBackgroundColor(TextIndex);
+        color = getBackgroundColor(TextPresetIndex);
     }
 
     // if the color still was not valid, use black
@@ -180,6 +182,9 @@ QColor Utils::Schema::getBackgroundColor(int index) {
  * @param index
  */
 void Utils::Schema::setFormatStyle(int index, QTextCharFormat &format) {
+    // set the font for the format
+    format.setFont(getEditorFont(index));
+
     // set the foreground color
     format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));
 
@@ -198,4 +203,67 @@ void Utils::Schema::setFormatStyle(int index, QTextCharFormat &format) {
     // set the underline state
     format.setFontUnderline(Utils::Schema::getSchemaValue(
             Utils::Schema::textSettingsKey("Underline", index)).toBool());
+}
+
+/**
+ * Returns the editor text font
+ *
+ * @return
+ */
+QFont Utils::Schema::getEditorTextFont() {
+    QTextEdit textEdit;
+    QFont font = textEdit.font();
+    QSettings settings;
+    QString fontString = settings.value(
+            "MainWindow/noteTextEdit.font").toString();
+
+    if (fontString != "") {
+        // set the note text edit font
+        font.fromString(fontString);
+    } else {
+        // store the default settings
+        fontString = textEdit.font().toString();
+        settings.setValue("MainWindow/noteTextEdit.font", fontString);
+    }
+
+    return font;
+}
+
+/**
+ * Returns the editor fixed font
+ *
+ * @return
+ */
+QFont Utils::Schema::getEditorFixedFont() {
+    QTextEdit textEdit;
+    QFont font = textEdit.font();
+    QSettings settings;
+    QString fontString = settings.value(
+            "MainWindow/noteTextEdit.code.font").toString();
+
+    if (fontString != "") {
+        // set the code font
+        font.fromString(fontString);
+    } else {
+        font = QFontDatabase::systemFont(QFontDatabase::FixedFont);
+
+        // store the default settings
+        settings.setValue(
+                "MainWindow/noteTextEdit.code.font", font.toString());
+    }
+
+    return font;
+}
+
+/**
+ * Returns the correct editor font
+ *
+ * @return
+ */
+QFont Utils::Schema::getEditorFont(int index) {
+    QList<int> fixedFontIndices;
+    fixedFontIndices << pmh_CODE << pmh_VERBATIM;
+
+    return fixedFontIndices.contains(index) ?
+        getEditorFixedFont() : getEditorTextFont();
 }

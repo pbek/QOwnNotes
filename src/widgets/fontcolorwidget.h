@@ -30,6 +30,8 @@ public:
     explicit FontColorWidget(QWidget *parent = 0);
     ~FontColorWidget();
 
+    void updateAllTextItems();
+
 private slots:
     void on_foregroundColorButton_clicked();
 
@@ -63,7 +65,7 @@ private:
     QString _currentSchemaKey;
     bool _currentSchemaIsDefault;
 
-    void addTextTreeWidgetItem(QString text, int id);
+    void addTextTreeWidgetItem(QString text, int index);
 
     void initTextTreeWidgetItems();
 
@@ -83,11 +85,11 @@ private:
 
     int textSettingsIndex(QTreeWidgetItem *item = Q_NULLPTR);
 
-    void updateAllTextItems();
-
     void updateTextItems(int index);
 
     void storeCheckBoxState(QString name, bool checked);
 
     void selectLastSchema();
+
+    void initFontSelectors();
 };

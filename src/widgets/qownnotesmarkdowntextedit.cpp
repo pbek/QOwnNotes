@@ -23,21 +23,7 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
  * Sets the highlighting styles for the text edit
  */
 void QOwnNotesMarkdownTextEdit::setStyles() {
-    QSettings settings;
-    QFont font = this->font();
-    QString fontString = settings.value(
-            "MainWindow/noteTextEdit.font").toString();
-
-    if (fontString != "") {
-        // set the note text edit font
-        font.fromString(fontString);
-        setFont(font);
-    } else {
-        // store the default settings
-        fontString = this->font().toString();
-        settings.setValue("MainWindow/noteTextEdit.font", fontString);
-    }
-
+    QFont font = Utils::Schema::getEditorTextFont();
     int defaultFontSize = font.pointSize();
 
     // set the tab stop to the width of 4 spaces in the editor
@@ -97,24 +83,6 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
 
     /* <pre> */
     QTextCharFormat code;
-    QFont codeFont = this->font();
-
-    fontString = settings.value(
-            "MainWindow/noteTextEdit.code.font").toString();
-
-    if (fontString != "") {
-        // set the code font
-        codeFont.fromString(fontString);
-    } else {
-        codeFont = QFontDatabase::systemFont(QFontDatabase::FixedFont);
-
-        // store the default settings
-        settings.setValue(
-                "MainWindow/noteTextEdit.code.font", codeFont.toString());
-    }
-
-    code.setFont(codeFont);
-
     Utils::Schema::setFormatStyle(pmh_CODE, code);
     STY(pmh_CODE, code);
     Utils::Schema::setFormatStyle(pmh_VERBATIM, code);

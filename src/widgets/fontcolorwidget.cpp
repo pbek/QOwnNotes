@@ -37,6 +37,12 @@ FontColorWidget::FontColorWidget(QWidget *parent) :
 
     // initialize the text tree widget items
     initTextTreeWidgetItems();
+
+    // we currently are using the font selector from the settings dialog
+    ui->fontGroupBox->setVisible(false);
+
+    // initialize the font selectors
+//    initFontSelectors();
 }
 
 /**
@@ -161,12 +167,12 @@ void FontColorWidget::updateTextItems(int index) {
  * @see src/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h
  */
 void FontColorWidget::initTextTreeWidgetItems() {
-    addTextTreeWidgetItem(tr("Text"), Utils::Schema::TextIndex);
+    addTextTreeWidgetItem(tr("Text preset"), Utils::Schema::TextPresetIndex);
     addTextTreeWidgetItem(tr("Explicit link"), pmh_LINK);
     addTextTreeWidgetItem(tr("Implicit URL link"), pmh_AUTO_LINK_URL);
     addTextTreeWidgetItem(tr("Implicit email link"), pmh_AUTO_LINK_EMAIL);
     addTextTreeWidgetItem(tr("Image definition"), pmh_IMAGE);
-    addTextTreeWidgetItem(tr("Code (inline)"), pmh_CODE);
+    addTextTreeWidgetItem(tr("Code"), pmh_CODE);
     addTextTreeWidgetItem("HTML", pmh_HTML);
     addTextTreeWidgetItem(tr("HTML special entity definition"),
                           pmh_HTML_ENTITY);
@@ -191,10 +197,15 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Note"), pmh_NOTE);
 }
 
-void FontColorWidget::addTextTreeWidgetItem(QString text, int id) {
+void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, text);
-    item->setData(0, Qt::UserRole, id);
+    item->setData(0, Qt::UserRole, index);
+
+    if (index == Utils::Schema::TextPresetIndex) {
+        item->setToolTip(0, tr(
+                "This item will be used to preset colors for the other items"));
+    }
 
     // update the styling of the text tree widget item
     updateTextItem(item);
@@ -370,20 +381,22 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem *item) {
         return;
     }
 
+    int index = textSettingsIndex(item);
+
     // set the foreground color
-    QColor color = Utils::Schema::getForegroundColor(textSettingsIndex(item));
+    QColor color = Utils::Schema::getForegroundColor(index);
     QBrush brush = item->foreground(0);
     brush.setColor(color);
     item->setForeground(0, brush);
 
     // set the background color
-    color = Utils::Schema::getBackgroundColor(textSettingsIndex(item));
+    color = Utils::Schema::getBackgroundColor(index);
     brush = item->background(0);
     brush.setColor(color);
     brush.setStyle(Qt::SolidPattern);
     item->setBackground(0, brush);
 
-    QFont font = item->font(0);
+    QFont font = Utils::Schema::getEditorFont(index);
     font.setBold(Utils::Schema::getSchemaValue(
             textSettingsKey("Bold", item)).toBool());
     font.setItalic(Utils::Schema::getSchemaValue(
@@ -654,7 +667,29 @@ void FontColorWidget::on_importSchemeButton_clicked() {
                     // select the last schema
                     selectLastSchema();
                 }
-
         }
     }
+}
+
+/**
+ * Initializes the font selectors
+ */
+void FontColorWidget::initFontSelectors() {
+    QTextEdit textEdit;
+    QFont font = textEdit.font();
+    QSettings settings;
+    QString fontString = settings.value(
+            "MainWindow/noteTextEdit.font").toString();
+
+    if (fontString != "") {
+        // set the note text edit font
+        font.fromString(fontString);
+    } else {
+        // store the default settings
+        fontString = textEdit.font().toString();
+        settings.setValue("MainWindow/noteTextEdit.font", fontString);
+    }
+
+    ui->fontFamilyComboBox->setCurrentFont(font);
+    ui->fontSizeSpinBox->setValue(font.pointSize());
 }

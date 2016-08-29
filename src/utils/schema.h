@@ -22,7 +22,7 @@
 
 namespace Utils {
     namespace Schema {
-        const int TextIndex = -1;
+        const int TextPresetIndex = -1;
 
         QStringList defaultSchemaKeys();
 
@@ -45,5 +45,11 @@ namespace Utils {
         QColor getBackgroundColor(int index);
 
         void setFormatStyle(int index, QTextCharFormat &format);
+
+        QFont getEditorTextFont();
+
+        QFont getEditorFixedFont();
+
+        QFont getEditorFont(int index);
     }
 }

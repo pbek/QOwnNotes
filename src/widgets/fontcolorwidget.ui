@@ -33,43 +33,12 @@
     <number>0</number>
    </property>
    <item row="0" column="0">
-    <widget class="QGroupBox" name="groupBox_18">
+    <widget class="QGroupBox" name="fontGroupBox">
      <property name="title">
-      <string>Font</string>
+      <string>Text font</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="1">
-       <widget class="QFontComboBox" name="fontFamilyComboBox"/>
-      </item>
-      <item row="0" column="3">
-       <widget class="QLabel" name="label_4">
-        <property name="text">
-         <string>Size:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_3">
-        <property name="text">
-         <string>Family:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="4">
-       <widget class="QComboBox" name="fontSizeComboBox">
-        <item>
-         <property name="text">
-          <string>6</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>7</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="0" column="5">
+      <item row="0" column="6">
        <spacer name="horizontalSpacer">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -98,11 +67,52 @@
         </property>
        </spacer>
       </item>
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>Size:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>Family:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QFontComboBox" name="fontFamilyComboBox"/>
+      </item>
+      <item row="0" column="4">
+       <widget class="QComboBox" name="fontSizeComboBox">
+        <item>
+         <property name="text">
+          <string>6</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>7</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="0" column="5">
+       <widget class="QSpinBox" name="fontSizeSpinBox">
+        <property name="minimum">
+         <number>5</number>
+        </property>
+        <property name="maximum">
+         <number>72</number>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>
    <item row="1" column="0">
-    <widget class="QGroupBox" name="groupBox_19">
+    <widget class="QGroupBox" name="colorGroupBox">
      <property name="title">
       <string>Color schema</string>
      </property>
@@ -193,7 +203,7 @@
          <item row="0" column="2">
           <widget class="QPushButton" name="foregroundColorButton">
            <property name="styleSheet">
-            <string notr="true">* {background: red; border: none}</string>
+            <string notr="true">* {background: black; border: none}</string>
            </property>
            <property name="text">
             <string notr="true"/>
@@ -203,7 +213,7 @@
          <item row="1" column="2">
           <widget class="QPushButton" name="backgroundColorButton">
            <property name="styleSheet">
-            <string notr="true">* {background: black}</string>
+            <string notr="true">* {background: white; border: none}</string>
            </property>
            <property name="text">
             <string/>

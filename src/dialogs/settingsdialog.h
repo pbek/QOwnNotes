@@ -235,6 +235,8 @@ private:
     void initMainSplitter();
 
     void storeSplitterSettings();
+
+    void storeFontSettings();
 };
 
 #endif // SETTINGSDIALOG_H
