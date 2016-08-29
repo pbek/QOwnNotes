@@ -430,6 +430,14 @@ void FontColorWidget::on_copySchemeButton_clicked() {
     settings.setValue("Editor/ColorSchemes", schemes);
     settings.setValue("Editor/CurrentSchemaKey", _currentSchemaKey);
 
+    // select the last schema
+    selectLastSchema();
+}
+
+/**
+ * Selects the last schema
+ */
+void FontColorWidget::selectLastSchema() {
 #ifdef Q_OS_MAC
     // under OS X we have to use a workaround to select the newly created schema
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_End,
@@ -643,12 +651,8 @@ void FontColorWidget::on_importSchemeButton_clicked() {
                             settings->setValue(key, value);
                         }
 
-                    // reload the schema selector
-                    initSchemaSelector();
-
-                    // set the index to the (new) last item
-                    ui->colorSchemeComboBox->setCurrentIndex(
-                            ui->colorSchemeComboBox->count() - 1);
+                    // select the last schema
+                    selectLastSchema();
                 }
 
         }

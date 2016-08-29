@@ -88,4 +88,6 @@ private:
     void updateTextItems(int index);
 
     void storeCheckBoxState(QString name, bool checked);
+
+    void selectLastSchema();
 };
