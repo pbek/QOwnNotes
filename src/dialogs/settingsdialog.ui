@@ -2931,7 +2931,7 @@ p, li { white-space: pre-wrap; }
                 <item row="0" column="0">
                  <widget class="QLabel" name="noteTextEditFontHeadlineLabel">
                   <property name="text">
-                   <string>Default font in markdown text edits:</string>
+                   <string>Default font:</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2948,7 +2948,7 @@ p, li { white-space: pre-wrap; }
                 <item row="0" column="2">
                  <widget class="QToolButton" name="noteTextEditButton">
                   <property name="toolTip">
-                   <string>set a new font</string>
+                   <string>Set a new font</string>
                   </property>
                   <property name="icon">
                    <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
@@ -2959,7 +2959,7 @@ p, li { white-space: pre-wrap; }
                 <item row="0" column="3">
                  <widget class="QToolButton" name="noteTextEditResetButton">
                   <property name="toolTip">
-                   <string>reset font</string>
+                   <string>Reset font</string>
                   </property>
                   <property name="text">
                    <string notr="true">...</string>
@@ -2973,7 +2973,7 @@ p, li { white-space: pre-wrap; }
                 <item row="1" column="0">
                  <widget class="QLabel" name="noteTextEditCodeFontHeadlineLabel">
                   <property name="text">
-                   <string>Code font in markdown text edits:</string>
+                   <string>Code font:</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2990,7 +2990,7 @@ p, li { white-space: pre-wrap; }
                 <item row="1" column="2">
                  <widget class="QToolButton" name="noteTextEditCodeButton">
                   <property name="toolTip">
-                   <string>set a new font</string>
+                   <string>Set a new font</string>
                   </property>
                   <property name="text">
                    <string/>
@@ -3004,7 +3004,7 @@ p, li { white-space: pre-wrap; }
                 <item row="1" column="3">
                  <widget class="QToolButton" name="noteTextEditCodeResetButton">
                   <property name="toolTip">
-                   <string>reset font</string>
+                   <string>Reset font</string>
                   </property>
                   <property name="text">
                    <string notr="true">...</string>
