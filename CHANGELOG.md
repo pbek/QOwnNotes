@@ -17,6 +17,9 @@
     - the schema `Default` was renamed to `Light`
 - you can now enable a dark mode system tray icon in the interface settings
   (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306))
+- added more French, Italian, Japanese, Portuguese, Polish, Hungarian
+  and Dutch translation (thank you Loelo, mlocati, piyo, mlimacarlos,
+  Snipirise and Fabijenna)
 
 ## 16.08.19
 - finally there are configurable **editor color schemes**
