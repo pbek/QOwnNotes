@@ -420,6 +420,12 @@ void MainWindow::initTagButtonScrollArea() {
     _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft);
     _noteTagButtonScrollArea->setWidget(ui->noteTagButtonFrame);
 
+#ifndef Q_OS_LINUX
+    // we need to set a minimum height under OS X and Windows or else the
+    // scroll are will be far to high
+    _noteTagButtonScrollArea->setMinimumHeight(40);
+#endif
+
     ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);
     ui->noteTagFrame->layout()->addWidget(ui->newNoteTagButton);
     ui->noteTagFrame->layout()->addWidget(ui->newNoteTagLineEdit);
