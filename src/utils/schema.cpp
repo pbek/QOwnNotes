@@ -21,6 +21,7 @@
 #include <QTextEdit>
 #include <QFontDatabase>
 #include "schema.h"
+#include "math.h"
 
 
 /**
