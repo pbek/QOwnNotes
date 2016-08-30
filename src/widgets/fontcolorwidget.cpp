@@ -168,31 +168,31 @@ void FontColorWidget::updateTextItems(int index) {
  */
 void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Text preset"), Utils::Schema::TextPresetIndex);
+    addTextTreeWidgetItem(tr("Emphasized text"), pmh_EMPH);
+    addTextTreeWidgetItem(tr("Strong text"), pmh_STRONG);
     addTextTreeWidgetItem(tr("Explicit link"), pmh_LINK);
     addTextTreeWidgetItem(tr("Implicit URL link"), pmh_AUTO_LINK_URL);
     addTextTreeWidgetItem(tr("Implicit email link"), pmh_AUTO_LINK_EMAIL);
     addTextTreeWidgetItem(tr("Image definition"), pmh_IMAGE);
     addTextTreeWidgetItem(tr("Code"), pmh_CODE);
-    addTextTreeWidgetItem("HTML", pmh_HTML);
-    addTextTreeWidgetItem(tr("HTML special entity definition"),
-                          pmh_HTML_ENTITY);
-    addTextTreeWidgetItem(tr("Emphasized text"), pmh_EMPH);
-    addTextTreeWidgetItem(tr("Strong text"), pmh_STRONG);
     addTextTreeWidgetItem(tr("Bullet for an unordered list item"),
                           pmh_LIST_BULLET);
     addTextTreeWidgetItem(tr("Enumerator for an ordered list item"),
                           pmh_LIST_ENUMERATOR);
-    addTextTreeWidgetItem(tr("(HTML) Comment"), pmh_COMMENT);
     addTextTreeWidgetItem(tr("Header, level 1"), pmh_H1);
     addTextTreeWidgetItem(tr("Header, level 2"), pmh_H2);
     addTextTreeWidgetItem(tr("Header, level 3"), pmh_H3);
     addTextTreeWidgetItem(tr("Header, level 4"), pmh_H4);
     addTextTreeWidgetItem(tr("Header, level 5"), pmh_H5);
     addTextTreeWidgetItem(tr("Header, level 6"), pmh_H6);
+    addTextTreeWidgetItem(tr("Horizontal rule"), pmh_HRULE);
     addTextTreeWidgetItem(tr("Blockquote"), pmh_BLOCKQUOTE);
     addTextTreeWidgetItem(tr("Verbatim (e.g. block of code)"), pmh_VERBATIM);
+    addTextTreeWidgetItem("HTML", pmh_HTML);
+    addTextTreeWidgetItem(tr("HTML special entity definition"),
+                          pmh_HTML_ENTITY);
+    addTextTreeWidgetItem(tr("(HTML) Comment"), pmh_COMMENT);
     addTextTreeWidgetItem(tr("Block of HTML"), pmh_HTMLBLOCK);
-    addTextTreeWidgetItem(tr("Horizontal rule"), pmh_HRULE);
     addTextTreeWidgetItem(tr("Reference"), pmh_REFERENCE);
     addTextTreeWidgetItem(tr("Note"), pmh_NOTE);
 }
@@ -249,6 +249,7 @@ void FontColorWidget::updateSchemeEditFrame() {
     ui->boldCheckBox->setVisible(index >= 0);
     ui->italicCheckBox->setVisible(index >= 0);
     ui->underlineCheckBox->setVisible(index >= 0);
+    ui->fontSizeAdaptionSpinBox->setVisible(index >= 0);
 
     if (index >= 0) {
         const QSignalBlocker blocker(ui->boldCheckBox);
@@ -271,6 +272,12 @@ void FontColorWidget::updateSchemeEditFrame() {
         ui->underlineCheckBox->setChecked(
                 Utils::Schema::getSchemaValue(
                         textSettingsKey("Underline")).toBool());
+
+        const QSignalBlocker blocker4(ui->fontSizeAdaptionSpinBox);
+        Q_UNUSED(blocker4);
+
+        ui->fontSizeAdaptionSpinBox->setValue(Utils::Schema::getSchemaValue(
+                        textSettingsKey("FontSizeAdaption"), 100).toInt());
     }
 }
 
@@ -403,6 +410,10 @@ void FontColorWidget::updateTextItem(QTreeWidgetItem *item) {
             textSettingsKey("Italic", item)).toBool());
     font.setUnderline(Utils::Schema::getSchemaValue(
                     textSettingsKey("Underline", item)).toBool());
+
+    // adapt the font size
+    Utils::Schema::adaptFontSize(index, font);
+
     item->setFont(0, font);
 }
 
@@ -692,4 +703,18 @@ void FontColorWidget::initFontSelectors() {
 
     ui->fontFamilyComboBox->setCurrentFont(font);
     ui->fontSizeSpinBox->setValue(font.pointSize());
+}
+
+/**
+ * Stores the font size adaption value
+ *
+ * @param value
+ */
+void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
+    if (!_currentSchemaIsDefault) {
+        setSchemaValue(textSettingsKey("FontSizeAdaption"), value);
+    }
+
+    // update the styling of the current text tree widget item
+    updateTextItem();
 }

@@ -188,21 +188,11 @@ void Utils::Schema::setFormatStyle(pmh_element_type index,
     // set the font
     format.setFont(font);
 
-    int fontSize = font.pointSize();
-
-    switch (index) {
-        case pmh_H1:
-            fontSize *= 1.2;
-            break;
-        case pmh_H2:
-            fontSize *= 1.1;
-            break;
-        default:
-            break;
-    }
+    // adapt the font size
+    adaptFontSize(index, font);
 
     // override the font size
-    format.setFontPointSize(fontSize);
+    format.setFontPointSize(font.pointSize());
 
     // set the foreground color
     format.setForeground(QBrush(Utils::Schema::getForegroundColor(index)));
@@ -222,6 +212,19 @@ void Utils::Schema::setFormatStyle(pmh_element_type index,
     // set the underline state
     format.setFontUnderline(Utils::Schema::getSchemaValue(
             Utils::Schema::textSettingsKey("Underline", index)).toBool());
+}
+
+/**
+ * Adapts the font size of a font for an index
+ *
+ * @param index
+ * @param font
+ */
+void Utils::Schema::adaptFontSize(int index, QFont &font) {
+    int adaption = getSchemaValue(textSettingsKey("FontSizeAdaption", index),
+                                  100).toInt();
+
+    font.setPointSize(round(font.pointSize() * adaption / 100));
 }
 
 /**

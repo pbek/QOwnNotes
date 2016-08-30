@@ -52,5 +52,7 @@ namespace Utils {
         QFont getEditorFixedFont();
 
         QFont getEditorFont(int index);
+
+        void adaptFontSize(int index, QFont &font);
     }
 }

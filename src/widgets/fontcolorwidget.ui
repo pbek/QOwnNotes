@@ -186,13 +186,27 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="0" column="2">
-          <widget class="QPushButton" name="foregroundColorButton">
-           <property name="styleSheet">
-            <string notr="true">* {background: black; border: none}</string>
-           </property>
+         <item row="3" column="3">
+          <widget class="QCheckBox" name="underlineCheckBox">
            <property name="text">
-            <string notr="true"/>
+            <string>Underline</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="3">
+          <widget class="QLabel" name="restartInfoLabel">
+           <property name="text">
+            <string>You might need to restart the application to let these changes take effect.</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="backgroundColorCheckBox">
+           <property name="text">
+            <string>Background:</string>
            </property>
           </widget>
          </item>
@@ -206,7 +220,17 @@
            </property>
           </widget>
          </item>
-         <item row="4" column="2">
+         <item row="0" column="2">
+          <widget class="QPushButton" name="foregroundColorButton">
+           <property name="styleSheet">
+            <string notr="true">* {background: black; border: none}</string>
+           </property>
+           <property name="text">
+            <string notr="true"/>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="2">
           <spacer name="verticalSpacer">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -219,48 +243,53 @@
            </property>
           </spacer>
          </item>
-         <item row="2" column="1">
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="foregroundColorCheckBox">
+           <property name="text">
+            <string>Foreground:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
           <widget class="QCheckBox" name="boldCheckBox">
            <property name="text">
             <string>Bold</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="2">
+         <item row="3" column="2">
           <widget class="QCheckBox" name="italicCheckBox">
            <property name="text">
             <string>Italic</string>
            </property>
           </widget>
          </item>
-         <item row="2" column="3">
-          <widget class="QCheckBox" name="underlineCheckBox">
+         <item row="2" column="1">
+          <widget class="QLabel" name="label">
            <property name="text">
-            <string>Underline</string>
+            <string>Adapt font size:</string>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QCheckBox" name="foregroundColorCheckBox">
-           <property name="text">
-            <string>Foreground</string>
+         <item row="2" column="2">
+          <widget class="QSpinBox" name="fontSizeAdaptionSpinBox">
+           <property name="suffix">
+            <string>%</string>
            </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="backgroundColorCheckBox">
-           <property name="text">
-            <string>Background</string>
+           <property name="prefix">
+            <string/>
            </property>
-          </widget>
-         </item>
-         <item row="3" column="1" colspan="3">
-          <widget class="QLabel" name="restartInfoLabel">
-           <property name="text">
-            <string>You might need to restart the application to let these changes take effect.</string>
+           <property name="minimum">
+            <number>10</number>
            </property>
-           <property name="wordWrap">
-            <bool>true</bool>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="singleStep">
+            <number>10</number>
+           </property>
+           <property name="value">
+            <number>100</number>
            </property>
           </widget>
          </item>

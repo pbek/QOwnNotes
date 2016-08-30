@@ -18,6 +18,7 @@
 #include <entities/notefolder.h>
 #include <entities/tag.h>
 #include <services/scriptingservice.h>
+#include <QScrollArea>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -422,6 +423,7 @@ private:
     QList<int> _buildNotesIndexBeforeNoteSubFolderIdList;
     QList<int> _buildNotesIndexAfterNoteIdList;
     QList<int> _buildNotesIndexAfterNoteSubFolderIdList;
+    QScrollArea *_noteTagButtonScrollArea;
 
     void initMainSplitter();
 
@@ -646,4 +648,6 @@ private:
     void initShowTagPaneUnderNavigationPane();
 
     bool selectedNotesHaveTags();
+
+    void initTagButtonScrollArea();
 };

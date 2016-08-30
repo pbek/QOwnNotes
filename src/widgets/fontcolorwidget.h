@@ -59,6 +59,8 @@ private slots:
 
     void on_importSchemeButton_clicked();
 
+    void on_fontSizeAdaptionSpinBox_valueChanged(int value);
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;

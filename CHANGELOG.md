@@ -6,11 +6,20 @@
   (for [Issue #305](https://github.com/pbek/QOwnNotes/issues/305))
     - triggering it jumps to `All notes` in the note subfolder tree 
       and triggers a `Find note`
+- if there are more tags assigned to a note than the width of the edit
+  pane allows there now will be used a scrollbar to scroll through the 
+  tags, so that the width of the edit pane can still be small
+  (for [Issue #308](https://github.com/pbek/QOwnNotes/issues/308))
+- more editor color scheme improvements
+    - you are now able the adapt the font size for each highlighting item
+        - you will be able to see the adapted font size in the item preview
+    - the highlighting items were reordered
+    - the schema `Default` was renamed to `Light`
 
 ## 16.08.19
 - finally there are configurable **editor color schemes**
   (for [Issue #280](https://github.com/pbek/QOwnNotes/issues/280))
-    - there are two default schemes called `Default` and `Dark` that
+    - there are two default schemes called `Light` and `Dark` that
       are mimicking the current default mode and the dark mode colors
     - you can create as many schemes as you like by copying and
       modifying them

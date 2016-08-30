@@ -104,6 +104,9 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->noteTextEdit->setMainWindow(this);
     ui->encryptedNoteTextEdit->setMainWindow(this);
 
+    // initialize the tag button scroll area
+    initTagButtonScrollArea();
+
     noteHistory = NoteHistory();
 
     // set our signal mapper
@@ -373,6 +376,16 @@ MainWindow::MainWindow(QWidget *parent) :
             "app/has-owncloud-settings", "app", "has owncloud settings",
             OwnCloudService::hasOwnCloudSettings() ? "yes" : "no");
 
+    // send an event for counting the editor color schemes
+    int schemaCount = settings.value("Editor/ColorSchemes").toStringList()
+            .count();
+    MetricsService::instance()->sendEventIfEnabled(
+            "app/editor-color-schema-count",
+            "editor",
+            "editor color schema count",
+            QString::number(schemaCount) + " schemas",
+            schemaCount);
+
     // init the showing of the tag pane under the navigation pane
     initShowTagPaneUnderNavigationPane();
 }
@@ -393,6 +406,26 @@ MainWindow::~MainWindow() {
  */
 
 /**
+ * Initializes the tag button scroll area
+ *
+ * If there are more tags assigned to a note than the width of the edit
+ * pane allows there now will be used a scrollbar to scroll through the
+ * tags, so that the width of the edit pane can still be small
+ */
+void MainWindow::initTagButtonScrollArea() {
+    _noteTagButtonScrollArea = new QScrollArea(this);
+    _noteTagButtonScrollArea->setWidgetResizable(true);
+    _noteTagButtonScrollArea->setSizePolicy(QSizePolicy::MinimumExpanding,
+                                      QSizePolicy::Minimum);
+    _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft);
+    _noteTagButtonScrollArea->setWidget(ui->noteTagButtonFrame);
+
+    ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);
+    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagButton);
+    ui->noteTagFrame->layout()->addWidget(ui->newNoteTagLineEdit);
+}
+
+/**
  * Returns all menus from the menu bar
  */
 QList<QMenu *> MainWindow::menuList() {
@@ -400,7 +433,7 @@ QList<QMenu *> MainWindow::menuList() {
 }
 
 /**
- * Returns all menus from the menu bar
+ * Finds an action in all menus of the menu bar
  */
 QAction *MainWindow::findAction(QString objectName) {
     QList<QMenu*> menus = menuList();
@@ -5816,6 +5849,12 @@ void MainWindow::reloadCurrentNoteTags() {
 
             ui->noteTagButtonFrame->layout()->addWidget(button);
         }
+
+    // add a spacer to prevent the button items to take the full width
+    QSpacerItem *spacer = new QSpacerItem(0, 20,
+                                          QSizePolicy::MinimumExpanding,
+                                          QSizePolicy::Ignored);
+    ui->noteTagButtonFrame->layout()->addItem(spacer);
 }
 
 /**
