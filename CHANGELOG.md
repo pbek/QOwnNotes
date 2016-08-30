@@ -15,6 +15,8 @@
         - you will be able to see the adapted font size in the item preview
     - the highlighting items were reordered
     - the schema `Default` was renamed to `Light`
+- you can now enable a dark mode system tray icon in the interface settings
+  (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306))
 
 ## 16.08.19
 - finally there are configurable **editor color schemes**

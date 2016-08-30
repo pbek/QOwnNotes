@@ -309,6 +309,9 @@ void SettingsDialog::storeSettings() {
     settings.setValue("darkMode",
                       ui->darkModeCheckBox->isChecked());
 
+    settings.setValue("darkModeTrayIcon",
+                      ui->darkModeTrayIconCheckBox->isChecked());
+
     QStringList todoCalendarUrlList;
     QStringList todoCalendarEnabledList;
     QStringList todoCalendarEnabledUrlList;
@@ -433,6 +436,9 @@ void SettingsDialog::readSettings() {
 
     ui->darkModeCheckBox->setChecked(settings.value(
             "darkMode").toBool());
+
+    ui->darkModeTrayIconCheckBox->setChecked(settings.value(
+            "darkModeTrayIcon").toBool());
 
     // toggle the dark mode colors check box with the dark mode checkbox
     on_darkModeCheckBox_toggled();

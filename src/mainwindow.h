@@ -650,4 +650,6 @@ private:
     bool selectedNotesHaveTags();
 
     void initTagButtonScrollArea();
+
+    static QIcon getSystemTrayIcon();
 };

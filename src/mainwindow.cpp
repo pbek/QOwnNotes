@@ -422,7 +422,7 @@ void MainWindow::initTagButtonScrollArea() {
 
 #ifndef Q_OS_LINUX
     // we need to set a minimum height under OS X and Windows or else the
-    // scroll are will be far to high
+    // scroll area will be far to high
     _noteTagButtonScrollArea->setMinimumHeight(40);
 #endif
 
@@ -1333,7 +1333,7 @@ void MainWindow::setupMainSplitter() {
 
 void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
-    trayIcon->setIcon(QIcon(":/images/icon.png"));
+    trayIcon->setIcon(getSystemTrayIcon());
 
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(
@@ -1342,6 +1342,23 @@ void MainWindow::createSystemTrayIcon() {
     if (showSystemTray) {
         trayIcon->show();
     }
+}
+
+/**
+ * Returns a proper system tray icon
+ *
+ * @return
+ */
+QIcon MainWindow::getSystemTrayIcon() {
+    QSettings settings;
+    QString fileName = ":/images/icon";
+
+    if (settings.value("darkModeTrayIcon").toBool()) {
+        fileName += "-dark";
+    }
+
+    fileName += ".png";
+    return QIcon(fileName);
 }
 
 /**
@@ -4193,7 +4210,7 @@ void MainWindow::generateSystemTrayContextMenu() {
 
     // add menu entry to open the app
     QAction *openAction = menu->addAction(tr("Open QOwnNotes"));
-    openAction->setIcon(QIcon(":/images/icon.png"));
+    openAction->setIcon(getSystemTrayIcon());
 
     connect(openAction, SIGNAL(triggered()),
             this, SLOT(showWindow()));

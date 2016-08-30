@@ -1612,6 +1612,16 @@
                        </property>
                       </widget>
                      </item>
+                     <item row="2" column="0">
+                      <widget class="QCheckBox" name="darkModeTrayIconCheckBox">
+                       <property name="toolTip">
+                        <string>You may need to restart the application to let these changes take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Enable dark mode tray icon</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
                    </widget>
                   </item>
