@@ -101,11 +101,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="277"/>
-        <source>%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../widgets/fontcolorwidget.ui" line="192"/>
         <source>Underline</source>
         <translation type="unfinished"></translation>

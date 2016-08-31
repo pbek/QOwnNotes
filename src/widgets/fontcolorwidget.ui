@@ -274,7 +274,7 @@
          <item row="2" column="2">
           <widget class="QSpinBox" name="fontSizeAdaptionSpinBox">
            <property name="suffix">
-            <string>%</string>
+            <string notr="true">%</string>
            </property>
            <property name="prefix">
             <string/>
