@@ -10,7 +10,8 @@
   pane allows there now will be used a scrollbar to scroll through the 
   tags, so that the width of the edit pane can still be small
   (for [Issue #308](https://github.com/pbek/QOwnNotes/issues/308))
-- more editor color scheme improvements
+- more **editor color scheme improvements**
+  (for [Issue #280](https://github.com/pbek/QOwnNotes/issues/280))
     - you are now able the adapt the font size for each highlighting item
         - you will be able to see the adapted font size in the item preview
     - the highlighting items were reordered
