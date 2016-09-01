@@ -423,10 +423,15 @@ void MainWindow::initTagButtonScrollArea() {
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 0, 0, 0);
     _noteTagButtonScrollArea->setContentsMargins(0, 0, 0, 0);
 
-#ifndef Q_OS_LINUX
-    // we need to set a minimum height under OS X and Windows or else the
-    // scroll area will be far to high
+#ifdef Q_OS_MAC
+    // we need to set a minimum height under OS X or else the scroll area
+    // will be far to high
     _noteTagButtonScrollArea->setMinimumHeight(36);
+#endif
+#ifdef Q_OS_WIN32
+    // we need to set a minimum height under Windows or else the scroll area
+    // will be far to high
+    _noteTagButtonScrollArea->setMinimumHeight(40);
 #endif
 
     ui->noteTagFrame->layout()->addWidget(_noteTagButtonScrollArea);

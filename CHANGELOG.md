@@ -14,6 +14,7 @@
   Spanish, Hungarian and Dutch translation (thank you vpistis,
   a514917345, mlimacarlos, lucjan, frostyland, bigant, richarson
   and Fabijenna)
+- tried to make the tag button area a tiny bit smaller
 
 ## 16.08.20
 - if you have note subfolders activated for a note folder there now is
