@@ -43,4 +43,4 @@ parts:
       - libqt5declarative5
     stage:
       - -usr/share/pkgconfig
-    after: [desktop/qt5]
+    after: [desktop-qt5]
