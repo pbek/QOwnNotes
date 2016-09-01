@@ -62,6 +62,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     readSettings();
 
+    // initializes the main splitter
+    initMainSplitter();
+
     if (ui->serverUrlEdit->text() != "") {
         // start a connection test
         startConnectionTest();
@@ -94,9 +97,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             item->setDisabled(true);
         }
     }
-
-    // initializes the main splitter
-    initMainSplitter();
 
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();

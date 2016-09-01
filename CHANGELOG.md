@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.09.0
+- fixed a possible crash when opening the settings dialog from a
+  message dialog
+
 ## 16.08.20
 - if you have note subfolders activated for a note folder there now is
   a new menu entry `Find notes in all subfolders` in the note menu
