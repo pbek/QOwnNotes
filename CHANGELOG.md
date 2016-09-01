@@ -10,6 +10,10 @@
     - increased `max-version` to `10.2`
     - switched to rolling release version numbers
 - several fixes in the snap version of QOwnNotes
+- added more Italian, Chinese, Portuguese, Polish, Russian, German,
+  Spanish, Hungarian and Dutch translation (thank you vpistis,
+  a514917345, mlimacarlos, lucjan, frostyland, bigant, richarson
+  and Fabijenna)
 
 ## 16.08.20
 - if you have note subfolders activated for a note folder there now is
