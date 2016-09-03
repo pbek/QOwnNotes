@@ -7,6 +7,7 @@ set(CMAKE_AUTOUIC ON)
 #set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+find_package( Qt5LinguistTools )
 find_package( Qt5Core 5.3 REQUIRED )
 find_package( Qt5Widgets REQUIRED )
 find_package( Qt5Gui REQUIRED )
@@ -192,7 +193,7 @@ set(SOURCE_FILES
 )
 
 # Translation files
-SET(TRANSLATION_FILES
+SET(QON_TS_FILES
     languages/QOwnNotes_en.ts
     languages/QOwnNotes_de.ts
     languages/QOwnNotes_fr.ts
@@ -207,7 +208,26 @@ SET(TRANSLATION_FILES
     languages/QOwnNotes_it.ts
 )
 
-add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED})
+qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})
+add_custom_target(translations DEPENDS ${QON_QM_FILES})
+
+if(NOT QT_TRANSLATIONS_DIR)
+    # If this directory is missing, we are in a Qt5 environment.
+    # Extract the qmake executable location
+    get_target_property(QT5_QMAKE_EXECUTABLE Qt5::qmake IMPORTED_LOCATION)
+    # Ask Qt5 where to put the translations
+    execute_process( COMMAND ${QT5_QMAKE_EXECUTABLE} -query QT_INSTALL_TRANSLATIONS
+            OUTPUT_VARIABLE qt_translations_dir OUTPUT_STRIP_TRAILING_WHITESPACE )
+    # make sure we have / and not \ as qmake gives on windows
+    file( TO_CMAKE_PATH "${qt_translations_dir}" qt_translations_dir)
+    set( QT_TRANSLATIONS_DIR ${qt_translations_dir} CACHE PATH
+            "The location of the Qt translations" FORCE)
+endif()
+
+install(FILES ${QON_QM_FILES}
+        DESTINATION ${QT_TRANSLATIONS_DIR})
+
+add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED} ${QON_QM_FILES})
 
 
 # The Qt5Widgets_INCLUDES also includes the include directories for
