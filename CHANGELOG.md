@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.09.1
+- updated Hoedown (markdown to html library) to version 3.0.7
+
 ## 16.09.0
 - fixed a possible crash when opening the settings dialog from a
   message dialog
@@ -7,7 +10,7 @@
     - fixed a problem when the ownCloud or Nextcloud server didn't
       provide the path of a trashed note and thus no note was shown in
       the trash dialog of QOwnNotes
-    - increased `max-version` to `10.2`
+    - increased `max-version` to `9.2`
     - switched to rolling release version numbers
 - several fixes in the snap version of QOwnNotes
 - tried to make the tag button area a tiny bit smaller
