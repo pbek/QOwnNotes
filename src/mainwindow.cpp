@@ -142,6 +142,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     initScriptingEngine();
 
+    // check if we want to start the application hidden
+    initShowHidden();
+
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
     ui->actionAlphabetical->setChecked(sortAlphabetically);
@@ -404,6 +407,19 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Initializes if we want to start the application hidden
+ */
+void MainWindow::initShowHidden() {
+    QSettings settings;
+    bool startHidden = settings.value("StartHidden", false).toBool();
+    ui->actionStart_hidden->setChecked(startHidden);
+    ui->actionStart_hidden->setEnabled(showSystemTray);
+    if (startHidden) {
+        QTimer::singleShot(250, this, SLOT(hide()));
+    }
+}
 
 /**
  * Initializes the tag button scroll area
@@ -4327,10 +4343,15 @@ void MainWindow::generateSystemTrayContextMenu() {
 
 void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
     showSystemTray = checked;
+    ui->actionStart_hidden->setEnabled(checked);
+
     if (checked) {
         trayIcon->show();
     } else {
         trayIcon->hide();
+
+        // turn off "Start hidden"
+        on_actionStart_hidden_triggered(false);
     }
 }
 
@@ -7542,4 +7563,19 @@ void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
 
     // trigger a "Find note"
     on_action_Find_note_triggered();
+}
+
+/**
+ * Toggle if we want to start the app hidden
+ */
+void MainWindow::on_actionStart_hidden_triggered(bool checked)
+{
+    QSettings settings;
+    settings.setValue("StartHidden", checked);
+
+    const QSignalBlocker blocker(ui->actionStart_hidden);
+    {
+        Q_UNUSED(blocker);
+        ui->actionStart_hidden->setChecked(checked);
+    }
 }

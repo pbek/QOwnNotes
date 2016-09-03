@@ -374,6 +374,8 @@ private slots:
 
     void on_actionFind_notes_in_all_subfolders_triggered();
 
+    void on_actionStart_hidden_triggered(bool checked);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -652,4 +654,6 @@ private:
     void initTagButtonScrollArea();
 
     static QIcon getSystemTrayIcon();
+
+    void initShowHidden();
 };

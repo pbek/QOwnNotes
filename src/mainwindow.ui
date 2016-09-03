@@ -738,6 +738,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
+    <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
     <addaction name="actionToggle_tag_pane"/>
@@ -1727,6 +1728,20 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Find notes in all subfolders</string>
+   </property>
+  </action>
+  <action name="actionStart_hidden">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Start hidden</string>
+   </property>
+   <property name="toolTip">
+    <string>Start hidden</string>
+   </property>
+   <property name="statusTip">
+    <string>Starts the application hidden if the system tray icon is shown</string>
    </property>
   </action>
  </widget>

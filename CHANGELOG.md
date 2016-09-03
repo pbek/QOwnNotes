@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 16.09.1
+- there now is an option in the windows menu to start the application 
+  hidden if the tray icon is shown
+  (for [Issue #307](https://github.com/pbek/QOwnNotes/issues/307))
 - updated Hoedown (markdown to html library) to version 3.0.7
 
 ## 16.09.0
