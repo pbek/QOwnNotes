@@ -7568,8 +7568,7 @@ void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
 /**
  * Toggle if we want to start the app hidden
  */
-void MainWindow::on_actionStart_hidden_triggered(bool checked)
-{
+void MainWindow::on_actionStart_hidden_triggered(bool checked) {
     QSettings settings;
     settings.setValue("StartHidden", checked);
 
