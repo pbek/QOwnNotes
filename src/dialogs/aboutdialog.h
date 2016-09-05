@@ -9,8 +9,7 @@ namespace Ui {
 class AboutDialog;
 }
 
-class AboutDialog : public MasterDialog
-{
+class AboutDialog : public MasterDialog {
     Q_OBJECT
 
 public:
