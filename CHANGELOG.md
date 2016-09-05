@@ -6,6 +6,8 @@
   (for [Issue #311](https://github.com/pbek/QOwnNotes/issues/311))
 - attempted to fix the start problems of the snap version of QOwnNotes
   (popey, thank you for mentioning) 
+- added more Italian, Portuguese, Polish and Russian translation
+  (thank you vpistis, mlimacarlos, lucjan, kamilko and frostyland)
 
 ## 16.09.1
 - there now is an option in the windows menu to start the application 
