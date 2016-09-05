@@ -23,7 +23,7 @@ PROJECT_PATH="/tmp/QOwnNotes-$$"
 CUR_DIR=$(pwd)
 UPLOAD="true"
 DEBUILD_ARGS=""
-GPG_PUBLIC_KEY=D55B7124
+GPG_PUBLIC_KEY=F5161BD3
 export DEBFULLNAME="Patrizio Bekerle"
 export DEBEMAIL="patrizio@bekerle.com"
 
