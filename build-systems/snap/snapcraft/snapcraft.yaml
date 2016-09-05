@@ -10,7 +10,7 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch usr/bin/QOwnNotes --snap
+    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes --snap
     plugs:
       - x11
       - network

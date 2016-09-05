@@ -4,6 +4,8 @@
 - fixed the tag tree reloading if a tag is added to or removed from a
   note in the note edit oder via bulk tagging 
   (for [Issue #311](https://github.com/pbek/QOwnNotes/issues/311))
+- attempted to fix the start problems of the snap version of QOwnNotes
+  (popey, thank you for mentioning) 
 
 ## 16.09.1
 - there now is an option in the windows menu to start the application 
