@@ -3281,6 +3281,9 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                 }
             }
 
+        reloadCurrentNoteTags();
+        reloadTagTree();
+
         showStatusBarMessage(
                 tr("%n note(s) were tagged with \"%2\"", "",
                    tagCount).arg(tag.getName()), 5000);
@@ -3318,6 +3321,9 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                     << note.getName();
                 }
             }
+
+        reloadCurrentNoteTags();
+        reloadTagTree();
 
         QMessageBox::information(
                 this, tr("Done"),
@@ -5437,6 +5443,7 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
+    ui->tagTreeWidget->expandAll();
 }
 
 /**
@@ -5849,7 +5856,6 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed() {
 
         tag.setName(text);
         tag.store();
-        reloadTagTree();
     }
 
     // link the current note to the tag
@@ -5859,6 +5865,7 @@ void MainWindow::on_newNoteTagLineEdit_returnPressed() {
 
         tag.linkToNote(currentNote);
         reloadCurrentNoteTags();
+        reloadTagTree();
     }
 }
 
@@ -5926,6 +5933,7 @@ void MainWindow::removeNoteTagClicked() {
 
         tag.removeLinkToNote(currentNote);
         reloadCurrentNoteTags();
+        reloadTagTree();
     }
 }
 

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.09.2
+- fixed the tag tree reloading if a tag is added to or removed from a
+  note in the note edit oder via bulk tagging 
+  (for [Issue #311](https://github.com/pbek/QOwnNotes/issues/311))
+
 ## 16.09.1
 - there now is an option in the windows menu to start the application 
   hidden if the tray icon is shown
