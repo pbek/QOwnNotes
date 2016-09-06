@@ -1,5 +1,5 @@
 name: qownnotes
-version: VERSION-STRING
+version: "VERSION-STRING"
 summary: Plain-text file notepad with markdown support and ownCloud integration
 confinement: strict
 description: |
