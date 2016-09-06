@@ -9,6 +9,7 @@
   - this works if the note was renamed by modifying the first line of
     the note or (if you turned that on) by changing the note name in
     the note list
+- added more Spanish translation (thank you richarson)
 
 ## 16.09.2
 - fixed the tag tree reloading if a tag is added to or removed from a
