@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.09.3
+- the tag tree will now be reloaded if a tag is moved to an other location
+
 ## 16.09.2
 - fixed the tag tree reloading if a tag is added to or removed from a
   note in the note edit oder via bulk tagging 

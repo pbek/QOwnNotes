@@ -3141,6 +3141,7 @@ void MainWindow::removeSelectedTags() {
             qDebug() << "Removed tag " << tag.getName();
         }
 
+        reloadCurrentNoteTags();
         reloadTagTree();
     }
 }
@@ -6242,13 +6243,15 @@ void MainWindow::moveSelectedTagsToTagId(int tagId) {
                     tag.setParentId(tagId);
                     tag.store();
 
+                    reloadCurrentNoteTags();
+                    reloadTagTree();
+
                     showStatusBarMessage(
                             tr("Moved tag '%1' to new tag").arg(tag.getName()),
                             3000);
                 }
             }
         }
-
 }
 
 /**
