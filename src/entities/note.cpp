@@ -807,6 +807,9 @@ bool Note::storeNoteTextFileToDisk() {
     if (oldName != newName) {
         // TODO(pbek): we need to heed note subfolders here
         Tag::renameNoteFileNamesOfLinks(oldName, newName);
+
+        // handle the replacing of all note urls if a note was renamed
+        Note::handleNoteRenaming(oldName, newName);
     }
 
     QFile file(fullNoteFilePath());
@@ -1057,6 +1060,11 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
 
                 // override the current note because the file name has changed
                 currentNote = note;
+
+                // handle the replacing of all note urls if a note was renamed
+                // we don't need to do that here, it would be called two
+                // times this way
+//                Note::handleNoteRenaming(oldName, newName);
             }
 
             // emit the signal for the QML that the note was stored
@@ -1256,7 +1264,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
     // we want to show quotes in the html, so we don't translate them into
     // `<q>` tags
     hoedown_extensions extensions =
-            (hoedown_extensions) (HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN &
+            (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN) &
                     ~HOEDOWN_EXT_QUOTE);
     hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
@@ -1784,6 +1792,69 @@ int Note::countByNoteSubFolderId(int noteSubFolderId) {
 bool Note::isSameFile(Note note) {
     return (id == note.getId()) &&
             (noteSubFolderId == note.getNoteSubFolderId());
+}
+
+/**
+ * Finds notes that that link to a note with fileName via note://
+ *
+ * @param fileName
+ * @return list of note ids
+ */
+QList<int> Note::findLinkedNotes(QString fileName) {
+    QString linkText = getNoteURL(fileName);
+    QList<int> noteIdList = searchInNotes(linkText);
+
+    return noteIdList;
+}
+
+/**
+ * Returns the url to a note
+ *
+ * @param fileName
+ * @return
+ */
+const QString Note::getNoteURL(const QString &fileName) {
+    return "note://" + generateTextForLink(fileName);
+}
+
+/**
+ * Handles the replacing of all note urls if a note was renamed
+ *
+ * @param oldFileName
+ * @param newFileName
+ */
+void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
+    QList<int> noteIdList = Note::findLinkedNotes(oldFileName);
+    int noteCount = noteIdList.count();
+
+    if (noteCount == 0) {
+        return;
+    }
+
+    QString oldUrl = getNoteURL(oldFileName);
+    QString newUrl = getNoteURL(newFileName);
+
+    if (QMessageBox::information(
+            Q_NULLPTR,
+            QObject::tr("Note filename changed"),
+            QObject::tr("A change of the note name was detected. Would you "
+                                "like to replace all occurrences of "
+                                "<strong>%1</strong> with <strong>%2</strong>"
+                                " in <strong>%n</strong> note file(s)?", "",
+                        noteCount).arg(oldUrl, newUrl),
+            QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes) {
+        // replace the urls in all found notes
+        Q_FOREACH(int noteId, noteIdList) {
+                Note note = Note::fetch(noteId);
+                if (!note.isFetched()) {
+                    continue;
+                }
+
+                QString text = note.getNoteText();
+                text.replace(oldUrl, newUrl);
+                note.storeNewText(text);
+            }
+    }
 }
 
 /**

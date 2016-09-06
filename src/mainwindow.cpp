@@ -2742,7 +2742,14 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
             // pressed in the notes list
             if ((keyEvent->key() == Qt::Key_Return) ||
                     (keyEvent->key() == Qt::Key_Tab)) {
-                focusNoteTextEdit();
+
+                // focusNoteTextEdit() might cause a crash in
+                // on_noteTreeWidget_itemChanged when
+                // Note::handleNoteRenaming is called, so we don't allow to
+                // call focusNoteTextEdit()
+                if (!Note::allowDifferentFileName()) {
+                    focusNoteTextEdit();
+                }
                 return true;
             } else if ((keyEvent->key() == Qt::Key_Delete) ||
                        (keyEvent->key() == Qt::Key_Backspace)) {
@@ -6965,6 +6972,9 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
                 // rename the note file names of note tag links
                 Tag::renameNoteFileNamesOfLinks(oldNoteName, newNoteName);
+
+                // handle the replacing of all note urls if a note was renamed
+                Note::handleNoteRenaming(oldNoteName, newNoteName);
 
                 // reload the directory list if note name has changed
 //                loadNoteDirectoryList();

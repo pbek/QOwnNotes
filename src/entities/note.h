@@ -192,6 +192,10 @@ public:
 
     static QList<int> fetchAllIds();
 
+    static QList<int> findLinkedNotes(QString fileName);
+
+    static void handleNoteRenaming(QString oldFileName, QString newFileName);
+
 protected:
     int id;
     QString name;
@@ -217,6 +221,8 @@ protected:
 signals:
 
 public slots:
+
+    static const QString getNoteURL(const QString &fileName);
 };
 
 #endif // NOTE_H
