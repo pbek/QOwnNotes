@@ -29,8 +29,13 @@ QtObject {
                 text = script.clipboard();
 
                 // http://www.regexpal.com is your friend
-                var re1 = /^Neue Aufgabe von [\w\s]+$\s\s^(.+)$/igm;
+                var re1 = /^(.+)\sStart Datum/igm;
                 var result1 = re1.exec(text);
+
+                if (result1 === null) {
+                    re1 = /^Neue Aufgabe von [\w\s]+$\s\s^(.+)$/igm;
+                    result1 = re1.exec(text);
+                }
 
                 if (result1 === null) {
                     re1 = /^Nachricht aktualisiert von [\w\s]+$\s\s^Aufgabe: (.+)$/igm;
