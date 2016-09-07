@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.09.4
+- the automatic note link url renaming method of v16.09.3 will now not
+  just search for the url but trying to detect markdown links to prevent
+  the wrong links from being renamed
+  (for [Issue #313](https://github.com/pbek/QOwnNotes/issues/313))
+
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
   (for [Issue #311](https://github.com/pbek/QOwnNotes/issues/311))

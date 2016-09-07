@@ -1802,9 +1802,12 @@ bool Note::isSameFile(Note note) {
  */
 QList<int> Note::findLinkedNotes(QString fileName) {
     QString linkText = getNoteURL(fileName);
-    QList<int> noteIdList = searchInNotes(linkText);
+    QList<int> noteIdList = searchInNotes("<" + linkText + ">");
+    QList<int> noteIdList2 = searchInNotes("](" + linkText + ")");
+    noteIdList.append(noteIdList2);
 
-    return noteIdList;
+    // remove duplicates and return list
+    return noteIdList.toSet().toList();
 }
 
 /**
@@ -1839,7 +1842,8 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
             QObject::tr("Note filename changed"),
             QObject::tr("A change of the note name was detected. Would you "
                                 "like to replace all occurrences of "
-                                "<strong>%1</strong> with <strong>%2</strong>"
+                                "<strong>%1</strong> links with "
+                                "<strong>%2</strong>"
                                 " in <strong>%n</strong> note file(s)?", "",
                         noteCount).arg(oldUrl, newUrl),
             QMessageBox::Yes, QMessageBox::No) == QMessageBox::Yes) {
@@ -1851,7 +1855,8 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
                 }
 
                 QString text = note.getNoteText();
-                text.replace(oldUrl, newUrl);
+                text.replace("<" + oldUrl + ">", "<" + newUrl + ">");
+                text.replace("](" + oldUrl + ")", "](" + newUrl + ")");
                 note.storeNewText(text);
             }
     }
