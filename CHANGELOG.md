@@ -2,6 +2,7 @@
 
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
+  (for [Issue #311](https://github.com/pbek/QOwnNotes/issues/311))
 - when renaming a note in QOwnNotes and a link to that note was found in
   other notes there now a dialog will be opened to ask if you want to
   rename the urls to the note in all found notes
