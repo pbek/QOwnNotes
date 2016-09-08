@@ -41,6 +41,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
+    ui->calDavCalendarGroupBox->setVisible(false);
 
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
@@ -332,10 +333,33 @@ void SettingsDialog::storeSettings() {
                       todoCalendarEnabledList);
     settings.setValue("ownCloud/todoCalendarEnabledUrlList",
                       todoCalendarEnabledUrlList);
-    settings.setValue("ownCloud/todoCalendarBackend",
-                      ui->calendarPlusRadioButton->isChecked()
-                      ? OwnCloudService::CalendarPlus
-                      : OwnCloudService::DefaultOwnCloudCalendar);
+
+    int todoCalendarBackend = OwnCloudService::DefaultOwnCloudCalendar;
+
+    if (ui->calendarPlusRadioButton->isChecked()) {
+        todoCalendarBackend = OwnCloudService::CalendarPlus;
+    }
+
+    if (ui->calDavCalendarRadioButton->isChecked()) {
+        todoCalendarBackend = OwnCloudService::CalDAVCalendar;
+    }
+
+    settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
+
+    ui->calDavServerUrlEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVServerUrl").toString());
+    ui->calDavUsernameEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVUsername").toString());
+    ui->calDavPasswordEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVPassword").toString());
+
+    settings.setValue("ownCloud/todoCalendarCalDAVServerUrl", 
+                      ui->calDavServerUrlEdit->text());
+    settings.setValue("ownCloud/todoCalendarCalDAVUsername", 
+                      ui->calDavUsernameEdit->text());
+    // TODO(pbek): store password encrypted
+    settings.setValue("ownCloud/todoCalendarCalDAVPassword", 
+                      ui->calDavPasswordEdit->text());
 
     settings.setValue("networking/ignoreSSLErrors",
                       ui->ignoreSSLErrorsCheckBox->isChecked());
@@ -480,10 +504,21 @@ void SettingsDialog::readSettings() {
         case OwnCloudService::CalendarPlus:
             ui->calendarPlusRadioButton->setChecked(true);
             break;
+        case OwnCloudService::CalDAVCalendar:
+            ui->calDavCalendarRadioButton->setChecked(true);
+            break;
         default:
             ui->defaultOwnCloudCalendarRadioButton->setChecked(true);
             break;
     }
+
+    ui->calDavServerUrlEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVServerUrl").toString());
+    ui->calDavUsernameEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVUsername").toString());
+    // TODO(pbek): load encrypted password
+    ui->calDavPasswordEdit->setText(settings.value(
+            "ownCloud/todoCalendarCalDAVPassword").toString());
 
     QStringList todoCalendarUrlList = settings.value(
             "ownCloud/todoCalendarUrlList").toStringList();
@@ -2126,4 +2161,8 @@ void SettingsDialog::storeSplitterSettings() {
     QSettings settings;
     settings.setValue("SettingsDialog/mainSplitterState",
                       _mainSplitter->saveState());
+}
+
+void SettingsDialog::on_calDavCalendarRadioButton_toggled(bool checked) {
+    ui->calDavCalendarGroupBox->setVisible(checked);
 }

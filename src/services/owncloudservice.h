@@ -19,7 +19,8 @@ Q_OBJECT
 public:
     enum CalendarBackend {
         DefaultOwnCloudCalendar = 0,
-        CalendarPlus
+        CalendarPlus,
+        CalDAVCalendar
     };
     Q_ENUMS(CalendarBackend)
 

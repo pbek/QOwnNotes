@@ -166,6 +166,8 @@ private slots:
 
     void on_settingsStackedWidget_currentChanged(int index);
 
+    void on_calDavCalendarRadioButton_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;
