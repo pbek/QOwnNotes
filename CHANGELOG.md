@@ -1,6 +1,22 @@
 # QOwnNotes Changelog
 
 ## 16.09.4
+- you can now also manage todo lists from a **custom CalDAV server**
+  (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
+    - this should already work
+        - listing of all calendars in the settings dialog
+        - listing of all tasks of a calendar in the todo dialog
+        - creating new tasks
+        - removing tasks
+        - setting tasks to completed / uncompleted
+    - work in progress
+        - showing the calendar names instead of the hashes from the server
+        - not showing an error message when switching to CalDAV in the
+          settings if no server url is entered
+        - storing additional information to a task, such as description,
+          priority and reminder date
+        - showing a better warning dialog if CalDAV username / password
+          are wrong, currently there only is a warning in the log dialog
 - the automatic note link url renaming method of v16.09.3 will now not
   just search for the url but trying to detect markdown links to prevent
   the wrong links from being renamed
@@ -8,7 +24,8 @@
 - added a new monochromic tray icon
   (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306),
   thanks a lot @Maboroshy)
-- renamed the `tag pane` to `tag / subfolder pane` in the menu for more clarity
+- renamed the `tag pane` to `tag / subfolder pane` in the menu for more
+  clarity
 
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
