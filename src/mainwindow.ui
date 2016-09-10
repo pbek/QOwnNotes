@@ -431,8 +431,8 @@
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
             <bool>false</bool>
@@ -460,8 +460,8 @@ p, li { white-space: pre-wrap; }
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book'; font-size:11pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
             <bool>false</bool>
@@ -586,7 +586,7 @@ p, li { white-space: pre-wrap; }
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -613,7 +613,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>34</height>
+     <height>35</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -627,7 +627,7 @@ p, li { white-space: pre-wrap; }
     </widget>
     <widget class="QMenu" name="menuSort_by">
      <property name="title">
-      <string>Sort b&amp;y</string>
+      <string>Sort by</string>
      </property>
      <addaction name="actionAlphabetical"/>
      <addaction name="actionBy_date"/>
@@ -727,7 +727,7 @@ p, li { white-space: pre-wrap; }
       <string>Editor width in distraction free mode</string>
      </property>
      <property name="title">
-      <string>&amp;Editor width</string>
+      <string>Editor width</string>
      </property>
      <addaction name="actionEditorWidthNarrow"/>
      <addaction name="actionEditorWidthMedium"/>
@@ -760,7 +760,7 @@ p, li { white-space: pre-wrap; }
    </widget>
    <widget class="QMenu" name="menuTag">
     <property name="title">
-     <string>Ta&amp;g</string>
+     <string>Tag</string>
     </property>
     <addaction name="action_new_tag"/>
    </widget>
@@ -770,7 +770,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QMenu" name="menuCustom_actions">
      <property name="title">
-      <string>&amp;Custom actions</string>
+      <string>Custom actions</string>
      </property>
     </widget>
     <addaction name="actionReload_scripting_engine"/>
@@ -910,7 +910,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Alphabetical</string>
+    <string>Alphabetical</string>
    </property>
    <property name="toolTip">
     <string>Sort alphabetical</string>
@@ -921,7 +921,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;By date</string>
+    <string>By date</string>
    </property>
    <property name="toolTip">
     <string>Sort by date</string>
@@ -941,7 +941,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
    </property>
    <property name="text">
-    <string>Settin&amp;gs</string>
+    <string>&amp;Settings</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+,</string>
@@ -1035,7 +1035,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-next.svg</iconset>
    </property>
    <property name="text">
-    <string>Forward &amp;in note history</string>
+    <string>Forward in note history</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Right</string>
@@ -1047,7 +1047,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/applications-system.svg</normaloff>:/icons/breeze-qownnotes/16x16/applications-system.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Show shortcuts</string>
+    <string>Show shortcuts</string>
    </property>
   </action>
   <action name="action_Knowledge_base">
@@ -1089,7 +1089,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</iconset>
    </property>
    <property name="text">
-    <string>E&amp;xport note as PDF (markdown)</string>
+    <string>&amp;Export note as PDF (markdown)</string>
    </property>
   </action>
   <action name="action_Export_note_as_PDF_text">
@@ -1119,7 +1119,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-print.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-print.svg</iconset>
    </property>
    <property name="text">
-    <string>Print note (&amp;markdown)</string>
+    <string>&amp;Print note (markdown)</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+P</string>
@@ -1176,7 +1176,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-decrypt.svg</iconset>
    </property>
    <property name="text">
-    <string>Decr&amp;ypt note</string>
+    <string>Decrypt note</string>
    </property>
   </action>
   <action name="action_Open_note_in_external_editor">
@@ -1197,7 +1197,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
    </property>
    <property name="text">
-    <string>Export note as mar&amp;kdown file</string>
+    <string>&amp;Export note as markdown file</string>
    </property>
   </action>
   <action name="actionGet_invloved">
@@ -1239,7 +1239,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-up.svg</iconset>
    </property>
    <property name="text">
-    <string>Pre&amp;vious note</string>
+    <string>Previous note</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Up</string>
@@ -1265,7 +1265,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Sho&amp;w toolbar</string>
+    <string>Show &amp;toolbar</string>
    </property>
   </action>
   <action name="actionEditorWidthNarrow">
@@ -1273,7 +1273,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Narrow</string>
+    <string>Narrow</string>
    </property>
    <property name="whatsThis">
     <string notr="true">1</string>
@@ -1284,7 +1284,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Medium</string>
+    <string>Medium</string>
    </property>
    <property name="whatsThis">
     <string notr="true">2</string>
@@ -1295,7 +1295,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Wide</string>
+    <string>Wide</string>
    </property>
    <property name="whatsThis">
     <string notr="true">3</string>
@@ -1306,7 +1306,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Full</string>
+    <string>Full</string>
    </property>
    <property name="whatsThis">
     <string notr="true">4</string>
@@ -1318,7 +1318,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/insert-image.svg</normaloff>:/icons/breeze-qownnotes/16x16/insert-image.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Paste html or media</string>
+    <string>Paste html or media</string>
    </property>
    <property name="toolTip">
     <string>Paste images, notes and html from the clipboard</string>
@@ -1336,7 +1336,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
    </property>
    <property name="text">
-    <string>Sho&amp;w note in file manager</string>
+    <string>Show note in &amp;file manager</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+F</string>
@@ -1360,7 +1360,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/format-text-italic.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-italic.svg</iconset>
    </property>
    <property name="text">
-    <string>For&amp;mat text italic</string>
+    <string>Format text &amp;italic</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+I</string>
@@ -1384,7 +1384,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-less.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-font-size-less.svg</iconset>
    </property>
    <property name="text">
-    <string>De&amp;crease note text size</string>
+    <string>&amp;Decrease note text size</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+-</string>
@@ -1426,7 +1426,7 @@ p, li { white-space: pre-wrap; }
     <string>Toggle tag / subfolder pane</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Shift+T</string>
+    <string notr="true">Alt+Shift+T</string>
    </property>
   </action>
   <action name="action_Reload_note_folder">
@@ -1450,7 +1450,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
    </property>
    <property name="text">
-    <string>Toggle &amp;markdown preview</string>
+    <string>Toggle markdown preview</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+M</string>
@@ -1465,7 +1465,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
    </property>
    <property name="text">
-    <string>Toggle &amp;note edit pane</string>
+    <string>Toggle note edit pane</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+E</string>
@@ -1491,7 +1491,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find-replace.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find-replace.svg</iconset>
    </property>
    <property name="text">
-    <string>Replace in c&amp;urrent note</string>
+    <string>Replace in current note</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+R</string>
@@ -1499,7 +1499,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAutocomplete">
    <property name="text">
-    <string>Solve equation &amp;or open URL</string>
+    <string>Solve equation or open URL</string>
    </property>
    <property name="toolTip">
     <string>Solve a simple equation like '(2+3)*6=' in the current line</string>
@@ -1510,7 +1510,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionSelect_note_folder">
    <property name="text">
-    <string>Se&amp;lect note folder</string>
+    <string>Select note folder</string>
    </property>
    <property name="toolTip">
     <string notr="true">Select note folder</string>
@@ -1525,7 +1525,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Reload scripting engine</string>
+    <string>Reload scripting engine</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+S</string>
@@ -1537,7 +1537,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
    </property>
    <property name="text">
-    <string>Show &amp;log dialog</string>
+    <string>Show log dialog</string>
    </property>
   </action>
   <action name="actionExport_preview_HTML">
@@ -1555,7 +1555,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Open chat</string>
+    <string>Open chat</string>
    </property>
    <property name="toolTip">
     <string>Open the #qownnotes IRC channel</string>
@@ -1584,7 +1584,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Use so&amp;ftwrap in note editor and preview</string>
+    <string>Use softwrap in note editor and preview</string>
    </property>
   </action>
   <action name="actionShow_status_bar">
@@ -1625,7 +1625,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</iconset>
    </property>
    <property name="text">
-    <string>To&amp;ggle text case</string>
+    <string>Toggle text case</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+U</string>
@@ -1637,7 +1637,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Markdown cheatsheet</string>
+    <string>Markdown cheatsheet</string>
    </property>
   </action>
   <action name="actionStrike_out_text">
@@ -1646,7 +1646,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-strikethrough.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Strike out text</string>
+    <string>Strike out text</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+S</string>
@@ -1654,7 +1654,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionToggle_between_edit_and_preview">
    <property name="text">
-    <string>Toggle &amp;between edit and preview</string>
+    <string>Toggle between edit and preview</string>
    </property>
    <property name="toolTip">
     <string>Toggle between edit and preview</string>
@@ -1668,7 +1668,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>&amp;Use one column mode</string>
+    <string>Use one column mode</string>
    </property>
    <property name="toolTip">
     <string>Use a one column minimal mode (like NVAlt)</string>
@@ -1686,7 +1686,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Show menu bar</string>
+    <string>Show menu bar</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+M</string>
@@ -1698,7 +1698,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/split.svg</normaloff>:/icons/breeze-qownnotes/16x16/split.svg</iconset>
    </property>
    <property name="text">
-    <string>Split &amp;note at cursor position</string>
+    <string>Split note at cursor position</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+X</string>
@@ -1709,7 +1709,7 @@ p, li { white-space: pre-wrap; }
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show tag &amp;pane under navigation pane</string>
+    <string>Show tag pane under navigation pane</string>
    </property>
   </action>
   <action name="actionDonate">
@@ -1718,7 +1718,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/taxes-finances.svg</normaloff>:/icons/breeze-qownnotes/16x16/taxes-finances.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Donate</string>
+    <string>Donate</string>
    </property>
   </action>
   <action name="actionFind_notes_in_all_subfolders">
@@ -1727,7 +1727,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
    </property>
    <property name="text">
-    <string>Fin&amp;d notes in all subfolders</string>
+    <string>Find notes in all subfolders</string>
    </property>
   </action>
   <action name="actionStart_hidden">
@@ -1769,8 +1769,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
