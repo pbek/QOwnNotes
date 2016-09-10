@@ -101,6 +101,11 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();
+
+    // TODO(pbek): remove if everything is working
+    ui->calDavCalendarRadioButton->setText(
+            ui->calDavCalendarRadioButton->text() +
+            " (this is still in early Alpha!)");
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -346,20 +351,13 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
 
-    ui->calDavServerUrlEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVServerUrl").toString());
-    ui->calDavUsernameEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVUsername").toString());
-    ui->calDavPasswordEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVPassword").toString());
-
-    settings.setValue("ownCloud/todoCalendarCalDAVServerUrl", 
+    settings.setValue("ownCloud/todoCalendarCalDAVServerUrl",
                       ui->calDavServerUrlEdit->text());
     settings.setValue("ownCloud/todoCalendarCalDAVUsername", 
                       ui->calDavUsernameEdit->text());
-    // TODO(pbek): store password encrypted
-    settings.setValue("ownCloud/todoCalendarCalDAVPassword", 
-                      ui->calDavPasswordEdit->text());
+    settings.setValue("ownCloud/todoCalendarCalDAVPassword",
+                      CryptoService::instance()->encryptToString(
+                              ui->calDavPasswordEdit->text()));
 
     settings.setValue("networking/ignoreSSLErrors",
                       ui->ignoreSSLErrorsCheckBox->isChecked());
@@ -500,25 +498,34 @@ void SettingsDialog::readSettings() {
     const QSignalBlocker blocker2(this->ui->defaultOwnCloudCalendarRadioButton);
     Q_UNUSED(blocker2);
 
+    const QSignalBlocker blocker4(this->ui->calendarPlusRadioButton);
+    Q_UNUSED(blocker4);
+
+    const QSignalBlocker blocker5(this->ui->calDavCalendarRadioButton);
+    Q_UNUSED(blocker5);
+
     switch (settings.value("ownCloud/todoCalendarBackend").toInt()) {
         case OwnCloudService::CalendarPlus:
             ui->calendarPlusRadioButton->setChecked(true);
             break;
         case OwnCloudService::CalDAVCalendar:
             ui->calDavCalendarRadioButton->setChecked(true);
+            ui->calDavCalendarGroupBox->setVisible(true);
             break;
         default:
             ui->defaultOwnCloudCalendarRadioButton->setChecked(true);
             break;
     }
 
+    // reload the calendar list
+    reloadCalendarList();
+
     ui->calDavServerUrlEdit->setText(settings.value(
             "ownCloud/todoCalendarCalDAVServerUrl").toString());
     ui->calDavUsernameEdit->setText(settings.value(
             "ownCloud/todoCalendarCalDAVUsername").toString());
-    // TODO(pbek): load encrypted password
-    ui->calDavPasswordEdit->setText(settings.value(
-            "ownCloud/todoCalendarCalDAVPassword").toString());
+    ui->calDavPasswordEdit->setText(CryptoService::instance()->decryptToString(
+            settings.value("ownCloud/todoCalendarCalDAVPassword").toString()));
 
     QStringList todoCalendarUrlList = settings.value(
             "ownCloud/todoCalendarUrlList").toStringList();
@@ -985,24 +992,26 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
     QStringList todoCalendarEnabledList = settings.value(
             "ownCloud/todoCalendarEnabledList").toStringList();
 
+    QUrl serverUrl(ui->calDavCalendarRadioButton->isChecked() ?
+                   ui->calDavServerUrlEdit->text() :
+                   ui->serverUrlEdit->text());
+
+    // return if server url isn't valid
+    if (!serverUrl.isValid()) {
+        return;
+    }
+
+    QString serverUrlText(serverUrl.toString());
+    QString serverUrlPath = serverUrl.path();
+    if (serverUrlPath != "") {
+        // remove the path from the end because we already got it in the url
+        serverUrlText.replace(QRegularExpression(
+                QRegularExpression::escape(serverUrlPath) + "$"), "");
+    }
+
     QListIterator<QString> itr(items);
     while (itr.hasNext()) {
         QString url = itr.next();
-
-        QUrl serverUrl(ui->serverUrlEdit->text());
-
-        // continue if server url isn't valid
-        if (!serverUrl.isValid()) {
-            continue;
-        }
-
-        QString serverUrlText(serverUrl.toString());
-        QString serverUrlPath = serverUrl.path();
-        if (serverUrlPath != "") {
-            // remove the path from the end because we already got it in the url
-            serverUrlText.replace(QRegularExpression(
-                    QRegularExpression::escape(serverUrlPath) + "$"), "");
-        }
 
         // only add the server url if it wasn't already added
         if (!url.startsWith(serverUrlText)) {
@@ -1121,13 +1130,23 @@ void SettingsDialog::on_reloadCalendarListButton_clicked() {
     // we need to store the calendar backend
     storeSettings();
 
+    // reload the calendar list
+    reloadCalendarList();
+}
+
+/**
+ * Reloads the calendar list
+ */
+void SettingsDialog::reloadCalendarList() {
     OwnCloudService *ownCloud = new OwnCloudService(this);
     ownCloud->settingsGetCalendarList(this);
 }
 
 void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
         bool checked) {
-    on_reloadCalendarListButton_clicked();
+    if (checked) {
+        on_reloadCalendarListButton_clicked();
+    }
 }
 
 void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
@@ -2093,17 +2112,17 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     }
 
     // turn off the tasks page if no ownCloud settings are available
-    QTreeWidgetItem *todoItem = findSettingsTreeWidgetItemByPage(TodoPage);
-    if (todoItem != Q_NULLPTR) {
-        if (OwnCloudService::hasOwnCloudSettings()) {
-            todoItem->setDisabled(false);
-            todoItem->setToolTip(0, "");
-        } else {
-            todoItem->setDisabled(true);
-            todoItem->setToolTip(0, tr("Please make sure the connection to "
-                                               "your ownCloud server works."));
-        }
-    }
+//    QTreeWidgetItem *todoItem = findSettingsTreeWidgetItemByPage(TodoPage);
+//    if (todoItem != Q_NULLPTR) {
+//        if (OwnCloudService::hasOwnCloudSettings()) {
+//            todoItem->setDisabled(false);
+//            todoItem->setToolTip(0, "");
+//        } else {
+//            todoItem->setDisabled(true);
+//            todoItem->setToolTip(0, tr("Please make sure the connection to "
+//                                               "your ownCloud server works."));
+//        }
+//    }
 }
 
 /**
@@ -2164,5 +2183,15 @@ void SettingsDialog::storeSplitterSettings() {
 }
 
 void SettingsDialog::on_calDavCalendarRadioButton_toggled(bool checked) {
+    if (checked) {
+        on_reloadCalendarListButton_clicked();
+    }
+
     ui->calDavCalendarGroupBox->setVisible(checked);
+}
+
+void SettingsDialog::on_calendarPlusRadioButton_toggled(bool checked) {
+    if (checked) {
+        on_reloadCalendarListButton_clicked();
+    }
 }

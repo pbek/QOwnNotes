@@ -58,10 +58,15 @@ public:
 
 private:
     QString serverUrl;
+    QString todoCalendarServerUrl;
     QString serverUrlPath;
+    QString todoCalendarServerUrlPath;
     QString serverUrlWithoutPath;
+    QString todoCalendarServerUrlWithoutPath;
     QString userName;
+    QString todoCalendarUsername;
     QString password;
+    QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
     MainWindow *mainWindow;
     ShareDialog *shareDialog;
@@ -73,7 +78,6 @@ private:
     QString capabilitiesPath;
     QString ownCloudTestPath;
     QString restoreTrashedNotePath;
-    QString calendarPath;
     QString webdavPath;
     QString sharePath;
     SettingsDialog *settingsDialog;
@@ -85,6 +89,8 @@ private:
     void readSettings();
 
     void addAuthHeader(QNetworkRequest *r);
+
+    void addCalendarAuthHeader(QNetworkRequest *r);
 
     void handleVersionsLoading(QString data);
 

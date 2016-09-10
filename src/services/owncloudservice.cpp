@@ -68,8 +68,34 @@ void OwnCloudService::readSettings() {
             "ownCloud/todoCalendarBackend").toInt();
     QString calendarBackendString =
             calendarBackend == CalendarPlus ? "calendarplus" : "caldav";
-    calendarPath =
+    QString calendarPath =
             "/remote.php/" + calendarBackendString + "/calendars/" + userName;
+    todoCalendarServerUrl = serverUrl + calendarPath;
+    todoCalendarServerUrlWithoutPath = serverUrlWithoutPath;
+    todoCalendarServerUrlPath = serverUrlPath + calendarPath;
+    todoCalendarUsername = userName;
+    todoCalendarPassword = password;
+
+    // if we are using a custom CalDAV server set the settings for it
+    if (settings.value("ownCloud/todoCalendarBackend").toInt() ==
+            OwnCloudService::CalDAVCalendar) {
+        todoCalendarServerUrl = settings.value(
+                "ownCloud/todoCalendarCalDAVServerUrl").toString();
+        todoCalendarServerUrlPath = QUrl(todoCalendarServerUrl).path();
+        todoCalendarUsername = settings.value(
+                "ownCloud/todoCalendarCalDAVUsername").toString();
+        todoCalendarPassword = CryptoService::instance()->decryptToString(
+                settings.value("ownCloud/todoCalendarCalDAVPassword")
+                        .toString());
+
+        todoCalendarServerUrlWithoutPath = todoCalendarServerUrl;
+        if (todoCalendarServerUrlPath != "") {
+            // remove the path from the calendar server url
+            todoCalendarServerUrlWithoutPath.replace(QRegularExpression(
+                    QRegularExpression::escape(
+                            todoCalendarServerUrlPath) + "$"), "");
+        }
+    }
 
     QObject::connect(networkManager,
                      SIGNAL(authenticationRequired(QNetworkReply * ,
@@ -96,7 +122,7 @@ void OwnCloudService::slotAuthenticationRequired(
 
 void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
     qDebug() << "Reply from " << reply->url().path();
-    // qDebug() << reply->errorString();
+//    qDebug() << reply->errorString();
 
     // this should only be called from the settings dialog
     if (reply->url().path().endsWith(appInfoPath)) {
@@ -109,6 +135,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
     } else {
         QByteArray arr = reply->readAll();
         QString data = QString(arr);
+//        qDebug() << __func__ << " - 'data': " << data;
 
         if (reply->url().path().endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
@@ -153,7 +180,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             // qDebug() << data;
 
             return;
-        } else if (reply->url().path().endsWith(serverUrlPath + calendarPath)) {
+        } else if (reply->url().path().endsWith(todoCalendarServerUrlPath)) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             qInfo() << "Reply from ownCloud calendar page: " << data;
 #else
@@ -171,7 +198,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             settingsDialog->refreshTodoCalendarList(calendarHrefList);
             return;
         } else if (reply->url().path()
-                .startsWith(serverUrlPath + calendarPath)) {
+                .startsWith(todoCalendarServerUrlPath)) {
             // check if we have a reply from a calendar item request
             if (reply->url().path().endsWith(".ics")) {
                 qDebug() << "Reply from ownCloud calendar item ics page";
@@ -188,9 +215,9 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
                 if (todoDialog != Q_NULLPTR) {
                     // this will mostly happen after the PUT request to update
-                    // or create a todo item
+                    // or create a task item
                     if (data == "") {
-                        // reload the todo list from server
+                        // reload the task list from server
                         todoDialog->reloadTodoList();
                     }
 
@@ -214,7 +241,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                     }
 
                     if (todoDialog != Q_NULLPTR) {
-                        // reload the todo list items
+                        // reload the task list items
                         todoDialog->reloadTodoListItems();
                     }
 
@@ -401,9 +428,9 @@ void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
 void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     settingsDialog = dialog;
 
-    QUrl url(serverUrl + calendarPath);
+    QUrl url(todoCalendarServerUrl);
     QNetworkRequest r(url);
-    addAuthHeader(&r);
+    addCalendarAuthHeader(&r);
 
     // build the request body
     QString body = "<d:propfind xmlns:d=\"DAV:\" "
@@ -426,7 +453,7 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
 }
 
 /**
- * @brief Gets the todo list from the ownCloud server for the todo list dialog
+ * @brief Gets the task list from the ownCloud server for the task list dialog
  */
 void OwnCloudService::todoGetTodoList(QString calendarName,
                                       TodoDialog *dialog) {
@@ -456,7 +483,7 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 
     QUrl url(calendarUrl);
     QNetworkRequest r(url);
-    addAuthHeader(&r);
+    addCalendarAuthHeader(&r);
 
     // ownCloud needs depth to be set to 1
     r.setRawHeader(QByteArray("DEPTH"), QByteArray("1"));
@@ -583,7 +610,7 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
 
     QUrl url(calItem.getUrl());
     QNetworkRequest r(url);
-    addAuthHeader(&r);
+    addCalendarAuthHeader(&r);
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
@@ -688,6 +715,16 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
 void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
     if (r) {
         QString concatenated = userName + ":" + password;
+        QByteArray data = concatenated.toLocal8Bit().toBase64();
+        QString headerData = "Basic " + data;
+        r->setRawHeader("Authorization", headerData.toLocal8Bit());
+    }
+}
+
+void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
+    if (r) {
+        QString concatenated =
+                todoCalendarUsername + ":" + todoCalendarPassword;
         QByteArray data = concatenated.toLocal8Bit().toBase64();
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
@@ -991,7 +1028,8 @@ void OwnCloudService::loadTodoItems(QString &data) {
                     continue;
                 }
 
-                QUrl calendarItemUrl = QUrl(serverUrlWithoutPath + urlPart);
+                QUrl calendarItemUrl =
+                        QUrl(todoCalendarServerUrlWithoutPath + urlPart);
 
                 // check if we have an etag
                 QDomNodeList etagNodes = elem.elementsByTagNameNS(NS_DAV,
@@ -1043,7 +1081,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
                         // fetch the calendar item
                         if (fetchItem) {
                             QNetworkRequest r(calendarItemUrl);
-                            addAuthHeader(&r);
+                            addCalendarAuthHeader(&r);
 
                             QNetworkReply *reply = networkManager->get(r);
                             ignoreSslErrorsIfAllowed(reply);
@@ -1358,7 +1396,7 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
 
     QUrl url(calendarItem.getUrl());
     QNetworkRequest r;
-    addAuthHeader(&r);
+    addCalendarAuthHeader(&r);
     r.setUrl(url);
 
     // build the request body

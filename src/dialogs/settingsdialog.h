@@ -168,6 +168,8 @@ private slots:
 
     void on_calDavCalendarRadioButton_toggled(bool checked);
 
+    void on_calendarPlusRadioButton_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -239,6 +241,8 @@ private:
     void storeSplitterSettings();
 
     void storeFontSettings();
+
+    void reloadCalendarList();
 };
 
 #endif // SETTINGSDIALOG_H

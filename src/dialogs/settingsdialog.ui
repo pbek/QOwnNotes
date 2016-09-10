@@ -1483,7 +1483,7 @@
                 <item row="2" column="0">
                  <widget class="QRadioButton" name="calDavCalendarRadioButton">
                   <property name="text">
-                   <string>An other CalDAV server</string>
+                   <string>Other CalDAV server</string>
                   </property>
                  </widget>
                 </item>
