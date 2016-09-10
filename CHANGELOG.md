@@ -8,6 +8,7 @@
 - added a new monochromic tray icon
   (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306),
   thanks a lot @Maboroshy)
+- renamed the `tag`pane` to `tag / subfolder pane` in the menu for more clarity
 
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
