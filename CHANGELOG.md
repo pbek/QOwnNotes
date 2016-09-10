@@ -5,6 +5,9 @@
   just search for the url but trying to detect markdown links to prevent
   the wrong links from being renamed
   (for [Issue #313](https://github.com/pbek/QOwnNotes/issues/313))
+- added a new monochromic tray icon
+  (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306),
+  thanks a lot @Maboroshy)
 
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
