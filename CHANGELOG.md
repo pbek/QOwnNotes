@@ -26,6 +26,9 @@
   thanks a lot @Maboroshy)
 - renamed the `tag pane` to `tag / subfolder pane` in the menu for more
   clarity
+- added more Italian, Portuguese, Polish, German, Spanish, Hungarian
+  and Dutch translation (thank you mlocati, mlimacarlos, kamilko,
+  richarson and Fabijenna)
 
 ## 16.09.3
 - the tag tree will now be reloaded if a tag is moved to an other location
