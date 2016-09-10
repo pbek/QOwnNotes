@@ -808,6 +808,7 @@ void SettingsDialog::outputSettings() {
     QStringList keyHiddenList = (QStringList() <<
             "cryptoKey" <<
             "ownCloud/password" <<
+            "ownCloud/todoCalendarCalDAVPassword" <<
             "PiwikClientId" <<
             "networking/proxyPassword");
 
