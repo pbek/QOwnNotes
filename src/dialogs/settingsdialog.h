@@ -11,11 +11,14 @@
 #include <QSplitter>
 #include <entities/notefolder.h>
 #include <entities/script.h>
+#include <services/owncloudservice.h>
 #include "masterdialog.h"
 
 namespace Ui {
     class SettingsDialog;
 }
+
+struct CalDAVCalendarData;
 
 class SettingsDialog : public MasterDialog {
 Q_OBJECT
@@ -53,7 +56,7 @@ public:
 
     void setOKLabelData(int number, QString text, OKLabelStatus status);
 
-    void refreshTodoCalendarList(QStringList items,
+    void refreshTodoCalendarList(QList<CalDAVCalendarData> items,
                                  bool forceReadCheckedState = false);
 
     void setNoteFolderRemotePathList(QStringList pathList);

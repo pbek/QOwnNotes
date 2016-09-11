@@ -527,8 +527,24 @@ void SettingsDialog::readSettings() {
 
     QStringList todoCalendarUrlList = settings.value(
             "ownCloud/todoCalendarUrlList").toStringList();
+    QStringList todoCalendarDisplayNameList = settings.value(
+            "ownCloud/todoCalendarDisplayNameList").toStringList();
+    int todoCalendarUrlListCount = todoCalendarUrlList.count();
+    int todoCalendarDisplayNameListCount = todoCalendarDisplayNameList.count();
+
+    QList<CalDAVCalendarData> calendarDataList;
+    for (int i = 0; i < todoCalendarUrlListCount; i++) {
+        CalDAVCalendarData data;
+        data.url = todoCalendarUrlList.at(i);
+
+        if (todoCalendarUrlListCount == todoCalendarDisplayNameListCount) {
+            data.displayName = todoCalendarDisplayNameList.at(i);
+        }
+
+        calendarDataList << data;
+    }
     // load the tasks calendar list and set the checked state
-    refreshTodoCalendarList(todoCalendarUrlList, true);
+    refreshTodoCalendarList(calendarDataList, true);
 
     // loads the custom note file extensions
     QListIterator<QString> itr(Note::customNoteFileExtensionList());
@@ -977,7 +993,7 @@ void SettingsDialog::setOKLabelData(int number, QString text,
     label->setStyleSheet("color: " + color);
 }
 
-void SettingsDialog::refreshTodoCalendarList(QStringList items,
+void SettingsDialog::refreshTodoCalendarList(QList<CalDAVCalendarData> items,
                                              bool forceReadCheckedState) {
     // we want to read the checked state from the settings if the
     // tasks calendar list was not empty
@@ -1008,31 +1024,37 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
                 QRegularExpression::escape(serverUrlPath) + "$"), "");
     }
 
-    QListIterator<QString> itr(items);
+    QListIterator<CalDAVCalendarData> itr(items);
     while (itr.hasNext()) {
-        QString url = itr.next();
+        CalDAVCalendarData data = itr.next();
+        QString url = data.url;
+        QString name = data.displayName;
 
         // only add the server url if it wasn't already added
         if (!url.startsWith(serverUrlText)) {
             url = serverUrlText + url;
         }
 
-        // get the name out of the url part
+        // get the hash out of the url part
         QRegularExpression regex("\\/([^\\/]*)\\/$");
         QRegularExpressionMatch match = regex.match(url);
-        QString name = match.captured(1);
+        QString hash = match.captured(1);
 
         // remove percent encoding
-        name = QUrl::fromPercentEncoding(name.toUtf8());
+        hash = QUrl::fromPercentEncoding(hash.toUtf8());
 
         // skip the contact birthdays calendar
-        if (name == "contact_birthdays") {
+        if (hash == "contact_birthdays") {
             continue;
         }
 
         // skip the Calendar Plus birthday calendar
-        if (name.startsWith("bdaycpltocal_")) {
+        if (hash.startsWith("bdaycpltocal_")) {
             continue;
+        }
+
+        if (name.isEmpty()) {
+            name = hash;
         }
 
         // create the list widget item and add it to the
@@ -1041,7 +1063,7 @@ void SettingsDialog::refreshTodoCalendarList(QStringList items,
 
         // eventually check if item was checked
         Qt::CheckState checkedState = readCheckedState
-                                      ? (todoCalendarEnabledList.contains(name)
+                                      ? (todoCalendarEnabledList.contains(hash)
                                          ? Qt::Checked : Qt::Unchecked)
                                       : Qt::Checked;
         item->setCheckState(checkedState);

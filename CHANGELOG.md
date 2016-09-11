@@ -5,6 +5,8 @@
     - storing of additional information to a task, such as description,
       priority and reminder date (was tested with
       [Fruux](https://fruux.com))
+    - the display name of the calendar will now be shown instead of the
+      hash of the calendar
 
 ## 16.09.4
 - you can now also manage **todo lists** from a **custom CalDAV server**

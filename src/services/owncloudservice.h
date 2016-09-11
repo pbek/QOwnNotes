@@ -13,6 +13,13 @@
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
+struct CalDAVCalendarData {
+    QString url;
+    QString displayName;
+};
+
+class SettingsDialog;
+
 class OwnCloudService : public QObject {
 Q_OBJECT
 
@@ -96,7 +103,7 @@ private:
 
     void handleTrashedLoading(QString data);
 
-    QStringList parseCalendarHrefList(QString &data);
+    QList<CalDAVCalendarData> parseCalendarData(QString &data);
 
     void loadTodoItems(QString &data);
 

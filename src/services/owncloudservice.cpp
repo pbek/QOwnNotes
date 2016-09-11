@@ -187,15 +187,16 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             qDebug() << "Reply from ownCloud calendar page" << data;
 #endif
 
-            QStringList calendarHrefList = parseCalendarHrefList(data);
+            QList<CalDAVCalendarData> calendarDataList =
+                    parseCalendarData(data);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
-            qInfo() << "calendarHrefList: " << calendarHrefList;
-#else
-            qDebug() << "calendarHrefList: " << calendarHrefList;
-#endif
+//#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+//            qInfo() << "calendarDataList: " << calendarDataList;
+//#else
+//            qDebug() << "calendarDataList: " << calendarDataList;
+//#endif
 
-            settingsDialog->refreshTodoCalendarList(calendarHrefList);
+            settingsDialog->refreshTodoCalendarList(calendarDataList);
             return;
         } else if (reply->url().path()
                 .startsWith(todoCalendarServerUrlPath)) {
@@ -904,8 +905,14 @@ void OwnCloudService::handleTrashedLoading(QString data) {
     dialog->exec();
 }
 
-QStringList OwnCloudService::parseCalendarHrefList(QString &data) {
-    QStringList resultList;
+/**
+ * Parses the calendar data to return the calendar url and display name
+ *
+ * @param data
+ * @return
+ */
+QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
+    QList<CalDAVCalendarData> resultList;
 
     // check if there was nothing returned at all from the CalDAV server
     if (data.isEmpty()) {
@@ -964,13 +971,19 @@ QStringList OwnCloudService::parseCalendarHrefList(QString &data) {
                     // ideally we should check the
                     // "supported-calendar-component-set" for "VTODO"
                     if (typeString == "calendar") {
+                        CalDAVCalendarData calendarData;
                         // add the href to our result list
                         QDomNodeList hrefNodes = elem.elementsByTagNameNS(
                                 NS_DAV, "href");
                         if (hrefNodes.length()) {
                             const QString href = hrefNodes.at(
                                     0).toElement().text();
-                            resultList << href;
+
+                            if (href.isEmpty()) {
+                                continue;
+                            }
+
+                            calendarData.url = href;
                         }
 
                         QDomNodeList displayNameNodes =
@@ -982,7 +995,14 @@ QStringList OwnCloudService::parseCalendarHrefList(QString &data) {
                                     0).toElement().text();
                             qDebug() << __func__ << " - 'displayName': " <<
                             displayName;
+                            calendarData.displayName = displayName;
                         }
+
+                        if (calendarData.displayName.isEmpty()) {
+                            calendarData.displayName = "Unknown";
+                        }
+
+                        resultList << calendarData;
                     }
                 }
             }
