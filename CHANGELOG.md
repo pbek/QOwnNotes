@@ -2,6 +2,7 @@
 
 ## 16.09.5
 - more todo list features
+  (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
     - storing of additional information to a task, such as description,
       priority and reminder date for custom CalDAV servers (this was
       tested with [Fruux](https://fruux.com))
