@@ -523,8 +523,8 @@ void MainWindow::initEditorSoftWrap() {
  */
 void MainWindow::reloadTodoLists() {
     QSettings settings;
-    QStringList calendars
-            = settings.value("ownCloud/todoCalendarEnabledList").toStringList();
+    QStringList calendars =
+            settings.value("ownCloud/todoCalendarEnabledList").toStringList();
     QString serverUrl =
             settings.value("ownCloud/serverUrl").toString().trimmed();
 

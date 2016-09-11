@@ -130,7 +130,7 @@ void CalendarItem::updateCompleted(bool value) {
 }
 
 /**
- * @brief CalendarItem::addCalendarItemForRequest
+ * CalendarItem::addCalendarItemForRequest
  * @param calendar
  * @param url we are using QUrl because be want special characters in the urls translated
  * @return
@@ -352,7 +352,7 @@ QList<CalendarItem> CalendarItem::fetchAllForSystemTray(int limit) {
 }
 
 /**
- * @brief Fetches all calendar items with an alarm date in the current minute
+ * Fetches all calendar items with an alarm date in the current minute
  * @return
  */
 QList<CalendarItem> CalendarItem::fetchAllForReminderAlert() {
@@ -471,7 +471,7 @@ void CalendarItem::updateSortPriority() {
 }
 
 /**
- * @brief Updates all priorities of calendar items
+ * Updates all priorities of calendar items
  */
 void CalendarItem::updateAllSortPriorities() {
     QList<CalendarItem> calendarItemList = fetchAll();
@@ -747,7 +747,7 @@ bool CalendarItem::updateWithICSData(QString icsData) {
 }
 
 /**
- * @brief Searches for an attribute in a block in the ics data
+ * Searches for an attribute in a block in the ics data
  * @param block
  * @param attributeName
  * @return
@@ -773,7 +773,7 @@ QString CalendarItem::getICSDataAttributeInBlock(QString block, QString attribut
 }
 
 /**
- * @brief Removes a block in the ics data
+ * Removes a block in the ics data
  * @param block
  */
 bool CalendarItem::removeICSDataBlock(QString block) {
@@ -816,7 +816,7 @@ bool CalendarItem::removeICSDataBlock(QString block) {
 }
 
 /**
- * @brief Adds the VALARM block to the ics data
+ * Adds the VALARM block to the ics data
  */
 bool CalendarItem::addVALARMBlockToICS() {
     // make a copy of the data
@@ -876,7 +876,7 @@ bool CalendarItem::addVALARMBlockToICS() {
 }
 
 /**
- * @brief Parses and transforms the ics data to a hash with the data
+ * Parses and transforms the ics data to a hash with the data
  * @param icsData
  * @return
  */
@@ -943,7 +943,7 @@ void CalendarItem::generateICSDataHash() {
 }
 
 /**
- * @brief Finds a free key in a hash
+ * Finds a free key in a hash
  * @param hash
  * @param key
  * @param number
@@ -972,7 +972,7 @@ QString CalendarItem::findFreeHashKey(QHash<QString, QString> *hash, QString key
 
 
 /**
- * @brief Decodes an ics data line
+ * Decodes an ics data line
  * @param line
  * @return
  */
@@ -980,7 +980,8 @@ QString CalendarItem::decodeICSDataLine(QString line) {
 //    qDebug() << __func__ << " - 'before line': " << line;
 
     // replace \n with newlines
-    // we have to replace this twice, because of the first character that gets replaces in multiple \n
+    // we have to replace this twice, because of the first character that
+    // gets replaces in multiple \n
     line.replace(QRegularExpression("([^\\\\])\\\\n"), "\\1\n");
     line.replace(QRegularExpression("([^\\\\])\\\\n"), "\\1\n");
 
@@ -994,7 +995,8 @@ QString CalendarItem::decodeICSDataLine(QString line) {
     return line;
 }
 
-CalendarItem CalendarItem::createNewTodoItem(QString summary, QString calendar) {
+CalendarItem CalendarItem::createNewTodoItem(
+        QString summary, QString calendar) {
     QUuid uuid = QUuid::createUuid();
     QString uuidString = uuid.toString();
     uuidString.replace("{", "").replace("}", "");
@@ -1002,9 +1004,11 @@ CalendarItem CalendarItem::createNewTodoItem(QString summary, QString calendar) 
     CalendarItem calItem;
     calItem.setSummary(summary);
     calItem.setCalendar(calendar);
-    calItem.setUrl(QUrl(getCurrentCalendarUrl() + "qownnotes-" + uuidString + ".ics"));
-    calItem.setICSData(
-            "BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO\nEND:VCALENDAR");
+    calItem.setUrl(QUrl(getCurrentCalendarUrl() + "qownnotes-" + uuidString
+                        + ".ics"));
+    calItem.setICSData("BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:ownCloud Calendar"
+                               "\nCALSCALE:GREGORIAN\nBEGIN:VTODO\nEND:VTODO"
+                               "\nEND:VCALENDAR");
     calItem.setUid(uuidString);
 
     QDateTime dateTime = QDateTime::currentDateTime();
@@ -1015,28 +1019,33 @@ CalendarItem CalendarItem::createNewTodoItem(QString summary, QString calendar) 
 
     if (calItem.store()) {
         qDebug() << __func__ << " - 'calItem': " << calItem;
-        qDebug() << __func__ << " - 'calItem.getICSData()': " << calItem.getICSData();
+        qDebug() << __func__ << " - 'calItem.getICSData()': "
+                 << calItem.getICSData();
     }
 
     return calItem;
 }
 
 /**
- * @brief Returns the index of the currently selected todo list in the todo dialog
+ * Returns the index of the currently selected task list in the todo dialog
+ * 
  * @return
  */
 int CalendarItem::getCurrentCalendarIndex() {
     QSettings settings;
 
-    QString todoListSelectorSelectedItem = settings.value("TodoDialog/todoListSelectorSelectedItem").toString();
+    QString todoListSelectorSelectedItem = settings.value(
+            "TodoDialog/todoListSelectorSelectedItem").toString();
     if (todoListSelectorSelectedItem != "") {
-        QStringList todoCalendarEnabledList = settings.value("ownCloud/todoCalendarEnabledList").toStringList();
+        QStringList todoCalendarEnabledList = settings.value(
+                "ownCloud/todoCalendarEnabledList").toStringList();
 
         // search for the text in the todoCalendarEnabledList
-        int index = todoCalendarEnabledList.indexOf(todoListSelectorSelectedItem);
+        int index = todoCalendarEnabledList.indexOf(
+                todoListSelectorSelectedItem);
 
         if (index >= 0) {
-            // return the index of the todo list selector if we found it
+            // return the index of the task list selector if we found it
             return index;
         }
     }
@@ -1045,7 +1054,7 @@ int CalendarItem::getCurrentCalendarIndex() {
 }
 
 /**
- * @brief Returns the url of the currently selected todo list in the todo dialog
+ * Returns the url of the currently selected task list in the todo dialog
  * @return
  */
 QString CalendarItem::getCurrentCalendarUrl() {
@@ -1054,7 +1063,8 @@ QString CalendarItem::getCurrentCalendarUrl() {
     int index = getCurrentCalendarIndex();
 
     if (index >= 0) {
-        QStringList todoCalendarEnabledUrlList = settings.value("ownCloud/todoCalendarEnabledUrlList").toStringList();
+        QStringList todoCalendarEnabledUrlList = settings.value(
+                "ownCloud/todoCalendarEnabledUrlList").toStringList();
         return todoCalendarEnabledUrlList.at(index);
     }
 
@@ -1062,7 +1072,7 @@ QString CalendarItem::getCurrentCalendarUrl() {
 }
 
 /**
- * @brief Shows alerts for calendar items with an alarm date in the current minute
+ * Shows alerts for calendar items with an alarm date in the current minute
  */
 void CalendarItem::alertTodoReminders() {
     QList<CalendarItem> calendarItemList = fetchAllForReminderAlert();
@@ -1070,12 +1080,14 @@ void CalendarItem::alertTodoReminders() {
     QListIterator<CalendarItem> itr(calendarItemList);
     while (itr.hasNext()) {
         CalendarItem calItem = itr.next();
-        QMessageBox::information(NULL, "Reminder", "Reminder: <strong>" + calItem.getSummary() + "</strong>");
+        QMessageBox::information(NULL, "Reminder", "Reminder: <strong>" +
+                calItem.getSummary() + "</strong>");
     }
 }
 
 QDebug operator<<(QDebug dbg, const CalendarItem &calendarItem) {
-    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>" << calendarItem.summary << " <url>" <<
+    dbg.nospace() << "CalendarItem: <id>" << calendarItem.id << " <summary>"
+                  << calendarItem.summary << " <url>" <<
     calendarItem.url << " <calendar>" << calendarItem.calendar;
     return dbg.space();
 }

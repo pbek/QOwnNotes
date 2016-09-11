@@ -343,9 +343,7 @@ void SettingsDialog::storeSettings() {
 
     if (ui->calendarPlusRadioButton->isChecked()) {
         todoCalendarBackend = OwnCloudService::CalendarPlus;
-    }
-
-    if (ui->calDavCalendarRadioButton->isChecked()) {
+    } else if (ui->calDavCalendarRadioButton->isChecked()) {
         todoCalendarBackend = OwnCloudService::CalDAVCalendar;
     }
 
@@ -353,7 +351,7 @@ void SettingsDialog::storeSettings() {
 
     settings.setValue("ownCloud/todoCalendarCalDAVServerUrl",
                       ui->calDavServerUrlEdit->text());
-    settings.setValue("ownCloud/todoCalendarCalDAVUsername", 
+    settings.setValue("ownCloud/todoCalendarCalDAVUsername",
                       ui->calDavUsernameEdit->text());
     settings.setValue("ownCloud/todoCalendarCalDAVPassword",
                       CryptoService::instance()->encryptToString(
