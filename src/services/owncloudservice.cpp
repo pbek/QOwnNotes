@@ -1388,6 +1388,12 @@ void OwnCloudService::loadDirectory(QString &data) {
     settingsDialog->setNoteFolderRemotePathList(pathList);
 }
 
+/**
+ * Updates a calendar item on the CalDAV server
+ *
+ * @param calendarItem
+ * @param dialog
+ */
 void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
                                                TodoDialog *dialog) {
     this->todoDialog = dialog;
@@ -1411,7 +1417,9 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
 }
 
 /**
- * @brief Loads and updates the icsData of a calendar item with data from the calendar server
+ * Loads and updates the icsData of a calendar item with data from the
+ * calendar server
+ *
  * @return
  */
 bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
@@ -1420,7 +1428,7 @@ bool OwnCloudService::updateICSDataOfCalendarItem(CalendarItem *calItem) {
     QUrl url(calItem->getUrl());
     QNetworkRequest r;
 
-    addAuthHeader(&r);
+    addCalendarAuthHeader(&r);
     r.setUrl(url);
 
     QEventLoop loop;

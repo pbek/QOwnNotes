@@ -1,7 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.09.5
+- more custom todo list CalDAV features
+    - storing of additional information to a task, such as description,
+      priority and reminder date (was tested with
+      [Fruux](https://fruux.com))
+
 ## 16.09.4
-- you can now also manage todo lists from a **custom CalDAV server**
+- you can now also manage **todo lists** from a **custom CalDAV server**
   (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
     - this should already work
         - listing of all calendars in the settings dialog

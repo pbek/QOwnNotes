@@ -135,12 +135,16 @@ void CalendarItem::updateCompleted(bool value) {
  * @param url we are using QUrl because be want special characters in the urls translated
  * @return
  */
-bool CalendarItem::addCalendarItemForRequest(QString calendar, QUrl url, QString etag, QString lastModifiedString) {
+bool CalendarItem::addCalendarItemForRequest(QString calendar, QUrl url,
+                                             QString etag,
+                                             QString lastModifiedString) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
     query.prepare(
-            "INSERT INTO calendarItem ( calendar, url, etag, last_modified_string ) VALUES ( :calendar, :url, :etag, :last_modified_string )");
+            "INSERT INTO calendarItem ( calendar, url, etag,"
+                    " last_modified_string ) VALUES ( :calendar, :url, :etag,"
+                    " :last_modified_string )");
     query.bindValue(":calendar", calendar);
     query.bindValue(":url", url);
     query.bindValue(":etag", etag);
@@ -152,7 +156,8 @@ bool CalendarItem::addCalendarItem(QString summary, QString url, QString text) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
-    query.prepare("INSERT INTO calendarItem ( summary, url, description ) VALUES ( :summary, :url, :description )");
+    query.prepare("INSERT INTO calendarItem ( summary, url, description )"
+                          " VALUES ( :summary, :url, :description )");
     query.bindValue(":summary", summary);
     query.bindValue(":url", url);
     query.bindValue(":description", text);
@@ -183,7 +188,8 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar(QString url, QString calendar) 
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
-    query.prepare("SELECT * FROM calendarItem WHERE url = :url AND calendar = :calendar");
+    query.prepare("SELECT * FROM calendarItem WHERE url = :url AND "
+                          "calendar = :calendar");
     query.bindValue(":url", url);
     query.bindValue(":calendar", calendar);
 
@@ -285,7 +291,8 @@ QList<CalendarItem> CalendarItem::fetchAllByCalendar(QString calendar) {
     QList<CalendarItem> calendarItemList;
 
     query.prepare(
-            "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY completed ASC, sort_priority DESC, modified DESC");
+            "SELECT * FROM calendarItem WHERE calendar = :calendar ORDER BY "
+                    "completed ASC, sort_priority DESC, modified DESC");
     query.bindValue(":calendar", calendar);
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -487,18 +494,32 @@ bool CalendarItem::store() {
     this->updateSortPriority();
 
     if (this->id > 0) {
-        query.prepare("UPDATE calendarItem SET "
-                              "summary = :summary, url = :url, description = :description, has_dirty_data = :has_dirty_data, completed = :completed, "
-                              "calendar = :calendar, uid = :uid, ics_data = :ics_data, "
-                              "etag = :etag, last_modified_string = :last_modified_string, "
-                              "alarm_date = :alarm_date, priority = :priority, created = :created, modified = :modified, completed_date = :completed_date, sort_priority = :sort_priority "
-                              "WHERE id = :id");
+        query.prepare(
+                "UPDATE calendarItem SET summary = :summary, url = :url, "
+                        "description = :description, "
+                        "has_dirty_data = :has_dirty_data, "
+                        "completed = :completed, "
+                        "calendar = :calendar, uid = :uid, "
+                        "ics_data = :ics_data, etag = :etag, "
+                        "last_modified_string = :last_modified_string, "
+                        "alarm_date = :alarm_date, priority = :priority, "
+                        "created = :created, modified = :modified, "
+                        "completed_date = :completed_date, "
+                        "sort_priority = :sort_priority WHERE id = :id");
         query.bindValue(":id", this->id);
     }
     else {
-        query.prepare("INSERT INTO calendarItem"
-                              "( summary, url, description, calendar, uid, ics_data, etag, last_modified_string, has_dirty_data, completed, alarm_date, priority, created, modified, completed_date, sort_priority ) "
-                              "VALUES ( :summary, :url, :description, :calendar, :uid, :ics_data, :etag, :last_modified_string, :has_dirty_data, :completed, :alarm_date, :priority, :created, :modified, :completed_date, :sort_priority )");
+        query.prepare(
+                "INSERT INTO calendarItem "
+                        "(summary, url, description, calendar, uid, ics_data, "
+                        "etag, last_modified_string, has_dirty_data, completed, "
+                        "alarm_date, priority, created, modified, "
+                        "completed_date, sort_priority) "
+                        "VALUES (:summary, :url, :description, :calendar, :uid,"
+                        " :ics_data, :etag, :last_modified_string, "
+                        ":has_dirty_data, :completed, :alarm_date, :priority, "
+                        ":created, :modified, :completed_date, "
+                        ":sort_priority)");
     }
 
     query.bindValue(":summary", this->summary);
@@ -522,9 +543,7 @@ bool CalendarItem::store() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
-    }
-        // on insert
-    else if (this->id == 0) {
+    } else if (this->id == 0) {  // on insert
         this->id = query.lastInsertId().toInt();
     }
 
@@ -532,7 +551,8 @@ bool CalendarItem::store() {
 }
 
 /**
- * @brief Generates the new ICS data for the CalendarItem to send to the calendar server
+ * Generates the new ICS data for the CalendarItem to send to the
+ * calendar server
  * @return
  */
 QString CalendarItem::generateNewICSData() {
@@ -552,12 +572,15 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["PERCENT-COMPLETE"] = QString::number(completed ? 100 : 0);
     icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
     icsDataHash["CREATED"] = created.toUTC().toString(ICS_DATETIME_FORMAT);
-    icsDataHash["LAST-MODIFIED"] = modified.toUTC().toString(ICS_DATETIME_FORMAT);
+    icsDataHash["LAST-MODIFIED"] =
+            modified.toUTC().toString(ICS_DATETIME_FORMAT);
 
     if (completed) {
-        icsDataHash["COMPLETED"] = completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
+        icsDataHash["COMPLETED"] =
+                completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
     } else {
-        // remove the "COMPLETED" ics data attribute if the todo item is not completed
+        // remove the "COMPLETED" ics data attribute if the task item is not
+        // completed
         icsDataHash.remove("COMPLETED");
         icsDataKeyList.removeAll("COMPLETED");
     }
@@ -601,7 +624,8 @@ QString CalendarItem::generateNewICSData() {
 }
 
 /**
- * @brief Checks if there are new entries in the icsDataHash (e.g. when we want to set a new property that wasn't there before) and updates the icsDataKeyList
+ * Checks if there are new entries in the icsDataHash (e.g. when we want to set
+ * a new property that wasn't there before) and updates the icsDataKeyList
  */
 void CalendarItem::updateICSDataKeyListFromHash() {
     QStringList keysToAdd;
@@ -813,6 +837,9 @@ bool CalendarItem::addVALARMBlockToICS() {
         // add the VALARM block at the end of the VTODO block
         if (foundBegin && key.startsWith("END") && (value == "VTODO")) {
             QString addKey;
+            QString alarmDateString =
+                    alarmDate.toUTC().toString(ICS_DATETIME_FORMAT);
+
             addKey = findFreeHashKey(&icsDataHashCopy, "BEGIN");
             icsDataHashCopy[addKey] = "VALARM";
             icsDataKeyListCopy.insert(i, addKey);
@@ -825,12 +852,17 @@ bool CalendarItem::addVALARMBlockToICS() {
             icsDataHashCopy[addKey] = "Reminder";
             icsDataKeyListCopy.insert(++i, addKey);
 
-            addKey = findFreeHashKey(&icsDataHashCopy, "TRIGGER;VALUE=DATE-TIME");
-            icsDataHashCopy[addKey] = alarmDate.toUTC().toString(ICS_DATETIME_FORMAT);
+            addKey = findFreeHashKey(&icsDataHashCopy,
+                                     "TRIGGER;VALUE=DATE-TIME");
+            icsDataHashCopy[addKey] = alarmDateString;
             icsDataKeyListCopy.insert(++i, addKey);
 
             addKey = findFreeHashKey(&icsDataHashCopy, "END");
             icsDataHashCopy[addKey] = "VALARM";
+            icsDataKeyListCopy.insert(++i, addKey);
+
+            addKey = findFreeHashKey(&icsDataHashCopy, "DUE");
+            icsDataHashCopy[addKey] = alarmDateString;
             icsDataKeyListCopy.insert(++i, addKey);
 
             // write the data back and end
