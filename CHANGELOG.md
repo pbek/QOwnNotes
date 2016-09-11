@@ -10,6 +10,10 @@
     - there now is a button to clear your calendar item cache in the
       todo settings, so that all todo list items will be reloaded from
       your server the next time you open your todo dialog
+    - fixed a problem where an error message is shown every time you
+      open your settings dialog when you don't have entered a ownCloud
+      server name or when you switch to a the custom CalDAV server
+      and have no server name entered yet in the todo settings
 
 ## 16.09.4
 - you can now also manage **todo lists** from a **custom CalDAV server**

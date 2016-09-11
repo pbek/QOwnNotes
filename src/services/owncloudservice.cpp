@@ -39,7 +39,7 @@ OwnCloudService::OwnCloudService(QObject *parent)
 
 void OwnCloudService::readSettings() {
     QSettings settings;
-    serverUrl = settings.value("ownCloud/serverUrl").toString();
+    serverUrl = settings.value("ownCloud/serverUrl").toString().trimmed();
     serverUrlPath = QUrl(serverUrl).path();
 
     serverUrlWithoutPath = serverUrl;
@@ -70,7 +70,7 @@ void OwnCloudService::readSettings() {
             calendarBackend == CalendarPlus ? "calendarplus" : "caldav";
     QString calendarPath =
             "/remote.php/" + calendarBackendString + "/calendars/" + userName;
-    todoCalendarServerUrl = serverUrl + calendarPath;
+    todoCalendarServerUrl = serverUrl.isEmpty() ? "" : serverUrl + calendarPath;
     todoCalendarServerUrlWithoutPath = serverUrlWithoutPath;
     todoCalendarServerUrlPath = serverUrlPath + calendarPath;
     todoCalendarUsername = userName;
@@ -80,7 +80,7 @@ void OwnCloudService::readSettings() {
     if (settings.value("ownCloud/todoCalendarBackend").toInt() ==
             OwnCloudService::CalDAVCalendar) {
         todoCalendarServerUrl = settings.value(
-                "ownCloud/todoCalendarCalDAVServerUrl").toString();
+                "ownCloud/todoCalendarCalDAVServerUrl").toString().trimmed();
         todoCalendarServerUrlPath = QUrl(todoCalendarServerUrl).path();
         todoCalendarUsername = settings.value(
                 "ownCloud/todoCalendarCalDAVUsername").toString();
@@ -427,6 +427,10 @@ void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
  * for the settings dialog
  */
 void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
+    if (todoCalendarServerUrl == "") {
+        return;
+    }
+
     settingsDialog = dialog;
 
     QUrl url(todoCalendarServerUrl);
