@@ -173,6 +173,8 @@ private slots:
 
     void on_calendarPlusRadioButton_toggled(bool checked);
 
+    void on_emptyCalendarCachePushButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

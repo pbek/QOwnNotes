@@ -1063,7 +1063,7 @@ void SettingsDialog::refreshTodoCalendarList(QList<CalDAVCalendarData> items,
 
         // eventually check if item was checked
         Qt::CheckState checkedState = readCheckedState
-                                      ? (todoCalendarEnabledList.contains(hash)
+                                      ? (todoCalendarEnabledList.contains(name)
                                          ? Qt::Checked : Qt::Unchecked)
                                       : Qt::Checked;
         item->setCheckState(checkedState);
@@ -2215,4 +2215,14 @@ void SettingsDialog::on_calendarPlusRadioButton_toggled(bool checked) {
     if (checked) {
         on_reloadCalendarListButton_clicked();
     }
+}
+
+/**
+ * Removes all calendar items
+ */
+void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
+    CalendarItem::removeAll();
+
+    QMessageBox::information(this, tr("Calendar cache emptied"),
+                             tr("Your calendar cache was emptied."));
 }

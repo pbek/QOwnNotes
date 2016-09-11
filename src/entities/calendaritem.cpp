@@ -175,8 +175,7 @@ CalendarItem CalendarItem::fetch(int id) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    }
-    else if (query.first()) {
+    }  else if (query.first()) {
         calendarItem.fillFromQuery(query);
     }
 
@@ -195,8 +194,7 @@ CalendarItem CalendarItem::fetchByUrlAndCalendar(QString url, QString calendar) 
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    }
-    else if (query.first()) {
+    } else if (query.first()) {
         calendarItem.fillFromQuery(query);
     }
 
@@ -213,8 +211,7 @@ CalendarItem CalendarItem::fetchByUid(QString uid) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    }
-    else if (query.first()) {
+    } else if (query.first()) {
         calendarItem.fillFromQuery(query);
     }
 
@@ -231,8 +228,7 @@ CalendarItem CalendarItem::fetchByUrl(QUrl url) {
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
-    }
-    else if (query.first()) {
+    } else if (query.first()) {
         calendarItem.fillFromQuery(query);
     }
 
@@ -249,12 +245,27 @@ bool CalendarItem::remove() {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
-    }
-    else {
+    } else {
         return true;
     }
 }
 
+/**
+ * Deletes all calendar items
+ */
+bool CalendarItem::removeAll() {
+    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlQuery query(db);
+
+    query.prepare("DELETE FROM calendarItem");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    } else {
+        return true;
+    }
+}
 
 CalendarItem CalendarItem::calendarItemFromQuery(QSqlQuery query) {
     CalendarItem calendarItem;

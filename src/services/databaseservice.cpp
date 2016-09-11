@@ -367,6 +367,14 @@ bool DatabaseService::setupTables() {
         version = 12;
     }
 
+    if (version < 13) {
+        // remove all calendar items so that all task items will be reloaded
+        // from the server
+        CalendarItem::removeAll();
+
+        version = 13;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

@@ -70,6 +70,7 @@ public:
     static void alertTodoReminders();
     static QList<QString> searchAsUidList(QString text, QString calendar);
     static QList<CalendarItem> fetchAllForSystemTray(int limit = 10);
+    static bool removeAll();
 
 private:
     int id;

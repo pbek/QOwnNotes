@@ -30,16 +30,6 @@
     <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
-   <item row="1" column="0">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="0">
     <widget class="QFrame" name="mainFrame">
      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -1496,6 +1486,44 @@
                 <string>CalDAV server settings</string>
                </property>
                <layout class="QFormLayout" name="formLayout_2">
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::ExpandingFieldsGrow</enum>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_19">
+                  <property name="text">
+                   <string>Server url:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="calDavServerUrlEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>300</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Please enter the url to your calendar overview of your CalDAV server.</string>
+                  </property>
+                  <property name="placeholderText">
+                   <string>your CalDAV calendar overview url</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
                 <item row="2" column="0">
                  <widget class="QLabel" name="label_15">
                   <property name="text">
@@ -1569,41 +1597,6 @@
                   </property>
                  </widget>
                 </item>
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_19">
-                  <property name="text">
-                   <string>Server url:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="calDavServerUrlEdit">
-                  <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                    <horstretch>0</horstretch>
-                    <verstretch>0</verstretch>
-                   </sizepolicy>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>300</width>
-                    <height>0</height>
-                   </size>
-                  </property>
-                  <property name="toolTip">
-                   <string>Please enter the url to your calendar overview of your CalDAV server.</string>
-                  </property>
-                  <property name="placeholderText">
-                   <string>your CalDAV calendar overview url</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -1613,13 +1606,40 @@
                 <string>Select the calendars you want to use for the TODO list</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_7">
-                <item row="0" column="0">
+                <item row="1" column="3">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="4">
                  <widget class="QListWidget" name="todoCalendarListWidget"/>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="emptyCalendarCachePushButton">
+                  <property name="toolTip">
+                   <string>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</string>
+                  </property>
+                  <property name="text">
+                   <string>Empty calendar item cache</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="trash-empty" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</normaloff>:/icons/breeze-qownnotes/16x16/trash-empty.svg</iconset>
+                  </property>
+                 </widget>
                 </item>
                 <item row="1" column="0">
                  <widget class="QPushButton" name="reloadCalendarListButton">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -1631,7 +1651,7 @@
                    </size>
                   </property>
                   <property name="toolTip">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to reload the list of calendars from your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>Click here to reload the list of calendars from your calendar server.</string>
                   </property>
                   <property name="styleSheet">
                    <string notr="true"/>
@@ -3160,6 +3180,16 @@ p, li { white-space: pre-wrap; }
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
     </widget>
    </item>
   </layout>

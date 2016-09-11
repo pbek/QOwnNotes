@@ -7,6 +7,9 @@
       [Fruux](https://fruux.com))
     - the display name of the calendar will now be shown instead of the
       hash of the calendar
+    - there now is a button to clear your calendar item cache in the
+      todo settings, so that all todo list items will be reloaded from
+      your server the next time you open your todo dialog
 
 ## 16.09.4
 - you can now also manage **todo lists** from a **custom CalDAV server**
