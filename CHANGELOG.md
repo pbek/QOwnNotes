@@ -14,6 +14,8 @@
       open your settings dialog when you don't have entered a ownCloud
       server name or when you switch to a the custom CalDAV server
       and have no server name entered yet in the todo settings
+- added more Japanese, Portuguese and Polish translation (thank you
+  piyo, mlimacarlos and lucjan)
 
 ## 16.09.4
 - you can now also manage **todo lists** from a **custom CalDAV server**
