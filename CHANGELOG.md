@@ -9,6 +9,8 @@
 - the completed status of ical items will now also be taken into account
   then checking for completed todo items on your CalDAV server
   (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
+- because of the changes made to the viewing of calendar names you now
+  have to select them again in the todo settings
 
 ## 16.09.5
 - more todo list features

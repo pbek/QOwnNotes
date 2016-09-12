@@ -224,6 +224,7 @@ bool DatabaseService::setupNoteFolderTables() {
 bool DatabaseService::setupTables() {
     QSqlDatabase dbDisk = QSqlDatabase::database("disk");
     QSqlQuery queryDisk(dbDisk);
+    QSettings settings;
 
     queryDisk.exec("CREATE TABLE IF NOT EXISTS appData ("
                            "name VARCHAR(255) PRIMARY KEY, "
@@ -303,7 +304,6 @@ bool DatabaseService::setupTables() {
 
     // we need to remove the main splitter sizes for version 4 and 5
     if (version < 5) {
-        QSettings settings;
         // remove the main splitter sizes for the tags pane
         settings.remove("mainSplitterSizes");
 
@@ -311,7 +311,6 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 6) {
-        QSettings settings;
         // remove the obsolete activeTagId setting
         settings.remove("activeTagId");
 
@@ -346,7 +345,6 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 11) {
-        QSettings settings;
         // remove the oneColumnModeEnabled setting, that wrongly
         // was turned on by default
         settings.remove("oneColumnModeEnabled");
@@ -355,7 +353,6 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 12) {
-        QSettings settings;
         bool darkModeColors = settings.value("darkModeColors").toBool();
 
         // set an initial schema key
@@ -367,12 +364,20 @@ bool DatabaseService::setupTables() {
         version = 12;
     }
 
-    if (version < 13) {
+    if (version < 14) {
         // remove all calendar items so that all task items will be reloaded
-        // from the server
+        // from the server because we are using the display name now instead
+        // of the last part of the calendar url
         CalendarItem::removeAll();
 
-        version = 13;
+        // remove the todoCalendar list setting, so that the user has
+        // to select the items again because the items will use the display
+        // name now instead of the last part of the calendar url
+        settings.remove("ownCloud/todoCalendarEnabledList");
+        settings.remove("ownCloud/todoCalendarEnabledUrlList");
+        settings.remove("ownCloud/todoCalendarUrlList");
+
+        version = 14;
     }
 
     if (version != oldVersion) {
