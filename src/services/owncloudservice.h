@@ -75,6 +75,7 @@ private:
     QString password;
     QString todoCalendarPassword;
     QNetworkAccessManager *networkManager;
+    QNetworkAccessManager *calendarNetworkManager;
     MainWindow *mainWindow;
     ShareDialog *shareDialog;
     static const QString rootPath;
@@ -135,6 +136,9 @@ private slots:
 
     void slotAuthenticationRequired(QNetworkReply *reply,
                                     QAuthenticator *authenticator);
+
+    void slotCalendarAuthenticationRequired(QNetworkReply *reply,
+                                            QAuthenticator *authenticator);
 
     void slotReplyFinished(QNetworkReply *);
 };

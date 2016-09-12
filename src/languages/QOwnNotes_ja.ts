@@ -1866,65 +1866,83 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="763"/>
+        <location filename="../services/owncloudservice.cpp" line="138"/>
+        <source>Username / password error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="139"/>
+        <source>Your calendar username or password is incorrect!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="785"/>
         <source>ownCloud server connection error</source>
         <translation>ownCloud サーバーへの接続エラー</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="767"/>
+        <location filename="../services/owncloudservice.cpp" line="789"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>ownCloud サーバーのエラー: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;あなたの ownCloud サーバーの構成を確認してください。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="783"/>
+        <location filename="../services/owncloudservice.cpp" line="805"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>あなたの ownCloud サーバーを構成する必要があります！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>Open &amp;settings</source>
         <translation>設定を開く(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="811"/>
+        <location filename="../services/owncloudservice.cpp" line="833"/>
         <source>done with loading note versions</source>
         <translation>ノートのバージョン履歴の読み込み完了</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="849"/>
+        <location filename="../services/owncloudservice.cpp" line="871"/>
         <source>no other version</source>
         <translation>バージョン履歴なし</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="850"/>
+        <location filename="../services/owncloudservice.cpp" line="872"/>
         <source>There are no other versions on the server for this note.</source>
         <translation>このノートのバージョン履歴はありません。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="867"/>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
         <translation>削除したノートの読み込み完了</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="928"/>
-        <location filename="../services/owncloudservice.cpp" line="952"/>
+        <location filename="../services/owncloudservice.cpp" line="950"/>
+        <location filename="../services/owncloudservice.cpp" line="976"/>
         <source>Error while loading todo lists!</source>
         <translation>Todo リストの読み込みエラー！</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="929"/>
-        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
-        <translation>あなたの ownCloud CalDAV サーバーから応答がありません！</translation>
+        <location filename="../services/owncloudservice.cpp" line="951"/>
+        <source>Your CalDAV server didn&apos;t reply anything!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="953"/>
+        <location filename="../services/owncloudservice.cpp" line="977"/>
+        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
+        <translation type="obsolete">あなたの ownCloud CalDAV サーバーから応答がありません！</translation>
+    </message>
+    <message>
         <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation>ownCloud CalDAV サーバーからのエラーメッセージ: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+        <translation type="obsolete">ownCloud CalDAV サーバーからのエラーメッセージ: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
 </context>
 <context>

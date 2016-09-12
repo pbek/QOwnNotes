@@ -1866,65 +1866,83 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="763"/>
+        <location filename="../services/owncloudservice.cpp" line="138"/>
+        <source>Username / password error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="139"/>
+        <source>Your calendar username or password is incorrect!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="785"/>
         <source>ownCloud server connection error</source>
         <translation type="unfinished">ownCloud server connection error</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="767"/>
+        <location filename="../services/owncloudservice.cpp" line="789"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="783"/>
+        <location filename="../services/owncloudservice.cpp" line="805"/>
         <source>You need to setup your ownCloud server!</source>
         <translation type="unfinished">You need to setup your ownCloud server!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="811"/>
+        <location filename="../services/owncloudservice.cpp" line="833"/>
         <source>done with loading note versions</source>
         <translation type="unfinished">done with loading note versions</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="849"/>
+        <location filename="../services/owncloudservice.cpp" line="871"/>
         <source>no other version</source>
         <translation type="unfinished">no other version</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="850"/>
+        <location filename="../services/owncloudservice.cpp" line="872"/>
         <source>There are no other versions on the server for this note.</source>
         <translation type="unfinished">There are no other versions on the server for this note.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="867"/>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
         <translation type="unfinished">done with loading trashed notes</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="928"/>
-        <location filename="../services/owncloudservice.cpp" line="952"/>
+        <location filename="../services/owncloudservice.cpp" line="950"/>
+        <location filename="../services/owncloudservice.cpp" line="976"/>
         <source>Error while loading todo lists!</source>
         <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="929"/>
-        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
-        <translation type="unfinished">Your ownCloud CalDAV server didn&apos;t reply anything!</translation>
+        <location filename="../services/owncloudservice.cpp" line="951"/>
+        <source>Your CalDAV server didn&apos;t reply anything!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="953"/>
+        <location filename="../services/owncloudservice.cpp" line="977"/>
+        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
+        <translation type="obsolete">Your ownCloud CalDAV server didn&apos;t reply anything!</translation>
+    </message>
+    <message>
         <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation type="unfinished">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+        <translation type="obsolete">Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
 </context>
 <context>

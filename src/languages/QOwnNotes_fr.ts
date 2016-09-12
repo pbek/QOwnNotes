@@ -1886,65 +1886,83 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="763"/>
+        <location filename="../services/owncloudservice.cpp" line="138"/>
+        <source>Username / password error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="139"/>
+        <source>Your calendar username or password is incorrect!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="785"/>
         <source>ownCloud server connection error</source>
         <translation>erreur de connexion avec le serveur ownCloud</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="767"/>
+        <location filename="../services/owncloudservice.cpp" line="789"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>erreur du serveur ownCloud : &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt; Veuillez vérifier votre configuration ownCloud.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="783"/>
+        <location filename="../services/owncloudservice.cpp" line="805"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>Vous devez configurer votre serveur ownCloud !</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>Open &amp;settings</source>
         <translation>Ouvrir les &amp;paramètres</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="789"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuler</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="811"/>
+        <location filename="../services/owncloudservice.cpp" line="833"/>
         <source>done with loading note versions</source>
         <translation>téléchargement des versions des notes terminé</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="849"/>
+        <location filename="../services/owncloudservice.cpp" line="871"/>
         <source>no other version</source>
         <translation>aucune autre version</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="850"/>
+        <location filename="../services/owncloudservice.cpp" line="872"/>
         <source>There are no other versions on the server for this note.</source>
         <translation>Il n&apos;y a pas d&apos;autres versions sur le serveur pour cette note.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="867"/>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
         <translation>téléchargement des notes de la corbeille terminé</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="928"/>
-        <location filename="../services/owncloudservice.cpp" line="952"/>
+        <location filename="../services/owncloudservice.cpp" line="950"/>
+        <location filename="../services/owncloudservice.cpp" line="976"/>
         <source>Error while loading todo lists!</source>
         <translation>Erreur lors du chargement des listes de tâches !</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="929"/>
-        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
-        <translation>Votre serveur CalDAV ownCloud n&apos;a pas répondu !</translation>
+        <location filename="../services/owncloudservice.cpp" line="951"/>
+        <source>Your CalDAV server didn&apos;t reply anything!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="953"/>
+        <location filename="../services/owncloudservice.cpp" line="977"/>
+        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
+        <translation type="obsolete">Votre serveur CalDAV ownCloud n&apos;a pas répondu !</translation>
+    </message>
+    <message>
         <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation>Message d’erreur du serveur CalDAV ownCloud : &lt;strong&gt;%1&lt;/strong&gt;</translation>
+        <translation type="obsolete">Message d’erreur du serveur CalDAV ownCloud : &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
 </context>
 <context>

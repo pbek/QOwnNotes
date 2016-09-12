@@ -11,6 +11,8 @@
   (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
 - because of the changes made to the viewing of calendar names you now
   have to select them again in the todo settings
+- now an error message is shown if the username or password to your
+  CalDAV server is incorrect
 
 ## 16.09.5
 - more todo list features

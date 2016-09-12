@@ -54,6 +54,7 @@ void OwnCloudService::readSettings() {
             settings.value("ownCloud/password").toString());
 
     networkManager = new QNetworkAccessManager();
+    calendarNetworkManager = new QNetworkAccessManager();
 
     versionListPath = rootPath + "note/versions";
     trashListPath = rootPath + "note/trashed";
@@ -104,6 +105,14 @@ void OwnCloudService::readSettings() {
                                                      QAuthenticator *)));
     QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)), this,
                      SLOT(slotReplyFinished(QNetworkReply *)));
+
+    QObject::connect(calendarNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply * ,
+                                                   QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply * ,
+                                                     QAuthenticator *)));
+    QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)), this,
+                     SLOT(slotReplyFinished(QNetworkReply *)));
 }
 
 void OwnCloudService::slotAuthenticationRequired(
@@ -116,6 +125,18 @@ void OwnCloudService::slotAuthenticationRequired(
         settingsDialog->setOKLabelData(4, "not connected",
                                        SettingsDialog::Failure);
     }
+
+    reply->abort();
+}
+
+void OwnCloudService::slotCalendarAuthenticationRequired(
+        QNetworkReply *reply, QAuthenticator *authenticator) {
+    Q_UNUSED(authenticator);
+    qWarning() << "Calendar username and/or password incorrect";
+
+    QMessageBox::warning(
+            0, tr("Username / password error"),
+            tr("Your calendar username or password is incorrect!"));
 
     reply->abort();
 }
@@ -456,8 +477,8 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = networkManager->sendCustomRequest(r, "PROPFIND",
-                                                             buffer);
+    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
+            r, "PROPFIND", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -515,8 +536,8 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = networkManager->sendCustomRequest(r, "REPORT",
-                                                             buffer);
+    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
+            r, "REPORT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -621,7 +642,8 @@ void OwnCloudService::removeCalendarItem(CalendarItem calItem,
     QNetworkRequest r(url);
     addCalendarAuthHeader(&r);
 
-    QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
+    QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
+            r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
 }
 
@@ -926,7 +948,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     if (data.isEmpty()) {
         QMessageBox::critical(
                 0, tr("Error while loading todo lists!"),
-                tr("Your ownCloud CalDAV server didn't reply anything!"));
+                tr("Your CalDAV server didn't reply anything!"));
 
         return resultList;
     }
@@ -952,7 +974,7 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     if (typeString == "message") {
                         QMessageBox::critical(
                                 0, tr("Error while loading todo lists!"),
-                                tr("Error message from your ownCloud "
+                                tr("Error message from your "
                                            "CalDAV server: <strong>%1</strong>")
                                         .arg(typeNode.toElement().text()));
 
@@ -1142,7 +1164,8 @@ void OwnCloudService::loadTodoItems(QString &data) {
                             QNetworkRequest r(calendarItemUrl);
                             addCalendarAuthHeader(&r);
 
-                            QNetworkReply *reply = networkManager->get(r);
+                            QNetworkReply *reply =
+                                    calendarNetworkManager->get(r);
                             ignoreSslErrorsIfAllowed(reply);
 
                             requestCount++;
@@ -1471,7 +1494,8 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
 
-    QNetworkReply *reply = networkManager->sendCustomRequest(r, "PUT", buffer);
+    QNetworkReply *reply =
+            calendarNetworkManager->sendCustomRequest(r, "PUT", buffer);
     ignoreSslErrorsIfAllowed(reply);
 }
 
