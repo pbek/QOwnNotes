@@ -20,6 +20,8 @@
     - this should prevent the user from downloading an old version and
       getting a new update dialog after updating and starting the
       application again
+- added more Italian, Portuguese, Russian, Hungarian and Dutch
+  translation (thank you mlocati, mlimacarlos, frostyland and Fabijenna)
 
 ## 16.09.5
 - more todo list features
