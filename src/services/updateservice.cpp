@@ -140,6 +140,13 @@ void UpdateService::onResult(QNetworkReply *reply) {
             } else if (updateMode == UpdateService::Periodic) {
                 // check if the update dialog is already open
                 showUpdateDialog = !UpdateDialog::isUpdateDialogOpen();
+
+                // if the dialog is not open but there is a new release version
+                // string open it anyway
+                if (!showUpdateDialog &&
+                        releaseVersionString != _currentReleaseVersionString) {
+                    showUpdateDialog = true;
+                }
             }
 
             // check if the update dialog was disabled
@@ -150,12 +157,24 @@ void UpdateService::onResult(QNetworkReply *reply) {
         }
 
         if (showUpdateDialog) {
+            // if there already is an update dialog and if it is open
+            // then close and remove the old one
+            if (_updateDialog != Q_NULLPTR &&
+                    UpdateDialog::isUpdateDialogOpen()) {
+                _updateDialog->close();
+                _updateDialog->deleteLater();
+                delete _updateDialog;
+            }
+
+            // set the current release version string
+            _currentReleaseVersionString = releaseVersionString;
+
             // open the update dialog
-            UpdateDialog *dialog = new UpdateDialog(
+            _updateDialog = new UpdateDialog(
                     0, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
-            dialog->exec();
+            _updateDialog->exec();
         }
     } else {
         mainWindow->hideUpdateAvailableButton();

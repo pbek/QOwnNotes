@@ -14,7 +14,10 @@ class UpdateDialog : public MasterDialog
     Q_OBJECT
 
 public:
-    explicit UpdateDialog(QWidget *parent = 0, QString changesHtml = "", QString releaseUrl = "", QString releaseVersionString = "", int releaseBuildNumber = 0);
+    explicit UpdateDialog(
+            QWidget *parent = 0, QString changesHtml = "",
+            QString releaseUrl = "", QString releaseVersionString = "",
+            int releaseBuildNumber = 0);
     ~UpdateDialog();
     static bool isUpdateDialogOpen();
     int exec();

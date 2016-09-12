@@ -13,6 +13,13 @@
   have to select them again in the todo settings
 - now an error message is shown if the username or password to your
   CalDAV server is incorrect
+- when automatically checking for application updates the update dialog
+  will now be refreshed even if it is already open if there is an even
+  newer version available
+  (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))
+    - this should prevent the user from downloading an old version and
+      getting a new update dialog after updating and starting the
+      application again
 
 ## 16.09.5
 - more todo list features
