@@ -3664,7 +3664,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
         if (QMessageBox::warning(
                 0, tr("No selected todo lists!"),
                 tr("You have not selected any todo lists.<br />"
-                           "Please check your <strong>Todo</strong>"
+                           "Please check your <strong>Todo</strong> "
                            "configuration in the settings!"),
                 tr("Open &settings"),
                 tr("&Cancel"),

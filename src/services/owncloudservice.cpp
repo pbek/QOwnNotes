@@ -180,7 +180,8 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             // qDebug() << data;
 
             return;
-        } else if (reply->url().path().endsWith(todoCalendarServerUrlPath)) {
+        } else if (!todoCalendarServerUrlPath.isEmpty() &&
+                reply->url().path().endsWith(todoCalendarServerUrlPath)) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             qInfo() << "Reply from ownCloud calendar page: " << data;
 #else
@@ -196,10 +197,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 //            qDebug() << "calendarDataList: " << calendarDataList;
 //#endif
 
-            settingsDialog->refreshTodoCalendarList(calendarDataList);
+            if (settingsDialog != Q_NULLPTR) {
+                settingsDialog->refreshTodoCalendarList(calendarDataList);
+            }
+
             return;
-        } else if (reply->url().path()
-                .startsWith(todoCalendarServerUrlPath)) {
+        } else if (!todoCalendarServerUrlPath.isEmpty() &&
+                reply->url().path().startsWith(todoCalendarServerUrlPath)) {
             // check if we have a reply from a calendar item request
             if (reply->url().path().endsWith(".ics")) {
                 qDebug() << "Reply from ownCloud calendar item ics page";
@@ -253,7 +257,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 qDebug() << "Reply from ownCloud calendar todo list page";
 //                qDebug() << data;
 
-                // load the Todo items
+                // load the task items
                 loadTodoItems(data);
             }
         } else if (reply->url().path()
@@ -427,7 +431,7 @@ void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
  * for the settings dialog
  */
 void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
-    if (todoCalendarServerUrl == "") {
+    if (todoCalendarServerUrl.isEmpty()) {
         return;
     }
 
@@ -928,6 +932,8 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
     }
 
     QDomDocument doc;
+    qDebug() << __func__ << " - 'data': " << data;
+
     doc.setContent(data, true);
 
     QDomNodeList errorNodes = doc.elementsByTagNameNS(NS_DAV, "error");
@@ -971,43 +977,72 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     QDomNode typeNode = typeNodes.at(j);
                     QString typeString = typeNode.toElement().tagName();
 
-                    // did we find a calendar?
-                    // ideally we should check the
-                    // "supported-calendar-component-set" for "VTODO"
-                    if (typeString == "calendar") {
-                        CalDAVCalendarData calendarData;
-                        // add the href to our result list
-                        QDomNodeList hrefNodes = elem.elementsByTagNameNS(
-                                NS_DAV, "href");
-                        if (hrefNodes.length()) {
-                            const QString href = hrefNodes.at(
-                                    0).toElement().text();
-
-                            if (href.isEmpty()) {
-                                continue;
-                            }
-
-                            calendarData.url = href;
-                        }
-
-                        QDomNodeList displayNameNodes =
-                                elem.elementsByTagNameNS(NS_DAV, "displayname");
-                        if (displayNameNodes.length()) {
-                            // TODO(pbek): we want to use this display name in
-                            // the future!
-                            const QString displayName = displayNameNodes.at(
-                                    0).toElement().text();
-                            qDebug() << __func__ << " - 'displayName': " <<
-                            displayName;
-                            calendarData.displayName = displayName;
-                        }
-
-                        if (calendarData.displayName.isEmpty()) {
-                            calendarData.displayName = "Unknown";
-                        }
-
-                        resultList << calendarData;
+                    // check if we found a calendar
+                    if (typeString != "calendar") {
+                        continue;
                     }
+
+                    // check if the calendar is a VTODO calendar
+                    QDomNodeList componentSetNodes =
+                            elem.elementsByTagName(
+                                    "supported-calendar-component-set");
+                    bool isTodoCalendar = false;
+                    if (componentSetNodes.length()) {
+                        for (int k = 0; k < componentSetNodes.length(); ++k) {
+                            QDomNodeList componentSets =
+                                    componentSetNodes.at(k).childNodes();
+
+                            if (componentSets.length()) {
+                                for (int i = 0;
+                                     i < componentSets.length();
+                                     ++i) {
+                                    QDomNode componentSet =
+                                            componentSets.at(i);
+                                    QString componentSetString =
+                                            componentSet.toElement()
+                                                    .attribute("name");
+                                    if (componentSetString == "VTODO") {
+                                        isTodoCalendar = true;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    // we only want VTODO calendars
+                    if (!isTodoCalendar) {
+                        continue;
+                    }
+
+                    CalDAVCalendarData calendarData;
+                    // add the href to our result list
+                    QDomNodeList hrefNodes = elem.elementsByTagNameNS(
+                            NS_DAV, "href");
+                    if (hrefNodes.length()) {
+                        const QString href = hrefNodes.at(
+                                0).toElement().text();
+
+                        if (href.isEmpty()) {
+                            continue;
+                        }
+
+                        calendarData.url = href;
+                    }
+
+                    QDomNodeList displayNameNodes =
+                            elem.elementsByTagNameNS(NS_DAV, "displayname");
+                    if (displayNameNodes.length()) {
+                        const QString displayName = displayNameNodes.at(
+                                0).toElement().text();
+                        displayName;
+                        calendarData.displayName = displayName;
+                    }
+
+                    if (calendarData.displayName.isEmpty()) {
+                        calendarData.displayName = "Unknown";
+                    }
+
+                    resultList << calendarData;
                 }
             }
         }

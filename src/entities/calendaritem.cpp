@@ -721,34 +721,55 @@ bool CalendarItem::updateWithICSData(QString icsData) {
     generateICSDataHash();
 
     // we only need VTODO items!
-//    if ( ( icsDataHash["BEGIN1"] != "VTODO" ) && ( icsDataHash["BEGIN"] != "VTODO" ) ) {
+//    if ( ( icsDataHash["BEGIN1"] != "VTODO" ) &&
+//         ( icsDataHash["BEGIN"] != "VTODO" ) ) {
 //        return false;
 //    }
 
-    summary = icsDataHash.contains("SUMMARY") ? icsDataHash["SUMMARY"].trimmed() : "";
-    completed = icsDataHash.contains("PERCENT-COMPLETE") ? icsDataHash["PERCENT-COMPLETE"] == "100" : false;
-    uid = icsDataHash.contains("UID") ? icsDataHash["UID"] : "";
-    description = icsDataHash.contains("DESCRIPTION") ? icsDataHash["DESCRIPTION"] : "";
-    priority = icsDataHash.contains("PRIORITY") ? icsDataHash["PRIORITY"].toInt() : 0;
-    created = icsDataHash.contains("CREATED") ? QDateTime::fromString(icsDataHash["CREATED"], ICS_DATETIME_FORMAT)
-                                              : QDateTime::currentDateTime();
-    modified = icsDataHash.contains("LAST-MODIFIED") ? QDateTime::fromString(icsDataHash["LAST-MODIFIED"],
-                                                                             ICS_DATETIME_FORMAT)
-                                                     : QDateTime::currentDateTime();
+    summary = icsDataHash.contains("SUMMARY") ?
+              icsDataHash["SUMMARY"].trimmed() : "";
+    completed = icsDataHash.contains("PERCENT-COMPLETE") ?
+                icsDataHash["PERCENT-COMPLETE"] == "100" : false;
 
-    // workaround to check if we have a alarm description, so that on empty descriptions the alarm description isn't taken
-    QString alarmDescription = getICSDataAttributeInBlock("VALARM", "DESCRIPTION");
-    if ((description != "") && (alarmDescription != "") && (description == alarmDescription)) {
+    // also take the completed status into account
+    if (!completed) {
+        completed = icsDataHash.contains("STATUS") &&
+                icsDataHash["STATUS"] == "COMPLETED";
+    }
+
+    uid = icsDataHash.contains("UID") ? icsDataHash["UID"] : "";
+    description = icsDataHash.contains("DESCRIPTION") ?
+                  icsDataHash["DESCRIPTION"] : "";
+    priority = icsDataHash.contains("PRIORITY") ?
+               icsDataHash["PRIORITY"].toInt() : 0;
+    created = icsDataHash.contains("CREATED") ?
+              QDateTime::fromString(icsDataHash["CREATED"], ICS_DATETIME_FORMAT)
+                                              : QDateTime::currentDateTime();
+    modified = icsDataHash.contains("LAST-MODIFIED") ?
+               QDateTime::fromString(icsDataHash["LAST-MODIFIED"],
+                                     ICS_DATETIME_FORMAT)
+                                                 : QDateTime::currentDateTime();
+
+    // workaround to check if we have a alarm description, so that on empty
+    // descriptions the alarm description isn't taken
+    QString alarmDescription =
+            getICSDataAttributeInBlock("VALARM", "DESCRIPTION");
+    if ((description != "") && (alarmDescription != "") &&
+            (description == alarmDescription)) {
         description = "";
     }
 
-    QString alarmDateString = getICSDataAttributeInBlock("VALARM", "TRIGGER;VALUE=DATE-TIME");
+    QString alarmDateString =
+            getICSDataAttributeInBlock("VALARM", "TRIGGER;VALUE=DATE-TIME");
     alarmDate = QDateTime();
 
     if (alarmDateString != "") {
-        QDateTime dateTime = QDateTime::fromString(alarmDateString, ICS_DATETIME_FORMAT);
-        // convert the UTC from the server to local time, because sqlite doesn't understand time zones
-        alarmDate = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC).toLocalTime();
+        QDateTime dateTime =
+                QDateTime::fromString(alarmDateString, ICS_DATETIME_FORMAT);
+        // convert the UTC from the server to local time, because sqlite
+        // doesn't understand time zones
+        alarmDate = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC)
+                .toLocalTime();
     }
 
 //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate;

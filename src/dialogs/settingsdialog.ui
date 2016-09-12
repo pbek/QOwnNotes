@@ -1492,7 +1492,7 @@
                 <item row="0" column="0">
                  <widget class="QLabel" name="label_19">
                   <property name="text">
-                   <string>Server url:</string>
+                   <string>Calendar base url:</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1517,7 +1517,7 @@
                    <string>Please enter the url to your calendar overview of your CalDAV server.</string>
                   </property>
                   <property name="placeholderText">
-                   <string>your CalDAV calendar overview url</string>
+                   <string>your CalDAV calendar base url</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>

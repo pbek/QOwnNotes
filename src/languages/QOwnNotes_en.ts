@@ -1261,6 +1261,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3666"/>
+        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="4250"/>
         <source>Open QOwnNotes</source>
         <translation type="unfinished"></translation>
@@ -1680,11 +1685,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3666"/>
-        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt;configuration in the settings!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5062"/>
         <location filename="../mainwindow.cpp" line="5124"/>
         <source>inserting image</source>
@@ -1881,63 +1881,63 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="755"/>
+        <location filename="../services/owncloudservice.cpp" line="763"/>
         <source>ownCloud server connection error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="759"/>
+        <location filename="../services/owncloudservice.cpp" line="767"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="775"/>
+        <location filename="../services/owncloudservice.cpp" line="783"/>
         <source>You need to setup your ownCloud server!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="781"/>
+        <location filename="../services/owncloudservice.cpp" line="789"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="781"/>
+        <location filename="../services/owncloudservice.cpp" line="789"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="803"/>
+        <location filename="../services/owncloudservice.cpp" line="811"/>
         <source>done with loading note versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="841"/>
+        <location filename="../services/owncloudservice.cpp" line="849"/>
         <source>no other version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="842"/>
+        <location filename="../services/owncloudservice.cpp" line="850"/>
         <source>There are no other versions on the server for this note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="859"/>
+        <location filename="../services/owncloudservice.cpp" line="867"/>
         <source>done with loading trashed notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="920"/>
-        <location filename="../services/owncloudservice.cpp" line="944"/>
+        <location filename="../services/owncloudservice.cpp" line="928"/>
+        <location filename="../services/owncloudservice.cpp" line="952"/>
         <source>Error while loading todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="921"/>
+        <location filename="../services/owncloudservice.cpp" line="929"/>
         <source>Your ownCloud CalDAV server didn&apos;t reply anything!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="945"/>
+        <location filename="../services/owncloudservice.cpp" line="953"/>
         <source>Error message from your ownCloud CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2827,6 +2827,16 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1495"/>
+        <source>Calendar base url:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1520"/>
+        <source>your CalDAV calendar base url</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="1552"/>
         <source>Please enter the username on your CalDAV server.</source>
         <translation type="unfinished"></translation>
@@ -2847,18 +2857,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1495"/>
-        <source>Server url:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/settingsdialog.ui" line="1517"/>
         <source>Please enter the url to your calendar overview of your CalDAV server.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1520"/>
-        <source>your CalDAV calendar overview url</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

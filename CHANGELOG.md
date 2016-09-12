@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 16.09.6
+- fixed a possible crash if the option to use a custom CalDAV server was
+  selected in the todo settings, but no server url was entered
+- only calendars that can hold todo items will now be shown in the
+  calendar list in the todo settings
+  (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
+- the completed status of ical items will now also be taken into account
+  then checking for completed todo items on your CalDAV server
+  (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
+
 ## 16.09.5
 - more todo list features
   (for [Issue #312](https://github.com/pbek/QOwnNotes/issues/312))
