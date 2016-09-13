@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>197</width>
-    <height>131</height>
+    <height>155</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -44,7 +44,7 @@
    <item row="1" column="0">
     <widget class="QLineEdit" name="nameLineEdit">
      <property name="placeholderText">
-      <string>new tag</string>
+      <string>New tag</string>
      </property>
     </widget>
    </item>

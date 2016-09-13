@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1255</width>
+    <width>1491</width>
     <height>964</height>
    </rect>
   </property>
@@ -738,7 +738,7 @@
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
                     <property name="placeholderText">
-                     <string>your ownCloud username</string>
+                     <string>Your ownCloud username</string>
                     </property>
                     <property name="clearButtonEnabled">
                      <bool>true</bool>
@@ -776,7 +776,7 @@
                      <enum>QLineEdit::Password</enum>
                     </property>
                     <property name="placeholderText">
-                     <string>your ownCloud password</string>
+                     <string>Your ownCloud password</string>
                     </property>
                     <property name="clearButtonEnabled">
                      <bool>true</bool>
@@ -1514,10 +1514,10 @@
                    </size>
                   </property>
                   <property name="toolTip">
-                   <string>Please enter the url to your calendar overview of your CalDAV server.</string>
+                   <string>Please enter the CalDAV base url to your calendar.</string>
                   </property>
                   <property name="placeholderText">
-                   <string>your CalDAV calendar base url</string>
+                   <string>Your CalDAV calendar base url</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>
@@ -1549,10 +1549,10 @@
                    </size>
                   </property>
                   <property name="toolTip">
-                   <string>Please enter the username on your CalDAV server.</string>
+                   <string>Please enter the username of your CalDAV server.</string>
                   </property>
                   <property name="placeholderText">
-                   <string>your CalDAV username</string>
+                   <string>Your CalDAV username</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>
@@ -1590,7 +1590,7 @@
                    <enum>QLineEdit::Password</enum>
                   </property>
                   <property name="placeholderText">
-                   <string>your CalDAV password</string>
+                   <string>Your CalDAV password</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>
@@ -2249,7 +2249,7 @@
 </string>
                   </property>
                   <property name="placeholderText">
-                   <string>search shortcut</string>
+                   <string>Search for shortcut</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>

@@ -41,16 +41,16 @@
         <item>
          <widget class="QLineEdit" name="urlEdit">
           <property name="statusTip">
-           <string>enter URL</string>
+           <string>Enter URL</string>
           </property>
           <property name="whatsThis">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string/>
           </property>
           <property name="accessibleName">
            <string/>
           </property>
           <property name="placeholderText">
-           <string>enter an URL to link to</string>
+           <string>Enter an URL to link to</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>
@@ -73,7 +73,7 @@
      <item>
       <widget class="QLineEdit" name="searchLineEdit">
        <property name="toolTip">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        <string>Search for notes or create new notes by entering text and pressing return</string>
        </property>
        <property name="styleSheet">
         <string notr="true">QLineEdit {
@@ -88,7 +88,7 @@
 </string>
        </property>
        <property name="placeholderText">
-        <string>search for a note to link to</string>
+        <string>Search for a note to link to</string>
        </property>
        <property name="clearButtonEnabled">
         <bool>true</bool>

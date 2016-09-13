@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.09.7
+- a lot of text case changes where made
+
 ## 16.09.6
 - fixed a possible crash if the option to use a custom CalDAV server was
   selected in the todo settings, but no server url was entered

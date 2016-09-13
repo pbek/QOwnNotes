@@ -101,11 +101,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();
-
-    // TODO(pbek): remove if everything is working
-    ui->calDavCalendarRadioButton->setText(
-            ui->calDavCalendarRadioButton->text() +
-            " (this is still in early Alpha!)");
 }
 
 SettingsDialog::~SettingsDialog() {

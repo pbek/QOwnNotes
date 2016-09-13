@@ -116,7 +116,7 @@
 </string>
               </property>
               <property name="placeholderText">
-               <string>find or create note sub folder</string>
+               <string>Find or create note sub folder</string>
               </property>
               <property name="clearButtonEnabled">
                <bool>true</bool>
@@ -190,7 +190,7 @@
 </string>
               </property>
               <property name="placeholderText">
-               <string>find or create tag</string>
+               <string>Find or create tag</string>
               </property>
               <property name="clearButtonEnabled">
                <bool>true</bool>
@@ -283,7 +283,7 @@
             <item>
              <widget class="QLineEdit" name="searchLineEdit">
               <property name="toolTip">
-               <string>search for notes or create new notes by entering text and pressing return</string>
+               <string>Search for notes or create new notes by entering text and pressing return</string>
               </property>
               <property name="styleSheet">
                <string notr="true">QLineEdit {
@@ -297,7 +297,7 @@
 </string>
               </property>
               <property name="placeholderText">
-               <string>search or create note</string>
+               <string>Search or create note</string>
               </property>
               <property name="clearButtonEnabled">
                <bool>true</bool>
@@ -531,7 +531,7 @@ p, li { white-space: pre-wrap; }
             <item>
              <widget class="QLineEdit" name="newNoteTagLineEdit">
               <property name="placeholderText">
-               <string>new tag</string>
+               <string>New tag</string>
               </property>
              </widget>
             </item>

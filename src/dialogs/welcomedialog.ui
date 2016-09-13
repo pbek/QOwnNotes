@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>838</width>
-    <height>441</height>
+    <height>449</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -146,7 +146,7 @@
    <item row="4" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="noteFolderPage">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -181,7 +181,7 @@
           <item row="2" column="0">
            <widget class="QCheckBox" name="createNoteFolderCheckBox">
             <property name="text">
-             <string>create note folder if not existing</string>
+             <string>Create note folder if not existing</string>
             </property>
             <property name="checked">
              <bool>true</bool>
@@ -221,12 +221,15 @@
                <property name="readOnly">
                 <bool>true</bool>
                </property>
+               <property name="placeholderText">
+                <string>Note folder path</string>
+               </property>
               </widget>
              </item>
              <item>
               <widget class="QPushButton" name="noteFolderButton">
                <property name="text">
-                <string>select &amp;folder</string>
+                <string>Select folder</string>
                </property>
                <property name="icon">
                 <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
@@ -301,7 +304,7 @@
           <item row="1" column="0">
            <widget class="QPushButton" name="ownCloudSettingsButton">
             <property name="text">
-             <string>open ownCloud &amp;settings</string>
+             <string>Open ownCloud settings</string>
             </property>
            </widget>
           </item>
@@ -343,7 +346,7 @@
           <item row="1" column="0">
            <widget class="QPushButton" name="networkSettingsButton">
             <property name="text">
-             <string>open network &amp;settings</string>
+             <string>Open network settings</string>
             </property>
            </widget>
           </item>
@@ -380,8 +383,8 @@
   </layout>
  </widget>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../images.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
