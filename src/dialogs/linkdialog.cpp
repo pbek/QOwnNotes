@@ -176,7 +176,7 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
 }
 
 /**
- * @brief Selects a local file to link to
+ * Selects a local file to link to
  */
 void LinkDialog::on_fileUrlButton_clicked() {
     QUrl fileUrl = QFileDialog::getOpenFileUrl(this,

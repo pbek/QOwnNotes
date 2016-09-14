@@ -2,6 +2,7 @@
 
 ## 16.09.7
 - a lot of text case changes have been made
+- added more debug output to the debug settings
 
 ## 16.09.6
 - fixed a possible crash if the option to use a custom CalDAV server was

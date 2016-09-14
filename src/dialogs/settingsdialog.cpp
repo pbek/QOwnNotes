@@ -797,9 +797,13 @@ void SettingsDialog::outputSettings() {
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
     if (noteFolders.count() > 0) {
         Q_FOREACH(NoteFolder noteFolder, noteFolders) {
-                output += "\n### " + noteFolder.getName() + "\n\n";
+                output += "\n### Note folder `" + noteFolder.getName() +
+                        "`\n\n";
                 output += prepareDebugInformationLine(
                         "id", QString::number(noteFolder.getId()));
+                output += prepareDebugInformationLine(
+                        "isCurrent",
+                        noteFolder.isCurrent() ? "yes" : "no");
                 output += prepareDebugInformationLine(
                         "activeTagId",
                         QString::number(noteFolder.getActiveTagId()));
@@ -807,6 +811,12 @@ void SettingsDialog::outputSettings() {
                         "localPath", noteFolder.getLocalPath());
                 output += prepareDebugInformationLine(
                         "remotePath", noteFolder.getRemotePath());
+                output += prepareDebugInformationLine(
+                        "isShowSubfolders",
+                        noteFolder.isShowSubfolders() ? "yes" : "no");
+                output += prepareDebugInformationLine(
+                        "activeNoteSubFolder name",
+                        noteFolder.getActiveNoteSubFolder().getName());
             }
     }
 
