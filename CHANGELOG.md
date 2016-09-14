@@ -6,6 +6,10 @@
 - fixed a problem with note subfolders when changing the path of the
   currently active note folder in the settings
   (for [Issue #318](https://github.com/pbek/QOwnNotes/issues/318))
+- added more Italian, Portuguese, Russian, Spanish, French, German,
+  Chinese, Japanese, Polish, Hungarian and Dutch translation (thank you
+  mlocati, mlimacarlos, frostyland, richarson, lepascalou, nkzk, piyo,
+  lucjan and Fabijenna)
 
 ## 16.09.6
 - fixed a possible crash if the option to use a custom CalDAV server was

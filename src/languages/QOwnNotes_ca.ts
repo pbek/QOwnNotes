@@ -281,33 +281,28 @@
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
-      <source>enter URL</source>
-      <translation>introduïu URL</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/linkdialog.ui" line="47"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;enter URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;introduïu l'URL&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <source>Enter URL</source>
+      <translation type="unfinished">Enter URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
-      <source>enter an URL to link to</source>
-      <translation>introduïu una URL per enllaçar</translation>
+      <source>Enter an URL to link to</source>
+      <translation type="unfinished">Enter an URL to link to</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/linkdialog.ui" line="76"/>
+      <source>Search for notes or create new notes by entering text and pressing return</source>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/linkdialog.ui" line="91"/>
+      <source>Search for a note to link to</source>
+      <translation type="unfinished">Search for a note to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;seleccioneu arxiu local per enllaçar&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/linkdialog.ui" line="76"/>
-      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;search for notes or create new notes by entering text and pressing return&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;cercar notes o crear noves notes introduint text i prement retorn&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/linkdialog.ui" line="91"/>
-      <source>search for a note to link to</source>
-      <translation>cerca una nota per enllaça</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="183"/>
@@ -366,11 +361,6 @@
   <context>
     <name>MainWindow</name>
     <message>
-      <location filename="../mainwindow.ui" line="300"/>
-      <source>search or create note</source>
-      <translation>cerca o crea una nota</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.ui" line="684"/>
       <source>Edit</source>
       <translation>Edita</translation>
@@ -384,26 +374,6 @@
       <location filename="../mainwindow.ui" line="523"/>
       <source>Add tag</source>
       <translation>Afegeix una etiqueta</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="534"/>
-      <source>new tag</source>
-      <translation>etiqueta nova</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="193"/>
-      <source>find or create tag</source>
-      <translation>troba o crea una etiqueta</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="119"/>
-      <source>find or create note sub folder</source>
-      <translation>troba o crea una subcarpeta de notes</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.ui" line="286"/>
-      <source>search for notes or create new notes by entering text and pressing return</source>
-      <translation>cerca notes o crea de noves escrivint text i prement Retorn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="378"/>
@@ -601,6 +571,31 @@
       <location filename="../mainwindow.ui" line="944"/>
       <source>&amp;Settings</source>
       <translation type="unfinished">&amp;Settings</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="119"/>
+      <source>Find or create note sub folder</source>
+      <translation type="unfinished">Find or create note sub folder</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="193"/>
+      <source>Find or create tag</source>
+      <translation type="unfinished">Find or create tag</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="286"/>
+      <source>Search for notes or create new notes by entering text and pressing return</source>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="300"/>
+      <source>Search or create note</source>
+      <translation type="unfinished">Search or create note</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.ui" line="534"/>
+      <source>New tag</source>
+      <translation type="unfinished">New tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1038"/>
@@ -1967,18 +1962,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
-      <source>password</source>
-      <translation>contrasenya</translation>
+      <source>Password</source>
+      <translation type="unfinished">Password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
-      <source>re-enter password</source>
-      <translation type="unfinished">re-enter password</translation>
+      <source>Re-enter password</source>
+      <translation type="unfinished">Re-enter password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
-      <source>passwords don't match!</source>
-      <translation type="unfinished">passwords don't match!</translation>
+      <source>Passwords don't match!</source>
+      <translation type="unfinished">Passwords don't match!</translation>
     </message>
   </context>
   <context>
@@ -2187,19 +2182,9 @@ Are the folder and the file writeable?</translation>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="741"/>
-      <source>your ownCloud username</source>
-      <translation type="unfinished">your ownCloud username</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="773"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="779"/>
-      <source>your ownCloud password</source>
-      <translation type="unfinished">your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="851"/>
@@ -2460,11 +2445,6 @@ Are the folder and the file writeable?</translation>
       <translation type="unfinished">Main window shortcuts</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2252"/>
-      <source>search shortcut</source>
-      <translation type="unfinished">search shortcut</translation>
-    </message>
-    <message>
       <location filename="../dialogs/settingsdialog.ui" line="2697"/>
       <source>Do this at your own risk!</source>
       <translation type="unfinished">Do this at your own risk!</translation>
@@ -2655,8 +2635,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2910"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1175"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1184"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1170"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1179"/>
       <source>Database</source>
       <translation type="unfinished">Database</translation>
     </message>
@@ -2677,7 +2657,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2726"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1248"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1243"/>
       <source>Clear app data and exit</source>
       <translation type="unfinished">Clear app data and exit</translation>
     </message>
@@ -2809,10 +2789,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Username:</translation>
     </message>
     <message>
+      <location filename="../dialogs/settingsdialog.ui" line="741"/>
+      <source>Your ownCloud username</source>
+      <translation type="unfinished">Your ownCloud username</translation>
+    </message>
+    <message>
       <location filename="../dialogs/settingsdialog.ui" line="751"/>
       <location filename="../dialogs/settingsdialog.ui" line="1565"/>
       <source>Password:</source>
       <translation type="unfinished">Password:</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="779"/>
+      <source>Your ownCloud password</source>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
@@ -2845,19 +2835,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Calendar base url:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1520"/>
-      <source>your CalDAV calendar base url</source>
-      <translation type="unfinished">your CalDAV calendar base url</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1552"/>
-      <source>Please enter the username on your CalDAV server.</source>
-      <translation type="unfinished">Please enter the username on your CalDAV server.</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1555"/>
-      <source>your CalDAV username</source>
-      <translation type="unfinished">your CalDAV username</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1517"/>
+      <source>Please enter the CalDAV base url to your calendar.</source>
+      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1587"/>
@@ -2865,14 +2845,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1593"/>
-      <source>your CalDAV password</source>
-      <translation type="unfinished">your CalDAV password</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1520"/>
+      <source>Your CalDAV calendar base url</source>
+      <translation type="unfinished">Your CalDAV calendar base url</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1517"/>
-      <source>Please enter the url to your calendar overview of your CalDAV server.</source>
-      <translation type="unfinished">Please enter the url to your calendar overview of your CalDAV server.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1552"/>
+      <source>Please enter the username of your CalDAV server.</source>
+      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="1555"/>
+      <source>Your CalDAV username</source>
+      <translation type="unfinished">Your CalDAV username</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="1593"/>
+      <source>Your CalDAV password</source>
+      <translation type="unfinished">Your CalDAV password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1628"/>
@@ -2903,6 +2893,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="1755"/>
       <source>Enable dark mode tray icon</source>
       <translation type="unfinished">Enable dark mode tray icon</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="2252"/>
+      <source>Search for shortcut</source>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2451"/>
@@ -3017,47 +3012,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="119"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="114"/>
       <source>hostname of proxy server</source>
       <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="120"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="115"/>
       <source>username for proxy server</source>
       <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="121"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="116"/>
       <source>password for proxy server</source>
       <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="123"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="118"/>
       <source>HTTP(S) proxy</source>
       <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="124"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="119"/>
       <source>SOCKS5 proxy</source>
       <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="622"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="617"/>
       <source>Undefined key</source>
       <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="627"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="622"/>
       <source>Assign a new key</source>
       <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="628"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="623"/>
       <source>Reset to default key</source>
       <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="917"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="912"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -3066,7 +3061,7 @@ Server version: %1
 QOwnNotesAPI version: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="928"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="923"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3077,125 +3072,125 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 Connection error message: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1404"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1399"/>
       <source>new folder</source>
       <translation type="unfinished">new folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1441"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1436"/>
       <source>Remove note folder</source>
       <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1442"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1444"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1776"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1439"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1771"/>
       <source>&amp;Remove</source>
       <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1517"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1512"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1554"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1549"/>
       <source>Loading folders from server</source>
       <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1568"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1563"/>
       <source>No more folders were found in the current folder</source>
       <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1642"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1637"/>
       <source>Loading folders in '%1' from server</source>
       <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1726"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1721"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
       <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1738"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1733"/>
       <source>new script</source>
       <translation type="unfinished">new script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1773"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1768"/>
       <source>Remove script</source>
       <translation type="unfinished">Remove script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1774"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1769"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1802"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1797"/>
       <source>Please select your QML file</source>
       <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1798"/>
       <source>QML Files (*.qml)</source>
       <translation type="unfinished">QML Files (*.qml)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1864"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1859"/>
       <source>Your script seems to be valid</source>
       <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1865"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1860"/>
       <source>There were script errors:
 %1</source>
       <translation type="unfinished">There were script errors:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1956"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1951"/>
       <source>File extension</source>
       <translation type="unfinished">File extension</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1957"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1952"/>
       <source>Enter your custom file extension:</source>
       <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2226"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2221"/>
       <source>Calendar cache emptied</source>
       <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2222"/>
       <source>Your calendar cache was emptied.</source>
       <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1185"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1180"/>
       <source>The Database was reinitialized.</source>
       <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1197"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1192"/>
       <source>Markdown files (*.md)</source>
       <translation type="unfinished">Markdown files (*.md)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1198"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1193"/>
       <source>Save debug information</source>
       <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1249"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1244"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -3204,30 +3199,30 @@ Your notes will stay intact!</source>
 Your notes will stay intact!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1252"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1247"/>
       <source>Clear and &amp;exit</source>
       <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1179"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1252"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1444"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1776"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1174"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1247"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1439"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1771"/>
       <source>&amp;Cancel</source>
       <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1176"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1171"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1179"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1174"/>
       <source>Clear &amp;database</source>
       <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1319"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1314"/>
       <source>Select editor application</source>
       <translation type="unfinished">Select editor application</translation>
     </message>
@@ -3264,8 +3259,8 @@ Your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
-      <source>new tag</source>
-      <translation type="unfinished">new tag</translation>
+      <source>New tag</source>
+      <translation type="unfinished">New tag</translation>
     </message>
   </context>
   <context>
@@ -3276,76 +3271,76 @@ Your notes will stay intact!</translation>
       <translation type="unfinished">Todo</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="139"/>
-      <source>summary</source>
-      <translation type="unfinished">summary</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="176"/>
-      <location filename="../dialogs/tododialog.ui" line="193"/>
-      <source>save current todo item</source>
-      <translation type="unfinished">save current todo item</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="179"/>
-      <source>&amp;save</source>
-      <translation type="unfinished">&amp;save</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="196"/>
-      <source>save and &amp;insert into note</source>
-      <translation type="unfinished">save and &amp;insert into note</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="210"/>
-      <source>remove current todo item</source>
-      <translation type="unfinished">remove current todo item</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="213"/>
-      <source>&amp;remove</source>
-      <translation type="unfinished">&amp;remove</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="43"/>
-      <location filename="../dialogs/tododialog.ui" line="50"/>
+      <location filename="../dialogs/tododialog.ui" line="49"/>
+      <location filename="../dialogs/tododialog.ui" line="56"/>
       <source>Priority</source>
       <translation type="unfinished">Priority</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="78"/>
+      <location filename="../dialogs/tododialog.ui" line="84"/>
       <source>Reminder</source>
       <translation type="unfinished">Reminder</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="264"/>
+      <location filename="../dialogs/tododialog.ui" line="145"/>
+      <source>Summary</source>
+      <translation type="unfinished">Summary</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="182"/>
+      <location filename="../dialogs/tododialog.ui" line="199"/>
+      <source>Save current todo item</source>
+      <translation type="unfinished">Save current todo item</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="185"/>
+      <source>Save</source>
+      <translation type="unfinished">Save</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="202"/>
+      <source>Save and insert into note</source>
+      <translation type="unfinished">Save and insert into note</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="216"/>
+      <source>Remove current todo item</source>
+      <translation type="unfinished">Remove current todo item</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="219"/>
+      <source>Remove</source>
+      <translation type="unfinished">Remove</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="276"/>
       <source>Show completed items</source>
       <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="271"/>
-      <source>reload the todo list from server</source>
-      <translation type="unfinished">reload the todo list from server</translation>
+      <location filename="../dialogs/tododialog.ui" line="283"/>
+      <source>Reload the todo list from server</source>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="274"/>
-      <source>&amp;reload</source>
-      <translation type="unfinished">&amp;reload</translation>
+      <location filename="../dialogs/tododialog.ui" line="286"/>
+      <source>Reload</source>
+      <translation type="unfinished">Reload</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="288"/>
+      <location filename="../dialogs/tododialog.ui" line="317"/>
+      <source>Search or create todo item</source>
+      <translation type="unfinished">Search or create todo item</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/tododialog.ui" line="300"/>
       <source>select your todo list</source>
       <translation type="unfinished">select your todo list</translation>
     </message>
     <message>
-      <location filename="../dialogs/tododialog.ui" line="295"/>
+      <location filename="../dialogs/tododialog.ui" line="307"/>
       <source>Todo list items are being loaded from the server</source>
       <translation type="unfinished">Todo list items are being loaded from the server</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/tododialog.ui" line="305"/>
-      <source>search or create todo item</source>
-      <translation type="unfinished">search or create todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="491"/>
@@ -3449,12 +3444,12 @@ This cannot be undone!</translation>
   <context>
     <name>UpdateService</name>
     <message>
-      <location filename="../services/updateservice.cpp" line="165"/>
+      <location filename="../services/updateservice.cpp" line="184"/>
       <source>No updates</source>
       <translation type="unfinished">No updates</translation>
     </message>
     <message>
-      <location filename="../services/updateservice.cpp" line="166"/>
+      <location filename="../services/updateservice.cpp" line="185"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
       <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
     </message>
@@ -3467,12 +3462,12 @@ This cannot be undone!</translation>
       <translation type="unfinished">Note versions on your ownCloud server</translation>
     </message>
     <message>
-      <location filename="../dialogs/versiondialog.ui" line="52"/>
+      <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
       <translation type="unfinished">Diff</translation>
     </message>
     <message>
-      <location filename="../dialogs/versiondialog.ui" line="85"/>
+      <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
       <translation type="unfinished">Note text</translation>
     </message>
@@ -3527,8 +3522,28 @@ This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
-      <source>create note folder if not existing</source>
-      <translation type="unfinished">create note folder if not existing</translation>
+      <source>Create note folder if not existing</source>
+      <translation type="unfinished">Create note folder if not existing</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/welcomedialog.ui" line="225"/>
+      <source>Note folder path</source>
+      <translation type="unfinished">Note folder path</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/welcomedialog.ui" line="232"/>
+      <source>Select folder</source>
+      <translation type="unfinished">Select folder</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/welcomedialog.ui" line="307"/>
+      <source>Open ownCloud settings</source>
+      <translation type="unfinished">Open ownCloud settings</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/welcomedialog.ui" line="349"/>
+      <source>Open network settings</source>
+      <translation type="unfinished">Open network settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
@@ -3536,32 +3551,17 @@ This cannot be undone!</translation>
       <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="229"/>
-      <source>select &amp;folder</source>
-      <translation type="unfinished">select &amp;folder</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/welcomedialog.ui" line="281"/>
+      <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
       <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="304"/>
-      <source>open ownCloud &amp;settings</source>
-      <translation type="unfinished">open ownCloud &amp;settings</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/welcomedialog.ui" line="311"/>
+      <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
       <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
-      <location filename="../dialogs/welcomedialog.ui" line="346"/>
-      <source>open network &amp;settings</source>
-      <translation type="unfinished">open network &amp;settings</translation>
-    </message>
-    <message>
-      <location filename="../dialogs/welcomedialog.ui" line="353"/>
+      <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
       <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
