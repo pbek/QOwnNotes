@@ -147,12 +147,15 @@ bool mainStartupMisc() {
 
 int main(int argc, char *argv[]) {
     QString release = RELEASE;
+    bool portable = false;
 
     // override the release string for snaps
     for (int i = 0; i < argc; ++i) {
-        if (QString(argv[i]) == "--snap") {
+        QString arg(argv[i]);
+        if (arg == "--snap") {
             release = "Snapcraft";
-            break;
+        } else if (arg == "--portable") {
+            portable = true;
         }
     }
 
@@ -230,6 +233,7 @@ int main(int argc, char *argv[]) {
     if (allowOnlyOneAppInstance) {
         SingleApplication app(argc, argv);
         app.setProperty("release", release);
+        app.setProperty("portable", portable);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
@@ -269,6 +273,7 @@ int main(int argc, char *argv[]) {
         // allowed
         QApplication app(argc, argv);
         app.setProperty("release", release);
+        app.setProperty("portable", portable);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
