@@ -3352,31 +3352,26 @@ void MainWindow::updateCurrentFolderTooltip() {
 }
 
 /**
- * @brief Opens the settings dialog
+ * Opens the settings dialog
  */
 void MainWindow::openSettingsDialog(int page) {
-    int currentNoteFolderId = NoteFolder::currentNoteFolderId();
-
     // open the settings dialog
     SettingsDialog *dialog = new SettingsDialog(page, this);
-    int dialogResult = dialog->exec();
+    dialog->exec();
 
-    if (dialogResult == QDialog::Accepted) {
-        // read all relevant settings, that can be set in the settings dialog
-        readSettingsFromSettingsDialog();
+    // read all relevant settings, that can be set in the settings dialog,
+    // even if the dialog was canceled
+    readSettingsFromSettingsDialog();
 
-        // reset the note save timer
-        this->noteSaveTimer->stop();
-        this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
-    }
+    // reset the note save timer
+    this->noteSaveTimer->stop();
+    this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
 
-    // if the current note folder was changed we will change the note path
-    if (currentNoteFolderId != NoteFolder::currentNoteFolderId()) {
-        NoteFolder noteFolder = NoteFolder::currentNoteFolder();
+    // set the current note folder again in case its path was changed
+    NoteFolder noteFolder = NoteFolder::currentNoteFolder();
 
-        if (noteFolder.isFetched()) {
-            changeNoteFolder(noteFolder.getId(), true);
-        }
+    if (noteFolder.isFetched()) {
+        changeNoteFolder(noteFolder.getId(), true);
     }
 
     // reload note folders in case we changed them in the settings

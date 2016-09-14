@@ -3,6 +3,9 @@
 ## 16.09.7
 - a lot of text case changes have been made
 - added more debug output to the debug settings
+- fixed a problem with note subfolders when changing the path of the
+  currently active note folder in the settings
+  (for [Issue #318](https://github.com/pbek/QOwnNotes/issues/318))
 
 ## 16.09.6
 - fixed a possible crash if the option to use a custom CalDAV server was
