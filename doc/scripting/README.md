@@ -31,6 +31,10 @@ bool startDetachedProcess(QString executablePath, QStringList parameters);
 script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
 ```
 
+You may want to take a look at the example [custom-actions.qml](custom-actions.qml)
+or [execute-command-after-note-update.qml](execute-command-after-note-update.qml).
+
+
 ### Getting the path of the current note folder
 
 #### Parameters
@@ -50,6 +54,9 @@ QString currentNoteFolderPath();
 var path = script.currentNoteFolderPath();
 ```
 
+You may want to take a look at the example [absolute-media-links.qml](absolute-media-links.qml).
+
+
 ### Getting the current note
 
 #### Parameters
@@ -68,6 +75,9 @@ NoteApi currentNote();
 ```javascript
 var note = script.currentNote();
 ```
+
+You may want to take a look at the example [custom-actions.qml](custom-actions.qml).
+
 
 ### Logging to the log dialog
 
@@ -106,8 +116,11 @@ QString downloadUrlToString(QUrl url);
 #### Usage in QML
 
 ```javascript
-script.downloadUrlToString("http://www.qownnotes.org");
+var html = script.downloadUrlToString("http://www.qownnotes.org");
 ```
+
+You may want to take a look at the example
+[insert-headline-with-link-from-github-url.qml](insert-headline-with-link-from-github-url.qml).
 
 
 ### Register a custom action
@@ -171,8 +184,7 @@ void ScriptingService::createNote(QString text);
 script.createNote("My note headline\n===\n\nMy text");
 ```
 
-You may want to take a look at the example in
-[custom-actions.qml](custom-actions.qml).
+You may want to take a look at the example [custom-actions.qml](custom-actions.qml).
 
 
 ### Accessing the clipboard
@@ -195,8 +207,7 @@ var clipboardText = script.clipboard();
 var clipboardHtml = script.clipboard(true);
 ```
 
-You may want to take a look at the example in
-[custom-actions.qml](custom-actions.qml).
+You may want to take a look at the example [custom-actions.qml](custom-actions.qml).
 
 
 ## Exposed classes
