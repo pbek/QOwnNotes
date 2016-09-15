@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.09.8
+- added a button to share a color schema you created in the settings
+
 ## 16.09.7
 - a lot of text case changes have been made
 - added more debug output to the debug settings

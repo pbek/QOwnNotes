@@ -22,6 +22,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QKeyEvent>
+#include <QDesktopServices>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -717,4 +718,11 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
 
     // update the styling of the current text tree widget item
     updateTextItem();
+}
+
+/**
+ * Open the GitHub issues page to share a schema
+ */
+void FontColorWidget::on_shareSchemaPushButton_clicked() {
+    QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
 }

@@ -61,6 +61,8 @@ private slots:
 
     void on_fontSizeAdaptionSpinBox_valueChanged(int value);
 
+    void on_shareSchemaPushButton_clicked();
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;
