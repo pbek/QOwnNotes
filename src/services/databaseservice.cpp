@@ -53,8 +53,7 @@ bool DatabaseService::removeDiskDatabase() {
     QFile file(getDiskDatabasePath());
 
     if (file.exists()) {
-        qDebug() << __func__ << " - 'removing database file': "
-        << file.fileName();
+        qWarning() << "removing database file: " << file.fileName();
         return file.remove();
     }
 

@@ -2645,9 +2645,15 @@ void MainWindow::storeSettings() {
  */
 
 void MainWindow::closeEvent(QCloseEvent *event) {
-    storeSettings();
+    bool forceQuit = qApp->property("clearAppDataAndExit").toBool();
 
-    if (showSystemTray) {
+    // make sure no settings get written after after we got the
+    // clearAppDataAndExit call
+    if (!forceQuit) {
+        storeSettings();
+    }
+
+    if (showSystemTray && !forceQuit) {
         // if we use the system tray lets hide the log dialog when the
         // main window is closed
         LogDialog::instance()->hide();
@@ -3358,6 +3364,12 @@ void MainWindow::openSettingsDialog(int page) {
     // open the settings dialog
     SettingsDialog *dialog = new SettingsDialog(page, this);
     dialog->exec();
+
+    // make sure no settings get written after after we got the
+    // clearAppDataAndExit call
+    if (qApp->property("clearAppDataAndExit").toBool()) {
+        return;
+    }
 
     // read all relevant settings, that can be set in the settings dialog,
     // even if the dialog was canceled

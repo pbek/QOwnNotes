@@ -1259,6 +1259,8 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
         QSettings settings;
         settings.clear();
         DatabaseService::removeDiskDatabase();
+        // make sure no settings get written after after are quitting
+        qApp->setProperty("clearAppDataAndExit", true);
         qApp->quit();
     }
 }
@@ -2195,6 +2197,12 @@ void SettingsDialog::initMainSplitter() {
 }
 
 void SettingsDialog::closeEvent(QCloseEvent *event) {
+    // make sure no settings get written after after we got the
+    // clearAppDataAndExit call
+    if (qApp->property("clearAppDataAndExit").toBool()) {
+        return;
+    }
+
     // store the splitter settings
     storeSplitterSettings();
 }

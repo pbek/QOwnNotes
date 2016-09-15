@@ -2,6 +2,9 @@
 
 ## 16.09.8
 - added a button to share a color schema you created in the settings
+- took better care that some settings are getting stored after the
+  `Clear app data and exit` button was pressed in the settings
+  (for [Issue #318](https://github.com/pbek/QOwnNotes/issues/318))
 
 ## 16.09.7
 - a lot of text case changes have been made
