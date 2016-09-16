@@ -2,8 +2,9 @@
 
 ## 16.09.8
 - added a button to share a color schema you created in the settings
-- took better care that some settings are getting stored after the
-  `Clear app data and exit` button was pressed in the settings
+- took better care that no settings are getting stored after the
+  `Clear app data and exit` button was pressed in the settings and
+  fixed a problem where the database file wasn't deleted under Windows
   (for [Issue #318](https://github.com/pbek/QOwnNotes/issues/318))
 
 ## 16.09.7
