@@ -6,6 +6,9 @@
   `Clear app data and exit` button was pressed in the settings and
   fixed a problem where the database file wasn't deleted under Windows
   (for [Issue #318](https://github.com/pbek/QOwnNotes/issues/318))
+- added more Portuguese, Russian, Chinese, Polish, Hungarian and Dutch
+  translation (thank you mlimacarlos, frostyland, lucjan, nkzk and
+  Fabijenna)
 
 ## 16.09.7
 - a lot of text case changes have been made
