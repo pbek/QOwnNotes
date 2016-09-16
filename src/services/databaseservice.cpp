@@ -47,7 +47,6 @@ QString DatabaseService::getDiskDatabasePath() {
  * @return string
  */
 QString DatabaseService::getNoteFolderDatabasePath() {
-
     return NoteFolder::currentLocalPath() + QDir::separator()
            + "notes.sqlite";
 }
