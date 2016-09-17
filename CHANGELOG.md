@@ -17,6 +17,7 @@
         - special handling for note folders, so that they always are
           read from the `Data` folder
         - a batch file for Windows to run QOwnNotes in portable mode
+- added more Polish translation (thank you lucjan)
 
 ## 16.09.8
 - added a button to share a color schema you created in the settings
