@@ -212,7 +212,6 @@ int main(int argc, char *argv[]) {
         QSettings::setDefaultFormat(QSettings::IniFormat);
         QSettings::setPath(QSettings::IniFormat, QSettings::UserScope,
                            Utils::Misc::portableDataPath());
-//        QSettings s("settings.ini", QSettings::IniFormat);
         QSettings settings;
         qDebug() << "settings fileName: " << settings.fileName();
     }
