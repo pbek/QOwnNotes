@@ -9,7 +9,8 @@
 - there now is a **portable mode**, for example to carry around
   QOwnNotes on an USB stick (work in progress)
   (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
-    - it will be used you start QOwnNotes with the parameter `--portable`
+    - it will be activated if you start QOwnNotes with the parameter
+      `--portable`
     - the internal sqlite database and the settings will be stored
       inside a `Data` folder at the binary's location
     - the settings will be stored in an ini file
