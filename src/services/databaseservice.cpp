@@ -10,30 +10,38 @@
 #include <QSettings>
 #include <QSqlError>
 #include <entities/notefolder.h>
+#include <utils/misc.h>
 
 DatabaseService::DatabaseService() {
 }
 
 /**
- * @brief Returns the path to the database (on disk)
+ * Returns the path to the database (on disk)
+ *
  * @return
  */
 QString DatabaseService::getDiskDatabasePath() {
+    QString path = "";
 
-    QStandardPaths::StandardLocation location;
+    if (qApp->property("portable").toBool()) {
+        path = Utils::Misc::portableDataPath();
+    } else {
+        QStandardPaths::StandardLocation location;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-    location = QStandardPaths::AppDataLocation;
+        location = QStandardPaths::AppDataLocation;
 #else
-    location = QStandardPaths::GenericDataLocation;
+        location = QStandardPaths::GenericDataLocation;
 #endif
 
-    // get the path to store the database
-    QString path = QStandardPaths::writableLocation(location);
-    QDir dir;
+        // get the path to store the database
+        path = QStandardPaths::writableLocation(location);
 
-    // create path if it doesn't exist yet
-    dir.mkpath(path);
+        QDir dir;
+
+        // create path if it doesn't exist yet
+        dir.mkpath(path);
+    }
 
     QString databaseFileName = path + QDir::separator() + "QOwnNotes.sqlite";
     qDebug() << __func__ << " - 'databaseFileName': " << databaseFileName;

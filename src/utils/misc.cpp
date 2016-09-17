@@ -235,3 +235,25 @@ void Utils::Misc::waitMsecs(int msecs) {
     while (QTime::currentTime() < dieTime)
         QCoreApplication::processEvents(QEventLoop::AllEvents, 50);
 }
+
+/**
+ * Returns (and creates) the portable data path
+ *
+ * @return the path
+ */
+QString Utils::Misc::portableDataPath() {
+    QString path = QCoreApplication::applicationDirPath();
+
+    // use a fallback if the QApplication object wasn't instantiated yet
+    if (path.isEmpty()) {
+        path = ".";
+    }
+
+    path += QString(QDir::separator()) + "Data";
+
+    QDir dir;
+    // create path if it doesn't exist yet
+    dir.mkpath(path);
+
+    return path;
+}

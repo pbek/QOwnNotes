@@ -7,6 +7,7 @@
 #include <services/metricsservice.h>
 #include <dialogs/logdialog.h>
 #include <services/databaseservice.h>
+#include <utils/misc.h>
 #include "libraries/singleapplication/singleapplication.h"
 #include "version.h"
 #include "release.h"
@@ -84,6 +85,9 @@ bool mainStartupMisc() {
     metricsService->sendEventIfEnabled(
             "app/release", "app", "release",
             qApp->property("release").toString());
+    metricsService->sendEventIfEnabled(
+            "app/portable", "app", "portable",
+            qApp->property("portable").toBool() ? "yes" : "no");
 
     QString productType;
 
@@ -159,6 +163,9 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    // TODO: remove
+//    portable = true;
+
     // don't log SSL warnings in releases on OS X
 #if defined(QT_NO_DEBUG) && defined(Q_OS_MAC)
     qputenv("QT_LOGGING_RULES", "qt.network.ssl.warning=false");
@@ -198,6 +205,17 @@ int main(int argc, char *argv[]) {
 #endif
 
     QCoreApplication::setApplicationVersion(appVersion);
+
+    // set the settings format to ini format and the settings path inside the
+    // path of the application in portable mode
+    if (portable) {
+        QSettings::setDefaultFormat(QSettings::IniFormat);
+        QSettings::setPath(QSettings::IniFormat, QSettings::UserScope,
+                           Utils::Misc::portableDataPath());
+//        QSettings s("settings.ini", QSettings::IniFormat);
+        QSettings settings;
+        qDebug() << "settings fileName: " << settings.fileName();
+    }
 
     QSettings settings;
     QString locale = settings.value("interfaceLanguage").toString();

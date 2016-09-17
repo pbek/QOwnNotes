@@ -761,6 +761,9 @@ void SettingsDialog::outputSettings() {
                                           qApp->property("release").toString());
     output += prepareDebugInformationLine("Qt Version (build)", QT_VERSION_STR);
     output += prepareDebugInformationLine("Qt Version (runtime)", qVersion());
+    output += prepareDebugInformationLine("Portable mode",
+                                          qApp->property("portable").toBool() ?
+                                          "yes" : "no");
 
     QString debug = "0";
 #ifdef QT_DEBUG
