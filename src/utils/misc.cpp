@@ -242,7 +242,11 @@ void Utils::Misc::waitMsecs(int msecs) {
  * @return the path
  */
 QString Utils::Misc::portableDataPath() {
-    QString path = QCoreApplication::applicationDirPath();
+    QString path = "";
+
+    if (qApp != Q_NULLPTR) {
+        path = QCoreApplication::applicationDirPath();
+    }
 
     // use a fallback if the QApplication object wasn't instantiated yet
     if (path.isEmpty()) {
