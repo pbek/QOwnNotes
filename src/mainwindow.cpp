@@ -1698,9 +1698,7 @@ void MainWindow::readSettingsFromSettingsDialog() {
             "MainWindow/mainToolBar.iconSize").toInt();
     if (toolBarIconSize == 0) {
         toolBarIconSize = ui->mainToolBar->iconSize().height();
-        settings.setValue(
-                "MainWindow/mainToolBar.iconSize",
-                QString::number(toolBarIconSize));
+        settings.setValue("MainWindow/mainToolBar.iconSize", toolBarIconSize);
     } else {
         QSize size(toolBarIconSize, toolBarIconSize);
         ui->mainToolBar->setIconSize(size);
@@ -1728,6 +1726,52 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     // initialize the shortcuts for the actions
     initShortcuts();
+
+    // initialize the item height of the tree widgets
+    initTreeWidgetItemHeight();
+}
+
+/**
+ * Initializes the item height of the tree widgets
+ */
+void MainWindow::initTreeWidgetItemHeight() {
+    QSettings settings;
+    int height = settings.value("itemHeight").toInt();
+
+    // if the height was 0 set it the the current height of a tree widget item
+    if (height == 0) {
+        QTreeWidget treeWidget(this);
+        QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+        treeWidget.addTopLevelItem(treeWidgetItem);
+        height = treeWidget.visualItemRect(treeWidgetItem).height();
+        settings.setValue("itemHeight", height);
+    }
+
+    updateTreeWidgetItemHeight(ui->tagTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->noteTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->noteSubFolderTreeWidget, height);
+}
+
+/**
+ * Sets height of the items of a tree widget
+ *
+ * @param treeWidget
+ * @param height
+ */
+void MainWindow::updateTreeWidgetItemHeight(QTreeWidget *treeWidget,
+                                            int height) {
+    QString styleText = treeWidget->styleSheet();
+
+    // remove the old height stylesheet
+    styleText.remove(QRegularExpression(
+            "\nQTreeWidget::item \\{height: \\d+px\\}",
+            QRegularExpression::CaseInsensitiveOption));
+
+    // add the new height stylesheet
+    styleText += QString("\nQTreeWidget::item {height: %1px}")
+            .arg(QString::number(height));
+
+    treeWidget->setStyleSheet(styleText);
 }
 
 void MainWindow::updateNoteTextFromDisk(Note note) {

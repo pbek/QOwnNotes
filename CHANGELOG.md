@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.09.9
+- you can now set and reset the item height of the tree widgets and
+  lists of the main window in the interface settings
+  (for [Issue #322](https://github.com/pbek/QOwnNotes/issues/322))
+    - this is handy if you are using QOwnNotes on a touch display
+- there now is a button to reset the toolbar size in the interface settings
+
 ## 16.09.8
 - added a button to share a color schema you created in the settings
 - took better care that no settings are getting stored after the

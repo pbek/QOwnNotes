@@ -175,6 +175,10 @@ private slots:
 
     void on_emptyCalendarCachePushButton_clicked();
 
+    void on_itemHeightResetButton_clicked();
+
+    void on_toolbarIconSizeResetButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

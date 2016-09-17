@@ -256,7 +256,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>3</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1790,23 +1790,20 @@
                      </size>
                     </property>
                     <property name="title">
-                     <string>Toolbar</string>
+                     <string>Item sizes in the main window</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_13">
-                     <item row="0" column="1">
-                      <widget class="QLabel" name="toolbarIconSizeLabel">
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="itemHeightLabel">
                        <property name="text">
-                        <string>Icon size:</string>
+                        <string>List and tree item height:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                        </property>
                       </widget>
                      </item>
-                     <item row="0" column="2">
-                      <widget class="QSpinBox" name="toolbarIconSizeSpinBox"/>
-                     </item>
-                     <item row="0" column="3">
+                     <item row="0" column="4">
                       <spacer name="horizontalSpacer_3">
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
@@ -1818,6 +1815,54 @@
                         </size>
                        </property>
                       </spacer>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QSpinBox" name="itemHeightSpinBox">
+                       <property name="suffix">
+                        <string notr="true">px</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="toolbarIconSizeLabel">
+                       <property name="text">
+                        <string>Toolbar icon size:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QSpinBox" name="toolbarIconSizeSpinBox"/>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QToolButton" name="toolbarIconSizeResetButton">
+                       <property name="toolTip">
+                        <string>Reset the icon size</string>
+                       </property>
+                       <property name="text">
+                        <string notr="true">...</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="3">
+                      <widget class="QToolButton" name="itemHeightResetButton">
+                       <property name="toolTip">
+                        <string>Reset the item height</string>
+                       </property>
+                       <property name="text">
+                        <string notr="true">...</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                       </property>
+                      </widget>
                      </item>
                     </layout>
                    </widget>
@@ -2117,10 +2162,17 @@
                   <string>Preview font settings</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_6">
-                  <item row="0" column="1">
-                   <widget class="QLineEdit" name="noteTextViewFontLabel">
-                    <property name="readOnly">
-                     <bool>true</bool>
+                  <item row="1" column="2">
+                   <widget class="QToolButton" name="noteTextViewCodeButton">
+                    <property name="toolTip">
+                     <string>Set a new font</string>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
                     </property>
                    </widget>
                   </item>
@@ -2134,17 +2186,17 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="2">
-                   <widget class="QToolButton" name="noteTextViewButton">
+                  <item row="1" column="3">
+                   <widget class="QToolButton" name="noteTextViewCodeResetButton">
                     <property name="toolTip">
-                     <string>set a new font</string>
+                     <string>Reset font</string>
                     </property>
                     <property name="text">
-                     <string/>
+                     <string notr="true">...</string>
                     </property>
                     <property name="icon">
-                     <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                     </property>
                    </widget>
                   </item>
@@ -2158,38 +2210,24 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="0" column="3">
-                   <widget class="QToolButton" name="noteTextViewResetButton">
-                    <property name="toolTip">
-                     <string>reset font</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true">...</string>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  <item row="1" column="1">
+                   <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
+                    <property name="readOnly">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="3">
-                   <widget class="QToolButton" name="noteTextViewCodeResetButton">
-                    <property name="toolTip">
-                     <string>reset font</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true">...</string>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="noteTextViewFontLabel">
+                    <property name="readOnly">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="2">
-                   <widget class="QToolButton" name="noteTextViewCodeButton">
+                  <item row="0" column="2">
+                   <widget class="QToolButton" name="noteTextViewButton">
                     <property name="toolTip">
-                     <string>set a new font</string>
+                     <string>Set a new font</string>
                     </property>
                     <property name="text">
                      <string/>
@@ -2200,10 +2238,17 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="1" column="1">
-                   <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
-                    <property name="readOnly">
-                     <bool>true</bool>
+                  <item row="0" column="3">
+                   <widget class="QToolButton" name="noteTextViewResetButton">
+                    <property name="toolTip">
+                     <string>Reset font</string>
+                    </property>
+                    <property name="text">
+                     <string notr="true">...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                     </property>
                    </widget>
                   </item>

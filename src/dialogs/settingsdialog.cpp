@@ -274,8 +274,9 @@ void SettingsDialog::storeSettings() {
                               ui->defaultNoteFileExtensionListWidget));
     settings.setValue("externalEditorPath",
                       ui->externalEditorPathLineEdit->text());
+    settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
     settings.setValue("MainWindow/mainToolBar.iconSize",
-                      QString::number(ui->toolbarIconSizeSpinBox->value()));
+                      ui->toolbarIconSizeSpinBox->value());
     settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
                       ui->showNoteFolderCheckBox->isChecked());
     settings.setValue("allowOnlyOneAppInstance",
@@ -434,6 +435,14 @@ void SettingsDialog::readSettings() {
             "allowOnlyOneAppInstance").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
+
+    QTreeWidget treeWidget(this);
+    QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+    treeWidget.addTopLevelItem(treeWidgetItem);
+    int height = treeWidget.visualItemRect(treeWidgetItem).height();
+
+    ui->itemHeightSpinBox->setValue(
+                 settings.value("itemHeight", height).toInt());
 
     selectListWidgetValue(ui->languageListWidget,
                           settings.value("interfaceLanguage").toString());
@@ -2238,4 +2247,23 @@ void SettingsDialog::on_emptyCalendarCachePushButton_clicked() {
 
     QMessageBox::information(this, tr("Calendar cache emptied"),
                              tr("Your calendar cache was emptied."));
+}
+
+/**
+ * Resets the item height
+ */
+void SettingsDialog::on_itemHeightResetButton_clicked() {
+    QTreeWidget treeWidget(this);
+    QTreeWidgetItem *treeWidgetItem = new QTreeWidgetItem();
+    treeWidget.addTopLevelItem(treeWidgetItem);
+    int height = treeWidget.visualItemRect(treeWidgetItem).height();
+    ui->itemHeightSpinBox->setValue(height);
+}
+
+/**
+ * Resets the icon seize
+ */
+void SettingsDialog::on_toolbarIconSizeResetButton_clicked() {
+    QToolBar toolbar(this);
+    ui->toolbarIconSizeSpinBox->setValue(toolbar.iconSize().height());
 }

@@ -656,4 +656,8 @@ private:
     static QIcon getSystemTrayIcon();
 
     void initShowHidden();
+
+    void initTreeWidgetItemHeight();
+
+    void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
 };
