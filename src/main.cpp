@@ -163,7 +163,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // TODO: remove
+    // TODO(pbek): remove
 //    portable = true;
 
     // don't log SSL warnings in releases on OS X

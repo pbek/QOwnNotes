@@ -6,6 +6,17 @@
   (for [Issue #322](https://github.com/pbek/QOwnNotes/issues/322))
     - this is handy if you are using QOwnNotes on a touch display
 - there now is a button to reset the toolbar size in the interface settings
+- there now is a **portable mode**, for example to carry around
+  QOwnNotes on an USB stick (work in progress)
+  (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
+    - it will be used you start QOwnNotes with the parameter `--portable`
+    - the internal sqlite database and the settings will be stored
+      inside a `Data` folder at the binary's location
+    - the settings will be stored in an ini file
+    - TODO
+        - special handling for note folders, so that they always are
+          read from the `Data` folder
+        - a batch file for Windows to run QOwnNotes in portable mode
 
 ## 16.09.8
 - added a button to share a color schema you created in the settings
