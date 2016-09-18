@@ -6,6 +6,8 @@
   relative to the `Data` folder so that the correct note folders will be
   loaded regardless where your QOwnNotes installation is currently stored
   (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
+    - for Windows there now is a `QOwnNotesPortable.exe` in your release
+      path to start QOwnNotes in portable mode
 
 ## 16.09.9
 - you can now set and reset the item height of the tree widgets and

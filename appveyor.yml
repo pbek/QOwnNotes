@@ -34,6 +34,8 @@ build_script:
   - copy ..\appveyor\OpenSSL\libeay32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\libssl32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\ssleay32.dll ..\%RELEASE_PATH%
+  # copy portable mode files to the release path
+  - copy ..\appveyor\QOwnNotesPortable.* ..\%RELEASE_PATH%
   # copy translation files
   - copy languages\*.qm ..\%RELEASE_PATH%
   - cd ..\%RELEASE_PATH%
