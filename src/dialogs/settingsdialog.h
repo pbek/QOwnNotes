@@ -41,7 +41,8 @@ public:
         ScriptingPage,
         GeneralPage,
         DebugPage,
-        EditorFontColorPage
+        EditorFontColorPage,
+        PortableModePage
     };
 
     explicit SettingsDialog(int page = 0,
@@ -252,6 +253,8 @@ private:
     void storeFontSettings();
 
     void reloadCalendarList();
+
+    void initPortableModePage();
 };
 
 #endif // SETTINGSDIALOG_H

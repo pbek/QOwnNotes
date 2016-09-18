@@ -101,10 +101,48 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // expand all items in the settings tree widget
     ui->settingsTreeWidget->expandAll();
+
+    // initialize the portable mode page
+    initPortableModePage();
 }
 
 SettingsDialog::~SettingsDialog() {
     delete ui;
+}
+
+/**
+ * Initializes the portable mode page
+ */
+void SettingsDialog::initPortableModePage() {
+    bool isInPortableMode = Utils::Misc::isInPortableMode();
+    QString status = isInPortableMode ? tr("enabled") : tr("disabled");
+
+    QString text =
+            "<p>" + tr("Portable mode is currently:") + " <strong>" + status +
+            "</strong></p>";
+
+    text += tr("In portable mode") + "<ul><li>" +
+            tr("the internal sqlite database and the settings will be stored "
+                       "inside a <code>Data</code> folder at the binary's "
+                       "location") + "</li><li>" +
+            tr("the settings will be stored in an ini file") + "</li><li>" +
+            tr("the note folders will be automatically stored relative to the "
+                       "<code>Data</code> folder so that the correct note "
+                       "folders will be loaded regardless where your QOwnNotes "
+                       "installation is currently located") + "</li></ul>";
+
+    if (!isInPortableMode) {
+        text += "<p>" + tr("It will be activated if you run QOwnNotes with "
+                                   "the parameter <code>--portable</code>.") + "</p>";
+
+#ifdef Q_OS_WIN32
+        text += "<p>" + tr("You will find a <code>QOwnNotesPortable.exe</code> "
+                           "in your release path to start QOwnNotes in "
+                           "portable mode.") + "</p>";
+#endif
+    }
+
+    ui->portableModeInfoTextBrowser->setHtml(text);
 }
 
 /**

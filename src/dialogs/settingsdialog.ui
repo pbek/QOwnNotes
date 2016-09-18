@@ -201,6 +201,18 @@
              <iconset resource="../breeze-qownnotes.qrc">
               <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
             </property>
+            <item>
+             <property name="text">
+              <string>Portable mode</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">10</string>
+             </property>
+             <property name="icon">
+              <iconset theme="drive-removable-media" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</normaloff>:/icons/breeze-qownnotes/16x16/drive-removable-media.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -256,7 +268,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>10</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3219,6 +3231,33 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="portableModePage">
+            <layout class="QGridLayout" name="gridLayout_41">
+             <item row="0" column="0">
+              <widget class="QTextBrowser" name="portableModeInfoTextBrowser">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">* {
+	background-color: transparent;
+	border: none;
+}</string>
+               </property>
+               <property name="html">
+                <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;portable mode information will be loaded here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="openExternalLinks">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -3253,8 +3292,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

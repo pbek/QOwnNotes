@@ -4,10 +4,12 @@
 - updated the monochromatic tray icon (thanks a lot @Maboroshy)
 - in **portable mode** the note folders will now be automatically stored
   relative to the `Data` folder so that the correct note folders will be
-  loaded regardless where your QOwnNotes installation is currently stored
+  loaded regardless where your QOwnNotes installation is currently located
   (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
     - for Windows there now is a `QOwnNotesPortable.exe` in your release
       path to start QOwnNotes in portable mode
+    - there now is a new page in the settings to show more information
+      about the portable mode
 
 ## 16.09.9
 - you can now set and reset the item height of the tree widgets and
@@ -18,7 +20,7 @@
 - there now is a **portable mode**, for example to carry around
   QOwnNotes on an USB stick (work in progress)
   (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
-    - it will be activated if you start QOwnNotes with the parameter
+    - it will be activated if you run QOwnNotes with the parameter
       `--portable`
     - the internal sqlite database and the settings will be stored
       inside a `Data` folder at the binary's location
