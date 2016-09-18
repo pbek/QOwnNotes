@@ -10,6 +10,9 @@
       path to start QOwnNotes in portable mode
     - there now is a new page in the settings to show more information
       about the portable mode
+- added more Italian, Portuguese, Russian, French, Polish, Hungarian and
+  Dutch translation (thank you mlocati, mlimacarlos, Maboroshy,
+  lepascalou, lucjan and Fabijenna)
 
 ## 16.09.9
 - you can now set and reset the item height of the tree widgets and
