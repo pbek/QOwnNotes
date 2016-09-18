@@ -299,7 +299,7 @@ QString Utils::Misc::prependPortableDataPathIfNeeded(QString path) {
 }
 
 /**
- * Removes the portable data path if we are in portable mode
+ * Makes the path relative to the portable data path if we are in portable mode
  *
  * @param path
  * @return

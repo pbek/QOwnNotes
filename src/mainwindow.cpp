@@ -1132,7 +1132,7 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // store notesPath setting
         QSettings settings;
-        // remove the portable data path if we are in portable mode
+        // make the path relative to the portable data path if we are in portable mode
         settings.setValue("notesPath",
                           Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                                   folderName));
@@ -2456,7 +2456,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
         this->notesPath = dir;
         QSettings settings;
-        // remove the portable data path if we are in portable mode
+        // make the path relative to the portable data path if we are in portable mode
         settings.setValue("notesPath",
                           Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                                   dir));

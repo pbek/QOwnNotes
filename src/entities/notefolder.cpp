@@ -239,7 +239,7 @@ bool NoteFolder::store() {
     query.bindValue(":showSubfolders", this->showSubfolders);
     query.bindValue(":activeNoteSubFolderData", this->activeNoteSubFolderData);
 
-    // remove the portable data path if we are in portable mode
+    // make the path relative to the portable data path if we are in portable mode
     query.bindValue(":localPath",
                     Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                             this->localPath));
@@ -272,7 +272,7 @@ void NoteFolder::setAsCurrent() {
     QSettings settings;
     settings.setValue("currentNoteFolderId", id);
 
-    // remove the portable data path if we are in portable mode
+    // make the path relative to the portable data path if we are in portable mode
     settings.setValue("notesPath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               localPath));
