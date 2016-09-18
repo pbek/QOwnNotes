@@ -32,5 +32,8 @@ namespace Utils {
         QString defaultNotesPath();
         void waitMsecs(int msecs);
         QString portableDataPath();
+        bool isInPortableMode();
+        QString prependPortableDataPathIfNeeded(QString path);
+        QString makePathRelativeToPortableDataPathIfNeeded(QString path);
     }
 }

@@ -171,7 +171,6 @@ NoteFolder NoteFolder::noteFolderFromQuery(QSqlQuery query) {
 bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
-    this->localPath = query.value("local_path").toString();
     this->ownCloudServerId = query.value("owncloud_server_id").toInt();
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
@@ -179,6 +178,10 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->activeTagId = query.value("active_tag_id").toInt();
     this->activeNoteSubFolderData =
             query.value("active_note_sub_folder_data").toString();
+
+    // prepend the portable data path if we are in portable mode
+    this->localPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            query.value("local_path").toString());
 
     return true;
 }
@@ -229,13 +232,17 @@ bool NoteFolder::store() {
     }
 
     query.bindValue(":name", this->name);
-    query.bindValue(":localPath", this->localPath);
     query.bindValue(":ownCloudServerId", this->ownCloudServerId);
     query.bindValue(":remotePath", this->remotePath);
     query.bindValue(":priority", this->priority);
     query.bindValue(":activeTagId", this->activeTagId);
     query.bindValue(":showSubfolders", this->showSubfolders);
     query.bindValue(":activeNoteSubFolderData", this->activeNoteSubFolderData);
+
+    // remove the portable data path if we are in portable mode
+    query.bindValue(":localPath",
+                    Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                            this->localPath));
 
     if (!query.exec()) {
         // on error
@@ -264,7 +271,11 @@ bool NoteFolder::isFetched() {
 void NoteFolder::setAsCurrent() {
     QSettings settings;
     settings.setValue("currentNoteFolderId", id);
-    settings.setValue("notesPath", localPath);
+
+    // remove the portable data path if we are in portable mode
+    settings.setValue("notesPath",
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                              localPath));
 }
 
 /**
@@ -328,7 +339,10 @@ QString NoteFolder::currentLocalPath() {
     // load notesPath as fallback
     if (path.isEmpty()) {
         QSettings settings;
-        path = settings.value("notesPath").toString();
+
+        // prepend the portable data path if we are in portable mode
+        path = Utils::Misc::prependPortableDataPathIfNeeded(
+                settings.value("notesPath").toString());
     }
 
     return Utils::Misc::removeIfEndsWith(path, QDir::separator());
@@ -381,7 +395,10 @@ bool NoteFolder::migrateToNoteFolders() {
 
     QSettings settings;
     int priority = 0;
-    QString notesPath = settings.value("notesPath").toString();
+
+    // prepend the portable data path if we are in portable mode
+    QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            settings.value("notesPath").toString());
 
     // create notes path as NoteFolder
     if (!notesPath.isEmpty()) {

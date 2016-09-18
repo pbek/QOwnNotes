@@ -23,7 +23,7 @@ DatabaseService::DatabaseService() {
 QString DatabaseService::getDiskDatabasePath() {
     QString path = "";
 
-    if (qApp->property("portable").toBool()) {
+    if (Utils::Misc::isInPortableMode()) {
         path = Utils::Misc::portableDataPath();
     } else {
         QStandardPaths::StandardLocation location;

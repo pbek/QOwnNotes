@@ -1132,7 +1132,10 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // store notesPath setting
         QSettings settings;
-        settings.setValue("notesPath", folderName);
+        // remove the portable data path if we are in portable mode
+        settings.setValue("notesPath",
+                          Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                                  folderName));
 
         // we have to unset the current note otherwise it might show up after
         // switching to an other note folder
@@ -1593,8 +1596,10 @@ void MainWindow::readSettings() {
     // read all relevant settings, that can be set in the settings dialog
     readSettingsFromSettingsDialog();
 
-    // get notes path
-    this->notesPath = settings.value("notesPath").toString();
+    // get the notes path
+    // prepend the portable data path if we are in portable mode
+    this->notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            settings.value("notesPath").toString());
 
     // migration: remove GAnalytics-cid
     if (!settings.value("GAnalytics-cid").toString().isEmpty()) {
@@ -2451,7 +2456,10 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
         this->notesPath = dir;
         QSettings settings;
-        settings.setValue("notesPath", dir);
+        // remove the portable data path if we are in portable mode
+        settings.setValue("notesPath",
+                          Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                                  dir));
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();

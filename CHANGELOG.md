@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.09.10
+- updated the monochromatic tray icon (thanks a lot @Maboroshy)
+- in **portable mode** the note folders will now be automatically stored
+  relative to the `Data` folder so that the correct note folders will be
+  loaded regardless where your QOwnNotes installation is currently stored
+  (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
+
 ## 16.09.9
 - you can now set and reset the item height of the tree widgets and
   lists of the main window in the interface settings
@@ -103,7 +110,7 @@
   just search for the url but trying to detect markdown links to prevent
   the wrong links from being renamed
   (for [Issue #313](https://github.com/pbek/QOwnNotes/issues/313))
-- added a new monochromic tray icon
+- added a new monochromatic tray icon
   (for [Issue #306](https://github.com/pbek/QOwnNotes/issues/306),
   thanks a lot @Maboroshy)
 - renamed the `tag pane` to `tag / subfolder pane` in the menu for more

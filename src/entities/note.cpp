@@ -976,7 +976,10 @@ bool Note::updateNoteTextFromDisk() {
 
 QString Note::getFullNoteFilePathForFile(QString fileName) {
     QSettings settings;
-    QString notesPath = settings.value("notesPath").toString();
+
+    // prepend the portable data path if we are in portable mode
+    QString notesPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            settings.value("notesPath").toString());
 
     return Utils::Misc::removeIfEndsWith(notesPath, "/") +
             QDir::separator() + fileName;

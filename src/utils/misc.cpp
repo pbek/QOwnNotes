@@ -220,9 +220,17 @@ bool Utils::Misc::startDetachedProcess(
 #endif
 }
 
+/**
+ * Returns the default notes path we are suggesting
+ *
+ * @return
+ */
 QString Utils::Misc::defaultNotesPath() {
-    QString path = QDir::homePath() + QDir::separator() + "ownCloud" +
-            QDir::separator() + "Notes";
+    QString path = isInPortableMode() ?
+                   portableDataPath() :
+                   QDir::homePath() + QDir::separator() + "ownCloud";
+
+    path += QString(QDir::separator()) + "Notes";
 
     // remove the snap path for Snapcraft builds
     path.remove(QRegularExpression("snap\\/qownnotes\\/\\w\\d+\\/"));
@@ -258,6 +266,54 @@ QString Utils::Misc::portableDataPath() {
     QDir dir;
     // create path if it doesn't exist yet
     dir.mkpath(path);
+
+    return path;
+}
+
+/**
+ * Returns true if the app is in portable mode
+ *
+ * @return
+ */
+bool Utils::Misc::isInPortableMode() {
+    return qApp->property("portable").toBool();
+}
+
+/**
+ * Prepends the portable data path if we are in portable mode
+ *
+ * @param path
+ * @return
+ */
+QString Utils::Misc::prependPortableDataPathIfNeeded(QString path) {
+    if (isInPortableMode()) {
+        QString portableDataPath(Utils::Misc::portableDataPath());
+
+        // check if the path already starts with the portable data path
+        if (!path.startsWith(portableDataPath)) {
+            path = portableDataPath + QDir::separator() + path;
+        }
+    }
+
+    return path;
+}
+
+/**
+ * Removes the portable data path if we are in portable mode
+ *
+ * @param path
+ * @return
+ */
+QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
+    if (isInPortableMode()) {
+//        path.remove(QRegularExpression(
+//                "^" + QRegularExpression::escape(portableDataPath()) +
+//                        "[\\//]"));
+
+        // make the path relative to the portable nata path
+        QDir dir(portableDataPath());
+        path = dir.relativeFilePath(path);
+    }
 
     return path;
 }

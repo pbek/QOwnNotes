@@ -87,7 +87,7 @@ bool mainStartupMisc() {
             qApp->property("release").toString());
     metricsService->sendEventIfEnabled(
             "app/portable", "app", "portable",
-            qApp->property("portable").toBool() ? "yes" : "no");
+            Utils::Misc::isInPortableMode() ? "yes" : "no");
 
     QString productType;
 
@@ -127,6 +127,11 @@ bool mainStartupMisc() {
     } else {
         // load the notes path
         notesPath = settings.value("notesPath").toString();
+    }
+
+    if (!notesPath.isEmpty()) {
+        // prepend the portable data path if we are in portable mode
+        notesPath = Utils::Misc::prependPortableDataPathIfNeeded(notesPath);
     }
 
     QDir dir(notesPath);

@@ -108,7 +108,11 @@ void WelcomeDialog::storeNoteFolderSettings() {
             ->sendVisitIfEnabled("welcome-dialog/note-folder/stored");
 
     QSettings settings;
-    settings.setValue("notesPath", _notesPath);
+
+    // remove the portable data path if we are in portable mode
+    settings.setValue("notesPath",
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                              _notesPath));
 }
 
 void WelcomeDialog::on_backButton_clicked() {
