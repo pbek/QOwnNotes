@@ -783,9 +783,9 @@ void MainWindow::initStyling() {
 /**
  * Moves the note view scrollbar when the note edit scrollbar was moved
  */
-void MainWindow::noteTextSliderValueChanged(int value) {
+void MainWindow::noteTextSliderValueChanged(int value, bool force) {
     // don't react if note text edit doesn't have the focus
-    if (!activeNoteTextEdit()->hasFocus()) {
+    if (!activeNoteTextEdit()->hasFocus() && !force) {
         return;
     }
 
@@ -804,22 +804,25 @@ void MainWindow::noteTextSliderValueChanged(int value) {
 /**
  * Moves the note edit scrollbar when the note view scrollbar was moved
  */
-void MainWindow::noteViewSliderValueChanged(int value) {
+void MainWindow::noteViewSliderValueChanged(int value, bool force) {
     // don't react if note text view doesn't have the focus
-    if (!ui->noteTextView->hasFocus()) {
+    if (!ui->noteTextView->hasFocus() && !force) {
         return;
     }
 
     QScrollBar *editScrollBar = activeNoteTextEdit()->verticalScrollBar();
     QScrollBar *viewScrollBar = ui->noteTextView->verticalScrollBar();
 
-    editScrollBar->maximum();
-
     float editScrollFactor =
             static_cast<float>(value) / viewScrollBar->maximum();
 
     int editPosition =
             static_cast<int>(editScrollBar->maximum() * editScrollFactor);
+
+    // for some reason we get some int-min value here sometimes
+    if (editPosition < 0) {
+        return;
+    }
 
     // set the scroll position in the note text edit
     editScrollBar->setSliderPosition(editPosition);
@@ -2994,7 +2997,7 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
 
     // update the slider when editing notes
     noteTextSliderValueChanged(
-            activeNoteTextEdit()->verticalScrollBar()->value());
+            activeNoteTextEdit()->verticalScrollBar()->value(), true);
 }
 
 /**
@@ -7330,14 +7333,33 @@ void MainWindow::on_actionStrike_out_text_triggered() {
  * Toggles between note edid mode and preview
  */
 void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
+    int noteTextEditScrollValue =
+            activeNoteTextEdit()->verticalScrollBar()->value();
+    int noteViewScrollValue = ui->noteTextView->verticalScrollBar()->value();
+
     // if we use toggle() the widget sizes are stored correctly
     ui->actionToggle_markdown_preview->toggle();
 
     bool hasPreview = ui->actionToggle_markdown_preview->isChecked();
     bool hasEdit = ui->actionToggle_note_edit_pane->isChecked();
 
+    // set the correct focus
+    if (hasPreview) {
+        ui->noteTextView->setFocus();
+    } else {
+        activeNoteTextEdit()->setFocus();
+    }
+
     if (hasPreview == hasEdit) {
         ui->actionToggle_note_edit_pane->toggle();
+    }
+
+    // restore the slider values
+    if (hasPreview) {
+        noteTextSliderValueChanged(noteTextEditScrollValue, true);
+    } else {
+//        activeNoteTextEdit()->ensureCursorVisible();
+        noteViewSliderValueChanged(noteViewScrollValue, true);
     }
 }
 

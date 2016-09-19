@@ -259,9 +259,9 @@ private slots:
 
     void on_actionToggle_markdown_preview_toggled(bool arg1);
 
-    void noteTextSliderValueChanged(int value);
+    void noteTextSliderValueChanged(int value, bool force = false);
 
-    void noteViewSliderValueChanged(int value);
+    void noteViewSliderValueChanged(int value, bool force = false);
 
     void on_actionToggle_note_edit_pane_toggled(bool arg1);
 

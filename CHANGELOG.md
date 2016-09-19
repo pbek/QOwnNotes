@@ -12,6 +12,9 @@
   (for [Issue #322](https://github.com/pbek/QOwnNotes/issues/322))
 - added access keys for the missing main menu items
   (for [Issue #329](https://github.com/pbek/QOwnNotes/issues/329))
+- now a better job is done at syncing the scrollbars after toggling
+  between edit and preview
+  (for [Issue #328](https://github.com/pbek/QOwnNotes/issues/328))
 
 ## 16.09.10
 - updated the monochromatic tray icon (thanks a lot @Maboroshy)
