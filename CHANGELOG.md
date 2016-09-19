@@ -15,6 +15,9 @@
 - now a better job is done at syncing the scrollbars after toggling
   between edit and preview
   (for [Issue #328](https://github.com/pbek/QOwnNotes/issues/328))
+- fixed setting of wrong preview font on for start of QOwnNotes if the
+  settings dialog is used in the welcome dialog
+  (for [Issue #325](https://github.com/pbek/QOwnNotes/issues/325))
 
 ## 16.09.10
 - updated the monochromatic tray icon (thanks a lot @Maboroshy)

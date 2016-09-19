@@ -513,13 +513,23 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/noteTextEdit.code.font").toString());
     setFontLabel(ui->noteTextEditCodeFontLabel, noteTextEditCodeFont);
 
-    noteTextViewFont.fromString(
-            settings.value("MainWindow/noteTextView.font").toString());
+    // load note text view font
+    QString fontString = settings.value("MainWindow/noteTextView.font")
+            .toString();
+
+    // store the current font if there isn't any set yet
+    if (fontString == "") {
+        QTextEdit *textEdit = new QTextEdit();
+        fontString = textEdit->font().toString();
+        settings.setValue("MainWindow/noteTextView.font", fontString);
+    }
+
+    noteTextViewFont.fromString(fontString);
     setFontLabel(ui->noteTextViewFontLabel, noteTextViewFont);
 
 
     // load note text view code font
-    QString fontString = settings.value("MainWindow/noteTextView.code.font")
+    fontString = settings.value("MainWindow/noteTextView.code.font")
             .toString();
 
     // set a default note text view code font
