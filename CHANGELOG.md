@@ -18,6 +18,9 @@
 - fixed setting of wrong preview font on for start of QOwnNotes if the
   settings dialog is used in the welcome dialog
   (for [Issue #325](https://github.com/pbek/QOwnNotes/issues/325))
+- added more Portuguese, Russian, Japanese, Polish, German, Hungarian
+  and Dutch translation (thank you mlimacarlos, frostyland, piyo,
+  lucjan and Fabijenna)
 
 ## 16.09.10
 - updated the monochromatic tray icon (thanks a lot @Maboroshy)
