@@ -136,7 +136,7 @@ void SettingsDialog::initPortableModePage() {
                                    "the parameter <code>--portable</code>.") + "</p>";
 
 #ifdef Q_OS_WIN32
-        text += "<p>" + tr("You will find a <code>QOwnNotesPortable.exe</code> "
+        text += "<p>" + tr("You will find a <code>QOwnNotesPortable.bat</code> "
                            "in your release path to start QOwnNotes in "
                            "portable mode.") + "</p>";
 #endif

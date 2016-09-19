@@ -68,6 +68,13 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     ui->setupUi(this);
+
+#ifdef Q_OS_MAC
+    // disable icons in the menu that weren't handled by
+    // Qt::AA_DontShowIconsInMenus
+    ui->actionShare_note->setIconVisibleInMenu(false);
+#endif
+
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;
@@ -1132,9 +1139,11 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // store notesPath setting
         QSettings settings;
-        // make the path relative to the portable data path if we are in portable mode
-        settings.setValue("notesPath",
-                          Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+        // make the path relative to the portable data path if we are in
+        // portable mode
+        settings.setValue(
+                "notesPath",
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                                   folderName));
 
         // we have to unset the current note otherwise it might show up after
@@ -1755,6 +1764,7 @@ void MainWindow::initTreeWidgetItemHeight() {
     updateTreeWidgetItemHeight(ui->tagTreeWidget, height);
     updateTreeWidgetItemHeight(ui->noteTreeWidget, height);
     updateTreeWidgetItemHeight(ui->noteSubFolderTreeWidget, height);
+    updateTreeWidgetItemHeight(ui->navigationWidget, height);
 }
 
 /**
@@ -2456,9 +2466,11 @@ QString MainWindow::selectOwnCloudNotesFolder() {
 
         this->notesPath = dir;
         QSettings settings;
-        // make the path relative to the portable data path if we are in portable mode
-        settings.setValue("notesPath",
-                          Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+        // make the path relative to the portable data path if we are in
+        // portable mode
+        settings.setValue(
+                "notesPath",
+                Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                                   dir));
 
         // update the current folder tooltip

@@ -681,7 +681,7 @@ p, li { white-space: pre-wrap; }
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
-     <string>Edit</string>
+     <string>&amp;Edit</string>
     </property>
     <addaction name="action_DuplicateText"/>
     <addaction name="separator"/>
@@ -714,13 +714,13 @@ p, li { white-space: pre-wrap; }
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
-     <string>Todo</string>
+     <string>To&amp;do</string>
     </property>
     <addaction name="actionOpen_List"/>
    </widget>
    <widget class="QMenu" name="menuWindow">
     <property name="title">
-     <string>Window</string>
+     <string>&amp;Window</string>
     </property>
     <widget class="QMenu" name="menuEditor_width">
      <property name="toolTip">
@@ -760,13 +760,13 @@ p, li { white-space: pre-wrap; }
    </widget>
    <widget class="QMenu" name="menuTag">
     <property name="title">
-     <string>Tag</string>
+     <string>&amp;Tag</string>
     </property>
     <addaction name="action_new_tag"/>
    </widget>
    <widget class="QMenu" name="menuScripting">
     <property name="title">
-     <string>Scripting</string>
+     <string>&amp;Scripting</string>
     </property>
     <widget class="QMenu" name="menuCustom_actions">
      <property name="title">

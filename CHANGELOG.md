@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 16.09.11
+- disabled the icon of the the share menu entry in OS X 
+- `QOwnNotesPortable.exe` was removed from the Windows release of
+   v16.09.10, because it wasn't clear if the BAT to EXE "converter" it
+   was created with added malware
+  (for [Issue #236](https://github.com/pbek/QOwnNotes/issues/236))
+   - please use `QOwnNotesPortable.bat` instead
+- the item height of the navigation tree widget will now also be set by
+  the `List and tree item height` setting in interface settings
+  (for [Issue #322](https://github.com/pbek/QOwnNotes/issues/322))
+- added access keys for the missing main menu items
+  (for [Issue #329](https://github.com/pbek/QOwnNotes/issues/329))
+
 ## 16.09.10
 - updated the monochromatic tray icon (thanks a lot @Maboroshy)
 - in **portable mode** the note folders will now be automatically stored
