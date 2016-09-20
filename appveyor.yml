@@ -70,7 +70,6 @@ notifications:
   # Gitter webhook
   - provider: Webhook
     url: https://webhooks.gitter.im/e/b6ef22402eb4af50f73a
-    headers:
     on_build_success: true
     on_build_failure: true
     on_build_status_changed: false
