@@ -118,8 +118,6 @@ void LinkDialog::on_notesListWidget_doubleClicked(const QModelIndex &index) {
     this->setResult(QDialog::Accepted);
 }
 
-extern "C" size_t decode_html_entities_utf8(char *dest, const char *src);
-
 /**
  * @brief Fetches the title of a webpage
  * @param url
