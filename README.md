@@ -7,13 +7,16 @@
 [Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
 [Knowledge base](http://www.qownnotes.org/Knowledge-base) |
 [Screenshots](http://www.qownnotes.org) |
-[ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497)
+[ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497) |
+[IRC Chat](https://kiwiirc.com/client/irc.freenode.net/#qownnotes) |
+[Gitter Chat](https://gitter.im/qownnotes/qownnotes)
 
 [![Build Status Linux / OS X](https://travis-ci.org/pbek/QOwnNotes.svg?branch=develop)](https://travis-ci.org/pbek/QOwnNotes)
 [![Build Status Windows](https://ci.appveyor.com/api/projects/status/github/pbek/QOwnNotes)](https://ci.appveyor.com/project/pbek/qownnotes)
 [![Coverage Status](https://coveralls.io/repos/pbek/QOwnNotes/badge.svg?branch=develop&service=github)](https://coveralls.io/github/pbek/QOwnNotes?branch=develop)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pbek/QOwnNotes.svg)](http://isitmaintained.com/project/pbek/QOwnNotes "Percentage of issues still open")
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/qownnotes/localized.svg)](https://crowdin.com/project/qownnotes)
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 
 [QOwnNotes](http://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
 
@@ -88,6 +91,18 @@ make
 Please feel free to contribute source code to this project, make suggestions or report troubles on the [QOwnNotes issues page](https://github.com/pbek/QOwnNotes/issues)!
 
 You can also visit [QOwnNotes on GitHub](https://github.com/pbek/QOwnNotes).
+
+## Chat
+
+### IRC
+
+If you are having trouble or would like to help out, join `#qownnotes` on Freenode.
+
+Kiwi IRC (IRC in your web browser): [QOwnNotes IRC](https://kiwiirc.com/client/irc.freenode.net/#qownnotes)
+
+### Join the chat at gitter
+
+[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 
 ## Minimum software requirements
 - A desktop operating system, that supports [Qt](http://www.qt.io/)
