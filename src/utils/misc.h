@@ -35,5 +35,6 @@ namespace Utils {
         bool isInPortableMode();
         QString prependPortableDataPathIfNeeded(QString path);
         QString makePathRelativeToPortableDataPathIfNeeded(QString path);
+        QString htmlToMarkdown(QString text);
     }
 }

@@ -676,7 +676,7 @@ bool Note::storeNewDecryptedText(QString text) {
 QString Note::defaultNoteFileExtension() {
     QSettings settings;
     QString extension = settings.value(
-            "defaultNoteFileExtension", "txt").toString();
+            "defaultNoteFileExtension", "md").toString();
     return extension;
 }
 
@@ -1863,6 +1863,23 @@ void Note::handleNoteRenaming(QString oldFileName, QString newFileName) {
                 note.storeNewText(text);
             }
     }
+}
+
+/**
+ * Creates a note headline from a name
+ *
+ * @param name
+ * @return
+ */
+QString Note::createNoteHeader(QString name) {
+    QString header = name + "\n";
+
+    for (int i = 0; i < name.length(); i++) {
+        header.append("=");
+    }
+
+    header.append("\n\n");
+    return header;
 }
 
 /**

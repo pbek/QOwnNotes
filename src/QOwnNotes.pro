@@ -82,7 +82,8 @@ SOURCES += main.cpp\
     dialogs/logdialog.cpp \
     widgets/combobox.cpp \
     dialogs/sharedialog.cpp \
-    widgets/fontcolorwidget.cpp
+    widgets/fontcolorwidget.cpp \
+    dialogs/evernoteimportdialog.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -138,7 +139,8 @@ HEADERS  += mainwindow.h \
     dialogs/logdialog.h \
     widgets/combobox.h \
     dialogs/sharedialog.h \
-    widgets/fontcolorwidget.h
+    widgets/fontcolorwidget.h \
+    dialogs/evernoteimportdialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -154,7 +156,8 @@ FORMS    += mainwindow.ui \
     dialogs/tagadddialog.ui \
     dialogs/logdialog.ui \
     dialogs/sharedialog.ui \
-    widgets/fontcolorwidget.ui
+    widgets/fontcolorwidget.ui \
+    dialogs/evernoteimportdialog.ui
 
 RESOURCES += \
     images.qrc \

@@ -376,6 +376,8 @@ private slots:
 
     void on_actionStart_hidden_triggered(bool checked);
 
+    void on_actionImport_notes_from_Evernote_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

@@ -31,6 +31,7 @@ qt5_wrap_ui(dialogs/ui_versiondialog.h versiondialog.ui)
 qt5_wrap_ui(dialogs/ui_welcomedialog.h welcomedialog.ui)
 qt5_wrap_ui(dialogs/ui_tagadddialog.h tagadddialog.ui)
 qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
+qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
 qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
         libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
 
@@ -91,6 +92,9 @@ set(SOURCE_FILES
     dialogs/sharedialog.cpp
     dialogs/sharedialog.h
     dialogs/sharedialog.ui
+    dialogs/evernoteimportdialog.cpp
+    dialogs/evernoteimportdialog.h
+    dialogs/evernoteimportdialog.ui
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp

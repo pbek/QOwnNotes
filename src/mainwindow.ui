@@ -632,6 +632,28 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionAlphabetical"/>
      <addaction name="actionBy_date"/>
     </widget>
+    <widget class="QMenu" name="menuExport">
+     <property name="title">
+      <string>Export</string>
+     </property>
+     <property name="icon">
+      <iconset theme="document-export" resource="breeze-dark-qownnotes.qrc">
+       <normaloff>:/icons/breeze-dark-qownnotes/16x16/document-export.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/document-export.svg</iconset>
+     </property>
+     <addaction name="action_Export_note_as_PDF_text"/>
+     <addaction name="action_Export_note_as_PDF_markdown"/>
+     <addaction name="actionExport_preview_HTML"/>
+     <addaction name="action_Export_note_as_markdown"/>
+    </widget>
+    <widget class="QMenu" name="menuImport">
+     <property name="title">
+      <string>Import</string>
+     </property>
+     <property name="icon">
+      <iconset theme="document-import"/>
+     </property>
+     <addaction name="actionImport_notes_from_Evernote"/>
+    </widget>
     <addaction name="action_New_note"/>
     <addaction name="action_Find_note"/>
     <addaction name="actionFind_notes_in_all_subfolders"/>
@@ -642,10 +664,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_trash"/>
     <addaction name="menuSort_by"/>
     <addaction name="separator"/>
-    <addaction name="action_Export_note_as_PDF_text"/>
-    <addaction name="action_Export_note_as_PDF_markdown"/>
-    <addaction name="actionExport_preview_HTML"/>
-    <addaction name="action_Export_note_as_markdown"/>
+    <addaction name="menuExport"/>
+    <addaction name="menuImport"/>
     <addaction name="separator"/>
     <addaction name="action_Print_note_text"/>
     <addaction name="action_Print_note_markdown"/>
@@ -1744,6 +1764,15 @@ p, li { white-space: pre-wrap; }
     <string>Starts the application hidden if the system tray icon is shown</string>
    </property>
   </action>
+  <action name="actionImport_notes_from_Evernote">
+   <property name="icon">
+    <iconset theme="text-xml" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Import notes from Evernote</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -1769,8 +1798,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

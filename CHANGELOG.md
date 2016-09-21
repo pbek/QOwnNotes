@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.09.12
+- the export menu entries in the note menu were moved to a `Export`
+  sub-menu to declutter the main menu
+- first alpha version of the **Evernote note import**
+  (for [Issue #332](https://github.com/pbek/QOwnNotes/issues/332))
+    - export an `enex` file (export notes) from your Evernote desktop client
+    - click `Import / Import notes from Evernote` in the QOwnNotes main menu
+    - please give feedback on how it worked out in above issue
+
 ## 16.09.11
 - disabled the icon of the the share menu entry in OS X 
 - `QOwnNotesPortable.exe` was removed from the Windows release of

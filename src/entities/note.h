@@ -196,6 +196,8 @@ public:
 
     static void handleNoteRenaming(QString oldFileName, QString newFileName);
 
+    static QString createNoteHeader(QString name);
+
 protected:
     int id;
     QString name;

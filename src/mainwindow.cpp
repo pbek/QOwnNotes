@@ -55,6 +55,7 @@
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
 #include <services/scriptingservice.h>
+#include <dialogs/evernoteimportdialog.h>
 #include <dialogs/logdialog.h>
 #include <dialogs/sharedialog.h>
 
@@ -3038,13 +3039,7 @@ void MainWindow::createNewNote(QString name, QString text, bool cursorAtEnd) {
         QDateTime currentDate = QDateTime::currentDateTime();
         name.append(" " + currentDate.toString(Qt::ISODate).replace(":", "."));
 
-        QString preText = name + "\n";
-
-        for (int i = 0; i < name.length(); i++) {
-            preText.append("=");
-        }
-
-        preText.append("\n\n");
+        QString preText = Note::createNoteHeader(name);
         text.prepend(preText);
     }
 
@@ -4023,16 +4018,10 @@ void MainWindow::jumpToNoteOrCreateNew() {
         // check if a hook changed the text
         if (noteText.isEmpty()) {
             // fallback to the old text if no hook changed the text
-            noteText = text;
-
-            // create a headline in new notes by adding "=====" as second line
-            noteText.append("\n");
-            for (int i = 0; i < text.length(); i++) {
-                noteText.append("=");
-            }
+            noteText = Note::createNoteHeader(text);
+        } else {
+            noteText.append("\n\n");
         }
-
-        noteText.append("\n\n");
 
         NoteSubFolder noteSubFolder = NoteSubFolder::activeNoteSubFolder();
         QString noteSubFolderPath = noteSubFolder.fullPath();
@@ -5214,55 +5203,11 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 void MainWindow::insertHtml(QString html) {
     qDebug() << __func__ << " - 'html': " << html;
 
-    // remove some blocks
-    html.remove(QRegularExpression(
-            "<head[^>]*>([^<]+)<\\/head>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    html.remove(QRegularExpression(
-            "<script[^>]*>([^<]+)<\\/script>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    html.remove(QRegularExpression(
-            "<style[^>]*>([^<]+)<\\/style>",
-            QRegularExpression::CaseInsensitiveOption));
-
-    // replace some html tags with markdown
-    html.replace(QRegularExpression(
-            "<strong[^>]*>([^<]+)<\\/strong>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
-    html.replace(QRegularExpression(
-            "<b[^>]*>([^<]+)<\\/b>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
-    html.replace(QRegularExpression(
-            "<em[^>]*>([^<]+)<\\/em>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
-    html.replace(QRegularExpression(
-            "<i[^>]*>([^<]+)<\\/i>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
-    html.replace(QRegularExpression(
-            "<h1[^>]*>([^<]+)<\\/h1>",
-            QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
-    html.replace(QRegularExpression(
-            "<h2[^>]*>([^<]+)<\\/h2>",
-            QRegularExpression::CaseInsensitiveOption), "\n## \\1\n");
-    html.replace(QRegularExpression(
-            "<h3[^>]*>([^<]+)<\\/h3>",
-            QRegularExpression::CaseInsensitiveOption), "\n### \\1\n");
-    html.replace(QRegularExpression("<h4[^>]*>([^<]+)<\\/h4>",
-            QRegularExpression::CaseInsensitiveOption), "\n#### \\1\n");
-    html.replace(QRegularExpression(
-            "<h5[^>]*>([^<]+)<\\/h5>",
-            QRegularExpression::CaseInsensitiveOption), "\n##### \\1\n");
-    html.replace(QRegularExpression(
-            "<br[^>]*>",
-            QRegularExpression::CaseInsensitiveOption), "\n");
-    html.replace(QRegularExpression(
-            "<a[^>]+href=\"([^\"]+)\"[^>]*>([^<]+)<\\/a>",
-            QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
+    // convert html tags to markdown
+    html = Utils::Misc::htmlToMarkdown(html);
 
     // match image tags
-    QRegularExpression re("<img[^>]+src=\"([^\"]+)\"[^>]*>",
+    QRegularExpression re("<img.+?src=\"(.+?)\".*?>",
                           QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(html);
 
@@ -5311,7 +5256,7 @@ void MainWindow::insertHtml(QString html) {
     showStatusBarMessage(tr("done downloading images"));
 
     // remove all html tags
-    html.remove(QRegularExpression("<[^>]*>"));
+    html.remove(QRegularExpression("<.+?>"));
 
     // remove the last character, that is broken
     html = html.left(html.size() - 1);
@@ -6824,13 +6769,7 @@ void MainWindow::on_actionInsert_headline_from_note_filename_triggered()
     c.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
 
     QString fileName = currentNote.fileBaseName(true);
-    QString text = fileName + "\n";
-
-    for (int i = 0; i < fileName.count(); i++) {
-        text.append("=");
-    }
-
-    text.append("\n\n");
+    QString text = Note::createNoteHeader(fileName);
     c.insertText(text);
 }
 
@@ -7691,4 +7630,9 @@ void MainWindow::on_actionStart_hidden_triggered(bool checked) {
         Q_UNUSED(blocker);
         ui->actionStart_hidden->setChecked(checked);
     }
+}
+
+void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
+    EvernoteImportDialog* dialog = new EvernoteImportDialog(this);
+    dialog->exec();
 }

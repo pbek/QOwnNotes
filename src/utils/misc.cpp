@@ -317,3 +317,64 @@ QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
 
     return path;
 }
+
+/**
+ * Converts html tags to markdown
+ *
+ * @param text
+ * @return markdown text
+ */
+QString Utils::Misc::htmlToMarkdown(QString text) {
+    // remove some blocks
+    text.remove(QRegularExpression(
+            "<head.*?>(.+?)<\\/head>",
+            QRegularExpression::CaseInsensitiveOption));
+
+    text.remove(QRegularExpression(
+            "<script.*?>(.+?)<\\/script>",
+            QRegularExpression::CaseInsensitiveOption));
+
+    text.remove(QRegularExpression(
+            "<style.*?>(.+?)<\\/style>",
+            QRegularExpression::CaseInsensitiveOption));
+
+    // replace some html tags with markdown
+    text.replace(QRegularExpression(
+            "<strong.*?>(.+?)<\\/strong>",
+            QRegularExpression::CaseInsensitiveOption), "**\\1**");
+    text.replace(QRegularExpression(
+            "<b.*?>(.+?)<\\/b>",
+            QRegularExpression::CaseInsensitiveOption), "**\\1**");
+    text.replace(QRegularExpression(
+            "<em.*?>(.+?)<\\/em>",
+            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+    text.replace(QRegularExpression(
+            "<i.*?>(.+?)<\\/i>",
+            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+    text.replace(QRegularExpression(
+            "<h1.*?>(.+?)<\\/h1>",
+            QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
+    text.replace(QRegularExpression(
+            "<h2.*?>(.+?)<\\/h2>",
+            QRegularExpression::CaseInsensitiveOption), "\n## \\1\n");
+    text.replace(QRegularExpression(
+            "<h3.*?>(.+?)<\\/h3>",
+            QRegularExpression::CaseInsensitiveOption), "\n### \\1\n");
+    text.replace(QRegularExpression(
+            "<h4.*?>(.+?)<\\/h4>",
+            QRegularExpression::CaseInsensitiveOption), "\n#### \\1\n");
+    text.replace(QRegularExpression(
+            "<h5.*?>(.+?)<\\/h5>",
+            QRegularExpression::CaseInsensitiveOption), "\n##### \\1\n");
+    text.replace(QRegularExpression(
+            "<li.*?>(.+?)<\\/li>",
+            QRegularExpression::CaseInsensitiveOption), "- \\1");
+    text.replace(QRegularExpression(
+            "<br.*?>",
+            QRegularExpression::CaseInsensitiveOption), "\n");
+    text.replace(QRegularExpression(
+            "<a[^>]+href=\"(.+?)\".*?>(.+?)<\\/a>",
+            QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
+
+    return text;
+}
