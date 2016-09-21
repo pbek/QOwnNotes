@@ -8,6 +8,9 @@
     - export an `enex` file (export notes) from your Evernote desktop client
     - click `Import / Import notes from Evernote` in the QOwnNotes main menu
     - please give feedback on how it worked out in above issue
+- added more Portuguese, French, Japanese, Polish, German and Italian
+  translation (thank you mlimacarlos, lepascalou, piyo, lucjan, bigant
+  and mlocati)
 
 ## 16.09.11
 - disabled the icon of the the share menu entry in OS X 
