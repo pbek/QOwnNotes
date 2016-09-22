@@ -6,6 +6,7 @@
     - the note folder is now reloaded when closing the import dialog
       if notes were imported
     - you can now also import the images of your notes
+    - some line break improvements were made
 - added more Portuguese, Japanese, Italian, Hungarian and Dutch
   translation (thank you mlimacarlos, piyo, vpistis, mlocati and
   Fabijenna)

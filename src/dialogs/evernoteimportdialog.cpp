@@ -242,6 +242,13 @@ void EvernoteImportDialog::importNotes(QString data) {
             // decode HTML entities
             content = htmlEntities.decodeHtmlEntities(content);
 
+            // add a newline in front of lists
+//            content.replace(QRegularExpression("<ul.*?>"), "\n<ul>");
+//            content.replace(QRegularExpression("<ol.*?>"), "\n<ol>");
+
+            // add a linebreak instead of div-containers
+            content.replace(QRegularExpression("<\\/div>"), "\n");
+
             // convert html tags to markdown
             content = Utils::Misc::htmlToMarkdown(content);
 
@@ -254,8 +261,8 @@ void EvernoteImportDialog::importNotes(QString data) {
             content.remove(QRegularExpression("<.+?>"));
 
             // remove multiple \n
-            content.replace(QRegularExpression("\n+"), "\n");
-            content.replace(QRegularExpression("\n\\s+"), "\n");
+            content.replace(QRegularExpression("\n\n+"), "\n\n");
+            content.replace(QRegularExpression("\n\n\\s+"), "\n\n");
 
             QString noteText = Note::createNoteHeader(title) + content;
 
