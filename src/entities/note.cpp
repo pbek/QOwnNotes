@@ -1883,6 +1883,37 @@ QString Note::createNoteHeader(QString name) {
 }
 
 /**
+ * Returns the markdown of the inserted media file into a note
+ */
+QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine) {
+    if (file->exists() && (file->size() > 0)) {
+        QDir mediaDir(NoteFolder::currentLocalPath() +
+                              QDir::separator() + "media");
+
+        // created the media folder if it doesn't exist
+        if (!mediaDir.exists()) {
+            mediaDir.mkpath(mediaDir.path());
+        }
+
+        QFileInfo fileInfo(file->fileName());
+
+        // find a random name for the new file
+        QString newFileName =
+                QString::number(qrand()) + "." + fileInfo.suffix();
+
+        // copy the file the the media folder
+        file->copy(mediaDir.path() + QDir::separator() + newFileName);
+
+        // return the image link
+        // we add a "\n" in the end so that hoedown recognizes multiple images
+        return "![" + fileInfo.baseName() + "](file://media/" +
+               newFileName + ")" + (addNewLine ? "\n" : "");
+    }
+
+    return "";
+}
+
+/**
  * Fetches all tags of the note
  */
 //QList<Tag> Note::tags() {

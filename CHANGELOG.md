@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.09.13
+- more **Evernote note import** features
+  (for [Issue #332](https://github.com/pbek/QOwnNotes/issues/332))
+    - the note folder is now reloaded when closing the import dialog
+      if notes were imported
+    - you can now also import the images of your notes
+
 ## 16.09.12
 - the export menu entries in the note menu were moved to a `Export`
   sub-menu to declutter the main menu

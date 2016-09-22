@@ -4615,7 +4615,7 @@ void MainWindow::on_actionInsert_image_triggered() {
  * Inserts a media file into a note
  */
 bool MainWindow::insertMedia(QFile *file) {
-    QString text = getInsertMediaMarkdown(file);
+    QString text = Note::getInsertMediaMarkdown(file);
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
         // attempts to ask a script for an other markdown text
@@ -4639,36 +4639,6 @@ bool MainWindow::insertMedia(QFile *file) {
     }
 
     return false;
-}
-
-/**
- * Returns the markdown of the inserted media file into a note
- */
-QString MainWindow::getInsertMediaMarkdown(QFile *file) {
-    if (file->exists() && (file->size() > 0)) {
-        QDir mediaDir(notesPath + QDir::separator() + "media");
-
-        // created the media folder if it doesn't exist
-        if (!mediaDir.exists()) {
-            mediaDir.mkpath(mediaDir.path());
-        }
-
-        QFileInfo fileInfo(file->fileName());
-
-        // find a random name for the new file
-        QString newFileName =
-                QString::number(qrand()) + "." + fileInfo.suffix();
-
-        // copy the file the the media folder
-        file->copy(mediaDir.path() + QDir::separator() + newFileName);
-
-        // return the image link
-        // we add a "\n" in the end so that hoedown recognizes multiple images
-        return "![" + fileInfo.baseName() + "](file://media/" +
-                newFileName + ")\n";
-    }
-
-    return "";
 }
 
 /**
@@ -5215,7 +5185,7 @@ void MainWindow::insertHtml(QString html) {
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString imageTag = match.captured(0);
-        QUrl imageUrl = QUrl(match.captured(1) );
+        QUrl imageUrl = QUrl(match.captured(1));
 
         qDebug() << __func__ << " - 'imageUrl': " << imageUrl;
 
@@ -5244,7 +5214,7 @@ void MainWindow::insertHtml(QString html) {
             if (downloadUrlToFile(imageUrl, tempFile)) {
                 // copy image to media folder and generate markdown code for
                 // the image
-                QString markdownCode = getInsertMediaMarkdown(tempFile);
+                QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
                 if (!markdownCode.isEmpty()) {
                     // replace image tag with markdown code
                     html.replace(imageTag, markdownCode);
@@ -7635,4 +7605,9 @@ void MainWindow::on_actionStart_hidden_triggered(bool checked) {
 void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
     EvernoteImportDialog* dialog = new EvernoteImportDialog(this);
     dialog->exec();
+
+    if (dialog->getImportCount() > 0) {
+        // reload the note folder after importing new notes
+        buildNotesIndexAndLoadNoteDirectoryList(true);
+    }
 }

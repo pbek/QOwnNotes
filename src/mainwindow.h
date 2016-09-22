@@ -515,8 +515,6 @@ private:
 
     bool insertMedia(QFile *file);
 
-    QString getInsertMediaMarkdown(QFile *file);
-
     int currentNoteLineNumber();
 
     bool isValidMediaFile(QFile *file);

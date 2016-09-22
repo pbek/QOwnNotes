@@ -14,6 +14,26 @@
    <string>Evernote Import</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
+   <item row="1" column="0">
+    <widget class="QLineEdit" name="fileLineEdit">
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Evernote enex file</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
+    <widget class="QProgressBar" name="progressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="format">
+      <string>%v of %m note(s) imported</string>
+     </property>
+    </widget>
+   </item>
    <item row="1" column="1">
     <widget class="QPushButton" name="fileButton">
      <property name="text">
@@ -25,6 +45,16 @@
      </property>
     </widget>
    </item>
+   <item row="2" column="0" colspan="2">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="label_2">
      <property name="text">
@@ -32,7 +62,7 @@
      </property>
     </widget>
    </item>
-   <item row="4" column="0" colspan="2">
+   <item row="5" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -45,42 +75,22 @@
      </property>
     </spacer>
    </item>
-   <item row="1" column="0">
-    <widget class="QLineEdit" name="fileLineEdit">
-     <property name="readOnly">
-      <bool>true</bool>
-     </property>
-     <property name="placeholderText">
-      <string>Evernote enex file</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="0" colspan="2">
-    <widget class="QProgressBar" name="progressBar">
-     <property name="value">
-      <number>0</number>
-     </property>
-     <property name="format">
-      <string>%v of %m note(s) imported</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0" colspan="2">
+   <item row="7" column="0" colspan="2">
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
      <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+      <set>QDialogButtonBox::Ok</set>
      </property>
     </widget>
    </item>
-   <item row="2" column="0" colspan="2">
-    <widget class="QLabel" name="label_3">
+   <item row="3" column="0" colspan="2">
+    <widget class="QCheckBox" name="imageImportCheckBox">
      <property name="text">
-      <string>You can generate such an enex file from your Evernote desktop client when you export your notes.</string>
+      <string>Import images</string>
      </property>
-     <property name="wordWrap">
+     <property name="checked">
       <bool>true</bool>
      </property>
     </widget>

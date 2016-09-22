@@ -198,6 +198,8 @@ public:
 
     static QString createNoteHeader(QString name);
 
+    static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true);
+
 protected:
     int id;
     QString name;
