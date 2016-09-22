@@ -6,6 +6,9 @@
     - the note folder is now reloaded when closing the import dialog
       if notes were imported
     - you can now also import the images of your notes
+- added more Portuguese, Japanese, Italian, Hungarian and Dutch
+  translation (thank you mlimacarlos, piyo, vpistis, mlocati and
+  Fabijenna)
 
 ## 16.09.12
 - the export menu entries in the note menu were moved to a `Export`
