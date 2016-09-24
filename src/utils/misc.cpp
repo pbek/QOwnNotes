@@ -352,6 +352,12 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
             "<i.*?>(.+?)<\\/i>",
             QRegularExpression::CaseInsensitiveOption), "*\\1*");
     text.replace(QRegularExpression(
+            "<pre.*?>(.+?)<\\/pre>",
+            QRegularExpression::CaseInsensitiveOption), "\n```\n\\1\n```\n");
+    text.replace(QRegularExpression(
+            "<code.*?>(.+?)<\\/code>",
+            QRegularExpression::CaseInsensitiveOption), "\n```\n\\1\n```\n");
+    text.replace(QRegularExpression(
             "<h1.*?>(.+?)<\\/h1>",
             QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
     text.replace(QRegularExpression(
