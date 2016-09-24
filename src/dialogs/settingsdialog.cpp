@@ -1290,11 +1290,11 @@ void SettingsDialog::on_appMetricsCheckBox_toggled(bool checked) {
         int reply;
         reply = QMessageBox::question(
                 this,
-                "Disable usage tracking",
-                "Anonymous usage data helps to decide what parts of "
+                tr("Disable usage tracking"),
+                tr("Anonymous usage data helps to decide what parts of "
                         "QOwnNotes to improve next and to find and fix bugs."
                         "<br />Please disable it only if you really can't live"
-                        " with it.<br /><br />Really disable usage tracking?",
+                        " with it.<br /><br />Really disable usage tracking?"),
                 QMessageBox::Yes | QMessageBox::No,
                 QMessageBox::No);
         if (reply == QMessageBox::No) {
