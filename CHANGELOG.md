@@ -8,6 +8,9 @@
     - some instances where images weren't detected were fixed
     - images that are not used in the note text can now also be imported
     - code block import
+- added more Portuguese, Russian, Polish, Spanish, Italian, Hungarian
+  and Dutch translation (thank you mlimacarlos, frostyland, lucjan,
+  richarson, asoliverez, mlocati and Fabijenna)
 
 ## 16.09.13
 - more **Evernote note import** features

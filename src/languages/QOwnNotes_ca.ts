@@ -3153,6 +3153,16 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 Connection error message: </translation>
     </message>
     <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="1293"/>
+      <source>Disable usage tracking</source>
+      <translation type="unfinished">Disable usage tracking</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="1294"/>
+      <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+    </message>
+    <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1471"/>
       <source>new folder</source>
       <translation type="unfinished">new folder</translation>
