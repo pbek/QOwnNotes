@@ -66,6 +66,8 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
       in more languages
 - support for hierarchical note tagging and note subfolders
 - support for sharing notes on your ownCloud server
+- portable mode for carrying QOwnNotes around on USB sticks
+- Evernote import
 
 ## Building QOwnNotes
 To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
