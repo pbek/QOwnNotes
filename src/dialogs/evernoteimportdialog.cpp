@@ -106,7 +106,7 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
     query.setQuery("resource");
 
     QXmlResultItems result;
-    QHash<QString, QString> imageFileData;
+    QHash<QString, ImageFileData> imageFileDataHash;
 
     if (!query.isValid()) {
         return content;
@@ -114,10 +114,33 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
 
     query.evaluateTo(&result);
     QRegularExpressionMatch match;
+    int missingImageCount = 0;
 
     while (!result.next().isNull()) {
+        QString objectType;
+        QString suffix;
         query.setFocus(result.current());
 
+        // parse the mime data of the object
+        QString mime;
+        query.setQuery("mime/text()");
+        query.evaluateTo(&mime);
+
+        QRegularExpression mimeExpression(
+                "(.+)?\\/(.+)?", QRegularExpression::CaseInsensitiveOption);
+        QRegularExpressionMatch mimeMatch = mimeExpression.match(mime);
+
+        if (mimeMatch.hasMatch()) {
+            objectType = mimeMatch.captured(1);
+            suffix = mimeMatch.captured(2);
+        }
+
+        // we only want to import images
+        if (objectType != "image") {
+            continue;
+        }
+
+        // check the recognition attribute for an object type
         QString recognition;
         query.setQuery("recognition/text()");
         query.evaluateTo(&recognition);
@@ -125,78 +148,70 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
         recognition.replace("\\\"", "\"");
 
         match = QRegularExpression(
-                "objType=\"(.+?)\"",
-                QRegularExpression::CaseInsensitiveOption)
-                .match(recognition);
-
-        if (!match.hasMatch()) {
-            continue;
-        }
-
-        // get the object type of the resource
-        QString objectType = match.captured(1);
-
-        // we only want to import images
-        if (objectType != "image") {
-            continue;
-        }
-
-        match = QRegularExpression(
                 "objID=\"(.+?)\"",
                 QRegularExpression::CaseInsensitiveOption)
                 .match(recognition);
 
-        if (!match.hasMatch()) {
-            continue;
+        QString objectId;
+
+        if (match.hasMatch()) {
+            // get the object id of the resource to match it with the
+            // en-media hash
+            objectId = match.captured(1);
         }
 
-        // get the object id of the resource to match it with the
-        // en-media hash
-        QString objectId = match.captured(1);
+        // if no object id was found we will use a fallback id so we can
+        // import all missing images
+        if (objectId.isEmpty()) {
+            objectId = "obj" + QString::number(++missingImageCount);
+        }
 
         QString data;
         query.setQuery("data/text()");
         query.evaluateTo(&data);
 
         // store data in a QHash
-        imageFileData[objectId] = data;
+        imageFileDataHash[objectId].data = data;
+        imageFileDataHash[objectId].suffix = suffix;
+    }
+
+    if (imageFileDataHash.count() == 0) {
+        return content;
     }
 
     // match image tags
-    QRegularExpression re(
-            "<en-media.+?type=\"image/(.+)?\".+?hash=\"(.+?)\".*?>",
+    QRegularExpression re("<en-media.+?type=\"image/.+?\".*?>",
                           QRegularExpression::CaseInsensitiveOption);
     QRegularExpressionMatchIterator i = re.globalMatch(content);
+    QStringList importedObjectIds;
 
     // find all images
     while (i.hasNext()) {
-        QRegularExpressionMatch match = i.next();
-        QString imageTag = match.captured(0);
-        QString imageSuffix = match.captured(1);
-        QString imageHash = match.captured(2);
+        QRegularExpressionMatch imageMatch = i.next();
+        QString imageTag = imageMatch.captured(0);
 
-        if (!imageFileData.contains(imageHash)) {
+        // check for the hash
+        QRegularExpression re2("hash=\"(.+?)\"",
+                              QRegularExpression::CaseInsensitiveOption);
+        QRegularExpressionMatch hashMatch = re2.match(imageTag);
+
+        if (!hashMatch.hasMatch()) {
             continue;
         }
+
+        QString objectId = hashMatch.captured(1);
+
+        if (!imageFileDataHash.contains(objectId)) {
+            continue;
+        }
+
+        importedObjectIds << objectId;
 
         // get the base64 encoded image
-        QString data = imageFileData[imageHash];
+        ImageFileData imageFileData = imageFileDataHash[objectId];
 
-        // create a temporary file for the image
-        QTemporaryFile *tempFile = new QTemporaryFile(
-                QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
-                        imageSuffix);
-
-        if (!tempFile->open()) {
-            continue;
-        }
-
-        // write image to the temporary file
-        tempFile->write(QByteArray::fromBase64(data.toLatin1()));
-
-        // store the temporary image in the media folder and return the
-        // markdown code
-        QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
+        // get the markdown code for the image file data entry
+        QString markdownCode = getMarkdownForImageFileData(imageFileData);
 
         if (!markdownCode.isEmpty()) {
             // replace image tag with markdown code
@@ -204,7 +219,53 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
         }
     }
 
+    // get the image markdown code for missing images
+    QHashIterator<QString, ImageFileData> hashIterator(imageFileDataHash);
+    while (hashIterator.hasNext()) {
+        hashIterator.next();
+        QString objectId = hashIterator.key();
+        if (importedObjectIds.contains(objectId)) {
+            continue;
+        }
+
+        ImageFileData imageFileData = hashIterator.value();
+
+        // get the markdown code for the image file data entry
+        QString markdownCode = getMarkdownForImageFileData(imageFileData);
+
+        content += "\n" + markdownCode;
+    }
+
     return content;
+}
+
+/**
+ * Returns the markdown code for an image file data entry
+ *
+ * @param imageFileData
+ * @return
+ */
+QString EvernoteImportDialog::getMarkdownForImageFileData(
+        EvernoteImportDialog::ImageFileData &imageFileData) {
+    QString data = imageFileData.data;
+    QString imageSuffix = imageFileData.suffix;
+
+    // create a temporary file for the image
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
+            imageSuffix);
+
+    if (!tempFile->open()) {
+        return "";
+    }
+
+    // write image to the temporary file
+    tempFile->write(QByteArray::fromBase64(data.toLatin1()));
+
+    // store the temporary image in the media folder and return the
+    // markdown code
+    QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
+    return markdownCode;
 }
 
 /**

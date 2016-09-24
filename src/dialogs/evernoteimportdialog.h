@@ -12,6 +12,11 @@ class EvernoteImportDialog : public MasterDialog
 {
     Q_OBJECT
 
+    struct ImageFileData {
+        QString data;
+        QString suffix;
+    };
+
 public:
     explicit EvernoteImportDialog(QWidget *parent = 0);
     ~EvernoteImportDialog();
@@ -32,4 +37,6 @@ private:
     void initNoteCount(QString data);
 
     QString importImages(QString content, QXmlQuery query);
+
+    QString getMarkdownForImageFileData(ImageFileData &imageFileData);
 };

@@ -3,6 +3,10 @@
 ## 16.09.14
 - added some missing translations
   (for [Issue #333](https://github.com/pbek/QOwnNotes/issues/333))
+- more **Evernote note import** features
+  (for [Issue #332](https://github.com/pbek/QOwnNotes/issues/332))
+    - some instances where images weren't detected were fixed
+    - images that are not used in the note text can now also be imported
 
 ## 16.09.13
 - more **Evernote note import** features
