@@ -6587,7 +6587,7 @@ void MainWindow::on_actionAutocomplete_triggered() {
                 QTextCursor c = textEdit->textCursor();
                 c.movePosition(QTextCursor::StartOfWord,
                                QTextCursor::KeepAnchor);
-                c.insertText(text);
+                c.insertText(text + " ");
             } else {
                 textEdit->insertPlainText(text);
             }
