@@ -62,6 +62,12 @@ ARCHIVE_SHA256=`wget -qO- http://downloads.sourceforge.net/project/qownnotes/src
 sed -i "s/ARCHIVE-SHA256/$ARCHIVE_SHA256/g" PKGBUILD
 echo "Archive sha256: ${ARCHIVE_SHA256}"
 
+if [ -z ${ARCHIVE_SHA256} ]; then
+    echo
+    echo "Archive sha256 is empty!"
+    exit 1
+fi
+
 # replace the version in the .SRCINFO file
 sed -i "s/VERSION-STRING/$QOWNNOTES_VERSION/g" .SRCINFO
 

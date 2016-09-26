@@ -54,6 +54,12 @@ cd QOwnNotes
 echo "Archive sha512: ${ARCHIVE_SHA512}"
 echo "Archive size: ${ARCHIVE_SIZE}"
 
+if [ -z ${ARCHIVE_SHA512} ]; then
+    echo
+    echo "Archive sha512 is empty!"
+    exit 1
+fi
+
 cd ../overlay/app-office/qownnotes/
 cp ../../../QOwnNotes/build-systems/gentoo/qownnotes.ebuild .
 

@@ -56,6 +56,12 @@ cd QOwnNotes
 echo "Archive md5: ${ARCHIVE_MD5}"
 echo "Archive size: ${ARCHIVE_SIZE}"
 
+if [ -z ${ARCHIVE_MD5} ]; then
+    echo
+    echo "Archive md5 is empty!"
+    exit 1
+fi
+
 buildSystemPath="../../../QOwnNotes/build-systems/slackware"
 
 cd ../slackbuilds/14.1/qownnotes/
