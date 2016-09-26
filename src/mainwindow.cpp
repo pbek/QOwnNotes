@@ -6550,6 +6550,59 @@ void MainWindow::on_actionAutocomplete_triggered() {
         return;
     }
 
+    QMenu menu;
+
+    double resultValue;
+    if (solveEquationInNoteTextEdit(resultValue)) {
+        QString text = QString::number(resultValue);
+        QAction *action = menu.addAction("= " + text);
+        action->setData(text);
+        action->setWhatsThis("equation");
+    }
+
+    QStringList resultList;
+    if (noteTextEditAutoComplete(resultList)) {
+        Q_FOREACH(QString text, resultList) {
+                QAction *action = menu.addAction(text);
+                action->setData(text);
+                action->setWhatsThis("autocomplete");
+            }
+    }
+
+    QPoint globalPos = textEdit->mapToGlobal(
+            textEdit->cursorRect().bottomRight());
+
+    if (menu.actions().count() > 0) {
+        QAction *selectedItem = menu.exec(globalPos);
+        if (selectedItem) {
+            QString text = selectedItem->data().toString();
+            QString type = selectedItem->whatsThis();
+
+            if (text.isEmpty()) {
+                return;
+            }
+
+            if (type == "autocomplete") {
+                // overwrite the currently written word
+                QTextCursor c = textEdit->textCursor();
+                c.movePosition(QTextCursor::StartOfWord,
+                               QTextCursor::KeepAnchor);
+                c.insertText(text);
+            } else {
+                textEdit->insertPlainText(text);
+            }
+        }
+    }
+}
+
+/**
+ * Tries to find an equation in the current line and solves it
+ *
+ * @param returnValue
+ * @return
+ */
+bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
 
     // get the text from the current cursor to the start of the line
@@ -6568,10 +6621,11 @@ void MainWindow::on_actionAutocomplete_triggered() {
                     .match(equation);
 
     if (!match.hasMatch()) {
-        showStatusBarMessage(tr("no equation was found in front of the cursor"),
-                             5000);
-        return;
+        return false;
     }
+
+    showStatusBarMessage(tr("no equation was found in front of the cursor"),
+                         5000);
 
     equation = match.captured(1);
     qDebug() << __func__ << " - 'equation': " << equation;
@@ -6588,15 +6642,61 @@ void MainWindow::on_actionAutocomplete_triggered() {
     }
 
     showStatusBarMessage(tr("result for equation: %1 = %2")
-                                 .arg(equation, QString::number(resultValue)),
+                                 .arg(equation,
+                                      QString::number(resultValue)),
                          10000);
 
     // check if cursor is after the "="
     match = QRegularExpression("=\\s*$").match(text);
-    if (match.hasMatch()) {
-        // put the result into the note
-        textEdit->insertPlainText(QString::number(resultValue));
+    if (!match.hasMatch()) {
+        return false;
     }
+
+    returnValue = resultValue;
+    return true;
+}
+
+/**
+ * Tries to find words that start with the current word in the note text edit
+ *
+ * @param resultList
+ * @return
+ */
+bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+
+    // get the text from the current cursor to the start of the line
+    c.movePosition(QTextCursor::StartOfWord, QTextCursor::KeepAnchor);
+    QString text = c.selectedText();
+    qDebug() << __func__ << " - 'text': " << text;
+
+    if (text.isEmpty()) {
+        return false;
+    }
+
+    QString noteText = textEdit->toPlainText();
+
+    // find all items that match our current word
+    resultList = noteText.split(
+            QRegularExpression("[^\\w\\d]"), QString::SkipEmptyParts)
+            .filter(QRegularExpression(
+                    "^" + QRegularExpression::escape(text),
+                    QRegularExpression::CaseInsensitiveOption));
+
+    // we only want each word once
+    resultList.removeDuplicates();
+
+    // remove the text we already entered
+    resultList.removeOne(text);
+
+    if (resultList.count() == 0) {
+        return false;
+    }
+
+    qDebug() << __func__ << " - 'resultList': " << resultList;
+
+    return true;
 }
 
 /**

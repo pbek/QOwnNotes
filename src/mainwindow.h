@@ -660,4 +660,8 @@ private:
     void initTreeWidgetItemHeight();
 
     void updateTreeWidgetItemHeight(QTreeWidget *treeWidget, int height);
+
+    bool solveEquationInNoteTextEdit(double &returnValue);
+
+    bool noteTextEditAutoComplete(QStringList &resultList);
 };

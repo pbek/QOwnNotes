@@ -650,7 +650,8 @@ p, li { white-space: pre-wrap; }
       <string>Import</string>
      </property>
      <property name="icon">
-      <iconset theme="document-import"/>
+      <iconset theme="document-import">
+       <normaloff>.</normaloff>.</iconset>
      </property>
      <addaction name="actionImport_notes_from_Evernote"/>
     </widget>
@@ -1519,7 +1520,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionAutocomplete">
    <property name="text">
-    <string>Solve equation or open URL</string>
+    <string>Autocomplete, solve equation or open URL</string>
    </property>
    <property name="toolTip">
     <string>Solve a simple equation like '(2+3)*6=' in the current line</string>

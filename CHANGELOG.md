@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.09.15
+- you can now not only solve equations with `Ctrl + Space` but also 
+  **autocomplete** the **currently written word**
+
 ## 16.09.14
 - added some missing translations
   (for [Issue #333](https://github.com/pbek/QOwnNotes/issues/333))
