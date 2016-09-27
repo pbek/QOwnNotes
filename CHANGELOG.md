@@ -7,6 +7,8 @@
 - you now can **delete orphaned images** in a dialog with an image preview
   (for [Issue #204](https://github.com/pbek/QOwnNotes/issues/204))
     - you will find a new menu entry in the edit menu to open the dialog 
+- added more Portuguese, Polish, Italian and German translation (thank
+  you mlimacarlos, lucjan, mlocati and bigant)
 
 ## 16.09.15
 - you can now not only solve equations with `Ctrl + Space` but also 
