@@ -87,5 +87,6 @@
         <file alias="16x16/document-import.svg">icons/breeze-qownnotes/16x16/document-import.svg</file>
         <file alias="16x16/document-export.svg">icons/breeze-qownnotes/16x16/document-export.svg</file>
         <file alias="16x16/drive-removable-media.svg">icons/breeze-qownnotes/16x16/drive-removable-media.svg</file>
+        <file alias="16x16/archive-remove.svg">icons/breeze-qownnotes/16x16/archive-remove.svg</file>
     </qresource>
 </RCC>

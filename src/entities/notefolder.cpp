@@ -349,6 +349,13 @@ QString NoteFolder::currentLocalPath() {
 }
 
 /**
+ * Fetches the current media path
+ */
+QString NoteFolder::currentMediaPath() {
+    return NoteFolder::currentLocalPath() + QDir::separator() + "media";
+}
+
+/**
  * Checks if the subfolders should be viewed for the current note folder
  */
 bool NoteFolder::isCurrentShowSubfolders() {

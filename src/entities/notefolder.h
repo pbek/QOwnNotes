@@ -50,6 +50,7 @@ public:
     void setActiveNoteSubFolder(NoteSubFolder noteSubFolder);
     NoteSubFolder getActiveNoteSubFolder();
     void resetActiveNoteSubFolder();
+    static QString currentMediaPath();
 
 private:
     int id;

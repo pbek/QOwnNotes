@@ -4,6 +4,9 @@
 - added RTL support for the markdown preview
   (for [Issue #335](https://github.com/pbek/QOwnNotes/issues/335))
     - you can turn it on in the interface settings
+- you now can **delete orphaned images** in a dialog with an image preview
+  (for [Issue #204](https://github.com/pbek/QOwnNotes/issues/204))
+    - you will find a new menu entry in the edit menu to open the dialog 
 
 ## 16.09.15
 - you can now not only solve equations with `Ctrl + Space` but also 

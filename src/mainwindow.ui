@@ -724,6 +724,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Remove_note"/>
     <addaction name="actionSplit_note_at_cursor_position"/>
     <addaction name="actionShow_versions"/>
+    <addaction name="actionDelete_orphaned_images"/>
     <addaction name="separator"/>
     <addaction name="action_Encrypt_note"/>
     <addaction name="actionEdit_encrypted_note"/>
@@ -1772,6 +1773,15 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Import notes from Evernote</string>
+   </property>
+  </action>
+  <action name="actionDelete_orphaned_images">
+   <property name="icon">
+    <iconset theme="archive-remove" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</normaloff>:/icons/breeze-qownnotes/16x16/archive-remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Delete orphaned image files</string>
    </property>
   </action>
  </widget>

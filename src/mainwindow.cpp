@@ -58,6 +58,7 @@
 #include <dialogs/evernoteimportdialog.h>
 #include <dialogs/logdialog.h>
 #include <dialogs/sharedialog.h>
+#include <dialogs/orphanedimagesdialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -3074,7 +3075,7 @@ void MainWindow::removeSelectedNotes() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
 
-    int selectedItemsCount = ui->noteTreeWidget->selectedItems().size();
+    int selectedItemsCount = ui->noteTreeWidget->selectedItems().count();
 
     if (selectedItemsCount == 0) {
         return;
@@ -7710,4 +7711,12 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
         // reload the note folder after importing new notes
         buildNotesIndexAndLoadNoteDirectoryList(true);
     }
+}
+
+/**
+ * Shows a dialog to delete orphaned images
+ */
+void MainWindow::on_actionDelete_orphaned_images_triggered() {
+    OrphanedImagesDialog* dialog = new OrphanedImagesDialog(this);
+    dialog->exec();
 }

@@ -378,6 +378,8 @@ private slots:
 
     void on_actionImport_notes_from_Evernote_triggered();
 
+    void on_actionDelete_orphaned_images_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
