@@ -324,6 +324,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("markdownHighlightingInterval",
                       ui->markdownHighlightingCheckBox->isChecked() ?
                       ui->markdownHighlightingIntervalSpinBox->value() : 0);
+    settings.setValue("MainWindow/noteTextView.rtl",
+                      ui->noteTextViewRTLCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -455,6 +457,8 @@ void SettingsDialog::readSettings() {
             settings.value("allowDifferentNoteFileName").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
+    ui->noteTextViewRTLCheckBox->setChecked(
+            settings.value("MainWindow/noteTextView.rtl").toBool());
 
     const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
     Q_UNUSED(blocker3);

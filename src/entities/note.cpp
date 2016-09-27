@@ -1345,6 +1345,8 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
 
     // correct the strikeout tag
     result.replace(QRegularExpression("<del>([^<]+)<\\/del>"), "<s>\\1</s>");
+    bool rtl = settings.value("MainWindow/noteTextView.rtl").toBool();
+    QString rtlStyle = rtl ? "body {text-align: right; direction: rtl;}" : "";
 
     if (forExport) {
         // get defined body font from settings
@@ -1365,17 +1367,17 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
                     "h1 { margin: 5px 0 20px 0; }"
                     "h2, h3 { margin: 10px 0 15px 0; }"
                     "img { max-width: 100%; }"
-                    "a { color: #FF9137; text-decoration: none; } %1 %2"
+                    "a { color: #FF9137; text-decoration: none; } %1 %2 %4"
                     "</style></head><body>%3</body></html>")
-            .arg(codeStyleSheet, exportStyleSheet, result);
+            .arg(codeStyleSheet, exportStyleSheet, result, rtlStyle);
     } else {
         // for preview
         result = QString("<html><head><style>"
                     "h1 { margin: 5px 0 20px 0; }"
                     "h2, h3 { margin: 10px 0 15px 0; }"
-                    "a { color: #FF9137; text-decoration: none; } %1"
+                    "a { color: #FF9137; text-decoration: none; } %1 %3"
                     "</style></head><body>%2</body></html>")
-            .arg(codeStyleSheet, result);
+            .arg(codeStyleSheet, result, rtlStyle);
     }
 
     // check if width of embedded local images is too high

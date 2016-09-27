@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.09.16
+- added RTL support for the markdown preview
+  (for [Issue #335](https://github.com/pbek/QOwnNotes/issues/335))
+    - you can turn it on in the interface settings
+
 ## 16.09.15
 - you can now not only solve equations with `Ctrl + Space` but also 
   **autocomplete** the **currently written word** if it was already
