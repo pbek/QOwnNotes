@@ -7,12 +7,16 @@
   with `Ctrl + Space`
 - there a now is a new scripting method `script.noteTextEditWrite(text)`
   to write text to the note text edit
+  (for [Issue #339](https://github.com/pbek/QOwnNotes/issues/339))
     - for more information please take a look at the 
       [noteTextEditWrite documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#write-text-to-the-note-text-edit)
 - there a now is a new scripting method `script.noteTextEditSelectedText()`
   to read the selected text from the note text edit
+  (for [Issue #339](https://github.com/pbek/QOwnNotes/issues/339))
     - for more information please take a look at the 
       [noteTextEditSelectedText documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#read-the-selected-text-in-the-note-text-edit)
+- added more Portuguese, Polish, Italian and Russian translation (thank
+  you mlimacarlos, lucjan, mlocati and frostyland)
 
 ## 16.09.16
 - added RTL support for the markdown preview
