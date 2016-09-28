@@ -380,6 +380,8 @@ private slots:
 
     void on_actionDelete_orphaned_images_triggered();
 
+    void on_actionGitter_triggered();
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;

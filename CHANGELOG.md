@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.09.17
+- changed the IRC channel link to a fancier web client and added a link
+  to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
+
 ## 16.09.16
 - added RTL support for the markdown preview
   (for [Issue #335](https://github.com/pbek/QOwnNotes/issues/335))

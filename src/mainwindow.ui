@@ -688,13 +688,24 @@ p, li { white-space: pre-wrap; }
     <property name="title">
      <string>&amp;Help</string>
     </property>
+    <widget class="QMenu" name="menuOpen_chat">
+     <property name="title">
+      <string>Open chat</string>
+     </property>
+     <property name="icon">
+      <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
+     </property>
+     <addaction name="actionOpen_IRC_Channel"/>
+     <addaction name="actionGitter"/>
+    </widget>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionShow_changelog"/>
     <addaction name="action_Shortcuts"/>
     <addaction name="actionMarkdown_cheatsheet"/>
     <addaction name="action_Knowledge_base"/>
     <addaction name="actionGet_invloved"/>
-    <addaction name="actionOpen_IRC_Channel"/>
+    <addaction name="menuOpen_chat"/>
     <addaction name="actionReport_problems_or_ideas"/>
     <addaction name="actionDonate"/>
     <addaction name="separator"/>
@@ -1577,13 +1588,13 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string>Open chat</string>
+    <string>IRC</string>
    </property>
    <property name="toolTip">
-    <string>Open the #qownnotes IRC channel</string>
+    <string>Open the #qownnotes IRC channel, you have to stay online to get a response</string>
    </property>
    <property name="statusTip">
-    <string>Open the #qownnotes IRC channel</string>
+    <string>Open the #qownnotes IRC channel, you have to stay online to get a response</string>
    </property>
   </action>
   <action name="actionInsert_headline_from_note_filename">
@@ -1784,6 +1795,21 @@ p, li { white-space: pre-wrap; }
     <string>Delete orphaned image files</string>
    </property>
   </action>
+  <action name="actionGitter">
+   <property name="icon">
+    <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Gitter</string>
+   </property>
+   <property name="toolTip">
+    <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
+   </property>
+   <property name="statusTip">
+    <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -1809,9 +1835,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
