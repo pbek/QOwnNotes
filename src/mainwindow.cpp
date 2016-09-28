@@ -7729,3 +7729,18 @@ void MainWindow::on_actionDelete_orphaned_images_triggered() {
     OrphanedImagesDialog* dialog = new OrphanedImagesDialog(this);
     dialog->exec();
 }
+
+/**
+ * Writes text to the note text edit (for ScriptingService)
+ *
+ * @param text
+ */
+void MainWindow::writeToNoteTextEdit(QString text) {
+    QTextEdit *textEdit = activeNoteTextEdit();
+    textEdit->insertPlainText(text);
+}
+
+QString MainWindow::selectedNoteTextEditText() {
+    QTextEdit *textEdit = activeNoteTextEdit();
+    return textEdit->textCursor().selectedText();
+}

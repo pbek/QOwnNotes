@@ -80,6 +80,10 @@ public:
 
     void preReloadScriptingEngine();
 
+    void writeToNoteTextEdit(QString text);
+
+    QString selectedNoteTextEditText();
+
 protected:
     void closeEvent(QCloseEvent *event);
 

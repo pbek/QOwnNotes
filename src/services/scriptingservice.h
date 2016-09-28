@@ -42,6 +42,8 @@ public:
                                           QString icon = "");
     Q_INVOKABLE void createNote(QString text);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
+    Q_INVOKABLE void noteTextEditWrite(QString text);
+    Q_INVOKABLE QString noteTextEditSelectedText();
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

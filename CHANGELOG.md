@@ -4,7 +4,15 @@
 - changed the IRC channel link to a fancier web client and added a link
   to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
 - fixed a problem with special characters when auto-completing text
-  with `Ctrl + Space` 
+  with `Ctrl + Space`
+- there a now is a new scripting method `script.noteTextEditWrite(text)`
+  to write text to the note text edit
+    - for more information please take a look at the 
+      [noteTextEditWrite documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#write-text-to-the-note-text-edit)
+- there a now is a new scripting method `script.noteTextEditSelectedText()`
+  to read the selected text from the note text edit
+    - for more information please take a look at the 
+      [noteTextEditSelectedText documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#read-the-selected-text-in-the-note-text-edit)
 
 ## 16.09.16
 - added RTL support for the markdown preview

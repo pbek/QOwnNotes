@@ -18,6 +18,9 @@ QtObject {
 
         // create a menu entry "No button here", but no button for it
         script.registerCustomAction("noButtonAction", "No button here");
+
+        // create a menu entry to transform text with rot13
+        script.registerCustomAction("transformTextRot13", "Transform selected text with rot13", "rot13", "text-wrap");
     }
 
     /**
@@ -58,6 +61,18 @@ QtObject {
 
                 // create a new note
                 script.createNote(text);
+                break;
+
+            // transform selected text with rot13
+            case "transformTextRot13":
+                var text = script.noteTextEditSelectedText();
+
+                // do the rot13 transformation
+                text = text.replace(/[a-zA-Z]/g, function(c){
+                    return String.fromCharCode((c <= "Z" ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+                });
+
+                script.noteTextEditWrite(text);
                 break;
         }
     }

@@ -210,6 +210,54 @@ var clipboardHtml = script.clipboard(true);
 You may want to take a look at the example [custom-actions.qml](custom-actions.qml).
 
 
+### Write text to the note text edit
+
+#### Parameters
+
+```cpp
+/**
+ * Writes text to the current cursor position in the note text edit
+ *
+ * @param text
+ */
+void ScriptingService::noteTextEditWrite(QString text);
+```
+
+#### Usage in QML
+
+```javascript
+// write text to the note text edit
+script.noteTextEditWrite("My custom text");
+```
+
+You might want to look at the custom action `transformTextRot13` in the
+example [custom-actions.qml](custom-actions.qml).
+
+
+### Read the selected text in the note text edit
+
+#### Parameters
+
+```cpp
+/**
+ * Reads the selected text in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditSelectedText();
+```
+
+#### Usage in QML
+
+```javascript
+// read the selected text from the note text edit
+var text = script.noteTextEditSelectedText();
+```
+
+You might want to look at the custom action `transformTextRot13` in the
+example [custom-actions.qml](custom-actions.qml).
+
+
 ## Exposed classes
 
 ### Note

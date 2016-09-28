@@ -499,6 +499,35 @@ NoteApi* ScriptingService::currentNote() {
 }
 
 /**
+ * Writes text to the current cursor position in the note text edit
+ *
+ * @param text
+ */
+void ScriptingService::noteTextEditWrite(QString text) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->writeToNoteTextEdit(text);
+    }
+}
+
+/**
+ * Reads the selected text in the note text edit
+ *
+ * @return
+ */
+QString ScriptingService::noteTextEditSelectedText() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    MainWindow *mainWindow = MainWindow::instance();
+    return mainWindow != Q_NULLPTR ?
+           mainWindow->selectedNoteTextEditText() : "";
+}
+
+/**
  * QML wrapper to log to the log dialog
  *
  * @param text
