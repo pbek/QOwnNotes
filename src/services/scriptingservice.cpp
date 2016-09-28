@@ -507,10 +507,12 @@ void ScriptingService::noteTextEditWrite(QString text) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
+#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
         mainWindow->writeToNoteTextEdit(text);
     }
+#endif
 }
 
 /**
@@ -522,9 +524,13 @@ QString ScriptingService::noteTextEditSelectedText() {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
+#ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     return mainWindow != Q_NULLPTR ?
            mainWindow->selectedNoteTextEditText() : "";
+#else
+    return "";
+#endif
 }
 
 /**
