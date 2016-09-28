@@ -3,6 +3,8 @@
 ## 16.09.17
 - changed the IRC channel link to a fancier web client and added a link
   to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
+- fixed a problem with special characters when auto-completing text
+  with `Ctrl + Space` 
 
 ## 16.09.16
 - added RTL support for the markdown preview

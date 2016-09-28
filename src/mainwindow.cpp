@@ -6680,7 +6680,9 @@ bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
 
     // find all items that match our current word
     resultList = noteText.split(
-            QRegularExpression("[^\\w\\d]"), QString::SkipEmptyParts)
+            QRegularExpression("[^\\w\\d]",
+                               QRegularExpression::UseUnicodePropertiesOption),
+            QString::SkipEmptyParts)
             .filter(QRegularExpression(
                     "^" + QRegularExpression::escape(text),
                     QRegularExpression::CaseInsensitiveOption));
