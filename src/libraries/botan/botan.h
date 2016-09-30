@@ -22,6 +22,8 @@
 #include <botan/pubkey.h>
 #include <botan/rsa.h>
 #include <botan/ui.h>
+#include <botan/pbkdf2.h>
+#include <botan/sha160.h>
 #else
 
 #include <QtGlobal>
