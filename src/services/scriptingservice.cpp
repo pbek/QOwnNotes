@@ -431,6 +431,60 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
 }
 
 /**
+ * Calls the encryptionHook function for an object
+ *
+ * @param object
+ * @param text the text to encrypt or descrypt
+ * @param password the password
+ * @param decrypt if false encryption is demanded, if true decryption is
+ * demanded
+ * @return
+ */
+QString ScriptingService::callEncryptionHookForObject(
+        QObject *object, QString text, QString password, bool decrypt) {
+    if (methodExistsForObject(
+            object, "encryptionHook(QVariant,QVariant,QVariant)")) {
+        QVariant result;
+        QMetaObject::invokeMethod(object, "encryptionHook",
+                                  Q_RETURN_ARG(QVariant, result),
+                                  Q_ARG(QVariant, text),
+                                  Q_ARG(QVariant, password),
+                                  Q_ARG(QVariant, decrypt));
+        return result.toString();
+    }
+
+    return "";
+}
+
+/**
+ * Calls the encryptionHook function for all script components
+ * This function is called when notes are encrypted or decrypted
+ *
+ * @param text
+ * @param password the password
+ * @param decrypt if false encryption is demanded, if true decryption is
+ * demanded
+ * @return
+ */
+QString ScriptingService::callEncryptionHook(QString text, QString password,
+                                             bool decrypt) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        QString result = callEncryptionHookForObject(scriptComponent.object,
+                                                     text, password, decrypt);
+        if (!text.isEmpty()) {
+            return result;
+        }
+    }
+
+    return "";
+}
+
+/**
  * QML wrapper to start a detached process
  *
  * @param executablePath the path of the executable

@@ -56,6 +56,10 @@ public:
     QString callHandleNewNoteHeadlineHookForObject(QObject *object,
                                                    QString headline);
     QString callHandleNewNoteHeadlineHook(QString headline);
+    QString callEncryptionHookForObject(QObject *object, QString text,
+                                        QString password, bool decrypt = false);
+    QString callEncryptionHook(QString text, QString password,
+                               bool decrypt = false);
 
 private:
     QQmlEngine *_engine;

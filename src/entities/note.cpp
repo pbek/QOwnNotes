@@ -1598,14 +1598,22 @@ QString Note::encryptNoteText() {
         text = " ";
     }
 
-    // encrypt the text
-    BotanWrapper botanWrapper;
-    botanWrapper.setPassword(cryptoPassword);
-    botanWrapper.setSalt(BOTAN_SALT);
-    QString encryptedText = botanWrapper.Encrypt(text);
+    // check if we have an external encryption method
+    QString encryptedText = ScriptingService::instance()->callEncryptionHook(
+            text, cryptoPassword, false);
+
+    // check if a hook changed the text
+    if (encryptedText.isEmpty()) {
+        // fallback to Botan
+        // encrypt the text
+        BotanWrapper botanWrapper;
+        botanWrapper.setPassword(cryptoPassword);
+        botanWrapper.setSalt(BOTAN_SALT);
+        encryptedText = botanWrapper.Encrypt(text);
 
 //    SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
 //    QString encryptedText = crypto->encryptToString(text);
+    }
 
     // add the encrypted text to the new note text
     noteText += encryptedText + "\n" +
@@ -1665,16 +1673,25 @@ bool Note::canDecryptNoteText() {
         return false;
     }
 
-    // decrypt the note text
-    BotanWrapper botanWrapper;
-    botanWrapper.setPassword(cryptoPassword);
-    botanWrapper.setSalt(BOTAN_SALT);
-    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+    // check if we have an external decryption method
+    QString decryptedNoteText =
+            ScriptingService::instance()->callEncryptionHook(
+                    encryptedNoteText, cryptoPassword, true);
 
-    // fallback to SimpleCrypt
-    if (decryptedNoteText == "") {
-        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    // check if a hook changed the text
+    if (decryptedNoteText.isEmpty()) {
+        // decrypt the note text with Botan
+        BotanWrapper botanWrapper;
+        botanWrapper.setPassword(cryptoPassword);
+        botanWrapper.setSalt(BOTAN_SALT);
+        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+        // fallback to SimpleCrypt
+        if (decryptedNoteText == "") {
+            SimpleCrypt *crypto = new SimpleCrypt(
+                    static_cast<quint64>(cryptoKey));
+            decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+        }
     }
 
     return decryptedNoteText != "";
@@ -1700,16 +1717,25 @@ QString Note::getDecryptedNoteText() {
         return noteText;
     }
 
-    // decrypt the note text
-    BotanWrapper botanWrapper;
-    botanWrapper.setPassword(cryptoPassword);
-    botanWrapper.setSalt(BOTAN_SALT);
-    QString decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+    // check if we have an external decryption method
+    QString decryptedNoteText =
+            ScriptingService::instance()->callEncryptionHook(
+                    encryptedNoteText, cryptoPassword, true);
 
-    // fallback to SimpleCrypt
-    if (decryptedNoteText == "") {
-        SimpleCrypt *crypto = new SimpleCrypt(static_cast<quint64>(cryptoKey));
-        decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+    // check if a hook changed the text
+    if (decryptedNoteText.isEmpty()) {
+        // decrypt the note text
+        BotanWrapper botanWrapper;
+        botanWrapper.setPassword(cryptoPassword);
+        botanWrapper.setSalt(BOTAN_SALT);
+        decryptedNoteText = botanWrapper.Decrypt(encryptedNoteText);
+
+        // fallback to SimpleCrypt
+        if (decryptedNoteText == "") {
+            SimpleCrypt *crypto = new SimpleCrypt(
+                    static_cast<quint64>(cryptoKey));
+            decryptedNoteText = crypto->decryptToString(encryptedNoteText);
+        }
     }
 
     if (decryptedNoteText == "") {
