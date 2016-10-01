@@ -2157,7 +2157,6 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         qDebug() << "No notes! We will add some...";
         QStringList filenames = QStringList() <<
                 "Markdown Showcase.md" <<
-                "GitHub Flavored Markdown.md" <<
                 "Markdown Cheatsheet.md" <<
                 "Welcome to QOwnNotes.md";
         QString filename;
