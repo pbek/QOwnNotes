@@ -165,6 +165,18 @@
                <normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/gtk-select-font.svg</iconset>
              </property>
             </item>
+            <item>
+             <property name="text">
+              <string>Preview fonts</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">11</string>
+             </property>
+             <property name="icon">
+              <iconset theme="text-x-markdown" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -268,7 +280,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>11</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1711,6 +1723,212 @@
              </property>
              <item>
               <layout class="QGridLayout" name="gridLayout_29">
+               <item row="1" column="0">
+                <widget class="QFrame" name="frame_4">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_11">
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QGroupBox" name="groupBox_7">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="title">
+                     <string>Interface language</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_10">
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                       <property name="openExternalLinks">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QListWidget" name="languageListWidget">
+                       <item>
+                        <property name="text">
+                         <string>Automatic</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true"/>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Deutsch</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>German</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">de</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">English</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>English</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">en</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Español</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Spanish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">es</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Français</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>French</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">fr</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Italiano</string>
+                        </property>
+                        <property name="statusTip">
+                         <string>Italian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">it</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Magyar</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Hungarian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">hu</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">日本語</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Japanese</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ja</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Nederlands</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Dutch</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">nl</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Polski</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Polish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">pl</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Português</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Portuguese</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">pt</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">русский</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Russian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ru</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">中文</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Chinese</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">zh</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>If you change the language you have to restart the application for the changes to take action.</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
                <item row="1" column="1" rowspan="3">
                 <widget class="QFrame" name="frame_2">
                  <property name="frameShape">
@@ -1952,324 +2170,6 @@
                      </size>
                     </property>
                    </spacer>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QFrame" name="frame_4">
-                 <property name="frameShape">
-                  <enum>QFrame::NoFrame</enum>
-                 </property>
-                 <property name="frameShadow">
-                  <enum>QFrame::Raised</enum>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_11">
-                  <property name="leftMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <widget class="QGroupBox" name="groupBox_7">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>0</height>
-                     </size>
-                    </property>
-                    <property name="title">
-                     <string>Interface language</string>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_10">
-                     <item row="2" column="0">
-                      <widget class="QLabel" name="label_8">
-                       <property name="text">
-                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                       <property name="openExternalLinks">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QListWidget" name="languageListWidget">
-                       <item>
-                        <property name="text">
-                         <string>Automatic</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true"/>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Deutsch</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>German</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">de</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">English</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>English</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">en</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Español</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Spanish</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">es</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Français</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>French</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">fr</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Italiano</string>
-                        </property>
-                        <property name="statusTip">
-                         <string>Italian</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">it</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Magyar</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Hungarian</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">hu</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">日本語</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Japanese</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">ja</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Nederlands</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Dutch</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">nl</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Polski</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Polish</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">pl</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">Português</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Portuguese</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">pt</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">русский</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Russian</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">ru</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true">中文</string>
-                        </property>
-                        <property name="toolTip">
-                         <string>Chinese</string>
-                        </property>
-                        <property name="whatsThis">
-                         <string notr="true">zh</string>
-                        </property>
-                       </item>
-                      </widget>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QLabel" name="label_2">
-                       <property name="text">
-                        <string>If you change the language you have to restart the application for the changes to take action.</string>
-                       </property>
-                       <property name="wordWrap">
-                        <bool>true</bool>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item row="4" column="0" colspan="2">
-                <widget class="QGroupBox" name="groupBox_2">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="title">
-                  <string>Preview font settings</string>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_6">
-                  <item row="0" column="3">
-                   <widget class="QToolButton" name="noteTextViewResetButton">
-                    <property name="toolTip">
-                     <string>Reset font</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true">...</string>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0">
-                   <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
-                    <property name="text">
-                     <string>Default font:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="3">
-                   <widget class="QToolButton" name="noteTextViewCodeResetButton">
-                    <property name="toolTip">
-                     <string>Reset font</string>
-                    </property>
-                    <property name="text">
-                     <string notr="true">...</string>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0">
-                   <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
-                    <property name="text">
-                     <string>Code font:</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="1">
-                   <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
-                    <property name="readOnly">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="1">
-                   <widget class="QLineEdit" name="noteTextViewFontLabel">
-                    <property name="readOnly">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="2">
-                   <widget class="QToolButton" name="noteTextViewButton">
-                    <property name="toolTip">
-                     <string>Set a new font</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="2">
-                   <widget class="QToolButton" name="noteTextViewCodeButton">
-                    <property name="toolTip">
-                     <string>Set a new font</string>
-                    </property>
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="icon">
-                     <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
-                      <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="1" colspan="3">
-                   <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
-                    <property name="text">
-                     <string>View text right to left (RTL)</string>
-                    </property>
-                   </widget>
                   </item>
                  </layout>
                 </widget>
@@ -3265,6 +3165,147 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="previewFontPage">
+            <layout class="QGridLayout" name="gridLayout_42">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QGroupBox" name="groupBox_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="title">
+                <string>Fonts</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_6">
+                <item row="0" column="3">
+                 <widget class="QToolButton" name="noteTextViewResetButton">
+                  <property name="toolTip">
+                   <string>Reset font</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="noteTextViewFontHeadlineLabel">
+                  <property name="text">
+                   <string>Default font:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="3">
+                 <widget class="QToolButton" name="noteTextViewCodeResetButton">
+                  <property name="toolTip">
+                   <string>Reset font</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="noteTextViewCodeFontHeadlineLabel">
+                  <property name="text">
+                   <string>Code font:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QLineEdit" name="noteTextViewCodeFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="noteTextViewFontLabel">
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QToolButton" name="noteTextViewButton">
+                  <property name="toolTip">
+                   <string>Set a new font</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QToolButton" name="noteTextViewCodeButton">
+                  <property name="toolTip">
+                   <string>Set a new font</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="gtk-select-font" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</normaloff>:/icons/breeze-qownnotes/16x16/gtk-select-font.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1" colspan="3">
+                 <widget class="QCheckBox" name="noteTextViewRTLCheckBox">
+                  <property name="text">
+                   <string>View text right to left (RTL)</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <spacer name="verticalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -3299,8 +3340,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

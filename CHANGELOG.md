@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.10.1
+- moved the preview font settings to a new page in the settings to make
+  more room in the interface settings
+
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
   via the scripting engine

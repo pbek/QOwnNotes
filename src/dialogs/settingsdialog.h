@@ -42,7 +42,8 @@ public:
         GeneralPage,
         DebugPage,
         EditorFontColorPage,
-        PortableModePage
+        PortableModePage,
+        PreviewFontPage
     };
 
     explicit SettingsDialog(int page = 0,
