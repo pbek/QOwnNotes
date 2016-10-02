@@ -479,7 +479,7 @@ QString ScriptingService::callEncryptionHook(QString text, QString password,
 
         QString result = callEncryptionHookForObject(scriptComponent.object,
                                                      text, password, decrypt);
-        if (!text.isEmpty()) {
+        if (!result.isEmpty()) {
             return result;
         }
     }
