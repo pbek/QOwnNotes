@@ -16,6 +16,8 @@
       `script.platformIsLinux()`, `script.platformIsOSX()` and `script.platformIsWindows()` 
     - for more information on the new commands please take a look at the 
       [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
+- added some fixes to the demo script
+  [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml)
 
 ## 16.09.17
 - changed the IRC channel link to a fancier web client and added a link

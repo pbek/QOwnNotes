@@ -25,7 +25,7 @@ QtObject {
             var output = script.downloadUrlToString(text);
 
             // parse the headline
-            var re2 = /<span class="\s*js-issue-title">([^>]+)<\/span>/igm
+            var re2 = /<span class="\s*js-issue-title">([^>]+)<\/span>/im
             var result2 = re2.exec(output);
 
             if (result2 !== null) {
@@ -38,9 +38,10 @@ QtObject {
             }
 
             script.log("no headline was found!");
+        } else {
+            script.log("no GitHub issue url was found");
         }
 
-        script.log("no GitHub issue url was found");
         return "";
     }
 
