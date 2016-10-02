@@ -13,7 +13,7 @@
       ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml))
     - you can disable the password dialog with `script.encryptionDisablePassword()`
     - to start an external synchronous process you can use `script.startSynchronousProcess()`
-    - to check on which platform the script is running there is
+    - to check on which platform the script is running you can use
       `script.platformIsLinux()`, `script.platformIsOSX()` and `script.platformIsWindows()` 
     - for more information on the new commands please take a look at the 
       [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
