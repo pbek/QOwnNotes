@@ -32,6 +32,8 @@ public:
     static bool validateScript(Script script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,
                                           QStringList parameters);
+    Q_INVOKABLE QByteArray startSynchronousProcess(
+            QString executablePath, QStringList parameters, QByteArray data);
     Q_INVOKABLE QString currentNoteFolderPath();
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
@@ -44,6 +46,10 @@ public:
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(QString text);
     Q_INVOKABLE QString noteTextEditSelectedText();
+    Q_INVOKABLE void encryptionDisablePassword();
+    Q_INVOKABLE bool platformIsLinux();
+    Q_INVOKABLE bool platformIsOSX();
+    Q_INVOKABLE bool platformIsWindows();
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

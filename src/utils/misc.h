@@ -36,5 +36,8 @@ namespace Utils {
         QString prependPortableDataPathIfNeeded(QString path);
         QString makePathRelativeToPortableDataPathIfNeeded(QString path);
         QString htmlToMarkdown(QString text);
+        QByteArray startSynchronousProcess(
+                QString executablePath, QStringList parameters,
+                QByteArray data);
     }
 }

@@ -134,6 +134,9 @@ void ScriptingService::reloadScriptComponents() {
     // clear the component cache
     _engine->clearComponentCache();
 
+    // enable the password dialog
+    qApp->setProperty("encryptionPasswordDisabled", false);
+
     // init the components again
     initComponents();
 }
@@ -500,6 +503,23 @@ bool ScriptingService::startDetachedProcess(QString executablePath,
 }
 
 /**
+ * QML wrapper to start a synchronous process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param data the data that will be written to the process
+ * @return the text that was returned by the process
+ */
+QByteArray ScriptingService::startSynchronousProcess(
+        QString executablePath, QStringList parameters, QByteArray data) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    return Utils::Misc::startSynchronousProcess(
+            executablePath, parameters, data);
+}
+
+/**
  * QML wrapper to get the current note folder path
  *
  * @return the path of the current note folder
@@ -707,4 +727,47 @@ QString ScriptingService::clipboard(bool asHtml) {
     QClipboard *clipboard = QApplication::clipboard();
     const QMimeData *mimeData = clipboard->mimeData(QClipboard::Clipboard);
     return asHtml ? mimeData->html() : mimeData->text();
+}
+
+/**
+ * Disables the note encryption password dialog
+ */
+void ScriptingService::encryptionDisablePassword() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    qApp->setProperty("encryptionPasswordDisabled", true);
+}
+
+/**
+ * Returns true if the current platform is Linux
+ */
+bool ScriptingService::platformIsLinux() {
+#ifdef Q_OS_LINUX
+    return true;
+#else
+    return false;
+#endif
+}
+
+/**
+ * Returns true if the current platform is Mac OS X
+ */
+bool ScriptingService::platformIsOSX() {
+#ifdef Q_OS_MAC
+    return true;
+#else
+    return false;
+#endif
+}
+
+/**
+ * Returns true if the current platform is Windows
+ */
+bool ScriptingService::platformIsWindows() {
+#ifdef Q_OS_WIN
+    return true;
+#else
+    return false;
+#endif
 }

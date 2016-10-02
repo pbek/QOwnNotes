@@ -4687,26 +4687,39 @@ void MainWindow::on_action_Encrypt_note_triggered()
         return;
     }
 
-    QString labelText = tr(
+    // the password dialog can be disabled by scripts
+    bool dialogDisabled = qApp->property("encryptionPasswordDisabled").toBool();
+
+    if (!dialogDisabled) {
+        QString labelText = tr(
             "Please enter your <strong>password</strong> to encrypt the note."
             "<br />Keep in mind that you have to <strong>remember</strong> "
             "your password to read the content of the note<br /> and that you "
-           "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
-    PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
-    int dialogResult = dialog->exec();
+            "can <strong>only</strong> do that <strong>in QOwnNotes</strong>!");
+        PasswordDialog* dialog = new PasswordDialog(this, labelText, true);
+        int dialogResult = dialog->exec();
 
-    // if user pressed ok take the password
-    if (dialogResult == QDialog::Accepted) {
+        // if the user didn't pressed ok return
+        if (dialogResult != QDialog::Accepted) {
+            return;
+        }
+
+        // take the password
         QString password = dialog->password();
 
-        // if password wasn't empty encrypt the note
-        if (!password.isEmpty()) {
-            currentNote.setCryptoPassword(password);
-            currentNote.store();
-            QString noteText = currentNote.encryptNoteText();
-            ui->noteTextEdit->setPlainText(noteText);
+        // if password was empty return
+        if (password.isEmpty()) {
+            return;
         }
+
+        // set the password
+        currentNote.setCryptoPassword(password);
+        currentNote.store();
     }
+
+    // encrypt the note
+    QString noteText = currentNote.encryptNoteText();
+    ui->noteTextEdit->setPlainText(noteText);
 }
 
 /**

@@ -206,6 +206,10 @@ QString Utils::Misc::shorten(
 
 /**
  * Starts an executable detached with parameters
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @return true on success, false otherwise
  */
 bool Utils::Misc::startDetachedProcess(
         QString executablePath, QStringList parameters) {
@@ -218,6 +222,41 @@ bool Utils::Misc::startDetachedProcess(
 #else
     return process.startDetached(executablePath, parameters);
 #endif
+}
+
+/**
+ * Starts an executable synchronous with parameters
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param data the data that will be written to the process
+ * @return the text that was returned by the process
+ */
+QByteArray Utils::Misc::startSynchronousProcess(
+        QString executablePath, QStringList parameters, QByteArray data) {
+    QProcess process;
+
+    // start executablePath synchronous with parameters
+#ifdef Q_OS_MAC
+    process.start(
+        "open", QStringList() << executablePath << "--args" << parameters);
+#else
+    process.start(executablePath, parameters);
+#endif
+
+    if (!process.waitForStarted()) {
+        return QByteArray();
+    }
+
+    process.write(data);
+    process.closeWriteChannel();
+
+    if (!process.waitForFinished()) {
+        return QByteArray();
+    }
+
+    QByteArray result = process.readAll();
+    return result;
 }
 
 /**

@@ -35,6 +35,25 @@ You may want to take a look at the example [custom-actions.qml](custom-actions.q
 or [execute-command-after-note-update.qml](execute-command-after-note-update.qml).
 
 
+```cpp
+ * QML wrapper to start a synchronous process
+ *
+ * @param executablePath the path of the executable
+ * @param parameters a list of parameter strings
+ * @param data the data that will be written to the process
+ * @return the text that was returned by the process
+bool QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+```
+
+#### Usage in QML
+
+```javascript
+var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
+```
+
+You may want to take a look at the example [encryption-keybase.qml](encryption-keybase.qml).
+
+
 ### Getting the path of the current note folder
 
 #### Parameters
@@ -256,6 +275,25 @@ var text = script.noteTextEditSelectedText();
 
 You might want to look at the custom action `transformTextRot13` in the
 example [custom-actions.qml](custom-actions.qml).
+
+
+### Check if platform is Linux, OS X or Windows
+
+#### Parameters
+
+```cpp
+bool ScriptingService::platformIsLinux();
+bool ScriptingService::platformIsOSX();
+bool ScriptingService::platformIsWindows();
+```
+
+#### Usage in QML
+
+```javascript
+if (script.platformIsLinux()) {
+    // only will be executed if under Linux
+}
+```
 
 
 ## Exposed classes

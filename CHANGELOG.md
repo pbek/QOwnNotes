@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 16.09.18
+- you now can use your **custom method** to **encrypt and decrypt notes**
+  (for [Issue #334](https://github.com/pbek/QOwnNotes/issues/334))
+    - you can use the new scripting hook `encryptionHook()` do implement
+      your own encryption
+    - there are examples to encrypt notes with **keybase.io**
+      ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)),
+      **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) or
+      do a trivial "encryption" with ROT13
+      ([encryption-rot13.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml))
+    - you can disable the password dialog with `script.encryptionDisablePassword()`
+    - to start an external synchronous process you can use `script.startSynchronousProcess()`
+    - to check on which platform the script is running there is
+      `script.platformIsLinux()`, `script.platformIsOSX()` and `script.platformIsWindows()` 
+    - for more information on the new commands please take a look at the 
+      [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
+
 ## 16.09.17
 - changed the IRC channel link to a fancier web client and added a link
   to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
