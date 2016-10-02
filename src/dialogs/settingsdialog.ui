@@ -1911,6 +1911,17 @@
                          <string notr="true">zh</string>
                         </property>
                        </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">العَرَبِيَّة</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Arabic</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ar</string>
+                        </property>
+                       </item>
                       </widget>
                      </item>
                      <item row="0" column="0">

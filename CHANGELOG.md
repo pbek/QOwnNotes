@@ -1,6 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.10.1
+- QOwnNotes is now available in **Arabic language** (a big thank you to
+  yousufinternet)
 - moved the preview font settings to a new page in the settings to make
   more room in the interface settings
 - there now is a new checkbox `Use internal icon theme instead of system
