@@ -2,6 +2,7 @@
 
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
+  via the scripting engine
   (for [Issue #334](https://github.com/pbek/QOwnNotes/issues/334))
     - you can use the new scripting hook `encryptionHook()` do implement
       your own encryption
@@ -21,7 +22,10 @@
 - the menu entry `Show tag pane under navigation pane` was replaced by
   `Show note list under tag pane` where note list and tag pane are swapped
   (for [Issue #340](https://github.com/pbek/QOwnNotes/issues/340))
-  
+- added more Portuguese, Russian, Japanese, Spanish, Italian, French and
+  German translation (thank you mlimacarlos, Maboroshy, piyo,
+  richarson, mlocati, lepascalou and bigant)
+
 ## 16.09.17
 - changed the IRC channel link to a fancier web client and added a link
   to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
