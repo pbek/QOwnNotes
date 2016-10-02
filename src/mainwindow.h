@@ -370,7 +370,7 @@ private slots:
     void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false,
                                                  bool forceLoad = false);
 
-    void on_actionShow_tag_pane_under_navigation_pane_toggled(bool arg1);
+    void on_actionShow_note_list_under_tag_pane_toggled(bool arg1);
 
     void onCustomActionInvoked(QString identifier);
 
@@ -655,7 +655,7 @@ private:
 
     void toggleOneColumnMode(bool activated, bool toggleOtherPanes = false);
 
-    void initShowTagPaneUnderNavigationPane();
+    void initShowNoteListUnderTagPane();
 
     bool selectedNotesHaveTags();
 

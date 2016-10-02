@@ -399,7 +399,7 @@ MainWindow::MainWindow(QWidget *parent) :
             schemaCount);
 
     // init the showing of the tag pane under the navigation pane
-    initShowTagPaneUnderNavigationPane();
+    initShowNoteListUnderTagPane();
 }
 
 MainWindow::~MainWindow() {
@@ -7627,12 +7627,12 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
  *
  * @param arg1
  */
-void MainWindow::on_actionShow_tag_pane_under_navigation_pane_toggled(
+void MainWindow::on_actionShow_note_list_under_tag_pane_toggled(
         bool arg1) {
     saveMainSplitterState(false, false, false, false);
 
     if (arg1) {
-        _noteListSplitter->addWidget(ui->tagFrame);
+        _noteListSplitter->insertWidget(0, ui->tagFrame);
     } else {
         mainSplitter->insertWidget(0, ui->tagFrame);
     }
@@ -7640,16 +7640,16 @@ void MainWindow::on_actionShow_tag_pane_under_navigation_pane_toggled(
     restoreMainSplitterState();
 
     QSettings settings;
-    settings.setValue("showTagPaneUnderNavigationPane", arg1);
+    settings.setValue("showNoteListUnderTagPane", arg1);
 }
 
 /**
  * Inits the showing of the tag pane under the navigation pane
  */
-void MainWindow::initShowTagPaneUnderNavigationPane() {
+void MainWindow::initShowNoteListUnderTagPane() {
     QSettings settings;
-    if (settings.value("showTagPaneUnderNavigationPane", false).toBool()) {
-        ui->actionShow_tag_pane_under_navigation_pane->setChecked(true);
+    if (settings.value("showNoteListUnderTagPane", false).toBool()) {
+        ui->actionShow_note_list_under_tag_pane->setChecked(true);
     }
 }
 

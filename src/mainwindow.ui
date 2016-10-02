@@ -780,7 +780,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_between_edit_and_preview"/>
     <addaction name="actionUse_vertical_preview_layout"/>
     <addaction name="actionUse_one_column_mode"/>
-    <addaction name="actionShow_tag_pane_under_navigation_pane"/>
+    <addaction name="actionShow_note_list_under_tag_pane"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
@@ -1737,12 +1737,12 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+Shift+X</string>
    </property>
   </action>
-  <action name="actionShow_tag_pane_under_navigation_pane">
+  <action name="actionShow_note_list_under_tag_pane">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show tag pane under navigation pane</string>
+    <string>Show note list under tag pane</string>
    </property>
   </action>
   <action name="actionDonate">
@@ -1835,9 +1835,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

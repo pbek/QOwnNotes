@@ -18,7 +18,10 @@
       [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
 - added some fixes to the demo script
   [insert-headline-with-link-from-github-url.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml)
-
+- the menu entry `Show tag pane under navigation pane` was replaced by
+  `Show note list under tag pane` where note list and tag pane are swapped
+  (for [Issue #340](https://github.com/pbek/QOwnNotes/issues/340))
+  
 ## 16.09.17
 - changed the IRC channel link to a fancier web client and added a link
   to the [qownnotes Gitter room](https://gitter.im/qownnotes/qownnotes)
