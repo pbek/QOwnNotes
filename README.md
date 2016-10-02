@@ -54,7 +54,9 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
 - manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
-- encryption of notes (AES-256)
+- encryption of notes (AES-256 is built in or you can use custom encryption methods like
+  **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or
+  **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - dark mode theme support (if your operating system supports it)
 - support for freedesktop theme icons, so you can use QOwnNotes with your 
   native desktop icons and with your favorite dark desktop theme
