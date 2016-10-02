@@ -1,7 +1,7 @@
 import QtQml 2.0
 
 /**
- * This script will encrypt and decrypt notes with keybase.io
+ * This script will encrypt and decrypt notes with https://keybase.io
  * 
  * You have to use your keybase user instead of "pbek"
  */

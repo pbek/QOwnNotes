@@ -1,6 +1,6 @@
 # QOwnNotes Changelog
 
-## 16.09.18
+## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
   (for [Issue #334](https://github.com/pbek/QOwnNotes/issues/334))
     - you can use the new scripting hook `encryptionHook()` do implement
