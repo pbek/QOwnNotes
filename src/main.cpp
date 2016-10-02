@@ -63,7 +63,9 @@
 bool mainStartupMisc() {
     QSettings settings;
 
-    if (QIcon::themeName() == "") {
+    bool internalIconTheme = settings.value("internalIconTheme").toBool();
+
+    if (QIcon::themeName() == "" || internalIconTheme) {
         QIcon::setThemeName("breeze-qownnotes");
     }
 

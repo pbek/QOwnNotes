@@ -2498,27 +2498,32 @@ Are the folder and the file writeable?</source>
         <translation>启用深色模式</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2023"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2001"/>
+        <source>You need to restart the application to let this setting take effect</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2042"/>
         <source>Item sizes in the main window</source>
         <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2109"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2128"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
         <translation>您需要重新启动应用程序已使更改生效。如果你设置markdown高亮显示间隔为 0, 高亮将被禁用。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2112"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2131"/>
         <source>Markdown highlighting</source>
         <translation>Markdown 高亮</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2131"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2150"/>
         <source>Highlighting interval [ms]:</source>
         <translation>高亮间隔 [ms]:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2154"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2173"/>
         <source>Enable markdown highlighting</source>
         <translation>启用 markdown 高亮</translation>
     </message>
@@ -2547,39 +2552,39 @@ Are the folder and the file writeable?</source>
         <translation type="obsolete">Preview font settings</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3042"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3211"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3061"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3230"/>
         <source>Default font:</source>
         <translation>默认字体︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3084"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3235"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3103"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3254"/>
         <source>Code font:</source>
         <translation>代码字体︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2198"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2217"/>
         <source>Main window shortcuts</source>
         <translation>主窗口快捷键</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2661"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2680"/>
         <source>Do this at your own risk!</source>
         <translation>这样做风险由你自己承担 ！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2664"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2683"/>
         <source>Ignore all external note folder changes</source>
         <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3004"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3023"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3007"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3026"/>
         <source>Use GitHub line breaks</source>
         <translation>使用 GitHub 换行符</translation>
     </message>
@@ -2634,17 +2639,17 @@ Are the folder and the file writeable?</source>
         <translation>深色模式</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2880"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2899"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
         <translation type="unfinished">Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2001"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2020"/>
         <source>Notes folders</source>
         <translation>笔记文件夹</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2007"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2026"/>
         <source>Show note folders in main area</source>
         <translation>在主区域显示笔记目录</translation>
     </message>
@@ -2679,17 +2684,17 @@ Are the folder and the file writeable?</source>
         <translation>重启后生效 Restart the application for the changes to take action.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2494"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2513"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>修改的脚本文件需重新加载脚本引擎</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2497"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2516"/>
         <source>Reload scripting engine</source>
         <translation>重新加载脚本引擎</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2504"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2523"/>
         <source>Validate script</source>
         <translation>验证脚本</translation>
     </message>
@@ -2699,17 +2704,17 @@ Are the folder and the file writeable?</source>
         <translation>通用</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2586"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2605"/>
         <source>Notes</source>
         <translation>笔记</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2648"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2667"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;勾选这个框，你会收到所有外部修改提醒，即使被修改的笔记并不是正在被编辑. 推荐 &lt;span style=&quot; font-style:italic;&quot;&gt;不要勾选&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2624"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2643"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>如果设定低于 10秒, 在跟旧版 ownCloud 同步时会遇到同步问题. 请先测试, 如果有同步冲突问题请调高这一数值.</translation>
@@ -2720,65 +2725,65 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">Japanese</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2628"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2647"/>
         <source>note save interval time [sec]</source>
         <translation>笔记保存时间间隔（秒）</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2654"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2673"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>当前笔记被外部修改时通知</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2874"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1244"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1253"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2893"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1250"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1259"/>
         <source>Database</source>
         <translation>数据库</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2890"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2909"/>
         <source>Reinitialize Database</source>
         <translation>数据库出厂状态复位</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2674"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2693"/>
         <source>Clear application data and exit</source>
         <translation>清除应用程序的数据并退出</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2699"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2690"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1317"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2709"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1323"/>
         <source>Clear app data and exit</source>
         <translation>清除应用程序的数据并退出</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2900"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2919"/>
         <source>Update dialog</source>
         <translation>更新对话框</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2746"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2765"/>
         <source>Default note file extension</source>
         <translation>默认笔记文件扩展名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2831"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2850"/>
         <source>External editor</source>
         <translation>外部编辑器</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2844"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2863"/>
         <source>path to external editor, leave empty for default</source>
         <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2851"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2870"/>
         <source>set external editor</source>
         <translation>设置外部编辑器</translation>
     </message>
@@ -2818,27 +2823,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>脚本编写</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2265"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2284"/>
         <source>Your scripts</source>
         <translation>你的脚本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2332"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2351"/>
         <source>&amp;Add script</source>
         <translation>添加脚本(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2356"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2375"/>
         <source>&amp;Remove script</source>
         <translation>删除脚本(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2459"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2478"/>
         <source>Click here to select your QML script</source>
         <translation>单击此处选择你的 QML 脚本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2452"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2471"/>
         <source>path to your QML file</source>
         <translation>你的QML文件路径</translation>
     </message>
@@ -2879,7 +2884,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="638"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2422"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2441"/>
         <source>Name:</source>
         <translation>名称︰</translation>
     </message>
@@ -3001,129 +3006,139 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>使用暗色托盘图标</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2059"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2078"/>
         <source>Toolbar icon size:</source>
         <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2029"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2048"/>
         <source>List and tree item height:</source>
         <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2072"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2091"/>
         <source>Reset the icon size</source>
         <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2086"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2105"/>
         <source>Reset the item height</source>
         <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3287"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3306"/>
         <source>View text right to left (RTL)</source>
         <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2235"/>
         <source>Search for shortcut</source>
         <translation>搜索快捷键</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2415"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1995"/>
+        <source>Icons</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2004"/>
+        <source>Use internal icon theme instead of system icon theme</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2434"/>
         <source>Script path:</source>
         <translation>脚本路径︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2442"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2461"/>
         <source>script name</source>
         <translation>脚本名称</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2611"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2630"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation>允许笔记文件名与标题不一致。&lt;br&gt;注意 ownCloud 笔记须一致 ！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2636"/>
         <source>Allow note file name to be different from headline</source>
         <translation>允许笔记文件名与标题不一致</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2635"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2654"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>选中此项如果你希望忽略当前正在编辑的笔记的所有外部修改通知</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2641"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2660"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>当前笔记被外部修改时无视通知</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2700"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2719"/>
         <source>App instance</source>
         <translation>应用程序外观</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2706"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2725"/>
         <source>Only allow one app instance at the same time</source>
         <translation>同时只允许一个应用程序实例</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2713"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2732"/>
         <source>You need to restart the application to let these changes take action.</source>
         <translation>您需要重新启动应用程序以使更改生效。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2752"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2771"/>
         <source>Add a custom file extension</source>
         <translation>添加自定义文件扩展名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2766"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2785"/>
         <source>Remove a custom file extension</source>
         <translation>删除自定义文件扩展名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2805"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2824"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>如果你想要添加自定义扩展名只需键入扩展名，如&quot;taskpaper&quot;。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2809"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2828"/>
         <source>Text file (txt)</source>
         <translation>文本文件 (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2837"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2856"/>
         <source>Path to external editor:</source>
         <translation>外部编辑器的路径︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2906"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2925"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>不自动显示更新对话框</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3036"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3191"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3055"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3210"/>
         <source>Fonts</source>
         <translation>字体</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3059"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3101"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3259"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3273"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3078"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3120"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3278"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3292"/>
         <source>Set a new font</source>
         <translation>设定新字体</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3070"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3115"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3197"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3221"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3089"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3134"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3216"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3240"/>
         <source>Reset font</source>
         <translation>重置字体</translation>
     </message>
@@ -3133,17 +3148,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Debug调试</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2947"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2966"/>
         <source>Debug information</source>
         <translation>Debug 信息</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2989"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;如果使用中有任何&lt;span style=&quot; font-weight:600;&quot;&gt;问题或疑问&lt;/span&gt;，你可以&lt;span style=&quot; font-weight:600;&quot;&gt;复制粘贴&lt;/span&gt;此文本(或部分文本)到&lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt;并提交&lt;span style=&quot; font-weight:600;&quot;&gt;问题&lt;/span&gt;。注意数据中的敏感信息将会被隐藏。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2983"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3002"/>
         <source>&amp;Save debug information</source>
         <translation>保存Debug调试信息(&amp;S)</translation>
     </message>
@@ -3173,29 +3188,29 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>SOCKS5 代理</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="678"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="684"/>
         <source>Undefined key</source>
         <translation>未定义快捷键</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="683"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="689"/>
         <source>Assign a new key</source>
         <translation>分配新的按键</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="684"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="690"/>
         <source>Reset to default key</source>
         <translation>重置为默认按键</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="986"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="992"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
         <translation>建立连接成功！服务器版本︰ %1 QOwnNotesAPI 版本︰ %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="997"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1003"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3203,119 +3218,119 @@ Connection error message: </source>
         <translation>连接到 ownCloud 服务器时出错 ！你必须安装并启用 QOwnNotesAPI 程序！ 连接错误消息︰ </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1297"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1303"/>
         <source>Disable usage tracking</source>
         <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1298"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1304"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1475"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
         <source>new folder</source>
         <translation>新建目录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1512"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1518"/>
         <source>Remove note folder</source>
         <translation>移除笔记目录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1513"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1519"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>删除当前笔记目录 &lt;strong&gt;%1&lt;/strong&gt; 吗？</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1515"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1847"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1521"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1853"/>
         <source>&amp;Remove</source>
         <translation>移除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1588"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1594"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>请选择你的笔记存储位置</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1625"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1631"/>
         <source>Loading folders from server</source>
         <translation>从服务器加载目录</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1639"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1645"/>
         <source>No more folders were found in the current folder</source>
         <translation>在当前文件夹中没有找到更多文件夹</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1713"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1719"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>从服务器加载&apos;%1&apos;个文件夹</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1797"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
         <translation>如果您需要访问QOwnNotes的特定功能的，请打开&lt;a href=&quot;%1&quot;&gt;QOwnNotes issue页面&lt;/a&gt;并提交。通过单击&lt;a href=&quot;%2&quot;&gt;QML 示例&lt;/a&gt;开始你的脚本。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1809"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1815"/>
         <source>new script</source>
         <translation>新建脚本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1844"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1850"/>
         <source>Remove script</source>
         <translation>删除脚本</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1845"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1851"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>删除当前的脚本 &lt;strong&gt;%1&lt;/strong&gt; 吗？</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1873"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1879"/>
         <source>Please select your QML file</source>
         <translation>请选择你的 QML 文件</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1874"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1880"/>
         <source>QML Files (*.qml)</source>
         <translation>QML 文件 (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1935"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1941"/>
         <source>Your script seems to be valid</source>
         <translation>脚本似乎有效</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1936"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1942"/>
         <source>There were script errors:
 %1</source>
         <translation>存在错误︰%1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2027"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
         <source>File extension</source>
         <translation>文件扩展名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2028"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
         <source>Enter your custom file extension:</source>
         <translation>输入自定义文件扩展名︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2303"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2309"/>
         <source>Calendar cache emptied</source>
         <translation>清空日历缓存</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2304"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
         <source>Your calendar cache was emptied.</source>
         <translation>您的日历缓存已被清空。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1254"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1260"/>
         <source>The Database was reinitialized.</source>
         <translation>数据库已重新初始化。</translation>
     </message>
@@ -3360,32 +3375,32 @@ Connection error message: </source>
         <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1266"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1272"/>
         <source>Markdown files (*.md)</source>
         <translation>Markdown 文件 (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1267"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1273"/>
         <source>Save debug information</source>
         <translation>保存调试信息</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1318"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1324"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation>是否要清除所有设置、 删除数据库并退出 QOwnNotes ？ 你的笔记将不会保存 ！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1321"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1327"/>
         <source>Clear and &amp;exit</source>
         <translation>清除和并退出(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1248"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1321"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1515"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1847"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1254"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1327"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1521"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1853"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>
@@ -3395,17 +3410,17 @@ Your notes will stay intact!</source>
         <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1245"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1251"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>是否要清除本地数据库吗？这也将删除你的配置笔记目录和缓存的 todo 项目 ！</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1248"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1254"/>
         <source>Clear &amp;database</source>
         <translation>清除数据库(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1390"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1396"/>
         <source>Select editor application</source>
         <translation>选择编辑器程序</translation>
     </message>

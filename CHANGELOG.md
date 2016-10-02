@@ -3,6 +3,9 @@
 ## 16.10.1
 - moved the preview font settings to a new page in the settings to make
   more room in the interface settings
+- there now is a new checkbox `Use internal icon theme instead of system
+  icon theme` in the interface settings
+  (for [Issue #331](https://github.com/pbek/QOwnNotes/issues/331))
 
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
