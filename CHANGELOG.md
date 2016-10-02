@@ -5,7 +5,7 @@
   (for [Issue #334](https://github.com/pbek/QOwnNotes/issues/334))
     - you can use the new scripting hook `encryptionHook()` do implement
       your own encryption
-    - there are examples to encrypt notes with **keybase.io**
+    - there are examples to encrypt notes with **[Keybase.io](https://keybase.io)**
       ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)),
       **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)) or
       do a trivial "encryption" with ROT13
