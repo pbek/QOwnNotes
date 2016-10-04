@@ -1260,7 +1260,8 @@ bool Note::removeNoteFile() {
  * @param forExport defines whether the export or preview stylesheet
  * @return
  */
-QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExport) {
+QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
+                             bool forExport, bool decrypt) {
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
 
@@ -1272,7 +1273,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth, bool forExpor
     hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
     // get the decrypted note text (or the normal note text if there isn't any)
-    QString str = getDecryptedNoteText();
+    QString str = decrypt ? getDecryptedNoteText() : noteText;
 
     QString windowsSlash = "";
 

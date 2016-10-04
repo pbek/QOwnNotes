@@ -2992,9 +2992,10 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
+    bool decrypt = ui->noteTextEdit->isHidden();
     ui->noteTextView->setHtml(
             note->toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                 getMaxImageWidth()));
+                                 getMaxImageWidth(), false, decrypt));
 
     // update the slider when editing notes
     noteTextSliderValueChanged(

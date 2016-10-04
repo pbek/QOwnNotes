@@ -16,6 +16,8 @@
     - please visit the
       [Ubuntu Linux installation page](http://www.qownnotes.org/installation#Linux)
       for more information
+- the preview will now only show the decrypted content of a note if the
+  `edit encrypted note` button was pressed
 
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
