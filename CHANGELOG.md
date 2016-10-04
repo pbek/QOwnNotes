@@ -8,6 +8,14 @@
 - there now is a new checkbox `Use internal icon theme instead of system
   icon theme` in the interface settings
   (for [Issue #331](https://github.com/pbek/QOwnNotes/issues/331))
+- there now is a software repository for **openSUSE Leap 42.2**
+    - please visit the
+      [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+      for instructions
+- the Ubuntu Linux 14.04 package is now built with Qt 5.6.1
+    - please visit the
+      [Ubuntu Linux installation page](http://www.qownnotes.org/installation#Linux)
+      for more information
 
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**
