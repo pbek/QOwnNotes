@@ -921,7 +921,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1745"/>
       <source>Show note list under tag pane</source>
-      <translation type="unfinished">Show note list under tag pane</translation>
+      <translation>Mostrar lista de notas abaixo do painel de tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1804"/>
@@ -2523,7 +2523,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+      <translation>Talvez seja necessário reiniciar o aplicativo para deixar essas alterações tenham efeito</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
@@ -2875,7 +2875,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="170"/>
       <source>Preview fonts</source>
-      <translation type="unfinished">Preview fonts</translation>
+      <translation>Visualização de fontes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="218"/>
@@ -3058,12 +3058,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1995"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>Ícones</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2004"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
+      <translation>Utilizar o tema interno ao invés do tema do sistema</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2434"/>

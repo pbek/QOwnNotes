@@ -18,6 +18,8 @@
       for more information
 - the preview will now only show the decrypted content of a note if the
   `edit encrypted note` button was pressed
+- added more Portuguese, Italian, French, Polish and German translation
+  (thank you mlimacarlos, mlocati, lepascalou, lucjan and Sqashtrash)
 
 ## 16.10.0
 - you now can use your **custom method** to **encrypt and decrypt notes**

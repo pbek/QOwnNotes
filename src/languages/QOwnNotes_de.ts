@@ -2526,7 +2526,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+      <translation>Die Anwendung muss neu gestartet werden, damit die Änderungen aktiv werden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
@@ -2878,7 +2878,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="170"/>
       <source>Preview fonts</source>
-      <translation type="unfinished">Preview fonts</translation>
+      <translation>Schriftarten-Vorschau</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="218"/>
@@ -3061,7 +3061,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1995"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>Symbole</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2004"/>

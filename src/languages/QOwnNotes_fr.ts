@@ -921,7 +921,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1745"/>
       <source>Show note list under tag pane</source>
-      <translation type="unfinished">Show note list under tag pane</translation>
+      <translation>Afficher la liste des notes sous le panneau des tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1804"/>
@@ -2525,7 +2525,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
+      <translation>Vous devez redémarrer l'application pour que ces changements soient appliqués</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2042"/>
@@ -2877,7 +2877,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="170"/>
       <source>Preview fonts</source>
-      <translation type="unfinished">Preview fonts</translation>
+      <translation>Prévisualisation des polices</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="218"/>
@@ -3060,12 +3060,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1995"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>Icônes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2004"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
+      <translation>Utiliser le thème d'icônes interne plutôt que celui du système</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2434"/>
