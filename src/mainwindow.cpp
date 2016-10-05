@@ -400,9 +400,67 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // init the showing of the tag pane under the navigation pane
     initShowNoteListUnderTagPane();
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    setDockOptions(dockOptions() | QMainWindow::GroupedDragging);
+#endif
+    _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
+    _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
+    _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
+                  Qt::Horizontal);
+
+    _taggingDockWidget = new QDockWidget(tr("Tags"), this);
+    _taggingDockWidget->setObjectName("taggingDockWidget");
+    _taggingDockWidget->setWidget(ui->tagFrame);
+    addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
+
+    _noteListDockWidget = new QDockWidget(tr("Note list"), this);
+    _noteListDockWidget->setObjectName("noteListDockWidget");
+    _noteListDockWidget->setWidget(ui->notesListFrame);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Horizontal);
+
+    _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
+    _noteNavigationDockWidget->setObjectName("noteListDockWidget");
+    _noteNavigationDockWidget->setWidget(ui->navigationFrame);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
+                  Qt::Vertical);
+
+    _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+    _noteEditDockWidget->setObjectName("noteEditDockWidget");
+    _noteEditDockWidget->setWidget(ui->noteEditFrame);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
+
+    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
+    _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
+    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
+    QWidget *titleBarWidget = _notePreviewDockWidget->titleBarWidget();
+//    _notePreviewDockWidget->setTitleBarWidget(new QWidget());
+//    ui->noteViewFrame->setContentsMargins(0,5,0,0);
+    addDockWidget(Qt::LeftDockWidgetArea, _notePreviewDockWidget,
+                  Qt::Horizontal);
+
+//    _notePreviewDockWidget->setTitleBarWidget(titleBarWidget);
+
+
+    setDockNestingEnabled(true);
+//    restoreState(settings.value("dockWindowState").toByteArray());
+
+//    _taggingDockWidget->hide();
+
+//    restoreGeometry(settings.value("dockWindowGeometry").toByteArray());
+//    restoreDockWidget(dock);
+//    restoreDockWidget(dock2);
+//    restoreDockWidget(dock3);
+//    restoreDockWidget(dock4);
 }
 
 MainWindow::~MainWindow() {
+    // TODO(pbek): remove
+    QSettings settings;
+    settings.setValue("dockWindowState", saveState());
+//    settings.setValue("dockWindowGeometry", saveGeometry());
+
     storeUpdatedNotesToDisk();
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the

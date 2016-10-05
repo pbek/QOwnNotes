@@ -19,6 +19,7 @@
 #include <entities/tag.h>
 #include <services/scriptingservice.h>
 #include <QScrollArea>
+#include <QDockWidget>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -436,6 +437,12 @@ private:
     QList<int> _buildNotesIndexAfterNoteIdList;
     QList<int> _buildNotesIndexAfterNoteSubFolderIdList;
     QScrollArea *_noteTagButtonScrollArea;
+    QDockWidget *_taggingDockWidget;
+    QDockWidget *_noteSubFolderDockWidget;
+    QDockWidget *_noteListDockWidget;
+    QDockWidget *_noteEditDockWidget;
+    QDockWidget *_noteNavigationDockWidget;
+    QDockWidget *_notePreviewDockWidget;
 
     void initMainSplitter();
 
