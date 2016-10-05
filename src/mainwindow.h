@@ -387,6 +387,8 @@ private slots:
 
     void on_actionGitter_triggered();
 
+    void on_actionLock_panels_toggled(bool arg1);
+
 private:
     Ui::MainWindow *ui;
     QSplitter *mainSplitter;
@@ -443,6 +445,12 @@ private:
     QDockWidget *_noteEditDockWidget;
     QDockWidget *_noteNavigationDockWidget;
     QDockWidget *_notePreviewDockWidget;
+    QWidget *_taggingDockTitleBarWidget;
+    QWidget *_noteSubFolderDockTitleBarWidget;
+    QWidget *_noteListDockTitleBarWidget;
+    QWidget *_noteEditDockTitleBarWidget;
+    QWidget *_noteNavigationDockTitleBarWidget;
+    QWidget *_notePreviewDockTitleBarWidget;
 
     void initMainSplitter();
 

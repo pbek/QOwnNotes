@@ -774,6 +774,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
+    <addaction name="actionLock_panels"/>
     <addaction name="actionToggle_tag_pane"/>
     <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
@@ -1808,6 +1809,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
+   </property>
+  </action>
+  <action name="actionLock_panels">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="system-lock-screen" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Lock panels</string>
    </property>
   </action>
  </widget>
