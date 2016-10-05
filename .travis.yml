@@ -9,7 +9,7 @@ branches:
     - develop
     - master
     - testing
-    - feature/note-tree
+    - /^feature.+$/
 
 env:
   global:
