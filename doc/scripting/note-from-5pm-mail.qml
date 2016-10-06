@@ -47,7 +47,7 @@ QtObject {
                     result1 = re1.exec(text);
                 }
 
-                var re2 = /^Direkter Zugriff hier: (http.+\d+)$/igm;
+                var re2 = /^Direkter Zugriff hier: (http.+\d+)$/im;
                 var result2 = re2.exec(text);
 
                 var re3 = /^Projekt: .+\nBeschreibung: ((.|\n)+)^Priorität: /igm;
@@ -58,8 +58,8 @@ QtObject {
                     result3 = re3.exec(text);
                 }
 
-        //         script.log(result1);
-        //         script.log(result2);
+                script.log("result1: " + result1);
+                script.log("result2: " + result2);
         //         script.log(result3);
 
                 // return an empty string if we didn't find anything
@@ -69,9 +69,11 @@ QtObject {
                 }
 
                 var url = result2[1];
+//                script.log("url: " + url);
 
-                var re4 = /(\d+)$/igm;
+                var re4 = /task=(\d+)/i;
                 var result4 = re4.exec(url);
+//                script.log("result4: " + result4);
 
                 var id = result4[1];
                 var headline = result1[1] + " (" + id + ")";
