@@ -53,6 +53,7 @@
 #include <QQmlContext>
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
+#include <QWidgetAction>
 #include <services/scriptingservice.h>
 #include <dialogs/evernoteimportdialog.h>
 #include <dialogs/logdialog.h>
@@ -694,6 +695,19 @@ void MainWindow::initToolbars() {
     _windowToolbar =
             new QToolBar(tr("window toolbar"), this);
     _windowToolbar->addAction(ui->actionLock_panels);
+
+    QWidgetAction *widgetAction = new QWidgetAction(this);
+
+    // TODO(pbek): get actions from ui->menuPanel_layouts
+    QComboBox *dockPanelComboBox = new QComboBox(this);
+    dockPanelComboBox->addItem("Panel 1");
+    dockPanelComboBox->addItem("Panel 2");
+    dockPanelComboBox->addItem("Panel 3");
+    widgetAction->setDefaultWidget(dockPanelComboBox);
+    _windowToolbar->addAction(widgetAction);
+    _windowToolbar->addAction(ui->actionRemove_current_panel_layout);
+    _windowToolbar->addAction(ui->actionCreate_new_panel_layout);
+
     _windowToolbar->addAction(ui->actionToggle_tag_pane);
     _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
     _windowToolbar->addAction(ui->actionToggle_markdown_preview);

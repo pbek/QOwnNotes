@@ -767,6 +767,14 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthWide"/>
      <addaction name="actionEditorWidthFull"/>
     </widget>
+    <widget class="QMenu" name="menuPanel_layouts">
+     <property name="title">
+      <string>Panel layouts</string>
+     </property>
+     <addaction name="actionPanel_1"/>
+     <addaction name="actionPanel_2"/>
+     <addaction name="actionPanel_3"/>
+    </widget>
     <addaction name="actionShow_menu_bar"/>
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
@@ -775,6 +783,9 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
     <addaction name="actionLock_panels"/>
+    <addaction name="menuPanel_layouts"/>
+    <addaction name="actionRemove_current_panel_layout"/>
+    <addaction name="actionCreate_new_panel_layout"/>
     <addaction name="actionToggle_tag_pane"/>
     <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
@@ -1818,6 +1829,48 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Lock panels</string>
+   </property>
+  </action>
+  <action name="actionRemove_current_panel_layout">
+   <property name="icon">
+    <iconset theme="list-remove" resource="breeze-dark-qownnotes.qrc">
+     <normaloff>:/icons/breeze-dark-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/list-remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remove current panel layout</string>
+   </property>
+  </action>
+  <action name="actionStore_current_panel_layout">
+   <property name="icon">
+    <iconset theme="document-save" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Store current panel layout</string>
+   </property>
+  </action>
+  <action name="actionCreate_new_panel_layout">
+   <property name="icon">
+    <iconset theme="list-add" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Store as new panel layout</string>
+   </property>
+  </action>
+  <action name="actionPanel_1">
+   <property name="text">
+    <string>Panel 1</string>
+   </property>
+  </action>
+  <action name="actionPanel_2">
+   <property name="text">
+    <string>Panel 2</string>
+   </property>
+  </action>
+  <action name="actionPanel_3">
+   <property name="text">
+    <string>Panel 3</string>
    </property>
   </action>
  </widget>
