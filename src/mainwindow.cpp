@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include <QSplitter>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -162,9 +161,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionShow_system_tray->setChecked(showSystemTray);
 
     createSystemTrayIcon();
-    initMainSplitter();
-    initNoteListSplitter();
-    initTagFrameSplitter();
     buildNotesIndexAndLoadNoteDirectoryList();
 
     // setup the update available button
@@ -292,9 +288,6 @@ MainWindow::MainWindow(QWidget *parent) :
         QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
     }
 
-    // setup the one column mode if needed
-    setupOneColumnMode();
-
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
             this, SLOT(trackAction(QAction *)));
@@ -398,9 +391,6 @@ MainWindow::MainWindow(QWidget *parent) :
             QString::number(schemaCount) + " schemas",
             schemaCount);
 
-    // init the showing of the tag pane under the navigation pane
-    initShowNoteListUnderTagPane();
-
     // initialize the dock widgets
     initDockWidgets();
 }
@@ -409,7 +399,6 @@ MainWindow::~MainWindow() {
     // TODO(pbek): remove
     QSettings settings;
     settings.setValue("dockWindowState", saveState());
-//    settings.setValue("dockWindowGeometry", saveGeometry());
 
     storeUpdatedNotesToDisk();
     if (showSystemTray) {
@@ -923,8 +912,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         settings.setValue("DistractionFreeMode/windowState", saveState());
         settings.setValue("DistractionFreeMode/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-        settings.setValue("DistractionFreeMode/mainSplitterSizes",
-                          mainSplitter->saveState());
         settings.setValue("DistractionFreeMode/menuBarHeight",
                           ui->menuBar->height());
 
@@ -966,11 +953,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the notes list widget
         ui->notesListFrame->hide();
 
-//        QList<int> sizes = mainSplitter->sizes();
-//        int size = sizes.takeFirst() + sizes.takeFirst();
-//        sizes << 0 << size;
-//        mainSplitter->setSizes(sizes);
-
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
         _leaveDistractionFreeModeButton->setToolTip(
@@ -995,9 +977,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         disconnect(_leaveDistractionFreeModeButton, 0, 0, 0);
 
         // restore states and sizes
-        QByteArray state = settings.value
-                ("DistractionFreeMode/mainSplitterSizes").toByteArray();
-        mainSplitter->restoreState(state);
         restoreState(
                 settings.value(
                         "DistractionFreeMode/windowState").toByteArray());
@@ -1320,134 +1299,6 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
 
     int result = this->noteDiffDialog->resultActionRole();
     return result;
-}
-
-/**
- * Does the initialization for the main splitter
- */
-void MainWindow::initMainSplitter() {
-    mainSplitter = new QSplitter();
-    mainSplitter->setHandleWidth(0);
-
-    ui->tagFrame->setStyleSheet("#tagFrame {margin-right: 3px;}");
-    ui->notesListFrame->setStyleSheet("#notesListFrame {margin: 0;}");
-
-    _verticalNoteFrame = new QFrame();
-    _verticalNoteFrame->setObjectName("verticalNoteFrame");
-    _verticalNoteFrame->setStyleSheet(
-            "#verticalNoteFrame {margin: 0 0 0 3px;}");
-    _verticalNoteFrame->setFrameShape(QFrame::NoFrame);
-    _verticalNoteFrame->setVisible(false);
-
-    _verticalNoteFrameSplitter = new QSplitter(Qt::Vertical);
-    _verticalNoteFrameSplitter->setHandleWidth(0);
-
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->addWidget(_verticalNoteFrameSplitter);
-    _verticalNoteFrame->setLayout(layout);
-
-    mainSplitter->addWidget(ui->tagFrame);
-    mainSplitter->addWidget(ui->notesListFrame);
-    mainSplitter->addWidget(_verticalNoteFrame);
-
-    // do the further setup for the main splitter and all the panes
-    setupMainSplitter();
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-    mainSplitter->restoreState(state);
-
-    ui->centralWidget->layout()->addWidget(this->mainSplitter);
-
-    // setup the checkbox
-    const QSignalBlocker blocker(ui->actionUse_vertical_preview_layout);
-    Q_UNUSED(blocker);
-    ui->actionUse_vertical_preview_layout
-            ->setChecked(isVerticalPreviewModeEnabled());
-}
-
-/**
- * Does the initialization for the note list splitter
- */
-void MainWindow::initNoteListSplitter() {
-    _noteListSplitter = new QSplitter();
-    _noteListSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteListSubFrame->setStyleSheet("#noteListSubFrame {margin: 0;}");
-    ui->navigationFrame->setStyleSheet("#navigationFrame {margin: 0;}");
-
-    _noteListSplitter->addWidget(ui->noteListSubFrame);
-    _noteListSplitter->addWidget(ui->navigationFrame);
-
-    ui->notesListFrame->layout()->addWidget(_noteListSplitter);
-
-    // restore note list splitter state
-    QSettings settings;
-    QByteArray state = settings.value("noteListSplitterState").toByteArray();
-    _noteListSplitter->restoreState(state);
-}
-
-/**
- * Does the initialization for the tag frame splitter
- */
-void MainWindow::initTagFrameSplitter() {
-    _tagFrameSplitter = new QSplitter();
-    _tagFrameSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteSubFolderFrame->setStyleSheet("#noteSubFolderFrame {margin: 0;}");
-    ui->tagSubFrame->setStyleSheet("#tagSubFrame {margin: 0;}");
-
-    _tagFrameSplitter->addWidget(ui->noteSubFolderFrame);
-    _tagFrameSplitter->addWidget(ui->tagSubFrame);
-
-    ui->tagFrame->layout()->addWidget(_tagFrameSplitter);
-
-    // restore tag frame splitter state
-    QSettings settings;
-    QByteArray state = settings.value("tagFrameSplitterState").toByteArray();
-    _tagFrameSplitter->restoreState(state);
-}
-
-/**
- * Does the further setup for the main splitter and all the panes
- */
-void MainWindow::setupMainSplitter() {
-    if ( isVerticalPreviewModeEnabled() ) {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 3px 0;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0;}");
-
-        _verticalNoteFrameSplitter->addWidget(ui->noteEditFrame);
-        _verticalNoteFrameSplitter->addWidget(ui->noteViewFrame);
-
-        // disable collapsing for all widgets in the splitter, users had
-        // problems with collapsed panels
-        for (int i = 0; i < _verticalNoteFrameSplitter->count(); i++) {
-            _verticalNoteFrameSplitter->setCollapsible(i, false);
-        }
-
-        // restore the vertical note frame splitter state
-        QSettings settings;
-        _verticalNoteFrameSplitter->restoreState(settings.value(
-                "verticalNoteFrameSplitterState").toByteArray());
-    } else {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 0 3px;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0 0 0 3px;}");
-
-        mainSplitter->addWidget(ui->noteEditFrame);
-        mainSplitter->addWidget(ui->noteViewFrame);
-    }
-
-    // disable collapsing for all widgets in the splitter, users had problems
-    // with collapsed panels
-    for (int i = 0; i < mainSplitter->count(); i++) {
-        mainSplitter->setCollapsible(i, false);
-    }
-
-    // set the visibility of the vertical note frame
-    _verticalNoteFrame->setVisible(isVerticalPreviewModeEnabled() &&
-                (isNoteEditPaneEnabled() || isMarkdownViewEnabled()));
 }
 
 void MainWindow::createSystemTrayIcon() {
@@ -2766,17 +2617,8 @@ void MainWindow::storeSettings() {
     if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
         settings.setValue("MainWindow/windowState", saveState());
-        settings.setValue("mainSplitterSizes", mainSplitter->saveState());
-        settings.setValue("noteListSplitterState",
-                          _noteListSplitter->saveState());
-        settings.setValue("tagFrameSplitterState",
-                          _tagFrameSplitter->saveState());
-        settings.setValue("verticalNoteFrameSplitterState",
-                          _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-
-        saveMainSplitterState();
     }
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
@@ -2950,7 +2792,7 @@ QTreeWidgetItem * MainWindow::firstVisibleNoteTreeWidgetItem() {
 /**
  * highlights all occurrences of str in the note text edit
  */
-void MainWindow::searchInNoteTextEdit(QString &str) {
+void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
     QList<QTextEdit::ExtraSelection> extraSelections2;
     QList<QTextEdit::ExtraSelection> extraSelections3;
@@ -3913,14 +3755,6 @@ void MainWindow::filterNotes(bool searchForText) {
         // let's highlight the text from the search line edit
         searchForSearchLineTextInNoteTextEdit();
     }
-}
-
-/**
- * Checks if the vertical preview mode is enabled
- */
-bool MainWindow::isVerticalPreviewModeEnabled() {
-    QSettings settings;
-    return settings.value("verticalPreviewModeEnabled", false).toBool();
 }
 
 /**
@@ -5815,99 +5649,12 @@ void MainWindow::setupNoteEditPane() {
 }
 
 /**
- * Sets up the one column mode
- */
-void MainWindow::setupOneColumnMode() {
-    QSettings settings;
-    bool modeEnabled = settings.value("oneColumnModeEnabled", false).toBool();
-
-    if (modeEnabled) {
-        const QSignalBlocker blocker(ui->actionUse_one_column_mode);
-        Q_UNUSED(blocker);
-
-        ui->actionUse_one_column_mode->setChecked(true);
-        toggleOneColumnMode(true, false);
-    }
-}
-
-/**
- * Returns the key for storing and restoring the main splitter state
- */
-QString MainWindow::getMainSplitterStateKey(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    bool state1 = ui->actionToggle_tag_pane->isChecked();
-    bool state2 = ui->actionToggle_markdown_preview->isChecked();
-    bool state3 = ui->actionToggle_note_edit_pane->isChecked();
-    bool state4 = isVerticalPreviewModeEnabled();
-
-    if (invertTagState) {
-        state1 = !state1;
-    }
-
-    if (invertMarkdownState) {
-        state2 = !state2;
-    }
-
-    if (invertEditState) {
-        state3 = !state3;
-    }
-
-    if (invertVerticalModeState) {
-        state4 = !state4;
-    }
-
-    QString state1Str = state1 ? "1" : "0";
-    QString state2Str = state2 ? "1" : "0";
-    QString state3Str = state3 ? "1" : "0";
-    QString state4Str = state4 ? "1" : "0";
-    return QString("mainSplitterState-%1-%2-%3-%4").arg(
-            state1Str, state2Str, state3Str, state4Str);
-}
-
-/**
- * Stores the main splitter state
- */
-void MainWindow::saveMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // store the main splitter state
-    QSettings settings;
-    settings.setValue(key, mainSplitter->saveState());
-}
-
-/**
- * Restores the main splitter state
- */
-void MainWindow::restoreMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value(key).toByteArray();
-
-    mainSplitter->restoreState(state);
-}
-
-/**
  * Toggles the note panes
  */
 void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
-    saveMainSplitterState(true);
-
     QSettings settings;
     settings.setValue("tagsEnabled", arg1);
     setupTags();
-
-    restoreMainSplitterState();
 }
 
 /**
@@ -6048,45 +5795,19 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
 }
 
 void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
-    saveMainSplitterState(false, true);
-
     QSettings settings;
     settings.setValue("markdownViewEnabled", arg1);
 
     // setup the markdown view
     setupMarkdownView();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
 }
 
 void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
-    saveMainSplitterState(false, false, true);
-
     QSettings settings;
     settings.setValue("noteEditPaneEnabled", arg1);
 
     // setup the note edit pane
     setupNoteEditPane();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
-}
-
-void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
-    saveMainSplitterState(false, false, false, true);
-
-    QSettings settings;
-    settings.setValue("verticalPreviewModeEnabled", arg1);
-
-    // setup the main splitter again
-    setupMainSplitter();
-
-    restoreMainSplitterState();
 }
 
 /**
@@ -7554,85 +7275,6 @@ void MainWindow::initShortcuts() {
 }
 
 /**
- * Toggles the one column mode
- *
- * @param activated
- * @param toggleOtherPanes
- */
-void MainWindow::toggleOneColumnMode(bool activated, bool toggleOtherPanes) {
-    // turn off the vertical preview layout because the two don't work well
-    // together (also when one column mode is deactivated)
-    ui->actionUse_vertical_preview_layout->setChecked(false);
-
-    // hide the navigation frame in one column mode
-    ui->navigationFrame->setHidden(activated);
-
-    if (activated) {
-        if (toggleOtherPanes) {
-            // turn on the note edit pane if not active
-            if (!ui->actionToggle_note_edit_pane->isChecked()) {
-                ui->actionToggle_note_edit_pane->toggle();
-            }
-
-            // turn off the tag pane if active
-            if (ui->actionToggle_tag_pane->isChecked()) {
-                ui->actionToggle_tag_pane->toggle();
-            }
-
-            // turn off the preview pane if active
-            if (ui->actionToggle_markdown_preview->isChecked()) {
-                ui->actionToggle_markdown_preview->toggle();
-            }
-        }
-
-        // add the edit frame to the note list splitter in one column mode
-        ui->noteEditFrame->setStyleSheet("#navigationFrame {margin: 0;}");
-        _noteListSplitter->addWidget(ui->noteEditFrame);
-    } else {
-        // restore the main splitter to get out of the one column mode
-        setupMainSplitter();
-    }
-
-    QSettings settings;
-    settings.setValue("oneColumnModeEnabled", activated);
-
-    // restore the splitter state
-    QByteArray state = settings.value("noteListSplitterState").toByteArray();
-    _noteListSplitter->restoreState(state);
-
-    if (activated) {
-        // try to set the height of the note edit frame if it is smaller
-        // than 300px to make sure it is visible when the one column mode is
-        // turned on
-        if (ui->noteEditFrame->height() < 300) {
-            // this doesn't work
-//        ui->noteEditFrame->resize(ui->noteEditFrame->width(), 300);
-
-            QList<int> sizes = _noteListSplitter->sizes();
-            sizes[2] = 300;
-            _noteListSplitter->setSizes(sizes);
-        }
-    } else {
-        // show the navigation frame again when the one column mode is
-        // turned off
-        if (ui->navigationFrame->height() < 200) {
-            QList<int> sizes = _noteListSplitter->sizes();
-            sizes[1] = 200;
-            _noteListSplitter->setSizes(sizes);
-        }
-    }
-}
-
-/**
- * Toggles the one column mode
- *
- * @param arg1
- */
-void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
-    toggleOneColumnMode(arg1, true);
-}
-
-/**
  * Shows or hides the main menu bar
  *
  * @param checked
@@ -7699,37 +7341,6 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     Q_FOREACH(Tag tag, tags) {
             tag.linkToNote(currentNote);
         }
-}
-
-/**
- * Toggles the showing of the tag pane under the navigation pane
- *
- * @param arg1
- */
-void MainWindow::on_actionShow_note_list_under_tag_pane_toggled(
-        bool arg1) {
-    saveMainSplitterState(false, false, false, false);
-
-    if (arg1) {
-        _noteListSplitter->insertWidget(0, ui->tagFrame);
-    } else {
-        mainSplitter->insertWidget(0, ui->tagFrame);
-    }
-
-    restoreMainSplitterState();
-
-    QSettings settings;
-    settings.setValue("showNoteListUnderTagPane", arg1);
-}
-
-/**
- * Inits the showing of the tag pane under the navigation pane
- */
-void MainWindow::initShowNoteListUnderTagPane() {
-    QSettings settings;
-    if (settings.value("showNoteListUnderTagPane", false).toBool()) {
-        ui->actionShow_note_list_under_tag_pane->setChecked(true);
-    }
 }
 
 /**

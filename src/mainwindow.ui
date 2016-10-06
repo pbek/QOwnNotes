@@ -779,9 +779,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
     <addaction name="actionToggle_between_edit_and_preview"/>
-    <addaction name="actionUse_vertical_preview_layout"/>
-    <addaction name="actionUse_one_column_mode"/>
-    <addaction name="actionShow_note_list_under_tag_pane"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>

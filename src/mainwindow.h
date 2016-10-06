@@ -2,7 +2,6 @@
 
 #include <QMainWindow>
 #include <QListWidgetItem>
-#include <QSplitter>
 #include <QFileSystemWatcher>
 #include <QHash>
 #include <QFileDialog>
@@ -270,8 +269,6 @@ private slots:
 
     void on_actionToggle_note_edit_pane_toggled(bool arg1);
 
-    void on_actionUse_vertical_preview_layout_toggled(bool arg1);
-
     void on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
     void on_tagTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
@@ -358,8 +355,6 @@ private slots:
 
     void on_actionToggle_between_edit_and_preview_triggered();
 
-    void on_actionUse_one_column_mode_toggled(bool arg1);
-
     void on_actionShow_menu_bar_triggered(bool checked);
 
     void moveSelectedNotesToNoteSubFolderId(int noteSubFolderId);
@@ -370,8 +365,6 @@ private slots:
 
     void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false,
                                                  bool forceLoad = false);
-
-    void on_actionShow_note_list_under_tag_pane_toggled(bool arg1);
 
     void onCustomActionInvoked(QString identifier);
 
@@ -391,9 +384,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QSplitter *mainSplitter;
-    QSplitter *_noteListSplitter;
-    QSplitter *_tagFrameSplitter;
     QString notesPath;
     QFileSystemWatcher noteDirectoryWatcher;
     Note currentNote;
@@ -425,7 +415,6 @@ private:
     QToolBar *_windowToolbar;
     QToolBar *_quitToolbar;
     QFrame *_verticalNoteFrame;
-    QSplitter *_verticalNoteFrameSplitter;
     bool _noteViewIsRegenerated;
     QHash<int, QString> _activeNoteFolderNoteNames;
     QHash<int, int> _activeNoteFolderNotePositions;
@@ -454,10 +443,6 @@ private:
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
 
-    void initMainSplitter();
-
-    void setupMainSplitter();
-
     void createSystemTrayIcon();
 
     void loadNoteDirectoryList();
@@ -478,7 +463,7 @@ private:
 
     void removeCurrentNote();
 
-    void searchInNoteTextEdit(QString &str);
+    void searchInNoteTextEdit(QString str);
 
     void searchForSearchLineTextInNoteTextEdit();
 
@@ -580,8 +565,6 @@ private:
 
     void initToolbars();
 
-    bool isVerticalPreviewModeEnabled();
-
     void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0);
 
     void buildTagMoveMenuTree(QMenu *parentMenu,
@@ -590,8 +573,6 @@ private:
     void buildBulkNoteTagMenuTree(QMenu *parentMenu, int parentTagId = 0);
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
-
-    void initNoteListSplitter();
 
     void jumpToNoteName(QString name);
 
@@ -602,18 +583,6 @@ private:
     void initLogDialog() const;
 
     int getMaxImageWidth();
-
-    void saveMainSplitterState(
-            bool invertTagState = false, bool invertMarkdownState = false,
-            bool invertEditState = false, bool invertVerticalModeState = false);
-
-    QString getMainSplitterStateKey(
-            bool invertTagState = false, bool invertMarkdownState = false,
-            bool invertEditState = false, bool invertVerticalModeState = false);
-
-    void restoreMainSplitterState(
-            bool invertTagState = false, bool invertMarkdownState = false,
-            bool invertEditState = false, bool invertVerticalModeState = false);
 
     void updateWindowTitle();
 
@@ -639,8 +608,6 @@ private:
 
     void setupNoteSubFolders();
 
-    void initTagFrameSplitter();
-
     void filterNotesByNoteSubFolders();
 
     void updateNoteDirectoryWatcher();
@@ -659,8 +626,6 @@ private:
 
     void initShortcuts();
 
-    void setupOneColumnMode();
-
     void buildBulkNoteSubFolderMenuTree(QMenu *parentMenu, bool doCopy = true,
                                         int parentNoteSubFolderId = 0);
 
@@ -669,10 +634,6 @@ private:
     void copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder);
 
     void createNewNote(QString noteName = "");
-
-    void toggleOneColumnMode(bool activated, bool toggleOtherPanes = false);
-
-    void initShowNoteListUnderTagPane();
 
     bool selectedNotesHaveTags();
 
