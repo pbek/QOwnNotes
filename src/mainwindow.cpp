@@ -401,65 +401,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // init the showing of the tag pane under the navigation pane
     initShowNoteListUnderTagPane();
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    setDockOptions(dockOptions() | QMainWindow::GroupedDragging);
-#endif
-    _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
-    _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
-    _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
-    _noteSubFolderDockTitleBarWidget =
-            _noteSubFolderDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
-                  Qt::Horizontal);
-
-    _taggingDockWidget = new QDockWidget(tr("Tags"), this);
-    _taggingDockWidget->setObjectName("taggingDockWidget");
-    _taggingDockWidget->setWidget(ui->tagFrame);
-    _taggingDockTitleBarWidget = _taggingDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
-
-    _noteListDockWidget = new QDockWidget(tr("Note list"), this);
-    _noteListDockWidget->setObjectName("noteListDockWidget");
-    _noteListDockWidget->setWidget(ui->notesListFrame);
-    _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Horizontal);
-
-    _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
-    _noteEditDockWidget->setObjectName("noteEditDockWidget");
-    _noteEditDockWidget->setWidget(ui->noteEditFrame);
-    _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
-
-    _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
-    _noteNavigationDockWidget->setObjectName("noteListDockWidget");
-    _noteNavigationDockWidget->setWidget(ui->navigationFrame);
-    _noteNavigationDockTitleBarWidget =
-            _noteNavigationDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
-                  Qt::Vertical);
-
-    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
-    _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
-    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
-    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _notePreviewDockWidget,
-                  Qt::Horizontal);
-
-    setDockNestingEnabled(true);
-
-    restoreState(settings.value("dockWindowState").toByteArray());
-
-    // lock the dock widgets
-    on_actionLock_panels_toggled(true);
-
-
-//    _taggingDockWidget->hide();
-
-//    restoreGeometry(settings.value("dockWindowGeometry").toByteArray());
-//    restoreDockWidget(dock);
-//    restoreDockWidget(dock2);
-//    restoreDockWidget(dock3);
-//    restoreDockWidget(dock4);
+    // initialize the dock widgets
+    initDockWidgets();
 }
 
 MainWindow::~MainWindow() {
@@ -481,6 +424,75 @@ MainWindow::~MainWindow() {
 /*!
  * Methods
  */
+
+/**
+ * Initializes the dock widgets
+ */
+void MainWindow::initDockWidgets() {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    setDockOptions(dockOptions() | GroupedDragging);
+#endif
+    _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
+    _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
+    _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
+    _noteSubFolderDockTitleBarWidget =
+            _noteSubFolderDockWidget->titleBarWidget();
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
+                  Qt::Horizontal);
+
+    _taggingDockWidget = new QDockWidget(tr("Tags"), this);
+    _taggingDockWidget->setObjectName("taggingDockWidget");
+    _taggingDockWidget->setWidget(ui->tagFrame);
+    _taggingDockTitleBarWidget = _taggingDockWidget->titleBarWidget();
+    addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
+
+    _noteListDockWidget = new QDockWidget(tr("Note list"), this);
+    _noteListDockWidget->setObjectName("noteListDockWidget");
+    _noteListDockWidget->setWidget(ui->notesListFrame);
+    _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
+    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Horizontal);
+
+    _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
+    _noteNavigationDockWidget->setObjectName("noteListDockWidget");
+    _noteNavigationDockWidget->setWidget(ui->navigationFrame);
+    _noteNavigationDockTitleBarWidget =
+            _noteNavigationDockWidget->titleBarWidget();
+    addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
+                  Qt::Vertical);
+    // we want the navigation under the note list
+    splitDockWidget(_noteListDockWidget, _noteNavigationDockWidget,
+                    Qt::Vertical);
+
+    _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+    _noteEditDockWidget->setObjectName("noteEditDockWidget");
+    _noteEditDockWidget->setWidget(ui->noteEditFrame);
+    _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
+
+    _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
+    _noteTagDockWidget->setObjectName("noteTagDockWidget");
+    _noteTagDockWidget->setWidget(ui->noteTagFrame);
+    _noteTagDockTitleBarWidget = _noteTagDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
+    // TODO(pbek): maybe do this only if there is no restoreState setting yet
+    // I found no other easy way to restrict the height
+    _noteTagDockWidget->setMaximumHeight(120);
+
+    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
+    _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
+    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
+    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget,
+                  Qt::Horizontal);
+
+    setDockNestingEnabled(true);
+    setCentralWidget(Q_NULLPTR);
+
+//    restoreState(settings.value("dockWindowState").toByteArray());
+
+    // lock the dock widgets
+    on_actionLock_panels_toggled(true);
+}
 
 /**
  * Initializes if we want to start the application hidden
@@ -7861,6 +7873,7 @@ void MainWindow::on_actionLock_panels_toggled(bool arg1) {
         _noteNavigationDockWidget->setTitleBarWidget(
                 _noteNavigationDockTitleBarWidget);
         _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+        _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
         _notePreviewDockWidget->setTitleBarWidget(
                 _notePreviewDockTitleBarWidget);
 

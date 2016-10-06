@@ -442,14 +442,16 @@ private:
     QDockWidget *_taggingDockWidget;
     QDockWidget *_noteSubFolderDockWidget;
     QDockWidget *_noteListDockWidget;
-    QDockWidget *_noteEditDockWidget;
     QDockWidget *_noteNavigationDockWidget;
+    QDockWidget *_noteEditDockWidget;
+    QDockWidget *_noteTagDockWidget;
     QDockWidget *_notePreviewDockWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
     QWidget *_noteListDockTitleBarWidget;
-    QWidget *_noteEditDockTitleBarWidget;
     QWidget *_noteNavigationDockTitleBarWidget;
+    QWidget *_noteEditDockTitleBarWidget;
+    QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
 
     void initMainSplitter();
@@ -687,4 +689,6 @@ private:
     bool solveEquationInNoteTextEdit(double &returnValue);
 
     bool noteTextEditAutoComplete(QStringList &resultList);
+
+    void initDockWidgets();
 };
