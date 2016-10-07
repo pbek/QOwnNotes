@@ -773,7 +773,7 @@ void MainWindow::updateWorkspaceLists() {
 
         _workspaceComboBox->addItem(name, uuid);
 
-        QAction *action = new QAction(name);
+        QAction *action = new QAction(name, ui->menuWorkspaces);
         QObject::connect(action, SIGNAL(triggered()),
                          _workspaceSignalMapper, SLOT(map()));
 
