@@ -19,6 +19,7 @@
 #include <services/scriptingservice.h>
 #include <QScrollArea>
 #include <QDockWidget>
+#include <QComboBox>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -382,6 +383,16 @@ private slots:
 
     void on_actionLock_panels_toggled(bool arg1);
 
+    void on_actionStore_as_new_workspace_triggered();
+
+    void onWorkspaceComboBoxCurrentIndexChanged(int index);
+
+    void on_actionRemove_current_workspace_triggered();
+
+    void on_actionRename_current_workspace_triggered();
+
+    void setCurrentWorkspace(QString uuid);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -392,6 +403,7 @@ private:
     QSignalMapper *storeNoteBookmarkSignalMapper;
     QSignalMapper *gotoNoteBookmarkSignalMapper;
     QSignalMapper *_customActionSignalMapper;
+    QSignalMapper *_workspaceSignalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
     bool showSystemTray;
@@ -442,6 +454,7 @@ private:
     QWidget *_noteEditDockTitleBarWidget;
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
+    QComboBox *_workspaceComboBox;
 
     void createSystemTrayIcon();
 
@@ -652,4 +665,20 @@ private:
     bool noteTextEditAutoComplete(QStringList &resultList);
 
     void initDockWidgets();
+
+    void updateWorkspaceLists();
+
+    bool createNewWorkspace(QString name);
+
+    QString currentWorkspaceUuid();
+
+    void storeCurrentWorkspace();
+
+    void restoreCurrentWorkspace();
+
+    void initWorkspaceComboBox();
+
+    QStringList getWorkspaceUuidList();
+
+    void updateWindowToolbar();
 };

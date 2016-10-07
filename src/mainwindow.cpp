@@ -26,6 +26,7 @@
 #include <QCompleter>
 #include <QTreeWidgetItem>
 #include <QCoreApplication>
+#include <QUuid>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -70,6 +71,9 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     ui->setupUi(this);
+
+    // initialize the workspace combo box
+    initWorkspaceComboBox();
 
 #ifdef Q_OS_MAC
     // disable icons in the menu that weren't handled by
@@ -153,6 +157,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // check if we want to start the application hidden
     initShowHidden();
+
+    // initialize the dock widgets
+    initDockWidgets();
 
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
@@ -256,6 +263,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
+
+    // restore the current workspace
+    restoreCurrentWorkspace();
 
     // update the current folder tooltip
     updateCurrentFolderTooltip();
@@ -391,17 +401,12 @@ MainWindow::MainWindow(QWidget *parent) :
             "editor color schema count",
             QString::number(schemaCount) + " schemas",
             schemaCount);
-
-    // initialize the dock widgets
-    initDockWidgets();
 }
 
 MainWindow::~MainWindow() {
-    // TODO(pbek): remove
-    QSettings settings;
-    settings.setValue("dockWindowState", saveState());
-
+    storeCurrentWorkspace();
     storeUpdatedNotesToDisk();
+
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the
         // app can quit
@@ -410,10 +415,20 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
-
 /*!
  * Methods
  */
+
+
+/**
+ * Initializes the workspace combo box
+ */
+void MainWindow::initWorkspaceComboBox() {
+    _workspaceComboBox = new QComboBox(this);
+    connect(_workspaceComboBox, SIGNAL(currentIndexChanged(int)),
+            this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
+    _workspaceSignalMapper = new QSignalMapper(this);
+}
 
 /**
  * Initializes the dock widgets
@@ -443,7 +458,7 @@ void MainWindow::initDockWidgets() {
     addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Horizontal);
 
     _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
-    _noteNavigationDockWidget->setObjectName("noteListDockWidget");
+    _noteNavigationDockWidget->setObjectName("noteNavigationDockWidget");
     _noteNavigationDockWidget->setWidget(ui->navigationFrame);
     _noteNavigationDockTitleBarWidget =
             _noteNavigationDockWidget->titleBarWidget();
@@ -478,10 +493,11 @@ void MainWindow::initDockWidgets() {
     setDockNestingEnabled(true);
     setCentralWidget(Q_NULLPTR);
 
-//    restoreState(settings.value("dockWindowState").toByteArray());
-
     // lock the dock widgets
     on_actionLock_panels_toggled(true);
+
+    // update the workspace menu and combobox entries
+    updateWorkspaceLists();
 }
 
 /**
@@ -692,31 +708,8 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName("encryptionToolbar");
     addToolBar(_encryptionToolbar);
 
-    _windowToolbar =
-            new QToolBar(tr("window toolbar"), this);
-    _windowToolbar->addAction(ui->actionLock_panels);
-
-    QWidgetAction *widgetAction = new QWidgetAction(this);
-
-    // TODO(pbek): get actions from ui->menuPanel_layouts
-    QComboBox *dockPanelComboBox = new QComboBox(this);
-    dockPanelComboBox->addItem("Panel 1");
-    dockPanelComboBox->addItem("Panel 2");
-    dockPanelComboBox->addItem("Panel 3");
-    widgetAction->setDefaultWidget(dockPanelComboBox);
-    _windowToolbar->addAction(widgetAction);
-    _windowToolbar->addAction(ui->actionRemove_current_panel_layout);
-    _windowToolbar->addAction(ui->actionCreate_new_panel_layout);
-
-    _windowToolbar->addAction(ui->actionToggle_tag_pane);
-    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
-    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
-    _windowToolbar->addSeparator();
-    _windowToolbar->addAction(
-            ui->actionToggle_distraction_free_mode);
-    _windowToolbar->addAction(ui->action_Increase_note_text_size);
-    _windowToolbar->addAction(ui->action_Decrease_note_text_size);
-    _windowToolbar->addAction(ui->action_Reset_note_text_size);
+    _windowToolbar = new QToolBar(tr("window toolbar"), this);
+    updateWindowToolbar();
     _windowToolbar->setObjectName("windowToolbar");
     addToolBar(_windowToolbar);
 
@@ -730,6 +723,86 @@ void MainWindow::initToolbars() {
     _quitToolbar->addAction(ui->action_Quit);
     _quitToolbar->setObjectName("quitToolbar");
     addToolBar(_quitToolbar);
+}
+
+/**
+ * Populates the window toolbar
+ */
+void MainWindow::updateWindowToolbar() {
+    _windowToolbar->clear();
+    _windowToolbar->addAction(ui->actionLock_panels);
+
+    QWidgetAction *widgetAction = new QWidgetAction(this);
+    widgetAction->setDefaultWidget(_workspaceComboBox);
+    _windowToolbar->addAction(widgetAction);
+    _windowToolbar->addAction(ui->actionRemove_current_workspace);
+    _windowToolbar->addAction(ui->actionStore_as_new_workspace);
+
+//    _windowToolbar->addAction(ui->actionToggle_tag_pane);
+//    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
+//    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
+    _windowToolbar->addSeparator();
+    _windowToolbar->addAction(
+            ui->actionToggle_distraction_free_mode);
+    _windowToolbar->addAction(ui->action_Increase_note_text_size);
+    _windowToolbar->addAction(ui->action_Decrease_note_text_size);
+    _windowToolbar->addAction(ui->action_Reset_note_text_size);
+}
+
+/**
+ * Updates the workspace menu and combobox entries
+ */
+void MainWindow::updateWorkspaceLists() {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+    QString currentUuid = currentWorkspaceUuid();
+
+    const QSignalBlocker blocker(_workspaceComboBox);
+    Q_UNUSED(blocker);
+
+    // we need to create a new combo box so the width gets updated in the
+    // window toolbar
+    _workspaceComboBox = new QComboBox(this);
+
+    ui->menuWorkspaces->clear();
+    int currentIndex = 0;
+
+    for (int i = 0; i < workspaces.count(); i++) {
+        QString uuid = workspaces.at(i);
+        QString name = settings.value("workspace-" + uuid + "/name").toString();
+
+        _workspaceComboBox->addItem(name, uuid);
+
+        QAction *action = new QAction(name);
+        QObject::connect(action, SIGNAL(triggered()),
+                         _workspaceSignalMapper, SLOT(map()));
+
+        // add a parameter the signal mapper
+        _workspaceSignalMapper->setMapping(action, uuid);
+
+        // set an object name for creating shortcuts
+        action->setObjectName("restoreWorkspace" + QString::number(i));
+
+        ui->menuWorkspaces->addAction(action);
+
+        if (uuid == currentUuid) {
+            currentIndex = i;
+        }
+    }
+
+    // set the new current workspace if a menu entry was triggered
+    QObject::connect(_workspaceSignalMapper,
+                     SIGNAL(mapped(QString)),
+                     this,
+                     SLOT(setCurrentWorkspace(QString)));
+
+    _workspaceComboBox->setCurrentIndex(currentIndex);
+
+    // we need to adapt the width of the workspaces combo box
+    updateWindowToolbar();
+
+    // enable the remove button if there are at least two workspaces
+    ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
 }
 
 /**
@@ -5623,7 +5696,7 @@ void MainWindow::setupNoteSubFolders() {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
 
 //    ui->tagFrame->setVisible(showSubfolders);
-    ui->noteSubFolderFrame->setVisible(showSubfolders);
+    _noteSubFolderDockWidget->setVisible(showSubfolders);
 
     // we only want to see that menu entry if there are note subfolders
     ui->actionFind_notes_in_all_subfolders->setVisible(showSubfolders);
@@ -7507,4 +7580,210 @@ void MainWindow::on_actionLock_panels_toggled(bool arg1) {
                 dockWidget->widget()->setContentsMargins(0, 0, 0, 0);
             }
     }
+}
+
+/**
+ * Creates a new workspace with asking for its name
+ */
+void MainWindow::on_actionStore_as_new_workspace_triggered() {
+    QString name = QInputDialog::getText(
+            this, tr("Create new workspace"), tr("Workspace name:")).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // create the new workspace
+    createNewWorkspace(name);
+}
+
+/**
+ * Creates a new workspace with name
+ *
+ * @param name
+ * @return
+ */
+bool MainWindow::createNewWorkspace(QString name) {
+    name = name.trimmed();
+
+    if (name.isEmpty()) {
+        return false;
+    }
+
+    QString uuid = QUuid::createUuid().toString();
+    uuid.replace("{", "").replace("}", "");
+
+    QStringList workspaces = getWorkspaceUuidList();
+    workspaces.append(uuid);
+
+    QSettings settings;
+    settings.setValue("workspaces", workspaces);
+    settings.setValue("currentWorkspace", uuid);
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+
+    return true;
+}
+
+/**
+ * Returns the uuid of the current workspace
+ *
+ * @return
+ */
+QString MainWindow::currentWorkspaceUuid() {
+    QSettings settings;
+    return settings.value("currentWorkspace").toString();
+}
+
+/**
+ * Sets the new current workspace when the workspace combo box index has changed
+ */
+void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
+    Q_UNUSED(index);
+
+    QString uuid = _workspaceComboBox->currentData().toString();
+
+    // set the new workspace
+    setCurrentWorkspace(uuid);
+}
+
+/**
+ * Sets a new current workspace
+ */
+void MainWindow::setCurrentWorkspace(QString uuid) {
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    QSettings settings;
+    settings.setValue("currentWorkspace", uuid);
+
+    // restore the new workspace
+    restoreCurrentWorkspace();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+}
+
+/**
+ * Stores the current workspace
+ */
+void MainWindow::storeCurrentWorkspace() {
+    QSettings settings;
+    QString uuid = currentWorkspaceUuid();
+
+    settings.setValue("workspace-" + uuid + "/windowState",  saveState());
+}
+
+/**
+ * Restores the current workspace
+ */
+void MainWindow::restoreCurrentWorkspace() {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // create a default workspace if there is none yet
+    if (workspaces.count() == 0) {
+        createNewWorkspace(tr("default", "default workspace"));
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // set the first workspace as current workspace if there is none set
+    if (uuid.isEmpty()) {
+        workspaces = getWorkspaceUuidList();
+
+        if (workspaces.count() == 0) {
+            return;
+        }
+
+        uuid = workspaces.at(0);
+        settings.setValue("currentWorkspace", uuid);
+
+        // update the menu and combo box
+        updateWorkspaceLists();
+    }
+
+    restoreState(settings.value(
+            "workspace-" + uuid + "/windowState").toByteArray());
+}
+
+/**
+ * Returns the list of workspace uuids
+ * @return
+ */
+QStringList MainWindow::getWorkspaceUuidList() {
+    QSettings settings;
+    return settings.value("workspaces").toStringList();
+}
+
+/**
+ * Removes the current workspace
+ */
+void MainWindow::on_actionRemove_current_workspace_triggered() {
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // there have to be at least one workspace
+    if (workspaces.count() < 2) {
+        return;
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't remove it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    // ask for permission
+    if (QMessageBox::information(
+            this,
+            tr("Remove current workspace"),
+            tr("Remove the current workspace?"),
+            tr("&Remove"), tr("&Cancel"), QString::null,
+            0, 1) != 0) {
+        return;
+    }
+
+    QSettings settings;
+    workspaces.removeAll(uuid);
+    settings.setValue("workspaces", workspaces);
+    settings.remove("workspace-" + uuid + "/windowState");
+
+    // reset current workspace
+    uuid = workspaces.at(0);
+
+    // set the new workspace
+    setCurrentWorkspace(uuid);
+}
+
+void MainWindow::on_actionRename_current_workspace_triggered() {
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't rename it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    QSettings settings;
+    QString name = settings.value("workspace-" + uuid + "/name").toString();
+
+    // ask for the new name
+    name = QInputDialog::getText(
+            this, tr("Rename workspace"), tr("Workspace name:"),
+            QLineEdit::Normal, name).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // rename the workspace
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // update the menu and combo box
+    updateWorkspaceLists();
 }
