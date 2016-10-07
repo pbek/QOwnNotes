@@ -757,12 +757,12 @@ void MainWindow::updateWorkspaceLists() {
     QStringList workspaces = getWorkspaceUuidList();
     QString currentUuid = currentWorkspaceUuid();
 
-    const QSignalBlocker blocker(_workspaceComboBox);
-    Q_UNUSED(blocker);
-
     // we need to create a new combo box so the width gets updated in the
     // window toolbar
-    _workspaceComboBox = new QComboBox(this);
+    initWorkspaceComboBox();
+
+    const QSignalBlocker blocker(_workspaceComboBox);
+    Q_UNUSED(blocker);
 
     ui->menuWorkspaces->clear();
     int currentIndex = 0;
@@ -4977,6 +4977,10 @@ void MainWindow::on_actionToggle_distraction_free_mode_triggered()
  * Tracks an action
  */
 void MainWindow::trackAction(QAction *action) {
+    if (action == Q_NULLPTR) {
+        return;
+    }
+
     MetricsService::instance()->sendVisitIfEnabled(
             "action/" + action->objectName());
 }
