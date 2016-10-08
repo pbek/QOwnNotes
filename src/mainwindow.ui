@@ -785,8 +785,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionStore_as_new_workspace"/>
     <addaction name="actionSwitch_to_previous_workspace"/>
     <addaction name="actionRename_current_workspace"/>
-    <addaction name="actionToggle_tag_pane"/>
-    <addaction name="actionToggle_note_edit_pane"/>
     <addaction name="actionToggle_markdown_preview"/>
     <addaction name="actionToggle_between_edit_and_preview"/>
     <addaction name="separator"/>
@@ -1455,21 +1453,6 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+Shift+A</string>
    </property>
   </action>
-  <action name="actionToggle_tag_pane">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="tag" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle tag / subfolder pane</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+T</string>
-   </property>
-  </action>
   <action name="action_Reload_note_folder">
    <property name="icon">
     <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
@@ -1495,21 +1478,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+M</string>
-   </property>
-  </action>
-  <action name="actionToggle_note_edit_pane">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle note edit pane</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+E</string>
    </property>
   </action>
   <action name="actionUse_vertical_preview_layout">

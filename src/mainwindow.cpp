@@ -282,18 +282,9 @@ MainWindow::MainWindow(QWidget *parent) :
     setupMarkdownView();
 
     if (isNoteEditPaneEnabled()) {
-        // setup the note edit pane
-        setupNoteEditPane();
-
         // restore the distraction free mode
         restoreDistractionFreeMode();
     } else {
-        // setup the note edit pane
-        // if the pane is disabled we have to setup the pane with a timer, so
-        // the automatic scrolling when clicked on the navigation bar works in
-        // the preview
-        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
-
         // if the note edit pane is disabled we have to wait with restoring
         // the distraction free mode
         QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
@@ -738,8 +729,6 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->actionRemove_current_workspace);
     _windowToolbar->addAction(ui->actionStore_as_new_workspace);
 
-//    _windowToolbar->addAction(ui->actionToggle_tag_pane);
-//    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
 //    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(
@@ -1029,22 +1018,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // hide the search line edit
         ui->searchLineEdit->hide();
 
-        // hide tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->hide();
-            ui->noteTagFrame->hide();
-        }
-
-        // show the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->show();
-        }
-
-        // hide note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->hide();
-        }
-
         // hide the status bar
 //        ui->statusBar->hide();
 
@@ -1088,22 +1061,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         ui->searchLineEdit->show();
 
         ui->notesListFrame->show();
-
-        // show tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->show();
-            ui->noteTagFrame->show();
-        }
-
-        // hide the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->hide();
-        }
-
-        // show note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->show();
-        }
     }
 
     ui->noteTextEdit->setPaperMargins(this->width());
@@ -3859,8 +3816,7 @@ void MainWindow::filterNotes(bool searchForText) {
  * Checks if tagging is enabled
  */
 bool MainWindow::isTagsEnabled() {
-    QSettings settings;
-    return settings.value("tagsEnabled", false).toBool();
+    return _taggingDockWidget->isVisible();
 }
 
 /**
@@ -3875,8 +3831,7 @@ bool MainWindow::isMarkdownViewEnabled() {
  * Checks if the note edit pane is enabled
  */
 bool MainWindow::isNoteEditPaneEnabled() {
-    QSettings settings;
-    return settings.value("noteEditPaneEnabled", true).toBool();
+    return _noteEditDockWidget->isVisible();
 }
 
 /**
@@ -5676,11 +5631,6 @@ bool MainWindow::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
  * Shows or hides everything for the note tags
  */
 void MainWindow::setupTags() {
-    bool tagsEnabled = isTagsEnabled();
-
-    ui->tagFrame->setVisible(tagsEnabled);
-    ui->tagSubFrame->setVisible(tagsEnabled);
-    ui->noteTagFrame->setVisible(tagsEnabled);
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 
@@ -5690,11 +5640,7 @@ void MainWindow::setupTags() {
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #endif
 
-    const QSignalBlocker blocker(ui->actionToggle_tag_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_tag_pane->setChecked(tagsEnabled);
-
-    if (tagsEnabled) {
+    if (isTagsEnabled()) {
         reloadTagTree();
         ui->tagTreeWidget->expandAll();
         reloadCurrentNoteTags();
@@ -5735,28 +5681,6 @@ void MainWindow::setupMarkdownView() {
     const QSignalBlocker blocker(ui->actionToggle_markdown_preview);
     Q_UNUSED(blocker);
     ui->actionToggle_markdown_preview->setChecked(markdownViewEnabled);
-}
-
-/**
- * Shows or hides everything for the note edit pane
- */
-void MainWindow::setupNoteEditPane() {
-    bool paneEnabled = isNoteEditPaneEnabled();
-
-    ui->noteEditFrame->setVisible(paneEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_note_edit_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_note_edit_pane->setChecked(paneEnabled);
-}
-
-/**
- * Toggles the note panes
- */
-void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
-    QSettings settings;
-    settings.setValue("tagsEnabled", arg1);
-    setupTags();
 }
 
 /**
@@ -5879,10 +5803,6 @@ void MainWindow::removeNoteTagClicked() {
  * Allows the user to add a tag to the current note
  */
 void MainWindow::on_action_new_tag_triggered() {
-    if (!ui->actionToggle_tag_pane->isChecked()) {
-        ui->actionToggle_tag_pane->setChecked(true);
-    }
-
     on_newNoteTagButton_clicked();
 }
 
@@ -5902,14 +5822,6 @@ void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
 
     // setup the markdown view
     setupMarkdownView();
-}
-
-void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
-    QSettings settings;
-    settings.setValue("noteEditPaneEnabled", arg1);
-
-    // setup the note edit pane
-    setupNoteEditPane();
 }
 
 /**
@@ -7274,17 +7186,12 @@ void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
     ui->actionToggle_markdown_preview->toggle();
 
     bool hasPreview = ui->actionToggle_markdown_preview->isChecked();
-    bool hasEdit = ui->actionToggle_note_edit_pane->isChecked();
 
     // set the correct focus
     if (hasPreview) {
         ui->noteTextView->setFocus();
     } else {
         activeNoteTextEdit()->setFocus();
-    }
-
-    if (hasPreview == hasEdit) {
-        ui->actionToggle_note_edit_pane->toggle();
     }
 
     // restore the slider values

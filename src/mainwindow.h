@@ -246,8 +246,6 @@ private slots:
 
     void on_tagLineEdit_textChanged(const QString &arg1);
 
-    void on_actionToggle_tag_pane_toggled(bool arg1);
-
     void on_newNoteTagButton_clicked();
 
     void on_newNoteTagLineEdit_returnPressed();
@@ -267,8 +265,6 @@ private slots:
     void noteTextSliderValueChanged(int value, bool force = false);
 
     void noteViewSliderValueChanged(int value, bool force = false);
-
-    void on_actionToggle_note_edit_pane_toggled(bool arg1);
 
     void on_tagTreeWidget_itemChanged(QTreeWidgetItem *item, int column);
 
@@ -291,8 +287,6 @@ private slots:
     void regenerateNotePreview();
 
     void on_actionAutocomplete_triggered();
-
-    void setupNoteEditPane();
 
     void restoreDistractionFreeMode();
 
