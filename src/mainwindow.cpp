@@ -1587,7 +1587,6 @@ void MainWindow::readSettings() {
             "SortingModeAlphabetically", false).toBool();
     showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
-    restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(
             settings.value("MainWindow/menuBarGeometry").toByteArray());
 
@@ -2671,7 +2670,6 @@ void MainWindow::storeSettings() {
     // don't store the window settings in distraction free mode
     if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
-        settings.setValue("MainWindow/windowState", saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
     }
