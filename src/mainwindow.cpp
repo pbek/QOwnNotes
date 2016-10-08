@@ -392,7 +392,10 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 MainWindow::~MainWindow() {
-    storeCurrentWorkspace();
+    if (!isInDistractionFreeMode()) {
+        storeCurrentWorkspace();
+    }
+
     storeUpdatedNotesToDisk();
 
     if (showSystemTray) {
@@ -993,6 +996,9 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // enter the distraction free mode
         //
 
+        // store the current workspace in case we changed something
+        storeCurrentWorkspace();
+
         // remember states, geometry and sizes
         settings.setValue("DistractionFreeMode/windowState", saveState());
         settings.setValue("DistractionFreeMode/menuBarGeometry",
@@ -1005,22 +1011,23 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         ui->menuBar->setFixedHeight(0);
 
         // hide the toolbars
-        ui->mainToolBar->hide();
-        _formattingToolbar->hide();
-        _customActionToolbar->hide();
-        _insertingToolbar->hide();
-        _encryptionToolbar->hide();
-        _windowToolbar->hide();
-        _quitToolbar->hide();
+        QList<QToolBar*> toolbars = findChildren<QToolBar*>();
+        Q_FOREACH(QToolBar *toolbar, toolbars) {
+                toolbar->hide();
+            }
 
-        // hide the search line edit
-        ui->searchLineEdit->hide();
+        // hide all dock widgets but the note edit dock widget
+        QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                if (dockWidget->objectName() == "noteEditDockWidget") {
+                    continue;
+                }
+
+                dockWidget->hide();
+            }
 
         // hide the status bar
 //        ui->statusBar->hide();
-
-        // hide the notes list widget
-        ui->notesListFrame->hide();
 
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
@@ -1054,11 +1061,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                         "DistractionFreeMode/menuBarGeometry").toByteArray());
         ui->menuBar->setFixedHeight(
                 settings.value("DistractionFreeMode/menuBarHeight").toInt());
-
-        // show the search line edit
-        ui->searchLineEdit->show();
-
-        ui->notesListFrame->show();
     }
 
     ui->noteTextEdit->setPaperMargins(this->width());
