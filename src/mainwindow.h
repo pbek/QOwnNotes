@@ -260,8 +260,6 @@ private slots:
 
     void noteViewUpdateTimerSlot();
 
-    void on_actionToggle_markdown_preview_toggled(bool arg1);
-
     void noteTextSliderValueChanged(int value, bool force = false);
 
     void noteViewSliderValueChanged(int value, bool force = false);
@@ -347,8 +345,6 @@ private slots:
     void on_actionMarkdown_cheatsheet_triggered();
 
     void on_actionStrike_out_text_triggered();
-
-    void on_actionToggle_between_edit_and_preview_triggered();
 
     void on_actionShow_menu_bar_triggered(bool checked);
 
@@ -565,8 +561,6 @@ private:
     void tagSelectedNotes(Tag tag);
 
     bool isMarkdownViewEnabled();
-
-    void setupMarkdownView();
 
     void removeTagFromSelectedNotes(Tag tag);
 

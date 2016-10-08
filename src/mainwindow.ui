@@ -785,8 +785,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionStore_as_new_workspace"/>
     <addaction name="actionSwitch_to_previous_workspace"/>
     <addaction name="actionRename_current_workspace"/>
-    <addaction name="actionToggle_markdown_preview"/>
-    <addaction name="actionToggle_between_edit_and_preview"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
@@ -1465,21 +1463,6 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Shift+R</string>
    </property>
   </action>
-  <action name="actionToggle_markdown_preview">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="text-x-markdown" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle markdown preview</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+M</string>
-   </property>
-  </action>
   <action name="actionUse_vertical_preview_layout">
    <property name="checkable">
     <bool>true</bool>
@@ -1659,17 +1642,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+S</string>
-   </property>
-  </action>
-  <action name="actionToggle_between_edit_and_preview">
-   <property name="text">
-    <string>Toggle between edit and preview</string>
-   </property>
-   <property name="toolTip">
-    <string>Toggle between edit and preview</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+P</string>
    </property>
   </action>
   <action name="actionUse_one_column_mode">

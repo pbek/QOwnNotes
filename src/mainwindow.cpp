@@ -278,9 +278,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
 
-    // setup the markdown view
-    setupMarkdownView();
-
     if (isNoteEditPaneEnabled()) {
         // restore the distraction free mode
         restoreDistractionFreeMode();
@@ -729,7 +726,6 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->actionRemove_current_workspace);
     _windowToolbar->addAction(ui->actionStore_as_new_workspace);
 
-//    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(
             ui->actionToggle_distraction_free_mode);
@@ -5671,19 +5667,6 @@ void MainWindow::setupNoteSubFolders() {
 }
 
 /**
- * Shows or hides everything for the markdown view
- */
-void MainWindow::setupMarkdownView() {
-    bool markdownViewEnabled = isMarkdownViewEnabled();
-
-    ui->noteViewFrame->setVisible(markdownViewEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_markdown_preview);
-    Q_UNUSED(blocker);
-    ui->actionToggle_markdown_preview->setChecked(markdownViewEnabled);
-}
-
-/**
  * Hides the note tag add button and shows the text edit
  */
 void MainWindow::on_newNoteTagButton_clicked() {
@@ -5814,14 +5797,6 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
     buildNotesIndexAndLoadNoteDirectoryList(true, true);
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
-}
-
-void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
-    QSettings settings;
-    settings.setValue("markdownViewEnabled", arg1);
-
-    // setup the markdown view
-    setupMarkdownView();
 }
 
 /**
@@ -7171,35 +7146,6 @@ void MainWindow::on_actionStrike_out_text_triggered() {
         textEdit->setTextCursor(c);
     } else {
         c.insertText("~~" + selectedText + "~~");
-    }
-}
-
-/**
- * Toggles between note edid mode and preview
- */
-void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
-    int noteTextEditScrollValue =
-            activeNoteTextEdit()->verticalScrollBar()->value();
-    int noteViewScrollValue = ui->noteTextView->verticalScrollBar()->value();
-
-    // if we use toggle() the widget sizes are stored correctly
-    ui->actionToggle_markdown_preview->toggle();
-
-    bool hasPreview = ui->actionToggle_markdown_preview->isChecked();
-
-    // set the correct focus
-    if (hasPreview) {
-        ui->noteTextView->setFocus();
-    } else {
-        activeNoteTextEdit()->setFocus();
-    }
-
-    // restore the slider values
-    if (hasPreview) {
-        noteTextSliderValueChanged(noteTextEditScrollValue, true);
-    } else {
-//        activeNoteTextEdit()->ensureCursorVisible();
-        noteViewSliderValueChanged(noteViewScrollValue, true);
     }
 }
 
