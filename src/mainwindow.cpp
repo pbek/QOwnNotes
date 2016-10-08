@@ -723,8 +723,10 @@ void MainWindow::updateWindowToolbar() {
     QWidgetAction *widgetAction = new QWidgetAction(this);
     widgetAction->setDefaultWidget(_workspaceComboBox);
     _windowToolbar->addAction(widgetAction);
-    _windowToolbar->addAction(ui->actionRemove_current_workspace);
     _windowToolbar->addAction(ui->actionStore_as_new_workspace);
+    _windowToolbar->addAction(ui->actionRemove_current_workspace);
+    _windowToolbar->addAction(ui->actionRename_current_workspace);
+    _windowToolbar->addAction(ui->actionSwitch_to_previous_workspace);
 
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(

@@ -781,10 +781,10 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionLock_panels"/>
     <addaction name="menuWorkspaces"/>
-    <addaction name="actionRemove_current_workspace"/>
     <addaction name="actionStore_as_new_workspace"/>
-    <addaction name="actionSwitch_to_previous_workspace"/>
+    <addaction name="actionRemove_current_workspace"/>
     <addaction name="actionRename_current_workspace"/>
+    <addaction name="actionSwitch_to_previous_workspace"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
