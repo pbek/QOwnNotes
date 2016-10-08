@@ -666,7 +666,7 @@ private:
 
     void initDockWidgets();
 
-    void updateWorkspaceLists();
+    void updateWorkspaceLists(bool rebuild = true);
 
     bool createNewWorkspace(QString name);
 

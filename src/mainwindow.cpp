@@ -752,23 +752,36 @@ void MainWindow::updateWindowToolbar() {
 /**
  * Updates the workspace menu and combobox entries
  */
-void MainWindow::updateWorkspaceLists() {
+void MainWindow::updateWorkspaceLists(bool rebuild) {
     QSettings settings;
     QStringList workspaces = getWorkspaceUuidList();
     QString currentUuid = currentWorkspaceUuid();
 
-    // we need to create a new combo box so the width gets updated in the
-    // window toolbar
-    initWorkspaceComboBox();
+    if (rebuild) {
+        // we need to create a new combo box so the width gets updated in the
+        // window toolbar
+        initWorkspaceComboBox();
+
+        ui->menuWorkspaces->clear();
+    }
 
     const QSignalBlocker blocker(_workspaceComboBox);
     Q_UNUSED(blocker);
 
-    ui->menuWorkspaces->clear();
     int currentIndex = 0;
 
     for (int i = 0; i < workspaces.count(); i++) {
         QString uuid = workspaces.at(i);
+
+        if (uuid == currentUuid) {
+            currentIndex = i;
+        }
+
+        // check if we want to skip the rebuilding part
+        if (!rebuild) {
+            continue;
+        }
+
         QString name = settings.value("workspace-" + uuid + "/name").toString();
 
         _workspaceComboBox->addItem(name, uuid);
@@ -784,22 +797,20 @@ void MainWindow::updateWorkspaceLists() {
         action->setObjectName("restoreWorkspace" + QString::number(i));
 
         ui->menuWorkspaces->addAction(action);
-
-        if (uuid == currentUuid) {
-            currentIndex = i;
-        }
     }
-
-    // set the new current workspace if a menu entry was triggered
-    QObject::connect(_workspaceSignalMapper,
-                     SIGNAL(mapped(QString)),
-                     this,
-                     SLOT(setCurrentWorkspace(QString)));
 
     _workspaceComboBox->setCurrentIndex(currentIndex);
 
-    // we need to adapt the width of the workspaces combo box
-    updateWindowToolbar();
+    if (rebuild) {
+        // set the new current workspace if a menu entry was triggered
+        QObject::connect(_workspaceSignalMapper,
+                         SIGNAL(mapped(QString)),
+                         this,
+                         SLOT(setCurrentWorkspace(QString)));
+
+        // we need to adapt the width of the workspaces combo box
+        updateWindowToolbar();
+    }
 
     // enable the remove button if there are at least two workspaces
     ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
@@ -7669,8 +7680,8 @@ void MainWindow::setCurrentWorkspace(QString uuid) {
     // restore the new workspace
     restoreCurrentWorkspace();
 
-    // update the menu and combo box
-    updateWorkspaceLists();
+    // update the menu and combo box (but don't rebuild it)
+    updateWorkspaceLists(false);
 }
 
 /**
