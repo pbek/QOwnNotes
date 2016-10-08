@@ -7625,13 +7625,16 @@ bool MainWindow::createNewWorkspace(QString name) {
         return false;
     }
 
+    QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
+
     QString uuid = QUuid::createUuid().toString();
     uuid.replace("{", "").replace("}", "");
 
     QStringList workspaces = getWorkspaceUuidList();
     workspaces.append(uuid);
 
-    QSettings settings;
     settings.setValue("workspaces", workspaces);
     settings.setValue("currentWorkspace", uuid);
     settings.setValue("workspace-" + uuid + "/name", name);
@@ -7675,6 +7678,8 @@ void MainWindow::setCurrentWorkspace(QString uuid) {
     storeCurrentWorkspace();
 
     QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
     settings.setValue("currentWorkspace", uuid);
 
     // restore the new workspace
@@ -7801,4 +7806,16 @@ void MainWindow::on_actionRename_current_workspace_triggered() {
 
     // update the menu and combo box
     updateWorkspaceLists();
+}
+
+/**
+ * Switch to the previous workspace
+ */
+void MainWindow::on_actionSwitch_to_previous_workspace_triggered() {
+    QSettings settings;
+    QString uuid = settings.value("previousWorkspace").toString();
+
+    if (!uuid.isEmpty()) {
+        setCurrentWorkspace(uuid);
+    }
 }

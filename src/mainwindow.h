@@ -393,6 +393,8 @@ private slots:
 
     void setCurrentWorkspace(QString uuid);
 
+    void on_actionSwitch_to_previous_workspace_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
