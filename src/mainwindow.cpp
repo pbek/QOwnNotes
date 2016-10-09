@@ -7624,16 +7624,23 @@ void MainWindow::on_actionRemove_current_workspace_triggered() {
         return;
     }
 
-    QSettings settings;
-    workspaces.removeAll(uuid);
-    settings.setValue("workspaces", workspaces);
-    settings.remove("workspace-" + uuid + "/windowState");
-
     // reset current workspace
-    uuid = workspaces.at(0);
+    workspaces.removeAll(uuid);
+    QString newUuid = workspaces.at(0);
 
     // set the new workspace
-    setCurrentWorkspace(uuid);
+    setCurrentWorkspace(newUuid);
+
+    QSettings settings;
+    settings.setValue("workspaces", workspaces);
+
+    // remove all settings in the group
+    settings.beginGroup("workspace-" + uuid);
+    settings.remove("");
+    settings.endGroup();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
 }
 
 void MainWindow::on_actionRename_current_workspace_triggered() {
