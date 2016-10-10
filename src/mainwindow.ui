@@ -1807,7 +1807,7 @@ p, li { white-space: pre-wrap; }
     <string>Switch to previous workspace</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Shift+P</string>
+    <string notr="true">Alt+Shift+P</string>
    </property>
   </action>
   <action name="actionShow_all_panels">
@@ -1841,8 +1841,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="breeze-dark-qownnotes.qrc"/>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
