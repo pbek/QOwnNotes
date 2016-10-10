@@ -472,7 +472,11 @@ void MainWindow::initDockWidgets() {
     addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
     // TODO(pbek): maybe do this only if there is no restoreState setting yet
     // I found no other easy way to restrict the height
+#ifdef Q_OS_LINUX
     _noteTagDockWidget->setMaximumHeight(120);
+#else
+    _noteTagDockWidget->setMaximumHeight(50);
+#endif
 
     _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
     _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
