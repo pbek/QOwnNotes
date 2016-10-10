@@ -428,11 +428,16 @@ void MainWindow::initDockWidgets() {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     setDockOptions(dockOptions() | GroupedDragging);
 #endif
+    QSizePolicy sizePolicy;
+
     _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
     _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
     _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
     _noteSubFolderDockTitleBarWidget =
             _noteSubFolderDockWidget->titleBarWidget();
+    sizePolicy = _noteSubFolderDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteSubFolderDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
                   Qt::Horizontal);
 
@@ -440,12 +445,18 @@ void MainWindow::initDockWidgets() {
     _taggingDockWidget->setObjectName("taggingDockWidget");
     _taggingDockWidget->setWidget(ui->tagFrame);
     _taggingDockTitleBarWidget = _taggingDockWidget->titleBarWidget();
+    sizePolicy = _taggingDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _taggingDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
 
     _noteListDockWidget = new QDockWidget(tr("Note list"), this);
     _noteListDockWidget->setObjectName("noteListDockWidget");
     _noteListDockWidget->setWidget(ui->notesListFrame);
     _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
+    sizePolicy = _noteListDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteListDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Vertical);
 
     _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
@@ -453,6 +464,9 @@ void MainWindow::initDockWidgets() {
     _noteNavigationDockWidget->setWidget(ui->navigationFrame);
     _noteNavigationDockTitleBarWidget =
             _noteNavigationDockWidget->titleBarWidget();
+    sizePolicy = _noteNavigationDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteNavigationDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
                   Qt::Vertical);
     // we want the navigation under the note list
@@ -463,12 +477,18 @@ void MainWindow::initDockWidgets() {
     _noteEditDockWidget->setObjectName("noteEditDockWidget");
     _noteEditDockWidget->setWidget(ui->noteEditFrame);
     _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+    sizePolicy = _noteEditDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(5);
+    _noteEditDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
 
     _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
     _noteTagDockWidget->setObjectName("noteTagDockWidget");
     _noteTagDockWidget->setWidget(ui->noteTagFrame);
     _noteTagDockTitleBarWidget = _noteTagDockWidget->titleBarWidget();
+    sizePolicy = _noteTagDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(3);
+    _noteTagDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
 
     QSettings settings;
@@ -5648,11 +5668,9 @@ void MainWindow::setupTags() {
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #endif
 
-    if (isTagsEnabled()) {
-        reloadTagTree();
-        ui->tagTreeWidget->expandAll();
-        reloadCurrentNoteTags();
-    }
+    reloadTagTree();
+    ui->tagTreeWidget->expandAll();
+    reloadCurrentNoteTags();
 
     // filter the notes again
     filterNotes(false);
