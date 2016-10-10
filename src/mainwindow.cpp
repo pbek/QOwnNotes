@@ -5682,8 +5682,6 @@ void MainWindow::setupTags() {
  */
 void MainWindow::setupNoteSubFolders() {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-
-//    ui->tagFrame->setVisible(showSubfolders);
     _noteSubFolderDockWidget->setVisible(showSubfolders);
 
     // we only want to see that menu entry if there are note subfolders
@@ -7711,4 +7709,19 @@ void MainWindow::on_actionSwitch_to_previous_workspace_triggered() {
     if (!uuid.isEmpty()) {
         setCurrentWorkspace(uuid);
     }
+}
+
+/**
+ * Shows all dock widgets
+ */
+void MainWindow::on_actionShow_all_panels_triggered() {
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+
+    Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+            dockWidget->setVisible(true);
+        }
+
+    // hide the note subfolder widget if subfolders are not activated
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    _noteSubFolderDockWidget->setVisible(showSubfolders);
 }

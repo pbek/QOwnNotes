@@ -385,6 +385,8 @@ private slots:
 
     void on_actionSwitch_to_previous_workspace_triggered();
 
+    void on_actionShow_all_panels_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

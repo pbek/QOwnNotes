@@ -785,6 +785,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionRemove_current_workspace"/>
     <addaction name="actionRename_current_workspace"/>
     <addaction name="actionSwitch_to_previous_workspace"/>
+    <addaction name="actionShow_all_panels"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
@@ -1807,6 +1808,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Alt+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionShow_all_panels">
+   <property name="text">
+    <string>Show all panels</string>
    </property>
   </action>
  </widget>
