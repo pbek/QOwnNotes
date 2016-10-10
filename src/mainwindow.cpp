@@ -446,7 +446,7 @@ void MainWindow::initDockWidgets() {
     _noteListDockWidget->setObjectName("noteListDockWidget");
     _noteListDockWidget->setWidget(ui->notesListFrame);
     _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
-    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Horizontal);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Vertical);
 
     _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
     _noteNavigationDockWidget->setObjectName("noteNavigationDockWidget");
