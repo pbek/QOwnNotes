@@ -860,7 +860,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1780"/>
-        <location filename="../mainwindow.cpp" line="7649"/>
+        <location filename="../mainwindow.cpp" line="7652"/>
         <source>Remove current workspace</source>
         <translation type="unfinished"></translation>
     </message>
@@ -877,11 +877,6 @@
     <message>
         <location filename="../mainwindow.ui" line="1807"/>
         <source>Switch to previous workspace</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="1810"/>
-        <source>Alt+Shift+P</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1089,7 +1084,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3385"/>
         <location filename="../mainwindow.cpp" line="3744"/>
         <location filename="../mainwindow.cpp" line="4747"/>
-        <location filename="../mainwindow.cpp" line="7651"/>
+        <location filename="../mainwindow.cpp" line="7654"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1157,7 +1152,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3180"/>
         <location filename="../mainwindow.cpp" line="3209"/>
         <location filename="../mainwindow.cpp" line="3385"/>
-        <location filename="../mainwindow.cpp" line="7651"/>
+        <location filename="../mainwindow.cpp" line="7654"/>
         <source>&amp;Remove</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1294,23 +1289,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7489"/>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7691"/>
         <source>Workspace name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7595"/>
+        <location filename="../mainwindow.cpp" line="7598"/>
         <source>default</source>
         <comment>default workspace</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7650"/>
+        <location filename="../mainwindow.cpp" line="7653"/>
         <source>Remove the current workspace?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7688"/>
+        <location filename="../mainwindow.cpp" line="7691"/>
         <source>Rename workspace</source>
         <translation type="unfinished"></translation>
     </message>

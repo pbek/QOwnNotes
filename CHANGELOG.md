@@ -1,5 +1,24 @@
 # QOwnNotes Changelog
 
+## 16.10.2
+- all **panels** are now **dockable**
+  (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+    - if you turn off panel locking you can move panels around as you
+      like, they can even **float** or be turned off
+    - there is a button to show all panels in case you lost some
+        - you can also right click on the toolbar to turn on and off
+          panels individually
+    - you can create, remove and rename different **workspaces** and 
+      switch between them
+    - there is a button to switch between the last two workspaces for
+      example to toggle between edit and preview if you don't want to
+      show both panels
+    - as a consequence of the new workspace feature the panel visibility
+      checkboxes and the different panel placement settings were removed
+- added more Arabic, Japanese, Italian, French, Portuguese, Russian,
+  Polish and Spanish translation (thank you yousufinternet, piyo,
+  mlocati, lepascalou, mlimacarlos, frostyland, lucjan and richarson)
+
 ## 16.10.1
 - QOwnNotes is now available in **Arabic language** (a big thank you to
   yousufinternet)
