@@ -418,6 +418,7 @@ void MainWindow::initWorkspaceComboBox() {
     _workspaceComboBox = new QComboBox(this);
     connect(_workspaceComboBox, SIGNAL(currentIndexChanged(int)),
             this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
+    _workspaceComboBox->setToolTip(tr("Workspaces"));
     _workspaceSignalMapper = new QSignalMapper(this);
 }
 
@@ -751,7 +752,6 @@ void MainWindow::initToolbars() {
  */
 void MainWindow::updateWindowToolbar() {
     _windowToolbar->clear();
-    _windowToolbar->addAction(ui->actionLock_panels);
 
     QWidgetAction *widgetAction = new QWidgetAction(this);
     widgetAction->setDefaultWidget(_workspaceComboBox);
@@ -760,6 +760,7 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->actionRemove_current_workspace);
     _windowToolbar->addAction(ui->actionRename_current_workspace);
     _windowToolbar->addAction(ui->actionSwitch_to_previous_workspace);
+    _windowToolbar->addAction(ui->actionLock_panels);
 
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(
