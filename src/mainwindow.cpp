@@ -7492,6 +7492,9 @@ void MainWindow::on_actionStore_as_new_workspace_triggered() {
         return;
     }
 
+    // store the current workspace
+    storeCurrentWorkspace();
+
     // create the new workspace
     createNewWorkspace(name);
 }
@@ -7523,7 +7526,7 @@ bool MainWindow::createNewWorkspace(QString name) {
     settings.setValue("currentWorkspace", uuid);
     settings.setValue("workspace-" + uuid + "/name", name);
 
-    // store the current workspace
+    // store the new current workspace
     storeCurrentWorkspace();
 
     // update the menu and combo box
