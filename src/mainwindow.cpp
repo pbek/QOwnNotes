@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include <QSplitter>
 #include <QDebug>
 #include <QDir>
 #include <QFile>
@@ -27,6 +26,7 @@
 #include <QCompleter>
 #include <QTreeWidgetItem>
 #include <QCoreApplication>
+#include <QUuid>
 #include "ui_mainwindow.h"
 #include "dialogs/linkdialog.h"
 #include "services/owncloudservice.h"
@@ -54,6 +54,7 @@
 #include <QQmlContext>
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
+#include <QWidgetAction>
 #include <services/scriptingservice.h>
 #include <dialogs/evernoteimportdialog.h>
 #include <dialogs/logdialog.h>
@@ -70,6 +71,9 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     ui->setupUi(this);
+
+    // initialize the workspace combo box
+    initWorkspaceComboBox();
 
 #ifdef Q_OS_MAC
     // disable icons in the menu that weren't handled by
@@ -154,6 +158,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // check if we want to start the application hidden
     initShowHidden();
 
+    // initialize the dock widgets
+    initDockWidgets();
+
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
     ui->actionAlphabetical->setChecked(sortAlphabetically);
@@ -162,9 +169,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->actionShow_system_tray->setChecked(showSystemTray);
 
     createSystemTrayIcon();
-    initMainSplitter();
-    initNoteListSplitter();
-    initTagFrameSplitter();
     buildNotesIndexAndLoadNoteDirectoryList();
 
     // setup the update available button
@@ -260,6 +264,9 @@ MainWindow::MainWindow(QWidget *parent) :
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
+    // restore the current workspace
+    restoreCurrentWorkspace();
+
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
@@ -271,29 +278,14 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
 
-    // setup the markdown view
-    setupMarkdownView();
-
     if (isNoteEditPaneEnabled()) {
-        // setup the note edit pane
-        setupNoteEditPane();
-
         // restore the distraction free mode
         restoreDistractionFreeMode();
     } else {
-        // setup the note edit pane
-        // if the pane is disabled we have to setup the pane with a timer, so
-        // the automatic scrolling when clicked on the navigation bar works in
-        // the preview
-        QTimer::singleShot(100, this, SLOT(setupNoteEditPane()));
-
         // if the note edit pane is disabled we have to wait with restoring
         // the distraction free mode
         QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
     }
-
-    // setup the one column mode if needed
-    setupOneColumnMode();
 
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
@@ -397,13 +389,15 @@ MainWindow::MainWindow(QWidget *parent) :
             "editor color schema count",
             QString::number(schemaCount) + " schemas",
             schemaCount);
-
-    // init the showing of the tag pane under the navigation pane
-    initShowNoteListUnderTagPane();
 }
 
 MainWindow::~MainWindow() {
+    if (!isInDistractionFreeMode()) {
+        storeCurrentWorkspace();
+    }
+
     storeUpdatedNotesToDisk();
+
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the
         // app can quit
@@ -412,10 +406,121 @@ MainWindow::~MainWindow() {
     delete ui;
 }
 
-
 /*!
  * Methods
  */
+
+
+/**
+ * Initializes the workspace combo box
+ */
+void MainWindow::initWorkspaceComboBox() {
+    _workspaceComboBox = new QComboBox(this);
+    connect(_workspaceComboBox, SIGNAL(currentIndexChanged(int)),
+            this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
+    _workspaceComboBox->setToolTip(tr("Workspaces"));
+    _workspaceSignalMapper = new QSignalMapper(this);
+}
+
+/**
+ * Initializes the dock widgets
+ */
+void MainWindow::initDockWidgets() {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    setDockOptions(dockOptions() | GroupedDragging);
+#endif
+    QSizePolicy sizePolicy;
+
+    _noteSubFolderDockWidget = new QDockWidget(tr("Subfolders"), this);
+    _noteSubFolderDockWidget->setObjectName("noteSubFolderDockWidget");
+    _noteSubFolderDockWidget->setWidget(ui->noteSubFolderFrame);
+    _noteSubFolderDockTitleBarWidget =
+            _noteSubFolderDockWidget->titleBarWidget();
+    sizePolicy = _noteSubFolderDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteSubFolderDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSubFolderDockWidget,
+                  Qt::Horizontal);
+
+    _taggingDockWidget = new QDockWidget(tr("Tags"), this);
+    _taggingDockWidget->setObjectName("taggingDockWidget");
+    _taggingDockWidget->setWidget(ui->tagFrame);
+    _taggingDockTitleBarWidget = _taggingDockWidget->titleBarWidget();
+    sizePolicy = _taggingDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _taggingDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
+
+    _noteListDockWidget = new QDockWidget(tr("Note list"), this);
+    _noteListDockWidget->setObjectName("noteListDockWidget");
+    _noteListDockWidget->setWidget(ui->notesListFrame);
+    _noteListDockTitleBarWidget = _noteListDockWidget->titleBarWidget();
+    sizePolicy = _noteListDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteListDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteListDockWidget, Qt::Vertical);
+
+    _noteNavigationDockWidget = new QDockWidget(tr("Navigation"), this);
+    _noteNavigationDockWidget->setObjectName("noteNavigationDockWidget");
+    _noteNavigationDockWidget->setWidget(ui->navigationFrame);
+    _noteNavigationDockTitleBarWidget =
+            _noteNavigationDockWidget->titleBarWidget();
+    sizePolicy = _noteNavigationDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteNavigationDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteNavigationDockWidget,
+                  Qt::Vertical);
+    // we want the navigation under the note list
+    splitDockWidget(_noteListDockWidget, _noteNavigationDockWidget,
+                    Qt::Vertical);
+
+    _noteEditDockWidget = new QDockWidget(tr("Note edit"), this);
+    _noteEditDockWidget->setObjectName("noteEditDockWidget");
+    _noteEditDockWidget->setWidget(ui->noteEditFrame);
+    _noteEditDockTitleBarWidget = _noteEditDockWidget->titleBarWidget();
+    sizePolicy = _noteEditDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(5);
+    _noteEditDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::RightDockWidgetArea, _noteEditDockWidget, Qt::Horizontal);
+
+    _noteTagDockWidget = new QDockWidget(tr("Note tags"), this);
+    _noteTagDockWidget->setObjectName("noteTagDockWidget");
+    _noteTagDockWidget->setWidget(ui->noteTagFrame);
+    _noteTagDockTitleBarWidget = _noteTagDockWidget->titleBarWidget();
+    sizePolicy = _noteTagDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(3);
+    _noteTagDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
+
+    QSettings settings;
+    bool wasInit = settings.value("dockWasInitializedOnce", false).toBool();
+    if (!wasInit) {
+        // I found no other easy way to set the height on the first start
+#ifdef Q_OS_LINUX
+        _noteTagDockWidget->setMaximumHeight(120);
+#else
+        _noteTagDockWidget->setMaximumHeight(50);
+#endif
+
+        settings.setValue("dockWasInitializedOnce", true);
+    }
+
+    _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
+    _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
+    _notePreviewDockWidget->setWidget(ui->noteViewFrame);
+    _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget,
+                  Qt::Horizontal);
+
+    setDockNestingEnabled(true);
+    setCentralWidget(Q_NULLPTR);
+
+    // lock the dock widgets
+    on_actionLock_panels_toggled(true);
+
+    // update the workspace menu and combobox entries
+    updateWorkspaceLists();
+}
 
 /**
  * Initializes if we want to start the application hidden
@@ -625,17 +730,8 @@ void MainWindow::initToolbars() {
     _encryptionToolbar->setObjectName("encryptionToolbar");
     addToolBar(_encryptionToolbar);
 
-    _windowToolbar =
-            new QToolBar(tr("window toolbar"), this);
-    _windowToolbar->addAction(ui->actionToggle_tag_pane);
-    _windowToolbar->addAction(ui->actionToggle_note_edit_pane);
-    _windowToolbar->addAction(ui->actionToggle_markdown_preview);
-    _windowToolbar->addSeparator();
-    _windowToolbar->addAction(
-            ui->actionToggle_distraction_free_mode);
-    _windowToolbar->addAction(ui->action_Increase_note_text_size);
-    _windowToolbar->addAction(ui->action_Decrease_note_text_size);
-    _windowToolbar->addAction(ui->action_Reset_note_text_size);
+    _windowToolbar = new QToolBar(tr("window toolbar"), this);
+    updateWindowToolbar();
     _windowToolbar->setObjectName("windowToolbar");
     addToolBar(_windowToolbar);
 
@@ -649,6 +745,96 @@ void MainWindow::initToolbars() {
     _quitToolbar->addAction(ui->action_Quit);
     _quitToolbar->setObjectName("quitToolbar");
     addToolBar(_quitToolbar);
+}
+
+/**
+ * Populates the window toolbar
+ */
+void MainWindow::updateWindowToolbar() {
+    _windowToolbar->clear();
+
+    QWidgetAction *widgetAction = new QWidgetAction(this);
+    widgetAction->setDefaultWidget(_workspaceComboBox);
+    _windowToolbar->addAction(widgetAction);
+    _windowToolbar->addAction(ui->actionStore_as_new_workspace);
+    _windowToolbar->addAction(ui->actionRemove_current_workspace);
+    _windowToolbar->addAction(ui->actionRename_current_workspace);
+    _windowToolbar->addAction(ui->actionSwitch_to_previous_workspace);
+    _windowToolbar->addAction(ui->actionLock_panels);
+
+    _windowToolbar->addSeparator();
+    _windowToolbar->addAction(
+            ui->actionToggle_distraction_free_mode);
+    _windowToolbar->addAction(ui->action_Increase_note_text_size);
+    _windowToolbar->addAction(ui->action_Decrease_note_text_size);
+    _windowToolbar->addAction(ui->action_Reset_note_text_size);
+}
+
+/**
+ * Updates the workspace menu and combobox entries
+ */
+void MainWindow::updateWorkspaceLists(bool rebuild) {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+    QString currentUuid = currentWorkspaceUuid();
+
+    if (rebuild) {
+        // we need to create a new combo box so the width gets updated in the
+        // window toolbar
+        initWorkspaceComboBox();
+
+        ui->menuWorkspaces->clear();
+    }
+
+    const QSignalBlocker blocker(_workspaceComboBox);
+    Q_UNUSED(blocker);
+
+    int currentIndex = 0;
+
+    for (int i = 0; i < workspaces.count(); i++) {
+        QString uuid = workspaces.at(i);
+
+        if (uuid == currentUuid) {
+            currentIndex = i;
+        }
+
+        // check if we want to skip the rebuilding part
+        if (!rebuild) {
+            continue;
+        }
+
+        QString name = settings.value("workspace-" + uuid + "/name").toString();
+
+        _workspaceComboBox->addItem(name, uuid);
+
+        QAction *action = new QAction(name, ui->menuWorkspaces);
+        QObject::connect(action, SIGNAL(triggered()),
+                         _workspaceSignalMapper, SLOT(map()));
+
+        // add a parameter the signal mapper
+        _workspaceSignalMapper->setMapping(action, uuid);
+
+        // set an object name for creating shortcuts
+        action->setObjectName("restoreWorkspace" + QString::number(i));
+
+        ui->menuWorkspaces->addAction(action);
+    }
+
+    _workspaceComboBox->setCurrentIndex(currentIndex);
+
+    if (rebuild) {
+        // set the new current workspace if a menu entry was triggered
+        QObject::connect(_workspaceSignalMapper,
+                         SIGNAL(mapped(QString)),
+                         this,
+                         SLOT(setCurrentWorkspace(QString)));
+
+        // we need to adapt the width of the workspaces combo box
+        updateWindowToolbar();
+    }
+
+    // enable the remove button if there are at least two workspaces
+    ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
 }
 
 /**
@@ -841,12 +1027,13 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         // enter the distraction free mode
         //
 
+        // store the current workspace in case we changed something
+        storeCurrentWorkspace();
+
         // remember states, geometry and sizes
         settings.setValue("DistractionFreeMode/windowState", saveState());
         settings.setValue("DistractionFreeMode/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-        settings.setValue("DistractionFreeMode/mainSplitterSizes",
-                          mainSplitter->saveState());
         settings.setValue("DistractionFreeMode/menuBarHeight",
                           ui->menuBar->height());
 
@@ -855,43 +1042,23 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         ui->menuBar->setFixedHeight(0);
 
         // hide the toolbars
-        ui->mainToolBar->hide();
-        _formattingToolbar->hide();
-        _customActionToolbar->hide();
-        _insertingToolbar->hide();
-        _encryptionToolbar->hide();
-        _windowToolbar->hide();
-        _quitToolbar->hide();
+        QList<QToolBar*> toolbars = findChildren<QToolBar*>();
+        Q_FOREACH(QToolBar *toolbar, toolbars) {
+                toolbar->hide();
+            }
 
-        // hide the search line edit
-        ui->searchLineEdit->hide();
+        // hide all dock widgets but the note edit dock widget
+        QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                if (dockWidget->objectName() == "noteEditDockWidget") {
+                    continue;
+                }
 
-        // hide tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->hide();
-            ui->noteTagFrame->hide();
-        }
-
-        // show the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->show();
-        }
-
-        // hide note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->hide();
-        }
+                dockWidget->hide();
+            }
 
         // hide the status bar
 //        ui->statusBar->hide();
-
-        // hide the notes list widget
-        ui->notesListFrame->hide();
-
-//        QList<int> sizes = mainSplitter->sizes();
-//        int size = sizes.takeFirst() + sizes.takeFirst();
-//        sizes << 0 << size;
-//        mainSplitter->setSizes(sizes);
 
         _leaveDistractionFreeModeButton = new QPushButton(tr("leave"));
         _leaveDistractionFreeModeButton->setFlat(true);
@@ -917,9 +1084,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         disconnect(_leaveDistractionFreeModeButton, 0, 0, 0);
 
         // restore states and sizes
-        QByteArray state = settings.value
-                ("DistractionFreeMode/mainSplitterSizes").toByteArray();
-        mainSplitter->restoreState(state);
         restoreState(
                 settings.value(
                         "DistractionFreeMode/windowState").toByteArray());
@@ -928,27 +1092,6 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                         "DistractionFreeMode/menuBarGeometry").toByteArray());
         ui->menuBar->setFixedHeight(
                 settings.value("DistractionFreeMode/menuBarHeight").toInt());
-
-        // show the search line edit
-        ui->searchLineEdit->show();
-
-        ui->notesListFrame->show();
-
-        // show tag frames if tagging is enabled
-        if (isTagsEnabled()) {
-            ui->tagFrame->show();
-            ui->noteTagFrame->show();
-        }
-
-        // hide the note edit frame if was disabled
-        if (!isNoteEditPaneEnabled()) {
-            ui->noteEditFrame->hide();
-        }
-
-        // show note view if markdown view is enabled
-        if (isMarkdownViewEnabled()) {
-            ui->noteViewFrame->show();
-        }
     }
 
     ui->noteTextEdit->setPaperMargins(this->width());
@@ -1244,134 +1387,6 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
     return result;
 }
 
-/**
- * Does the initialization for the main splitter
- */
-void MainWindow::initMainSplitter() {
-    mainSplitter = new QSplitter();
-    mainSplitter->setHandleWidth(0);
-
-    ui->tagFrame->setStyleSheet("#tagFrame {margin-right: 3px;}");
-    ui->notesListFrame->setStyleSheet("#notesListFrame {margin: 0;}");
-
-    _verticalNoteFrame = new QFrame();
-    _verticalNoteFrame->setObjectName("verticalNoteFrame");
-    _verticalNoteFrame->setStyleSheet(
-            "#verticalNoteFrame {margin: 0 0 0 3px;}");
-    _verticalNoteFrame->setFrameShape(QFrame::NoFrame);
-    _verticalNoteFrame->setVisible(false);
-
-    _verticalNoteFrameSplitter = new QSplitter(Qt::Vertical);
-    _verticalNoteFrameSplitter->setHandleWidth(0);
-
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->setContentsMargins(0, 0, 0, 0);
-    layout->addWidget(_verticalNoteFrameSplitter);
-    _verticalNoteFrame->setLayout(layout);
-
-    mainSplitter->addWidget(ui->tagFrame);
-    mainSplitter->addWidget(ui->notesListFrame);
-    mainSplitter->addWidget(_verticalNoteFrame);
-
-    // do the further setup for the main splitter and all the panes
-    setupMainSplitter();
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value("mainSplitterSizes").toByteArray();
-    mainSplitter->restoreState(state);
-
-    ui->centralWidget->layout()->addWidget(this->mainSplitter);
-
-    // setup the checkbox
-    const QSignalBlocker blocker(ui->actionUse_vertical_preview_layout);
-    Q_UNUSED(blocker);
-    ui->actionUse_vertical_preview_layout
-            ->setChecked(isVerticalPreviewModeEnabled());
-}
-
-/**
- * Does the initialization for the note list splitter
- */
-void MainWindow::initNoteListSplitter() {
-    _noteListSplitter = new QSplitter();
-    _noteListSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteListSubFrame->setStyleSheet("#noteListSubFrame {margin: 0;}");
-    ui->navigationFrame->setStyleSheet("#navigationFrame {margin: 0;}");
-
-    _noteListSplitter->addWidget(ui->noteListSubFrame);
-    _noteListSplitter->addWidget(ui->navigationFrame);
-
-    ui->notesListFrame->layout()->addWidget(_noteListSplitter);
-
-    // restore note list splitter state
-    QSettings settings;
-    QByteArray state = settings.value("noteListSplitterState").toByteArray();
-    _noteListSplitter->restoreState(state);
-}
-
-/**
- * Does the initialization for the tag frame splitter
- */
-void MainWindow::initTagFrameSplitter() {
-    _tagFrameSplitter = new QSplitter();
-    _tagFrameSplitter->setOrientation(Qt::Vertical);
-
-    ui->noteSubFolderFrame->setStyleSheet("#noteSubFolderFrame {margin: 0;}");
-    ui->tagSubFrame->setStyleSheet("#tagSubFrame {margin: 0;}");
-
-    _tagFrameSplitter->addWidget(ui->noteSubFolderFrame);
-    _tagFrameSplitter->addWidget(ui->tagSubFrame);
-
-    ui->tagFrame->layout()->addWidget(_tagFrameSplitter);
-
-    // restore tag frame splitter state
-    QSettings settings;
-    QByteArray state = settings.value("tagFrameSplitterState").toByteArray();
-    _tagFrameSplitter->restoreState(state);
-}
-
-/**
- * Does the further setup for the main splitter and all the panes
- */
-void MainWindow::setupMainSplitter() {
-    if ( isVerticalPreviewModeEnabled() ) {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 3px 0;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0;}");
-
-        _verticalNoteFrameSplitter->addWidget(ui->noteEditFrame);
-        _verticalNoteFrameSplitter->addWidget(ui->noteViewFrame);
-
-        // disable collapsing for all widgets in the splitter, users had
-        // problems with collapsed panels
-        for (int i = 0; i < _verticalNoteFrameSplitter->count(); i++) {
-            _verticalNoteFrameSplitter->setCollapsible(i, false);
-        }
-
-        // restore the vertical note frame splitter state
-        QSettings settings;
-        _verticalNoteFrameSplitter->restoreState(settings.value(
-                "verticalNoteFrameSplitterState").toByteArray());
-    } else {
-        ui->noteEditFrame->setStyleSheet("#noteEditFrame {margin: 0 0 0 3px;}");
-        ui->noteViewFrame->setStyleSheet("#noteViewFrame {margin: 0 0 0 3px;}");
-
-        mainSplitter->addWidget(ui->noteEditFrame);
-        mainSplitter->addWidget(ui->noteViewFrame);
-    }
-
-    // disable collapsing for all widgets in the splitter, users had problems
-    // with collapsed panels
-    for (int i = 0; i < mainSplitter->count(); i++) {
-        mainSplitter->setCollapsible(i, false);
-    }
-
-    // set the visibility of the vertical note frame
-    _verticalNoteFrame->setVisible(isVerticalPreviewModeEnabled() &&
-                (isNoteEditPaneEnabled() || isMarkdownViewEnabled()));
-}
-
 void MainWindow::createSystemTrayIcon() {
     trayIcon = new QSystemTrayIcon(this);
     trayIcon->setIcon(getSystemTrayIcon());
@@ -1603,7 +1618,6 @@ void MainWindow::readSettings() {
             "SortingModeAlphabetically", false).toBool();
     showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
-    restoreState(settings.value("MainWindow/windowState").toByteArray());
     ui->menuBar->restoreGeometry(
             settings.value("MainWindow/menuBarGeometry").toByteArray());
 
@@ -2687,18 +2701,8 @@ void MainWindow::storeSettings() {
     // don't store the window settings in distraction free mode
     if (!isInDistractionFreeMode()) {
         settings.setValue("MainWindow/geometry", saveGeometry());
-        settings.setValue("MainWindow/windowState", saveState());
-        settings.setValue("mainSplitterSizes", mainSplitter->saveState());
-        settings.setValue("noteListSplitterState",
-                          _noteListSplitter->saveState());
-        settings.setValue("tagFrameSplitterState",
-                          _tagFrameSplitter->saveState());
-        settings.setValue("verticalNoteFrameSplitterState",
-                          _verticalNoteFrameSplitter->saveState());
         settings.setValue("MainWindow/menuBarGeometry",
                           ui->menuBar->saveGeometry());
-
-        saveMainSplitterState();
     }
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
@@ -2872,7 +2876,7 @@ QTreeWidgetItem * MainWindow::firstVisibleNoteTreeWidgetItem() {
 /**
  * highlights all occurrences of str in the note text edit
  */
-void MainWindow::searchInNoteTextEdit(QString &str) {
+void MainWindow::searchInNoteTextEdit(QString str) {
     QList<QTextEdit::ExtraSelection> extraSelections;
     QList<QTextEdit::ExtraSelection> extraSelections2;
     QList<QTextEdit::ExtraSelection> extraSelections3;
@@ -3838,19 +3842,10 @@ void MainWindow::filterNotes(bool searchForText) {
 }
 
 /**
- * Checks if the vertical preview mode is enabled
- */
-bool MainWindow::isVerticalPreviewModeEnabled() {
-    QSettings settings;
-    return settings.value("verticalPreviewModeEnabled", false).toBool();
-}
-
-/**
  * Checks if tagging is enabled
  */
 bool MainWindow::isTagsEnabled() {
-    QSettings settings;
-    return settings.value("tagsEnabled", false).toBool();
+    return _taggingDockWidget->isVisible();
 }
 
 /**
@@ -3865,8 +3860,7 @@ bool MainWindow::isMarkdownViewEnabled() {
  * Checks if the note edit pane is enabled
  */
 bool MainWindow::isNoteEditPaneEnabled() {
-    QSettings settings;
-    return settings.value("noteEditPaneEnabled", true).toBool();
+    return _noteEditDockWidget->isVisible();
 }
 
 /**
@@ -4978,6 +4972,10 @@ void MainWindow::on_actionToggle_distraction_free_mode_triggered()
  * Tracks an action
  */
 void MainWindow::trackAction(QAction *action) {
+    if (action == Q_NULLPTR) {
+        return;
+    }
+
     MetricsService::instance()->sendVisitIfEnabled(
             "action/" + action->objectName());
 }
@@ -5662,11 +5660,6 @@ bool MainWindow::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
  * Shows or hides everything for the note tags
  */
 void MainWindow::setupTags() {
-    bool tagsEnabled = isTagsEnabled();
-
-    ui->tagFrame->setVisible(tagsEnabled);
-    ui->tagSubFrame->setVisible(tagsEnabled);
-    ui->noteTagFrame->setVisible(tagsEnabled);
     ui->newNoteTagLineEdit->setVisible(false);
     ui->newNoteTagButton->setVisible(true);
 
@@ -5676,15 +5669,9 @@ void MainWindow::setupTags() {
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #endif
 
-    const QSignalBlocker blocker(ui->actionToggle_tag_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_tag_pane->setChecked(tagsEnabled);
-
-    if (tagsEnabled) {
-        reloadTagTree();
-        ui->tagTreeWidget->expandAll();
-        reloadCurrentNoteTags();
-    }
+    reloadTagTree();
+    ui->tagTreeWidget->expandAll();
+    reloadCurrentNoteTags();
 
     // filter the notes again
     filterNotes(false);
@@ -5695,9 +5682,7 @@ void MainWindow::setupTags() {
  */
 void MainWindow::setupNoteSubFolders() {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-
-//    ui->tagFrame->setVisible(showSubfolders);
-    ui->noteSubFolderFrame->setVisible(showSubfolders);
+    _noteSubFolderDockWidget->setVisible(showSubfolders);
 
     // we only want to see that menu entry if there are note subfolders
     ui->actionFind_notes_in_all_subfolders->setVisible(showSubfolders);
@@ -5708,128 +5693,6 @@ void MainWindow::setupNoteSubFolders() {
 
     // filter the notes again
     filterNotes(false);
-}
-
-/**
- * Shows or hides everything for the markdown view
- */
-void MainWindow::setupMarkdownView() {
-    bool markdownViewEnabled = isMarkdownViewEnabled();
-
-    ui->noteViewFrame->setVisible(markdownViewEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_markdown_preview);
-    Q_UNUSED(blocker);
-    ui->actionToggle_markdown_preview->setChecked(markdownViewEnabled);
-}
-
-/**
- * Shows or hides everything for the note edit pane
- */
-void MainWindow::setupNoteEditPane() {
-    bool paneEnabled = isNoteEditPaneEnabled();
-
-    ui->noteEditFrame->setVisible(paneEnabled);
-
-    const QSignalBlocker blocker(ui->actionToggle_note_edit_pane);
-    Q_UNUSED(blocker);
-    ui->actionToggle_note_edit_pane->setChecked(paneEnabled);
-}
-
-/**
- * Sets up the one column mode
- */
-void MainWindow::setupOneColumnMode() {
-    QSettings settings;
-    bool modeEnabled = settings.value("oneColumnModeEnabled", false).toBool();
-
-    if (modeEnabled) {
-        const QSignalBlocker blocker(ui->actionUse_one_column_mode);
-        Q_UNUSED(blocker);
-
-        ui->actionUse_one_column_mode->setChecked(true);
-        toggleOneColumnMode(true, false);
-    }
-}
-
-/**
- * Returns the key for storing and restoring the main splitter state
- */
-QString MainWindow::getMainSplitterStateKey(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    bool state1 = ui->actionToggle_tag_pane->isChecked();
-    bool state2 = ui->actionToggle_markdown_preview->isChecked();
-    bool state3 = ui->actionToggle_note_edit_pane->isChecked();
-    bool state4 = isVerticalPreviewModeEnabled();
-
-    if (invertTagState) {
-        state1 = !state1;
-    }
-
-    if (invertMarkdownState) {
-        state2 = !state2;
-    }
-
-    if (invertEditState) {
-        state3 = !state3;
-    }
-
-    if (invertVerticalModeState) {
-        state4 = !state4;
-    }
-
-    QString state1Str = state1 ? "1" : "0";
-    QString state2Str = state2 ? "1" : "0";
-    QString state3Str = state3 ? "1" : "0";
-    QString state4Str = state4 ? "1" : "0";
-    return QString("mainSplitterState-%1-%2-%3-%4").arg(
-            state1Str, state2Str, state3Str, state4Str);
-}
-
-/**
- * Stores the main splitter state
- */
-void MainWindow::saveMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // store the main splitter state
-    QSettings settings;
-    settings.setValue(key, mainSplitter->saveState());
-}
-
-/**
- * Restores the main splitter state
- */
-void MainWindow::restoreMainSplitterState(
-        bool invertTagState, bool invertMarkdownState,
-        bool invertEditState, bool invertVerticalModeState) {
-    QString key = getMainSplitterStateKey(
-            invertTagState, invertMarkdownState,
-            invertEditState, invertVerticalModeState);
-
-    // restore main splitter state
-    QSettings settings;
-    QByteArray state = settings.value(key).toByteArray();
-
-    mainSplitter->restoreState(state);
-}
-
-/**
- * Toggles the note panes
- */
-void MainWindow::on_actionToggle_tag_pane_toggled(bool arg1) {
-    saveMainSplitterState(true);
-
-    QSettings settings;
-    settings.setValue("tagsEnabled", arg1);
-    setupTags();
-
-    restoreMainSplitterState();
 }
 
 /**
@@ -5952,10 +5815,6 @@ void MainWindow::removeNoteTagClicked() {
  * Allows the user to add a tag to the current note
  */
 void MainWindow::on_action_new_tag_triggered() {
-    if (!ui->actionToggle_tag_pane->isChecked()) {
-        ui->actionToggle_tag_pane->setChecked(true);
-    }
-
     on_newNoteTagButton_clicked();
 }
 
@@ -5967,48 +5826,6 @@ void MainWindow::on_action_Reload_note_folder_triggered() {
     buildNotesIndexAndLoadNoteDirectoryList(true, true);
     currentNote.refetch();
     setNoteTextFromNote(&currentNote);
-}
-
-void MainWindow::on_actionToggle_markdown_preview_toggled(bool arg1) {
-    saveMainSplitterState(false, true);
-
-    QSettings settings;
-    settings.setValue("markdownViewEnabled", arg1);
-
-    // setup the markdown view
-    setupMarkdownView();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
-}
-
-void MainWindow::on_actionToggle_note_edit_pane_toggled(bool arg1) {
-    saveMainSplitterState(false, false, true);
-
-    QSettings settings;
-    settings.setValue("noteEditPaneEnabled", arg1);
-
-    // setup the note edit pane
-    setupNoteEditPane();
-
-    // setup the main splitter again for the vertical note pane visibility
-    setupMainSplitter();
-
-    restoreMainSplitterState();
-}
-
-void MainWindow::on_actionUse_vertical_preview_layout_toggled(bool arg1) {
-    saveMainSplitterState(false, false, false, true);
-
-    QSettings settings;
-    settings.setValue("verticalPreviewModeEnabled", arg1);
-
-    // setup the main splitter again
-    setupMainSplitter();
-
-    restoreMainSplitterState();
 }
 
 /**
@@ -7362,40 +7179,6 @@ void MainWindow::on_actionStrike_out_text_triggered() {
 }
 
 /**
- * Toggles between note edid mode and preview
- */
-void MainWindow::on_actionToggle_between_edit_and_preview_triggered() {
-    int noteTextEditScrollValue =
-            activeNoteTextEdit()->verticalScrollBar()->value();
-    int noteViewScrollValue = ui->noteTextView->verticalScrollBar()->value();
-
-    // if we use toggle() the widget sizes are stored correctly
-    ui->actionToggle_markdown_preview->toggle();
-
-    bool hasPreview = ui->actionToggle_markdown_preview->isChecked();
-    bool hasEdit = ui->actionToggle_note_edit_pane->isChecked();
-
-    // set the correct focus
-    if (hasPreview) {
-        ui->noteTextView->setFocus();
-    } else {
-        activeNoteTextEdit()->setFocus();
-    }
-
-    if (hasPreview == hasEdit) {
-        ui->actionToggle_note_edit_pane->toggle();
-    }
-
-    // restore the slider values
-    if (hasPreview) {
-        noteTextSliderValueChanged(noteTextEditScrollValue, true);
-    } else {
-//        activeNoteTextEdit()->ensureCursorVisible();
-        noteViewSliderValueChanged(noteViewScrollValue, true);
-    }
-}
-
-/**
  * Initializes the shortcuts for the actions
  *
  * @param setDefaultShortcut
@@ -7476,85 +7259,6 @@ void MainWindow::initShortcuts() {
 }
 
 /**
- * Toggles the one column mode
- *
- * @param activated
- * @param toggleOtherPanes
- */
-void MainWindow::toggleOneColumnMode(bool activated, bool toggleOtherPanes) {
-    // turn off the vertical preview layout because the two don't work well
-    // together (also when one column mode is deactivated)
-    ui->actionUse_vertical_preview_layout->setChecked(false);
-
-    // hide the navigation frame in one column mode
-    ui->navigationFrame->setHidden(activated);
-
-    if (activated) {
-        if (toggleOtherPanes) {
-            // turn on the note edit pane if not active
-            if (!ui->actionToggle_note_edit_pane->isChecked()) {
-                ui->actionToggle_note_edit_pane->toggle();
-            }
-
-            // turn off the tag pane if active
-            if (ui->actionToggle_tag_pane->isChecked()) {
-                ui->actionToggle_tag_pane->toggle();
-            }
-
-            // turn off the preview pane if active
-            if (ui->actionToggle_markdown_preview->isChecked()) {
-                ui->actionToggle_markdown_preview->toggle();
-            }
-        }
-
-        // add the edit frame to the note list splitter in one column mode
-        ui->noteEditFrame->setStyleSheet("#navigationFrame {margin: 0;}");
-        _noteListSplitter->addWidget(ui->noteEditFrame);
-    } else {
-        // restore the main splitter to get out of the one column mode
-        setupMainSplitter();
-    }
-
-    QSettings settings;
-    settings.setValue("oneColumnModeEnabled", activated);
-
-    // restore the splitter state
-    QByteArray state = settings.value("noteListSplitterState").toByteArray();
-    _noteListSplitter->restoreState(state);
-
-    if (activated) {
-        // try to set the height of the note edit frame if it is smaller
-        // than 300px to make sure it is visible when the one column mode is
-        // turned on
-        if (ui->noteEditFrame->height() < 300) {
-            // this doesn't work
-//        ui->noteEditFrame->resize(ui->noteEditFrame->width(), 300);
-
-            QList<int> sizes = _noteListSplitter->sizes();
-            sizes[2] = 300;
-            _noteListSplitter->setSizes(sizes);
-        }
-    } else {
-        // show the navigation frame again when the one column mode is
-        // turned off
-        if (ui->navigationFrame->height() < 200) {
-            QList<int> sizes = _noteListSplitter->sizes();
-            sizes[1] = 200;
-            _noteListSplitter->setSizes(sizes);
-        }
-    }
-}
-
-/**
- * Toggles the one column mode
- *
- * @param arg1
- */
-void MainWindow::on_actionUse_one_column_mode_toggled(bool arg1) {
-    toggleOneColumnMode(arg1, true);
-}
-
-/**
  * Shows or hides the main menu bar
  *
  * @param checked
@@ -7621,37 +7325,6 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
     Q_FOREACH(Tag tag, tags) {
             tag.linkToNote(currentNote);
         }
-}
-
-/**
- * Toggles the showing of the tag pane under the navigation pane
- *
- * @param arg1
- */
-void MainWindow::on_actionShow_note_list_under_tag_pane_toggled(
-        bool arg1) {
-    saveMainSplitterState(false, false, false, false);
-
-    if (arg1) {
-        _noteListSplitter->insertWidget(0, ui->tagFrame);
-    } else {
-        mainSplitter->insertWidget(0, ui->tagFrame);
-    }
-
-    restoreMainSplitterState();
-
-    QSettings settings;
-    settings.setValue("showNoteListUnderTagPane", arg1);
-}
-
-/**
- * Inits the showing of the tag pane under the navigation pane
- */
-void MainWindow::initShowNoteListUnderTagPane() {
-    QSettings settings;
-    if (settings.value("showNoteListUnderTagPane", false).toBool()) {
-        ui->actionShow_note_list_under_tag_pane->setChecked(true);
-    }
 }
 
 /**
@@ -7756,4 +7429,302 @@ void MainWindow::writeToNoteTextEdit(QString text) {
 QString MainWindow::selectedNoteTextEditText() {
     QTextEdit *textEdit = activeNoteTextEdit();
     return textEdit->textCursor().selectedText();
+}
+
+/**
+ * Locks and unlocks the dock widgets
+ *
+ * @param arg1
+ */
+void MainWindow::on_actionLock_panels_toggled(bool arg1) {
+    const QSignalBlocker blocker(ui->actionLock_panels);
+    {
+        Q_UNUSED(blocker);
+        ui->actionLock_panels->setChecked(arg1);
+    }
+
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+
+    if (arg1) {
+        // remove the title bar widgets of all dock widgets
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                // we don't want to lock floating dock widgets
+                if (dockWidget->isFloating()) {
+                    continue;
+                }
+
+                // remove the title bar widget
+                dockWidget->setTitleBarWidget(new QWidget());
+
+#ifndef Q_OS_MAC
+                // set 3px top margin for the enclosed widget
+                dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
+#endif
+            }
+    } else {
+        // add the old title bar widgets to all dock widgets
+        _noteSubFolderDockWidget->setTitleBarWidget(
+                _noteSubFolderDockTitleBarWidget);
+        _taggingDockWidget->setTitleBarWidget(_taggingDockTitleBarWidget);
+        _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
+        _noteNavigationDockWidget->setTitleBarWidget(
+                _noteNavigationDockTitleBarWidget);
+        _noteEditDockWidget->setTitleBarWidget(_noteEditDockTitleBarWidget);
+        _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
+        _notePreviewDockWidget->setTitleBarWidget(
+                _notePreviewDockTitleBarWidget);
+
+        Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+                // reset the top margin of the enclosed widget
+                dockWidget->widget()->setContentsMargins(0, 0, 0, 0);
+            }
+    }
+}
+
+/**
+ * Creates a new workspace with asking for its name
+ */
+void MainWindow::on_actionStore_as_new_workspace_triggered() {
+    QString name = QInputDialog::getText(
+            this, tr("Create new workspace"), tr("Workspace name:")).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    // create the new workspace
+    createNewWorkspace(name);
+}
+
+/**
+ * Creates a new workspace with name
+ *
+ * @param name
+ * @return
+ */
+bool MainWindow::createNewWorkspace(QString name) {
+    name = name.trimmed();
+
+    if (name.isEmpty()) {
+        return false;
+    }
+
+    QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
+
+    QString uuid = QUuid::createUuid().toString();
+    uuid.replace("{", "").replace("}", "");
+
+    QStringList workspaces = getWorkspaceUuidList();
+    workspaces.append(uuid);
+
+    settings.setValue("workspaces", workspaces);
+    settings.setValue("currentWorkspace", uuid);
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // store the new current workspace
+    storeCurrentWorkspace();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+
+    return true;
+}
+
+/**
+ * Returns the uuid of the current workspace
+ *
+ * @return
+ */
+QString MainWindow::currentWorkspaceUuid() {
+    QSettings settings;
+    return settings.value("currentWorkspace").toString();
+}
+
+/**
+ * Sets the new current workspace when the workspace combo box index has changed
+ */
+void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
+    Q_UNUSED(index);
+
+    QString uuid = _workspaceComboBox->currentData().toString();
+
+    // set the new workspace
+    setCurrentWorkspace(uuid);
+}
+
+/**
+ * Sets a new current workspace
+ */
+void MainWindow::setCurrentWorkspace(QString uuid) {
+    // store the current workspace
+    storeCurrentWorkspace();
+
+    QSettings settings;
+    QString currentUuid = currentWorkspaceUuid();
+    settings.setValue("previousWorkspace", currentUuid);
+    settings.setValue("currentWorkspace", uuid);
+
+    // restore the new workspace
+    restoreCurrentWorkspace();
+
+    // update the menu and combo box (but don't rebuild it)
+    updateWorkspaceLists(false);
+}
+
+/**
+ * Stores the current workspace
+ */
+void MainWindow::storeCurrentWorkspace() {
+    QSettings settings;
+    QString uuid = currentWorkspaceUuid();
+
+    settings.setValue("workspace-" + uuid + "/windowState",  saveState());
+}
+
+/**
+ * Restores the current workspace
+ */
+void MainWindow::restoreCurrentWorkspace() {
+    QSettings settings;
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // create a default workspace if there is none yet
+    if (workspaces.count() == 0) {
+        createNewWorkspace(tr("default", "default workspace"));
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // set the first workspace as current workspace if there is none set
+    if (uuid.isEmpty()) {
+        workspaces = getWorkspaceUuidList();
+
+        if (workspaces.count() == 0) {
+            return;
+        }
+
+        uuid = workspaces.at(0);
+        settings.setValue("currentWorkspace", uuid);
+
+        // update the menu and combo box
+        updateWorkspaceLists();
+    }
+
+    restoreState(settings.value(
+            "workspace-" + uuid + "/windowState").toByteArray());
+}
+
+/**
+ * Returns the list of workspace uuids
+ * @return
+ */
+QStringList MainWindow::getWorkspaceUuidList() {
+    QSettings settings;
+    return settings.value("workspaces").toStringList();
+}
+
+/**
+ * Removes the current workspace
+ */
+void MainWindow::on_actionRemove_current_workspace_triggered() {
+    QStringList workspaces = getWorkspaceUuidList();
+
+    // there have to be at least one workspace
+    if (workspaces.count() < 2) {
+        return;
+    }
+
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't remove it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    // ask for permission
+    if (QMessageBox::information(
+            this,
+            tr("Remove current workspace"),
+            tr("Remove the current workspace?"),
+            tr("&Remove"), tr("&Cancel"), QString::null,
+            0, 1) != 0) {
+        return;
+    }
+
+    // reset current workspace
+    workspaces.removeAll(uuid);
+    QString newUuid = workspaces.at(0);
+
+    // set the new workspace
+    setCurrentWorkspace(newUuid);
+
+    QSettings settings;
+    settings.setValue("workspaces", workspaces);
+
+    // remove all settings in the group
+    settings.beginGroup("workspace-" + uuid);
+    settings.remove("");
+    settings.endGroup();
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+}
+
+void MainWindow::on_actionRename_current_workspace_triggered() {
+    QString uuid = currentWorkspaceUuid();
+
+    // if no workspace is set we can't rename it
+    if (uuid.isEmpty()) {
+        return;
+    }
+
+    QSettings settings;
+    QString name = settings.value("workspace-" + uuid + "/name").toString();
+
+    // ask for the new name
+    name = QInputDialog::getText(
+            this, tr("Rename workspace"), tr("Workspace name:"),
+            QLineEdit::Normal, name).trimmed();
+
+    if (name.isEmpty()) {
+        return;
+    }
+
+    // rename the workspace
+    settings.setValue("workspace-" + uuid + "/name", name);
+
+    // update the menu and combo box
+    updateWorkspaceLists();
+}
+
+/**
+ * Switch to the previous workspace
+ */
+void MainWindow::on_actionSwitch_to_previous_workspace_triggered() {
+    QSettings settings;
+    QString uuid = settings.value("previousWorkspace").toString();
+
+    if (!uuid.isEmpty()) {
+        setCurrentWorkspace(uuid);
+    }
+}
+
+/**
+ * Shows all dock widgets
+ */
+void MainWindow::on_actionShow_all_panels_triggered() {
+    QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
+
+    Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
+            dockWidget->setVisible(true);
+        }
+
+    // hide the note subfolder widget if subfolders are not activated
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    _noteSubFolderDockWidget->setVisible(showSubfolders);
 }

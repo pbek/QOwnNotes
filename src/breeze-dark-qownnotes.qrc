@@ -88,5 +88,6 @@
         <file alias="16x16/document-export.svg">icons/breeze-dark-qownnotes/16x16/document-export.svg</file>
         <file alias="16x16/drive-removable-media.svg">icons/breeze-dark-qownnotes/16x16/drive-removable-media.svg</file>
         <file alias="16x16/archive-remove.svg">icons/breeze-dark-qownnotes/16x16/archive-remove.svg</file>
+        <file alias="16x16/system-lock-screen.svg">icons/breeze-dark-qownnotes/16x16/system-lock-screen.svg</file>
     </qresource>
 </RCC>

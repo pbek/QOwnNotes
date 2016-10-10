@@ -398,6 +398,43 @@ bool DatabaseService::setupTables() {
         version = 14;
     }
 
+    if (version < 15) {
+        // turn off the DFM initially after the dock widget update
+        settings.remove("DistractionFreeMode/isEnabled");
+
+        // remove some deprecated settings
+        settings.remove("MainWindow/windowState");
+        settings.remove("windowState");
+        settings.remove("markdownViewEnabled");
+        settings.remove("tagsEnabled");
+        settings.remove("noteEditPaneEnabled");
+        settings.remove("dockWindowState");
+        settings.remove("verticalPreviewModeEnabled");
+        settings.remove("mainSplitterSizes");
+        settings.remove("DistractionFreeMode/mainSplitterSizes");
+        settings.remove("mainSplitterState-0-0-0-0");
+        settings.remove("mainSplitterState-0-0-0-1");
+        settings.remove("mainSplitterState-0-0-1-0");
+        settings.remove("mainSplitterState-0-0-1-1");
+        settings.remove("mainSplitterState-0-1-0-0");
+        settings.remove("mainSplitterState-0-1-0-1");
+        settings.remove("mainSplitterState-0-1-1-0");
+        settings.remove("mainSplitterState-0-1-1-1");
+        settings.remove("mainSplitterState-1-0-0-0");
+        settings.remove("mainSplitterState-1-0-0-1");
+        settings.remove("mainSplitterState-1-0-1-0");
+        settings.remove("mainSplitterState-1-0-1-1");
+        settings.remove("mainSplitterState-1-1-0-0");
+        settings.remove("mainSplitterState-1-1-0-1");
+        settings.remove("mainSplitterState-1-1-1-0");
+        settings.remove("mainSplitterState-1-1-1-1");
+        settings.remove("noteListSplitterState");
+        settings.remove("tagFrameSplitterState");
+        settings.remove("verticalNoteFrameSplitterState");
+
+        version = 15;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

@@ -431,7 +431,7 @@
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -460,7 +460,7 @@ p, li { white-space: pre-wrap; }
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Oxygen-Sans Sans-Book';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -586,7 +586,7 @@ p, li { white-space: pre-wrap; }
             <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Oxygen-Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
            <property name="acceptRichText">
@@ -613,7 +613,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>35</height>
+     <height>37</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -767,6 +767,11 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionEditorWidthWide"/>
      <addaction name="actionEditorWidthFull"/>
     </widget>
+    <widget class="QMenu" name="menuWorkspaces">
+     <property name="title">
+      <string>Workspaces</string>
+     </property>
+    </widget>
     <addaction name="actionShow_menu_bar"/>
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
@@ -774,13 +779,13 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log_dialog"/>
     <addaction name="separator"/>
-    <addaction name="actionToggle_tag_pane"/>
-    <addaction name="actionToggle_note_edit_pane"/>
-    <addaction name="actionToggle_markdown_preview"/>
-    <addaction name="actionToggle_between_edit_and_preview"/>
-    <addaction name="actionUse_vertical_preview_layout"/>
-    <addaction name="actionUse_one_column_mode"/>
-    <addaction name="actionShow_note_list_under_tag_pane"/>
+    <addaction name="actionLock_panels"/>
+    <addaction name="menuWorkspaces"/>
+    <addaction name="actionStore_as_new_workspace"/>
+    <addaction name="actionRemove_current_workspace"/>
+    <addaction name="actionRename_current_workspace"/>
+    <addaction name="actionSwitch_to_previous_workspace"/>
+    <addaction name="actionShow_all_panels"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
@@ -1447,21 +1452,6 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+Shift+A</string>
    </property>
   </action>
-  <action name="actionToggle_tag_pane">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="tag" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</normaloff>:/icons/breeze-qownnotes/16x16/tag.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle tag / subfolder pane</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+T</string>
-   </property>
-  </action>
   <action name="action_Reload_note_folder">
    <property name="icon">
     <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
@@ -1472,36 +1462,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+R</string>
-   </property>
-  </action>
-  <action name="actionToggle_markdown_preview">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="text-x-markdown" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle markdown preview</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+M</string>
-   </property>
-  </action>
-  <action name="actionToggle_note_edit_pane">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="icon">
-    <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
-   </property>
-   <property name="text">
-    <string>Toggle note edit pane</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+E</string>
    </property>
   </action>
   <action name="actionUse_vertical_preview_layout">
@@ -1685,17 +1645,6 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Alt+Shift+S</string>
    </property>
   </action>
-  <action name="actionToggle_between_edit_and_preview">
-   <property name="text">
-    <string>Toggle between edit and preview</string>
-   </property>
-   <property name="toolTip">
-    <string>Toggle between edit and preview</string>
-   </property>
-   <property name="shortcut">
-    <string notr="true">Alt+Shift+P</string>
-   </property>
-  </action>
   <action name="actionUse_one_column_mode">
    <property name="checkable">
     <bool>true</bool>
@@ -1808,6 +1757,62 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="statusTip">
     <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
+   </property>
+  </action>
+  <action name="actionLock_panels">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset theme="system-lock-screen" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Lock panels</string>
+   </property>
+  </action>
+  <action name="actionRemove_current_workspace">
+   <property name="icon">
+    <iconset theme="list-remove" resource="breeze-dark-qownnotes.qrc">
+     <normaloff>:/icons/breeze-dark-qownnotes/16x16/list-remove.svg</normaloff>:/icons/breeze-dark-qownnotes/16x16/list-remove.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Remove current workspace</string>
+   </property>
+  </action>
+  <action name="actionStore_as_new_workspace">
+   <property name="icon">
+    <iconset theme="list-add" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</normaloff>:/icons/breeze-qownnotes/16x16/list-add.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Add new workspace</string>
+   </property>
+  </action>
+  <action name="actionRename_current_workspace">
+   <property name="icon">
+    <iconset theme="document-edit" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-edit.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Rename current workspace</string>
+   </property>
+  </action>
+  <action name="actionSwitch_to_previous_workspace">
+   <property name="icon">
+    <iconset theme="go-previous" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</normaloff>:/icons/breeze-qownnotes/16x16/go-previous.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Switch to previous workspace</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+P</string>
+   </property>
+  </action>
+  <action name="actionShow_all_panels">
+   <property name="text">
+    <string>Show all panels</string>
    </property>
   </action>
  </widget>
