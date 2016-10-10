@@ -7440,8 +7440,8 @@ void MainWindow::on_actionLock_panels_toggled(bool arg1) {
                 dockWidget->setTitleBarWidget(new QWidget());
 
 #ifndef Q_OS_MAC
-                // set 5px top margin for the enclosed widget
-                dockWidget->widget()->setContentsMargins(0, 5, 0, 0);
+                // set 3px top margin for the enclosed widget
+                dockWidget->widget()->setContentsMargins(0, 3, 0, 0);
 #endif
             }
     } else {
