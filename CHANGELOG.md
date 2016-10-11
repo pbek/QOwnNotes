@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.10.4
+- fixed the left and right margin of the note tag panel
+
 ## 16.10.3
 - fixed a problem when the note edit panel was hidden before entering
   the distraction free mode

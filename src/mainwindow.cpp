@@ -5684,11 +5684,12 @@ void MainWindow::setupTags() {
 
 #ifdef Q_OS_MAC
     // try to compensate for the different button top margins in OS X
-    ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
-#endif
-
-    // we want the tag frame as small as possible
     ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
+    ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
+#else
+    // we want the tag frame as small as possible
+    ui->noteTagFrame->layout()->setContentsMargins(8, 0, 8, 0);
+#endif
 
     reloadTagTree();
     ui->tagTreeWidget->expandAll();
