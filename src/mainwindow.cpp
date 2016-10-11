@@ -267,6 +267,12 @@ MainWindow::MainWindow(QWidget *parent) :
     // restore the current workspace
     restoreCurrentWorkspace();
 
+    // we need to restore the current workspace a little later when
+    // application window is maximized or in full screen mode
+    if (isMaximized() || isFullScreen()) {
+        QTimer::singleShot(200, this, SLOT(restoreCurrentWorkspace()));
+    }
+
     // update the current folder tooltip
     updateCurrentFolderTooltip();
 
@@ -278,14 +284,8 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the shortcuts for the note bookmarks
     setupNoteBookmarkShortcuts();
 
-    if (isNoteEditPaneEnabled()) {
-        // restore the distraction free mode
-        restoreDistractionFreeMode();
-    } else {
-        // if the note edit pane is disabled we have to wait with restoring
-        // the distraction free mode
-        QTimer::singleShot(200, this, SLOT(restoreDistractionFreeMode()));
-    }
+    // restore the distraction free mode
+    restoreDistractionFreeMode();
 
     // add action tracking
     connect(ui->menuBar, SIGNAL(triggered(QAction *)),
@@ -451,6 +451,24 @@ void MainWindow::initDockWidgets() {
     _taggingDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::LeftDockWidgetArea, _taggingDockWidget, Qt::Vertical);
 
+    _noteSearchDockWidget = new QDockWidget(tr("Note search"), this);
+    _noteSearchDockWidget->setObjectName("noteSearchDockWidget");
+    _noteSearchDockWidget->setWidget(ui->searchLineEdit);
+    _noteSearchDockTitleBarWidget = _noteSearchDockWidget->titleBarWidget();
+    sizePolicy = _noteSearchDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteSearchDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteSearchDockWidget, Qt::Vertical);
+
+    _noteFolderDockWidget = new QDockWidget(tr("Note folder"), this);
+    _noteFolderDockWidget->setObjectName("noteFolderDockWidget");
+    _noteFolderDockWidget->setWidget(ui->noteFolderComboBox);
+    _noteFolderDockTitleBarWidget = _noteFolderDockWidget->titleBarWidget();
+    sizePolicy = _noteFolderDockWidget->sizePolicy();
+    sizePolicy.setHorizontalStretch(2);
+    _noteFolderDockWidget->setSizePolicy(sizePolicy);
+    addDockWidget(Qt::LeftDockWidgetArea, _noteFolderDockWidget, Qt::Vertical);
+
     _noteListDockWidget = new QDockWidget(tr("Note list"), this);
     _noteListDockWidget->setObjectName("noteListDockWidget");
     _noteListDockWidget->setWidget(ui->notesListFrame);
@@ -511,6 +529,9 @@ void MainWindow::initDockWidgets() {
     _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget,
                   Qt::Horizontal);
+
+//    ui->noteEditFrame->setStyleSheet("* { border: none; }");
+//    ui->noteTextEdit->setStyleSheet("* { border: none; }");
 
     setDockNestingEnabled(true);
     setCentralWidget(Q_NULLPTR);
@@ -1046,6 +1067,9 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
         Q_FOREACH(QToolBar *toolbar, toolbars) {
                 toolbar->hide();
             }
+
+        // show the note edit dock widget
+        _noteEditDockWidget->show();
 
         // hide all dock widgets but the note edit dock widget
         QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
@@ -1742,11 +1766,6 @@ void MainWindow::readSettingsFromSettingsDialog() {
         _windowToolbar->setIconSize(size);
         _quitToolbar->setIconSize(size);
     }
-
-    // check if we want to view the note folder combo box
-    ui->noteFolderComboBox->setVisible(
-            settings.value(
-                    "MainWindow/showRecentNoteFolderInMainArea").toBool());
 
     // change the search notes symbol between dark and light mode
     QString fileName = settings.value("darkModeColors").toBool() ?
@@ -5385,10 +5404,9 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
 /**
  * Hides the note folder combobox if it should not be visible
  */
-void MainWindow::hideNoteFolderComboBoxIfNeeded() const {
-    QSettings settings;
-    if (!settings.value("MainWindow/showRecentNoteFolderInMainArea").toBool()) {
-        ui->noteFolderComboBox->hide();
+void MainWindow::hideNoteFolderComboBoxIfNeeded() {
+    if (!_noteFolderDockWidgetWasVisible) {
+        _noteFolderDockWidget->hide();
     }
 }
 
@@ -6536,7 +6554,8 @@ bool MainWindow::noteTextEditAutoComplete(QStringList &resultList) {
  * Shows the note folder selection popup
  */
 void MainWindow::on_actionSelect_note_folder_triggered() {
-    ui->noteFolderComboBox->show();
+    _noteFolderDockWidgetWasVisible = _noteFolderDockWidget->isVisible();
+    _noteFolderDockWidget->show();
     ui->noteFolderComboBox->showPopup();
 }
 
@@ -7466,6 +7485,8 @@ void MainWindow::on_actionLock_panels_toggled(bool arg1) {
         _noteSubFolderDockWidget->setTitleBarWidget(
                 _noteSubFolderDockTitleBarWidget);
         _taggingDockWidget->setTitleBarWidget(_taggingDockTitleBarWidget);
+        _noteSearchDockWidget->setTitleBarWidget(_noteSearchDockTitleBarWidget);
+        _noteFolderDockWidget->setTitleBarWidget(_noteFolderDockTitleBarWidget);
         _noteListDockWidget->setTitleBarWidget(_noteListDockTitleBarWidget);
         _noteNavigationDockWidget->setTitleBarWidget(
                 _noteNavigationDockTitleBarWidget);

@@ -1,10 +1,27 @@
 # QOwnNotes Changelog
 
+## 16.10.3
+- fixed a problem when the note edit panel was hidden before entering
+  the distraction free mode
+  (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+- fixed a problem with the restoring of the last workspace correctly
+  when starting the app maximized
+- the note folder combobox and the note search line edit now have their
+  own movable panels
+  (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+    - as a consequence the `Show note folders in main area` checkbox in
+      the interface settings was removed
+    - if the note folder combobox was hidden while the `Select note folder`
+      shortcut in the main menu was pressed the panel will be hidden
+      again after the combobox was closed
+    - you have to move the two new panels to their proper places if you
+      have already used version 16.10.2
+
 ## 16.10.2
 - all **panels** are now **dockable**
   (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
     - if you turn off panel locking you can **rearrange panels** as
-      you like, they can even **float** or be turned off
+      you like, they can even **float**, stack or be turned off
     - there is a button to show all panels in case you lost some
         - you can also right click on the toolbar to turn on and off
           panels individually

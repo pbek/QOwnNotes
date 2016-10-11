@@ -435,6 +435,14 @@ bool DatabaseService::setupTables() {
         version = 15;
     }
 
+    if (version < 16) {
+        // remove some deprecated settings
+        settings.remove("dockWindowGeometry");
+        settings.remove("MainWindow/showRecentNoteFolderInMainArea");
+
+        version = 16;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

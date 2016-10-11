@@ -306,6 +306,9 @@
             </item>
             <item>
              <widget class="ComboBox" name="noteFolderComboBox">
+              <property name="toolTip">
+               <string>Note folder</string>
+              </property>
               <property name="styleSheet">
                <string notr="true"/>
               </property>

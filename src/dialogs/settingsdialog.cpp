@@ -315,8 +315,6 @@ void SettingsDialog::storeSettings() {
     settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       ui->toolbarIconSizeSpinBox->value());
-    settings.setValue("MainWindow/showRecentNoteFolderInMainArea",
-                      ui->showNoteFolderCheckBox->isChecked());
     settings.setValue("allowOnlyOneAppInstance",
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
@@ -474,8 +472,6 @@ void SettingsDialog::readSettings() {
             markdownHighlightingInterval);
     on_markdownHighlightingCheckBox_toggled(markdownHighlightingEnabled);
 
-    ui->showNoteFolderCheckBox->setChecked(settings.value(
-            "MainWindow/showRecentNoteFolderInMainArea").toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
             "allowOnlyOneAppInstance").toBool());
     ui->toolbarIconSizeSpinBox->setValue(

@@ -296,7 +296,7 @@ private slots:
 
     void on_actionExport_preview_HTML_triggered();
 
-    void hideNoteFolderComboBoxIfNeeded() const;
+    void hideNoteFolderComboBoxIfNeeded();
 
     void generateSystemTrayContextMenu();
 
@@ -387,6 +387,8 @@ private slots:
 
     void on_actionShow_all_panels_triggered();
 
+    void restoreCurrentWorkspace();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -436,6 +438,8 @@ private:
     QScrollArea *_noteTagButtonScrollArea;
     QDockWidget *_taggingDockWidget;
     QDockWidget *_noteSubFolderDockWidget;
+    QDockWidget *_noteSearchDockWidget;
+    QDockWidget *_noteFolderDockWidget;
     QDockWidget *_noteListDockWidget;
     QDockWidget *_noteNavigationDockWidget;
     QDockWidget *_noteEditDockWidget;
@@ -443,12 +447,15 @@ private:
     QDockWidget *_notePreviewDockWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
+    QWidget *_noteSearchDockTitleBarWidget;
+    QWidget *_noteFolderDockTitleBarWidget;
     QWidget *_noteListDockTitleBarWidget;
     QWidget *_noteNavigationDockTitleBarWidget;
     QWidget *_noteEditDockTitleBarWidget;
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
+    bool _noteFolderDockWidgetWasVisible;
 
     void createSystemTrayIcon();
 
@@ -665,8 +672,6 @@ private:
     QString currentWorkspaceUuid();
 
     void storeCurrentWorkspace();
-
-    void restoreCurrentWorkspace();
 
     void initWorkspaceComboBox();
 

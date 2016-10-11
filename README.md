@@ -48,7 +48,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - older versions of your notes can be restored from your ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - trashed notes can be restored from your ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - sub-string searching of notes is possible and search results are highlighted in the notes
-- application can be operated with keyboard shortcuts.
+- application can be operated with customizable keyboard shortcuts
 - external changes of note files are watched (notes or note list are reloaded)
 - differences between current note and externally changed note are showed in a dialog
 - markdown highlighting of notes and a markdown preview mode
@@ -58,6 +58,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
   **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or
   **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
 - dark mode theme support (if your operating system supports it)
+- all panels can be placed wherever you want, they can even float or stack (fully dockable)
 - support for freedesktop theme icons, so you can use QOwnNotes with your 
   native desktop icons and with your favorite dark desktop theme
   QOwnNotes supports Freedesktop icon themes
