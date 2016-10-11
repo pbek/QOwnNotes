@@ -532,6 +532,7 @@ void MainWindow::initDockWidgets() {
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
 //    ui->noteTextEdit->setStyleSheet("* { border: none; }");
+//    ui->noteEditFrame->layout()->setContentsMargins(0, 0, 0, 0);
 
     setDockNestingEnabled(true);
     setCentralWidget(Q_NULLPTR);
@@ -5683,9 +5684,11 @@ void MainWindow::setupTags() {
 
 #ifdef Q_OS_MAC
     // try to compensate for the different button top margins in OS X
-    ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
     ui->noteTagButtonFrame->layout()->setContentsMargins(0, 8, 0, 0);
 #endif
+
+    // we want the tag frame as small as possible
+    ui->noteTagFrame->layout()->setContentsMargins(0, 0, 0, 0);
 
     reloadTagTree();
     ui->tagTreeWidget->expandAll();

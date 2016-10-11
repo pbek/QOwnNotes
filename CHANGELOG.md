@@ -16,6 +16,7 @@
       again after the combobox was closed
     - you have to move the two new panels to their proper places if you
       have already used version 16.10.2
+- decreased the possible minimal height of the note tag panel
 
 ## 16.10.2
 - all **panels** are now **dockable**
