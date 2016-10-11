@@ -7586,6 +7586,8 @@ void MainWindow::onWorkspaceComboBoxCurrentIndexChanged(int index) {
  * Sets a new current workspace
  */
 void MainWindow::setCurrentWorkspace(QString uuid) {
+    QWidget *focusWidget = qApp->focusWidget();
+
     // store the current workspace
     storeCurrentWorkspace();
 
@@ -7599,6 +7601,12 @@ void MainWindow::setCurrentWorkspace(QString uuid) {
 
     // update the menu and combo box (but don't rebuild it)
     updateWorkspaceLists(false);
+
+    if (focusWidget != Q_NULLPTR) {
+        // set the focus to the widget that had the focus before
+        // the workspace was restored
+        focusWidget->setFocus();
+    }
 }
 
 /**
