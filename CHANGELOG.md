@@ -17,6 +17,8 @@
     - you have to move the two new panels to their proper places if you
       have already used version 16.10.2
 - decreased the possible minimal height of the note tag panel
+- added more Japanese, Italian, French and Polish translation (thank you
+  piyo, mlocati, lepascalou and lucjan)
 
 ## 16.10.2
 - all **panels** are now **dockable**
