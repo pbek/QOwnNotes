@@ -1,5 +1,6 @@
 {
     "require": {
-        "snoopy/snoopy": "^2.0"
+        "snoopy/snoopy": "^2.0",
+        "simpletest/simpletest": "^1.1"
     }
 }
