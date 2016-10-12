@@ -445,6 +445,7 @@ private:
     QDockWidget *_noteEditDockWidget;
     QDockWidget *_noteTagDockWidget;
     QDockWidget *_notePreviewDockWidget;
+    QDockWidget *_logDockWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
     QWidget *_noteSearchDockTitleBarWidget;
@@ -454,6 +455,7 @@ private:
     QWidget *_noteEditDockTitleBarWidget;
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
+    QWidget *_logDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
     bool _noteFolderDockWidgetWasVisible;
 
@@ -590,9 +592,9 @@ private:
 
     void initScriptingEngine();
 
-    void showLogDialog();
+    void showLogWidget();
 
-    void initLogDialog() const;
+    void initLogWidget() const;
 
     int getMaxImageWidth();
 

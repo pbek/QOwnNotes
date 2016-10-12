@@ -369,49 +369,49 @@
     </message>
   </context>
   <context>
-    <name>LogDialog</name>
+    <name>LogWidget</name>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="14"/>
+      <location filename="../widgets/logwidget.ui" line="14"/>
       <source>Logs</source>
       <translation>ログ</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="55"/>
+      <location filename="../widgets/logwidget.ui" line="55"/>
       <source>Fatal</source>
       <translation>Fatal</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="87"/>
+      <location filename="../widgets/logwidget.ui" line="87"/>
       <source>Warning</source>
       <translation>Warning</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="24"/>
+      <location filename="../widgets/logwidget.ui" line="24"/>
       <source>Critical</source>
       <translation>Critical</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="48"/>
+      <location filename="../widgets/logwidget.ui" line="48"/>
       <source>Debug</source>
       <translation>Debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="94"/>
+      <location filename="../widgets/logwidget.ui" line="94"/>
       <source>Info</source>
       <translation>Info</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="62"/>
+      <location filename="../widgets/logwidget.ui" line="62"/>
       <source>Status</source>
       <translation>Status</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="69"/>
+      <location filename="../widgets/logwidget.ui" line="69"/>
       <source>Scripting</source>
       <translation>Scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="76"/>
+      <location filename="../widgets/logwidget.ui" line="76"/>
       <source>Clear log</source>
       <translation>ログの消去</translation>
     </message>

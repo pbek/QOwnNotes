@@ -9,7 +9,7 @@
 #include <utils/misc.h>
 #include <entities/notefolder.h>
 #include <services/metricsservice.h>
-#include <dialogs/logdialog.h>
+#include <widgets/logwidget.h>
 #include <QTimer>
 #include <QVariant>
 #include <QApplication>
@@ -616,7 +616,7 @@ void ScriptingService::log(QString text) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    LogDialog::instance()->log(LogDialog::ScriptingLogType, text);
+    LogWidget::instance()->log(LogWidget::ScriptingLogType, text);
 }
 
 

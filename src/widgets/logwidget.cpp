@@ -2,16 +2,16 @@
 #include <QSettings>
 #include <QScrollBar>
 #include <QDebug>
-#include "logdialog.h"
+#include "logwidget.h"
 
 #ifndef INTEGRATION_TESTS
-#include "ui_logdialog.h"
+#include "ui_logwidget.h"
 #endif
 
-LogDialog::LogDialog(QWidget *parent) :
-        MasterDialog(parent)
+LogWidget::LogWidget(QWidget *parent) :
+        QFrame(parent)
 #ifndef INTEGRATION_TESTS
-        ,ui(new Ui::LogDialog)
+        ,ui(new Ui::LogWidget)
 #endif
 {
 #ifndef INTEGRATION_TESTS
@@ -22,24 +22,23 @@ LogDialog::LogDialog(QWidget *parent) :
 
     // load the dialog settings
     QSettings settings;
-    restoreGeometry(settings.value("LogDialog/geometry").toByteArray());
+    restoreGeometry(settings.value("LogWidget/geometry").toByteArray());
     ui->debugCheckBox->setChecked(
-            settings.value("LogDialog/debugLog", false).toBool());
+            settings.value("LogWidget/debugLog", false).toBool());
     ui->infoCheckBox->setChecked(
-            settings.value("LogDialog/infoLog", false).toBool());
+            settings.value("LogWidget/infoLog", false).toBool());
     ui->warningCheckBox->setChecked(
-            settings.value("LogDialog/warningLog", false).toBool());
+            settings.value("LogWidget/warningLog", false).toBool());
     ui->criticalCheckBox->setChecked(
-            settings.value("LogDialog/criticalLog", true).toBool());
+            settings.value("LogWidget/criticalLog", true).toBool());
     ui->fatalCheckBox->setChecked(
-            settings.value("LogDialog/fatalLog", true).toBool());
+            settings.value("LogWidget/fatalLog", true).toBool());
     ui->statusCheckBox->setChecked(
-            settings.value("LogDialog/statusLog", true).toBool());
+            settings.value("LogWidget/statusLog", true).toBool());
     ui->scriptingCheckBox->setChecked(
-            settings.value("LogDialog/scriptingLog", true).toBool());
+            settings.value("LogWidget/scriptingLog", true).toBool());
 
     // store the settings if the dialog is closed or the checkboxes are clicked
-    connect(this, SIGNAL(rejected()), this, SLOT(storeSettings()));
     connect(ui->debugCheckBox, SIGNAL(clicked()), this, SLOT(storeSettings()));
     connect(ui->infoCheckBox, SIGNAL(clicked()), this, SLOT(storeSettings()));
     connect(ui->warningCheckBox, SIGNAL(clicked()),
@@ -53,7 +52,7 @@ LogDialog::LogDialog(QWidget *parent) :
 #endif
 }
 
-LogDialog::~LogDialog()
+LogWidget::~LogWidget()
 {
 #ifndef INTEGRATION_TESTS
     delete ui;
@@ -63,23 +62,23 @@ LogDialog::~LogDialog()
 /**
  * Stores the settings of the dialog
  */
-void LogDialog::storeSettings() const {
+void LogWidget::storeSettings() const {
 #ifndef INTEGRATION_TESTS
     QSettings settings;
-    settings.setValue("LogDialog/geometry", saveGeometry());
-    settings.setValue("LogDialog/debugLog",
+    settings.setValue("LogWidget/geometry", saveGeometry());
+    settings.setValue("LogWidget/debugLog",
                       ui->debugCheckBox->isChecked());
-    settings.setValue("LogDialog/infoLog",
+    settings.setValue("LogWidget/infoLog",
                       ui->infoCheckBox->isChecked());
-    settings.setValue("LogDialog/warningLog",
+    settings.setValue("LogWidget/warningLog",
                       ui->warningCheckBox->isChecked());
-    settings.setValue("LogDialog/criticalLog",
+    settings.setValue("LogWidget/criticalLog",
                       ui->criticalCheckBox->isChecked());
-    settings.setValue("LogDialog/fatalLog",
+    settings.setValue("LogWidget/fatalLog",
                       ui->fatalCheckBox->isChecked());
-    settings.setValue("LogDialog/statusLog",
+    settings.setValue("LogWidget/statusLog",
                       ui->statusCheckBox->isChecked());
-    settings.setValue("LogDialog/scriptingLog",
+    settings.setValue("LogWidget/scriptingLog",
                       ui->scriptingCheckBox->isChecked());
 #endif
 }
@@ -87,7 +86,7 @@ void LogDialog::storeSettings() const {
 /**
  * Adds a log entry
  */
-void LogDialog::log(LogType logType, QString text) {
+void LogWidget::log(LogType logType, QString text) {
 #ifndef INTEGRATION_TESTS
     QString type = "";
     QColor color = QColor(Qt::black);
@@ -187,38 +186,38 @@ void LogDialog::log(LogType logType, QString text) {
  * Fetches the global instance of the class
  * The instance will be created if it doesn't exist.
  */
-LogDialog * LogDialog::instance() {
-    LogDialog *logDialog = nullptr;
+LogWidget * LogWidget::instance() {
+    LogWidget *logWidget = nullptr;
 #ifndef INTEGRATION_TESTS
-    logDialog = qApp->property("logDialog").value<LogDialog *>();
+    logWidget = qApp->property("logWidget").value<LogWidget *>();
 #endif
 
-    if (logDialog == Q_NULLPTR) {
-        logDialog = createInstance(NULL);
+    if (logWidget == Q_NULLPTR) {
+        logWidget = createInstance(NULL);
     }
 
-    return logDialog;
+    return logWidget;
 }
 
 /**
  * Creates a global instance of the class
  */
-LogDialog * LogDialog::createInstance(QWidget *parent) {
-    LogDialog *logDialog = new LogDialog(parent);
+LogWidget * LogWidget::createInstance(QWidget *parent) {
+    LogWidget *logWidget = new LogWidget(parent);
 
 #ifndef INTEGRATION_TESTS
     qApp->setProperty(
-            "logDialog",
-            QVariant::fromValue<LogDialog *>(logDialog));
+            "logWidget",
+            QVariant::fromValue<LogWidget *>(logWidget));
 #endif
 
-    return logDialog;
+    return logWidget;
 }
 
 /**
  * This is our custom log output
  */
-void LogDialog::logMessageOutput(
+void LogWidget::logMessageOutput(
         QtMsgType type, const QMessageLogContext &context, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
     switch (type) {
@@ -226,29 +225,29 @@ void LogDialog::logMessageOutput(
 //            fprintf(stderr, "Debug: %s (%s:%u, %s)\n", localMsg.constData(),
 //                    context.file, context.line, context.function);
             fprintf(stderr, "Debug: %s\n", localMsg.constData());
-            LogDialog::instance()->log(LogType::DebugLogType, msg);
+            LogWidget::instance()->log(LogType::DebugLogType, msg);
             break;
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
             fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogDialog::instance()->log(LogType::InfoLogType, msg);
+            LogWidget::instance()->log(LogType::InfoLogType, msg);
             break;
 #endif
         case QtWarningMsg:
             fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogDialog::instance()->log(LogType::WarningLogType, msg);
+            LogWidget::instance()->log(LogType::WarningLogType, msg);
             break;
         case QtCriticalMsg:
             fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogDialog::instance()->log(LogType::CriticalLogType, msg);
+            LogWidget::instance()->log(LogType::CriticalLogType, msg);
             break;
         case QtFatalMsg:
             fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogDialog::instance()->log(LogType::FatalLogType, msg);
+            LogWidget::instance()->log(LogType::FatalLogType, msg);
             abort();
     }
 }
@@ -256,7 +255,7 @@ void LogDialog::logMessageOutput(
 /**
  * Clears all log entries
  */
-void LogDialog::on_clearButton_clicked()
+void LogWidget::on_clearButton_clicked()
 {
 #ifndef INTEGRATION_TESTS
     ui->logTextEdit->clear();

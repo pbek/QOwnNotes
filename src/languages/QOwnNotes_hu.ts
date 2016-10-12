@@ -369,49 +369,49 @@
     </message>
   </context>
   <context>
-    <name>LogDialog</name>
+    <name>LogWidget</name>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="14"/>
+      <location filename="../widgets/logwidget.ui" line="14"/>
       <source>Logs</source>
       <translation>Naplók</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="55"/>
+      <location filename="../widgets/logwidget.ui" line="55"/>
       <source>Fatal</source>
       <translation>Végzetes</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="87"/>
+      <location filename="../widgets/logwidget.ui" line="87"/>
       <source>Warning</source>
       <translation>Figyelmeztetés</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="24"/>
+      <location filename="../widgets/logwidget.ui" line="24"/>
       <source>Critical</source>
       <translation>Kritikus</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="48"/>
+      <location filename="../widgets/logwidget.ui" line="48"/>
       <source>Debug</source>
       <translation>Debug</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="94"/>
+      <location filename="../widgets/logwidget.ui" line="94"/>
       <source>Info</source>
       <translation>Info</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="62"/>
+      <location filename="../widgets/logwidget.ui" line="62"/>
       <source>Status</source>
       <translation>Állapot</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="69"/>
+      <location filename="../widgets/logwidget.ui" line="69"/>
       <source>Scripting</source>
       <translation>Scripting</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="76"/>
+      <location filename="../widgets/logwidget.ui" line="76"/>
       <source>Clear log</source>
       <translation>Napló törlése</translation>
     </message>

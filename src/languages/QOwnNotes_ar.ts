@@ -369,49 +369,49 @@
     </message>
   </context>
   <context>
-    <name>LogDialog</name>
+    <name>LogWidget</name>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="14"/>
+      <location filename="../widgets/logwidget.ui" line="14"/>
       <source>Logs</source>
       <translation>السجلات</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="55"/>
+      <location filename="../widgets/logwidget.ui" line="55"/>
       <source>Fatal</source>
       <translation>فادح</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="87"/>
+      <location filename="../widgets/logwidget.ui" line="87"/>
       <source>Warning</source>
       <translation>تحذير</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="24"/>
+      <location filename="../widgets/logwidget.ui" line="24"/>
       <source>Critical</source>
       <translation>حرج</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="48"/>
+      <location filename="../widgets/logwidget.ui" line="48"/>
       <source>Debug</source>
       <translation>التصحيح</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="94"/>
+      <location filename="../widgets/logwidget.ui" line="94"/>
       <source>Info</source>
       <translation>معلومات</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="62"/>
+      <location filename="../widgets/logwidget.ui" line="62"/>
       <source>Status</source>
       <translation>الحالة</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="69"/>
+      <location filename="../widgets/logwidget.ui" line="69"/>
       <source>Scripting</source>
       <translation>البرمجة</translation>
     </message>
     <message>
-      <location filename="../dialogs/logdialog.ui" line="76"/>
+      <location filename="../widgets/logwidget.ui" line="76"/>
       <source>Clear log</source>
       <translation>مسح السجل</translation>
     </message>

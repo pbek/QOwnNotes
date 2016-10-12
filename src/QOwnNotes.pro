@@ -80,7 +80,7 @@ SOURCES += main.cpp\
     widgets/notepreviewwidget.cpp \
     api/noteapi.cpp \
     api/tagapi.cpp \
-    dialogs/logdialog.cpp \
+    widgets/logwidget.cpp \
     widgets/combobox.cpp \
     dialogs/sharedialog.cpp \
     widgets/fontcolorwidget.cpp \
@@ -138,7 +138,7 @@ HEADERS  += mainwindow.h \
     widgets/notepreviewwidget.h \
     api/noteapi.h \
     api/tagapi.h \
-    dialogs/logdialog.h \
+    widgets/logwidget.h \
     widgets/combobox.h \
     dialogs/sharedialog.h \
     widgets/fontcolorwidget.h \
@@ -157,7 +157,7 @@ FORMS    += mainwindow.ui \
     dialogs/passworddialog.ui \
     dialogs/welcomedialog.ui \
     dialogs/tagadddialog.ui \
-    dialogs/logdialog.ui \
+    widget/logwidget.ui \
     dialogs/sharedialog.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \

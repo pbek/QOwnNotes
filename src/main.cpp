@@ -5,7 +5,7 @@
 #include <QSettings>
 #include <QTranslator>
 #include <services/metricsservice.h>
-#include <dialogs/logdialog.h>
+#include <widgets/logwidget.h>
 #include <services/databaseservice.h>
 #include <utils/misc.h>
 #include "libraries/singleapplication/singleapplication.h"
@@ -315,7 +315,7 @@ int main(int argc, char *argv[]) {
         }
 
         // use our custom log handler
-        qInstallMessageHandler(LogDialog::logMessageOutput);
+        qInstallMessageHandler(LogWidget::logMessageOutput);
 
         MainWindow w;
         w.show();

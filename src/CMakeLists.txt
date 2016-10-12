@@ -22,7 +22,7 @@ find_package( Qt5Qml REQUIRED )
 qt5_wrap_ui(dialogs/ui_settingsdialog.h settingsdialog.ui)
 qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
 qt5_wrap_ui(dialogs/ui_aboutdialog.h aboutdialog.ui)
-qt5_wrap_ui(dialogs/ui_logdialog.h logdialog.ui)
+qt5_wrap_ui(dialogs/ui_logwidget.h logwidget.ui)
 qt5_wrap_ui(dialogs/ui_trashdialog.h trashdialog.ui)
 qt5_wrap_ui(dialogs/ui_linkdialog.h linkdialog.ui)
 qt5_wrap_ui(dialogs/ui_updatedialog.h updatedialog.ui)
@@ -58,9 +58,6 @@ set(SOURCE_FILES
     dialogs/aboutdialog.cpp
     dialogs/aboutdialog.h
     dialogs/aboutdialog.ui
-    dialogs/logdialog.cpp
-    dialogs/logdialog.h
-    dialogs/logdialog.ui
     dialogs/linkdialog.cpp
     dialogs/linkdialog.h
     dialogs/linkdialog.ui
@@ -187,6 +184,9 @@ set(SOURCE_FILES
     widgets/fontcolorwidget.ui
     widgets/fontcolorwidget.cpp
     widgets/fontcolorwidget.h
+    widgets/logwidget.cpp
+    widgets/logwidget.h
+    widgets/logwidget.ui
     utils/misc.cpp
     utils/misc.h
     utils/schema.cpp

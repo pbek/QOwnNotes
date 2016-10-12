@@ -57,7 +57,7 @@
 #include <QWidgetAction>
 #include <services/scriptingservice.h>
 #include <dialogs/evernoteimportdialog.h>
-#include <dialogs/logdialog.h>
+#include <widgets/logwidget.h>
 #include <dialogs/sharedialog.h>
 #include <dialogs/orphanedimagesdialog.h>
 
@@ -353,7 +353,7 @@ MainWindow::MainWindow(QWidget *parent) :
                      SLOT(onNoteTextViewResize(QSize, QSize)));
 
     // initializes the log dialog
-    initLogDialog();
+    initLogWidget();
 
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
@@ -401,7 +401,7 @@ MainWindow::~MainWindow() {
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the
         // app can quit
-        delete(LogDialog::instance());
+        delete(LogWidget::instance());
     }
     delete ui;
 }
@@ -529,6 +529,13 @@ void MainWindow::initDockWidgets() {
     _notePreviewDockTitleBarWidget = _notePreviewDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _notePreviewDockWidget,
                   Qt::Horizontal);
+
+    _logDockWidget = new QDockWidget(tr("Log"), this);
+    _logDockWidget->setObjectName("logDockWidget");
+    _logDockWidget->setWidget(LogWidget::instance());
+    _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _logDockWidget,
+                  Qt::Vertical);
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
 //    ui->noteTextEdit->setStyleSheet("* { border: none; }");
@@ -719,10 +726,10 @@ void MainWindow::onCustomActionInvoked(QString identifier) {
 /**
  * Initializes the log dialog
  */
-void MainWindow::initLogDialog() const {
+void MainWindow::initLogWidget() const {
     QSettings settings;
-    if (settings.value("LogDialog/showAtStartup", false).toBool()) {
-        LogDialog::instance()->show();
+    if (settings.value("LogWidget/showAtStartup", false).toBool()) {
+        LogWidget::instance()->show();
     }
 }
 
@@ -1141,7 +1148,7 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
     }
 
     // write to the log dialog
-    LogDialog::instance()->log(LogDialog::StatusLogType, message);
+    LogWidget::instance()->log(LogWidget::StatusLogType, message);
 }
 
 /**
@@ -2727,8 +2734,8 @@ void MainWindow::storeSettings() {
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("ShowSystemTray", showSystemTray);
-    settings.setValue("LogDialog/showAtStartup",
-                      LogDialog::instance()->isVisible());
+    settings.setValue("LogWidget/showAtStartup",
+                      LogWidget::instance()->isVisible());
 }
 
 
@@ -2748,7 +2755,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     if (showSystemTray && !forceQuit) {
         // if we use the system tray lets hide the log dialog when the
         // main window is closed
-        LogDialog::instance()->hide();
+        LogWidget::instance()->hide();
         hide();
         event->ignore();
     } else {
@@ -2756,7 +2763,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
 
         // if we don't use the system tray we delete the log widow so the app
         // can quit
-        delete(LogDialog::instance());
+        delete(LogWidget::instance());
         QMainWindow::closeEvent(event);
     }
 }
@@ -3483,8 +3490,8 @@ void MainWindow::openSettingsDialog(int page) {
 /**
  * Shows the log dialog
  */
-void MainWindow::showLogDialog() {
-    LogDialog::instance()->show();
+void MainWindow::showLogWidget() {
+    LogWidget::instance()->show();
 }
 
 /**
@@ -6584,7 +6591,7 @@ void MainWindow::preReloadScriptingEngine() {
 }
 
 void MainWindow::on_actionShow_log_dialog_triggered() {
-    showLogDialog();
+    showLogWidget();
 }
 
 /**
@@ -7498,6 +7505,7 @@ void MainWindow::on_actionLock_panels_toggled(bool arg1) {
         _noteTagDockWidget->setTitleBarWidget(_noteTagDockTitleBarWidget);
         _notePreviewDockWidget->setTitleBarWidget(
                 _notePreviewDockTitleBarWidget);
+        _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
 
         Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
                 // reset the top margin of the enclosed widget
