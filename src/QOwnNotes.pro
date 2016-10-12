@@ -157,7 +157,7 @@ FORMS    += mainwindow.ui \
     dialogs/passworddialog.ui \
     dialogs/welcomedialog.ui \
     dialogs/tagadddialog.ui \
-    widget/logwidget.ui \
+    widgets/logwidget.ui \
     dialogs/sharedialog.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \
