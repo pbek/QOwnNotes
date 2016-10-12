@@ -4,6 +4,9 @@
 - fixed the left and right margin of the note tag panel
 - fixed the restoring of the focus after switching workspaces
   (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+- added an example for custom styling of html in the note preview at
+  [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml)
+  (for [Issue #356](https://github.com/pbek/QOwnNotes/issues/356))
 
 ## 16.10.3
 - fixed a problem when the note edit panel was hidden before entering
