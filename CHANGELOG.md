@@ -16,6 +16,13 @@
 - the subfolder dock widget is now turned on or off according to whether
   the subfolders are enabled or not when the workspaces are switched
   (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+- attempted to fix a tagging portability problems between Windows and
+  other operating systems
+  (for [Issue #358](https://github.com/pbek/QOwnNotes/issues/358))
+- added more Arabic, Japanese, Italian, French, Portuguese, Polish,
+  Spanish, German, Hungarian and Dutch translation (thank you
+  yousufinternet, piyo, mlocati, lepascalou, mlimacarlos, lucjan, guijan
+  and Fabijenna)
 
 ## 16.10.3
 - fixed a problem when the note edit panel was hidden before entering
