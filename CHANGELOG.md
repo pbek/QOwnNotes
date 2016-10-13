@@ -13,6 +13,9 @@
 - fixed a problem where the note folder select box was hidden
 - fixed an image preview problem and problem with the notes path under
   Windows (for [Issue #357](https://github.com/pbek/QOwnNotes/issues/357))
+- the subfolder dock widget is now turned on or off according to whether
+  the subfolders are enabled or not when the workspaces are switched
+  (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
 
 ## 16.10.3
 - fixed a problem when the note edit panel was hidden before entering

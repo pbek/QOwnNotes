@@ -7647,6 +7647,11 @@ void MainWindow::restoreCurrentWorkspace() {
 
     restoreState(settings.value(
             "workspace-" + uuid + "/windowState").toByteArray());
+
+    // turn the subfolder dock widget on or off according to whether the
+    // subfolders are enabled or not
+    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
+    _noteSubFolderDockWidget->setVisible(showSubfolders);
 }
 
 /**
