@@ -1046,9 +1046,6 @@ p, li { white-space: pre-wrap; }
    <property name="toolTip">
     <string>Find text in current note</string>
    </property>
-   <property name="shortcut">
-    <string notr="true">Ctrl+F</string>
-   </property>
   </action>
   <action name="action_DuplicateText">
    <property name="text">

@@ -66,6 +66,9 @@ p, li { white-space: pre-wrap; }
       <enum>QFrame::Raised</enum>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
       <item row="0" column="0">
        <widget class="QCheckBox" name="debugCheckBox">
         <property name="text">
