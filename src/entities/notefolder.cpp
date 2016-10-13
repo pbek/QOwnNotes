@@ -345,7 +345,10 @@ QString NoteFolder::currentLocalPath() {
                 settings.value("notesPath").toString());
     }
 
-    return Utils::Misc::removeIfEndsWith(path, QDir::separator());
+    path = Utils::Misc::removeIfEndsWith(path, QDir::separator());
+    path = Utils::Misc::removeIfEndsWith(path, Utils::Misc::dirSeparator());
+
+    return path;
 }
 
 /**

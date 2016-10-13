@@ -99,7 +99,9 @@ NoteSubFolder NoteSubFolder::fetchByNameAndParentId(
  */
 QString NoteSubFolder::relativePath(QString separator) {
     if (separator.isEmpty()) {
-        separator = QDir::separator();
+        // be aware that the separator has to be same on all platforms to
+        // work cross platform
+        separator = Utils::Misc::dirSeparator();
     }
 
     return parentId == 0 ?

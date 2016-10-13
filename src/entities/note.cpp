@@ -982,7 +982,7 @@ QString Note::getFullNoteFilePathForFile(QString fileName) {
             settings.value("notesPath").toString());
 
     return Utils::Misc::removeIfEndsWith(notesPath, "/") +
-            QDir::separator() + fileName;
+            Utils::Misc::dirSeparator() + fileName;
 }
 
 /**
@@ -999,7 +999,7 @@ QString Note::relativeNoteFilePath(QString separator) {
     QString fullFileName = fileName;
 
     if (separator.isEmpty()) {
-        separator = QDir::separator();
+        separator = Utils::Misc::dirSeparator();
     }
 
     if (noteSubFolderId > 0) {
