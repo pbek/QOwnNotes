@@ -351,6 +351,22 @@ QStringList Tag::fetchAllLinkedNoteFileNames() {
 }
 
 /**
+ * Converts backslashes to slashes in the noteTagLink table to fix
+ * problems with Windows
+ */
+void Tag::convertDirSeparator() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("UPDATE noteTagLink SET note_sub_folder_path = replace("
+                          "note_sub_folder_path, '\\', '/')");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    }
+}
+
+/**
  * Fetches all tag names
  */
 QStringList Tag::fetchAllNames() {

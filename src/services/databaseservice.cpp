@@ -11,6 +11,7 @@
 #include <QSqlError>
 #include <entities/notefolder.h>
 #include <utils/misc.h>
+#include <entities/tag.h>
 
 DatabaseService::DatabaseService() {
 }
@@ -229,6 +230,13 @@ bool DatabaseService::setupNoteFolderTables() {
         queryDisk.exec("UPDATE noteTagLink SET note_sub_folder_path = '' "
                                "WHERE note_sub_folder_path IS NULL");
         version = 6;
+    }
+
+    if (version < 7) {
+        // convert backslashes to slashes in the noteTagLink table to fix
+        // problems with Windows
+        Tag::convertDirSeparator();
+        version = 7;
     }
 
     if (version != oldVersion) {

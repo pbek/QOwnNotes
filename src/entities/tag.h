@@ -88,6 +88,8 @@ public:
 
     static void setAsActive(int tagId);
 
+    static void convertDirSeparator();
+
 protected:
     int id;
     QString name;
