@@ -1286,7 +1286,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     // (for example to show images under the note path)
     str.replace(
             QRegularExpression("([\\(<])file:\\/\\/([^\\/].+)([\\)>])"),
-            "\\1file://" + windowsSlash + notesPath + "/\\2\\3");
+            "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath) + "/\\2\\3");
 
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
@@ -1390,7 +1390,12 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
 #ifdef Q_OS_WIN
         // remove the leading slash under Windows to get a more correct filename
-        QImage image(Utils::Misc::removeIfStartsWith(fileName, "/"));
+        QString fileNameWindows = Utils::Misc::removeIfStartsWith(fileName, "/");
+
+        // fix for "\" in paths
+        fileNameWindows.replace("%5C", "/");
+
+        QImage image(fileNameWindows);
 #else
         QImage image(fileName);
 #endif

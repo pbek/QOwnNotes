@@ -265,16 +265,29 @@ QByteArray Utils::Misc::startSynchronousProcess(
  * @return
  */
 QString Utils::Misc::defaultNotesPath() {
+    // it seems QDir::separator() is not needed,
+    // because Windows also uses "/" in QDir::homePath()
     QString path = isInPortableMode() ?
                    portableDataPath() :
-                   QDir::homePath() + QDir::separator() + "ownCloud";
+                   QDir::homePath() + Utils::Misc::dirSeparator() + "ownCloud";
 
-    path += QString(QDir::separator()) + "Notes";
+    path += Utils::Misc::dirSeparator() + "Notes";
 
     // remove the snap path for Snapcraft builds
     path.remove(QRegularExpression("snap\\/qownnotes\\/\\w\\d+\\/"));
 
     return path;
+}
+
+/**
+ * Returns the directory separator
+ * Replaces QDir::separator() because it seems methods like
+ * QDir::homePath() are using "/" under Windows too
+ *
+ * @return
+ */
+QString Utils::Misc::dirSeparator() {
+    return "/";
 }
 
 void Utils::Misc::waitMsecs(int msecs) {
@@ -300,7 +313,9 @@ QString Utils::Misc::portableDataPath() {
         path = ".";
     }
 
-    path += QString(QDir::separator()) + "Data";
+    // it seems QDir::separator() is not needed, because Windows also
+    // uses "/" in QCoreApplication::applicationDirPath()
+    path += Utils::Misc::dirSeparator() + "Data";
 
     QDir dir;
     // create path if it doesn't exist yet
