@@ -443,6 +443,18 @@ bool DatabaseService::setupTables() {
         version = 16;
     }
 
+    if (version < 17) {
+        // remove some deprecated settings
+        settings.beginGroup("LogDialog");
+        settings.remove("");
+        settings.endGroup();
+
+        settings.remove("LogWidget/geometry");
+        settings.remove("LogWidget/showAtStartup");
+
+        version = 17;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

@@ -7,6 +7,10 @@
 - added an example for custom styling of html in the note preview at
   [preview-styling.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml)
   (for [Issue #356](https://github.com/pbek/QOwnNotes/issues/356))
+- the log dialog is now a dockable panel that can be placed everywhere
+- fixed a problem with showing the title bar of floating panels after
+  application start
+- fixed a problem where the note folder select box was hidden
 
 ## 16.10.3
 - fixed a problem when the note edit panel was hidden before entering

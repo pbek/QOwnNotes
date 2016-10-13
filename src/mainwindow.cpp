@@ -86,6 +86,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _isNotesDirectoryWasModifiedDisabled = false;
     _isDefaultShortcutInitialized = false;
     _showNotesFromAllNoteSubFolders = false;
+    _noteFolderDockWidgetWasVisible = true;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -264,9 +265,6 @@ MainWindow::MainWindow(QWidget *parent) :
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
-    // restore the current workspace
-    restoreCurrentWorkspace();
-
     // we need to restore the current workspace a little later when
     // application window is maximized or in full screen mode
     if (isMaximized() || isFullScreen()) {
@@ -351,9 +349,6 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(resize(QSize, QSize)),
                      this,
                      SLOT(onNoteTextViewResize(QSize, QSize)));
-
-    // initializes the log dialog
-    initLogWidget();
 
     // reloads all tasks from the ownCloud server
     reloadTodoLists();
@@ -536,6 +531,7 @@ void MainWindow::initDockWidgets() {
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _logDockWidget,
                   Qt::Vertical);
+    _logDockWidget->hide();
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
 //    ui->noteTextEdit->setStyleSheet("* { border: none; }");
@@ -543,6 +539,9 @@ void MainWindow::initDockWidgets() {
 
     setDockNestingEnabled(true);
     setCentralWidget(Q_NULLPTR);
+
+    // restore the current workspace
+    restoreCurrentWorkspace();
 
     // lock the dock widgets
     on_actionLock_panels_toggled(true);
@@ -724,16 +723,6 @@ void MainWindow::onCustomActionInvoked(QString identifier) {
 }
 
 /**
- * Initializes the log dialog
- */
-void MainWindow::initLogWidget() const {
-    QSettings settings;
-    if (settings.value("LogWidget/showAtStartup", false).toBool()) {
-        LogWidget::instance()->show();
-    }
-}
-
-/**
  * Initializes the toolbars
  */
 void MainWindow::initToolbars() {
@@ -845,6 +834,12 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
 
         // set an object name for creating shortcuts
         action->setObjectName("restoreWorkspace" + QString::number(i));
+
+//        if (uuid == currentUuid) {
+//            QFont font = action->font();
+//            font.setBold(true);
+//            action->setFont(font);
+//        }
 
         ui->menuWorkspaces->addAction(action);
     }
@@ -1147,7 +1142,7 @@ void MainWindow::showStatusBarMessage(const QString & message, int timeout) {
         ui->statusBar->showMessage(message, timeout);
     }
 
-    // write to the log dialog
+    // write to the log widget
     LogWidget::instance()->log(LogWidget::StatusLogType, message);
 }
 
@@ -2753,7 +2748,7 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     }
 
     if (showSystemTray && !forceQuit) {
-        // if we use the system tray lets hide the log dialog when the
+        // if we use the system tray lets hide the log widget when the
         // main window is closed
         LogWidget::instance()->hide();
         hide();
@@ -3485,13 +3480,6 @@ void MainWindow::openSettingsDialog(int page) {
 
     // load the note list again in case the setting on the note name has changed
     loadNoteDirectoryList();
-}
-
-/**
- * Shows the log dialog
- */
-void MainWindow::showLogWidget() {
-    LogWidget::instance()->show();
 }
 
 /**
@@ -5415,6 +5403,7 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
 void MainWindow::hideNoteFolderComboBoxIfNeeded() {
     if (!_noteFolderDockWidgetWasVisible) {
         _noteFolderDockWidget->hide();
+        _noteFolderDockWidgetWasVisible = true;
     }
 }
 
@@ -6590,8 +6579,8 @@ void MainWindow::preReloadScriptingEngine() {
     _customActionToolbar->hide();
 }
 
-void MainWindow::on_actionShow_log_dialog_triggered() {
-    showLogWidget();
+void MainWindow::on_actionShow_log_triggered() {
+    _logDockWidget->show();
 }
 
 /**

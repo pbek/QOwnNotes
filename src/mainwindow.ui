@@ -780,7 +780,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
     <addaction name="actionStart_hidden"/>
-    <addaction name="actionShow_log_dialog"/>
+    <addaction name="actionShow_log"/>
     <addaction name="separator"/>
     <addaction name="actionLock_panels"/>
     <addaction name="menuWorkspaces"/>
@@ -1527,13 +1527,13 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Shift+S</string>
    </property>
   </action>
-  <action name="actionShow_log_dialog">
+  <action name="actionShow_log">
    <property name="icon">
     <iconset theme="text-x-generic" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-generic.svg</iconset>
    </property>
    <property name="text">
-    <string>Show log dialog</string>
+    <string>Show log</string>
    </property>
   </action>
   <action name="actionExport_preview_HTML">

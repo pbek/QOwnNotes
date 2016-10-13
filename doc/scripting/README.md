@@ -6,7 +6,7 @@
 - since debug output is disabled in the releases of QOwnNotes, so you might want
   to use `console.warn()` instead of `console.log()` to actually see an output
     - additionally you can also use the `script.log()` command to log to the 
-      log dialog
+      log widget
 
 ## Methods and objects QOwnNotes provides
 
@@ -98,13 +98,13 @@ var note = script.currentNote();
 You may want to take a look at the example [custom-actions.qml](custom-actions.qml).
 
 
-### Logging to the log dialog
+### Logging to the log widget
 
 #### Parameters
 
 ```cpp
 /**
- * QML wrapper to log to the log dialog
+ * QML wrapper to log to the log widget
  *
  * @param text
  */

@@ -22,13 +22,12 @@ LogWidget::LogWidget(QWidget *parent) :
 
     // load the dialog settings
     QSettings settings;
-    restoreGeometry(settings.value("LogWidget/geometry").toByteArray());
     ui->debugCheckBox->setChecked(
             settings.value("LogWidget/debugLog", false).toBool());
     ui->infoCheckBox->setChecked(
             settings.value("LogWidget/infoLog", false).toBool());
     ui->warningCheckBox->setChecked(
-            settings.value("LogWidget/warningLog", false).toBool());
+            settings.value("LogWidget/warningLog", true).toBool());
     ui->criticalCheckBox->setChecked(
             settings.value("LogWidget/criticalLog", true).toBool());
     ui->fatalCheckBox->setChecked(
@@ -65,7 +64,6 @@ LogWidget::~LogWidget()
 void LogWidget::storeSettings() const {
 #ifndef INTEGRATION_TESTS
     QSettings settings;
-    settings.setValue("LogWidget/geometry", saveGeometry());
     settings.setValue("LogWidget/debugLog",
                       ui->debugCheckBox->isChecked());
     settings.setValue("LogWidget/infoLog",

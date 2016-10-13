@@ -608,7 +608,7 @@ QString ScriptingService::noteTextEditSelectedText() {
 }
 
 /**
- * QML wrapper to log to the log dialog
+ * QML wrapper to log to the log widget
  *
  * @param text
  */

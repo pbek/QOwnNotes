@@ -292,7 +292,7 @@ private slots:
 
     void on_actionReload_scripting_engine_triggered();
 
-    void on_actionShow_log_dialog_triggered();
+    void on_actionShow_log_triggered();
 
     void on_actionExport_preview_HTML_triggered();
 
@@ -591,10 +591,6 @@ private:
     void jumpToNoteName(QString name);
 
     void initScriptingEngine();
-
-    void showLogWidget();
-
-    void initLogWidget() const;
 
     int getMaxImageWidth();
 
