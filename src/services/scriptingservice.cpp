@@ -608,6 +608,23 @@ QString ScriptingService::noteTextEditSelectedText() {
 }
 
 /**
+ * Tags the current note with a tag named tagName
+ *
+ * @param tagName
+ */
+void ScriptingService::tagCurrentNote(QString tagName) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->linkTagNameToCurrentNote(tagName);
+    }
+#endif
+}
+
+/**
  * QML wrapper to log to the log widget
  *
  * @param text

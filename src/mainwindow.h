@@ -76,14 +76,16 @@ public:
     static void searchForTextInTreeWidget(QTreeWidget *treeWidget,
                                           QString text);
 
-    void addCustomAction(QString identifier, QString menuText, QString buttonText,
-                             QString icon);
+    void addCustomAction(QString identifier, QString menuText,
+                         QString buttonText, QString icon);
 
     void preReloadScriptingEngine();
 
     void writeToNoteTextEdit(QString text);
 
     QString selectedNoteTextEditText();
+
+    void linkTagNameToCurrentNote(QString tagName);
 
 protected:
     void closeEvent(QCloseEvent *event);

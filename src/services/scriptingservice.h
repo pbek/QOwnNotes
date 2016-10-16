@@ -50,6 +50,7 @@ public:
     Q_INVOKABLE bool platformIsLinux();
     Q_INVOKABLE bool platformIsOSX();
     Q_INVOKABLE bool platformIsWindows();
+    Q_INVOKABLE void tagCurrentNote(QString tagName);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

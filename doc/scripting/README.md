@@ -296,6 +296,30 @@ if (script.platformIsLinux()) {
 ```
 
 
+### Tag the current note
+
+#### Parameters
+
+```cpp
+/**
+ * Tags the current note with a tag named tagName
+ *
+ * @param tagName
+ */
+void ScriptingService::tagCurrentNote(QString tagName);
+```
+
+#### Usage in QML
+
+```javascript
+// add a "favorite" tag to the current note
+script.tagCurrentNote("favorite");
+```
+
+You might want to look at the custom action `favoriteNote` in the
+example [favorite-note.qml](favorite-note.qml).
+
+
 ## Exposed classes
 
 ### Note

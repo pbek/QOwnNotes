@@ -5735,24 +5735,32 @@ void MainWindow::on_newNoteTagButton_clicked() {
  */
 void MainWindow::on_newNoteTagLineEdit_returnPressed() {
     QString text = ui->newNoteTagLineEdit->text();
+    linkTagNameToCurrentNote(text);
+}
 
-    if (text.isEmpty()) {
+/**
+ * Links a tag to the current note
+ *
+ * @param tagName
+ */
+void MainWindow::linkTagNameToCurrentNote(QString tagName) {
+    if (tagName.isEmpty()) {
         return;
     }
 
     // create a new tag if it doesn't exist
-    Tag tag = Tag::fetchByName(text);
+    Tag tag = Tag::fetchByName(tagName);
     if (!tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
-        tag.setName(text);
+        tag.setName(tagName);
         tag.store();
     }
 
     // link the current note to the tag
     if (tag.isFetched()) {
-        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        const QSignalBlocker blocker(noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
         tag.linkToNote(currentNote);

@@ -79,6 +79,26 @@ Tag Tag::fetchByName(QString name) {
     return tag;
 }
 
+Tag Tag::fetchByName(QString name, int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    Tag tag;
+
+    query.prepare("SELECT * FROM tag WHERE LOWER(name) = :name AND"
+                          "parent_id = :parent_id");
+    query.bindValue(":name", name.toLower());
+    query.bindValue(":parent_id", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        tag.fillFromQuery(query);
+    }
+
+    return tag;
+}
+
 int Tag::countAll() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);

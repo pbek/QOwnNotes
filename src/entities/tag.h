@@ -53,6 +53,8 @@ public:
 
     static Tag fetchByName(QString name);
 
+    static Tag fetchByName(QString name, int parentId);
+
     bool linkToNote(Note note);
 
     static QList<Tag> fetchAllOfNote(Note note);

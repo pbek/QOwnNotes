@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.10.5
+- added a new scripting method `tagCurrentNote()` to tag the current note
+  (for [Issue #351](https://github.com/pbek/QOwnNotes/issues/351))
+    - there is an example for creating a custom action to add a tag
+      `favorite` to the current note at
+      [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/favorite-note.qml)
+
 ## 16.10.4
 - fixed the left and right margin of the note tag panel
 - fixed the restoring of the focus after switching workspaces
