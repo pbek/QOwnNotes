@@ -1015,11 +1015,11 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                                     componentSetNodes.at(k).childNodes();
 
                             if (componentSets.length()) {
-                                for (int i = 0;
-                                     i < componentSets.length();
-                                     ++i) {
+                                for (int l = 0;
+                                     l < componentSets.length();
+                                     ++l) {
                                     QDomNode componentSet =
-                                            componentSets.at(i);
+                                            componentSets.at(l);
                                     QString componentSetString =
                                             componentSet.toElement()
                                                     .attribute("name");
