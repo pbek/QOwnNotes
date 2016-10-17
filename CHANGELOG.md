@@ -7,8 +7,8 @@
       `favorite` to the current note at
       [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/favorite-note.qml)
 - the status messages now all start with an uppercase letter
-- there now is a checkbox to turn off the ignoring of non-VTODO
-  calendars in the todo settings (for @binerf on GitHub)
+- there now is a checkbox for ignoring of non-VTODO calendars in the
+  todo settings that is turned on by default (for @binerf on GitHub)
 - added more Italian, French, Portuguese, Polish, German, Hungarian and
   Dutch translation (thank you mlocati, lepascalou, mlimacarlos, lucjan,
   bigant and Fabijenna)
