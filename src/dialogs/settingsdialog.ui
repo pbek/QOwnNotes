@@ -280,7 +280,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>3</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1630,7 +1630,7 @@
                 <string>Select the calendars you want to use for the TODO list</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_7">
-                <item row="1" column="3">
+                <item row="2" column="3">
                  <spacer name="horizontalSpacer_8">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
@@ -1646,7 +1646,7 @@
                 <item row="0" column="0" colspan="4">
                  <widget class="QListWidget" name="todoCalendarListWidget"/>
                 </item>
-                <item row="1" column="1">
+                <item row="2" column="1">
                  <widget class="QPushButton" name="emptyCalendarCachePushButton">
                   <property name="toolTip">
                    <string>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</string>
@@ -1660,7 +1660,7 @@
                   </property>
                  </widget>
                 </item>
-                <item row="1" column="0">
+                <item row="2" column="0">
                  <widget class="QPushButton" name="reloadCalendarListButton">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -1686,6 +1686,13 @@
                   <property name="icon">
                    <iconset theme="network-connect" resource="../breeze-qownnotes.qrc">
                     <normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</normaloff>:/icons/breeze-qownnotes/16x16/network-connect.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="4">
+                 <widget class="QCheckBox" name="ignoreNonTodoCalendarsCheckBox">
+                  <property name="text">
+                   <string>Ignore calendars that don't support todo items</string>
                   </property>
                  </widget>
                 </item>

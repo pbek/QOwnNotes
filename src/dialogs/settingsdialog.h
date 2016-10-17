@@ -181,6 +181,8 @@ private slots:
 
     void on_toolbarIconSizeResetButton_clicked();
 
+    void on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

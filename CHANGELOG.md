@@ -7,6 +7,8 @@
       `favorite` to the current note at
       [favorite-note.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/favorite-note.qml)
 - the status messages now all start with an uppercase letter
+- there now is a checkbox to turn off the ignoring of non-VTODO
+  calendars in the todo settings (for @binerf on GitHub)
 
 ## 16.10.4
 - fixed the left and right margin of the note tag panel

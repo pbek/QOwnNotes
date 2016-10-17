@@ -573,6 +573,12 @@ void SettingsDialog::readSettings() {
             break;
     }
 
+    const QSignalBlocker blocker6(this->ui->ignoreNonTodoCalendarsCheckBox);
+    Q_UNUSED(blocker6);
+
+    ui->ignoreNonTodoCalendarsCheckBox->setChecked(settings.value(
+            "ownCloud/ignoreNonTodoCalendars", true).toBool());
+
     // reload the calendar list
     reloadCalendarList();
 
@@ -2323,4 +2329,9 @@ void SettingsDialog::on_itemHeightResetButton_clicked() {
 void SettingsDialog::on_toolbarIconSizeResetButton_clicked() {
     QToolBar toolbar(this);
     ui->toolbarIconSizeSpinBox->setValue(toolbar.iconSize().height());
+}
+
+void SettingsDialog::on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked) {
+    QSettings settings;
+    settings.setValue("ownCloud/ignoreNonTodoCalendars", checked);
 }

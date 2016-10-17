@@ -985,6 +985,10 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
         }
     }
 
+    QSettings settings;
+    bool ignoreNonTodoCalendars = settings.value(
+            "ownCloud/ignoreNonTodoCalendars", true).toBool();
+
     // loop all response blocks
     QDomNodeList responseNodes = doc.elementsByTagNameNS(NS_DAV, "response");
     for (int i = 0; i < responseNodes.length(); ++i) {
@@ -1005,35 +1009,39 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     }
 
                     // check if the calendar is a VTODO calendar
-                    QDomNodeList componentSetNodes =
-                            elem.elementsByTagName(
-                                    "supported-calendar-component-set");
-                    bool isTodoCalendar = false;
-                    if (componentSetNodes.length()) {
-                        for (int k = 0; k < componentSetNodes.length(); ++k) {
-                            QDomNodeList componentSets =
-                                    componentSetNodes.at(k).childNodes();
+                    if (ignoreNonTodoCalendars) {
+                        QDomNodeList componentSetNodes =
+                                elem.elementsByTagName(
+                                        "supported-calendar-component-set");
+                        bool isTodoCalendar = false;
+                        if (componentSetNodes.length()) {
+                            for (int k = 0;
+                                 k < componentSetNodes.length();
+                                 ++k) {
+                                QDomNodeList componentSets =
+                                        componentSetNodes.at(k).childNodes();
 
-                            if (componentSets.length()) {
-                                for (int l = 0;
-                                     l < componentSets.length();
-                                     ++l) {
-                                    QDomNode componentSet =
-                                            componentSets.at(l);
-                                    QString componentSetString =
-                                            componentSet.toElement()
-                                                    .attribute("name");
-                                    if (componentSetString == "VTODO") {
-                                        isTodoCalendar = true;
+                                if (componentSets.length()) {
+                                    for (int l = 0;
+                                         l < componentSets.length();
+                                         ++l) {
+                                        QDomNode componentSet =
+                                                componentSets.at(l);
+                                        QString componentSetString =
+                                                componentSet.toElement()
+                                                        .attribute("name");
+                                        if (componentSetString == "VTODO") {
+                                            isTodoCalendar = true;
+                                        }
                                     }
                                 }
                             }
                         }
-                    }
 
-                    // we only want VTODO calendars
-                    if (!isTodoCalendar) {
-                        continue;
+                        // we only want VTODO calendars
+                        if (!isTodoCalendar) {
+                            continue;
+                        }
                     }
 
                     CalDAVCalendarData calendarData;
