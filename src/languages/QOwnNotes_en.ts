@@ -376,42 +376,42 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="100"/>
+        <location filename="../widgets/logwidget.ui" line="103"/>
         <source>Fatal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="86"/>
+        <location filename="../widgets/logwidget.ui" line="89"/>
         <source>Warning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="93"/>
+        <location filename="../widgets/logwidget.ui" line="96"/>
         <source>Critical</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="72"/>
+        <location filename="../widgets/logwidget.ui" line="75"/>
         <source>Debug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="79"/>
+        <location filename="../widgets/logwidget.ui" line="82"/>
         <source>Info</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="107"/>
+        <location filename="../widgets/logwidget.ui" line="110"/>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="114"/>
+        <location filename="../widgets/logwidget.ui" line="117"/>
         <source>Scripting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="121"/>
+        <location filename="../widgets/logwidget.ui" line="124"/>
         <source>Clear log</source>
         <translation type="unfinished"></translation>
     </message>
@@ -430,7 +430,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
-        <location filename="../mainwindow.cpp" line="475"/>
+        <location filename="../mainwindow.cpp" line="476"/>
         <source>Navigation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -561,13 +561,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1020"/>
-        <location filename="../mainwindow.cpp" line="6845"/>
+        <location filename="../mainwindow.cpp" line="6861"/>
         <source>Select &amp;all notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1029"/>
-        <location filename="../mainwindow.cpp" line="4492"/>
+        <location filename="../mainwindow.cpp" line="4499"/>
         <source>Insert &amp;link</source>
         <translation type="unfinished"></translation>
     </message>
@@ -587,12 +587,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1055"/>
+        <location filename="../mainwindow.ui" line="1052"/>
         <source>&amp;Duplicate text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1067"/>
+        <location filename="../mainwindow.ui" line="1064"/>
         <source>&amp;Back in note history</source>
         <translation type="unfinished"></translation>
     </message>
@@ -653,7 +653,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
-        <location filename="../mainwindow.cpp" line="415"/>
+        <location filename="../mainwindow.cpp" line="416"/>
         <source>Workspaces</source>
         <translation type="unfinished"></translation>
     </message>
@@ -663,297 +663,297 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1079"/>
+        <location filename="../mainwindow.ui" line="1076"/>
         <source>Forward in note history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1091"/>
+        <location filename="../mainwindow.ui" line="1088"/>
         <source>Show shortcuts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1100"/>
+        <location filename="../mainwindow.ui" line="1097"/>
         <source>&amp;Knowledge base</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1109"/>
+        <location filename="../mainwindow.ui" line="1106"/>
         <source>Insert current &amp;time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1121"/>
+        <location filename="../mainwindow.ui" line="1118"/>
         <source>Show &amp;Todo List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1133"/>
+        <location filename="../mainwindow.ui" line="1130"/>
         <source>&amp;Export note as PDF (markdown)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1142"/>
+        <location filename="../mainwindow.ui" line="1139"/>
         <source>&amp;Export note as PDF (text)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1151"/>
+        <location filename="../mainwindow.ui" line="1148"/>
         <source>&amp;Print note (text)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1163"/>
+        <location filename="../mainwindow.ui" line="1160"/>
         <source>&amp;Print note (markdown)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1175"/>
+        <location filename="../mainwindow.ui" line="1172"/>
         <source>Insert &amp;image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1178"/>
+        <location filename="../mainwindow.ui" line="1175"/>
         <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1190"/>
+        <location filename="../mainwindow.ui" line="1187"/>
         <source>Show &amp;changelog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1199"/>
+        <location filename="../mainwindow.ui" line="1196"/>
         <source>&amp;Encrypt note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1208"/>
+        <location filename="../mainwindow.ui" line="1205"/>
         <source>Edit encrypted note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1220"/>
+        <location filename="../mainwindow.ui" line="1217"/>
         <source>Decrypt note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1229"/>
+        <location filename="../mainwindow.ui" line="1226"/>
         <source>&amp;Open note in external editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1241"/>
+        <location filename="../mainwindow.ui" line="1238"/>
         <source>&amp;Export note as markdown file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1250"/>
+        <location filename="../mainwindow.ui" line="1247"/>
         <source>&amp;Get involved</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1259"/>
+        <location filename="../mainwindow.ui" line="1256"/>
         <source>Insert &amp;code block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1271"/>
+        <location filename="../mainwindow.ui" line="1268"/>
         <source>Next note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1283"/>
+        <location filename="../mainwindow.ui" line="1280"/>
         <source>Previous note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1295"/>
+        <location filename="../mainwindow.ui" line="1292"/>
         <source>&amp;Distraction free mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1298"/>
+        <location filename="../mainwindow.ui" line="1295"/>
         <source>Distraction free mode, you can leave it with a button on the bottom right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1309"/>
+        <location filename="../mainwindow.ui" line="1306"/>
         <source>Show &amp;toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1317"/>
+        <location filename="../mainwindow.ui" line="1314"/>
         <source>Narrow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1328"/>
+        <location filename="../mainwindow.ui" line="1325"/>
         <source>Medium</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1339"/>
+        <location filename="../mainwindow.ui" line="1336"/>
         <source>Wide</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1350"/>
+        <location filename="../mainwindow.ui" line="1347"/>
         <source>Full</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1362"/>
+        <location filename="../mainwindow.ui" line="1359"/>
         <source>Paste html or media</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1362"/>
         <location filename="../mainwindow.ui" line="1365"/>
-        <location filename="../mainwindow.ui" line="1368"/>
         <source>Paste images, notes and html from the clipboard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1380"/>
+        <location filename="../mainwindow.ui" line="1377"/>
         <source>Show note in &amp;file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1392"/>
+        <location filename="../mainwindow.ui" line="1389"/>
         <source>Format text &amp;bold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1404"/>
+        <location filename="../mainwindow.ui" line="1401"/>
         <source>Format text &amp;italic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1416"/>
+        <location filename="../mainwindow.ui" line="1413"/>
         <source>&amp;Increase note text size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1428"/>
+        <location filename="../mainwindow.ui" line="1425"/>
         <source>&amp;Decrease note text size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1440"/>
+        <location filename="../mainwindow.ui" line="1437"/>
         <source>&amp;Reset note text size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1452"/>
+        <location filename="../mainwindow.ui" line="1449"/>
         <source>&amp;Add tag to note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1464"/>
+        <location filename="../mainwindow.ui" line="1461"/>
         <source>&amp;Reload note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1536"/>
+        <location filename="../mainwindow.ui" line="1533"/>
         <source>Show log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1774"/>
+        <location filename="../mainwindow.ui" line="1771"/>
         <source>Lock panels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1783"/>
-        <location filename="../mainwindow.cpp" line="7674"/>
+        <location filename="../mainwindow.ui" line="1780"/>
+        <location filename="../mainwindow.cpp" line="7695"/>
         <source>Remove current workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1792"/>
+        <location filename="../mainwindow.ui" line="1789"/>
         <source>Add new workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1801"/>
+        <location filename="../mainwindow.ui" line="1798"/>
         <source>Rename current workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1810"/>
+        <location filename="../mainwindow.ui" line="1807"/>
         <source>Switch to previous workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1818"/>
+        <location filename="../mainwindow.ui" line="1815"/>
         <source>Show all panels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1475"/>
+        <location filename="../mainwindow.ui" line="1472"/>
         <source>Use &amp;vertical preview layout</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1475"/>
         <location filename="../mainwindow.ui" line="1478"/>
-        <location filename="../mainwindow.ui" line="1481"/>
         <source>The note edit panel will be above the preview panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1490"/>
+        <location filename="../mainwindow.ui" line="1487"/>
         <source>Replace in current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1498"/>
+        <location filename="../mainwindow.ui" line="1495"/>
         <source>Autocomplete, solve equation or open URL</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1501"/>
+        <location filename="../mainwindow.ui" line="1498"/>
         <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1509"/>
+        <location filename="../mainwindow.ui" line="1506"/>
         <source>Select note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1524"/>
+        <location filename="../mainwindow.ui" line="1521"/>
         <source>Reload scripting engine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1545"/>
+        <location filename="../mainwindow.ui" line="1542"/>
         <source>Export note as HTML (markdown)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1554"/>
+        <location filename="../mainwindow.ui" line="1551"/>
         <source>IRC</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1554"/>
         <location filename="../mainwindow.ui" line="1557"/>
-        <location filename="../mainwindow.ui" line="1560"/>
         <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1697"/>
+        <location filename="../mainwindow.ui" line="1694"/>
         <source>Show note list under tag pane</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1756"/>
+        <location filename="../mainwindow.ui" line="1753"/>
         <source>Gitter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1756"/>
         <location filename="../mainwindow.ui" line="1759"/>
-        <location filename="../mainwindow.ui" line="1762"/>
         <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
         <translation type="unfinished"></translation>
     </message>
@@ -963,143 +963,143 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1569"/>
+        <location filename="../mainwindow.ui" line="1566"/>
         <source>Insert headline from note filename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1583"/>
+        <location filename="../mainwindow.ui" line="1580"/>
         <source>Use softwrap in note editor and preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1591"/>
+        <location filename="../mainwindow.ui" line="1588"/>
         <source>Show status bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1606"/>
+        <location filename="../mainwindow.ui" line="1603"/>
         <source>Share note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1624"/>
+        <location filename="../mainwindow.ui" line="1621"/>
         <source>Toggle text case</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1636"/>
+        <location filename="../mainwindow.ui" line="1633"/>
         <source>Markdown cheatsheet</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1645"/>
+        <location filename="../mainwindow.ui" line="1642"/>
         <source>Strike out text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1656"/>
+        <location filename="../mainwindow.ui" line="1653"/>
         <source>Use one column mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1656"/>
         <location filename="../mainwindow.ui" line="1659"/>
-        <location filename="../mainwindow.ui" line="1662"/>
         <source>Use a one column minimal mode (like NVAlt)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1674"/>
+        <location filename="../mainwindow.ui" line="1671"/>
         <source>Show menu bar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1686"/>
+        <location filename="../mainwindow.ui" line="1683"/>
         <source>Split note at cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1706"/>
+        <location filename="../mainwindow.ui" line="1703"/>
         <source>Donate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1715"/>
+        <location filename="../mainwindow.ui" line="1712"/>
         <source>Find notes in all subfolders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1720"/>
         <location filename="../mainwindow.ui" line="1723"/>
-        <location filename="../mainwindow.ui" line="1726"/>
         <source>Start hidden</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1729"/>
+        <location filename="../mainwindow.ui" line="1726"/>
         <source>Starts the application hidden if the system tray icon is shown</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
+        <location filename="../mainwindow.ui" line="1735"/>
         <source>Import notes from Evernote</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1747"/>
+        <location filename="../mainwindow.ui" line="1744"/>
         <source>Delete orphaned image files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1892"/>
-        <location filename="../mainwindow.cpp" line="1938"/>
-        <location filename="../mainwindow.cpp" line="4055"/>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1923"/>
+        <location filename="../mainwindow.cpp" line="1930"/>
         <source>Note was removed externally!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1924"/>
+        <location filename="../mainwindow.cpp" line="1931"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1926"/>
+        <location filename="../mainwindow.cpp" line="1933"/>
         <source>&amp;Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1926"/>
-        <location filename="../mainwindow.cpp" line="2654"/>
-        <location filename="../mainwindow.cpp" line="3111"/>
-        <location filename="../mainwindow.cpp" line="3195"/>
-        <location filename="../mainwindow.cpp" line="3224"/>
-        <location filename="../mainwindow.cpp" line="3266"/>
-        <location filename="../mainwindow.cpp" line="3322"/>
-        <location filename="../mainwindow.cpp" line="3360"/>
-        <location filename="../mainwindow.cpp" line="3400"/>
-        <location filename="../mainwindow.cpp" line="3752"/>
-        <location filename="../mainwindow.cpp" line="4755"/>
-        <location filename="../mainwindow.cpp" line="7676"/>
+        <location filename="../mainwindow.cpp" line="1933"/>
+        <location filename="../mainwindow.cpp" line="2661"/>
+        <location filename="../mainwindow.cpp" line="3118"/>
+        <location filename="../mainwindow.cpp" line="3202"/>
+        <location filename="../mainwindow.cpp" line="3231"/>
+        <location filename="../mainwindow.cpp" line="3273"/>
+        <location filename="../mainwindow.cpp" line="3329"/>
+        <location filename="../mainwindow.cpp" line="3367"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
+        <location filename="../mainwindow.cpp" line="3759"/>
+        <location filename="../mainwindow.cpp" line="4762"/>
+        <location filename="../mainwindow.cpp" line="7697"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1960"/>
+        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1981"/>
+        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2047"/>
+        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
         <translation>
             <numerusform>stored one note to disk</numerusform>
@@ -1107,77 +1107,77 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2098"/>
+        <location filename="../mainwindow.cpp" line="2105"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2114"/>
+        <location filename="../mainwindow.cpp" line="2121"/>
         <source>new version %1 available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2514"/>
+        <location filename="../mainwindow.cpp" line="2521"/>
         <source>No folder was selected</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2515"/>
+        <location filename="../mainwindow.cpp" line="2522"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2517"/>
+        <location filename="../mainwindow.cpp" line="2524"/>
         <source>&amp;Retry</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2517"/>
+        <location filename="../mainwindow.cpp" line="2524"/>
         <source>&amp;Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2651"/>
+        <location filename="../mainwindow.cpp" line="2658"/>
         <source>Remove current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2652"/>
+        <location filename="../mainwindow.cpp" line="2659"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2654"/>
-        <location filename="../mainwindow.cpp" line="3111"/>
-        <location filename="../mainwindow.cpp" line="3195"/>
-        <location filename="../mainwindow.cpp" line="3224"/>
-        <location filename="../mainwindow.cpp" line="3400"/>
-        <location filename="../mainwindow.cpp" line="7676"/>
+        <location filename="../mainwindow.cpp" line="2661"/>
+        <location filename="../mainwindow.cpp" line="3118"/>
+        <location filename="../mainwindow.cpp" line="3202"/>
+        <location filename="../mainwindow.cpp" line="3231"/>
+        <location filename="../mainwindow.cpp" line="3407"/>
+        <location filename="../mainwindow.cpp" line="7697"/>
         <source>&amp;Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2959"/>
+        <location filename="../mainwindow.cpp" line="2966"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2983"/>
+        <location filename="../mainwindow.cpp" line="2990"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2984"/>
+        <location filename="../mainwindow.cpp" line="2991"/>
         <source>It seems that your password is not valid!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3105"/>
+        <location filename="../mainwindow.cpp" line="3112"/>
         <source>Remove selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3106"/>
+        <location filename="../mainwindow.cpp" line="3113"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1191,13 +1191,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3188"/>
-        <location filename="../mainwindow.cpp" line="7043"/>
+        <location filename="../mainwindow.cpp" line="3195"/>
+        <location filename="../mainwindow.cpp" line="7059"/>
         <source>Remove selected folders</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3189"/>
+        <location filename="../mainwindow.cpp" line="3196"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1205,12 +1205,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3220"/>
+        <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3221"/>
+        <location filename="../mainwindow.cpp" line="3228"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1218,13 +1218,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3263"/>
-        <location filename="../mainwindow.cpp" line="6207"/>
+        <location filename="../mainwindow.cpp" line="3270"/>
+        <location filename="../mainwindow.cpp" line="6223"/>
         <source>Move selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3264"/>
+        <location filename="../mainwindow.cpp" line="3271"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Move one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1232,18 +1232,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3266"/>
+        <location filename="../mainwindow.cpp" line="3273"/>
         <source>&amp;Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3319"/>
-        <location filename="../mainwindow.cpp" line="6262"/>
+        <location filename="../mainwindow.cpp" line="3326"/>
+        <location filename="../mainwindow.cpp" line="6278"/>
         <source>Copy selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3320"/>
+        <location filename="../mainwindow.cpp" line="3327"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Copy one selected note to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1251,18 +1251,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3322"/>
+        <location filename="../mainwindow.cpp" line="3329"/>
         <source>&amp;Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3343"/>
-        <location filename="../mainwindow.cpp" line="3425"/>
+        <location filename="../mainwindow.cpp" line="3350"/>
+        <location filename="../mainwindow.cpp" line="3432"/>
         <source>Done</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3344"/>
+        <location filename="../mainwindow.cpp" line="3351"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>One note was copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -1270,12 +1270,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3357"/>
+        <location filename="../mainwindow.cpp" line="3364"/>
         <source>Tag selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3358"/>
+        <location filename="../mainwindow.cpp" line="3365"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1283,45 +1283,45 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7503"/>
+        <location filename="../mainwindow.cpp" line="7519"/>
         <source>Create new workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7503"/>
-        <location filename="../mainwindow.cpp" line="7713"/>
+        <location filename="../mainwindow.cpp" line="7519"/>
+        <location filename="../mainwindow.cpp" line="7734"/>
         <source>Workspace name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7620"/>
+        <location filename="../mainwindow.cpp" line="7636"/>
         <source>default</source>
         <comment>default workspace</comment>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7675"/>
+        <location filename="../mainwindow.cpp" line="7696"/>
         <source>Remove the current workspace?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7713"/>
+        <location filename="../mainwindow.cpp" line="7734"/>
         <source>Rename workspace</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
-        <location filename="../mainwindow.cpp" line="3360"/>
+        <location filename="../mainwindow.cpp" line="3367"/>
         <source>&amp;Tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3397"/>
+        <location filename="../mainwindow.cpp" line="3404"/>
         <source>Remove tag from selected notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3398"/>
+        <location filename="../mainwindow.cpp" line="3405"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1329,7 +1329,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3426"/>
+        <location filename="../mainwindow.cpp" line="3433"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1337,135 +1337,135 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3436"/>
+        <location filename="../mainwindow.cpp" line="3443"/>
         <source>Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3438"/>
+        <location filename="../mainwindow.cpp" line="3445"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3491"/>
+        <location filename="../mainwindow.cpp" line="3498"/>
         <source>Link to an url or note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3602"/>
+        <location filename="../mainwindow.cpp" line="3609"/>
         <source>Print note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3633"/>
+        <location filename="../mainwindow.cpp" line="3640"/>
         <source>Letter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3659"/>
+        <location filename="../mainwindow.cpp" line="3666"/>
         <source>Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3659"/>
+        <location filename="../mainwindow.cpp" line="3666"/>
         <source>Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3664"/>
+        <location filename="../mainwindow.cpp" line="3671"/>
         <source>Orientation</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3664"/>
+        <location filename="../mainwindow.cpp" line="3671"/>
         <source>Orientation:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3684"/>
+        <location filename="../mainwindow.cpp" line="3691"/>
         <source>PDF files (*.pdf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3685"/>
+        <location filename="../mainwindow.cpp" line="3692"/>
         <source>Export current note as PDF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3748"/>
+        <location filename="../mainwindow.cpp" line="3755"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4316"/>
+        <location filename="../mainwindow.cpp" line="4323"/>
         <source>Open QOwnNotes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4325"/>
-        <location filename="../mainwindow.cpp" line="7041"/>
+        <location filename="../mainwindow.cpp" line="4332"/>
+        <location filename="../mainwindow.cpp" line="7057"/>
         <source>New note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4341"/>
+        <location filename="../mainwindow.cpp" line="4348"/>
         <source>Recent notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4371"/>
+        <location filename="../mainwindow.cpp" line="4378"/>
         <source>Show todo lists</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4382"/>
+        <location filename="../mainwindow.cpp" line="4389"/>
         <source>Recent tasks</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4414"/>
+        <location filename="../mainwindow.cpp" line="4421"/>
         <source>Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5474"/>
+        <location filename="../mainwindow.cpp" line="5482"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5492"/>
+        <location filename="../mainwindow.cpp" line="5500"/>
         <source>show notes in note root folder (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
-        <location filename="../mainwindow.cpp" line="457"/>
-        <location filename="../mainwindow.cpp" line="5496"/>
+        <location filename="../mainwindow.cpp" line="458"/>
+        <location filename="../mainwindow.cpp" line="5504"/>
         <source>Note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6142"/>
+        <location filename="../mainwindow.cpp" line="6158"/>
         <source>Copy to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6143"/>
+        <location filename="../mainwindow.cpp" line="6159"/>
         <source>Move to note folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6144"/>
+        <location filename="../mainwindow.cpp" line="6160"/>
         <source>Copy to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6145"/>
+        <location filename="../mainwindow.cpp" line="6161"/>
         <source>Move to this subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6196"/>
+        <location filename="../mainwindow.cpp" line="6212"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1473,18 +1473,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6209"/>
+        <location filename="../mainwindow.cpp" line="6225"/>
         <source>Move</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6209"/>
-        <location filename="../mainwindow.cpp" line="6264"/>
+        <location filename="../mainwindow.cpp" line="6225"/>
+        <location filename="../mainwindow.cpp" line="6280"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6241"/>
+        <location filename="../mainwindow.cpp" line="6257"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1492,7 +1492,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6251"/>
+        <location filename="../mainwindow.cpp" line="6267"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1500,18 +1500,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6201"/>
-        <location filename="../mainwindow.cpp" line="6256"/>
+        <location filename="../mainwindow.cpp" line="6217"/>
+        <location filename="../mainwindow.cpp" line="6272"/>
         <source>Tagging information of these notes will be lost at the destination.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6264"/>
+        <location filename="../mainwindow.cpp" line="6280"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6296"/>
+        <location filename="../mainwindow.cpp" line="6312"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1519,338 +1519,338 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6793"/>
+        <location filename="../mainwindow.cpp" line="6809"/>
         <source>Move notes to subfolder...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6797"/>
+        <location filename="../mainwindow.cpp" line="6813"/>
         <source>Copy notes to subfolder...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6841"/>
+        <location filename="../mainwindow.cpp" line="6857"/>
         <source>Open note in external editor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6843"/>
+        <location filename="../mainwindow.cpp" line="6859"/>
         <source>Show note in file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7042"/>
+        <location filename="../mainwindow.cpp" line="7058"/>
         <source>New subfolder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7045"/>
+        <location filename="../mainwindow.cpp" line="7061"/>
         <source>Show folder in file manager</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7076"/>
+        <location filename="../mainwindow.cpp" line="7092"/>
         <source>Create a new folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7076"/>
+        <location filename="../mainwindow.cpp" line="7092"/>
         <source>Folder name:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5440"/>
+        <location filename="../mainwindow.cpp" line="5448"/>
         <source>show all untagged notes (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5443"/>
+        <location filename="../mainwindow.cpp" line="5451"/>
         <source>Untagged notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6390"/>
+        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6559"/>
+        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6586"/>
+        <location filename="../mainwindow.cpp" line="6602"/>
         <source>HTML files (*.html)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6587"/>
+        <location filename="../mainwindow.cpp" line="6603"/>
         <source>Export current note as HTML file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3642"/>
+        <location filename="../mainwindow.cpp" line="3649"/>
         <source>Page size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="682"/>
-        <source>your tasks are being loaded from your ownCloud server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="761"/>
+        <location filename="../mainwindow.cpp" line="762"/>
         <source>quit toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="963"/>
+        <location filename="../mainwindow.cpp" line="970"/>
         <source>Show menu bar item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3642"/>
+        <location filename="../mainwindow.cpp" line="3649"/>
         <source>Page size:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3723"/>
+        <location filename="../mainwindow.cpp" line="3730"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3727"/>
+        <location filename="../mainwindow.cpp" line="3734"/>
         <source>&amp;Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4451"/>
+        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4465"/>
+        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6763"/>
+        <location filename="../mainwindow.cpp" line="6779"/>
         <source>&amp;Move notes to...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6764"/>
+        <location filename="../mainwindow.cpp" line="6780"/>
         <source>&amp;Copy notes to...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6805"/>
+        <location filename="../mainwindow.cpp" line="6821"/>
         <source>&amp;Tag selected notes with...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6827"/>
+        <location filename="../mainwindow.cpp" line="6843"/>
         <source>&amp;Remove tag from selected notes...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6838"/>
+        <location filename="../mainwindow.cpp" line="6854"/>
         <source>&amp;Remove notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4492"/>
+        <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4496"/>
+        <location filename="../mainwindow.cpp" line="4503"/>
         <source>Paste HTML or media</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5412"/>
+        <location filename="../mainwindow.cpp" line="5420"/>
         <source>show all notes (%1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5415"/>
-        <location filename="../mainwindow.cpp" line="5478"/>
+        <location filename="../mainwindow.cpp" line="5423"/>
+        <location filename="../mainwindow.cpp" line="5486"/>
         <source>All notes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5903"/>
+        <location filename="../mainwindow.cpp" line="5919"/>
         <source>&amp;Add tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5910"/>
+        <location filename="../mainwindow.cpp" line="5926"/>
         <source>&amp;Move tags to...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5942"/>
+        <location filename="../mainwindow.cpp" line="5958"/>
         <source>Tag could not be created!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5996"/>
+        <location filename="../mainwindow.cpp" line="6012"/>
         <source>Move to the root</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5996"/>
+        <location filename="../mainwindow.cpp" line="6012"/>
         <source>Move to this tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6046"/>
+        <location filename="../mainwindow.cpp" line="6062"/>
         <source>Tag this</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6076"/>
+        <location filename="../mainwindow.cpp" line="6092"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6087"/>
+        <location filename="../mainwindow.cpp" line="6103"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6468"/>
+        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6485"/>
+        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5595"/>
+        <location filename="../mainwindow.cpp" line="5603"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5786"/>
+        <location filename="../mainwindow.cpp" line="5802"/>
         <source>remove tag &apos;%1&apos; from note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5905"/>
+        <location filename="../mainwindow.cpp" line="5921"/>
         <source>&amp;Edit tag</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5907"/>
+        <location filename="../mainwindow.cpp" line="5923"/>
         <source>&amp;Remove tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3747"/>
+        <location filename="../mainwindow.cpp" line="3754"/>
         <source>No selected todo lists!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="428"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>Subfolders</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="439"/>
+        <location filename="../mainwindow.cpp" line="440"/>
         <source>Tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="448"/>
+        <location filename="../mainwindow.cpp" line="449"/>
         <source>Note search</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="467"/>
         <source>Note list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="489"/>
+        <location filename="../mainwindow.cpp" line="490"/>
         <source>Note edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="498"/>
+        <location filename="../mainwindow.cpp" line="499"/>
         <source>Note tags</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="520"/>
+        <location filename="../mainwindow.cpp" line="521"/>
         <source>Note preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="527"/>
+        <location filename="../mainwindow.cpp" line="528"/>
         <source>Log</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="728"/>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="736"/>
+        <location filename="../mainwindow.cpp" line="737"/>
         <source>inserting toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="743"/>
+        <location filename="../mainwindow.cpp" line="744"/>
         <source>encryption toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="750"/>
+        <location filename="../mainwindow.cpp" line="751"/>
         <source>window toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="755"/>
+        <location filename="../mainwindow.cpp" line="756"/>
         <source>custom action toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1537"/>
+        <location filename="../mainwindow.cpp" line="1544"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1577"/>
+        <location filename="../mainwindow.cpp" line="1584"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1582"/>
+        <location filename="../mainwindow.cpp" line="1589"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1865"/>
+        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2487"/>
+        <location filename="../mainwindow.cpp" line="2494"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3201"/>
+        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3384"/>
+        <location filename="../mainwindow.cpp" line="3391"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1858,19 +1858,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5115"/>
-        <location filename="../mainwindow.cpp" line="5177"/>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5120"/>
-        <location filename="../mainwindow.cpp" line="5180"/>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5131"/>
+        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1878,7 +1878,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5140"/>
+        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1886,7 +1886,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5150"/>
+        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -1894,108 +1894,108 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5164"/>
+        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5183"/>
+        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5216"/>
+        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5246"/>
+        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5347"/>
+        <location filename="../mainwindow.cpp" line="5354"/>
         <source>Increased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5359"/>
+        <location filename="../mainwindow.cpp" line="5366"/>
         <source>Decreased font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5370"/>
+        <location filename="../mainwindow.cpp" line="5377"/>
         <source>Reset font size to %1 pt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3728"/>
-        <location filename="../mainwindow.cpp" line="3751"/>
+        <location filename="../mainwindow.cpp" line="3735"/>
+        <location filename="../mainwindow.cpp" line="3758"/>
         <source>Open &amp;settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1083"/>
+        <location filename="../mainwindow.cpp" line="1090"/>
         <source>leave</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1086"/>
+        <location filename="../mainwindow.cpp" line="1093"/>
         <source>leave distraction free mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4600"/>
+        <location filename="../mainwindow.cpp" line="4607"/>
         <source>Image files (*.jpg *.png *.gif)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4601"/>
+        <location filename="../mainwindow.cpp" line="4608"/>
         <source>Select image to insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4697"/>
+        <location filename="../mainwindow.cpp" line="4704"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4750"/>
+        <location filename="../mainwindow.cpp" line="4757"/>
         <source>Decrypt note and store it as plain text</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4751"/>
+        <location filename="../mainwindow.cpp" line="4758"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4755"/>
+        <location filename="../mainwindow.cpp" line="4762"/>
         <source>&amp;Decrypt</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4780"/>
+        <location filename="../mainwindow.cpp" line="4787"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4837"/>
+        <location filename="../mainwindow.cpp" line="4844"/>
         <source>Markdown files (*.md)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4838"/>
+        <location filename="../mainwindow.cpp" line="4845"/>
         <source>Export current note as Markdown file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4893"/>
+        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4909"/>
+        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2207,17 +2207,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>QObject</name>
     <message>
-        <location filename="../entities/notefolder.cpp" line="413"/>
+        <location filename="../entities/notefolder.cpp" line="416"/>
         <source>default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1874"/>
+        <location filename="../entities/note.cpp" line="1879"/>
         <source>Note filename changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="1875"/>
+        <location filename="../entities/note.cpp" line="1880"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -2306,29 +2306,29 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>QWidget</name>
     <message>
-        <location filename="../services/databaseservice.cpp" line="96"/>
+        <location filename="../services/databaseservice.cpp" line="97"/>
         <source>Cannot open memory database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="97"/>
+        <location filename="../services/databaseservice.cpp" line="98"/>
         <source>Unable to establish a memory database connection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="113"/>
+        <location filename="../services/databaseservice.cpp" line="114"/>
         <source>Cannot open disk database</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="114"/>
-        <location filename="../services/databaseservice.cpp" line="136"/>
+        <location filename="../services/databaseservice.cpp" line="115"/>
+        <location filename="../services/databaseservice.cpp" line="137"/>
         <source>Unable to establish a database connection with file &apos;%1&apos;.
 Are the folder and the file writeable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="135"/>
+        <location filename="../services/databaseservice.cpp" line="136"/>
         <source>Cannot open note folder database</source>
         <translation type="unfinished"></translation>
     </message>

@@ -680,7 +680,7 @@ void MainWindow::reloadTodoLists() {
         }
 
         showStatusBarMessage(
-                tr("your tasks are being loaded from your ownCloud server"),
+                tr("your tasks are being loaded from your server"),
                 4000);
 
         // generate the system tray context menu to show modified tasks
