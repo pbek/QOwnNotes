@@ -1050,11 +1050,8 @@
         <translation type="unfinished">Delete orphaned image files</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
-        <location filename="../mainwindow.cpp" line="1945"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
-        <translation>lemezen tárolt aktuális jegyzet</translation>
+        <translation type="obsolete">lemezen tárolt aktuális jegyzet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1930"/>
@@ -1089,19 +1086,16 @@ Restore current note?</source>
         <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
-        <translation>a jegyzet külsőleg módosításra került: %1</translation>
+        <translation type="obsolete">a jegyzet külsőleg módosításra került: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
-        <translation>a jegyzék címtár külsőleg módosult</translation>
+        <translation type="obsolete">a jegyzék címtár külsőleg módosult</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
         </translation>
     </message>
@@ -1200,6 +1194,11 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3208"/>
+        <source>Removed note subfolder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation>Kijelölt címkék eltávolítása</translation>
@@ -1271,6 +1270,99 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>
             <numerusform>Címkézzek %n kijelölt jegyzetet &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4458"/>
+        <source>Note versions are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4472"/>
+        <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4900"/>
+        <source>Bookmarked note position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4916"/>
+        <source>Jumped to bookmark position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
+        <source>Inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
+        <source>Done inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5138"/>
+        <source>Copied %n note(s) to %1</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5147"/>
+        <source>Failed to copy %n note(s) (most likely already existing)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5157"/>
+        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5171"/>
+        <source>Saving temporary image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5190"/>
+        <source>Temporary file can&apos;t be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5223"/>
+        <source>Downloading %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <source>Done downloading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6406"/>
+        <source>An url was opened at the current cursor position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6484"/>
+        <source>No equation was found in front of the cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <source>Result for equation: %1 = %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6575"/>
+        <source>The scripting engine was reloaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7519"/>
@@ -1553,14 +1645,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>Címkézetlen bejegyzések</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
-        <translation>egy url-t nyitott meg az aktuális kurzorpozícióban</translation>
+        <translation type="obsolete">egy url-t nyitott meg az aktuális kurzorpozícióban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
-        <translation>a parancsfájl-végrehajtó újratöltve</translation>
+        <translation type="obsolete">a parancsfájl-végrehajtó újratöltve</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6602"/>
@@ -1607,14 +1697,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>&amp;Oké</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
-        <translation>a jelenleg betöltött jegyzetverzió az ownCloud szerveren</translation>
+        <translation type="obsolete">a jelenleg betöltött jegyzetverzió az ownCloud szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
-        <translation>a törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
+        <translation type="obsolete">a törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6779"/>
@@ -1645,6 +1733,40 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Linkelje be a kijelölt szöveget</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>Your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1872"/>
+        <source>Current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
+        <source>Stored current note to disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1967"/>
+        <source>Note was modified externally: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <source>Notes directory was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>Stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4503"/>
@@ -1703,14 +1825,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>&apos;%1&apos; címke új helyre került</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
-        <translation>nincs egyenlet a kurzor előtt</translation>
+        <translation type="obsolete">nincs egyenlet a kurzor előtt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
-        <translation>egyenlet eredménye: %1 = %2</translation>
+        <translation type="obsolete">egyenlet eredménye: %1 = %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
@@ -1778,11 +1898,6 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation type="unfinished">Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
-        <source>your tasks are being loaded from your server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation>az eszköztár formatálása</translation>
@@ -1823,9 +1938,8 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>&lt; br /&gt;elérési út: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
-        <translation>az aktuális jegyzet külsőleg módosított</translation>
+        <translation type="obsolete">az aktuális jegyzet külsőleg módosított</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2494"/>
@@ -1833,9 +1947,8 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
-        <translation>törölt jegyzet almappa: %1</translation>
+        <translation type="obsolete">törölt jegyzet almappa: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="3391"/>
@@ -1845,57 +1958,46 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5122"/>
-        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
-        <translation>kép beszúrása</translation>
+        <translation type="obsolete">kép beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
-        <translation>kép beillesztése</translation>
+        <translation type="obsolete">kép beillesztése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n jegyzet(et) másolt át %1</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
-        <translation>kép mentése</translation>
+        <translation type="obsolete">kép mentése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
-        <translation>ideiglenes fájl nem nyitható meg</translation>
+        <translation type="obsolete">ideiglenes fájl nem nyitható meg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
-        <translation>letöltés %1</translation>
+        <translation type="obsolete">letöltés %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
-        <translation>képek letöltése kész</translation>
+        <translation type="obsolete">képek letöltése kész</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5354"/>
@@ -1974,14 +2076,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>Markdown fájlként exportálhatja az aktuális jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
-        <translation>könyvjelzővel megjelölt jegyzet helyzete a slot %1</translation>
+        <translation type="obsolete">könyvjelzővel megjelölt jegyzet helyzete a slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation>ugrott az %1-es könyvjelző helyzethez</translation>
+        <translation type="obsolete">ugrott az %1-es könyvjelző helyzethez</translation>
     </message>
 </context>
 <context>
@@ -2124,8 +2224,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="833"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>done with loading note versions</source>
-        <translation>a jegyzetváltozatok töltése befejeződött</translation>
+        <translation type="obsolete">a jegyzetváltozatok töltése befejeződött</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="871"/>
@@ -2138,9 +2247,8 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
         <translation>Ennek a jegyzetek nincsenek a szerveren más változatai.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
-        <translation>a törölt jegyzetek töltése befejeződött</translation>
+        <translation type="obsolete">a törölt jegyzetek töltése befejeződött</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="950"/>

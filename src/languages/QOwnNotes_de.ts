@@ -1051,11 +1051,8 @@
         <translation>Verwaiste Bild-Dateien löschen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
-        <location filename="../mainwindow.cpp" line="1945"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
-        <translation>aktuelle Notiz auf Datenträger gespeichert</translation>
+        <translation type="obsolete">aktuelle Notiz auf Datenträger gespeichert</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1930"/>
@@ -1091,19 +1088,16 @@ Notiz wiederherstellen?</translation>
         <translation>&amp;Abbrechen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
-        <translation>Notiz wurde extern verändert: %1</translation>
+        <translation type="obsolete">Notiz wurde extern verändert: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
-        <translation>Notizordner wurde extern verändert</translation>
+        <translation type="obsolete">Notizordner wurde extern verändert</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>eine Notiz wurde auf dem Datenträger gespeichert</numerusform>
             <numerusform>%n Notizen wurden auf dem Datenträger gespeichert</numerusform>
         </translation>
@@ -1207,6 +1201,11 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3208"/>
+        <source>Removed note subfolder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation>Ausgewählten Tags entfernen</translation>
@@ -1283,6 +1282,102 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
             <numerusform>%n ausgewählte Notiz das Schlagwort &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
             <numerusform>%n ausgewählten Notizen die Schlagworte &lt;strong&gt;%2&lt;/strong&gt; hinzufügen?</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4458"/>
+        <source>Note versions are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4472"/>
+        <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4900"/>
+        <source>Bookmarked note position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4916"/>
+        <source>Jumped to bookmark position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
+        <source>Inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
+        <source>Done inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5138"/>
+        <source>Copied %n note(s) to %1</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5147"/>
+        <source>Failed to copy %n note(s) (most likely already existing)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5157"/>
+        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5171"/>
+        <source>Saving temporary image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5190"/>
+        <source>Temporary file can&apos;t be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5223"/>
+        <source>Downloading %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <source>Done downloading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6406"/>
+        <source>An url was opened at the current cursor position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6484"/>
+        <source>No equation was found in front of the cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <source>Result for equation: %1 = %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6575"/>
+        <source>The scripting engine was reloaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7519"/>
@@ -1571,14 +1666,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>Notizen ohne Schlagwort</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
-        <translation>An der aktuellen Cursor-Position wurde eine URL geöffnet</translation>
+        <translation type="obsolete">An der aktuellen Cursor-Position wurde eine URL geöffnet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
-        <translation>Die Skripting-Engine wurde neu geladen</translation>
+        <translation type="obsolete">Die Skripting-Engine wurde neu geladen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6602"/>
@@ -1625,14 +1718,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
-        <translation>Notiz-Versionen werden von Ihrem ownCloud-Server geladen</translation>
+        <translation type="obsolete">Notiz-Versionen werden von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
-        <translation>gelöschte Notizen werden derzeit von Ihrem ownCloud-Server geladen</translation>
+        <translation type="obsolete">gelöschte Notizen werden derzeit von Ihrem ownCloud-Server geladen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6779"/>
@@ -1663,6 +1754,41 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation>markierten Text ver&amp;linken</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>Your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1872"/>
+        <source>Current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
+        <source>Stored current note to disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1967"/>
+        <source>Note was modified externally: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <source>Notes directory was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>Stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4503"/>
@@ -1721,14 +1847,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>Schlagwort &apos;%1&apos; wurde zum neuen Schlagwort verschoben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
-        <translation>keine Gleichung vor dem Cursor gefunden</translation>
+        <translation type="obsolete">keine Gleichung vor dem Cursor gefunden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
-        <translation>Ergebnis der Gleichung: %1 = %2</translation>
+        <translation type="obsolete">Ergebnis der Gleichung: %1 = %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
@@ -1796,11 +1920,6 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation type="unfinished">Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
-        <source>your tasks are being loaded from your server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation>Formatierungs-Werkzeugleiste</translation>
@@ -1841,9 +1960,8 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>&lt;br /&gt;Pfad: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
-        <translation>aktuelle Notiz wurde extern verändert</translation>
+        <translation type="obsolete">aktuelle Notiz wurde extern verändert</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2494"/>
@@ -1851,9 +1969,8 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>Bitte wählen den Ordner aus, in dem die Notizen gespeichert werden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
-        <translation>Notiz-Unterordner entfernt: %1</translation>
+        <translation type="obsolete">Notiz-Unterordner entfernt: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="3391"/>
@@ -1864,60 +1981,49 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5122"/>
-        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
-        <translation>Füge Bild ein</translation>
+        <translation type="obsolete">Füge Bild ein</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
-        <translation>Bild eingefügt</translation>
+        <translation type="obsolete">Bild eingefügt</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>eine Notiz wurde nach %1 kopiert</numerusform>
             <numerusform>%n Notizen wurden nach %1 kopiert</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>Fehler beim Kopieren von einer Notiz (höchstwahrscheinlich bereits vorhanden)</numerusform>
             <numerusform>Fehler beim Kopieren von %n Notizen (höchstwahrscheinlich bereits vorhanden)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>das Kopieren von einer Notiz wurde übersprungen (keine Markdown/Text-Datei oder nicht lesbar)</numerusform>
             <numerusform>das Kopieren von %n Notizen wurde übersprungen (keine Markdown/Text-Datei oder nicht lesbar)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
-        <translation>Speichere temporäres Bild</translation>
+        <translation type="obsolete">Speichere temporäres Bild</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
-        <translation>Temporäres Bild konnte nicht geöffnet werden</translation>
+        <translation type="obsolete">Temporäres Bild konnte nicht geöffnet werden</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
-        <translation>Lade %1 herunter</translation>
+        <translation type="obsolete">Lade %1 herunter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
-        <translation>Herunterladen beendet</translation>
+        <translation type="obsolete">Herunterladen beendet</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5354"/>
@@ -1996,14 +2102,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>aktuelle Notiz als Markdown Datei exportieren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
-        <translation>Lesezeichen %1 wurde abgelegt</translation>
+        <translation type="obsolete">Lesezeichen %1 wurde abgelegt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation>es wurde zu Lesezeichen %1 gesprungen</translation>
+        <translation type="obsolete">es wurde zu Lesezeichen %1 gesprungen</translation>
     </message>
 </context>
 <context>
@@ -2147,8 +2251,17 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="833"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>done with loading note versions</source>
-        <translation>fertig mit dem Laden von Notiz-Versionen</translation>
+        <translation type="obsolete">fertig mit dem Laden von Notiz-Versionen</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="871"/>
@@ -2161,9 +2274,8 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
         <translation>Es gibt keine anderen Versionen auf dem Server für diese Notiz.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
-        <translation>fertig mit dem Laden gelöschter Notizen</translation>
+        <translation type="obsolete">fertig mit dem Laden gelöschter Notizen</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="950"/>

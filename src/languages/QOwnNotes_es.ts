@@ -1050,11 +1050,8 @@
         <translation>Eliminar archivos de imagen huérfanos</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
-        <location filename="../mainwindow.cpp" line="1945"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
-        <translation>nota actual almacenada en el disco</translation>
+        <translation type="obsolete">nota actual almacenada en el disco</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1930"/>
@@ -1089,19 +1086,16 @@ Restore current note?</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
-        <translation>la nota fue modificada externamente: %1</translation>
+        <translation type="obsolete">la nota fue modificada externamente: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
-        <translation>la carpeta de notas fue modificada externamente</translation>
+        <translation type="obsolete">la carpeta de notas fue modificada externamente</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>nota(s) %n almacenada en disco</numerusform>
             <numerusform>nota(s) %n almacenadas en disco</numerusform>
         </translation>
@@ -1205,6 +1199,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3208"/>
+        <source>Removed note subfolder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation>Eliminar etiquetas seleccionadas</translation>
@@ -1281,6 +1280,102 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
             <numerusform>¿Etiquetar %n nota(s) seleccionada(s) con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
             <numerusform>¿Etiquetar %n nota(s) seleccionada(s) con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4458"/>
+        <source>Note versions are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4472"/>
+        <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4900"/>
+        <source>Bookmarked note position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4916"/>
+        <source>Jumped to bookmark position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
+        <source>Inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
+        <source>Done inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5138"/>
+        <source>Copied %n note(s) to %1</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5147"/>
+        <source>Failed to copy %n note(s) (most likely already existing)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5157"/>
+        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5171"/>
+        <source>Saving temporary image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5190"/>
+        <source>Temporary file can&apos;t be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5223"/>
+        <source>Downloading %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <source>Done downloading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6406"/>
+        <source>An url was opened at the current cursor position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6484"/>
+        <source>No equation was found in front of the cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <source>Result for equation: %1 = %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6575"/>
+        <source>The scripting engine was reloaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7519"/>
@@ -1569,14 +1664,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Notas sin etiquetar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
-        <translation>un utl se abrió en la posición actual del cursor</translation>
+        <translation type="obsolete">un utl se abrió en la posición actual del cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
-        <translation>La engine de scripting ha sido actualizada</translation>
+        <translation type="obsolete">La engine de scripting ha sido actualizada</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6602"/>
@@ -1623,14 +1716,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
-        <translation>las versiones de notas actualmente se cargan desde el servidor de ownCloud</translation>
+        <translation type="obsolete">las versiones de notas actualmente se cargan desde el servidor de ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
-        <translation>las notas eliminadas actualmente se cargan desde el servidor de ownCloud</translation>
+        <translation type="obsolete">las notas eliminadas actualmente se cargan desde el servidor de ownCloud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6779"/>
@@ -1661,6 +1752,41 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation>Enlazarar texto seleccionado</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>Your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1872"/>
+        <source>Current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
+        <source>Stored current note to disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1967"/>
+        <source>Note was modified externally: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <source>Notes directory was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>Stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4503"/>
@@ -1719,14 +1845,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Etiqueta &apos;%1&apos; movida a nueva etiqueta</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
-        <translation>No se pudo encontrar ninguna ecuación en la posición del cursor</translation>
+        <translation type="obsolete">No se pudo encontrar ninguna ecuación en la posición del cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
-        <translation>Resultado de la ecuación: %1 = %2</translation>
+        <translation type="obsolete">Resultado de la ecuación: %1 = %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
@@ -1794,11 +1918,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation type="unfinished">Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
-        <source>your tasks are being loaded from your server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation>barra de formato</translation>
@@ -1839,9 +1958,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>&lt;br /&gt;ruta: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
-        <translation>la nota actual fue modificada externamente</translation>
+        <translation type="obsolete">la nota actual fue modificada externamente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2494"/>
@@ -1849,9 +1967,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
-        <translation>eliminar la subcarpeta de notas: %1</translation>
+        <translation type="obsolete">eliminar la subcarpeta de notas: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="3391"/>
@@ -1862,60 +1979,49 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5122"/>
-        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
-        <translation>insertar imagen</translation>
+        <translation type="obsolete">insertar imagen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
-        <translation>insertar imagen</translation>
+        <translation type="obsolete">insertar imagen</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>copia %n nota(s) a %1</numerusform>
             <numerusform>copia %n nota(s) a %1</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>Error al copiar %n la nota probablemente ya existe</numerusform>
             <numerusform>Error al copiar %n las notas probablemente ya existen</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>omite la copia de %n de la nota (no hay ningún archivo de texto o markdown legible)</numerusform>
             <numerusform>omite la copia de %n de las notas (no hay ningún archivo de texto o markdown legible)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
-        <translation>guardar imagen temporal</translation>
+        <translation type="obsolete">guardar imagen temporal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
-        <translation>no se puede abrir el archivo temporal</translation>
+        <translation type="obsolete">no se puede abrir el archivo temporal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
-        <translation>descargando %1</translation>
+        <translation type="obsolete">descargando %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
-        <translation>imágenes descargas</translation>
+        <translation type="obsolete">imágenes descargas</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5354"/>
@@ -1994,14 +2100,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Exportar la nota actual a Markdown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
-        <translation>se guardó la posición de la nota en la ranura %1</translation>
+        <translation type="obsolete">se guardó la posición de la nota en la ranura %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation>posición del marcador en slot %1</translation>
+        <translation type="obsolete">posición del marcador en slot %1</translation>
     </message>
 </context>
 <context>
@@ -2145,8 +2249,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="833"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>done with loading note versions</source>
-        <translation>conseguir versiones de nota</translation>
+        <translation type="obsolete">conseguir versiones de nota</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="871"/>
@@ -2159,9 +2272,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>No hay ninguna otra versión de esta nota en el servidor.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
-        <translation>cargado desde notas eliminadas</translation>
+        <translation type="obsolete">cargado desde notas eliminadas</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="950"/>

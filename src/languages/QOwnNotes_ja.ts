@@ -1050,11 +1050,8 @@
         <translation>孤立した画像ファイルの削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
-        <location filename="../mainwindow.cpp" line="1945"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
-        <translation>現在のノートをディスクに保存しました</translation>
+        <translation type="obsolete">現在のノートをディスクに保存しました</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1930"/>
@@ -1090,19 +1087,16 @@ Restore current note?</source>
         <translation>中止(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
-        <translation>ノートは外部で変更されています: %1</translation>
+        <translation type="obsolete">ノートは外部で変更されています: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
-        <translation>ノート ディレクトリが外部で変更されています</translation>
+        <translation type="obsolete">ノート ディレクトリが外部で変更されています</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n 個のノートをディスクに保存しました</numerusform>
         </translation>
     </message>
@@ -1201,6 +1195,11 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3208"/>
+        <source>Removed note subfolder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation>選択したタグの削除</translation>
@@ -1272,6 +1271,99 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>
             <numerusform>選択した %n 個のノートに &lt;strong&gt;%2&lt;/strong&gt; タグを追加しますか？</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4458"/>
+        <source>Note versions are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4472"/>
+        <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4900"/>
+        <source>Bookmarked note position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4916"/>
+        <source>Jumped to bookmark position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
+        <source>Inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
+        <source>Done inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5138"/>
+        <source>Copied %n note(s) to %1</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5147"/>
+        <source>Failed to copy %n note(s) (most likely already existing)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5157"/>
+        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5171"/>
+        <source>Saving temporary image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5190"/>
+        <source>Temporary file can&apos;t be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5223"/>
+        <source>Downloading %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <source>Done downloading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6406"/>
+        <source>An url was opened at the current cursor position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6484"/>
+        <source>No equation was found in front of the cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <source>Result for equation: %1 = %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6575"/>
+        <source>The scripting engine was reloaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7519"/>
@@ -1554,14 +1646,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>タグなしノート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
-        <translation>カーソル位置のURLを開きました</translation>
+        <translation type="obsolete">カーソル位置のURLを開きました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
-        <translation>スクリプト エンジンを再読み込みしました</translation>
+        <translation type="obsolete">スクリプト エンジンを再読み込みしました</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6602"/>
@@ -1608,14 +1698,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
-        <translation>ノートのバージョン履歴をあなたのownCloud サーバーから読み込みました</translation>
+        <translation type="obsolete">ノートのバージョン履歴をあなたのownCloud サーバーから読み込みました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
-        <translation>削除したノートをあなたのownCloud サーバーから読み込みました</translation>
+        <translation type="obsolete">削除したノートをあなたのownCloud サーバーから読み込みました</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6779"/>
@@ -1646,6 +1734,40 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation>選択テキストをリンクに(&amp;L)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>Your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1872"/>
+        <source>Current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
+        <source>Stored current note to disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1967"/>
+        <source>Note was modified externally: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <source>Notes directory was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>Stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4503"/>
@@ -1704,14 +1826,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>タグ &apos;%1&apos; を新しいタグに移動しました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
-        <translation>カーソルの前に計算式がありません</translation>
+        <translation type="obsolete">カーソルの前に計算式がありません</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
-        <translation>計算結果: %1 = %2</translation>
+        <translation type="obsolete">計算結果: %1 = %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
@@ -1779,11 +1899,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation type="unfinished">Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
-        <source>your tasks are being loaded from your server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation>書式ツールバー</translation>
@@ -1824,9 +1939,8 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>&lt;br /&gt;パス: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
-        <translation>現在のノートは外部で変更されています</translation>
+        <translation type="obsolete">現在のノートは外部で変更されています</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2494"/>
@@ -1834,9 +1948,8 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>あなたのノートを保存するフォルダーを選択してください</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
-        <translation>サブフォルダーを削除しました: %1</translation>
+        <translation type="obsolete">サブフォルダーを削除しました: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="3391"/>
@@ -1846,57 +1959,46 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5122"/>
-        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
-        <translation>画像の挿入</translation>
+        <translation type="obsolete">画像の挿入</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
-        <translation>画像の挿入が完了しました</translation>
+        <translation type="obsolete">画像の挿入が完了しました</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n 個のノートを %1 にコピーしました</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n 個のノートのコピーに失敗しました (おそらくすでに存在します)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>%n 個のノートのコピーをスキップしました (markdown、プレーンテキスト ファイルでないか、読み込めません)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
-        <translation>一時画像の保存中</translation>
+        <translation type="obsolete">一時画像の保存中</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
-        <translation>一時ファイルが開けません</translation>
+        <translation type="obsolete">一時ファイルが開けません</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
-        <translation>%1 をダウンロード中</translation>
+        <translation type="obsolete">%1 をダウンロード中</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
-        <translation>画像のダウンロードが完了しました</translation>
+        <translation type="obsolete">画像のダウンロードが完了しました</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5354"/>
@@ -1975,14 +2077,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>現在のノートをMarkdownファイルにエクスポート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
-        <translation>現在のノートの位置をスロット %1 にブックマークしました</translation>
+        <translation type="obsolete">現在のノートの位置をスロット %1 にブックマークしました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation>スロット %1 のブックマーク位置にジャンプしました</translation>
+        <translation type="obsolete">スロット %1 のブックマーク位置にジャンプしました</translation>
     </message>
 </context>
 <context>
@@ -2125,8 +2225,17 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="833"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>done with loading note versions</source>
-        <translation>ノートのバージョン履歴の読み込み完了</translation>
+        <translation type="obsolete">ノートのバージョン履歴の読み込み完了</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="871"/>
@@ -2139,9 +2248,8 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>このノートのバージョン履歴はありません。</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
-        <translation>削除したノートの読み込み完了</translation>
+        <translation type="obsolete">削除したノートの読み込み完了</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="950"/>

@@ -1050,11 +1050,8 @@
         <translation>Excluir imagens órfãs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1899"/>
-        <location filename="../mainwindow.cpp" line="1945"/>
-        <location filename="../mainwindow.cpp" line="4062"/>
         <source>stored current note to disk</source>
-        <translation>Armazenar a nota atual no disco</translation>
+        <translation type="obsolete">Armazenar a nota atual no disco</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="1930"/>
@@ -1090,19 +1087,16 @@ Restaurar a nota atual? </translation>
         <translation>&amp;Cancelar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1967"/>
         <source>note was modified externally: %1</source>
-        <translation>nota foi modificada externamente: %1</translation>
+        <translation type="obsolete">nota foi modificada externamente: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1988"/>
         <source>notes directory was modified externally</source>
-        <translation>diretório de notas foi modificado externamente</translation>
+        <translation type="obsolete">diretório de notas foi modificado externamente</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2054"/>
         <source>stored %n note(s) to disk</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>armazenar %n nota no disco </numerusform>
             <numerusform>armazenar %n notas no disco </numerusform>
         </translation>
@@ -1204,6 +1198,11 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3208"/>
+        <source>Removed note subfolder: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="3227"/>
         <source>Remove selected tags</source>
         <translation>Excluir as tags selecionadas</translation>
@@ -1280,6 +1279,102 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
             <numerusform>Colocar tag nas %n nota(s) selecionadas com &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
             <numerusform>Colocar tag nas %n nota(s) selecionadas com &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4458"/>
+        <source>Note versions are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4472"/>
+        <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4900"/>
+        <source>Bookmarked note position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4916"/>
+        <source>Jumped to bookmark position at slot %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5122"/>
+        <location filename="../mainwindow.cpp" line="5184"/>
+        <source>Inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5127"/>
+        <location filename="../mainwindow.cpp" line="5187"/>
+        <source>Done inserting image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5138"/>
+        <source>Copied %n note(s) to %1</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5147"/>
+        <source>Failed to copy %n note(s) (most likely already existing)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="5157"/>
+        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5171"/>
+        <source>Saving temporary image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5190"/>
+        <source>Temporary file can&apos;t be opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5223"/>
+        <source>Downloading %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5253"/>
+        <source>Done downloading images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6406"/>
+        <source>An url was opened at the current cursor position</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6484"/>
+        <source>No equation was found in front of the cursor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6501"/>
+        <source>Result for equation: %1 = %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="6575"/>
+        <source>The scripting engine was reloaded</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="7519"/>
@@ -1568,14 +1663,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Notas sem tags</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6406"/>
         <source>an url was opened at the current cursor position</source>
-        <translation>uma url foi aberta na posição atual do cursor</translation>
+        <translation type="obsolete">uma url foi aberta na posição atual do cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6575"/>
         <source>the scripting engine was reloaded</source>
-        <translation>a engine de script foi recarregada</translation>
+        <translation type="obsolete">a engine de script foi recarregada</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6602"/>
@@ -1622,14 +1715,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4458"/>
         <source>note versions are currently loaded from your ownCloud server</source>
-        <translation>as versões da nota são carregadas do seu servidor OwnCloud</translation>
+        <translation type="obsolete">as versões da nota são carregadas do seu servidor OwnCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
         <source>trashed notes are currently loaded from your ownCloud server</source>
-        <translation>as notas excluidas são carregadas do seu servidor OwnCloud</translation>
+        <translation type="obsolete">as notas excluidas são carregadas do seu servidor OwnCloud</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="6779"/>
@@ -1660,6 +1751,41 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <location filename="../mainwindow.cpp" line="4499"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Linkar o texto selecionado</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="683"/>
+        <source>Your tasks are being loaded from your server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1872"/>
+        <source>Current note was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1899"/>
+        <location filename="../mainwindow.cpp" line="1945"/>
+        <location filename="../mainwindow.cpp" line="4062"/>
+        <source>Stored current note to disk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1967"/>
+        <source>Note was modified externally: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <source>Notes directory was modified externally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../mainwindow.cpp" line="2054"/>
+        <source>Stored %n note(s) to disk</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="4503"/>
@@ -1718,14 +1844,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Movido a tag &apos;%1&apos; para a nova tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6484"/>
         <source>no equation was found in front of the cursor</source>
-        <translation>a equação não foi encontrada na frente do cursor</translation>
+        <translation type="obsolete">a equação não foi encontrada na frente do cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6501"/>
         <source>result for equation: %1 = %2</source>
-        <translation>resultado para a equação: %1 = %2</translation>
+        <translation type="obsolete">resultado para a equação: %1 = %2</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5603"/>
@@ -1793,11 +1917,6 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation type="unfinished">Log</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="683"/>
-        <source>your tasks are being loaded from your server</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="729"/>
         <source>formatting toolbar</source>
         <translation>formatar a barra de ferramentas</translation>
@@ -1838,9 +1957,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>&lt;br /&gt;caminho: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1872"/>
         <source>current note was modified externally</source>
-        <translation>nota atual foi modificada externamente</translation>
+        <translation type="obsolete">nota atual foi modificada externamente</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="2494"/>
@@ -1848,9 +1966,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Por favor, selecione a pasta onde suas anotações ficarão armazenadas</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3208"/>
         <source>removed note subfolder: %1</source>
-        <translation>remover o sub diretório: %1</translation>
+        <translation type="obsolete">remover o sub diretório: %1</translation>
     </message>
     <message numerus="yes">
         <location filename="../mainwindow.cpp" line="3391"/>
@@ -1861,60 +1978,49 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5122"/>
-        <location filename="../mainwindow.cpp" line="5184"/>
         <source>inserting image</source>
-        <translation>inserir imagem</translation>
+        <translation type="obsolete">inserir imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <location filename="../mainwindow.cpp" line="5187"/>
         <source>done inserting image</source>
-        <translation>inserção de imagem completa</translation>
+        <translation type="obsolete">inserção de imagem completa</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5138"/>
         <source>copied %n note(s) to %1</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>copiado %n nota(s) para %1</numerusform>
             <numerusform>copiado %n nota(s) para %1</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5147"/>
         <source>failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>falha ao copiar %n nota(s) (mais provável que a nota exista)</numerusform>
             <numerusform>falha ao copiar %n nota(s) (mais provável que a nota exista)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5157"/>
         <source>skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
+        <translation type="obsolete">
             <numerusform>ignorando a copia de %n nota(s) (markdown ou arquivo de texto ilegível)</numerusform>
             <numerusform>ignorando a copia de %n nota(s) (markdown ou arquivo de texto ilegível)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5171"/>
         <source>saving temporary image</source>
-        <translation>salvando imagem temporária</translation>
+        <translation type="obsolete">salvando imagem temporária</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5190"/>
         <source>temporary file can&apos;t be opened</source>
-        <translation>arquivo temporário não pode ser aberto</translation>
+        <translation type="obsolete">arquivo temporário não pode ser aberto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5223"/>
         <source>downloading %1</source>
-        <translation>baixando %1</translation>
+        <translation type="obsolete">baixando %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5253"/>
         <source>done downloading images</source>
-        <translation>download de imagens completo</translation>
+        <translation type="obsolete">download de imagens completo</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5354"/>
@@ -1993,14 +2099,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Exportar a nota atual para arquivo MarkDown</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4900"/>
         <source>bookmarked note position at slot %1</source>
-        <translation>marcada a nota no slot %1</translation>
+        <translation type="obsolete">marcada a nota no slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4916"/>
         <source>jumped to bookmark position at slot %1</source>
-        <translation>saltando para o marcador no slot %1</translation>
+        <translation type="obsolete">saltando para o marcador no slot %1</translation>
     </message>
 </context>
 <context>
@@ -2144,8 +2248,17 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="833"/>
+        <source>Done with loading note versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../services/owncloudservice.cpp" line="889"/>
+        <source>Done with loading trashed notes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>done with loading note versions</source>
-        <translation>versões de notas carregadas</translation>
+        <translation type="obsolete">versões de notas carregadas</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="871"/>
@@ -2158,9 +2271,8 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Não existe outras versões do servidor para esta nota.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="889"/>
         <source>done with loading trashed notes</source>
-        <translation>notas excluídas carregadas</translation>
+        <translation type="obsolete">notas excluídas carregadas</translation>
     </message>
     <message>
         <location filename="../services/owncloudservice.cpp" line="950"/>

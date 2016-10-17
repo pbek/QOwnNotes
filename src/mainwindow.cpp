@@ -680,7 +680,7 @@ void MainWindow::reloadTodoLists() {
         }
 
         showStatusBarMessage(
-                tr("your tasks are being loaded from your server"),
+                tr("Your tasks are being loaded from your server"),
                 4000);
 
         // generate the system tray context menu to show modified tasks
@@ -1869,7 +1869,7 @@ void MainWindow::notesWereModified(const QString &str) {
             qDebug() << "Current note was modified externally!";
 
             showStatusBarMessage(
-                    tr("current note was modified externally"), 5000);
+                    tr("Current note was modified externally"), 5000);
 
             // if we don't want to get notifications at all
             // external modifications check if we really need one
@@ -1896,7 +1896,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     this->currentNote.store();
                     this->currentNote.storeNoteTextFileToDisk();
                     showStatusBarMessage(
-                            tr("stored current note to disk"), 3000);
+                            tr("Stored current note to disk"), 3000);
 
                     // just to make sure everything is uptodate
 //                        this->currentNote = note;
@@ -1942,7 +1942,7 @@ void MainWindow::notesWereModified(const QString &str) {
                     // store note to disk again
                     note.storeNoteTextFileToDisk();
                     showStatusBarMessage(
-                            tr("stored current note to disk"), 3000);
+                            tr("Stored current note to disk"), 3000);
 
                     // rebuild and reload the notes directory list
                     buildNotesIndexAndLoadNoteDirectoryList();
@@ -1964,7 +1964,7 @@ void MainWindow::notesWereModified(const QString &str) {
         qDebug() << "other note was changed: " << str;
 
         showStatusBarMessage(
-                tr("note was modified externally: %1").arg(str), 5000);
+                tr("Note was modified externally: %1").arg(str), 5000);
 
         // rebuild and reload the notes directory list
         buildNotesIndexAndLoadNoteDirectoryList();
@@ -1985,7 +1985,7 @@ void MainWindow::notesDirectoryWasModified(const QString &str) {
     }
 
     qDebug() << "notesDirectoryWasModified: " << str;
-    showStatusBarMessage(tr("notes directory was modified externally"), 5000);
+    showStatusBarMessage(tr("Notes directory was modified externally"), 5000);
 
     // rebuild and reload the notes directory list
     buildNotesIndexAndLoadNoteDirectoryList();
@@ -2051,7 +2051,7 @@ void MainWindow::storeUpdatedNotesToDisk() {
         qDebug() << __func__ << " - 'count': " << count;
 
         showStatusBarMessage(
-                tr("stored %n note(s) to disk", "", count),
+                tr("Stored %n note(s) to disk", "", count),
                 3000);
 
         // wait 100ms before the block on this->noteDirectoryWatcher
@@ -3205,7 +3205,7 @@ void MainWindow::removeSelectedNoteSubFolders() {
         Q_FOREACH(NoteSubFolder noteSubFolder, noteSubFolderList) {
                 // remove the directory recursively from the file system
                 if (noteSubFolder.removeFromFileSystem()) {
-                    showStatusBarMessage(tr("removed note subfolder: %1").arg(
+                    showStatusBarMessage(tr("Removed note subfolder: %1").arg(
                             noteSubFolder.fullPath()));
                 }
         }
@@ -4059,7 +4059,7 @@ void MainWindow::jumpToNoteOrCreateNew() {
 
         note.storeNoteTextFileToDisk();
         showStatusBarMessage(
-                tr("stored current note to disk"), 3000);
+                tr("Stored current note to disk"), 3000);
 
         {
             const QSignalBlocker blocker2(ui->noteTreeWidget);
@@ -4455,7 +4455,7 @@ void MainWindow::on_actionShow_versions_triggered() {
 
     ui->actionShow_versions->setDisabled(true);
     showStatusBarMessage(
-            tr("note versions are currently loaded from your ownCloud server"),
+            tr("Note versions are currently loaded from your ownCloud server"),
             20000);
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
@@ -4469,7 +4469,7 @@ void MainWindow::enableShowVersionsButton() {
 void MainWindow::on_actionShow_trash_triggered() {
     ui->actionShow_trash->setDisabled(true);
     showStatusBarMessage(
-            tr("trashed notes are currently loaded from your ownCloud server"),
+            tr("Trashed notes are currently loaded from your ownCloud server"),
             20000);
 
     OwnCloudService *ownCloud = new OwnCloudService(this);
@@ -4897,7 +4897,7 @@ void MainWindow::storeNoteBookmark(int slot) {
     noteBookmarks[slot] = item;
 
     showStatusBarMessage(
-            tr("bookmarked note position at slot %1").arg(
+            tr("Bookmarked note position at slot %1").arg(
                     QString::number(slot)), 3000);
 }
 
@@ -4913,7 +4913,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
         setCurrentNoteFromHistoryItem(item);
 
         showStatusBarMessage(
-                tr("jumped to bookmark position at slot %1").arg(
+                tr("Jumped to bookmark position at slot %1").arg(
                         QString::number(slot)), 3000);
     }
 }
@@ -5119,12 +5119,12 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                         }
                     // only allow image files to be inserted as image
                     } else if (isValidMediaFile(file)) {
-                        showStatusBarMessage(tr("inserting image"));
+                        showStatusBarMessage(tr("Inserting image"));
 
                         // insert the image
                         insertMedia(file);
 
-                        showStatusBarMessage(tr("done inserting image"), 3000);
+                        showStatusBarMessage(tr("Done inserting image"), 3000);
                     } else {
                         skipCount++;
                     }
@@ -5135,7 +5135,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
         QString message;
         if (successCount > 0) {
-            message += tr("copied %n note(s) to %1", "", successCount)
+            message += tr("Copied %n note(s) to %1", "", successCount)
                     .arg(notesPath);
         }
 
@@ -5145,7 +5145,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             }
 
             message += tr(
-                    "failed to copy %n note(s) (most likely already existing)",
+                    "Failed to copy %n note(s) (most likely already existing)",
                     "", failureCount);
         }
 
@@ -5155,7 +5155,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
             }
 
             message += tr(
-                    "skipped copying of %n note(s) "
+                    "Skipped copying of %n note(s) "
                             "(no markdown or text file or not readable)",
                     "", skipCount);
         }
@@ -5168,7 +5168,7 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
         QImage image = mimeData->imageData().value<QImage>();
 
         if (!image.isNull()) {
-            showStatusBarMessage(tr("saving temporary image"));
+            showStatusBarMessage(tr("Saving temporary image"));
 
             QTemporaryFile tempFile(
                     QDir::tempPath() + QDir::separator() +
@@ -5181,13 +5181,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
                 // insert media into note
                 QFile *file = new QFile(tempFile.fileName());
 
-                showStatusBarMessage(tr("inserting image"));
+                showStatusBarMessage(tr("Inserting image"));
                 insertMedia(file);
 
-                showStatusBarMessage(tr("done inserting image"), 3000);
+                showStatusBarMessage(tr("Done inserting image"), 3000);
             } else {
                 showStatusBarMessage(
-                        tr("temporary file can't be opened"), 3000);
+                        tr("Temporary file can't be opened"), 3000);
             }
         }
     }
@@ -5220,7 +5220,7 @@ void MainWindow::insertHtml(QString html) {
             continue;
         }
 
-        showStatusBarMessage(tr("downloading %1").arg(imageUrl.toString()));
+        showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
 
         // try to get the suffix from the url
         QString suffix =
@@ -5250,7 +5250,7 @@ void MainWindow::insertHtml(QString html) {
         }
     }
 
-    showStatusBarMessage(tr("done downloading images"));
+    showStatusBarMessage(tr("Done downloading images"));
 
     // remove all html tags
     html.remove(QRegularExpression("<.+?>"));
@@ -6403,7 +6403,7 @@ void MainWindow::on_actionAutocomplete_triggered() {
     // try to open a link at the cursor position
     if (textEdit->openLinkAtCursorPosition()) {
         showStatusBarMessage(
-                tr("an url was opened at the current cursor position"), 5000);
+                tr("An url was opened at the current cursor position"), 5000);
         return;
     }
 
@@ -6481,7 +6481,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
         return false;
     }
 
-    showStatusBarMessage(tr("no equation was found in front of the cursor"),
+    showStatusBarMessage(tr("No equation was found in front of the cursor"),
                          5000);
 
     equation = match.captured(1);
@@ -6498,7 +6498,7 @@ bool MainWindow::solveEquationInNoteTextEdit(double &returnValue) {
         resultValue = 0;
     }
 
-    showStatusBarMessage(tr("result for equation: %1 = %2")
+    showStatusBarMessage(tr("Result for equation: %1 = %2")
                                  .arg(equation,
                                       QString::number(resultValue)),
                          10000);
@@ -6572,7 +6572,7 @@ void MainWindow::on_actionSelect_note_folder_triggered() {
  */
 void MainWindow::on_actionReload_scripting_engine_triggered() {
     ScriptingService::instance()->reloadEngine();
-    showStatusBarMessage(tr("the scripting engine was reloaded"), 3000);
+    showStatusBarMessage(tr("The scripting engine was reloaded"), 3000);
 }
 
 /**

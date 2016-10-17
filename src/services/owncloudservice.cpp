@@ -830,7 +830,7 @@ void OwnCloudService::showOwnCloudMessage(
 void OwnCloudService::handleVersionsLoading(QString data) {
     mainWindow->enableShowVersionsButton();
     mainWindow->showStatusBarMessage(
-            tr("done with loading note versions"), 2000);
+            tr("Done with loading note versions"), 2000);
 
     // check if we get any data at all
     if (data.isEmpty()) {
@@ -886,7 +886,7 @@ void OwnCloudService::handleVersionsLoading(QString data) {
 void OwnCloudService::handleTrashedLoading(QString data) {
     mainWindow->enableShowTrashButton();
     mainWindow->showStatusBarMessage(
-            tr("done with loading trashed notes"), 2000);
+            tr("Done with loading trashed notes"), 2000);
 
     // check if we get any data at all
     if (data == "") {
