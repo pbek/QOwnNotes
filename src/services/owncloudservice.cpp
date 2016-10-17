@@ -1056,7 +1056,6 @@ QList<CalDAVCalendarData> OwnCloudService::parseCalendarData(QString &data) {
                     if (displayNameNodes.length()) {
                         const QString displayName = displayNameNodes.at(
                                 0).toElement().text();
-                        displayName;
                         calendarData.displayName = displayName;
                     }
 
