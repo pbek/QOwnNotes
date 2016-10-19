@@ -28,6 +28,7 @@
 #include <QKeySequence>
 #include <QKeySequenceEdit>
 #include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
+#include <helpers/toolbarcontainer.h>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
@@ -104,6 +105,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // initialize the portable mode page
     initPortableModePage();
+
+    // init the toolbar editor
+    ui->toolbarEditor->setTargetWindow(MainWindow::instance());
+    ui->toolbarEditor->setButtonStyle(Qt::ToolButtonTextBesideIcon);
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -421,6 +426,9 @@ void SettingsDialog::storeSettings() {
 
     // store the splitter settings
     storeSplitterSettings();
+
+    // apply and store the toolbar configuration
+    on_applyToolbarButton_clicked();
 }
 
 /**
@@ -2334,4 +2342,34 @@ void SettingsDialog::on_toolbarIconSizeResetButton_clicked() {
 void SettingsDialog::on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked) {
     QSettings settings;
     settings.setValue("ownCloud/ignoreNonTodoCalendars", checked);
+}
+
+void SettingsDialog::on_applyToolbarButton_clicked() {
+    ui->toolbarEditor->apply();
+
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow == Q_NULLPTR) {
+        return;
+    }
+
+    QList<ToolbarContainer> toolbarContainers;
+    foreach(QToolBar* toolbar, mainWindow->findChildren<QToolBar*>()) {
+            if (toolbar->objectName() == "customActionsToolbar") {
+                continue;
+            }
+
+            toolbarContainers.append(toolbar);
+        }
+
+    QSettings settings;
+    settings.beginWriteArray("toolbar", toolbarContainers.size());
+
+    for (int i = 0; i < toolbarContainers.size(); i++) {
+        settings.setArrayIndex(i);
+        settings.setValue("name", toolbarContainers[i].name);
+        settings.setValue("title", toolbarContainers[i].title);
+        settings.setValue("items", toolbarContainers[i].actions);
+    }
+
+    settings.endArray();
 }

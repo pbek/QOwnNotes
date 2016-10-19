@@ -65,6 +65,7 @@ SOURCES += main.cpp\
     services/updateservice.cpp \
     helpers/htmlentities.cpp \
     helpers/clientproxy.cpp \
+    helpers/toolbarcontainer.cpp \
     services/databaseservice.cpp \
     widgets/qownnotesmarkdowntextedit.cpp \
     dialogs/passworddialog.cpp \
@@ -123,6 +124,7 @@ HEADERS  += mainwindow.h \
     services/scriptingservice.h \
     helpers/htmlentities.h \
     helpers/clientproxy.h \
+    helpers/toolbarcontainer.h \
     services/databaseservice.h \
     release.h \
     widgets/qownnotesmarkdowntextedit.h \
@@ -178,7 +180,7 @@ include(libraries/qmarkdowntextedit/qmarkdowntextedit.pri)
 include(libraries/piwiktracker/piwiktracker.pri)
 include(libraries/botan/botan.pri)
 include(libraries/qkeysequencewidget/qkeysequencewidget/qkeysequencewidget.pri)
-
+include(libraries/qttoolbareditor/toolbar_editor.pri)
 
 unix {
 

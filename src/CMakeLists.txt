@@ -35,6 +35,8 @@ qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
 qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
 qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
         libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
+qt5_wrap_ui(libraries/qttoolbareditor/src/toolbar_editor.hpp
+        libraries/qttoolbareditor/src/toolbar_editor.ui)
 
 set(RESOURCE_FILES
         breeze-qownnotes.qrc
@@ -114,6 +116,8 @@ set(SOURCE_FILES
     helpers/htmlentities.h
     helpers/clientproxy.cpp
     helpers/clientproxy.h
+    helpers/toolbarcontainer.cpp
+    helpers/toolbarcontainer.h
     api/noteapi.cpp
     api/noteapi.h
     api/tagapi.cpp
@@ -152,6 +156,9 @@ set(SOURCE_FILES
     libraries/versionnumber/versionnumber.h
     libraries/singleapplication/singleapplication.h
     libraries/singleapplication/singleapplication.cpp
+    libraries/qttoolbareditor/src/toolbar_editor.cpp
+    libraries/qttoolbareditor/src/toolbar_editor.hpp
+    libraries/qttoolbareditor/src/toolbar_editor.ui
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp

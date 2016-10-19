@@ -177,6 +177,18 @@
                <normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-x-markdown.svg</iconset>
              </property>
             </item>
+            <item>
+             <property name="text">
+              <string>Toolbars</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">12</string>
+             </property>
+             <property name="icon">
+              <iconset theme="configure" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
+             </property>
+            </item>
            </item>
            <item>
             <property name="text">
@@ -280,7 +292,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>3</number>
+            <number>12</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3321,6 +3333,37 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="toolbarPage">
+            <layout class="QGridLayout" name="gridLayout_44">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="applyToolbarButton">
+               <property name="text">
+                <string>Apply toolbar configuration</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0" colspan="2">
+              <widget class="Toolbar_Editor" name="toolbarEditor" native="true"/>
+             </item>
+             <item row="1" column="1">
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </widget>
           </widget>
          </item>
         </layout>
@@ -3353,10 +3396,16 @@ p, li { white-space: pre-wrap; }
    <header location="global">widgets/fontcolorwidget.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>Toolbar_Editor</class>
+   <extends>QWidget</extends>
+   <header location="global">libraries/qttoolbareditor/src/toolbar_editor.hpp</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

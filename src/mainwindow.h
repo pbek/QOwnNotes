@@ -678,4 +678,6 @@ private:
     QStringList getWorkspaceUuidList();
 
     void updateWindowToolbar();
+
+    void restoreToolbars();
 };

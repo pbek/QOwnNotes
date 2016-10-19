@@ -60,6 +60,7 @@
 #include <widgets/logwidget.h>
 #include <dialogs/sharedialog.h>
 #include <dialogs/orphanedimagesdialog.h>
+#include <helpers/toolbarcontainer.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -128,6 +129,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // initialize the toolbars
     initToolbars();
+
+    // restore toolbars
+    restoreToolbars();
 
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
@@ -1706,6 +1710,54 @@ void MainWindow::readSettings() {
     bool showMenuBar =
             settings.value("showMenuBar", !ui->menuBar->isHidden()).toBool();
     on_actionShow_menu_bar_triggered(showMenuBar);
+}
+
+/**
+ * Restores the toolbars
+ */
+void MainWindow::restoreToolbars() {
+    QSettings settings;
+    QList<ToolbarContainer> toolbarContainers;
+    int toolbarCount = settings.beginReadArray("toolbar");
+
+    for (int i = 0; i < toolbarCount; i++) {
+        settings.setArrayIndex(i);
+
+        ToolbarContainer toolbarContainer;
+
+        toolbarContainer.name = settings.value("name").toString();
+        if (toolbarContainer.name.isEmpty()) {
+            qWarning() << tr("Toolbar could not be loaded without name");
+            continue;
+        }
+
+        toolbarContainer.title = settings.value("title").toString();
+
+        toolbarContainer.actions = settings.value("items").toStringList();
+
+        toolbarContainers.push_back(toolbarContainer);
+    }
+
+    settings.endArray();
+
+    if (!toolbarContainers.empty()) {
+        foreach(QToolBar* toolbar, findChildren<QToolBar*>() ) {
+                if (toolbar->objectName() == "customActionsToolbar") {
+                    continue;
+                }
+
+                // TODO(pbek): delete custom toolbars
+//                delete toolbar;
+            }
+
+        foreach(ToolbarContainer toolbarContainer, toolbarContainers) {
+                if (toolbarContainer.toolbarFound()) {
+                    toolbarContainer.updateToolbar();
+                } else {
+                    toolbarContainer.create(this);
+                }
+            }
+    }
 }
 
 /**

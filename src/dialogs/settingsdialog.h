@@ -43,7 +43,8 @@ public:
         DebugPage,
         EditorFontColorPage,
         PortableModePage,
-        PreviewFontPage
+        PreviewFontPage,
+        ToolbarPage
     };
 
     explicit SettingsDialog(int page = 0,
@@ -182,6 +183,8 @@ private slots:
     void on_toolbarIconSizeResetButton_clicked();
 
     void on_ignoreNonTodoCalendarsCheckBox_toggled(bool checked);
+
+    void on_applyToolbarButton_clicked();
 
 private:
 

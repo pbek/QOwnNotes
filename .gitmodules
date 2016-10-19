@@ -7,3 +7,6 @@
 [submodule "src/libraries/qkeysequencewidget"]
 	path = src/libraries/qkeysequencewidget
 	url = https://github.com/pbek/qkeysequencewidget
+[submodule "src/libraries/qttoolbareditor"]
+	path = src/libraries/qttoolbareditor
+	url = https://github.com/pbek/Qt-Toolbar-Editor.git
