@@ -10,6 +10,9 @@
       to the default
     - there are still some issues, like that the window toolbar can't be
       modified because of the magic that is happening there
+- tried to fix the openSUSE Tumbleweed repository package by using
+  `libqt5-qtdeclarative` instead of (the missing) `libQt5Declarative5`
+    - feedback is welcome
 - added more Italian, French, Portuguese, Polish, Dutch, Russian,
   Japanese and Spanish translation (thank you mlocati, bdouxx,
   mlimacarlos, lucjan, Fabijenna, frostyland, piyo and richarson)
