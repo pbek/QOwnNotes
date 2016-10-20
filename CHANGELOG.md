@@ -10,6 +10,9 @@
       to the default
     - there are still some issues, like that the window toolbar can't be
       modified because of the magic that is happening there
+- added more Italian, French, Portuguese, Polish, Dutch, Russian,
+  Japanese and Spanish translation (thank you mlocati, bdouxx,
+  mlimacarlos, lucjan, Fabijenna, frostyland, piyo and richarson)
 
 ## 16.10.5
 - added a new scripting method `tagCurrentNote()` to tag the current note
