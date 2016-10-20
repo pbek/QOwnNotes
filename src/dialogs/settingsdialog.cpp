@@ -2377,3 +2377,23 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
 
     settings.endArray();
 }
+
+void SettingsDialog::on_resetToolbarPushButton_clicked() {
+    if (QMessageBox::information(
+            this, tr("Reset toolbars and exit"),
+            tr("Do you really want to reset all toolbars? "
+                       "The application will be closed in the process, the "
+                       "default toolbars will be restored when you start it "
+                       "again."),
+            tr("Reset and &exit"), tr("&Cancel"), QString::null,
+            1) == 0) {
+        QSettings settings;
+
+        // remove all settings in the group
+        settings.beginGroup("toolbar");
+        settings.remove("");
+        settings.endGroup();
+
+        qApp->quit();
+    }
+}

@@ -186,6 +186,8 @@ private slots:
 
     void on_applyToolbarButton_clicked();
 
+    void on_resetToolbarPushButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

@@ -430,7 +430,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="381"/>
-        <location filename="../mainwindow.cpp" line="480"/>
+        <location filename="../mainwindow.cpp" line="482"/>
         <source>Navigation</source>
         <translation>ナビゲーション</translation>
     </message>
@@ -561,13 +561,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1020"/>
-        <location filename="../mainwindow.cpp" line="6912"/>
+        <location filename="../mainwindow.cpp" line="6916"/>
         <source>Select &amp;all notes</source>
         <translation>すべてのノートを選択(&amp;A)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1029"/>
-        <location filename="../mainwindow.cpp" line="4550"/>
+        <location filename="../mainwindow.cpp" line="4554"/>
         <source>Insert &amp;link</source>
         <translation>リンクの挿入(&amp;L)</translation>
     </message>
@@ -653,7 +653,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="775"/>
-        <location filename="../mainwindow.cpp" line="420"/>
+        <location filename="../mainwindow.cpp" line="422"/>
         <source>Workspaces</source>
         <translation>ワークスペース</translation>
     </message>
@@ -865,7 +865,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1780"/>
-        <location filename="../mainwindow.cpp" line="7746"/>
+        <location filename="../mainwindow.cpp" line="7750"/>
         <source>Remove current workspace</source>
         <translation>現在のワークスペースを削除</translation>
     </message>
@@ -1050,35 +1050,35 @@
         <translation>孤立した画像ファイルの削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1981"/>
+        <location filename="../mainwindow.cpp" line="1985"/>
         <source>Note was removed externally!</source>
         <translation>ノートが外部で削除されました。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1982"/>
+        <location filename="../mainwindow.cpp" line="1986"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>現在のノートがこのアプリ外で削除されました。
 現在のノートを復旧しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1984"/>
+        <location filename="../mainwindow.cpp" line="1988"/>
         <source>&amp;Restore</source>
         <translation>元に戻す(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1984"/>
-        <location filename="../mainwindow.cpp" line="2712"/>
-        <location filename="../mainwindow.cpp" line="3169"/>
-        <location filename="../mainwindow.cpp" line="3253"/>
-        <location filename="../mainwindow.cpp" line="3282"/>
-        <location filename="../mainwindow.cpp" line="3324"/>
-        <location filename="../mainwindow.cpp" line="3380"/>
-        <location filename="../mainwindow.cpp" line="3418"/>
-        <location filename="../mainwindow.cpp" line="3458"/>
-        <location filename="../mainwindow.cpp" line="3810"/>
-        <location filename="../mainwindow.cpp" line="4813"/>
-        <location filename="../mainwindow.cpp" line="7748"/>
+        <location filename="../mainwindow.cpp" line="1988"/>
+        <location filename="../mainwindow.cpp" line="2716"/>
+        <location filename="../mainwindow.cpp" line="3173"/>
+        <location filename="../mainwindow.cpp" line="3257"/>
+        <location filename="../mainwindow.cpp" line="3286"/>
+        <location filename="../mainwindow.cpp" line="3328"/>
+        <location filename="../mainwindow.cpp" line="3384"/>
+        <location filename="../mainwindow.cpp" line="3422"/>
+        <location filename="../mainwindow.cpp" line="3462"/>
+        <location filename="../mainwindow.cpp" line="3814"/>
+        <location filename="../mainwindow.cpp" line="4817"/>
+        <location filename="../mainwindow.cpp" line="7752"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>
@@ -1089,77 +1089,77 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2156"/>
+        <location filename="../mainwindow.cpp" line="2160"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
         <translation>クリックで、最新版の変更点とダウンロード ボタンを表示するウィンドウを開きます</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2172"/>
+        <location filename="../mainwindow.cpp" line="2176"/>
         <source>new version %1 available</source>
         <translation>新しいバージョン %1 があります</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2572"/>
+        <location filename="../mainwindow.cpp" line="2576"/>
         <source>No folder was selected</source>
         <translation>フォルダーが選択されていません</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2573"/>
+        <location filename="../mainwindow.cpp" line="2577"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>このソフトウェアが機能するためにはあなたの ownCloud ノートフォルダーを選択する必要があります。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2575"/>
+        <location filename="../mainwindow.cpp" line="2579"/>
         <source>&amp;Retry</source>
         <translation>再試行(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2575"/>
+        <location filename="../mainwindow.cpp" line="2579"/>
         <source>&amp;Exit</source>
         <translation>終了(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2709"/>
+        <location filename="../mainwindow.cpp" line="2713"/>
         <source>Remove current note</source>
         <translation>現在のノートの削除</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2710"/>
+        <location filename="../mainwindow.cpp" line="2714"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>現在のノート &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2712"/>
-        <location filename="../mainwindow.cpp" line="3169"/>
-        <location filename="../mainwindow.cpp" line="3253"/>
-        <location filename="../mainwindow.cpp" line="3282"/>
-        <location filename="../mainwindow.cpp" line="3458"/>
-        <location filename="../mainwindow.cpp" line="7748"/>
+        <location filename="../mainwindow.cpp" line="2716"/>
+        <location filename="../mainwindow.cpp" line="3173"/>
+        <location filename="../mainwindow.cpp" line="3257"/>
+        <location filename="../mainwindow.cpp" line="3286"/>
+        <location filename="../mainwindow.cpp" line="3462"/>
+        <location filename="../mainwindow.cpp" line="7752"/>
         <source>&amp;Remove</source>
         <translation>削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3017"/>
+        <location filename="../mainwindow.cpp" line="3021"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>この暗号化ノートの &lt;strong&gt;パスワード&lt;/strong&gt; を入力してください。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3041"/>
+        <location filename="../mainwindow.cpp" line="3045"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>ノートの暗号化解除に失敗しました。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3042"/>
+        <location filename="../mainwindow.cpp" line="3046"/>
         <source>It seems that your password is not valid!</source>
         <translation>あなたのパスワードは無効です。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3163"/>
+        <location filename="../mainwindow.cpp" line="3167"/>
         <source>Remove selected notes</source>
         <translation>選択ノートの削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3164"/>
+        <location filename="../mainwindow.cpp" line="3168"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1170,824 +1170,824 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3246"/>
-        <location filename="../mainwindow.cpp" line="7110"/>
+        <location filename="../mainwindow.cpp" line="3250"/>
+        <location filename="../mainwindow.cpp" line="7114"/>
         <source>Remove selected folders</source>
         <translation>選択フォルダーの削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3247"/>
+        <location filename="../mainwindow.cpp" line="3251"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>&lt;strong&gt;%n&lt;/strong&gt; 個の選択フォルダーを削除しますか？&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;フォルダー内のすべてのファイルとフォルダーは失われます！</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3259"/>
+        <location filename="../mainwindow.cpp" line="3263"/>
         <source>Removed note subfolder: %1</source>
         <translation type="unfinished">Removed note subfolder: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3278"/>
+        <location filename="../mainwindow.cpp" line="3282"/>
         <source>Remove selected tags</source>
         <translation>選択したタグの削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3279"/>
+        <location filename="../mainwindow.cpp" line="3283"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>選択した &lt;strong&gt;%n&lt;/strong&gt; 個のタグを削除しますか？ この作業でノートが削除されることはありません。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3321"/>
-        <location filename="../mainwindow.cpp" line="6274"/>
+        <location filename="../mainwindow.cpp" line="3325"/>
+        <location filename="../mainwindow.cpp" line="6278"/>
         <source>Move selected notes</source>
         <translation>選択ノートの移動</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3322"/>
+        <location filename="../mainwindow.cpp" line="3326"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>%n 個の選択ノートを &lt;strong&gt;%2&lt;/strong&gt; に移動しますか？</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3324"/>
+        <location filename="../mainwindow.cpp" line="3328"/>
         <source>&amp;Move</source>
         <translation>移動(&amp;M)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3377"/>
-        <location filename="../mainwindow.cpp" line="6329"/>
+        <location filename="../mainwindow.cpp" line="3381"/>
+        <location filename="../mainwindow.cpp" line="6333"/>
         <source>Copy selected notes</source>
         <translation>選択ノートのコピー</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3378"/>
+        <location filename="../mainwindow.cpp" line="3382"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>%n 個の選択ノートを &lt;strong&gt;%2&lt;/strong&gt; にコピーしますか？</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3380"/>
+        <location filename="../mainwindow.cpp" line="3384"/>
         <source>&amp;Copy</source>
         <translation>コピー(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3401"/>
-        <location filename="../mainwindow.cpp" line="3483"/>
+        <location filename="../mainwindow.cpp" line="3405"/>
+        <location filename="../mainwindow.cpp" line="3487"/>
         <source>Done</source>
         <translation>終了</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3402"/>
+        <location filename="../mainwindow.cpp" line="3406"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n 個のノートを &lt;strong&gt;%2&lt;/strong&gt; にコピーしました。</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3415"/>
+        <location filename="../mainwindow.cpp" line="3419"/>
         <source>Tag selected notes</source>
         <translation>選択したノートにタグを追加</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3416"/>
+        <location filename="../mainwindow.cpp" line="3420"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>選択した %n 個のノートに &lt;strong&gt;%2&lt;/strong&gt; タグを追加しますか？</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4509"/>
+        <location filename="../mainwindow.cpp" line="4513"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4523"/>
+        <location filename="../mainwindow.cpp" line="4527"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4951"/>
+        <location filename="../mainwindow.cpp" line="4955"/>
         <source>Bookmarked note position at slot %1</source>
         <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4967"/>
+        <location filename="../mainwindow.cpp" line="4971"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5173"/>
-        <location filename="../mainwindow.cpp" line="5235"/>
+        <location filename="../mainwindow.cpp" line="5177"/>
+        <location filename="../mainwindow.cpp" line="5239"/>
         <source>Inserting image</source>
         <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5178"/>
-        <location filename="../mainwindow.cpp" line="5238"/>
+        <location filename="../mainwindow.cpp" line="5182"/>
+        <location filename="../mainwindow.cpp" line="5242"/>
         <source>Done inserting image</source>
         <translation type="unfinished">Done inserting image</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5189"/>
+        <location filename="../mainwindow.cpp" line="5193"/>
         <source>Copied %n note(s) to %1</source>
         <translation type="unfinished">
             <numerusform>Copied %n note(s) to %1</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5198"/>
+        <location filename="../mainwindow.cpp" line="5202"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation type="unfinished">
             <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5208"/>
+        <location filename="../mainwindow.cpp" line="5212"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation type="unfinished">
             <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5222"/>
+        <location filename="../mainwindow.cpp" line="5226"/>
         <source>Saving temporary image</source>
         <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5241"/>
+        <location filename="../mainwindow.cpp" line="5245"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation type="unfinished">Temporary file can&apos;t be opened</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5274"/>
+        <location filename="../mainwindow.cpp" line="5278"/>
         <source>Downloading %1</source>
         <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5304"/>
+        <location filename="../mainwindow.cpp" line="5308"/>
         <source>Done downloading images</source>
         <translation type="unfinished">Done downloading images</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6457"/>
+        <location filename="../mainwindow.cpp" line="6461"/>
         <source>An url was opened at the current cursor position</source>
         <translation type="unfinished">An url was opened at the current cursor position</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6535"/>
+        <location filename="../mainwindow.cpp" line="6539"/>
         <source>No equation was found in front of the cursor</source>
         <translation type="unfinished">No equation was found in front of the cursor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6552"/>
+        <location filename="../mainwindow.cpp" line="6556"/>
         <source>Result for equation: %1 = %2</source>
         <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6626"/>
+        <location filename="../mainwindow.cpp" line="6630"/>
         <source>The scripting engine was reloaded</source>
         <translation type="unfinished">The scripting engine was reloaded</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7570"/>
+        <location filename="../mainwindow.cpp" line="7574"/>
         <source>Create new workspace</source>
         <translation>新しいワークスペースの作成</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7570"/>
-        <location filename="../mainwindow.cpp" line="7785"/>
+        <location filename="../mainwindow.cpp" line="7574"/>
+        <location filename="../mainwindow.cpp" line="7789"/>
         <source>Workspace name:</source>
         <translation>ワークスペース名:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7687"/>
+        <location filename="../mainwindow.cpp" line="7691"/>
         <source>default</source>
         <comment>default workspace</comment>
         <translation type="unfinished">default</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7747"/>
+        <location filename="../mainwindow.cpp" line="7751"/>
         <source>Remove the current workspace?</source>
         <translation>現在のワークスペースを削除しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7785"/>
+        <location filename="../mainwindow.cpp" line="7789"/>
         <source>Rename workspace</source>
         <translation>ワークスペース名の変更</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="804"/>
-        <location filename="../mainwindow.cpp" line="3418"/>
+        <location filename="../mainwindow.cpp" line="3422"/>
         <source>&amp;Tag</source>
         <translation>タグ(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3455"/>
+        <location filename="../mainwindow.cpp" line="3459"/>
         <source>Remove tag from selected notes</source>
         <translation>選択ノートからタグを削除</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3456"/>
+        <location filename="../mainwindow.cpp" line="3460"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>&lt;strong&gt;%1&lt;/strong&gt; タグを %n 個のノートから削除しますか？</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3484"/>
+        <location filename="../mainwindow.cpp" line="3488"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>&lt;strong&gt;%1&lt;/strong&gt; タグを %n 個のノートから削除しました</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3494"/>
+        <location filename="../mainwindow.cpp" line="3498"/>
         <source>Current notes folder: </source>
         <translation>現在のノート フォルダー: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3496"/>
+        <location filename="../mainwindow.cpp" line="3500"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>ノート フォルダーの設定。 現在のノート フォルダー: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3549"/>
+        <location filename="../mainwindow.cpp" line="3553"/>
         <source>Link to an url or note</source>
         <translation>URLまたはノートにリンク</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3660"/>
+        <location filename="../mainwindow.cpp" line="3664"/>
         <source>Print note</source>
         <translation>ノートの印刷</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3691"/>
+        <location filename="../mainwindow.cpp" line="3695"/>
         <source>Letter</source>
         <translation>レター</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3717"/>
+        <location filename="../mainwindow.cpp" line="3721"/>
         <source>Portrait</source>
         <translation>縦</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3717"/>
+        <location filename="../mainwindow.cpp" line="3721"/>
         <source>Landscape</source>
         <translation>横</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3722"/>
+        <location filename="../mainwindow.cpp" line="3726"/>
         <source>Orientation</source>
         <translation>ページの向き</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3722"/>
+        <location filename="../mainwindow.cpp" line="3726"/>
         <source>Orientation:</source>
         <translation>ページの向き:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3742"/>
+        <location filename="../mainwindow.cpp" line="3746"/>
         <source>PDF files (*.pdf)</source>
         <translation>PDF ファイル (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3743"/>
+        <location filename="../mainwindow.cpp" line="3747"/>
         <source>Export current note as PDF</source>
         <translation>現在のノートをPDFにエクスポート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3806"/>
+        <location filename="../mainwindow.cpp" line="3810"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Todoリストが選択されていません。&lt;br /&gt;&lt;strong&gt;Todo&lt;/strong&gt;設定の構成を確認してください。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4374"/>
+        <location filename="../mainwindow.cpp" line="4378"/>
         <source>Open QOwnNotes</source>
         <translation>QOwnNotesを開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4383"/>
-        <location filename="../mainwindow.cpp" line="7108"/>
+        <location filename="../mainwindow.cpp" line="4387"/>
+        <location filename="../mainwindow.cpp" line="7112"/>
         <source>New note</source>
         <translation>新しいノート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4399"/>
+        <location filename="../mainwindow.cpp" line="4403"/>
         <source>Recent notes</source>
         <translation>最近のノート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4429"/>
+        <location filename="../mainwindow.cpp" line="4433"/>
         <source>Show todo lists</source>
         <translation>Todoリストを表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4440"/>
+        <location filename="../mainwindow.cpp" line="4444"/>
         <source>Recent tasks</source>
         <translation>最近のタスク</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4472"/>
+        <location filename="../mainwindow.cpp" line="4476"/>
         <source>Quit</source>
         <translation>終了</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5533"/>
+        <location filename="../mainwindow.cpp" line="5537"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>サブフォルダーを含むすべてのノートを表示 (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5551"/>
+        <location filename="../mainwindow.cpp" line="5555"/>
         <source>show notes in note root folder (%1)</source>
         <translation>ルートフォルダー内のノートを表示 (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
-        <location filename="../mainwindow.cpp" line="462"/>
-        <location filename="../mainwindow.cpp" line="5555"/>
+        <location filename="../mainwindow.cpp" line="464"/>
+        <location filename="../mainwindow.cpp" line="5559"/>
         <source>Note folder</source>
         <translation>ノートフォルダー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6209"/>
+        <location filename="../mainwindow.cpp" line="6213"/>
         <source>Copy to note folder</source>
         <translation>ノートフォルダーにコピー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6210"/>
+        <location filename="../mainwindow.cpp" line="6214"/>
         <source>Move to note folder</source>
         <translation>ノートフォルダーに移動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6211"/>
+        <location filename="../mainwindow.cpp" line="6215"/>
         <source>Copy to this subfolder</source>
         <translation>このサブフォルダーにコピー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6212"/>
+        <location filename="../mainwindow.cpp" line="6216"/>
         <source>Move to this subfolder</source>
         <translation>このサブフォルダーに移動</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6263"/>
+        <location filename="../mainwindow.cpp" line="6267"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>%n 個の選択ノートをサブフォルダー &lt;strong&gt;%2&lt;/strong&gt; に移動しますか？</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6276"/>
+        <location filename="../mainwindow.cpp" line="6280"/>
         <source>Move</source>
         <translation>移動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6276"/>
-        <location filename="../mainwindow.cpp" line="6331"/>
+        <location filename="../mainwindow.cpp" line="6280"/>
+        <location filename="../mainwindow.cpp" line="6335"/>
         <source>Cancel</source>
         <translation>中止</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6308"/>
+        <location filename="../mainwindow.cpp" line="6312"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n 個のノートをサブフォルダー &quot;%2&quot; に移動しました</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6318"/>
+        <location filename="../mainwindow.cpp" line="6322"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>%n 個の選択ノートをサブフォルダー &lt;strong&gt;%2&lt;/strong&gt; にコピーしますか？</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6268"/>
-        <location filename="../mainwindow.cpp" line="6323"/>
+        <location filename="../mainwindow.cpp" line="6272"/>
+        <location filename="../mainwindow.cpp" line="6327"/>
         <source>Tagging information of these notes will be lost at the destination.</source>
         <translation>移動/コピー先では、タグの情報は失われます。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6331"/>
+        <location filename="../mainwindow.cpp" line="6335"/>
         <source>Copy</source>
         <translation>コピー</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6363"/>
+        <location filename="../mainwindow.cpp" line="6367"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n 個のノートをサブフォルダー &quot;%2&quot; にコピーしました</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6860"/>
+        <location filename="../mainwindow.cpp" line="6864"/>
         <source>Move notes to subfolder...</source>
         <translation>選択ノートをサブフォルダーに移動...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6864"/>
+        <location filename="../mainwindow.cpp" line="6868"/>
         <source>Copy notes to subfolder...</source>
         <translation>選択ノートをサブフォルダーにコピー...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6908"/>
+        <location filename="../mainwindow.cpp" line="6912"/>
         <source>Open note in external editor</source>
         <translation>外部エディターで開く</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6910"/>
+        <location filename="../mainwindow.cpp" line="6914"/>
         <source>Show note in file manager</source>
         <translation>ファイル マネージャーで表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7109"/>
+        <location filename="../mainwindow.cpp" line="7113"/>
         <source>New subfolder</source>
         <translation>新しいサブフォルダー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7112"/>
+        <location filename="../mainwindow.cpp" line="7116"/>
         <source>Show folder in file manager</source>
         <translation>フォルダーをファイル マネージャーで表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7143"/>
+        <location filename="../mainwindow.cpp" line="7147"/>
         <source>Create a new folder</source>
         <translation>新しいフォルダーの作成</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7143"/>
+        <location filename="../mainwindow.cpp" line="7147"/>
         <source>Folder name:</source>
         <translation>フォルダー名:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5499"/>
+        <location filename="../mainwindow.cpp" line="5503"/>
         <source>show all untagged notes (%1)</source>
         <translation>タグのないすべてのノートを表示 (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5502"/>
+        <location filename="../mainwindow.cpp" line="5506"/>
         <source>Untagged notes</source>
         <translation>タグなしノート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6653"/>
+        <location filename="../mainwindow.cpp" line="6657"/>
         <source>HTML files (*.html)</source>
         <translation>HTML ファイル (*.html)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6654"/>
+        <location filename="../mainwindow.cpp" line="6658"/>
         <source>Export current note as HTML file</source>
         <translation>現在のノートをHTMLファイルにエクスポート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3700"/>
+        <location filename="../mainwindow.cpp" line="3704"/>
         <source>Page size</source>
         <translation>ページ サイズ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="766"/>
+        <location filename="../mainwindow.cpp" line="768"/>
         <source>quit toolbar</source>
         <translation>終了ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="974"/>
+        <location filename="../mainwindow.cpp" line="976"/>
         <source>Show menu bar item</source>
         <translation>メニューバー項目に表示</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3700"/>
+        <location filename="../mainwindow.cpp" line="3704"/>
         <source>Page size:</source>
         <translation>ページ サイズ:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3781"/>
+        <location filename="../mainwindow.cpp" line="3785"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes は匿名の使用データを収集します。これはQOwnNotesが次に改善すべき部分を決めたり、バグの発見や修正に役立ちます。設定でこの機能を無効にすることができます。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3785"/>
+        <location filename="../mainwindow.cpp" line="3789"/>
         <source>&amp;Ok</source>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6830"/>
+        <location filename="../mainwindow.cpp" line="6834"/>
         <source>&amp;Move notes to...</source>
         <translation>選択ノートの移動(&amp;M)...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6831"/>
+        <location filename="../mainwindow.cpp" line="6835"/>
         <source>&amp;Copy notes to...</source>
         <translation>選択ノートのコピー(&amp;C)...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6872"/>
+        <location filename="../mainwindow.cpp" line="6876"/>
         <source>&amp;Tag selected notes with...</source>
         <translation>選択ノートにタグを追加(&amp;T)...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6894"/>
+        <location filename="../mainwindow.cpp" line="6898"/>
         <source>&amp;Remove tag from selected notes...</source>
         <translation>選択ノートからタグを削除(&amp;R)...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6905"/>
+        <location filename="../mainwindow.cpp" line="6909"/>
         <source>&amp;Remove notes</source>
         <translation>選択ノートの削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4550"/>
+        <location filename="../mainwindow.cpp" line="4554"/>
         <source>&amp;Link selected text</source>
         <translation>選択テキストをリンクに(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="687"/>
+        <location filename="../mainwindow.cpp" line="689"/>
         <source>Your tasks are being loaded from your server</source>
         <translation type="unfinished">Your tasks are being loaded from your server</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1923"/>
+        <location filename="../mainwindow.cpp" line="1927"/>
         <source>Current note was modified externally</source>
         <translation type="unfinished">Current note was modified externally</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1950"/>
-        <location filename="../mainwindow.cpp" line="1996"/>
-        <location filename="../mainwindow.cpp" line="4113"/>
+        <location filename="../mainwindow.cpp" line="1954"/>
+        <location filename="../mainwindow.cpp" line="2000"/>
+        <location filename="../mainwindow.cpp" line="4117"/>
         <source>Stored current note to disk</source>
         <translation type="unfinished">Stored current note to disk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2018"/>
+        <location filename="../mainwindow.cpp" line="2022"/>
         <source>Note was modified externally: %1</source>
         <translation type="unfinished">Note was modified externally: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2039"/>
+        <location filename="../mainwindow.cpp" line="2043"/>
         <source>Notes directory was modified externally</source>
         <translation type="unfinished">Notes directory was modified externally</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2105"/>
+        <location filename="../mainwindow.cpp" line="2109"/>
         <source>Stored %n note(s) to disk</source>
         <translation type="unfinished">
             <numerusform>Stored %n note(s) to disk</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4554"/>
+        <location filename="../mainwindow.cpp" line="4558"/>
         <source>Paste HTML or media</source>
         <translation>HTML / メディアの貼り付け</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5471"/>
+        <location filename="../mainwindow.cpp" line="5475"/>
         <source>show all notes (%1)</source>
         <translation>すべてのノートを表示 (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5474"/>
-        <location filename="../mainwindow.cpp" line="5537"/>
+        <location filename="../mainwindow.cpp" line="5478"/>
+        <location filename="../mainwindow.cpp" line="5541"/>
         <source>All notes</source>
         <translation>すべてのノート</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5970"/>
+        <location filename="../mainwindow.cpp" line="5974"/>
         <source>&amp;Add tag</source>
         <translation>タグの追加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5977"/>
+        <location filename="../mainwindow.cpp" line="5981"/>
         <source>&amp;Move tags to...</source>
         <translation>タグの移動(&amp;M)...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6009"/>
+        <location filename="../mainwindow.cpp" line="6013"/>
         <source>Tag could not be created!</source>
         <translation>タグを作成できません。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6063"/>
+        <location filename="../mainwindow.cpp" line="6067"/>
         <source>Move to the root</source>
         <translation>ルートに移動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6063"/>
+        <location filename="../mainwindow.cpp" line="6067"/>
         <source>Move to this tag</source>
         <translation>このタグに移動</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6113"/>
+        <location filename="../mainwindow.cpp" line="6117"/>
         <source>Tag this</source>
         <translation>このタグを追加</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6143"/>
+        <location filename="../mainwindow.cpp" line="6147"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>タグ &apos;%1&apos; をこのタグに移動できません</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6154"/>
+        <location filename="../mainwindow.cpp" line="6158"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>タグ &apos;%1&apos; を新しいタグに移動しました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5654"/>
+        <location filename="../mainwindow.cpp" line="5658"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>タグ &apos;%1&apos; に属するすべてのノートを表示 (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5853"/>
+        <location filename="../mainwindow.cpp" line="5857"/>
         <source>remove tag &apos;%1&apos; from note</source>
         <translation>ノートからタグ &apos;%1&apos; を削除します</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5972"/>
+        <location filename="../mainwindow.cpp" line="5976"/>
         <source>&amp;Edit tag</source>
         <translation>タグの編集(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5974"/>
+        <location filename="../mainwindow.cpp" line="5978"/>
         <source>&amp;Remove tags</source>
         <translation>タグの削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3805"/>
+        <location filename="../mainwindow.cpp" line="3809"/>
         <source>No selected todo lists!</source>
         <translation>Todoリストが選択されていません。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="433"/>
+        <location filename="../mainwindow.cpp" line="435"/>
         <source>Subfolders</source>
         <translation>サブフォルダー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="444"/>
+        <location filename="../mainwindow.cpp" line="446"/>
         <source>Tags</source>
         <translation>タグ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
+        <location filename="../mainwindow.cpp" line="455"/>
         <source>Note search</source>
         <translation>ノートの検索</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="471"/>
+        <location filename="../mainwindow.cpp" line="473"/>
         <source>Note list</source>
         <translation>ノートの一覧</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="494"/>
+        <location filename="../mainwindow.cpp" line="496"/>
         <source>Note edit</source>
         <translation>ノートの編集</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="503"/>
+        <location filename="../mainwindow.cpp" line="505"/>
         <source>Note tags</source>
         <translation>ノートのタグ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="525"/>
+        <location filename="../mainwindow.cpp" line="527"/>
         <source>Note preview</source>
         <translation>ノートのプレビュー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="532"/>
+        <location filename="../mainwindow.cpp" line="534"/>
         <source>Log</source>
         <translation>ログ</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="733"/>
+        <location filename="../mainwindow.cpp" line="735"/>
         <source>formatting toolbar</source>
         <translation>書式ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="741"/>
+        <location filename="../mainwindow.cpp" line="743"/>
         <source>inserting toolbar</source>
         <translation>挿入ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="748"/>
+        <location filename="../mainwindow.cpp" line="750"/>
         <source>encryption toolbar</source>
         <translation>暗号化ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="755"/>
+        <location filename="../mainwindow.cpp" line="757"/>
         <source>window toolbar</source>
         <translation>ウィンドウ ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="760"/>
+        <location filename="../mainwindow.cpp" line="762"/>
         <source>custom action toolbar</source>
         <translation>カスタム アクション ツールバー</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1548"/>
+        <location filename="../mainwindow.cpp" line="1550"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation>&apos;%1&apos; フォルダー内のノートを表示 (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1588"/>
+        <location filename="../mainwindow.cpp" line="1590"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;更新日時: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1593"/>
+        <location filename="../mainwindow.cpp" line="1595"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation>&lt;br /&gt;パス: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1730"/>
+        <location filename="../mainwindow.cpp" line="1732"/>
         <source>Toolbar could not be loaded without name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2545"/>
+        <location filename="../mainwindow.cpp" line="2549"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>あなたのノートを保存するフォルダーを選択してください</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3442"/>
+        <location filename="../mainwindow.cpp" line="3446"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n 個のノートに &quot;%2&quot; タグを付けました</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5405"/>
+        <location filename="../mainwindow.cpp" line="5409"/>
         <source>Increased font size to %1 pt</source>
         <translation>文字の大きさを %1 pt に拡大しました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5417"/>
+        <location filename="../mainwindow.cpp" line="5421"/>
         <source>Decreased font size to %1 pt</source>
         <translation>文字の大きさを %1 pt に縮小しました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5428"/>
+        <location filename="../mainwindow.cpp" line="5432"/>
         <source>Reset font size to %1 pt</source>
         <translation>文字の大きさを %1 pt にリセットしました</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3786"/>
-        <location filename="../mainwindow.cpp" line="3809"/>
+        <location filename="../mainwindow.cpp" line="3790"/>
+        <location filename="../mainwindow.cpp" line="3813"/>
         <source>Open &amp;settings</source>
         <translation>設定を開く(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1094"/>
+        <location filename="../mainwindow.cpp" line="1096"/>
         <source>leave</source>
         <translation>戻る</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1097"/>
+        <location filename="../mainwindow.cpp" line="1099"/>
         <source>leave distraction free mode</source>
         <translation>没入モードを終了します</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4658"/>
+        <location filename="../mainwindow.cpp" line="4662"/>
         <source>Image files (*.jpg *.png *.gif)</source>
         <translation>画像ファイル (*.jpg *.png *.gif)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4659"/>
+        <location filename="../mainwindow.cpp" line="4663"/>
         <source>Select image to insert</source>
         <translation>挿入する画像の選択</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4755"/>
+        <location filename="../mainwindow.cpp" line="4759"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>ノートを暗号化する&lt;strong&gt;パスワード&lt;/strong&gt;を入力してください。&lt;br /&gt;&lt;br /&gt;ノートの内容を読むためにはパスワードを&lt;strong&gt;記憶しておく&lt;/strong&gt;必要があり、 &lt;br /&gt;内容の閲覧は&lt;strong&gt;QOwnNotes内でのみ&lt;/strong&gt;可能だということに注意してください。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4808"/>
+        <location filename="../mainwindow.cpp" line="4812"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>ノートの暗号化を解除しプレーン テキストで保存します</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4809"/>
+        <location filename="../mainwindow.cpp" line="4813"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>ノートの暗号化が解除され、再びプレーンテキストで保存されます。暗号化されていないノートはあなたのサーバーと同期され、テキストが露出する可能性があることに注意してください。&lt;br /&gt;ノートの暗号化を解除しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4813"/>
+        <location filename="../mainwindow.cpp" line="4817"/>
         <source>&amp;Decrypt</source>
         <translation>暗号化の解除(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4838"/>
+        <location filename="../mainwindow.cpp" line="4842"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt;そうすれば暗号化ノートの編集ができます。</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4895"/>
+        <location filename="../mainwindow.cpp" line="4899"/>
         <source>Markdown files (*.md)</source>
         <translation>Markdown ファイル (*.md)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4896"/>
+        <location filename="../mainwindow.cpp" line="4900"/>
         <source>Export current note as Markdown file</source>
         <translation>現在のノートをMarkdownファイルにエクスポート</translation>
     </message>
@@ -2215,8 +2215,8 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         </translation>
     </message>
     <message>
-        <location filename="../helpers/toolbarcontainer.cpp" line="35"/>
-        <location filename="../helpers/toolbarcontainer.cpp" line="82"/>
+        <location filename="../helpers/toolbarcontainer.cpp" line="36"/>
+        <location filename="../helpers/toolbarcontainer.cpp" line="85"/>
         <source>Unknown action %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2832,8 +2832,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2901"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1260"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1269"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1261"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1270"/>
         <source>Database</source>
         <translation>データベース</translation>
     </message>
@@ -2854,7 +2854,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2717"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1333"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1334"/>
         <source>Clear app data and exit</source>
         <translation>アプリのデータを初期化して終了</translation>
     </message>
@@ -3057,8 +3057,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>CalDAV ユーザーのパスワードを入力してください。&lt;br/&gt;現在のところ、パスワードは暗号化され、他の設定と一緒に保存されますが、必ずしも安全ではありません。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3341"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3354"/>
         <source>Apply toolbar configuration</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3381"/>
+        <source>Reset toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3279,47 +3284,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>デバッグ情報の保存(&amp;S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="157"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="158"/>
         <source>hostname of proxy server</source>
         <translation>プロキシサーバーのホスト名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="158"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="159"/>
         <source>username for proxy server</source>
         <translation>プロキシサーバーのユーザー名</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="159"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="160"/>
         <source>password for proxy server</source>
         <translation>プロキシサーバーのパスワード</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="161"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="162"/>
         <source>HTTP(S) proxy</source>
         <translation>HTTP(S) プロキシ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="162"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="163"/>
         <source>SOCKS5 proxy</source>
         <translation>SOCKS5 プロキシ</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="694"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="695"/>
         <source>Undefined key</source>
         <translation>未定義</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="699"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="700"/>
         <source>Assign a new key</source>
         <translation>新しいキーを割り当て</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="700"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="701"/>
         <source>Reset to default key</source>
         <translation>既定に戻す</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1002"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1003"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -3328,7 +3333,7 @@ QOwnNotesAPI version: %2</source>
 QOwnNotesAPIのバージョン: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1013"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1014"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3339,175 +3344,190 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 接続エラーメッセージ: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1313"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1314"/>
         <source>Disable usage tracking</source>
         <translation>使用状況データの収集を無効にする</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1314"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1315"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>匿名の使用データはQOwnNotesが次に改善すべき部分を決めたり、バグの発見や修正に役立ちます。&lt;br /&gt;どうしても容認できない場合にのみ無効にしてください。&lt;br /&gt;&lt;br /&gt;使用状況データの収集を無効にしますか？</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1491"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1492"/>
         <source>new folder</source>
         <translation>新しいフォルダー</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1528"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1529"/>
         <source>Remove note folder</source>
         <translation>ノート フォルダーの削除</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1529"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1530"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>このノート フォルダー &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1531"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1863"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1532"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1864"/>
         <source>&amp;Remove</source>
         <translation>削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1604"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1605"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>ノートを保存するフォルダーを選択してください。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1641"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1642"/>
         <source>Loading folders from server</source>
         <translation>サーバーからフォルダーを読み込み中</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1655"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1656"/>
         <source>No more folders were found in the current folder</source>
         <translation>このフォルダーにはフォルダーがありません</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1729"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1730"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>サーバーから &apos;%1&apos; のフォルダーを読み込み中</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1813"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1814"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
         <translation>もしQOwnNotesの特定の機能にアクセスする必要がある場合は、&lt;a href=&quot;%1&quot;&gt;QOwnNotes issue ページ&lt;/a&gt;でissueを作成してください。あなたのスクリプト作成を始める場合は、&lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt;を訪れてみてください。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1825"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1826"/>
         <source>new script</source>
         <translation>新しいスクリプト</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1860"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1861"/>
         <source>Remove script</source>
         <translation>スクリプトの削除</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1861"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1862"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>現在のスクリプト &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1889"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1890"/>
         <source>Please select your QML file</source>
         <translation>あなたのQMLファイルを選択してください。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1890"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1891"/>
         <source>QML Files (*.qml)</source>
         <translation>QML ファイル (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1951"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1952"/>
         <source>Your script seems to be valid</source>
         <translation>あなたのスクリプトは有効のようです</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1952"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
         <source>There were script errors:
 %1</source>
         <translation>スクリプト エラーがあります:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2043"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2044"/>
         <source>File extension</source>
         <translation>ファイルの拡張子</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2044"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
         <source>Enter your custom file extension:</source>
         <translation>独自のファイル拡張子を入力:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
         <source>Calendar cache emptied</source>
         <translation>カレンダー キャッシュの削除</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2320"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2321"/>
         <source>Your calendar cache was emptied.</source>
         <translation>カレンダーのキャッシュを空にしました。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1270"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2383"/>
+        <source>Reset toolbars and exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="2384"/>
+        <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
+        <source>Reset and &amp;exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1271"/>
         <source>The Database was reinitialized.</source>
         <translation>データベースは再初期化されました。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="123"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="124"/>
         <source>enabled</source>
         <translation>有効です</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="123"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="124"/>
         <source>disabled</source>
         <translation>無効です</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="126"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="127"/>
         <source>Portable mode is currently:</source>
         <translation>現在ポータブル モードは:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="129"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="130"/>
         <source>In portable mode</source>
         <translation>ポータブル モードでは</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="130"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="131"/>
         <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
         <translation>内部SQLiteデータベースと設定はバイナリの場所にある &lt;code&gt;Data&lt;/code&gt; フォルダー内に保存されます</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="133"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="134"/>
         <source>the settings will be stored in an ini file</source>
         <translation>設定は ini ファイルに保存されます</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="134"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="135"/>
         <source>the note folders will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders will be loaded regardless where your QOwnNotes installation is currently located</source>
         <translation>ノートフォルダーは、あなたのQOwnNotesのインストール場所が現在どこにあってもかまわないように、自動で &lt;code&gt;Data&lt;/code&gt; フォルダーからの相対パスで保存されます</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="140"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="141"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
         <translation>QOwnNotes を &lt;code&gt;--portable&lt;/code&gt; パラメーターをつけて起動したときに有効になります。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1282"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1283"/>
         <source>Markdown files (*.md)</source>
         <translation>Markdown ファイル (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1283"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1284"/>
         <source>Save debug information</source>
         <translation>デバッグ情報の保存</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1334"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1335"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -3516,35 +3536,36 @@ Your notes will stay intact!</source>
 あなたのノートはそのまま残ります。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1337"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1338"/>
         <source>Clear and &amp;exit</source>
         <translation>初期化して終了(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1264"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1337"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1531"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1863"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1265"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1338"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1532"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1864"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2388"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="144"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="145"/>
         <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
         <translation>QOwnNotesをポータブル モードで起動するための &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; がアプリの場所にあります。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1261"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1262"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>本当にローカル データベースを初期化しますか？ これはあなたのノート フォルダーの構成とキャッシュされたTodo項目も同時に削除します。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1264"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1265"/>
         <source>Clear &amp;database</source>
         <translation>データベースの初期化(&amp;D)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1406"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1407"/>
         <source>Select editor application</source>
         <translation>編集アプリケーションの選択</translation>
     </message>
@@ -3725,89 +3746,89 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="67"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
         <source>Delete selected toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="70"/>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="173"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
         <source>Remove</source>
         <translation type="unfinished">削除</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="84"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
         <source>Lists the available actions for the selected menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="106"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
         <source>Move Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="109"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
         <source>Moves the selected toolbar item up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="112"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
         <source>Move &amp;Up</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
         <source>Move Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
         <source>moves the selected toolbar item down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="130"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
         <source>Move &amp;Down</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="155"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
         <source>Insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="158"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
         <source>Adds the selected menu action to the toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="161"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
         <source>&amp;Insert</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="176"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
         <source>Removes the selected item from the active toolbar</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="179"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
         <source>&amp;Remove</source>
         <translation type="unfinished">削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="204"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
         <source>Separator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="207"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
         <source>&amp;Separator</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="135"/>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="155"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="138"/>
+        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="158"/>
         <source>--(separator)--</source>
         <translation type="unfinished"></translation>
     </message>

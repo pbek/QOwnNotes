@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.10.6
+- the **buttons** in the **toolbars** can now be **customized**
+  (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
+    - there is a new `Toolbars` pane in the settings to add buttons from
+      the main menu to toolbars, move buttons around or remove buttons
+    - you can as well **add custom toolbars**
+    - if you have messed the toolbars up you can also reset the toolbars
+      to the default
+
 ## 16.10.5
 - added a new scripting method `tagCurrentNote()` to tag the current note
   (for [Issue #351](https://github.com/pbek/QOwnNotes/issues/351))
