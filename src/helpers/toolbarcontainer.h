@@ -23,4 +23,6 @@ struct ToolbarContainer {
     void updateToolbar();
 
     bool toolbarFound();
+
+    static void updateIconSize(QToolBar *toolbar);
 };

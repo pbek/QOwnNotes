@@ -2,6 +2,7 @@
 #include <QMenu>
 #include <QMainWindow>
 #include <QDebug>
+#include <QSettings>
 #include <mainwindow.h>
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)
@@ -34,6 +35,8 @@ QToolBar *ToolbarContainer::create(QMainWindow *w) const {
             } else {
                 qWarning() << QObject::tr("Unknown action %1").arg(item);
             }
+
+            updateIconSize(toolbar);
         }
     }
 
@@ -81,8 +84,21 @@ void ToolbarContainer::updateToolbar() {
             } else {
                 qWarning() << QObject::tr("Unknown action %1").arg(item);
             }
+
+            updateIconSize(toolbar);
         }
     }
 }
 
-
+/**
+ * Updates the icon size of a toolbar
+ *
+ * @param toolbar
+ */
+void ToolbarContainer::updateIconSize(QToolBar *toolbar) {
+    QSettings settings;
+    int toolBarIconSize = settings.value(
+            "MainWindow/mainToolBar.iconSize").toInt();
+    QSize size(toolBarIconSize, toolBarIconSize);
+    toolbar->setIconSize(size);
+}

@@ -61,6 +61,7 @@
 #include <dialogs/sharedialog.h>
 #include <dialogs/orphanedimagesdialog.h>
 #include <helpers/toolbarcontainer.h>
+#include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -130,9 +131,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // initialize the toolbars
     initToolbars();
 
-    // restore toolbars
-    restoreToolbars();
-
 #ifdef Q_OS_MAC
     // add some different shortcuts for the note history on the mac
     ui->action_Back_in_note_history->
@@ -158,7 +156,11 @@ MainWindow::MainWindow(QWidget *parent) :
     // read the settings (shortcuts have to be defined before that)
     readSettings();
 
+    // initialize the scripting engine
     initScriptingEngine();
+
+    // restore toolbars
+    restoreToolbars();
 
     // check if we want to start the application hidden
     initShowHidden();
@@ -1741,13 +1743,14 @@ void MainWindow::restoreToolbars() {
     settings.endArray();
 
     if (!toolbarContainers.empty()) {
+        // delete the custom toolbars
         foreach(QToolBar* toolbar, findChildren<QToolBar*>() ) {
-                if (toolbar->objectName() == "customActionsToolbar") {
+                if (!toolbar->objectName().startsWith(
+                        Toolbar_Editor::customToolbarNamePrefix)) {
                     continue;
                 }
 
-                // TODO(pbek): delete custom toolbars
-//                delete toolbar;
+                delete toolbar;
             }
 
         foreach(ToolbarContainer toolbarContainer, toolbarContainers) {

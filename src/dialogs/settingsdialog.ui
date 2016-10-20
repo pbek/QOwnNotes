@@ -3335,21 +3335,7 @@ p, li { white-space: pre-wrap; }
            </widget>
            <widget class="QWidget" name="toolbarPage">
             <layout class="QGridLayout" name="gridLayout_44">
-             <item row="1" column="0">
-              <widget class="QPushButton" name="applyToolbarButton">
-               <property name="text">
-                <string>Apply toolbar configuration</string>
-               </property>
-               <property name="icon">
-                <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0" colspan="2">
-              <widget class="Toolbar_Editor" name="toolbarEditor" native="true"/>
-             </item>
-             <item row="1" column="1">
+             <item row="1" column="2">
               <spacer name="horizontalSpacer_9">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
@@ -3361,6 +3347,33 @@ p, li { white-space: pre-wrap; }
                 </size>
                </property>
               </spacer>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="applyToolbarButton">
+               <property name="text">
+                <string>Apply toolbar configuration</string>
+               </property>
+               <property name="icon">
+                <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
+                 <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="0" colspan="3">
+              <widget class="Toolbar_Editor" name="toolbarEditor" native="true"/>
              </item>
             </layout>
            </widget>

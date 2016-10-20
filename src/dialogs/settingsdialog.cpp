@@ -109,6 +109,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // init the toolbar editor
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
     ui->toolbarEditor->setButtonStyle(Qt::ToolButtonTextBesideIcon);
+    ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -2359,6 +2360,9 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
             }
 
             toolbarContainers.append(toolbar);
+
+            // update the icon size
+            ToolbarContainer::updateIconSize(toolbar);
         }
 
     QSettings settings;
