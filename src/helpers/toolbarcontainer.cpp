@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QSettings>
 #include <mainwindow.h>
+#include <QWidgetAction>
 
 ToolbarContainer::ToolbarContainer(QToolBar *toolbar)
     : name(toolbar->objectName()), title(toolbar->windowTitle()) {
@@ -70,19 +71,46 @@ void ToolbarContainer::updateToolbar() {
         if ( item.isEmpty() ) {
             toolbar->addSeparator();
         } else {
-            QAction* act = mainWindow->findChild<QAction*>(item);
+            // TODO(pbek): we will enable that again later
+            if (false) {
+//            if (item == "actionWorkspaceComboBox") {
+                qDebug() << __func__ << " - 'actionWorkspaceComboBox': " << item;
 
-            if (!act) {
-                QMenu *menu = mainWindow->findChild<QMenu*>(item);
-                if ( menu ) {
-                    act = menu->menuAction();
+                // TODO(pbek): for some reason we can't find the combobox
+                QComboBox *workspaceComboBox =
+                        mainWindow->findChild<QComboBox*>("workspaceComboBox");
+
+                qDebug() << __func__ << " - 'workspaceComboBox': "
+                         << workspaceComboBox;
+
+                QWidgetAction* widgetAction = mainWindow->findChild<QWidgetAction*>(item);
+
+                qDebug() << __func__ << " - 'widgetAction': " << widgetAction;
+
+
+                if (widgetAction == Q_NULLPTR) {
+                    widgetAction = new QWidgetAction(mainWindow);
+                    widgetAction->setObjectName("actionWorkspaceComboBox");
+                    widgetAction->setText(QObject::tr("Workspace selector"));
                 }
-            }
 
-            if (act) {
-                toolbar->addAction(act);
+                widgetAction->setDefaultWidget(workspaceComboBox);
+                toolbar->addAction(widgetAction);
             } else {
-                qWarning() << QObject::tr("Unknown action %1").arg(item);
+                QAction* action = mainWindow->findChild<QAction*>(item);
+
+                if (!action) {
+                    QMenu *menu = mainWindow->findChild<QMenu*>(item);
+                    if ( menu ) {
+                        action = menu->menuAction();
+                    }
+                }
+
+                if (action != Q_NULLPTR) {
+                    toolbar->addAction(action);
+                } else {
+                    qWarning() << QObject::tr("Unknown action %1").arg(item);
+                }
             }
 
             updateIconSize(toolbar);

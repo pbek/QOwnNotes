@@ -420,6 +420,7 @@ void MainWindow::initWorkspaceComboBox() {
     connect(_workspaceComboBox, SIGNAL(currentIndexChanged(int)),
             this, SLOT(onWorkspaceComboBoxCurrentIndexChanged(int)));
     _workspaceComboBox->setToolTip(tr("Workspaces"));
+    _workspaceComboBox->setObjectName("workspaceComboBox");
     _workspaceSignalMapper = new QSignalMapper(this);
 }
 
@@ -779,6 +780,8 @@ void MainWindow::updateWindowToolbar() {
 
     QWidgetAction *widgetAction = new QWidgetAction(this);
     widgetAction->setDefaultWidget(_workspaceComboBox);
+    widgetAction->setObjectName("actionWorkspaceComboBox");
+    widgetAction->setText(tr("Workspace selector"));
     _windowToolbar->addAction(widgetAction);
     _windowToolbar->addAction(ui->actionStore_as_new_workspace);
     _windowToolbar->addAction(ui->actionRemove_current_workspace);
@@ -792,6 +795,9 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->action_Increase_note_text_size);
     _windowToolbar->addAction(ui->action_Decrease_note_text_size);
     _windowToolbar->addAction(ui->action_Reset_note_text_size);
+
+    // TODO(pbek): we can't do that yet
+//    restoreToolbars();
 }
 
 /**
@@ -1734,7 +1740,6 @@ void MainWindow::restoreToolbars() {
         }
 
         toolbarContainer.title = settings.value("title").toString();
-
         toolbarContainer.actions = settings.value("items").toStringList();
 
         toolbarContainers.push_back(toolbarContainer);

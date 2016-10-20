@@ -8,6 +8,8 @@
     - you can as well **add custom toolbars**
     - if you have messed the toolbars up you can also reset the toolbars
       to the default
+    - there are still some issues, like that the window toolbar can't be
+      modified because of the magic that is happening there
 
 ## 16.10.5
 - added a new scripting method `tagCurrentNote()` to tag the current note
