@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.10.7
+- fixed a problem with recurring custom toolbar names when creating a
+  new one in the settings
+
 ## 16.10.6
 - the **buttons** in the **toolbars** can now be **customized**
   (for [Issue #343](https://github.com/pbek/QOwnNotes/issues/343))
