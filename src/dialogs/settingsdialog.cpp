@@ -108,7 +108,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // init the toolbar editor
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
-    ui->toolbarEditor->setButtonStyle(Qt::ToolButtonTextBesideIcon);
     ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 
     QStringList disallowedToolbarNames;

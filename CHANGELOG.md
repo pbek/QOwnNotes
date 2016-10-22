@@ -9,6 +9,7 @@
     - double-clicking on the menu item list now adds the current item
     - double-clicking on the toolbar item list now removes the current item
     - now the user is asked for permission to remove a toolbar
+    - the tool buttons are now push buttons to look less crappy under OS X
 
 ## 16.10.6
 - the **buttons** in the **toolbars** can now be **customized**
