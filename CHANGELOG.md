@@ -8,6 +8,7 @@
       because they are modified by the application itself too often
     - double-clicking on the menu item list now adds the current item
     - double-clicking on the toolbar item list now removes the current item
+    - now the user is asked for permission to remove a toolbar
 
 ## 16.10.6
 - the **buttons** in the **toolbars** can now be **customized**
