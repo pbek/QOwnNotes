@@ -10,6 +10,8 @@
     - double-clicking on the toolbar item list now removes the current item
     - now the user is asked for permission to remove a toolbar
     - the tool buttons are now push buttons to look less crappy under OS X
+- added more Italian, Portuguese, Dutch, Hungarian, Spanish and Japanese
+  translation (thank you mlocati, mlimacarlos, Fabijenna, richarson and piyo)
 
 ## 16.10.6
 - the **buttons** in the **toolbars** can now be **customized**
