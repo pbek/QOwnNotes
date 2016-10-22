@@ -795,9 +795,6 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->action_Increase_note_text_size);
     _windowToolbar->addAction(ui->action_Decrease_note_text_size);
     _windowToolbar->addAction(ui->action_Reset_note_text_size);
-
-    // TODO(pbek): we can't do that yet
-//    restoreToolbars();
 }
 
 /**

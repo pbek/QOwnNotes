@@ -3,6 +3,8 @@
 ## 16.10.7
 - fixed a problem with recurring custom toolbar names when creating a
   new one in the settings
+- editing of the window and custom action toolbars is now disabled
+  because they are modified by the application itself too often
 
 ## 16.10.6
 - the **buttons** in the **toolbars** can now be **customized**
