@@ -883,6 +883,7 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
  * Initializes the panel menu
  */
 void MainWindow::initPanelMenu() {
+    // update the panel menu if the visibility of a panel was changed
     Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
             QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
                              this, SLOT(updatePanelMenu()));
@@ -897,8 +898,8 @@ void MainWindow::updatePanelMenu() {
     ui->menuPanels->clear();
 
     Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
-            QAction *action = new QAction(
-                    tr("Show %1 panel").arg(dockWidget->windowTitle()));
+            QAction *action = new QAction(this);
+            action->setText(tr("Show %1 panel").arg(dockWidget->windowTitle()));
             action->setObjectName("togglePanel-" + dockWidget->objectName());
             action->setCheckable(true);
             action->setChecked(!dockWidget->isHidden());
