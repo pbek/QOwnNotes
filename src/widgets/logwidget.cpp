@@ -85,12 +85,12 @@ void LogWidget::storeSettings() const {
  * Adds a log entry
  */
 void LogWidget::log(LogType logType, QString text) {
+#ifndef INTEGRATION_TESTS
     // return if logging wasn't enabled
     if (!qApp->property("loggingEnabled").toBool()) {
         return;
     }
 
-#ifndef INTEGRATION_TESTS
     QString type = "";
     QColor color = QColor(Qt::black);
 
