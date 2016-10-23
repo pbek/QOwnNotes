@@ -680,4 +680,6 @@ private:
     void updateWindowToolbar();
 
     void restoreToolbars();
+
+    void handleNoteSubFolderVisibility() const;
 };

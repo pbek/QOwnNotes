@@ -5759,7 +5759,9 @@ void MainWindow::setupTags() {
  */
 void MainWindow::setupNoteSubFolders() {
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-    _noteSubFolderDockWidget->setVisible(showSubfolders);
+
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
 
     // we only want to see that menu entry if there are note subfolders
     ui->actionFind_notes_in_all_subfolders->setVisible(showSubfolders);
@@ -7715,10 +7717,21 @@ void MainWindow::restoreCurrentWorkspace() {
     restoreState(settings.value(
             "workspace-" + uuid + "/windowState").toByteArray());
 
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
+}
+
+/**
+ * Handles the visibility of the note subfolder panel
+ */
+void MainWindow::handleNoteSubFolderVisibility() const {
     // turn the subfolder dock widget on or off according to whether the
     // subfolders are enabled or not
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
     _noteSubFolderDockWidget->setVisible(showSubfolders);
+//    ui->noteSubFolderFrame->setVisible(showSubfolders);
+//    ui->noteSubFolderFrame->setEnabled(showSubfolders);
+//    _noteSubFolderDockWidget->setEnabled(showSubfolders);
 }
 
 /**
@@ -7826,7 +7839,6 @@ void MainWindow::on_actionShow_all_panels_triggered() {
             dockWidget->setVisible(true);
         }
 
-    // hide the note subfolder widget if subfolders are not activated
-    bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-    _noteSubFolderDockWidget->setVisible(showSubfolders);
+    // handle the visibility of the note subfolder panel
+    handleNoteSubFolderVisibility();
 }
