@@ -110,9 +110,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
     ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 
-    QStringList disallowedToolbarNames;
-    disallowedToolbarNames << "windowToolbar" << "customActionsToolbar";
-    ui->toolbarEditor->setDisabledToolbarNames(disallowedToolbarNames);
+    QStringList disabledToolbarNames;
+    disabledToolbarNames << "windowToolbar" << "customActionsToolbar";
+    ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
     ui->toolbarEditor->updateBars();
 }
 
@@ -2357,9 +2357,18 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
         return;
     }
 
+    // get all available toolbar names from the toolbar editor
+    QStringList toolbarObjectNames = ui->toolbarEditor->toolbarObjectNames();
+
     QList<ToolbarContainer> toolbarContainers;
     foreach(QToolBar* toolbar, mainWindow->findChildren<QToolBar*>()) {
-            if (toolbar->objectName() == "customActionsToolbar") {
+            QString name = toolbar->objectName();
+
+            // don't store the custom actions toolbar and toolbars that are
+            // not in the toolbar edit widget any more (for some reason they
+            // are still found by findChildren)
+            if (name == "customActionsToolbar" ||
+                    !toolbarObjectNames.contains(name)) {
                 continue;
             }
 
@@ -2370,6 +2379,12 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
         }
 
     QSettings settings;
+
+    // remove the current toolbars
+//    settings.beginGroup("toolbar");
+//    settings.remove("");
+//    settings.endGroup();
+
     settings.beginWriteArray("toolbar", toolbarContainers.size());
 
     for (int i = 0; i < toolbarContainers.size(); i++) {

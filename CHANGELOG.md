@@ -13,6 +13,8 @@
   (for [Issue #370](https://github.com/pbek/QOwnNotes/issues/370))
     - this works even if the note subfolder panel was turned off because
       the current note folder has subfolders disabled
+- removed custom toolbars will now not be present again after restart of
+  the application
 
 ## 16.10.7
 - more toolbar editing fixes and improvements
