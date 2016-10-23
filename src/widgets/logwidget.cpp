@@ -223,7 +223,12 @@ LogWidget * LogWidget::createInstance(QWidget *parent) {
 void LogWidget::logMessageOutput(
         QtMsgType type, const QMessageLogContext &context, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
+
+#ifndef INTEGRATION_TESTS
     bool loggingEnabled = qApp->property("loggingEnabled").toBool();
+#else
+    bool loggingEnabled = false;
+#endif
 
     switch (type) {
         case QtDebugMsg:
