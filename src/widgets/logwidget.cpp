@@ -223,34 +223,51 @@ LogWidget * LogWidget::createInstance(QWidget *parent) {
 void LogWidget::logMessageOutput(
         QtMsgType type, const QMessageLogContext &context, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
+    bool loggingEnabled = qApp->property("loggingEnabled").toBool();
+
     switch (type) {
         case QtDebugMsg:
 //            fprintf(stderr, "Debug: %s (%s:%u, %s)\n", localMsg.constData(),
 //                    context.file, context.line, context.function);
             fprintf(stderr, "Debug: %s\n", localMsg.constData());
-            LogWidget::instance()->log(LogType::DebugLogType, msg);
+
+            if (loggingEnabled) {
+                LogWidget::instance()->log(LogType::DebugLogType, msg);
+            }
             break;
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
         case QtInfoMsg:
             fprintf(stderr, "Info: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogWidget::instance()->log(LogType::InfoLogType, msg);
+
+            if (loggingEnabled) {
+                LogWidget::instance()->log(LogType::InfoLogType, msg);
+            }
             break;
 #endif
         case QtWarningMsg:
             fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogWidget::instance()->log(LogType::WarningLogType, msg);
+
+            if (loggingEnabled) {
+                LogWidget::instance()->log(LogType::WarningLogType, msg);
+            }
             break;
         case QtCriticalMsg:
             fprintf(stderr, "Critical: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogWidget::instance()->log(LogType::CriticalLogType, msg);
+
+            if (loggingEnabled) {
+                LogWidget::instance()->log(LogType::CriticalLogType, msg);
+            }
             break;
         case QtFatalMsg:
             fprintf(stderr, "Fatal: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
-            LogWidget::instance()->log(LogType::FatalLogType, msg);
+
+            if (loggingEnabled) {
+                LogWidget::instance()->log(LogType::FatalLogType, msg);
+            }
             abort();
     }
 }
