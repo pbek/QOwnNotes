@@ -562,6 +562,9 @@ void MainWindow::initDockWidgets() {
 
     // update the workspace menu and combobox entries
     updateWorkspaceLists();
+
+    // initialize the panel menu
+    initPanelMenu();
 }
 
 /**
@@ -874,6 +877,63 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
 
     // enable the remove button if there are at least two workspaces
     ui->actionRemove_current_workspace->setEnabled(workspaces.count() > 1);
+}
+
+/**
+ * Initializes the panel menu
+ */
+void MainWindow::initPanelMenu() {
+    Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
+            QObject::connect(dockWidget, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updatePanelMenu()));
+    }
+}
+
+/**
+ * Updates the panel menu entries
+ */
+void MainWindow::updatePanelMenu() {
+    _panelSignalMapper = new QSignalMapper(this);
+    ui->menuPanels->clear();
+
+    Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
+            QAction *action = new QAction(
+                    tr("Show %1 panel").arg(dockWidget->windowTitle()));
+            action->setObjectName("togglePanel-" + dockWidget->objectName());
+            action->setCheckable(true);
+            action->setChecked(!dockWidget->isHidden());
+
+            QObject::connect(action, SIGNAL(triggered()),
+                             _panelSignalMapper, SLOT(map()));
+
+            // add a parameter the signal mapper
+            _panelSignalMapper->setMapping(action, dockWidget->objectName());
+
+            ui->menuPanels->addAction(action);
+        }
+
+    // toggle the panel if the checkbox was triggered
+    QObject::connect(_panelSignalMapper, SIGNAL(mapped(QString)),
+                     this, SLOT(togglePanelVisibility(QString)));
+}
+
+/**
+ * Toggles the visibility of a panel by object name
+ *
+ * @param objectName
+ */
+void MainWindow::togglePanelVisibility(QString objectName) {
+    QDockWidget *dockWidget = findChild<QDockWidget *>(objectName);
+
+    if (dockWidget == Q_NULLPTR) {
+        return;
+    }
+
+    // to prevent crashes if updatePanelMenu removes all actions
+    const QSignalBlocker blocker(dockWidget);
+    Q_UNUSED(blocker);
+
+    dockWidget->setVisible(dockWidget->isHidden());
 }
 
 /**
@@ -7719,6 +7779,9 @@ void MainWindow::restoreCurrentWorkspace() {
 
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();
+
+    // update the panel lists
+    updatePanelMenu();
 }
 
 /**

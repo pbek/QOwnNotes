@@ -4,6 +4,8 @@
 - tried to fix some logging problems that could cause a crash when the
   app quits under OS X
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/371))
+- added a new `Panels` menu to the windows menu for showing and hiding
+  panels (for [Issue #366](https://github.com/pbek/QOwnNotes/issues/366))
 
 ## 16.10.7
 - more toolbar editing fixes and improvements

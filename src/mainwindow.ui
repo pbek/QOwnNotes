@@ -775,12 +775,18 @@ p, li { white-space: pre-wrap; }
       <string>Workspaces</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuPanels">
+     <property name="title">
+      <string>Panels</string>
+     </property>
+    </widget>
     <addaction name="actionShow_menu_bar"/>
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
     <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log"/>
+    <addaction name="menuPanels"/>
     <addaction name="separator"/>
     <addaction name="actionLock_panels"/>
     <addaction name="menuWorkspaces"/>
@@ -1840,9 +1846,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
