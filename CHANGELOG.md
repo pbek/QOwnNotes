@@ -6,6 +6,11 @@
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/371))
 - added a new `Panels` menu to the windows menu for showing and hiding
   panels (for [Issue #366](https://github.com/pbek/QOwnNotes/issues/366))
+- the note subfolder panel now remembers if the user originally wanted
+  it to be visible if the visibility was set with the new Panels menu
+  (for [Issue #370](https://github.com/pbek/QOwnNotes/issues/370))
+    - this works even if the note subfolder panel was turned off because
+      the current note folder has subfolders disabled
 
 ## 16.10.7
 - more toolbar editing fixes and improvements

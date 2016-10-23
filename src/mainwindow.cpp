@@ -93,6 +93,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _isDefaultShortcutInitialized = false;
     _showNotesFromAllNoteSubFolders = false;
     _noteFolderDockWidgetWasVisible = true;
+    _noteSubFolderDockWidgetVisible = true;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -934,7 +935,21 @@ void MainWindow::togglePanelVisibility(QString objectName) {
     const QSignalBlocker blocker(dockWidget);
     Q_UNUSED(blocker);
 
-    dockWidget->setVisible(dockWidget->isHidden());
+    bool newVisibility = dockWidget->isHidden();
+
+    // remember that the user wanted the note subfolder dock widget to be set
+    // to visible or invisible
+    if (objectName == "noteSubFolderDockWidget") {
+        _noteSubFolderDockWidgetVisible = newVisibility;
+
+        // don't allow the note subfolder dock widget to be visible if the
+        // note folder has no subfolders activated
+        if (newVisibility) {
+            newVisibility = NoteFolder::isCurrentShowSubfolders();
+        }
+    }
+
+    dockWidget->setVisible(newVisibility);
 }
 
 /**
@@ -7743,7 +7758,9 @@ void MainWindow::storeCurrentWorkspace() {
     QSettings settings;
     QString uuid = currentWorkspaceUuid();
 
-    settings.setValue("workspace-" + uuid + "/windowState",  saveState());
+    settings.setValue("workspace-" + uuid + "/windowState", saveState());
+    settings.setValue("workspace-" + uuid + "/noteSubFolderDockWidgetVisible",
+                      _noteSubFolderDockWidgetVisible);
 }
 
 /**
@@ -7783,6 +7800,14 @@ void MainWindow::restoreCurrentWorkspace() {
 
     // update the panel lists
     updatePanelMenu();
+
+    // check if the user wanted the note subfolder dock widget visible
+    _noteSubFolderDockWidgetVisible = settings.value(
+            "workspace-" + uuid + "/noteSubFolderDockWidgetVisible", true)
+            .toBool();
+
+    // set the visibility of the note subfolder dock widget
+    handleNoteSubFolderVisibility();
 }
 
 /**
@@ -7792,10 +7817,8 @@ void MainWindow::handleNoteSubFolderVisibility() const {
     // turn the subfolder dock widget on or off according to whether the
     // subfolders are enabled or not
     bool showSubfolders = NoteFolder::isCurrentShowSubfolders();
-    _noteSubFolderDockWidget->setVisible(showSubfolders);
-//    ui->noteSubFolderFrame->setVisible(showSubfolders);
-//    ui->noteSubFolderFrame->setEnabled(showSubfolders);
-//    _noteSubFolderDockWidget->setEnabled(showSubfolders);
+    _noteSubFolderDockWidget->setVisible(
+            showSubfolders && _noteSubFolderDockWidgetVisible);
 }
 
 /**
@@ -7902,6 +7925,8 @@ void MainWindow::on_actionShow_all_panels_triggered() {
     Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
             dockWidget->setVisible(true);
         }
+
+    _noteSubFolderDockWidgetVisible = true;
 
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();

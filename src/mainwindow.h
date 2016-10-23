@@ -465,6 +465,7 @@ private:
     QWidget *_logDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
     bool _noteFolderDockWidgetWasVisible;
+    bool _noteSubFolderDockWidgetVisible;
 
     void createSystemTrayIcon();
 
