@@ -848,7 +848,7 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
         QObject::connect(action, SIGNAL(triggered()),
                          _workspaceSignalMapper, SLOT(map()));
 
-        // add a parameter the signal mapper
+        // add a parameter to the signal mapper
         _workspaceSignalMapper->setMapping(action, uuid);
 
         // set an object name for creating shortcuts
@@ -892,6 +892,20 @@ void MainWindow::initPanelMenu() {
 }
 
 /**
+ * Initializes the toolbar menu
+ */
+void MainWindow::initToolbarMenu() {
+    // update the toolbar menu if the visibility of a toolbar was changed
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar *>()) {
+            // in case the connection was already established
+            QObject::disconnect(toolbar, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updateToolbarMenu()));
+            QObject::connect(toolbar, SIGNAL(visibilityChanged(bool)),
+                             this, SLOT(updateToolbarMenu()));
+    }
+}
+
+/**
  * Updates the panel menu entries
  */
 void MainWindow::updatePanelMenu() {
@@ -908,7 +922,7 @@ void MainWindow::updatePanelMenu() {
             QObject::connect(action, SIGNAL(triggered()),
                              _panelSignalMapper, SLOT(map()));
 
-            // add a parameter the signal mapper
+            // add a parameter to the signal mapper
             _panelSignalMapper->setMapping(action, dockWidget->objectName());
 
             ui->menuPanels->addAction(action);
@@ -917,6 +931,34 @@ void MainWindow::updatePanelMenu() {
     // toggle the panel if the checkbox was triggered
     QObject::connect(_panelSignalMapper, SIGNAL(mapped(QString)),
                      this, SLOT(togglePanelVisibility(QString)));
+}
+
+/**
+ * Updates the toolbar menu entries
+ */
+void MainWindow::updateToolbarMenu() {
+    _toolbarSignalMapper = new QSignalMapper(this);
+    ui->menuToolbars->clear();
+
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar *>()) {
+            QAction *action = new QAction(this);
+            action->setText(tr("Show %1").arg(toolbar->windowTitle()));
+            action->setObjectName("toggleToolBar-" + toolbar->objectName());
+            action->setCheckable(true);
+            action->setChecked(!toolbar->isHidden());
+
+            QObject::connect(action, SIGNAL(triggered()),
+                             _toolbarSignalMapper, SLOT(map()));
+
+            // add a parameter to the signal mapper
+            _toolbarSignalMapper->setMapping(action, toolbar->objectName());
+
+            ui->menuToolbars->addAction(action);
+        }
+
+    // toggle the panel if the checkbox was triggered
+    QObject::connect(_toolbarSignalMapper, SIGNAL(mapped(QString)),
+                     this, SLOT(toggleToolbarVisibility(QString)));
 }
 
 /**
@@ -950,6 +992,26 @@ void MainWindow::togglePanelVisibility(QString objectName) {
     }
 
     dockWidget->setVisible(newVisibility);
+}
+
+/**
+ * Toggles the visibility of a toolbar by object name
+ *
+ * @param objectName
+ */
+void MainWindow::toggleToolbarVisibility(QString objectName) {
+    QToolBar *toolbar = findChild<QToolBar *>(objectName);
+
+    if (toolbar == Q_NULLPTR) {
+        return;
+    }
+
+    // to prevent crashes if updateToolbarMenu removes all actions
+    const QSignalBlocker blocker(toolbar);
+    Q_UNUSED(blocker);
+
+    bool newVisibility = toolbar->isHidden();
+    toolbar->setVisible(newVisibility);
 }
 
 /**
@@ -1845,6 +1907,12 @@ void MainWindow::restoreToolbars() {
                 }
             }
     }
+
+    // initialize the toolbar menu
+    initToolbarMenu();
+
+    // update the toolbar menu
+    updateToolbarMenu();
 }
 
 /**
@@ -1923,6 +1991,13 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     // initialize the item height of the tree widgets
     initTreeWidgetItemHeight();
+
+    // we need to initialize the toolbar menu again in case there are new
+    // toolbars
+    initToolbarMenu();
+
+    // update the toolbar menu
+    updateToolbarMenu();
 }
 
 /**

@@ -780,13 +780,20 @@ p, li { white-space: pre-wrap; }
       <string>Panels</string>
      </property>
     </widget>
+    <widget class="QMenu" name="menuToolbars">
+     <property name="title">
+      <string>Toolbars</string>
+     </property>
+    </widget>
     <addaction name="actionShow_menu_bar"/>
     <addaction name="actionShow_toolbar"/>
     <addaction name="actionShow_status_bar"/>
     <addaction name="actionShow_system_tray"/>
     <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log"/>
+    <addaction name="actionShow_all_panels"/>
     <addaction name="menuPanels"/>
+    <addaction name="menuToolbars"/>
     <addaction name="separator"/>
     <addaction name="actionLock_panels"/>
     <addaction name="menuWorkspaces"/>
@@ -794,7 +801,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionRemove_current_workspace"/>
     <addaction name="actionRename_current_workspace"/>
     <addaction name="actionSwitch_to_previous_workspace"/>
-    <addaction name="actionShow_all_panels"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>

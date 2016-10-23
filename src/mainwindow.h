@@ -395,6 +395,10 @@ private slots:
 
     void updatePanelMenu();
 
+    void toggleToolbarVisibility(QString objectName);
+
+    void updateToolbarMenu();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -407,6 +411,7 @@ private:
     QSignalMapper *_customActionSignalMapper;
     QSignalMapper *_workspaceSignalMapper;
     QSignalMapper *_panelSignalMapper;
+    QSignalMapper *_toolbarSignalMapper;
     UpdateService *updateService;
     bool sortAlphabetically;
     bool showSystemTray;
@@ -690,4 +695,6 @@ private:
     void handleNoteSubFolderVisibility() const;
 
     void initPanelMenu();
+
+    void initToolbarMenu();
 };
