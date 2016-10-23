@@ -67,6 +67,10 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+    // use our custom log handler
+    qInstallMessageHandler(LogWidget::logMessageOutput);
+    qApp->setProperty("loggingEnabled", true);
+
 #ifdef Q_OS_MAC
     // disable icons in the menu
     QApplication::instance()->setAttribute(Qt::AA_DontShowIconsInMenus, true);
@@ -399,11 +403,14 @@ MainWindow::~MainWindow() {
 
     storeUpdatedNotesToDisk();
 
+    qApp->setProperty("loggingEnabled", false);
+
     if (showSystemTray) {
         // if we are using the system tray lets delete the log window so the
         // app can quit
         delete(LogWidget::instance());
     }
+
     delete ui;
 }
 
@@ -765,8 +772,7 @@ void MainWindow::initToolbars() {
     _customActionToolbar->hide();
     addToolBar(_customActionToolbar);
 
-    _quitToolbar =
-            new QToolBar(tr("quit toolbar"), this);
+    _quitToolbar = new QToolBar(tr("quit toolbar"), this);
     _quitToolbar->addAction(ui->action_Quit);
     _quitToolbar->setObjectName("quitToolbar");
     addToolBar(_quitToolbar);
@@ -2786,8 +2792,6 @@ void MainWindow::storeSettings() {
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("ShowSystemTray", showSystemTray);
-    settings.setValue("LogWidget/showAtStartup",
-                      LogWidget::instance()->isVisible());
 }
 
 
@@ -2805,13 +2809,11 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     }
 
     if (showSystemTray && !forceQuit) {
-        // if we use the system tray lets hide the log widget when the
-        // main window is closed
-        LogWidget::instance()->hide();
         hide();
         event->ignore();
     } else {
         MetricsService::instance()->sendVisitIfEnabled("app/end", "app end");
+        qApp->setProperty("loggingEnabled", false);
 
         // if we don't use the system tray we delete the log widow so the app
         // can quit

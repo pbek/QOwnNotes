@@ -314,9 +314,6 @@ int main(int argc, char *argv[]) {
             return 0;
         }
 
-        // use our custom log handler
-        qInstallMessageHandler(LogWidget::logMessageOutput);
-
         MainWindow w;
         w.show();
 

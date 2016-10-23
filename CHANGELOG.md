@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.10.8
+- tried to fix some logging problems that could cause a crash when the
+  app quits under OS X
+  (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/371))
+
 ## 16.10.7
 - more toolbar editing fixes and improvements
     - fixed a problem with recurring custom toolbar names when creating
