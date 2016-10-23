@@ -307,20 +307,10 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->actionShow_toolbar->setChecked(isToolbarVisible());
     }
 
-    connect(ui->mainToolBar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_formattingToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_customActionToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_insertingToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_encryptionToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_windowToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
-    connect(_quitToolbar, SIGNAL(visibilityChanged(bool)),
-            this, SLOT(toolbarVisibilityChanged(bool)));
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            connect(toolbar, SIGNAL(visibilityChanged(bool)),
+                    this, SLOT(toolbarVisibilityChanged(bool)));
+        }
 
     // set the action group for the width selector of the distraction free mode
     QActionGroup *dfmEditorWidthActionGroup = new QActionGroup(this);
@@ -5218,13 +5208,9 @@ void MainWindow::resizeEvent(QResizeEvent* event) {
  * Toggles the visibility of the toolbars
  */
 void MainWindow::on_actionShow_toolbar_triggered(bool checked) {
-    ui->mainToolBar->setVisible(checked);
-    _formattingToolbar->setVisible(checked);
-    _customActionToolbar->setVisible(checked);
-    _insertingToolbar->setVisible(checked);
-    _encryptionToolbar->setVisible(checked);
-    _windowToolbar->setVisible(checked);
-    _quitToolbar->setVisible(checked);
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            toolbar->setVisible(checked);
+        }
 }
 
 /**
@@ -5244,13 +5230,13 @@ void MainWindow::toolbarVisibilityChanged(bool visible) {
  * Checks if at least one toolbar is visible
  */
 bool MainWindow::isToolbarVisible() {
-    return ui->mainToolBar->isVisible() ||
-            _formattingToolbar->isVisible() ||
-            _customActionToolbar->isVisible() ||
-            _insertingToolbar->isVisible() ||
-            _encryptionToolbar->isVisible() ||
-            _windowToolbar->isVisible() ||
-            _quitToolbar->isVisible();
+    Q_FOREACH(QToolBar *toolbar, findChildren<QToolBar*>()) {
+            if (toolbar->isVisible()) {
+                return true;
+            }
+        }
+
+    return false;
 }
 
 void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {

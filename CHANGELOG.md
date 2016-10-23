@@ -15,6 +15,7 @@
       the current note folder has subfolders disabled
 - removed custom toolbars will now not be present again after restart of
   the application
+- the `Show toolbar` menu entry now also shows and hides custom toolbars
 
 ## 16.10.7
 - more toolbar editing fixes and improvements
