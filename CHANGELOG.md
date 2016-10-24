@@ -7,6 +7,8 @@
 - the custom actions will be loaded correctly to the custom action
   toolbar when leaving the settings dialog with the `Ok` button 
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
+- tried to fix a note folder database problem under Windows
+  (for [Issue #373](https://github.com/pbek/QOwnNotes/issues/373))
 
 ## 16.10.8
 - tried to fix some logging problems that could cause a crash when the
