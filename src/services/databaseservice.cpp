@@ -44,7 +44,8 @@ QString DatabaseService::getDiskDatabasePath() {
         dir.mkpath(path);
     }
 
-    QString databaseFileName = path + QDir::separator() + "QOwnNotes.sqlite";
+    QString databaseFileName =
+            path + Utils::Misc::dirSeparator() + "QOwnNotes.sqlite";
     qDebug() << __func__ << " - 'databaseFileName': " << databaseFileName;
 
     return databaseFileName;
