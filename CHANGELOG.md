@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.10.9
+- reloading the script engine in the script settings now also stores the
+  enabled state of the script engine 
+  (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
+- the custom actions will be loaded correctly to the custom action
+  toolbar when leaving the settings dialog with the `Ok` button 
+  (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
+
 ## 16.10.8
 - tried to fix some logging problems that could cause a crash when the
   app quits under OS X

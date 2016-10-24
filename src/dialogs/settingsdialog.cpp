@@ -423,9 +423,6 @@ void SettingsDialog::storeSettings() {
     // store the proxy settings
     storeProxySettings();
 
-    // store the enabled state of the scripts
-    storeScriptListEnabledState();
-
     // store the shortcut settings
     storeShortcutSettings();
 
@@ -434,6 +431,9 @@ void SettingsDialog::storeSettings() {
 
     // apply and store the toolbar configuration
     on_applyToolbarButton_clicked();
+
+    // store the enabled state of the scripts
+    storeScriptListEnabledState();
 }
 
 /**
@@ -2008,8 +2008,8 @@ void SettingsDialog::on_scriptValidationButton_clicked() {
  * Reloads the scripting engine
  */
 void SettingsDialog::on_scriptReloadEngineButton_clicked() {
-    // reload the scripting engine
-    ScriptingService::instance()->reloadEngine();
+    // store the enabled states and reload the scripting engine
+    storeScriptListEnabledState();
 }
 
 /**
