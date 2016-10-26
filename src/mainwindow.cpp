@@ -1366,16 +1366,24 @@ void MainWindow::loadNoteFolderListMenu() {
                     continue;
                 }
 
+                int folderId = noteFolder.getId();
+                const QString &name = noteFolder.getName();
+
                 // add an entry to the combo box
-                ui->noteFolderComboBox->addItem(noteFolder.getName(),
-                                                      noteFolder.getId());
+                ui->noteFolderComboBox->addItem(name,
+                                                folderId);
 
                 // add a menu entry
                 QAction *action =
-                        ui->noteFoldersMenu->addAction(noteFolder.getName());
-                action->setData(noteFolder.getId());
+                        ui->noteFoldersMenu->addAction(name);
+                action->setData(folderId);
                 action->setToolTip(noteFolder.getLocalPath());
                 action->setStatusTip(noteFolder.getLocalPath());
+                action->setObjectName(
+                        "noteFolder-" + QString::number(folderId));
+                action->setIcon(QIcon::fromTheme(
+                        "folder",
+                        QIcon(":icons/breeze-qownnotes/16x16/folder.svg")));
 
                 if (noteFolder.isCurrent()) {
                     QFont font = action->font();
@@ -1391,7 +1399,7 @@ void MainWindow::loadNoteFolderListMenu() {
 
                 // add a parameter to changeNoteFolder with the signal mapper
                 recentNoteFolderSignalMapper->setMapping(
-                        action, noteFolder.getId());
+                        action, folderId);
 
                 index++;
             }
@@ -5650,7 +5658,7 @@ void MainWindow::reloadTagTree() {
         untaggedItem->setToolTip(0, toolTip);
         untaggedItem->setToolTip(1, toolTip);
         untaggedItem->setData(0, Qt::UserRole, Tag::AllUntaggedNotesId);
-        untaggedItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+        untaggedItem->setFlags(untaggedItem->flags() & ~Qt::ItemIsSelectable);
         untaggedItem->setIcon(0, QIcon::fromTheme(
                 "edit-copy",
                 QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));

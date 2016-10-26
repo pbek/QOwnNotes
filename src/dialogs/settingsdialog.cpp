@@ -110,9 +110,16 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->toolbarEditor->setTargetWindow(MainWindow::instance());
     ui->toolbarEditor->setCustomToolbarRemovalOnly(true);
 
-    QStringList disabledToolbarNames;
-    disabledToolbarNames << "windowToolbar" << "customActionsToolbar";
+    QStringList disabledToolbarNames(
+            QStringList() << "windowToolbar" << "customActionsToolbar");
     ui->toolbarEditor->setDisabledToolbarNames(disabledToolbarNames);
+
+    QStringList disabledMenuNames(QStringList() << "noteFoldersMenu");
+    ui->toolbarEditor->setDisabledMenuNames(disabledMenuNames);
+
+//    QStringList disabledMenuActionNames(QStringList() << "");
+//    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
+
     ui->toolbarEditor->updateBars();
 }
 

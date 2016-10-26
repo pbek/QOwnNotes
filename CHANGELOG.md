@@ -9,6 +9,9 @@
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
 - tried to fix a database folder problem under Windows
   (for [Issue #373](https://github.com/pbek/QOwnNotes/issues/373))
+- the note folder menu and several menu actions are now disabled in the
+  toolbar editor because they will not work in the toolbars
+  (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
 - you can now choose to scale images down when inserted into notes in
   the general settings
   (for [Issue #268](https://github.com/pbek/QOwnNotes/issues/268))
