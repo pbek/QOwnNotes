@@ -201,6 +201,8 @@ public:
 
     static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true);
 
+    static bool scaleDownImageFileIfNeeded(QFile &file);
+
 protected:
     int id;
     QString name;

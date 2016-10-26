@@ -9,6 +9,10 @@
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
 - tried to fix a database folder problem under Windows
   (for [Issue #373](https://github.com/pbek/QOwnNotes/issues/373))
+- you can now choose to scale images down when inserted into notes in
+  the general settings
+  (for [Issue #268](https://github.com/pbek/QOwnNotes/issues/268))
+    - you can set a maximum height and width of the images
 
 ## 16.10.8
 - tried to fix some logging problems that could cause a crash when the

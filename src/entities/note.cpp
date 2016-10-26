@@ -1934,8 +1934,13 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine) {
         QString newFileName =
                 QString::number(qrand()) + "." + fileInfo.suffix();
 
+        QString newFilePath = mediaDir.path() + QDir::separator() + newFileName;
+
         // copy the file the the media folder
-        file->copy(mediaDir.path() + QDir::separator() + newFileName);
+        file->copy(newFilePath);
+
+        QFile newFile(newFilePath);
+        scaleDownImageFileIfNeeded(newFile);
 
         // return the image link
         // we add a "\n" in the end so that hoedown recognizes multiple images
@@ -1944,6 +1949,43 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine) {
     }
 
     return "";
+}
+
+/**
+ * Scales down an image file if needed
+ * The image file will be overwritten in the process
+ *
+ * @param file
+ * @return
+ */
+bool Note::scaleDownImageFileIfNeeded(QFile &file) {
+    QSettings settings;
+
+    // load image scaling settings
+    bool scaleImageDown = settings.value("imageScaleDown", false).toBool();
+
+    if (!scaleImageDown) {
+        return true;
+    }
+
+    QImage image;
+
+    if (!image.load(file.fileName())) {
+        return false;
+    }
+
+    int width = settings.value("imageScaleDownMaximumWidth", 1024).toInt();
+    int height = settings.value("imageScaleDownMaximumHeight", 1024).toInt();
+
+    QPixmap pixmap;
+    pixmap = pixmap.fromImage(image.scaled(
+            width, height, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
+    file.open(QIODevice::WriteOnly);
+    pixmap.save(&file);
+    file.close();
+
+    return true;
 }
 
 /**

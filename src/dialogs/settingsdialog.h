@@ -188,6 +188,8 @@ private slots:
 
     void on_resetToolbarPushButton_clicked();
 
+    void on_imageScaleDownCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

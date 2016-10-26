@@ -434,6 +434,14 @@ void SettingsDialog::storeSettings() {
 
     // store the enabled state of the scripts
     storeScriptListEnabledState();
+
+    // store image scaling settings
+    settings.setValue("imageScaleDown",
+                      ui->imageScaleDownCheckBox->isChecked());
+    settings.setValue("imageScaleDownMaximumHeight",
+                      ui->maximumImageHeightSpinBox->value());
+    settings.setValue("imageScaleDownMaximumWidth",
+                      ui->maximumImageWidthSpinBox->value());
 }
 
 /**
@@ -643,6 +651,15 @@ void SettingsDialog::readSettings() {
 
     // load the shortcut settings
     loadShortcutSettings();
+
+    // load image scaling settings
+    bool scaleImageDown = settings.value("imageScaleDown", false).toBool();
+    ui->maximumImageHeightSpinBox->setValue(settings.value(
+            "imageScaleDownMaximumHeight", 1024).toInt());
+    ui->maximumImageWidthSpinBox->setValue(settings.value(
+            "imageScaleDownMaximumWidth", 1024).toInt());
+    ui->imageScaleDownCheckBox->setChecked(scaleImageDown);
+    ui->imageScalingFrame->setVisible(scaleImageDown);
 }
 
 /**
@@ -2415,4 +2432,13 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
 
         qApp->quit();
     }
+}
+
+/**
+ * Toggles the visibility of the image scaling frame
+ * 
+ * @param checked
+ */
+void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
+    ui->imageScalingFrame->setVisible(checked);
 }
