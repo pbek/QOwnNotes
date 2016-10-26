@@ -40,5 +40,6 @@ namespace Utils {
         QByteArray startSynchronousProcess(
                 QString executablePath, QStringList parameters,
                 QByteArray data);
+        QList<QObject *> getParents(QObject *object);
     }
 }

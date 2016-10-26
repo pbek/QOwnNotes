@@ -1,6 +1,12 @@
 # QOwnNotes Changelog
 
 ## 16.10.9
+- you can now choose to **scale images down** when inserted into notes
+  in the general settings to save disk space
+  (for [Issue #268](https://github.com/pbek/QOwnNotes/issues/268))
+    - you can set a maximum height and width of the images
+- you can now **search for text** in the **settings dialog** to find the
+  page you need more easily
 - reloading the script engine in the script settings now also stores the
   enabled state of the script engine 
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
@@ -12,10 +18,6 @@
 - the note folder menu and several menu actions are now disabled in the
   toolbar editor because they will not work in the toolbars
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
-- you can now choose to scale images down when inserted into notes in
-  the general settings
-  (for [Issue #268](https://github.com/pbek/QOwnNotes/issues/268))
-    - you can set a maximum height and width of the images
 
 ## 16.10.8
 - tried to fix some logging problems that could cause a crash when the

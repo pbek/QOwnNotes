@@ -2449,3 +2449,117 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
 void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
     ui->imageScalingFrame->setVisible(checked);
 }
+
+/**
+ * Searches for text in the whole settings dialog and filters the settings
+ * tree widget
+ *
+ * @param arg1
+ */
+void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
+    QList<QTreeWidgetItem*> allItems = ui->settingsTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    // search text if at least one character was entered
+    if (arg1.count() >= 1) {
+        QList<int> pageIndexList;
+
+        // search in the tree widget items themselves
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                if (item->text(0).contains(arg1, Qt::CaseInsensitive)) {
+                    int pageIndex = item->whatsThis(0).toInt();
+
+                    if (!pageIndexList.contains(pageIndex)) {
+                        pageIndexList << pageIndex;
+                    }
+                }
+            }
+
+        // search in all labels
+        Q_FOREACH(QLabel *widget, findChildren<QLabel *>()) {
+                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                    addToSearchIndexList(widget, pageIndexList);
+                }
+            }
+
+        // search in all push buttons
+        Q_FOREACH(QPushButton *widget, findChildren<QPushButton *>()) {
+                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                    addToSearchIndexList(widget, pageIndexList);
+                }
+            }
+
+        // search in all checkboxes
+        Q_FOREACH(QCheckBox *widget, findChildren<QCheckBox *>()) {
+                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                    addToSearchIndexList(widget, pageIndexList);
+                }
+            }
+
+        // search in all radio buttons
+        Q_FOREACH(QRadioButton *widget, findChildren<QRadioButton *>()) {
+                if (widget->text().contains(arg1, Qt::CaseInsensitive)) {
+                    addToSearchIndexList(widget, pageIndexList);
+                }
+            }
+
+        // search in all group boxes
+        Q_FOREACH(QGroupBox *widget, findChildren<QGroupBox *>()) {
+                if (widget->title().contains(arg1, Qt::CaseInsensitive)) {
+                    addToSearchIndexList(widget, pageIndexList);
+                }
+            }
+
+        // show and hide items according of if index was found in pageIndexList
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                // get stored index of list widget item
+                int pageIndex = item->whatsThis(0).toInt();
+                item->setHidden(!pageIndexList.contains(pageIndex));
+            }
+    } else {
+        // show all items otherwise
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                item->setHidden(false);
+            }
+    }
+}
+
+/**
+ * Adds the page index of a widget to the pageIndexList if not already added
+ *
+ * @param widget
+ * @param pageIndexList
+ */
+void SettingsDialog::addToSearchIndexList(QWidget *widget,
+                                          QList<int> &pageIndexList) {
+    // get the page id of the widget
+    int pageIndex = findSettingsPageIndexOfWidget(widget);
+
+    // add page id if not already added
+    if (!pageIndexList.contains(pageIndex)) {
+        pageIndexList << pageIndex;
+    }
+}
+
+/**
+ * Finds the settings page index of a widget
+ * 
+ * @param widget
+ * @return
+ */
+int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
+    QWidget *parent = qobject_cast<QWidget*>(widget->parent());
+
+    if (parent == Q_NULLPTR) {
+        return -1;
+    }
+
+    // check if the parent is our settings stacked widget
+    if (parent->objectName() == "settingsStackedWidget") {
+        // get the index of the object in the settings stacked widget
+        return ui->settingsStackedWidget->indexOf(widget);
+    }
+
+    // search for the page id in the parent
+    return findSettingsPageIndexOfWidget(parent);
+}

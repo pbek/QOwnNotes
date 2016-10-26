@@ -438,3 +438,21 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
 
     return text;
 }
+
+/**
+ * Returns a list of all parents until the top
+ *
+ * @param object
+ * @return
+ */
+QList<QObject *> Utils::Misc::getParents(QObject *object) {
+    QList<QObject *> list;
+    QObject *parent = object->parent();
+
+    if (parent != Q_NULLPTR) {
+        list = getParents(parent);
+        list << parent;
+    }
+
+    return list;
+}

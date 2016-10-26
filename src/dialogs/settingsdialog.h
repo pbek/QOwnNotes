@@ -190,6 +190,8 @@ private slots:
 
     void on_imageScaleDownCheckBox_toggled(bool checked);
 
+    void on_searchLineEdit_textChanged(const QString &arg1);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -265,6 +267,10 @@ private:
     void reloadCalendarList();
 
     void initPortableModePage();
+
+    int findSettingsPageIndexOfWidget(QWidget *widget);
+
+    void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList);
 };
 
 #endif // SETTINGSDIALOG_H

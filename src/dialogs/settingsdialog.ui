@@ -76,6 +76,27 @@
           <number>0</number>
          </property>
          <item>
+          <widget class="QLineEdit" name="searchLineEdit">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	border: none;
+	padding: 2px 5px 2px 27px;
+	background-image: url(:/images/search-notes.svg);
+	background-repeat: no-repeat;
+	background-position: center left;
+	margin-right: 0px;
+}
+</string>
+           </property>
+           <property name="placeholderText">
+            <string>Find setting</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
           <widget class="QTreeWidget" name="settingsTreeWidget">
            <property name="minimumSize">
             <size>
@@ -292,7 +313,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
