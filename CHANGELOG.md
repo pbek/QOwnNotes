@@ -18,6 +18,9 @@
 - the note folder menu and several menu actions are now disabled in the
   toolbar editor because they will not work in the toolbars
   (for [Issue #371](https://github.com/pbek/QOwnNotes/issues/368))
+- added more Russian, Spanish, German, French, Italian, Dutch, Hungarian
+  and Japanese translation (thank you frostyland, richarson, bigant,
+  lepascalou, mlocati, Fabijenna and piyo)
 
 ## 16.10.8
 - tried to fix some logging problems that could cause a crash when the
