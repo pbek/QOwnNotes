@@ -295,6 +295,7 @@ void LogWidget::on_clearButton_clicked()
  * @param pos
  */
 void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
+#ifndef INTEGRATION_TESTS
     QPoint globalPos = ui->logTextEdit->mapToGlobal(pos);
     QMenu *menu = ui->logTextEdit->createStandardContextMenu();
 
@@ -313,4 +314,5 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
             on_clearButton_clicked();
         }
     }
+#endif
 }
