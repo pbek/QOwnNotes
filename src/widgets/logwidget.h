@@ -50,6 +50,8 @@ private slots:
 
     void on_clearButton_clicked();
 
+    void on_logTextEdit_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::LogWidget *ui;
 };

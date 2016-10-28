@@ -38,6 +38,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 //    resize(1, 1);
 
     ui->connectionTestLabel->hide();
+    ui->darkModeInfoLabel->hide();
     ui->connectButton->setDefault(true);
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
@@ -2134,6 +2135,7 @@ void SettingsDialog::on_darkModeCheckBox_toggled() {
     bool checked = ui->darkModeCheckBox->isChecked();
 
     ui->darkModeColorsCheckBox->setEnabled(!checked);
+    ui->darkModeInfoLabel->setVisible(checked);
 
     if (checked) {
         ui->darkModeColorsCheckBox->setChecked(true);
@@ -2188,7 +2190,8 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
                 // search in the shortcut text
                 if (keyWidget != Q_NULLPTR) {
                     QKeySequence keySequence = keyWidget->keySequence();
-                    foundKeySequence = keySequence.toString().contains(arg1);
+                    foundKeySequence = keySequence.toString().contains(
+                            arg1, Qt::CaseInsensitive);
                 }
 
                 item->setHidden(!foundItems.contains(item) &&

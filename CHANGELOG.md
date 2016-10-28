@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.10.10
+- the controls in the log panel are now hidden by default and can be
+  accessed via a context menu
+    - you can also clear the log from the context menu
+- added an information text about color schemas to the dark mode settings
+- improved the search for key sequences in the shortcut settings
+
 ## 16.10.9
 - you can now choose to **scale images down** when inserted into notes
   in the general settings to save disk space

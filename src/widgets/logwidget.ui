@@ -32,8 +32,14 @@
    </property>
    <item row="0" column="0" colspan="3">
     <widget class="QOwnNotesMarkdownTextEdit" name="logTextEdit">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
      <property name="styleSheet">
       <string notr="true">/*QTextEdit { background-color: rgb(255, 255, 255) }*/</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="readOnly">
       <bool>true</bool>

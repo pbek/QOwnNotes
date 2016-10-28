@@ -1,6 +1,7 @@
 #include <QDateTime>
 #include <QSettings>
 #include <QScrollBar>
+#include <QMenu>
 #include <QDebug>
 #include "logwidget.h"
 
@@ -16,6 +17,7 @@ LogWidget::LogWidget(QWidget *parent) :
 {
 #ifndef INTEGRATION_TESTS
     ui->setupUi(this);
+    ui->buttonFrame->hide();
 
     // init the log text edit search frame
     ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame);
@@ -285,4 +287,30 @@ void LogWidget::on_clearButton_clicked()
 #ifndef INTEGRATION_TESTS
     ui->logTextEdit->clear();
 #endif
+}
+
+/**
+ * Shows a context menu with more options
+ *
+ * @param pos
+ */
+void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
+    QPoint globalPos = ui->logTextEdit->mapToGlobal(pos);
+    QMenu *menu = ui->logTextEdit->createStandardContextMenu();
+
+    menu->addSeparator();
+
+    QString actionText = ui->buttonFrame->isHidden() ?
+                         tr("Show options") : tr("Hide options");
+    QAction *toggleOptionsAction = menu->addAction(actionText);
+    QAction *clearLogAction = menu->addAction(tr("Clear log"));
+
+    QAction *selectedItem = menu->exec(globalPos);
+    if (selectedItem) {
+        if (selectedItem == toggleOptionsAction) {
+            ui->buttonFrame->setVisible(ui->buttonFrame->isHidden());
+        } else if (selectedItem == clearLogAction) {
+            on_clearButton_clicked();
+        }
+    }
 }

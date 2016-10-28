@@ -313,7 +313,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>0</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2007,6 +2007,16 @@
                      <string>Dark mode</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_24">
+                     <item row="2" column="0">
+                      <widget class="QCheckBox" name="darkModeTrayIconCheckBox">
+                       <property name="toolTip">
+                        <string>You may need to restart the application to let these changes take effect</string>
+                       </property>
+                       <property name="text">
+                        <string>Enable dark mode tray icon</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item row="1" column="0">
                       <widget class="QCheckBox" name="darkModeColorsCheckBox">
                        <property name="toolTip">
@@ -2027,13 +2037,13 @@
                        </property>
                       </widget>
                      </item>
-                     <item row="2" column="0">
-                      <widget class="QCheckBox" name="darkModeTrayIconCheckBox">
-                       <property name="toolTip">
-                        <string>You may need to restart the application to let these changes take effect</string>
-                       </property>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="darkModeInfoLabel">
                        <property name="text">
-                        <string>Enable dark mode tray icon</string>
+                        <string>You might also want to choose an other editor color schema in the editor settings in dark mode.</string>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
                        </property>
                       </widget>
                      </item>
