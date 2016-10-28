@@ -6,6 +6,10 @@
     - you can also clear the log from the context menu
 - added an information text about color schemas to the dark mode settings
 - improved the search for key sequences in the shortcut settings
+- the todo dialog is not modal any more and doesn't hinder you from 
+  using the application main window 
+  (for [Issue #275](https://github.com/pbek/QOwnNotes/issues/275))
+    - you can also open as many todo dialogs as you want now
 
 ## 16.10.9
 - you can now choose to **scale images down** when inserted into notes

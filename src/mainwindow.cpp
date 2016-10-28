@@ -3973,7 +3973,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
     }
 
     TodoDialog *dialog = new TodoDialog(this, taskUid, this);
-    dialog->exec();
+    dialog->show();
 
     // generate the system tray context menu to show modified tasks
     generateSystemTrayContextMenu();
