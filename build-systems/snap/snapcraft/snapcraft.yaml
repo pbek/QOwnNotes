@@ -13,6 +13,7 @@ apps:
     command: desktop-launch ${SNAP}/usr/bin/QOwnNotes --snap
     plugs:
       - x11
+      - unity7
       - network
       - network-bind
       - home
