@@ -18,7 +18,7 @@
 BRANCH=develop
 #BRANCH=master
 
-PROJECT_PATH="/tmp/QOwnNotes-launchpad-snap-$$"
+PROJECT_PATH="/tmp/QOwnNotes-local-snap-$$"
 CUR_DIR=$(pwd)
 
 
@@ -34,7 +34,7 @@ cd $PROJECT_PATH
 echo "Project path: $PROJECT_PATH"
 
 # checkout the source code
-git clone --depth=5 git@github.com:pbek/QOwnNotes.git QOwnNotes -b $BRANCH
+git clone --depth=5 https://github.com/pbek/QOwnNotes.git QOwnNotes -b $BRANCH
 cd QOwnNotes
 
 if [ -z $QOWNNOTES_VERSION ]; then
