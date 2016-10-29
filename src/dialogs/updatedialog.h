@@ -3,6 +3,7 @@
 
 #include <QAbstractButton>
 #include <QDialog>
+#include <QNetworkAccessManager>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -22,21 +23,31 @@ public:
     static bool isUpdateDialogOpen();
     int exec();
 
+public slots:
+    void show();
+
 private slots:
     void dialogButtonClicked(QAbstractButton *button);
     void setIsUpdateDialogOpen(bool isOpen);
+    void releaseDownloadProgress(qint64 bytesReceived, qint64 bytesTotal);
+    void slotReplyFinished(QNetworkReply *reply);
 
 private:
     Ui::UpdateDialog *ui;
     QString releaseUrl;
     QString releaseVersionString;
+    QNetworkAccessManager *_networkManager;
+    QPushButton *_updateButton;
 
     enum ButtonRole {
         Unset,  // nothing was selected
+        Update,
         Download,
         Skip,
         Cancel
     };
+
+    void closeEvent(QCloseEvent *event);
 };
 
 #endif // UPDATEDIALOG_H

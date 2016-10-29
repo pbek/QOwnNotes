@@ -20,7 +20,8 @@ UpdateService::UpdateService(QObject *parent) :
         QObject(parent) {
 }
 
-void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMode) {
+void UpdateService::checkForUpdates(MainWindow *mainWindow,
+                                    UpdateMode updateMode) {
     this->mainWindow = mainWindow;
     this->updateMode = updateMode;
 
@@ -49,6 +50,9 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow, UpdateMode updateMod
     QUrlQuery q;
     q.addQueryItem("b", QString::number(BUILD));
     q.addQueryItem("v", QString(VERSION));
+    // for debugging
+    // TODO(pbek): remove again
+    q.addQueryItem("v", "16.10.3");
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));
@@ -174,7 +178,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
                     0, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
-            _updateDialog->exec();
+            _updateDialog->show();
         }
     } else {
         mainWindow->hideUpdateAvailableButton();
