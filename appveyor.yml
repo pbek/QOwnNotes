@@ -14,7 +14,7 @@ before_build:
 
 build_script:
   # list qt versions
-  - dir C:\Qt
+  - dir C:\Qt\5.7
   # using a header file without MemoryBarrier, that causes the build to fail
   - copy appveyor\qopenglversionfunctions.h %QTDIR%\include\QtGui
   # workaround for MinGW bug
