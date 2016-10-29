@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.10.11
+- QOwnNotes is now built with Qt 5.7 under OS X and Windows instead of Qt 5.5
+
 ## 16.10.10
 - the controls in the log panel are now hidden by default and can be
   accessed via a context menu
