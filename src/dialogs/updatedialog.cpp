@@ -180,8 +180,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     ui->downloadProgressBar->hide();
 
     qDebug() << "Reply from " << reply->url().path();
-    QByteArray arr = reply->readAll();
-    QString data = QString(arr);
+    QByteArray data = reply->readAll();
+
 //    qDebug() << __func__ << " - 'data': " << data;
      qDebug() << __func__ << " - 'data.size': " << data.size();
 
@@ -207,8 +207,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
         if (file->open()) {
             // file->fileName() only holds a value after file->open()
             qDebug() << __func__ << " - 'file': " << file->fileName();
-            QTextStream out(file);
-            out << data;
+            file->write(data);
             file->flush();
             file->close();
 
