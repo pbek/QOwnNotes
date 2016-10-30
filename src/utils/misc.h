@@ -39,7 +39,7 @@ namespace Utils {
         QString htmlToMarkdown(QString text);
         QByteArray startSynchronousProcess(
                 QString executablePath, QStringList parameters,
-                QByteArray data);
+                QByteArray data = QByteArray());
         QList<QObject *> getParents(QObject *object);
     }
 }

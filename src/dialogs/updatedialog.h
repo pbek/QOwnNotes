@@ -4,6 +4,7 @@
 #include <QAbstractButton>
 #include <QDialog>
 #include <QNetworkAccessManager>
+#include <QFile>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -48,6 +49,10 @@ private:
     };
 
     void closeEvent(QCloseEvent *event);
+
+    bool initializeUpdateProcess(QFile *file);
+
+    bool initializeWindowsUpdateProcess(QFile *file);
 };
 
 #endif // UPDATEDIALOG_H

@@ -30,6 +30,8 @@ build_script:
   - copy ..\appveyor\OpenSSL\libeay32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\libssl32.dll ..\%RELEASE_PATH%
   - copy ..\appveyor\OpenSSL\ssleay32.dll ..\%RELEASE_PATH%
+  # copy updater unzip script
+  - copy ..\appveyor\unzip.vbs ..\%RELEASE_PATH%
   # copy portable mode launcher to the release path
   - copy ..\appveyor\QOwnNotesPortable.bat ..\%RELEASE_PATH%
   # copy translation files

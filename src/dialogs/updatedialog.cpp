@@ -196,21 +196,22 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
         // we want to keep the file to be used in the update process
         file->setAutoRemove(false);
 
-        // TODO(pbek): this doesn't show the file path!
-        qDebug() << __func__ << " - 'file': " << file->fileName();
-
         // store file
         if (file->open()) {
+            // file->fileName() only holds a value after file->open()
+            qDebug() << __func__ << " - 'file': " << file->fileName();
             QTextStream out(file);
             out << data;
             file->flush();
             file->close();
+
+            // initialize the update process
+            initializeUpdateProcess(file);
         } else {
             QMessageBox::critical(
-                    0, tr("Could not store to file"),
-                    tr("Could not store to file:\n%1\n\n%2\n\nIs your "
-                               "temporary path writable?")
-                            .arg(file->fileName(), file->errorString()));
+                    0, tr("Could not store file"),
+                    tr("Could not store downloaded file:\n%1")
+                            .arg(file->errorString()));
         }
     } else {
         QMessageBox::critical(
@@ -220,6 +221,56 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
         qWarning() << tr("network error: %1").arg(reply->errorString());
         _updateButton->setDisabled(false);
     }
+}
+
+/**
+ * Initializes the update process
+ */
+bool UpdateDialog::initializeUpdateProcess(QFile *file) {
+#if defined(Q_OS_MAC)
+    // TODO(pbek): implement OS X updater
+#elif defined(Q_OS_WIN)
+    initializeWindowsUpdateProcess(file);
+#endif
+}
+
+/**
+ * Initializes the Windows update process
+ */
+bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
+    QString filePath = file->fileName();
+
+    // get the folder path from the file path
+    int lastPoint = file->fileName().lastIndexOf(".");
+    QString folderPath = filePath.left(lastPoint);
+
+    // create a new folder
+    QDir dir;
+    if (!dir.mkpath(folderPath)) {
+        QMessageBox::critical(0, tr("Error"),
+                              tr("Couldn't create folder: %1").arg(folderPath));
+        return false;
+    }
+
+    QStringList parameters;
+    parameters << "//B";
+    // TODO(pbek): for testing
+    parameters << "C:\\Users\\omega\\Downloads\\unzip.vbs";
+//    parameters << QCoreApplication::applicationDirPath() + "\\unzip.vbs";
+    parameters << filePath << folderPath;
+
+    qDebug() << __func__ << " - ''unzip.vbs: " <<
+        QCoreApplication::applicationDirPath() + "\\unzip.vbs";
+
+    qDebug() << __func__ << " - 'parameters': " << parameters;
+
+    Utils::Misc::startSynchronousProcess("cscript", parameters);
+
+//    Utils::Misc::startDetachedProcess(
+//            folderPath + Utils::Misc::dirSeparator() + "QOwnNotes.exe"
+//    )
+
+    return true;
 }
 
 /**
