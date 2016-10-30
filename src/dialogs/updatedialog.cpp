@@ -185,48 +185,63 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
 //    qDebug() << __func__ << " - 'data': " << data;
      qDebug() << __func__ << " - 'data.size': " << data.size();
 
-    if (reply->error() == QNetworkReply::NoError) {
-#if defined(Q_OS_MAC)
-        QString suffix = "dmg";
-#elif defined(Q_OS_WIN)
-        QString suffix = "zip";
-#elif defined(Q_OS_LINUX)
-        QString suffix = "deb";
-#else
-        QString suffix = "download";
-#endif
-
-        QTemporaryFile *file = new QTemporaryFile(
-                QDir::tempPath() + QDir::separator() + "QOwnNotes-XXXXXX." +
-                suffix);
-
-        // we want to keep the file to be used in the update process
-        file->setAutoRemove(false);
-
-        // store file
-        if (file->open()) {
-            // file->fileName() only holds a value after file->open()
-            qDebug() << __func__ << " - 'file': " << file->fileName();
-            file->write(data);
-            file->flush();
-            file->close();
-
-            // initialize the update process
-            initializeUpdateProcess(file);
-        } else {
-            QMessageBox::critical(
-                    0, tr("Could not store file"),
-                    tr("Could not store downloaded file:\n%1")
-                            .arg(file->errorString()));
-        }
-    } else {
+    if (reply->error() != QNetworkReply::NoError) {
         QMessageBox::critical(
                 0, tr("Download error"),
                 tr("Error while downloading:\n%1").arg(reply->errorString()));
 
         qWarning() << tr("network error: %1").arg(reply->errorString());
         _updateButton->setDisabled(false);
+        return;
     }
+#if defined(Q_OS_MAC)
+    QString suffix = "dmg";
+#elif defined(Q_OS_WIN)
+    QString suffix = "zip";
+#elif defined(Q_OS_LINUX)
+    QString suffix = "deb";
+#else
+    QString suffix = "download";
+#endif
+
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + "/QOwnNotes-XXXXXX." + suffix);
+
+    // we want to keep the file to be used in the update process
+    tempFile->setAutoRemove(false);
+
+    // get a temporary file
+    if (!tempFile->open()) {
+        QMessageBox::critical(
+                    0, tr("File error"),
+                    tr("Could not open temporary file:\n%1")
+                    .arg(tempFile->errorString()));
+        return;
+    }
+
+    // file->fileName() only holds a value after file->open()
+    QString filePath = tempFile->fileName();
+    tempFile->close();
+    destroy(tempFile);
+
+    // unfortunately if you write to a QTemporaryFile under Windows the data
+    // only gets written when the application quits, so we need a QFile to write to
+    QFile *file = new QFile(filePath);
+
+    if (!file->open(QIODevice::WriteOnly)) {
+        QMessageBox::critical(
+                0, tr("File error"),
+                tr("Could not store downloaded file:\n%1")
+                        .arg(file->errorString()));
+        return;
+    }
+
+    // store file
+    file->write(data);
+    file->flush();
+    file->close();
+
+    initializeUpdateProcess(file);
 }
 
 /**
@@ -262,8 +277,9 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
     parameters << "//B";
     // TODO(pbek): for testing
     parameters << "C:\\Users\\omega\\Downloads\\unzip.vbs";
-//    parameters << QCoreApplication::applicationDirPath() + "\\unzip.vbs";
-    parameters << filePath << folderPath;
+//    parameters << QDir::toNativeSeparators(QCoreApplication::applicationDirPath() + "/unzip.vbs");
+    parameters << QDir::toNativeSeparators(filePath)
+               << QDir::toNativeSeparators(folderPath);
 
     qDebug() << __func__ << " - unzip.vbs: " <<
         QCoreApplication::applicationDirPath() + "\\unzip.vbs";
@@ -271,10 +287,9 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // uncompress the zip file
-    Utils::Misc::startSynchronousProcess("cscript", parameters);
+    Utils::Misc::startSynchronousProcess("C:\\Windows\\System32\\cscript.exe", parameters);
 
-    QString updaterPath = folderPath + Utils::Misc::dirSeparator() +
-            "QOwnNotes.exe";
+    QString updaterPath = folderPath + "/QOwnNotes.exe";
 
     // check if updater executable exists
     QFile updaterFile(updaterPath);

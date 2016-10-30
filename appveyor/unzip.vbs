@@ -6,19 +6,16 @@
 
 Set argObj = WScript.Arguments
 
+If (Wscript.Arguments.Count < 2) Then
+    WScript.Echo ( "Please enter both parameters!" )
+    WScript.Quit
+End If
+
 ' The location of the zip file.
-If (Wscript.Arguments.Count > 0) Then
- zipFile = argObj(0)
-Else
- zipFile = ""
-End if
+zipFile = argObj(0)
 
 ' The folder the contents should be extracted to.
-If (Wscript.Arguments.Count > 1) Then
- extractTo = argObj(1)
-Else
- extractTo = ""
-End if
+extractTo = argObj(1)
 
 'WScript.Echo ( "zipFile: " & zipFile )
 'WScript.Echo ( "extractTo: " & extractTo )
