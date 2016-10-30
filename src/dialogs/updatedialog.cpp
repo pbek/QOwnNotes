@@ -125,6 +125,11 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
         case Update:
         {
             qDebug() << __func__ << " - 'releaseUrl': " << releaseUrl;
+
+            // TODO(pbek): url for debugging
+            //releaseUrl = "http://downloads.sourceforge.net/project/qownnotes/test/QOwnNotes.zip";
+            releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/x_QOwnNotes.zip";
+
             ui->downloadProgressBar->show();
             _updateButton->setDisabled(true);
 
@@ -176,7 +181,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     qDebug() << "Reply from " << reply->url().path();
     QByteArray arr = reply->readAll();
     QString data = QString(arr);
-    qDebug() << __func__ << " - 'data': " << data;
+//    qDebug() << __func__ << " - 'data': " << data;
+     qDebug() << __func__ << " - 'data.size': " << data.size();
 
     if (reply->error() == QNetworkReply::NoError) {
 #if defined(Q_OS_MAC)
@@ -259,7 +265,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
 //    parameters << QCoreApplication::applicationDirPath() + "\\unzip.vbs";
     parameters << filePath << folderPath;
 
-    qDebug() << __func__ << " - ''unzip.vbs: " <<
+    qDebug() << __func__ << " - unzip.vbs: " <<
         QCoreApplication::applicationDirPath() + "\\unzip.vbs";
 
     qDebug() << __func__ << " - 'parameters': " << parameters;
