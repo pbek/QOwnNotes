@@ -11,6 +11,7 @@ description: |
 apps:
   qownnotes:
     command: desktop-launch ${SNAP}/usr/bin/QOwnNotes --snap
+    # see https://developer.ubuntu.com/en/snappy/guides/interfaces
     plugs:
       - x11
       - unity7
