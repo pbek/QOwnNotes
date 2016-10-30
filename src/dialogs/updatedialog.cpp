@@ -128,7 +128,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 
             // TODO(pbek): url for debugging
             //releaseUrl = "http://downloads.sourceforge.net/project/qownnotes/test/QOwnNotes.zip";
-            releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/x_QOwnNotes.zip";
+            //releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/x_QOwnNotes.zip";
+            //releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/QOwnNotes.zip";
 
             ui->downloadProgressBar->show();
             _updateButton->setDisabled(true);
@@ -270,12 +271,40 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
 
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
+    // uncompress the zip file
     Utils::Misc::startSynchronousProcess("cscript", parameters);
 
-//    Utils::Misc::startDetachedProcess(
-//            folderPath + Utils::Misc::dirSeparator() + "QOwnNotes.exe"
-//    )
+    QString updaterPath = folderPath + Utils::Misc::dirSeparator() +
+            "QOwnNotes.exe";
 
+    // check if updater executable exists
+    QFile updaterFile(updaterPath);
+    if (!updaterFile.exists()) {
+        QMessageBox::critical(
+                0, tr("Error"),
+                tr("Couldn't find updater executable: %1").arg(updaterPath));
+        return false;
+    }
+
+    if (QMessageBox::information(
+            this,
+            tr("Proceed with update"),
+            tr("The download is now finished. Do you want to update and "
+                       "restart QOwnNotes?"),
+            tr("&Update and restart"), tr("&Cancel"), QString::null,
+            0, 1) == 1) {
+        return false;
+    }
+
+    parameters.clear();
+    parameters << "--update" << filePath
+               << QCoreApplication::applicationDirPath();
+    qDebug() << __func__ << " - 'parameters': " << parameters;
+
+    // start QOwnNotes as updater
+    Utils::Misc::startDetachedProcess(updaterPath, parameters);
+
+    qApp->quit();
     return true;
 }
 
