@@ -50,9 +50,9 @@ private:
 
     void closeEvent(QCloseEvent *event);
 
-    bool initializeUpdateProcess(QFile *file);
+    bool initializeUpdateProcess(QString filePath);
 
-    bool initializeWindowsUpdateProcess(QFile *file);
+    bool initializeWindowsUpdateProcess(QString filePath);
 };
 
 #endif // UPDATEDIALOG_H

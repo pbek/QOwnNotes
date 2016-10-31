@@ -222,47 +222,57 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     // file->fileName() only holds a value after file->open()
     QString filePath = tempFile->fileName();
     tempFile->close();
+    // we need to delete the object so the later written file
+    // can be read again while the app is open
+    tempFile->deleteLater();
     destroy(tempFile);
 
     // unfortunately if you write to a QTemporaryFile under Windows the data
     // only gets written when the application quits, so we need a QFile to write to
-    QFile *file = new QFile(filePath);
+    QFile file(filePath);
 
-    if (!file->open(QIODevice::WriteOnly)) {
+    if (!file.open(QIODevice::WriteOnly)) {
         QMessageBox::critical(
                 0, tr("File error"),
                 tr("Could not store downloaded file:\n%1")
-                        .arg(file->errorString()));
+                        .arg(file.errorString()));
         return;
     }
 
-    // store file
-    file->write(data);
-    file->flush();
-    file->close();
+    // store the data in the file
+    file.write(data);
+    file.close();
+    // we need to delete the object so the written file
+    // can be read again while the app is open
+    file.deleteLater();
 
-    initializeUpdateProcess(file);
+    // this is needed so deleteLater() really deletes the object
+    // and the downloaded file can be accessed
+    QCoreApplication::processEvents();
+
+//    destroy(file);
+
+//    QFile updateFile(filePath);
+    initializeUpdateProcess(filePath);
 }
 
 /**
  * Initializes the update process
  */
-bool UpdateDialog::initializeUpdateProcess(QFile *file) {
+bool UpdateDialog::initializeUpdateProcess(QString filePath) {
 #if defined(Q_OS_MAC)
     // TODO(pbek): implement OS X updater
 #elif defined(Q_OS_WIN)
-    initializeWindowsUpdateProcess(file);
+    initializeWindowsUpdateProcess(filePath);
 #endif
 }
 
 /**
  * Initializes the Windows update process
  */
-bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
-    QString filePath = file->fileName();
-
+bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     // get the folder path from the file path
-    int lastPoint = file->fileName().lastIndexOf(".");
+    int lastPoint = filePath.lastIndexOf(".");
     QString folderPath = filePath.left(lastPoint);
 
     // create a new folder
@@ -274,20 +284,28 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QFile *file) {
     }
 
     QStringList parameters;
-    parameters << "//B";
+//    parameters << "//B";
     // TODO(pbek): for testing
-    parameters << "C:\\Users\\omega\\Downloads\\unzip.vbs";
-//    parameters << QDir::toNativeSeparators(QCoreApplication::applicationDirPath() + "/unzip.vbs");
-    parameters << QDir::toNativeSeparators(filePath)
-               << QDir::toNativeSeparators(folderPath);
-
-    qDebug() << __func__ << " - unzip.vbs: " <<
-        QCoreApplication::applicationDirPath() + "\\unzip.vbs";
+//    parameters << "C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.vbs";
+////    parameters << QDir::toNativeSeparators(QCoreApplication::applicationDirPath() + "/unzip.vbs");
+//    parameters << QDir::toNativeSeparators(filePath)
+//               << QDir::toNativeSeparators(folderPath);
 
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // uncompress the zip file
-    Utils::Misc::startSynchronousProcess("C:\\Windows\\System32\\cscript.exe", parameters);
+//    QString result = Utils::Misc::startSynchronousProcess("cscript.exe", parameters);
+//    qDebug() << __func__ << " - 'result': " << result;
+
+//    Utils::Misc::startDetachedProcess("cscript.exe", parameters);
+
+    parameters << QDir::toNativeSeparators(filePath)
+               << "-d"
+               << QDir::toNativeSeparators(folderPath);
+//    QString result = Utils::Misc::startSynchronousProcess("unzip.exe", parameters);
+    QString result = Utils::Misc::startSynchronousProcess("C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.exe", parameters);
+    qDebug() << __func__ << " - 'result': " << result;
+
 
     QString updaterPath = folderPath + "/QOwnNotes.exe";
 

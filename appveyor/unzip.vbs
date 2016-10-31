@@ -17,12 +17,13 @@ zipFile = argObj(0)
 ' The folder the contents should be extracted to.
 extractTo = argObj(1)
 
-'WScript.Echo ( "zipFile: " & zipFile )
-'WScript.Echo ( "extractTo: " & extractTo )
+WScript.Echo ( "zipFile: " & zipFile )
+WScript.Echo ( "extractTo: " & extractTo )
 
 ' If the extraction location does not exist create it.
 Set fso = CreateObject("Scripting.FileSystemObject")
 If NOT fso.FolderExists(extractTo) Then
+   WScript.Echo ( "creating folder" )
    fso.CreateFolder(extractTo)
 End If
 
@@ -30,5 +31,12 @@ End If
 set objShell = CreateObject("Shell.Application")
 set FilesInZip = objShell.NameSpace(zipFile).Items()
 objShell.NameSpace(extractTo).CopyHere(FilesInZip)
+
+'WScript.Echo ( "objShell: " & objShell )
+'WScript.Echo ( "FilesInZip: " & FilesInZip )
+
 Set fso = Nothing
 Set objShell = Nothing
+
+WScript.Echo ( "Done" )
+'WScript.Sleep 50000
