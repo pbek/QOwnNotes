@@ -250,9 +250,7 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     // and the downloaded file can be accessed
     QCoreApplication::processEvents();
 
-//    destroy(file);
-
-//    QFile updateFile(filePath);
+    // initialize the update process
     initializeUpdateProcess(filePath);
 }
 
@@ -284,32 +282,19 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     }
 
     QStringList parameters;
-//    parameters << "//B";
-    // TODO(pbek): for testing
-//    parameters << "C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.vbs";
-////    parameters << QDir::toNativeSeparators(QCoreApplication::applicationDirPath() + "/unzip.vbs");
-//    parameters << QDir::toNativeSeparators(filePath)
-//               << QDir::toNativeSeparators(folderPath);
-
-    qDebug() << __func__ << " - 'parameters': " << parameters;
-
-    // uncompress the zip file
-//    QString result = Utils::Misc::startSynchronousProcess("cscript.exe", parameters);
-//    qDebug() << __func__ << " - 'result': " << result;
-
-//    Utils::Misc::startDetachedProcess("cscript.exe", parameters);
-
     parameters << QDir::toNativeSeparators(filePath)
                << "-d"
                << QDir::toNativeSeparators(folderPath);
-//    QString result = Utils::Misc::startSynchronousProcess("unzip.exe", parameters);
-    QString result = Utils::Misc::startSynchronousProcess("C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.exe", parameters);
-    qDebug() << __func__ << " - 'result': " << result;
 
+    // uncompress the zip file
+    // TODO(pbek): for testing
+    QString result = Utils::Misc::startSynchronousProcess("C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.exe", parameters);
+//    QString result = Utils::Misc::startSynchronousProcess("unzip.exe", parameters);
+    qDebug() << __func__ << " - 'result': " << result;
 
     QString updaterPath = folderPath + "/QOwnNotes.exe";
 
-    // check if updater executable exists
+    // check if updater QOwnNotes executable exists
     QFile updaterFile(updaterPath);
     if (!updaterFile.exists()) {
         QMessageBox::critical(
