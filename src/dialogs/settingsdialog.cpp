@@ -29,6 +29,7 @@
 #include <QKeySequenceEdit>
 #include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 #include <helpers/toolbarcontainer.h>
+#include <QProcess>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
@@ -991,6 +992,18 @@ void SettingsDialog::outputSettings() {
                                                           value.toString());
             }
         }
+    }
+
+    // add information about the system environment
+    output += "\n## System environment\n\n";
+
+    itr = QProcess::systemEnvironment();
+    while (itr.hasNext()) {
+        QStringList textList = itr.next().split("=");
+        QString key = textList.first();
+        textList.removeFirst();
+        QString value = textList.join("=");
+        output += prepareDebugInformationLine(key, value);
     }
 
     ui->debugInfoTextEdit->setPlainText(output);
