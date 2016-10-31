@@ -315,8 +315,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     }
 
     parameters.clear();
-    parameters << "--update" << filePath
-               << QCoreApplication::applicationDirPath();
+    parameters << "--update" << QCoreApplication::applicationDirPath();
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // start QOwnNotes as updater
