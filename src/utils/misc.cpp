@@ -211,9 +211,15 @@ QString Utils::Misc::shorten(
  * @param parameters a list of parameter strings
  * @return true on success, false otherwise
  */
-bool Utils::Misc::startDetachedProcess(
-        QString executablePath, QStringList parameters) {
+bool Utils::Misc::startDetachedProcess(QString executablePath,
+                                       QStringList parameters,
+                                       QString workingDirectory) {
     QProcess process;
+
+    if (!workingDirectory.isEmpty()) {
+        // change the directory to run the app from
+        process.setWorkingDirectory(workingDirectory);
+    }
 
     // start executablePath detached with parameters
 #ifdef Q_OS_MAC

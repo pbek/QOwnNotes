@@ -92,6 +92,9 @@ p, li { white-space: pre-wrap; }
        <property name="value">
         <number>0</number>
        </property>
+       <property name="format">
+        <string>%p% downloaded</string>
+       </property>
       </widget>
      </item>
      <item>

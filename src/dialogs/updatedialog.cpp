@@ -12,6 +12,7 @@
 #include <utils/misc.h>
 #include <QDir>
 #include <QTemporaryFile>
+#include <QProcess>
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                            QString releaseUrl, QString releaseVersionString,
@@ -319,7 +320,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // start QOwnNotes as updater
-    Utils::Misc::startDetachedProcess(updaterPath, parameters);
+    Utils::Misc::startDetachedProcess(updaterPath, parameters, folderPath);
 
     qApp->quit();
     return true;
