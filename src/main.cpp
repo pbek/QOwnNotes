@@ -156,6 +156,23 @@ bool mainStartupMisc() {
     return true;
 }
 
+/**
+ * Updates an installation of QOwnNotes under Windows
+ *
+ * @param appPath the path of the application we want to update
+ */
+void startWindowsUpdate(QString appPath) {
+    QString updaterAppPath = QCoreApplication::applicationDirPath();
+    QString archivePath = updaterAppPath + ".zip";
+
+    qDebug() << __func__ << " - 'appPath': " << appPath;
+    qDebug() << __func__ << " - 'updaterAppPath': " << updaterAppPath;
+    qDebug() << __func__ << " - 'archivePath': " << archivePath;
+
+    // TODO(pbek): unzip the zip to the path of the app
+    // use a dialog to debug
+}
+
 int main(int argc, char *argv[]) {
     QString release = RELEASE;
     bool portable = false;
@@ -175,8 +192,8 @@ int main(int argc, char *argv[]) {
             }
 
             // start updater
-            QString appPath(argv[i+1])
-            startWindowsUpdate(appPath)
+            QString appPath(argv[i+1]);
+            startWindowsUpdate(appPath);
             return 0;
 #endif
         }
@@ -331,20 +348,4 @@ int main(int argc, char *argv[]) {
 
         return app.exec();
     }
-}
-
-/**
- * Updates an installation of QOwnNotes under Windows
- *
- * @param appPath the path of the application we want to update
- */
-void startWindowsUpdate(QString appPath) {
-    QString updaterAppPath = QCoreApplication::applicationDirPath();
-    QString archivePath = updaterAppPath + ".zip";
-
-    qDebug() << __func__ << " - 'appPath': " << appPath;
-    qDebug() << __func__ << " - 'updaterAppPath': " << updaterAppPath;
-    qDebug() << __func__ << " - 'archivePath': " << archivePath;
-
-    // TODO(pbek): unzip the zip to the path of the app
 }
