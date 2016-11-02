@@ -4,7 +4,7 @@
 # creating the QOwnNotes.dmg with Applications link
 #
 
-QTDIR="/usr/local/opt/qt55"
+QTDIR="/usr/local/opt/qt5"
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
