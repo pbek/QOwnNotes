@@ -169,7 +169,7 @@ void UpdateDialog::releaseDownloadProgress(
 }
 
 /**
- * Stores the downloaded file
+ * Stores the downloaded file and starts updater script
  *
  * @param reply
  */
@@ -229,7 +229,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
     destroy(tempFile);
 
     // unfortunately if you write to a QTemporaryFile under Windows the data
-    // only gets written when the application quits, so we need a QFile to write to
+    // only gets written when the application quits,
+    // so we need a QFile to write to
     QFile file(filePath);
 
     if (!file.open(QIODevice::WriteOnly)) {
@@ -276,10 +277,12 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     QString updaterPath = pathPrefix + "-updater.bat";
     QString unzipPath = pathPrefix + "-unzip.exe";
 
-    QFile updaterSourceFile(QCoreApplication::applicationDirPath() + "/update.bat");
-    QFile unzipSourceFile(QCoreApplication::applicationDirPath() + "/unzip.exe");
-//    QFile updaterSourceFile("C:\Users\omega\Code\QOwnNotes\appveyor\update.bat");
+    QFile updaterSourceFile(QCoreApplication::applicationDirPath() +
+                                    "/update.bat");
+    QFile unzipSourceFile(QCoreApplication::applicationDirPath() +
+                                  "/unzip.exe");
 
+    // check if updater script exists
     if (!updaterSourceFile.exists()) {
         QMessageBox::critical(
                     0, tr("Error"),
@@ -288,6 +291,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
+    // check if unzip executable exists
     if (!unzipSourceFile.exists()) {
         QMessageBox::critical(
                     0, tr("Error"),
@@ -296,6 +300,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
+    // copy updater script
     if (!updaterSourceFile.copy(updaterPath)) {
         QMessageBox::critical(
                     0, tr("Error"),
@@ -304,6 +309,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
+    // copy unzip executable script
     if (!unzipSourceFile.copy(unzipPath)) {
         QMessageBox::critical(
                     0, tr("Error"),
@@ -312,7 +318,7 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
-    // check if updater QOwnNotes script exists
+    // check if updater script exists in temporary folder
     QFile updaterFile(updaterPath);
     if (!updaterFile.exists()) {
         QMessageBox::critical(
@@ -321,52 +327,14 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
-    // check if updater unzip executable exists
+    // check if unzip executable exists in temporary folder
     QFile unzipFile(unzipPath);
     if (!unzipFile.exists()) {
         QMessageBox::critical(
                     0, tr("Error"),
-                    tr("Couldn't find unzip excutable: %1").arg(unzipPath));
+                    tr("Couldn't find unzip executable: %1").arg(unzipPath));
         return false;
     }
-
-/*
-    QString folderPath = filePath.left(lastPoint);
-
-    // create a new folder
-    QDir dir;
-    if (!dir.mkpath(folderPath)) {
-        QMessageBox::critical(0, tr("Error"),
-                              tr("Couldn't create folder: %1").arg(folderPath));
-        return false;
-    }
-
-    QStringList parameters;
-    parameters << QDir::toNativeSeparators(filePath)
-               << "-d"
-               << QDir::toNativeSeparators(folderPath);
-
-    // uncompress the zip file
-    // TODO(pbek): for testing
-    QString result = Utils::Misc::startSynchronousProcess("C:\\Users\\omega\\Code\\QOwnNotes\\appveyor\\unzip.exe", parameters);
-//    QString result = Utils::Misc::startSynchronousProcess("unzip.exe", parameters);
-    qDebug() << __func__ << " - 'result': " << result;
-
-    // TODO(pbek): for local testing, the QOwnNotes version from GitHub has no updater features
-    folderPath = QCoreApplication::applicationDirPath();
-
-    QString updaterPath = folderPath + "/QOwnNotes.exe";
-
-    QFile updaterFile(updaterPath);
-
-    // check if updater QOwnNotes executable exists
-    if (!updaterFile.exists()) {
-        QMessageBox::critical(
-                0, tr("Error"),
-                tr("Couldn't find updater executable: %1").arg(updaterPath));
-        return false;
-    }
-*/
 
     if (QMessageBox::information(
             this,
@@ -378,20 +346,14 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
-/*
-    parameters.clear();
-    parameters << "--update" << QCoreApplication::applicationDirPath();
-*/
-
     QStringList parameters(QStringList() <<
                            QDir::toNativeSeparators(filePath) <<
-                           QDir::toNativeSeparators(QCoreApplication::applicationDirPath()) <<
+                           QDir::toNativeSeparators(
+                                   QCoreApplication::applicationDirPath()) <<
                            QDir::toNativeSeparators(unzipPath));
 
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
-    // start QOwnNotes as updater
-//    Utils::Misc::startDetachedProcess(updaterPath, parameters, folderPath);
     // start updater script
     Utils::Misc::startDetachedProcess(updaterPath, parameters);
 

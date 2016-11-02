@@ -156,23 +156,6 @@ bool mainStartupMisc() {
     return true;
 }
 
-/**
- * Updates an installation of QOwnNotes under Windows
- *
- * @param appPath the path of the application we want to update
- */
-void startWindowsUpdate(QString appPath) {
-    QString updaterAppPath = QDir::currentPath();
-    QString archivePath = updaterAppPath + ".zip";
-
-    qDebug() << __func__ << " - 'appPath': " << appPath;
-    qDebug() << __func__ << " - 'updaterAppPath': " << updaterAppPath;
-    qDebug() << __func__ << " - 'archivePath': " << archivePath;
-
-    // TODO(pbek): unzip the zip to the path of the app
-    // use a dialog to debug
-}
-
 int main(int argc, char *argv[]) {
     QString release = RELEASE;
     bool portable = false;
@@ -184,18 +167,17 @@ int main(int argc, char *argv[]) {
             release = "Snapcraft";
         } else if (arg == "--portable") {
             portable = true;
-        } else if (arg == "--update") {
+        } else if (arg == "--after-update") {
             qWarning() << __func__ << " - 'arg': " << arg;
-#if defined(Q_OS_WIN)
-            // check if there is a 2nd parameter
-            if (argc <= (i+1)) {
-                return 1;
-            }
+#if not defined(Q_OS_WIN)
+            // check if there is a 2nd parameter with the script path
+            if (argc > (i+1)) {
+                QString scriptPath(argv[i+1]);
 
-            // start updater
-            QString appPath(argv[i+1]);
-            startWindowsUpdate(appPath);
-            return 0;
+                // remove the updater script file
+                QFile file(scriptPath);
+                file.remove();
+            }
 #endif
         }
     }
