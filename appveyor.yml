@@ -13,7 +13,7 @@ before_build:
   - git submodule update --init
 
 build_script:
-  - dir C:\Qt\5.6
+#  - dir C:\Qt\5.6\mingw49_32
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
@@ -44,9 +44,9 @@ build_script:
   # http://doc.qt.io/qt-5/windows-deployment.html
   - windeployqt --release QOwnNotes.exe
   # this dll was missed by windeployqt
-  - copy ..\libwinpthread-1.dll . /y
+#  - copy ..\libwinpthread-1.dll . /y
   # this dll didn't work when released by windeployqt
-  - copy "..\libstdc++-6.dll" . /y
+#  - copy "..\libstdc++-6.dll" . /y
   # for some reason AppVeyor or windeployqt uses a copy of the German
   # translation file as English one, which screws up the English user interface
   - del "translations\qt_en.qm"
@@ -65,7 +65,8 @@ deploy:
     auth_token:
       secure: spcyN/Dz3B2GXBPii8IywDLq6vfxC1SrN+xR2wMerFM7g2nTy0Lrh5agQONFoInR
     on:
-      branch: master
+#      branch: master
+      branch: develop
 
 notifications:
   # Gitter webhook
