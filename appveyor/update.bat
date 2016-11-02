@@ -33,6 +33,9 @@ del %unzipExecutable%
 echo ======================================
 echo Starting QOwnNotes:
 echo %qownnotesCommand%
-call %%qownnotesCommand%%
+rem start in background
+start /b call %%qownnotesCommand%%
+rem call %%qownnotesCommand%%
 echo ======================================
 pause
+exit
