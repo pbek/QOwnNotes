@@ -343,6 +343,8 @@ void SettingsDialog::storeSettings() {
                       ui->markdownHighlightingIntervalSpinBox->value() : 0);
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
+    settings.setValue("Debug/fakeOldVersionNumber",
+                      ui->oldVersionNumberCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -490,6 +492,8 @@ void SettingsDialog::readSettings() {
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
             settings.value("MainWindow/noteTextView.rtl").toBool());
+    ui->oldVersionNumberCheckBox->setChecked(
+            settings.value("Debug/fakeOldVersionNumber").toBool());
 
     const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
     Q_UNUSED(blocker3);

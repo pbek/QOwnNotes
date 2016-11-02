@@ -44,7 +44,8 @@ public:
         EditorFontColorPage,
         PortableModePage,
         PreviewFontPage,
-        ToolbarPage
+        ToolbarPage,
+        DebugOptionPage
     };
 
     explicit SettingsDialog(int page = 0,

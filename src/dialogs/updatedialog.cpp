@@ -12,7 +12,6 @@
 #include <utils/misc.h>
 #include <QDir>
 #include <QTemporaryFile>
-#include <QProcess>
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                            QString releaseUrl, QString releaseVersionString,
@@ -32,14 +31,17 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     ui->buttonBox->clear();
 
     _updateButton = new QPushButton(tr("&Update"));
+
+    // automatic updates are only available for Windows
+#if defined(Q_OS_WIN)
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
-    // TODO(pbek): use other icon
     _updateButton->setIcon(
             QIcon::fromTheme(
-                    "edit-download",
-                    QIcon(":/icons/breeze-qownnotes/16x16/edit-download.svg")));
+                    "svn-update",
+                    QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
     ui->buttonBox->addButton(_updateButton, QDialogButtonBox::ActionRole);
+#endif
 
     button = new QPushButton(tr("&Download latest"));
     button->setProperty("ActionRole", Download);
@@ -89,6 +91,7 @@ int UpdateDialog::exec() {
 }
 
 void UpdateDialog::closeEvent(QCloseEvent *event) {
+    Q_UNUSED(event);
     setIsUpdateDialogOpen(false);
 }
 
@@ -127,11 +130,6 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
         {
             qDebug() << __func__ << " - 'releaseUrl': " << releaseUrl;
 
-            // TODO(pbek): url for debugging
-            //releaseUrl = "http://downloads.sourceforge.net/project/qownnotes/test/QOwnNotes.zip";
-            //releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/x_QOwnNotes.zip";
-            //releaseUrl = "http://heanet.dl.sourceforge.net/project/qownnotes/test/QOwnNotes.zip";
-
             ui->downloadProgressBar->show();
             _updateButton->setDisabled(true);
 
@@ -139,6 +137,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             QNetworkRequest networkRequest(url);
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+            // we really need redirects for GitHub urls!
             networkRequest.setAttribute(
                     QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
@@ -262,9 +261,14 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
 bool UpdateDialog::initializeUpdateProcess(QString filePath) {
 #if defined(Q_OS_MAC)
     // TODO(pbek): implement OS X updater
+    Q_UNUSED(filePath);
 #elif defined(Q_OS_WIN)
-    initializeWindowsUpdateProcess(filePath);
+    return initializeWindowsUpdateProcess(filePath);
+#elif defined(Q_OS_LINUX)
+    Q_UNUSED(filePath);
 #endif
+
+    return true;
 }
 
 /**

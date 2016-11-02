@@ -48,11 +48,16 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
              QString(PLATFORM) + ".json");
 
     QUrlQuery q;
+    QString version(VERSION);
+
+    // check if we want to fake the version number to trigger an update
+    if (settings.value("Debug/fakeOldVersionNumber").toBool()) {
+        version = "16.10.9";
+        isDebug = true;
+    }
+
     q.addQueryItem("b", QString::number(BUILD));
-    q.addQueryItem("v", QString(VERSION));
-    // for debugging
-    // TODO(pbek): remove again
-    q.addQueryItem("v", "16.10.3");
+    q.addQueryItem("v", version);
     q.addQueryItem("d", QString(__DATE__) + " " + QString(__TIME__));
     q.addQueryItem("um", QString::number(updateMode));
     q.addQueryItem("debug", QString::number(isDebug));

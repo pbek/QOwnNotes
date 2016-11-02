@@ -1,8 +1,21 @@
 # QOwnNotes Changelog
 
-## 16.10.11
+## 16.11.0
 - QOwnNotes is now built with Qt 5.7 under OS X and Windows instead of Qt 5.5
 - added information about the system environment to the debug settings dump
+- there are now **automatic updates** for **Windows**
+  (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
+    - in the update dialog you will see a new `Update` button
+    - if you press it the latest version of QOwnNotes will be downloaded
+      and an updater script will uncompress the ZIP file to the folder
+      where you were running QOwnNotes from
+    - all temporary files for the update will be deleted
+    - after the update QOwnNotes will be started again
+- there is a new `Debug options` page in the settings
+  (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
+    - use the checkbox `Fake old version number to trigger update` and
+      click `Check for updates` in the `Help` main menu to test the
+      update process so you can provide feedback
 
 ## 16.10.10
 - the controls in the log panel are now hidden by default and can be
