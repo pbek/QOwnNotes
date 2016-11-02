@@ -18,6 +18,9 @@
     - use the checkbox `Fake old version number to trigger update` and
       click `Check for updates` in the `Help` main menu to test the
       update process so you can provide feedback
+- added more Spanish, Italian, Dutch, Hungarian, Polish, French
+  and Japanese translation (thank you richarson, mlocati, Fabijenna,
+  lucjan, lepascalou and piyo)
 
 ## 16.10.10
 - the controls in the log panel are now hidden by default and can be
