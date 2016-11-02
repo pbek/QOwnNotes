@@ -272,6 +272,65 @@ bool UpdateDialog::initializeUpdateProcess(QString filePath) {
 bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
     // get the folder path from the file path
     int lastPoint = filePath.lastIndexOf(".");
+    QString pathPrefix = filePath.left(lastPoint);
+    QString updaterPath = pathPrefix + "-updater.bat";
+    QString unzipPath = pathPrefix + "-unzip.exe";
+
+    QFile updaterSourceFile(QCoreApplication::applicationDirPath() + "/update.bat");
+    QFile unzipSourceFile(QCoreApplication::applicationDirPath() + "/unzip.exe");
+//    QFile updaterSourceFile("C:\Users\omega\Code\QOwnNotes\appveyor\update.bat");
+
+    if (!updaterSourceFile.exists()) {
+        QMessageBox::critical(
+                    0, tr("Error"),
+                    tr("Updater script '%1' doesn't exist!")
+                    .arg(updaterSourceFile.fileName()));
+        return false;
+    }
+
+    if (!unzipSourceFile.exists()) {
+        QMessageBox::critical(
+                    0, tr("Error"),
+                    tr("Updater unzip executable '%1' doesn't exist!")
+                    .arg(unzipSourceFile.fileName()));
+        return false;
+    }
+
+    if (!updaterSourceFile.copy(updaterPath)) {
+        QMessageBox::critical(
+                    0, tr("Error"),
+                    tr("Could not copy updater script '%1' to '%2'!")
+                    .arg(updaterSourceFile.fileName(), unzipPath));
+        return false;
+    }
+
+    if (!unzipSourceFile.copy(unzipPath)) {
+        QMessageBox::critical(
+                    0, tr("Error"),
+                    tr("Could not copy updater script '%1' to '%2'!")
+                    .arg(updaterSourceFile.fileName(), unzipPath));
+        return false;
+    }
+
+    // check if updater QOwnNotes script exists
+    QFile updaterFile(updaterPath);
+    if (!updaterFile.exists()) {
+        QMessageBox::critical(
+                0, tr("Error"),
+                tr("Couldn't find updater script: %1").arg(updaterPath));
+        return false;
+    }
+
+    // check if updater unzip executable exists
+    QFile unzipFile(unzipPath);
+    if (!unzipFile.exists()) {
+        QMessageBox::critical(
+                    0, tr("Error"),
+                    tr("Couldn't find unzip excutable: %1").arg(unzipPath));
+        return false;
+    }
+
+/*
     QString folderPath = filePath.left(lastPoint);
 
     // create a new folder
@@ -293,16 +352,21 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
 //    QString result = Utils::Misc::startSynchronousProcess("unzip.exe", parameters);
     qDebug() << __func__ << " - 'result': " << result;
 
+    // TODO(pbek): for local testing, the QOwnNotes version from GitHub has no updater features
+    folderPath = QCoreApplication::applicationDirPath();
+
     QString updaterPath = folderPath + "/QOwnNotes.exe";
 
-    // check if updater QOwnNotes executable exists
     QFile updaterFile(updaterPath);
+
+    // check if updater QOwnNotes executable exists
     if (!updaterFile.exists()) {
         QMessageBox::critical(
                 0, tr("Error"),
                 tr("Couldn't find updater executable: %1").arg(updaterPath));
         return false;
     }
+*/
 
     if (QMessageBox::information(
             this,
@@ -314,12 +378,22 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
         return false;
     }
 
+/*
     parameters.clear();
     parameters << "--update" << QCoreApplication::applicationDirPath();
+*/
+
+    QStringList parameters(QStringList() <<
+                           QDir::toNativeSeparators(filePath) <<
+                           QDir::toNativeSeparators(QCoreApplication::applicationDirPath()) <<
+                           QDir::toNativeSeparators(unzipPath));
+
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // start QOwnNotes as updater
-    Utils::Misc::startDetachedProcess(updaterPath, parameters, folderPath);
+//    Utils::Misc::startDetachedProcess(updaterPath, parameters, folderPath);
+    // start updater script
+    Utils::Misc::startDetachedProcess(updaterPath, parameters);
 
     qApp->quit();
     return true;

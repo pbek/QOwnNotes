@@ -162,7 +162,7 @@ bool mainStartupMisc() {
  * @param appPath the path of the application we want to update
  */
 void startWindowsUpdate(QString appPath) {
-    QString updaterAppPath = QCoreApplication::applicationDirPath();
+    QString updaterAppPath = QDir::currentPath();
     QString archivePath = updaterAppPath + ".zip";
 
     qDebug() << __func__ << " - 'appPath': " << appPath;
@@ -177,14 +177,15 @@ int main(int argc, char *argv[]) {
     QString release = RELEASE;
     bool portable = false;
 
-    // override the release string for snaps
     for (int i = 0; i < argc; ++i) {
         QString arg(argv[i]);
         if (arg == "--snap") {
+            // override the release string for snaps
             release = "Snapcraft";
         } else if (arg == "--portable") {
             portable = true;
         } else if (arg == "--update") {
+            qWarning() << __func__ << " - 'arg': " << arg;
 #if defined(Q_OS_WIN)
             // check if there is a 2nd parameter
             if (argc <= (i+1)) {
