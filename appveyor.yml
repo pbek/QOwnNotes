@@ -4,8 +4,8 @@ os: unstable
 skip_tags: true
 
 install:
-  - set QTDIR=C:\Qt\5.6\mingw49_32
-#  - set QTDIR=C:\Qt\5.7\mingw53_32
+#  - set QTDIR=C:\Qt\5.6\mingw49_32
+  - set QTDIR=C:\Qt\5.7\mingw53_32
   - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
   - set RELEASE_PATH=appveyor\release
 
@@ -14,7 +14,6 @@ before_build:
   - git submodule update --init
 
 build_script:
-  - dir C:\Qt
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
@@ -45,9 +44,9 @@ build_script:
   # http://doc.qt.io/qt-5/windows-deployment.html
   - windeployqt --release QOwnNotes.exe
   # this dll was missed by windeployqt
-#  - copy ..\libwinpthread-1.dll . /y
+  - copy ..\libwinpthread-1.dll . /y
   # this dll didn't work when released by windeployqt
-#  - copy "..\libstdc++-6.dll" . /y
+  - copy "..\libstdc++-6.dll" . /y
   # for some reason AppVeyor or windeployqt uses a copy of the German
   # translation file as English one, which screws up the English user interface
   - del "translations\qt_en.qm"
