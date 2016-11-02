@@ -1,11 +1,14 @@
 @echo off
-rem QOwnNotes updater script
+rem ***************************************
+rem * QOwnNotes updater script
+rem ***************************************
 set source=%1
 set destination=%2
 rem don't use the variable `unzip` because it's used by unzip.exe!
 set unzipExecutable=%3
+set portable=%4
 set unzipCommand=%unzipExecutable% -o %source% -d %destination%
-set qownnotesCommand=%destination%\QOwnNotes.exe --after-update %0
+set qownnotesCommand=%destination%\QOwnNotes.exe --after-update %0 %portable%
 
 echo %0 %*
 echo ======================================

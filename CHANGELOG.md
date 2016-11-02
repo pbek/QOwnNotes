@@ -11,6 +11,8 @@
       where you were running QOwnNotes from
     - all temporary files for the update will be deleted
     - after the update QOwnNotes will be started again
+        - QOwnNotes will be started in potable mode again if it was in
+          portable mode before
 - there is a new `Debug options` page in the settings
   (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
     - use the checkbox `Fake old version number to trigger update` and

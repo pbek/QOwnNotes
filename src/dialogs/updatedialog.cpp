@@ -356,6 +356,10 @@ bool UpdateDialog::initializeWindowsUpdateProcess(QString filePath) {
                                    QCoreApplication::applicationDirPath()) <<
                            QDir::toNativeSeparators(unzipPath));
 
+    if (Utils::Misc::isInPortableMode()) {
+        parameters << "--portable";
+    }
+
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
     // start updater script
