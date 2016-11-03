@@ -42,8 +42,8 @@ install:
       && brew tap homebrew/versions
       && echo "We are using QT 5.6, because we had troubles with the current QT 5.7 brew."
       && echo "The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
-      && brew install qt561
-      && chmod -R 755 /usr/local/opt/qt561/*
+      && brew install qt56
+      && chmod -R 755 /usr/local/opt/qt56/*
       ;
     fi
 
@@ -54,7 +54,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt561"
+         QTDIR="/usr/local/opt/qt56"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include
