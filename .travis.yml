@@ -39,8 +39,8 @@ install:
       ;
     else
          brew update > /dev/null
-      && brew install qt5
-      && chmod -R 755 /usr/local/opt/qt5/*
+      && brew install qt562
+      && chmod -R 755 /usr/local/opt/qt562/*
       ;
     fi
 
@@ -51,7 +51,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt5"
+         QTDIR="/usr/local/opt/qt562"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include
@@ -126,7 +126,8 @@ deploy:
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
-        branch: master
+#        branch: master
+        branch: develop
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
 
