@@ -39,8 +39,8 @@ install:
       ;
     else
          brew update > /dev/null
-      && brew install qt562
-      && chmod -R 755 /usr/local/opt/qt562/*
+      && brew install qt561
+      && chmod -R 755 /usr/local/opt/qt561/*
       ;
     fi
 
@@ -51,7 +51,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt562"
+         QTDIR="/usr/local/opt/qt561"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include
@@ -126,10 +126,29 @@ deploy:
     skip_cleanup: true
     on:
         repo: pbek/QOwnNotes
-#        branch: master
-        branch: develop
+        branch: master
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes-$TRAVIS_COMMIT.deb
+    skip_cleanup: true
+    on:
+        repo: pbek/qownnotes-dev
+        branch: develop
+        tags: false
+        condition: ${TRAVIS_OS_NAME} = linux
+  - provider: releases
+    api_key:
+        secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
+    file: QOwnNotes-$TRAVIS_COMMIT.dmg
+    skip_cleanup: true
+    on:
+        repo: pbek/qownnotes-dev
+        branch: develop
+        tags: false
+        condition: ${TRAVIS_OS_NAME} = osx
 
 notifications:
   recipients:
