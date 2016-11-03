@@ -1267,9 +1267,10 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
     // we want to show quotes in the html, so we don't translate them into
     // `<q>` tags
+    // HOEDOWN_EXT_MATH and HOEDOWN_EXT_MATH_EXPLICIT don't seem to do anything
     hoedown_extensions extensions =
-            (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN) &
-                    ~HOEDOWN_EXT_QUOTE);
+            (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
+                    HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
     hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
 
     // get the decrypted note text (or the normal note text if there isn't any)
@@ -1286,7 +1287,8 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     // (for example to show images under the note path)
     str.replace(
             QRegularExpression("([\\(<])file:\\/\\/([^\\/].+)([\\)>])"),
-            "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath) + "/\\2\\3");
+            "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
+            + "/\\2\\3");
 
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());

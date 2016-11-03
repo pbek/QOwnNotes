@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.11.1
+- fixed build problems with Qt 5.7 under Windows and Mac OS
+  (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
+- enabled `HOEDOWN_EXT_MATH_EXPLICIT` in hoedown
+  (for [Issue #377](https://github.com/pbek/QOwnNotes/issues/377))
+
 ## 16.11.0
 - QOwnNotes is now built with Qt 5.7 under OS X and Windows instead of Qt 5.5
 - added information about the system environment to the debug settings dump
