@@ -103,14 +103,14 @@ before_deploy:
   - TIME_STRING=`date +%H%M%S`
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
-  - if [ "${TRAVIS_OS_NAME}" == "linux" ]; then
-        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
+        if [ "${TRAVIS_BRANCH}" = "master" ]; then
             export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
         else
             export GIT_TAG=dev-linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
         fi
     else
-        if [ "${TRAVIS_BRANCH}" == "master" ]; then
+        if [ "${TRAVIS_BRANCH}" = "master" ]; then
             export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
         else
             export GIT_TAG=dev-macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
