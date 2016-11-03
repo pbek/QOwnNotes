@@ -90,9 +90,11 @@ before_deploy:
       && mv ../icons/* build/opt/QOwnNotes/
       && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
       && dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
+      && cp QOwnNotes-$VERSION_NUMBER.deb QOwnNotesDev-$TRAVIS_COMMIT.deb
       ;
     else
          ../travis/create-dmg.sh
+      && cp QOwnNotes-$VERSION_NUMBER.dmg QOwnNotesDev-$TRAVIS_COMMIT.dmg
       ;
     fi
   #
