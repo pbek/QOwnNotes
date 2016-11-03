@@ -39,8 +39,11 @@ install:
       ;
     else
          brew update > /dev/null
-      && brew install qt561
-      && chmod -R 755 /usr/local/opt/qt561/*
+      && brew tap homebrew/versions
+      && echo "We are using QT 5.6, because we had troubles with the current QT 5.7 brew."
+      && echo "The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
+      && brew install qt562
+      && chmod -R 755 /usr/local/opt/qt562/*
       ;
     fi
 
@@ -51,7 +54,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt561"
+         QTDIR="/usr/local/opt/qt562"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include
@@ -109,6 +112,7 @@ before_deploy:
   - git push -q https://$TAGPERM@github.com/pbek/QOwnNotes --tags
 
 deploy:
+    # Linux master release
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
@@ -119,6 +123,7 @@ deploy:
         branch: master
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = linux
+    # macOS master release
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
@@ -129,6 +134,7 @@ deploy:
         branch: master
         tags: false
         condition: $CONFIG = release && ${TRAVIS_OS_NAME} = osx
+    # Linux development release
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
@@ -139,6 +145,7 @@ deploy:
         branch: develop
         tags: false
         condition: ${TRAVIS_OS_NAME} = linux
+    # macOS development release
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
