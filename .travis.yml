@@ -54,7 +54,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt55"
+         export QTDIR="/usr/local/opt/qt55"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include

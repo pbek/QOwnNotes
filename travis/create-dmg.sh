@@ -4,7 +4,8 @@
 # creating the QOwnNotes.dmg with Applications link
 #
 
-#QTDIR="/usr/local/opt/qt5"
+# we will get the $QTDIR from Travis CI
+#QTDIR="/usr/local/opt/qt55"
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
@@ -23,6 +24,9 @@ rm -f $APP.app/Contents/Info.plist-e
 
 # copy translation files to app
 cp languages/*.qm $APP.app/Contents/Resources
+
+# copy updater script to app
+cp ../travis/osx/update.sh $APP.app/Contents/MacOS
 
 echo "Adding keys"
 # add the keys for OSX code signing
