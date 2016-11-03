@@ -42,8 +42,8 @@ install:
       && brew tap homebrew/versions
       && echo "We are using QT 5.6, because we had troubles with the current QT 5.7 brew."
       && echo "The deployed frameworks were loading libraries from /usr/local/Cellar/qt5 instead of the app bundle."
-      && brew install qt562
-      && chmod -R 755 /usr/local/opt/qt562/*
+      && brew install qt561
+      && chmod -R 755 /usr/local/opt/qt561/*
       ;
     fi
 
@@ -54,7 +54,7 @@ script:
       && qt56-env.sh
       ;
     else
-         QTDIR="/usr/local/opt/qt562"
+         QTDIR="/usr/local/opt/qt561"
       && PATH="$QTDIR/bin:$PATH"
       && LDFLAGS=-L$QTDIR/lib
       && CPPFLAGS=-I$QTDIR/include
@@ -102,10 +102,22 @@ before_deploy:
   - git config --global user.email "builds@travis-ci.com"
   - git config --global user.name "Travis CI"
   - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+        if [ "${TRAVIS_BRANCH}" == "master ]; then
+            export GIT_TAG=linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+          ;
+        else
+            export GIT_TAG=dev-linux-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+          ;
+        fi
       ;
     else
-         export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+        if [ "${TRAVIS_BRANCH}" == "master ]; then
+            export GIT_TAG=macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+          ;
+        else
+            export GIT_TAG=dev-macosx-b$TRAVIS_BUILD_NUMBER-$TIME_STRING
+          ;
+        fi
       ;
     fi
   - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
@@ -138,10 +150,10 @@ deploy:
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-    file: QOwnNotes-$TRAVIS_COMMIT.deb
+    file: QOwnNotesDev-$TRAVIS_COMMIT.deb
     skip_cleanup: true
     on:
-        repo: pbek/qownnotes-dev
+        repo: pbek/QOwnNotes
         branch: develop
         tags: false
         condition: ${TRAVIS_OS_NAME} = linux
@@ -149,10 +161,10 @@ deploy:
   - provider: releases
     api_key:
         secure: EyOMTm+fzo7rWhRMfROH8/jeJnSFmLFz4pfD/HuFJI2ohayHJOIfASMdg0d7N2cGFS9G7iuPUmQ1S56YC8BSnEefc3lASB1i5hiSOMWJV+lO3N1JBFCWxCBzHc9Hs+XKwHwyhZ5iIYncx+JHPYRNWtUD+A6SZHiZ+sVI48gYMyA=
-    file: QOwnNotes-$TRAVIS_COMMIT.dmg
+    file: QOwnNotesDev-$TRAVIS_COMMIT.dmg
     skip_cleanup: true
     on:
-        repo: pbek/qownnotes-dev
+        repo: pbek/QOwnNotes
         branch: develop
         tags: false
         condition: ${TRAVIS_OS_NAME} = osx
