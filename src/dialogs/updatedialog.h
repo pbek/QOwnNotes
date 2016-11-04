@@ -53,6 +53,8 @@ private:
     bool initializeUpdateProcess(QString filePath);
 
     bool initializeWindowsUpdateProcess(QString filePath);
+
+    bool initializeMacOSUpdateProcess(QString releaseUrl);
 };
 
 #endif // UPDATEDIALOG_H

@@ -133,6 +133,11 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
         {
             qDebug() << __func__ << " - 'releaseUrl': " << releaseUrl;
 
+#if defined(Q_OS_MAC)
+            // under macOS we will just start the update.sh
+            initializeMacOSUpdateProcess(releaseUrl);
+#else
+            // we will download the latest release
             ui->downloadProgressBar->show();
             _updateButton->setDisabled(true);
 
@@ -149,6 +154,7 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
 
             connect(reply, SIGNAL(downloadProgress(qint64, qint64)),
                     this, SLOT(releaseDownloadProgress(qint64, qint64)));
+#endif
 
             break;
         }
@@ -271,6 +277,22 @@ bool UpdateDialog::initializeUpdateProcess(QString filePath) {
     Q_UNUSED(filePath);
 #endif
 
+    return true;
+}
+
+/**
+ * Initializes the macOS update process
+ */
+bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
+    QStringList parameters(QStringList() << releaseUrl <<
+             QDir::toNativeSeparators(QCoreApplication::applicationDirPath()));
+
+    qDebug() << __func__ << " - 'parameters': " << parameters;
+
+//    // start updater script
+//    Utils::Misc::startDetachedProcess(updaterPath, parameters);
+//
+//    qApp->quit();
     return true;
 }
 
