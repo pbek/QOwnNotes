@@ -41,9 +41,12 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                     "svn-update",
                     QIcon(":/icons/breeze-qownnotes/16x16/svn-update.svg")));
     ui->buttonBox->addButton(_updateButton, QDialogButtonBox::ActionRole);
+    QString downloadButtonText = tr("Just download");
+#else
+    QString downloadButtonText = tr("&Download latest");
 #endif
 
-    button = new QPushButton(tr("&Download latest"));
+    button = new QPushButton(downloadButtonText);
     button->setProperty("ActionRole", Download);
     button->setDefault(true);
     button->setIcon(

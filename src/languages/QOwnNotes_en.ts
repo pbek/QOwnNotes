@@ -2260,12 +2260,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1879"/>
+        <location filename="../entities/note.cpp" line="1881"/>
         <source>Note filename changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="1880"/>
+        <location filename="../entities/note.cpp" line="1882"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -4012,98 +4012,103 @@ This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="55"/>
+        <location filename="../dialogs/updatedialog.cpp" line="44"/>
+        <source>Just download</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.cpp" line="58"/>
         <source>&amp;Skip version</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="65"/>
-        <location filename="../dialogs/updatedialog.cpp" line="348"/>
+        <location filename="../dialogs/updatedialog.cpp" line="68"/>
+        <location filename="../dialogs/updatedialog.cpp" line="351"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="190"/>
+        <location filename="../dialogs/updatedialog.cpp" line="193"/>
         <source>Download error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="191"/>
+        <location filename="../dialogs/updatedialog.cpp" line="194"/>
         <source>Error while downloading:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="193"/>
+        <location filename="../dialogs/updatedialog.cpp" line="196"/>
         <source>network error: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="216"/>
-        <location filename="../dialogs/updatedialog.cpp" line="237"/>
+        <location filename="../dialogs/updatedialog.cpp" line="219"/>
+        <location filename="../dialogs/updatedialog.cpp" line="240"/>
         <source>File error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="217"/>
+        <location filename="../dialogs/updatedialog.cpp" line="220"/>
         <source>Could not open temporary file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="238"/>
+        <location filename="../dialogs/updatedialog.cpp" line="241"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="292"/>
-        <location filename="../dialogs/updatedialog.cpp" line="301"/>
-        <location filename="../dialogs/updatedialog.cpp" line="310"/>
-        <location filename="../dialogs/updatedialog.cpp" line="319"/>
-        <location filename="../dialogs/updatedialog.cpp" line="329"/>
-        <location filename="../dialogs/updatedialog.cpp" line="338"/>
+        <location filename="../dialogs/updatedialog.cpp" line="295"/>
+        <location filename="../dialogs/updatedialog.cpp" line="304"/>
+        <location filename="../dialogs/updatedialog.cpp" line="313"/>
+        <location filename="../dialogs/updatedialog.cpp" line="322"/>
+        <location filename="../dialogs/updatedialog.cpp" line="332"/>
+        <location filename="../dialogs/updatedialog.cpp" line="341"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="293"/>
+        <location filename="../dialogs/updatedialog.cpp" line="296"/>
         <source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="302"/>
+        <location filename="../dialogs/updatedialog.cpp" line="305"/>
         <source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="311"/>
-        <location filename="../dialogs/updatedialog.cpp" line="320"/>
+        <location filename="../dialogs/updatedialog.cpp" line="314"/>
+        <location filename="../dialogs/updatedialog.cpp" line="323"/>
         <source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="330"/>
+        <location filename="../dialogs/updatedialog.cpp" line="333"/>
         <source>Couldn&apos;t find updater script: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="339"/>
+        <location filename="../dialogs/updatedialog.cpp" line="342"/>
         <source>Couldn&apos;t find unzip executable: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="345"/>
+        <location filename="../dialogs/updatedialog.cpp" line="348"/>
         <source>Proceed with update</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="346"/>
+        <location filename="../dialogs/updatedialog.cpp" line="349"/>
         <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="348"/>
+        <location filename="../dialogs/updatedialog.cpp" line="351"/>
         <source>&amp;Update and restart</source>
         <translation type="unfinished"></translation>
     </message>
