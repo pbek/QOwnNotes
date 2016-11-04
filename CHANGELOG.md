@@ -5,6 +5,8 @@
   troubles with the Qt 5.7 brewmaster deployment
 - changed the download button for Windows in the update dialog to make
   it more clear that it just downloads
+- added more Spanish, Italian, French and Japanese translation (thank
+  you richarson, mlocati, lepascalou and piyo)
 
 ## 16.11.1
 - fixed build problems with Qt 5.7 under Windows and Mac OS
