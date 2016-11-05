@@ -27,7 +27,7 @@ namespace Utils {
         QString prependIfDoesNotStartWith(QString text, QString startString);
         QString appendIfDoesNotEndWith(QString text, QString endString);
         bool startDetachedProcess(QString executablePath,
-                                          QStringList parameters,
+                                          QStringList parameters = QStringList(),
                                           QString workingDirectory = "");
         QString shorten(QString text, int length, QString sequence = "...");
         QString defaultNotesPath();

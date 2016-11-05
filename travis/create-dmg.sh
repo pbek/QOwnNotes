@@ -26,7 +26,8 @@ rm -f $APP.app/Contents/Info.plist-e
 cp languages/*.qm $APP.app/Contents/Resources
 
 # copy updater script to app
-cp ../travis/osx/update.sh $APP.app/Contents/MacOS
+chmod a+x ../travis/osx/update.command
+cp ../travis/osx/update.command $APP.app/Contents/MacOS
 
 echo "Adding keys"
 # add the keys for OSX code signing

@@ -7,16 +7,20 @@
 
 #diskImageUrl="https://github.com/pbek/QOwnNotes/releases/download/macosx-b2381-103543/QOwnNotes-16.10.10.dmg"
 #diskImageUrl="https://github.com/pbek/QOwnNotes/releases/download/macosx-b2376-114124/QOwnNotes-16.10.9.dmg"
-diskImageUrl="$1"
+#diskImageUrl="$1"
+diskImageUrl="$QOWNNOTES_RELEASE_URL"
 
 #applicationsFolder="/Applications"
-applicationsFolder="$2"
+#applicationsFolder="$2"
+applicationsFolder="$QOWNNOTES_APPLICATIONS_PATH"
 
 # https://bash.cyberciti.biz/guide/$IFS
 IFS="
 "
+
 die () {
     echo >&2 "$@"
+    read -p "Press [Enter] key to end..."
     exit 1
 }
 
@@ -24,7 +28,15 @@ echo "QOwnNotes macOS updater script"
 echo
 
 # check if we have 2 parameters
-[ "$#" -eq 2 ] || die "2 arguments required, $# provided"
+#[ "$#" -eq 2 ] || die "2 arguments required, $# provided"
+
+if [ -z "$diskImageUrl" ]; then
+    die "diskImageUrl is empty"
+fi
+
+if [ -z "$applicationsFolder" ]; then
+    die "applicationsFolder is empty"
+fi
 
 tempDir=`mktemp -d` && cd $tempDir
 mountPoint=`mktemp -d`

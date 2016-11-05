@@ -286,7 +286,7 @@ bool UpdateDialog::initializeUpdateProcess(QString filePath) {
  * Initializes the macOS update process
  */
 bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
-    // find out the /Application folder
+    // find out the /Applications folder
     QString applicationDirPath = QCoreApplication::applicationDirPath();
     QString appPathPart = "/QOwnNotes.app/Contents/MacOS";
     QString applicationsPath = "/Applications";
@@ -295,11 +295,6 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
         applicationsPath = Utils::Misc::removeIfEndsWith(
                     applicationDirPath, appPathPart);
     }
-
-    QStringList parameters(QStringList() << releaseUrl <<
-             QDir::toNativeSeparators(applicationsPath));
-    qDebug() << __func__ << " - 'parameters': " << parameters;
-
 
     if (QMessageBox::information(
             this,
@@ -310,13 +305,19 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
         return false;
     }
 
-    QString updaterPath = "update.sh";
+    QString updaterPath = "update.command";
 
     // TODO: remove
-    updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.sh";
+    //updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.command";
+
+    // we have to pass the parameters via environment because Qt
+    // or macOS wasn't able to pass them in any other way
+    qputenv("QOWNNOTES_RELEASE_URL", releaseUrl.toLatin1());
+    qputenv("QOWNNOTES_APPLICATIONS_PATH",
+            QDir::toNativeSeparators(applicationsPath).toLatin1());
 
     // start updater script
-    Utils::Misc::startDetachedProcess(updaterPath, parameters);
+    Utils::Misc::startDetachedProcess(updaterPath);
 
     qApp->quit();
     return true;
