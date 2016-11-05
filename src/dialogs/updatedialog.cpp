@@ -321,6 +321,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
         return false;
     }
 
+    // read the content of the updater script
     f.open(QFile::ReadOnly | QFile::Text);
     QTextStream ts(&f);
     QString scriptContent = ts.readAll();
@@ -331,6 +332,8 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
             "\"$QOWNNOTES_APPLICATIONS_PATH\"",
             "\"" + QDir::toNativeSeparators(applicationsPath) + "\"");
 
+    // we need a temporary script file with hardcoded parameters because some
+    // users were not able to get parameters via the system environment
     QTemporaryFile *tempFile = new QTemporaryFile(
             QDir::tempPath() + "/QOwnNotes-Updater-XXXXXX.command");
 
@@ -350,7 +353,8 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     tempFile->write(scriptContent.toLatin1());
 
     // setting executable permissions to the updater script
-    tempFile->setPermissions(QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
+    tempFile->setPermissions(
+            QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
 
     // file->fileName() only holds a value after file->open()
     QString updaterFilePath = tempFile->fileName();
@@ -372,7 +376,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
 //    // start updater script
 //    Utils::Misc::startDetachedProcess(updaterPath);
 
-    qDebug() << updaterFilePath;
+    qDebug() << __func__ << " - 'updaterFilePath': " << updaterFilePath;
 
     // start updater script
     Utils::Misc::startDetachedProcess(updaterFilePath);
