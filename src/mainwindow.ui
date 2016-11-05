@@ -699,8 +699,8 @@ p, li { white-space: pre-wrap; }
       <iconset theme="im-user-online" resource="breeze-qownnotes.qrc">
        <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
      </property>
-     <addaction name="actionOpen_IRC_Channel"/>
      <addaction name="actionGitter"/>
+     <addaction name="actionOpen_IRC_Channel"/>
     </widget>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionShow_changelog"/>
@@ -1560,7 +1560,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string>IRC</string>
+    <string notr="true">IRC</string>
    </property>
    <property name="toolTip">
     <string>Open the #qownnotes IRC channel, you have to stay online to get a response</string>
@@ -1762,7 +1762,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</normaloff>:/icons/breeze-qownnotes/16x16/im-user-online.svg</iconset>
    </property>
    <property name="text">
-    <string>Gitter</string>
+    <string notr="true">Gitter</string>
    </property>
    <property name="toolTip">
     <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
@@ -1852,9 +1852,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
-  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
