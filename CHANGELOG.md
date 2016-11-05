@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 16.11.3
+- there are now **automatic updates** for **macOS**
+  (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))
+    - in the update dialog you will see a new `Update` button
+    - if you press it a script will be loaded after a confirmation to 
+      download the latest version of QOwnNotes and update your current
+      installation
+    - after the update QOwnNotes will be started again
+    - please use the checkbox `Fake old version number to trigger update`
+      in the `Debug options` and click `Check for updates` in the `Help`
+      main menu to test the update process and provide feedback
+- added more Italian, Dutch, Hungarian, Portuguese and Japanese
+  translation (thank you mlocati, Fabijenna, mlimacarlos and piyo)
+
 ## 16.11.2
 - QOwnNotes is now built with Qt 5.5 under macOS again because of
   troubles with the Qt 5.7 brewmaster deployment
@@ -25,7 +39,7 @@
       where you were running QOwnNotes from
     - all temporary files for the update will be deleted
     - after the update QOwnNotes will be started again
-        - QOwnNotes will be started in potable mode again if it was in
+        - QOwnNotes will be started in portable mode again if it was in
           portable mode before
 - there is a new `Debug options` page in the settings
   (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
