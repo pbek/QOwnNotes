@@ -271,7 +271,8 @@ void UpdateDialog::slotReplyFinished(QNetworkReply *reply) {
  */
 bool UpdateDialog::initializeUpdateProcess(QString filePath) {
 #if defined(Q_OS_MAC)
-    // TODO(pbek): implement OS X updater
+    // the OS X updater initializeMacOSUpdateProcess will be started
+    // from dialogButtonClicked
     Q_UNUSED(filePath);
 #elif defined(Q_OS_WIN)
     return initializeWindowsUpdateProcess(filePath);
@@ -305,10 +306,11 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
         return false;
     }
 
+    // macOS only opens command files in a terminal
     QString updaterPath = "update.command";
 
-    // TODO: remove
-    //updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.command";
+    // just for debugging
+//    updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.command";
 
     // we have to pass the parameters via environment because Qt
     // or macOS wasn't able to pass them in any other way
