@@ -325,9 +325,11 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     QTextStream ts(&f);
     QString scriptContent = ts.readAll();
     f.close();
-    scriptContent.replace("\"$QOWNNOTES_RELEASE_URL\"", releaseUrl);
-    scriptContent.replace("\"$QOWNNOTES_APPLICATIONS_PATH\"",
-                          QDir::toNativeSeparators(applicationsPath));
+    scriptContent.replace(
+            "\"$QOWNNOTES_RELEASE_URL\"", "\"" + releaseUrl + "\"");
+    scriptContent.replace(
+            "\"$QOWNNOTES_APPLICATIONS_PATH\"",
+            "\"" + QDir::toNativeSeparators(applicationsPath) + "\"");
 
     QTemporaryFile *tempFile = new QTemporaryFile(
             QDir::tempPath() + "/QOwnNotes-Updater-XXXXXX.command");
