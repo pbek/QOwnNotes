@@ -312,14 +312,63 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     // just for debugging
 //    updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.command";
 
-    // we have to pass the parameters via environment because Qt
-    // or macOS wasn't able to pass them in any other way
-    qputenv("QOWNNOTES_RELEASE_URL", releaseUrl.toLatin1());
-    qputenv("QOWNNOTES_APPLICATIONS_PATH",
-            QDir::toNativeSeparators(applicationsPath).toLatin1());
+    QFile f(updaterPath);
+
+    if (!f.exists()) {
+        QMessageBox::critical(
+                0, tr("Error"),
+                tr("Could not find updater file:\n%1").arg(updaterPath));
+        return false;
+    }
+
+    f.open(QFile::ReadOnly | QFile::Text);
+    QTextStream ts(&f);
+    QString scriptContent = ts.readAll();
+    f.close();
+    scriptContent.replace("\"$QOWNNOTES_RELEASE_URL\"", releaseUrl);
+    scriptContent.replace("\"$QOWNNOTES_APPLICATIONS_PATH\"",
+                          QDir::toNativeSeparators(applicationsPath));
+
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + "/QOwnNotes-Updater-XXXXXX.command");
+
+    // we want to keep the file to be used in the update process
+    tempFile->setAutoRemove(false);
+
+    // get a temporary file
+    if (!tempFile->open()) {
+        QMessageBox::critical(
+                0, tr("File error"),
+                tr("Could not open temporary file:\n%1")
+                        .arg(tempFile->errorString()));
+        return false;
+    }
+
+    // write the script content
+    tempFile->write(scriptContent.toLatin1());
+
+    // file->fileName() only holds a value after file->open()
+    QString updaterFilePath = tempFile->fileName();
+    tempFile->close();
+    // we need to delete the object so the later written file
+    // can be read again while the app is open
+    tempFile->deleteLater();
+    destroy(tempFile);
+
+    // this is needed so deleteLater() really deletes the object
+    QCoreApplication::processEvents();
+
+//    // we have to pass the parameters via environment because Qt
+//    // or macOS wasn't able to pass them in any other way
+//    qputenv("QOWNNOTES_RELEASE_URL", releaseUrl.toLatin1());
+//    qputenv("QOWNNOTES_APPLICATIONS_PATH",
+//            QDir::toNativeSeparators(applicationsPath).toLatin1());
+//
+//    // start updater script
+//    Utils::Misc::startDetachedProcess(updaterPath);
 
     // start updater script
-    Utils::Misc::startDetachedProcess(updaterPath);
+    Utils::Misc::startDetachedProcess(updaterFilePath);
 
     qApp->quit();
     return true;
