@@ -33,7 +33,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     _updateButton = new QPushButton(tr("&Update"));
 
     // automatic updates are only available for Windows
-#if defined(Q_OS_WIN)
+#if defined(Q_OS_WIN) || defined(Q_OS_MAC)
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
     _updateButton->setIcon(
@@ -48,7 +48,9 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
 
     button = new QPushButton(downloadButtonText);
     button->setProperty("ActionRole", Download);
+#ifdef Q_OS_LINUX
     button->setDefault(true);
+#endif
     button->setIcon(
             QIcon::fromTheme(
                     "edit-download",
@@ -284,15 +286,39 @@ bool UpdateDialog::initializeUpdateProcess(QString filePath) {
  * Initializes the macOS update process
  */
 bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
-    QStringList parameters(QStringList() << releaseUrl <<
-             QDir::toNativeSeparators(QCoreApplication::applicationDirPath()));
+    // find out the /Application folder
+    QString applicationDirPath = QCoreApplication::applicationDirPath();
+    QString appPathPart = "/QOwnNotes.app/Contents/MacOS";
+    QString applicationsPath = "/Applications";
 
+    if (applicationDirPath.endsWith(appPathPart)) {
+        applicationsPath = Utils::Misc::removeIfEndsWith(
+                    applicationDirPath, appPathPart);
+    }
+
+    QStringList parameters(QStringList() << releaseUrl <<
+             QDir::toNativeSeparators(applicationsPath));
     qDebug() << __func__ << " - 'parameters': " << parameters;
 
-//    // start updater script
-//    Utils::Misc::startDetachedProcess(updaterPath, parameters);
-//
-//    qApp->quit();
+
+    if (QMessageBox::information(
+            this,
+            tr("Proceed with update"),
+            tr("Do you want to update and restart QOwnNotes?"),
+            tr("&Update and restart"), tr("&Cancel"), QString::null,
+            0, 1) == 1) {
+        return false;
+    }
+
+    QString updaterPath = "update.sh";
+
+    // TODO: remove
+    updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.sh";
+
+    // start updater script
+    Utils::Misc::startDetachedProcess(updaterPath, parameters);
+
+    qApp->quit();
     return true;
 }
 
