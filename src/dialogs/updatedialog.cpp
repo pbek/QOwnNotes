@@ -347,6 +347,9 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     // write the script content
     tempFile->write(scriptContent.toLatin1());
 
+    // setting executable permissions to the updater script
+    tempFile->setPermissions(QFile::ExeUser | QFile::ReadUser | QFile::WriteUser);
+
     // file->fileName() only holds a value after file->open()
     QString updaterFilePath = tempFile->fileName();
     tempFile->close();
@@ -366,6 +369,8 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
 //
 //    // start updater script
 //    Utils::Misc::startDetachedProcess(updaterPath);
+
+    qDebug() << updaterFilePath;
 
     // start updater script
     Utils::Misc::startDetachedProcess(updaterFilePath);
