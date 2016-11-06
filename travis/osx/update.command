@@ -8,10 +8,14 @@
 #diskImageUrl="https://github.com/pbek/QOwnNotes/releases/download/macosx-b2381-103543/QOwnNotes-16.10.10.dmg"
 #diskImageUrl="https://github.com/pbek/QOwnNotes/releases/download/macosx-b2376-114124/QOwnNotes-16.10.9.dmg"
 #diskImageUrl="$1"
+
+# QOwnNotes will parse the text: "$QOWNNOTES_RELEASE_URL"
 diskImageUrl="$QOWNNOTES_RELEASE_URL"
 
 #applicationsFolder="/Applications"
 #applicationsFolder="$2"
+
+# QOwnNotes will parse the text: "$QOWNNOTES_APPLICATIONS_PATH"
 applicationsFolder="$QOWNNOTES_APPLICATIONS_PATH"
 
 # https://bash.cyberciti.biz/guide/$IFS
@@ -53,10 +57,9 @@ curl -L -o $diskImage $diskImageUrl
 hdiutil attach -mountpoint $mountPoint $diskImage
 
 # copy app to application folder
-for app in `find $mountPoint -type d -maxdepth 2 -name \*.app `; do
-  echo Syncing "$app" to applications folder
-  rsync -av --progress "$app" "$applicationsFolder"
-done
+app="$mountPoint/QOwnNotes.app"
+echo Syncing "$app" to applications folder
+rsync -a --progress "$app" "$applicationsFolder"
 
 # unmounting dmg
 hdiutil detach $mountPoint
