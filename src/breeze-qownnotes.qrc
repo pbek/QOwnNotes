@@ -89,5 +89,7 @@
         <file alias="16x16/drive-removable-media.svg">icons/breeze-qownnotes/16x16/drive-removable-media.svg</file>
         <file alias="16x16/archive-remove.svg">icons/breeze-qownnotes/16x16/archive-remove.svg</file>
         <file alias="16x16/system-lock-screen.svg">icons/breeze-qownnotes/16x16/system-lock-screen.svg</file>
+        <file alias="16x16/window-duplicate.svg">icons/breeze-qownnotes/16x16/window-duplicate.svg</file>
+        <file alias="16x16/step_object_LinearMotor.svg">icons/breeze-qownnotes/16x16/step_object_LinearMotor.svg</file>
     </qresource>
 </RCC>

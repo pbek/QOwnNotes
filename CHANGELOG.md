@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 16.11.4
+- the process for the automatic updates in macOS was improved because of
+  problems of some users
+- the `Lock panels` menu entry was renamed to `Unlock panels`, got a new
+  icon and now acts accordingly
+  (for [Issue #368](https://github.com/pbek/QOwnNotes/issues/368))
+- the icon for the `Reload scripting engine` menu entry was changed to
+  make it different from the icon of `Reload note folder`
+  (for [Issue #368](https://github.com/pbek/QOwnNotes/issues/368))
+
 ## 16.11.3
 - there are now **automatic updates** for **macOS**
   (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))

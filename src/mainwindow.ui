@@ -795,7 +795,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuPanels"/>
     <addaction name="menuToolbars"/>
     <addaction name="separator"/>
-    <addaction name="actionLock_panels"/>
+    <addaction name="actionUnlock_panels"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionStore_as_new_workspace"/>
     <addaction name="actionRemove_current_workspace"/>
@@ -1526,8 +1526,8 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionReload_scripting_engine">
    <property name="icon">
-    <iconset theme="view-refresh" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</normaloff>:/icons/breeze-qownnotes/16x16/view-refresh.svg</iconset>
+    <iconset theme="step_object_LinearMotor" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/step_object_LinearMotor.svg</normaloff>:/icons/breeze-qownnotes/16x16/step_object_LinearMotor.svg</iconset>
    </property>
    <property name="text">
     <string>Reload scripting engine</string>
@@ -1771,16 +1771,16 @@ p, li { white-space: pre-wrap; }
     <string>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</string>
    </property>
   </action>
-  <action name="actionLock_panels">
+  <action name="actionUnlock_panels">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset theme="system-lock-screen" resource="breeze-qownnotes.qrc">
-     <normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</normaloff>:/icons/breeze-qownnotes/16x16/system-lock-screen.svg</iconset>
+    <iconset theme="window-duplicate" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</iconset>
    </property>
    <property name="text">
-    <string>Lock panels</string>
+    <string>Unlock panels</string>
    </property>
   </action>
   <action name="actionRemove_current_workspace">
@@ -1853,8 +1853,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="breeze-dark-qownnotes.qrc"/>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
  </resources>
  <connections/>
 </ui>

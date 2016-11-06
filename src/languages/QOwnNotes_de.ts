@@ -882,8 +882,12 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
+        <source>Unlock panels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Lock panels</source>
-        <translation>Bereiche sperren</translation>
+        <translation type="obsolete">Bereiche sperren</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1792"/>

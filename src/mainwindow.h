@@ -373,7 +373,7 @@ private slots:
 
     void on_actionGitter_triggered();
 
-    void on_actionLock_panels_toggled(bool arg1);
+    void on_actionUnlock_panels_toggled(bool arg1);
 
     void on_actionStore_as_new_workspace_triggered();
 

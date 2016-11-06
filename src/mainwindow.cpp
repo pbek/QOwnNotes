@@ -549,7 +549,7 @@ void MainWindow::initDockWidgets() {
     restoreCurrentWorkspace();
 
     // lock the dock widgets
-    on_actionLock_panels_toggled(true);
+    on_actionUnlock_panels_toggled(false);
 
     // update the workspace menu and combobox entries
     updateWorkspaceLists();
@@ -787,7 +787,7 @@ void MainWindow::updateWindowToolbar() {
     _windowToolbar->addAction(ui->actionRemove_current_workspace);
     _windowToolbar->addAction(ui->actionRename_current_workspace);
     _windowToolbar->addAction(ui->actionSwitch_to_previous_workspace);
-    _windowToolbar->addAction(ui->actionLock_panels);
+    _windowToolbar->addAction(ui->actionUnlock_panels);
 
     _windowToolbar->addSeparator();
     _windowToolbar->addAction(
@@ -7669,16 +7669,16 @@ QString MainWindow::selectedNoteTextEditText() {
  *
  * @param arg1
  */
-void MainWindow::on_actionLock_panels_toggled(bool arg1) {
-    const QSignalBlocker blocker(ui->actionLock_panels);
+void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
+    const QSignalBlocker blocker(ui->actionUnlock_panels);
     {
         Q_UNUSED(blocker);
-        ui->actionLock_panels->setChecked(arg1);
+        ui->actionUnlock_panels->setChecked(arg1);
     }
 
     QList<QDockWidget*> dockWidgets = findChildren<QDockWidget*>();
 
-    if (arg1) {
+    if (!arg1) {
         // remove the title bar widgets of all dock widgets
         Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
                 // we don't want to lock floating dock widgets

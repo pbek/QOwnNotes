@@ -881,7 +881,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1783"/>
-        <source>Lock panels</source>
+        <source>Unlock panels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
