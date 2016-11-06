@@ -14,6 +14,7 @@
   (for [Issue #365](https://github.com/pbek/QOwnNotes/issues/365))
     - selecting `No` now really causes external changes to be
       overwritten by the text in the note text edit 
+- added more Spanish and Polish translation (thank you richarson and lucjan)
 
 ## 16.11.3
 - there are now **automatic updates** for **macOS**
