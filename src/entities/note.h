@@ -24,6 +24,8 @@ public:
 
     bool getHasDirtyData();
 
+    void setHasDirtyData(bool hasDirtyData);
+
     void setName(QString text);
 
     void setNoteText(QString text);

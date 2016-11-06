@@ -9,6 +9,11 @@
 - the icon for the `Reload scripting engine` menu entry was changed to
   make it different from the icon of `Reload note folder`
   (for [Issue #368](https://github.com/pbek/QOwnNotes/issues/368))
+- when the current note was modified externally the note diff dialog now
+  just ask whether to `Accept external changes?`
+  (for [Issue #365](https://github.com/pbek/QOwnNotes/issues/365))
+    - selecting `No` now really causes external changes to be
+      overwritten by the text in the note text edit 
 
 ## 16.11.3
 - there are now **automatic updates** for **macOS**

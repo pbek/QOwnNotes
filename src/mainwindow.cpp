@@ -2105,12 +2105,18 @@ void MainWindow::notesWereModified(const QString &str) {
                 case NoteDiffDialog::Overwrite: {
                     const QSignalBlocker blocker(this->noteDirectoryWatcher);
                     Q_UNUSED(blocker);
-                    this->currentNote.store();
-                    this->currentNote.storeNoteTextFileToDisk();
-                    showStatusBarMessage(
-                            tr("Stored current note to disk"), 3000);
 
-                    // just to make sure everything is uptodate
+                    showStatusBarMessage(
+                            tr("Overwriting external changes of: %1").arg(
+                                    currentNote.getFileName()), 3000);
+
+                    // the note text has to be stored newly because the
+                    // external change is already in the note table entry
+                    currentNote.storeNewText(
+                            ui->noteTextEdit->toPlainText());
+                    currentNote.storeNoteTextFileToDisk();
+
+                    // just to make sure everything is up-to-date
 //                        this->currentNote = note;
 //                        this->setNoteTextFromNote( &note, true );
 
@@ -2122,11 +2128,14 @@ void MainWindow::notesWereModified(const QString &str) {
 
                 // reload note file from disk
                 case NoteDiffDialog::Reload:
+                    showStatusBarMessage(
+                            tr("Loading external changes from: %1").arg(
+                                    currentNote.getFileName()), 3000);
                     updateNoteTextFromDisk(note);
                     break;
 
-                case NoteDiffDialog::Cancel:
-                case NoteDiffDialog::Ignore:
+//                case NoteDiffDialog::Cancel:
+//                case NoteDiffDialog::Ignore:
                 default:
                     // do nothing
                     break;

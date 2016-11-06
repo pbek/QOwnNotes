@@ -572,13 +572,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1032"/>
-        <location filename="../mainwindow.cpp" line="7067"/>
+        <location filename="../mainwindow.cpp" line="7076"/>
         <source>Select &amp;all notes</source>
         <translation>Wybierz wszystkie not&amp;atki </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1041"/>
-        <location filename="../mainwindow.cpp" line="4707"/>
+        <location filename="../mainwindow.cpp" line="4716"/>
         <source>Insert &amp;link</source>
         <translation>Wstaw &amp;link</translation>
     </message>
@@ -890,7 +890,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1792"/>
-        <location filename="../mainwindow.cpp" line="7923"/>
+        <location filename="../mainwindow.cpp" line="7932"/>
         <source>Remove current workspace</source>
         <translation>Usuń bieżący obszar roboczy</translation>
     </message>
@@ -1065,35 +1065,35 @@
         <translation>Usuń porzucone pliki obrazów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2142"/>
+        <location filename="../mainwindow.cpp" line="2151"/>
         <source>Note was removed externally!</source>
         <translation>Notatka została zmodyfikowana poza programem!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2143"/>
+        <location filename="../mainwindow.cpp" line="2152"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>Obecna notatka została usunięta poza programem!
 Przywrócić notatkę?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2145"/>
+        <location filename="../mainwindow.cpp" line="2154"/>
         <source>&amp;Restore</source>
         <translation>Przywróć</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2145"/>
-        <location filename="../mainwindow.cpp" line="2873"/>
-        <location filename="../mainwindow.cpp" line="3326"/>
-        <location filename="../mainwindow.cpp" line="3410"/>
-        <location filename="../mainwindow.cpp" line="3439"/>
-        <location filename="../mainwindow.cpp" line="3481"/>
-        <location filename="../mainwindow.cpp" line="3537"/>
-        <location filename="../mainwindow.cpp" line="3575"/>
-        <location filename="../mainwindow.cpp" line="3615"/>
-        <location filename="../mainwindow.cpp" line="3967"/>
-        <location filename="../mainwindow.cpp" line="4970"/>
-        <location filename="../mainwindow.cpp" line="7925"/>
+        <location filename="../mainwindow.cpp" line="2154"/>
+        <location filename="../mainwindow.cpp" line="2882"/>
+        <location filename="../mainwindow.cpp" line="3335"/>
+        <location filename="../mainwindow.cpp" line="3419"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
+        <location filename="../mainwindow.cpp" line="3490"/>
+        <location filename="../mainwindow.cpp" line="3546"/>
+        <location filename="../mainwindow.cpp" line="3584"/>
+        <location filename="../mainwindow.cpp" line="3624"/>
+        <location filename="../mainwindow.cpp" line="3976"/>
+        <location filename="../mainwindow.cpp" line="4979"/>
+        <location filename="../mainwindow.cpp" line="7934"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Anuluj</translation>
     </message>
@@ -1106,77 +1106,77 @@ Przywrócić notatkę?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2317"/>
+        <location filename="../mainwindow.cpp" line="2326"/>
         <source>click here to see what has changed and to be able to download the latest version</source>
         <translation>kliknij tutaj by zobaczyć zmiany i ściągnąć najnowszą wersję</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2333"/>
+        <location filename="../mainwindow.cpp" line="2342"/>
         <source>new version %1 available</source>
         <translation>wersja %1 dostępna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2733"/>
+        <location filename="../mainwindow.cpp" line="2742"/>
         <source>No folder was selected</source>
         <translation>Nie zaznaczono folderu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2734"/>
+        <location filename="../mainwindow.cpp" line="2743"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>Musisz określić swój folder notatek ownCloud aby ten program działał!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2736"/>
+        <location filename="../mainwindow.cpp" line="2745"/>
         <source>&amp;Retry</source>
         <translation>Ponów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2736"/>
+        <location filename="../mainwindow.cpp" line="2745"/>
         <source>&amp;Exit</source>
         <translation>Wyjdź</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2870"/>
+        <location filename="../mainwindow.cpp" line="2879"/>
         <source>Remove current note</source>
         <translation>Usuń wybraną notatkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2871"/>
+        <location filename="../mainwindow.cpp" line="2880"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Usunąć wybraną notatkę: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2873"/>
-        <location filename="../mainwindow.cpp" line="3326"/>
-        <location filename="../mainwindow.cpp" line="3410"/>
-        <location filename="../mainwindow.cpp" line="3439"/>
-        <location filename="../mainwindow.cpp" line="3615"/>
-        <location filename="../mainwindow.cpp" line="7925"/>
+        <location filename="../mainwindow.cpp" line="2882"/>
+        <location filename="../mainwindow.cpp" line="3335"/>
+        <location filename="../mainwindow.cpp" line="3419"/>
+        <location filename="../mainwindow.cpp" line="3448"/>
+        <location filename="../mainwindow.cpp" line="3624"/>
+        <location filename="../mainwindow.cpp" line="7934"/>
         <source>&amp;Remove</source>
         <translation>Usuń</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3174"/>
+        <location filename="../mainwindow.cpp" line="3183"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>Wpisz  &lt;strong&gt;hasło&lt;/strong&gt; zaszyfrowanej notatki.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3198"/>
+        <location filename="../mainwindow.cpp" line="3207"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>Notatka nie może zostać odszyfrowana!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3199"/>
+        <location filename="../mainwindow.cpp" line="3208"/>
         <source>It seems that your password is not valid!</source>
         <translation>Twoje hasło nie jest poprawne!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3320"/>
+        <location filename="../mainwindow.cpp" line="3329"/>
         <source>Remove selected notes</source>
         <translation>Usuń zaznaczone notatki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3321"/>
+        <location filename="../mainwindow.cpp" line="3330"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1193,13 +1193,13 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3403"/>
-        <location filename="../mainwindow.cpp" line="7265"/>
+        <location filename="../mainwindow.cpp" line="3412"/>
+        <location filename="../mainwindow.cpp" line="7274"/>
         <source>Remove selected folders</source>
         <translation>Usuń zaznaczone foldery</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3404"/>
+        <location filename="../mainwindow.cpp" line="3413"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybrany folder?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Usunięte zostaną także wszystkie notatki i foldery w nim zawarte!</numerusform>
@@ -1208,17 +1208,17 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3416"/>
+        <location filename="../mainwindow.cpp" line="3425"/>
         <source>Removed note subfolder: %1</source>
         <translation>Usuń podfolder: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3435"/>
+        <location filename="../mainwindow.cpp" line="3444"/>
         <source>Remove selected tags</source>
         <translation>Usuń zaznaczone etykietki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3436"/>
+        <location filename="../mainwindow.cpp" line="3445"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>Usunąć &lt;strong&gt;%n&lt;/strong&gt; wybraną etykietę? Żadna notatka nie zostanie usunięta.</numerusform>
@@ -1227,13 +1227,13 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3478"/>
-        <location filename="../mainwindow.cpp" line="6429"/>
+        <location filename="../mainwindow.cpp" line="3487"/>
+        <location filename="../mainwindow.cpp" line="6438"/>
         <source>Move selected notes</source>
         <translation>Przenieś zaznaczone notatki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3479"/>
+        <location filename="../mainwindow.cpp" line="3488"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Przenieść %n zaznaczoną notatkę do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1242,18 +1242,18 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3481"/>
+        <location filename="../mainwindow.cpp" line="3490"/>
         <source>&amp;Move</source>
         <translation>Przenieś</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3534"/>
-        <location filename="../mainwindow.cpp" line="6484"/>
+        <location filename="../mainwindow.cpp" line="3543"/>
+        <location filename="../mainwindow.cpp" line="6493"/>
         <source>Copy selected notes</source>
         <translation>Skopiuj zaznaczone notatki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3535"/>
+        <location filename="../mainwindow.cpp" line="3544"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Skopiować %n zaznaczoną notatkę do &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1262,18 +1262,18 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3537"/>
+        <location filename="../mainwindow.cpp" line="3546"/>
         <source>&amp;Copy</source>
         <translation>&amp;Kopiuj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3558"/>
-        <location filename="../mainwindow.cpp" line="3640"/>
+        <location filename="../mainwindow.cpp" line="3567"/>
+        <location filename="../mainwindow.cpp" line="3649"/>
         <source>Done</source>
         <translation>Zrobione</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3559"/>
+        <location filename="../mainwindow.cpp" line="3568"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n notatka została skopiowana do &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -1282,12 +1282,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3572"/>
+        <location filename="../mainwindow.cpp" line="3581"/>
         <source>Tag selected notes</source>
         <translation>Oznacz wybrane notatki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3573"/>
+        <location filename="../mainwindow.cpp" line="3582"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Dodać do %n zaznaczonej notatki etykietę &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1296,39 +1296,39 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4666"/>
+        <location filename="../mainwindow.cpp" line="4675"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Wersje notatek są ładowane z Twojego serwera ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4680"/>
+        <location filename="../mainwindow.cpp" line="4689"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Skasowane notatki są ładowane z Twojego serwera ownCloud</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5108"/>
+        <location filename="../mainwindow.cpp" line="5117"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Stworzono zakładkę notatki na pozycji %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5124"/>
+        <location filename="../mainwindow.cpp" line="5133"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Przejście do zakładki na pozycji %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5326"/>
-        <location filename="../mainwindow.cpp" line="5388"/>
+        <location filename="../mainwindow.cpp" line="5335"/>
+        <location filename="../mainwindow.cpp" line="5397"/>
         <source>Inserting image</source>
         <translation>Wstawianie obrazu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5331"/>
-        <location filename="../mainwindow.cpp" line="5391"/>
+        <location filename="../mainwindow.cpp" line="5340"/>
+        <location filename="../mainwindow.cpp" line="5400"/>
         <source>Done inserting image</source>
         <translation>Wstawiono obraz</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5342"/>
+        <location filename="../mainwindow.cpp" line="5351"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Skopiowano %n notatkę do %1</numerusform>
@@ -1337,7 +1337,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5351"/>
+        <location filename="../mainwindow.cpp" line="5360"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Nie udało się skopiować %n notatki (najprawdopodobniej już istnieje)</numerusform>
@@ -1346,7 +1346,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5361"/>
+        <location filename="../mainwindow.cpp" line="5370"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Pominięto kopiowanie %n notatki (plik nie do odczytu lub uszkodzony)</numerusform>
@@ -1355,85 +1355,85 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5375"/>
+        <location filename="../mainwindow.cpp" line="5384"/>
         <source>Saving temporary image</source>
         <translation>Zapisywanie tymczasowego obrazu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5394"/>
+        <location filename="../mainwindow.cpp" line="5403"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Plik tymczasowy nie mógł zostać otwarty</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5427"/>
+        <location filename="../mainwindow.cpp" line="5436"/>
         <source>Downloading %1</source>
         <translation>Pobieranie %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5457"/>
+        <location filename="../mainwindow.cpp" line="5466"/>
         <source>Done downloading images</source>
         <translation>Zakończono pobieranie obrazów</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6612"/>
+        <location filename="../mainwindow.cpp" line="6621"/>
         <source>An url was opened at the current cursor position</source>
         <translation>Adres URL z bieżącej pozycji kursora został otwarty</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6690"/>
+        <location filename="../mainwindow.cpp" line="6699"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Nie znaleziono działania przed kursorem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6707"/>
+        <location filename="../mainwindow.cpp" line="6716"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Wynik działania: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6781"/>
+        <location filename="../mainwindow.cpp" line="6790"/>
         <source>The scripting engine was reloaded</source>
         <translation>Silnik skryptów został uruchomiony ponownie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7725"/>
+        <location filename="../mainwindow.cpp" line="7734"/>
         <source>Create new workspace</source>
         <translation>Utwórz nowy obszar roboczy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7725"/>
-        <location filename="../mainwindow.cpp" line="7962"/>
+        <location filename="../mainwindow.cpp" line="7734"/>
+        <location filename="../mainwindow.cpp" line="7971"/>
         <source>Workspace name:</source>
         <translation>Nazwa obszaru roboczego:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7844"/>
+        <location filename="../mainwindow.cpp" line="7853"/>
         <source>default</source>
         <comment>default workspace</comment>
         <translation>domyślny</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7924"/>
+        <location filename="../mainwindow.cpp" line="7933"/>
         <source>Remove the current workspace?</source>
         <translation>Usunąć bieżący obszar roboczy?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7962"/>
+        <location filename="../mainwindow.cpp" line="7971"/>
         <source>Rename workspace</source>
         <translation>Zmień nazwę obszaru roboczego</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="816"/>
-        <location filename="../mainwindow.cpp" line="3575"/>
+        <location filename="../mainwindow.cpp" line="3584"/>
         <source>&amp;Tag</source>
         <translation>&amp;Etykietka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3612"/>
+        <location filename="../mainwindow.cpp" line="3621"/>
         <source>Remove tag from selected notes</source>
         <translation>Usuń etykietkę z wybranych notatek</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3613"/>
+        <location filename="../mainwindow.cpp" line="3622"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>Usuń etykietę &lt;strong&gt;%1&lt;/strong&gt; z %n zaznaczonej notatki?</numerusform>
@@ -1442,7 +1442,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3641"/>
+        <location filename="../mainwindow.cpp" line="3650"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>Etykieta &lt;strong&gt;%1&lt;/strong&gt; została usunięta z %n notatki</numerusform>
@@ -1451,135 +1451,135 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3651"/>
+        <location filename="../mainwindow.cpp" line="3660"/>
         <source>Current notes folder: </source>
         <translation>Aktualny folder notatek:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3653"/>
+        <location filename="../mainwindow.cpp" line="3662"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>Wybierz folder notatek. Obecny folder notatek: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3706"/>
+        <location filename="../mainwindow.cpp" line="3715"/>
         <source>Link to an url or note</source>
         <translation>Link do URL albo notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3817"/>
+        <location filename="../mainwindow.cpp" line="3826"/>
         <source>Print note</source>
         <translation>Wydrukuj notatkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3848"/>
+        <location filename="../mainwindow.cpp" line="3857"/>
         <source>Letter</source>
         <translation>Letter</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3874"/>
+        <location filename="../mainwindow.cpp" line="3883"/>
         <source>Portrait</source>
         <translation>Pionowa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3874"/>
+        <location filename="../mainwindow.cpp" line="3883"/>
         <source>Landscape</source>
         <translation>Pozioma</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3879"/>
+        <location filename="../mainwindow.cpp" line="3888"/>
         <source>Orientation</source>
         <translation>Orientacja</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3879"/>
+        <location filename="../mainwindow.cpp" line="3888"/>
         <source>Orientation:</source>
         <translation>Orientacja:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3899"/>
+        <location filename="../mainwindow.cpp" line="3908"/>
         <source>PDF files (*.pdf)</source>
         <translation>Pliki PDF  *.pdf)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3900"/>
+        <location filename="../mainwindow.cpp" line="3909"/>
         <source>Export current note as PDF</source>
         <translation>Eksportuj notatkę jako PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3963"/>
+        <location filename="../mainwindow.cpp" line="3972"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Nie wybrałeś żadnych list zadań.&lt;br /&gt;Sprawdź swoją konfigurację &lt;strong&gt;List zadań&lt;/strong&gt; w ustawieniach!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4531"/>
+        <location filename="../mainwindow.cpp" line="4540"/>
         <source>Open QOwnNotes</source>
         <translation>Otwórz QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4540"/>
-        <location filename="../mainwindow.cpp" line="7263"/>
+        <location filename="../mainwindow.cpp" line="4549"/>
+        <location filename="../mainwindow.cpp" line="7272"/>
         <source>New note</source>
         <translation>Nowa notatka</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4556"/>
+        <location filename="../mainwindow.cpp" line="4565"/>
         <source>Recent notes</source>
         <translation>Ostatnie notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4586"/>
+        <location filename="../mainwindow.cpp" line="4595"/>
         <source>Show todo lists</source>
         <translation>Pokaż listę rzeczy do zrobienia (TODO)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4597"/>
+        <location filename="../mainwindow.cpp" line="4606"/>
         <source>Recent tasks</source>
         <translation>Ostatnie zadania</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4629"/>
+        <location filename="../mainwindow.cpp" line="4638"/>
         <source>Quit</source>
         <translation>Wyjście</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5686"/>
+        <location filename="../mainwindow.cpp" line="5695"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>pokaż notatki z wszystkich podfolderów (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5704"/>
+        <location filename="../mainwindow.cpp" line="5713"/>
         <source>show notes in note root folder (%1)</source>
         <translation>pokaż notatki w folderze głównym (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <location filename="../mainwindow.cpp" line="463"/>
-        <location filename="../mainwindow.cpp" line="5708"/>
+        <location filename="../mainwindow.cpp" line="5717"/>
         <source>Note folder</source>
         <translation>Folder notatek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6364"/>
+        <location filename="../mainwindow.cpp" line="6373"/>
         <source>Copy to note folder</source>
         <translation>Kopiuj do folderu notatek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6365"/>
+        <location filename="../mainwindow.cpp" line="6374"/>
         <source>Move to note folder</source>
         <translation>Przenieś do folderu notatek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6366"/>
+        <location filename="../mainwindow.cpp" line="6375"/>
         <source>Copy to this subfolder</source>
         <translation>Kopiuj do tego podfolderu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6367"/>
+        <location filename="../mainwindow.cpp" line="6376"/>
         <source>Move to this subfolder</source>
         <translation>Przenieś do tego podfolderu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6418"/>
+        <location filename="../mainwindow.cpp" line="6427"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Przenieść %n wybraną notatkę do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1588,18 +1588,18 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6431"/>
+        <location filename="../mainwindow.cpp" line="6440"/>
         <source>Move</source>
         <translation>Przenieś</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6431"/>
-        <location filename="../mainwindow.cpp" line="6486"/>
+        <location filename="../mainwindow.cpp" line="6440"/>
+        <location filename="../mainwindow.cpp" line="6495"/>
         <source>Cancel</source>
         <translation>Anuluj</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6463"/>
+        <location filename="../mainwindow.cpp" line="6472"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n notatka została przeniesiona do podfolderu „%2”</numerusform>
@@ -1608,7 +1608,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6473"/>
+        <location filename="../mainwindow.cpp" line="6482"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Skopiować %n wybraną notatkę do podfolderu &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1617,18 +1617,18 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6423"/>
-        <location filename="../mainwindow.cpp" line="6478"/>
+        <location filename="../mainwindow.cpp" line="6432"/>
+        <location filename="../mainwindow.cpp" line="6487"/>
         <source>Tagging information of these notes will be lost at the destination.</source>
         <translation>Informacje o tagach tej notatki zostaną utracone w miejscu docelowym.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6486"/>
+        <location filename="../mainwindow.cpp" line="6495"/>
         <source>Copy</source>
         <translation>Kopiuj</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6518"/>
+        <location filename="../mainwindow.cpp" line="6527"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n notatka została skopiowana do podfolderu „%2”</numerusform>
@@ -1637,67 +1637,67 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7015"/>
+        <location filename="../mainwindow.cpp" line="7024"/>
         <source>Move notes to subfolder...</source>
         <translation>Przenieś notatki do podfolderu…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7019"/>
+        <location filename="../mainwindow.cpp" line="7028"/>
         <source>Copy notes to subfolder...</source>
         <translation>Kopiuj notatki do podfolderu…</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7063"/>
+        <location filename="../mainwindow.cpp" line="7072"/>
         <source>Open note in external editor</source>
         <translation>Otwórz notatkę w zewnętrznym edytorze</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7065"/>
+        <location filename="../mainwindow.cpp" line="7074"/>
         <source>Show note in file manager</source>
         <translation>Pokaż notatkę w menadżerze plików</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7264"/>
+        <location filename="../mainwindow.cpp" line="7273"/>
         <source>New subfolder</source>
         <translation>Nowy podfolder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7267"/>
+        <location filename="../mainwindow.cpp" line="7276"/>
         <source>Show folder in file manager</source>
         <translation>Pokaż folder w menadżerze plików</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7298"/>
+        <location filename="../mainwindow.cpp" line="7307"/>
         <source>Create a new folder</source>
         <translation>Utwórz nowy folder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7298"/>
+        <location filename="../mainwindow.cpp" line="7307"/>
         <source>Folder name:</source>
         <translation>Nazwa folderu:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5652"/>
+        <location filename="../mainwindow.cpp" line="5661"/>
         <source>show all untagged notes (%1)</source>
         <translation>pokaż wszystkie notatki bez etykietek (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5655"/>
+        <location filename="../mainwindow.cpp" line="5664"/>
         <source>Untagged notes</source>
         <translation>Notatki bez etykietek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6808"/>
+        <location filename="../mainwindow.cpp" line="6817"/>
         <source>HTML files (*.html)</source>
         <translation>Pliki HTML (*.html)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6809"/>
+        <location filename="../mainwindow.cpp" line="6818"/>
         <source>Export current note as HTML file</source>
         <translation>Eksportuj notatkę jako plik HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3857"/>
+        <location filename="../mainwindow.cpp" line="3866"/>
         <source>Page size</source>
         <translation>Rozmiar strony</translation>
     </message>
@@ -1712,47 +1712,47 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>Pokaż element paska menu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3857"/>
+        <location filename="../mainwindow.cpp" line="3866"/>
         <source>Page size:</source>
         <translation>Rozmiar strony:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3938"/>
+        <location filename="../mainwindow.cpp" line="3947"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes będzie zbierać anonimowe dane na temat użytkowania aplikacji, które pomogą ocenić co należy dalej rozwijać, a także by znaleźć i naprawić błędy. Możesz wyłączyć tę opcję w ustawieniach.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3942"/>
+        <location filename="../mainwindow.cpp" line="3951"/>
         <source>&amp;Ok</source>
         <translation>&amp;Ok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6985"/>
+        <location filename="../mainwindow.cpp" line="6994"/>
         <source>&amp;Move notes to...</source>
         <translation>&amp;Przenieś notatki do...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6986"/>
+        <location filename="../mainwindow.cpp" line="6995"/>
         <source>&amp;Copy notes to...</source>
         <translation>Skopiuj notatki do...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7027"/>
+        <location filename="../mainwindow.cpp" line="7036"/>
         <source>&amp;Tag selected notes with...</source>
         <translation>&amp;Oznacz wybrane notatki etykietką...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7049"/>
+        <location filename="../mainwindow.cpp" line="7058"/>
         <source>&amp;Remove tag from selected notes...</source>
         <translation>&amp;Usuń etykietkę z wybranych notatek...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7060"/>
+        <location filename="../mainwindow.cpp" line="7069"/>
         <source>&amp;Remove notes</source>
         <translation>Usuń notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4707"/>
+        <location filename="../mainwindow.cpp" line="4716"/>
         <source>&amp;Link selected text</source>
         <translation>Zalinkuj zaznaczony tekst</translation>
     </message>
@@ -1767,24 +1767,23 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>Bieżąca notatka została zmodyfikowana w innym programie</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2111"/>
-        <location filename="../mainwindow.cpp" line="2157"/>
-        <location filename="../mainwindow.cpp" line="4270"/>
+        <location filename="../mainwindow.cpp" line="2166"/>
+        <location filename="../mainwindow.cpp" line="4279"/>
         <source>Stored current note to disk</source>
         <translation>Zapisano bieżącą notatkę na dysk</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2179"/>
+        <location filename="../mainwindow.cpp" line="2188"/>
         <source>Note was modified externally: %1</source>
         <translation>Notatka została zmodyfikowana w innym programie: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2200"/>
+        <location filename="../mainwindow.cpp" line="2209"/>
         <source>Notes directory was modified externally</source>
         <translation>Folder notatek został zmodyfikowany przez inny program</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2266"/>
+        <location filename="../mainwindow.cpp" line="2275"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>Zapisano %n notatkę na dysku</numerusform>
@@ -1793,83 +1792,83 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4711"/>
+        <location filename="../mainwindow.cpp" line="4720"/>
         <source>Paste HTML or media</source>
         <translation>Wklej kod html bądź media</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5624"/>
+        <location filename="../mainwindow.cpp" line="5633"/>
         <source>show all notes (%1)</source>
         <translation>Pokaż wszystkie notatki (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5627"/>
-        <location filename="../mainwindow.cpp" line="5690"/>
+        <location filename="../mainwindow.cpp" line="5636"/>
+        <location filename="../mainwindow.cpp" line="5699"/>
         <source>All notes</source>
         <translation>Wszystkie notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6125"/>
+        <location filename="../mainwindow.cpp" line="6134"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Dodaj etykietkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6132"/>
+        <location filename="../mainwindow.cpp" line="6141"/>
         <source>&amp;Move tags to...</source>
         <translation>&amp;Przenieś etykietki do...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6164"/>
+        <location filename="../mainwindow.cpp" line="6173"/>
         <source>Tag could not be created!</source>
         <translation>Etykietka nie może zostać utworzona!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6218"/>
+        <location filename="../mainwindow.cpp" line="6227"/>
         <source>Move to the root</source>
         <translation>Przenieś do katalogu głównego</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6218"/>
+        <location filename="../mainwindow.cpp" line="6227"/>
         <source>Move to this tag</source>
         <translation>Przenieś do tej etykietki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6268"/>
+        <location filename="../mainwindow.cpp" line="6277"/>
         <source>Tag this</source>
         <translation>Oznacz to</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6298"/>
+        <location filename="../mainwindow.cpp" line="6307"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Nie można przenieść &apos;%1&apos; do tej etykietki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6309"/>
+        <location filename="../mainwindow.cpp" line="6318"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Przeniesiono &apos;%1&apos; do nowej etykietki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5807"/>
+        <location filename="../mainwindow.cpp" line="5816"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>pokaż wszystkie notatki oznaczone &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6008"/>
+        <location filename="../mainwindow.cpp" line="6017"/>
         <source>remove tag &apos;%1&apos; from note</source>
         <translation>usuń etykietkę &apos;%1&apos; z notatki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6127"/>
+        <location filename="../mainwindow.cpp" line="6136"/>
         <source>&amp;Edit tag</source>
         <translation>&amp;Zmień etykietkę</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6129"/>
+        <location filename="../mainwindow.cpp" line="6138"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Usuń etykietki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3962"/>
+        <location filename="../mainwindow.cpp" line="3971"/>
         <source>No selected todo lists!</source>
         <translation>Nie zaznaczono listy zadań!</translation>
     </message>
@@ -1974,12 +1973,22 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>Nie można załadować paska narzędzi bez nazwy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2706"/>
+        <location filename="../mainwindow.cpp" line="2110"/>
+        <source>Overwriting external changes of: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2132"/>
+        <source>Loading external changes from: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="2715"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Zaznacz folder gdzie będą zapisywane notatki</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3599"/>
+        <location filename="../mainwindow.cpp" line="3608"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n notatka została oznaczona tagiem „%2”</numerusform>
@@ -1988,23 +1997,23 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5558"/>
+        <location filename="../mainwindow.cpp" line="5567"/>
         <source>Increased font size to %1 pt</source>
         <translation>Zwiększ rozmiar czcionki do %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5570"/>
+        <location filename="../mainwindow.cpp" line="5579"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Zmniejsz rozmiar czcionki do %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5581"/>
+        <location filename="../mainwindow.cpp" line="5590"/>
         <source>Reset font size to %1 pt</source>
         <translation>Ustaw rozmiar czcionki na domyślne %1 pt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3943"/>
-        <location filename="../mainwindow.cpp" line="3966"/>
+        <location filename="../mainwindow.cpp" line="3952"/>
+        <location filename="../mainwindow.cpp" line="3975"/>
         <source>Open &amp;settings</source>
         <translation>Otwórz u&amp;stawienia</translation>
     </message>
@@ -2019,47 +2028,47 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>wyjdź z trybu bez rozpraszania</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4815"/>
+        <location filename="../mainwindow.cpp" line="4824"/>
         <source>Image files (*.jpg *.png *.gif)</source>
         <translation>Pliki obrazów (*.jpg *.png *.gif)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4816"/>
+        <location filename="../mainwindow.cpp" line="4825"/>
         <source>Select image to insert</source>
         <translation>Zaznacz obraz do wstawienia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4912"/>
+        <location filename="../mainwindow.cpp" line="4921"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Wpisz &lt;strong&gt;hasło&lt;/strong&gt; aby zaszyfrować notatkę.&lt;br /&gt;Pamiętaj, aby  &lt;strong&gt;zapamiętać&lt;/strong&gt; hasło aby móc odczytać zawartość notatki&lt;br /&gt; a także, że możesz ją odczytać  &lt;strong&gt;tylko w QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4965"/>
+        <location filename="../mainwindow.cpp" line="4974"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Odszyfruj notatkę i zapisz odkrytym tekstem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4966"/>
+        <location filename="../mainwindow.cpp" line="4975"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Notatka zostanie odszyfrowana i zapisana jako otwarty tekst. Pamiętaj, że niezaszyfrowana notatka będzie najpewniej zsynchronizowana z Twoim serwerem i wrażliwe informacje mogą zostać ujawnione. Czy chcesz odszyfrować notatkę?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4970"/>
+        <location filename="../mainwindow.cpp" line="4979"/>
         <source>&amp;Decrypt</source>
         <translation>Odszyfruj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4995"/>
+        <location filename="../mainwindow.cpp" line="5004"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt;Będziesz mógł edytować zaszyfrowaną notatkę.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5052"/>
+        <location filename="../mainwindow.cpp" line="5061"/>
         <source>Markdown files (*.md)</source>
         <translation>Pliki Markdown (*.md)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5053"/>
+        <location filename="../mainwindow.cpp" line="5062"/>
         <source>Export current note as Markdown file</source>
         <translation>Exportuj notatkę jako plik Markdown</translation>
     </message>
@@ -2080,39 +2089,54 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>Notatka została zmodyfikowana na zewnątrz!</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="38"/>
+        <location filename="../dialogs/notediffdialog.ui" line="41"/>
         <source>The current note was modified outside of this application!</source>
         <translation>Bieżąca notatka została zmodyfikowana poza tą aplikacją!</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="59"/>
-        <source>Reload current note from disk?</source>
-        <translation>Wczytać notatkę z dysku?</translation>
+        <location filename="../dialogs/notediffdialog.ui" line="48"/>
+        <source>Differences:</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="66"/>
+        <location filename="../dialogs/notediffdialog.ui" line="76"/>
+        <source>Accept external changes?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload current note from disk?</source>
+        <translation type="obsolete">Wczytać notatkę z dysku?</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notediffdialog.ui" line="69"/>
         <source>Ignore all external modifications in the future</source>
         <translation>Ignoruj wszystkie zewnętrzne zmiany w przyszłości</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="19"/>
         <source>&amp;Overwrite note on disk</source>
-        <translation>&amp;Nadpisz notatkę na dysku</translation>
+        <translation type="obsolete">&amp;Nadpisz notatkę na dysku</translation>
+    </message>
+    <message>
+        <source>&amp;Reload note from disk</source>
+        <translation type="obsolete">&amp;Wczytaj ponownie notatkę z dysku</translation>
+    </message>
+    <message>
+        <source>&amp;Ignore changes</source>
+        <translation type="obsolete">&amp;Ignoruj zmiany</translation>
+    </message>
+    <message>
+        <source>&amp;Cancel</source>
+        <translation type="obsolete">&amp;Anuluj</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/notediffdialog.cpp" line="19"/>
+        <source>Yes</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/notediffdialog.cpp" line="24"/>
-        <source>&amp;Reload note from disk</source>
-        <translation>&amp;Wczytaj ponownie notatkę z dysku</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="29"/>
-        <source>&amp;Ignore changes</source>
-        <translation>&amp;Ignoruj zmiany</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="34"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Anuluj</translation>
+        <source>No</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2277,12 +2301,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
         <translation>Domyślny</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1881"/>
+        <location filename="../entities/note.cpp" line="1885"/>
         <source>Note filename changed</source>
         <translation>Nazwa pliku notatki została zmieniona</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="1882"/>
+        <location filename="../entities/note.cpp" line="1886"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation>
             <numerusform>Wykryto zmianę nazwy notatki. Czy chcesz zamienić wszystkie wystąpienia odnośnika &lt;strong&gt;%1&lt;/strong&gt; na &lt;strong&gt;%2&lt;/strong&gt; w &lt;strong&gt;%n&lt;/strong&gt; notatce?</numerusform>

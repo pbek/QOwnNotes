@@ -16,28 +16,28 @@ NoteDiffDialog::NoteDiffDialog(QWidget *parent, QString html) :
     QPushButton *button;
     ui->buttonBox->clear();
 
-    button = new QPushButton(tr("&Overwrite note on disk"));
-    button->setProperty("ActionRole", Overwrite);
-    button->setDefault(false);
-    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
-
-    button = new QPushButton(tr("&Reload note from disk"));
+    button = new QPushButton(tr("Yes"));
     button->setProperty("ActionRole", Reload);
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    button = new QPushButton(tr("&Ignore changes"));
-    button->setProperty("ActionRole", Ignore);
-    button->setDefault(true);
-    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
-
-    button = new QPushButton(tr("&Cancel"));
-    button->setProperty("ActionRole", Cancel);
+    button = new QPushButton(tr("No"));
+    button->setProperty("ActionRole", Overwrite);
     button->setDefault(false);
     ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
 
-    connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton * )),
-            SLOT(dialogButtonClicked(QAbstractButton * )));
+//    button = new QPushButton(tr("&Ignore changes"));
+//    button->setProperty("ActionRole", Ignore);
+//    button->setDefault(true);
+//    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+//
+//    button = new QPushButton(tr("&Cancel"));
+//    button->setProperty("ActionRole", Cancel);
+//    button->setDefault(false);
+//    ui->buttonBox->addButton(button, QDialogButtonBox::ActionRole);
+
+    connect(this->ui->buttonBox, SIGNAL(clicked(QAbstractButton *)),
+            SLOT(dialogButtonClicked(QAbstractButton *)));
 }
 
 NoteDiffDialog::~NoteDiffDialog() {

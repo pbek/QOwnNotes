@@ -91,6 +91,10 @@ QString Note::getNoteText() {
     return this->noteText;
 }
 
+void Note::setHasDirtyData(bool hasDirtyData) {
+    this->hasDirtyData = hasDirtyData;
+}
+
 bool Note::getHasDirtyData() {
     return this->hasDirtyData;
 }
