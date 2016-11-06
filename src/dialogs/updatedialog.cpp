@@ -307,7 +307,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     }
 
     // macOS only opens command files in a terminal
-    QString updaterPath = "update.command";
+    QString updaterPath = ":/scripts/macos/update.command";
 
     // just for debugging
 //    updaterPath = "/Users/omega/Code/QOwnNotes/travis/osx/update.command";
@@ -317,7 +317,7 @@ bool UpdateDialog::initializeMacOSUpdateProcess(QString releaseUrl) {
     if (!f.exists()) {
         QMessageBox::critical(
                 0, tr("Error"),
-                tr("Could not find updater file:\n%1").arg(updaterPath));
+                tr("Could not find updater file:\n%1").arg(f.fileName()));
         return false;
     }
 
