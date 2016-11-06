@@ -3,6 +3,7 @@
 ## 16.11.4
 - the process for the automatic updates in macOS was improved because of
   problems of some users
+  (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))
 - the `Lock panels` menu entry was renamed to `Unlock panels`, got a new
   icon and now acts accordingly
   (for [Issue #368](https://github.com/pbek/QOwnNotes/issues/368))
