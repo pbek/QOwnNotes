@@ -13,6 +13,7 @@ Tag::Tag() {
     name = "";
     priority = 0;
     parentId = 0;
+    _color = QColor();
 }
 
 int Tag::getId() {
@@ -33,6 +34,14 @@ QString Tag::getName() {
 
 void Tag::setName(QString text) {
     this->name = text;
+}
+
+QColor Tag::getColor() {
+    return this->_color;
+}
+
+void Tag::setColor(QColor color) {
+    this->_color = color;
 }
 
 int Tag::getPriority() {
@@ -158,6 +167,9 @@ bool Tag::fillFromQuery(QSqlQuery query) {
     this->name = query.value("name").toString();
     this->priority = query.value("priority").toInt();
     this->parentId = query.value("parent_id").toInt();
+
+    QString colorName = query.value("color").toString();
+    this->_color = colorName.isEmpty() ? QColor() : QColor(colorName);
 
     return true;
 }
@@ -441,18 +453,19 @@ bool Tag::store() {
     if (this->id > 0) {
         query.prepare(
                 "UPDATE tag SET name = :name, priority = :priority, "
-                        "parent_id = :parentId "
+                        "parent_id = :parentId, color = :color "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
-                "INSERT INTO tag (name, priority, parent_id) "
-                        "VALUES (:name, :priority, :parentId)");
+                "INSERT INTO tag (name, priority, parent_id, color) "
+                        "VALUES (:name, :priority, :parentId, color)");
     }
 
     query.bindValue(":name", this->name);
     query.bindValue(":priority", this->priority);
     query.bindValue(":parentId", this->parentId);
+    query.bindValue(":color", _color.isValid() ? _color.name() : "");
 
     if (!query.exec()) {
         // on error

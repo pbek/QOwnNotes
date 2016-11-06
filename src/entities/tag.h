@@ -2,6 +2,7 @@
 
 #include <QSqlQuery>
 #include <QList>
+#include <QColor>
 #include "note.h"
 
 class Tag {
@@ -92,9 +93,14 @@ public:
 
     static void convertDirSeparator();
 
+    QColor getColor();
+
+    void setColor(QColor color);
+
 protected:
     int id;
     QString name;
     int priority;
     int parentId;
+    QColor _color;
 };

@@ -697,4 +697,6 @@ private:
     void initPanelMenu();
 
     void initToolbarMenu();
+
+    void assignColorToTagItem(QTreeWidgetItem *item);
 };

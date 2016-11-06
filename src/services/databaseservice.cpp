@@ -240,6 +240,11 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 7;
     }
 
+    if (version < 8) {
+        queryDisk.exec("ALTER TABLE tag ADD color VARCHAR(20)");
+        version = 8;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

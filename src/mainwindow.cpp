@@ -55,6 +55,7 @@
 #include <QQmlComponent>
 #include <QQmlApplicationEngine>
 #include <QWidgetAction>
+#include <QColorDialog>
 #include <services/scriptingservice.h>
 #include <dialogs/evernoteimportdialog.h>
 #include <widgets/logwidget.h>
@@ -6134,6 +6135,10 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
             tr("&Add tag"));
     QAction *editAction = menu.addAction(
             tr("&Edit tag"));
+    QAction *assignColorAction = menu.addAction(
+            tr("Assign color"));
+    QAction *disableColorAction = menu.addAction(
+            tr("Disable color"));
     QAction *removeAction = menu.addAction(
             tr("&Remove tags"));
 
@@ -6178,7 +6183,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         return;
     }
 
-    // don't allow clicking on non-tag items vor removing nnd editing
+    // don't allow clicking on non-tag items for removing, editing and colors
     if (item->data(0, Qt::UserRole) <= 0) {
         return;
     }
@@ -6188,6 +6193,33 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         removeSelectedTags();
     } else if (selectedItem == editAction) {
         ui->tagTreeWidget->editItem(item);
+    } else if (selectedItem == assignColorAction) {
+        // assign and store a color to the tag
+        assignColorToTagItem(item);
+    } else if (selectedItem == disableColorAction) {
+        // TODO(pbek): implement color disabling
+    }
+}
+
+/**
+ * Assigns and stores a color to a tag from the tag tree widget
+ *
+ * @param item
+ */
+void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
+    int tagId = item->data(0, Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    QColor color = tag.getColor();
+    color = QColorDialog::getColor(color.isValid() ? color : QColor(Qt::white));
+
+    if (color.isValid()) {
+        tag.setColor(color);
+        tag.store();
     }
 }
 
