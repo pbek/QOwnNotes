@@ -12,11 +12,18 @@
 LogWidget::LogWidget(QWidget *parent) :
         QFrame(parent)
 #ifndef INTEGRATION_TESTS
-        ,ui(new Ui::LogWidget)
+        , ui(new Ui::LogWidget)
 #endif
 {
 #ifndef INTEGRATION_TESTS
+    connect(this, SIGNAL(destroyed(QObject*)),
+            this, SLOT(onDestroyed(QObject*)));
+
     ui->setupUi(this);
+
+    connect(ui->logTextEdit, SIGNAL(destroyed(QObject*)),
+            this, SLOT(onDestroyed(QObject*)));
+
     ui->buttonFrame->hide();
 
     // init the log text edit search frame
@@ -173,6 +180,11 @@ void LogWidget::log(LogType logType, QString text) {
 
     QTextCursor c = ui->logTextEdit->textCursor();
 
+    // return if logging isn't enabled any more
+    if (!qApp->property("loggingEnabled").toBool()) {
+        return;
+    }
+
     // insert the text at the end
     c.movePosition(QTextCursor::End);
     c.insertHtml(html);
@@ -256,6 +268,14 @@ void LogWidget::logMessageOutput(
             fprintf(stderr, "Warning: %s (%s:%u, %s)\n", localMsg.constData(),
                     context.file, context.line, context.function);
 
+            // this is a "fix" for crashes that occur when a network goes away
+            // and this message should be printed, I haven't managed to get
+            // around this crash with other methods
+            if (msg.contains(
+                    "/org/freedesktop/NetworkManager/ActiveConnection")) {
+                loggingEnabled = false;
+            }
+
             if (loggingEnabled) {
                 LogWidget::instance()->log(LogType::WarningLogType, msg);
             }
@@ -315,4 +335,15 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
         }
     }
 #endif
+}
+
+/**
+ * In case that method gets ever called it should disable logging if an
+ * object is destroyed
+ *
+ * @param obj
+ */
+void LogWidget::onDestroyed(QObject *obj) {
+    Q_UNUSED(obj);
+    qApp->setProperty("loggingEnabled", false);
 }

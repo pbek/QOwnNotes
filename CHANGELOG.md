@@ -13,6 +13,8 @@
       tag tree and of the notes in the note list
     - if multiple tags with colors are assigned to a note then the color
       of the first tag with a color is used for the note 
+- created a workaround for a sporadic crash that occurs when a network
+  connection goes away
 
 ## 16.11.4
 - the process for the automatic updates in macOS was improved because of

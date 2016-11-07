@@ -52,6 +52,8 @@ private slots:
 
     void on_logTextEdit_customContextMenuRequested(const QPoint &pos);
 
+    void onDestroyed(QObject *obj = Q_NULLPTR);
+
 private:
     Ui::LogWidget *ui;
 };
