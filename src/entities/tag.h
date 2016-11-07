@@ -97,6 +97,8 @@ public:
 
     void setColor(QColor color);
 
+    static Tag fetchOneOfNoteWithColor(Note note);
+
 protected:
     int id;
     QString name;

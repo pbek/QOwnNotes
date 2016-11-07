@@ -277,6 +277,19 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 }
 
 /**
+ * Fetches one Tag of a note that has a color
+ */
+Tag Tag::fetchOneOfNoteWithColor(Note note) {
+    Q_FOREACH(Tag tag, fetchAllOfNote(note)) {
+            if (tag.getColor().isValid()) {
+                return tag;
+            }
+        }
+
+    return Tag();
+}
+
+/**
  * Count all linked tags of a note
  */
 int Tag::countAllOfNote(Note note) {

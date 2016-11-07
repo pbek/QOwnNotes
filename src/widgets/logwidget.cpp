@@ -167,7 +167,7 @@ void LogWidget::log(LogType logType, QString text) {
 
     QScrollBar *scrollBar = ui->logTextEdit->verticalScrollBar();
 
-    // we want to scroll down later if the scrollbar is near the end bottom
+    // we want to scroll down later if the scrollbar is near the bottom
     bool scrollDown = scrollBar->value() >=
             (scrollBar->maximum() - scrollBar->singleStep());
 

@@ -1665,6 +1665,12 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
                     QIcon(":icons/breeze-qownnotes/16x16/"
                                   "text-x-generic.svg")));
 
+    Tag tag = Tag::fetchOneOfNoteWithColor(note);
+    if (tag.isFetched()) {
+        // set the color of the note tree widget item
+        handleTreeWidgetItemTagColor(noteItem, tag);
+    }
+
     bool isEditable = Note::allowDifferentFileName();
     if (isEditable) {
         noteItem->setFlags(noteItem->flags() | Qt::ItemIsEditable);
@@ -4284,7 +4290,7 @@ void MainWindow::jumpToNoteOrCreateNew() {
             Q_UNUSED(blocker2);
 
             // adds the note to the note tree widget
-            MainWindow::addNoteToNoteTreeWidget(note);
+            addNoteToNoteTreeWidget(note);
         }
 
 //        buildNotesIndex();
@@ -6282,6 +6288,9 @@ void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
 
         // set the color of the tag tree widget item
         handleTreeWidgetItemTagColor(item, tag);
+
+        // reload the notes in the note tree widget
+        loadNoteDirectoryList();
     }
 }
 
@@ -6337,6 +6346,9 @@ void MainWindow::assignColorToSelectedTagItems() {
                 handleTreeWidgetItemTagColor(item, tag);
             }
     }
+
+    // reload the notes in the note tree widget
+    loadNoteDirectoryList();
 }
 
 /**

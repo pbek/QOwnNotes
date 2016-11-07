@@ -5,9 +5,14 @@
   for some users and added removing of the temporary updater script
   after the update
   (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))
-- you can now **assign colors to tags**
+- you can now **assign a color to tags**
   (for [Issue #378](https://github.com/pbek/QOwnNotes/issues/378))
-    - multiple tags can be selected to assign a color or to disable the color
+    - multiple tags can be selected to assign a color to or to disable
+      the color
+    - the color will be used as background color of the tag items in the
+      tag tree and of the notes in the note list
+    - if multiple tags with colors are assigned to a note then the color
+      of the first tag with a color is used for the note 
 
 ## 16.11.4
 - the process for the automatic updates in macOS was improved because of
