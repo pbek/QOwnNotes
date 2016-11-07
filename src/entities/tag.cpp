@@ -472,7 +472,7 @@ bool Tag::store() {
     } else {
         query.prepare(
                 "INSERT INTO tag (name, priority, parent_id, color) "
-                        "VALUES (:name, :priority, :parentId, color)");
+                        "VALUES (:name, :priority, :parentId, :color)");
     }
 
     query.bindValue(":name", this->name);

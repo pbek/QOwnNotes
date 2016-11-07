@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.11.6
+- fixed tag creation (was broken in version 16.11.5) 
+
 ## 16.11.5
 - fixed a problem when QOwnNotes didn't detect the macOS updater script
   for some users and added removing of the temporary updater script
