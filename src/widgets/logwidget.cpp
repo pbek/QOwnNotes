@@ -345,5 +345,7 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
  */
 void LogWidget::onDestroyed(QObject *obj) {
     Q_UNUSED(obj);
+#ifndef INTEGRATION_TESTS
     qApp->setProperty("loggingEnabled", false);
+#endif
 }
