@@ -3603,6 +3603,11 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                 if (result) {
                     tagCount++;
                     qDebug() << "Note was tagged:" << note.getName();
+
+                    // handle the coloring of the note in the note tree widget
+                    QTreeWidgetItem *noteItem =
+                            findNoteInNoteTreeWidget(note);
+                    handleTreeWidgetItemTagColor(noteItem, tag);
                 } else {
                     qWarning() << "Could not tag note:" << note.getName();
                 }
@@ -3643,6 +3648,12 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 if (result) {
                     tagCount++;
                     qDebug() << "Tag was removed from note:" << note.getName();
+
+                    // handle the coloring of the note in the note tree widget
+                    Tag colorTag = Tag::fetchOneOfNoteWithColor(note);
+                    QTreeWidgetItem *noteItem =
+                            findNoteInNoteTreeWidget(note);
+                    handleTreeWidgetItemTagColor(noteItem, colorTag);
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
@@ -6034,6 +6045,10 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
         tag.linkToNote(currentNote);
         reloadCurrentNoteTags();
         reloadTagTree();
+
+        // handle the coloring of the note in the note tree widget
+        QTreeWidgetItem *item = findNoteInNoteTreeWidget(currentNote);
+        handleTreeWidgetItemTagColor(item, tag);
     }
 }
 
@@ -6238,6 +6253,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     if (selectedItem == assignColorAction) {
         // assign and store a color to all selected tags in the tag tree widget
         assignColorToSelectedTagItems();
+        return;
     } else if (selectedItem ==
             disableColorAction) {
         // disable the color of all selected tags
@@ -6246,6 +6262,10 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
                 // disable the color of the tag
                 disableColorOfTagItem(tagItem);
             }
+
+        // reload the notes in the note tree widget to update the colors
+        loadNoteDirectoryList();
+        return;
     }
 
     // don't allow clicking on non-tag items for removing, editing and colors
@@ -6289,7 +6309,7 @@ void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
         // set the color of the tag tree widget item
         handleTreeWidgetItemTagColor(item, tag);
 
-        // reload the notes in the note tree widget
+        // reload the notes in the note tree widget to update the colors
         loadNoteDirectoryList();
     }
 }
@@ -6347,7 +6367,7 @@ void MainWindow::assignColorToSelectedTagItems() {
             }
     }
 
-    // reload the notes in the note tree widget
+    // reload the notes in the note tree widget to update the colors
     loadNoteDirectoryList();
 }
 
