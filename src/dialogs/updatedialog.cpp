@@ -12,6 +12,7 @@
 #include <utils/misc.h>
 #include <QDir>
 #include <QTemporaryFile>
+#include <services/metricsservice.h>
 
 UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
                            QString releaseUrl, QString releaseVersionString,
@@ -134,6 +135,14 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
         case Update:
         {
             qDebug() << __func__ << " - 'releaseUrl': " << releaseUrl;
+            QString productName = "unknown";
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+            productName = QSysInfo::prettyProductName();
+#endif
+
+            MetricsService::instance()->sendEventIfEnabled(
+                    "app/auto-update", "app", "auto update", productName);
 
 #if defined(Q_OS_MAC)
             // under macOS we will just start the update.sh
