@@ -71,3 +71,6 @@ rmdir $mountPoint
 
 echo "Starting QOwnNotes..."
 open "$applicationsFolder/QOwnNotes.app"
+
+echo "Removing temporary script..."
+rm $0
