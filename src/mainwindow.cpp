@@ -6229,6 +6229,19 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         return;
     }
 
+    if (selectedItem == assignColorAction) {
+        // assign and store a color to all selected tags in the tag tree widget
+        assignColorToSelectedTagItems();
+    } else if (selectedItem ==
+            disableColorAction) {
+        // disable the color of all selected tags
+        Q_FOREACH(QTreeWidgetItem *tagItem,
+                  ui->tagTreeWidget->selectedItems()) {
+                // disable the color of the tag
+                disableColorOfTagItem(tagItem);
+            }
+    }
+
     // don't allow clicking on non-tag items for removing, editing and colors
     if (item->data(0, Qt::UserRole) <= 0) {
         return;
@@ -6239,12 +6252,6 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         removeSelectedTags();
     } else if (selectedItem == editAction) {
         ui->tagTreeWidget->editItem(item);
-    } else if (selectedItem == assignColorAction) {
-        // assign and store a color to the tag
-        assignColorToTagItem(item);
-    } else if (selectedItem == disableColorAction) {
-        // disable the color of the tag
-        disableColorOfTagItem(item);
     }
 }
 
@@ -6255,6 +6262,11 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
  */
 void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
     int tagId = item->data(0, Qt::UserRole).toInt();
+
+    if (tagId <= 0) {
+        return;
+    }
+
     Tag tag = Tag::fetch(tagId);
 
     if (!tag.isFetched()) {
@@ -6270,6 +6282,60 @@ void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
 
         // set the color of the tag tree widget item
         handleTreeWidgetItemTagColor(item, tag);
+    }
+}
+
+/**
+ * Assigns and stores a color to all selected tags from the tag tree widget
+ */
+void MainWindow::assignColorToSelectedTagItems() {
+    QColor color;
+    bool hasTags = false;
+
+    // get the color of a selected tag
+    Q_FOREACH(QTreeWidgetItem *item,
+              ui->tagTreeWidget->selectedItems()) {
+            int tagId = item->data(0, Qt::UserRole).toInt();
+            if (tagId > 0) {
+                Tag tag = Tag::fetch(tagId);
+
+                if (!tag.isFetched()) {
+                    continue;
+                }
+
+                color = tag.getColor();
+                hasTags = true;
+                break;
+            }
+        }
+
+    if (!hasTags) {
+        return;
+    }
+
+    color = QColorDialog::getColor(color.isValid() ? color : QColor(Qt::white));
+
+    // store the color to all selected tags
+    if (color.isValid()) {
+        Q_FOREACH(QTreeWidgetItem *item,
+                  ui->tagTreeWidget->selectedItems()) {
+                int tagId = item->data(0, Qt::UserRole).toInt();
+                if (tagId <= 0) {
+                    continue;
+                }
+
+                Tag tag = Tag::fetch(tagId);
+
+                if (!tag.isFetched()) {
+                    continue;
+                }
+
+                tag.setColor(color);
+                tag.store();
+
+                // set the color of the tag tree widget item
+                handleTreeWidgetItemTagColor(item, tag);
+            }
     }
 }
 

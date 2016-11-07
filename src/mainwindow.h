@@ -703,4 +703,6 @@ private:
     void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, Tag &tag) const;
 
     void disableColorOfTagItem(QTreeWidgetItem *item);
+
+    void assignColorToSelectedTagItems();
 };

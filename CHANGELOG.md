@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.11.5
+- fixed a problem when QOwnNotes didn't detect the macOS updater script
+  for some users and added removing of the temporary updater script
+  after the update
+  (for [Issue #102](https://github.com/pbek/QOwnNotes/issues/102))
+- you can now **assign colors to tags**
+  (for [Issue #378](https://github.com/pbek/QOwnNotes/issues/378))
+    - multiple tags can be selected to assign a color or to disable the color
+
 ## 16.11.4
 - the process for the automatic updates in macOS was improved because of
   problems of some users
