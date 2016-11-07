@@ -5806,9 +5806,11 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
 QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
         QTreeWidgetItem *parent, Tag tag) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+
     if (parentId < 0) {
         parentId = 0;
     }
+
     int tagId = tag.getId();
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
@@ -5826,6 +5828,9 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
     item->setToolTip(1, toolTip);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
 
+    // set the color of the tag tree widget item
+    handleTreeWidgetItemTagColor(item, tag);
+
     if (parentId == 0) {
         // add the item at top level if there was no parent item
         ui->tagTreeWidget->addTopLevelItem(item);
@@ -5835,6 +5840,47 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
     }
 
     return item;
+}
+
+/**
+ * Reads the color from a tag and sets the background color of a tree widget
+ * item
+ *
+ * @param item
+ * @param tag
+ */
+void MainWindow::handleTreeWidgetItemTagColor(QTreeWidgetItem *item,
+                                              Tag &tag) const {
+    if (item == Q_NULLPTR) {
+        return;
+    }
+
+    int columnCount = item->columnCount();
+
+    if (columnCount == 0) {
+        return;
+    }
+
+    // get the color from the tag
+    QColor color = tag.getColor();
+
+    // if no color was set reset it by using a transparent white
+    if (!color.isValid()) {
+        color = QColor(255, 255, 255, 0);
+    }
+
+    QBrush brush = QBrush(color);
+
+    // the tree widget events have to be blocked because when called in
+    // assignColorToTagItem() the 2nd setBackground() crashes the app,
+    // because it seems the tag tree will be reloaded
+    const QSignalBlocker blocker(item->treeWidget());
+    Q_UNUSED(blocker);
+
+    // set the color for all columns
+    for (int column = 0; column < columnCount; column++) {
+        item->setBackground(column, brush);
+    }
 }
 
 /**
@@ -6197,7 +6243,8 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         // assign and store a color to the tag
         assignColorToTagItem(item);
     } else if (selectedItem == disableColorAction) {
-        // TODO(pbek): implement color disabling
+        // disable the color of the tag
+        disableColorOfTagItem(item);
     }
 }
 
@@ -6220,7 +6267,30 @@ void MainWindow::assignColorToTagItem(QTreeWidgetItem *item) {
     if (color.isValid()) {
         tag.setColor(color);
         tag.store();
+
+        // set the color of the tag tree widget item
+        handleTreeWidgetItemTagColor(item, tag);
     }
+}
+
+/**
+ * Disables a color of a tag from the tag tree widget
+ *
+ * @param item
+ */
+void MainWindow::disableColorOfTagItem(QTreeWidgetItem *item) {
+    int tagId = item->data(0, Qt::UserRole).toInt();
+    Tag tag = Tag::fetch(tagId);
+
+    if (!tag.isFetched()) {
+        return;
+    }
+
+    tag.setColor(QColor());
+    tag.store();
+
+    // set the color of the tag tree widget item
+    handleTreeWidgetItemTagColor(item, tag);
 }
 
 /**

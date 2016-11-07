@@ -699,4 +699,8 @@ private:
     void initToolbarMenu();
 
     void assignColorToTagItem(QTreeWidgetItem *item);
+
+    void handleTreeWidgetItemTagColor(QTreeWidgetItem *item, Tag &tag) const;
+
+    void disableColorOfTagItem(QTreeWidgetItem *item);
 };
