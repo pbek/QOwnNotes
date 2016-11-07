@@ -15,6 +15,8 @@
       of the first tag with a color is used for the note 
 - created a workaround for a sporadic crash that occurs when a network
   connection goes away
+- added more Italian, Dutch, Hungarian, French, Spanish and Japanese
+  translation (thank you mlocati, Fabijenna, lepascalou, richarson and piyo)
 
 ## 16.11.4
 - the process for the automatic updates in macOS was improved because of
