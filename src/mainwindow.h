@@ -705,4 +705,6 @@ private:
     void disableColorOfTagItem(QTreeWidgetItem *item);
 
     void assignColorToSelectedTagItems();
+
+    void handleNoteTreeTagColoringForNote(const Note &note);
 };

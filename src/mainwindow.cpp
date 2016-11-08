@@ -3605,9 +3605,7 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                     qDebug() << "Note was tagged:" << note.getName();
 
                     // handle the coloring of the note in the note tree widget
-                    QTreeWidgetItem *noteItem =
-                            findNoteInNoteTreeWidget(note);
-                    handleTreeWidgetItemTagColor(noteItem, tag);
+                    handleNoteTreeTagColoringForNote(note);
                 } else {
                     qWarning() << "Could not tag note:" << note.getName();
                 }
@@ -3650,10 +3648,7 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                     qDebug() << "Tag was removed from note:" << note.getName();
 
                     // handle the coloring of the note in the note tree widget
-                    Tag colorTag = Tag::fetchOneOfNoteWithColor(note);
-                    QTreeWidgetItem *noteItem =
-                            findNoteInNoteTreeWidget(note);
-                    handleTreeWidgetItemTagColor(noteItem, colorTag);
+                    handleNoteTreeTagColoringForNote(note);
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
@@ -3668,6 +3663,17 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 tr("Tag <strong>%1</strong> was removed from %n note(s)", "",
                    tagCount).arg(tag.getName()));
     }
+}
+
+/**
+ * Handle the coloring of the note in the note tree widget
+ *
+ * @param note
+ */
+void MainWindow::handleNoteTreeTagColoringForNote(const Note &note) {
+    Tag colorTag = Tag::fetchOneOfNoteWithColor(note);
+    QTreeWidgetItem *noteItem = findNoteInNoteTreeWidget(note);
+    handleTreeWidgetItemTagColor(noteItem, colorTag);
 }
 
 /**
@@ -6047,8 +6053,7 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
         reloadTagTree();
 
         // handle the coloring of the note in the note tree widget
-        QTreeWidgetItem *item = findNoteInNoteTreeWidget(currentNote);
-        handleTreeWidgetItemTagColor(item, tag);
+        handleNoteTreeTagColoringForNote(currentNote);
     }
 }
 
@@ -6117,6 +6122,9 @@ void MainWindow::removeNoteTagClicked() {
         tag.removeLinkToNote(currentNote);
         reloadCurrentNoteTags();
         reloadTagTree();
+
+        // handle the coloring of the note in the note tree widget
+        handleNoteTreeTagColoringForNote(currentNote);
     }
 }
 
@@ -6190,28 +6198,29 @@ void MainWindow::on_tagTreeWidget_currentItemChanged(
  */
 void MainWindow::on_tagTreeWidget_customContextMenuRequested(
         const QPoint &pos) {
-    // don't open the context menu if no tags are selected
-    if (ui->tagTreeWidget->selectedItems().count() == 0) {
-        return;
-    }
+    // don't open the most of the context menu if no tags are selected
+    bool hasSelected = ui->tagTreeWidget->selectedItems().count() > 0;
 
     QPoint globalPos = ui->tagTreeWidget->mapToGlobal(pos);
     QMenu menu;
 
-    QAction *addAction = menu.addAction(
-            tr("&Add tag"));
-    QAction *editAction = menu.addAction(
-            tr("&Edit tag"));
-    QAction *assignColorAction = menu.addAction(
-            tr("Assign color"));
-    QAction *disableColorAction = menu.addAction(
-            tr("Disable color"));
-    QAction *removeAction = menu.addAction(
-            tr("&Remove tags"));
+    QAction *addAction = menu.addAction(tr("&Add tag"));
+    QAction *editAction;
+    QAction *assignColorAction;
+    QAction *disableColorAction;
+    QAction *removeAction;
 
-    // build the tag moving menu
-    QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
-    buildTagMoveMenuTree(moveMenu);
+    // allow these actions only if tags are selected
+    if (hasSelected) {
+        editAction = menu.addAction(tr("&Edit tag"));
+        assignColorAction = menu.addAction(tr("Assign color"));
+        disableColorAction = menu.addAction(tr("Disable color"));
+        removeAction = menu.addAction(tr("&Remove tags"));
+
+        // build the tag moving menu
+        QMenu *moveMenu = menu.addMenu(tr("&Move tags to..."));
+        buildTagMoveMenuTree(moveMenu);
+    }
 
     QAction *selectedItem = menu.exec(globalPos);
 
@@ -6241,7 +6250,9 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
                 tag.setName(name);
                 tag.store();
 
-                if (!tag.isFetched()) {
+                if (tag.isFetched()) {
+                    reloadTagTree();
+                } else {
                     showStatusBarMessage(tr("Tag could not be created!"), 3000);
                 }
             }

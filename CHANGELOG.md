@@ -1,7 +1,17 @@
 # QOwnNotes Changelog
 
+## 16.11.7
+- the tag color of the note will now be updated correctly if a tag is
+  removed from the current note
+  (for [Issue #378](https://github.com/pbek/QOwnNotes/issues/378))
+- when creating a new tag in the tag tree by right-clicking on a tag and
+  clicking `Add tag` the tag will now be shown in the tag tree
+- you can now also create tags in the tag tree by right-clicking on the
+  `All notes` or `Untagged notes` items and selecting `Add tag`
+
 ## 16.11.6
 - fixed tag creation (was broken in version 16.11.5) 
+  (for [Issue #378](https://github.com/pbek/QOwnNotes/issues/378))
 
 ## 16.11.5
 - fixed a problem when QOwnNotes didn't detect the macOS updater script
