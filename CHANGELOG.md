@@ -8,6 +8,7 @@
   clicking `Add tag` the tag will now be shown in the tag tree
 - you can now also create tags in the tag tree by right-clicking on the
   `All notes` or `Untagged notes` items and selecting `Add tag`
+- added more Polish translation (thank you lucjan)
 
 ## 16.11.6
 - fixed tag creation (was broken in version 16.11.5) 

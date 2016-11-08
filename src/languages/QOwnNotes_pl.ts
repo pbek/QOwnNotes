@@ -882,7 +882,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1783"/>
       <source>Unlock panels</source>
-      <translation type="unfinished">Unlock panels</translation>
+      <translation>Odblokuj panele</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1792"/>
@@ -1373,12 +1373,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="6139"/>
       <source>Assign color</source>
-      <translation type="unfinished">Assign color</translation>
+      <translation>Przypisz kolor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6141"/>
       <source>Disable color</source>
-      <translation type="unfinished">Disable color</translation>
+      <translation>Wyłącz kolor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6653"/>
@@ -1981,12 +1981,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="2111"/>
       <source>Overwriting external changes of: %1</source>
-      <translation type="unfinished">Overwriting external changes of: %1</translation>
+      <translation>Nadpisz zewnętrzne zmiany w: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2133"/>
       <source>Loading external changes from: %1</source>
-      <translation type="unfinished">Loading external changes from: %1</translation>
+      <translation>Ładowanie zewnętrznych zmian z: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2716"/>
@@ -2102,12 +2102,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation type="unfinished">Differences:</translation>
+      <translation>Różnice:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Accept external changes?</source>
-      <translation type="unfinished">Accept external changes?</translation>
+      <translation>Zaakceptować zewnętrzne zmiany?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
@@ -2117,12 +2117,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="19"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>Tak</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="24"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>Nie</translation>
     </message>
   </context>
   <context>
@@ -4107,7 +4107,7 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="303"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>Czy chcesz zaktualizować i uruchomić ponownie QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="319"/>
@@ -4124,8 +4124,7 @@ Nie można tego cofnąć!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="320"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
-%1</translation>
+      <translation>Nie można znaleźć pliku aktualizacji: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="407"/>
@@ -4135,7 +4134,7 @@ Nie można tego cofnąć!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="416"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
+      <translation>Plik wykonywalny unzip pakietu aktualizacyjnego '%1' nie istnieje!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="425"/>
