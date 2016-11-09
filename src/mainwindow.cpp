@@ -63,6 +63,7 @@
 #include <dialogs/orphanedimagesdialog.h>
 #include <helpers/toolbarcontainer.h>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
+#include <dialogs/actiondialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -535,8 +536,7 @@ void MainWindow::initDockWidgets() {
     _logDockWidget->setObjectName("logDockWidget");
     _logDockWidget->setWidget(LogWidget::instance());
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
-    addDockWidget(Qt::RightDockWidgetArea, _logDockWidget,
-                  Qt::Vertical);
+    addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
     _logDockWidget->hide();
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
@@ -8219,4 +8219,9 @@ void MainWindow::on_actionShow_all_panels_triggered() {
 
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();
+}
+
+void MainWindow::on_actionFind_action_triggered() {
+    ActionDialog* dialog = new ActionDialog(ui->menuBar, this);
+    dialog->exec();
 }

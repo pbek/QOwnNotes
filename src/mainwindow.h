@@ -399,6 +399,8 @@ private slots:
 
     void updateToolbarMenu();
 
+    void on_actionFind_action_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

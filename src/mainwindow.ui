@@ -702,6 +702,8 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionGitter"/>
      <addaction name="actionOpen_IRC_Channel"/>
     </widget>
+    <addaction name="actionFind_action"/>
+    <addaction name="separator"/>
     <addaction name="actionCheck_for_updates"/>
     <addaction name="actionShow_changelog"/>
     <addaction name="action_Shortcuts"/>
@@ -791,11 +793,11 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_system_tray"/>
     <addaction name="actionStart_hidden"/>
     <addaction name="actionShow_log"/>
+    <addaction name="actionUnlock_panels"/>
     <addaction name="actionShow_all_panels"/>
     <addaction name="menuPanels"/>
     <addaction name="menuToolbars"/>
     <addaction name="separator"/>
-    <addaction name="actionUnlock_panels"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionStore_as_new_workspace"/>
     <addaction name="actionRemove_current_workspace"/>
@@ -1825,6 +1827,24 @@ p, li { white-space: pre-wrap; }
   <action name="actionShow_all_panels">
    <property name="text">
     <string>Show all panels</string>
+   </property>
+  </action>
+  <action name="actionFind_action">
+   <property name="icon">
+    <iconset theme="configure" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Find action</string>
+   </property>
+   <property name="toolTip">
+    <string>Find an action from the menu</string>
+   </property>
+   <property name="statusTip">
+    <string>Find an action from the menu</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+A</string>
    </property>
   </action>
  </widget>
