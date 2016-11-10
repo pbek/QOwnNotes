@@ -8223,5 +8223,5 @@ void MainWindow::on_actionShow_all_panels_triggered() {
 
 void MainWindow::on_actionFind_action_triggered() {
     ActionDialog* dialog = new ActionDialog(ui->menuBar, this);
-    dialog->exec();
+    dialog->show();
 }

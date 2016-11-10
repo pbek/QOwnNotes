@@ -69,11 +69,6 @@
        <string notr="true">Name</string>
       </property>
      </column>
-     <column>
-      <property name="text">
-       <string notr="true">Note count</string>
-      </property>
-     </column>
     </widget>
    </item>
   </layout>

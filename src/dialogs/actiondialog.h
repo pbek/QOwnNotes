@@ -1,8 +1,8 @@
-#ifndef ACTIONDIALOG_H
-#define ACTIONDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QMenuBar>
+#include <QTreeWidgetItem>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -17,8 +17,13 @@ public:
     explicit ActionDialog(QMenuBar *menuBar, QWidget *parent = 0);
     ~ActionDialog();
 
+private slots:
+    void on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
 private:
     Ui::ActionDialog *ui;
-};
+    QMenuBar *_menuBar;
 
-#endif // ACTIONDIALOG_H
+    void buildActionTreeForMenu(QMenu *menu,
+                                QTreeWidgetItem *parentItem = Q_NULLPTR);
+};
