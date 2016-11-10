@@ -53,9 +53,9 @@ public:
 
     ~SettingsDialog();
 
-    void connectTestCallback(bool appIsValid,
-                             QString appVersion,
+    void connectTestCallback(bool appIsValid, QString appVersion,
                              QString serverVersion,
+                             QString notesPathExistsText,
                              QString connectionErrorMessage);
 
     void setOKLabelData(int number, QString text, OKLabelStatus status);
@@ -204,6 +204,7 @@ private:
     bool appIsValid;
     QString appVersion;
     QString serverVersion;
+    QString notesPathExistsText;
     QString connectionErrorMessage;
     NoteFolder _selectedNoteFolder;
     Script _selectedScript;

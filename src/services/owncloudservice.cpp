@@ -327,6 +327,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
 
+    QString notesPathExistsText = "unknown";
     bool appIsValid = result.property(0).property("versioning").toBool();
     QString appVersion = result.property(0).property("app_version")
             .toVariant().toString();
@@ -376,6 +377,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
         if (serverAppVersion >= VersionNumber("0.4.1")) {
             bool notesPathExists = result.property(0).property(
                     "notes_path_exists").toBool();
+            notesPathExistsText = notesPathExists ? "yes" : "not found";
 
             if (notesPathExists) {
                 settingsDialog->setOKLabelData(8, "ok", SettingsDialog::OK);
@@ -390,8 +392,9 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     }
 
     // call callback in settings dialog
-    settingsDialog->connectTestCallback(appIsValid, appVersion, serverVersion,
-                                        reply->errorString());
+    settingsDialog->connectTestCallback(
+            appIsValid, appVersion, serverVersion, notesPathExistsText,
+            reply->errorString());
 }
 
 /**

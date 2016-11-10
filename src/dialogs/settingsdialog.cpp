@@ -895,6 +895,8 @@ void SettingsDialog::outputSettings() {
                                           ui->serverUrlEdit->text());
     output += prepareDebugInformationLine("appIsValid",
                                           QString(appIsValid ? "yes" : "no"));
+    output += prepareDebugInformationLine("notesPathExists",
+                                          notesPathExistsText);
     if (appIsValid) {
         output += prepareDebugInformationLine("serverVersion", serverVersion);
         output += prepareDebugInformationLine("appVersion", appVersion);
@@ -1035,12 +1037,15 @@ QString SettingsDialog::prepareDebugInformationLine(QString headline,
  * @param appVersion
  * @param serverVersion
  */
-void SettingsDialog::connectTestCallback(bool appIsValid, QString appVersion,
+void SettingsDialog::connectTestCallback(bool appIsValid,
+                                         QString appVersion,
                                          QString serverVersion,
+                                         QString notesPathExistsText,
                                          QString connectionErrorMessage) {
     this->appIsValid = appIsValid;
     this->appVersion = appVersion;
     this->serverVersion = serverVersion;
+    this->notesPathExistsText = notesPathExistsText;
     this->connectionErrorMessage = connectionErrorMessage;
 
     if (appIsValid) {
