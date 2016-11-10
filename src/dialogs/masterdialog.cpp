@@ -6,6 +6,11 @@ MasterDialog::MasterDialog(QWidget *parent) : QDialog(parent) {
     installEventFilter(this);
 }
 
+void MasterDialog::closeEvent(QCloseEvent *event) {
+//    storeGeometrySettings();
+    QDialog::closeEvent(event);
+}
+
 void MasterDialog::resizeEvent(QResizeEvent *event) {
     // save the geometry of the dialog
     storeGeometrySettings();
@@ -39,7 +44,25 @@ const QString MasterDialog::getGeometrySettingKey() const {
     return objectName() + "/geometry";
 }
 
+void MasterDialog::show() {
+    handleOpenDialog();
+    return QDialog::show();
+}
+
+void MasterDialog::open() {
+    handleOpenDialog();
+    return QDialog::open();
+}
+
 int MasterDialog::exec() {
+    handleOpenDialog();
+    return QDialog::exec();
+}
+
+/**
+ * Handles dialog opening
+ */
+void MasterDialog::handleOpenDialog() {
     // restore the geometry of the dialog
     QSettings settings;
     QByteArray geometryData =
@@ -50,6 +73,6 @@ int MasterDialog::exec() {
         restoreGeometry(geometryData);
     }
 
+    // send metrics
     MetricsService::instance()->sendVisitIfEnabled("dialog/" + objectName());
-    return QDialog::exec();
 }

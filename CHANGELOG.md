@@ -3,6 +3,7 @@
 ## 16.11.8
 - added information whether the notes path exists on the server to the
   debug information
+- fixed storing of position and size of non-modal dialogs
 
 ## 16.11.7
 - the tag color of the note will now be updated correctly if a tag is
