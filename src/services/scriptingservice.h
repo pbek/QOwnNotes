@@ -51,6 +51,7 @@ public:
     Q_INVOKABLE bool platformIsOSX();
     Q_INVOKABLE bool platformIsWindows();
     Q_INVOKABLE void tagCurrentNote(QString tagName);
+    Q_INVOKABLE void addStyleSheet(QString stylesheet);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
@@ -81,6 +82,7 @@ private:
     void initComponent(Script script);
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();
+    void clearCustomStyleSheets();
 
 signals:
     void noteStored(QVariant note);

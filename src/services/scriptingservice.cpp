@@ -178,6 +178,7 @@ bool ScriptingService::validateScript(Script script,
  * Initializes all components
  */
 void ScriptingService::initComponents() {
+    clearCustomStyleSheets();
     _scriptComponents.clear();
     QList<Script> scripts = Script::fetchAll();
 
@@ -787,4 +788,28 @@ bool ScriptingService::platformIsWindows() {
 #else
     return false;
 #endif
+}
+
+/**
+ * Adds a custom stylesheet to the application
+ *
+ * @param stylesheet
+ */
+void ScriptingService::addStyleSheet(QString stylesheet) {
+    qDebug() << __func__ << " - 'stylesheet': " << stylesheet;
+
+    qApp->setStyleSheet(qApp->styleSheet() + "\n/* BEGIN CUSTOM STYLESHEET */\n"
+                        + stylesheet + "\n/* END CUSTOM STYLESHEET */");
+}
+
+/**
+ * Clears all custom stylesheets
+ */
+void ScriptingService::clearCustomStyleSheets() {
+    QRegularExpression regExp(
+            QRegularExpression::escape("/* BEGIN CUSTOM STYLESHEET */") + ".+" +
+                    QRegularExpression::escape("/* END CUSTOM STYLESHEET */"),
+            QRegularExpression::DotMatchesEverythingOption |
+    QRegularExpression::MultilineOption);
+    qApp->setStyleSheet(qApp->styleSheet().remove(regExp));
 }

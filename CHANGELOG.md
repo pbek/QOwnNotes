@@ -4,6 +4,18 @@
 - you can now **search for actions from the menu** with `Find action`
   in the *Help* menu or by pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> +
   <kbd>A</kbd> 
+- you can now set **custom stylesheets** to **change the look of QOwnNotes**
+  with the help of the new scripting method `script.addStyleSheet()`
+  (for [Issue #381](https://github.com/pbek/QOwnNotes/issues/381))
+    - there is an example for adding custom stylesheets at
+      [custom-stylesheet.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-stylesheet.qml)
+    - take a look at the
+      [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#add-a-custom-stylesheet)
+      for more information
+    - you can get the object names from the `*.ui` files, for example
+      [mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui)
+    - take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html)
+      for a reference of what styles are available
 - added information whether the notes path exists on the server to the
   debug information
 - fixed storing of position and size of non-modal dialogs

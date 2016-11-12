@@ -320,6 +320,35 @@ You might want to look at the custom action `favoriteNote` in the
 example [favorite-note.qml](favorite-note.qml).
 
 
+### Add a custom stylesheet
+
+#### Parameters
+
+```cpp
+/**
+ * Adds a custom stylesheet to the application
+ * 
+ * @param stylesheet 
+ */
+void ScriptingService::addStyleSheet(QString stylesheet);
+```
+
+#### Usage in QML
+
+```javascript
+// make the text in the note list bigger
+script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
+```
+
+You may want to take a look at the example [custom-stylesheet.qml](custom-stylesheet.qml).
+
+You can get the object names from the `*.ui` files, for example
+[mainwindow.ui](https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui).
+
+Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html)
+for a reference of what styles are available.
+
+
 ## Exposed classes
 
 ### Note
