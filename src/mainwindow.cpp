@@ -46,6 +46,7 @@
 #include <services/cryptoservice.h>
 #include <helpers/clientproxy.h>
 #include <utils/misc.h>
+#include <utils/gui.h>
 #include <entities/notefolder.h>
 #include <entities/notesubfolder.h>
 #include <entities/tag.h>
@@ -5698,7 +5699,9 @@ void MainWindow::reloadTagTree() {
         ui->tagTreeWidget->addTopLevelItem(untaggedItem);
     }
 
-    // decorate root of there are multiple levels to be able to expand them
+    // decorate root if there are multiple levels to be able to collapse them,
+    // because double clicking will not collapse the first level, but edit
+    // the clicked tag
     ui->tagTreeWidget->setRootIsDecorated(
             Tag::countAllParentId(0) != Tag::countAll());
 
@@ -5937,21 +5940,9 @@ void MainWindow::on_tagLineEdit_returnPressed() {
  */
 void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
-    searchForTextInTreeWidget(ui->tagTreeWidget, arg1);
-}
-
-/**
- * Checks if there is at least one child that is visible
- */
-bool MainWindow::isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item) {
-    for (int i = 0; i < item->childCount(); i++) {
-        QTreeWidgetItem *child = item->child(i);
-        if (!child->isHidden() || isOneTreeWidgetItemChildVisible(child)) {
-            return true;
-        }
-    }
-
-    return false;
+    Utils::Gui::searchForTextInTreeWidget(
+            ui->tagTreeWidget, arg1,
+            Utils::Gui::TreeWidgetSearchFlags::IntCheck);
 }
 
 /**
@@ -7404,44 +7395,9 @@ void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
         Q_UNUSED(blocker);
 
         // search for the text
-        searchForTextInTreeWidget(ui->noteSubFolderTreeWidget, arg1);
-    }
-}
-
-/**
- * Searches for text in items of a tree widget
- */
-void MainWindow::searchForTextInTreeWidget(QTreeWidget *treeWidget,
-                                           QString text) {
-    // get all items
-    QList<QTreeWidgetItem*> allItems = treeWidget->
-            findItems("", Qt::MatchContains | Qt::MatchRecursive);
-
-    // search text if at least one character was entered
-    if (text.count() >= 1) {
-        // search for items
-        QList<QTreeWidgetItem*> foundItems = treeWidget->
-                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
-
-        // hide all not found items
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                int id = item->data(0, Qt::UserRole).toInt();
-                item->setHidden(!foundItems.contains(item) && (id > 0));
-            }
-
-        // show items again that have visible children so that they are
-        // really shown
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (isOneTreeWidgetItemChildVisible(item)) {
-                    item->setHidden(false);
-                    item->setExpanded(true);
-                }
-            }
-    } else {
-        // show all items otherwise
-        Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                item->setHidden(false);
-            }
+        Utils::Gui::searchForTextInTreeWidget(
+                ui->noteSubFolderTreeWidget, arg1,
+                Utils::Gui::TreeWidgetSearchFlags::IntCheck);
     }
 }
 

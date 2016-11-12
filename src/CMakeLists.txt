@@ -200,6 +200,8 @@ set(SOURCE_FILES
     widgets/logwidget.ui
     utils/misc.cpp
     utils/misc.h
+    utils/gui.cpp
+    utils/gui.h
     utils/schema.cpp
     utils/schema.h
     build_number.h

@@ -2,6 +2,7 @@
 
 #include <QDialog>
 #include <QMenuBar>
+#include <QEvent>
 #include <QTreeWidgetItem>
 #include "masterdialog.h"
 
@@ -19,6 +20,11 @@ public:
 
 private slots:
     void on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+
+    void on_actionLineEdit_textChanged(const QString &arg1);
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event);
 
 private:
     Ui::ActionDialog *ui;

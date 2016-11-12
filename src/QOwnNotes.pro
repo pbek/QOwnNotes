@@ -74,6 +74,7 @@ SOURCES += main.cpp\
     services/scriptingservice.cpp \
     dialogs/masterdialog.cpp \
     utils/misc.cpp \
+    utils/gui.cpp \
     utils/schema.cpp \
     dialogs/welcomedialog.cpp \
     dialogs/tagadddialog.cpp \
@@ -134,6 +135,7 @@ HEADERS  += mainwindow.h \
     services/cryptoservice.h \
     dialogs/masterdialog.h \
     utils/misc.h \
+    utils/gui.h \
     utils/schema.h \
     dialogs/welcomedialog.h \
     dialogs/tagadddialog.h \

@@ -71,11 +71,6 @@ public:
 
     QAction *findAction(QString objectName);
 
-    static bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
-
-    static void searchForTextInTreeWidget(QTreeWidget *treeWidget,
-                                          QString text);
-
     void addCustomAction(QString identifier, QString menuText,
                          QString buttonText, QString icon);
 

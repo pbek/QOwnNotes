@@ -18,6 +18,7 @@
 #include "helpers/clientproxy.h"
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
+#include <utils/gui.h>
 #include <entities/notefolder.h>
 #include <QTextBrowser>
 #include <entities/script.h>
@@ -2223,7 +2224,7 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
         // show items again that have visible children so that they are
         // really shown
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                if (MainWindow::isOneTreeWidgetItemChildVisible(item)) {
+                if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
                     item->setHidden(false);
                     item->setExpanded(true);
                 }

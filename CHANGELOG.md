@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 16.11.8
+- you can now **search for actions from the menu** with `Find action`
+  in the *Help* menu or by pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> +
+  <kbd>A</kbd> 
 - added information whether the notes path exists on the server to the
   debug information
 - fixed storing of position and size of non-modal dialogs
