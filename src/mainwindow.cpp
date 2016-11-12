@@ -5942,7 +5942,7 @@ void MainWindow::on_tagLineEdit_textChanged(const QString &arg1)
 {
     Utils::Gui::searchForTextInTreeWidget(
             ui->tagTreeWidget, arg1,
-            Utils::Gui::TreeWidgetSearchFlags::IntCheck);
+            Utils::Gui::TreeWidgetSearchFlag::IntCheck);
 }
 
 /**
@@ -7397,7 +7397,7 @@ void MainWindow::on_noteSubFolderLineEdit_textChanged(const QString &arg1) {
         // search for the text
         Utils::Gui::searchForTextInTreeWidget(
                 ui->noteSubFolderTreeWidget, arg1,
-                Utils::Gui::TreeWidgetSearchFlags::IntCheck);
+                Utils::Gui::TreeWidgetSearchFlag::IntCheck);
     }
 }
 

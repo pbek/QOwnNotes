@@ -134,9 +134,9 @@ void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
     // search for the text
     Utils::Gui::searchForTextInTreeWidget(
             ui->actionTreeWidget, arg1,
-            Utils::Gui::TreeWidgetSearchFlags
-                    (Utils::Gui::TreeWidgetSearchFlags::TooltipSearch |
-                    Utils::Gui::TreeWidgetSearchFlags::AllColumnsSearch));
+            Utils::Gui::TreeWidgetSearchFlags(
+                    Utils::Gui::TreeWidgetSearchFlag::TooltipSearch |
+                    Utils::Gui::TreeWidgetSearchFlag::AllColumnsSearch));
 }
 
 /**

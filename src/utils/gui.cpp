@@ -43,7 +43,7 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
     // search text if at least one character was entered
     if (text.count() >= 1) {
         int searchColumnCount = searchFlags &
-                TreeWidgetSearchFlags::AllColumnsSearch ?
+                TreeWidgetSearchFlag::AllColumnsSearch ?
                                 treeWidget->columnCount() : 1;
 
         // hide all not found items
@@ -57,14 +57,14 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
                             text, Qt::CaseInsensitive);
 
                     // also show the item if the text was found in the tooltip
-                    if (searchFlags & TreeWidgetSearchFlags::TooltipSearch) {
+                    if (searchFlags & TreeWidgetSearchFlag::TooltipSearch) {
                         show |= item->toolTip(index).contains(
                                 text, Qt::CaseInsensitive);
                     }
                 }
 
                 // also show the item if an integer id is greater than 0
-                if (searchFlags & TreeWidgetSearchFlags::IntCheck) {
+                if (searchFlags & TreeWidgetSearchFlag::IntCheck) {
                     int id = item->data(0, Qt::UserRole).toInt();
                     show |= id <= 0;
                 }

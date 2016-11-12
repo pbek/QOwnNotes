@@ -20,24 +20,25 @@
 
 namespace Utils {
     namespace Gui {
-        enum TreeWidgetSearchFlags {
-            None = 0,
+        enum TreeWidgetSearchFlag {
+            None = 0x0000,
 
             // also show the item if an integer id is greater than 0
-            IntCheck = 1,
+            IntCheck = 0x0001,
 
             // also show the item if the text was found in the tooltip
-            TooltipSearch =2,
+            TooltipSearch = 0x0002,
 
             // search in all columns
-            AllColumnsSearch =4
+            AllColumnsSearch = 0x0004
         };
+
+        Q_DECLARE_FLAGS(TreeWidgetSearchFlags, TreeWidgetSearchFlag)
 
         bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);
 
         void searchForTextInTreeWidget(
                 QTreeWidget *treeWidget, QString text,
-                TreeWidgetSearchFlags searchFlags =
-                TreeWidgetSearchFlags::None);
+                TreeWidgetSearchFlags searchFlags = None);
     }
 }
