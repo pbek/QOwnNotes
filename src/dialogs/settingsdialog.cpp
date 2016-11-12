@@ -1402,21 +1402,29 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
         settings.clear();
         DatabaseService::removeDiskDatabase();
 
-        // remove log file
-        QFile file(Utils::Misc::logFilePath());
-        if (file.exists()) {
-            // remove the file
-            bool result = file.remove();
-            QString text = result ? "Removed" : "Could not remove";
-
-            // if settings are cleared logging to log file will be disabled
-            // by default and it will not be created again
-            qWarning() << text + " log file: " << file.fileName();
-        }
+        // remove the log file
+        removeLogFile();
 
         // make sure no settings get written after after are quitting
         qApp->setProperty("clearAppDataAndExit", true);
         qApp->quit();
+    }
+}
+
+/**
+ * Removes the log file
+ */
+void SettingsDialog::removeLogFile() const {
+    // remove log file if exists
+    QFile file(Utils::Misc::logFilePath());
+    if (file.exists()) {
+        // remove the file
+        bool result = file.remove();
+        QString text = result ? "Removed" : "Could not remove";
+
+        // in case that the settings are cleared logging to log file is
+        // disabled by default and it will not be created again
+        qWarning() << text + " log file: " << file.fileName();
     }
 }
 
@@ -2619,4 +2627,17 @@ int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
  */
 void SettingsDialog::on_fileLoggingCheckBox_toggled(bool checked) {
     ui->logFileFrame->setVisible(checked);
+}
+
+/**
+ * Removes the log file
+ */
+void SettingsDialog::on_clearLogFileButton_clicked() {
+    // remove the log file
+    removeLogFile();
+
+    QMessageBox::information(
+            this, tr("Log file cleared"),
+            tr("The log file <strong>%1</strong> was cleared"".").arg(
+                    Utils::Misc::logFilePath()));
 }

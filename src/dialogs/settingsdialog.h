@@ -195,6 +195,8 @@ private slots:
 
     void on_fileLoggingCheckBox_toggled(bool checked);
 
+    void on_clearLogFileButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -275,6 +277,8 @@ private:
     int findSettingsPageIndexOfWidget(QWidget *widget);
 
     void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList);
+
+    void removeLogFile() const;
 };
 
 #endif // SETTINGSDIALOG_H

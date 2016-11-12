@@ -20,6 +20,7 @@
  `Enable logging to file` in the *Debug options*
     - if you enable it the path to the log file will be viewed
     - all log messages will be appended to that file
+    - there also is a button to clear the log file
 - added information whether the notes path exists on the server to the
   debug information
 - fixed storing of position and size of non-modal dialogs
