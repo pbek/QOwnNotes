@@ -42,18 +42,25 @@ void Utils::Gui::searchForTextInTreeWidget(QTreeWidget *treeWidget,
 
     // search text if at least one character was entered
     if (text.count() >= 1) {
-        // search for items
-        QList<QTreeWidgetItem*> foundItems = treeWidget->
-                findItems(text, Qt::MatchContains | Qt::MatchRecursive);
+        int searchColumnCount = searchFlags &
+                TreeWidgetSearchFlags::AllColumnsSearch ?
+                                treeWidget->columnCount() : 1;
 
         // hide all not found items
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
-                bool show = foundItems.contains(item);
+                bool show = false;
 
-                // also show the item if the text was found in the tooltip
-                if (searchFlags & TreeWidgetSearchFlags::TooltipSearch) {
-                    show |= item->toolTip(0).contains(text,
-                                                      Qt::CaseInsensitive);
+                // look in all columns that we want to search
+                for (int index = 0; index < searchColumnCount; index++) {
+                    // search for text in the columns
+                    show |= item->text(index).contains(
+                            text, Qt::CaseInsensitive);
+
+                    // also show the item if the text was found in the tooltip
+                    if (searchFlags & TreeWidgetSearchFlags::TooltipSearch) {
+                        show |= item->toolTip(index).contains(
+                                text, Qt::CaseInsensitive);
+                    }
                 }
 
                 // also show the item if an integer id is greater than 0

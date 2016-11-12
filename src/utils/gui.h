@@ -27,7 +27,10 @@ namespace Utils {
             IntCheck = 1,
 
             // also show the item if the text was found in the tooltip
-            TooltipSearch =2
+            TooltipSearch =2,
+
+            // search in all columns
+            AllColumnsSearch =4
         };
 
         bool isOneTreeWidgetItemChildVisible(QTreeWidgetItem *item);

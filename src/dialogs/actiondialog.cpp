@@ -24,6 +24,7 @@ ActionDialog::ActionDialog(QMenuBar* menuBar, QWidget *parent) :
     ui->actionTreeWidget->setRootIsDecorated(false);
     ui->actionTreeWidget->expandAll();
     ui->actionTreeWidget->resizeColumnToContents(0);
+    ui->actionTreeWidget->resizeColumnToContents(1);
 }
 
 /**
@@ -67,19 +68,19 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
                 continue;
             }
 
-            QString tooltip = action->toolTip();
-            QKeySequence shortcut = action->shortcut();
-
-            // add the shortcut as text to the tooltip
-            if (!shortcut.isEmpty()) {
-                tooltip += " (" + shortcut.toString() + ")";
-            }
-
             QTreeWidgetItem *item = new QTreeWidgetItem();
             item->setData(0, Qt::UserRole, actionName);
             item->setText(0, text);
-            item->setToolTip(0, tooltip);
+            item->setToolTip(0, action->toolTip());
             item->setIcon(0, action->icon());
+
+            QKeySequence shortcut = action->shortcut();
+
+            // add the shortcut in the 2nd column
+            if (!shortcut.isEmpty()) {
+                item->setText(1, shortcut.toString());
+                item->setTextColor(1, QColor(Qt::gray));
+            }
 
             menuItem->addChild(item);
         }
@@ -133,7 +134,9 @@ void ActionDialog::on_actionLineEdit_textChanged(const QString &arg1) {
     // search for the text
     Utils::Gui::searchForTextInTreeWidget(
             ui->actionTreeWidget, arg1,
-            Utils::Gui::TreeWidgetSearchFlags::TooltipSearch);
+            Utils::Gui::TreeWidgetSearchFlags
+                    (Utils::Gui::TreeWidgetSearchFlags::TooltipSearch |
+                    Utils::Gui::TreeWidgetSearchFlags::AllColumnsSearch));
 }
 
 /**
