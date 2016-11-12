@@ -15,6 +15,7 @@
 #include <QApplication>
 #include <QClipboard>
 #include <QMimeData>
+#include <QRegularExpression>
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -706,6 +707,11 @@ void ScriptingService::registerCustomAction(QString identifier,
 
         mainWindow->addCustomAction(identifier, menuText, buttonText, icon);
     }
+#else
+    Q_UNUSED(identifier);
+    Q_UNUSED(menuText);
+    Q_UNUSED(buttonText);
+    Q_UNUSED(icon);
 #endif
 }
 
@@ -730,6 +736,8 @@ void ScriptingService::createNote(QString text) {
         // create the new note and move the cursor to the end
         mainWindow->createNewNote(name, text, true);
     }
+#else
+    Q_UNUSED(text);
 #endif
 }
 
@@ -796,8 +804,6 @@ bool ScriptingService::platformIsWindows() {
  * @param stylesheet
  */
 void ScriptingService::addStyleSheet(QString stylesheet) {
-    qDebug() << __func__ << " - 'stylesheet': " << stylesheet;
-
     qApp->setStyleSheet(qApp->styleSheet() + "\n/* BEGIN CUSTOM STYLESHEET */\n"
                         + stylesheet + "\n/* END CUSTOM STYLESHEET */");
 }
