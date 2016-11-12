@@ -56,4 +56,8 @@ private slots:
 
 private:
     Ui::LogWidget *ui;
+
+    static QString logTypeText(LogType logType);
+
+    static void logToFileIfAllowed(LogType logType, QString msg);
 };

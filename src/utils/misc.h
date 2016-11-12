@@ -42,5 +42,7 @@ namespace Utils {
                 QString executablePath, QStringList parameters,
                 QByteArray data = QByteArray());
         QList<QObject *> getParents(QObject *object);
+        QString appDataPath();
+        QString logFilePath();
     }
 }

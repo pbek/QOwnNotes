@@ -124,6 +124,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 //    ui->toolbarEditor->setDisabledMenuActionNames(disabledMenuActionNames);
 
     ui->toolbarEditor->updateBars();
+
+    // show the log file path
+    ui->logFileLabel->setText(QDir::toNativeSeparators(
+            Utils::Misc::logFilePath()));
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -346,6 +350,8 @@ void SettingsDialog::storeSettings() {
                       ui->noteTextViewRTLCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
                       ui->oldVersionNumberCheckBox->isChecked());
+    settings.setValue("Debug/fileLogging",
+                      ui->fileLoggingCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -495,6 +501,9 @@ void SettingsDialog::readSettings() {
             settings.value("MainWindow/noteTextView.rtl").toBool());
     ui->oldVersionNumberCheckBox->setChecked(
             settings.value("Debug/fakeOldVersionNumber").toBool());
+    ui->fileLoggingCheckBox->setChecked(
+            settings.value("Debug/fileLogging").toBool());
+    on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
 
     const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
     Q_UNUSED(blocker3);
@@ -1392,6 +1401,19 @@ void SettingsDialog::on_clearAppDataAndExitButton_clicked() {
         QSettings settings;
         settings.clear();
         DatabaseService::removeDiskDatabase();
+
+        // remove log file
+        QFile file(Utils::Misc::logFilePath());
+        if (file.exists()) {
+            // remove the file
+            bool result = file.remove();
+            QString text = result ? "Removed" : "Could not remove";
+
+            // if settings are cleared logging to log file will be disabled
+            // by default and it will not be created again
+            qWarning() << text + " log file: " << file.fileName();
+        }
+
         // make sure no settings get written after after are quitting
         qApp->setProperty("clearAppDataAndExit", true);
         qApp->quit();
@@ -2588,4 +2610,13 @@ int SettingsDialog::findSettingsPageIndexOfWidget(QWidget *widget) {
 
     // search for the page id in the parent
     return findSettingsPageIndexOfWidget(parent);
+}
+
+/**
+ * Toggles the log file frame
+ *
+ * @param checked
+ */
+void SettingsDialog::on_fileLoggingCheckBox_toggled(bool checked) {
+    ui->logFileFrame->setVisible(checked);
 }

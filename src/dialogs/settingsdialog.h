@@ -193,6 +193,8 @@ private slots:
 
     void on_searchLineEdit_textChanged(const QString &arg1);
 
+    void on_fileLoggingCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

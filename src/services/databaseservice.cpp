@@ -22,30 +22,8 @@ DatabaseService::DatabaseService() {
  * @return
  */
 QString DatabaseService::getDiskDatabasePath() {
-    QString path = "";
-
-    if (Utils::Misc::isInPortableMode()) {
-        path = Utils::Misc::portableDataPath();
-    } else {
-        QStandardPaths::StandardLocation location;
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
-        location = QStandardPaths::AppDataLocation;
-#else
-        location = QStandardPaths::GenericDataLocation;
-#endif
-
-        // get the path to store the database
-        path = QStandardPaths::writableLocation(location);
-
-        QDir dir;
-
-        // create path if it doesn't exist yet
-        dir.mkpath(path);
-    }
-
-    QString databaseFileName =
-            path + Utils::Misc::dirSeparator() + "QOwnNotes.sqlite";
+    QString databaseFileName = Utils::Misc::appDataPath() +
+            Utils::Misc::dirSeparator() + "QOwnNotes.sqlite";
     qDebug() << __func__ << " - 'databaseFileName': " << databaseFileName;
 
     return databaseFileName;

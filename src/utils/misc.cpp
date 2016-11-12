@@ -326,7 +326,7 @@ QString Utils::Misc::portableDataPath() {
 
     // it seems QDir::separator() is not needed, because Windows also
     // uses "/" in QCoreApplication::applicationDirPath()
-    path += Utils::Misc::dirSeparator() + "Data";
+    path += dirSeparator() + "Data";
 
     QDir dir;
     // create path if it doesn't exist yet
@@ -466,4 +466,39 @@ QList<QObject *> Utils::Misc::getParents(QObject *object) {
     }
 
     return list;
+}
+
+/**
+ * Returns the application data path
+ *
+ * @return
+ */
+QString Utils::Misc::appDataPath() {
+    QString path = "";
+
+    if (isInPortableMode()) {
+        path = portableDataPath();
+    } else {
+        QStandardPaths::StandardLocation location;
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
+        location = QStandardPaths::AppDataLocation;
+#else
+        location = QStandardPaths::GenericDataLocation;
+#endif
+
+        // get the path to store the database
+        path = QStandardPaths::writableLocation(location);
+
+        QDir dir;
+
+        // create path if it doesn't exist yet
+        dir.mkpath(path);
+    }
+
+    return path;
+}
+
+QString Utils::Misc::logFilePath() {
+    return appDataPath() + "/" + qAppName().replace(" ", "-") + ".log";
 }
