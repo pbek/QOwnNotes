@@ -588,6 +588,8 @@ void ScriptingService::noteTextEditWrite(QString text) {
     if (mainWindow != Q_NULLPTR) {
         mainWindow->writeToNoteTextEdit(text);
     }
+#else
+    Q_UNUSED(text);
 #endif
 }
 
@@ -623,6 +625,8 @@ void ScriptingService::tagCurrentNote(QString tagName) {
     if (mainWindow != Q_NULLPTR) {
         mainWindow->linkTagNameToCurrentNote(tagName);
     }
+#else
+    Q_UNUSED(tagName);
 #endif
 }
 

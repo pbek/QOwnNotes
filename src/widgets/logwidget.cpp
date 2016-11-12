@@ -2,6 +2,7 @@
 #include <QSettings>
 #include <QScrollBar>
 #include <QMenu>
+#include <QFile>
 #include <QDebug>
 #include <utils/misc.h>
 #include "logwidget.h"
@@ -378,6 +379,8 @@ void LogWidget::on_logTextEdit_customContextMenuRequested(const QPoint &pos) {
             on_clearButton_clicked();
         }
     }
+#else
+    Q_UNUSED(pos);
 #endif
 }
 
