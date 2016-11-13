@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.11.9
+- fixed the shortcut display in the action dialog on macOS
+  (and filed a Qt documentation bug 
+  [QTWEBSITE-744](https://bugreports.qt.io/browse/QTWEBSITE-744))
+
 ## 16.11.8
 - you can now **search for actions from the menu** with `Find action`
   in the *Help* menu or by pressing <kbd>Ctrl</kbd> + <kbd>⇧</kbd> +
