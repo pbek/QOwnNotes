@@ -421,17 +421,17 @@
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="130"/>
-      <location filename="../widgets/logwidget.cpp" line="371"/>
+      <location filename="../widgets/logwidget.cpp" line="372"/>
       <source>Clear log</source>
       <translation type="unfinished">Clear log</translation>
     </message>
     <message>
-      <location filename="../widgets/logwidget.cpp" line="369"/>
+      <location filename="../widgets/logwidget.cpp" line="370"/>
       <source>Show options</source>
       <translation type="unfinished">Show options</translation>
     </message>
     <message>
-      <location filename="../widgets/logwidget.cpp" line="369"/>
+      <location filename="../widgets/logwidget.cpp" line="370"/>
       <source>Hide options</source>
       <translation type="unfinished">Hide options</translation>
     </message>
@@ -3185,17 +3185,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3498"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3511"/>
       <source>Enable logging to file</source>
       <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3505"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3518"/>
+      <source>Clear log file</source>
+      <translation type="unfinished">Clear log file</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <source>Fake old version number to trigger update</source>
       <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3546"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3557"/>
       <source>Log file path:</source>
       <translation type="unfinished">Log file path:</translation>
     </message>
@@ -3487,122 +3492,132 @@ Connection error message: </translation>
       <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1553"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1574"/>
       <source>new folder</source>
       <translation type="unfinished">new folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1590"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1611"/>
       <source>Remove note folder</source>
       <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1591"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1612"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1593"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1925"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1614"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1946"/>
       <source>&amp;Remove</source>
       <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1666"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1687"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1703"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1724"/>
       <source>Loading folders from server</source>
       <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1717"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1738"/>
       <source>No more folders were found in the current folder</source>
       <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1791"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1812"/>
       <source>Loading folders in '%1' from server</source>
       <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1875"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1896"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
       <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href="%2"&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1887"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1908"/>
       <source>new script</source>
       <translation type="unfinished">new script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1922"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1943"/>
       <source>Remove script</source>
       <translation type="unfinished">Remove script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1944"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1951"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1972"/>
       <source>Please select your QML file</source>
       <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1952"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1973"/>
       <source>QML Files (*.qml)</source>
       <translation type="unfinished">QML Files (*.qml)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2013"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2034"/>
       <source>Your script seems to be valid</source>
       <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2014"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
       <source>There were script errors:
 %1</source>
       <translation type="unfinished">There were script errors:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2105"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2126"/>
       <source>File extension</source>
       <translation type="unfinished">File extension</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2106"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2127"/>
       <source>Enter your custom file extension:</source>
       <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2383"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2404"/>
       <source>Calendar cache emptied</source>
       <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2384"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2405"/>
       <source>Your calendar cache was emptied.</source>
       <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2461"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2482"/>
       <source>Reset toolbars and exit</source>
       <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2462"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2483"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2466"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
       <source>Reset and &amp;exit</source>
       <translation type="unfinished">Reset and &amp;exit</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="2640"/>
+      <source>Log file cleared</source>
+      <translation type="unfinished">Log file cleared</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.cpp" line="2641"/>
+      <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
+      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1332"/>
@@ -3676,9 +3691,9 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1326"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1399"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1593"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1925"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2466"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1614"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1946"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2487"/>
       <source>&amp;Cancel</source>
       <translation type="unfinished">&amp;Cancel</translation>
     </message>
@@ -3698,7 +3713,7 @@ Your notes will stay intact!</translation>
       <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
       <source>Select editor application</source>
       <translation type="unfinished">Select editor application</translation>
     </message>

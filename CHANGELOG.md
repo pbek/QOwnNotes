@@ -6,6 +6,7 @@
   [QTWEBSITE-744](https://bugreports.qt.io/browse/QTWEBSITE-744))
 - tried to improve the restoring of the workspace in full-screen and
   maximized mode
+- added more Dutch and Italian translation (thank you Fabijenna and mlocati)
 
 ## 16.11.8
 - you can now **search for actions from the menu** with `Find action`
