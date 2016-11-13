@@ -280,9 +280,9 @@ MainWindow::MainWindow(QWidget *parent) :
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
     // we need to restore the current workspace a little later when
-    // application window is maximized or in full screen mode
+    // application window is maximized or in full-screen mode
     if (isMaximized() || isFullScreen()) {
-        QTimer::singleShot(200, this, SLOT(restoreCurrentWorkspace()));
+        QTimer::singleShot(500, this, SLOT(restoreCurrentWorkspace()));
     }
 
     // update the current folder tooltip
