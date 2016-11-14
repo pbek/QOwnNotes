@@ -695,3 +695,15 @@ void TodoDialog::on_saveAndInsertButton_clicked()
     _mainWindow->activeNoteTextEdit()->textCursor().insertText(insertText);
     close();
 }
+
+/**
+ * Imports the current task as new note
+ */
+void TodoDialog::on_importAsNoteButton_clicked() {
+    QString name = ui->summaryEdit->text();
+    QString text = ui->descriptionEdit->toPlainText();
+
+    // create a new note with the task text
+    _mainWindow->createNewNote(name, text, MainWindow::CreateNewNoteOptions(
+            MainWindow::CreateNewNoteOption::UseNameAsHeadline));
+}

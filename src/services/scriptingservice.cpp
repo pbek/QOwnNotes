@@ -738,7 +738,9 @@ void ScriptingService::createNote(QString text) {
                 currentDate.toString(Qt::ISODate).replace(":", ".");
 
         // create the new note and move the cursor to the end
-        mainWindow->createNewNote(name, text, true);
+        mainWindow->createNewNote(
+                name, text, MainWindow::CreateNewNoteOptions(
+                        MainWindow::CreateNewNoteOption::CursorAtEnd));
     }
 #else
     Q_UNUSED(text);

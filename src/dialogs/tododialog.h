@@ -46,6 +46,7 @@ private slots:
     void on_summaryEdit_returnPressed();
     void on_newItemEdit_textChanged(const QString &arg1);
     void on_saveAndInsertButton_clicked();
+    void on_importAsNoteButton_clicked();
 
 private:
     Ui::TodoDialog *ui;

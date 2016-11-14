@@ -3281,7 +3281,8 @@ void MainWindow::setCurrentNoteText(QString text) {
  * @param text
  * @param cursorAtEnd
  */
-void MainWindow::createNewNote(QString name, QString text, bool cursorAtEnd) {
+void MainWindow::createNewNote(QString name, QString text,
+                               CreateNewNoteOptions options) {
     QString extension = Note::defaultNoteFileExtension();
     QFile *f = new QFile(this->notesPath + QDir::separator() + name + "."
                          + extension);
@@ -3295,12 +3296,21 @@ void MainWindow::createNewNote(QString name, QString text, bool cursorAtEnd) {
         text.prepend(preText);
     }
 
+    // create a new note
     ui->searchLineEdit->setText(name);
     on_searchLineEdit_returnPressed();
-    ui->noteTextEdit->setText(text);
+
+    // check if to append the text or replace the text of the note
+    if (options & CreateNewNoteOption::UseNameAsHeadline) {
+        QTextCursor c = ui->noteTextEdit->textCursor();
+        c.insertText(text);
+        ui->noteTextEdit->setTextCursor(c);
+    } else {
+        ui->noteTextEdit->setText(text);
+    }
 
     // move the cursor to the end of the note
-    if (cursorAtEnd) {
+    if (options & CreateNewNoteOption::CursorAtEnd) {
         QTextCursor c = ui->noteTextEdit->textCursor();
         c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
         ui->noteTextEdit->setTextCursor(c);
@@ -8177,6 +8187,9 @@ void MainWindow::on_actionShow_all_panels_triggered() {
     handleNoteSubFolderVisibility();
 }
 
+/**
+ * Opens the find action dialog
+ */
 void MainWindow::on_actionFind_action_triggered() {
     ActionDialog* dialog = new ActionDialog(ui->menuBar, this);
     dialog->show();

@@ -6,6 +6,9 @@
     - characters like `"`, `'`, `*`, `(`, `[` or `{` are automatically closed
     - `"`, `'` and `*` are only closed if there isn't already an opening
       character in the current text block
+- there now is a new button `Import as note` in the todo dialog that
+  imports the current todo item as new note
+  (for [Issue #387](https://github.com/pbek/QOwnNotes/issues/387))
 
 ## 16.11.9
 - fixed the shortcut display in the action dialog on macOS

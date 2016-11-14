@@ -39,13 +39,27 @@ Q_SIGNALS:
     void currentNoteChanged(Note &note);
 
 public:
+    enum CreateNewNoteOption {
+        None = 0x0000,
+
+        // use the name parameter as headline too
+        UseNameAsHeadline = 0x0001,
+
+        // places the cursor at the end of the note
+        CursorAtEnd = 0x0002,
+    };
+
+    Q_DECLARE_FLAGS(CreateNewNoteOptions, CreateNewNoteOption)
+
     explicit MainWindow(QWidget *parent = 0);
 
     ~MainWindow();
 
     void setCurrentNoteText(QString text);
 
-    void createNewNote(QString name, QString text, bool cursorAtEnd = false);
+    void createNewNote(
+            QString name, QString text,
+            CreateNewNoteOptions options = CreateNewNoteOption::None);
 
     void openSettingsDialog(int page = 0);
 
