@@ -429,6 +429,13 @@ void MainWindow::initWorkspaceComboBox() {
  * Initializes the dock widgets
  */
 void MainWindow::initDockWidgets() {
+
+//    int buttonHeight = ui->newNoteTagButton->height();
+    int buttonHeight = ui->newNoteTagButton->baseSize().height();
+    qDebug() << __func__ << " - 'button height': " << buttonHeight;
+    qDebug() << __func__ << " - 'button height': " <<
+                                                   ui->newNoteTagButton->geometry();
+
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     setDockOptions(dockOptions() | GroupedDragging);
 #endif
@@ -509,22 +516,9 @@ void MainWindow::initDockWidgets() {
     _noteTagDockWidget->setWidget(ui->noteTagFrame);
     _noteTagDockTitleBarWidget = _noteTagDockWidget->titleBarWidget();
     sizePolicy = _noteTagDockWidget->sizePolicy();
-    sizePolicy.setHorizontalStretch(3);
+    sizePolicy.setHorizontalStretch(5);
     _noteTagDockWidget->setSizePolicy(sizePolicy);
     addDockWidget(Qt::RightDockWidgetArea, _noteTagDockWidget, Qt::Vertical);
-
-    QSettings settings;
-    bool wasInit = settings.value("dockWasInitializedOnce", false).toBool();
-    if (!wasInit) {
-        // I found no other easy way to set the height on the first start
-#ifdef Q_OS_LINUX
-        _noteTagDockWidget->setMaximumHeight(120);
-#else
-        _noteTagDockWidget->setMaximumHeight(50);
-#endif
-
-        settings.setValue("dockWasInitializedOnce", true);
-    }
 
     _notePreviewDockWidget = new QDockWidget(tr("Note preview"), this);
     _notePreviewDockWidget->setObjectName("notePreviewDockWidget");
@@ -539,6 +533,29 @@ void MainWindow::initDockWidgets() {
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
     _logDockWidget->hide();
+
+    QSettings settings;
+
+    // I found no other easy way force some sizes on the first start
+    if (!settings.value("dockWasInitializedOnce").toBool()) {
+        // setting a height for the note tag panel
+#ifdef Q_OS_LINUX
+//        _noteTagDockWidget->setMaximumHeight(buttonHeight * 3);
+#else
+//        _noteTagDockWidget->setMaximumHeight(50);
+#endif
+        _noteTagDockWidget->setMaximumHeight(40);
+
+        // giving the left panels with the note list a fifth of the screen
+        _noteListDockWidget->setMaximumWidth(width() / 5);
+
+        // giving the preview pane a third of the screen, the rest goes to the
+        // note edit pane
+        _notePreviewDockWidget->setMaximumWidth(width() / 3);
+
+        settings.setValue("dockWasInitializedOnce", true);
+        QTimer::singleShot(250, this, SLOT(releaseDockWidgetSizes()));
+    }
 
 //    ui->noteEditFrame->setStyleSheet("* { border: none; }");
 //    ui->noteTextEdit->setStyleSheet("* { border: none; }");
@@ -558,6 +575,15 @@ void MainWindow::initDockWidgets() {
 
     // initialize the panel menu
     initPanelMenu();
+}
+
+/**
+ * Releaseing the foced maximum size on some dock widgets
+ */
+void MainWindow::releaseDockWidgetSizes() {
+    _noteListDockWidget->setMaximumWidth(10000);
+    _notePreviewDockWidget->setMaximumWidth(10000);
+    _noteTagDockWidget->setMaximumHeight(10000);
 }
 
 /**

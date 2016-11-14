@@ -410,6 +410,8 @@ private slots:
 
     void on_actionFind_action_triggered();
 
+    void releaseDockWidgetSizes();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
