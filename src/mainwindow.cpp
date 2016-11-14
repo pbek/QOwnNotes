@@ -429,13 +429,6 @@ void MainWindow::initWorkspaceComboBox() {
  * Initializes the dock widgets
  */
 void MainWindow::initDockWidgets() {
-
-//    int buttonHeight = ui->newNoteTagButton->height();
-    int buttonHeight = ui->newNoteTagButton->baseSize().height();
-    qDebug() << __func__ << " - 'button height': " << buttonHeight;
-    qDebug() << __func__ << " - 'button height': " <<
-                                                   ui->newNoteTagButton->geometry();
-
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
     setDockOptions(dockOptions() | GroupedDragging);
 #endif
@@ -536,14 +529,9 @@ void MainWindow::initDockWidgets() {
 
     QSettings settings;
 
-    // I found no other easy way force some sizes on the first start
+    // forcing some dock widget sizes on the first application start
     if (!settings.value("dockWasInitializedOnce").toBool()) {
-        // setting a height for the note tag panel
-#ifdef Q_OS_LINUX
-//        _noteTagDockWidget->setMaximumHeight(buttonHeight * 3);
-#else
-//        _noteTagDockWidget->setMaximumHeight(50);
-#endif
+        // setting a small height for the note tag panel
         _noteTagDockWidget->setMaximumHeight(40);
 
         // giving the left panels with the note list a fifth of the screen
@@ -554,6 +542,8 @@ void MainWindow::initDockWidgets() {
         _notePreviewDockWidget->setMaximumWidth(width() / 3);
 
         settings.setValue("dockWasInitializedOnce", true);
+
+        // releasing the forced maximum sizes
         QTimer::singleShot(250, this, SLOT(releaseDockWidgetSizes()));
     }
 
@@ -578,7 +568,7 @@ void MainWindow::initDockWidgets() {
 }
 
 /**
- * Releaseing the foced maximum size on some dock widgets
+ * Releaseing the forced maximum sizes on some dock widgets
  */
 void MainWindow::releaseDockWidgetSizes() {
     _noteListDockWidget->setMaximumWidth(10000);

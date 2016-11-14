@@ -9,6 +9,7 @@
 - there now is a new button `Import as note` in the todo dialog that
   imports the current todo item as new note
   (for [Issue #387](https://github.com/pbek/QOwnNotes/issues/387))
+- improved the initial sizes of the panels on the first application start
 
 ## 16.11.9
 - fixed the shortcut display in the action dialog on macOS
