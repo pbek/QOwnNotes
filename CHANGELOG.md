@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.11.10
+- implemented automatic entering of matching characters like closing
+  parenthesis (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+    - characters like `"`, `'`, `*`, `(`, `[` or `{` are automatically closed
+    - `"`, `'` and `*` are only closed if there isn't already an opening
+      character in the current text block
+
 ## 16.11.9
 - fixed the shortcut display in the action dialog on macOS
   (and filed a Qt documentation bug 
