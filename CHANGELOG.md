@@ -1,15 +1,18 @@
 # QOwnNotes Changelog
 
 ## 16.11.10
-- implemented automatic entering of matching characters like closing
+- implemented automatic entering of **matching characters** like closing
   parenthesis (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
     - characters like `"`, `'`, `*`, `(`, `[` or `{` are automatically closed
     - `"`, `'` and `*` are only closed if there isn't already an opening
       character in the current text block
 - there now is a new button `Import as note` in the todo dialog that
-  imports the current todo item as new note
+  **imports** the current **todo item as new note**
   (for [Issue #387](https://github.com/pbek/QOwnNotes/issues/387))
 - improved the initial sizes of the panels on the first application start
+- added more Chinese, Dutch, Portuguese, Russian, German and Japanese
+  translation (thank you nkzk, Fabijenna, mlimacarlos, frostyland,
+  guijan and piyo)
 
 ## 16.11.9
 - fixed the shortcut display in the action dialog on macOS
