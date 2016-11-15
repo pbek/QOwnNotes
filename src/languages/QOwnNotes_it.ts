@@ -765,7 +765,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1231"/>
       <source>Decrypt note</source>
-      <translation>Decifra nota</translation>
+      <translation>Decripta nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
@@ -922,7 +922,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1838"/>
       <source>Find action</source>
-      <translation>Teova azione</translation>
+      <translation>Trova azione</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1841"/>
@@ -1539,7 +1539,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="4630"/>
       <source>Show todo lists</source>
-      <translation>Mostra la lista di to-do</translation>
+      <translation>Mostra la lista dei TODO</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4641"/>
@@ -2650,7 +2650,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Da fare</translation>
+      <translation>TODO</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1528"/>
@@ -3051,7 +3051,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="251"/>
       <source>Portable mode</source>
-      <translation>Modo portabile</translation>
+      <translation>Modalità portabile</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="275"/>
@@ -3194,7 +3194,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Versione obsoleta fasulla per forzare l'aggiornamento</translation>
+      <translation>Forza l'aggiornamento falsificando i numeri indicanti la versione corrente con quelli di una versione obsoleta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3557"/>
@@ -3634,12 +3634,12 @@ Messaggio di errore: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="145"/>
       <source>Portable mode is currently:</source>
-      <translation>Il modo portabile è attualmente:</translation>
+      <translation>la modalità portabile è attualmente:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="148"/>
       <source>In portable mode</source>
-      <translation>In modo portabile</translation>
+      <translation>In modalità portabile</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="149"/>
