@@ -42,9 +42,7 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
 
 ## Features
-- one or many notes folders can be chosen
-- notes can be created, edited, viewed and removed
-- list of notes is shown
+- multiple note folders can be used
 - older versions of your notes can be restored from your ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - trashed notes can be restored from your ownCloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - sub-string searching of notes is possible and search results are highlighted in the notes
@@ -53,12 +51,14 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - differences between current note and externally changed note are showed in a dialog
 - markdown highlighting of notes and a markdown preview mode
 - notes are getting their name from the first line of the note text (just like in the ownCloud notes web-application) and the note text files are automatically renamed, if the the first line changes
+    - this feature can also be turned off and you can use any filename you like
 - manage your ownCloud todo lists (ownCloud tasks or Tasks Plus / Calendar Plus)
 - encryption of notes (AES-256 is built in or you can use custom encryption methods like
   **[Keybase.io](https://keybase.io)** ([encryption-keybase.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml)) or
   **PGP** ([encryption-pgp.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml)))
-- dark mode theme support (if your operating system supports it)
+- dark mode theme support
 - all panels can be placed wherever you want, they can even float or stack (fully dockable)
+- toolbars are fully customizable
 - support for freedesktop theme icons, so you can use QOwnNotes with your 
   native desktop icons and with your favorite dark desktop theme
   QOwnNotes supports Freedesktop icon themes
@@ -105,16 +105,18 @@ If you are having trouble or would like to help out, join `#qownnotes` on Freeno
 
 Kiwi IRC (IRC in your web browser): [QOwnNotes IRC](https://kiwiirc.com/client/irc.freenode.net/#qownnotes)
 
-### Join the chat at gitter
+### Join the Gitter channel
 
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
 
 ## Minimum software requirements
+
 - A desktop operating system, that supports [Qt](http://www.qt.io/)
 - Qt 5.3+
 - gcc 4.8+
 
 ## Disclaimer
+
 This SOFTWARE PRODUCT is provided by THE PROVIDER "as is" and "with all faults." THE PROVIDER makes no representations or warranties of any kind concerning the safety, suitability, lack of viruses, inaccuracies, typographical errors, or other harmful components of this SOFTWARE PRODUCT. 
 
 There are inherent dangers in the use of any software, and you are solely responsible for determining whether this SOFTWARE PRODUCT is compatible with your equipment and other software installed on your equipment. You are also solely responsible for the protection of your equipment and backup of your data, and THE PROVIDER will not be liable for any damages you may suffer in connection with using, modifying, or distributing this SOFTWARE PRODUCT.
