@@ -145,7 +145,7 @@ void SettingsDialog::initPortableModePage() {
             "<p>" + tr("Portable mode is currently:") + " <strong>" + status +
             "</strong></p>";
 
-    text += tr("In portable mode") + "<ul><li>" +
+    text += tr("In portable mode") + ":<ul><li>" +
             tr("the internal sqlite database and the settings will be stored "
                        "inside a <code>Data</code> folder at the binary's "
                        "location") + "</li><li>" +
@@ -157,7 +157,8 @@ void SettingsDialog::initPortableModePage() {
 
     if (!isInPortableMode) {
         text += "<p>" + tr("It will be activated if you run QOwnNotes with "
-                                   "the parameter <code>--portable</code>.") + "</p>";
+                                   "the parameter <code>--portable</code>.") +
+                "</p>";
 
 #ifdef Q_OS_WIN32
         text += "<p>" + tr("You will find a <code>QOwnNotesPortable.bat</code> "
