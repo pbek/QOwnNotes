@@ -2,10 +2,13 @@
 
 ## 16.11.11
 - the `Markdown highlighting` options moved to the new `Editor` settings
-- you can now disable the automatic closing of brackets and markdown 
-  formatting characters in the `Editor` settings
+- more changes to closing of brackets and markdown formatting characters
   (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+    - you can now disable the feature in the `Editor` settings
     - added closing of `<` and removed closing of `'`
+    - `*` will now only be closed if not used in lists
+        - it will be checked if it is on the beginning of a block or if
+          it has just whitespaces in front of it
 
 ## 16.11.10
 - implemented automatic entering of **matching characters** like closing
