@@ -9,6 +9,9 @@
     - `*` will now only be closed if not used in lists
         - it will be checked if it is on the beginning of a block or if
           it has just whitespaces in front of it
+- added more Italian, Dutch, Hungarian, Polish, Spanish, Portuguese,
+  German and Japanese translation (thank you mlocati, Manu-sh,
+  Fabijenna, lucjan, richarson, mlimacarlos, bigant and piyo)
 
 ## 16.11.10
 - implemented automatic entering of **matching characters** like closing
