@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.11.11
+- the `Markdown highlighting` options moved to the new `Editor` settings
+- you can now disable the automatic closing of brackets and markdown 
+  formatting characters in the `Editor` settings
+  (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+    - added closing of `<` and removed closing of `'`
+
 ## 16.11.10
 - implemented automatic entering of **matching characters** like closing
   parenthesis (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))

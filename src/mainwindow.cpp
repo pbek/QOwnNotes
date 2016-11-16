@@ -2020,6 +2020,12 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     // update the toolbar menu
     updateToolbarMenu();
+
+    // update the settings of all markdown edits
+    Q_FOREACH(QOwnNotesMarkdownTextEdit *textEdit,
+              findChildren<QOwnNotesMarkdownTextEdit*>()) {
+            textEdit->updateSettings();
+        }
 }
 
 /**

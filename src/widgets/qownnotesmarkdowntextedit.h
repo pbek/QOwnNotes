@@ -32,6 +32,7 @@ public:
     void setPaperMargins(int width);
     void setMainWindow(MainWindow *mainWindow);
     int modifyFontSize(FontModificationMode mode);
+    void updateSettings();
 
 protected:
     void insertFromMimeData(const QMimeData * source);

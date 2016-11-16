@@ -10,6 +10,7 @@
 QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent) {
     setStyles();
+    updateSettings();
 }
 
 /**
@@ -279,4 +280,18 @@ void QOwnNotesMarkdownTextEdit::insertFromMimeData(const QMimeData * source) {
         // was set)
         mainWindow->handleInsertingFromMimeData(source);
     }
+}
+
+/**
+ * Handles the settings of the markdown textedit
+ */
+void QOwnNotesMarkdownTextEdit::updateSettings() {
+    QSettings settings;
+    QMarkdownTextEdit::AutoTextOptions options;
+
+    if (settings.value("Editor/autoBracketClosing", true).toBool()) {
+        options |= QMarkdownTextEdit::AutoTextOption::BracketClosing;
+    }
+
+    setAutoTextOptions(options);
 }
