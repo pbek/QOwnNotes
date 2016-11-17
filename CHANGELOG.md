@@ -17,6 +17,8 @@
    - opening characters can be `(`, `[`, `{`, `<`, `*` or `"`
    - you can disable this feature in the `Editor` settings
    - if text was selected closing characters will not be removed
+- added more Italian, Polish and French translation (thank you Manu-sh,
+  lucjan and lepascalou)
 
 ## 16.11.11
 - the `Markdown highlighting` options moved to the new `Editor` settings
