@@ -1,7 +1,6 @@
 # QOwnNotes Changelog
 
 ## 16.11.12
-
 - added a new scripting hook `noteOpenedHook(note)` that is called every
   time a note is opened
   (for [Issue #389](https://github.com/pbek/QOwnNotes/issues/389))
