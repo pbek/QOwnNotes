@@ -5,6 +5,11 @@
 - added a new scripting hook `noteOpenedHook(note)` that is called every
   time a note is opened
   (for [Issue #389](https://github.com/pbek/QOwnNotes/issues/389))
+    - take a look at the
+      [noteOpenedHook documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md#noteopenedhook)
+      for more information
+    - there is an example script at
+      [on-note-opened.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml)
 - added some documentation for all scripting hooks to the
   [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
 - the closing of brackets and markdown formatting characters is now only
