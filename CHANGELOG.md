@@ -10,6 +10,13 @@
 - the closing of brackets and markdown formatting characters is now only
   allowed if the cursor was at the end of a block
   (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+- closing brackets and markdown formatting characters are now
+  automatically removed if the opening character is removed with
+  <kbd>Backspace</kbd>
+  (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+   - opening characters can be `(`, `[`, `{`, `<`, `*` or `"`
+   - you can disable this feature in the `Editor` settings
+   - if text was selected closing characters will not be removed
 
 ## 16.11.11
 - the `Markdown highlighting` options moved to the new `Editor` settings

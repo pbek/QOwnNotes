@@ -293,5 +293,9 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
         options |= QMarkdownTextEdit::AutoTextOption::BracketClosing;
     }
 
+    if (settings.value("Editor/autoBracketRemoval", true).toBool()) {
+        options |= QMarkdownTextEdit::AutoTextOption::BracketRemoval;
+    }
+
     setAutoTextOptions(options);
 }

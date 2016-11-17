@@ -3638,6 +3638,16 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
+                  <property name="toolTip">
+                   <string>You have to use the backspace key to remove the opening character</string>
+                  </property>
+                  <property name="text">
+                   <string>Enable automatic removal of matching closing characters</string>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>

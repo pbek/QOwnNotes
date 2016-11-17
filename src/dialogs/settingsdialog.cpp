@@ -355,6 +355,8 @@ void SettingsDialog::storeSettings() {
                       ui->fileLoggingCheckBox->isChecked());
     settings.setValue("Editor/autoBracketClosing",
                       ui->autoBracketClosingCheckBox->isChecked());
+    settings.setValue("Editor/autoBracketRemoval",
+                      ui->autoBracketRemovalCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -509,6 +511,8 @@ void SettingsDialog::readSettings() {
     on_fileLoggingCheckBox_toggled(ui->fileLoggingCheckBox->isChecked());
     ui->autoBracketClosingCheckBox->setChecked(
             settings.value("Editor/autoBracketClosing", true).toBool());
+    ui->autoBracketRemovalCheckBox->setChecked(
+            settings.value("Editor/autoBracketRemoval", true).toBool());
 
     const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
     Q_UNUSED(blocker3);
