@@ -36,6 +36,7 @@ or [execute-command-after-note-update.qml](execute-command-after-note-update.qml
 
 
 ```cpp
+/**
  * QML wrapper to start a synchronous process
  *
  * @param executablePath the path of the executable
@@ -277,7 +278,7 @@ You might want to look at the custom action `transformTextRot13` in the
 example [custom-actions.qml](custom-actions.qml).
 
 
-### Check if platform is Linux, OS X or Windows
+### Check whether platform is Linux, OS X or Windows
 
 #### Parameters
 
@@ -347,6 +348,140 @@ You can get the object names from the `*.ui` files, for example
 
 Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html)
 for a reference of what styles are available.
+
+
+## Hooks
+
+### noteOpenedHook
+
+```javascript
+/**
+ * This function is called after a note was opened
+ * 
+ * @param {NoteApi} note - the note object that was opened
+ */
+function noteOpenedHook(note) {
+    script.log(note.fullNoteFilePath);
+}
+```
+
+You may want to take a look at the example [on-note-opened.qml](on-note-opened.qml).
+
+
+### insertMediaHook
+
+```javascript
+/**
+ * This function is called when media file is inserted into the note
+ * If this function is defined in multiple scripts, then the first script that returns a non-empty string wins
+ * 
+ * @param fileName string the file path of the source media file before it was copied to the media folder
+ * @param mediaMarkdownText string the markdown text of the media file, e.g. ![my-image](file://media/505671508.jpg)
+ * @return string the new markdown text of the media file
+ */
+function insertMediaHook(fileName, mediaMarkdownText);
+```
+
+You may want to take a look at the example [example.qml](example.qml).
+
+
+### insertingFromMimeDataHook
+
+```javascript
+/**
+ * This function is called when html or a media file is pasted to a note with `Ctrl + Shift + V`
+ * 
+ * @param text text of the QMimeData object
+ * @param html html of the QMimeData object
+ * @returns the string that should be inserted instead of the text from the QMimeData object
+ */
+function insertingFromMimeDataHook(text, html);
+```
+
+You may want to take a look at the example [example.qml](example.qml),
+[insert-headline-with-link-from-github-url.qml](insert-headline-with-link-from-github-url.qml)
+or [note-text-from-5pm-mail.qml](note-text-from-5pm-mail.qml).
+
+
+### handleNoteTextFileNameHook
+
+```javascript
+/**
+ * This function is called when a note gets stored to disk if
+ * "Allow note file name to be different from headline" is enabled 
+ * in the settings
+ * 
+ * It allows you to modify the name of the note file
+ * Return an empty string if the file name of the note should 
+ * not be modified
+ * 
+ * @param {NoteApi} note - the note object of the stored note
+ * @return {string} the file name of the note
+ */
+function handleNoteTextFileNameHook(note);
+```
+
+You may want to take a look at the example [example.qml](example.qml) or
+[use-tag-names-in-filename.qml](use-tag-names-in-filename.qml).
+
+
+### handleNewNoteHeadlineHook
+
+```javascript
+/**
+ * This function is called before a note note is created
+ * 
+ * It allows you to modify the headline of the note before it is created
+ * Note that you have to take care about a unique note name, otherwise
+ * the new note will not be created, it will just be found in the note list
+ *
+ * You can use this method for creating note templates
+ * 
+ * @param headline text that would be used to create the headline
+ * @return {string} the headline of the note
+ */
+function handleNewNoteHeadlineHook(headline);
+```
+
+You may want to take a look at the example [custom-new-note-headline.qml](custom-new-note-headline.qml).
+
+
+### noteToMarkdownHtmlHook
+
+```javascript
+/**
+ * This function is called when the markdown html of a note is generated
+ * 
+ * It allows you to modify this html
+ * This is for example called before by the note preview
+ * 
+ * @param {NoteApi} note - the note object
+ * @param {string} html - the html that is about to being rendered
+ * @return {string} the modfied html or an empty string if nothing should be modified
+ */
+function noteToMarkdownHtmlHook(note, html);
+```
+
+You may want to take a look at the example [example.qml](example.qml) or
+[preview-styling.qml](preview-styling.qml).
+
+
+### encryptionHook
+
+```javascript
+/**
+ * This function is called when text has to be encrypted or decrypted
+ * 
+ * @param text string the text to encrypt or descrypt
+ * @param password string the password
+ * @param decrypt bool if false encryption is demanded, if true decryption is demanded
+ * @return the exncrypted or decrypted text
+ */
+function encryptionHook(text, password, decrypt);
+```
+
+You may want to take a look at the example [encryption-keybase.qml](encryption-keybase.qml),
+[encryption-pgp.qml](encryption-pgp.qml) or [encryption-rot13.qml](encryption-rot13.qml).
 
 
 ## Exposed classes

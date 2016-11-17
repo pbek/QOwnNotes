@@ -2866,6 +2866,9 @@ void MainWindow::setCurrentNote(Note note,
     // update the share button
     updateShareButton();
 
+    // call a script hook that a new note was opened
+    ScriptingService::instance()->callHandleNoteOpenedHook(&currentNote);
+
 //    putenv(QString("QOWNNOTES_CURRENT_NOTE_PATH=" + currentNote
 //            .fullNoteFilePath()).toLatin1().data());
 //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",

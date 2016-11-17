@@ -69,6 +69,8 @@ public:
     QString callEncryptionHook(QString text, QString password,
                                bool decrypt = false);
 
+    void callHandleNoteOpenedHook(Note *note);
+
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteAPi;

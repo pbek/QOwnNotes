@@ -371,6 +371,28 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
 }
 
 /**
+ * Calls the handleNoteOpenedHook function for all script components
+ */
+void ScriptingService::callHandleNoteOpenedHook(Note *note) {
+    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QObject *object = scriptComponent.object;
+
+        if (methodExistsForObject(object, "noteOpenedHook(QVariant)")) {
+            NoteApi *noteApi = new NoteApi();
+            noteApi->fetch(note->getId());
+
+            QMetaObject::invokeMethod(object, "noteOpenedHook",
+                                      Q_ARG(QVariant, QVariant::fromValue(
+                                              static_cast<QObject*>(noteApi))));
+        }
+    }
+}
+
+/**
  * Calls the handleNewNoteHeadlineHook function for all script components
  */
 QString ScriptingService::callHandleNewNoteHeadlineHook(QString headline) {

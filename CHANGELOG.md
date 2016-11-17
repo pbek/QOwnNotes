@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 16.11.12
+
+- added a new scripting hook `noteOpenedHook(note)` that is called every
+  time a note is opened
+  (for [Issue #389](https://github.com/pbek/QOwnNotes/issues/389))
+- added some documentation for all scripting hooks to the
+  [scripting documentation](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/README.md)
+
 ## 16.11.11
 - the `Markdown highlighting` options moved to the new `Editor` settings
 - more changes to closing of brackets and markdown formatting characters
