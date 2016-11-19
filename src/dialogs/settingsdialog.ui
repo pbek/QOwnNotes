@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2970,7 +2970,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item>
                    <widget class="QLabel" name="reinitializeDatabaseLabel">
                     <property name="text">
-                     <string>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</string>
+                     <string>Be warned that this will also remove your cached todo items and configured note folders and scripts!</string>
                     </property>
                     <property name="wordWrap">
                      <bool>true</bool>

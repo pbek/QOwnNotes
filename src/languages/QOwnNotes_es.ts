@@ -2853,9 +2853,8 @@ Are the folder and the file writeable?</source>
         <translation>Modo oscuro</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2973"/>
         <source>Do this only if you have troubles with your Todo items. Be warned that this will also remove your configured note folders!</source>
-        <translation>Haga esto sólo si tiene problemas con sus tareas. Se advierte que esto eliminará las carpetas de notas configuradas!</translation>
+        <translation type="vanished">Haga esto sólo si tiene problemas con sus tareas. Se advierte que esto eliminará las carpetas de notas configuradas!</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="1385"/>
@@ -2941,8 +2940,8 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2967"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1331"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1340"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1335"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1344"/>
         <source>Database</source>
         <translation>Base de datos</translation>
     </message>
@@ -2963,7 +2962,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2783"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1404"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1408"/>
         <source>Clear app data and exit</source>
         <translation>Borrar datos de la aplicación y salir</translation>
     </message>
@@ -3199,6 +3198,11 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
         <location filename="../dialogs/settingsdialog.ui" line="2757"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Achicar las imágenes al insertarlas en una nota</translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="2973"/>
+        <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3420"/>
@@ -3508,14 +3512,14 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
         <translation>Restablecer atajo por defecto</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1073"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1077"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
         <translation>Conexión realizada con éxito! Versión del servidor: %1 QOwnNotesAPI versión: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1084"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1088"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3525,150 +3529,150 @@ Connection error message: </source>
 Mensaje de error de conexión: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1353"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1357"/>
         <source>Markdown files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1384"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1388"/>
         <source>Disable usage tracking</source>
         <translation>Deshabilitar seguimiento de uso</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1385"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1389"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Los datos de uso anónimos ayudan a decidir qué partes de QOwnNotes mejorar primero, y encontrar y arreglar errores.&lt;br /&gt; Por favor deshabilitalo sólo si realmente no puedes vivir con ello.&lt;br /&gt;&lt;br /&gt; ¿Deshabilitar el seguimiento de uso?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1583"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1587"/>
         <source>new folder</source>
         <translation>nueva carpeta</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1620"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1624"/>
         <source>Remove note folder</source>
         <translation>Eliminar carpeta de notas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1621"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1625"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Eliminar la carpeta de notas actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1623"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1955"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1627"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1959"/>
         <source>&amp;Remove</source>
         <translation>&amp;Eliminar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1696"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1700"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Por favor seleccione la carpeta donde se almacenarán las notas</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1733"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1737"/>
         <source>Loading folders from server</source>
         <translation>Cargando carpetas del servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1747"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1751"/>
         <source>No more folders were found in the current folder</source>
         <translation>No se han encontrado más carpetas en la actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1821"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1825"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Cargando carpetas en &apos;%1&apos; desde el servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1905"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1909"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
         <translation>Si necesita acceso a una cierta funcionalidad en QOwnNotes por favor abra un tema en el &lt;a href=&quot;%1&quot;&gt; QOwnNotes pagina de problemas&lt;/a&gt;. Haga clic en &lt;a href=&quot;%2&quot;&gt; ejemplos QML&lt;/a&gt; para iniciar el scripting.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1917"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1921"/>
         <source>new script</source>
         <translation>nuevo script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1952"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1956"/>
         <source>Remove script</source>
         <translation>Eliminar script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1957"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>¿Quitar el script actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1981"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1985"/>
         <source>Please select your QML file</source>
         <translation>Por favor, seleccione su archivo QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1982"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1986"/>
         <source>QML Files (*.qml)</source>
         <translation>Archivos QML (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2043"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2047"/>
         <source>Your script seems to be valid</source>
         <translation>Su script parece ser válido</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2044"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2048"/>
         <source>There were script errors:
 %1</source>
         <translation>Hubo errores en el script:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2135"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2139"/>
         <source>File extension</source>
         <translation>Extensión de archivo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2136"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2140"/>
         <source>Enter your custom file extension:</source>
         <translation>Escriba la extensión de archivo personalizado:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2413"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2417"/>
         <source>Calendar cache emptied</source>
         <translation>Se vació la caché de calendarios</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2414"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2418"/>
         <source>Your calendar cache was emptied.</source>
         <translation>La caché de calendarios fue vaciada.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2491"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2495"/>
         <source>Reset toolbars and exit</source>
         <translation>Restablecer las barras de herramientas y salir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2492"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>¿Desea restablecer todas las barras de herramientas? La aplicación se cerrará en el proceso, las barras de herramientas por defecto serán restauradas cuando la inicies otra vez.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
         <source>Reset and &amp;exit</source>
         <translation>R&amp;establecer y salir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2649"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2662"/>
         <source>Log file cleared</source>
         <translation>Se vació el archivo de registro</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2650"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2663"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Se vació el archivo de registro &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1341"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1345"/>
         <source>The Database was reinitialized.</source>
         <translation>Se reinicializó la base de datos.</translation>
     </message>
@@ -3717,28 +3721,28 @@ Mensaje de error de conexión: </translation>
         <translation type="vanished">Archivos Markdown (*.md)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1354"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1358"/>
         <source>Save debug information</source>
         <translation>Guardar información de depuración</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1405"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1409"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation>¿Realmente desea borrar todos los ajustes, eliminar la base de datos y salir de QOwnNotes? Las notas permanecerán intactas!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1408"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1412"/>
         <source>Clear and &amp;exit</source>
         <translation>Limpiar y salir</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1335"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1408"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1623"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1955"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2496"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1339"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1412"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1627"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1959"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2500"/>
         <source>&amp;Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -3748,17 +3752,17 @@ Your notes will stay intact!</source>
         <translation>Encontrarás un archivo &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en la ruta de tu versión para ejecutar QOwnNotes en modo portátil.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1332"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1336"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>¿Realmente desea borrar la base de datos local? Esto también eliminará las carpetas de notas configuradas y sus tareas!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1335"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1339"/>
         <source>Clear &amp;database</source>
         <translation>Limpiar la base de &amp;datos</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1498"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1502"/>
         <source>Select editor application</source>
         <translation>Seleccionar la aplicación de edición</translation>
     </message>
@@ -3807,109 +3811,114 @@ Your notes will stay intact!</source>
         <translation>Tareas</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="49"/>
-        <location filename="../dialogs/tododialog.ui" line="56"/>
+        <location filename="../dialogs/tododialog.ui" line="76"/>
+        <location filename="../dialogs/tododialog.ui" line="83"/>
         <source>Priority</source>
         <translation>Prioridad</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="84"/>
+        <location filename="../dialogs/tododialog.ui" line="111"/>
         <source>Reminder</source>
         <translation>Recordatorio</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="145"/>
+        <location filename="../dialogs/tododialog.ui" line="155"/>
         <source>Summary</source>
         <translation>Resumen</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="185"/>
+        <location filename="../dialogs/tododialog.ui" line="189"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="202"/>
+        <location filename="../dialogs/tododialog.cpp" line="114"/>
         <source>Save and insert into note</source>
         <translation>Guardar e insertar en la nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="236"/>
+        <location filename="../dialogs/tododialog.ui" line="206"/>
         <source>Remove</source>
         <translation>Eliminar</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="293"/>
+        <location filename="../dialogs/tododialog.ui" line="220"/>
+        <source>Note...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.ui" line="264"/>
         <source>Show completed items</source>
         <translation>Mostrar los items completados</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="300"/>
+        <location filename="../dialogs/tododialog.ui" line="271"/>
         <source>Reload the todo list from server</source>
         <translation>Recargar la lista de tareas desde el servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="303"/>
+        <location filename="../dialogs/tododialog.ui" line="274"/>
         <source>Reload</source>
         <translation>Recargar</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="334"/>
+        <location filename="../dialogs/tododialog.ui" line="305"/>
         <source>Search or create todo item</source>
         <translation>Buscar o crear tarea</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="317"/>
+        <location filename="../dialogs/tododialog.ui" line="288"/>
         <source>select your todo list</source>
         <translation>seleccione la lista de tareas</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="182"/>
+        <location filename="../dialogs/tododialog.ui" line="186"/>
         <source>Save the current todo item</source>
         <translation>Guardar la tarea actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="199"/>
+        <location filename="../dialogs/tododialog.cpp" line="118"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation>Guardar la tarea actual e insertar un vínculo a ella en la nota actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="216"/>
+        <location filename="../dialogs/tododialog.cpp" line="127"/>
         <source>Import the current todo item as new note</source>
         <translation>Importar la tarea actual como una nota nueva</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="219"/>
+        <location filename="../dialogs/tododialog.cpp" line="123"/>
         <source>Import as note</source>
         <translation>Importar como nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="233"/>
+        <location filename="../dialogs/tododialog.ui" line="203"/>
         <source>Remove the current todo item</source>
         <translation>Eliminar la tarea actual</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="324"/>
+        <location filename="../dialogs/tododialog.ui" line="295"/>
         <source>Todo list items are being loaded from the server</source>
         <translation>Los elementos de la lista de tareas se están cargando desde el servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="491"/>
+        <location filename="../dialogs/tododialog.cpp" line="514"/>
         <source>Remove todo item</source>
         <translation>Quitar item de tareas</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="492"/>
+        <location filename="../dialogs/tododialog.cpp" line="515"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation>¿Eliminar la tarea seleccionada? Esto no se puede deshacer!</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="493"/>
+        <location filename="../dialogs/tododialog.cpp" line="516"/>
         <source>&amp;Remove</source>
         <translation>Elimina</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="493"/>
+        <location filename="../dialogs/tododialog.cpp" line="516"/>
         <source>&amp;Cancel</source>
         <translation>Cancelar</translation>
     </message>
