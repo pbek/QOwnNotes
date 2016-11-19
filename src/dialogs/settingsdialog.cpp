@@ -889,7 +889,7 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Settings path / key",
                                           settings.fileName());
     output += prepareDebugInformationLine("Application database path",
-            DatabaseService::getDiskDatabasePath());
+            QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()));
 
     QString debug = "0";
 #ifdef QT_DEBUG
@@ -948,7 +948,8 @@ void SettingsDialog::outputSettings() {
                         "activeTagId",
                         QString::number(noteFolder.getActiveTagId()));
                 output += prepareDebugInformationLine(
-                        "localPath", noteFolder.getLocalPath());
+                        "localPath", QDir::toNativeSeparators(
+                                noteFolder.getLocalPath()));
                 output += prepareDebugInformationLine(
                         "remotePath", noteFolder.getRemotePath());
                 output += prepareDebugInformationLine(
@@ -957,6 +958,10 @@ void SettingsDialog::outputSettings() {
                 output += prepareDebugInformationLine(
                         "activeNoteSubFolder name",
                         noteFolder.getActiveNoteSubFolder().getName());
+                output += prepareDebugInformationLine(
+                        "database file",
+                        QDir::toNativeSeparators(noteFolder.getLocalPath() +
+                                                 "/notes.sqlite"));
             }
     }
 

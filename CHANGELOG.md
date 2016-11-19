@@ -15,6 +15,8 @@
 - the path to the settings file (or the key if the settings are stored
   in the Windows registry) and the path to the application database file
   are now shown in the debug settings
+    - the database file path of the note folders is shown in the note
+      folder list 
 
 ## 16.11.12
 - added a new scripting hook `noteOpenedHook(note)` that is called every
