@@ -888,6 +888,8 @@ void SettingsDialog::outputSettings() {
                                           "yes" : "no");
     output += prepareDebugInformationLine("Settings path / key",
                                           settings.fileName());
+    output += prepareDebugInformationLine("Application database path",
+            DatabaseService::getDiskDatabasePath());
 
     QString debug = "0";
 #ifdef QT_DEBUG

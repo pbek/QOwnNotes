@@ -13,7 +13,8 @@
 - now a button menu is used in the todo dialog to improve it for small
   screen sizes
 - the path to the settings file (or the key if the settings are stored
-  in the Windows registry) is now shown in the debug settings
+  in the Windows registry) and the path to the application database file
+  are now shown in the debug settings
 
 ## 16.11.12
 - added a new scripting hook `noteOpenedHook(note)` that is called every

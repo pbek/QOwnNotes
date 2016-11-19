@@ -20,9 +20,9 @@ public:
     static bool removeDiskDatabase();
     static bool createNoteFolderConnection();
     static bool setupNoteFolderTables();
+    static QString getDiskDatabasePath();
 
 private:
-    static QString getDiskDatabasePath();
     static QString getNoteFolderDatabasePath();
     static bool createMemoryConnection();
     static bool createDiskConnection();
