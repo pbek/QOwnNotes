@@ -2581,6 +2581,15 @@ void SettingsDialog::on_searchLineEdit_textChanged(const QString &arg1) {
                 int pageIndex = item->whatsThis(0).toInt();
                 item->setHidden(!pageIndexList.contains(pageIndex));
             }
+
+        // show items again that have visible children so that they are
+        // really shown
+        Q_FOREACH(QTreeWidgetItem *item, allItems) {
+                if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                    item->setHidden(false);
+                    item->setExpanded(true);
+                }
+            }
     } else {
         // show all items otherwise
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
