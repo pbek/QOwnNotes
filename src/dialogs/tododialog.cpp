@@ -6,6 +6,7 @@
 #include <QMessageBox>
 #include <QKeyEvent>
 #include <QShortcut>
+#include <QMenu>
 #include <services/metricsservice.h>
 
 TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
@@ -106,6 +107,28 @@ void TodoDialog::setupUi() {
     QObject::connect(shortcut, SIGNAL(activated()),
                      this, SLOT(on_removeButton_clicked()));
 
+    // setup the note button menu
+    QMenu *noteMenu = new QMenu();
+
+    QAction *insertAction = noteMenu->addAction(
+            tr("Save and insert into note"));
+    insertAction->setIcon(QIcon::fromTheme(
+            "document-save",
+            QIcon(":icons/breeze-qownnotes/16x16/document-save.svg")));
+    insertAction->setToolTip(tr("Save the current todo item and insert a link"
+                                        " to it into the current note"));
+    connect(insertAction, SIGNAL(triggered()),
+            this, SLOT(on_saveAndInsertButton_clicked()));
+
+    QAction *importAction = noteMenu->addAction(tr("Import as note"));
+    importAction->setIcon(QIcon::fromTheme(
+            "document-import",
+            QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
+    importAction->setToolTip(tr("Import the current todo item as new note"));
+    connect(importAction, SIGNAL(triggered()),
+            this, SLOT(on_importAsNoteButton_clicked()));
+
+    ui->noteButton->setMenu(noteMenu);
 }
 
 void TodoDialog::setupMainSplitter() {
@@ -264,7 +287,7 @@ void TodoDialog::resetEditFrameControls() {
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
     ui->saveButton->setEnabled(false);
-    ui->saveAndInsertButton->setEnabled(false);
+    ui->noteButton->setEnabled(false);
     ui->removeButton->setEnabled(false);
     currentCalendarItem = CalendarItem();
 }
@@ -374,7 +397,7 @@ void TodoDialog::on_todoList_currentItemChanged(
         on_prioritySlider_valueChanged(priority);
 
         ui->saveButton->setEnabled(true);
-        ui->saveAndInsertButton->setEnabled(true);
+        ui->noteButton->setEnabled(true);
         ui->removeButton->setEnabled(true);
     }
 }

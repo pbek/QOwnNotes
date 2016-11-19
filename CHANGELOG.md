@@ -10,6 +10,8 @@
       also fixed in the process
 - fixed searching of settings that are not at the root level of the
   settings page tree
+- now a button menu is used in the todo dialog to improve it for small
+  screen sizes
 
 ## 16.11.12
 - added a new scripting hook `noteOpenedHook(note)` that is called every

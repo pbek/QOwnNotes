@@ -35,13 +35,40 @@
         </size>
        </property>
        <property name="frameShape">
-        <enum>QFrame::StyledPanel</enum>
+        <enum>QFrame::NoFrame</enum>
        </property>
        <property name="frameShadow">
         <enum>QFrame::Raised</enum>
        </property>
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="1" column="0">
+        <item row="6" column="0" colspan="2">
+         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
+          <property name="readOnly">
+           <bool>false</bool>
+          </property>
+          <property name="html">
+           <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="acceptRichText">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0" colspan="2">
+         <widget class="QFrame" name="descriptionEditSearchFrame">
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="lineWidth">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
          <layout class="QFormLayout" name="formLayout">
           <item row="0" column="0">
            <widget class="QLabel" name="priorityLabel">
@@ -119,24 +146,7 @@
           </item>
          </layout>
         </item>
-        <item row="6" column="0">
-         <widget class="QOwnNotesMarkdownTextEdit" name="descriptionEdit">
-          <property name="readOnly">
-           <bool>false</bool>
-          </property>
-          <property name="html">
-           <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-          <property name="acceptRichText">
-           <bool>false</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
+        <item row="0" column="0" colspan="2">
          <widget class="QLineEdit" name="summaryEdit">
           <property name="readOnly">
            <bool>false</bool>
@@ -149,21 +159,15 @@ p, li { white-space: pre-wrap; }
           </property>
          </widget>
         </item>
-        <item row="8" column="0">
+        <item row="10" column="0" colspan="2">
          <widget class="QFrame" name="horizontalFrame">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
           </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout">
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
            <property name="leftMargin">
             <number>0</number>
            </property>
@@ -194,40 +198,6 @@ p, li { white-space: pre-wrap; }
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="saveAndInsertButton">
-             <property name="toolTip">
-              <string>Save the current todo item and insert a link to it into the current note</string>
-             </property>
-             <property name="text">
-              <string>Save and insert into note</string>
-             </property>
-             <property name="icon">
-              <iconset theme="document-save" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+I</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="importAsNoteButton">
-             <property name="toolTip">
-              <string>Import the current todo item as new note</string>
-             </property>
-             <property name="text">
-              <string>Import as note</string>
-             </property>
-             <property name="icon">
-              <iconset theme="document-import" resource="../breeze-qownnotes.qrc">
-               <normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-import.svg</iconset>
-             </property>
-             <property name="shortcut">
-              <string notr="true">Ctrl+I</string>
-             </property>
-            </widget>
-           </item>
-           <item>
             <widget class="QPushButton" name="removeButton">
              <property name="toolTip">
               <string>Remove the current todo item</string>
@@ -244,17 +214,18 @@ p, li { white-space: pre-wrap; }
              </property>
             </widget>
            </item>
+           <item>
+            <widget class="QPushButton" name="noteButton">
+             <property name="text">
+              <string>Note...</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-new.svg</iconset>
+             </property>
+            </widget>
+           </item>
           </layout>
-         </widget>
-        </item>
-        <item row="7" column="0">
-         <widget class="QFrame" name="descriptionEditSearchFrame">
-          <property name="frameShape">
-           <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="lineWidth">
-           <number>0</number>
-          </property>
          </widget>
         </item>
        </layout>
@@ -359,8 +330,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>prioritySlider</tabstop>
   <tabstop>reminderDateTimeEdit</tabstop>
   <tabstop>descriptionEdit</tabstop>
-  <tabstop>saveButton</tabstop>
-  <tabstop>removeButton</tabstop>
   <tabstop>reloadTodoListButton</tabstop>
   <tabstop>showCompletedItemsCheckBox</tabstop>
   <tabstop>todoListSelector</tabstop>
