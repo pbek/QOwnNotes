@@ -886,6 +886,8 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Portable mode",
                                           Utils::Misc::isInPortableMode() ?
                                           "yes" : "no");
+    output += prepareDebugInformationLine("Settings path / key",
+                                          settings.fileName());
 
     QString debug = "0";
 #ifdef QT_DEBUG
