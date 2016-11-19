@@ -35,7 +35,7 @@ void EvernoteImportDialog::on_fileButton_clicked() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Enex files (*.enex)"));
+    dialog.setNameFilter(tr("Enex files") + " (*.enex)");
     dialog.setWindowTitle(tr("Select Evernote enex file to import"));
     int ret = dialog.exec();
 

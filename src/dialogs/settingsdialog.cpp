@@ -1350,7 +1350,7 @@ void SettingsDialog::on_saveDebugInfoButton_clicked() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Save debug information"));
     dialog.selectFile("QOwnNotes Debug Information.md");
     int ret = dialog.exec();

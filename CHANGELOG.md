@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.11.13
+- QOwnNotes is now also available for Ubuntu 17.04
+    - see [Ubuntu installation](http://www.qownnotes.org/installation#Linux)
+      for more information
+- Fixed a problem with inserting images when application language is Italian
+  (for [Issue #391](https://github.com/pbek/QOwnNotes/issues/391))
+    - potential file open dialog filter problems in other languages were
+      also fixed in the process
+
 ## 16.11.12
 - added a new scripting hook `noteOpenedHook(note)` that is called every
   time a note is opened

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="en_US">
-<defaultcodec>UTF-8</defaultcodec>
+<TS version="2.1" language="en_US">
 <context>
     <name>AboutDialog</name>
     <message>
@@ -58,7 +57,7 @@
     </message>
     <message>
         <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
-        <source>Enex files (*.enex)</source>
+        <source>Enex files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -335,7 +334,7 @@
     <message>
         <location filename="../widgets/fontcolorwidget.cpp" line="601"/>
         <location filename="../widgets/fontcolorwidget.cpp" line="643"/>
-        <source>INI files (*.ini)</source>
+        <source>INI files</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1301,6 +1300,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="3968"/>
+        <source>PDF files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="4735"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation type="unfinished"></translation>
@@ -1308,6 +1312,16 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="4749"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="4884"/>
+        <source>Image files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="5121"/>
+        <source>Markdown files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1407,6 +1421,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="7054"/>
+        <source>HTML files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="7936"/>
         <source>Create new workspace</source>
         <translation type="unfinished"></translation>
@@ -1503,11 +1522,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="3948"/>
         <source>Orientation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3968"/>
-        <source>PDF files (*.pdf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1690,11 +1704,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="5724"/>
         <source>Untagged notes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="7054"/>
-        <source>HTML files (*.html)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2032,11 +2041,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4884"/>
-        <source>Image files (*.jpg *.png *.gif)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="4885"/>
         <source>Select image to insert</source>
         <translation type="unfinished"></translation>
@@ -2064,11 +2068,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
         <location filename="../mainwindow.cpp" line="5064"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5121"/>
-        <source>Markdown files (*.md)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3499,6 +3498,11 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="1353"/>
+        <source>Markdown files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.cpp" line="1384"/>
         <source>Disable usage tracking</source>
         <translation type="unfinished"></translation>
@@ -3678,11 +3682,6 @@ Connection error message: </source>
     <message>
         <location filename="../dialogs/settingsdialog.cpp" line="159"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1353"/>
-        <source>Markdown files (*.md)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -598,7 +598,7 @@ void FontColorWidget::on_exportSchemeButton_clicked() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("INI files (*.ini)"));
+    dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Export schema"));
     dialog.selectFile(ui->colorSchemeComboBox->currentText() + ".ini");
     int ret = dialog.exec();
@@ -640,7 +640,7 @@ void FontColorWidget::on_importSchemeButton_clicked() {
     dialog.setFileMode(QFileDialog::ExistingFiles);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("INI files (*.ini)"));
+    dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Import schema"));
     int ret = dialog.exec();
 

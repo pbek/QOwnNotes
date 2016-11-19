@@ -3965,7 +3965,7 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("PDF files (*.pdf)"));
+    dialog.setNameFilter(tr("PDF files") + " (*.pdf)");
     dialog.setWindowTitle(tr("Export current note as PDF"));
     dialog.selectFile(currentNote.getName() + ".pdf");
     int ret = dialog.exec();
@@ -4881,7 +4881,7 @@ void MainWindow::on_actionInsert_image_triggered() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Image files (*.jpg *.png *.gif)"));
+    dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
     dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 
@@ -5118,7 +5118,7 @@ void MainWindow::on_action_Export_note_as_markdown_triggered() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("Markdown files (*.md)"));
+    dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
@@ -7051,7 +7051,7 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
     dialog.setDirectory(QDir::homePath());
-    dialog.setNameFilter(tr("HTML files (*.html)"));
+    dialog.setNameFilter(tr("HTML files") + " (*.html)");
     dialog.setWindowTitle(tr("Export current note as HTML file"));
     dialog.selectFile(currentNote.getName() + ".html");
     int ret = dialog.exec();
