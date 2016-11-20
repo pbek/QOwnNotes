@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.11.14
+- reduced the margins in the todo dialog to save space on small displays
+
 ## 16.11.13
 - QOwnNotes is now also available for Ubuntu 17.04
     - see [Ubuntu installation](http://www.qownnotes.org/installation#Linux)
