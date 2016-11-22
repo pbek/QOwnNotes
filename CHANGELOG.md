@@ -1,7 +1,11 @@
 # QOwnNotes Changelog
 
 ## 16.11.14
+- added **Ukrainian translation** (a big thank you to Borisvit!)
 - reduced the margins in the todo dialog to save space on small displays
+- added more Italian, Dutch, Hungarian, Polish, German, Portuguese and
+  French translation (thank you Manu-sh, Fabijenna, lucjan, bigant,
+  mlimacarlos and lepascalou)
 
 ## 16.11.13
 - QOwnNotes is now also available for Ubuntu 17.04

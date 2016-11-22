@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1962,6 +1962,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">ru</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Українська мова</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Ukrainian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">uk</string>
                         </property>
                        </item>
                        <item>
