@@ -4,7 +4,7 @@ Welcome to QOwnNotes
 Welcome to your installation of **QOwnnotes**!
 
 ## TODO
-- Be sure to setup your *ownCloud server* in the **settings dialog**.
+- Be sure to setup your *ownCloud/Nextcloud server* in the **settings dialog**.
 - Install [QOwnNotesAPI](https://apps.owncloud.com/content/show.php?content=173817) to access **note versions** and **trashed notes**.
 
 ## Later

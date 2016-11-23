@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.11.15
+- there now is a **Solus package** for QOwnNotes in the unstable repository
+    - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
+      for more information
+- mentioned Nextcloud support a bit more often
+ 
 ## 16.11.14
 - added **Ukrainian translation** (a big thank you to Borisvit!)
 - reduced the margins in the todo dialog to save space on small displays

@@ -4,7 +4,7 @@
 pkgname=qownnotes
 pkgver=VERSION-STRING
 pkgrel=1
-pkgdesc="Note-taking app and todo list manager with ownCloud integration"
+pkgdesc="Note-taking app and todo list manager with ownCloud/Nextcloud integration"
 arch=('i686' 'x86_64')
 url='http://www.qownnotes.org/'
 license=('GPL2')
