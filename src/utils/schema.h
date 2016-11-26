@@ -46,8 +46,7 @@ namespace Utils {
         QColor getBackgroundColor(int index);
 
         void setFormatStyle(MarkdownHighlighter::HighlighterState index,
-                            QTextCharFormat
-        &format);
+                            QTextCharFormat &format);
 
         QFont getEditorTextFont();
 

@@ -63,7 +63,6 @@ void NavigationWidget::parse(QTextDocument *document) {
     for (int i = 0; i < document->blockCount(); i++) {
         QTextBlock block = document->findBlockByNumber(i);
         int elementType = block.userState();
-
         QString text = block.text();
 
         // check for unrecognized headlines, like `# Header [link](http://url)`
