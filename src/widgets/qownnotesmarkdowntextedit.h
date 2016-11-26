@@ -40,8 +40,7 @@ protected:
 private:
     MainWindow *mainWindow;
 
-    void setFormatStyle(pmh_element_type index,
-                        QVector<HighlightingStyle> *styles);
+    void setFormatStyle(MarkdownHighlighter::HighlighterState index);
 };
 
 #endif // QOWNNOTESMARKDOWNTEXTEDIT_H

@@ -447,6 +447,18 @@ bool DatabaseService::setupTables() {
         version = 17;
     }
 
+    if (version < 18) {
+        // set a new markdownHighlightingEnabled setting
+        settings.setValue(
+            "markdownHighlightingEnabled",
+            settings.value("markdownHighlightingInterval", 200).toInt() > 0);
+
+        // remove the deprecated markdownHighlightingInterval setting
+        settings.remove("markdownHighlightingInterval");
+
+        version = 18;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

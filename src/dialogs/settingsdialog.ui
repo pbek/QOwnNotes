@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1560</width>
+    <width>1592</width>
     <height>975</height>
    </rect>
   </property>
@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>14</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -3590,46 +3590,10 @@ p, li { white-space: pre-wrap; }
                 <string>Markdown highlighting</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_35">
-                <item row="1" column="3">
-                 <spacer name="horizontalSpacer_7">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="0" column="1" colspan="3">
+                <item row="0" column="1" colspan="2">
                  <widget class="QCheckBox" name="markdownHighlightingCheckBox">
                   <property name="text">
                    <string>Enable markdown highlighting</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="2">
-                 <widget class="QSpinBox" name="markdownHighlightingIntervalSpinBox">
-                  <property name="toolTip">
-                   <string/>
-                  </property>
-                  <property name="maximum">
-                   <number>10000</number>
-                  </property>
-                  <property name="singleStep">
-                   <number>100</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QLabel" name="markdownHighlightingIntervalLabel">
-                  <property name="text">
-                   <string>Highlighting interval [ms]:</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                   </property>
                  </widget>
                 </item>

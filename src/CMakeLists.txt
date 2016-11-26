@@ -144,9 +144,6 @@ set(SOURCE_FILES
     libraries/hoedown/stack.h
     libraries/hoedown/version.c
     libraries/hoedown/version.h
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.c
-    libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_parser.h
     libraries/qmarkdowntextedit/markdownhighlighter.cpp
     libraries/qmarkdowntextedit/markdownhighlighter.h
     libraries/qmarkdowntextedit/qmarkdowntextedit.cpp

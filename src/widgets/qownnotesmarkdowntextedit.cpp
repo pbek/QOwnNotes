@@ -20,10 +20,10 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
  * @param styles
  */
 void QOwnNotesMarkdownTextEdit::setFormatStyle(
-        pmh_element_type index, QVector<HighlightingStyle> *styles) {
+        MarkdownHighlighter::HighlighterState index) {
     QTextCharFormat format;
     Utils::Schema::setFormatStyle(index, format);
-    styles->append({index, format});
+    _highlighter->setTextFormat(index, format);
 
 // The initial define causes an error with Visual Studio 2015:
 // "error C4576: a parenthesized type followed by an initializer list is
@@ -44,51 +44,23 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     QFontMetrics metrics(font);
     setTabStopWidth(tabStop * metrics.width(' '));
 
-    QVector<HighlightingStyle> *styles = new QVector<HighlightingStyle>();
-
-    setFormatStyle(pmh_H1, styles);
-    setFormatStyle(pmh_H2, styles);
-    setFormatStyle(pmh_H3, styles);
-    setFormatStyle(pmh_H4, styles);
-    setFormatStyle(pmh_H5, styles);
-    setFormatStyle(pmh_H6, styles);
-
-    setFormatStyle(pmh_HRULE, styles);
-
-    /* <ul> */
-    setFormatStyle(pmh_LIST_BULLET, styles);
-    setFormatStyle(pmh_LIST_ENUMERATOR, styles);
-
-    /* <a href> */
-    setFormatStyle(pmh_LINK, styles);
-    setFormatStyle(pmh_AUTO_LINK_URL, styles);
-    setFormatStyle(pmh_AUTO_LINK_EMAIL, styles);
-
-    /* <img> */
-    setFormatStyle(pmh_IMAGE, styles);
-
-    setFormatStyle(pmh_REFERENCE, styles);
-
-    /* <pre> */
-    setFormatStyle(pmh_CODE, styles);
-    setFormatStyle(pmh_VERBATIM, styles);
-
-    /* <em> */
-    setFormatStyle(pmh_EMPH, styles);
-
-    /* <strong> */
-    setFormatStyle(pmh_STRONG, styles);
-
-    setFormatStyle(pmh_COMMENT, styles);
-    setFormatStyle(pmh_BLOCKQUOTE, styles);
-
-    setFormatStyle(pmh_HTML, styles);
-    setFormatStyle(pmh_HTML_ENTITY, styles);
-    setFormatStyle(pmh_HTMLBLOCK, styles);
-
-    setFormatStyle(pmh_NOTE, styles);
-
-    _highlighter->setStyles(*styles);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H1);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H2);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H3);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H4);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H5);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::H6);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::HorizontalRuler);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::List);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Bold);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Italic);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::BlockQuote);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::CodeBlock);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Comment);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Image);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
 }
 
 /**
@@ -175,7 +147,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
     if (doSetStyles) {
         this->setStyles();
-        highlighter()->parse();
+        _highlighter->rehighlight();
     }
 
     return fontSize;

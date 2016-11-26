@@ -344,9 +344,8 @@ void SettingsDialog::storeSettings() {
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
-    settings.setValue("markdownHighlightingInterval",
-                      ui->markdownHighlightingCheckBox->isChecked() ?
-                      ui->markdownHighlightingIntervalSpinBox->value() : 0);
+    settings.setValue("markdownHighlightingEnabled",
+                      ui->markdownHighlightingCheckBox->isChecked());
     settings.setValue("MainWindow/noteTextView.rtl",
                       ui->noteTextViewRTLCheckBox->isChecked());
     settings.setValue("Debug/fakeOldVersionNumber",
@@ -513,18 +512,8 @@ void SettingsDialog::readSettings() {
             settings.value("Editor/autoBracketClosing", true).toBool());
     ui->autoBracketRemovalCheckBox->setChecked(
             settings.value("Editor/autoBracketRemoval", true).toBool());
-
-    const QSignalBlocker blocker3(ui->markdownHighlightingCheckBox);
-    Q_UNUSED(blocker3);
-    int markdownHighlightingInterval =
-            settings.value("markdownHighlightingInterval",
-                           _defaultMarkdownHighlightingInterval).toInt();
-    bool markdownHighlightingEnabled = markdownHighlightingInterval > 0;
-    ui->markdownHighlightingCheckBox->setChecked(markdownHighlightingEnabled);
-    ui->markdownHighlightingIntervalSpinBox->setValue(
-            markdownHighlightingInterval);
-    on_markdownHighlightingCheckBox_toggled(markdownHighlightingEnabled);
-
+    ui->markdownHighlightingCheckBox->setChecked(
+            settings.value("markdownHighlightingEnabled", true).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
             "allowOnlyOneAppInstance").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
@@ -2282,21 +2271,6 @@ void SettingsDialog::on_shortcutSearchLineEdit_textChanged(
         Q_FOREACH(QTreeWidgetItem *item, allItems) {
                 item->setHidden(false);
             }
-    }
-}
-
-/**
- * Turn the markdown highlighter interval spin box on or off
- *
- * @param checked
- */
-void SettingsDialog::on_markdownHighlightingCheckBox_toggled(bool checked) {
-    ui->markdownHighlightingIntervalSpinBox->setEnabled(checked);
-    ui->markdownHighlightingIntervalLabel->setEnabled(checked);
-
-    if (checked && (ui->markdownHighlightingIntervalSpinBox->value() == 0)) {
-        ui->markdownHighlightingIntervalSpinBox->setValue(
-                _defaultMarkdownHighlightingInterval);
     }
 }
 

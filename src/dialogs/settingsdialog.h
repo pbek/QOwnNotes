@@ -167,8 +167,6 @@ private slots:
 
     void on_shortcutSearchLineEdit_textChanged(const QString &arg1);
 
-    void on_markdownHighlightingCheckBox_toggled(bool checked);
-
     void on_settingsTreeWidget_currentItemChanged(QTreeWidgetItem *current,
                                                   QTreeWidgetItem *previous);
 

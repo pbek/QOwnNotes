@@ -181,7 +181,7 @@ QColor Utils::Schema::getBackgroundColor(int index) {
  * @param format
  * @param index
  */
-void Utils::Schema::setFormatStyle(pmh_element_type index,
+void Utils::Schema::setFormatStyle(MarkdownHighlighter::HighlighterState index,
                                    QTextCharFormat &format) {
     // get the correct font
     QFont font = getEditorFont(index);
@@ -285,7 +285,9 @@ QFont Utils::Schema::getEditorFixedFont() {
  */
 QFont Utils::Schema::getEditorFont(int index) {
     QList<int> fixedFontIndices;
-    fixedFontIndices << pmh_CODE << pmh_VERBATIM;
+    fixedFontIndices << MarkdownHighlighter::CodeBlock
+                     << MarkdownHighlighter::InlineCodeBlock
+                     << MarkdownHighlighter::Table;
 
     return fixedFontIndices.contains(index) ?
         getEditorFixedFont() : getEditorTextFont();

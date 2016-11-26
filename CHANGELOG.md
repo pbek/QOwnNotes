@@ -1,11 +1,16 @@
 # QOwnNotes Changelog
 
 ## 16.11.15
+- a **new markdown parser and highlighter** were now implemented to
+  allow a higher parsing speed and flexibility in the future
+   - please report issues with the new highlighter
+- **markdown tables** are now supported by the markdown highlighter
+    - a mono-space font is used for it
 - there now is a **Solus package** for QOwnNotes in the unstable repository
     - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
       for more information
-- mentioned Nextcloud support a bit more often
- 
+- Nextcloud support is now mentioned a bit more often
+
 ## 16.11.14
 - added **Ukrainian translation** (a big thank you to Borisvit!)
 - reduced the margins in the todo dialog to save space on small displays

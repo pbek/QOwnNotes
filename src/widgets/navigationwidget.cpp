@@ -13,7 +13,7 @@
 
 #include <QTextBlock>
 #include <QDebug>
-#include <libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h>
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 #include "navigationwidget.h"
 
 
@@ -63,6 +63,7 @@ void NavigationWidget::parse(QTextDocument *document) {
     for (int i = 0; i < document->blockCount(); i++) {
         QTextBlock block = document->findBlockByNumber(i);
         int elementType = block.userState();
+
         QString text = block.text();
 
         // check for unrecognized headlines, like `# Header [link](http://url)`
@@ -72,12 +73,14 @@ void NavigationWidget::parse(QTextDocument *document) {
 
             if (match.hasMatch()) {
                 // override the element type
-                elementType = pmh_H1 + match.captured(1).count() - 1;
+                elementType = MarkdownHighlighter::H1 +
+                        match.captured(1).count() - 1;
             }
         }
 
         // ignore all non headline types
-        if ((elementType < pmh_H1) || (elementType > pmh_H6)) {
+        if ((elementType < MarkdownHighlighter::H1) ||
+                (elementType > MarkdownHighlighter::H6)) {
             continue;
         }
 
@@ -94,7 +97,8 @@ void NavigationWidget::parse(QTextDocument *document) {
         QTreeWidgetItem *item = new QTreeWidgetItem();
         item->setText(0, text);
         item->setData(0, Qt::UserRole, block.position());
-        item->setToolTip(0, tr("headline %1").arg(elementType - pmh_H1 + 1));
+        item->setToolTip(0, tr("headline %1").arg(
+                elementType - MarkdownHighlighter::H1 + 1));
 
         // attempt to find a suitable parent item for the element type
         QTreeWidgetItem *lastHigherItem = findSuitableParentItem(elementType);
@@ -122,6 +126,7 @@ QTreeWidgetItem * NavigationWidget::findSuitableParentItem(int elementType) {
     elementType--;
     QTreeWidgetItem *lastHigherItem = _lastHeadingItemList[elementType];
 
-    return ((lastHigherItem == NULL) && (elementType > pmh_H1)) ?
+    return ((lastHigherItem == NULL) &&
+            (elementType > MarkdownHighlighter::H1)) ?
            findSuitableParentItem(elementType) : lastHigherItem;
 }

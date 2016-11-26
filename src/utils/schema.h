@@ -19,7 +19,7 @@
 #include <QSettings>
 #include <QVariant>
 #include <QTextCharFormat>
-#include <libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h>
+#include <libraries/qmarkdowntextedit/markdownhighlighter.h>
 
 namespace Utils {
     namespace Schema {
@@ -45,7 +45,9 @@ namespace Utils {
 
         QColor getBackgroundColor(int index);
 
-        void setFormatStyle(pmh_element_type index, QTextCharFormat &format);
+        void setFormatStyle(MarkdownHighlighter::HighlighterState index,
+                            QTextCharFormat
+        &format);
 
         QFont getEditorTextFont();
 

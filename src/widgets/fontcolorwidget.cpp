@@ -26,7 +26,6 @@
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
-#include "libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h"
 
 FontColorWidget::FontColorWidget(QWidget *parent) :
     QFrame(parent),
@@ -164,38 +163,28 @@ void FontColorWidget::updateTextItems(int index) {
 
 /**
  * Initializes the text tree widget items
- *
- * @see src/libraries/qmarkdowntextedit/lib/peg-markdown-highlight/pmh_definitions.h
  */
 void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Text preset"), Utils::Schema::TextPresetIndex);
-    addTextTreeWidgetItem(tr("Emphasized text"), pmh_EMPH);
-    addTextTreeWidgetItem(tr("Strong text"), pmh_STRONG);
-    addTextTreeWidgetItem(tr("Explicit link"), pmh_LINK);
-    addTextTreeWidgetItem(tr("Implicit URL link"), pmh_AUTO_LINK_URL);
-    addTextTreeWidgetItem(tr("Implicit email link"), pmh_AUTO_LINK_EMAIL);
-    addTextTreeWidgetItem(tr("Image definition"), pmh_IMAGE);
-    addTextTreeWidgetItem(tr("Code"), pmh_CODE);
-    addTextTreeWidgetItem(tr("Bullet for an unordered list item"),
-                          pmh_LIST_BULLET);
-    addTextTreeWidgetItem(tr("Enumerator for an ordered list item"),
-                          pmh_LIST_ENUMERATOR);
-    addTextTreeWidgetItem(tr("Header, level 1"), pmh_H1);
-    addTextTreeWidgetItem(tr("Header, level 2"), pmh_H2);
-    addTextTreeWidgetItem(tr("Header, level 3"), pmh_H3);
-    addTextTreeWidgetItem(tr("Header, level 4"), pmh_H4);
-    addTextTreeWidgetItem(tr("Header, level 5"), pmh_H5);
-    addTextTreeWidgetItem(tr("Header, level 6"), pmh_H6);
-    addTextTreeWidgetItem(tr("Horizontal rule"), pmh_HRULE);
-    addTextTreeWidgetItem(tr("Blockquote"), pmh_BLOCKQUOTE);
-    addTextTreeWidgetItem(tr("Verbatim (e.g. block of code)"), pmh_VERBATIM);
-    addTextTreeWidgetItem("HTML", pmh_HTML);
-    addTextTreeWidgetItem(tr("HTML special entity definition"),
-                          pmh_HTML_ENTITY);
-    addTextTreeWidgetItem(tr("(HTML) Comment"), pmh_COMMENT);
-    addTextTreeWidgetItem(tr("Block of HTML"), pmh_HTMLBLOCK);
-    addTextTreeWidgetItem(tr("Reference"), pmh_REFERENCE);
-    addTextTreeWidgetItem(tr("Note"), pmh_NOTE);
+    addTextTreeWidgetItem(tr("Emphasized text"), MarkdownHighlighter::Italic);
+    addTextTreeWidgetItem(tr("Strong text"), MarkdownHighlighter::Bold);
+    addTextTreeWidgetItem(tr("Link"), MarkdownHighlighter::Link);
+    addTextTreeWidgetItem(tr("Image"), MarkdownHighlighter::Image);
+    addTextTreeWidgetItem(tr("Code (block)"), MarkdownHighlighter::CodeBlock);
+    addTextTreeWidgetItem(tr("Code (inline)"),
+                          MarkdownHighlighter::InlineCodeBlock);
+    addTextTreeWidgetItem(tr("List item"), MarkdownHighlighter::List);
+    addTextTreeWidgetItem(tr("Header, level 1"), MarkdownHighlighter::H1);
+    addTextTreeWidgetItem(tr("Header, level 2"), MarkdownHighlighter::H2);
+    addTextTreeWidgetItem(tr("Header, level 3"), MarkdownHighlighter::H3);
+    addTextTreeWidgetItem(tr("Header, level 4"), MarkdownHighlighter::H4);
+    addTextTreeWidgetItem(tr("Header, level 5"), MarkdownHighlighter::H5);
+    addTextTreeWidgetItem(tr("Header, level 6"), MarkdownHighlighter::H6);
+    addTextTreeWidgetItem(tr("Horizontal rule"),
+                          MarkdownHighlighter::HorizontalRuler);
+    addTextTreeWidgetItem(tr("Block quote"), MarkdownHighlighter::BlockQuote);
+    addTextTreeWidgetItem(tr("Table"), MarkdownHighlighter::Table);
+    addTextTreeWidgetItem(tr("(HTML) Comment"), MarkdownHighlighter::Comment);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {

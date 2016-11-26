@@ -191,7 +191,7 @@ void LogWidget::log(LogType logType, QString text) {
     Q_UNUSED(blocker);
 
     // insert the text at the end
-    ui->logTextEdit->append(html.trimmed());
+//    ui->logTextEdit->append(html.trimmed());
 
     if (scrollDown) {
         // move the text cursor to the end
