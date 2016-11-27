@@ -10,7 +10,7 @@
      enable/disable the highlighting without re-starting the application
    - please report issues with the new highlighter if you find any
 - **markdown tables** are now supported by the new markdown highlighter
-    - a mono-space font is used for it
+    - the mono-space code font is used for it
     - you can change the highlighting color and other styles in the settings
 - there now is a **Solus package** for QOwnNotes in the Solus main repository
     - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
@@ -18,6 +18,9 @@
 - Nextcloud support is now mentioned a bit more often
 - to save memory the log output will now only be written to the log
   panel if the panel is visible
+- added more Italian, Dutch, Hungarian, Polish, Spanish, Portuguese,
+  Ukrainian, German and Japanese translation (thank you mlocati,
+  Fabijenna, lucjan, richarson, mlimacarlos, Borisvit, bigant and MoeMoePig)
 
 ## 16.11.14
 - added **Ukrainian translation** (a big thank you to Borisvit!)
