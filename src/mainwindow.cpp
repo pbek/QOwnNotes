@@ -5622,7 +5622,6 @@ void MainWindow::on_action_Increase_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->rehighlight();
     showStatusBarMessage(
             tr("Increased font size to %1 pt").arg(fontSize), 3000);
 }
@@ -5634,7 +5633,6 @@ void MainWindow::on_action_Decrease_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->rehighlight();
     showStatusBarMessage(
             tr("Decreased font size to %1 pt").arg(fontSize), 3000);
 }
@@ -5646,7 +5644,6 @@ void MainWindow::on_action_Reset_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
     ui->encryptedNoteTextEdit->setStyles();
-    ui->encryptedNoteTextEdit->highlighter()->rehighlight();
     showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 3000);
 
     QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
@@ -7202,9 +7199,6 @@ void MainWindow::on_noteTreeWidget_currentItemChanged(
     qDebug() << "currentItemChanged " << note;
 
     setCurrentNote(note, true, false);
-
-    // parse the current note for markdown highlighting
-    ui->noteTextEdit->highlighter()->rehighlight();
 
     // let's highlight the text from the search line edit
     searchForSearchLineTextInNoteTextEdit();
