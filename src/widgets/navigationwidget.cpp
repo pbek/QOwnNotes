@@ -66,16 +66,16 @@ void NavigationWidget::parse(QTextDocument *document) {
         QString text = block.text();
 
         // check for unrecognized headlines, like `# Header [link](http://url)`
-        if (text.startsWith("#") && elementType != -1) {
-            QRegularExpressionMatch match =
-                    QRegularExpression("^(#+)").match(text);
-
-            if (match.hasMatch()) {
-                // override the element type
-                elementType = MarkdownHighlighter::H1 +
-                        match.captured(1).count() - 1;
-            }
-        }
+//        if (text.startsWith("#") && elementType != -1) {
+//            QRegularExpressionMatch match =
+//                    QRegularExpression("^(#+)").match(text);
+//
+//            if (match.hasMatch()) {
+//                // override the element type
+//                elementType = MarkdownHighlighter::H1 +
+//                        match.captured(1).count() - 1;
+//            }
+//        }
 
         // ignore all non headline types
         if ((elementType < MarkdownHighlighter::H1) ||
