@@ -265,7 +265,18 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
 
     setAutoTextOptions(options);
 
-    // set the new highlighting styles
-    setStyles();
-    _highlighter->rehighlight();
+    // highlighting is always disabled for logTextEdit
+    if (objectName() != "logTextEdit") {
+        // enable or disable markdown highlighting
+        bool highlightingEnabled = settings.value("markdownHighlightingEnabled",
+                                                  true).toBool();
+
+        setHighlightingEnabled(highlightingEnabled);
+
+        if (highlightingEnabled) {
+            // set the new highlighting styles
+            setStyles();
+            _highlighter->rehighlight();
+        }
+    }
 }

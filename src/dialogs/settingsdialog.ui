@@ -3583,9 +3583,6 @@ p, li { white-space: pre-wrap; }
                  <height>90</height>
                 </size>
                </property>
-               <property name="toolTip">
-                <string>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</string>
-               </property>
                <property name="title">
                 <string>Markdown highlighting</string>
                </property>

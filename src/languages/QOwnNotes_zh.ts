@@ -110,7 +110,7 @@
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="287"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="271"/>
         <source>If you have created a nice color schema please export it and share it with everyone!</source>
         <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
@@ -137,44 +137,43 @@
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="216"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="315"/>
         <source>Share schema</source>
         <translation type="unfinished">Share schema</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="266"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="288"/>
         <source>Background:</source>
         <translation>背景：</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="273"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="281"/>
         <source>Foreground:</source>
         <translation>前景：</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="192"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="264"/>
         <source>Bold</source>
         <translation>粗体</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="249"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="244"/>
         <source>Italic</source>
         <translation>斜体</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="199"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="237"/>
         <source>Adapt font size:</source>
         <translation>调整字体大小︰</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="280"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="208"/>
         <source>Underline</source>
         <translation>下划线</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="206"/>
         <source>You might need to restart the application to let these changes take effect.</source>
-        <translation>您可能需要重新启动应用程序以使更改生效。</translation>
+        <translation type="vanished">您可能需要重新启动应用程序以使更改生效。</translation>
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
@@ -442,17 +441,17 @@
     </message>
     <message>
         <location filename="../widgets/logwidget.ui" line="130"/>
-        <location filename="../widgets/logwidget.cpp" line="372"/>
+        <location filename="../widgets/logwidget.cpp" line="375"/>
         <source>Clear log</source>
         <translation type="unfinished">Clear log</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Show options</source>
         <translation type="unfinished">Show options</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Hide options</source>
         <translation type="unfinished">Hide options</translation>
     </message>
@@ -2699,12 +2698,11 @@ Are the folder and the file writeable?</source>
         <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
-        <translation>您需要重新启动应用程序已使更改生效。如果你设置markdown高亮显示间隔为 0, 高亮将被禁用。</translation>
+        <translation type="vanished">您需要重新启动应用程序已使更改生效。如果你设置markdown高亮显示间隔为 0, 高亮将被禁用。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>Markdown highlighting</source>
         <translation>Markdown 高亮</translation>
     </message>
@@ -2713,7 +2711,7 @@ Are the folder and the file writeable?</source>
         <translation type="vanished">高亮间隔 [ms]:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3596"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3593"/>
         <source>Enable markdown highlighting</source>
         <translation>启用 markdown 高亮</translation>
     </message>
@@ -3207,22 +3205,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
         <source>Editor options</source>
         <translation type="unfinished">Editor options</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
@@ -3606,37 +3604,37 @@ Connection error message: </source>
         <translation>输入自定义文件扩展名︰</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2398"/>
         <source>Calendar cache emptied</source>
         <translation>清空日历缓存</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2399"/>
         <source>Your calendar cache was emptied.</source>
         <translation>您的日历缓存已被清空。</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2474"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2475"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>Reset and &amp;exit</source>
         <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2641"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2643"/>
         <source>Log file cleared</source>
         <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2642"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2644"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
@@ -3707,7 +3705,7 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/settingsdialog.cpp" line="1406"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1621"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>&amp;Cancel</source>
         <translation>取消(&amp;C)</translation>
     </message>

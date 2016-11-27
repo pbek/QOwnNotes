@@ -2354,6 +2354,8 @@ void SettingsDialog::initMainSplitter() {
 }
 
 void SettingsDialog::closeEvent(QCloseEvent *event) {
+    Q_UNUSED(event);
+
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
     if (qApp->property("clearAppDataAndExit").toBool()) {

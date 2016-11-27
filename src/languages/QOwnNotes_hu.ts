@@ -110,7 +110,7 @@
         <translation>Export</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="287"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="271"/>
         <source>If you have created a nice color schema please export it and share it with everyone!</source>
         <translation>Ha létre hozott egy szép színsémát kérjük exportálja, és ossza meg másokkal!</translation>
     </message>
@@ -137,44 +137,43 @@
         <translation>Import</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="216"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="315"/>
         <source>Share schema</source>
         <translation>Megosztom a sémát</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="266"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="288"/>
         <source>Background:</source>
         <translation>Háttér:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="273"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="281"/>
         <source>Foreground:</source>
         <translation>Előtérben:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="192"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="264"/>
         <source>Bold</source>
         <translation>Vastag</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="249"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="244"/>
         <source>Italic</source>
         <translation>Dőlt</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="199"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="237"/>
         <source>Adapt font size:</source>
         <translation>Alkalmazom a betűméretet:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="280"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="208"/>
         <source>Underline</source>
         <translation>Aláhúzás</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="206"/>
         <source>You might need to restart the application to let these changes take effect.</source>
-        <translation>Szükséges lehet újraindítani az alkalmazást a változások érvénybe léptetéséhez.</translation>
+        <translation type="vanished">Szükséges lehet újraindítani az alkalmazást a változások érvénybe léptetéséhez.</translation>
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
@@ -442,17 +441,17 @@
     </message>
     <message>
         <location filename="../widgets/logwidget.ui" line="130"/>
-        <location filename="../widgets/logwidget.cpp" line="372"/>
+        <location filename="../widgets/logwidget.cpp" line="375"/>
         <source>Clear log</source>
         <translation>Napló törlése</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Show options</source>
         <translation>Beállítások megjelenítése</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Hide options</source>
         <translation>Beállítások elrejtése</translation>
     </message>
@@ -2701,12 +2700,11 @@ Are the folder and the file writeable?</source>
         <translation>Elemek mérete a fő ablakban</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
-        <translation>Újra kell indítanod az alkalmazást, hogy a változtatások életbe lépjenek. Ha a markdown kiemelés időközének értéke 0, a kiemelést letiltjuk.</translation>
+        <translation type="vanished">Újra kell indítanod az alkalmazást, hogy a változtatások életbe lépjenek. Ha a markdown kiemelés időközének értéke 0, a kiemelést letiltjuk.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>Markdown highlighting</source>
         <translation>Markdown kiemelés</translation>
     </message>
@@ -2715,7 +2713,7 @@ Are the folder and the file writeable?</source>
         <translation type="vanished">Intervallum kiemelés [ms]:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3596"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3593"/>
         <source>Enable markdown highlighting</source>
         <translation>Engedélyezi a markdown kiemelést</translation>
     </message>
@@ -3209,22 +3207,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Naplófájl elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
         <source>Editor options</source>
         <translation>Szerkesztő beállításai</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Automatikus záró zárójel és a markdown karakterformázás engedélyezése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>A vissza billentyűgombot használja a nyitó karakter eltavolitására</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Engedélyezi az egyforma karakterek automatikus eltávolítását</translation>
     </message>
@@ -3610,37 +3608,37 @@ Kapcsolathiba üzenet: </translation>
         <translation>Adja meg az egyéni fájl kiterjesztést:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2398"/>
         <source>Calendar cache emptied</source>
         <translation>Naptár-gyorsítótár kiürítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2399"/>
         <source>Your calendar cache was emptied.</source>
         <translation>A naptár gyorsítótár törlődött.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2474"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
         <source>Reset toolbars and exit</source>
         <translation>Az eszköztárakat visszaállítom alaphelyzetbe és kilépek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2475"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Biztosan alaphelyzetbe teszed az eszköztárakat? Az alkalmazás zárva lesz a folyamat alatt, újraindítás után visszaáll az alapértelmezett eszköztár.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>Reset and &amp;exit</source>
         <translation>Alaphelyzetbe állít és kilép</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2641"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2643"/>
         <source>Log file cleared</source>
         <translation>Log fájl törölve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2642"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2644"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>A naplófájl &lt;strong&gt;%1&lt;/strong&gt; törlésre került.</translation>
     </message>
@@ -3711,7 +3709,7 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/settingsdialog.cpp" line="1406"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1621"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>

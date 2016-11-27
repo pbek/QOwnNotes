@@ -110,7 +110,7 @@
         <translation>Eksportuj</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="287"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="271"/>
         <source>If you have created a nice color schema please export it and share it with everyone!</source>
         <translation>Jeżeli stworzyłeś atrakcyjny schemat kolorów wyeksportuj go i podziel się nim z innymi użytkownikami programu!</translation>
     </message>
@@ -137,44 +137,43 @@
         <translation>Importuj</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="216"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="315"/>
         <source>Share schema</source>
         <translation>Współdziel schemat</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="266"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="288"/>
         <source>Background:</source>
         <translation>Tło:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="273"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="281"/>
         <source>Foreground:</source>
         <translation>Pierwszy plan:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="192"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="264"/>
         <source>Bold</source>
         <translation>Pogrubienie</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="249"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="244"/>
         <source>Italic</source>
         <translation>Kursywa</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="199"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="237"/>
         <source>Adapt font size:</source>
         <translation>Skala czcionki:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="280"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="208"/>
         <source>Underline</source>
         <translation>Podkreślenie</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="206"/>
         <source>You might need to restart the application to let these changes take effect.</source>
-        <translation>Może być konieczny restart aplikacji aby były widoczne zmiany.</translation>
+        <translation type="vanished">Może być konieczny restart aplikacji aby były widoczne zmiany.</translation>
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
@@ -442,17 +441,17 @@
     </message>
     <message>
         <location filename="../widgets/logwidget.ui" line="130"/>
-        <location filename="../widgets/logwidget.cpp" line="372"/>
+        <location filename="../widgets/logwidget.cpp" line="375"/>
         <source>Clear log</source>
         <translation>Wyczyść dziennik zdarzeń</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Show options</source>
         <translation>Pokaż opcje</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Hide options</source>
         <translation>Ukryj opcje</translation>
     </message>
@@ -2748,12 +2747,11 @@ Are the folder and the file writeable?</source>
         <translation>Rozmiary elementów w oknie głównym</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
-        <translation>Musisz uruchomić ponownie program aby zmiany odniosły skutek. Jeżeli ustawisz opóźnienie podświetlania znaczników na 0 to podświetlanie zostanie wyłączone.</translation>
+        <translation type="vanished">Musisz uruchomić ponownie program aby zmiany odniosły skutek. Jeżeli ustawisz opóźnienie podświetlania znaczników na 0 to podświetlanie zostanie wyłączone.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>Markdown highlighting</source>
         <translation>Podświetlanie znaczników</translation>
     </message>
@@ -2762,7 +2760,7 @@ Are the folder and the file writeable?</source>
         <translation type="vanished">Opóźnienie podświetlania [ms]:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3596"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3593"/>
         <source>Enable markdown highlighting</source>
         <translation>Włącz podświetlanie znaczników</translation>
     </message>
@@ -3257,22 +3255,22 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
         <translation>Ścieżka do pliku dziennika zdarzeń:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
         <source>Editor options</source>
         <translation>Opcje edytora</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Włącz automatycznie domykanie nawiasów i znaczników formatujących markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Musisz użyć klawisza backspace, aby usunąć znak otwierający</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Włącz automatyczne usuwanie odpowiadającego znaku zamykającego</translation>
     </message>
@@ -3661,37 +3659,37 @@ Wiadomość błędu: </translation>
         <translation>Wprowadź swoje niestandardowe rozszerzenia:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2398"/>
         <source>Calendar cache emptied</source>
         <translation>Pamięć podręczna oczyszczona</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2399"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Pamięć podręczna została oczyszczona.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2474"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
         <source>Reset toolbars and exit</source>
         <translation>Przywróć domyślne ustawienia pasków narzędzi i wyjdź</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2475"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Czy naprawdę chcesz zresetować wszystkie paski narzędzi? Aplikacja zostanie zamknięta, a domyślne paski narzędzi zostaną przywrócone gdy ponownie uruchomisz program.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>Reset and &amp;exit</source>
         <translation>Zresetuj i &amp;wyjdź</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2641"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2643"/>
         <source>Log file cleared</source>
         <translation>Dziennik zdarzeń został wyczyszczony</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2642"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2644"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Plik dziennika zdarzeń &lt;strong&gt;%1&lt;/strong&gt; został wyczyszczony.</translation>
     </message>
@@ -3764,7 +3762,7 @@ Twoje notatki pozostaną nietknięte!</translation>
         <location filename="../dialogs/settingsdialog.cpp" line="1406"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1621"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>&amp;Cancel</source>
         <translation>Anuluj</translation>
     </message>

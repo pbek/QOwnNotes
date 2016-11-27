@@ -110,7 +110,7 @@
         <translation>Exporteren</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="287"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="271"/>
         <source>If you have created a nice color schema please export it and share it with everyone!</source>
         <translation>Als u een mooie kleur schema hebt gemaakt kunt u hét exporteren en delen met iedereen!</translation>
     </message>
@@ -137,44 +137,43 @@
         <translation>Importeren</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="216"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="315"/>
         <source>Share schema</source>
         <translation>Kleurschema delen</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="266"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="288"/>
         <source>Background:</source>
         <translation>Achtergrond:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="273"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="281"/>
         <source>Foreground:</source>
         <translation>Voorgrond:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="192"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="264"/>
         <source>Bold</source>
         <translation>Vet</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="249"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="244"/>
         <source>Italic</source>
         <translation>Cursief</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="199"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="237"/>
         <source>Adapt font size:</source>
         <translation>Lettergrootte aanpassen:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="280"/>
+        <location filename="../widgets/fontcolorwidget.ui" line="208"/>
         <source>Underline</source>
         <translation>Onderstrepen</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="206"/>
         <source>You might need to restart the application to let these changes take effect.</source>
-        <translation>U moet de applicatie wellicht opnieuw opstarten om deze wijzigingen toe te passen.</translation>
+        <translation type="vanished">U moet de applicatie wellicht opnieuw opstarten om deze wijzigingen toe te passen.</translation>
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
@@ -442,17 +441,17 @@
     </message>
     <message>
         <location filename="../widgets/logwidget.ui" line="130"/>
-        <location filename="../widgets/logwidget.cpp" line="372"/>
+        <location filename="../widgets/logwidget.cpp" line="375"/>
         <source>Clear log</source>
         <translation>Logboek wissen</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Show options</source>
         <translation>Toon opties</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="370"/>
+        <location filename="../widgets/logwidget.cpp" line="373"/>
         <source>Hide options</source>
         <translation>Opties verbergen</translation>
     </message>
@@ -2724,12 +2723,11 @@ Are the folder and the file writeable?</source>
         <translation>Pictogramm grootte in het hoofdvenster</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>You need to restart the application to let changes take effect. If you set the markdown highlighting interval to 0 the highlighting will be disabled.</source>
-        <translation>Je moet de applicatie opnieuw opstarten om de wijzigingen werkzaam te maken. Als u de markdown markeringsinterval op 0 instelt dan wordt de markering uitgeschakeld. </translation>
+        <translation type="vanished">Je moet de applicatie opnieuw opstarten om de wijzigingen werkzaam te maken. Als u de markdown markeringsinterval op 0 instelt dan wordt de markering uitgeschakeld. </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3590"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3587"/>
         <source>Markdown highlighting</source>
         <translation>Markdown markering</translation>
     </message>
@@ -2738,7 +2736,7 @@ Are the folder and the file writeable?</source>
         <translation type="vanished">Interval [ms] markering:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3596"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3593"/>
         <source>Enable markdown highlighting</source>
         <translation>Markdown markeren inschakelen</translation>
     </message>
@@ -3232,22 +3230,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Pad van logboekbestand:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3606"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
         <source>Editor options</source>
         <translation>Editoropties</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3612"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Inschakelen automatische sluiting van haken en markdown opmaaktekens</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>U moet de backspace-toets gebruiken om het voormalig teken te verwijderen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3622"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Inschakelen automatische verwijdering van identieke afsluitende karakters</translation>
     </message>
@@ -3634,37 +3632,37 @@ Verbinding foutbericht: </translation>
         <translation>Voer uw aangepaste bestandsextensie in:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2396"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2398"/>
         <source>Calendar cache emptied</source>
         <translation>Kalender cache geleegd</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2397"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2399"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Uw agenda-cache is leeggemaakt.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2474"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2476"/>
         <source>Reset toolbars and exit</source>
         <translation>Herstellen van de werkbalken en afsluiten</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2475"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Wilt u echt alle werkbalken herstellen? De toepassing zal worden gesloten in het proces, de standaardwerkbalken zal worden hersteld als u het opnieuw start.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>Reset and &amp;exit</source>
         <translation>Reset en &amp;afsluiten</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2641"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2643"/>
         <source>Log file cleared</source>
         <translation>Logboekbestand gewist</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2642"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2644"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Het log bestand &lt;strong&gt;%1&lt;/strong&gt; werd gewist.</translation>
     </message>
@@ -3737,7 +3735,7 @@ Je notities zullen intact blijven!</translation>
         <location filename="../dialogs/settingsdialog.cpp" line="1406"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1621"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1953"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2479"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2481"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annuleer</translation>
     </message>

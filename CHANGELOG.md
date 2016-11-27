@@ -3,8 +3,8 @@
 ## 16.11.15
 - a **new markdown parser and highlighter** were now implemented to
   allow a higher parsing speed and flexibility in the future
-   - now you also can change the styling in the settings without
-     re-starting the application
+   - now you also can change the styling in the settings or 
+     enable/disable the highlighting without re-starting the application
    - please report issues with the new highlighter if you find any
 - **markdown tables** are now supported by the markdown highlighter
     - a mono-space font is used for it

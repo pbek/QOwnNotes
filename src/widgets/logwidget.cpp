@@ -31,6 +31,9 @@ LogWidget::LogWidget(QWidget *parent) :
     // init the log text edit search frame
     ui->logTextEdit->initSearchFrame(ui->logTextEditSearchFrame);
 
+    // turn off markdown highlighting
+    ui->logTextEdit->setHighlightingEnabled(false);
+
     // load the dialog settings
     QSettings settings;
     ui->debugCheckBox->setChecked(
