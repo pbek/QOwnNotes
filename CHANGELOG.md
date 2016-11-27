@@ -1,16 +1,18 @@
 # QOwnNotes Changelog
 
 ## 16.11.15
-- a **new markdown parser and highlighter** was now implemented to
-  allow higher parsing speed and flexibility in the future
+- a **new markdown parser and highlighter** was now implemented from
+  the scratch to allow a higher parsing speed and more flexibility in
+  the future
    - text will now be instantly highlighted, there is no
      highlighting-interval setting any more
    - now you also can change the styling in the settings or 
      enable/disable the highlighting without re-starting the application
    - please report issues with the new highlighter if you find any
-- **markdown tables** are now supported by the markdown highlighter
+- **markdown tables** are now supported by the new markdown highlighter
     - a mono-space font is used for it
-- there now is a **Solus package** for QOwnNotes in the unstable repository
+    - you can change the highlighting color and other styles in the settings
+- there now is a **Solus package** for QOwnNotes in the Solus main repository
     - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
       for more information
 - Nextcloud support is now mentioned a bit more often
