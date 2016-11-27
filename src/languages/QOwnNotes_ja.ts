@@ -2081,7 +2081,7 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>見出し %1</translation>
     </message>

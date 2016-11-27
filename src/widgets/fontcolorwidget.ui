@@ -186,38 +186,26 @@
          <enum>QFrame::Raised</enum>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
-         <item row="3" column="1">
-          <widget class="QCheckBox" name="boldCheckBox">
-           <property name="text">
-            <string>Bold</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLabel" name="label">
-           <property name="text">
-            <string>Adapt font size:</string>
-           </property>
-          </widget>
-         </item>
          <item row="4" column="1" colspan="3">
-          <widget class="QLabel" name="restartInfoLabel">
-           <property name="text">
-            <string>You might need to restart the application to let these changes take effect.</string>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
            </property>
-           <property name="wordWrap">
-            <bool>true</bool>
+           <property name="sizeType">
+            <enum>QSizePolicy::Preferred</enum>
            </property>
-          </widget>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>10</height>
+            </size>
+           </property>
+          </spacer>
          </item>
-         <item row="8" column="1" colspan="3">
-          <widget class="QPushButton" name="shareSchemaPushButton">
+         <item row="3" column="3">
+          <widget class="QCheckBox" name="underlineCheckBox">
            <property name="text">
-            <string>Share schema</string>
-           </property>
-           <property name="icon">
-            <iconset theme="share" resource="../breeze-qownnotes.qrc">
-             <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
+            <string>Underline</string>
            </property>
           </widget>
          </item>
@@ -243,10 +231,71 @@
            </property>
           </widget>
          </item>
+         <item row="2" column="1">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Adapt font size:</string>
+           </property>
+          </widget>
+         </item>
          <item row="3" column="2">
           <widget class="QCheckBox" name="italicCheckBox">
            <property name="text">
             <string>Italic</string>
+           </property>
+          </widget>
+         </item>
+         <item row="8" column="2">
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="3" column="1">
+          <widget class="QCheckBox" name="boldCheckBox">
+           <property name="text">
+            <string>Bold</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1" colspan="3">
+          <widget class="QLabel" name="label_2">
+           <property name="text">
+            <string>If you have created a nice color schema please export it and share it with everyone!</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QCheckBox" name="foregroundColorCheckBox">
+           <property name="text">
+            <string>Foreground:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QCheckBox" name="backgroundColorCheckBox">
+           <property name="text">
+            <string>Background:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QPushButton" name="backgroundColorButton">
+           <property name="styleSheet">
+            <string notr="true">* {background: white; border: none}</string>
+           </property>
+           <property name="text">
+            <string/>
            </property>
           </widget>
          </item>
@@ -260,75 +309,16 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QCheckBox" name="backgroundColorCheckBox">
+         <item row="7" column="1" colspan="3">
+          <widget class="QPushButton" name="shareSchemaPushButton">
            <property name="text">
-            <string>Background:</string>
+            <string>Share schema</string>
+           </property>
+           <property name="icon">
+            <iconset theme="share" resource="../breeze-qownnotes.qrc">
+             <normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-share.svg</iconset>
            </property>
           </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QCheckBox" name="foregroundColorCheckBox">
-           <property name="text">
-            <string>Foreground:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="3">
-          <widget class="QCheckBox" name="underlineCheckBox">
-           <property name="text">
-            <string>Underline</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1" colspan="3">
-          <widget class="QLabel" name="label_2">
-           <property name="text">
-            <string>If you have created a nice color schema please export it and share it with everyone!</string>
-           </property>
-           <property name="wordWrap">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item row="9" column="2">
-          <spacer name="verticalSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="2">
-          <widget class="QPushButton" name="backgroundColorButton">
-           <property name="styleSheet">
-            <string notr="true">* {background: white; border: none}</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1" colspan="3">
-          <spacer name="verticalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Preferred</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>10</height>
-            </size>
-           </property>
-          </spacer>
          </item>
         </layout>
        </widget>

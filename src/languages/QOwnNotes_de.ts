@@ -2103,7 +2103,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>Überschrift %1</translation>
     </message>

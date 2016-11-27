@@ -340,11 +340,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // do the navigation parsing after the highlighter was finished
     QObject::connect(ui->noteTextEdit->highlighter(),
-                     SIGNAL(parsingFinished()),
+                     SIGNAL(highlightingFinished()),
                      this,
                      SLOT(startNavigationParser()));
     QObject::connect(ui->encryptedNoteTextEdit->highlighter(),
-                     SIGNAL(parsingFinished()),
+                     SIGNAL(highlightingFinished()),
                      this,
                      SLOT(startNavigationParser()));
 

@@ -2101,7 +2101,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>kop %1</translation>
     </message>

@@ -2078,7 +2078,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>标题 %1</translation>
     </message>

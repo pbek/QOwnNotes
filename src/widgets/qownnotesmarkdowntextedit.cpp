@@ -24,12 +24,6 @@ void QOwnNotesMarkdownTextEdit::setFormatStyle(
     QTextCharFormat format;
     Utils::Schema::setFormatStyle(index, format);
     _highlighter->setTextFormat(index, format);
-
-// The initial define causes an error with Visual Studio 2015:
-// "error C4576: a parenthesized type followed by an initializer list is
-// a non-standard explicit type conversion syntax"
-// The replacement works, probably also on other platforms (to be tested)
-// styles->append((HighlightingStyle){index, format});
 }
 
 /**
@@ -270,4 +264,8 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
     }
 
     setAutoTextOptions(options);
+
+    // set the new highlighting styles
+    setStyles();
+    _highlighter->rehighlight();
 }

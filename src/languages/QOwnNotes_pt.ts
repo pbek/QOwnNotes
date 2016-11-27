@@ -2100,7 +2100,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>chamada %1</translation>
     </message>

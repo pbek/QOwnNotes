@@ -2101,7 +2101,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>linea di intestazione %1</translation>
     </message>

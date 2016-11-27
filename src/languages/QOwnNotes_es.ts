@@ -2101,7 +2101,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
 <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="100"/>
+        <location filename="../widgets/navigationwidget.cpp" line="99"/>
         <source>headline %1</source>
         <translation>Titulo %1</translation>
     </message>
