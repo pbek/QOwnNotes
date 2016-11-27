@@ -46,6 +46,8 @@ or [execute-command-after-note-update.qml](execute-command-after-note-update.qml
 bool QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 ```
 
+### Starting an external program and wait for the output
+
 #### Usage in QML
 
 ```javascript
