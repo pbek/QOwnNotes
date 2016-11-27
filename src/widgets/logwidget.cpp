@@ -103,8 +103,8 @@ void LogWidget::log(LogType logType, QString text) {
     // log to the log file
     logToFileIfAllowed(logType, text);
 
-    // return if logging wasn't enabled
-    if (!qApp->property("loggingEnabled").toBool()) {
+    // return if logging wasn't enabled or if widget is not visible
+    if (!qApp->property("loggingEnabled").toBool() || !isVisible()) {
         return;
     }
 

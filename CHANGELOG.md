@@ -1,8 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.11.15
-- a **new markdown parser and highlighter** were now implemented to
-  allow a higher parsing speed and flexibility in the future
+- a **new markdown parser and highlighter** was now implemented to
+  allow higher parsing speed and flexibility in the future
+   - text will now be instantly highlighted, there is no
+     highlighting-interval setting any more
    - now you also can change the styling in the settings or 
      enable/disable the highlighting without re-starting the application
    - please report issues with the new highlighter if you find any
@@ -12,6 +14,8 @@
     - see [Solus package for QOwnNotes](http://www.qownnotes.org/Blog/Solus-package-for-QOwnNotes)
       for more information
 - Nextcloud support is now mentioned a bit more often
+- to save memory the log output will now only be written to the log
+  panel if the panel is visible
 
 ## 16.11.14
 - added **Ukrainian translation** (a big thank you to Borisvit!)
