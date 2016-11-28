@@ -1,14 +1,24 @@
 # QOwnNotes Changelog
 
+## 16.11.16
+- highlighting improvements
+    - better multi-line html comment detection
+    - image links like `![](file://)` work now
+    - it's now possible to have links and italic/bold formatting in a headline
+    - urls without any other markup are now highlighted too
+        - they can now also be opened with <kbd>Ctrl</kbd> + `Click`
+    - formatting bold and italic with `__bold__` and `_italic_` now also works
+    - fixed a wrongly detected table in a link
+
 ## 16.11.15
 - a **new markdown parser and highlighter** was now implemented from
   scratch to allow a higher parsing speed and more flexibility in
   the future (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
-   - text will now be instantly highlighted, there is no
-     highlighting-interval setting any more
-   - now you also can change the styling in the settings or 
-     enable/disable the highlighting without re-starting the application
-   - please report issues with the new highlighter if you find any
+    - text will now be instantly highlighted, there is no
+      highlighting-interval setting any more
+    - now you also can change the styling in the settings or
+      enable/disable the highlighting without re-starting the application
+    - please report issues with the new highlighter if you find any
 - **markdown tables** are now supported by the new markdown highlighter
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - the mono-space code font is used for it
