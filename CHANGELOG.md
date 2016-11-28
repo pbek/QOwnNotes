@@ -1,7 +1,8 @@
 # QOwnNotes Changelog
 
 ## 16.11.16
-- highlighting improvements
+- markdown syntax highlighting improvements
+  (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - better multi-line html comment detection
     - image links like `![](file://)` work now
     - it's now possible to have links and italic/bold formatting in a headline
@@ -9,6 +10,11 @@
         - they can now also be opened with <kbd>Ctrl</kbd> + `Click`
     - formatting bold and italic with `__bold__` and `_italic_` now also works
     - fixed a wrongly detected table in a link
+- you can now **insert** a **markdown table** with the new shortcut
+  <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd>
+  (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
+    - a markdown table wizard will be opened to create an empty table
+      to work with
 
 ## 16.11.15
 - a **new markdown parser and highlighter** was now implemented from

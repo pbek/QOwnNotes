@@ -65,6 +65,7 @@
 #include <helpers/toolbarcontainer.h>
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <dialogs/actiondialog.h>
+#include <dialogs/tabledialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -8211,5 +8212,13 @@ void MainWindow::on_actionShow_all_panels_triggered() {
  */
 void MainWindow::on_actionFind_action_triggered() {
     ActionDialog* dialog = new ActionDialog(ui->menuBar, this);
+    dialog->show();
+}
+
+/**
+ * Opens the table dialog
+ */
+void MainWindow::on_actionInsert_table_triggered() {
+    TableDialog* dialog = new TableDialog(this);
     dialog->show();
 }

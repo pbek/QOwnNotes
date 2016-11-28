@@ -91,5 +91,7 @@
         <file alias="16x16/system-lock-screen.svg">icons/breeze-dark-qownnotes/16x16/system-lock-screen.svg</file>
         <file alias="16x16/window-duplicate.svg">icons/breeze-dark-qownnotes/16x16/window-duplicate.svg</file>
         <file alias="16x16/step_object_LinearMotor.svg">icons/breeze-dark-qownnotes/16x16/step_object_LinearMotor.svg</file>
+        <file alias="16x16/insert-table.svg">icons/breeze-dark-qownnotes/16x16/insert-table.svg</file>
+        <file alias="16x16/table.svg">icons/breeze-dark-qownnotes/16x16/table.svg</file>
     </qresource>
 </RCC>

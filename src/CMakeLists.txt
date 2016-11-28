@@ -34,6 +34,7 @@ qt5_wrap_ui(widgets/ui_fontcolorwidget.h fontcolorwidget.ui)
 qt5_wrap_ui(widgets/ui_evernoteimportdialog.h ui_evernoteimportdialog.ui)
 qt5_wrap_ui(dialogs/ui_orphanedimagesdialog.h orphanedimagesdialog.ui)
 qt5_wrap_ui(dialogs/ui_actiondialog.h actiondialog.ui)
+qt5_wrap_ui(dialogs/ui_tabledialog.h tabledialog.ui)
 qt5_wrap_ui(libraries/qmarkdowntextedit/ui_qtexteditsearchwidget.h
         libraries/qmarkdowntextedit/qtexteditsearchwidget.ui)
 qt5_wrap_ui(libraries/qttoolbareditor/src/toolbar_editor.hpp
@@ -102,6 +103,9 @@ set(SOURCE_FILES
     dialogs/actiondialog.cpp
     dialogs/actiondialog.h
     dialogs/actiondialog.ui
+    dialogs/tabledialog.cpp
+    dialogs/tabledialog.h
+    dialogs/tabledialog.ui
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp

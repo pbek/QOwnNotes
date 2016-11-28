@@ -56,6 +56,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
@@ -140,6 +141,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic 

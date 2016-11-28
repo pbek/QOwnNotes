@@ -412,6 +412,8 @@ private slots:
 
     void releaseDockWidgetSizes();
 
+    void on_actionInsert_table_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

@@ -89,7 +89,8 @@ SOURCES += main.cpp\
     widgets/fontcolorwidget.cpp \
     dialogs/evernoteimportdialog.cpp \
     dialogs/orphanedimagesdialog.cpp \
-    dialogs/actiondialog.cpp
+    dialogs/actiondialog.cpp \
+    dialogs/tabledialog.cpp
 
 
 HEADERS  += mainwindow.h \
@@ -150,7 +151,8 @@ HEADERS  += mainwindow.h \
     widgets/fontcolorwidget.h \
     dialogs/evernoteimportdialog.h \
     dialogs/orphanedimagesdialog.h \
-    dialogs/actiondialog.h
+    dialogs/actiondialog.h \
+    dialogs/tabledialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -169,7 +171,8 @@ FORMS    += mainwindow.ui \
     widgets/fontcolorwidget.ui \
     dialogs/evernoteimportdialog.ui \
     dialogs/orphanedimagesdialog.ui \
-    dialogs/actiondialog.ui
+    dialogs/actiondialog.ui \
+    dialogs/tabledialog.ui
 
 RESOURCES += \
     images.qrc \
