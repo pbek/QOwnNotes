@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 16.11.16
-- markdown syntax highlighting improvements
+- **markdown** syntax **highlighting improvements**
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - better multi-line html comment detection
     - image links like `![](file://)` work now
@@ -15,6 +15,8 @@
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - a markdown table wizard will be opened to create an empty table
       to work with
+- added more Spanish, French and Russian translation (thank you
+  richarson, lepascalou and frostyland)
 
 ## 16.11.15
 - a **new markdown parser and highlighter** was now implemented from
