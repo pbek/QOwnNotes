@@ -5,7 +5,7 @@ This cheatsheet is intended as a quick reference and showcase of the markdown sy
 
 ## Headers
 
-```
+```markdown
 # H1
 ## H2
 ### H3
@@ -40,7 +40,7 @@ Alt-H2
 
 ## Emphasis
 
-```
+```markdown
 Emphasis, aka italics, with *asterisks* or _underscores_.
 
 Strong emphasis, aka bold, with **asterisks** or __underscores__.
@@ -59,7 +59,7 @@ Combined emphasis with **asterisks and _underscores_**.
 
 (In this example, leading and trailing spaces are shown with with dots: ⋅)
 
-```
+```markdown
 1. First ordered list item
 2. Another item
 ⋅⋅* Unordered sub-list. 
@@ -98,7 +98,7 @@ Combined emphasis with **asterisks and _underscores_**.
 
 There are two ways to create links.
 
-```
+```markdown
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -125,7 +125,7 @@ http://www.example.com or <http://www.example.com>
 
 ## Code and Syntax Highlighting
 
-```
+```markdown
 Inline `code` has `back-ticks around` it.
 ```
 
@@ -133,7 +133,7 @@ Inline `code` has `back-ticks around` it.
 
 Blocks of code are either fenced by lines with three back-ticks, or are indented with four spaces. I recommend only using the fenced code blocks -- they're easier and only they support syntax highlighting.
 
-```
+```markdown
 	s = "Code with space indent"
 	print s
 ```
@@ -146,7 +146,7 @@ Blocks of code are either fenced by lines with three back-ticks, or are indented
 
 Tables aren't part of the core Markdown spec, but the QOwnNotes preview supports them. 
 
-```
+```markdown
 Colons can be used to align columns.
 
 | Tables        | Are           | Cool  |
@@ -183,7 +183,7 @@ Markdown | Less | Pretty
 
 ## Blockquotes
 
-```
+```markdown
 > Blockquotes are very handy in email to emulate reply text.
 > This line is part of the same quote.
 
@@ -202,7 +202,7 @@ Quote break.
 
 ## Horizontal Rule
 
-```
+```markdown
 Three or more...
 
 ---
@@ -234,7 +234,7 @@ Underscores
 
 ## Line Breaks
 
-```
+```markdown
 Here's a line for us to start with.
 
 This line is separated from the one above by two newlines, so it will be a *separate paragraph*.
