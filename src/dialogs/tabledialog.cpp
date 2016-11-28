@@ -50,10 +50,10 @@ void TableDialog::on_buttonBox_accepted() {
             }
 
             QString text;
-            QString space;
-            QString headline;
-            space.resize(ui->columnWidthSpinBox->value(), ' ');
-            headline.resize(ui->separatorColumnWidthSpinBox->value(), '-');
+            QString space = QString(" ").repeated(
+                    ui->columnWidthSpinBox->value());
+            QString headline = QString("-").repeated(
+                    ui->separatorColumnWidthSpinBox->value());
 
             for (int row = 0; row < ui->rowSpinBox->value(); row++) {
                 // add all columns of the row
