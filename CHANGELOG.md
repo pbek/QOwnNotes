@@ -4,6 +4,8 @@
 - lots of memory leak fixes, memory related optimizations and speed
   improvements, mainly in conjunction with the dialogs and the
   ownCloud service
+- added more German, Italian, Polish and Portuguese translation (thank
+  you mlocati, lucjan and mlimacarlos)
 
 ## 16.11.16
 - **markdown** syntax **highlighting improvements**

@@ -43,7 +43,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Enex file di Evernote</translation>
+      <translation>File enex di Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
@@ -139,7 +139,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Condividi combinazione</translation>
+      <translation>Condividi schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
@@ -199,27 +199,27 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="171"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>Collegamento</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="172"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>Immagine</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="173"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>Codice (blocco)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="174"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>Codice (in linea)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="176"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>Voce elenco</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="178"/>
@@ -249,12 +249,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="185"/>
       <source>Block quote</source>
-      <translation type="unfinished">Block quote</translation>
+      <translation>Blocco citazione</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="186"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>Tabella</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="183"/>
@@ -897,7 +897,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1857"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Inserisci tabella</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1487"/>
@@ -3727,57 +3727,57 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Inserisci tabella</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>Crea tabella</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>Larghezza colonna:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a headline separator</source>
-      <translation type="unfinished">Insert a headline separator</translation>
+      <translation>Inserisce un separatore di titolo</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation type="unfinished">Columns:</translation>
+      <translation>Colonne:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation type="unfinished">Rows:</translation>
+      <translation>Righe:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation type="unfinished">The amount of spaces in a column</translation>
+      <translation>La quantità di spazi in una colonna</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation type="unfinished">Select table layout:</translation>
+      <translation>Selezionare il layout della tabella:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation type="unfinished">Separator column width:</translation>
+      <translation>Larghezza della colonna di separazione:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation type="unfinished">The amount of dash characters in the separator</translation>
+      <translation>La quantità di trattini nel separatore</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation type="unfinished">Import CSV file</translation>
+      <translation>Importa file CSV</translation>
     </message>
   </context>
   <context>

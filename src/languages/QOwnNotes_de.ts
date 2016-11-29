@@ -841,7 +841,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1464"/>
       <source>&amp;Add tag to note</source>
-      <translation>Notiz oder Schlagwort &amp;hinzufügen</translation>
+      <translation>Notiz mit Schlagwort versehen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1476"/>
