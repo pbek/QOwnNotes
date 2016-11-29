@@ -28,23 +28,37 @@ TodoDialog::TodoDialog(MainWindow *mainWindow, QString taskUid,
         ui->newItemEdit->setText(selectedText);
     }
 
+    // jump to a task
     if (!taskUid.isEmpty()) {
-        CalendarItem calendarItem = CalendarItem::fetchByUid(taskUid);
-        qDebug() << __func__ << " - 'calendarItem': " << calendarItem;
+        jumpToTask(taskUid);
+    }
+}
 
-        if (calendarItem.exists()) {
-            // set a calendar item uid to jump to later on
-            _jumpToCalendarItemUid = taskUid;
+/**
+ * Jumps to a task
+ *
+ * @param taskUid
+ */
+void TodoDialog::jumpToTask(QString taskUid) {
+    if (taskUid.isEmpty()) {
+        return;
+    }
 
-            QString calendar = calendarItem.getCalendar();
-            // if the calendar of the calendar item isn't the current one we
-            // have to switch to it
-            if (ui->todoListSelector->currentText() != calendar) {
-                ui->todoListSelector->setCurrentText(calendar);
-            } else {
-                // jump to the correct task list item
-                jumpToTodoListItem();
-            }
+    CalendarItem calendarItem = CalendarItem::fetchByUid(taskUid);
+    qDebug() << __func__ << " - 'calendarItem': " << calendarItem;
+
+    if (calendarItem.exists()) {
+        // set a calendar item uid to jump to later on
+        _jumpToCalendarItemUid = taskUid;
+
+        QString calendar = calendarItem.getCalendar();
+        // if the calendar of the calendar item isn't the current one we
+        // have to switch to it
+        if (ui->todoListSelector->currentText() != calendar) {
+            ui->todoListSelector->setCurrentText(calendar);
+        } else {
+            // jump to the correct task list item
+            jumpToTodoListItem();
         }
     }
 }
@@ -165,7 +179,7 @@ void TodoDialog::loadTodoListData() {
 void TodoDialog::reloadTodoList() {
     ui->todoItemLoadingProgressBar->setValue(0);
     ui->todoItemLoadingProgressBar->show();
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->todoGetTodoList(ui->todoListSelector->currentText(), this);
 }
 
@@ -439,7 +453,7 @@ void TodoDialog::on_saveButton_clicked() {
 
     updateCurrentCalendarItemWithFormData();
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
 
     // update the local icsData from server
     ownCloud->updateICSDataOfCalendarItem(&currentCalendarItem);
@@ -492,7 +506,7 @@ void TodoDialog::on_newItemEdit_returnPressed() {
     // set the focus to the description edit after we loaded the tasks
     _setFocusToDescriptionEdit = true;
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
 
     // post the calendar item to the server
     ownCloud->postCalendarItemToServer(calItem, this);
@@ -526,7 +540,7 @@ void TodoDialog::on_removeButton_clicked() {
 
         // remove the calendar item from the ownCloud server
         // (this will reload the task list as well)
-        OwnCloudService *ownCloud = new OwnCloudService(this);
+        OwnCloudService *ownCloud = OwnCloudService::instance();
         ownCloud->removeCalendarItem(calItem, this);
     }
 }
@@ -544,7 +558,7 @@ void TodoDialog::on_todoList_itemChanged(QListWidgetItem *item) {
         calItem.updateCompleted(item->checkState() == Qt::Checked);
         calItem.store();
 
-        OwnCloudService *ownCloud = new OwnCloudService(this);
+        OwnCloudService *ownCloud = OwnCloudService::instance();
 
         // post the calendar item to the server
         ownCloud->postCalendarItemToServer(calItem, this);

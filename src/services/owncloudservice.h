@@ -19,6 +19,8 @@ struct CalDAVCalendarData {
 };
 
 class SettingsDialog;
+class MainWindow;
+class TodoDialog;
 
 class OwnCloudService : public QObject {
 Q_OBJECT
@@ -62,6 +64,8 @@ public:
     void fetchShares(QString path = "");
 
     void removeNoteShare(Note note, ShareDialog *shareDialog);
+
+    static OwnCloudService *instance();
 
 private:
     QString serverUrl;

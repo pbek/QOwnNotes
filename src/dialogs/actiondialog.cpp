@@ -9,12 +9,19 @@ ActionDialog::ActionDialog(QMenuBar* menuBar, QWidget *parent) :
     ui(new Ui::ActionDialog) {
     _menuBar = menuBar;
     ui->setupUi(this);
+    refreshUi();
+}
+
+/**
+ * Refreshes the UI
+ */
+void ActionDialog::refreshUi() {
     ui->actionLineEdit->setFocus();
     ui->actionLineEdit->installEventFilter(this);
     ui->actionTreeWidget->clear();
     ui->actionTreeWidget->installEventFilter(this);
 
-    QList<QMenu *> menuList = menuBar->findChildren<QMenu *>(
+    QList<QMenu *> menuList = _menuBar->findChildren<QMenu *>(
             QString(), Qt::FindDirectChildrenOnly);
 
     Q_FOREACH(QMenu *menu, menuList) {
@@ -25,6 +32,7 @@ ActionDialog::ActionDialog(QMenuBar* menuBar, QWidget *parent) :
     ui->actionTreeWidget->expandAll();
     ui->actionTreeWidget->resizeColumnToContents(0);
     ui->actionTreeWidget->resizeColumnToContents(1);
+    ui->actionLineEdit->clear();
 }
 
 /**

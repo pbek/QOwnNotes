@@ -13,6 +13,8 @@ namespace Ui {
 class TodoDialog;
 }
 
+class MainWindow;
+
 class TodoDialog : public MasterDialog
 {
     Q_OBJECT
@@ -29,6 +31,7 @@ public:
     void todoItemLoadingProgressBarSetMaximum(int value);
     void todoItemLoadingProgressBarHide();
     void todoItemLoadingProgressBarHideIfOnMaximum();
+    void jumpToTask(QString taskUid);
 
 private slots:
     void on_TodoDialog_finished(int result);

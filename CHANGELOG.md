@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.11.17
+- lots of memory leak fixes, memory related optimizations and speed
+  improvements, mainly in conjunction with the dialogs and the
+  ownCloud service
+
 ## 16.11.16
 - **markdown** syntax **highlighting improvements**
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))

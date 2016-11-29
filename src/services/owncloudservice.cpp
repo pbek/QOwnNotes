@@ -30,6 +30,25 @@ const QString NS_DAV("DAV:");
 
 OwnCloudService::OwnCloudService(QObject *parent)
         : QObject(parent) {
+    networkManager = new QNetworkAccessManager();
+    calendarNetworkManager = new QNetworkAccessManager();
+
+    QObject::connect(networkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *,
+                                                   QAuthenticator *)),
+                     this, SLOT(slotAuthenticationRequired(QNetworkReply *,
+                                                     QAuthenticator *)));
+    QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)),
+                     this, SLOT(slotReplyFinished(QNetworkReply *)));
+
+    QObject::connect(calendarNetworkManager,
+                     SIGNAL(authenticationRequired(QNetworkReply *,
+                                                   QAuthenticator *)), this,
+                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply *,
+                                                            QAuthenticator *)));
+    QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)),
+                     this, SLOT(slotReplyFinished(QNetworkReply *)));
+
     readSettings();
     settingsDialog = Q_NULLPTR;
     todoDialog = Q_NULLPTR;
@@ -52,9 +71,6 @@ void OwnCloudService::readSettings() {
     userName = settings.value("ownCloud/userName").toString();
     password = CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString());
-
-    networkManager = new QNetworkAccessManager();
-    calendarNetworkManager = new QNetworkAccessManager();
 
     versionListPath = rootPath + "note/versions";
     trashListPath = rootPath + "note/trashed";
@@ -97,22 +113,6 @@ void OwnCloudService::readSettings() {
                             todoCalendarServerUrlPath) + "$"), "");
         }
     }
-
-    QObject::connect(networkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply * ,
-                                                   QAuthenticator *)), this,
-                     SLOT(slotAuthenticationRequired(QNetworkReply * ,
-                                                     QAuthenticator *)));
-    QObject::connect(networkManager, SIGNAL(finished(QNetworkReply *)), this,
-                     SLOT(slotReplyFinished(QNetworkReply *)));
-
-    QObject::connect(calendarNetworkManager,
-                     SIGNAL(authenticationRequired(QNetworkReply * ,
-                                                   QAuthenticator *)), this,
-                     SLOT(slotCalendarAuthenticationRequired(QNetworkReply * ,
-                                                     QAuthenticator *)));
-    QObject::connect(calendarNetworkManager, SIGNAL(finished(QNetworkReply *)), this,
-                     SLOT(slotReplyFinished(QNetworkReply *)));
 }
 
 void OwnCloudService::slotAuthenticationRequired(
@@ -822,6 +822,26 @@ void OwnCloudService::showOwnCloudMessage(
     } else {
         QMessageBox::warning(0, headline, message);
     }
+}
+
+/**
+ * Returns the global OwnCloudService instance
+ */
+OwnCloudService *OwnCloudService::instance() {
+    OwnCloudService *instance =
+            qApp->property("ownCloudService").value<OwnCloudService *>();
+
+    if (instance == NULL) {
+        instance = new OwnCloudService(NULL);
+
+        qApp->setProperty("ownCloudService",
+                          QVariant::fromValue<OwnCloudService *>(instance));
+    } else {
+        // we need to read the settings in case something has changed
+        instance->readSettings();
+    }
+
+    return instance;
 }
 
 /**

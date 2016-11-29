@@ -66,6 +66,8 @@ public:
 
     void setNoteFolderRemotePathList(QStringList pathList);
 
+    void setCurrentPage(int page);
+
 protected:
     void closeEvent(QCloseEvent *event);
 

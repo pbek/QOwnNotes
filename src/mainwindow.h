@@ -20,6 +20,9 @@
 #include <QScrollArea>
 #include <QDockWidget>
 #include <QComboBox>
+#include <dialogs/actiondialog.h>
+#include <dialogs/tododialog.h>
+#include <dialogs/settingsdialog.h>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -29,6 +32,9 @@
 namespace Ui {
 class MainWindow;
 }
+
+class TodoDialog;
+class SettingsDialog;
 
 class MainWindow : public QMainWindow {
     Q_OBJECT
@@ -449,7 +455,6 @@ private:
     QToolBar *_encryptionToolbar;
     QToolBar *_windowToolbar;
     QToolBar *_quitToolbar;
-    QFrame *_verticalNoteFrame;
     bool _noteViewIsRegenerated;
     QHash<int, QString> _activeNoteFolderNoteNames;
     QHash<int, int> _activeNoteFolderNotePositions;
@@ -486,6 +491,9 @@ private:
     QComboBox *_workspaceComboBox;
     bool _noteFolderDockWidgetWasVisible;
     bool _noteSubFolderDockWidgetVisible;
+    ActionDialog *_actionDialog;
+    TodoDialog *_todoDialog;
+    SettingsDialog *_settingsDialog;
 
     void createSystemTrayIcon();
 

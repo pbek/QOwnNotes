@@ -78,14 +78,10 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // init the debug info search frame
     ui->debugInfoTextEdit->initSearchFrame(ui->debugInfoTextEditSearchFrame);
 
+    // set the current page
     // must be done in the end so that the settings are loaded first when
     // doing a connection test
-    ui->settingsStackedWidget->setCurrentIndex(page);
-
-    // update other stuff for the settings tree widget
-    if (ui->settingsStackedWidget->currentIndex() == page) {
-        on_settingsStackedWidget_currentChanged(page);
-    }
+    setCurrentPage(page);
 
 #ifdef Q_OS_MAC
     // we don't need app instance settings on OS X
@@ -128,6 +124,20 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // show the log file path
     ui->logFileLabel->setText(QDir::toNativeSeparators(
             Utils::Misc::logFilePath()));
+}
+
+/**
+ * Sets the current page
+ *
+ * @param page
+ */
+void SettingsDialog::setCurrentPage(int page) {
+    ui->settingsStackedWidget->setCurrentIndex(page);
+
+    // update other stuff for the settings tree widget
+    if (ui->settingsStackedWidget->currentIndex() == page) {
+        on_settingsStackedWidget_currentChanged(page);
+    }
 }
 
 SettingsDialog::~SettingsDialog() {
@@ -290,7 +300,7 @@ void SettingsDialog::storeProxySettings() {
  */
 void SettingsDialog::startConnectionTest() {
     ui->connectionTestLabel->hide();
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->settingsConnectionTest(this);
 }
 
@@ -756,6 +766,8 @@ void SettingsDialog::loadShortcutSettings() {
                 ui->shortcutTreeWidget->addTopLevelItem(menuItem);
                 menuItem->setExpanded(true);
             }
+
+            delete(menuItem);
     }
 
     ui->shortcutTreeWidget->resizeColumnToContents(0);
@@ -1313,7 +1325,7 @@ void SettingsDialog::on_reloadCalendarListButton_clicked() {
  * Reloads the calendar list
  */
 void SettingsDialog::reloadCalendarList() {
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->settingsGetCalendarList(this);
 }
 
@@ -1730,7 +1742,7 @@ void SettingsDialog::on_noteFolderRemotePathButton_clicked()
     noteFolderRemotePathTreeStatusBar->showMessage(
             tr("Loading folders from server"));
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->settingsGetFileList(this, "");
 }
 
@@ -1818,7 +1830,7 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
     noteFolderRemotePathTreeStatusBar->showMessage(
             tr("Loading folders in '%1' from server").arg(current->text(0)));
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->settingsGetFileList(this, folderName);
 }
 

@@ -389,6 +389,10 @@ MainWindow::MainWindow(QWidget *parent) :
             "editor color schema count",
             QString::number(schemaCount) + " schemas",
             schemaCount);
+
+    _actionDialog = Q_NULLPTR;
+    _todoDialog = Q_NULLPTR;
+    _settingsDialog = Q_NULLPTR;
 }
 
 MainWindow::~MainWindow() {
@@ -698,7 +702,7 @@ void MainWindow::reloadTodoLists() {
             settings.value("ownCloud/serverUrl").toString().trimmed();
 
     if (calendars.count() > 0 && !serverUrl.isEmpty()) {
-        OwnCloudService *ownCloud = new OwnCloudService(this);
+        OwnCloudService *ownCloud = OwnCloudService::instance();
 
         QListIterator<QString> itr(calendars);
         while (itr.hasNext()) {
@@ -2635,7 +2639,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
         updateNoteDirectoryWatcher();
 
         // update the information about shared notes
-        OwnCloudService *ownCloud = new OwnCloudService(this);
+        OwnCloudService *ownCloud = OwnCloudService::instance();
         ownCloud->fetchShares();
     }
 
@@ -3242,6 +3246,8 @@ void MainWindow::askForEncryptedNotePasswordIfNeeded(QString additionalText) {
                         tr("It seems that your password is not valid!"));
             }
         }
+
+        delete(dialog);
     }
 }
 
@@ -3351,7 +3357,7 @@ void MainWindow::createNewNote(QString name, QString text,
  * This is a public callback function for the trash dialog.
  */
 void MainWindow::restoreTrashedNoteOnServer(QString fileName, int timestamp) {
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->restoreTrashedNoteOnServer(fileName, timestamp, this);
 }
 
@@ -3728,9 +3734,14 @@ void MainWindow::updateCurrentFolderTooltip() {
  * Opens the settings dialog
  */
 void MainWindow::openSettingsDialog(int page) {
+    if (_settingsDialog == Q_NULLPTR) {
+        _settingsDialog = new SettingsDialog(page, this);
+    } else {
+        _settingsDialog->setCurrentPage(page);
+    }
+
     // open the settings dialog
-    SettingsDialog *dialog = new SettingsDialog(page, this);
-    dialog->exec();
+    _settingsDialog->exec();
 
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
@@ -3775,6 +3786,7 @@ void MainWindow::handleTextNoteLinking() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
     dialog->exec();
+
     if (dialog->result() == QDialog::Accepted) {
         QString url = dialog->getURL();
         QString noteName = dialog->getSelectedNoteName();
@@ -3812,6 +3824,8 @@ void MainWindow::handleTextNoteLinking() {
             textEdit->textCursor().insertText(newText);
         }
     }
+
+    delete(dialog);
 }
 
 /**
@@ -4042,8 +4056,13 @@ void MainWindow::openTodoDialog(QString taskUid) {
         return;
     }
 
-    TodoDialog *dialog = new TodoDialog(this, taskUid, this);
-    dialog->show();
+    if (_todoDialog == Q_NULLPTR) {
+        _todoDialog = new TodoDialog(this, taskUid, this);
+    } else {
+        _todoDialog->jumpToTask(taskUid);
+    }
+
+    _todoDialog->show();
 
     // generate the system tray context menu to show modified tasks
     generateSystemTrayContextMenu();
@@ -4382,6 +4401,7 @@ void MainWindow::on_action_Remove_note_triggered() {
 void MainWindow::on_actionAbout_QOwnNotes_triggered() {
     AboutDialog *dialog = new AboutDialog(this);
     dialog->exec();
+    delete(dialog);
 }
 
 //
@@ -4736,7 +4756,7 @@ void MainWindow::on_actionShow_versions_triggered() {
             tr("Note versions are currently loaded from your ownCloud server"),
             20000);
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadVersions(this->currentNote.relativeNoteFilePath("/"), this);
 }
 
@@ -4750,7 +4770,7 @@ void MainWindow::on_actionShow_trash_triggered() {
             tr("Trashed notes are currently loaded from your ownCloud server"),
             20000);
 
-    OwnCloudService *ownCloud = new OwnCloudService(this);
+    OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->loadTrash(this);
 }
 
@@ -5003,6 +5023,8 @@ void MainWindow::on_action_Encrypt_note_triggered()
         // set the password
         currentNote.setCryptoPassword(password);
         currentNote.store();
+
+        delete(dialog);
     }
 
     // encrypt the note
@@ -6282,6 +6304,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
             }
         }
 
+        delete(dialog);
         return;
     }
 
@@ -7561,6 +7584,7 @@ void MainWindow::on_actionShare_note_triggered() {
 
     ShareDialog *dialog = new ShareDialog(currentNote, this);
     dialog->exec();
+    delete(dialog);
 
     currentNote.refetch();
 
@@ -7845,6 +7869,8 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
         // reload the note folder after importing new notes
         buildNotesIndexAndLoadNoteDirectoryList(true);
     }
+
+    delete(dialog);
 }
 
 /**
@@ -7853,6 +7879,7 @@ void MainWindow::on_actionImport_notes_from_Evernote_triggered() {
 void MainWindow::on_actionDelete_orphaned_images_triggered() {
     OrphanedImagesDialog* dialog = new OrphanedImagesDialog(this);
     dialog->exec();
+    delete(dialog);
 }
 
 /**
@@ -8211,8 +8238,13 @@ void MainWindow::on_actionShow_all_panels_triggered() {
  * Opens the find action dialog
  */
 void MainWindow::on_actionFind_action_triggered() {
-    ActionDialog* dialog = new ActionDialog(ui->menuBar, this);
-    dialog->show();
+    if (_actionDialog == Q_NULLPTR) {
+        _actionDialog = new ActionDialog(ui->menuBar, this);
+    } else {
+        _actionDialog->refreshUi();
+    }
+
+    _actionDialog->show();
 }
 
 /**
@@ -8220,5 +8252,6 @@ void MainWindow::on_actionFind_action_triggered() {
  */
 void MainWindow::on_actionInsert_table_triggered() {
     TableDialog* dialog = new TableDialog(this);
-    dialog->show();
+    dialog->exec();
+    delete(dialog);
 }

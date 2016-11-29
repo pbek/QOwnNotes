@@ -17,6 +17,7 @@ class ActionDialog : public MasterDialog
 public:
     explicit ActionDialog(QMenuBar *menuBar, QWidget *parent = 0);
     ~ActionDialog();
+    void refreshUi();
 
 private slots:
     void on_actionTreeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
