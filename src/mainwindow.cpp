@@ -4059,6 +4059,7 @@ void MainWindow::openTodoDialog(QString taskUid) {
     if (_todoDialog == Q_NULLPTR) {
         _todoDialog = new TodoDialog(this, taskUid, this);
     } else {
+        _todoDialog->refreshUi();
         _todoDialog->jumpToTask(taskUid);
     }
 

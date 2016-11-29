@@ -52,12 +52,14 @@ void TodoDialog::jumpToTask(QString taskUid) {
         _jumpToCalendarItemUid = taskUid;
 
         QString calendar = calendarItem.getCalendar();
+
         // if the calendar of the calendar item isn't the current one we
         // have to switch to it
         if (ui->todoListSelector->currentText() != calendar) {
+            // select the correct calendar and then jump to the task item
             ui->todoListSelector->setCurrentText(calendar);
         } else {
-            // jump to the correct task list item
+            // jump directly to the correct task item
             jumpToTodoListItem();
         }
     }
@@ -69,40 +71,7 @@ TodoDialog::~TodoDialog() {
 
 void TodoDialog::setupUi() {
     setupMainSplitter();
-    loadTodoListData();
-
-    ui->todoItemLoadingProgressBar->hide();
-
-    QSettings settings;
-
-    {
-        const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
-        Q_UNUSED(blocker);
-
-        bool showCompletedItems =
-                settings.value("TodoDialog/showCompletedItems").toBool();
-        ui->showCompletedItemsCheckBox->setChecked(showCompletedItems);
-    }
-
-    int index = CalendarItem::getCurrentCalendarIndex();
-
-    if (index >= 0) {
-        const QSignalBlocker blocker(ui->todoListSelector);
-        Q_UNUSED(blocker);
-
-        // set the index of the task list selector if we found it
-        ui->todoListSelector->setCurrentIndex(index);
-    } else {
-        // if we didn't find the index store the new current item
-        settings.setValue("TodoDialog/todoListSelectorSelectedItem",
-                          ui->todoListSelector->currentText());
-    }
-
-    // hide the reminder date time select
-    ui->reminderDateTimeEdit->hide();
-
-    // now load the task list items
-    reloadTodoList();
+    refreshUi();
 
     ui->newItemEdit->installEventFilter(this);
     ui->todoList->installEventFilter(this);
@@ -143,6 +112,46 @@ void TodoDialog::setupUi() {
             this, SLOT(on_importAsNoteButton_clicked()));
 
     ui->noteButton->setMenu(noteMenu);
+}
+
+/**
+ * Refreshes the UI
+ */
+void TodoDialog::refreshUi() {
+    loadTodoListData();
+
+    ui->todoItemLoadingProgressBar->hide();
+
+    QSettings settings;
+
+    {
+        const QSignalBlocker blocker(ui->showCompletedItemsCheckBox);
+        Q_UNUSED(blocker);
+
+        bool showCompletedItems =
+                settings.value("TodoDialog/showCompletedItems").toBool();
+        ui->showCompletedItemsCheckBox->setChecked(showCompletedItems);
+    }
+
+    int index = CalendarItem::getCurrentCalendarIndex();
+
+    if (index >= 0) {
+        const QSignalBlocker blocker(ui->todoListSelector);
+        Q_UNUSED(blocker);
+
+        // set the index of the task list selector if we found it
+        ui->todoListSelector->setCurrentIndex(index);
+    } else {
+        // if we didn't find the index store the new current item
+        settings.setValue("TodoDialog/todoListSelectorSelectedItem",
+                          ui->todoListSelector->currentText());
+    }
+
+    // hide the reminder date time select
+    ui->reminderDateTimeEdit->hide();
+
+    // now load the task list items
+    reloadTodoList();
 }
 
 void TodoDialog::setupMainSplitter() {

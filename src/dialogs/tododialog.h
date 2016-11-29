@@ -32,6 +32,7 @@ public:
     void todoItemLoadingProgressBarHide();
     void todoItemLoadingProgressBarHideIfOnMaximum();
     void jumpToTask(QString taskUid);
+    void refreshUi();
 
 private slots:
     void on_TodoDialog_finished(int result);
