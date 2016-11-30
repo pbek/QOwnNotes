@@ -7,6 +7,9 @@
   (for [Issue #367](https://github.com/pbek/QOwnNotes/issues/367))
 - there now is a new scripting command `script.reloadScriptingEngine()`
   to reload the scripting engine
+- dramatically reduced the loading time of large notes
+    - the navigation tree in the navigation panel was rebuilt too often
+      with the new highlighter
 
 ## 16.11.17
 - lots of memory leak fixes, memory related optimizations and speed
