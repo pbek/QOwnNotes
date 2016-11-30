@@ -198,6 +198,16 @@ void ScriptingService::reloadEngine() {
 }
 
 /**
+ * Reloads the scripting engine
+ *
+ * This is done in the background so the application doesn't crash when
+ * called from a script
+ */
+void ScriptingService::reloadScriptingEngine() {
+    QTimer::singleShot(500, this, SLOT(reloadEngine()));
+}
+
+/**
  * Checks if a method exists for an object
  */
 bool ScriptingService::methodExistsForObject(QObject *object,

@@ -351,6 +351,24 @@ You can get the object names from the `*.ui` files, for example
 Take a look at [Style Sheet Reference](http://doc.qt.io/qt-5/stylesheet-reference.html)
 for a reference of what styles are available.
 
+### Reloading the scripting engine
+
+#### Parameters
+
+```cpp
+/**
+ * Reloads the scripting engine
+ */
+void ScriptingService::reloadScriptingEngine();
+```
+
+#### Usage in QML
+
+```javascript
+// reload the scripting engine
+script.reloadScriptingEngine();
+```
+
 
 ## Hooks
 

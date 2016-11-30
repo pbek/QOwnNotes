@@ -5,6 +5,8 @@
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
 - tried to fix a package dependency in openSUSE Tumbleweed
   (for [Issue #367](https://github.com/pbek/QOwnNotes/issues/367))
+- there now is a new scripting command `script.reloadScriptingEngine()`
+  to reload the scripting engine
 
 ## 16.11.17
 - lots of memory leak fixes, memory related optimizations and speed

@@ -52,6 +52,7 @@ public:
     Q_INVOKABLE bool platformIsWindows();
     Q_INVOKABLE void tagCurrentNote(QString tagName);
     Q_INVOKABLE void addStyleSheet(QString stylesheet);
+    Q_INVOKABLE void reloadScriptingEngine();
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

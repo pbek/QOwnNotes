@@ -12,7 +12,7 @@ QtObject {
      */
     function init() {
         // create a menu entry "New 5pm note" with a button and a freedesktop theme icon
-         script.registerCustomAction("new5pmNote", "New 5pm note", "5pm", "task-new");
+        script.registerCustomAction("new5pmNote", "New 5pm note", "5pm", "task-new");
     }
 
     /**
@@ -107,5 +107,8 @@ QtObject {
                 script.createNote(text);
                 break;
         }
+
+        // workaround because the parsers don't seem to work every time
+        script.reloadScriptingEngine();
     }
 }
