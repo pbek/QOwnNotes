@@ -30,8 +30,10 @@ BuildRequires:  libqt5-qtbase-devel libqt5-qtdeclarative-devel libQt5Svg-devel l
 BuildRequires:  update-desktop-files
 Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network5 libQt5Widgets5 libQt5Xml5 libQt5XmlPatterns5 libQt5PrintSupport5
 
-%if 0%{?if_tumbleweed} == 1
-Requires:   libqt5-qtdeclarative
+# try to detect openSUSE Tumbleweed
+# the way described in https://en.opensuse.org/Archive:How_to_detect_Tumbleweed didn't seem to work
+%if 0%{suse_version} > 1320
+Requires:   libQtQuick5
 %else
 Requires:   libQt5Declarative5
 %endif

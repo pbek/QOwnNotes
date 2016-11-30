@@ -3,6 +3,8 @@
 ## 16.11.18
 - fixed a highlighting issue with images and tables
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
+- tried to fix a package dependency in openSUSE Tumbleweed
+  (for [Issue #367](https://github.com/pbek/QOwnNotes/issues/367))
 
 ## 16.11.17
 - lots of memory leak fixes, memory related optimizations and speed
