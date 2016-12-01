@@ -10,3 +10,6 @@
 [submodule "src/libraries/qttoolbareditor"]
 	path = src/libraries/qttoolbareditor
 	url = https://github.com/pbek/Qt-Toolbar-Editor.git
+[submodule "src/libraries/qtcsv"]
+	path = src/libraries/qtcsv
+	url = https://github.com/pbek/qtcsv.git

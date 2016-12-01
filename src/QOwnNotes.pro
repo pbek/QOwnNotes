@@ -90,8 +90,8 @@ SOURCES += main.cpp\
     dialogs/evernoteimportdialog.cpp \
     dialogs/orphanedimagesdialog.cpp \
     dialogs/actiondialog.cpp \
-    dialogs/tabledialog.cpp
-
+    dialogs/tabledialog.cpp \
+    libraries/qtcsv/src/sources/reader.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -152,7 +152,11 @@ HEADERS  += mainwindow.h \
     dialogs/evernoteimportdialog.h \
     dialogs/orphanedimagesdialog.h \
     dialogs/actiondialog.h \
-    dialogs/tabledialog.h
+    dialogs/tabledialog.h \
+    libraries/qtcsv/src/include/abstractdata.h \
+    libraries/qtcsv/src/include/reader.h \
+    libraries/qtcsv/src/sources/filechecker.h \
+    libraries/qtcsv/src/sources/symbols.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

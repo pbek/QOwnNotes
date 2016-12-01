@@ -22,6 +22,8 @@ private slots:
 
     void on_headlineCheckBox_toggled(bool checked);
 
+    void on_fileButton_clicked();
+
 private:
     enum Tab {
         CreateTab,
@@ -29,4 +31,8 @@ private:
     };
 
     Ui::TableDialog *ui;
+
+    void createMarkdownTable();
+
+    void importCSV();
 };

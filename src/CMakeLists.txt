@@ -164,6 +164,11 @@ set(SOURCE_FILES
     libraries/qttoolbareditor/src/toolbar_editor.cpp
     libraries/qttoolbareditor/src/toolbar_editor.hpp
     libraries/qttoolbareditor/src/toolbar_editor.ui
+    libraries/qtcsv/src/include/abstractdata.h
+    libraries/qtcsv/src/include/reader.h
+    libraries/qtcsv/src/sources/reader.cpp
+    libraries/qtcsv/src/sources/filechecker.h
+    libraries/qtcsv/src/sources/symbols.h
     services/databaseservice.cpp
     services/databaseservice.h
     services/owncloudservice.cpp

@@ -34,7 +34,7 @@
        <item row="8" column="0" colspan="2">
         <widget class="QCheckBox" name="headlineCheckBox">
          <property name="text">
-          <string>Insert a headline separator</string>
+          <string>Insert a table heading separator</string>
          </property>
          <property name="checked">
           <bool>true</bool>
@@ -149,6 +149,120 @@
       <attribute name="title">
        <string>Import CSV file</string>
       </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="5" column="2">
+        <widget class="QComboBox" name="textDelimiterComboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">'</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QLabel" name="label_6">
+         <property name="text">
+          <string>Separator:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="fileButton">
+         <property name="text">
+          <string>Select file</string>
+         </property>
+         <property name="icon">
+          <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+           <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="3">
+        <widget class="QLabel" name="label_5">
+         <property name="text">
+          <string>Please select the CSV file you want to import:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="3">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>686</width>
+           <height>47</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="4" column="2">
+        <widget class="QComboBox" name="separatorComboBox">
+         <property name="editable">
+          <bool>true</bool>
+         </property>
+         <item>
+          <property name="text">
+           <string notr="true">,</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string notr="true">;</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLineEdit" name="fileLineEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>CSV file</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="3">
+        <widget class="QCheckBox" name="firstLineHeadlineCheckBox">
+         <property name="text">
+          <string>First line is the table heading</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="3">
+        <widget class="QPlainTextEdit" name="csvFileTextEdit">
+         <property name="undoRedoEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="lineWrapMode">
+          <enum>QPlainTextEdit::NoWrap</enum>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="label_7">
+         <property name="text">
+          <string>Text-delimiter:</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -164,7 +278,9 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../breeze-qownnotes.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>
