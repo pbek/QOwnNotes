@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.12.0
+- fixed an issue with other highlighting inside an inline code block
+  (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
+
 ## 16.11.18
 - fixed highlighting issues with images and tables
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
