@@ -153,6 +153,7 @@ HEADERS  += mainwindow.h \
     dialogs/orphanedimagesdialog.h \
     dialogs/actiondialog.h \
     dialogs/tabledialog.h \
+    libraries/qtcsv/src/include/qtcsv_global.h \
     libraries/qtcsv/src/include/abstractdata.h \
     libraries/qtcsv/src/include/reader.h \
     libraries/qtcsv/src/sources/filechecker.h \

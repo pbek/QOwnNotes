@@ -164,6 +164,7 @@ set(SOURCE_FILES
     libraries/qttoolbareditor/src/toolbar_editor.cpp
     libraries/qttoolbareditor/src/toolbar_editor.hpp
     libraries/qttoolbareditor/src/toolbar_editor.ui
+    libraries/qtcsv/src/include/qtcsv_global.h
     libraries/qtcsv/src/include/abstractdata.h
     libraries/qtcsv/src/include/reader.h
     libraries/qtcsv/src/sources/reader.cpp
