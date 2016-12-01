@@ -32,11 +32,11 @@ Requires:       libQt5Svg5 libQt5Sql5 libQt5Sql5-sqlite libQt5Gui5 libQt5Network
 
 # try to detect openSUSE Tumbleweed
 # the way described in https://en.opensuse.org/Archive:How_to_detect_Tumbleweed didn't seem to work
-%if 0%{suse_version} > 1320
+#%if 0%{suse_version} > 1320
 Requires:   libQtQuick5
-%else
-Requires:   libQt5Declarative5
-%endif
+#%else
+#Requires:   libQt5Declarative5
+#%endif
 
 %endif
 
