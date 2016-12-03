@@ -1,15 +1,16 @@
 # QOwnNotes Changelog
 
 ## 16.12.0
-- fixed an issue with other highlighting inside an inline code block
-  (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
-    - table highlighting support for tables, that don't start with a `|`
-      was dropped, that's far to messy to deal with
 - you can now import csv files with the `Insert table` dialog
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - you'll get a preview of the content of your csv file
     - you can choose your separator, text-delimiter and whether the
       first line is the table heading
+- more highlighting fixes
+  (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
+    - fixed an issue with other highlighting inside an inline code block
+    - table highlighting support for tables, that don't start with a `|`
+      was dropped, that's far to messy to deal with
 - fixed a problem where the shortcuts were not viewed in the settings
 - made a special allowance for allowing entering two `*` characters in a row 
   and closing both of them when the first `*` was at the end of the line
