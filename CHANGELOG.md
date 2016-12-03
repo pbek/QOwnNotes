@@ -11,6 +11,9 @@
     - you can choose your separator, text-delimiter and whether the
       first line is the table heading
 - fixed a problem where the shortcuts were not viewed in the settings
+- made a special allowance for allowing entering two `*` characters in a row 
+  and closing both of them when the first `*` was at the end of the line
+  (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
 
 ## 16.11.18
 - fixed highlighting issues with images and tables
