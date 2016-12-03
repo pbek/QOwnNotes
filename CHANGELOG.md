@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.12.0
-- you can now import csv files with the `Insert table` dialog
+- you can now **import csv files** with the `Insert table` dialog
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
     - you'll get a preview of the content of your csv file
-    - you can choose your separator, text-delimiter and whether the
+    - you can choose the separator, text-delimiter and whether the
       first line is the table heading
 - more highlighting fixes
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
@@ -15,6 +15,7 @@
 - made a special allowance for allowing entering two `*` characters in a row 
   and closing both of them when the first `*` was at the end of the line
   (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
+- markdown reference urls can now also be opened with <kbd>Ctrl</kbd> + `Click`
 
 ## 16.11.18
 - fixed highlighting issues with images and tables
