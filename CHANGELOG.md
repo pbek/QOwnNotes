@@ -10,6 +10,7 @@
     - you'll get a preview of the content of your csv file
     - you can choose your separator, text-delimiter and whether the
       first line is the table heading
+- fixed a problem where the shortcuts were not viewed in the settings
 
 ## 16.11.18
 - fixed highlighting issues with images and tables

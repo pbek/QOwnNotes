@@ -766,8 +766,6 @@ void SettingsDialog::loadShortcutSettings() {
                 ui->shortcutTreeWidget->addTopLevelItem(menuItem);
                 menuItem->setExpanded(true);
             }
-
-            delete(menuItem);
     }
 
     ui->shortcutTreeWidget->resizeColumnToContents(0);

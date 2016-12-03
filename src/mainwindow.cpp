@@ -3737,11 +3737,16 @@ void MainWindow::openSettingsDialog(int page) {
     if (_settingsDialog == Q_NULLPTR) {
         _settingsDialog = new SettingsDialog(page, this);
     } else {
+        _settingsDialog->readSettings();
         _settingsDialog->setCurrentPage(page);
     }
 
     // open the settings dialog
     _settingsDialog->exec();
+
+    // seems to safe a little leaking memory
+    delete(_settingsDialog);
+    _settingsDialog = Q_NULLPTR;
 
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call

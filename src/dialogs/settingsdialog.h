@@ -68,6 +68,8 @@ public:
 
     void setCurrentPage(int page);
 
+    void readSettings();
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -216,8 +218,6 @@ private:
     QSignalMapper *_keyWidgetSignalMapper;
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
-
-    void readSettings();
 
     void storeSettings();
 
