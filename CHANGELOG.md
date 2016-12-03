@@ -16,6 +16,8 @@
   and closing both of them when the first `*` was at the end of the line
   (for [Issue #386](https://github.com/pbek/QOwnNotes/issues/386))
 - markdown reference urls can now also be opened with <kbd>Ctrl</kbd> + `Click`
+- added more Japanese, Italian, Polish and Portuguese translation (thank
+  you MoeMoePig, Manu-sh, lucjan and mlimacarlos)
 
 ## 16.11.18
 - fixed highlighting issues with images and tables
