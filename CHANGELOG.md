@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.12.1
+- markdown reference links with text as reference id are now also highlighted
+  and can now also be opened with <kbd>Ctrl</kbd> + `Click`
+
 ## 16.12.0
 - you can now **import csv files** with the `Insert table` dialog
   (for [Issue #78](https://github.com/pbek/QOwnNotes/issues/78))
