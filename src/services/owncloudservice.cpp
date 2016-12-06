@@ -752,6 +752,7 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
         QByteArray data = concatenated.toLocal8Bit().toBase64();
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
+        // Nextcloud 11+ needs that
         r->setRawHeader("OCS-APIRequest", "true");
     }
 }
