@@ -3,9 +3,9 @@
 ## 16.12.1
 - markdown reference links with text as reference id are now also highlighted
   and can now also be opened with <kbd>Ctrl</kbd> + `Click`
-- fixed a problem with exporting font schemas to a file that already exists
-  (for [Issue #407](https://github.com/pbek/QOwnNotes/issues/407))
-- added the new dark theme *AnalyticalYellow* (thank you, @Omnicraft)
+- fixed a problem with exporting font color schemas to a file that already 
+  exists (for [Issue #407](https://github.com/pbek/QOwnNotes/issues/407))
+- added the new dark font color schema *AnalyticalYellow* (thank you, @Omnicraft)
   (for [Issue #407](https://github.com/pbek/QOwnNotes/issues/407))
 
 ## 16.12.0
