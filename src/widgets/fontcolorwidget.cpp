@@ -605,6 +605,9 @@ void FontColorWidget::on_exportSchemeButton_clicked() {
                     new QSettings(fileName, QSettings::IniFormat);
             QSettings *schemaSettings = Utils::Schema::getSchemaSettings();
 
+            // clear the settings in case the settings file already existed
+            exportSettings->clear();
+
             // store the schema key
             exportSettings->setValue("Export/SchemaKey", _currentSchemaKey);
 
