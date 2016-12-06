@@ -105,6 +105,10 @@ QtObject {
 
                 // create a new note
                 script.createNote(text);
+
+                // tag the current note
+                script.tagCurrentNote("todo");
+
                 break;
         }
 
