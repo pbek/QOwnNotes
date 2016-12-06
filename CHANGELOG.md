@@ -10,6 +10,8 @@
 - fixed a crash that could occur when closing the settings dialog immediately 
   after opening it, while the ownCloud connection test is still running 
   (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
+- fixed problems with note sharing, note versions and the note trash with 
+  Nextcloud 11 (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 
 ## 16.12.0
 - you can now **import csv files** with the `Insert table` dialog
