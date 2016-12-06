@@ -7,6 +7,9 @@
   exists (for [Issue #407](https://github.com/pbek/QOwnNotes/issues/407))
 - added the new dark font color schema *AnalyticalYellow* (thank you, @Omnicraft)
   (for [Issue #407](https://github.com/pbek/QOwnNotes/issues/407))
+- fixed a crash that could occur when closing the settings dialog immediately 
+  after opening it, while the ownCloud connection test is still running 
+  (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 
 ## 16.12.0
 - you can now **import csv files** with the `Insert table` dialog

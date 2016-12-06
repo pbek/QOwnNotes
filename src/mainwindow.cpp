@@ -3745,8 +3745,10 @@ void MainWindow::openSettingsDialog(int page) {
     _settingsDialog->exec();
 
     // seems to safe a little leaking memory
-    delete(_settingsDialog);
-    _settingsDialog = Q_NULLPTR;
+    // we must not null the dialog, this will crash if the ownCloud check
+    // tries to write to the labels and the dialog went away
+//    delete(_settingsDialog);
+//    _settingsDialog = Q_NULLPTR;
 
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
