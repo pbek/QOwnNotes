@@ -4124,11 +4124,19 @@ void MainWindow::on_noteTextEdit_textChanged() {
 }
 
 void MainWindow::on_action_Quit_triggered() {
+    // this will be done again in the destructor, but we want to make sure
+    // nothing is logged to the log widget that might already be destroyed
+    qApp->setProperty("loggingEnabled", false);
+
     storeSettings();
     QApplication::quit();
 }
 
 void MainWindow::quitApp() {
+    // this will be done again in the destructor, but we want to make sure
+    // nothing is logged to the log widget that might already be destroyed
+    qApp->setProperty("loggingEnabled", false);
+
     QApplication::quit();
 }
 
