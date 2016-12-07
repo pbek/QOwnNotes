@@ -4087,12 +4087,19 @@ void MainWindow::openTodoDialog(QString taskUid) {
 // *
 // *****************************************************************************
 
+/**
+ * Triggers if the text in the note text edit was modified
+ */
 void MainWindow::on_noteTextEdit_textChanged() {
     Note note = this->currentNote;
     note.updateNoteTextFromDisk();
-    QString noteTextFromDisk = note.getNoteText();
 
-    QString text = this->ui->noteTextEdit->toPlainText();
+    // we are transforming line feeds, because in some instances Windows
+    // managed to sneak some "special" line feeds in
+    QString noteTextFromDisk = Utils::Misc::transformLinefeeds(
+            note.getNoteText());
+    QString text = Utils::Misc::transformLinefeeds(
+            ui->noteTextEdit->toPlainText());
 
     if (text != noteTextFromDisk) {
         this->currentNote.storeNewText(text);

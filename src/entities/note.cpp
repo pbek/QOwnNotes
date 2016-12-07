@@ -835,8 +835,7 @@ bool Note::storeNoteTextFileToDisk() {
 
     // transform all types of newline to \n
     // (maybe the ownCloud-sync works better then)
-    QString text = this->noteText;
-    text.replace(QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"), "\n");
+    QString text = Utils::Misc::transformLinefeeds(this->noteText);
 
 //    diff_match_patch *diff = new diff_match_patch();
 //    QList<Diff> diffList = diff->diff_main( this->noteText, text );

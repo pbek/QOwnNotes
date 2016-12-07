@@ -499,6 +499,21 @@ QString Utils::Misc::appDataPath() {
     return path;
 }
 
+/**
+ * Retruns the log file path
+ *
+ * @return
+ */
 QString Utils::Misc::logFilePath() {
     return appDataPath() + "/" + qAppName().replace(" ", "-") + ".log";
+}
+
+/**
+ * Transforms all line feeds to \n
+ *
+ * @param text
+ * @return
+ */
+QString Utils::Misc::transformLinefeeds(QString text) {
+    return text.replace(QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"), "\n");
 }

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.12.2
+- fixed a problem with line feeds under Windows where notes will move up to 
+  the top in the note list even when not actively edited
+  (for [Issue #408](https://github.com/pbek/QOwnNotes/issues/408))
+
 ## 16.12.1
 - markdown reference links with text as reference id are now also highlighted
   and can now also be opened with <kbd>Ctrl</kbd> + `Click`
