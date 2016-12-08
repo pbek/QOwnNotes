@@ -49,7 +49,7 @@ QtObject {
                 // transform html breaks to \n and remove all other tags
                 description = description.replace(/<br.*?>/gim, "\n").replace(/<.+?>/gim, "");
                 
-                var urlRegExp = /<form name="COMMENTS_.+?".*? action="(.+?)\?.*?"/im;
+                var urlRegExp = /<form name="COMMENTS_.+?".*? action="(.+?)" method/im;
                 var urlMatch = urlRegExp.exec(html);
                 var url = urlMatch !== null ? urlMatch[1] : "";
                 
