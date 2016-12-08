@@ -1,6 +1,6 @@
 #! /bin/bash
 #
-# Runs all build scripts in Konsole tabs
+# Runs all build scripts in tmux panes
 #
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
@@ -10,6 +10,27 @@ $DIR/sourceforge/build-sourceforge-src.sh
 
 # lets wait a bit to make sure SourceForce has their files in place
 sleep 3
+
+cd $DIR
+
+# kill the previous tmux session
+tmux kill-session -t deploy-qownnotes
+
+# start a new deployment session with all deployment scripts from .tmuxinator.yml
+# you'll need https://github.com/tmuxinator/tmuxinator
+tmuxinator deploy-qownnotes
+
+exit
+
+
+
+
+
+#
+# this was the previous konsole tabs implementation
+#
+
+
 
 # List of commands to run, with parameters, in quotes, space-separated; do not use quotes inside (see bash arrays)
 COMMANDS=("$DIR/../ubuntu-launchpad/build-for-launchpad.sh" "$DIR/../obs/build-for-obs.sh" "$DIR/aur/build-for-aur.sh" "$DIR/gentoo/build-for-gentoo.sh" "$DIR/slackware/build-for-slackware.sh" "$DIR/snap/build-for-launchpad-snap.sh")
