@@ -161,6 +161,10 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
                     QNetworkRequest::FollowRedirectsAttribute, true);
 #endif
 
+            // try to ensure the network is accessible
+            _networkManager->setNetworkAccessible(
+                    QNetworkAccessManager::Accessible);
+
             QNetworkReply *reply = _networkManager->get(networkRequest);
 
             connect(reply, SIGNAL(downloadProgress(qint64, qint64)),

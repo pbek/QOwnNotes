@@ -412,6 +412,9 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     QUrl url(serverUrl);
     QNetworkRequest r(url);
 
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
     // direct server url request without auth header
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -577,6 +580,9 @@ void OwnCloudService::shareNote(Note note, ShareDialog *shareDialog) {
     r.setHeader(QNetworkRequest::ContentTypeHeader,
                 "application/x-www-form-urlencoded");
 
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
     QNetworkReply *reply = networkManager->post(r, postData);
     ignoreSslErrorsIfAllowed(reply);
 }
@@ -601,6 +607,9 @@ void OwnCloudService::removeNoteShare(Note note, ShareDialog *shareDialog) {
 
     QNetworkRequest r(url);
     addAuthHeader(&r);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->sendCustomRequest(r, "DELETE");
     ignoreSslErrorsIfAllowed(reply);
@@ -630,6 +639,9 @@ void OwnCloudService::fetchShares(QString path) {
 
     QNetworkRequest r(url);
     addAuthHeader(&r);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -679,6 +691,9 @@ void OwnCloudService::restoreTrashedNoteOnServer(QString fileName,
     QNetworkRequest r(url);
     addAuthHeader(&r);
 
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
 }
@@ -703,6 +718,9 @@ void OwnCloudService::loadVersions(QString fileName, MainWindow *mainWindow) {
 
     QNetworkRequest r(url);
     addAuthHeader(&r);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -743,6 +761,9 @@ void OwnCloudService::loadTrash(MainWindow *mainWindow) {
 
     QNetworkRequest r(url);
     addAuthHeader(&r);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
@@ -1605,6 +1626,9 @@ void OwnCloudService::settingsGetFileList(
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     QBuffer *buffer = new QBuffer(dataToSend);
+
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
     QNetworkReply *reply = networkManager->sendCustomRequest(
             r, "PROPFIND", buffer);

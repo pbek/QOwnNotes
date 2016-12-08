@@ -4,6 +4,8 @@
 - fixed a problem with saving tasks in Nextcloud 11.0 RC 1
   (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 - fixed two warnings about no matching signals when opening the todo dialog
+- trying to enable the network access again when the network has gone away to
+  fix occasional problems where the app remained without network
 
 ## 16.12.2
 - fixed a problem with line feeds under Windows where notes will move up to 
