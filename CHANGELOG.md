@@ -3,6 +3,7 @@
 ## 16.12.3
 - fixed a problem with saving tasks in Nextcloud 11.0 RC 1
   (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
+- fixed two warnings about no matching signals when opening the todo dialog
 
 ## 16.12.2
 - fixed a problem with line feeds under Windows where notes will move up to 

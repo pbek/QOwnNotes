@@ -85,7 +85,7 @@ void TodoDialog::setupUi() {
                      this, SLOT(on_saveButton_clicked()));
     shortcut = new QShortcut(QKeySequence("Ctrl+I"), this);
     QObject::connect(shortcut, SIGNAL(activated()),
-                     this, SLOT(on_saveAndInsertButton_clicked()));
+                     this, SLOT(onSaveAndInsertButtonClicked()));
     shortcut = new QShortcut(QKeySequence("Ctrl+R"), this);
     QObject::connect(shortcut, SIGNAL(activated()),
                      this, SLOT(on_removeButton_clicked()));
@@ -101,7 +101,7 @@ void TodoDialog::setupUi() {
     insertAction->setToolTip(tr("Save the current todo item and insert a link"
                                         " to it into the current note"));
     connect(insertAction, SIGNAL(triggered()),
-            this, SLOT(on_saveAndInsertButton_clicked()));
+            this, SLOT(onSaveAndInsertButtonClicked()));
 
     QAction *importAction = noteMenu->addAction(tr("Import as note"));
     importAction->setIcon(QIcon::fromTheme(
@@ -109,7 +109,7 @@ void TodoDialog::setupUi() {
             QIcon(":icons/breeze-qownnotes/16x16/document-import.svg")));
     importAction->setToolTip(tr("Import the current todo item as new note"));
     connect(importAction, SIGNAL(triggered()),
-            this, SLOT(on_importAsNoteButton_clicked()));
+            this, SLOT(onImportAsNoteButtonClicked()));
 
     ui->noteButton->setMenu(noteMenu);
 }
@@ -724,7 +724,7 @@ bool TodoDialog::eventFilter(QObject *obj, QEvent *event) {
  * Saves the current note and inserts a link to it in the current note of the
  * main window
  */
-void TodoDialog::on_saveAndInsertButton_clicked()
+void TodoDialog::onSaveAndInsertButtonClicked()
 {
     on_saveButton_clicked();
 
@@ -745,7 +745,7 @@ void TodoDialog::on_saveAndInsertButton_clicked()
 /**
  * Imports the current task as new note
  */
-void TodoDialog::on_importAsNoteButton_clicked() {
+void TodoDialog::onImportAsNoteButtonClicked() {
     QString name = ui->summaryEdit->text();
     QString text = ui->descriptionEdit->toPlainText();
 
