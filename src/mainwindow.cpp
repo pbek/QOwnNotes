@@ -1561,10 +1561,16 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
         this->noteDiffDialog->close();
     }
 
-    // if we should ignore all changes return here
     QSettings settings;
+
+    // check if we should ignore all changes
     if (settings.value("ignoreAllExternalModifications").toBool()) {
         return NoteDiffDialog::Ignore;
+    }
+
+    // check if we should accept all changes
+    if (settings.value("acceptAllExternalModifications").toBool()) {
+        return NoteDiffDialog::Reload;
     }
 
     QString text1 = this->ui->noteTextEdit->toPlainText();

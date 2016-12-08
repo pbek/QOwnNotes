@@ -29,6 +29,10 @@ public:
 private slots:
     void dialogButtonClicked( QAbstractButton *button );
 
+    void on_ignoreAllExternalChangesCheckBox_toggled(bool checked);
+
+    void on_acceptAllExternalChangesCheckBox_toggled(bool checked);
+
 private:
     Ui::NoteDiffDialog *ui;
     int actionRole;

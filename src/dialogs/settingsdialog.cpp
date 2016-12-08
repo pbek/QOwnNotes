@@ -335,6 +335,8 @@ void SettingsDialog::storeSettings() {
                       ui->notifyAllExternalModificationsCheckBox->isChecked());
     settings.setValue("ignoreAllExternalModifications",
                       ui->ignoreAllExternalModificationsCheckBox->isChecked());
+    settings.setValue("acceptAllExternalModifications",
+                      ui->acceptAllExternalModificationsCheckBox->isChecked());
     settings.setValue("ignoreAllExternalNoteFolderChanges",
                       ui->ignoreAllExternalNoteFolderChangesCheckBox
                               ->isChecked());
@@ -505,6 +507,8 @@ void SettingsDialog::readSettings() {
             settings.value("notifyAllExternalModifications").toBool());
     ui->ignoreAllExternalModificationsCheckBox->setChecked(
             settings.value("ignoreAllExternalModifications").toBool());
+    ui->acceptAllExternalModificationsCheckBox->setChecked(
+            settings.value("acceptAllExternalModifications").toBool());
     ui->ignoreAllExternalNoteFolderChangesCheckBox->setChecked(
             settings.value("ignoreAllExternalNoteFolderChanges").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
@@ -2130,6 +2134,25 @@ void SettingsDialog::on_ignoreAllExternalModificationsCheckBox_toggled(
         bool checked) {
     if (checked) {
         ui->notifyAllExternalModificationsCheckBox->setChecked(false);
+    }
+
+    // un-check and disable the acceptAllExternalModificationsCheckBox
+    const QSignalBlocker blocker(ui->acceptAllExternalModificationsCheckBox);
+    ui->acceptAllExternalModificationsCheckBox->setEnabled(!checked);
+
+    if (checked) {
+        ui->acceptAllExternalModificationsCheckBox->setChecked(false);
+    }
+}
+
+void SettingsDialog::on_acceptAllExternalModificationsCheckBox_toggled(
+        bool checked) {
+    // un-check and disable the ignoreAllExternalModificationsCheckBox
+    const QSignalBlocker blocker(ui->ignoreAllExternalModificationsCheckBox);
+    ui->ignoreAllExternalModificationsCheckBox->setEnabled(!checked);
+
+    if (checked) {
+        ui->ignoreAllExternalModificationsCheckBox->setChecked(false);
     }
 }
 

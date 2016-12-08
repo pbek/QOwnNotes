@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2618,7 +2618,7 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="6" column="0" colspan="2">
+                  <item row="7" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -2683,7 +2683,7 @@
                     </layout>
                    </widget>
                   </item>
-                  <item row="3" column="0">
+                  <item row="4" column="0">
                    <widget class="QSpinBox" name="noteSaveIntervalTime">
                     <property name="toolTip">
                      <string/>
@@ -2702,7 +2702,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="4" column="0" colspan="2">
+                  <item row="5" column="0" colspan="2">
                    <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                     <property name="toolTip">
                      <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
@@ -2715,7 +2715,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="3" column="1">
+                  <item row="4" column="1">
                    <widget class="QLabel" name="noteSaveIntervalTimeLabel">
                     <property name="toolTip">
                      <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
@@ -2752,7 +2752,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="2" column="0" colspan="2">
+                  <item row="3" column="0" colspan="2">
                    <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
                     <property name="toolTip">
                      <string>Do this at your own risk!</string>
@@ -2762,10 +2762,23 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="5" column="0" colspan="2">
+                  <item row="6" column="0" colspan="2">
                    <widget class="QCheckBox" name="imageScaleDownCheckBox">
                     <property name="text">
                      <string>Scale images down when inserted into notes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Accept all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
@@ -3678,8 +3691,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

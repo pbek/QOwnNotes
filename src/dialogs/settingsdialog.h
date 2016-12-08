@@ -200,6 +200,8 @@ private slots:
 
     void on_clearLogFileButton_clicked();
 
+    void on_acceptAllExternalModificationsCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

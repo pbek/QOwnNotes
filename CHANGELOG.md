@@ -6,6 +6,10 @@
 - fixed two warnings about no matching signals when opening the todo dialog
 - trying to enable the network access again when the network has gone away to
   fix occasional problems where the app remained without network
+- you can now choose `Always accept external changes in the future` when your
+  current note got modified externally and the diff dialog pops up
+  (for [Issue #405](https://github.com/pbek/QOwnNotes/issues/405))
+    - you can reset that checkbox in the general settings
 
 ## 16.12.2
 - fixed a problem with line feeds under Windows where notes will move up to 

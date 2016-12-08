@@ -71,6 +71,13 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
+      <widget class="QCheckBox" name="acceptAllExternalChangesCheckBox">
+       <property name="text">
+        <string>Always accept external changes in the future</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label">
        <property name="text">
         <string>Accept external changes?</string>

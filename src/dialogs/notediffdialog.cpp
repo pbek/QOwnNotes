@@ -53,9 +53,35 @@ void NoteDiffDialog::dialogButtonClicked(QAbstractButton *button) {
         settings.setValue("ignoreAllExternalModifications", true);
     }
 
+    // set the setting to accept all external changes
+    if (ui->acceptAllExternalChangesCheckBox->isChecked()) {
+        QSettings settings;
+        settings.setValue("acceptAllExternalModifications", true);
+    }
+
     this->close();
 }
 
 int NoteDiffDialog::resultActionRole() {
     return this->actionRole;
+}
+
+void NoteDiffDialog::on_ignoreAllExternalChangesCheckBox_toggled(bool checked) {
+    // un-check and disable the acceptAllExternalChangesCheckBox
+    const QSignalBlocker blocker(ui->acceptAllExternalChangesCheckBox);
+    ui->acceptAllExternalChangesCheckBox->setEnabled(!checked);
+
+    if (checked) {
+        ui->acceptAllExternalChangesCheckBox->setChecked(false);
+    }
+}
+
+void NoteDiffDialog::on_acceptAllExternalChangesCheckBox_toggled(bool checked) {
+    // un-check and disable the ignoreAllExternalChangesCheckBox
+    const QSignalBlocker blocker(ui->ignoreAllExternalChangesCheckBox);
+    ui->ignoreAllExternalChangesCheckBox->setEnabled(!checked);
+
+    if (checked) {
+        ui->ignoreAllExternalChangesCheckBox->setChecked(false);
+    }
 }
