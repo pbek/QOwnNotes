@@ -1,11 +1,15 @@
 # QOwnNotes Changelog
 
+## 16.12.3
+- fixed a problem with saving tasks in Nextcloud 11.0 RC 1
+  (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
+
 ## 16.12.2
 - fixed a problem with line feeds under Windows where notes will move up to 
   the top in the note list even when not actively edited
   (for [Issue #408](https://github.com/pbek/QOwnNotes/issues/408))
 - took some more safety measures to prevent crashes when the application is 
-  quit while log output was still sent to the the log panel
+  quitting while log output was still sent to the the log panel
   (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 
 ## 16.12.1
@@ -19,7 +23,8 @@
   after opening it, while the ownCloud connection test is still running 
   (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 - fixed problems with note sharing, note versions and the note trash with 
-  Nextcloud 11 (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
+  Nextcloud 11.0 beta 2
+  (for [Issue #406](https://github.com/pbek/QOwnNotes/issues/406))
 - added more Dutch, Hungarian, Russian, Spanish and Ukrainian translation 
   (thank you Fabijenna, frostyland, richarson and Borisvit)
 

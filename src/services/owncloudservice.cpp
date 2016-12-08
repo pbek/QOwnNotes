@@ -83,6 +83,8 @@ void OwnCloudService::readSettings() {
 
     int calendarBackend = settings.value(
             "ownCloud/todoCalendarBackend").toInt();
+    // it might be possible that we need to change from "caldav" to "dav" for
+    // Nextcloud 11
     QString calendarBackendString =
             calendarBackend == CalendarPlus ? "calendarplus" : "caldav";
     QString calendarPath =
@@ -752,6 +754,7 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
         QByteArray data = concatenated.toLocal8Bit().toBase64();
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
+
         // Nextcloud 11+ needs that
         r->setRawHeader("OCS-APIRequest", "true");
     }

@@ -6,7 +6,7 @@
 #include <QStringList>
 #include <QUrl>
 
-#define ICS_DATETIME_FORMAT "yyyyMMddThhmmssZ"
+#define ICS_DATETIME_FORMAT "yyyyMMddThhmmss"
 
 class CalendarItem
 {
