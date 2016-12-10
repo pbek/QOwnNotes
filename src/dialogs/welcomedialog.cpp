@@ -109,7 +109,8 @@ void WelcomeDialog::storeNoteFolderSettings() {
 
     QSettings settings;
 
-    // make the path relative to the portable data path if we are in portable mode
+    // make the path relative to the portable data path if we are in
+    // portable mode
     settings.setValue("notesPath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               _notesPath));

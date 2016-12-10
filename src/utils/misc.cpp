@@ -356,7 +356,7 @@ QString Utils::Misc::prependPortableDataPathIfNeeded(QString path) {
 
         // check if the path already starts with the portable data path
         if (!path.startsWith(portableDataPath)) {
-            path = portableDataPath + QDir::separator() + path;
+            path = portableDataPath + "/" + path;
         }
     }
 

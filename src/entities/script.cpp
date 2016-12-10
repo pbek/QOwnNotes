@@ -5,6 +5,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QDir>
+#include <utils/misc.h>
 
 
 Script::Script() {
@@ -62,7 +63,13 @@ bool Script::create(QString name, QString scriptPath) {
     query.prepare("INSERT INTO script ( name, script_path ) "
                           "VALUES ( :name, :scriptPath )");
     query.bindValue(":name", name);
-    query.bindValue(":scriptPath", scriptPath);
+
+    // make the path relative to the portable data path if we are in
+    // portable mode
+    query.bindValue(":scriptPath",
+                    Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                            scriptPath));
+
     return query.exec();
 }
 
@@ -143,9 +150,12 @@ Script Script::scriptFromQuery(QSqlQuery query) {
 bool Script::fillFromQuery(QSqlQuery query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
-    this->scriptPath = query.value("script_path").toString();
     this->priority = query.value("priority").toInt();
     this->enabled = query.value("enabled").toBool();
+
+    // prepend the portable data path if we are in portable mode
+    this->scriptPath = Utils::Misc::prependPortableDataPathIfNeeded(
+            query.value("script_path").toString());
 
     return true;
 }
@@ -192,9 +202,14 @@ bool Script::store() {
     }
 
     query.bindValue(":name", this->name);
-    query.bindValue(":scriptPath", this->scriptPath);
     query.bindValue(":priority", this->priority);
     query.bindValue(":enabled", this->enabled);
+
+    // make the path relative to the portable data path if we are in
+    // portable mode
+    query.bindValue(":scriptPath",
+                    Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                            this->scriptPath));
 
     if (!query.exec()) {
         // on error

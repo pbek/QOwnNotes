@@ -7,6 +7,10 @@
 - the `version 0` problem at fresh installations of QOwnNotesAPI from the store 
   was now fixed in Nextcloud 11
   (for [Issue #262](https://github.com/pbek/QOwnNotes/issues/262))
+- scripts now also work with a path relative to the data directory in 
+  portable mode (for [Issue #412](https://github.com/pbek/QOwnNotes/issues/412))
+- if you select a new script path for a script in the script settings the 
+  directory of your current script will be selected
 
 ## 16.12.3
 - fixed a problem with saving tasks in Nextcloud 11.0 RC 1

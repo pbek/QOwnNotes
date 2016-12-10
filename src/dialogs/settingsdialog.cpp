@@ -2026,9 +2026,17 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
  * Allows to choose the script path
  */
 void SettingsDialog::on_scriptPathButton_clicked() {
-    QString path = QFileDialog::getOpenFileName(
+    QString path = ui->scriptPathLineEdit->text();
+    QString dirPath = path.isEmpty() ? QDir::homePath() : path;
+
+    // get the path of the script if a script was set
+//    if (!path.isEmpty()) {
+//        dirPath = QFileInfo(path).dir().path();
+//    }
+
+    path = QFileDialog::getOpenFileName(
             this, tr("Please select your QML file"),
-            QDir::homePath(), tr("QML Files (*.qml)"));
+            dirPath, tr("QML Files (*.qml)"));
 
     QFile file(path);
 
