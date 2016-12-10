@@ -12,6 +12,7 @@
 #include <entities/notefolder.h>
 #include <entities/script.h>
 #include <services/owncloudservice.h>
+#include <QCheckBox>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -151,10 +152,6 @@ private slots:
 
     void on_scriptReloadEngineButton_clicked();
 
-    void on_notifyAllExternalModificationsCheckBox_toggled(bool checked);
-
-    void on_ignoreAllExternalModificationsCheckBox_toggled(bool checked);
-
     void on_addCustomNoteFileExtensionButton_clicked();
 
     void on_removeCustomNoteFileExtensionButton_clicked();
@@ -200,7 +197,9 @@ private slots:
 
     void on_clearLogFileButton_clicked();
 
-    void on_acceptAllExternalModificationsCheckBox_toggled(bool checked);
+    void noteNotificationButtonGroupPressed(QAbstractButton *button);
+
+    void noteNotificationNoneCheckBoxCheck();
 
 private:
 
@@ -220,6 +219,8 @@ private:
     QSignalMapper *_keyWidgetSignalMapper;
     static const int _defaultMarkdownHighlightingInterval = 200;
     QSplitter *_mainSplitter;
+    QButtonGroup *_noteNotificationButtonGroup;
+    QCheckBox *_noteNotificationNoneCheckBox;
 
     void storeSettings();
 

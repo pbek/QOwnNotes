@@ -5,11 +5,24 @@
 #include <QAbstractButton>
 #include <QDebug>
 #include <QSettings>
+#include <QTimer>
 
 NoteDiffDialog::NoteDiffDialog(QWidget *parent, QString html) :
         MasterDialog(parent),
         ui(new Ui::NoteDiffDialog) {
     ui->setupUi(this);
+
+    _notificationButtonGroup = new QButtonGroup(this);
+    _notificationButtonGroup->addButton(ui->ignoreAllExternalChangesCheckBox);
+    _notificationButtonGroup->addButton(ui->acceptAllExternalChangesCheckBox);
+
+    // create a hidden checkbox so we can un-check above checkboxes
+    _notificationNoneCheckBox = new QCheckBox(this);
+    _notificationNoneCheckBox->setHidden(true);
+    _notificationButtonGroup->addButton(_notificationNoneCheckBox);
+    connect(_notificationButtonGroup,
+            SIGNAL(buttonPressed(QAbstractButton *)),
+            this, SLOT(notificationButtonGroupPressed(QAbstractButton *)));
 
     this->ui->textEdit->setHtml(html);
 
@@ -44,6 +57,27 @@ NoteDiffDialog::~NoteDiffDialog() {
     delete ui;
 }
 
+/**
+ * Check the _notificationNoneCheckBox when the checkboxes should all be
+ * unchecked
+ *
+ * @param button
+ */
+void NoteDiffDialog::notificationButtonGroupPressed(
+        QAbstractButton *button) {
+    if (button->isChecked()) {
+        QTimer::singleShot(100, this,
+                           SLOT(notificationNoneCheckBoxCheck()));
+    }
+}
+
+/**
+ * Check the _notificationNoneCheckBox
+ */
+void NoteDiffDialog::notificationNoneCheckBoxCheck() {
+    _notificationNoneCheckBox->setChecked(true);
+}
+
 void NoteDiffDialog::dialogButtonClicked(QAbstractButton *button) {
     this->actionRole = button->property("ActionRole").toInt();
 
@@ -64,24 +98,4 @@ void NoteDiffDialog::dialogButtonClicked(QAbstractButton *button) {
 
 int NoteDiffDialog::resultActionRole() {
     return this->actionRole;
-}
-
-void NoteDiffDialog::on_ignoreAllExternalChangesCheckBox_toggled(bool checked) {
-    // un-check and disable the acceptAllExternalChangesCheckBox
-    const QSignalBlocker blocker(ui->acceptAllExternalChangesCheckBox);
-    ui->acceptAllExternalChangesCheckBox->setEnabled(!checked);
-
-    if (checked) {
-        ui->acceptAllExternalChangesCheckBox->setChecked(false);
-    }
-}
-
-void NoteDiffDialog::on_acceptAllExternalChangesCheckBox_toggled(bool checked) {
-    // un-check and disable the ignoreAllExternalChangesCheckBox
-    const QSignalBlocker blocker(ui->ignoreAllExternalChangesCheckBox);
-    ui->ignoreAllExternalChangesCheckBox->setEnabled(!checked);
-
-    if (checked) {
-        ui->ignoreAllExternalChangesCheckBox->setChecked(false);
-    }
 }

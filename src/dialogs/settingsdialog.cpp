@@ -47,6 +47,22 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
     ui->calDavCalendarGroupBox->setVisible(false);
 
+    _noteNotificationButtonGroup = new QButtonGroup(this);
+    _noteNotificationButtonGroup->addButton(
+            ui->notifyAllExternalModificationsCheckBox);
+    _noteNotificationButtonGroup->addButton(
+            ui->ignoreAllExternalModificationsCheckBox);
+    _noteNotificationButtonGroup->addButton(
+            ui->acceptAllExternalModificationsCheckBox);
+
+    // create a hidden checkbox so we can un-check above checkboxes
+    _noteNotificationNoneCheckBox = new QCheckBox(this);
+    _noteNotificationNoneCheckBox->setHidden(true);
+    _noteNotificationButtonGroup->addButton(_noteNotificationNoneCheckBox);
+    connect(_noteNotificationButtonGroup,
+            SIGNAL(buttonPressed(QAbstractButton *)),
+            this, SLOT(noteNotificationButtonGroupPressed(QAbstractButton *)));
+
     for (int i = 0; i <= 8; i++) {
         setOKLabelData(i, "unknown", SettingsDialog::Unknown);
     }
@@ -124,6 +140,27 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // show the log file path
     ui->logFileLabel->setText(QDir::toNativeSeparators(
             Utils::Misc::logFilePath()));
+}
+
+/**
+ * Check the _noteNotificationNoneCheckBox when the checkboxes should all be
+ * unchecked
+ *
+ * @param button
+ */
+void SettingsDialog::noteNotificationButtonGroupPressed(
+        QAbstractButton *button) {
+    if (button->isChecked()) {
+        QTimer::singleShot(100, this,
+                           SLOT(noteNotificationNoneCheckBoxCheck()));
+    }
+}
+
+/**
+ * Check the _noteNotificationNoneCheckBox
+ */
+void SettingsDialog::noteNotificationNoneCheckBoxCheck() {
+    _noteNotificationNoneCheckBox->setChecked(true);
 }
 
 /**
@@ -2109,51 +2146,6 @@ void SettingsDialog::on_scriptValidationButton_clicked() {
 void SettingsDialog::on_scriptReloadEngineButton_clicked() {
     // store the enabled states and reload the scripting engine
     storeScriptListEnabledState();
-}
-
-/**
- * Turns off "ignoring all external modifications" if "notify all external
- * modifications" is checked
- *
- * @param checked
- */
-void SettingsDialog::on_notifyAllExternalModificationsCheckBox_toggled(
-        bool checked) {
-    if (checked) {
-        ui->ignoreAllExternalModificationsCheckBox->setChecked(false);
-    }
-}
-
-/**
- * Turns off "notify all external modifications" if "ignoring all external
- * modifications" is checked
- *
- * @param checked
- */
-void SettingsDialog::on_ignoreAllExternalModificationsCheckBox_toggled(
-        bool checked) {
-    if (checked) {
-        ui->notifyAllExternalModificationsCheckBox->setChecked(false);
-    }
-
-    // un-check and disable the acceptAllExternalModificationsCheckBox
-    const QSignalBlocker blocker(ui->acceptAllExternalModificationsCheckBox);
-    ui->acceptAllExternalModificationsCheckBox->setEnabled(!checked);
-
-    if (checked) {
-        ui->acceptAllExternalModificationsCheckBox->setChecked(false);
-    }
-}
-
-void SettingsDialog::on_acceptAllExternalModificationsCheckBox_toggled(
-        bool checked) {
-    // un-check and disable the ignoreAllExternalModificationsCheckBox
-    const QSignalBlocker blocker(ui->ignoreAllExternalModificationsCheckBox);
-    ui->ignoreAllExternalModificationsCheckBox->setEnabled(!checked);
-
-    if (checked) {
-        ui->ignoreAllExternalModificationsCheckBox->setChecked(false);
-    }
 }
 
 /**

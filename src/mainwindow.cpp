@@ -1561,6 +1561,9 @@ int MainWindow::openNoteDiffDialog(Note changedNote) {
         this->noteDiffDialog->close();
     }
 
+    qDebug() << __func__ << " - 'changedNote': " << changedNote;
+
+
     QSettings settings;
 
     // check if we should ignore all changes
