@@ -15,8 +15,9 @@
       was set yet
 - the **path to an external editor** will now also be stored relative to the 
   data directory in **portable mode**
-    - if you select a path and no path was yet set now the data directory 
-      will be selected
+    - if you select a path and no path was set yet the data directory will
+      now be selected
+- added more Dutch and Hungarian translation (thank you Fabijenna)
 
 ## 16.12.3
 - fixed a problem with saving tasks in Nextcloud 11.0 RC 1
