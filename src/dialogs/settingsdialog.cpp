@@ -197,13 +197,10 @@ void SettingsDialog::initPortableModePage() {
                        "inside a <code>Data</code> folder at the binary's "
                        "location") + "</li><li>" +
             tr("the settings will be stored in an ini file") + "</li><li>" +
-            tr("the note folders will be automatically stored relative to the "
+            tr("the note folders, script paths and path to an external editor "
+                       "will be automatically stored relative to the "
                        "<code>Data</code> folder so that the correct note "
-                       "folders will be loaded regardless where your QOwnNotes "
-                       "installation is currently located") + "</li><li>" +
-            tr("the script paths will be automatically stored relative "
-                       "to the <code>Data</code> folder so that the "
-                       "scripts will be loaded from the correct path "
+                       "folders, scripts and external editor will be loaded "
                        "regardless where your QOwnNotes installation is "
                        "currently located") + "</li></ul>";
 
@@ -389,8 +386,13 @@ void SettingsDialog::storeSettings() {
     settings.setValue("defaultNoteFileExtension",
                       getSelectedListWidgetValue(
                               ui->defaultNoteFileExtensionListWidget));
+
+    // make the path relative to the portable data path if we are in
+    // portable mode
     settings.setValue("externalEditorPath",
-                      ui->externalEditorPathLineEdit->text());
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                              ui->externalEditorPathLineEdit->text()));
+
     settings.setValue("itemHeight", ui->itemHeightSpinBox->value());
     settings.setValue("MainWindow/mainToolBar.iconSize",
                       ui->toolbarIconSizeSpinBox->value());
@@ -541,8 +543,12 @@ void SettingsDialog::readSettings() {
     ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
     ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString()));
+
+    // prepend the portable data path if we are in portable mode
     ui->externalEditorPathLineEdit->setText(
-            settings.value("externalEditorPath").toString());
+            Utils::Misc::prependPortableDataPathIfNeeded(
+                    settings.value("externalEditorPath").toString(), true));
+
     ui->disableAutomaticUpdateDialogCheckBox->setChecked(
             settings.value("disableAutomaticUpdateDialog").toBool());
     ui->notifyAllExternalModificationsCheckBox->setChecked(
@@ -1541,13 +1547,21 @@ void SettingsDialog::on_noteTextViewCodeResetButton_clicked() {
  * Sets a path to an external editor
  */
 void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
+    QString path = ui->externalEditorPathLineEdit->text();
+    QString dirPath = path.isEmpty() ? QDir::homePath() : path;
+
+    // in portable mode the data path will be opened if path was empty
+    if (path.isEmpty() && Utils::Misc::isInPortableMode()) {
+        dirPath = Utils::Misc::portableDataPath();
+    }
+
     QStringList mimeTypeFilters;
     mimeTypeFilters << "application/x-executable" << "application/octet-stream";
 
     QFileDialog dialog(this);
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(QDir::homePath());
+    dialog.setDirectory(dirPath);
     dialog.setMimeTypeFilters(mimeTypeFilters);
     dialog.setWindowTitle(tr("Select editor application"));
     int ret = dialog.exec();
@@ -2536,7 +2550,7 @@ void SettingsDialog::on_resetToolbarPushButton_clicked() {
 
 /**
  * Toggles the visibility of the image scaling frame
- * 
+ *
  * @param checked
  */
 void SettingsDialog::on_imageScaleDownCheckBox_toggled(bool checked) {
@@ -2645,7 +2659,7 @@ void SettingsDialog::addToSearchIndexList(QWidget *widget,
 
 /**
  * Finds the settings page index of a widget
- * 
+ *
  * @param widget
  * @return
  */

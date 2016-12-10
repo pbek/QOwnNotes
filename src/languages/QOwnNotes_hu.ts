@@ -2853,8 +2853,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2991"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1385"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1394"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1391"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1400"/>
         <source>Database</source>
         <translation>Adatbázis</translation>
     </message>
@@ -2875,7 +2875,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="2807"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1458"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1464"/>
         <source>Clear app data and exit</source>
         <translation>App adatokat töröl és kilép</translation>
     </message>
@@ -3400,54 +3400,59 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>&amp;Hibakeresési adatok mentése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="229"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="200"/>
+        <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.cpp" line="226"/>
         <source>hostname of proxy server</source>
         <translation>hostname proxy szerver</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="230"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="227"/>
         <source>username for proxy server</source>
         <translation>felhasználónév a proxykiszolgálóhoz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="231"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="228"/>
         <source>password for proxy server</source>
         <translation>jelszó a proxykiszolgálóhoz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="233"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="230"/>
         <source>HTTP(S) proxy</source>
         <translation>Proxy HTTP (S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="234"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="231"/>
         <source>SOCKS5 proxy</source>
         <translation>Socks5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="793"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="799"/>
         <source>Undefined key</source>
         <translation>Nem definiált kulcs</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="798"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="804"/>
         <source>Assign a new key</source>
         <translation>Határozz meg egy új kulcsot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="799"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="805"/>
         <source>Reset to default key</source>
         <translation>Alapértelmezett kulcs visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1127"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1133"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
         <translation>Sikeresen létrejött a kapcsolat! Kiszolgáló verziószáma: %1 QOwnNotesAPI verzió: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1138"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1144"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3457,149 +3462,149 @@ Connection error message: </source>
 Kapcsolathiba üzenet: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1407"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1413"/>
         <source>Markdown files</source>
         <translation>Markdown-fájlok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1438"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1444"/>
         <source>Disable usage tracking</source>
         <translation>Tiltsa le a használatkövetést</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1439"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1445"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Névtelen használat adatok segítik eldönteni, hogy a QOwnNotes melyik részét szükséges fejleszteni. Azon kívül megtaláljuk és megszereljük az esetleges hibákat. &lt;/br&gt; Kérjük, hogy csak akkor kapcsold ki, ha tényleg nem bírsz vele együttélni.&lt;br /&gt;&lt;br /&gt;Valóban letiltod a használatkövetést?&lt;br /&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1637"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1651"/>
         <source>new folder</source>
         <translation>új mappa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1674"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1688"/>
         <source>Remove note folder</source>
         <translation>Jegyzet mappa eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1675"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1689"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Eltávolítja a jelenlegi jegyzet mappát &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1677"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2009"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1691"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
         <source>&amp;Remove</source>
         <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1750"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1764"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1787"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1801"/>
         <source>Loading folders from server</source>
         <translation>Mappák betöltése a kiszolgálóról</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1801"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1815"/>
         <source>No more folders were found in the current folder</source>
         <translation>Nincs több mappa az aktuális mappában</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1875"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1889"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>&quot;%1&quot; mappa betöltése a kiszolgálóról</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1959"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1973"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
         <translation>Ha a QOwnNotes egy bizonyos funkcióját el szeretné érni, nyisson meg egy témát &lt;a href=&quot;%1&quot;&gt; a QOwnNotes kérdés oldalon &lt;/a&gt;. Kattintson a &lt;a href=&quot;%2&quot;&gt; QML példák&lt;/a&gt; gombra, hogy megnyissa a parancsfájlokat.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1971"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1985"/>
         <source>new script</source>
         <translation>új parancsfájl</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2006"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
         <source>Remove script</source>
         <translation>Parancsfájl eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2007"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2021"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; parancsot?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2048"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2062"/>
         <source>Please select your QML file</source>
         <translation>Kérjük, válassza ki a QML fájlt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2049"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2063"/>
         <source>QML Files (*.qml)</source>
         <translation>QML fájlok (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2110"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2124"/>
         <source>Your script seems to be valid</source>
         <translation>A parancsfájl érvényesnek bizonyosul</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2111"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2125"/>
         <source>There were script errors:
 %1</source>
         <translation>Parancsfájl-hiba: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2176"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2190"/>
         <source>File extension</source>
         <translation>Fájlkiterjesztés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2177"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2191"/>
         <source>Enter your custom file extension:</source>
         <translation>Adja meg az egyéni fájl kiterjesztést:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2441"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2455"/>
         <source>Calendar cache emptied</source>
         <translation>Naptár-gyorsítótár kiürítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2442"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2456"/>
         <source>Your calendar cache was emptied.</source>
         <translation>A naptár gyorsítótár törlődött.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2519"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2533"/>
         <source>Reset toolbars and exit</source>
         <translation>Az eszköztárakat visszaállítom alaphelyzetbe és kilépek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2520"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2534"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Biztosan alaphelyzetbe teszed az eszköztárakat? Az alkalmazás zárva lesz a folyamat alatt, újraindítás után visszaáll az alapértelmezett eszköztár.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2524"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2538"/>
         <source>Reset and &amp;exit</source>
         <translation>Alaphelyzetbe állít és kilép</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2686"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2700"/>
         <source>Log file cleared</source>
         <translation>Log fájl törölve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2687"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2701"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>A naplófájl &lt;strong&gt;%1&lt;/strong&gt; törlésre került.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1395"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1401"/>
         <source>The Database was reinitialized.</source>
         <translation>Az adatbázis újrainicializálódott.</translation>
     </message>
@@ -3634,63 +3639,57 @@ Kapcsolathiba üzenet: </translation>
         <translation>a beállításokat a rendszer ini-fájlként tárolja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="200"/>
         <source>the note folders will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders will be loaded regardless where your QOwnNotes installation is currently located</source>
-        <translation>a jegyzetmappák automatikusan kerülnek tárolásra az &lt;code&gt;adatok&lt;/code&gt; mappához viszonyítva úgy, hogy a megfelelő jegyzet mappákat töltjük függetlenül attól, hogy a QOwnNotes telepítése jelenleg hol található</translation>
+        <translation type="vanished">a jegyzetmappák automatikusan kerülnek tárolásra az &lt;code&gt;adatok&lt;/code&gt; mappához viszonyítva úgy, hogy a megfelelő jegyzet mappákat töltjük függetlenül attól, hogy a QOwnNotes telepítése jelenleg hol található</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="204"/>
-        <source>the script paths will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the scripts will be loaded from the correct path regardless where your QOwnNotes installation is currently located</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="211"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="208"/>
         <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
         <translation>Ez lesz aktivált, ha QOwnNotes-t a &lt;code&gt;--hordozható&lt;/code&gt; paraméterrel használja.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1408"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1414"/>
         <source>Save debug information</source>
         <translation>Hibakeresési adatok mentése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1459"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1465"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
         <translation>Valóban szeretné az összes beállítás törlését, az adatbázis eltávolítását, és kilép a QOwnNotes-ból? A jegyzetek érintetlenek maradnak!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
         <source>Clear and &amp;exit</source>
         <translation>Törlés és kilépés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1389"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1677"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2009"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2524"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1395"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1468"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1691"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2023"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2538"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="216"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="213"/>
         <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
         <translation>Találsz egy &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;-ot a elérési útban, hogy a QOwnNotes-ot indíthasd hordozható módban.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1386"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1392"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Igazán akar a helyi adatbázisból törölni? Ez eltávolítja a beállított jegyzeteket is: a mappákat és a gyorsítótárazott todo elemeket!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1389"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1395"/>
         <source>Clear &amp;database</source>
         <translation>Töröli az &amp;adatbázist</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1552"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1566"/>
         <source>Select editor application</source>
         <translation>Válassza ki a szerkesztő alkalmazást</translation>
     </message>

@@ -28,9 +28,7 @@ int Script::getId() {
  * @return
  */
 QString Script::getScriptPath() {
-    return Utils::Misc::isInPortableMode() &&
-            (this->scriptPath == Utils::Misc::appendIfDoesNotEndWith(
-            Utils::Misc::portableDataPath(), "/")) ? "" : this->scriptPath;
+    return this->scriptPath;
 }
 
 QString Script::getName() {
@@ -164,7 +162,7 @@ bool Script::fillFromQuery(QSqlQuery query) {
 
     // prepend the portable data path if we are in portable mode
     this->scriptPath = Utils::Misc::prependPortableDataPathIfNeeded(
-            query.value("script_path").toString());
+            query.value("script_path").toString(), true);
 
     return true;
 }

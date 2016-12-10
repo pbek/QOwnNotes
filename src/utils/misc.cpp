@@ -350,7 +350,12 @@ bool Utils::Misc::isInPortableMode() {
  * @param path
  * @return
  */
-QString Utils::Misc::prependPortableDataPathIfNeeded(QString path) {
+QString Utils::Misc::prependPortableDataPathIfNeeded(QString path,
+                                                     bool ifNotEmptyOnly) {
+    if (ifNotEmptyOnly && path.isEmpty()) {
+        return "";
+    }
+
     if (isInPortableMode()) {
         QString portableDataPath(Utils::Misc::portableDataPath());
 

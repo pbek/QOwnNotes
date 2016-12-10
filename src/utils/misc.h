@@ -35,7 +35,8 @@ namespace Utils {
         void waitMsecs(int msecs);
         QString portableDataPath();
         bool isInPortableMode();
-        QString prependPortableDataPathIfNeeded(QString path);
+        QString prependPortableDataPathIfNeeded(QString path,
+                                                bool ifNotEmptyOnly = false);
         QString makePathRelativeToPortableDataPathIfNeeded(QString path);
         QString htmlToMarkdown(QString text);
         QByteArray startSynchronousProcess(
