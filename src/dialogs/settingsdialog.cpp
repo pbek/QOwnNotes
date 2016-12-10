@@ -200,7 +200,12 @@ void SettingsDialog::initPortableModePage() {
             tr("the note folders will be automatically stored relative to the "
                        "<code>Data</code> folder so that the correct note "
                        "folders will be loaded regardless where your QOwnNotes "
-                       "installation is currently located") + "</li></ul>";
+                       "installation is currently located") + "</li><li>" +
+            tr("the script paths will be automatically stored relative "
+                       "to the <code>Data</code> folder so that the "
+                       "scripts will be loaded from the correct path "
+                       "regardless where your QOwnNotes installation is "
+                       "currently located") + "</li></ul>";
 
     if (!isInPortableMode) {
         text += "<p>" + tr("It will be activated if you run QOwnNotes with "
@@ -2033,6 +2038,11 @@ void SettingsDialog::on_scriptPathButton_clicked() {
 //    if (!path.isEmpty()) {
 //        dirPath = QFileInfo(path).dir().path();
 //    }
+
+    // in portable mode the data path will be opened if path was empty
+    if (path.isEmpty() && Utils::Misc::isInPortableMode()) {
+        dirPath = Utils::Misc::portableDataPath();
+    }
 
     path = QFileDialog::getOpenFileName(
             this, tr("Please select your QML file"),

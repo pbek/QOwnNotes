@@ -20,8 +20,17 @@ int Script::getId() {
     return this->id;
 }
 
+/**
+ * Returns the script path
+ * In portable mode the path will only be returned if it isn't just the data
+ * path from the prepend function
+ *
+ * @return
+ */
 QString Script::getScriptPath() {
-    return this->scriptPath;
+    return Utils::Misc::isInPortableMode() &&
+            (this->scriptPath == Utils::Misc::appendIfDoesNotEndWith(
+            Utils::Misc::portableDataPath(), "/")) ? "" : this->scriptPath;
 }
 
 QString Script::getName() {
