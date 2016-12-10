@@ -4,6 +4,9 @@
 - all three settings about external modifications of the current note in the 
   general settings are now mutual exclusive
   (for [Issue #405](https://github.com/pbek/QOwnNotes/issues/405))
+- the `version 0` problem at fresh installations of QOwnNotesAPI from the store 
+  was now fixed in Nextcloud 11
+  (for [Issue #262](https://github.com/pbek/QOwnNotes/issues/262))
 
 ## 16.12.3
 - fixed a problem with saving tasks in Nextcloud 11.0 RC 1
