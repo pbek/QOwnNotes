@@ -2096,7 +2096,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation type="unfinished">Always accept external changes in the future</translation>
+      <translation>W przyszłości zawsze akceptuj zewnętrzne zmiany</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
@@ -3168,12 +3168,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2775"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+      <translation>Zaznacz, jeżeli chcesz akceptować wszystkie zewnętrzne zmiany podczas edycji bieżącej notatki.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2781"/>
       <source>Accept all external modifications of the current note</source>
-      <translation type="unfinished">Accept all external modifications of the current note</translation>
+      <translation>Akceptuj wszystkie zewnętrzne zmiany w bieżącej notatce</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2997"/>
@@ -3687,7 +3687,7 @@ Wiadomość błędu: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="200"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
+      <translation>Foldery notatek, ścieżki skryptów i ścieżka do zewnętrznego edytora będą automatycznie tworzone jako podfoldery folderu &lt;code&gt;Data&lt;/code&gt; aby zapewnić poprawne ich ładowanie niezależnie od tego skąd uruchamiasz QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="208"/>

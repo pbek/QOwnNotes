@@ -3660,7 +3660,7 @@ Verbinding foutbericht: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="200"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
+      <translation>de nota folders, de paden en het pad worden automatisch naar een externe editor opgeslagen ten opzichte van de map &lt;code&gt;Data&lt;/code&gt; zodat de juiste notaomslagen, scripts en externe editor zal worden geladen ongeacht waar uw QOwnNotes installatie zich bevindt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="208"/>

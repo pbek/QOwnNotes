@@ -3,6 +3,8 @@
 ## 16.12.5
 - updated the OpenSSL DLLs to 1.0.2j to prevent problems on some Windows
  installations (for [Issue #413](https://github.com/pbek/QOwnNotes/issues/413))
+- added more Dutch, Hungarian, Italian, Polish, Arabic and Ukrainian translation 
+  (thank you Fabijenna, mlocati, lucjan, yousufinternet and Borisvit)
 
 ## 16.12.4
 - all three settings about external modifications of the current note in the 

@@ -3659,7 +3659,7 @@ Kapcsolathiba üzenet: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="200"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
+      <translation>a jegyzet mappák, a parancsfájl elérési és a külső szerkesztő utak automatikusan tárolódnak a &lt;code&gt;adatok&lt;/code&gt; mappához viszonyítva úgy, hogy a jegyzet mappák, a szkriptek és a külső szerkesztőt függetlenül attól töltjük, hogy a QOwnNotes telepítése jelenleg hol található</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="208"/>
