@@ -185,6 +185,8 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Block quote"), MarkdownHighlighter::BlockQuote);
     addTextTreeWidgetItem(tr("Table"), MarkdownHighlighter::Table);
     addTextTreeWidgetItem(tr("(HTML) Comment"), MarkdownHighlighter::Comment);
+    addTextTreeWidgetItem(tr("Masked syntax"),
+                          MarkdownHighlighter::MaskedSyntax);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {

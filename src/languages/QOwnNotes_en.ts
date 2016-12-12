@@ -100,7 +100,7 @@
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="591"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="593"/>
         <source>Export schema</source>
         <translation type="unfinished"></translation>
     </message>
@@ -121,13 +121,13 @@
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.ui" line="158"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="418"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="420"/>
         <source>Copy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="636"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="638"/>
         <source>Import schema</source>
         <translation type="unfinished"></translation>
     </message>
@@ -262,43 +262,48 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="188"/>
+        <source>Masked syntax</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
         <source>This item will be used to preset colors for the other items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="415"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="417"/>
         <source>Copy color schema</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="416"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="418"/>
         <source>Color schema name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="540"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
         <source>Remove schema</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="541"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="543"/>
         <source>Remove current schema? This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
         <source>Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
         <source>Cancel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="590"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="635"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="592"/>
+        <location filename="../widgets/fontcolorwidget.cpp" line="637"/>
         <source>INI files</source>
         <translation type="unfinished"></translation>
     </message>

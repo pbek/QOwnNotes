@@ -51,6 +51,7 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::BlockQuote);
     setFormatStyle(MarkdownHighlighter::HighlighterState::CodeBlock);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Comment);
+    setFormatStyle(MarkdownHighlighter::HighlighterState::MaskedSyntax);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Image);
     setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
