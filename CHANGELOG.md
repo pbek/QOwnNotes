@@ -1,7 +1,11 @@
 # QOwnNotes Changelog
 
+## 16.12.7
+- headlines now have a small top and bottom margin in the edit panel
+
 ## 16.12.6
-- a lot of markdown syntax is now masked in gray in the markdown highlighting
+- a lot of **markdown syntax** is now **masked in gray** in the markdown 
+  highlighting
     - there is a new highlighting state `Masked syntax` in the Editor fonts &
       color settings to choose a styling for masked markdown syntax
 - the font size of the headlines were increased in the `Light` and `Dark` color 
