@@ -519,6 +519,18 @@ QString Utils::Misc::logFilePath() {
  * @param text
  * @return
  */
-QString Utils::Misc::transformLinefeeds(QString text) {
+QString Utils::Misc::transformLineFeeds(QString text) {
     return text.replace(QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"), "\n");
+}
+
+/**
+ * Replaces the text "ownCloud" by "ownCloud / Nexcloud"
+ *
+ * @param text
+ * @param useShortText
+ * @return
+ */
+QString Utils::Misc::replaceOwnCloudText(QString text, bool useShortText) {
+    QString replaceText = useShortText ? "oC / NC" : "ownCloud / Nextcloud";
+    return text.replace("ownCloud", replaceText, Qt::CaseInsensitive);
 }

@@ -4105,9 +4105,9 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
     // we are transforming line feeds, because in some instances Windows
     // managed to sneak some "special" line feeds in
-    QString noteTextFromDisk = Utils::Misc::transformLinefeeds(
+    QString noteTextFromDisk = Utils::Misc::transformLineFeeds(
             note.getNoteText());
-    QString text = Utils::Misc::transformLinefeeds(
+    QString text = Utils::Misc::transformLineFeeds(
             ui->noteTextEdit->toPlainText());
 
     if (text != noteTextFromDisk) {

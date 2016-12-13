@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -646,7 +646,7 @@
                        </widget>
                       </item>
                       <item row="0" column="0">
-                       <widget class="QLabel" name="label_6">
+                       <widget class="QLabel" name="noteFolderRemotePathListLabel">
                         <property name="text">
                          <string>Please select your note folder on your ownCloud server:</string>
                         </property>
@@ -683,7 +683,7 @@
                     <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
                    </item>
                    <item row="8" column="0" colspan="2">
-                    <widget class="QLabel" name="label_14">
+                    <widget class="QLabel" name="noteFolderRemotePathLabel">
                      <property name="text">
                       <string>Path on your ownCloud server:</string>
                      </property>
@@ -754,7 +754,7 @@
                 <item row="0" column="0">
                  <layout class="QFormLayout" name="formLayout">
                   <item row="1" column="0">
-                   <widget class="QLabel" name="label_4">
+                   <widget class="QLabel" name="ownCloudServerUrlLabel">
                     <property name="text">
                      <string>ownCloud server url:</string>
                     </property>

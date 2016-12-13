@@ -45,6 +45,7 @@ namespace Utils {
         QList<QObject *> getParents(QObject *object);
         QString appDataPath();
         QString logFilePath();
-        QString transformLinefeeds(QString text);
+        QString transformLineFeeds(QString text);
+        QString replaceOwnCloudText(QString text, bool useShortText = false);
     }
 }

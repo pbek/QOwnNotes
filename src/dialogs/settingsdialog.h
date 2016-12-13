@@ -283,6 +283,8 @@ private:
     void addToSearchIndexList(QWidget *widget, QList<int> &pageIndexList);
 
     void removeLogFile() const;
+
+    void replaceOwnCloudText() const;
 };
 
 #endif // SETTINGSDIALOG_H

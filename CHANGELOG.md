@@ -2,6 +2,8 @@
 
 ## 16.12.7
 - headlines now have a small top and bottom margin in the edit panel
+- replaced the text `ownCloud` by `ownCloud / Nextcloud` in the settings 
+  dialog to make it more clear that Nextcloud is also supported
 
 ## 16.12.6
 - a lot of **markdown syntax** is now **masked in gray** in the markdown 

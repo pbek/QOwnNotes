@@ -140,6 +140,49 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // show the log file path
     ui->logFileLabel->setText(QDir::toNativeSeparators(
             Utils::Misc::logFilePath()));
+
+    // replace the "ownCloud" text by "ownCloud / NextCloud"
+    replaceOwnCloudText();
+}
+
+/**
+ * Replaces the "ownCloud" text by "ownCloud / NextCloud"
+ */
+void SettingsDialog::replaceOwnCloudText() const {
+    //
+    // ownCloud settings
+    //
+    ui->ownCloudGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudGroupBox->title()));
+    ui->ownCloudServerUrlLabel->setText(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudServerUrlLabel->text(), true));
+    ui->check2Label->setText(Utils::Misc::replaceOwnCloudText(
+            ui->check2Label->text()));
+    ui->ownCloudServerAppPageButton->setText(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudServerAppPageButton->text(), true));
+    ui->connectButton->setText(Utils::Misc::replaceOwnCloudText(
+            ui->connectButton->text(), true));
+    ui->installInfoTextLabel1->setText(Utils::Misc::replaceOwnCloudText(
+            ui->installInfoTextLabel1->text()));
+    ui->installInfoTextLabel2->setText(Utils::Misc::replaceOwnCloudText(
+            ui->installInfoTextLabel2->text()));
+
+    QTreeWidgetItem *item = ui->settingsTreeWidget->topLevelItem(
+            OwnCloudPage);
+    item->setText(0, Utils::Misc::replaceOwnCloudText(item->text(0)));
+
+    // note folder settings
+    ui->noteFolderRemotePathLabel->setText(Utils::Misc::replaceOwnCloudText(
+            ui->noteFolderRemotePathLabel->text()));
+    ui->noteFolderRemotePathListLabel->setText(Utils::Misc::replaceOwnCloudText(
+            ui->noteFolderRemotePathListLabel->text()));
+    ui->useOwnCloudPathButton->setText(Utils::Misc::replaceOwnCloudText(
+            ui->useOwnCloudPathButton->text()));
+
+    // task settings
+    ui->defaultOwnCloudCalendarRadioButton->setText(
+            Utils::Misc::replaceOwnCloudText(
+                    ui->defaultOwnCloudCalendarRadioButton->text()));
 }
 
 /**
