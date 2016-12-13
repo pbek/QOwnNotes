@@ -8308,6 +8308,9 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
         QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
         selectedText.replace(newLine, "\n> ");
 
+        // remove the block quote if it was placed at the end of the text
+        selectedText.remove(QRegularExpression("> $"));
+
         c.insertText(selectedText);
     }
 }
