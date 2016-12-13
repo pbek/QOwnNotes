@@ -1,11 +1,13 @@
 # QOwnNotes Changelog
 
 ## 16.12.7
-- headlines now have a small top and bottom margin in the edit panel
+- headlines now have a small top and bottom margin in the note edit panel
 - replaced the text `ownCloud` by `ownCloud / Nextcloud` in the settings 
   dialog to make it more clear that Nextcloud is also supported
 - there is a new shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> that
-  inserts a block quote character or formats the selected text as block quote
+  **inserts a block quote** character or formats the selected text as block quote
+- added more Dutch, Hungarian, French, Portuguese and Ukrainian translation 
+  (thank you Fabijenna, lepascalou, mlimacarlos and Borisvit)
 
 ## 16.12.6
 - a lot of **markdown syntax** is now **masked in gray** in the markdown 
