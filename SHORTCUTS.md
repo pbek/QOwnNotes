@@ -58,6 +58,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
@@ -143,6 +144,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> inserts a table
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>C</kbd> inserts a code block at the current position
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>B</kbd> inserts a block quote at the current position
 - <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic 
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text

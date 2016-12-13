@@ -221,7 +221,7 @@ private slots:
 
     void storeNoteBookmark(int slot = 0);
 
-    void on_actionInset_code_block_triggered();
+    void on_actionInsert_code_block_triggered();
 
     void on_actionNext_note_triggered();
 
@@ -419,6 +419,8 @@ private slots:
     void releaseDockWidgetSizes();
 
     void on_actionInsert_table_triggered();
+
+    void on_actionInsert_block_quote_triggered();
 
 private:
     Ui::MainWindow *ui;

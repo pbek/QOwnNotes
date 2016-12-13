@@ -93,5 +93,6 @@
         <file alias="16x16/step_object_LinearMotor.svg">icons/breeze-dark-qownnotes/16x16/step_object_LinearMotor.svg</file>
         <file alias="16x16/insert-table.svg">icons/breeze-dark-qownnotes/16x16/insert-table.svg</file>
         <file alias="16x16/table.svg">icons/breeze-dark-qownnotes/16x16/table.svg</file>
+        <file alias="16x16/format-text-blockquote.svg">icons/breeze-dark-qownnotes/16x16/format-text-blockquote.svg</file>
     </qresource>
 </RCC>

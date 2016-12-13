@@ -761,7 +761,8 @@ void MainWindow::initToolbars() {
     _formattingToolbar->addAction(ui->actionFormat_text_bold);
     _formattingToolbar->addAction(ui->actionFormat_text_italic);
     _formattingToolbar->addAction(ui->actionStrike_out_text);
-    _formattingToolbar->addAction(ui->actionInset_code_block);
+    _formattingToolbar->addAction(ui->actionInsert_code_block);
+    _formattingToolbar->addAction(ui->actionInsert_block_quote);
     _formattingToolbar->setObjectName("formattingToolbar");
     addToolBar(_formattingToolbar);
 
@@ -5253,7 +5254,7 @@ void MainWindow::gotoNoteBookmark(int slot) {
 /**
  * Inserts a code block at the current cursor position
  */
-void MainWindow::on_actionInset_code_block_triggered() {
+void MainWindow::on_actionInsert_code_block_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selection().toPlainText();
@@ -8286,4 +8287,27 @@ void MainWindow::on_actionInsert_table_triggered() {
     TableDialog* dialog = new TableDialog(this);
     dialog->exec();
     delete(dialog);
+}
+
+/**
+ * Inserts a block quote character or formats the selected text as block quote
+ */
+void MainWindow::on_actionInsert_block_quote_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    if (selectedText.isEmpty()) {
+        c.insertText("> ");
+        textEdit->setTextCursor(c);
+    } else {
+        // this only applies to the start of the selected block
+        selectedText.replace(QRegularExpression("^"), "> ");
+
+        // this newline character seems to be used in multi-line selections
+        QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
+        selectedText.replace(newLine, "\n> ");
+
+        c.insertText(selectedText);
+    }
 }
