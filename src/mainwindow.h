@@ -422,6 +422,8 @@ private slots:
 
     void on_actionInsert_block_quote_triggered();
 
+    void on_actionSearch_text_on_the_web_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

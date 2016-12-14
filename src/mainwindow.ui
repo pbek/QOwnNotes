@@ -724,6 +724,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionReplace_in_current_note"/>
+    <addaction name="separator"/>
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="actionInsert_image"/>
     <addaction name="actionInsert_table"/>
@@ -750,6 +751,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="separator"/>
     <addaction name="actionSelect_all_notes"/>
+    <addaction name="actionSearch_text_on_the_web"/>
     <addaction name="actionAutocomplete"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
@@ -1871,6 +1873,14 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+B</string>
+   </property>
+  </action>
+  <action name="actionSearch_text_on_the_web">
+   <property name="text">
+    <string>Search text on the web</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+W</string>
    </property>
   </action>
  </widget>

@@ -4831,6 +4831,9 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     QAction *linkTextAction = menu->addAction(linkTextActionName);
     linkTextAction->setShortcut(ui->actionInsert_Link_to_note->shortcut());
 
+    QAction *searchAction = menu->addAction(tr("Search text on the web"));
+    searchAction->setShortcut(ui->actionSearch_text_on_the_web->shortcut());
+
     QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
     pasteMediaAction->setShortcut(ui->actionPaste_image->shortcut());
 
@@ -4842,6 +4845,9 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
         } else if (selectedItem == pasteMediaAction) {
             // paste HTML or media into the note
             pasteMediaIntoNote();
+        } else if (selectedItem == searchAction) {
+            // search for the selected text on the web
+            on_actionSearch_text_on_the_web_triggered();
         }
     }
 }
@@ -5643,7 +5649,7 @@ void MainWindow::on_actionShow_note_in_file_manager_triggered() {
 void MainWindow::on_actionFormat_text_bold_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
+    QString selectedText = c.selectedText();
 
     if (selectedText.isEmpty()) {
         c.insertText("****");
@@ -5660,7 +5666,7 @@ void MainWindow::on_actionFormat_text_bold_triggered() {
 void MainWindow::on_actionFormat_text_italic_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
+    QString selectedText = c.selectedText();
 
     if (selectedText.isEmpty()) {
         c.insertText("**");
@@ -7631,7 +7637,7 @@ void MainWindow::on_actionShare_note_triggered() {
 void MainWindow::on_actionToggle_text_case_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
+    QString selectedText = c.selectedText();
 
     if (selectedText.isEmpty()) {
         return;
@@ -8295,7 +8301,7 @@ void MainWindow::on_actionInsert_table_triggered() {
 void MainWindow::on_actionInsert_block_quote_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
-    QString selectedText = textEdit->textCursor().selectedText();
+    QString selectedText = c.selectedText();
 
     if (selectedText.isEmpty()) {
         c.insertText("> ");
@@ -8313,4 +8319,20 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
 
         c.insertText(selectedText);
     }
+}
+
+/**
+ * Searches for the selected text on the web
+ */
+void MainWindow::on_actionSearch_text_on_the_web_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QString selectedText = textEdit->textCursor().selectedText().trimmed();
+
+    if (selectedText.isEmpty()) {
+        return;
+    }
+
+    QUrl url("https://duckduckgo.com/?t=qownnotes&q=" +
+                     QUrl::toPercentEncoding(selectedText));
+    QDesktopServices::openUrl(url);
 }

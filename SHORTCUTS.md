@@ -79,6 +79,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in front of the cursor, auto-completes text or opens urls
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
 
 ### In the Todo list
 
@@ -165,6 +166,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
 
 ### In the Todo list
 

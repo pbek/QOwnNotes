@@ -3,6 +3,8 @@
 ## 16.12.8
 - urls with empty title like `[](file://link)` are now also highlighted
   (for [Issue #415](https://github.com/pbek/QOwnNotes/issues/415))
+- added a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> to 
+  **search** for the **selected text** on the **web**
 
 ## 16.12.7
 - headlines now have a small top and bottom margin in the note edit panel
