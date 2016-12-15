@@ -14,6 +14,8 @@
     - highlighting for such links was also added
     - in the preview these file links are replaced with note links, that also
       takes place when such a link was found in a code block
+- added more Dutch, Hungarian, Spanish, Italian and Portuguese translation 
+  (thank you Fabijenna, richarson, mlocati and mlimacarlos)
 
 ## 16.12.8
 - added a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> to 

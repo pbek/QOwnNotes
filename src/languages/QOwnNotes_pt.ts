@@ -907,13 +907,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Inserir bloco &amp;quote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1880"/>
       <location filename="../mainwindow.cpp" line="4834"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Pesquisar texto na web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>

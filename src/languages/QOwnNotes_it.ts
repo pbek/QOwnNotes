@@ -913,7 +913,7 @@
       <location filename="../mainwindow.ui" line="1880"/>
       <location filename="../mainwindow.cpp" line="4834"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Cerca testo sul web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>

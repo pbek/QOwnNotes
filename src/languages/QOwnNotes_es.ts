@@ -264,7 +264,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="188"/>
       <source>Masked syntax</source>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>Sintaxis enmascarada</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
@@ -907,13 +907,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Insertar cita de blo&amp;que</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1880"/>
       <location filename="../mainwindow.cpp" line="4834"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Buscar el texto en la web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1490"/>
