@@ -4500,8 +4500,7 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
 void MainWindow::openLocalUrl(QString urlString) {
     // if urlString is no valid url we will try to convert it into a note url
     if (!QMarkdownTextEdit::isValidUrl(urlString)) {
-        QFileInfo info(urlString);
-        urlString = Note::getNoteURL(info.baseName());
+        urlString = Note::getNoteURLFromFileName(urlString);
     }
 
     // convert relative file urls to absolute urls and open them

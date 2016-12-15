@@ -231,7 +231,9 @@ signals:
 
 public slots:
 
-    static const QString getNoteURL(const QString &fileName);
+    static const QString getNoteURL(const QString &baseName);
+
+    static const QString getNoteURLFromFileName(const QString &fileName);
 };
 
 #endif // NOTE_H

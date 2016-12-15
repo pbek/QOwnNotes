@@ -1293,6 +1293,35 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
             + "/\\2\\3");
 
+    // try to replace file links like <my-note.md> to note links
+    QRegularExpressionMatchIterator i =
+            QRegularExpression("<(((?!\\w+:\\/\\/).)+)>").globalMatch(str);
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString fileLink = match.captured(1);
+        QString noteUrl = Note::getNoteURLFromFileName(fileLink);
+
+        if (!noteUrl.isEmpty()) {
+            str.replace(match.captured(0),
+                        "[" + fileLink + "](" + noteUrl + ")");
+        }
+    }
+
+    // try to replace file links like [my note](my-note.md) to note links
+    i = QRegularExpression(
+            "\\[(.+?)\\]\\((((?!\\w+:\\/\\/).)+)\\)").globalMatch(str);
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        QString fileText = match.captured(1);
+        QString fileLink = match.captured(2);
+        QString noteUrl = Note::getNoteURLFromFileName(fileLink);
+
+        if (!noteUrl.isEmpty()) {
+            str.replace(match.captured(0),
+                        "[" + fileText + "](" + noteUrl + ")");
+        }
+    }
+
     unsigned char *sequence = (unsigned char *) qstrdup(
             str.toUtf8().constData());
     qint64 length = strlen((char *) sequence);
@@ -1388,7 +1417,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
     // check if width of embedded local images is too high
     QRegularExpression re("<img src=\"file:\\/\\/([^\"]+)\"");
-    QRegularExpressionMatchIterator i = re.globalMatch(result);
+    i = re.globalMatch(result);
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileName = match.captured(1);
@@ -1855,11 +1884,22 @@ QList<int> Note::findLinkedNotes(QString fileName) {
 /**
  * Returns the url to a note
  *
+ * @param baseName
+ * @return
+ */
+const QString Note::getNoteURL(const QString &baseName) {
+    return "note://" + generateTextForLink(baseName);
+}
+
+/**
+ * Returns the url to a note from a file name
+ *
  * @param fileName
  * @return
  */
-const QString Note::getNoteURL(const QString &fileName) {
-    return "note://" + generateTextForLink(fileName);
+const QString Note::getNoteURLFromFileName(const QString &fileName) {
+    QFileInfo info(fileName);
+    return Note::getNoteURL(info.baseName());
 }
 
 /**
