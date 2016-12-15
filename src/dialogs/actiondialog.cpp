@@ -72,7 +72,8 @@ void ActionDialog::buildActionTreeForMenu(QMenu *menu,
             QString text = action->text().remove("&");
             QString actionName = action->objectName();
 
-            if (text.isEmpty() || actionName.isEmpty()) {
+            if (text.isEmpty() || actionName.isEmpty()
+                || !action->isVisible()) {
                 continue;
             }
 

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 16.12.9
+- fixed a problem where duplicate actions would be shown in the *find action* 
+  dialog
+
 ## 16.12.8
 - added a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> to 
   **search** for the **selected text** on the **web**
