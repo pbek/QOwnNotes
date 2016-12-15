@@ -1294,6 +1294,8 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             + "/\\2\\3");
 
     // try to replace file links like <my-note.md> to note links
+    // this is a "has not '\w+:\/\/' in it" regular expression
+    // see: http://stackoverflow.com/questions/406230/regular-expression-to-match-line-that-doesnt-contain-a-word
     QRegularExpressionMatchIterator i =
             QRegularExpression("<(((?!\\w+:\\/\\/).)+)>").globalMatch(str);
     while (i.hasNext()) {
