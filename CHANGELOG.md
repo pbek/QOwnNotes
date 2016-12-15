@@ -3,6 +3,16 @@
 ## 16.12.9
 - fixed a problem where duplicate actions would be shown in the *find action* 
   dialog
+- added experimental support for **regular file links** like `<my-note.md>` or 
+  `[my note](my-note.md)` in the note edit pane
+   (for [Issue #266](https://github.com/pbek/QOwnNotes/issues/266))
+    - no paths are allowed
+    - only note files are supported
+    - when `Ctrl` - clicked the note will be opened
+    - the file link is internally converted to a `note://my_note` url, file 
+      extensions will be stripped
+    - highlighting for such links was also added
+    - no preview support yet
 
 ## 16.12.8
 - added a new shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> to 

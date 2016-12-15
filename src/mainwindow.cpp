@@ -4498,6 +4498,12 @@ void MainWindow::on_noteTextView_anchorClicked(const QUrl &url) {
  * - <note://my-note-with-spaces-in-the-name> opens the note "My Note with spaces in the name"
  */
 void MainWindow::openLocalUrl(QString urlString) {
+    // if urlString is no valid url we will try to convert it into a note url
+    if (!QMarkdownTextEdit::isValidUrl(urlString)) {
+        QFileInfo info(urlString);
+        urlString = Note::getNoteURL(info.baseName());
+    }
+
     // convert relative file urls to absolute urls and open them
     if (urlString.startsWith("file://..")) {
         QString windowsSlash = "";
