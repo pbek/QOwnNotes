@@ -28,36 +28,38 @@ QtObject {
             case "newBitrixTaskNote":
                 // get the text that is currently in the clipboard
                 var html = script.clipboard(true);
-                
+
 //                script.log(html);
 
                 // https://regex101.com is your friend
-                var headlineRegExp = /<span class="pagetitle-inner".*?>(.+?)<\/span>/im;
+//                 var headlineRegExp = /<span class="pagetitle-inner".*?>(.+?)<\/span>/im;
+                var headlineRegExp = /<span id="pagetitle".*?>(.+?)<\/span>/im;
                 var headlineMatch = headlineRegExp.exec(html);
                 var headline = headlineMatch !== null ? headlineMatch[1] : "";
                 // remove the "aufgabe" text and all "/"
                 headline = headline.replace("(aufgabe #", "(#").replace(/\s*\//igm, "");
-                
+
                 if (headline == "") {
                     script.log("No Bitrix task headline was found!");
                     return;
                 }
-                
+
                 var descriptionRegExp = /<div.*? id="task-detail-description".*?>(.+?)<\/div>/im;
                 var descriptionMatch = descriptionRegExp.exec(html);
                 var description = descriptionMatch !== null ? descriptionMatch[1] : "";
                 // transform html breaks to \n and remove all other tags
                 description = description.replace(/<br.*?>/gim, "\n").replace(/<.+?>/gim, "");
-                
-                var urlRegExp = /<form name="COMMENTS_.+?".*? action="(.+?)" method/im;
+
+//                 var urlRegExp = /<form name="COMMENTS_.+?".*? action="(.+?)" method/im;
+                var urlRegExp = /<a href="(.+?)[\?#].*?" class="main-buttons-item-link"/im;
                 var urlMatch = urlRegExp.exec(html);
                 var url = urlMatch !== null ? urlMatch[1] : "";
-                
+
 //                script.log(headline);
 //                script.log(descriptionMatch);
 //                script.log(description);
 //                script.log(url);
-                
+
                 // add the headline of the task
                 var text = headline + "\n";
 
@@ -86,7 +88,7 @@ QtObject {
 
                 // create a new note
                 script.createNote(text);
-                
+
                 // tag the current note
                 script.tagCurrentNote("todo");
 
