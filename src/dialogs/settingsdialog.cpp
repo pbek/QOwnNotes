@@ -811,6 +811,8 @@ void SettingsDialog::loadShortcutSettings() {
 
     _keyWidgetSignalMapper = new QSignalMapper(this);
     QList<QMenu*> menus = mainWindow->menuList();
+    ui->shortcutSearchLineEdit->clear();
+    ui->shortcutTreeWidget->clear();
     ui->shortcutTreeWidget->setColumnCount(2);
 
     // loop through all menus

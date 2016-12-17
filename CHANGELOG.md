@@ -5,6 +5,9 @@
 - decreased the saturation of some background colors of the `Light` color 
   schema to increase readability
 - tried to fix a problem with wrong reminder times of tasks in the todo list
+- fixed a problem with duplicate shortcut items in the shortcut settings 
+  after opening the settings dialog multiple times
+   (for [Issue #424](https://github.com/pbek/QOwnNotes/issues/424))
 
 ## 16.12.9
 - fixed a problem where duplicate actions would be shown in the *find action* 
