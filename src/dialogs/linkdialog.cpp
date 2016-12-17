@@ -17,7 +17,7 @@ LinkDialog::LinkDialog(QString dialogTitle, QWidget *parent) :
 
     this->firstVisibleNoteListRow = 0;
 
-    if (dialogTitle != "") {
+    if (!dialogTitle.isEmpty()) {
         this->setWindowTitle(dialogTitle);
     }
 

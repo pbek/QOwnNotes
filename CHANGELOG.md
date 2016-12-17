@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 16.12.10
+- when linking notes now the title of the note will be used as link-text
+
 ## 16.12.9
 - fixed a problem where duplicate actions would be shown in the *find action* 
   dialog

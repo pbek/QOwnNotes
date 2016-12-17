@@ -3801,7 +3801,7 @@ QMarkdownTextEdit* MainWindow::activeNoteTextEdit() {
  */
 void MainWindow::handleTextNoteLinking() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    LinkDialog *dialog = new LinkDialog(tr("Link to an url or note"), this);
+    LinkDialog *dialog = new LinkDialog("", this);
     dialog->exec();
 
     if (dialog->result() == QDialog::Accepted) {
@@ -3832,12 +3832,12 @@ void MainWindow::handleTextNoteLinking() {
             } else {
                 // if user has selected a note
                 if (selectedText != "") {
-                    newText = "[" + selectedText + "]"
-                           "(note://" + noteNameForLink + ")";
-                } else {
-                    newText = "<note://" + noteNameForLink + ">";
+                    noteName = selectedText;
                 }
+
+                newText = "[" + noteName + "](note://" + noteNameForLink + ")";
             }
+
             textEdit->textCursor().insertText(newText);
         }
     }
