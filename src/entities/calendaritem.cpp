@@ -582,13 +582,16 @@ QString CalendarItem::generateNewICSData() {
     icsDataHash["PRIORITY"] = QString::number(priority);
     icsDataHash["PERCENT-COMPLETE"] = QString::number(completed ? 100 : 0);
     icsDataHash["STATUS"] = completed ? "COMPLETED" : "NEEDS-ACTION";
-    icsDataHash["CREATED"] = created.toUTC().toString(ICS_DATETIME_FORMAT);
-    icsDataHash["LAST-MODIFIED"] =
-            modified.toUTC().toString(ICS_DATETIME_FORMAT);
+//    icsDataHash["CREATED"] = created.toUTC().toString(ICS_DATETIME_FORMAT);
+//    icsDataHash["LAST-MODIFIED"] =
+//            modified.toUTC().toString(ICS_DATETIME_FORMAT);
+    icsDataHash["CREATED"] = created.toString(ICS_DATETIME_FORMAT);
+    icsDataHash["LAST-MODIFIED"] = modified.toString(ICS_DATETIME_FORMAT);
 
     if (completed) {
-        icsDataHash["COMPLETED"] =
-                completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
+//        icsDataHash["COMPLETED"] =
+//                completedDate.toUTC().toString(ICS_DATETIME_FORMAT);
+        icsDataHash["COMPLETED"] = completedDate.toString(ICS_DATETIME_FORMAT);
     } else {
         // remove the "COMPLETED" ics data attribute if the task item is not
         // completed
@@ -768,8 +771,9 @@ bool CalendarItem::updateWithICSData(QString icsData) {
                 QDateTime::fromString(alarmDateString, ICS_DATETIME_FORMAT);
         // convert the UTC from the server to local time, because sqlite
         // doesn't understand time zones
-        alarmDate = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC)
-                .toLocalTime();
+//        alarmDate = QDateTime(dateTime.date(), dateTime.time(), Qt::UTC)
+//                .toLocalTime();
+        alarmDate = dateTime;
     }
 
 //    qDebug() << __func__ << " - 'alarmDate': " << alarmDate;
@@ -869,8 +873,9 @@ bool CalendarItem::addVALARMBlockToICS() {
         // add the VALARM block at the end of the VTODO block
         if (foundBegin && key.startsWith("END") && (value == "VTODO")) {
             QString addKey;
-            QString alarmDateString =
-                    alarmDate.toUTC().toString(ICS_DATETIME_FORMAT);
+//            QString alarmDateString =
+//                    alarmDate.toUTC().toString(ICS_DATETIME_FORMAT);
+            QString alarmDateString = alarmDate.toString(ICS_DATETIME_FORMAT);
 
             addKey = findFreeHashKey(&icsDataHashCopy, "BEGIN");
             icsDataHashCopy[addKey] = "VALARM";
