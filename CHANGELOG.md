@@ -8,6 +8,8 @@
 - fixed a problem with duplicate shortcut items in the shortcut settings 
   after opening the settings dialog multiple times
    (for [Issue #424](https://github.com/pbek/QOwnNotes/issues/424))
+- added more Dutch, Chinese and Japanese translation (thank you Leime,
+  Fabijenna, chonghua and MoeMoePig)
 
 ## 16.12.9
 - fixed a problem where duplicate actions would be shown in the *find action* 

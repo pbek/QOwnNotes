@@ -431,7 +431,7 @@
     <message>
       <location filename="../mainwindow.ui" line="628"/>
       <source>Note &amp;folders</source>
-      <translation>Notitie &amp;mappen</translation>
+      <translation>&amp;Notitiemappen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
@@ -471,7 +471,7 @@
     <message>
       <location filename="../mainwindow.ui" line="895"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Instellen notitie mappen</translation>
+      <translation>&amp;Instellen notitiemappen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="904"/>
@@ -2732,7 +2732,7 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/settingsdialog.ui" line="3201"/>
       <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Code font:</source>
-      <translation>De doopvont van de code:</translation>
+      <translation>Codelettertype:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2230"/>
@@ -4467,7 +4467,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="149"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Selecteer de map waar uw notities zullen worden opgeslagen</translation>
+      <translation>Selecteer de map waarin je notities zullen worden opgeslagen</translation>
     </message>
   </context>
 </TS>

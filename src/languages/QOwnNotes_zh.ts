@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>查找操作</translation>
     </message>
   </context>
   <context>
@@ -23,12 +23,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation type="unfinished">Evernote Import</translation>
+      <translation>Evernote 导入</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>选择文件</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="61"/>
@@ -38,12 +38,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Import images</source>
-      <translation type="unfinished">Import images</translation>
+      <translation>导入图像</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation type="unfinished">Evernote enex file</translation>
+      <translation>Evernote enex文件</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
@@ -58,12 +58,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
       <source>Enex files</source>
-      <translation type="unfinished">Enex files</translation>
+      <translation>Enex文件</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Select Evernote enex file to import</source>
-      <translation type="unfinished">Select Evernote enex file to import</translation>
+      <translation>选择要导入的 Evernote enex文件</translation>
     </message>
   </context>
   <context>
@@ -112,7 +112,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>如果您已经创建了一个美观的配色请将其导出，和大家一起分享 ！</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -199,12 +199,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="171"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>链接</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="172"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>图像</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="173"/>
@@ -219,7 +219,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="176"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>列表项</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="178"/>
@@ -249,12 +249,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="185"/>
       <source>Block quote</source>
-      <translation type="unfinished">Block quote</translation>
+      <translation>块引用</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="186"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>表</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="183"/>
@@ -279,7 +279,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="418"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>配色名称</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
@@ -305,7 +305,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="592"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="637"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI 文件</translation>
     </message>
   </context>
   <context>
@@ -313,12 +313,12 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>链接到网址或笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>输入网址</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
@@ -328,7 +328,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>搜索笔记或者输入文本按回车键创建新的笔记</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
@@ -351,7 +351,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="14"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="109"/>
@@ -361,7 +361,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="95"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>警告</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="102"/>
@@ -371,38 +371,38 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="81"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>调试</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="88"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>信息</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="116"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>状态</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="123"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>脚本编写</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="130"/>
       <location filename="../widgets/logwidget.cpp" line="375"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>清除日志</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>显示选项</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>隐藏选项</translation>
     </message>
   </context>
   <context>
@@ -521,7 +521,7 @@
     <message>
       <location filename="../mainwindow.ui" line="986"/>
       <source>Sort by date</source>
-      <translation>按日期顺序排列</translation>
+      <translation>按日期排序</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="994"/>
@@ -568,7 +568,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1062"/>
       <source>&amp;Find in current note</source>
-      <translation>在当前笔记搜索查找(&amp;F)</translation>
+      <translation>在当前笔记中查找(&amp;F)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1065"/>
@@ -603,7 +603,7 @@
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>搜索笔记或者输入文本按回车键创建新的笔记</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="300"/>
@@ -618,17 +618,17 @@
     <message>
       <location filename="../mainwindow.ui" line="640"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>导出</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="653"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>导入</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="721"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>编辑(&amp;E)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="759"/>
@@ -638,23 +638,23 @@
     <message>
       <location filename="../mainwindow.ui" line="765"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>窗口(&amp;W)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="781"/>
       <location filename="../mainwindow.cpp" line="428"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>工作区</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="786"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>面板</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="791"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>工具栏</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="828"/>
@@ -1344,32 +1344,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5506"/>
       <source>Saving temporary image</source>
-      <translation type="unfinished">Saving temporary image</translation>
+      <translation>保存临时图像</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5525"/>
       <source>Temporary file can't be opened</source>
-      <translation type="unfinished">Temporary file can't be opened</translation>
+      <translation>无法打开临时文件</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5558"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>正在下载%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5588"/>
       <source>Done downloading images</source>
-      <translation type="unfinished">Done downloading images</translation>
+      <translation>完成下载图像</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6301"/>
       <source>Assign color</source>
-      <translation type="unfinished">Assign color</translation>
+      <translation>指定颜色</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6302"/>
       <source>Disable color</source>
-      <translation type="unfinished">Disable color</translation>
+      <translation>禁用颜色</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6918"/>
@@ -1384,7 +1384,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7013"/>
       <source>Result for equation: %1 = %2</source>
-      <translation type="unfinished">Result for equation: %1 = %2</translation>
+      <translation>方程的结果︰ %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7087"/>
@@ -1394,34 +1394,34 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7114"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>HTML 文件</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7997"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>创建新工作区</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7997"/>
       <location filename="../mainwindow.cpp" line="8234"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>工作区名称︰</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8116"/>
       <source>default</source>
       <comment>default workspace</comment>
-      <translation type="unfinished">default</translation>
+      <translation>默认</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8196"/>
       <source>Remove the current workspace?</source>
-      <translation type="unfinished">Remove the current workspace?</translation>
+      <translation>删除当前工作区？</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8234"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>重命名工作区</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="822"/>
@@ -1734,7 +1734,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4830"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>链接选定文本(&amp;L)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="714"/>
@@ -1853,42 +1853,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="442"/>
       <source>Subfolders</source>
-      <translation type="unfinished">Subfolders</translation>
+      <translation>子文件夹</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="453"/>
       <source>Tags</source>
-      <translation type="unfinished">Tags</translation>
+      <translation>标签</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="462"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>笔记搜索</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="480"/>
       <source>Note list</source>
-      <translation type="unfinished">Note list</translation>
+      <translation>笔记列表</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="503"/>
       <source>Note edit</source>
-      <translation type="unfinished">Note edit</translation>
+      <translation>笔记编辑</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="512"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>笔记标签</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="521"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>笔记预览</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="528"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>日志</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="760"/>
@@ -1918,17 +1918,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="808"/>
       <source>Workspace selector</source>
-      <translation type="unfinished">Workspace selector</translation>
+      <translation>工作区选择器</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="931"/>
       <source>Show %1 panel</source>
-      <translation type="unfinished">Show %1 panel</translation>
+      <translation>显示 %1 面板</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="959"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>显示 %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1734"/>
@@ -1943,7 +1943,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1779"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt; br / &gt; 路径： %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1916"/>
@@ -2545,7 +2545,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Show subfolders in note list</source>
-      <translation type="unfinished">Show subfolders in note list</translation>
+      <translation>在笔记列表中显示子文件夹</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1045"/>
@@ -2690,7 +2690,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1862"/>
       <source>English</source>
-      <translation type="unfinished">English</translation>
+      <translation>英语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="228"/>
@@ -2737,17 +2737,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1851"/>
       <source>German</source>
-      <translation type="unfinished">German</translation>
+      <translation>德语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1884"/>
       <source>French</source>
-      <translation type="unfinished">French</translation>
+      <translation>法语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1939"/>
       <source>Polish</source>
-      <translation type="unfinished">Polish</translation>
+      <translation>波兰语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1983"/>
@@ -2757,22 +2757,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1950"/>
       <source>Portuguese</source>
-      <translation type="unfinished">Portuguese</translation>
+      <translation>葡萄牙语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1928"/>
       <source>Dutch</source>
-      <translation type="unfinished">Dutch</translation>
+      <translation>荷兰语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1906"/>
       <source>Hungarian</source>
-      <translation type="unfinished">Hungarian</translation>
+      <translation>匈牙利语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1873"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>西班牙语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1826"/>
@@ -2802,7 +2802,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1961"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>俄语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1338"/>
@@ -2853,7 +2853,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1917"/>
       <source>Japanese</source>
-      <translation type="unfinished">Japanese</translation>
+      <translation>日语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2725"/>
@@ -2946,7 +2946,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1895"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>意大利语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="240"/>
@@ -2981,12 +2981,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>查找设置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation type="unfinished">Editor</translation>
+      <translation>编辑器</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
@@ -2996,22 +2996,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Preview fonts</source>
-      <translation type="unfinished">Preview fonts</translation>
+      <translation>预览字体</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>工具栏</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="263"/>
       <source>Portable mode</source>
-      <translation type="unfinished">Portable mode</translation>
+      <translation>便携模式</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Debug options</source>
-      <translation type="unfinished">Debug options</translation>
+      <translation>调试选项</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="612"/>
@@ -3109,7 +3109,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1972"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>乌克兰语</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2078"/>
@@ -3119,12 +3119,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2652"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>最大高度︰</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2659"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>最大宽度︰</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2768"/>
@@ -3149,22 +3149,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3444"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>应用工具栏配置</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3458"/>
       <source>Reset toolbars</source>
-      <translation type="unfinished">Reset toolbars</translation>
+      <translation>重置工具栏</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3486"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>启用日志记录到文件</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3493"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>清除日志文件</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3504"/>
@@ -3174,12 +3174,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3532"/>
       <source>Log file path:</source>
-      <translation type="unfinished">Log file path:</translation>
+      <translation>日志文件路径︰</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3616"/>
       <source>Editor options</source>
-      <translation type="unfinished">Editor options</translation>
+      <translation>编辑器选项</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3622"/>
@@ -3717,7 +3717,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation type="unfinished">The public url of your note</translation>
+      <translation>您的笔记的公开地址</translation>
     </message>
   </context>
   <context>
@@ -3725,17 +3725,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>插入表格</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation type="unfinished">Create table</translation>
+      <translation>创建表格</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation type="unfinished">Column width:</translation>
+      <translation>列宽度︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
@@ -3745,12 +3745,12 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation type="unfinished">Columns:</translation>
+      <translation>列︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation type="unfinished">Rows:</translation>
+      <translation>行︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
@@ -3760,7 +3760,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation type="unfinished">Select table layout:</translation>
+      <translation>选择表格布局︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -3775,17 +3775,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation type="unfinished">Import CSV file</translation>
+      <translation>导入 CSV 文件</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation type="unfinished">Separator:</translation>
+      <translation>分隔符︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>选择文件</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
@@ -3795,7 +3795,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation type="unfinished">CSV file</translation>
+      <translation>CSV 文件</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
@@ -3805,17 +3805,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation type="unfinished">Text-delimiter:</translation>
+      <translation>文本分隔符︰</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="147"/>
       <source>CSV files</source>
-      <translation type="unfinished">CSV files</translation>
+      <translation>CSV 文件</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>All files</source>
-      <translation type="unfinished">All files</translation>
+      <translation>所有文件</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
@@ -3862,7 +3862,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="167"/>
       <source>Summary</source>
-      <translation type="unfinished">Summary</translation>
+      <translation>摘要</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="201"/>
@@ -3992,7 +3992,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>添加新的工具栏</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
@@ -4008,7 +4008,7 @@ This cannot be undone!</translation>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>移除</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
@@ -4018,7 +4018,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation type="unfinished">Move Up</translation>
+      <translation>向上移动</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
@@ -4033,7 +4033,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation type="unfinished">Move Down</translation>
+      <translation>向下移动</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
@@ -4048,7 +4048,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>插入</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
