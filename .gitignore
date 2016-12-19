@@ -6,3 +6,4 @@ bin/*
 build-tests-*
 .idea
 cmake-build-*
+doc/build
