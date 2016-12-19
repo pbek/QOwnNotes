@@ -11,6 +11,10 @@ Welcome to QOwnNotes's documentation!
 
    scripting/README
 
+License
+=======
+
+   `LICENSE <../LICENSE>`_
 
 Indices and tables
 ==================
