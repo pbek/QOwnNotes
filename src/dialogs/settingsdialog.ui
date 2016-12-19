@@ -705,8 +705,11 @@
                    </item>
                    <item row="5" column="0" colspan="2">
                     <widget class="QCheckBox" name="noteFolderShowSubfoldersCheckBox">
+                     <property name="toolTip">
+                      <string>Be aware that the ownCloud notes app doesn't support sub-folders!</string>
+                     </property>
                      <property name="text">
-                      <string>Show subfolders in note list</string>
+                      <string>Use note sub-folders</string>
                      </property>
                     </widget>
                    </item>
