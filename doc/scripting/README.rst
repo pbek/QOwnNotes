@@ -1,15 +1,17 @@
 QOwnNotes Scripting
 ===================
 
--  if you need access to a certain functionality in QOwnNotes or have
+-  Take a look at the `example scripts <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting>`__
+   to get started fast.
+-  If you need access to a certain functionality in QOwnNotes or have
    questions or ideas please open an issue on the `QOwnNotes issue
-   page <https://github.com/pbek/QOwnNotes/issues>`__
--  since debug output is disabled in the releases of QOwnNotes, so you
+   page <https://github.com/pbek/QOwnNotes/issues>`__.
+-  Since debug output is disabled in the releases of QOwnNotes, so you
    might want to use ``console.warn()`` instead of ``console.log()`` to
-   actually see an output
+   actually see an output.
 
-   -  additionally you can also use the ``script.log()`` command to log
-      to the log widget
+   -  Additionally you can also use the ``script.log()`` command to log
+      to the log widget.
 
 Methods and objects QOwnNotes provides
 --------------------------------------

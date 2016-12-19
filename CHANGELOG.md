@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 16.12.11
+- added a link to the new documentation at [docs.qownnotes.org](http://docs.qownnotes.org)
+  to the scripting settings
+- the problem with accessing your todo lists on Nextcloud 11 will be fixed in
+  Nextcloud 11.0.1
+  (see [Nextcloud Issue #2552](https://github.com/nextcloud/server/issues/2552))
+
 ## 16.12.10
 - when linking notes now the title of the note will be used as link-text
 - decreased the saturation of some background colors of the `Light` color 
@@ -7,7 +14,7 @@
 - tried to fix a problem with wrong reminder times of tasks in the todo list
 - fixed a problem with duplicate shortcut items in the shortcut settings 
   after opening the settings dialog multiple times
-   (for [Issue #424](https://github.com/pbek/QOwnNotes/issues/424))
+  (for [Issue #424](https://github.com/pbek/QOwnNotes/issues/424))
 - added more Dutch, Chinese and Japanese translation (thank you Leime,
   Fabijenna, chonghua and MoeMoePig)
 
