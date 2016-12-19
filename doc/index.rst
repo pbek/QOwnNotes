@@ -1,24 +1,19 @@
-.. QOwnNotes documentation master file, created by
-   sphinx-quickstart on Mon Dec 19 17:33:55 2016.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. QOwnNotes documentation master file
+   You need to install `pip install sphinx sphinx_rtd_theme` and
+   run `make html` to create the documentation
 
-Welcome to QOwnNotes's documentation!
-=====================================
+QOwnNotes documentation
+=======================
 
 .. toctree::
    :maxdepth: 3
 
    scripting/README
+   license
 
-License
-=======
-
-   `LICENSE <../LICENSE>`_
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

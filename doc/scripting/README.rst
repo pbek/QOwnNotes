@@ -39,8 +39,8 @@ Usage in QML
     script.startDetachedProcess("/path/to/my/program", ["my parameter"]);
 
 You may want to take a look at the example
-`custom-actions.qml <custom-actions.qml>`__ or
-`execute-command-after-note-update.qml <execute-command-after-note-update.qml>`__.
+`custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__ or
+`execute-command-after-note-update.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/execute-command-after-note-update.qml>`__.
 
 .. code:: cpp
 
@@ -64,7 +64,7 @@ Usage in QML
     var result = script.startSynchronousProcess("/path/to/my/program", ["my parameter"], "data");
 
 You may want to take a look at the example
-`encryption-keybase.qml <encryption-keybase.qml>`__.
+`encryption-keybase.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml>`__.
 
 Getting the path of the current note folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -89,7 +89,7 @@ Usage in QML
     var path = script.currentNoteFolderPath();
 
 You may want to take a look at the example
-`absolute-media-links.qml <absolute-media-links.qml>`__.
+`absolute-media-links.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/absolute-media-links.qml>`__.
 
 Getting the current note
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -114,7 +114,7 @@ Usage in QML
     var note = script.currentNote();
 
 You may want to take a look at the example
-`custom-actions.qml <custom-actions.qml>`__.
+`custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Logging to the log widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -162,7 +162,7 @@ Usage in QML
     var html = script.downloadUrlToString("http://www.qownnotes.org");
 
 You may want to take a look at the example
-`insert-headline-with-link-from-github-url.qml <insert-headline-with-link-from-github-url.qml>`__.
+`insert-headline-with-link-from-github-url.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml>`__.
 
 Register a custom action
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,7 +207,7 @@ Usage in QML
 
 You may then want to use the identifier with function
 ``customActionInvoked`` in a script like
-`custom-actions.qml <custom-actions.qml>`__.
+`custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Create a new note
 ~~~~~~~~~~~~~~~~~
@@ -232,7 +232,7 @@ Usage in QML
     script.createNote("My note headline\n===\n\nMy text");
 
 You may want to take a look at the example
-`custom-actions.qml <custom-actions.qml>`__.
+`custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Accessing the clipboard
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -258,7 +258,7 @@ Usage in QML
     var clipboardHtml = script.clipboard(true);
 
 You may want to take a look at the example
-`custom-actions.qml <custom-actions.qml>`__.
+`custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Write text to the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -284,7 +284,7 @@ Usage in QML
     script.noteTextEditWrite("My custom text");
 
 You might want to look at the custom action ``transformTextRot13`` in
-the example `custom-actions.qml <custom-actions.qml>`__.
+the example `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Read the selected text in the note text edit
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -310,7 +310,7 @@ Usage in QML
     var text = script.noteTextEditSelectedText();
 
 You might want to look at the custom action ``transformTextRot13`` in
-the example `custom-actions.qml <custom-actions.qml>`__.
+the example `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 Check whether platform is Linux, OS X or Windows
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -357,7 +357,7 @@ Usage in QML
     script.tagCurrentNote("favorite");
 
 You might want to look at the custom action ``favoriteNote`` in the
-example `favorite-note.qml <favorite-note.qml>`__.
+example `favorite-note.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/favorite-note.qml>`__.
 
 Add a custom stylesheet
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -383,7 +383,7 @@ Usage in QML
     script.addStyleSheet("QTreeWidget#noteTreeWidget {font-size: 30px;}");
 
 You may want to take a look at the example
-`custom-stylesheet.qml <custom-stylesheet.qml>`__.
+`custom-stylesheet.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-stylesheet.qml>`__.
 
 You can get the object names from the ``*.ui`` files, for example
 `mainwindow.ui <https://github.com/pbek/QOwnNotes/blob/develop/src/mainwindow.ui>`__.
@@ -431,7 +431,7 @@ noteOpenedHook
     }
 
 You may want to take a look at the example
-`on-note-opened.qml <on-note-opened.qml>`__.
+`on-note-opened.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml>`__.
 
 insertMediaHook
 ~~~~~~~~~~~~~~~
@@ -449,7 +449,7 @@ insertMediaHook
     function insertMediaHook(fileName, mediaMarkdownText);
 
 You may want to take a look at the example
-`example.qml <example.qml>`__.
+`example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__.
 
 insertingFromMimeDataHook
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -466,9 +466,9 @@ insertingFromMimeDataHook
     function insertingFromMimeDataHook(text, html);
 
 You may want to take a look at the example
-`example.qml <example.qml>`__,
-`insert-headline-with-link-from-github-url.qml <insert-headline-with-link-from-github-url.qml>`__
-or `note-text-from-5pm-mail.qml <note-text-from-5pm-mail.qml>`__.
+`example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__,
+`insert-headline-with-link-from-github-url.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml>`__
+or `note-text-from-5pm-mail.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-text-from-5pm-mail.qml>`__.
 
 handleNoteTextFileNameHook
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -489,8 +489,8 @@ handleNoteTextFileNameHook
      */
     function handleNoteTextFileNameHook(note);
 
-You may want to take a look at the example `example.qml <example.qml>`__
-or `use-tag-names-in-filename.qml <use-tag-names-in-filename.qml>`__.
+You may want to take a look at the example `example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__
+or `use-tag-names-in-filename.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml>`__.
 
 handleNewNoteHeadlineHook
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -512,7 +512,7 @@ handleNewNoteHeadlineHook
     function handleNewNoteHeadlineHook(headline);
 
 You may want to take a look at the example
-`custom-new-note-headline.qml <custom-new-note-headline.qml>`__.
+`custom-new-note-headline.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-new-note-headline.qml>`__.
 
 noteToMarkdownHtmlHook
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -531,8 +531,8 @@ noteToMarkdownHtmlHook
      */
     function noteToMarkdownHtmlHook(note, html);
 
-You may want to take a look at the example `example.qml <example.qml>`__
-or `preview-styling.qml <preview-styling.qml>`__.
+You may want to take a look at the example `example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__
+or `preview-styling.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml>`__.
 
 encryptionHook
 ~~~~~~~~~~~~~~
@@ -550,9 +550,9 @@ encryptionHook
     function encryptionHook(text, password, decrypt);
 
 You may want to take a look at the example
-`encryption-keybase.qml <encryption-keybase.qml>`__,
-`encryption-pgp.qml <encryption-pgp.qml>`__ or
-`encryption-rot13.qml <encryption-rot13.qml>`__.
+`encryption-keybase.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml>`__,
+`encryption-pgp.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml>`__ or
+`encryption-rot13.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml>`__.
 
 Exposed classes
 ---------------
