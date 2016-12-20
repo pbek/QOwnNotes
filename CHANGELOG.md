@@ -11,6 +11,11 @@
 - there now is a repository for **Fedora 25**
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora)
       for instructions
+- added more markdown highlighting support
+    - multiple block quote characters like `> > deeper level`
+    - support for headlines without space after the `#` like `##no space here`,
+      because Beebom was (mis-)using headlines that way in his YouTube video
+      [10 Must Have Linux Apps You Should Use](https://youtu.be/oSSyLNb8jA8?t=2m19s) ;)
 
 ## 16.12.10
 - when linking notes now the title of the note will be used as link-text
