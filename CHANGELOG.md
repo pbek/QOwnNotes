@@ -8,6 +8,9 @@
   (see [Nextcloud Issue #2552](https://github.com/nextcloud/server/issues/2552))
 - added a warning that the ownCloud notes app doesn't support sub-folders in 
   the note folder settings
+- there now is a repository for **Fedora 25**
+    - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora)
+      for instructions
 
 ## 16.12.10
 - when linking notes now the title of the note will be used as link-text
