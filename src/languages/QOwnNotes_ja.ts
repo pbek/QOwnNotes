@@ -3900,7 +3900,7 @@ Your notes will stay intact!</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="97"/>
+        <location filename="../dialogs/tododialog.cpp" line="99"/>
         <source>Save and insert into note</source>
         <translation>保存してノートに挿入(&amp;I)</translation>
     </message>
@@ -3925,9 +3925,8 @@ Your notes will stay intact!</source>
         <translation>Todoリストをサーバーから再読み込みする</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="298"/>
         <source>Reload</source>
-        <translation>更新</translation>
+        <translation type="vanished">更新</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="329"/>
@@ -3945,17 +3944,17 @@ Your notes will stay intact!</source>
         <translation>現在のTodo項目を保存</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="101"/>
+        <location filename="../dialogs/tododialog.cpp" line="103"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation>現在のToDoアイテムを保存し、現在のメモにそのリンクを挿入する</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="110"/>
+        <location filename="../dialogs/tododialog.cpp" line="112"/>
         <source>Import the current todo item as new note</source>
         <translation>現在のToDoアイテムを新しいメモとしてインポートする</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="106"/>
+        <location filename="../dialogs/tododialog.cpp" line="108"/>
         <source>Import as note</source>
         <translation>メモとしてインポート</translation>
     </message>
@@ -3965,29 +3964,54 @@ Your notes will stay intact!</source>
         <translation>現在のTodo項目を削除</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="298"/>
+        <source>Reload...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
         <source>Todo list items are being loaded from the server</source>
         <translation>Todoリスト項目をサーバーから読み込みました</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="537"/>
+        <location filename="../dialogs/tododialog.cpp" line="123"/>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="127"/>
+        <source>Reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="132"/>
+        <source>Clear cache and reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="136"/>
+        <source>Clear calendar cache and reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="572"/>
         <source>Remove todo item</source>
         <translation>Todo 項目の削除</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="538"/>
+        <location filename="../dialogs/tododialog.cpp" line="573"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation>選択したTodo項目を削除しますか？
 これは元に戻すことはできません。</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Remove</source>
         <translation>削除(&amp;R)</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>

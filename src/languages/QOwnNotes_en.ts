@@ -3900,7 +3900,7 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="97"/>
+        <location filename="../dialogs/tododialog.cpp" line="99"/>
         <source>Save and insert into note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3925,11 +3925,6 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="298"/>
-        <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../dialogs/tododialog.ui" line="329"/>
         <source>Search or create todo item</source>
         <translation type="unfinished"></translation>
@@ -3945,17 +3940,17 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="101"/>
+        <location filename="../dialogs/tododialog.cpp" line="103"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="110"/>
+        <location filename="../dialogs/tododialog.cpp" line="112"/>
         <source>Import the current todo item as new note</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="106"/>
+        <location filename="../dialogs/tododialog.cpp" line="108"/>
         <source>Import as note</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3965,28 +3960,53 @@ Your notes will stay intact!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="298"/>
+        <source>Reload...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
         <source>Todo list items are being loaded from the server</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="537"/>
+        <location filename="../dialogs/tododialog.cpp" line="123"/>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="127"/>
+        <source>Reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="132"/>
+        <source>Clear cache and reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="136"/>
+        <source>Clear calendar cache and reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="572"/>
         <source>Remove todo item</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="538"/>
+        <location filename="../dialogs/tododialog.cpp" line="573"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Remove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>

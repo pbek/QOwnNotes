@@ -295,7 +295,7 @@ p, li { white-space: pre-wrap; }
               <string>Reload the todo list from server</string>
              </property>
              <property name="text">
-              <string>Reload</string>
+              <string>Reload...</string>
              </property>
              <property name="icon">
               <iconset theme="view-refresh" resource="../breeze-qownnotes.qrc">

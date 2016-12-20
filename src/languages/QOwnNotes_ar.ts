@@ -4005,7 +4005,7 @@ Your notes will stay intact!</source>
         <translation>حفظ</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="97"/>
+        <location filename="../dialogs/tododialog.cpp" line="99"/>
         <source>Save and insert into note</source>
         <translation>احفظ وأدرج في الملاحظة</translation>
     </message>
@@ -4030,9 +4030,8 @@ Your notes will stay intact!</source>
         <translation>أعد تحميل قائمة للإنجاز من الخادم</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="298"/>
         <source>Reload</source>
-        <translation>أعد التحميل</translation>
+        <translation type="vanished">أعد التحميل</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="329"/>
@@ -4050,17 +4049,17 @@ Your notes will stay intact!</source>
         <translation>احفظ عنصر للإنجاز الحالي</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="101"/>
+        <location filename="../dialogs/tododialog.cpp" line="103"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation>احفظ عنصر للإنجاز الحالي وأدرج رابطاً له في الملاحظة الحالية</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="110"/>
+        <location filename="../dialogs/tododialog.cpp" line="112"/>
         <source>Import the current todo item as new note</source>
         <translation>استورد عنصر للإنجاز الحالي كملاحظة جديدة</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="106"/>
+        <location filename="../dialogs/tododialog.cpp" line="108"/>
         <source>Import as note</source>
         <translation>استورد كملاحظة</translation>
     </message>
@@ -4070,28 +4069,53 @@ Your notes will stay intact!</source>
         <translation>أزل عنصر قائمة للإنجاز الحالي</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="298"/>
+        <source>Reload...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
         <source>Todo list items are being loaded from the server</source>
         <translation>يتم تحميل عناصر قائمة للإنجاز من الخادم</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="537"/>
+        <location filename="../dialogs/tododialog.cpp" line="123"/>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="127"/>
+        <source>Reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="132"/>
+        <source>Clear cache and reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="136"/>
+        <source>Clear calendar cache and reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="572"/>
         <source>Remove todo item</source>
         <translation>أزل عنصر قائمة للإنجاز</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="538"/>
+        <location filename="../dialogs/tododialog.cpp" line="573"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation>هل تريد إزالة عنصر قائمة للإنجاز الحالي؟ لا يمكن التراجع عن هذا!</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Remove</source>
         <translation>أزل</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Cancel</source>
         <translation>ألغ</translation>
     </message>

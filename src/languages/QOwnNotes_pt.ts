@@ -3919,7 +3919,7 @@ Suas Notas estarão intactas!</translation>
         <translation>Salvar</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="97"/>
+        <location filename="../dialogs/tododialog.cpp" line="99"/>
         <source>Save and insert into note</source>
         <translation>Salvar e inserir nota</translation>
     </message>
@@ -3944,9 +3944,8 @@ Suas Notas estarão intactas!</translation>
         <translation>Recarregar a lista de tarefas do servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="298"/>
         <source>Reload</source>
-        <translation>Recarregar</translation>
+        <translation type="vanished">Recarregar</translation>
     </message>
     <message>
         <location filename="../dialogs/tododialog.ui" line="329"/>
@@ -3964,17 +3963,17 @@ Suas Notas estarão intactas!</translation>
         <translation>Salvar a tarefa atual</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="101"/>
+        <location filename="../dialogs/tododialog.cpp" line="103"/>
         <source>Save the current todo item and insert a link to it into the current note</source>
         <translation>Salvar a tarefa atual e inserir um link para ele na nota atual</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="110"/>
+        <location filename="../dialogs/tododialog.cpp" line="112"/>
         <source>Import the current todo item as new note</source>
         <translation>Importar a tarefa atual como uma nova nota</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="106"/>
+        <location filename="../dialogs/tododialog.cpp" line="108"/>
         <source>Import as note</source>
         <translation>Importar como nota</translation>
     </message>
@@ -3984,29 +3983,54 @@ Suas Notas estarão intactas!</translation>
         <translation>Excluir a tarefa atual</translation>
     </message>
     <message>
+        <location filename="../dialogs/tododialog.ui" line="298"/>
+        <source>Reload...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/tododialog.ui" line="319"/>
         <source>Todo list items are being loaded from the server</source>
         <translation>A lista de tarefas foi carregada do servidor</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="537"/>
+        <location filename="../dialogs/tododialog.cpp" line="123"/>
+        <source>Reload from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="127"/>
+        <source>Reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="132"/>
+        <source>Clear cache and reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="136"/>
+        <source>Clear calendar cache and reload tasks from server</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/tododialog.cpp" line="572"/>
         <source>Remove todo item</source>
         <translation>Excluir uma tarefa</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="538"/>
+        <location filename="../dialogs/tododialog.cpp" line="573"/>
         <source>Remove the selected todo item?
 This cannot be undone!</source>
         <translation>Excluir o item selecionado?
 Isso não poderá ser desfeito!</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Remove</source>
         <translation>&amp;Excluir</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="539"/>
+        <location filename="../dialogs/tododialog.cpp" line="574"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>

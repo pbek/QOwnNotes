@@ -90,7 +90,9 @@ void TodoDialog::setupUi() {
     QObject::connect(shortcut, SIGNAL(activated()),
                      this, SLOT(on_removeButton_clicked()));
 
-    // setup the note button menu
+    /*
+     * setup the note button menu
+     */
     QMenu *noteMenu = new QMenu();
 
     QAction *insertAction = noteMenu->addAction(
@@ -112,6 +114,31 @@ void TodoDialog::setupUi() {
             this, SLOT(onImportAsNoteButtonClicked()));
 
     ui->noteButton->setMenu(noteMenu);
+
+    /*
+     * setup the reload button menu
+     */
+    QMenu *reloadMenu = new QMenu();
+
+    QAction *reloadAction = reloadMenu->addAction(tr("Reload from server"));
+    reloadAction->setIcon(QIcon::fromTheme(
+            "view-refresh",
+            QIcon(":icons/breeze-qownnotes/16x16/view-refresh.svg")));
+    reloadAction->setToolTip(tr("Reload tasks from server"));
+    connect(reloadAction, SIGNAL(triggered()),
+            this, SLOT(reloadTodoList()));
+
+    QAction *clearCacheAction = reloadMenu->addAction(
+            tr("Clear cache and reload"));
+    clearCacheAction->setIcon(QIcon::fromTheme(
+            "trash-empty",
+            QIcon(":icons/breeze-qownnotes/16x16/trash-empty.svg")));
+    clearCacheAction->setToolTip(tr("Clear calendar cache and reload tasks "
+                                            "from server"));
+    connect(clearCacheAction, SIGNAL(triggered()),
+            this, SLOT(clearCacheAndReloadTodoList()));
+
+    ui->reloadTodoListButton->setMenu(reloadMenu);
 }
 
 /**
@@ -190,6 +217,14 @@ void TodoDialog::reloadTodoList() {
     ui->todoItemLoadingProgressBar->show();
     OwnCloudService *ownCloud = OwnCloudService::instance();
     ownCloud->todoGetTodoList(ui->todoListSelector->currentText(), this);
+}
+
+/**
+ * @brief Clears the calendar table and reloads the tasks from the server
+ */
+void TodoDialog::clearCacheAndReloadTodoList() {
+    CalendarItem::removeAll();
+    reloadTodoList();
 }
 
 /**
@@ -591,10 +626,6 @@ void TodoDialog::on_reminderCheckBox_clicked() {
     } else {
         ui->reminderDateTimeEdit->hide();
     }
-}
-
-void TodoDialog::on_reloadTodoListButton_clicked() {
-    reloadTodoList();
 }
 
 /**
