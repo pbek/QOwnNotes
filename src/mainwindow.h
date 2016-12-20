@@ -424,6 +424,8 @@ private slots:
 
     void on_actionSearch_text_on_the_web_triggered();
 
+    void noteEditCursorPositionChanged();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -452,6 +454,7 @@ private:
     NoteHistory noteHistory;
     QHash<int, NoteHistoryItem> noteBookmarks;
     QPushButton *_updateAvailableButton;
+    QLabel *_noteEditLineNumberLabel;
     QPushButton *_leaveDistractionFreeModeButton;
     QToolBar *_formattingToolbar;
     QToolBar *_customActionToolbar;
@@ -569,7 +572,7 @@ private:
 
     void setupNoteBookmarkShortcuts();
 
-    void setupUpdateAvailableButton();
+    void setupStatusBarWidgets();
 
     void gotoNextNote();
 

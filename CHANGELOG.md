@@ -1,10 +1,10 @@
 # QOwnNotes Changelog
 
 ## 16.12.11
-- added a link to the new documentation at [docs.qownnotes.org](http://docs.qownnotes.org)
-  to the scripting settings
-- the problem with accessing your todo lists on Nextcloud 11 will be fixed in
-  Nextcloud 11.0.1
+- added a link to the **new documentation** at
+  [docs.qownnotes.org](http://docs.qownnotes.org) to the scripting settings
+- the problem with accessing your todo lists on **Nextcloud 11** will be 
+  fixed in Nextcloud 11.0.1
   (see [Nextcloud Issue #2552](https://github.com/nextcloud/server/issues/2552))
 - added a warning that the ownCloud notes app doesn't support sub-folders in 
   the note folder settings
@@ -12,12 +12,14 @@
     - please visit the [QOwnNotes installation page](http://www.qownnotes.org/installation#Fedora)
       for instructions
 - added more markdown highlighting support
-    - multiple block quote characters like `> > deeper level`
-    - support for headlines without space after the `#` like `##no space here`,
+    - **multiple block quote characters** like `> > deeper level`
+    - support for **headlines without space** after the `#` like `##no space`,
       because Beebom was (mis-)using headlines that way in his YouTube video
       [10 Must Have Linux Apps You Should Use](https://youtu.be/oSSyLNb8jA8?t=2m19s) ;)
-- you can now also clear the calendar cache and reload the tasks from your 
-  server in the *Todo dialog*
+- you can now also **clear the calendar cache** and **reload the tasks** from 
+  your server in the *Todo dialog*
+- you now can see the **current line number**, the position in the line and the 
+  amount of selected characters in the status bar
 
 ## 16.12.10
 - when linking notes now the title of the note will be used as link-text

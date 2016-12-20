@@ -188,7 +188,7 @@ MainWindow::MainWindow(QWidget *parent) :
     buildNotesIndexAndLoadNoteDirectoryList();
 
     // setup the update available button
-    setupUpdateAvailableButton();
+    setupStatusBarWidgets();
 
     this->noteDiffDialog = new NoteDiffDialog();
 
@@ -365,7 +365,7 @@ MainWindow::MainWindow(QWidget *parent) :
             this, SLOT(reloadTodoLists()));
     _todoListTimer->start(600000);
 
-    // setup the softwrap checkbox
+    // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2);
     QSettings settings;
@@ -393,6 +393,18 @@ MainWindow::MainWindow(QWidget *parent) :
     _actionDialog = Q_NULLPTR;
     _todoDialog = Q_NULLPTR;
     _settingsDialog = Q_NULLPTR;
+
+    // track cursor position changes for the line number label
+    QObject::connect(ui->noteTextEdit,
+                     SIGNAL(cursorPositionChanged()),
+                     this,
+                     SLOT(noteEditCursorPositionChanged()));
+
+    // track cursor position changes for the line number label
+    QObject::connect(ui->encryptedNoteTextEdit,
+                     SIGNAL(cursorPositionChanged()),
+                     this,
+                     SLOT(noteEditCursorPositionChanged()));
 }
 
 MainWindow::~MainWindow() {
@@ -2362,14 +2374,26 @@ void MainWindow::frequentPeriodicChecker() {
 }
 
 /**
- * Does the setup for the update available button
+ * Does the setup the status bar widgets
  */
-void MainWindow::setupUpdateAvailableButton() {
+void MainWindow::setupStatusBarWidgets() {
+    /*
+     * setup of update available button
+     */
+    _noteEditLineNumberLabel = new QLabel(this);
+    _noteEditLineNumberLabel->setText("0:0");
+    _noteEditLineNumberLabel->setToolTip(tr("Line numbers"));
+
+    ui->statusBar->addPermanentWidget(_noteEditLineNumberLabel);
+
+    /*
+     * setup of update available button
+     */
     _updateAvailableButton = new QPushButton(this);
     _updateAvailableButton->setFlat(true);
     _updateAvailableButton->setToolTip(
-            tr("click here to see what has changed and to be able to "
-                       "download the latest version"));
+            tr("Click here to see what has changed and to be able to "
+                       "update to the latest version"));
     _updateAvailableButton->hide();
     _updateAvailableButton->setStyleSheet("QPushButton {padding: 0 5px}");
 
@@ -2889,6 +2913,8 @@ void MainWindow::setCurrentNote(Note note,
 //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
 //           currentNote.fullNoteFilePath().toLatin1().data(),
 //           1);
+
+    noteEditCursorPositionChanged();
 }
 
 /**
@@ -8340,4 +8366,22 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
     QUrl url("https://duckduckgo.com/?t=qownnotes&q=" +
                      QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
+}
+
+/**
+ * Updates the line number label
+ */
+void MainWindow::noteEditCursorPositionChanged() {
+    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    QString selectedText = cursor.selectedText();
+    QString text;
+
+    if (!selectedText.isEmpty()) {
+        text = tr("%n chars", "characters", selectedText.count()) + "  ";
+    }
+
+    text += QString::number(cursor.block().blockNumber() + 1) + ":" +
+            QString::number(cursor.positionInBlock() + 1);
+
+    _noteEditLineNumberLabel->setText(text);
 }
