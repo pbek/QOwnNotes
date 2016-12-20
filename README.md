@@ -5,6 +5,7 @@
 [Issues](https://github.com/pbek/QOwnNotes/issues) | 
 [Releases](https://github.com/pbek/QOwnNotes/releases) |
 [Shortcuts](https://github.com/pbek/QOwnNotes/blob/develop/SHORTCUTS.md) |
+[Documentation](http://docs.qownnotes.org) |
 [Knowledge base](http://www.qownnotes.org/Knowledge-base) |
 [Screenshots](http://www.qownnotes.org) |
 [ownCloud Apps page](https://apps.owncloud.com/content/show.php?content=168497) |
@@ -17,6 +18,7 @@
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/pbek/QOwnNotes.svg)](http://isitmaintained.com/project/pbek/QOwnNotes "Percentage of issues still open")
 [![Crowdin](https://d322cqt584bo4o.cloudfront.net/qownnotes/localized.svg)](https://crowdin.com/project/qownnotes)
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/qownnotes/qownnotes)
+[![Documentation](https://readthedocs.org/projects/qownnotes/badge/?version=develop)](http://docs.qownnotes.org)
 
 [QOwnNotes](http://www.qownnotes.org) is the **open source notepad** with **markdown support** and **todo list manager** for **GNU/Linux**, **Mac OS X** and **Windows**, that works together with the default [**notes application**](https://github.com/owncloud/notes) of [**ownCloud**](http://owncloud.org/).
 
