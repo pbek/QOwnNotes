@@ -20,6 +20,8 @@
   your server in the *Todo dialog*
 - you now can see the **current line number**, the position in the line and the 
   amount of selected characters in the status bar
+- added more Dutch, Hungarian, Italian, Spanish and Polish translation 
+  (thank you Fabijenna, mlocati, richarson and lucjan)
 
 ## 16.12.10
 - when linking notes now the title of the note will be used as link-text

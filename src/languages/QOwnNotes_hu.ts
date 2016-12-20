@@ -1,4502 +1,4506 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
 <TS version="2.1" language="hu" sourcelanguage="en">
-<context>
+  <context>
     <name>AboutDialog</name>
     <message>
-        <location filename="../dialogs/aboutdialog.ui" line="14"/>
-        <source>About QOwnNotes</source>
-        <translation>A QOwnNotes-ról</translation>
+      <location filename="../dialogs/aboutdialog.ui" line="14"/>
+      <source>About QOwnNotes</source>
+      <translation>A QOwnNotes-ról</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>ActionDialog</name>
     <message>
-        <location filename="../dialogs/actiondialog.ui" line="14"/>
-        <location filename="../dialogs/actiondialog.ui" line="46"/>
-        <source>Find action</source>
-        <translation>Talál egy tevékenységet</translation>
+      <location filename="../dialogs/actiondialog.ui" line="14"/>
+      <location filename="../dialogs/actiondialog.ui" line="46"/>
+      <source>Find action</source>
+      <translation>Talál egy tevékenységet</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>EvernoteImportDialog</name>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
-        <source>Evernote Import</source>
-        <translation>Evernote importálása</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
+      <source>Evernote Import</source>
+      <translation>Evernote importálása</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
-        <source>Select file</source>
-        <translation>Válassza ki a fájlt</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
+      <source>Select file</source>
+      <translation>Válassza ki a fájlt</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="61"/>
-        <source>Please select the Evernote enex file you want to import:</source>
-        <translation>Kérjük, válassza ki a Evernote enex fájlt melyt szeretne importálni:</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="61"/>
+      <source>Please select the Evernote enex file you want to import:</source>
+      <translation>Kérjük, válassza ki a Evernote enex fájlt melyt szeretne importálni:</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
-        <source>Import images</source>
-        <translation>Képek importálása</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
+      <source>Import images</source>
+      <translation>Képek importálása</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
-        <source>Evernote enex file</source>
-        <translation>Evernote enex fájl</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
+      <source>Evernote enex file</source>
+      <translation>Evernote enex fájl</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
-        <source>%v of %m note(s) imported</source>
-        <translation>%m importált jegyzet %v-ből</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
+      <source>%v of %m note(s) imported</source>
+      <translation>%m importált jegyzet %v-ből</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.ui" line="51"/>
-        <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click &quot;Export notes...&quot; in the File menu.</source>
-        <translation>Ahhoz, hogy egy ilyen enex fájlt kapjon, jelöljön ki egy vagy több evernotes jegyzet asztal clienst és kattintson az &quot;Exportálom a jegyzeteket...&quot; gombra a fájl menüben.</translation>
+      <location filename="../dialogs/evernoteimportdialog.ui" line="51"/>
+      <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
+      <translation>Ahhoz, hogy egy ilyen enex fájlt kapjon, jelöljön ki egy vagy több evernotes jegyzet asztal clienst és kattintson az "Exportálom a jegyzeteket..." gombra a fájl menüben.</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
-        <source>Enex files</source>
-        <translation>Enex fájlok</translation>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
+      <source>Enex files</source>
+      <translation>Enex fájlok</translation>
     </message>
     <message>
-        <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
-        <source>Select Evernote enex file to import</source>
-        <translation>Válassza ki a Evernote enex fájlt az importáláshoz</translation>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
+      <source>Select Evernote enex file to import</source>
+      <translation>Válassza ki a Evernote enex fájlt az importáláshoz</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>FontColorWidget</name>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="38"/>
-        <source>Text font</source>
-        <translation>Szöveg betűtípusa</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="38"/>
+      <source>Text font</source>
+      <translation>Szöveg betűtípusa</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="73"/>
-        <source>Size:</source>
-        <translation>Méret:</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="73"/>
+      <source>Size:</source>
+      <translation>Méret:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="80"/>
-        <source>Family:</source>
-        <translation>Család:</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="80"/>
+      <source>Family:</source>
+      <translation>Család:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="103"/>
-        <source>Color schema</source>
-        <translation>Szín séma</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="103"/>
+      <source>Color schema</source>
+      <translation>Szín séma</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="124"/>
-        <source>Delete schema</source>
-        <translation>Séma törlése</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="124"/>
+      <source>Delete schema</source>
+      <translation>Séma törlése</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="127"/>
-        <source>Delete</source>
-        <translation>Törlés</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="127"/>
+      <source>Delete</source>
+      <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="593"/>
-        <source>Export schema</source>
-        <translation>Séma exportálása</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="169"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="593"/>
+      <source>Export schema</source>
+      <translation>Séma exportálása</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="172"/>
-        <source>Export</source>
-        <translation>Export</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="172"/>
+      <source>Export</source>
+      <translation>Export</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="271"/>
-        <source>If you have created a nice color schema please export it and share it with everyone!</source>
-        <translation>Ha létre hozott egy szép színsémát kérjük exportálja, és ossza meg másokkal!</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="271"/>
+      <source>If you have created a nice color schema please export it and share it with everyone!</source>
+      <translation>Ha létre hozott egy szép színsémát kérjük exportálja, és ossza meg másokkal!</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="155"/>
-        <source>Copy schema</source>
-        <translation>Másolás séma</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="155"/>
+      <source>Copy schema</source>
+      <translation>Másolás séma</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="158"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="420"/>
-        <source>Copy</source>
-        <translation>Másolás</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="158"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="420"/>
+      <source>Copy</source>
+      <translation>Másolás</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="638"/>
-        <source>Import schema</source>
-        <translation>Séma importálása</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="141"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="638"/>
+      <source>Import schema</source>
+      <translation>Séma importálása</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="144"/>
-        <source>Import</source>
-        <translation>Import</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="144"/>
+      <source>Import</source>
+      <translation>Import</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="315"/>
-        <source>Share schema</source>
-        <translation>Megosztom a sémát</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="315"/>
+      <source>Share schema</source>
+      <translation>Megosztom a sémát</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="288"/>
-        <source>Background:</source>
-        <translation>Háttér:</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="288"/>
+      <source>Background:</source>
+      <translation>Háttér:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="281"/>
-        <source>Foreground:</source>
-        <translation>Előtérben:</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="281"/>
+      <source>Foreground:</source>
+      <translation>Előtérben:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="264"/>
-        <source>Bold</source>
-        <translation>Vastag</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="264"/>
+      <source>Bold</source>
+      <translation>Vastag</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="244"/>
-        <source>Italic</source>
-        <translation>Dőlt</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="244"/>
+      <source>Italic</source>
+      <translation>Dőlt</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="237"/>
-        <source>Adapt font size:</source>
-        <translation>Alkalmazom a betűméretet:</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="237"/>
+      <source>Adapt font size:</source>
+      <translation>Alkalmazom a betűméretet:</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.ui" line="208"/>
-        <source>Underline</source>
-        <translation>Aláhúzás</translation>
+      <location filename="../widgets/fontcolorwidget.ui" line="208"/>
+      <source>Underline</source>
+      <translation>Aláhúzás</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
-        <source>Text preset</source>
-        <translation>Szöveg készlet</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="168"/>
+      <source>Text preset</source>
+      <translation>Szöveg készlet</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="169"/>
-        <source>Emphasized text</source>
-        <translation>Kiemelt szöveg</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="169"/>
+      <source>Emphasized text</source>
+      <translation>Kiemelt szöveg</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="170"/>
-        <source>Strong text</source>
-        <translation>Erős szöveg</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="170"/>
+      <source>Strong text</source>
+      <translation>Erős szöveg</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="187"/>
-        <source>(HTML) Comment</source>
-        <translation>(HTML) Megjegyzés</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="187"/>
+      <source>(HTML) Comment</source>
+      <translation>(HTML) Megjegyzés</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="177"/>
-        <source>Header, level 1</source>
-        <translation>Fej, 1-es szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="177"/>
+      <source>Header, level 1</source>
+      <translation>Fej, 1-es szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="171"/>
-        <source>Link</source>
-        <translation>Link</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="171"/>
+      <source>Link</source>
+      <translation>Link</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="172"/>
-        <source>Image</source>
-        <translation>Kép</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="172"/>
+      <source>Image</source>
+      <translation>Kép</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="173"/>
-        <source>Code (block)</source>
-        <translation>Kód (blokk)</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="173"/>
+      <source>Code (block)</source>
+      <translation>Kód (blokk)</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="174"/>
-        <source>Code (inline)</source>
-        <translation>Kód (inline)</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="174"/>
+      <source>Code (inline)</source>
+      <translation>Kód (inline)</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="176"/>
-        <source>List item</source>
-        <translation>Listaelem</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="176"/>
+      <source>List item</source>
+      <translation>Listaelem</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="178"/>
-        <source>Header, level 2</source>
-        <translation>Fejléc, 2. szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="178"/>
+      <source>Header, level 2</source>
+      <translation>Fejléc, 2. szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="179"/>
-        <source>Header, level 3</source>
-        <translation>Fejléc, 3. szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="179"/>
+      <source>Header, level 3</source>
+      <translation>Fejléc, 3. szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="180"/>
-        <source>Header, level 4</source>
-        <translation>Fejléc, 4. szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="180"/>
+      <source>Header, level 4</source>
+      <translation>Fejléc, 4. szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="181"/>
-        <source>Header, level 5</source>
-        <translation>Fejléc, 5-ös szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="181"/>
+      <source>Header, level 5</source>
+      <translation>Fejléc, 5-ös szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="182"/>
-        <source>Header, level 6</source>
-        <translation>Fejléc, 6. szint</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="182"/>
+      <source>Header, level 6</source>
+      <translation>Fejléc, 6. szint</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="185"/>
-        <source>Block quote</source>
-        <translation>Idézetblokk</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="185"/>
+      <source>Block quote</source>
+      <translation>Idézetblokk</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="186"/>
-        <source>Table</source>
-        <translation>Táblázat</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="186"/>
+      <source>Table</source>
+      <translation>Táblázat</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="183"/>
-        <source>Horizontal rule</source>
-        <translation>Vízszintes díszítővonal</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="183"/>
+      <source>Horizontal rule</source>
+      <translation>Vízszintes díszítővonal</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="188"/>
-        <source>Masked syntax</source>
-        <translation>Maszkirozott szintaxis</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="188"/>
+      <source>Masked syntax</source>
+      <translation>Maszkirozott szintaxis</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
-        <source>This item will be used to preset colors for the other items</source>
-        <translation>Ezt a cikket használjuk más cikkek színe előre beállitásához</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
+      <source>This item will be used to preset colors for the other items</source>
+      <translation>Ezt a cikket használjuk más cikkek színe előre beállitásához</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="417"/>
-        <source>Copy color schema</source>
-        <translation>Színséma másolás</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="417"/>
+      <source>Copy color schema</source>
+      <translation>Színséma másolás</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="418"/>
-        <source>Color schema name</source>
-        <translation>Színséma neve</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="418"/>
+      <source>Color schema name</source>
+      <translation>Színséma neve</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
-        <source>Remove schema</source>
-        <translation>Séma eltávolítása</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="542"/>
+      <source>Remove schema</source>
+      <translation>Séma eltávolítása</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="543"/>
-        <source>Remove current schema? This cannot be undone!</source>
-        <translation>Eltávolítja a jelenlegi sémát? Nem lehet visszahozni!</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="543"/>
+      <source>Remove current schema? This cannot be undone!</source>
+      <translation>Eltávolítja a jelenlegi sémát? Nem lehet visszahozni!</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
-        <source>Remove</source>
-        <translation>Eltávolítom</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
+      <source>Remove</source>
+      <translation>Eltávolítom</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
-        <source>Cancel</source>
-        <translation>Mégse</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="544"/>
+      <source>Cancel</source>
+      <translation>Mégse</translation>
     </message>
     <message>
-        <location filename="../widgets/fontcolorwidget.cpp" line="592"/>
-        <location filename="../widgets/fontcolorwidget.cpp" line="637"/>
-        <source>INI files</source>
-        <translation>INI fájlok</translation>
+      <location filename="../widgets/fontcolorwidget.cpp" line="592"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="637"/>
+      <source>INI files</source>
+      <translation>INI fájlok</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>LinkDialog</name>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="14"/>
-        <source>Link an url or note</source>
-        <translation>Linkelj be egy URL-t vagy egy jegyzetet</translation>
+      <location filename="../dialogs/linkdialog.ui" line="14"/>
+      <source>Link an url or note</source>
+      <translation>Linkelj be egy URL-t vagy egy jegyzetet</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="44"/>
-        <source>Enter URL</source>
-        <translation>Add meg az URL-címet</translation>
+      <location filename="../dialogs/linkdialog.ui" line="44"/>
+      <source>Enter URL</source>
+      <translation>Add meg az URL-címet</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="53"/>
-        <source>Enter an URL to link to</source>
-        <translation>Adj meg egy URL-t a linkhez</translation>
+      <location filename="../dialogs/linkdialog.ui" line="53"/>
+      <source>Enter an URL to link to</source>
+      <translation>Adj meg egy URL-t a linkhez</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="76"/>
-        <source>Search for notes or create new notes by entering text and pressing return</source>
-        <translation>Jegyzetek keresése vagy teremtsen új jegyzetet szöveg megadása által, és nyomja meg a vissza gombot</translation>
+      <location filename="../dialogs/linkdialog.ui" line="76"/>
+      <source>Search for notes or create new notes by entering text and pressing return</source>
+      <translation>Jegyzetek keresése vagy teremtsen új jegyzetet szöveg megadása által, és nyomja meg a vissza gombot</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="91"/>
-        <source>Search for a note to link to</source>
-        <translation>Találj egy belinkelni való jegyzetet</translation>
+      <location filename="../dialogs/linkdialog.ui" line="91"/>
+      <source>Search for a note to link to</source>
+      <translation>Találj egy belinkelni való jegyzetet</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.ui" line="63"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;válaszd ki a helyi fájl csatolását&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/linkdialog.ui" line="63"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;válaszd ki a helyi fájl csatolását&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/linkdialog.cpp" line="181"/>
-        <source>Select file to link to</source>
-        <translation>Válassza ki a csatolni kívánt fájlt</translation>
+      <location filename="../dialogs/linkdialog.cpp" line="181"/>
+      <source>Select file to link to</source>
+      <translation>Válassza ki a csatolni kívánt fájlt</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>LogWidget</name>
     <message>
-        <location filename="../widgets/logwidget.ui" line="14"/>
-        <source>Logs</source>
-        <translation>Naplók</translation>
+      <location filename="../widgets/logwidget.ui" line="14"/>
+      <source>Logs</source>
+      <translation>Naplók</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="109"/>
-        <source>Fatal</source>
-        <translation>Végzetes</translation>
+      <location filename="../widgets/logwidget.ui" line="109"/>
+      <source>Fatal</source>
+      <translation>Végzetes</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="95"/>
-        <source>Warning</source>
-        <translation>Figyelmeztetés</translation>
+      <location filename="../widgets/logwidget.ui" line="95"/>
+      <source>Warning</source>
+      <translation>Figyelmeztetés</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="102"/>
-        <source>Critical</source>
-        <translation>Kritikus</translation>
+      <location filename="../widgets/logwidget.ui" line="102"/>
+      <source>Critical</source>
+      <translation>Kritikus</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="81"/>
-        <source>Debug</source>
-        <translation>Debug</translation>
+      <location filename="../widgets/logwidget.ui" line="81"/>
+      <source>Debug</source>
+      <translation>Debug</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="88"/>
-        <source>Info</source>
-        <translation>Infó</translation>
+      <location filename="../widgets/logwidget.ui" line="88"/>
+      <source>Info</source>
+      <translation>Infó</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="116"/>
-        <source>Status</source>
-        <translation>Állapot</translation>
+      <location filename="../widgets/logwidget.ui" line="116"/>
+      <source>Status</source>
+      <translation>Állapot</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="123"/>
-        <source>Scripting</source>
-        <translation>Scripting</translation>
+      <location filename="../widgets/logwidget.ui" line="123"/>
+      <source>Scripting</source>
+      <translation>Scripting</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.ui" line="130"/>
-        <location filename="../widgets/logwidget.cpp" line="375"/>
-        <source>Clear log</source>
-        <translation>Napló törlése</translation>
+      <location filename="../widgets/logwidget.ui" line="130"/>
+      <location filename="../widgets/logwidget.cpp" line="375"/>
+      <source>Clear log</source>
+      <translation>Napló törlése</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="373"/>
-        <source>Show options</source>
-        <translation>Beállítások megjelenítése</translation>
+      <location filename="../widgets/logwidget.cpp" line="373"/>
+      <source>Show options</source>
+      <translation>Beállítások megjelenítése</translation>
     </message>
     <message>
-        <location filename="../widgets/logwidget.cpp" line="373"/>
-        <source>Hide options</source>
-        <translation>Beállítások elrejtése</translation>
+      <location filename="../widgets/logwidget.cpp" line="373"/>
+      <source>Hide options</source>
+      <translation>Beállítások elrejtése</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../mainwindow.ui" line="523"/>
-        <source>add a tag to this note</source>
-        <translation>címkézze a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="523"/>
+      <source>add a tag to this note</source>
+      <translation>címkézze a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="526"/>
-        <source>Add tag</source>
-        <translation>Címke hozzáadása</translation>
+      <location filename="../mainwindow.ui" line="526"/>
+      <source>Add tag</source>
+      <translation>Címke hozzáadása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="381"/>
-        <location filename="../mainwindow.cpp" line="501"/>
-        <source>Navigation</source>
-        <translation>Navigáció</translation>
+      <location filename="../mainwindow.ui" line="381"/>
+      <location filename="../mainwindow.cpp" line="501"/>
+      <source>Navigation</source>
+      <translation>Navigáció</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="624"/>
-        <source>&amp;Note</source>
-        <translation>&amp;Jegyzet</translation>
+      <location filename="../mainwindow.ui" line="624"/>
+      <source>&amp;Note</source>
+      <translation>&amp;Jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="628"/>
-        <source>Note &amp;folders</source>
-        <translation>Jegyzet &amp;mappák</translation>
+      <location filename="../mainwindow.ui" line="628"/>
+      <source>Note &amp;folders</source>
+      <translation>Jegyzet &amp;mappák</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="633"/>
-        <source>Sort by</source>
-        <translation>Rendezés</translation>
+      <location filename="../mainwindow.ui" line="633"/>
+      <source>Sort by</source>
+      <translation>Rendezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="692"/>
-        <source>&amp;Help</source>
-        <translation>&amp;Súgó</translation>
+      <location filename="../mainwindow.ui" line="692"/>
+      <source>&amp;Help</source>
+      <translation>&amp;Súgó</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="769"/>
-        <source>Editor width in distraction free mode</source>
-        <translation>Szerkesztő szélessége figyelemelterelésmentes módban</translation>
+      <location filename="../mainwindow.ui" line="769"/>
+      <source>Editor width in distraction free mode</source>
+      <translation>Szerkesztő szélessége figyelemelterelésmentes módban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="772"/>
-        <source>Editor width</source>
-        <translation>Szerkesztő szélessége</translation>
+      <location filename="../mainwindow.ui" line="772"/>
+      <source>Editor width</source>
+      <translation>Szerkesztő szélessége</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="832"/>
-        <source>Custom actions</source>
-        <translation>Egyéni műveletek</translation>
+      <location filename="../mainwindow.ui" line="832"/>
+      <source>Custom actions</source>
+      <translation>Egyéni műveletek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="848"/>
-        <source>main toolbar</source>
-        <translation>fő eszköztár</translation>
+      <location filename="../mainwindow.ui" line="848"/>
+      <source>main toolbar</source>
+      <translation>fő eszköztár</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="880"/>
-        <source>&amp;Quit</source>
-        <translation>&amp;Kilép</translation>
+      <location filename="../mainwindow.ui" line="880"/>
+      <source>&amp;Quit</source>
+      <translation>&amp;Kilép</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="895"/>
-        <source>&amp;Setup note folders</source>
-        <translation>Jegyzet mappák &amp;beállítása</translation>
+      <location filename="../mainwindow.ui" line="895"/>
+      <source>&amp;Setup note folders</source>
+      <translation>Jegyzet mappák &amp;beállítása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="904"/>
-        <source>&amp;Find note</source>
-        <translation>&amp;Jegyzet megkeresése</translation>
+      <location filename="../mainwindow.ui" line="904"/>
+      <source>&amp;Find note</source>
+      <translation>&amp;Jegyzet megkeresése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="916"/>
-        <source>&amp;Remove current note</source>
-        <translation>Eltávolítom az aktuális jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="916"/>
+      <source>&amp;Remove current note</source>
+      <translation>Eltávolítom az aktuális jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="928"/>
-        <source>About &amp;QOwnNotes...</source>
-        <translation>A &amp;QOwnNotes-ról...</translation>
+      <location filename="../mainwindow.ui" line="928"/>
+      <source>About &amp;QOwnNotes...</source>
+      <translation>A &amp;QOwnNotes-ról...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="940"/>
-        <source>&amp;New note</source>
-        <translation>&amp;Új Megjegyzés</translation>
+      <location filename="../mainwindow.ui" line="940"/>
+      <source>&amp;New note</source>
+      <translation>&amp;Új Megjegyzés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="952"/>
-        <source>Check for &amp;updates</source>
-        <translation>Ellenőrizze a &amp;frissítéseket</translation>
+      <location filename="../mainwindow.ui" line="952"/>
+      <source>Check for &amp;updates</source>
+      <translation>Ellenőrizze a &amp;frissítéseket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="964"/>
-        <source>Report &amp;issues or ideas</source>
-        <translation>Közölj &amp;kérdéseket vagy ötleteket</translation>
+      <location filename="../mainwindow.ui" line="964"/>
+      <source>Report &amp;issues or ideas</source>
+      <translation>Közölj &amp;kérdéseket vagy ötleteket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="972"/>
-        <source>Alphabetical</source>
-        <translation>ABC</translation>
+      <location filename="../mainwindow.ui" line="972"/>
+      <source>Alphabetical</source>
+      <translation>ABC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="975"/>
-        <source>Sort alphabetical</source>
-        <translation>Betűrendes rendezés</translation>
+      <location filename="../mainwindow.ui" line="975"/>
+      <source>Sort alphabetical</source>
+      <translation>Betűrendes rendezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="983"/>
-        <source>By date</source>
-        <translation>Dátum szerint</translation>
+      <location filename="../mainwindow.ui" line="983"/>
+      <source>By date</source>
+      <translation>Dátum szerint</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="986"/>
-        <source>Sort by date</source>
-        <translation>Dátum szerinti rendezés</translation>
+      <location filename="../mainwindow.ui" line="986"/>
+      <source>Sort by date</source>
+      <translation>Dátum szerinti rendezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="994"/>
-        <source>Sh&amp;ow in system tray</source>
-        <translation>&amp;Megjelenítése a tálcán</translation>
+      <location filename="../mainwindow.ui" line="994"/>
+      <source>Sh&amp;ow in system tray</source>
+      <translation>&amp;Megjelenítése a tálcán</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1018"/>
-        <source>Show note &amp;versions</source>
-        <translation>Jegyzet &amp;változatokat megmutat</translation>
+      <location filename="../mainwindow.ui" line="1018"/>
+      <source>Show note &amp;versions</source>
+      <translation>Jegyzet &amp;változatokat megmutat</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1021"/>
-        <source>Show note versions on server</source>
-        <translation>Jegyzet változatokat megmutat a szerveren</translation>
+      <location filename="../mainwindow.ui" line="1021"/>
+      <source>Show note versions on server</source>
+      <translation>Jegyzet változatokat megmutat a szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1030"/>
-        <source>Show &amp;trash</source>
-        <translation>Megmutatja a &amp;kukát</translation>
+      <location filename="../mainwindow.ui" line="1030"/>
+      <source>Show &amp;trash</source>
+      <translation>Megmutatja a &amp;kukát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1033"/>
-        <source>Show trashed notes on server</source>
-        <translation>Mutassa meg a törölt jegyzeteket a szerveren</translation>
+      <location filename="../mainwindow.ui" line="1033"/>
+      <source>Show trashed notes on server</source>
+      <translation>Mutassa meg a törölt jegyzeteket a szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1038"/>
-        <location filename="../mainwindow.cpp" line="7401"/>
-        <source>Select &amp;all notes</source>
-        <translation>Válassza ki az &amp;összes jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="1038"/>
+      <location filename="../mainwindow.cpp" line="7401"/>
+      <source>Select &amp;all notes</source>
+      <translation>Válassza ki az &amp;összes jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1047"/>
-        <location filename="../mainwindow.cpp" line="4861"/>
-        <source>Insert &amp;link</source>
-        <translation>&amp;Link beszúrás</translation>
+      <location filename="../mainwindow.ui" line="1047"/>
+      <location filename="../mainwindow.cpp" line="4861"/>
+      <source>Insert &amp;link</source>
+      <translation>&amp;Link beszúrás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1050"/>
-        <source>Insert link to an url or a note</source>
-        <translation>Egy URL vagy jegyzet hivatkozás beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1050"/>
+      <source>Insert link to an url or a note</source>
+      <translation>Egy URL vagy jegyzet hivatkozás beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1062"/>
-        <source>&amp;Find in current note</source>
-        <translation>&amp;Találd meg az aktuális jegyzetben</translation>
+      <location filename="../mainwindow.ui" line="1062"/>
+      <source>&amp;Find in current note</source>
+      <translation>&amp;Találd meg az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1065"/>
-        <source>Find text in current note</source>
-        <translation>Szöveg keresése az aktuális jegyzetben</translation>
+      <location filename="../mainwindow.ui" line="1065"/>
+      <source>Find text in current note</source>
+      <translation>Szöveg keresése az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1070"/>
-        <source>&amp;Duplicate text</source>
-        <translation>&amp;Ismétlődő szöveg</translation>
+      <location filename="../mainwindow.ui" line="1070"/>
+      <source>&amp;Duplicate text</source>
+      <translation>&amp;Ismétlődő szöveg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1082"/>
-        <source>&amp;Back in note history</source>
-        <translation>&amp;Vissza a jegyzettörténelemben</translation>
+      <location filename="../mainwindow.ui" line="1082"/>
+      <source>&amp;Back in note history</source>
+      <translation>&amp;Vissza a jegyzettörténelemben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1003"/>
-        <source>&amp;Settings</source>
-        <translation>&amp;Beállítások</translation>
+      <location filename="../mainwindow.ui" line="1003"/>
+      <source>&amp;Settings</source>
+      <translation>&amp;Beállítások</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="119"/>
-        <source>Find or create note sub folder</source>
-        <translation>Megkeresi vagy létrehozza az alárendelt jegyzet dossziét</translation>
+      <location filename="../mainwindow.ui" line="119"/>
+      <source>Find or create note sub folder</source>
+      <translation>Megkeresi vagy létrehozza az alárendelt jegyzet dossziét</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="193"/>
-        <source>Find or create tag</source>
-        <translation>Találjon vagy létesítsen egy címkét</translation>
+      <location filename="../mainwindow.ui" line="193"/>
+      <source>Find or create tag</source>
+      <translation>Találjon vagy létesítsen egy címkét</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="286"/>
-        <source>Search for notes or create new notes by entering text and pressing return</source>
-        <translation>Jegyzetek keresése vagy teremtsen új jegyzetet szöveg megadása által, és nyomja meg a vissza gombot</translation>
+      <location filename="../mainwindow.ui" line="286"/>
+      <source>Search for notes or create new notes by entering text and pressing return</source>
+      <translation>Jegyzetek keresése vagy teremtsen új jegyzetet szöveg megadása által, és nyomja meg a vissza gombot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="300"/>
-        <source>Search or create note</source>
-        <translation>Jegyzet keresése vagy létrehozása</translation>
+      <location filename="../mainwindow.ui" line="300"/>
+      <source>Search or create note</source>
+      <translation>Jegyzet keresése vagy létrehozása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="537"/>
-        <source>New tag</source>
-        <translation>Új tag</translation>
+      <location filename="../mainwindow.ui" line="537"/>
+      <source>New tag</source>
+      <translation>Új tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="640"/>
-        <source>Export</source>
-        <translation>Export</translation>
+      <location filename="../mainwindow.ui" line="640"/>
+      <source>Export</source>
+      <translation>Export</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="653"/>
-        <source>Import</source>
-        <translation>Import</translation>
+      <location filename="../mainwindow.ui" line="653"/>
+      <source>Import</source>
+      <translation>Import</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="721"/>
-        <source>&amp;Edit</source>
-        <translation>&amp;Szerkesztés</translation>
+      <location filename="../mainwindow.ui" line="721"/>
+      <source>&amp;Edit</source>
+      <translation>&amp;Szerkesztés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="759"/>
-        <source>To&amp;do</source>
-        <translation>&amp;Tennivalók</translation>
+      <location filename="../mainwindow.ui" line="759"/>
+      <source>To&amp;do</source>
+      <translation>&amp;Tennivalók</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="765"/>
-        <source>&amp;Window</source>
-        <translation>&amp;Ablak</translation>
+      <location filename="../mainwindow.ui" line="765"/>
+      <source>&amp;Window</source>
+      <translation>&amp;Ablak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="781"/>
-        <location filename="../mainwindow.cpp" line="440"/>
-        <source>Workspaces</source>
-        <translation>Munkaterületek</translation>
+      <location filename="../mainwindow.ui" line="781"/>
+      <location filename="../mainwindow.cpp" line="440"/>
+      <source>Workspaces</source>
+      <translation>Munkaterületek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="786"/>
-        <source>Panels</source>
-        <translation>Panelek</translation>
+      <location filename="../mainwindow.ui" line="786"/>
+      <source>Panels</source>
+      <translation>Panelek</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="791"/>
-        <source>Toolbars</source>
-        <translation>Eszköztárak</translation>
+      <location filename="../mainwindow.ui" line="791"/>
+      <source>Toolbars</source>
+      <translation>Eszköztárak</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="828"/>
-        <source>&amp;Scripting</source>
-        <translation>&amp;Scripting</translation>
+      <location filename="../mainwindow.ui" line="828"/>
+      <source>&amp;Scripting</source>
+      <translation>&amp;Scripting</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1094"/>
-        <source>Forward in note history</source>
-        <translation>Előre a jegyzettörténelemben</translation>
+      <location filename="../mainwindow.ui" line="1094"/>
+      <source>Forward in note history</source>
+      <translation>Előre a jegyzettörténelemben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1106"/>
-        <source>Show shortcuts</source>
-        <translation>Megmutatja a rövidítéseket</translation>
+      <location filename="../mainwindow.ui" line="1106"/>
+      <source>Show shortcuts</source>
+      <translation>Megmutatja a rövidítéseket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1115"/>
-        <source>&amp;Knowledge base</source>
-        <translation>&amp;Tudásbázis</translation>
+      <location filename="../mainwindow.ui" line="1115"/>
+      <source>&amp;Knowledge base</source>
+      <translation>&amp;Tudásbázis</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1124"/>
-        <source>Insert current &amp;time</source>
-        <translation>Jelenlegi &amp;idő beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1124"/>
+      <source>Insert current &amp;time</source>
+      <translation>Jelenlegi &amp;idő beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1136"/>
-        <source>Show &amp;Todo List</source>
-        <translation>Mutasd a &amp;tennivalók listáját</translation>
+      <location filename="../mainwindow.ui" line="1136"/>
+      <source>Show &amp;Todo List</source>
+      <translation>Mutasd a &amp;tennivalók listáját</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1148"/>
-        <source>&amp;Export note as PDF (markdown)</source>
-        <translation>&amp;Jegyzet exportálása PDF-ként (markdown)</translation>
+      <location filename="../mainwindow.ui" line="1148"/>
+      <source>&amp;Export note as PDF (markdown)</source>
+      <translation>&amp;Jegyzet exportálása PDF-ként (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1157"/>
-        <source>&amp;Export note as PDF (text)</source>
-        <translation>&amp;Jegyzet exportálása PDF-ként (szöveg)</translation>
+      <location filename="../mainwindow.ui" line="1157"/>
+      <source>&amp;Export note as PDF (text)</source>
+      <translation>&amp;Jegyzet exportálása PDF-ként (szöveg)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1166"/>
-        <source>&amp;Print note (text)</source>
-        <translation>Jegyzet &amp;nyomtatása (szövegként)</translation>
+      <location filename="../mainwindow.ui" line="1166"/>
+      <source>&amp;Print note (text)</source>
+      <translation>Jegyzet &amp;nyomtatása (szövegként)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1178"/>
-        <source>&amp;Print note (markdown)</source>
-        <translation>Jegyzet &amp;nyomtatása (markdown)</translation>
+      <location filename="../mainwindow.ui" line="1178"/>
+      <source>&amp;Print note (markdown)</source>
+      <translation>Jegyzet &amp;nyomtatása (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1190"/>
-        <source>Insert &amp;image</source>
-        <translation>&amp;Kép beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1190"/>
+      <source>Insert &amp;image</source>
+      <translation>&amp;Kép beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1193"/>
-        <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-        <translation>Kép beszúrása (a kép bekerül a &quot;média&quot; dosszié-ban a jelenlegi jegyzetek dossziéba)</translation>
+      <location filename="../mainwindow.ui" line="1193"/>
+      <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
+      <translation>Kép beszúrása (a kép bekerül a "média" dosszié-ban a jelenlegi jegyzetek dossziéba)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1205"/>
-        <source>Show &amp;changelog</source>
-        <translation>Megmutatja a &amp;changelog-ot</translation>
+      <location filename="../mainwindow.ui" line="1205"/>
+      <source>Show &amp;changelog</source>
+      <translation>Megmutatja a &amp;changelog-ot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1214"/>
-        <source>&amp;Encrypt note</source>
-        <translation>&amp;Titkosítja a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="1214"/>
+      <source>&amp;Encrypt note</source>
+      <translation>&amp;Titkosítja a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1223"/>
-        <source>Edit encrypted note</source>
-        <translation>Titkosított jegyzet szerkesztése</translation>
+      <location filename="../mainwindow.ui" line="1223"/>
+      <source>Edit encrypted note</source>
+      <translation>Titkosított jegyzet szerkesztése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1235"/>
-        <source>Decrypt note</source>
-        <translation>Megjeleníti a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="1235"/>
+      <source>Decrypt note</source>
+      <translation>Megjeleníti a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1244"/>
-        <source>&amp;Open note in external editor</source>
-        <translation>&amp;Megynyitom a jegyzetet külső szerkesztőben</translation>
+      <location filename="../mainwindow.ui" line="1244"/>
+      <source>&amp;Open note in external editor</source>
+      <translation>&amp;Megynyitom a jegyzetet külső szerkesztőben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1256"/>
-        <source>&amp;Export note as markdown file</source>
-        <translation>&amp;Markdown fájlként exportálhatja a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="1256"/>
+      <source>&amp;Export note as markdown file</source>
+      <translation>&amp;Markdown fájlként exportálhatja a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1265"/>
-        <source>&amp;Get involved</source>
-        <translation>&amp;Végy részt</translation>
+      <location filename="../mainwindow.ui" line="1265"/>
+      <source>&amp;Get involved</source>
+      <translation>&amp;Végy részt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1274"/>
-        <source>Insert &amp;code block</source>
-        <translation>&amp;Kód blokk beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1274"/>
+      <source>Insert &amp;code block</source>
+      <translation>&amp;Kód blokk beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1286"/>
-        <source>Next note</source>
-        <translation>Következő jegyzet</translation>
+      <location filename="../mainwindow.ui" line="1286"/>
+      <source>Next note</source>
+      <translation>Következő jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1298"/>
-        <source>Previous note</source>
-        <translation>Előző jegyzet</translation>
+      <location filename="../mainwindow.ui" line="1298"/>
+      <source>Previous note</source>
+      <translation>Előző jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1310"/>
-        <source>&amp;Distraction free mode</source>
-        <translation>&amp;Figyelemelterelésmentes mód</translation>
+      <location filename="../mainwindow.ui" line="1310"/>
+      <source>&amp;Distraction free mode</source>
+      <translation>&amp;Figyelemelterelésmentes mód</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1313"/>
-        <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-        <translation>Figyelemelterelésmentes mód, a jobb alsó sarokban található gombbal hagyhatja el</translation>
+      <location filename="../mainwindow.ui" line="1313"/>
+      <source>Distraction free mode, you can leave it with a button on the bottom right</source>
+      <translation>Figyelemelterelésmentes mód, a jobb alsó sarokban található gombbal hagyhatja el</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1324"/>
-        <source>Show &amp;toolbar</source>
-        <translation>&amp;Eszköztár megmutatása</translation>
+      <location filename="../mainwindow.ui" line="1324"/>
+      <source>Show &amp;toolbar</source>
+      <translation>&amp;Eszköztár megmutatása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1332"/>
-        <source>Narrow</source>
-        <translation>Keskeny</translation>
+      <location filename="../mainwindow.ui" line="1332"/>
+      <source>Narrow</source>
+      <translation>Keskeny</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1343"/>
-        <source>Medium</source>
-        <translation>Közepes</translation>
+      <location filename="../mainwindow.ui" line="1343"/>
+      <source>Medium</source>
+      <translation>Közepes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1354"/>
-        <source>Wide</source>
-        <translation>Széles</translation>
+      <location filename="../mainwindow.ui" line="1354"/>
+      <source>Wide</source>
+      <translation>Széles</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1365"/>
-        <source>Full</source>
-        <translation>Teljes</translation>
+      <location filename="../mainwindow.ui" line="1365"/>
+      <source>Full</source>
+      <translation>Teljes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1377"/>
-        <source>Paste html or media</source>
-        <translation>Beilleszti a html-t vagy médiát</translation>
+      <location filename="../mainwindow.ui" line="1377"/>
+      <source>Paste html or media</source>
+      <translation>Beilleszti a html-t vagy médiát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1380"/>
-        <location filename="../mainwindow.ui" line="1383"/>
-        <source>Paste images, notes and html from the clipboard</source>
-        <translation>Illessze be a képeket, a jegyzeteket és a html-t a vágólapról</translation>
+      <location filename="../mainwindow.ui" line="1380"/>
+      <location filename="../mainwindow.ui" line="1383"/>
+      <source>Paste images, notes and html from the clipboard</source>
+      <translation>Illessze be a képeket, a jegyzeteket és a html-t a vágólapról</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1395"/>
-        <source>Show note in &amp;file manager</source>
-        <translation>Megjeleníti a jegyzetet a &amp;fájl igazgatóban</translation>
+      <location filename="../mainwindow.ui" line="1395"/>
+      <source>Show note in &amp;file manager</source>
+      <translation>Megjeleníti a jegyzetet a &amp;fájl igazgatóban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1407"/>
-        <source>Format text &amp;bold</source>
-        <translation>Szöveg formázása &amp;vastag betű</translation>
+      <location filename="../mainwindow.ui" line="1407"/>
+      <source>Format text &amp;bold</source>
+      <translation>Szöveg formázása &amp;vastag betű</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1419"/>
-        <source>Format text &amp;italic</source>
-        <translation>Szöveg formázása &amp;dőlt betű</translation>
+      <location filename="../mainwindow.ui" line="1419"/>
+      <source>Format text &amp;italic</source>
+      <translation>Szöveg formázása &amp;dőlt betű</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1431"/>
-        <source>&amp;Increase note text size</source>
-        <translation>Jegyzet &amp;szövegméret növelése</translation>
+      <location filename="../mainwindow.ui" line="1431"/>
+      <source>&amp;Increase note text size</source>
+      <translation>Jegyzet &amp;szövegméret növelése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1443"/>
-        <source>&amp;Decrease note text size</source>
-        <translation>Jegyzet &amp;szövegméret csökkentése</translation>
+      <location filename="../mainwindow.ui" line="1443"/>
+      <source>&amp;Decrease note text size</source>
+      <translation>Jegyzet &amp;szövegméret csökkentése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1455"/>
-        <source>&amp;Reset note text size</source>
-        <translation>Jegyzet szövegméret &amp;visszaállítása</translation>
+      <location filename="../mainwindow.ui" line="1455"/>
+      <source>&amp;Reset note text size</source>
+      <translation>Jegyzet szövegméret &amp;visszaállítása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1467"/>
-        <source>&amp;Add tag to note</source>
-        <translation>Jegyzet címke &amp;hozzáadása</translation>
+      <location filename="../mainwindow.ui" line="1467"/>
+      <source>&amp;Add tag to note</source>
+      <translation>Jegyzet címke &amp;hozzáadása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1479"/>
-        <source>&amp;Reload note folder</source>
-        <translation>&amp;Újratölti a jegyzetmappát</translation>
+      <location filename="../mainwindow.ui" line="1479"/>
+      <source>&amp;Reload note folder</source>
+      <translation>&amp;Újratölti a jegyzetmappát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1551"/>
-        <source>Show log</source>
-        <translation>Mutasd be</translation>
+      <location filename="../mainwindow.ui" line="1551"/>
+      <source>Show log</source>
+      <translation>Mutasd be</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1789"/>
-        <source>Unlock panels</source>
-        <translation>Kinyitja a paneleket</translation>
+      <location filename="../mainwindow.ui" line="1789"/>
+      <source>Unlock panels</source>
+      <translation>Kinyitja a paneleket</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1798"/>
-        <location filename="../mainwindow.cpp" line="8226"/>
-        <source>Remove current workspace</source>
-        <translation>Távolítsa el az aktuális munkaterületet</translation>
+      <location filename="../mainwindow.ui" line="1798"/>
+      <location filename="../mainwindow.cpp" line="8226"/>
+      <source>Remove current workspace</source>
+      <translation>Távolítsa el az aktuális munkaterületet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1807"/>
-        <source>Add new workspace</source>
-        <translation>Add hozzá új munkaterület</translation>
+      <location filename="../mainwindow.ui" line="1807"/>
+      <source>Add new workspace</source>
+      <translation>Add hozzá új munkaterület</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1816"/>
-        <source>Rename current workspace</source>
-        <translation>Nevezze át az aktuális munkaterületet</translation>
+      <location filename="../mainwindow.ui" line="1816"/>
+      <source>Rename current workspace</source>
+      <translation>Nevezze át az aktuális munkaterületet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1825"/>
-        <source>Switch to previous workspace</source>
-        <translation>Előző munkaterülethez vált</translation>
+      <location filename="../mainwindow.ui" line="1825"/>
+      <source>Switch to previous workspace</source>
+      <translation>Előző munkaterülethez vált</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1833"/>
-        <source>Show all panels</source>
-        <translation>Minden panel megjelenítése</translation>
+      <location filename="../mainwindow.ui" line="1833"/>
+      <source>Show all panels</source>
+      <translation>Minden panel megjelenítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1842"/>
-        <source>Find action</source>
-        <translation>Talál egy tevékenységet</translation>
+      <location filename="../mainwindow.ui" line="1842"/>
+      <source>Find action</source>
+      <translation>Talál egy tevékenységet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1845"/>
-        <location filename="../mainwindow.ui" line="1848"/>
-        <source>Find an action from the menu</source>
-        <translation>Talál egy tevékenységet a menüből</translation>
+      <location filename="../mainwindow.ui" line="1845"/>
+      <location filename="../mainwindow.ui" line="1848"/>
+      <source>Find an action from the menu</source>
+      <translation>Talál egy tevékenységet a menüből</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1860"/>
-        <source>Insert table</source>
-        <translation>Táblázat beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1860"/>
+      <source>Insert table</source>
+      <translation>Táblázat beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1872"/>
-        <source>Insert block &amp;quote</source>
-        <translation>Blokk &amp; idézet beszúrása</translation>
+      <location filename="../mainwindow.ui" line="1872"/>
+      <source>Insert block &amp;quote</source>
+      <translation>Blokk &amp; idézet beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1880"/>
-        <location filename="../mainwindow.cpp" line="4865"/>
-        <source>Search text on the web</source>
-        <translation>Keressen szöveget az interneten</translation>
+      <location filename="../mainwindow.ui" line="1880"/>
+      <location filename="../mainwindow.cpp" line="4865"/>
+      <source>Search text on the web</source>
+      <translation>Keressen szöveget az interneten</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1490"/>
-        <source>Use &amp;vertical preview layout</source>
-        <translation>Használata &amp;függőleges minta elrendezése</translation>
+      <location filename="../mainwindow.ui" line="1490"/>
+      <source>Use &amp;vertical preview layout</source>
+      <translation>Használata &amp;függőleges minta elrendezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1493"/>
-        <location filename="../mainwindow.ui" line="1496"/>
-        <source>The note edit panel will be above the preview panel</source>
-        <translation>A jegyzetszerkesztő ablak az előnézetablak felett lesz</translation>
+      <location filename="../mainwindow.ui" line="1493"/>
+      <location filename="../mainwindow.ui" line="1496"/>
+      <source>The note edit panel will be above the preview panel</source>
+      <translation>A jegyzetszerkesztő ablak az előnézetablak felett lesz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1505"/>
-        <source>Replace in current note</source>
-        <translation>Kicserélem az aktuális jegyzetben</translation>
+      <location filename="../mainwindow.ui" line="1505"/>
+      <source>Replace in current note</source>
+      <translation>Kicserélem az aktuális jegyzetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1513"/>
-        <source>Autocomplete, solve equation or open URL</source>
-        <translation>Automatikus kiegészítés, egyenlet megoldása, vagy nyissa meg az URL-t</translation>
+      <location filename="../mainwindow.ui" line="1513"/>
+      <source>Autocomplete, solve equation or open URL</source>
+      <translation>Automatikus kiegészítés, egyenlet megoldása, vagy nyissa meg az URL-t</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1516"/>
-        <source>Solve a simple equation like &apos;(2+3)*6=&apos; in the current line</source>
-        <translation>Megoldok egy egyszerű egyenletet, mint &apos;(2+3) * 6 = &quot;az aktuális sorban</translation>
+      <location filename="../mainwindow.ui" line="1516"/>
+      <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
+      <translation>Megoldok egy egyszerű egyenletet, mint '(2+3) * 6 = "az aktuális sorban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1524"/>
-        <source>Select note folder</source>
-        <translation>Megjegyzés: mappa kiválasztása</translation>
+      <location filename="../mainwindow.ui" line="1524"/>
+      <source>Select note folder</source>
+      <translation>Megjegyzés: mappa kiválasztása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1539"/>
-        <source>Reload scripting engine</source>
-        <translation>Újratölti a parancsfájl-végrehajtót</translation>
+      <location filename="../mainwindow.ui" line="1539"/>
+      <source>Reload scripting engine</source>
+      <translation>Újratölti a parancsfájl-végrehajtót</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1560"/>
-        <source>Export note as HTML (markdown)</source>
-        <translation>Exportálom a jegyzetet mint HTML (markdown)</translation>
+      <location filename="../mainwindow.ui" line="1560"/>
+      <source>Export note as HTML (markdown)</source>
+      <translation>Exportálom a jegyzetet mint HTML (markdown)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1572"/>
-        <location filename="../mainwindow.ui" line="1575"/>
-        <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-        <translation>Nyissa meg a #qownnotes IRC csatornát, maradj online, hogy választ kaphass</translation>
+      <location filename="../mainwindow.ui" line="1572"/>
+      <location filename="../mainwindow.ui" line="1575"/>
+      <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
+      <translation>Nyissa meg a #qownnotes IRC csatornát, maradj online, hogy választ kaphass</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1712"/>
-        <source>Show note list under tag pane</source>
-        <translation>Jegyzet listát megmutat a címke-térkép alatt</translation>
+      <location filename="../mainwindow.ui" line="1712"/>
+      <source>Show note list under tag pane</source>
+      <translation>Jegyzet listát megmutat a címke-térkép alatt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1774"/>
-        <location filename="../mainwindow.ui" line="1777"/>
-        <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-        <translation>Nyissd meg a qownnotes gitter termet, szükséged van egy GitHub vagy Twitter fiókra a bejelentkezéshes, de offline üzeneteket kaphatsz</translation>
+      <location filename="../mainwindow.ui" line="1774"/>
+      <location filename="../mainwindow.ui" line="1777"/>
+      <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
+      <translation>Nyissd meg a qownnotes gitter termet, szükséged van egy GitHub vagy Twitter fiókra a bejelentkezéshes, de offline üzeneteket kaphatsz</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="696"/>
-        <source>Open chat</source>
-        <translation>Nyitom a csevegőt</translation>
+      <location filename="../mainwindow.ui" line="696"/>
+      <source>Open chat</source>
+      <translation>Nyitom a csevegőt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1584"/>
-        <source>Insert headline from note filename</source>
-        <translation>Megjegyzés: főcím beszúrása a fáljlnévből</translation>
+      <location filename="../mainwindow.ui" line="1584"/>
+      <source>Insert headline from note filename</source>
+      <translation>Megjegyzés: főcím beszúrása a fáljlnévből</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1598"/>
-        <source>Use softwrap in note editor and preview</source>
-        <translation>Szoftver használata a jegyzet szerkesztőben és az előnézetben</translation>
+      <location filename="../mainwindow.ui" line="1598"/>
+      <source>Use softwrap in note editor and preview</source>
+      <translation>Szoftver használata a jegyzet szerkesztőben és az előnézetben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1606"/>
-        <source>Show status bar</source>
-        <translation>Állapotsor megjelenítése</translation>
+      <location filename="../mainwindow.ui" line="1606"/>
+      <source>Show status bar</source>
+      <translation>Állapotsor megjelenítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1621"/>
-        <source>Share note</source>
-        <translation>Megosztom a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="1621"/>
+      <source>Share note</source>
+      <translation>Megosztom a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1639"/>
-        <source>Toggle text case</source>
-        <translation>Kisbetű-nagybetű váltása a szövegben</translation>
+      <location filename="../mainwindow.ui" line="1639"/>
+      <source>Toggle text case</source>
+      <translation>Kisbetű-nagybetű váltása a szövegben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1651"/>
-        <source>Markdown cheatsheet</source>
-        <translation>Markdown súgókártya</translation>
+      <location filename="../mainwindow.ui" line="1651"/>
+      <source>Markdown cheatsheet</source>
+      <translation>Markdown súgókártya</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1660"/>
-        <source>Strike out text</source>
-        <translation>Tárgytalan szöveget áthúzom</translation>
+      <location filename="../mainwindow.ui" line="1660"/>
+      <source>Strike out text</source>
+      <translation>Tárgytalan szöveget áthúzom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1671"/>
-        <source>Use one column mode</source>
-        <translation>Egyoszlopos mód használata</translation>
+      <location filename="../mainwindow.ui" line="1671"/>
+      <source>Use one column mode</source>
+      <translation>Egyoszlopos mód használata</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1674"/>
-        <location filename="../mainwindow.ui" line="1677"/>
-        <source>Use a one column minimal mode (like NVAlt)</source>
-        <translation>Egy oszlop minimális mód (mint NVAlt)</translation>
+      <location filename="../mainwindow.ui" line="1674"/>
+      <location filename="../mainwindow.ui" line="1677"/>
+      <source>Use a one column minimal mode (like NVAlt)</source>
+      <translation>Egy oszlop minimális mód (mint NVAlt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1689"/>
-        <source>Show menu bar</source>
-        <translation>Menüsor megjelenítése</translation>
+      <location filename="../mainwindow.ui" line="1689"/>
+      <source>Show menu bar</source>
+      <translation>Menüsor megjelenítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1701"/>
-        <source>Split note at cursor position</source>
-        <translation>Elválasztom a jegyzetet a kurzorpozícióban</translation>
+      <location filename="../mainwindow.ui" line="1701"/>
+      <source>Split note at cursor position</source>
+      <translation>Elválasztom a jegyzetet a kurzorpozícióban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1721"/>
-        <source>Donate</source>
-        <translation>Adományozom</translation>
+      <location filename="../mainwindow.ui" line="1721"/>
+      <source>Donate</source>
+      <translation>Adományozom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1730"/>
-        <source>Find notes in all subfolders</source>
-        <translation>Összes almappában található jegyzet</translation>
+      <location filename="../mainwindow.ui" line="1730"/>
+      <source>Find notes in all subfolders</source>
+      <translation>Összes almappában található jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1738"/>
-        <location filename="../mainwindow.ui" line="1741"/>
-        <source>Start hidden</source>
-        <translation>Rejtett start</translation>
+      <location filename="../mainwindow.ui" line="1738"/>
+      <location filename="../mainwindow.ui" line="1741"/>
+      <source>Start hidden</source>
+      <translation>Rejtett start</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1744"/>
-        <source>Starts the application hidden if the system tray icon is shown</source>
-        <translation>Elindítja az alkalmazást, rejtve, ha a rendszertálcaikon jelenik meg</translation>
+      <location filename="../mainwindow.ui" line="1744"/>
+      <source>Starts the application hidden if the system tray icon is shown</source>
+      <translation>Elindítja az alkalmazást, rejtve, ha a rendszertálcaikon jelenik meg</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1753"/>
-        <source>Import notes from Evernote</source>
-        <translation>Importálj jegyzeteket az Evernoteból</translation>
+      <location filename="../mainwindow.ui" line="1753"/>
+      <source>Import notes from Evernote</source>
+      <translation>Importálj jegyzeteket az Evernoteból</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1762"/>
-        <source>Delete orphaned image files</source>
-        <translation>Elárvult kép fájlok törlése</translation>
+      <location filename="../mainwindow.ui" line="1762"/>
+      <source>Delete orphaned image files</source>
+      <translation>Elárvult kép fájlok törlése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2208"/>
-        <source>Note was removed externally!</source>
-        <translation>A jegyzetet az alkalmazáson kívül törölték!</translation>
+      <location filename="../mainwindow.cpp" line="2208"/>
+      <source>Note was removed externally!</source>
+      <translation>A jegyzetet az alkalmazáson kívül törölték!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2209"/>
-        <source>Current note was removed outside of this application!
+      <location filename="../mainwindow.cpp" line="2209"/>
+      <source>Current note was removed outside of this application!
 Restore current note?</source>
-        <translation>A jegyzetet az alkalmazáson kívül törölték! Visszaállítja az aktuális jegyzetet?</translation>
+      <translation>A jegyzetet az alkalmazáson kívül törölték! Visszaállítja az aktuális jegyzetet?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2211"/>
-        <source>&amp;Restore</source>
-        <translation>&amp;Visszaállítás</translation>
+      <location filename="../mainwindow.cpp" line="2211"/>
+      <source>&amp;Restore</source>
+      <translation>&amp;Visszaállítás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2211"/>
-        <location filename="../mainwindow.cpp" line="2956"/>
-        <location filename="../mainwindow.cpp" line="3421"/>
-        <location filename="../mainwindow.cpp" line="3505"/>
-        <location filename="../mainwindow.cpp" line="3534"/>
-        <location filename="../mainwindow.cpp" line="3576"/>
-        <location filename="../mainwindow.cpp" line="3632"/>
-        <location filename="../mainwindow.cpp" line="3670"/>
-        <location filename="../mainwindow.cpp" line="3713"/>
-        <location filename="../mainwindow.cpp" line="4094"/>
-        <location filename="../mainwindow.cpp" line="5132"/>
-        <location filename="../mainwindow.cpp" line="8228"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../mainwindow.cpp" line="2211"/>
+      <location filename="../mainwindow.cpp" line="2956"/>
+      <location filename="../mainwindow.cpp" line="3421"/>
+      <location filename="../mainwindow.cpp" line="3505"/>
+      <location filename="../mainwindow.cpp" line="3534"/>
+      <location filename="../mainwindow.cpp" line="3576"/>
+      <location filename="../mainwindow.cpp" line="3632"/>
+      <location filename="../mainwindow.cpp" line="3670"/>
+      <location filename="../mainwindow.cpp" line="3713"/>
+      <location filename="../mainwindow.cpp" line="4094"/>
+      <location filename="../mainwindow.cpp" line="5132"/>
+      <location filename="../mainwindow.cpp" line="8228"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
     <message numerus="yes">
-        <source>stored %n note(s) to disk</source>
-        <translation type="vanished">
-            <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
-        </translation>
+      <source>stored %n note(s) to disk</source>
+      <translation>
+        <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
+        <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
+      </translation>
     </message>
     <message>
-        <source>click here to see what has changed and to be able to download the latest version</source>
-        <translation type="vanished">kattintson ide, hogy lássa, mi változott, és letölthetsse a legfrissebb változatot</translation>
+      <location filename="../mainwindow.cpp" line="2411"/>
+      <source>new version %1 available</source>
+      <translation>új rendelkezésre álló változat %1 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2411"/>
-        <source>new version %1 available</source>
-        <translation>új rendelkezésre álló változat %1 </translation>
+      <location filename="../mainwindow.cpp" line="2811"/>
+      <source>No folder was selected</source>
+      <translation>Nincs mappa kijelölve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2811"/>
-        <source>No folder was selected</source>
-        <translation>Nincs mappa kijelölve</translation>
+      <location filename="../mainwindow.cpp" line="2812"/>
+      <source>You have to select your ownCloud notes folder to make this software work!</source>
+      <translation>Válassza ki a saját ownCloud jegyzetmappáját, hogy ez a szoftver működjön!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2812"/>
-        <source>You have to select your ownCloud notes folder to make this software work!</source>
-        <translation>Válassza ki a saját ownCloud jegyzetmappáját, hogy ez a szoftver működjön!</translation>
+      <location filename="../mainwindow.cpp" line="2814"/>
+      <source>&amp;Retry</source>
+      <translation>&amp;Újra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2814"/>
-        <source>&amp;Retry</source>
-        <translation>&amp;Újra</translation>
+      <location filename="../mainwindow.cpp" line="2814"/>
+      <source>&amp;Exit</source>
+      <translation>&amp;Kilépés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2814"/>
-        <source>&amp;Exit</source>
-        <translation>&amp;Kilépés</translation>
+      <location filename="../mainwindow.cpp" line="2953"/>
+      <source>Remove current note</source>
+      <translation>Eltávolítom az aktuális jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2953"/>
-        <source>Remove current note</source>
-        <translation>Eltávolítom az aktuális jegyzetet</translation>
+      <location filename="../mainwindow.cpp" line="2954"/>
+      <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
+      <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; jegyzetet?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2954"/>
-        <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; jegyzetet?</translation>
+      <location filename="../mainwindow.cpp" line="2956"/>
+      <location filename="../mainwindow.cpp" line="3421"/>
+      <location filename="../mainwindow.cpp" line="3505"/>
+      <location filename="../mainwindow.cpp" line="3534"/>
+      <location filename="../mainwindow.cpp" line="3713"/>
+      <location filename="../mainwindow.cpp" line="8228"/>
+      <source>&amp;Remove</source>
+      <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2956"/>
-        <location filename="../mainwindow.cpp" line="3421"/>
-        <location filename="../mainwindow.cpp" line="3505"/>
-        <location filename="../mainwindow.cpp" line="3534"/>
-        <location filename="../mainwindow.cpp" line="3713"/>
-        <location filename="../mainwindow.cpp" line="8228"/>
-        <source>&amp;Remove</source>
-        <translation>&amp;Eltávolítás</translation>
+      <location filename="../mainwindow.cpp" line="3257"/>
+      <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
+      <translation>Kérjük, írja be a &lt;strong&gt;jelszót&lt;/strong&gt; a titkosított jegyzet eléréséhez.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3257"/>
-        <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-        <translation>Kérjük, írja be a &lt;strong&gt;jelszót&lt;/strong&gt; a titkosított jegyzet eléréséhez.</translation>
+      <location filename="../mainwindow.cpp" line="3281"/>
+      <source>Note can't be decrypted!</source>
+      <translation>A jegyzet nem titkosítható!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3281"/>
-        <source>Note can&apos;t be decrypted!</source>
-        <translation>A jegyzet nem titkosítható!</translation>
+      <location filename="../mainwindow.cpp" line="3282"/>
+      <source>It seems that your password is not valid!</source>
+      <translation>Úgy tűnik, hogy a jelszava nem érvényes!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3282"/>
-        <source>It seems that your password is not valid!</source>
-        <translation>Úgy tűnik, hogy a jelszava nem érvényes!</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3415"/>
-        <source>Remove selected notes</source>
-        <translation>Távolítsa el a kijelölt jegyzeteket</translation>
+      <location filename="../mainwindow.cpp" line="3415"/>
+      <source>Remove selected notes</source>
+      <translation>Távolítsa el a kijelölt jegyzeteket</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3416"/>
-        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
+      <location filename="../mainwindow.cpp" line="3416"/>
+      <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-        <translation>
-            <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt;jegyzet(et)? 
+      <translation>
+        <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt;jegyzet(et)? 
 
 Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket állítani.</numerusform>
-        </translation>
+        <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt;jegyzet(et)? 
+
+Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket állítani.</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3498"/>
-        <location filename="../mainwindow.cpp" line="7564"/>
-        <source>Remove selected folders</source>
-        <translation>Eltávolítja a kiválasztott mappákat</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3499"/>
-        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-        <translation>
-            <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Minden fájl és mappa ebben a mappában szintén törlődik!</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3511"/>
-        <source>Removed note subfolder: %1</source>
-        <translation>Törölt jegyzet almappa: %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3530"/>
-        <source>Remove selected tags</source>
-        <translation>Kijelölt címkék eltávolítása</translation>
+      <location filename="../mainwindow.cpp" line="3498"/>
+      <location filename="../mainwindow.cpp" line="7564"/>
+      <source>Remove selected folders</source>
+      <translation>Eltávolítja a kiválasztott mappákat</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3531"/>
-        <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-        <translation>
-            <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3499"/>
+      <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
+      <translation>
+        <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Minden fájl és mappa ebben a mappában szintén törlődik!</numerusform>
+        <numerusform>Eltávolítja a kijelölt &lt;strong&gt;%n&lt;/strong&gt; mappát? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Minden fájl és mappa is törlődik ezekben a mappákban!</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3573"/>
-        <location filename="../mainwindow.cpp" line="6766"/>
-        <source>Move selected notes</source>
-        <translation>Áthelyezem  a kijelölt megjegyzéseket</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3574"/>
-        <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>
-            <numerusform>%n kijelölt jegyzet(et) áthelyez ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3511"/>
+      <source>Removed note subfolder: %1</source>
+      <translation>Törölt jegyzet almappa: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3576"/>
-        <source>&amp;Move</source>
-        <translation>&amp;Áthelyezés</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3629"/>
-        <location filename="../mainwindow.cpp" line="6821"/>
-        <source>Copy selected notes</source>
-        <translation>Másolom a kijelölt jegyzetetket</translation>
+      <location filename="../mainwindow.cpp" line="3530"/>
+      <source>Remove selected tags</source>
+      <translation>Kijelölt címkék eltávolítása</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3630"/>
-        <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>
-            <numerusform>%n kijelölt jegyzet áthelyezése ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3531"/>
+      <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
+      <translation>
+        <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
+        <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3632"/>
-        <source>&amp;Copy</source>
-        <translation>&amp;Másolás</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3653"/>
-        <location filename="../mainwindow.cpp" line="3741"/>
-        <source>Done</source>
-        <translation>Kész</translation>
+      <location filename="../mainwindow.cpp" line="3573"/>
+      <location filename="../mainwindow.cpp" line="6766"/>
+      <source>Move selected notes</source>
+      <translation>Áthelyezem  a kijelölt megjegyzéseket</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3654"/>
-        <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-        <translation>
-            <numerusform>%n jegyzet ide: &lt;strong&gt;%2&lt;/strong&gt; lett másolva.</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3574"/>
+      <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+      <translation>
+        <numerusform>%n kijelölt jegyzet(et) áthelyez ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>%n kijelölt jegyzet(et) áthelyez ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3667"/>
-        <source>Tag selected notes</source>
-        <translation>Címkézem a kijelölt jegyzeteket</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3668"/>
-        <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>
-            <numerusform>Címkézzek %n kijelölt jegyzetet &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3576"/>
+      <source>&amp;Move</source>
+      <translation>&amp;Áthelyezés</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4026"/>
-        <source>PDF files</source>
-        <translation>PDF-fájlok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4820"/>
-        <source>Note versions are currently loaded from your ownCloud server</source>
-        <translation>A jelenleg betöltött jegyzetverzió az ownCloud szerveren</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4834"/>
-        <source>Trashed notes are currently loaded from your ownCloud server</source>
-        <translation>A törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4975"/>
-        <source>Image files</source>
-        <translation>Kép fájlok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5214"/>
-        <source>Markdown files</source>
-        <translation>Markdown-fájlok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5270"/>
-        <source>Bookmarked note position at slot %1</source>
-        <translation>Könyvjelzővel megjelölt jegyzet helyzete a slot %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5286"/>
-        <source>Jumped to bookmark position at slot %1</source>
-        <translation>Ugrott az %1-es könyvjelző slotra</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5488"/>
-        <location filename="../mainwindow.cpp" line="5550"/>
-        <source>Inserting image</source>
-        <translation>Kép beszúrása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5493"/>
-        <location filename="../mainwindow.cpp" line="5553"/>
-        <source>Done inserting image</source>
-        <translation>Kép beillesztése</translation>
+      <location filename="../mainwindow.cpp" line="3629"/>
+      <location filename="../mainwindow.cpp" line="6821"/>
+      <source>Copy selected notes</source>
+      <translation>Másolom a kijelölt jegyzetetket</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5504"/>
-        <source>Copied %n note(s) to %1</source>
-        <translation>
-            <numerusform>%n jegyzet(et) másolt át %1</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3630"/>
+      <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
+      <translation>
+        <numerusform>%n kijelölt jegyzet áthelyezése ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>%n kijelölt jegyzet áthelyezése ide: &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="3632"/>
+      <source>&amp;Copy</source>
+      <translation>&amp;Másolás</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="3653"/>
+      <location filename="../mainwindow.cpp" line="3741"/>
+      <source>Done</source>
+      <translation>Kész</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5513"/>
-        <source>Failed to copy %n note(s) (most likely already existing)</source>
-        <translation>
-            <numerusform>Nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3654"/>
+      <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
+      <translation>
+        <numerusform>%n jegyzet ide: &lt;strong&gt;%2&lt;/strong&gt; lett másolva.</numerusform>
+        <numerusform>%n jegyzet ide: &lt;strong&gt;%2&lt;/strong&gt; lett másolva.</numerusform>
+      </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="3667"/>
+      <source>Tag selected notes</source>
+      <translation>Címkézem a kijelölt jegyzeteket</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5523"/>
-        <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-        <translation>
-            <numerusform>Kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3668"/>
+      <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
+      <translation>
+        <numerusform>Címkézzek %n kijelölt jegyzetet &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Címkézzek %n kijelölt jegyzetet &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5537"/>
-        <source>Saving temporary image</source>
-        <translation>Kép mentése</translation>
+      <location filename="../mainwindow.cpp" line="4026"/>
+      <source>PDF files</source>
+      <translation>PDF-fájlok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5556"/>
-        <source>Temporary file can&apos;t be opened</source>
-        <translation>Ideiglenes fájl nem nyitható meg</translation>
+      <location filename="../mainwindow.cpp" line="4820"/>
+      <source>Note versions are currently loaded from your ownCloud server</source>
+      <translation>A jelenleg betöltött jegyzetverzió az ownCloud szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5589"/>
-        <source>Downloading %1</source>
-        <translation>Letöltés %1</translation>
+      <location filename="../mainwindow.cpp" line="4834"/>
+      <source>Trashed notes are currently loaded from your ownCloud server</source>
+      <translation>A törölt jegyzetek jelenleg töltöttek az ownCloud szerveren</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5619"/>
-        <source>Done downloading images</source>
-        <translation>Képek letöltése kész</translation>
+      <location filename="../mainwindow.cpp" line="4975"/>
+      <source>Image files</source>
+      <translation>Kép fájlok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6332"/>
-        <source>Assign color</source>
-        <translation>Szín hozzárendelése</translation>
+      <location filename="../mainwindow.cpp" line="5214"/>
+      <source>Markdown files</source>
+      <translation>Markdown-fájlok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6333"/>
-        <source>Disable color</source>
-        <translation>Tiltsa le a színt</translation>
+      <location filename="../mainwindow.cpp" line="5270"/>
+      <source>Bookmarked note position at slot %1</source>
+      <translation>Könyvjelzővel megjelölt jegyzet helyzete a slot %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6949"/>
-        <source>An url was opened at the current cursor position</source>
-        <translation>Egy url-t nyitott meg az aktuális kurzorpozícióban</translation>
+      <location filename="../mainwindow.cpp" line="5286"/>
+      <source>Jumped to bookmark position at slot %1</source>
+      <translation>Ugrott az %1-es könyvjelző slotra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7027"/>
-        <source>No equation was found in front of the cursor</source>
-        <translation>Nincs egyenlet a kurzor előtt</translation>
+      <location filename="../mainwindow.cpp" line="5488"/>
+      <location filename="../mainwindow.cpp" line="5550"/>
+      <source>Inserting image</source>
+      <translation>Kép beszúrása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7044"/>
-        <source>Result for equation: %1 = %2</source>
-        <translation>Egyenlet eredménye: %1 = %2</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="7118"/>
-        <source>The scripting engine was reloaded</source>
-        <translation>A parancsfájl-végrehajtó újratöltve</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="7145"/>
-        <source>HTML files</source>
-        <translation>HTML-fájlok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8028"/>
-        <source>Create new workspace</source>
-        <translation>Új munkaterület létrehozása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8028"/>
-        <location filename="../mainwindow.cpp" line="8265"/>
-        <source>Workspace name:</source>
-        <translation>Munkaterület neve:</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8147"/>
-        <source>default</source>
-        <comment>default workspace</comment>
-        <translation>alapértelmezett</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8227"/>
-        <source>Remove the current workspace?</source>
-        <translation>Eltávolítja az aktuális munkaterületet?</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="8265"/>
-        <source>Rename workspace</source>
-        <translation>Munkaterület átnevezése</translation>
+      <location filename="../mainwindow.cpp" line="5493"/>
+      <location filename="../mainwindow.cpp" line="5553"/>
+      <source>Done inserting image</source>
+      <translation>Kép beillesztése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8380"/>
-        <source>%n chars</source>
-        <comment>characters</comment>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="822"/>
-        <location filename="../mainwindow.cpp" line="3670"/>
-        <source>&amp;Tag</source>
-        <translation>&amp;Tag</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="3710"/>
-        <source>Remove tag from selected notes</source>
-        <translation>Tag eltávolítása a kijelölt jegyzetben</translation>
+      <location filename="../mainwindow.cpp" line="5504"/>
+      <source>Copied %n note(s) to %1</source>
+      <translation>
+        <numerusform>%n jegyzet(et) másolt át %1</numerusform>
+        <numerusform>%n jegyzetet másolt át %1-ba</numerusform>
+      </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3711"/>
-        <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-        <translation>
-            <numerusform>Távolítsam el a címkét&lt;strong&gt;%1&lt;/strong&gt; %n kijelölt jegyzetben?</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="5513"/>
+      <source>Failed to copy %n note(s) (most likely already existing)</source>
+      <translation>
+        <numerusform>Nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
+        <numerusform>Nem sikerült %n (valószínűleg már meglévő) jegyzetet másolni</numerusform>
+      </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3742"/>
-        <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-        <translation>
-            <numerusform>&lt;strong&gt;%1&lt;/strong&gt; címke  el lett távolítva %n jegyzetböl</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="5523"/>
+      <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
+      <translation>
+        <numerusform>Kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
+        <numerusform>Kihagyott %n jegyzet másolását (nincs markdown vagy szöveges fájl vagy nem olvasható)</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3763"/>
-        <source>Current notes folder: </source>
-        <translation>Jelenlegi jegyzet mappa: </translation>
+      <location filename="../mainwindow.cpp" line="5537"/>
+      <source>Saving temporary image</source>
+      <translation>Kép mentése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3765"/>
-        <source>Set the notes folder. Current notes folder: </source>
-        <translation>A jeygzet mappa beállítása. Jelenlegi jegyzet mappa: </translation>
+      <location filename="../mainwindow.cpp" line="5556"/>
+      <source>Temporary file can't be opened</source>
+      <translation>Ideiglenes fájl nem nyitható meg</translation>
     </message>
     <message>
-        <source>Link to an url or note</source>
-        <translation type="vanished">Egy linket csatolok egy URL-hoz vagy jegyzethet</translation>
+      <location filename="../mainwindow.cpp" line="5589"/>
+      <source>Downloading %1</source>
+      <translation>Letöltés %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3944"/>
-        <source>Print note</source>
-        <translation>Jegyzet nyomtatása</translation>
+      <location filename="../mainwindow.cpp" line="5619"/>
+      <source>Done downloading images</source>
+      <translation>Képek letöltése kész</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3975"/>
-        <source>Letter</source>
-        <translation>Levél</translation>
+      <location filename="../mainwindow.cpp" line="6332"/>
+      <source>Assign color</source>
+      <translation>Szín hozzárendelése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4001"/>
-        <source>Portrait</source>
-        <translation>Portré</translation>
+      <location filename="../mainwindow.cpp" line="6333"/>
+      <source>Disable color</source>
+      <translation>Tiltsa le a színt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4001"/>
-        <source>Landscape</source>
-        <translation>Táj</translation>
+      <location filename="../mainwindow.cpp" line="6949"/>
+      <source>An url was opened at the current cursor position</source>
+      <translation>Egy url-t nyitott meg az aktuális kurzorpozícióban</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4006"/>
-        <source>Orientation</source>
-        <translation>Tájékozódás</translation>
+      <location filename="../mainwindow.cpp" line="7027"/>
+      <source>No equation was found in front of the cursor</source>
+      <translation>Nincs egyenlet a kurzor előtt</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4006"/>
-        <source>Orientation:</source>
-        <translation>Tájékozódás:</translation>
+      <location filename="../mainwindow.cpp" line="7044"/>
+      <source>Result for equation: %1 = %2</source>
+      <translation>Egyenlet eredménye: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4027"/>
-        <source>Export current note as PDF</source>
-        <translation>Aktuális jegyzet exportálása PDF-ként</translation>
+      <location filename="../mainwindow.cpp" line="7118"/>
+      <source>The scripting engine was reloaded</source>
+      <translation>A parancsfájl-végrehajtó újratöltve</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4090"/>
-        <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-        <translation>Nem választott ki teendőlistát. &lt;br /&gt;Kérjük, ellenőrizze a &lt;strong&gt;Teendők&lt;/strong&gt; konfigurációs beállításait!</translation>
+      <location filename="../mainwindow.cpp" line="7145"/>
+      <source>HTML files</source>
+      <translation>HTML-fájlok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4685"/>
-        <source>Open QOwnNotes</source>
-        <translation>Nyítja a QOwnNotes-t</translation>
+      <location filename="../mainwindow.cpp" line="8028"/>
+      <source>Create new workspace</source>
+      <translation>Új munkaterület létrehozása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4694"/>
-        <location filename="../mainwindow.cpp" line="7562"/>
-        <source>New note</source>
-        <translation>Új jegyzet</translation>
+      <location filename="../mainwindow.cpp" line="8028"/>
+      <location filename="../mainwindow.cpp" line="8265"/>
+      <source>Workspace name:</source>
+      <translation>Munkaterület neve:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4710"/>
-        <source>Recent notes</source>
-        <translation>Legutóbbi jegyzet</translation>
+      <location filename="../mainwindow.cpp" line="8147"/>
+      <source>default</source>
+      <comment>default workspace</comment>
+      <translation>alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4740"/>
-        <source>Show todo lists</source>
-        <translation>Todo-listák megjelenítése</translation>
+      <location filename="../mainwindow.cpp" line="8227"/>
+      <source>Remove the current workspace?</source>
+      <translation>Eltávolítja az aktuális munkaterületet?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4751"/>
-        <source>Recent tasks</source>
-        <translation>Legfrissebb feladatok</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4783"/>
-        <source>Quit</source>
-        <translation>Lépjen ki</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5847"/>
-        <source>show notes from all note subfolders (%1)</source>
-        <translation>megtekintem az összes jegyzet almappában található (%1) jegyzetet</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5865"/>
-        <source>show notes in note root folder (%1)</source>
-        <translation>megmutatja a jegyzeteket a jegyzetek alapértelmezett mappában (%1)</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="310"/>
-        <location filename="../mainwindow.cpp" line="483"/>
-        <location filename="../mainwindow.cpp" line="5869"/>
-        <source>Note folder</source>
-        <translation>Jegyzet mappa</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6701"/>
-        <source>Copy to note folder</source>
-        <translation>Másolom a jegyzet dossziéba</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6702"/>
-        <source>Move to note folder</source>
-        <translation>Jegyzetmappa áthelyezése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6703"/>
-        <source>Copy to this subfolder</source>
-        <translation>Ebbe az almappába másolom</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6704"/>
-        <source>Move to this subfolder</source>
-        <translation>Ebbe az almappába áthelyezem</translation>
+      <location filename="../mainwindow.cpp" line="8265"/>
+      <source>Rename workspace</source>
+      <translation>Munkaterület átnevezése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6755"/>
-        <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>
-            <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába helyez?</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="8380"/>
+      <source>%n chars</source>
+      <comment>characters</comment>
+      <translation type="unfinished">
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6768"/>
-        <source>Move</source>
-        <translation>Áthelyezem</translation>
+      <location filename="../mainwindow.ui" line="822"/>
+      <location filename="../mainwindow.cpp" line="3670"/>
+      <source>&amp;Tag</source>
+      <translation>&amp;Tag</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6768"/>
-        <location filename="../mainwindow.cpp" line="6823"/>
-        <source>Cancel</source>
-        <translation>Mégse</translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6800"/>
-        <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
-        <translation>
-            <numerusform>%n jegyzet átkerült a &quot;%2&quot;-es almappába</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3710"/>
+      <source>Remove tag from selected notes</source>
+      <translation>Tag eltávolítása a kijelölt jegyzetben</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6810"/>
-        <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-        <translation>
-            <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába másol?</numerusform>
-        </translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6760"/>
-        <location filename="../mainwindow.cpp" line="6815"/>
-        <source>Tagging information of these notes will be lost at the destination.</source>
-        <translation>A bejejölés adatai elvesznek a célhelyen.</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6823"/>
-        <source>Copy</source>
-        <translation>Másolás</translation>
+      <location filename="../mainwindow.cpp" line="3711"/>
+      <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
+      <translation>
+        <numerusform>Távolítsam el a címkét&lt;strong&gt;%1&lt;/strong&gt; %n kijelölt jegyzetben?</numerusform>
+        <numerusform>Távolítsam el a címkét&lt;strong&gt;%1&lt;/strong&gt; %n kijelölt jegyzetben?</numerusform>
+      </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6855"/>
-        <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
-        <translation>
-            <numerusform>%n jegyzet másolva lett a(z) &quot;%2&quot;-es almappába</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="3742"/>
+      <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
+      <translation>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; címke  el lett távolítva %n jegyzetböl</numerusform>
+        <numerusform>&lt;strong&gt;%1&lt;/strong&gt; címke el lett távolítva %n jegyzetböl</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7349"/>
-        <source>Move notes to subfolder...</source>
-        <translation>Jegyzeteket az almappába helyezem...</translation>
+      <location filename="../mainwindow.cpp" line="3763"/>
+      <source>Current notes folder: </source>
+      <translation>Jelenlegi jegyzet mappa: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7353"/>
-        <source>Copy notes to subfolder...</source>
-        <translation>Másolom a jegyzeteket az almappába...</translation>
+      <location filename="../mainwindow.cpp" line="3765"/>
+      <source>Set the notes folder. Current notes folder: </source>
+      <translation>A jeygzet mappa beállítása. Jelenlegi jegyzet mappa: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7397"/>
-        <source>Open note in external editor</source>
-        <translation>&amp;Megynyitom a Jegyzetet külső szerkesztőben</translation>
+      <location filename="../mainwindow.cpp" line="3944"/>
+      <source>Print note</source>
+      <translation>Jegyzet nyomtatása</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7399"/>
-        <source>Show note in file manager</source>
-        <translation>Megjegyzés megjelenítése a fájlkezelőben</translation>
+      <location filename="../mainwindow.cpp" line="3975"/>
+      <source>Letter</source>
+      <translation>Levél</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7563"/>
-        <source>New subfolder</source>
-        <translation>Új almappa</translation>
+      <location filename="../mainwindow.cpp" line="4001"/>
+      <source>Portrait</source>
+      <translation>Portré</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7566"/>
-        <source>Show folder in file manager</source>
-        <translation>Mappájának megjelenítése a fájlkezelőben</translation>
+      <location filename="../mainwindow.cpp" line="4001"/>
+      <source>Landscape</source>
+      <translation>Táj</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7597"/>
-        <source>Create a new folder</source>
-        <translation>Hozzon létre egy új mappát</translation>
+      <location filename="../mainwindow.cpp" line="4006"/>
+      <source>Orientation</source>
+      <translation>Tájékozódás</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7597"/>
-        <source>Folder name:</source>
-        <translation>Mappa neve:</translation>
+      <location filename="../mainwindow.cpp" line="4006"/>
+      <source>Orientation:</source>
+      <translation>Tájékozódás:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5811"/>
-        <source>show all untagged notes (%1)</source>
-        <translation>megmutatja az összes címkézetlen bejegyzést (%1)</translation>
+      <location filename="../mainwindow.cpp" line="4027"/>
+      <source>Export current note as PDF</source>
+      <translation>Aktuális jegyzet exportálása PDF-ként</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5814"/>
-        <source>Untagged notes</source>
-        <translation>Címkézetlen bejegyzések</translation>
+      <location filename="../mainwindow.cpp" line="4090"/>
+      <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
+      <translation>Nem választott ki teendőlistát. &lt;br /&gt;Kérjük, ellenőrizze a &lt;strong&gt;Teendők&lt;/strong&gt; konfigurációs beállításait!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7146"/>
-        <source>Export current note as HTML file</source>
-        <translation>HTML fájlként exportálhatja az aktuális feljegyzéshez</translation>
+      <location filename="../mainwindow.cpp" line="4685"/>
+      <source>Open QOwnNotes</source>
+      <translation>Nyítja a QOwnNotes-t</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3984"/>
-        <source>Page size</source>
-        <translation>Lapméret</translation>
+      <location filename="../mainwindow.cpp" line="4694"/>
+      <location filename="../mainwindow.cpp" line="7562"/>
+      <source>New note</source>
+      <translation>Új jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="805"/>
-        <source>quit toolbar</source>
-        <translation>kilép az eszköztárból</translation>
+      <location filename="../mainwindow.cpp" line="4710"/>
+      <source>Recent notes</source>
+      <translation>Legutóbbi jegyzet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1149"/>
-        <source>Show menu bar item</source>
-        <translation>Menüelem megjelenítése</translation>
+      <location filename="../mainwindow.cpp" line="4740"/>
+      <source>Show todo lists</source>
+      <translation>Todo-listák megjelenítése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3984"/>
-        <source>Page size:</source>
-        <translation>Lapméret:</translation>
+      <location filename="../mainwindow.cpp" line="4751"/>
+      <source>Recent tasks</source>
+      <translation>Legfrissebb feladatok</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4065"/>
-        <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-        <translation>QOwnNotes követi a névtelen használati adatot, amely segít eldönteni, hogy a QOwnNotes melyik részeit javítsjuk tovább és szereljük meg. Letilthatja ezt a funkciót a beállításoknál.</translation>
+      <location filename="../mainwindow.cpp" line="4783"/>
+      <source>Quit</source>
+      <translation>Lépjen ki</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4069"/>
-        <source>&amp;Ok</source>
-        <translation>&amp;Oké</translation>
+      <location filename="../mainwindow.cpp" line="5847"/>
+      <source>show notes from all note subfolders (%1)</source>
+      <translation>megtekintem az összes jegyzet almappában található (%1) jegyzetet</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7319"/>
-        <source>&amp;Move notes to...</source>
-        <translation>&amp;Áthelyezem a jegyzetet</translation>
+      <location filename="../mainwindow.cpp" line="5865"/>
+      <source>show notes in note root folder (%1)</source>
+      <translation>megmutatja a jegyzeteket a jegyzetek alapértelmezett mappában (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7320"/>
-        <source>&amp;Copy notes to...</source>
-        <translation>&amp;Ide másolom a jegyzetet</translation>
+      <location filename="../mainwindow.ui" line="310"/>
+      <location filename="../mainwindow.cpp" line="483"/>
+      <location filename="../mainwindow.cpp" line="5869"/>
+      <source>Note folder</source>
+      <translation>Jegyzet mappa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7361"/>
-        <source>&amp;Tag selected notes with...</source>
-        <translation>&amp;címkézi a kijelölt jegyzeteket...</translation>
+      <location filename="../mainwindow.cpp" line="6701"/>
+      <source>Copy to note folder</source>
+      <translation>Másolom a jegyzet dossziéba</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7383"/>
-        <source>&amp;Remove tag from selected notes...</source>
-        <translation>Címke eltávolítása a kijelölt jegyzetben...</translation>
+      <location filename="../mainwindow.cpp" line="6702"/>
+      <source>Move to note folder</source>
+      <translation>Jegyzetmappa áthelyezése</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7394"/>
-        <source>&amp;Remove notes</source>
-        <translation>&amp;Jegyzetek eltávolítása</translation>
+      <location filename="../mainwindow.cpp" line="6703"/>
+      <source>Copy to this subfolder</source>
+      <translation>Ebbe az almappába másolom</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4861"/>
-        <source>&amp;Link selected text</source>
-        <translation>&amp;Linkelje be a kijelölt szöveget</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="726"/>
-        <source>Your tasks are being loaded from your server</source>
-        <translation>A feladatok betöltésük a kiszolgálóról</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2141"/>
-        <source>Current note was modified externally</source>
-        <translation>Az aktuális jegyzet külsőleg módosított</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2223"/>
-        <location filename="../mainwindow.cpp" line="4418"/>
-        <source>Stored current note to disk</source>
-        <translation>Lemezen tárolt aktuális jegyzet</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2245"/>
-        <source>Note was modified externally: %1</source>
-        <translation>A jegyzet külsőleg módosításra került: %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2266"/>
-        <source>Notes directory was modified externally</source>
-        <translation>A jegyzék címtár külsőleg módosult</translation>
+      <location filename="../mainwindow.cpp" line="6704"/>
+      <source>Move to this subfolder</source>
+      <translation>Ebbe az almappába áthelyezem</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2332"/>
-        <source>Stored %n note(s) to disk</source>
-        <translation>
-            <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="6755"/>
+      <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+      <translation>
+        <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába helyez?</numerusform>
+        <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába helyez?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4868"/>
-        <source>Paste HTML or media</source>
-        <translation>Beillesztés HTML vagy média</translation>
+      <location filename="../mainwindow.cpp" line="6768"/>
+      <source>Move</source>
+      <translation>Áthelyezem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5783"/>
-        <source>show all notes (%1)</source>
-        <translation>mutassa meg az összes jegyzetet (%1)</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5786"/>
-        <location filename="../mainwindow.cpp" line="5851"/>
-        <source>All notes</source>
-        <translation>Az összes jegyzet</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6323"/>
-        <source>&amp;Add tag</source>
-        <translation>&amp;Címke hozzáadása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6337"/>
-        <source>&amp;Move tags to...</source>
-        <translation>&amp;Címkék áthelyezése...</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6372"/>
-        <source>Tag could not be created!</source>
-        <translation>Nem hozható létre a tag!</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6555"/>
-        <source>Move to the root</source>
-        <translation>A root-ba való áthelyezés</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6555"/>
-        <source>Move to this tag</source>
-        <translation>Ezt a címkét áthelyezem</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6605"/>
-        <source>Tag this</source>
-        <translation>Ez címkézem</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6635"/>
-        <source>Cannot move tag &apos;%1&apos; to this tag</source>
-        <translation>Ez a címke &apos;%1&apos; nem helyezhető át</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6646"/>
-        <source>Moved tag &apos;%1&apos; to new tag</source>
-        <translation>&apos;%1&apos; címke új helyre került</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="5970"/>
-        <source>show all notes tagged with &apos;%1&apos; (%2)</source>
-        <translation>megmutat minden &quot;%1&quot; (%2) -el jelölt jegyzetet</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6206"/>
-        <source>remove tag &apos;%1&apos; from note</source>
-        <translation>&apos;%1&apos; címke eltávolítása jegyzetből</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6331"/>
-        <source>&amp;Edit tag</source>
-        <translation>&amp;Címke szerkesztése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="6334"/>
-        <source>&amp;Remove tags</source>
-        <translation>&amp;Címkék eltávolítása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="4089"/>
-        <source>No selected todo lists!</source>
-        <translation>Nincsenek kijelölt teendőlisták!</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="454"/>
-        <source>Subfolders</source>
-        <translation>Almappák</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="465"/>
-        <source>Tags</source>
-        <translation>Címkék</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="474"/>
-        <source>Note search</source>
-        <translation>Jegyzet keresés</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="492"/>
-        <source>Note list</source>
-        <translation>Jegyzet lista</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="515"/>
-        <source>Note edit</source>
-        <translation>Jegyzet szerkesztése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="524"/>
-        <source>Note tags</source>
-        <translation>Jegyzet címkék</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="533"/>
-        <source>Note preview</source>
-        <translation>Jegyzet előnézet</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="540"/>
-        <source>Log</source>
-        <translation>Napló</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="772"/>
-        <source>formatting toolbar</source>
-        <translation>az eszköztár formatálása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="781"/>
-        <source>inserting toolbar</source>
-        <translation>az eszköztár behelyezése</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="788"/>
-        <source>encryption toolbar</source>
-        <translation>az eszköztár titkosítása</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="795"/>
-        <source>window toolbar</source>
-        <translation>ablak eszköztár</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="800"/>
-        <source>custom action toolbar</source>
-        <translation>egyéni művelet eszköztár</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="820"/>
-        <source>Workspace selector</source>
-        <translation>Munkaterület választás</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="943"/>
-        <source>Show %1 panel</source>
-        <translation>Megmutat %1 panelt</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="971"/>
-        <source>Show %1</source>
-        <translation>Megmutat %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1746"/>
-        <source>show notes in folder &apos;%1&apos; (%2)</source>
-        <translation>megmutatja a jegyzeteket a mappában &apos;%1&apos; (%2)</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1786"/>
-        <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-        <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; utolsó módosítás: %2</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1791"/>
-        <source>&lt;br /&gt;path: %1</source>
-        <translation>&lt; br /&gt;elérési út: %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="1928"/>
-        <source>Toolbar could not be loaded without name</source>
-        <translation>Eszköztárat név nélkül nem lehet betölteni</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2167"/>
-        <source>Overwriting external changes of: %1</source>
-        <translation>Átírom a külső változásokat: %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2189"/>
-        <source>Loading external changes from: %1</source>
-        <translation>Külső változtatásokat betöltöm: %1</translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2385"/>
-        <source>Line numbers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2395"/>
-        <source>Click here to see what has changed and to be able to update to the latest version</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.cpp" line="2784"/>
-        <source>Please select the folder where your notes will get stored to</source>
-        <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
+      <location filename="../mainwindow.cpp" line="6768"/>
+      <location filename="../mainwindow.cpp" line="6823"/>
+      <source>Cancel</source>
+      <translation>Mégse</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3697"/>
-        <source>%n note(s) were tagged with &quot;%2&quot;</source>
-        <translation>
-            <numerusform>%n jegyzet volt bejelölve &quot;%2&quot;-vel</numerusform>
-        </translation>
+      <location filename="../mainwindow.cpp" line="6800"/>
+      <source>%n note(s) were moved to note subfolder "%2"</source>
+      <translation>
+        <numerusform>%n jegyzet átkerült a "%2"-es almappába</numerusform>
+        <numerusform>%n jegyzet átkerült a "%2"-es almappába</numerusform>
+      </translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../mainwindow.cpp" line="6810"/>
+      <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
+      <translation>
+        <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába másol?</numerusform>
+        <numerusform>%n kijelölt jegyzetet a(z) &lt;strong&gt;%2&lt;/strong&gt; -es almappába másol?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5719"/>
-        <source>Increased font size to %1 pt</source>
-        <translation>Nagyobb betűméret: pt-%1</translation>
+      <location filename="../mainwindow.cpp" line="6760"/>
+      <location filename="../mainwindow.cpp" line="6815"/>
+      <source>Tagging information of these notes will be lost at the destination.</source>
+      <translation>A bejejölés adatai elvesznek a célhelyen.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5730"/>
-        <source>Decreased font size to %1 pt</source>
-        <translation>Csökkent betűméret: pt-%1</translation>
+      <location filename="../mainwindow.cpp" line="6823"/>
+      <source>Copy</source>
+      <translation>Másolás</translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../mainwindow.cpp" line="6855"/>
+      <source>%n note(s) were copied to note subfolder "%2"</source>
+      <translation>
+        <numerusform>%n jegyzet másolva lett a(z) "%2"-es almappába</numerusform>
+        <numerusform>%n jegyzet másolva lett a(z) "%2"-es almappába</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5740"/>
-        <source>Reset font size to %1 pt</source>
-        <translation>%1 pt betűméret visszaállítása</translation>
+      <location filename="../mainwindow.cpp" line="7349"/>
+      <source>Move notes to subfolder...</source>
+      <translation>Jegyzeteket az almappába helyezem...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4070"/>
-        <location filename="../mainwindow.cpp" line="4093"/>
-        <source>Open &amp;settings</source>
-        <translation>Nyílt &amp; beállítások</translation>
+      <location filename="../mainwindow.cpp" line="7353"/>
+      <source>Copy notes to subfolder...</source>
+      <translation>Másolom a jegyzeteket az almappába...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1269"/>
-        <source>leave</source>
-        <translation>kilép</translation>
+      <location filename="../mainwindow.cpp" line="7397"/>
+      <source>Open note in external editor</source>
+      <translation>&amp;Megynyitom a Jegyzetet külső szerkesztőben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1272"/>
-        <source>leave distraction free mode</source>
-        <translation>elhagyja a figyelemelterelésmentes módot</translation>
+      <location filename="../mainwindow.cpp" line="7399"/>
+      <source>Show note in file manager</source>
+      <translation>Megjegyzés megjelenítése a fájlkezelőben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4976"/>
-        <source>Select image to insert</source>
-        <translation>Válassza ki a beszúrása kerülő képet</translation>
+      <location filename="../mainwindow.cpp" line="7563"/>
+      <source>New subfolder</source>
+      <translation>Új almappa</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5072"/>
-        <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-        <translation>Kérjük, írja be a &lt;strong&gt;jelszavát&lt;/strong&gt;-t, hogy titkosítsa a jegyzetet. &lt;br /&gt;Ne feledje &lt;strong&gt;megjegyezni&lt;/strong&gt;a jelszavát hogy a jegyzet tartalmához hozzá juthasson&lt; br /&gt; és hogy &lt;strong&gt;csak&lt;/strong&gt; a jelszavával teheti ezt a&lt;strong&gt;QOwnNotes&lt;/strong&gt;-ban!</translation>
+      <location filename="../mainwindow.cpp" line="7566"/>
+      <source>Show folder in file manager</source>
+      <translation>Mappájának megjelenítése a fájlkezelőben</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5127"/>
-        <source>Decrypt note and store it as plain text</source>
-        <translation>Jelenítse meg a jegyzetet, és tárolja azt egyszerű szövegként</translation>
+      <location filename="../mainwindow.cpp" line="7597"/>
+      <source>Create a new folder</source>
+      <translation>Hozzon létre egy új mappát</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5128"/>
-        <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation>A jegyzet meg lesz jelenítve és egyszerű szövegként tárolásra kerül. Ne feledje, hogy a titkosítatlan jegyzet esetleg szinkronizálva lesz a kiszolgálón és a bizalmas szöveg megjelenhet! &lt; br /&gt; Kívánja megjeleníteni a jegyzetet?</translation>
+      <location filename="../mainwindow.cpp" line="7597"/>
+      <source>Folder name:</source>
+      <translation>Mappa neve:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5132"/>
-        <source>&amp;Decrypt</source>
-        <translation>&amp;Megjelenít</translation>
+      <location filename="../mainwindow.cpp" line="5811"/>
+      <source>show all untagged notes (%1)</source>
+      <translation>megmutatja az összes címkézetlen bejegyzést (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5157"/>
-        <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-        <translation>&lt; br /&gt;Tudja majd szerkeszteni a titkosított jegyzetet.</translation>
+      <location filename="../mainwindow.cpp" line="5814"/>
+      <source>Untagged notes</source>
+      <translation>Címkézetlen bejegyzések</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5215"/>
-        <source>Export current note as Markdown file</source>
-        <translation>Markdown fájlként exportálhatja az aktuális jegyzetet</translation>
+      <location filename="../mainwindow.cpp" line="7146"/>
+      <source>Export current note as HTML file</source>
+      <translation>HTML fájlként exportálhatja az aktuális feljegyzéshez</translation>
     </message>
-</context>
-<context>
+    <message>
+      <location filename="../mainwindow.cpp" line="3984"/>
+      <source>Page size</source>
+      <translation>Lapméret</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="805"/>
+      <source>quit toolbar</source>
+      <translation>kilép az eszköztárból</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1149"/>
+      <source>Show menu bar item</source>
+      <translation>Menüelem megjelenítése</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="3984"/>
+      <source>Page size:</source>
+      <translation>Lapméret:</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4065"/>
+      <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
+      <translation>QOwnNotes követi a névtelen használati adatot, amely segít eldönteni, hogy a QOwnNotes melyik részeit javítsjuk tovább és szereljük meg. Letilthatja ezt a funkciót a beállításoknál.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4069"/>
+      <source>&amp;Ok</source>
+      <translation>&amp;Oké</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7319"/>
+      <source>&amp;Move notes to...</source>
+      <translation>&amp;Áthelyezem a jegyzetet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7320"/>
+      <source>&amp;Copy notes to...</source>
+      <translation>&amp;Ide másolom a jegyzetet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7361"/>
+      <source>&amp;Tag selected notes with...</source>
+      <translation>&amp;címkézi a kijelölt jegyzeteket...</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7383"/>
+      <source>&amp;Remove tag from selected notes...</source>
+      <translation>Címke eltávolítása a kijelölt jegyzetben...</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7394"/>
+      <source>&amp;Remove notes</source>
+      <translation>&amp;Jegyzetek eltávolítása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4861"/>
+      <source>&amp;Link selected text</source>
+      <translation>&amp;Linkelje be a kijelölt szöveget</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="726"/>
+      <source>Your tasks are being loaded from your server</source>
+      <translation>A feladatok betöltésük a kiszolgálóról</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2141"/>
+      <source>Current note was modified externally</source>
+      <translation>Az aktuális jegyzet külsőleg módosított</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2223"/>
+      <location filename="../mainwindow.cpp" line="4418"/>
+      <source>Stored current note to disk</source>
+      <translation>Lemezen tárolt aktuális jegyzet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2245"/>
+      <source>Note was modified externally: %1</source>
+      <translation>A jegyzet külsőleg módosításra került: %1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2266"/>
+      <source>Notes directory was modified externally</source>
+      <translation>A jegyzék címtár külsőleg módosult</translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../mainwindow.cpp" line="2332"/>
+      <source>Stored %n note(s) to disk</source>
+      <translation>
+        <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
+        <numerusform>%n jegyzet(et) tárolt a lemezre</numerusform>
+      </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4868"/>
+      <source>Paste HTML or media</source>
+      <translation>Beillesztés HTML vagy média</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5783"/>
+      <source>show all notes (%1)</source>
+      <translation>mutassa meg az összes jegyzetet (%1)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5786"/>
+      <location filename="../mainwindow.cpp" line="5851"/>
+      <source>All notes</source>
+      <translation>Az összes jegyzet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6323"/>
+      <source>&amp;Add tag</source>
+      <translation>&amp;Címke hozzáadása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6337"/>
+      <source>&amp;Move tags to...</source>
+      <translation>&amp;Címkék áthelyezése...</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6372"/>
+      <source>Tag could not be created!</source>
+      <translation>Nem hozható létre a tag!</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6555"/>
+      <source>Move to the root</source>
+      <translation>A root-ba való áthelyezés</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6555"/>
+      <source>Move to this tag</source>
+      <translation>Ezt a címkét áthelyezem</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6605"/>
+      <source>Tag this</source>
+      <translation>Ez címkézem</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6635"/>
+      <source>Cannot move tag '%1' to this tag</source>
+      <translation>Ez a címke '%1' nem helyezhető át</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6646"/>
+      <source>Moved tag '%1' to new tag</source>
+      <translation>'%1' címke új helyre került</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5970"/>
+      <source>show all notes tagged with '%1' (%2)</source>
+      <translation>megmutat minden "%1" (%2) -el jelölt jegyzetet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6206"/>
+      <source>remove tag '%1' from note</source>
+      <translation>'%1' címke eltávolítása jegyzetből</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6331"/>
+      <source>&amp;Edit tag</source>
+      <translation>&amp;Címke szerkesztése</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="6334"/>
+      <source>&amp;Remove tags</source>
+      <translation>&amp;Címkék eltávolítása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4089"/>
+      <source>No selected todo lists!</source>
+      <translation>Nincsenek kijelölt teendőlisták!</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="454"/>
+      <source>Subfolders</source>
+      <translation>Almappák</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="465"/>
+      <source>Tags</source>
+      <translation>Címkék</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="474"/>
+      <source>Note search</source>
+      <translation>Jegyzet keresés</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="492"/>
+      <source>Note list</source>
+      <translation>Jegyzet lista</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="515"/>
+      <source>Note edit</source>
+      <translation>Jegyzet szerkesztése</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="524"/>
+      <source>Note tags</source>
+      <translation>Jegyzet címkék</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="533"/>
+      <source>Note preview</source>
+      <translation>Jegyzet előnézet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="540"/>
+      <source>Log</source>
+      <translation>Napló</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="772"/>
+      <source>formatting toolbar</source>
+      <translation>az eszköztár formatálása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="781"/>
+      <source>inserting toolbar</source>
+      <translation>az eszköztár behelyezése</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="788"/>
+      <source>encryption toolbar</source>
+      <translation>az eszköztár titkosítása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="795"/>
+      <source>window toolbar</source>
+      <translation>ablak eszköztár</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="800"/>
+      <source>custom action toolbar</source>
+      <translation>egyéni művelet eszköztár</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="820"/>
+      <source>Workspace selector</source>
+      <translation>Munkaterület választás</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="943"/>
+      <source>Show %1 panel</source>
+      <translation>Megmutat %1 panelt</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="971"/>
+      <source>Show %1</source>
+      <translation>Megmutat %1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1746"/>
+      <source>show notes in folder '%1' (%2)</source>
+      <translation>megmutatja a jegyzeteket a mappában '%1' (%2)</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1786"/>
+      <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt; &lt;br /&gt; utolsó módosítás: %2</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1791"/>
+      <source>&lt;br /&gt;path: %1</source>
+      <translation>&lt; br /&gt;elérési út: %1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1928"/>
+      <source>Toolbar could not be loaded without name</source>
+      <translation>Eszköztárat név nélkül nem lehet betölteni</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2167"/>
+      <source>Overwriting external changes of: %1</source>
+      <translation>Átírom a külső változásokat: %1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2189"/>
+      <source>Loading external changes from: %1</source>
+      <translation>Külső változtatásokat betöltöm: %1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2385"/>
+      <source>Line numbers</source>
+      <translation type="unfinished">Line numbers</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2395"/>
+      <source>Click here to see what has changed and to be able to update to the latest version</source>
+      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="2784"/>
+      <source>Please select the folder where your notes will get stored to</source>
+      <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
+    </message>
+    <message numerus="yes">
+      <location filename="../mainwindow.cpp" line="3697"/>
+      <source>%n note(s) were tagged with "%2"</source>
+      <translation>
+        <numerusform>%n jegyzet volt bejelölve "%2"-vel</numerusform>
+        <numerusform>%n jegyzet volt bejelölve "%2"-vel</numerusform>
+      </translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5719"/>
+      <source>Increased font size to %1 pt</source>
+      <translation>Nagyobb betűméret: pt-%1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5730"/>
+      <source>Decreased font size to %1 pt</source>
+      <translation>Csökkent betűméret: pt-%1</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5740"/>
+      <source>Reset font size to %1 pt</source>
+      <translation>%1 pt betűméret visszaállítása</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4070"/>
+      <location filename="../mainwindow.cpp" line="4093"/>
+      <source>Open &amp;settings</source>
+      <translation>Nyílt &amp; beállítások</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1269"/>
+      <source>leave</source>
+      <translation>kilép</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="1272"/>
+      <source>leave distraction free mode</source>
+      <translation>elhagyja a figyelemelterelésmentes módot</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="4976"/>
+      <source>Select image to insert</source>
+      <translation>Válassza ki a beszúrása kerülő képet</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5072"/>
+      <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
+      <translation>Kérjük, írja be a &lt;strong&gt;jelszavát&lt;/strong&gt;-t, hogy titkosítsa a jegyzetet. &lt;br /&gt;Ne feledje &lt;strong&gt;megjegyezni&lt;/strong&gt;a jelszavát hogy a jegyzet tartalmához hozzá juthasson&lt; br /&gt; és hogy &lt;strong&gt;csak&lt;/strong&gt; a jelszavával teheti ezt a&lt;strong&gt;QOwnNotes&lt;/strong&gt;-ban!</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5127"/>
+      <source>Decrypt note and store it as plain text</source>
+      <translation>Jelenítse meg a jegyzetet, és tárolja azt egyszerű szövegként</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5128"/>
+      <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+      <translation>A jegyzet meg lesz jelenítve és egyszerű szövegként tárolásra kerül. Ne feledje, hogy a titkosítatlan jegyzet esetleg szinkronizálva lesz a kiszolgálón és a bizalmas szöveg megjelenhet! &lt; br /&gt; Kívánja megjeleníteni a jegyzetet?</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5132"/>
+      <source>&amp;Decrypt</source>
+      <translation>&amp;Megjelenít</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5157"/>
+      <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
+      <translation>&lt; br /&gt;Tudja majd szerkeszteni a titkosított jegyzetet.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5215"/>
+      <source>Export current note as Markdown file</source>
+      <translation>Markdown fájlként exportálhatja az aktuális jegyzetet</translation>
+    </message>
+  </context>
+  <context>
     <name>NavigationWidget</name>
     <message>
-        <location filename="../widgets/navigationwidget.cpp" line="99"/>
-        <source>headline %1</source>
-        <translation>%1 főcím</translation>
+      <location filename="../widgets/navigationwidget.cpp" line="99"/>
+      <source>headline %1</source>
+      <translation>%1 főcím</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>NoteDiffDialog</name>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="17"/>
-        <source>Note was modified externaly!</source>
-        <translation>A jegyzet az alkalmazáson kívül módosult!</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="17"/>
+      <source>Note was modified externaly!</source>
+      <translation>A jegyzet az alkalmazáson kívül módosult!</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="41"/>
-        <source>The current note was modified outside of this application!</source>
-        <translation>Az aktuális jegyzet ez alkalmazáson kívül módosult!</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="41"/>
+      <source>The current note was modified outside of this application!</source>
+      <translation>Az aktuális jegyzet ez alkalmazáson kívül módosult!</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="48"/>
-        <source>Differences:</source>
-        <translation>Különbségek:</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="48"/>
+      <source>Differences:</source>
+      <translation>Különbségek:</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="76"/>
-        <source>Always accept external changes in the future</source>
-        <translation>Mindig fogadja el a jövőben a külső változtatásokat</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="76"/>
+      <source>Always accept external changes in the future</source>
+      <translation>Mindig fogadja el a jövőben a külső változtatásokat</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="83"/>
-        <source>Accept external changes?</source>
-        <translation>Elfogadod a külső változatásokat?</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="83"/>
+      <source>Accept external changes?</source>
+      <translation>Elfogadod a külső változatásokat?</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.ui" line="69"/>
-        <source>Ignore all external modifications in the future</source>
-        <translation>A jövőben a minden külső módosítást figyelmen kívül hagy</translation>
+      <location filename="../dialogs/notediffdialog.ui" line="69"/>
+      <source>Ignore all external modifications in the future</source>
+      <translation>A jövőben a minden külső módosítást figyelmen kívül hagy</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="32"/>
-        <source>Yes</source>
-        <translation>Igen</translation>
+      <location filename="../dialogs/notediffdialog.cpp" line="32"/>
+      <source>Yes</source>
+      <translation>Igen</translation>
     </message>
     <message>
-        <location filename="../dialogs/notediffdialog.cpp" line="37"/>
-        <source>No</source>
-        <translation>Nem</translation>
+      <location filename="../dialogs/notediffdialog.cpp" line="37"/>
+      <source>No</source>
+      <translation>Nem</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>OrphanedImagesDialog</name>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
-        <source>Orphaned images</source>
-        <translation>Elárvult képek</translation>
+      <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
+      <source>Orphaned images</source>
+      <translation>Elárvult képek</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
-        <source>Delete selected images</source>
-        <translation>Kijelölt képek törlése</translation>
+      <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
+      <source>Delete selected images</source>
+      <translation>Kijelölt képek törlése</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
-        <source>Delete</source>
-        <translation>Törlés</translation>
+      <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
+      <source>Delete</source>
+      <translation>Törlés</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.ui" line="132"/>
-        <source>Images that are not used in notes:</source>
-        <translation>Képek, melyeket nem használ a jegyzetekben:</translation>
+      <location filename="../dialogs/orphanedimagesdialog.ui" line="132"/>
+      <source>Images that are not used in notes:</source>
+      <translation>Képek, melyeket nem használ a jegyzetekben:</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="61"/>
-        <source>Last modified at %1</source>
-        <translation>Legutóbbi módosítás: %1</translation>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="61"/>
+      <source>Last modified at %1</source>
+      <translation>Legutóbbi módosítás: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="120"/>
-        <source>Delete selected files</source>
-        <translation> kiválasztott fájlok törlése</translation>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="120"/>
+      <source>Delete selected files</source>
+      <translation> kiválasztott fájlok törlése</translation>
     </message>
     <message numerus="yes">
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="121"/>
-        <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-        <translation>
-            <numerusform>Törli a &lt;strong&gt;%n&lt;/strong&gt; kijelölt fájlt?</numerusform>
-        </translation>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="121"/>
+      <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
+      <translation>
+        <numerusform>Törli a &lt;strong&gt;%n&lt;/strong&gt; kijelölt fájlt?</numerusform>
+        <numerusform>Törli a &lt;strong&gt;%n&lt;/strong&gt; kijelölt fájlt?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
-        <source>&amp;Delete</source>
-        <translation>&amp;Törlés</translation>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+      <source>&amp;Delete</source>
+      <translation>&amp;Törlés</translation>
     </message>
     <message>
-        <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="140"/>
-        <source>Username / password error</source>
-        <translation>Felhasználónév / jelszó hiba</translation>
+      <location filename="../services/owncloudservice.cpp" line="140"/>
+      <source>Username / password error</source>
+      <translation>Felhasználónév / jelszó hiba</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="141"/>
-        <source>Your calendar username or password is incorrect!</source>
-        <translation>A naptár-felhasználónév vagy a jelszó nem megfelelő!</translation>
+      <location filename="../services/owncloudservice.cpp" line="141"/>
+      <source>Your calendar username or password is incorrect!</source>
+      <translation>A naptár-felhasználónév vagy a jelszó nem megfelelő!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="814"/>
-        <source>ownCloud server connection error</source>
-        <translation>ownCloud kiszolgálócsatlakozási hiba</translation>
+      <location filename="../services/owncloudservice.cpp" line="814"/>
+      <source>ownCloud server connection error</source>
+      <translation>ownCloud kiszolgálócsatlakozási hiba</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="818"/>
-        <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-        <translation>ownCloud kiszolgálóhiba: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt; Kérjük ellenőrizze az ownCloud konfigurációját.</translation>
+      <location filename="../services/owncloudservice.cpp" line="818"/>
+      <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
+      <translation>ownCloud kiszolgálóhiba: &lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt; Kérjük ellenőrizze az ownCloud konfigurációját.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="834"/>
-        <source>You need to setup your ownCloud server!</source>
-        <translation>A saját ownCloud szerveredet kell felépítened!</translation>
+      <location filename="../services/owncloudservice.cpp" line="834"/>
+      <source>You need to setup your ownCloud server!</source>
+      <translation>A saját ownCloud szerveredet kell felépítened!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="840"/>
-        <source>Open &amp;settings</source>
-        <translation>Nyítja a &amp;beállításokat</translation>
+      <location filename="../services/owncloudservice.cpp" line="840"/>
+      <source>Open &amp;settings</source>
+      <translation>Nyítja a &amp;beállításokat</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="840"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../services/owncloudservice.cpp" line="840"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="882"/>
-        <source>Done with loading note versions</source>
-        <translation>A jegyzetváltozatok töltése befejeződött</translation>
+      <location filename="../services/owncloudservice.cpp" line="882"/>
+      <source>Done with loading note versions</source>
+      <translation>A jegyzetváltozatok töltése befejeződött</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="938"/>
-        <source>Done with loading trashed notes</source>
-        <translation>A törölt jegyzetek töltése befejeződött</translation>
+      <location filename="../services/owncloudservice.cpp" line="938"/>
+      <source>Done with loading trashed notes</source>
+      <translation>A törölt jegyzetek töltése befejeződött</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="920"/>
-        <source>no other version</source>
-        <translation>nincs más verzió</translation>
+      <location filename="../services/owncloudservice.cpp" line="920"/>
+      <source>no other version</source>
+      <translation>nincs más verzió</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="921"/>
-        <source>There are no other versions on the server for this note.</source>
-        <translation>Ennek a jegyzetek nincsenek a szerveren más változatai.</translation>
+      <location filename="../services/owncloudservice.cpp" line="921"/>
+      <source>There are no other versions on the server for this note.</source>
+      <translation>Ennek a jegyzetek nincsenek a szerveren más változatai.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="999"/>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
-        <source>Error while loading todo lists!</source>
-        <translation>Hiba a teendő lista betöltésekor!</translation>
+      <location filename="../services/owncloudservice.cpp" line="999"/>
+      <location filename="../services/owncloudservice.cpp" line="1025"/>
+      <source>Error while loading todo lists!</source>
+      <translation>Hiba a teendő lista betöltésekor!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1000"/>
-        <source>Your CalDAV server didn&apos;t reply anything!</source>
-        <translation>A CalDAV-kiszolgáló nem válaszolt!</translation>
+      <location filename="../services/owncloudservice.cpp" line="1000"/>
+      <source>Your CalDAV server didn't reply anything!</source>
+      <translation>A CalDAV-kiszolgáló nem válaszolt!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
-        <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-        <translation>Hibaüzenet a CalDAV szerveren: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <location filename="../services/owncloudservice.cpp" line="1026"/>
+      <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
+      <translation>Hibaüzenet a CalDAV szerveren: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>PasswordDialog</name>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="14"/>
-        <source>Please enter your password</source>
-        <translation>Kérjük, írja be a jelszót</translation>
+      <location filename="../dialogs/passworddialog.ui" line="14"/>
+      <source>Please enter your password</source>
+      <translation>Kérjük, írja be a jelszót</translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="24"/>
-        <source>Enter your password:</source>
-        <translation>Írja be a jelszót:</translation>
+      <location filename="../dialogs/passworddialog.ui" line="24"/>
+      <source>Enter your password:</source>
+      <translation>Írja be a jelszót:</translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="34"/>
-        <source>Password</source>
-        <translation>Jelszó</translation>
+      <location filename="../dialogs/passworddialog.ui" line="34"/>
+      <source>Password</source>
+      <translation>Jelszó</translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="44"/>
-        <source>Re-enter password</source>
-        <translation>Jelszó újra</translation>
+      <location filename="../dialogs/passworddialog.ui" line="44"/>
+      <source>Re-enter password</source>
+      <translation>Jelszó újra</translation>
     </message>
     <message>
-        <location filename="../dialogs/passworddialog.ui" line="54"/>
-        <source>Passwords don&apos;t match!</source>
-        <translation>A jelszavak nem egyeznek!</translation>
+      <location filename="../dialogs/passworddialog.ui" line="54"/>
+      <source>Passwords don't match!</source>
+      <translation>A jelszavak nem egyeznek!</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>QObject</name>
     <message>
-        <location filename="../entities/notefolder.cpp" line="418"/>
-        <source>default</source>
-        <translation>alapértelmezett</translation>
+      <location filename="../entities/notefolder.cpp" line="418"/>
+      <source>default</source>
+      <translation>alapértelmezett</translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1926"/>
-        <source>Note filename changed</source>
-        <translation>A jegyzet fájlneve megváltozott</translation>
+      <location filename="../entities/note.cpp" line="1926"/>
+      <source>Note filename changed</source>
+      <translation>A jegyzet fájlneve megváltozott</translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="1927"/>
-        <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-        <translation>
-            <numerusform>A jegyzet címe változott. Szeretné az összes előforduló &lt;strong&gt;%1&lt;/strong&gt; linket cserélni &lt;strong&gt;%2&lt;/strong&gt; &lt;strong&gt;%n&lt;/strong&gt; a jegyzet fájl(ok)ban?</numerusform>
-        </translation>
+      <location filename="../entities/note.cpp" line="1927"/>
+      <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
+      <translation>
+        <numerusform>A jegyzet címe változott. Szeretné az összes előforduló &lt;strong&gt;%1&lt;/strong&gt; linket cserélni &lt;strong&gt;%2&lt;/strong&gt; &lt;strong&gt;%n&lt;/strong&gt; a jegyzet fájl(ok)ban?</numerusform>
+        <numerusform>A jegyzet címe változott. Szeretné az összes előforduló &lt;strong&gt;%1&lt;/strong&gt; linket cserélni &lt;strong&gt;%2&lt;/strong&gt; &lt;strong&gt;%n&lt;/strong&gt; a jegyzet fájlokban?</numerusform>
+      </translation>
     </message>
     <message>
-        <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
-        <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
-        <source>Unknown action %1</source>
-        <translation>Ismeretlen akció %1</translation>
+      <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
+      <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
+      <source>Unknown action %1</source>
+      <translation>Ismeretlen akció %1</translation>
     </message>
     <message>
-        <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
-        <source>Workspace selector</source>
-        <translation>Munkaterület választás</translation>
+      <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
+      <source>Workspace selector</source>
+      <translation>Munkaterület választás</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>QTextEditSearchWidget</name>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="62"/>
-        <source>close search</source>
-        <translation>zárja be a keresést</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="62"/>
+      <source>close search</source>
+      <translation>zárja be a keresést</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
-        <source>Find:</source>
-        <translation>Keresés:</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
+      <source>Find:</source>
+      <translation>Keresés:</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
-        <source>replace text</source>
-        <translation>cserélem a szöveget</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
+      <source>replace text</source>
+      <translation>cserélem a szöveget</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
-        <source>find in text</source>
-        <translation>keresés a szövegben</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
+      <source>find in text</source>
+      <translation>keresés a szövegben</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
-        <source>search forward</source>
-        <translation>előrefelé keresés</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
+      <source>search forward</source>
+      <translation>előrefelé keresés</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="103"/>
-        <source>search backward</source>
-        <translation>visszafelé keresés</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="103"/>
+      <source>search backward</source>
+      <translation>visszafelé keresés</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
-        <source>replace with</source>
-        <translation>helyettesít</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
+      <source>replace with</source>
+      <translation>helyettesít</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
-        <source>Replace:</source>
-        <translation>Helyettesítés:</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
+      <source>Replace:</source>
+      <translation>Helyettesítés:</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
-        <source>Plain text</source>
-        <translation>Egyszerű szöveg</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
+      <source>Plain text</source>
+      <translation>Egyszerű szöveg</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
-        <source>Whole words</source>
-        <translation>Teljes szavak</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
+      <source>Whole words</source>
+      <translation>Teljes szavak</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
-        <source>Regular expression</source>
-        <translation>Általános kifejezés</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
+      <source>Regular expression</source>
+      <translation>Általános kifejezés</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
-        <source>Replace</source>
-        <translation>Helyettesítés</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
+      <source>Replace</source>
+      <translation>Helyettesítés</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
-        <source>Replace All</source>
-        <translation>Az összes cseréje</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
+      <source>Replace All</source>
+      <translation>Az összes cseréje</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
-        <source>Mode:</source>
-        <translation>Mód:</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
+      <source>Mode:</source>
+      <translation>Mód:</translation>
     </message>
     <message>
-        <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
-        <source>Match case sensitive</source>
-        <translation>Kis- és nagybetűk egyeztetése</translation>
+      <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
+      <source>Match case sensitive</source>
+      <translation>Kis- és nagybetűk egyeztetése</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>QWidget</name>
     <message>
-        <location filename="../services/databaseservice.cpp" line="76"/>
-        <source>Cannot open memory database</source>
-        <translation>Memória adatbázis nem nyitható meg</translation>
+      <location filename="../services/databaseservice.cpp" line="76"/>
+      <source>Cannot open memory database</source>
+      <translation>Memória adatbázis nem nyitható meg</translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="77"/>
-        <source>Unable to establish a memory database connection.</source>
-        <translation>Nem sikerült memória adatbázis-kapcsolatot létesíteni.</translation>
+      <location filename="../services/databaseservice.cpp" line="77"/>
+      <source>Unable to establish a memory database connection.</source>
+      <translation>Nem sikerült memória adatbázis-kapcsolatot létesíteni.</translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="93"/>
-        <source>Cannot open disk database</source>
-        <translation>Lemez adatbázisa nem nyitható meg</translation>
+      <location filename="../services/databaseservice.cpp" line="93"/>
+      <source>Cannot open disk database</source>
+      <translation>Lemez adatbázisa nem nyitható meg</translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="94"/>
-        <location filename="../services/databaseservice.cpp" line="116"/>
-        <source>Unable to establish a database connection with file &apos;%1&apos;.
+      <location filename="../services/databaseservice.cpp" line="94"/>
+      <location filename="../services/databaseservice.cpp" line="116"/>
+      <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-        <translation>Nem sikerült adatbázis-kapcsolatot létesíteni a&quot;%1&quot;-es fájllal. A mappa és a fájl írható?</translation>
+      <translation>Nem sikerült adatbázis-kapcsolatot létesíteni a"%1"-es fájllal. A mappa és a fájl írható?</translation>
     </message>
     <message>
-        <location filename="../services/databaseservice.cpp" line="115"/>
-        <source>Cannot open note folder database</source>
-        <translation>Jegyzet adatbázis nem nyitható meg</translation>
+      <location filename="../services/databaseservice.cpp" line="115"/>
+      <source>Cannot open note folder database</source>
+      <translation>Jegyzet adatbázis nem nyitható meg</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>ScriptingService</name>
     <message>
-        <location filename="../services/scriptingservice.cpp" line="154"/>
-        <source>file doesn&apos;t exist</source>
-        <translation>fájl nem létezik</translation>
+      <location filename="../services/scriptingservice.cpp" line="154"/>
+      <source>file doesn't exist</source>
+      <translation>fájl nem létezik</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>SettingsDialog</name>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="26"/>
-        <source>Settings</source>
-        <translation>Beállítások</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="26"/>
+      <source>Settings</source>
+      <translation>Beállítások</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="120"/>
-        <source>Note folders</source>
-        <translation>Jegyzet mappák</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="120"/>
+      <source>Note folders</source>
+      <translation>Jegyzet mappák</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="359"/>
-        <source>Your note folders</source>
-        <translation>Az Ön jegyzetmappái</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="359"/>
+      <source>Your note folders</source>
+      <translation>Az Ön jegyzetmappái</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="426"/>
-        <source>&amp;Add folder</source>
-        <translation>&amp;Mappa hozzáadása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="426"/>
+      <source>&amp;Add folder</source>
+      <translation>&amp;Mappa hozzáadása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="450"/>
-        <source>&amp;Remove folder</source>
-        <translation>&amp;Mappa eltávolítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="450"/>
+      <source>&amp;Remove folder</source>
+      <translation>&amp;Mappa eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="661"/>
-        <source>This name will be viewed in all the menus.</source>
-        <translation>Ezt a címet fogja látni a menükben.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="661"/>
+      <source>This name will be viewed in all the menus.</source>
+      <translation>Ezt a címet fogja látni a menükben.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="664"/>
-        <source>a name you will recognize</source>
-        <translation>egy könnyen felismerhető név</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="664"/>
+      <source>a name you will recognize</source>
+      <translation>egy könnyen felismerhető név</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="506"/>
-        <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-        <translation>A ownCloud elérési útjának beállítása, ahol a jegyzetmappa elérési útja szinkronizálódik az ownCloud kiszolgálóján.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="506"/>
+      <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
+      <translation>A ownCloud elérési útjának beállítása, ahol a jegyzetmappa elérési útja szinkronizálódik az ownCloud kiszolgálóján.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="671"/>
-        <source>Use as active note folder</source>
-        <translation>Aktív jegyzet mappaként</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="671"/>
+      <source>Use as active note folder</source>
+      <translation>Aktív jegyzet mappaként</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="748"/>
-        <source>Your ownCloud server</source>
-        <translation>OwnCloud szervere</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="748"/>
+      <source>Your ownCloud server</source>
+      <translation>OwnCloud szervere</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="762"/>
-        <source>ownCloud server url:</source>
-        <translation>ownCloud szerver Url-címe:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="762"/>
+      <source>ownCloud server url:</source>
+      <translation>ownCloud szerver Url-címe:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="784"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=&quot; font-style:italic;&quot;&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, adja meg a ownCloud kiszolgáló URL-címét, például: &lt;span style=&quot;font-style:italic;&quot;&gt; https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="784"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, adja meg a ownCloud kiszolgáló URL-címét, például: &lt;span style="font-style:italic;"&gt; https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="822"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználónevet a ownCloud kiszolgálón.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="822"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználónevet a ownCloud kiszolgálón.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="857"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználóneve jelszavát. &lt;br/&gt; Jelenleg a jelszó titkosítva lesz elraktározva más beállításokkal együtt, de nem nagyon biztonságos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="857"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kérjük, írja be a felhasználóneve jelszavát. &lt;br/&gt; Jelenleg a jelszó titkosítva lesz elraktározva más beállításokkal együtt, de nem nagyon biztonságos.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="935"/>
-        <source>connection to web server</source>
-        <translation>web szerver kapcsolat</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="935"/>
+      <source>connection to web server</source>
+      <translation>web szerver kapcsolat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="952"/>
-        <source>ownCloud server detected</source>
-        <translation>ownCloud kiszolgáló észlelése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="952"/>
+      <source>ownCloud server detected</source>
+      <translation>ownCloud kiszolgáló észlelése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="986"/>
-        <source>connection to QOwnNotesAPI</source>
-        <translation>QOwnNotesAPI kapcsolat </translation>
+      <location filename="../dialogs/settingsdialog.ui" line="986"/>
+      <source>connection to QOwnNotesAPI</source>
+      <translation>QOwnNotesAPI kapcsolat </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="969"/>
-        <source>username and password correct</source>
-        <translation>a felhasználónév és jelszó helyes</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="969"/>
+      <source>username and password correct</source>
+      <translation>a felhasználónév és jelszó helyes</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="925"/>
-        <location filename="../dialogs/settingsdialog.ui" line="942"/>
-        <location filename="../dialogs/settingsdialog.ui" line="959"/>
-        <location filename="../dialogs/settingsdialog.ui" line="976"/>
-        <location filename="../dialogs/settingsdialog.ui" line="993"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1010"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1027"/>
-        <source>unknown</source>
-        <translation>ismeretlen</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="925"/>
+      <location filename="../dialogs/settingsdialog.ui" line="942"/>
+      <location filename="../dialogs/settingsdialog.ui" line="959"/>
+      <location filename="../dialogs/settingsdialog.ui" line="976"/>
+      <location filename="../dialogs/settingsdialog.ui" line="993"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1010"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1027"/>
+      <source>unknown</source>
+      <translation>ismeretlen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="885"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kattintson ide, hogy tesztelje a kapcsolatot az ownCloud kiszolgálójával.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="885"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kattintson ide, hogy tesztelje a kapcsolatot az ownCloud kiszolgálójával.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1003"/>
-        <source>versions app enabled on server</source>
-        <translation>verziók-app engedélyezve a kiszolgálón</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1003"/>
+      <source>versions app enabled on server</source>
+      <translation>verziók-app engedélyezve a kiszolgálón</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1020"/>
-        <source>trash app enabled on server</source>
-        <translation>kuka-app engedélyezve a kiszolgálón</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1020"/>
+      <source>trash app enabled on server</source>
+      <translation>kuka-app engedélyezve a kiszolgálón</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1037"/>
-        <source>notes path found on server</source>
-        <translation>jegyzetek elérhetőek a kiszolgálón</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1037"/>
+      <source>notes path found on server</source>
+      <translation>jegyzetek elérhetőek a kiszolgálón</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1093"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=&quot; font-weight:600;&quot;&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kinyitja az ownCloud szervert &lt;span style=&quot;font-weight:600;&quot;&gt; App konfiguráció&lt;/span&gt; oldal elindítja a WebBrowser telepítését vagy frissítését a QOwnNotesAPI-n, és engedélyezi a fő alkalmazás &lt;span style=&quot;font-weight:600;&quot;&gt; változatokat&lt;/span&gt; és &lt;span style=&quot;font-weight:600;&quot;&gt; töröl fájlokat&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1093"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Kinyitja az ownCloud szervert &lt;span style="font-weight:600;"&gt; App konfiguráció&lt;/span&gt; oldal elindítja a WebBrowser telepítését vagy frissítését a QOwnNotesAPI-n, és engedélyezi a fő alkalmazás &lt;span style="font-weight:600;"&gt; változatokat&lt;/span&gt; és &lt;span style="font-weight:600;"&gt; töröl fájlokat&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="643"/>
-        <source>path</source>
-        <translation>elérési út</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="643"/>
+      <source>path</source>
+      <translation>elérési út</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="482"/>
-        <source>Click here to select your local note path</source>
-        <translation>Kattintson ide, válassza ki a helyi jegyzet elérési útját</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="482"/>
+      <source>Click here to select your local note path</source>
+      <translation>Kattintson ide, válassza ki a helyi jegyzet elérési útját</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="499"/>
-        <source>path where your notes are stored locally</source>
-        <translation>a tárolt jegyzetek helyi elérési útja</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="499"/>
+      <source>path where your notes are stored locally</source>
+      <translation>a tárolt jegyzetek helyi elérési útja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="556"/>
-        <source>Click here to select your remote note path on your ownCloud server</source>
-        <translation>Kattintson ide, válassza ki a ownCloud kiszolgálón távoli jegyzet utat</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="556"/>
+      <source>Click here to select your remote note path on your ownCloud server</source>
+      <translation>Kattintson ide, válassza ki a ownCloud kiszolgálón távoli jegyzet utat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="609"/>
-        <source>Click here to use the selected folder from your server as note folder</source>
-        <translation>Ide kattintva a kijelöli a mappát a kiszolgáló jegyzet mappák közül</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="609"/>
+      <source>Click here to use the selected folder from your server as note folder</source>
+      <translation>Ide kattintva a kijelöli a mappát a kiszolgáló jegyzet mappák közül</translation>
     </message>
     <message>
-        <source>Show subfolders in note list</source>
-        <translation type="vanished">Almappák megjelenítése a jegyzet listában</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1048"/>
+      <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
+      <translation>Kérjük telepítse a legújabb változatból &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (legalább változat QOWNNOTESAPI_MIN_VERSION) ha szeretne hozzájutni a QOwnNotes-szal, a jegyzetverziókhoz és a törölt jegyzetekhez.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1048"/>
-        <source>Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-        <translation>Kérjük telepítse a legújabb változatból &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt; &lt;span style=&quot;font-weight:600;&quot;&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (legalább változat QOWNNOTESAPI_MIN_VERSION) ha szeretne hozzájutni a QOwnNotes-szal, a jegyzetverziókhoz és a törölt jegyzetekhez.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1061"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Szintén szüksége van a két ownCloud alapvető apps &lt;span style="font-weight:600;"&gt; változatra&lt;/span&gt; és &lt;span style="font-weight:600;"&gt; töröl fájlokat&lt;/span&gt; a kiszolgálón engedélyezve legyen a ownCloud (ez legyen az alapértelmezett).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1061"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Szintén szüksége van a két ownCloud alapvető apps &lt;span style=&quot;font-weight:600;&quot;&gt; változatra&lt;/span&gt; és &lt;span style=&quot;font-weight:600;&quot;&gt; töröl fájlokat&lt;/span&gt; a kiszolgálón engedélyezve legyen a ownCloud (ez legyen az alapértelmezett).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1074"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Mindig szüksége lesz arra, hogy &lt;a href="https://owncloud.org/"&gt; &lt;span style="font-weight:600"&gt; ownCloud sync client&lt;/span&gt;&lt;/a&gt; (vagy egy másik asztali szinkron ügyfél) szinkronizálja a jegyzeteit!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1074"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Mindig szüksége lesz arra, hogy &lt;a href=&quot;https://owncloud.org/&quot;&gt; &lt;span style=&quot;font-weight:600&quot;&gt; ownCloud sync client&lt;/span&gt;&lt;/a&gt; (vagy egy másik asztali szinkron ügyfél) szinkronizálja a jegyzeteit!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1140"/>
+      <source>Error Message</source>
+      <translation>Hibaüzenet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1140"/>
-        <source>Error Message</source>
-        <translation>Hibaüzenet</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="144"/>
+      <source>Network</source>
+      <translation>Hálózat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="144"/>
-        <source>Network</source>
-        <translation>Hálózat</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1178"/>
+      <source>Proxy Settings</source>
+      <translation>Proxy beállítások</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1178"/>
-        <source>Proxy Settings</source>
-        <translation>Proxy beállítások</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1184"/>
+      <source>No Proxy</source>
+      <translation>Nincs Proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1184"/>
-        <source>No Proxy</source>
-        <translation>Nincs Proxy</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1194"/>
+      <source>Use system proxy</source>
+      <translation>Rendszer proxy használata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1194"/>
-        <source>Use system proxy</source>
-        <translation>Rendszer proxy használata</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1201"/>
+      <source>Specify proxy manually as</source>
+      <translation>Adja meg a proxy-t manuálisan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1201"/>
-        <source>Specify proxy manually as</source>
-        <translation>Adja meg a proxy-t manuálisan</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1226"/>
+      <source>Host</source>
+      <translation>Host</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1226"/>
-        <source>Host</source>
-        <translation>Host</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1277"/>
+      <source>Proxy server requires authentication</source>
+      <translation>A proxy szerver hitelesítést igényel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1277"/>
-        <source>Proxy server requires authentication</source>
-        <translation>A proxy szerver hitelesítést igényel</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1328"/>
+      <source>SSL Settings</source>
+      <translation>SSL-beállítások</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1328"/>
-        <source>SSL Settings</source>
-        <translation>SSL-beállítások</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1334"/>
+      <source>Ignore SSL errors</source>
+      <translation>Az SSL-hibákat figyelmen kívül hagyom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1334"/>
-        <source>Ignore SSL errors</source>
-        <translation>Az SSL-hibákat figyelmen kívül hagyom</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="156"/>
+      <source>Todo</source>
+      <translation>Todo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="156"/>
-        <source>Todo</source>
-        <translation>Todo</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1543"/>
+      <source>Default ownCloud calendar</source>
+      <translation>Alapértelmezett OwnCloud naptár</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1543"/>
-        <source>Default ownCloud calendar</source>
-        <translation>Alapértelmezett OwnCloud naptár</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1690"/>
+      <source>Select the calendars you want to use for the TODO list</source>
+      <translation>Válassza ki a naptárat melyet a tennivalók listához használni szeretne</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1690"/>
-        <source>Select the calendars you want to use for the TODO list</source>
-        <translation>Válassza ki a naptárat melyet a tennivalók listához használni szeretne</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="168"/>
+      <source>Interface</source>
+      <translation>Felület</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="168"/>
-        <source>Interface</source>
-        <translation>Felület</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1560"/>
+      <source>Other CalDAV server</source>
+      <translation>Más CalDAV-kiszolgáló</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1560"/>
-        <source>Other CalDAV server</source>
-        <translation>Más CalDAV-kiszolgáló</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2061"/>
+      <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
+      <translation>Csak az egyes színeket igazítjuk, az asztaltéma ellenőrzése a többi által ellenőrződik. Újra kell indítani az alkalmazást ahhoz, hogy ezek a változások életbe lépjenek.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2061"/>
-        <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-        <translation>Csak az egyes színeket igazítjuk, az asztaltéma ellenőrzése a többi által ellenőrződik. Újra kell indítani az alkalmazást ahhoz, hogy ezek a változások életbe lépjenek.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2064"/>
+      <source>Optimize preview colors for dark mode desktop themes</source>
+      <translation>Optimálom az előnézet színeit a sötét módusz asztal témához</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2064"/>
-        <source>Optimize preview colors for dark mode desktop themes</source>
-        <translation>Optimálom az előnézet színeit a sötét módusz asztal témához</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2071"/>
+      <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
+      <translation>Ez lehetővé teszi, hogy a sötét üzemmódot, a felületet és az ikonokat módosítsuk. Újra kell indítani az alkalmazást, hogy ezek a változások életbe léphessenek.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2071"/>
-        <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-        <translation>Ez lehetővé teszi, hogy a sötét üzemmódot, a felületet és az ikonokat módosítsuk. Újra kell indítani az alkalmazást, hogy ezek a változások életbe léphessenek.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2074"/>
+      <source>Enable dark mode</source>
+      <translation>Sötét üzemmód engedélyezése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2074"/>
-        <source>Enable dark mode</source>
-        <translation>Sötét üzemmód engedélyezése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2100"/>
+      <source>You need to restart the application to let this setting take effect</source>
+      <translation>Újra kell indítania az alkalmazást, hogy a beállítás érvénybe lépjen</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2100"/>
-        <source>You need to restart the application to let this setting take effect</source>
-        <translation>Újra kell indítania az alkalmazást, hogy a beállítás érvénybe lépjen</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2119"/>
+      <source>Item sizes in the main window</source>
+      <translation>Elemek mérete a fő ablakban</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2119"/>
-        <source>Item sizes in the main window</source>
-        <translation>Elemek mérete a fő ablakban</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3603"/>
+      <source>Markdown highlighting</source>
+      <translation>Markdown kiemelés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
-        <source>Markdown highlighting</source>
-        <translation>Markdown kiemelés</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3609"/>
+      <source>Enable markdown highlighting</source>
+      <translation>Engedélyezi a markdown kiemelést</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
-        <source>Enable markdown highlighting</source>
-        <translation>Engedélyezi a markdown kiemelést</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1823"/>
+      <source>Interface language</source>
+      <translation>Kezelőfelület nyelve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1823"/>
-        <source>Interface language</source>
-        <translation>Kezelőfelület nyelve</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1843"/>
+      <source>Automatic</source>
+      <translation>Automatikus</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1843"/>
-        <source>Automatic</source>
-        <translation>Automatikus</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1865"/>
+      <source>English</source>
+      <translation>angol</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1865"/>
-        <source>English</source>
-        <translation>angol</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="228"/>
+      <source>Shortcuts</source>
+      <translation>Parancsikonok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="228"/>
-        <source>Shortcuts</source>
-        <translation>Parancsikonok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3162"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3331"/>
+      <source>Default font:</source>
+      <translation>Alapértelmezett betűtípusa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3162"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3331"/>
-        <source>Default font:</source>
-        <translation>Alapértelmezett betűtípusa:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3204"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3355"/>
+      <source>Code font:</source>
+      <translation>Kód betűtípusa:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3204"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3355"/>
-        <source>Code font:</source>
-        <translation>Kód betűtípusa:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2233"/>
+      <source>Main window shortcuts</source>
+      <translation>Főablak parancsikonok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2233"/>
-        <source>Main window shortcuts</source>
-        <translation>Főablak parancsikonok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2761"/>
+      <source>Do this at your own risk!</source>
+      <translation>Ezt a saját felelősségedre!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2761"/>
-        <source>Do this at your own risk!</source>
-        <translation>Ezt a saját felelősségedre!</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2764"/>
+      <source>Ignore all external note folder changes</source>
+      <translation>Figyelmen kívül hagyja az összes külső jegyzetmappa változásokat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2764"/>
-        <source>Ignore all external note folder changes</source>
-        <translation>Figyelmen kívül hagyja az összes külső jegyzetmappa változásokat</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3124"/>
+      <source>No two spaces to do a line break are added here if checked</source>
+      <translation>Ha bejelöli, két szóköz nélkül tör sort</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3124"/>
-        <source>No two spaces to do a line break are added here if checked</source>
-        <translation>Ha bejelöli, két szóköz nélkül tör sort</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3127"/>
+      <source>Use GitHub line breaks</source>
+      <translation>Használja a GitHub sortöréseket</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3127"/>
-        <source>Use GitHub line breaks</source>
-        <translation>Használja a GitHub sortöréseket</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1854"/>
+      <source>German</source>
+      <translation>német</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1854"/>
-        <source>German</source>
-        <translation>német</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1887"/>
+      <source>French</source>
+      <translation>francia</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1887"/>
-        <source>French</source>
-        <translation>francia</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1942"/>
+      <source>Polish</source>
+      <translation>lengyel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1942"/>
-        <source>Polish</source>
-        <translation>lengyel</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1986"/>
+      <source>Chinese</source>
+      <translation>kínai</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1986"/>
-        <source>Chinese</source>
-        <translation>kínai</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1953"/>
+      <source>Portuguese</source>
+      <translation>portugál</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1953"/>
-        <source>Portuguese</source>
-        <translation>portugál</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1931"/>
+      <source>Dutch</source>
+      <translation>holland</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1931"/>
-        <source>Dutch</source>
-        <translation>holland</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1909"/>
+      <source>Hungarian</source>
+      <translation>Magyar</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1909"/>
-        <source>Hungarian</source>
-        <translation>Magyar</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1876"/>
+      <source>Spanish</source>
+      <translation>Spanyol</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1876"/>
-        <source>Spanish</source>
-        <translation>Spanyol</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1829"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Ha szeretné segíteni lefordítani QOwnNotest vagy frissíteni egy meglévő fordítást, kérjük, olvassa el: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt; Így segítek lefordítani a QOwnNotes-t.&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1829"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Ha szeretné segíteni lefordítani QOwnNotest vagy frissíteni egy meglévő fordítást, kérjük, olvassa el: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt; Így segítek lefordítani a QOwnNotes-t.&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2045"/>
+      <source>Dark mode</source>
+      <translation>Dark módusz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2045"/>
-        <source>Dark mode</source>
-        <translation>Dark módusz</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1388"/>
+      <source>Disable tracking of usage data</source>
+      <translation>Tiltsa le az adatok nyomon követését</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1388"/>
-        <source>Disable tracking of usage data</source>
-        <translation>Tiltsa le az adatok nyomon követését</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1432"/>
+      <source>Usage tracking is done on a private Piwik server.</source>
+      <translation>A használatkövetés egy privát Piwik-kiszolgálón történik.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1432"/>
-        <source>Usage tracking is done on a private Piwik server.</source>
-        <translation>A használatkövetés egy privát Piwik-kiszolgálón történik.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1492"/>
+      <source>Disable heartbeat</source>
+      <translation>Kikapcsolom a szívverés-t</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1492"/>
-        <source>Disable heartbeat</source>
-        <translation>Kikapcsolom a szívverés-t</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1964"/>
+      <source>Russian</source>
+      <translation>orosz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1964"/>
-        <source>Russian</source>
-        <translation>orosz</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1341"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Érdemes megfontolni egy ingyenes SSL-tanúsítványt a &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt-röl&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1341"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Érdemes megfontolni egy ingyenes SSL-tanúsítványt a &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt-röl&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2008"/>
+      <source>If you change the language you have to restart the application for the changes to take action.</source>
+      <translation>Ha módosítja a nyelvet, indítsa újra az alkalmazást a módosítások megtételére.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2008"/>
-        <source>If you change the language you have to restart the application for the changes to take action.</source>
-        <translation>Ha módosítja a nyelvet, indítsa újra az alkalmazást a módosítások megtételére.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2521"/>
+      <source>You need to reload the scripting engine if you modify a script file</source>
+      <translation>Akkor kell újra a parancsfájl-végrehajtó, ha egy parancs fájlt módosít</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2521"/>
-        <source>You need to reload the scripting engine if you modify a script file</source>
-        <translation>Akkor kell újra a parancsfájl-végrehajtó, ha egy parancs fájlt módosít</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+      <source>Reload scripting engine</source>
+      <translation>Újratölti a parancsfájl-végrehajtót</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
-        <source>Reload scripting engine</source>
-        <translation>Újratölti a parancsfájl-végrehajtót</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2531"/>
+      <source>Validate script</source>
+      <translation>Parancsfájl érvényesítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2531"/>
-        <source>Validate script</source>
-        <translation>Parancsfájl érvényesítése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="252"/>
+      <source>General</source>
+      <translation>Általános</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="252"/>
-        <source>General</source>
-        <translation>Általános</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2621"/>
+      <source>Notes</source>
+      <translation>Jegyzetek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2621"/>
-        <source>Notes</source>
-        <translation>Jegyzetek</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2748"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;, Ha be van jelölve akkor mindig értesíteni fogjuk a külső módosításokról, akkor is, ha az aktuális feljegyzés az utolsó percben nem került szerkesztésre. Ajánlott &lt;span style="font-style:italic;"&gt;nem bejelölni&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2748"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;, Ha be van jelölve akkor mindig értesíteni fogjuk a külső módosításokról, akkor is, ha az aktuális feljegyzés az utolsó percben nem került szerkesztésre. Ajánlott &lt;span style=&quot;font-style:italic;&quot;&gt;nem bejelölni&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2724"/>
-        <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+      <location filename="../dialogs/settingsdialog.ui" line="2724"/>
+      <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-        <translation>Szinkronizációs problémák léphetnek fel az ownCloud korábbi verzióival ha sokkal 10 mp alá megy. Tesztelje meg, ha szinkronizálási konfliktus lép fel és állítson be ilyen esetben egy nagyobb értéket.</translation>
+      <translation>Szinkronizációs problémák léphetnek fel az ownCloud korábbi verzióival ha sokkal 10 mp alá megy. Tesztelje meg, ha szinkronizálási konfliktus lép fel és állítson be ilyen esetben egy nagyobb értéket.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1920"/>
-        <source>Japanese</source>
-        <translation>Japán</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1920"/>
+      <source>Japanese</source>
+      <translation>Japán</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2728"/>
-        <source>note save interval time [sec]</source>
-        <translation>jegyzetmentés időintervalluma [sec]</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2728"/>
+      <source>note save interval time [sec]</source>
+      <translation>jegyzetmentés időintervalluma [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2754"/>
-        <source>Notify about all external modifications of the current note</source>
-        <translation>Értesítsen az aktuális jegyzet minden külső módosításáról</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2754"/>
+      <source>Notify about all external modifications of the current note</source>
+      <translation>Értesítsen az aktuális jegyzet minden külső módosításáról</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2994"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1436"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1445"/>
-        <source>Database</source>
-        <translation>Adatbázis</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2994"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1436"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1445"/>
+      <source>Database</source>
+      <translation>Adatbázis</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3010"/>
-        <source>Reinitialize Database</source>
-        <translation>Újrainicializálja az adatbázist</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3010"/>
+      <source>Reinitialize Database</source>
+      <translation>Újrainicializálja az adatbázist</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2794"/>
-        <source>Clear application data and exit</source>
-        <translation>Alkalmazási adatok törlése és kilépés</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2794"/>
+      <source>Clear application data and exit</source>
+      <translation>Alkalmazási adatok törlése és kilépés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2800"/>
-        <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-        <translation>Ez a gomb törli az összes beállítást, eltávolítja a helyi todo-adatbázist és elhagyja vele a QOwnNotes-t.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2800"/>
+      <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
+      <translation>Ez a gomb törli az összes beállítást, eltávolítja a helyi todo-adatbázist és elhagyja vele a QOwnNotes-t.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2810"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1509"/>
-        <source>Clear app data and exit</source>
-        <translation>App adatokat töröl és kilép</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2810"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1509"/>
+      <source>Clear app data and exit</source>
+      <translation>App adatokat töröl és kilép</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3020"/>
-        <source>Update dialog</source>
-        <translation>Ablak frissítése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3020"/>
+      <source>Update dialog</source>
+      <translation>Ablak frissítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2866"/>
-        <source>Default note file extension</source>
-        <translation>Alapértelmezett fájlkiterjesztés</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2866"/>
+      <source>Default note file extension</source>
+      <translation>Alapértelmezett fájlkiterjesztés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2951"/>
-        <source>External editor</source>
-        <translation>Külső szerkesztő</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2951"/>
+      <source>External editor</source>
+      <translation>Külső szerkesztő</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2964"/>
-        <source>path to external editor, leave empty for default</source>
-        <translation>térkép a külső szerkesztőhöz, hagyja üresen alapértelmezettként</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2964"/>
+      <source>path to external editor, leave empty for default</source>
+      <translation>térkép a külső szerkesztőhöz, hagyja üresen alapértelmezettként</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2971"/>
-        <source>set external editor</source>
-        <translation>Állítsa be a külső szerkesztőt</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2971"/>
+      <source>set external editor</source>
+      <translation>Állítsa be a külső szerkesztőt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1357"/>
-        <source>App metrics</source>
-        <translation>App statisztika</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1357"/>
+      <source>App metrics</source>
+      <translation>App statisztika</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1375"/>
-        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can&apos;t live with it.</source>
-        <translation>Névtelen használat adat segít eldönteni, hogy a QOwnNotes melyik részeit javítsuk tovább és -hoz talál és helyzrehoz hibákat. Csak akkor tiltsd le ezt, ha egyáltalán nem tudsz vele élni.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1375"/>
+      <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
+      <translation>Névtelen használat adat segít eldönteni, hogy a QOwnNotes melyik részeit javítsuk tovább és -hoz talál és helyzrehoz hibákat. Csak akkor tiltsd le ezt, ha egyáltalán nem tudsz vele élni.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1407"/>
-        <source>This data includes anonymous information about what features of the app are used.</source>
-        <translation>Ezek az adatok tartalmazzák a névtelen információt arról, hogy az alkalmazás melyik jellemzőit használják.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1407"/>
+      <source>This data includes anonymous information about what features of the app are used.</source>
+      <translation>Ezek az adatok tartalmazzák a névtelen információt arról, hogy az alkalmazás melyik jellemzőit használják.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1461"/>
-        <source>App heartbeat</source>
-        <translation>Szívverés app</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1461"/>
+      <source>App heartbeat</source>
+      <translation>Szívverés app</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1479"/>
-        <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-        <translation>Egy kis szívverés-kérelmet küldünk rendszeresen a QOwnNotes futtatása közben. Engedje meg egy fejlesztő boldogságát és tudassa vele hogy valaki használja a QOwnNotes-t.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1479"/>
+      <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
+      <translation>Egy kis szívverés-kérelmet küldünk rendszeresen a QOwnNotes futtatása közben. Engedje meg egy fejlesztő boldogságát és tudassa vele hogy valaki használja a QOwnNotes-t.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1898"/>
-        <source>Italian</source>
-        <translation>Olasz</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1898"/>
+      <source>Italian</source>
+      <translation>Olasz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="240"/>
-        <source>Scripting</source>
-        <translation>Scripting</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="240"/>
+      <source>Scripting</source>
+      <translation>Scripting</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2300"/>
-        <source>Your scripts</source>
-        <translation>A parancsfájlok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2300"/>
+      <source>Your scripts</source>
+      <translation>A parancsfájlok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2367"/>
-        <source>&amp;Add script</source>
-        <translation>parancsfájl &amp;hozzáadása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2367"/>
+      <source>&amp;Add script</source>
+      <translation>parancsfájl &amp;hozzáadása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2391"/>
-        <source>&amp;Remove script</source>
-        <translation>Parancsfájl &amp;eltávolítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2391"/>
+      <source>&amp;Remove script</source>
+      <translation>Parancsfájl &amp;eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2554"/>
-        <source>Click here to select your QML script</source>
-        <translation>Kattintson ide, hogy kiválassza a QML scriptjét</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2554"/>
+      <source>Click here to select your QML script</source>
+      <translation>Kattintson ide, hogy kiválassza a QML scriptjét</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2473"/>
-        <source>path to your QML file</source>
-        <translation>a QML fájl elérési útja</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2473"/>
+      <source>path to your QML file</source>
+      <translation>a QML fájl elérési útja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="92"/>
-        <source>Find setting</source>
-        <translation>Beállításokat megtalálom</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="92"/>
+      <source>Find setting</source>
+      <translation>Beállításokat megtalálom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="179"/>
-        <source>Editor</source>
-        <translation>Szerkesztő</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="179"/>
+      <source>Editor</source>
+      <translation>Szerkesztő</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="190"/>
-        <source>Editor fonts &amp; colors</source>
-        <translation>Szerkesztő betűtípusok &amp; színek</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="190"/>
+      <source>Editor fonts &amp; colors</source>
+      <translation>Szerkesztő betűtípusok &amp; színek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="203"/>
-        <source>Preview fonts</source>
-        <translation>Betűtípusok előnézet</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="203"/>
+      <source>Preview fonts</source>
+      <translation>Betűtípusok előnézet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="215"/>
-        <source>Toolbars</source>
-        <translation>Eszköztárak</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="215"/>
+      <source>Toolbars</source>
+      <translation>Eszköztárak</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="263"/>
-        <source>Portable mode</source>
-        <translation>Hordozható üzemmód</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="263"/>
+      <source>Portable mode</source>
+      <translation>Hordozható üzemmód</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="287"/>
-        <source>Debug options</source>
-        <translation>Hibakeresési lehetőségek</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="287"/>
+      <source>Debug options</source>
+      <translation>Hibakeresési lehetőségek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="612"/>
-        <source>&amp;Use as ownCloud path</source>
-        <translation>&amp;ownCloud elérési útjaként használom</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="612"/>
+      <source>&amp;Use as ownCloud path</source>
+      <translation>&amp;ownCloud elérési útjaként használom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="651"/>
-        <source>Please select your note folder on your ownCloud server:</source>
-        <translation>Kérjük, válassza ki a jegyzet mappát a ownCloud szerveren:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="651"/>
+      <source>Please select your note folder on your ownCloud server:</source>
+      <translation>Kérjük, válassza ki a jegyzet mappát a ownCloud szerveren:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="678"/>
-        <source>ownCloud server:</source>
-        <translation>ownCloud szerver:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="678"/>
+      <source>ownCloud server:</source>
+      <translation>ownCloud szerver:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="688"/>
-        <source>Path on your ownCloud server:</source>
-        <translation>OwnCloud kiszolgáló elérési útja:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="688"/>
+      <source>Path on your ownCloud server:</source>
+      <translation>OwnCloud kiszolgáló elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="695"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2463"/>
-        <source>Name:</source>
-        <translation>Név:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="695"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2463"/>
+      <source>Name:</source>
+      <translation>Név:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="702"/>
-        <source>Note folder path:</source>
-        <translation>Jegyzetmappa elérési útja:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="702"/>
+      <source>Note folder path:</source>
+      <translation>Jegyzetmappa elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="709"/>
-        <source>Be aware that the ownCloud notes app doesn&apos;t support sub-folders!</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/settingsdialog.ui" line="709"/>
+      <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
+      <translation>Ne feledje, hogy a ownCloud jegyzet alkalmazás nem támogatja az almappákat!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="712"/>
-        <source>Use note sub-folders</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/settingsdialog.ui" line="712"/>
+      <source>Use note sub-folders</source>
+      <translation>Jegyzet al-mappák használata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="800"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1614"/>
-        <source>Username:</source>
-        <translation>Felhasználónév:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="800"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1614"/>
+      <source>Username:</source>
+      <translation>Felhasználónév:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="825"/>
-        <source>Your ownCloud username</source>
-        <translation>ownCloud felhasználónév</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="825"/>
+      <source>Your ownCloud username</source>
+      <translation>ownCloud felhasználónév</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="835"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1649"/>
-        <source>Password:</source>
-        <translation>Jelszó:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="835"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1649"/>
+      <source>Password:</source>
+      <translation>Jelszó:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="863"/>
-        <source>Your ownCloud password</source>
-        <translation>Az ownCloud jelszavad</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="863"/>
+      <source>Your ownCloud password</source>
+      <translation>Az ownCloud jelszavad</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="891"/>
-        <source>&amp;Connect to ownCloud server</source>
-        <translation>&amp;kapcsolat az ownCloud kiszolgálóval</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="891"/>
+      <source>&amp;Connect to ownCloud server</source>
+      <translation>&amp;kapcsolat az ownCloud kiszolgálóval</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="918"/>
-        <source>Connection status</source>
-        <translation>Kapcsolat állapota</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="918"/>
+      <source>Connection status</source>
+      <translation>Kapcsolat állapota</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1096"/>
-        <source>Open your ownCloud server &amp;Apps page</source>
-        <translation>Nyissa meg a ownCloud server &amp;alkalmazások oldalt</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1096"/>
+      <source>Open your ownCloud server &amp;Apps page</source>
+      <translation>Nyissa meg a ownCloud server &amp;alkalmazások oldalt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1537"/>
-        <source>Which calendar backend do you want to use?</source>
-        <translation>Melyik naptár backend-et szeretné használni?</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1537"/>
+      <source>Which calendar backend do you want to use?</source>
+      <translation>Melyik naptár backend-et szeretné használni?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1570"/>
-        <source>CalDAV server settings</source>
-        <translation>CalDAV kiszolgáló beállításai</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1570"/>
+      <source>CalDAV server settings</source>
+      <translation>CalDAV kiszolgáló beállításai</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1579"/>
-        <source>Calendar base url:</source>
-        <translation>Naptár alap URL-címe:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1579"/>
+      <source>Calendar base url:</source>
+      <translation>Naptár alap URL-címe:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1601"/>
-        <source>Please enter the CalDAV base url to your calendar.</source>
-        <translation>Kérjük, írja be a CalDAV alap Url-t a naptárba.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1601"/>
+      <source>Please enter the CalDAV base url to your calendar.</source>
+      <translation>Kérjük, írja be a CalDAV alap Url-t a naptárba.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1671"/>
-        <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-        <translation>Kérjük, írja be a jelszót a CalDAV felhasználónevét. &lt;br/&gt; Jelenleg a jelszót titkosítva tároljuk más beállítások mellet, de nem nagyon biztonságos.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1671"/>
+      <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
+      <translation>Kérjük, írja be a jelszót a CalDAV felhasználónevét. &lt;br/&gt; Jelenleg a jelszót titkosítva tároljuk más beállítások mellet, de nem nagyon biztonságos.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1975"/>
-        <source>Ukrainian</source>
-        <translation>Ukrán</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1975"/>
+      <source>Ukrainian</source>
+      <translation>Ukrán</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2081"/>
-        <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-        <translation>Ha szeretne választani egy másik szerkesztő szín sémát a szerkesztői beállítások sötét módban.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2081"/>
+      <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
+      <translation>Ha szeretne választani egy másik szerkesztő szín sémát a szerkesztői beállítások sötét módban.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2655"/>
-        <source>Maximum height:</source>
-        <translation>Maximális magasság:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2655"/>
+      <source>Maximum height:</source>
+      <translation>Maximális magasság:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2662"/>
-        <source>Maximum width:</source>
-        <translation>Maximális szélesség:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2662"/>
+      <source>Maximum width:</source>
+      <translation>Maximális szélesség:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2771"/>
-        <source>Scale images down when inserted into notes</source>
-        <translation>A képeket lekicsinyíti, ha beszúrod a jegyzetbe</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2771"/>
+      <source>Scale images down when inserted into notes</source>
+      <translation>A képeket lekicsinyíti, ha beszúrod a jegyzetbe</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2778"/>
-        <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-        <translation>Jelölje be, ha szeretné, hogy minden külső módosítást figyelmen kívül hagyjunk, miközben az aktuális jegyzetet szerkeszti.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2778"/>
+      <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
+      <translation>Jelölje be, ha szeretné, hogy minden külső módosítást figyelmen kívül hagyjunk, miközben az aktuális jegyzetet szerkeszti.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2784"/>
-        <source>Accept all external modifications of the current note</source>
-        <translation>Fogadja el az aktuális jegyzet minden külső módosítását</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2784"/>
+      <source>Accept all external modifications of the current note</source>
+      <translation>Fogadja el az aktuális jegyzet minden külső módosítását</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3000"/>
-        <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-        <translation>Figyelmeztetünk, hogy ezzel szintén eltávolítja a gyorsítótárazott todo elemeket és a jegyzetmappákat és a szkripteket!</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3000"/>
+      <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
+      <translation>Figyelmeztetünk, hogy ezzel szintén eltávolítja a gyorsítótárazott todo elemeket és a jegyzetmappákat és a szkripteket!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3447"/>
-        <source>Apply toolbar configuration</source>
-        <translation>Alkalmazom az eszköztár-beállítás használatát</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3447"/>
+      <source>Apply toolbar configuration</source>
+      <translation>Alkalmazom az eszköztár-beállítás használatát</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3461"/>
-        <source>Reset toolbars</source>
-        <translation>Visszaállítom az eszköztárat</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3461"/>
+      <source>Reset toolbars</source>
+      <translation>Visszaállítom az eszköztárat</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3489"/>
-        <source>Enable logging to file</source>
-        <translation>Engedélyezi a naplózást a fájlban</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3489"/>
+      <source>Enable logging to file</source>
+      <translation>Engedélyezi a naplózást a fájlban</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3496"/>
-        <source>Clear log file</source>
-        <translation>Törli a log fájlt</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3496"/>
+      <source>Clear log file</source>
+      <translation>Törli a log fájlt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3507"/>
-        <source>Fake old version number to trigger update</source>
-        <translation>Hamis a régi verzió számmal hívja elő a frissítést</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3507"/>
+      <source>Fake old version number to trigger update</source>
+      <translation>Hamis a régi verzió számmal hívja elő a frissítést</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3535"/>
-        <source>Log file path:</source>
-        <translation>Naplófájl elérési útja:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3535"/>
+      <source>Log file path:</source>
+      <translation>Naplófájl elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
-        <source>Editor options</source>
-        <translation>Szerkesztő beállításai</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3619"/>
+      <source>Editor options</source>
+      <translation>Szerkesztő beállításai</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3625"/>
-        <source>Enable automatic closing of brackets and markdown formatting characters</source>
-        <translation>Automatikus záró zárójel és a markdown karakterformázás engedélyezése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3625"/>
+      <source>Enable automatic closing of brackets and markdown formatting characters</source>
+      <translation>Automatikus záró zárójel és a markdown karakterformázás engedélyezése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3632"/>
-        <source>You have to use the backspace key to remove the opening character</source>
-        <translation>A vissza billentyűgombot használja a nyitó karakter eltavolitására</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3632"/>
+      <source>You have to use the backspace key to remove the opening character</source>
+      <translation>A vissza billentyűgombot használja a nyitó karakter eltavolitására</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3635"/>
-        <source>Enable automatic removal of matching closing characters</source>
-        <translation>Engedélyezi az egyforma karakterek automatikus eltávolítását</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3635"/>
+      <source>Enable automatic removal of matching closing characters</source>
+      <translation>Engedélyezi az egyforma karakterek automatikus eltávolítását</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1604"/>
-        <source>Your CalDAV calendar base url</source>
-        <translation>A CalDAV naptár alap Url-címe</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1604"/>
+      <source>Your CalDAV calendar base url</source>
+      <translation>A CalDAV naptár alap Url-címe</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1636"/>
-        <source>Please enter the username of your CalDAV server.</source>
-        <translation>Kérjük, írja be a felhasználónevet a CalDAV-kiszolgálón.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1636"/>
+      <source>Please enter the username of your CalDAV server.</source>
+      <translation>Kérjük, írja be a felhasználónevet a CalDAV-kiszolgálón.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1639"/>
-        <source>Your CalDAV username</source>
-        <translation>A CalDAV felhasználónevét</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1639"/>
+      <source>Your CalDAV username</source>
+      <translation>A CalDAV felhasználónevét</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1677"/>
-        <source>Your CalDAV password</source>
-        <translation>A CalDAV jelszavad</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1677"/>
+      <source>Your CalDAV password</source>
+      <translation>A CalDAV jelszavad</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1712"/>
-        <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-        <translation>Ezáltal az összes todo lista elem betöltődik a kiszolgálóról a todo párbeszédpanel következő megnyitásakor.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1712"/>
+      <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
+      <translation>Ezáltal az összes todo lista elem betöltődik a kiszolgálóról a todo párbeszédpanel következő megnyitásakor.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1715"/>
-        <source>Empty calendar item cache</source>
-        <translation>Üres naptár elem raktár</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1715"/>
+      <source>Empty calendar item cache</source>
+      <translation>Üres naptár elem raktár</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1738"/>
-        <source>Click here to reload the list of calendars from your calendar server.</source>
-        <translation>Kattintson ide, hogy újratöltse a naptár kiszolgálóról naptárak listáját.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1738"/>
+      <source>Click here to reload the list of calendars from your calendar server.</source>
+      <translation>Kattintson ide, hogy újratöltse a naptár kiszolgálóról naptárak listáját.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1744"/>
-        <source>&amp;Reload calendar list</source>
-        <translation>&amp;újratölti a naptárlistát</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1744"/>
+      <source>&amp;Reload calendar list</source>
+      <translation>&amp;újratölti a naptárlistát</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2051"/>
-        <source>You may need to restart the application to let these changes take effect</source>
-        <translation>A változások érvénybe lépéséhez szükséges lehet újraindítani az alkalmazást</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2051"/>
+      <source>You may need to restart the application to let these changes take effect</source>
+      <translation>A változások érvénybe lépéséhez szükséges lehet újraindítani az alkalmazást</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2054"/>
-        <source>Enable dark mode tray icon</source>
-        <translation>Engedélyezi a sötét mód tálca ikont</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2054"/>
+      <source>Enable dark mode tray icon</source>
+      <translation>Engedélyezi a sötét mód tálca ikont</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2155"/>
-        <source>Toolbar icon size:</source>
-        <translation>Eszköztár ikon méret:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2155"/>
+      <source>Toolbar icon size:</source>
+      <translation>Eszköztár ikon méret:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2125"/>
-        <source>List and tree item height:</source>
-        <translation>Lista- és favezérlő elem magassága:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2125"/>
+      <source>List and tree item height:</source>
+      <translation>Lista- és favezérlő elem magassága:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2168"/>
-        <source>Reset the icon size</source>
-        <translation>Az ikon méret visszaállítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2168"/>
+      <source>Reset the icon size</source>
+      <translation>Az ikon méret visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2182"/>
-        <source>Reset the item height</source>
-        <translation>Az ikon magasság visszaállítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2182"/>
+      <source>Reset the item height</source>
+      <translation>Az ikon magasság visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3407"/>
-        <source>View text right to left (RTL)</source>
-        <translation>Szöveg jobbról balra (RTL)</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3407"/>
+      <source>View text right to left (RTL)</source>
+      <translation>Szöveg jobbról balra (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2251"/>
-        <source>Search for shortcut</source>
-        <translation>Helyi keresés</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2251"/>
+      <source>Search for shortcut</source>
+      <translation>Helyi keresés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1755"/>
-        <source>Ignore calendars that don&apos;t support todo items</source>
-        <translation>Figyelmen kívül hagyja a naptárakat melyek nem kompatibilisek a tennivalókkal</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1755"/>
+      <source>Ignore calendars that don't support todo items</source>
+      <translation>Figyelmen kívül hagyja a naptárakat melyek nem kompatibilisek a tennivalókkal</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1997"/>
-        <source>Arabic</source>
-        <translation>arab</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="1997"/>
+      <source>Arabic</source>
+      <translation>arab</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2094"/>
-        <source>Icons</source>
-        <translation>Ikonok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2094"/>
+      <source>Icons</source>
+      <translation>Ikonok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2103"/>
-        <source>Use internal icon theme instead of system icon theme</source>
-        <translation>Belső ikon téma használata helyett rendszer ikontémát használok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2103"/>
+      <source>Use internal icon theme instead of system icon theme</source>
+      <translation>Belső ikon téma használata helyett rendszer ikontémát használok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2568"/>
-        <source>Script path:</source>
-        <translation>Parancsfájl elérési útja:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2568"/>
+      <source>Script path:</source>
+      <translation>Parancsfájl elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2480"/>
-        <source>script name</source>
-        <translation>parancsfájl neve</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2480"/>
+      <source>script name</source>
+      <translation>parancsfájl neve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2711"/>
-        <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-        <translation>Lehetővé teszi, hogy a fájl neve eltérjen a jegyzetfájl címétől. &lt;br&gt;Ügyeljen arra, hogy ownCloud jegyzetekben meg kell egyezniük!</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2711"/>
+      <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
+      <translation>Lehetővé teszi, hogy a fájl neve eltérjen a jegyzetfájl címétől. &lt;br&gt;Ügyeljen arra, hogy ownCloud jegyzetekben meg kell egyezniük!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2717"/>
-        <source>Allow note file name to be different from headline</source>
-        <translation>Lehetővé teszi a különböző jegyzetfájl nevet a főcímtől</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2717"/>
+      <source>Allow note file name to be different from headline</source>
+      <translation>Lehetővé teszi a különböző jegyzetfájl nevet a főcímtől</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2735"/>
-        <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-        <translation>Jelölje be, ha szeretné, hogy minden külső módosítást figyelmen kívül hagyjunk, miközben az aktuális jegyzetet szerkeszti.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2735"/>
+      <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
+      <translation>Jelölje be, ha szeretné, hogy minden külső módosítást figyelmen kívül hagyjunk, miközben az aktuális jegyzetet szerkeszti.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2741"/>
-        <source>Ignore all external modifications of the current note</source>
-        <translation>Figyelmen kívül hagyja az aktuális feljegyzés összes külső módosítását</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2741"/>
+      <source>Ignore all external modifications of the current note</source>
+      <translation>Figyelmen kívül hagyja az aktuális feljegyzés összes külső módosítását</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2820"/>
-        <source>App instance</source>
-        <translation>App példány</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2820"/>
+      <source>App instance</source>
+      <translation>App példány</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2826"/>
-        <source>Only allow one app instance at the same time</source>
-        <translation>Egyetlen app-példányt enged egy időben</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2826"/>
+      <source>Only allow one app instance at the same time</source>
+      <translation>Egyetlen app-példányt enged egy időben</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2833"/>
-        <source>You need to restart the application to let these changes take action.</source>
-        <translation>Újra kell indítani az alkalmazás, hogy ezek a változások életbe léphessenek.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2833"/>
+      <source>You need to restart the application to let these changes take action.</source>
+      <translation>Újra kell indítani az alkalmazás, hogy ezek a változások életbe léphessenek.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2872"/>
-        <source>Add a custom file extension</source>
-        <translation>Adjon hozzá egy egyéni fájl kiterjesztés-t</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2872"/>
+      <source>Add a custom file extension</source>
+      <translation>Adjon hozzá egy egyéni fájl kiterjesztés-t</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2886"/>
-        <source>Remove a custom file extension</source>
-        <translation>Eltávolít egy egyéni fájl kiterjesztést</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2886"/>
+      <source>Remove a custom file extension</source>
+      <translation>Eltávolít egy egyéni fájl kiterjesztést</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2925"/>
-        <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
-        <translation>Ha egyéni kiterjesztést csatlakoztat, csak írja be a kiterjesztést, mint pl. &quot;feladatlap&quot;.</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2925"/>
+      <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
+      <translation>Ha egyéni kiterjesztést csatlakoztat, csak írja be a kiterjesztést, mint pl. "feladatlap".</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2929"/>
-        <source>Text file (txt)</source>
-        <translation>Szövegfájl (. txt)</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2929"/>
+      <source>Text file (txt)</source>
+      <translation>Szövegfájl (. txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2957"/>
-        <source>Path to external editor:</source>
-        <translation>Külső szerkesztö elérési útja:</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="2957"/>
+      <source>Path to external editor:</source>
+      <translation>Külső szerkesztö elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3026"/>
-        <source>Don&apos;t show the update dialog automatically</source>
-        <translation>Ne jelenjen meg a frissítés párbeszédpanel automatikusan</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3026"/>
+      <source>Don't show the update dialog automatically</source>
+      <translation>Ne jelenjen meg a frissítés párbeszédpanel automatikusan</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3156"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3311"/>
-        <source>Fonts</source>
-        <translation>Betűtípusok</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3156"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3311"/>
+      <source>Fonts</source>
+      <translation>Betűtípusok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3179"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3221"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3379"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3393"/>
-        <source>Set a new font</source>
-        <translation>Egy új betűtípus beállítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3179"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3221"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3379"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3393"/>
+      <source>Set a new font</source>
+      <translation>Egy új betűtípus beállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3190"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3235"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3317"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3341"/>
-        <source>Reset font</source>
-        <translation>Betűtípusok visszaállítása</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3190"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3235"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3317"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3341"/>
+      <source>Reset font</source>
+      <translation>Betűtípusok visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="276"/>
-        <source>Debug</source>
-        <translation>Hibakeresés</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="276"/>
+      <source>Debug</source>
+      <translation>Hibakeresés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3067"/>
-        <source>Debug information</source>
-        <translation>Hibakeresési információk</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3067"/>
+      <source>Debug information</source>
+      <translation>Hibakeresési információk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3090"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt; Itt &lt;span style=&quot;font-weight:600;&quot;&gt; másolhatja és beillesztheti &lt;/span&gt; ezt a szöveget (vagy a szöveg egyes részeit) egy &lt;span style=&quot;font-weight:600;&quot;&gt; témához &lt;/span&gt; &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;a QOwnNotes problémak lapon &lt;/a&gt; ha &lt;span style=&quot;font-weight:600;&quot;&gt; kérdései vagy problémái&lt;/span&gt; akadnak a QOwnNotes-al. Az érzékeny adatokat ebben az információban elrejtjük.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3090"/>
+      <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt; Itt &lt;span style="font-weight:600;"&gt; másolhatja és beillesztheti &lt;/span&gt; ezt a szöveget (vagy a szöveg egyes részeit) egy &lt;span style="font-weight:600;"&gt; témához &lt;/span&gt; &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;a QOwnNotes problémak lapon &lt;/a&gt; ha &lt;span style="font-weight:600;"&gt; kérdései vagy problémái&lt;/span&gt; akadnak a QOwnNotes-al. Az érzékeny adatokat ebben az információban elrejtjük.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3103"/>
-        <source>&amp;Save debug information</source>
-        <translation>&amp;Hibakeresési adatok mentése</translation>
+      <location filename="../dialogs/settingsdialog.ui" line="3103"/>
+      <source>&amp;Save debug information</source>
+      <translation>&amp;Hibakeresési adatok mentése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="269"/>
-        <source>hostname of proxy server</source>
-        <translation>hostname proxy szerver</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="269"/>
+      <source>hostname of proxy server</source>
+      <translation>hostname proxy szerver</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="270"/>
-        <source>username for proxy server</source>
-        <translation>felhasználónév a proxykiszolgálóhoz</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="270"/>
+      <source>username for proxy server</source>
+      <translation>felhasználónév a proxykiszolgálóhoz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="271"/>
-        <source>password for proxy server</source>
-        <translation>jelszó a proxykiszolgálóhoz</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="271"/>
+      <source>password for proxy server</source>
+      <translation>jelszó a proxykiszolgálóhoz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="273"/>
-        <source>HTTP(S) proxy</source>
-        <translation>Proxy HTTP (S)</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="273"/>
+      <source>HTTP(S) proxy</source>
+      <translation>Proxy HTTP (S)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="274"/>
-        <source>SOCKS5 proxy</source>
-        <translation>Socks5 proxy</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="274"/>
+      <source>SOCKS5 proxy</source>
+      <translation>Socks5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="844"/>
-        <source>Undefined key</source>
-        <translation>Nem definiált kulcs</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="844"/>
+      <source>Undefined key</source>
+      <translation>Nem definiált kulcs</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="849"/>
-        <source>Assign a new key</source>
-        <translation>Határozz meg egy új kulcsot</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="849"/>
+      <source>Assign a new key</source>
+      <translation>Határozz meg egy új kulcsot</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="850"/>
-        <source>Reset to default key</source>
-        <translation>Alapértelmezett kulcs visszaállítása</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="850"/>
+      <source>Reset to default key</source>
+      <translation>Alapértelmezett kulcs visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1178"/>
-        <source>The connection was made successfully!
+      <location filename="../dialogs/settingsdialog.cpp" line="1178"/>
+      <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-        <translation>Sikeresen létrejött a kapcsolat! Kiszolgáló verziószáma: %1 QOwnNotesAPI verzió: %2</translation>
+      <translation>Sikeresen létrejött a kapcsolat! Kiszolgáló verziószáma: %1 QOwnNotesAPI verzió: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1189"/>
-        <source>There was an error connecting to the ownCloud Server!
+      <location filename="../dialogs/settingsdialog.cpp" line="1189"/>
+      <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-        <translation>Hiba akadt az ownCloud-dal való kapcsolattal! Szükség van a QOwnNotesAPI app telepítésére és engedélyezésére! 
+      <translation>Hiba akadt az ownCloud-dal való kapcsolattal! Szükség van a QOwnNotesAPI app telepítésére és engedélyezésére! 
 
 Kapcsolathiba üzenet: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1458"/>
-        <source>Markdown files</source>
-        <translation>Markdown-fájlok</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1458"/>
+      <source>Markdown files</source>
+      <translation>Markdown-fájlok</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
-        <source>Disable usage tracking</source>
-        <translation>Tiltsa le a használatkövetést</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1489"/>
+      <source>Disable usage tracking</source>
+      <translation>Tiltsa le a használatkövetést</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1490"/>
-        <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-        <translation>Névtelen használat adatok segítik eldönteni, hogy a QOwnNotes melyik részét szükséges fejleszteni. Azon kívül megtaláljuk és megszereljük az esetleges hibákat. &lt;/br&gt; Kérjük, hogy csak akkor kapcsold ki, ha tényleg nem bírsz vele együttélni.&lt;br /&gt;&lt;br /&gt;Valóban letiltod a használatkövetést?&lt;br /&gt;?</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1490"/>
+      <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
+      <translation>Névtelen használat adatok segítik eldönteni, hogy a QOwnNotes melyik részét szükséges fejleszteni. Azon kívül megtaláljuk és megszereljük az esetleges hibákat. &lt;/br&gt; Kérjük, hogy csak akkor kapcsold ki, ha tényleg nem bírsz vele együttélni.&lt;br /&gt;&lt;br /&gt;Valóban letiltod a használatkövetést?&lt;br /&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1696"/>
-        <source>new folder</source>
-        <translation>új mappa</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1696"/>
+      <source>new folder</source>
+      <translation>új mappa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1733"/>
-        <source>Remove note folder</source>
-        <translation>Jegyzet mappa eltávolítása</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1733"/>
+      <source>Remove note folder</source>
+      <translation>Jegyzet mappa eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
-        <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Eltávolítja a jelenlegi jegyzet mappát &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1734"/>
+      <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
+      <translation>Eltávolítja a jelenlegi jegyzet mappát &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2069"/>
-        <source>&amp;Remove</source>
-        <translation>&amp;Eltávolítás</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2069"/>
+      <source>&amp;Remove</source>
+      <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1809"/>
-        <source>Please select the folder where your notes will get stored to</source>
-        <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1809"/>
+      <source>Please select the folder where your notes will get stored to</source>
+      <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1846"/>
-        <source>Loading folders from server</source>
-        <translation>Mappák betöltése a kiszolgálóról</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1846"/>
+      <source>Loading folders from server</source>
+      <translation>Mappák betöltése a kiszolgálóról</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1860"/>
-        <source>No more folders were found in the current folder</source>
-        <translation>Nincs több mappa az aktuális mappában</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1860"/>
+      <source>No more folders were found in the current folder</source>
+      <translation>Nincs több mappa az aktuális mappában</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1934"/>
-        <source>Loading folders in &apos;%1&apos; from server</source>
-        <translation>&quot;%1&quot; mappa betöltése a kiszolgálóról</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1934"/>
+      <source>Loading folders in '%1' from server</source>
+      <translation>"%1" mappa betöltése a kiszolgálóról</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2018"/>
-        <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2018"/>
+      <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
+      <translation>Vessen egy pillantást a &lt;a href="%1"&gt; parancsfájlkezelés iratgyüjteményre&lt;/a&gt;a gyors kezdéshez.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
-        <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2020"/>
+      <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
+      <translation>Ha a QOwnNotes bizonyos funkcióit szeretné elérni, tegyen fel egy kérdést a &lt;a href="%1"&gt; QOwnNotes kérdés oldal&lt;/a&gt;on.</translation>
     </message>
     <message>
-        <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt;QOwnNotes issue page&lt;/a&gt;. Click &lt;a href=&quot;%2&quot;&gt;QML examples&lt;/a&gt; for a place to start with your scripting.</source>
-        <translation type="vanished">Ha a QOwnNotes egy bizonyos funkcióját el szeretné érni, nyisson meg egy témát &lt;a href=&quot;%1&quot;&gt; a QOwnNotes kérdés oldalon &lt;/a&gt;. Kattintson a &lt;a href=&quot;%2&quot;&gt; QML példák&lt;/a&gt; gombra, hogy megnyissa a parancsfájlokat.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2031"/>
+      <source>new script</source>
+      <translation>új parancsfájl</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2031"/>
-        <source>new script</source>
-        <translation>új parancsfájl</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2066"/>
+      <source>Remove script</source>
+      <translation>Parancsfájl eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2066"/>
-        <source>Remove script</source>
-        <translation>Parancsfájl eltávolítása</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2067"/>
+      <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
+      <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; parancsot?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2067"/>
-        <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-        <translation>Eltávolítja az aktuális &lt;strong&gt;%1&lt;/strong&gt; parancsot?</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2108"/>
+      <source>Please select your QML file</source>
+      <translation>Kérjük, válassza ki a QML fájlt</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2108"/>
-        <source>Please select your QML file</source>
-        <translation>Kérjük, válassza ki a QML fájlt</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2109"/>
+      <source>QML Files (*.qml)</source>
+      <translation>QML fájlok (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2109"/>
-        <source>QML Files (*.qml)</source>
-        <translation>QML fájlok (*.qml)</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
+      <source>Your script seems to be valid</source>
+      <translation>A parancsfájl érvényesnek bizonyosul</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
-        <source>Your script seems to be valid</source>
-        <translation>A parancsfájl érvényesnek bizonyosul</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2171"/>
-        <source>There were script errors:
+      <location filename="../dialogs/settingsdialog.cpp" line="2171"/>
+      <source>There were script errors:
 %1</source>
-        <translation>Parancsfájl-hiba: %1</translation>
+      <translation>Parancsfájl-hiba: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2236"/>
-        <source>File extension</source>
-        <translation>Fájlkiterjesztés</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2236"/>
+      <source>File extension</source>
+      <translation>Fájlkiterjesztés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2237"/>
-        <source>Enter your custom file extension:</source>
-        <translation>Adja meg az egyéni fájl kiterjesztést:</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2237"/>
+      <source>Enter your custom file extension:</source>
+      <translation>Adja meg az egyéni fájl kiterjesztést:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2501"/>
-        <source>Calendar cache emptied</source>
-        <translation>Naptár-gyorsítótár kiürítése</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2501"/>
+      <source>Calendar cache emptied</source>
+      <translation>Naptár-gyorsítótár kiürítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2502"/>
-        <source>Your calendar cache was emptied.</source>
-        <translation>A naptár gyorsítótár törlődött.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2502"/>
+      <source>Your calendar cache was emptied.</source>
+      <translation>A naptár gyorsítótár törlődött.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2579"/>
-        <source>Reset toolbars and exit</source>
-        <translation>Az eszköztárakat visszaállítom alaphelyzetbe és kilépek</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2579"/>
+      <source>Reset toolbars and exit</source>
+      <translation>Az eszköztárakat visszaállítom alaphelyzetbe és kilépek</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
-        <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-        <translation>Biztosan alaphelyzetbe teszed az eszköztárakat? Az alkalmazás zárva lesz a folyamat alatt, újraindítás után visszaáll az alapértelmezett eszköztár.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2580"/>
+      <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
+      <translation>Biztosan alaphelyzetbe teszed az eszköztárakat? Az alkalmazás zárva lesz a folyamat alatt, újraindítás után visszaáll az alapértelmezett eszköztár.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
-        <source>Reset and &amp;exit</source>
-        <translation>Alaphelyzetbe állít és kilép</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
+      <source>Reset and &amp;exit</source>
+      <translation>Alaphelyzetbe állít és kilép</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2746"/>
-        <source>Log file cleared</source>
-        <translation>Log fájl törölve</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2746"/>
+      <source>Log file cleared</source>
+      <translation>Log fájl törölve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2747"/>
-        <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-        <translation>A naplófájl &lt;strong&gt;%1&lt;/strong&gt; törlésre került.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="2747"/>
+      <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
+      <translation>A naplófájl &lt;strong&gt;%1&lt;/strong&gt; törlésre került.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1446"/>
-        <source>The Database was reinitialized.</source>
-        <translation>Az adatbázis újrainicializálódott.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1446"/>
+      <source>The Database was reinitialized.</source>
+      <translation>Az adatbázis újrainicializálódott.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="232"/>
-        <source>enabled</source>
-        <translation>engedélyezve</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="232"/>
+      <source>enabled</source>
+      <translation>engedélyezve</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="232"/>
-        <source>disabled</source>
-        <translation>le van tiltva</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="232"/>
+      <source>disabled</source>
+      <translation>le van tiltva</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="235"/>
-        <source>Portable mode is currently:</source>
-        <translation>Hordozható üzemmódban jelenleg:</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="235"/>
+      <source>Portable mode is currently:</source>
+      <translation>Hordozható üzemmódban jelenleg:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="238"/>
-        <source>In portable mode</source>
-        <translation>Hordozható üzemmódban</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="238"/>
+      <source>In portable mode</source>
+      <translation>Hordozható üzemmódban</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="239"/>
-        <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary&apos;s location</source>
-        <translation>a belső sqlite adatbázis, és a beállításokat az &lt;code&gt;adat&lt;/code&gt; dossziéban a bináris helyen tároljuk</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="239"/>
+      <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
+      <translation>a belső sqlite adatbázis, és a beállításokat az &lt;code&gt;adat&lt;/code&gt; dossziéban a bináris helyen tároljuk</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="242"/>
-        <source>the settings will be stored in an ini file</source>
-        <translation>a beállításokat a rendszer ini-fájlként tárolja</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="242"/>
+      <source>the settings will be stored in an ini file</source>
+      <translation>a beállításokat a rendszer ini-fájlként tárolja</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="243"/>
-        <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-        <translation>a jegyzet mappák, a parancsfájl elérési és a külső szerkesztő utak automatikusan tárolódnak a &lt;code&gt;adatok&lt;/code&gt; mappához viszonyítva úgy, hogy a jegyzet mappák, a szkriptek és a külső szerkesztőt függetlenül attól töltjük, hogy a QOwnNotes telepítése jelenleg hol található</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="243"/>
+      <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
+      <translation>a jegyzet mappák, a parancsfájl elérési és a külső szerkesztő utak automatikusan tárolódnak a &lt;code&gt;adatok&lt;/code&gt; mappához viszonyítva úgy, hogy a jegyzet mappák, a szkriptek és a külső szerkesztőt függetlenül attól töltjük, hogy a QOwnNotes telepítése jelenleg hol található</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="251"/>
-        <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-        <translation>Ez lesz aktivált, ha QOwnNotes-t a &lt;code&gt;--hordozható&lt;/code&gt; paraméterrel használja.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="251"/>
+      <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
+      <translation>Ez lesz aktivált, ha QOwnNotes-t a &lt;code&gt;--hordozható&lt;/code&gt; paraméterrel használja.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1459"/>
-        <source>Save debug information</source>
-        <translation>Hibakeresési adatok mentése</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1459"/>
+      <source>Save debug information</source>
+      <translation>Hibakeresési adatok mentése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1510"/>
-        <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
+      <location filename="../dialogs/settingsdialog.cpp" line="1510"/>
+      <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-        <translation>Valóban szeretné az összes beállítás törlését, az adatbázis eltávolítását, és kilép a QOwnNotes-ból? A jegyzetek érintetlenek maradnak!</translation>
+      <translation>Valóban szeretné az összes beállítás törlését, az adatbázis eltávolítását, és kilép a QOwnNotes-ból? A jegyzetek érintetlenek maradnak!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1513"/>
-        <source>Clear and &amp;exit</source>
-        <translation>Törlés és kilépés</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1513"/>
+      <source>Clear and &amp;exit</source>
+      <translation>Törlés és kilépés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1440"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1513"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2069"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1440"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1513"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2069"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2584"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="256"/>
-        <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-        <translation>Találsz egy &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;-ot a elérési útban, hogy a QOwnNotes-ot indíthasd hordozható módban.</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="256"/>
+      <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
+      <translation>Találsz egy &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt;-ot a elérési útban, hogy a QOwnNotes-ot indíthasd hordozható módban.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
-        <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-        <translation>Igazán akar a helyi adatbázisból törölni? Ez eltávolítja a beállított jegyzeteket is: a mappákat és a gyorsítótárazott todo elemeket!</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1437"/>
+      <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
+      <translation>Igazán akar a helyi adatbázisból törölni? Ez eltávolítja a beállított jegyzeteket is: a mappákat és a gyorsítótárazott todo elemeket!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1440"/>
-        <source>Clear &amp;database</source>
-        <translation>Töröli az &amp;adatbázist</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1440"/>
+      <source>Clear &amp;database</source>
+      <translation>Töröli az &amp;adatbázist</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1611"/>
-        <source>Select editor application</source>
-        <translation>Válassza ki a szerkesztő alkalmazást</translation>
+      <location filename="../dialogs/settingsdialog.cpp" line="1611"/>
+      <source>Select editor application</source>
+      <translation>Válassza ki a szerkesztő alkalmazást</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>ShareDialog</name>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="20"/>
-        <source>Share note</source>
-        <translation>Megosztom a jegyzetet</translation>
+      <location filename="../dialogs/sharedialog.ui" line="20"/>
+      <source>Share note</source>
+      <translation>Megosztom a jegyzetet</translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="30"/>
-        <source>Share note on ownCloud</source>
-        <translation>Megosztom a jegyzetet az ownCloud-on</translation>
+      <location filename="../dialogs/sharedialog.ui" line="30"/>
+      <source>Share note on ownCloud</source>
+      <translation>Megosztom a jegyzetet az ownCloud-on</translation>
     </message>
     <message>
-        <location filename="../dialogs/sharedialog.ui" line="37"/>
-        <source>The public url of your note</source>
-        <translation>A jegyzetem nyilvános URL címe</translation>
+      <location filename="../dialogs/sharedialog.ui" line="37"/>
+      <source>The public url of your note</source>
+      <translation>A jegyzetem nyilvános URL címe</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>TableDialog</name>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="14"/>
-        <source>Insert table</source>
-        <translation>Táblázat beszúrása</translation>
+      <location filename="../dialogs/tabledialog.ui" line="14"/>
+      <source>Insert table</source>
+      <translation>Táblázat beszúrása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="24"/>
-        <source>Create table</source>
-        <translation>Táblázat létrehozása</translation>
+      <location filename="../dialogs/tabledialog.ui" line="24"/>
+      <source>Create table</source>
+      <translation>Táblázat létrehozása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="30"/>
-        <source>Column width:</source>
-        <translation>Oszlopszélesség:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="30"/>
+      <source>Column width:</source>
+      <translation>Oszlopszélesség:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="37"/>
-        <source>Insert a table heading separator</source>
-        <translation>Táblázat fejléc elválasztó beszúrása</translation>
+      <location filename="../dialogs/tabledialog.ui" line="37"/>
+      <source>Insert a table heading separator</source>
+      <translation>Táblázat fejléc elválasztó beszúrása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="47"/>
-        <source>Columns:</source>
-        <translation>Oszlopok:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="47"/>
+      <source>Columns:</source>
+      <translation>Oszlopok:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="67"/>
-        <source>Rows:</source>
-        <translation>Sorok:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="67"/>
+      <source>Rows:</source>
+      <translation>Sorok:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="87"/>
-        <source>The amount of spaces in a column</source>
-        <translation>Egy oszlop összes leütésének összege</translation>
+      <location filename="../dialogs/tabledialog.ui" line="87"/>
+      <source>The amount of spaces in a column</source>
+      <translation>Egy oszlop összes leütésének összege</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="119"/>
-        <source>Select table layout:</source>
-        <translation>Válassza ki a táblázat elrendezését:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="119"/>
+      <source>Select table layout:</source>
+      <translation>Válassza ki a táblázat elrendezését:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="126"/>
-        <source>Separator column width:</source>
-        <translation>Elválasztó oszlop szélessége:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="126"/>
+      <source>Separator column width:</source>
+      <translation>Elválasztó oszlop szélessége:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="133"/>
-        <source>The amount of dash characters in the separator</source>
-        <translation>Az elválasztó kötőjel karakterek összege</translation>
+      <location filename="../dialogs/tabledialog.ui" line="133"/>
+      <source>The amount of dash characters in the separator</source>
+      <translation>Az elválasztó kötőjel karakterek összege</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="150"/>
-        <source>Import CSV file</source>
-        <translation>CSV-fájl importálása</translation>
+      <location filename="../dialogs/tabledialog.ui" line="150"/>
+      <source>Import CSV file</source>
+      <translation>CSV-fájl importálása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="173"/>
-        <source>Separator:</source>
-        <translation>Elválasztó:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="173"/>
+      <source>Separator:</source>
+      <translation>Elválasztó:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="180"/>
-        <source>Select file</source>
-        <translation>Válassza ki a fájlt</translation>
+      <location filename="../dialogs/tabledialog.ui" line="180"/>
+      <source>Select file</source>
+      <translation>Válassza ki a fájlt</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="191"/>
-        <source>Please select the CSV file you want to import:</source>
-        <translation>Kérjük, válassza ki az importálni kívánt CSV-fájl:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="191"/>
+      <source>Please select the CSV file you want to import:</source>
+      <translation>Kérjük, válassza ki az importálni kívánt CSV-fájl:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="231"/>
-        <source>CSV file</source>
-        <translation>CSV-fájl</translation>
+      <location filename="../dialogs/tabledialog.ui" line="231"/>
+      <source>CSV file</source>
+      <translation>CSV-fájl</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="238"/>
-        <source>First line is the table heading</source>
-        <translation>Első sor a táblázat fejléce</translation>
+      <location filename="../dialogs/tabledialog.ui" line="238"/>
+      <source>First line is the table heading</source>
+      <translation>Első sor a táblázat fejléce</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.ui" line="261"/>
-        <source>Text-delimiter:</source>
-        <translation>Szöveghatároló:</translation>
+      <location filename="../dialogs/tabledialog.ui" line="261"/>
+      <source>Text-delimiter:</source>
+      <translation>Szöveghatároló:</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="147"/>
-        <source>CSV files</source>
-        <translation>CSV-fájlok</translation>
+      <location filename="../dialogs/tabledialog.cpp" line="147"/>
+      <source>CSV files</source>
+      <translation>CSV-fájlok</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="148"/>
-        <source>All files</source>
-        <translation>Minden fájl</translation>
+      <location filename="../dialogs/tabledialog.cpp" line="148"/>
+      <source>All files</source>
+      <translation>Minden fájl</translation>
     </message>
     <message>
-        <location filename="../dialogs/tabledialog.cpp" line="154"/>
-        <source>Select CSV file to import</source>
-        <translation>Válassza ki a CSV-fájl importálása</translation>
+      <location filename="../dialogs/tabledialog.cpp" line="154"/>
+      <source>Select CSV file to import</source>
+      <translation>Válassza ki a CSV-fájl importálása</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>TagAddDialog</name>
     <message>
-        <location filename="../dialogs/tagadddialog.ui" line="20"/>
-        <source>Add a new tag</source>
-        <translation>Hozzáad egy új címkét</translation>
+      <location filename="../dialogs/tagadddialog.ui" line="20"/>
+      <source>Add a new tag</source>
+      <translation>Hozzáad egy új címkét</translation>
     </message>
     <message>
-        <location filename="../dialogs/tagadddialog.ui" line="30"/>
-        <source>Add new tag</source>
-        <translation>Hozzáad egy új címkét</translation>
+      <location filename="../dialogs/tagadddialog.ui" line="30"/>
+      <source>Add new tag</source>
+      <translation>Hozzáad egy új címkét</translation>
     </message>
     <message>
-        <location filename="../dialogs/tagadddialog.ui" line="47"/>
-        <source>New tag</source>
-        <translation>Új tag</translation>
+      <location filename="../dialogs/tagadddialog.ui" line="47"/>
+      <source>New tag</source>
+      <translation>Új tag</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>TodoDialog</name>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="14"/>
-        <source>Todo</source>
-        <translation>Todo</translation>
+      <location filename="../dialogs/tododialog.ui" line="14"/>
+      <source>Todo</source>
+      <translation>Todo</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="88"/>
-        <location filename="../dialogs/tododialog.ui" line="95"/>
-        <source>Priority</source>
-        <translation>Prioritás</translation>
+      <location filename="../dialogs/tododialog.ui" line="88"/>
+      <location filename="../dialogs/tododialog.ui" line="95"/>
+      <source>Priority</source>
+      <translation>Prioritás</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="123"/>
-        <source>Reminder</source>
-        <translation>Emlékeztető</translation>
+      <location filename="../dialogs/tododialog.ui" line="123"/>
+      <source>Reminder</source>
+      <translation>Emlékeztető</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="167"/>
-        <source>Summary</source>
-        <translation>Összefoglaló</translation>
+      <location filename="../dialogs/tododialog.ui" line="167"/>
+      <source>Summary</source>
+      <translation>Összefoglaló</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="201"/>
-        <source>Save</source>
-        <translation>Mentés</translation>
+      <location filename="../dialogs/tododialog.ui" line="201"/>
+      <source>Save</source>
+      <translation>Mentés</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="99"/>
-        <source>Save and insert into note</source>
-        <translation>Jegyzet mentése és beszúrása</translation>
+      <location filename="../dialogs/tododialog.cpp" line="99"/>
+      <source>Save and insert into note</source>
+      <translation>Jegyzet mentése és beszúrása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="218"/>
-        <source>Remove</source>
-        <translation>Eltávolítom</translation>
+      <location filename="../dialogs/tododialog.ui" line="218"/>
+      <source>Remove</source>
+      <translation>Eltávolítom</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="232"/>
-        <source>Note...</source>
-        <translation>Megjegyzés...</translation>
+      <location filename="../dialogs/tododialog.ui" line="232"/>
+      <source>Note...</source>
+      <translation>Megjegyzés...</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="288"/>
-        <source>Show completed items</source>
-        <translation>A befejezett elemek megjelenítése</translation>
+      <location filename="../dialogs/tododialog.ui" line="288"/>
+      <source>Show completed items</source>
+      <translation>A befejezett elemek megjelenítése</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="295"/>
-        <source>Reload the todo list from server</source>
-        <translation>A teendőlista újratöltése a kiszolgálón</translation>
+      <location filename="../dialogs/tododialog.ui" line="295"/>
+      <source>Reload the todo list from server</source>
+      <translation>A teendőlista újratöltése a kiszolgálón</translation>
     </message>
     <message>
-        <source>Reload</source>
-        <translation type="vanished">Újratöltés</translation>
+      <location filename="../dialogs/tododialog.ui" line="329"/>
+      <source>Search or create todo item</source>
+      <translation>Keresés vagy teendőlista-elem létrehozása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="329"/>
-        <source>Search or create todo item</source>
-        <translation>Keresés vagy teendőlista-elem létrehozása</translation>
+      <location filename="../dialogs/tododialog.ui" line="312"/>
+      <source>select your todo list</source>
+      <translation>Válassza ki a todo listát</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="312"/>
-        <source>select your todo list</source>
-        <translation>Válassza ki a todo listát</translation>
+      <location filename="../dialogs/tododialog.ui" line="198"/>
+      <source>Save the current todo item</source>
+      <translation>Menti az aktuális todo elemet</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="198"/>
-        <source>Save the current todo item</source>
-        <translation>Menti az aktuális todo elemet</translation>
+      <location filename="../dialogs/tododialog.cpp" line="103"/>
+      <source>Save the current todo item and insert a link to it into the current note</source>
+      <translation>Menti az aktuális todo elemet, és beszúr egy linket az aktuális feljegyzéshez</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="103"/>
-        <source>Save the current todo item and insert a link to it into the current note</source>
-        <translation>Menti az aktuális todo elemet, és beszúr egy linket az aktuális feljegyzéshez</translation>
+      <location filename="../dialogs/tododialog.cpp" line="112"/>
+      <source>Import the current todo item as new note</source>
+      <translation>Az aktuális todo cikk új jegyzetként való importálása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="112"/>
-        <source>Import the current todo item as new note</source>
-        <translation>Az aktuális todo cikk új jegyzetként való importálása</translation>
+      <location filename="../dialogs/tododialog.cpp" line="108"/>
+      <source>Import as note</source>
+      <translation>Jegyzeként importál</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="108"/>
-        <source>Import as note</source>
-        <translation>Jegyzeként importál</translation>
+      <location filename="../dialogs/tododialog.ui" line="215"/>
+      <source>Remove the current todo item</source>
+      <translation>Távolítsa el az aktuális todo-cikket</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="215"/>
-        <source>Remove the current todo item</source>
-        <translation>Távolítsa el az aktuális todo-cikket</translation>
+      <location filename="../dialogs/tododialog.ui" line="298"/>
+      <source>Reload...</source>
+      <translation>Újra tölt...</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="298"/>
-        <source>Reload...</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/tododialog.ui" line="319"/>
+      <source>Todo list items are being loaded from the server</source>
+      <translation>Teendőlista elemeit betöltjük a kiszolgálóról</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.ui" line="319"/>
-        <source>Todo list items are being loaded from the server</source>
-        <translation>Teendőlista elemeit betöltjük a kiszolgálóról</translation>
+      <location filename="../dialogs/tododialog.cpp" line="123"/>
+      <source>Reload from server</source>
+      <translation>Újratölt a szerverről</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="123"/>
-        <source>Reload from server</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/tododialog.cpp" line="127"/>
+      <source>Reload tasks from server</source>
+      <translation>Feladatok újratöltése a szerverről</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="127"/>
-        <source>Reload tasks from server</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/tododialog.cpp" line="132"/>
+      <source>Clear cache and reload</source>
+      <translation>Üríti a cache-t és újratölt</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="132"/>
-        <source>Clear cache and reload</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/tododialog.cpp" line="136"/>
+      <source>Clear calendar cache and reload tasks from server</source>
+      <translation>Naptár cache törlése és újratölti a feladatokat a szerverről</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="136"/>
-        <source>Clear calendar cache and reload tasks from server</source>
-        <translation type="unfinished"></translation>
+      <location filename="../dialogs/tododialog.cpp" line="572"/>
+      <source>Remove todo item</source>
+      <translation>Todo elem eltávolítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="572"/>
-        <source>Remove todo item</source>
-        <translation>Todo elem eltávolítása</translation>
-    </message>
-    <message>
-        <location filename="../dialogs/tododialog.cpp" line="573"/>
-        <source>Remove the selected todo item?
+      <location filename="../dialogs/tododialog.cpp" line="573"/>
+      <source>Remove the selected todo item?
 This cannot be undone!</source>
-        <translation>Eltávolítja a kijelölt teendőlista elemet? 
+      <translation>Eltávolítja a kijelölt teendőlista elemet? 
 Nem lehet visszavonni!</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="574"/>
-        <source>&amp;Remove</source>
-        <translation>&amp;Eltávolítás</translation>
+      <location filename="../dialogs/tododialog.cpp" line="574"/>
+      <source>&amp;Remove</source>
+      <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-        <location filename="../dialogs/tododialog.cpp" line="574"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/tododialog.cpp" line="574"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>Toolbar_Editor</name>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
-        <source>Select a menu</source>
-        <translation>Válasszon egy menüt</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
+      <source>Select a menu</source>
+      <translation>Válasszon egy menüt</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
-        <source>Lists the avaliable menus to get the corresponding actions</source>
-        <translation>Felsorolja a rendelkezésre álló menüket a megfelelő intézkedésekhez</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
+      <source>Lists the avaliable menus to get the corresponding actions</source>
+      <translation>Felsorolja a rendelkezésre álló menüket a megfelelő intézkedésekhez</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
-        <source>Select toolbar</source>
-        <translation>Válassza ki az eszköztárat</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
+      <source>Select toolbar</source>
+      <translation>Válassza ki az eszköztárat</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
-        <source>List the available toolbars. The selected one will be edited</source>
-        <translation>Felsorolja a rendelkezésre álló eszköztárakat. A kiválasztottat szerkeszted.</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
+      <source>List the available toolbars. The selected one will be edited</source>
+      <translation>Felsorolja a rendelkezésre álló eszköztárakat. A kiválasztottat szerkeszted.</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
-        <source>Lists the actions in the selected toolbar</source>
-        <translation>Felsorolja a kijelölt eszköztár tevékenységeket</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
+      <source>Lists the actions in the selected toolbar</source>
+      <translation>Felsorolja a kijelölt eszköztár tevékenységeket</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
-        <source>Add new Toolbar</source>
-        <translation>Új eszköztár hozzáadása</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
+      <source>Add new Toolbar</source>
+      <translation>Új eszköztár hozzáadása</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
-        <source>New</source>
-        <translation>Új</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
+      <source>New</source>
+      <translation>Új</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
-        <source>Delete selected toolbar</source>
-        <translation>Törli a kijelölt eszköztárat</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
+      <source>Delete selected toolbar</source>
+      <translation>Törli a kijelölt eszköztárat</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
-        <source>Remove</source>
-        <translation>Eltávolítom</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
+      <source>Remove</source>
+      <translation>Eltávolítom</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
-        <source>Lists the available actions for the selected menu</source>
-        <translation>Felsorolja a kiválasztott menü elérhető műveleit</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
+      <source>Lists the available actions for the selected menu</source>
+      <translation>Felsorolja a kiválasztott menü elérhető műveleit</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
-        <source>Move Up</source>
-        <translation>Feljebb</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
+      <source>Move Up</source>
+      <translation>Feljebb</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
-        <source>Moves the selected toolbar item up</source>
-        <translation>Feljebb helyezem a kijelölt eszköztár elemet</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
+      <source>Moves the selected toolbar item up</source>
+      <translation>Feljebb helyezem a kijelölt eszköztár elemet</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
-        <source>Move &amp;Up</source>
-        <translation>Áthelyezem &amp;Fel</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
+      <source>Move &amp;Up</source>
+      <translation>Áthelyezem &amp;Fel</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
-        <source>Move Down</source>
-        <translation>Lejjebb</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
+      <source>Move Down</source>
+      <translation>Lejjebb</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
-        <source>moves the selected toolbar item down</source>
-        <translation>lejjebb helyezem a kijelölt eszköztár elemet</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
+      <source>moves the selected toolbar item down</source>
+      <translation>lejjebb helyezem a kijelölt eszköztár elemet</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
-        <source>Move &amp;Down</source>
-        <translation>Lejjebb</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
+      <source>Move &amp;Down</source>
+      <translation>Lejjebb</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
-        <source>Insert</source>
-        <translation>Beszúrás</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
+      <source>Insert</source>
+      <translation>Beszúrás</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
-        <source>Adds the selected menu action to the toolbar</source>
-        <translation>Hozzáadom a kiválasztott menü műveletet az eszköztárhoz</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
+      <source>Adds the selected menu action to the toolbar</source>
+      <translation>Hozzáadom a kiválasztott menü műveletet az eszköztárhoz</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
-        <source>&amp;Insert</source>
-        <translation>&amp;Beszúrom</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
+      <source>&amp;Insert</source>
+      <translation>&amp;Beszúrom</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
-        <source>Removes the selected item from the active toolbar</source>
-        <translation>A kijelölt elem eltávolítása az aktív eszköztárból</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
+      <source>Removes the selected item from the active toolbar</source>
+      <translation>A kijelölt elem eltávolítása az aktív eszköztárból</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
-        <source>&amp;Remove</source>
-        <translation>&amp;Eltávolítás</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
+      <source>&amp;Remove</source>
+      <translation>&amp;Eltávolítás</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
-        <source>Separator</source>
-        <translation>Elválasztó</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
+      <source>Separator</source>
+      <translation>Elválasztó</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
-        <source>&amp;Separator</source>
-        <translation>&amp;Elválasztó</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
+      <source>&amp;Separator</source>
+      <translation>&amp;Elválasztó</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="189"/>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="213"/>
-        <source>--(separator)--</source>
-        <translation>--(elválasztó)--</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="189"/>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="213"/>
+      <source>--(separator)--</source>
+      <translation>--(elválasztó)--</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="306"/>
-        <source>Remove current toolbar</source>
-        <translation>Eltávolítom az aktuális eszköztárat</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="306"/>
+      <source>Remove current toolbar</source>
+      <translation>Eltávolítom az aktuális eszköztárat</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
-        <source>Remove the current toolbar?</source>
-        <translation>Eltávolítod az aktuális eszköztárat?</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
+      <source>Remove the current toolbar?</source>
+      <translation>Eltávolítod az aktuális eszköztárat?</translation>
     </message>
     <message>
-        <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>TrashDialog</name>
     <message>
-        <location filename="../dialogs/trashdialog.ui" line="14"/>
-        <source>Trashed notes</source>
-        <translation>Törölt jegyzetek</translation>
+      <location filename="../dialogs/trashdialog.ui" line="14"/>
+      <source>Trashed notes</source>
+      <translation>Törölt jegyzetek</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="24"/>
-        <source>&amp;Restore selected note on server</source>
-        <translation>A kijelölt jegyzet &amp;visszaállítása a szerveren</translation>
+      <location filename="../dialogs/trashdialog.cpp" line="24"/>
+      <source>&amp;Restore selected note on server</source>
+      <translation>A kijelölt jegyzet &amp;visszaállítása a szerveren</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="25"/>
-        <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Lassabb, de jegyzet verziókkal&lt;/h3&gt; &lt;p&gt;A jegyzet visszaállítható a ownCloud kiszolgálón az összes verziójával.&lt;/p&gt; &lt;p&gt;Várjon, míg amíg az ownCloud sync szinkronizálta ezt a QOwnNotes-ban.&lt;/p&gt;</translation>
+      <location filename="../dialogs/trashdialog.cpp" line="25"/>
+      <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
+      <translation>&lt;h3&gt;Lassabb, de jegyzet verziókkal&lt;/h3&gt; &lt;p&gt;A jegyzet visszaállítható a ownCloud kiszolgálón az összes verziójával.&lt;/p&gt; &lt;p&gt;Várjon, míg amíg az ownCloud sync szinkronizálta ezt a QOwnNotes-ban.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="38"/>
-        <source>&amp;Download selected note</source>
-        <translation>&amp;Töltse le a kiválasztott jegyzetet</translation>
+      <location filename="../dialogs/trashdialog.cpp" line="38"/>
+      <source>&amp;Download selected note</source>
+      <translation>&amp;Töltse le a kiválasztott jegyzetet</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="39"/>
-        <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-        <translation>&lt;h3&gt;Gyorsabb de változatok nélkül &lt;/h3&gt; &lt;p&gt;A jegyzet az előnézet szerint lesz megjelenítve.&lt;/p&gt; &lt;p&gt;A jegyzetváltozatok a ownCloud kiszolgálón nem állíthatók vissza, és a jegyzet továbbra is a kukában marad.&lt;/p&gt; &lt;p&gt;Később bármikor helyreállíthatja a jegyzetet és annak változatait.&lt;/p&gt;</translation>
+      <location filename="../dialogs/trashdialog.cpp" line="39"/>
+      <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
+      <translation>&lt;h3&gt;Gyorsabb de változatok nélkül &lt;/h3&gt; &lt;p&gt;A jegyzet az előnézet szerint lesz megjelenítve.&lt;/p&gt; &lt;p&gt;A jegyzetváltozatok a ownCloud kiszolgálón nem állíthatók vissza, és a jegyzet továbbra is a kukában marad.&lt;/p&gt; &lt;p&gt;Később bármikor helyreállíthatja a jegyzetet és annak változatait.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/trashdialog.cpp" line="52"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/trashdialog.cpp" line="52"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>UpdateDialog</name>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="14"/>
-        <source>Update available</source>
-        <translation>Frissítés érhető el</translation>
+      <location filename="../dialogs/updatedialog.ui" line="14"/>
+      <source>Update available</source>
+      <translation>Frissítés érhető el</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="26"/>
-        <source>A new update of QOwnNotes is available!</source>
-        <translation>Egy új QOwnNotes frissítés érhető el!</translation>
+      <location filename="../dialogs/updatedialog.ui" line="26"/>
+      <source>A new update of QOwnNotes is available!</source>
+      <translation>Egy új QOwnNotes frissítés érhető el!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="69"/>
-        <source>Do you want to download the new version?</source>
-        <translation>Szeretné letölteni a legfrissebb verziót?</translation>
+      <location filename="../dialogs/updatedialog.ui" line="69"/>
+      <source>Do you want to download the new version?</source>
+      <translation>Szeretné letölteni a legfrissebb verziót?</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="76"/>
-        <source>QOwnNotes will be downloaded in your default browser.</source>
-        <translation>QOwnNotes az alapértelmezett böngészőben lesz letöltve.</translation>
+      <location filename="../dialogs/updatedialog.ui" line="76"/>
+      <source>QOwnNotes will be downloaded in your default browser.</source>
+      <translation>QOwnNotes az alapértelmezett böngészőben lesz letöltve.</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="83"/>
-        <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-        <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt; Vegyen részt a QOwnNotes-ban!&lt;/a&gt;</translation>
+      <location filename="../dialogs/updatedialog.ui" line="83"/>
+      <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt; Vegyen részt a QOwnNotes-ban!&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="96"/>
-        <source>%p% downloaded</source>
-        <translation>%p% letöltve</translation>
+      <location filename="../dialogs/updatedialog.ui" line="96"/>
+      <source>%p% downloaded</source>
+      <translation>%p% letöltve</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="34"/>
-        <source>&amp;Update</source>
-        <translation>&amp;Frissítés</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="34"/>
+      <source>&amp;Update</source>
+      <translation>&amp;Frissítés</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="47"/>
-        <source>&amp;Download latest</source>
-        <translation>&amp;Letöltöm a legfrissebbet</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="47"/>
+      <source>&amp;Download latest</source>
+      <translation>&amp;Letöltöm a legfrissebbet</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="45"/>
-        <source>Just download</source>
-        <translation>Csak letöltöm</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="45"/>
+      <source>Just download</source>
+      <translation>Csak letöltöm</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="61"/>
-        <source>&amp;Skip version</source>
-        <translation>&amp;Átugrom ezt a változatot</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="61"/>
+      <source>&amp;Skip version</source>
+      <translation>&amp;Átugrom ezt a változatot</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="71"/>
-        <location filename="../dialogs/updatedialog.cpp" line="317"/>
-        <location filename="../dialogs/updatedialog.cpp" line="475"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="71"/>
+      <location filename="../dialogs/updatedialog.cpp" line="317"/>
+      <location filename="../dialogs/updatedialog.cpp" line="475"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="214"/>
-        <source>Download error</source>
-        <translation>Letöltési hiba</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="214"/>
+      <source>Download error</source>
+      <translation>Letöltési hiba</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="215"/>
-        <source>Error while downloading:
+      <location filename="../dialogs/updatedialog.cpp" line="215"/>
+      <source>Error while downloading:
 %1</source>
-        <translation>Hiba történt a letöltésnél</translation>
+      <translation>Hiba történt a letöltésnél</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="217"/>
-        <source>network error: %1</source>
-        <translation>hálózati hiba: %1</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="217"/>
+      <source>network error: %1</source>
+      <translation>hálózati hiba: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="240"/>
-        <location filename="../dialogs/updatedialog.cpp" line="261"/>
-        <location filename="../dialogs/updatedialog.cpp" line="359"/>
-        <source>File error</source>
-        <translation>Fájl hiba</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="240"/>
+      <location filename="../dialogs/updatedialog.cpp" line="261"/>
+      <location filename="../dialogs/updatedialog.cpp" line="359"/>
+      <source>File error</source>
+      <translation>Fájl hiba</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="241"/>
-        <location filename="../dialogs/updatedialog.cpp" line="360"/>
-        <source>Could not open temporary file:
+      <location filename="../dialogs/updatedialog.cpp" line="241"/>
+      <location filename="../dialogs/updatedialog.cpp" line="360"/>
+      <source>Could not open temporary file:
 %1</source>
-        <translation>Nem lehet megnyitni az ideiglenes fájlt: %1</translation>
+      <translation>Nem lehet megnyitni az ideiglenes fájlt: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="262"/>
-        <source>Could not store downloaded file:
+      <location filename="../dialogs/updatedialog.cpp" line="262"/>
+      <source>Could not store downloaded file:
 %1</source>
-        <translation>Nem tárolható letöltött fájl: %1</translation>
+      <translation>Nem tárolható letöltött fájl: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="316"/>
-        <source>Do you want to update and restart QOwnNotes?</source>
-        <translation>Szeretné frissíteni, és újra indítani a QOwnNotes-t?</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="316"/>
+      <source>Do you want to update and restart QOwnNotes?</source>
+      <translation>Szeretné frissíteni, és újra indítani a QOwnNotes-t?</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="332"/>
-        <location filename="../dialogs/updatedialog.cpp" line="419"/>
-        <location filename="../dialogs/updatedialog.cpp" line="428"/>
-        <location filename="../dialogs/updatedialog.cpp" line="437"/>
-        <location filename="../dialogs/updatedialog.cpp" line="446"/>
-        <location filename="../dialogs/updatedialog.cpp" line="456"/>
-        <location filename="../dialogs/updatedialog.cpp" line="465"/>
-        <source>Error</source>
-        <translation>Hiba</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="332"/>
+      <location filename="../dialogs/updatedialog.cpp" line="419"/>
+      <location filename="../dialogs/updatedialog.cpp" line="428"/>
+      <location filename="../dialogs/updatedialog.cpp" line="437"/>
+      <location filename="../dialogs/updatedialog.cpp" line="446"/>
+      <location filename="../dialogs/updatedialog.cpp" line="456"/>
+      <location filename="../dialogs/updatedialog.cpp" line="465"/>
+      <source>Error</source>
+      <translation>Hiba</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="333"/>
-        <source>Could not find updater file:
+      <location filename="../dialogs/updatedialog.cpp" line="333"/>
+      <source>Could not find updater file:
 %1</source>
-        <translation>Nem található a frissítő fájl: %1</translation>
+      <translation>Nem található a frissítő fájl: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="420"/>
-        <source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
-        <translation>Updater-script &quot;%1&quot; nem létezik!</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="420"/>
+      <source>Updater script '%1' doesn't exist!</source>
+      <translation>Updater-script "%1" nem létezik!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="429"/>
-        <source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
-        <translation>Nincs frissítö kicsomagoló program &quot;%1&quot;!</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="429"/>
+      <source>Updater unzip executable '%1' doesn't exist!</source>
+      <translation>Nincs frissítö kicsomagoló program "%1"!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="438"/>
-        <location filename="../dialogs/updatedialog.cpp" line="447"/>
-        <source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
-        <translation>Nem sikerült másolni a updater-script &quot;%1&quot;, &quot;%2&quot;!</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="438"/>
+      <location filename="../dialogs/updatedialog.cpp" line="447"/>
+      <source>Could not copy updater script '%1' to '%2'!</source>
+      <translation>Nem sikerült másolni a updater-script "%1", "%2"!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="457"/>
-        <source>Couldn&apos;t find updater script: %1</source>
-        <translation>Nem találta meg az updater-script: %1</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="457"/>
+      <source>Couldn't find updater script: %1</source>
+      <translation>Nem találta meg az updater-script: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="466"/>
-        <source>Couldn&apos;t find unzip executable: %1</source>
-        <translation>Nem talált futtatható kicsomagolót: %1</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="466"/>
+      <source>Couldn't find unzip executable: %1</source>
+      <translation>Nem talált futtatható kicsomagolót: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="315"/>
-        <location filename="../dialogs/updatedialog.cpp" line="472"/>
-        <source>Proceed with update</source>
-        <translation>Folytatja a frissítést</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="315"/>
+      <location filename="../dialogs/updatedialog.cpp" line="472"/>
+      <source>Proceed with update</source>
+      <translation>Folytatja a frissítést</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="473"/>
-        <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-        <translation>A letöltés befejeződött. Szeretné frissíteni, és újra indítani a QOwnNotest?</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="473"/>
+      <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
+      <translation>A letöltés befejeződött. Szeretné frissíteni, és újra indítani a QOwnNotest?</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="317"/>
-        <location filename="../dialogs/updatedialog.cpp" line="475"/>
-        <source>&amp;Update and restart</source>
-        <translation>&amp;Frissítés és újraindítás</translation>
+      <location filename="../dialogs/updatedialog.cpp" line="317"/>
+      <location filename="../dialogs/updatedialog.cpp" line="475"/>
+      <source>&amp;Update and restart</source>
+      <translation>&amp;Frissítés és újraindítás</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>UpdateService</name>
     <message>
-        <location filename="../services/updateservice.cpp" line="193"/>
-        <source>No updates</source>
-        <translation>Nincsen frissítés</translation>
+      <location filename="../services/updateservice.cpp" line="193"/>
+      <source>No updates</source>
+      <translation>Nincsen frissítés</translation>
     </message>
     <message>
-        <location filename="../services/updateservice.cpp" line="194"/>
-        <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-        <translation>Jelenleg nincs frissítés. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; a legfrissebb változat.</translation>
+      <location filename="../services/updateservice.cpp" line="194"/>
+      <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
+      <translation>Jelenleg nincs frissítés. &lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; a legfrissebb változat.</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>VersionDialog</name>
     <message>
-        <location filename="../dialogs/versiondialog.ui" line="14"/>
-        <source>Note versions on your ownCloud server</source>
-        <translation>A ownCloud szerveren található jegyzetverziók</translation>
+      <location filename="../dialogs/versiondialog.ui" line="14"/>
+      <source>Note versions on your ownCloud server</source>
+      <translation>A ownCloud szerveren található jegyzetverziók</translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.ui" line="65"/>
-        <source>Diff</source>
-        <translation>Diff</translation>
+      <location filename="../dialogs/versiondialog.ui" line="65"/>
+      <source>Diff</source>
+      <translation>Diff</translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.ui" line="98"/>
-        <source>Note text</source>
-        <translation>Jegyzet szöveg</translation>
+      <location filename="../dialogs/versiondialog.ui" line="98"/>
+      <source>Note text</source>
+      <translation>Jegyzet szöveg</translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="25"/>
-        <source>&amp;Restore selected version</source>
-        <translation>&amp;Kiválasztott verzió visszaállítása</translation>
+      <location filename="../dialogs/versiondialog.cpp" line="25"/>
+      <source>&amp;Restore selected version</source>
+      <translation>&amp;Kiválasztott verzió visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/versiondialog.cpp" line="34"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/versiondialog.cpp" line="34"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
-</context>
-<context>
+  </context>
+  <context>
     <name>WelcomeDialog</name>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="14"/>
-        <location filename="../dialogs/welcomedialog.ui" line="56"/>
-        <source>Welcome to QOwnNotes</source>
-        <translation>A QOwnNotes üdvözli!</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="14"/>
+      <location filename="../dialogs/welcomedialog.ui" line="56"/>
+      <source>Welcome to QOwnNotes</source>
+      <translation>A QOwnNotes üdvözli!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="24"/>
-        <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-        <translation>a sima szöveges fájlt Jegyzettömb markdown támogatása és ownCloud integráció</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="24"/>
+      <source>the plain-text file notepad with markdown support and ownCloud integration</source>
+      <translation>a sima szöveges fájlt Jegyzettömb markdown támogatása és ownCloud integráció</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="88"/>
-        <source>&amp;Back</source>
-        <translation>&amp;Vissza</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="88"/>
+      <source>&amp;Back</source>
+      <translation>&amp;Vissza</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="99"/>
-        <source>&amp;Next</source>
-        <translation>&amp;Tovább</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="99"/>
+      <source>&amp;Next</source>
+      <translation>&amp;Tovább</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="116"/>
-        <source>&amp;Finished</source>
-        <translation>&amp;Kész</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="116"/>
+      <source>&amp;Finished</source>
+      <translation>&amp;Kész</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="139"/>
-        <source>&amp;Cancel</source>
-        <translation>&amp;Mégse</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="139"/>
+      <source>&amp;Cancel</source>
+      <translation>&amp;Mégse</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="168"/>
-        <source>Note folder</source>
-        <translation>Jegyzet mappa</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="168"/>
+      <source>Note folder</source>
+      <translation>Jegyzet mappa</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="184"/>
-        <source>Create note folder if not existing</source>
-        <translation>Hozzon létre egy jegyzetmappát, ha nincs még</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="184"/>
+      <source>Create note folder if not existing</source>
+      <translation>Hozzon létre egy jegyzetmappát, ha nincs még</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="225"/>
-        <source>Note folder path</source>
-        <translation>Jegyzet mappa elérési útja</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="225"/>
+      <source>Note folder path</source>
+      <translation>Jegyzet mappa elérési útja</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="232"/>
-        <source>Select folder</source>
-        <translation>Mappa kijelölése</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="232"/>
+      <source>Select folder</source>
+      <translation>Mappa kijelölése</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="307"/>
-        <source>Open ownCloud settings</source>
-        <translation>OwnCloud &amp;beállítások megnyitása</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="307"/>
+      <source>Open ownCloud settings</source>
+      <translation>OwnCloud &amp;beállítások megnyitása</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="349"/>
-        <source>Open network settings</source>
-        <translation>Nyissa meg a hálózati &amp;beállításokat</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="349"/>
+      <source>Open network settings</source>
+      <translation>Nyissa meg a hálózati &amp;beállításokat</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="194"/>
-        <source>Please select where you want to store your notes:</source>
-        <translation>Kérjük, válassza ki, hol szeretné tárolni a jegyzeteit:</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="194"/>
+      <source>Please select where you want to store your notes:</source>
+      <translation>Kérjük, válassza ki, hol szeretné tárolni a jegyzeteit:</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="284"/>
-        <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-        <translation>Ha szeretné elérni a jegyzet változatokat és törölt jegyzeteket az ownCloud kiszolgálóján, most konfigurálhatja ezt a QOwnNotes-on. Megteheti ezt később is.</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="284"/>
+      <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
+      <translation>Ha szeretné elérni a jegyzet változatokat és törölt jegyzeteket az ownCloud kiszolgálóján, most konfigurálhatja ezt a QOwnNotes-on. Megteheti ezt később is.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="314"/>
-        <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-        <translation>Minden esetben szükséges szinkrozinálni az ownCloud sync klienst (vagy bármely más szinkronizálási klienst), hogy szinkronizálhassa jegyzeteit ownCloud kiszolgálójával.</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="314"/>
+      <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
+      <translation>Minden esetben szükséges szinkrozinálni az ownCloud sync klienst (vagy bármely más szinkronizálási klienst), hogy szinkronizálhassa jegyzeteit ownCloud kiszolgálójával.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.ui" line="356"/>
-        <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-        <translation>QOwnNotes követi a névtelen használat adatot, amely segít eldönteni, hogy a QOwnNotes melyik részeit javítsjuk tovább és hogy találjunk és megszereljünk hibákat. Letilthatja ezt a funkciót a beállításoknál.</translation>
+      <location filename="../dialogs/welcomedialog.ui" line="356"/>
+      <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
+      <translation>QOwnNotes követi a névtelen használat adatot, amely segít eldönteni, hogy a QOwnNotes melyik részeit javítsjuk tovább és hogy találjunk és megszereljünk hibákat. Letilthatja ezt a funkciót a beállításoknál.</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="77"/>
-        <source>Cannot create note path!</source>
-        <translation>Jegyzet hozzáférés nem létesíthetö!</translation>
+      <location filename="../dialogs/welcomedialog.cpp" line="77"/>
+      <source>Cannot create note path!</source>
+      <translation>Jegyzet hozzáférés nem létesíthetö!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="82"/>
-        <source>This note path doesn&apos;t exist!</source>
-        <translation>A jegyzet elérési út hiányzik!</translation>
+      <location filename="../dialogs/welcomedialog.cpp" line="82"/>
+      <source>This note path doesn't exist!</source>
+      <translation>A jegyzet elérési út hiányzik!</translation>
     </message>
     <message>
-        <location filename="../dialogs/welcomedialog.cpp" line="149"/>
-        <source>Please select the folder where your notes will get stored to</source>
-        <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
+      <location filename="../dialogs/welcomedialog.cpp" line="149"/>
+      <source>Please select the folder where your notes will get stored to</source>
+      <translation>Kérjük, válassza ki a mappát, ahol a jegyzeteket tárolni kívánja</translation>
     </message>
-</context>
+  </context>
 </TS>
