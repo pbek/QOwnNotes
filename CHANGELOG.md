@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 16.12.12
+- the foreground and background color of the note text edit will now be taken
+  from the *Text preset* highlighting item, so you can use dark highlighting 
+  schemas even if you are not in dark mode
+  (for [Issue #429](https://github.com/pbek/QOwnNotes/issues/429))
+    - its now also possible to override these colors in a script if you 
+      specify the css selector, for example with
+      `script.addStyleSheet("QTextEdit#noteTextEdit {background-color: red;}");`
+
 ## 16.12.11
 - added a link to the **new documentation** at
   [docs.qownnotes.org](http://docs.qownnotes.org) to the scripting settings

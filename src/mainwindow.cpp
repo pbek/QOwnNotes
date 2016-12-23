@@ -66,6 +66,7 @@
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <dialogs/actiondialog.h>
 #include <dialogs/tabledialog.h>
+#include <utils/schema.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -164,6 +165,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // read the settings (shortcuts have to be defined before that)
     readSettings();
+
+    // do a bit more styling
+    initStyling();
 
     // initialize the scripting engine
     initScriptingEngine();
@@ -331,9 +335,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // we need to disallow this explicitly under Windows
     // so that the MainWindow gets the event
     ui->noteTextEdit->setAcceptDrops(false);
-
-    // do a bit more styling
-    initStyling();
 
     // act on position clicks in the navigation widget
     QObject::connect(ui->navigationWidget, SIGNAL(positionClicked(int)),
@@ -1092,7 +1093,8 @@ void MainWindow::toggleDistractionFreeMode() {
 void MainWindow::initStyling() {
     QSettings settings;
     bool darkMode = settings.value("darkMode").toBool();
-    QString colorName;
+    QString appStyleSheet;
+    QString noteTagFrameColorName;
 
     // turn on the dark mode if enabled
     if (darkMode) {
@@ -1102,31 +1104,37 @@ void MainWindow::initStyling() {
         } else {
             f.open(QFile::ReadOnly | QFile::Text);
             QTextStream ts(&f);
-            qApp->setStyleSheet(ts.readAll());
+            appStyleSheet = ts.readAll();
         }
 
         // QTextEdit background color of qdarkstyle
-        colorName = "#201F1F";
+        noteTagFrameColorName = "#201F1F";
     } else {
         QPalette palette;
         QColor color = palette.color(QPalette::Base);
-        colorName = color.name();
+        noteTagFrameColorName = color.name();
     }
 
-    QString textEditStyling = QString("QTextEdit {background-color: %1;}")
-            .arg(colorName);
+    // get the color name of the background color of the default text
+    // highlighting item
+    QString fgColorName = Utils::Schema::getForegroundColor(
+            MarkdownHighlighter::HighlighterState::NoState).name();
+    QString bgColorName = Utils::Schema::getBackgroundColor(
+            MarkdownHighlighter::HighlighterState::NoState).name();
 
-    ui->noteTextEdit->setStyleSheet(
-            ui->noteTextEdit->styleSheet() + textEditStyling);
+    // set the foreground and background color for the note text edits
+    appStyleSheet += QString("QTextEdit#noteTextEdit,"
+                                     "QTextEdit#encryptedNoteTextEdit"
+                                              "{color: %1;"
+                                              "background-color: %2;}")
+            .arg(fgColorName, bgColorName);
 
-    ui->encryptedNoteTextEdit->setStyleSheet(
-            ui->encryptedNoteTextEdit->styleSheet() + textEditStyling);
+    // set the background color for the note tag frame and its children QFrames
+    appStyleSheet += QString("QFrame#noteTagFrame, QFrame#noteTagFrame QFrame "
+                                     "{background-color: %1;}").arg(
+            noteTagFrameColorName);
 
-    QString frameStyling = QString("QFrame {background-color: %1;}")
-            .arg(colorName);
-
-    ui->noteTagFrame->setStyleSheet(
-            ui->noteTagFrame->styleSheet() + frameStyling);
+    qApp->setStyleSheet(appStyleSheet);
 
     if (!isInDistractionFreeMode()) {
         ui->noteTextEdit->setPaperMargins(0);
