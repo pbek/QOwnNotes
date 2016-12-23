@@ -8,10 +8,10 @@
     - it's now also possible to override these colors in a script if you 
       specify the css selector, for example with
       `script.addStyleSheet("QTextEdit#noteTextEdit {background-color: red;}");`
-- the automatic bracket-closing of the `*` character is now disabled when used
-  in markdown lists that start with a `* `
+- the automatic bracket-closing of the `*` character now also works if used in
+  markdown lists that start with a `* ` and when used in normal text at the 
+  start of the line after the 2nd `*`
   (for [Issue #428](https://github.com/pbek/QOwnNotes/issues/428))
-    - in all other cases it should now work as intended
 
 ## 16.12.11
 - added a link to the **new documentation** at
