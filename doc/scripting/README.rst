@@ -1,6 +1,7 @@
 QOwnNotes Scripting
 ===================
 
+-  QOwnNotes scripts consist basically of JavaScript embedded in QML files.
 -  Take a look at the `example scripts <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting>`__
    to get started fast.
 -  If you need access to a certain functionality in QOwnNotes or have
