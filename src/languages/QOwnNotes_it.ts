@@ -1437,9 +1437,9 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <location filename="../mainwindow.cpp" line="8380"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n carattere</numerusform>
+        <numerusform>%n caratteri</numerusform>
       </translation>
     </message>
     <message>
@@ -1984,12 +1984,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="2385"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Numeri di riga</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2395"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Fare clic qui per vedere cosa è cambiato e per aggiornare all'ultima versione</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2784"/>
@@ -3076,12 +3076,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>Prestare attenzione: l'app delle note di ownCloud non supporta le sotto-cartelle!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="712"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Usa le sotto-cartelle delle note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="800"/>
@@ -3984,7 +3984,7 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="298"/>
       <source>Reload...</source>
-      <translation type="unfinished">Reload...</translation>
+      <translation>Ricarica...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -3994,22 +3994,22 @@ Le proprie note non verranno modificate!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="123"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Ricarica dal server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Ricarica i compiti dal server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="132"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Svuota la cache e ricarica</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="136"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Svuota la cache del calendario e ricarica i compiti dal server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="572"/>

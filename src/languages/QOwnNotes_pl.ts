@@ -1451,10 +1451,10 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
       <location filename="../mainwindow.cpp" line="8380"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n znak</numerusform>
+        <numerusform>%n znaki</numerusform>
+        <numerusform>%n znaków</numerusform>
       </translation>
     </message>
     <message>
@@ -2006,12 +2006,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="2385"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Numery linii</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2395"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Kliknij tutaj, aby zobaczyć, co się zmieniło i aby móc zaktualizować do najnowszej wersji</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2784"/>
@@ -3102,12 +3102,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>Należy pamiętać, że aplikacja Notatki ownCloud nie obsługuje podkatalogów!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="712"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Używaj podfolderów notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="800"/>
@@ -4009,7 +4009,7 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="298"/>
       <source>Reload...</source>
-      <translation type="unfinished">Reload...</translation>
+      <translation>Wczytaj ponownie…</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -4019,22 +4019,22 @@ Twoje notatki pozostaną nietknięte!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="123"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Wczytaj ponownie z serwera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Wczytaj ponownie zadania z serwera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="132"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Wyczyść pamięć podręczną i załaduj ponownie</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="136"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Wyczyść pamięć podręczną kalendarza i wczytaj ponownie zadania z serwera</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="572"/>

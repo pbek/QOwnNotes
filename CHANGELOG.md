@@ -12,6 +12,8 @@
   markdown lists that start with a `* ` and when used in normal text at the 
   start of the line after the 2nd `*`
   (for [Issue #428](https://github.com/pbek/QOwnNotes/issues/428))
+- added more Dutch, Hungarian, Italian and Polish translation (thank you
+  Fabijenna, Leime, mlocati and lucjan)
 
 ## 16.12.11
 - added a link to the **new documentation** at

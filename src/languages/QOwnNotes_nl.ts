@@ -1437,9 +1437,9 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../mainwindow.cpp" line="8380"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n teken</numerusform>
+        <numerusform>%n tekens</numerusform>
       </translation>
     </message>
     <message>
@@ -1565,7 +1565,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../mainwindow.cpp" line="483"/>
       <location filename="../mainwindow.cpp" line="5869"/>
       <source>Note folder</source>
-      <translation>Notitie map</translation>
+      <translation>Notitiemap</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6701"/>
@@ -1984,12 +1984,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="2385"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Regelnummers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2395"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Klik hier om te zien wat er veranderd is en om bij te werken naar de nieuwste versie</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2784"/>

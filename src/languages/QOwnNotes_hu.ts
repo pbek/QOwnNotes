@@ -1437,9 +1437,9 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="8380"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n karakter</numerusform>
+        <numerusform>%n karakter</numerusform>
       </translation>
     </message>
     <message>
@@ -1984,12 +1984,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="2385"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Sorszám</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2395"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Kattintson ide, hogy lássa, mi változott, és ahhoz, hogy frissítse a legújabb verzióra</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2784"/>
