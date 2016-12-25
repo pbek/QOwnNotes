@@ -7,6 +7,7 @@
 - bold markdown tags will now also be closed at the beginning of a line after
   the 2nd `*` was entered (because after the first `*` it could still be a list)
   (for [Issue #428](https://github.com/pbek/QOwnNotes/issues/428))
+- added more Spanish translation (thank you richarson)
  
 ## 16.12.12
 - the foreground and background color of the note text edit will now be taken
