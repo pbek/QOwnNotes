@@ -4,7 +4,10 @@
 - note links like `<my note.md>` will now only be translated to real note 
   links in the preview if the linked note was found in the current note folder
   (for [Issue #433](https://github.com/pbek/QOwnNotes/issues/433))
-
+- bold markdown tags will now also be closed at the beginning of a line after
+  the 2nd `*` was entered (because after the first `*` it could still be a list)
+  (for [Issue #428](https://github.com/pbek/QOwnNotes/issues/428))
+ 
 ## 16.12.12
 - the foreground and background color of the note text edit will now be taken
   from the *Text preset* highlighting item, so you can use dark highlighting 
