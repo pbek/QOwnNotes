@@ -1297,13 +1297,16 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     // this is a "has not '\w+:\/\/' in it" regular expression
     // see: http://stackoverflow.com/questions/406230/regular-expression-to-match-line-that-doesnt-contain-a-word
     QRegularExpressionMatchIterator i =
-            QRegularExpression("<(((?!\\w+:\\/\\/).)+)>").globalMatch(str);
+            QRegularExpression("<(((?!\\w+:\\/\\/)[^<>])+)>").globalMatch(str);
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileLink = match.captured(1);
         QString noteUrl = Note::getNoteURLFromFileName(fileLink);
 
-        if (!noteUrl.isEmpty()) {
+        // try to load the note to check if it really exists
+        Note note = Note::fetchByFileName(fileLink);
+
+        if (!noteUrl.isEmpty() && note.exists()) {
             str.replace(match.captured(0),
                         "[" + fileLink + "](" + noteUrl + ")");
         }
@@ -1311,14 +1314,17 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
     // try to replace file links like [my note](my-note.md) to note links
     i = QRegularExpression(
-            "\\[(.+?)\\]\\((((?!\\w+:\\/\\/).)+)\\)").globalMatch(str);
+            "\\[(.+?)\\]\\((((?!\\w+:\\/\\/)[^<>])+)\\)").globalMatch(str);
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileText = match.captured(1);
         QString fileLink = match.captured(2);
         QString noteUrl = Note::getNoteURLFromFileName(fileLink);
 
-        if (!noteUrl.isEmpty()) {
+        // try to load the note to check if it really exists
+        Note note = Note::fetchByFileName(fileLink);
+
+        if (!noteUrl.isEmpty() && note.exists()) {
             str.replace(match.captured(0),
                         "[" + fileText + "](" + noteUrl + ")");
         }
