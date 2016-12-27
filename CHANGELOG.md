@@ -3,6 +3,9 @@
 ## 16.12.14
 - fixed a highlighting problem with normal text between bold formatted markdown 
   texts (for [Issue #431](https://github.com/pbek/QOwnNotes/issues/431))
+- now a `¶` character, followed by a new line is used instead of a `\n` to
+  signal a line break in the diffs of the note versions dialog
+  (for [Issue #435](https://github.com/pbek/QOwnNotes/issues/435))
 
 ## 16.12.13
 - note links like `<my note.md>` will now only be translated to real note 

@@ -81,6 +81,7 @@ VersionDialog::VersionDialog(QJSValue versions, MainWindow *mainWindow,
         diffHtml.replace("<del>",
                          "<span style='background-color: rgb(255, 215, 215)'>");
         diffHtml.replace("</del>", "</span>");
+        diffHtml.replace("\\n", "&para;<br />");
         diffHtml.replace("\n", "<br />");
 
         ui->versionListWidget->addItem(itemName);
