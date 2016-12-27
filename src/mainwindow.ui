@@ -721,6 +721,8 @@ p, li { white-space: pre-wrap; }
      <string>&amp;Edit</string>
     </property>
     <addaction name="action_DuplicateText"/>
+    <addaction name="actionDelete_line"/>
+    <addaction name="actionDelete_word"/>
     <addaction name="separator"/>
     <addaction name="action_Find_text_in_note"/>
     <addaction name="actionReplace_in_current_note"/>
@@ -1881,6 +1883,22 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+W</string>
+   </property>
+  </action>
+  <action name="actionDelete_line">
+   <property name="text">
+    <string>Delete line</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Backspace</string>
+   </property>
+  </action>
+  <action name="actionDelete_word">
+   <property name="text">
+    <string>Delete word</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Backspace</string>
    </property>
   </action>
  </widget>

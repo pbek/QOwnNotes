@@ -426,6 +426,10 @@ private slots:
 
     void noteEditCursorPositionChanged();
 
+    void on_actionDelete_line_triggered();
+
+    void on_actionDelete_word_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

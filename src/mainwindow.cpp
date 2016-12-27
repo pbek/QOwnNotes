@@ -90,6 +90,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // disable icons in the menu that weren't handled by
     // Qt::AA_DontShowIconsInMenus
     ui->actionShare_note->setIconVisibleInMenu(false);
+
+    // set an other shortcut for delete line under macOS
+    ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
 #endif
 
     _noteViewIsRegenerated = false;
@@ -8392,4 +8395,22 @@ void MainWindow::noteEditCursorPositionChanged() {
             QString::number(cursor.positionInBlock() + 1);
 
     _noteEditLineNumberLabel->setText(text);
+}
+
+/**
+ * Deletes a line in the active note text edit
+ */
+void MainWindow::on_actionDelete_line_triggered() {
+    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    cursor.select(QTextCursor::BlockUnderCursor);
+    QString selectedText = cursor.selectedText();
+    if (selectedText.isEmpty()) {
+        cursor.deletePreviousChar();
+    } else {
+        cursor.removeSelectedText();
+    }
+}
+
+void MainWindow::on_actionDelete_word_triggered() {
+
 }

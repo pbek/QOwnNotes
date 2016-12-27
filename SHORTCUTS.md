@@ -53,6 +53,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>Ctrl</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Down</kbd> does the same
+- <kbd>Alt</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>Ctrl</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>Ctrl</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
@@ -140,6 +141,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>R</kbd> lets you search and replace in the current note
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
+- <kbd>⌘</kbd> + <kbd>Backspace</kbd> deletes the current line
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)

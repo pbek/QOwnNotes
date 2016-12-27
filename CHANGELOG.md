@@ -6,6 +6,9 @@
 - now a `¶` character, followed by a new line is used instead of a `\n` to
   signal a line break in the diffs of the note versions dialog
   (for [Issue #435](https://github.com/pbek/QOwnNotes/issues/435))
+- you can now delete the current line in the note text edit with <kbd>Alt</kbd>
+  + <kbd>Backspace</kbd> (or <kbd>⌘</kbd> + <kbd>Backspace</kbd> under macOS)
+  (for [Issue #434](https://github.com/pbek/QOwnNotes/issues/434))
 
 ## 16.12.13
 - note links like `<my note.md>` will now only be translated to real note 
