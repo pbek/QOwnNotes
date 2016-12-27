@@ -8,7 +8,11 @@
   (for [Issue #435](https://github.com/pbek/QOwnNotes/issues/435))
 - you can now delete the current line in the note text edit with <kbd>Alt</kbd>
   + <kbd>Backspace</kbd> (or <kbd>⌘</kbd> + <kbd>Backspace</kbd> under macOS)
-  (for [Issue #434](https://github.com/pbek/QOwnNotes/issues/434))
+  (for [Issue #434](https://github.com/pbek/QOwnNotes/issues/434) and
+  [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
+- you can now delete the current word in the note text edit with <kbd>Ctrl</kbd>
+  + <kbd>Backspace</kbd> (or <kbd>Alt</kbd> + <kbd>Backspace</kbd> under macOS)
+  (for [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
 
 ## 16.12.13
 - note links like `<my note.md>` will now only be translated to real note 

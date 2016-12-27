@@ -93,6 +93,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // set an other shortcut for delete line under macOS
     ui->actionDelete_line->setShortcut(QKeySequence("Ctrl+Backspace"));
+    ui->actionDelete_word->setShortcut(QKeySequence("Alt+Backspace"));
 #endif
 
     _noteViewIsRegenerated = false;
@@ -8398,7 +8399,7 @@ void MainWindow::noteEditCursorPositionChanged() {
 }
 
 /**
- * Deletes a line in the active note text edit
+ * Deletes the current line in the active note text edit
  */
 void MainWindow::on_actionDelete_line_triggered() {
     QTextCursor cursor = activeNoteTextEdit()->textCursor();
@@ -8411,6 +8412,16 @@ void MainWindow::on_actionDelete_line_triggered() {
     }
 }
 
+/**
+ * Deletes the current word in the active note text edit
+ */
 void MainWindow::on_actionDelete_word_triggered() {
-
+    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    cursor.select(QTextCursor::WordUnderCursor);
+    QString selectedText = cursor.selectedText();
+    if (selectedText.isEmpty()) {
+        cursor.deletePreviousChar();
+    } else {
+        cursor.removeSelectedText();
+    }
 }
