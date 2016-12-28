@@ -7,6 +7,8 @@
 - you will now get a dialog to restart the application if you have modified a 
   setting in the settings dialog that requests a restart
 - added the application arguments to the output in the debug settings
+- added more Dutch, Hungarian, Italian, Spanish and Polish translation 
+  (thank you Fabijenna, mlocati, richarson and lucjan)
 
 ## 16.12.14
 - fixed a highlighting problem with normal text between bold formatted markdown 
