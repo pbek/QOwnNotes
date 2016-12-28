@@ -741,4 +741,6 @@ private:
     void assignColorToSelectedTagItems();
 
     void handleNoteTreeTagColoringForNote(const Note &note);
+
+    bool showRestartNotificationIfNeeded();
 };

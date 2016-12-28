@@ -23,6 +23,7 @@
 #include <QFileDialog>
 #include <QKeyEvent>
 #include <QDesktopServices>
+#include <utils/misc.h>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -43,6 +44,19 @@ FontColorWidget::FontColorWidget(QWidget *parent) :
 
     // initialize the font selectors
 //    initFontSelectors();
+
+    // declare that we need to restart the application if certain settings
+    // are changed
+    connect(ui->colorSchemeComboBox, SIGNAL(currentIndexChanged(int)),
+            this, SLOT(needRestart()));
+    connect(ui->foregroundColorCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->backgroundColorCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->foregroundColorButton, SIGNAL(clicked()),
+            this, SLOT(needRestart()));
+    connect(ui->backgroundColorButton, SIGNAL(clicked()),
+            this, SLOT(needRestart()));
 }
 
 /**
@@ -719,4 +733,11 @@ void FontColorWidget::on_fontSizeAdaptionSpinBox_valueChanged(int value) {
  */
 void FontColorWidget::on_shareSchemaPushButton_clicked() {
     QDesktopServices::openUrl(QUrl("https://github.com/pbek/QOwnNotes/issues"));
+}
+
+/**
+ * Declares that we need a restart
+ */
+void FontColorWidget::needRestart() {
+    Utils::Misc::needRestart();
 }

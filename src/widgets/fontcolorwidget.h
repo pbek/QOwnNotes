@@ -63,6 +63,8 @@ private slots:
 
     void on_shareSchemaPushButton_clicked();
 
+    void needRestart();
+
 private:
     Ui::FontColorWidget *ui;
     QStringList _defaultSchemaKeys;

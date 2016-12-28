@@ -20,6 +20,7 @@
 #include <QDebug>
 #include <QTime>
 #include <QCoreApplication>
+#include <QApplication>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -533,4 +534,22 @@ QString Utils::Misc::transformLineFeeds(QString text) {
 QString Utils::Misc::replaceOwnCloudText(QString text, bool useShortText) {
     QString replaceText = useShortText ? "oC / NC" : "ownCloud / Nextcloud";
     return text.replace("ownCloud", replaceText, Qt::CaseInsensitive);
+}
+
+/**
+ * Declares that we need a restart
+ */
+void Utils::Misc::needRestart() {
+    qApp->setProperty("needsRestart", true);
+}
+
+/**
+ * Restarts the application
+ */
+void Utils::Misc::restartApplication() {
+    QStringList parameters = QApplication::arguments();
+    QString appPath = parameters.takeFirst();
+
+    startDetachedProcess(appPath, parameters);
+    QApplication::quit();
 }

@@ -201,6 +201,8 @@ private slots:
 
     void noteNotificationNoneCheckBoxCheck();
 
+    void needRestart();
+
 private:
 
     Ui::SettingsDialog *ui;

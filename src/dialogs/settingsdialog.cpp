@@ -143,6 +143,21 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 
     // replace the "ownCloud" text by "ownCloud / NextCloud"
     replaceOwnCloudText();
+
+    // declare that we need to restart the application if certain settings
+    // are changed
+    connect(ui->languageListWidget, SIGNAL(itemSelectionChanged()),
+            this, SLOT(needRestart()));
+    connect(ui->internalIconThemeCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->darkModeTrayIconCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->darkModeColorsCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->darkModeCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
+    connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)),
+            this, SLOT(needRestart()));
 }
 
 /**
@@ -2746,4 +2761,11 @@ void SettingsDialog::on_clearLogFileButton_clicked() {
             this, tr("Log file cleared"),
             tr("The log file <strong>%1</strong> was cleared"".").arg(
                     Utils::Misc::logFilePath()));
+}
+
+/**
+ * Declares that we need a restart
+ */
+void SettingsDialog::needRestart() {
+    Utils::Misc::needRestart();
 }

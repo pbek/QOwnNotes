@@ -3798,6 +3798,11 @@ void MainWindow::openSettingsDialog(int page) {
 //    delete(_settingsDialog);
 //    _settingsDialog = Q_NULLPTR;
 
+    // shows a restart application notification if needed
+    if (showRestartNotificationIfNeeded()) {
+        return;
+    }
+
     // make sure no settings get written after after we got the
     // clearAppDataAndExit call
     if (qApp->property("clearAppDataAndExit").toBool()) {
@@ -3824,6 +3829,44 @@ void MainWindow::openSettingsDialog(int page) {
 
     // load the note list again in case the setting on the note name has changed
     loadNoteDirectoryList();
+}
+
+/**
+ * Shows a restart application notification if needed
+ *
+ * @return true if the applications is restarting
+ */
+bool MainWindow::showRestartNotificationIfNeeded() {
+    bool needsRestart = qApp->property("needsRestart").toBool();
+
+    if (!needsRestart) {
+        return false;
+    }
+
+    qApp->setProperty("needsRestart", false);
+    QString title = tr("Restart application");
+    bool singleApplication = qApp->property("singleApplication").toBool();
+
+    if (singleApplication) {
+        QMessageBox::information(
+                this, title,
+                tr("You may need to restart the application manually to let "
+                           "the changes take effect."));
+    } else {
+        if (QMessageBox::information(
+                this, title,
+                tr("You may need to restart the application to let the changes "
+                           "take effect."),
+                tr("Restart"),
+                tr("Cancel"),
+                QString::null, 0, 1) == 0) {
+            storeSettings();
+            Utils::Misc::restartApplication();
+            return true;
+        }
+    }
+
+    return false;
 }
 
 /**
