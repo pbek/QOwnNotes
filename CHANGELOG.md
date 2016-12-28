@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 16.12.15
+- fixed a highlighting problem with italic tags at the start of an ordered 
+  list, that starts with a `*`, like `* *italic*`
+  (for [Issue #431](https://github.com/pbek/QOwnNotes/issues/431))
+
 ## 16.12.14
 - fixed a highlighting problem with normal text between bold formatted markdown 
   texts (for [Issue #431](https://github.com/pbek/QOwnNotes/issues/431))
