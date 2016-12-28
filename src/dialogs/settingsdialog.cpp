@@ -1001,6 +1001,8 @@ void SettingsDialog::outputSettings() {
                                           settings.fileName());
     output += prepareDebugInformationLine("Application database path",
             QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()));
+    output += prepareDebugInformationLine("Application arguments",
+            QApplication::arguments().join("`, `"));
 
     QString debug = "0";
 #ifdef QT_DEBUG

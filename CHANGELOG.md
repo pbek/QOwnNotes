@@ -6,6 +6,7 @@
   (for [Issue #431](https://github.com/pbek/QOwnNotes/issues/431))
 - you will now get a dialog to restart the application if you have modified a 
   setting in the settings dialog that requests a restart
+- added the application arguments to the output in the debug settings
 
 ## 16.12.14
 - fixed a highlighting problem with normal text between bold formatted markdown 
