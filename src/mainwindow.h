@@ -743,4 +743,6 @@ private:
     void handleNoteTreeTagColoringForNote(const Note &note);
 
     bool showRestartNotificationIfNeeded();
+
+    void unsetCurrentNote();
 };

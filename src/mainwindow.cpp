@@ -3602,18 +3602,8 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 this->noteDirectoryWatcher.removePath(note.fullNoteFilePath());
 
                 if (note.getId() == currentNote.getId()) {
-                    // reset the current note
-                    this->currentNote = Note();
-
-                    // clear the note text edit
-                    const QSignalBlocker blocker2(ui->noteTextEdit);
-                    Q_UNUSED(blocker2);
-                    ui->noteTextEdit->clear();
-
-                    // clear the encrypted note text edit
-                    const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
-                    Q_UNUSED(blocker3);
-                    ui->encryptedNoteTextEdit->clear();
+                    // unset the current note
+                    unsetCurrentNote();
                 }
 
                 // move note
@@ -3627,6 +3617,24 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 
         loadNoteDirectoryList();
     }
+}
+
+/**
+ * Unsets the current note
+ */
+void MainWindow::unsetCurrentNote() {
+    // reset the current note
+    currentNote = Note();
+
+    // clear the note text edit
+    const QSignalBlocker blocker2(ui->noteTextEdit);
+    Q_UNUSED(blocker2);
+    ui->noteTextEdit->clear();
+
+    // clear the encrypted note text edit
+    const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
+    Q_UNUSED(blocker3);
+    ui->encryptedNoteTextEdit->clear();
 }
 
 /**
@@ -6831,6 +6839,11 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
 
                 if (!note.isFetched()) {
                     continue;
+                }
+
+                if (note.getId() == currentNote.getId()) {
+                    // unset the current note
+                    unsetCurrentNote();
                 }
 
                 // move note
