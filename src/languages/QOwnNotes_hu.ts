@@ -1293,22 +1293,22 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Indítsa újra az alkalmazást</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3853"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Szükség lehet az alkalmazás manuális újraindítására a módosítások érvénybe léptetéséhez.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3858"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>A változások érvénybe lépéséhez szükséges lehet újraindítani az alkalmazást.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3860"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Újból indít</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4081"/>

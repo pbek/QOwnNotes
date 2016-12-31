@@ -4,6 +4,8 @@
 - when the current note is moved to a different note sub-folder the current note
   will now be unset, like when it is moved to a different note folder
   (for [Issue #446](https://github.com/pbek/QOwnNotes/issues/446))
+- added more French, Dutch, Hungarian and Italian translation (thank you
+  lepascalou, Fabijenna and mlocati)
 
 ## 16.12.15
 - fixed a highlighting problem with italic tags at the start of an ordered 

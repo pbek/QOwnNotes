@@ -1293,22 +1293,22 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Riavviare l'applicazione</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3853"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Potrebbe essere necessario riavviare l'applicazione manualmente per rendere effettive le modifiche.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3858"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Potrebbe essere necessario riavviare l'applicazione per rendere effettive le modifiche.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3860"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Riavvia</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4081"/>

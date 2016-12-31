@@ -907,23 +907,23 @@
     <message>
       <location filename="../mainwindow.ui" line="1874"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Insérer une &amp;citation</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1882"/>
       <location filename="../mainwindow.cpp" line="4920"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Rechercher le texte sur le web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Supprimer la ligne</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1898"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Supprimer le mot</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1492"/>
@@ -1294,22 +1294,22 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Redémarrer l'application</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3853"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Vous devrez peut-être redémarrer manuellement le programme pour que les modifications soient appliquées.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3858"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Vous devrez peut-être redémarrer le programme pour que les modifications soient appliquées.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3860"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Redémarrer</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4081"/>
@@ -1468,9 +1468,9 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
       <location filename="../mainwindow.cpp" line="8435"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n caractère</numerusform>
+        <numerusform>%n caractères</numerusform>
       </translation>
     </message>
     <message>
@@ -2016,12 +2016,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="2397"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Nombre de lignes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2407"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Cliquer ici pour voir ce qui a changé et pour pouvoir mettre à jour vers la dernière version</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2796"/>
@@ -3109,12 +3109,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>Attention, l'application ownCloud ne supporte pas les sous-dossiers !</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="712"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Utiliser les sous-dossiers</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="800"/>
@@ -3604,12 +3604,12 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2033"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Pour un démarrage rapide, veuillez lire la &lt;a href="%1"&gt;documentation pour l'écriture de scripts&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Si vous souhaitez l'accès à une certaine fonctionnalité dans QOwnNotes veuillez ouvrir un sujet sur la &lt;a href="%1"&gt;page QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2046"/>
@@ -4014,7 +4014,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="298"/>
       <source>Reload...</source>
-      <translation type="unfinished">Reload...</translation>
+      <translation>Recharger...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -4024,22 +4024,22 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="123"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Recharger depuis le serveur</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Recharger les tâches depuis le serveur</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="132"/>
       <source>Clear cache and reload</source>
-      <translation type="unfinished">Clear cache and reload</translation>
+      <translation>Vider le cache et recharger</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="136"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Vider le cache du calendrier et recharger les tâches depuis le serveur</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="572"/>
