@@ -7536,6 +7536,12 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
                 // reload the directory list if note name has changed
 //                loadNoteDirectoryList();
+
+                // sort notes if note name has changed
+                if (sortAlphabetically) {
+                    ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+                    ui->noteTreeWidget->scrollToItem(item);
+                }
             }
         }
 
