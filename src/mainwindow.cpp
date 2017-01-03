@@ -1522,19 +1522,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
         // we have to unset the current note otherwise it might show up after
         // switching to an other note folder
-        currentNote = Note();
+        unsetCurrentNote();
 
         buildNotesIndexAndLoadNoteDirectoryList();
-
-        const QSignalBlocker blocker(this->ui->noteTextEdit);
-        {
-            Q_UNUSED(blocker);
-            ui->noteTextEdit->clear();
-            ui->noteTextEdit->show();
-            ui->encryptedNoteTextEdit->hide();
-        }
-
-        this->ui->noteTextView->clear();
 
         // update the current folder tooltip
         updateCurrentFolderTooltip();
@@ -1671,12 +1661,6 @@ void MainWindow::loadNoteDirectoryList() {
             addNoteToNoteTreeWidget(note);
         }
 
-    // clear the text edits if there are no notes
-    if (noteList.isEmpty()) {
-        ui->noteTextEdit->clear();
-        ui->noteTextView->clear();
-    }
-
     int itemCount = noteList.count();
     MetricsService::instance()->sendEventIfEnabled(
             "note/list/loaded",
@@ -1698,6 +1682,11 @@ void MainWindow::loadNoteDirectoryList() {
 
     // generate the tray context menu
     generateSystemTrayContextMenu();
+
+    // clear the text edits if there is no visible note
+    if (firstVisibleNoteTreeWidgetItem() == Q_NULLPTR) {
+        unsetCurrentNote();
+    }
 }
 
 /**
@@ -2880,10 +2869,9 @@ void MainWindow::setCurrentNote(Note note,
     QString name = note.getName();
     updateWindowTitle();
 
-    // set the note text edit to readonly if note file is not writable
-    QFileInfo *f = new QFileInfo(note.fullNoteFilePath());
-    ui->noteTextEdit->setReadOnly(!f->isWritable());
-    ui->encryptedNoteTextEdit->setReadOnly(!f->isWritable());
+    // set the note text edit to readonly if the note does not exist or the
+    // note file is not writable
+    setNoteTextEditReadOnly(!(note.exists() && note.fileWriteable()));
 
     // find and set the current item
     if (updateSelectedNote) {
@@ -2927,6 +2915,16 @@ void MainWindow::setCurrentNote(Note note,
 //           1);
 
     noteEditCursorPositionChanged();
+}
+
+/**
+ * Sets the readonly state of the note text edits
+ *
+ * @param readonly
+ */
+void MainWindow::setNoteTextEditReadOnly(bool readonly) const {
+    ui->noteTextEdit->setReadOnly(readonly);
+    ui->encryptedNoteTextEdit->setReadOnly(readonly);
 }
 
 /**
@@ -2990,10 +2988,7 @@ void MainWindow::removeCurrentNote() {
                 // delete note in database and on file system
                 currentNote.remove(true);
 
-                ui->noteTextEdit->clear();
-                ui->noteTextView->clear();
-                ui->encryptedNoteTextEdit->clear();
-
+                unsetCurrentNote();
                 loadNoteDirectoryList();
             }
 
@@ -3185,17 +3180,13 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
 }
 
 /**
- * Finds the first visible tree widget row
+ * Finds the first visible tree widget item
  */
 QTreeWidgetItem * MainWindow::firstVisibleNoteTreeWidgetItem() {
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
                                QTreeWidgetItemIterator::NotHidden);
 
     return *it;
-//
-//    while (it) {
-//        return *it;
-//    }
 }
 
 /**
@@ -3620,21 +3611,31 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 }
 
 /**
- * Unsets the current note
+ * Un-sets the current note
  */
 void MainWindow::unsetCurrentNote() {
     // reset the current note
     currentNote = Note();
 
+    // clear the note preview
+    const QSignalBlocker blocker(ui->noteTextView);
+    Q_UNUSED(blocker);
+    ui->noteTextView->clear();
+
     // clear the note text edit
     const QSignalBlocker blocker2(ui->noteTextEdit);
     Q_UNUSED(blocker2);
     ui->noteTextEdit->clear();
+    ui->noteTextEdit->show();
 
     // clear the encrypted note text edit
     const QSignalBlocker blocker3(ui->encryptedNoteTextEdit);
     Q_UNUSED(blocker3);
+    ui->encryptedNoteTextEdit->hide();
     ui->encryptedNoteTextEdit->clear();
+
+    // set the note text edits to readonly
+    setNoteTextEditReadOnly(true);
 }
 
 /**

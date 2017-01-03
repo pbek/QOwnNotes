@@ -89,6 +89,8 @@ public:
 
     bool fileExists();
 
+    bool fileWriteable();
+
     bool exists();
 
     bool refetch();

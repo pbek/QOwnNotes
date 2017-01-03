@@ -1162,12 +1162,26 @@ bool Note::deleteAll() {
     }
 }
 
-//
-// checks if file of note exists in the filesystem
-//
+/**
+ * Checks if file of note exists in the filesystem and is readable
+ *
+ * @return bool
+ */
 bool Note::fileExists() {
     QFile file(fullNoteFilePath());
-    return file.exists();
+    QFileInfo fileInfo(file);
+    return file.exists() && fileInfo.isFile() && fileInfo.isReadable();
+}
+
+/**
+ * Checks if file of note exists in the filesystem and is writeable
+ *
+ * @return bool
+ */
+bool Note::fileWriteable() {
+    QFile file(fullNoteFilePath());
+    QFileInfo fileInfo(file);
+    return file.exists() && fileInfo.isFile() && fileInfo.isWritable();
 }
 
 //

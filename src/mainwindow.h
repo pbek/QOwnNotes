@@ -745,4 +745,6 @@ private:
     bool showRestartNotificationIfNeeded();
 
     void unsetCurrentNote();
+
+    void setNoteTextEditReadOnly(bool readonly) const;
 };
