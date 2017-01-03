@@ -2,13 +2,15 @@
 
 ## 17.01.0
 - notes in the note list are now resorted if they were sorted alphabetically 
-  and a note was manually renamed in the note list (thank you @dwu)
-  (for [Issue #450](https://github.com/pbek/QOwnNotes/issues/450))
+  and a note was manually renamed in the note list
+  (for [Issue #450](https://github.com/pbek/QOwnNotes/issues/450), thank you @dwu)
 - improved on setting the note text edit to be readonly if the last note from a 
   note folder or note sub-folder was removed or moved somewhere else or when
   there is no visible note to view
   (for [Issue #446](https://github.com/pbek/QOwnNotes/issues/446))
- 
+- the *Delete word* functionality now matches that of other editors more closely
+  (for [Issue #453](https://github.com/pbek/QOwnNotes/issues/453), thank you @dwu)
+
 ## 16.12.16
 - when the current note is moved to a different note sub-folder the current note
   will now be unset, like when it is moved to a different note folder

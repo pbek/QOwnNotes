@@ -8468,6 +8468,7 @@ void MainWindow::on_actionDelete_line_triggered() {
     QTextCursor cursor = activeNoteTextEdit()->textCursor();
     cursor.select(QTextCursor::BlockUnderCursor);
     QString selectedText = cursor.selectedText();
+
     if (selectedText.isEmpty()) {
         cursor.deletePreviousChar();
     } else {
@@ -8480,11 +8481,10 @@ void MainWindow::on_actionDelete_line_triggered() {
  */
 void MainWindow::on_actionDelete_word_triggered() {
     QTextCursor cursor = activeNoteTextEdit()->textCursor();
-    cursor.select(QTextCursor::WordUnderCursor);
-    QString selectedText = cursor.selectedText();
-    if (selectedText.isEmpty()) {
-        cursor.deletePreviousChar();
-    } else {
-        cursor.removeSelectedText();
+
+    if (cursor.selectedText().isEmpty()) {
+        cursor.movePosition(QTextCursor::PreviousWord, QTextCursor::KeepAnchor);
     }
+
+    cursor.removeSelectedText();
 }
