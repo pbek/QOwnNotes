@@ -942,13 +942,21 @@ void MainWindow::initToolbarMenu() {
 void MainWindow::updatePanelMenu() {
     _panelSignalMapper = new QSignalMapper(this);
     ui->menuPanels->clear();
+    QSettings settings;
 
     Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget *>()) {
             QAction *action = new QAction(this);
+            QString objectName = "togglePanel-" + dockWidget->objectName();
+
             action->setText(tr("Show %1 panel").arg(dockWidget->windowTitle()));
-            action->setObjectName("togglePanel-" + dockWidget->objectName());
+            action->setObjectName(objectName);
             action->setCheckable(true);
             action->setChecked(!dockWidget->isHidden());
+
+            // try to load a key sequence from the settings
+            QKeySequence shortcut = QKeySequence(settings.value(
+                    "Shortcuts/MainWindow-" + objectName).toString());
+            action->setShortcut(shortcut);
 
             QObject::connect(action, SIGNAL(triggered()),
                              _panelSignalMapper, SLOT(map()));
