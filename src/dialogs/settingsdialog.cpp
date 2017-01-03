@@ -832,6 +832,11 @@ void SettingsDialog::loadShortcutSettings() {
 
     // loop through all menus
     foreach(QMenu* menu, menus) {
+            // shortcuts on toolbars don't work yet
+            if (menu->objectName() == "menuToolbars") {
+                continue;
+            }
+
             QTreeWidgetItem *menuItem = new QTreeWidgetItem();
             int actionCount = 0;
 
