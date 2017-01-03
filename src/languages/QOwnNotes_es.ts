@@ -1293,22 +1293,22 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Reiniciar la aplicación</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3853"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Puede que necesites reiniciar la aplicación manualmente para que los cambios se apliquen.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3858"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Puede que necesites reiniciar la aplicación para que los cambios se apliquen.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3860"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Reiniciar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4081"/>

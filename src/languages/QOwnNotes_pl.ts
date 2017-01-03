@@ -1304,22 +1304,22 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Uruchom ponownie aplikację</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3853"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Może być konieczne ręczne ponowne uruchomienie aplikacji aby zmiany zostały zastosowane.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3858"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Może być konieczne ponowne uruchomienie aplikacji aby zmiany zostały zastosowane.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3860"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Uruchom ponownie</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4081"/>

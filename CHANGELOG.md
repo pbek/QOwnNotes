@@ -12,6 +12,7 @@
   (for [Issue #453](https://github.com/pbek/QOwnNotes/issues/453), thank you @dwu)
 - implemented the ability to set shortcuts for panels
   (for [Issue #452](https://github.com/pbek/QOwnNotes/issues/452))
+- added more Spanish and Polish translation (thank you richarson and lucjan)
 
 ## 16.12.16
 - when the current note is moved to a different note sub-folder the current note
