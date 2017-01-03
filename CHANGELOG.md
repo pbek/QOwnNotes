@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.01.0
+- notes in the note list are now resorted if they were sorted alphabetically 
+  and a note was manually renamed in the note list (thank you @dwu)
+  (for [Issue #450](https://github.com/pbek/QOwnNotes/issues/450))
+
 ## 16.12.16
 - when the current note is moved to a different note sub-folder the current note
   will now be unset, like when it is moved to a different note folder
