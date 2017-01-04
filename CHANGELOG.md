@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.01.1
+- you can now enter a custom time format when inserting the current time into
+  a note in the *Editor settings*
+    - take a look at the [time format documentation](http://docs.qownnotes.org/en/develop/time-formats.html)
+      for more information about the available time formats
+
 ## 17.01.0
 - notes in the note list are now resorted if they were sorted alphabetically 
   and a note was manually renamed in the note list

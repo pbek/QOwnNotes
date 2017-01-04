@@ -78,5 +78,8 @@ Example format strings:
 +-----------------+-----------------+
 
 
-See the `Qt documentation <http://doc.qt.io/qt-5/qdatetime.html#toString>`__ for all
-possible time formats.
+Take a look at the `Qt documentation <http://doc.qt.io/qt-5/qdatetime.html#toString>`__ for
+more information about time formats.
+
+If you need to make more complex operations to output the current time please consider
+creating a `custom action <scripting/README.html#register-a-custom-action>`__.

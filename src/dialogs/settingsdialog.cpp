@@ -426,6 +426,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("ownCloud/password",
                       CryptoService::instance()->encryptToString(
                               ui->passwordEdit->text()));
+    settings.setValue("insertTimeFormat", ui->timeFormatLineEdit->text());
     settings.setValue("disableAutomaticUpdateDialog",
                       ui->disableAutomaticUpdateDialogCheckBox->isChecked());
     settings.setValue("notifyAllExternalModifications",
@@ -601,6 +602,8 @@ void SettingsDialog::readSettings() {
     ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
     ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
             settings.value("ownCloud/password").toString()));
+    ui->timeFormatLineEdit->setText(
+            settings.value("insertTimeFormat").toString());
 
     // prepend the portable data path if we are in portable mode
     ui->externalEditorPathLineEdit->setText(

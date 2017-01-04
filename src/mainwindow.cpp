@@ -4991,15 +4991,20 @@ void MainWindow::on_action_Knowledge_base_triggered() {
 }
 
 /**
- * @brief Inserts the current date in ISO 8601 format
+ * Inserts the current date
  */
 void MainWindow::on_actionInsert_current_time_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QDateTime dateTime = QDateTime::currentDateTime();
+    QSettings settings;
+    QString format = settings.value("insertTimeFormat").toString();
+    QString text = format.isEmpty() ?
+                   dateTime.toString(Qt::SystemLocaleShortDate) :
+                   dateTime.toString(format);
 
-    // insert the current date in ISO 8601 format
-    c.insertText(dateTime.toString(Qt::SystemLocaleShortDate));
+    // insert the current date
+    c.insertText(text);
 }
 
 void MainWindow::on_actionOpen_List_triggered() {
