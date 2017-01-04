@@ -5,6 +5,8 @@
   a note in the *Editor settings*
     - take a look at the [time format documentation](http://docs.qownnotes.org/en/develop/time-formats.html)
       for more information about the available time formats
+- the menu entry for showing the note sub-folder panel is now invisible if 
+  note sub-folders are not enabled for the current note folder
 
 ## 17.01.0
 - notes in the note list are now resorted if they were sorted alphabetically 

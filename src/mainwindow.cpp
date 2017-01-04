@@ -953,6 +953,13 @@ void MainWindow::updatePanelMenu() {
             action->setCheckable(true);
             action->setChecked(!dockWidget->isHidden());
 
+            // hide the noteSubFolderDockWidget menu entry if sub-folders are
+            // not enabled
+            if (dockWidget->objectName() == "noteSubFolderDockWidget" &&
+                    !NoteFolder::isCurrentShowSubfolders()) {
+                action->setVisible(false);
+            }
+
             // try to load a key sequence from the settings
             QKeySequence shortcut = QKeySequence(settings.value(
                     "Shortcuts/MainWindow-" + objectName).toString());
@@ -5831,6 +5838,14 @@ void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
+    }
+
+    // hide the noteSubFolderDockWidget menu entry if sub-folders are
+    // not enabled
+    QAction *action = findAction("togglePanel-noteSubFolderDockWidget");
+
+    if (action != Q_NULLPTR) {
+        action->setVisible(NoteFolder::isCurrentShowSubfolders());
     }
 
     // hide the note folder combobox if it should not be visible
