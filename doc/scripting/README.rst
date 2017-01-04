@@ -395,7 +395,7 @@ Take a look at `Style Sheet
 Reference <http://doc.qt.io/qt-5/stylesheet-reference.html>`__ for a
 reference of what styles are available.
 
-If you want to inject styles into html preview to alter the way notes are previewed please look `here <other.rst#notetomarkdownhtmlhook>`__.
+If you want to inject styles into html preview to alter the way notes are previewed please look at `notetomarkdownhtmlhook <#notetomarkdownhtmlhook>`__.
 
 Reloading the scripting engine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
