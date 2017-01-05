@@ -203,6 +203,8 @@ private slots:
 
     void needRestart();
 
+    void on_legacyOwnCloudCalendarRadioButton_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

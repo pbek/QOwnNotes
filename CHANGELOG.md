@@ -2,6 +2,13 @@
 
 ## 17.01.2
 - years were bumped to 2017
+- since the support for legacy **CalDAV** URLs in **Nextcloud 11** is still 
+  broken support for the new URLs was added and will now used by default (if the 
+  application is re-installed)
+    - the legacy URLs will be supported as well
+    - switch to the new setting in the *Todo setting* if you have troubles 
+      with Nextcloud 11
+    - ownCloud 9 seems to support the new CalDAV URLs as well 
 
 ## 17.01.1
 - you can now enter a custom time format when inserting the current time into

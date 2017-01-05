@@ -550,13 +550,13 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1040"/>
-        <location filename="../mainwindow.cpp" line="7483"/>
+        <location filename="../mainwindow.cpp" line="7498"/>
         <source>Select &amp;all notes</source>
         <translation>Вибрати &amp;усі нотатки</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1049"/>
-        <location filename="../mainwindow.cpp" line="4933"/>
+        <location filename="../mainwindow.cpp" line="4940"/>
         <source>Insert &amp;link</source>
         <translation>Вставити &amp;посилання</translation>
     </message>
@@ -864,7 +864,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1800"/>
-        <location filename="../mainwindow.cpp" line="8314"/>
+        <location filename="../mainwindow.cpp" line="8329"/>
         <source>Remove current workspace</source>
         <translation>Видалити поточну робочу область</translation>
     </message>
@@ -911,7 +911,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1882"/>
-        <location filename="../mainwindow.cpp" line="4937"/>
+        <location filename="../mainwindow.cpp" line="4944"/>
         <source>Search text on the web</source>
         <translation type="unfinished">Search text on the web</translation>
     </message>
@@ -1076,34 +1076,34 @@
         <translation>Видалити занедбані файли зображень</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2217"/>
+        <location filename="../mainwindow.cpp" line="2224"/>
         <source>Note was removed externally!</source>
         <translation>Нотатку було видалено зовні!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2218"/>
+        <location filename="../mainwindow.cpp" line="2225"/>
         <source>Current note was removed outside of this application!
 Restore current note?</source>
         <translation>Поточну нотатку було видалено за межами цієї програми! Відновити поточну нотатку?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2220"/>
+        <location filename="../mainwindow.cpp" line="2227"/>
         <source>&amp;Restore</source>
         <translation>&amp;Відновити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2220"/>
-        <location filename="../mainwindow.cpp" line="2974"/>
-        <location filename="../mainwindow.cpp" line="3432"/>
-        <location filename="../mainwindow.cpp" line="3516"/>
-        <location filename="../mainwindow.cpp" line="3545"/>
-        <location filename="../mainwindow.cpp" line="3587"/>
-        <location filename="../mainwindow.cpp" line="3661"/>
-        <location filename="../mainwindow.cpp" line="3699"/>
-        <location filename="../mainwindow.cpp" line="3742"/>
-        <location filename="../mainwindow.cpp" line="4166"/>
-        <location filename="../mainwindow.cpp" line="5209"/>
-        <location filename="../mainwindow.cpp" line="8316"/>
+        <location filename="../mainwindow.cpp" line="2227"/>
+        <location filename="../mainwindow.cpp" line="2981"/>
+        <location filename="../mainwindow.cpp" line="3439"/>
+        <location filename="../mainwindow.cpp" line="3523"/>
+        <location filename="../mainwindow.cpp" line="3552"/>
+        <location filename="../mainwindow.cpp" line="3594"/>
+        <location filename="../mainwindow.cpp" line="3668"/>
+        <location filename="../mainwindow.cpp" line="3706"/>
+        <location filename="../mainwindow.cpp" line="3749"/>
+        <location filename="../mainwindow.cpp" line="4173"/>
+        <location filename="../mainwindow.cpp" line="5216"/>
+        <location filename="../mainwindow.cpp" line="8331"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Скасувати</translation>
     </message>
@@ -1116,72 +1116,72 @@ Restore current note?</source>
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2420"/>
+        <location filename="../mainwindow.cpp" line="2427"/>
         <source>new version %1 available</source>
         <translation>доступна нова версія: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2820"/>
+        <location filename="../mainwindow.cpp" line="2827"/>
         <source>No folder was selected</source>
         <translation>Не вибрано жодної теки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2821"/>
+        <location filename="../mainwindow.cpp" line="2828"/>
         <source>You have to select your ownCloud notes folder to make this software work!</source>
         <translation>Ви повинні вибрати теку з нотатками ownCloud, щоб програма могла працювати!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2823"/>
+        <location filename="../mainwindow.cpp" line="2830"/>
         <source>&amp;Retry</source>
         <translation>&amp;Повторити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2823"/>
+        <location filename="../mainwindow.cpp" line="2830"/>
         <source>&amp;Exit</source>
         <translation>&amp;Вийти</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2971"/>
+        <location filename="../mainwindow.cpp" line="2978"/>
         <source>Remove current note</source>
         <translation>Видалити поточну нотатку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2972"/>
+        <location filename="../mainwindow.cpp" line="2979"/>
         <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Видалити поточну нотатку: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2974"/>
-        <location filename="../mainwindow.cpp" line="3432"/>
-        <location filename="../mainwindow.cpp" line="3516"/>
-        <location filename="../mainwindow.cpp" line="3545"/>
-        <location filename="../mainwindow.cpp" line="3742"/>
-        <location filename="../mainwindow.cpp" line="8316"/>
+        <location filename="../mainwindow.cpp" line="2981"/>
+        <location filename="../mainwindow.cpp" line="3439"/>
+        <location filename="../mainwindow.cpp" line="3523"/>
+        <location filename="../mainwindow.cpp" line="3552"/>
+        <location filename="../mainwindow.cpp" line="3749"/>
+        <location filename="../mainwindow.cpp" line="8331"/>
         <source>&amp;Remove</source>
         <translation>&amp;Видалити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3268"/>
+        <location filename="../mainwindow.cpp" line="3275"/>
         <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
         <translation>Будь ласка, введіть &lt;strong&gt;пароль&lt;/strong&gt; для зашифрованої нотатки.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3292"/>
+        <location filename="../mainwindow.cpp" line="3299"/>
         <source>Note can&apos;t be decrypted!</source>
         <translation>Не вдалося розшифрувати нотатку!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3293"/>
+        <location filename="../mainwindow.cpp" line="3300"/>
         <source>It seems that your password is not valid!</source>
         <translation>Здається, ваш пароль не підходить!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3426"/>
+        <location filename="../mainwindow.cpp" line="3433"/>
         <source>Remove selected notes</source>
         <translation>Видалити вибрані нотатки</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3427"/>
+        <location filename="../mainwindow.cpp" line="3434"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
@@ -1192,13 +1192,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3509"/>
-        <location filename="../mainwindow.cpp" line="7652"/>
+        <location filename="../mainwindow.cpp" line="3516"/>
+        <location filename="../mainwindow.cpp" line="7667"/>
         <source>Remove selected folders</source>
         <translation>Видалити вибрані теки</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3510"/>
+        <location filename="../mainwindow.cpp" line="3517"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
         <translation>
             <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибрану теку?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;Усі файли і теки у цих теках будуть видалені також!</numerusform>
@@ -1207,17 +1207,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3522"/>
+        <location filename="../mainwindow.cpp" line="3529"/>
         <source>Removed note subfolder: %1</source>
         <translation>Видалено підтеку: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3541"/>
+        <location filename="../mainwindow.cpp" line="3548"/>
         <source>Remove selected tags</source>
         <translation>Видалити вибрані теги</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3542"/>
+        <location filename="../mainwindow.cpp" line="3549"/>
         <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
         <translation>
             <numerusform>Видалити &lt;strong&gt;%n&lt;/strong&gt; вибраний тег? В цьому процесі нотатки видалятись не будуть.</numerusform>
@@ -1226,13 +1226,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3584"/>
-        <location filename="../mainwindow.cpp" line="6843"/>
+        <location filename="../mainwindow.cpp" line="3591"/>
+        <location filename="../mainwindow.cpp" line="6858"/>
         <source>Move selected notes</source>
         <translation>Перемістити вибрані нотатки</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3585"/>
+        <location filename="../mainwindow.cpp" line="3592"/>
         <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Перемістити %n вибрану нотатку до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1241,18 +1241,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3587"/>
+        <location filename="../mainwindow.cpp" line="3594"/>
         <source>&amp;Move</source>
         <translation>&amp;Перемістити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3658"/>
-        <location filename="../mainwindow.cpp" line="6903"/>
+        <location filename="../mainwindow.cpp" line="3665"/>
+        <location filename="../mainwindow.cpp" line="6918"/>
         <source>Copy selected notes</source>
         <translation>Копіювати вибрані нотатки</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3659"/>
+        <location filename="../mainwindow.cpp" line="3666"/>
         <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Копіювати %n вибрану нотатку до &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1261,18 +1261,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3661"/>
+        <location filename="../mainwindow.cpp" line="3668"/>
         <source>&amp;Copy</source>
         <translation>&amp;Копіювати</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3682"/>
-        <location filename="../mainwindow.cpp" line="3770"/>
+        <location filename="../mainwindow.cpp" line="3689"/>
+        <location filename="../mainwindow.cpp" line="3777"/>
         <source>Done</source>
         <translation>Зроблено</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3683"/>
+        <location filename="../mainwindow.cpp" line="3690"/>
         <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
         <translation>
             <numerusform>%n нотатка скопійована до &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
@@ -1281,12 +1281,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3696"/>
+        <location filename="../mainwindow.cpp" line="3703"/>
         <source>Tag selected notes</source>
         <translation>Позначити вибрані нотатки</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3697"/>
+        <location filename="../mainwindow.cpp" line="3704"/>
         <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Помітити %n вибрану нотатку тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1295,74 +1295,74 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3864"/>
+        <location filename="../mainwindow.cpp" line="3871"/>
         <source>Restart application</source>
         <translation type="unfinished">Restart application</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3870"/>
+        <location filename="../mainwindow.cpp" line="3877"/>
         <source>You may need to restart the application manually to let the changes take effect.</source>
         <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3875"/>
+        <location filename="../mainwindow.cpp" line="3882"/>
         <source>You may need to restart the application to let the changes take effect.</source>
         <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3877"/>
+        <location filename="../mainwindow.cpp" line="3884"/>
         <source>Restart</source>
         <translation type="unfinished">Restart</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4098"/>
+        <location filename="../mainwindow.cpp" line="4105"/>
         <source>PDF files</source>
         <translation>Файли PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4892"/>
+        <location filename="../mainwindow.cpp" line="4899"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation>Версії нотатка завантажені з вашого ownCloud сервера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4906"/>
+        <location filename="../mainwindow.cpp" line="4913"/>
         <source>Trashed notes are currently loaded from your ownCloud server</source>
         <translation>Видалені нотатки завантажені з вашого ownCloud сервера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5052"/>
+        <location filename="../mainwindow.cpp" line="5059"/>
         <source>Image files</source>
         <translation>Файли зображень</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5291"/>
+        <location filename="../mainwindow.cpp" line="5298"/>
         <source>Markdown files</source>
         <translation>Файли Markdown </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5347"/>
+        <location filename="../mainwindow.cpp" line="5354"/>
         <source>Bookmarked note position at slot %1</source>
         <translation>Створено закладку на позицію %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5363"/>
+        <location filename="../mainwindow.cpp" line="5370"/>
         <source>Jumped to bookmark position at slot %1</source>
         <translation>Перехід до закладки на позицію %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5565"/>
-        <location filename="../mainwindow.cpp" line="5627"/>
+        <location filename="../mainwindow.cpp" line="5572"/>
+        <location filename="../mainwindow.cpp" line="5634"/>
         <source>Inserting image</source>
         <translation>Вставка зображення</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5570"/>
-        <location filename="../mainwindow.cpp" line="5630"/>
+        <location filename="../mainwindow.cpp" line="5577"/>
+        <location filename="../mainwindow.cpp" line="5637"/>
         <source>Done inserting image</source>
         <translation>Зображення вставлено успішно</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5581"/>
+        <location filename="../mainwindow.cpp" line="5588"/>
         <source>Copied %n note(s) to %1</source>
         <translation>
             <numerusform>Скопійовано %n нотатку до %1</numerusform>
@@ -1371,7 +1371,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5590"/>
+        <location filename="../mainwindow.cpp" line="5597"/>
         <source>Failed to copy %n note(s) (most likely already existing)</source>
         <translation>
             <numerusform>Не вдалося скопіювати %n нотатку (скоріше за все вона, вже існує)</numerusform>
@@ -1380,7 +1380,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="5600"/>
+        <location filename="../mainwindow.cpp" line="5607"/>
         <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
         <translation>
             <numerusform>Пропущено копіювання %n нотатки (не markdown або текстовий файл не читається)</numerusform>
@@ -1389,89 +1389,89 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5614"/>
+        <location filename="../mainwindow.cpp" line="5621"/>
         <source>Saving temporary image</source>
         <translation>Зберігання тимчасового зображення</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5633"/>
+        <location filename="../mainwindow.cpp" line="5640"/>
         <source>Temporary file can&apos;t be opened</source>
         <translation>Тимчасовий файл неможливо відкрити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5666"/>
+        <location filename="../mainwindow.cpp" line="5673"/>
         <source>Downloading %1</source>
         <translation>Завантаження %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5696"/>
+        <location filename="../mainwindow.cpp" line="5703"/>
         <source>Done downloading images</source>
         <translation>Закінчено завантаження зображень</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6409"/>
+        <location filename="../mainwindow.cpp" line="6424"/>
         <source>Assign color</source>
         <translation>Призначити колір</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6410"/>
+        <location filename="../mainwindow.cpp" line="6425"/>
         <source>Disable color</source>
         <translation>Виключити колір</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7031"/>
+        <location filename="../mainwindow.cpp" line="7046"/>
         <source>An url was opened at the current cursor position</source>
         <translation>URL-адреса була відкрита у поточній позиції курсора</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7109"/>
+        <location filename="../mainwindow.cpp" line="7124"/>
         <source>No equation was found in front of the cursor</source>
         <translation>Під курсором не було знайдено рівняння</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7126"/>
+        <location filename="../mainwindow.cpp" line="7141"/>
         <source>Result for equation: %1 = %2</source>
         <translation>Результат для рівняння: %1 = %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7200"/>
+        <location filename="../mainwindow.cpp" line="7215"/>
         <source>The scripting engine was reloaded</source>
         <translation>Скриптовий рушій було перезавантажено</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7227"/>
+        <location filename="../mainwindow.cpp" line="7242"/>
         <source>HTML files</source>
         <translation>Файли HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8116"/>
+        <location filename="../mainwindow.cpp" line="8131"/>
         <source>Create new workspace</source>
         <translation>Створити нову робочу область</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8116"/>
-        <location filename="../mainwindow.cpp" line="8353"/>
+        <location filename="../mainwindow.cpp" line="8131"/>
+        <location filename="../mainwindow.cpp" line="8368"/>
         <source>Workspace name:</source>
         <translation>Ім&apos;я робочої області:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8235"/>
+        <location filename="../mainwindow.cpp" line="8250"/>
         <source>default</source>
         <comment>default workspace</comment>
         <translation>за замовчуванням</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8315"/>
+        <location filename="../mainwindow.cpp" line="8330"/>
         <source>Remove the current workspace?</source>
         <translation>Видалити поточну робочу область?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8353"/>
+        <location filename="../mainwindow.cpp" line="8368"/>
         <source>Rename workspace</source>
         <translation>Перейменувати робочої області</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8468"/>
+        <location filename="../mainwindow.cpp" line="8483"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation type="unfinished">
@@ -1482,17 +1482,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     </message>
     <message>
         <location filename="../mainwindow.ui" line="824"/>
-        <location filename="../mainwindow.cpp" line="3699"/>
+        <location filename="../mainwindow.cpp" line="3706"/>
         <source>&amp;Tag</source>
         <translation>&amp;Тег</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3739"/>
+        <location filename="../mainwindow.cpp" line="3746"/>
         <source>Remove tag from selected notes</source>
         <translation>Видалити тег з вибраних нотаток</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3740"/>
+        <location filename="../mainwindow.cpp" line="3747"/>
         <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
         <translation>
             <numerusform>Видалити тег &lt;strong&gt;%1&lt;/strong&gt; з %n вибраної нотатки?</numerusform>
@@ -1501,7 +1501,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3771"/>
+        <location filename="../mainwindow.cpp" line="3778"/>
         <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
         <translation>
             <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; було видалено з %n нотатки</numerusform>
@@ -1510,125 +1510,125 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3792"/>
+        <location filename="../mainwindow.cpp" line="3799"/>
         <source>Current notes folder: </source>
         <translation>Поточна тека для нотаток: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3794"/>
+        <location filename="../mainwindow.cpp" line="3801"/>
         <source>Set the notes folder. Current notes folder: </source>
         <translation>Встановити теку для нотаток. Поточна тека: </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4016"/>
+        <location filename="../mainwindow.cpp" line="4023"/>
         <source>Print note</source>
         <translation>Друкувати нотатку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4047"/>
+        <location filename="../mainwindow.cpp" line="4054"/>
         <source>Letter</source>
         <translation>Лист</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4073"/>
+        <location filename="../mainwindow.cpp" line="4080"/>
         <source>Portrait</source>
         <translation>Портрет</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4073"/>
+        <location filename="../mainwindow.cpp" line="4080"/>
         <source>Landscape</source>
         <translation>Ландшафт</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4078"/>
+        <location filename="../mainwindow.cpp" line="4085"/>
         <source>Orientation</source>
         <translation>Орієнтація</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4078"/>
+        <location filename="../mainwindow.cpp" line="4085"/>
         <source>Orientation:</source>
         <translation>Орієнтація:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4099"/>
+        <location filename="../mainwindow.cpp" line="4106"/>
         <source>Export current note as PDF</source>
         <translation>Експорт поточної нотатки у форматі PDF</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4162"/>
+        <location filename="../mainwindow.cpp" line="4169"/>
         <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
         <translation>Ви не обрали жоден список завдань.&lt;br /&gt;Будь ласка, перевірте конфігурацію вашого &lt;strong&gt;списку завдань&lt;/strong&gt; в налаштуваннях!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4757"/>
+        <location filename="../mainwindow.cpp" line="4764"/>
         <source>Open QOwnNotes</source>
         <translation>Відкрити QOwnNotes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4766"/>
-        <location filename="../mainwindow.cpp" line="7650"/>
+        <location filename="../mainwindow.cpp" line="4773"/>
+        <location filename="../mainwindow.cpp" line="7665"/>
         <source>New note</source>
         <translation>Нова нотатка</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4782"/>
+        <location filename="../mainwindow.cpp" line="4789"/>
         <source>Recent notes</source>
         <translation>Останні нотатки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4812"/>
+        <location filename="../mainwindow.cpp" line="4819"/>
         <source>Show todo lists</source>
         <translation>Показати список завдань</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4823"/>
+        <location filename="../mainwindow.cpp" line="4830"/>
         <source>Recent tasks</source>
         <translation>Останні завдання</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4855"/>
+        <location filename="../mainwindow.cpp" line="4862"/>
         <source>Quit</source>
         <translation>Вихід</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5924"/>
+        <location filename="../mainwindow.cpp" line="5939"/>
         <source>show notes from all note subfolders (%1)</source>
         <translation>показати нотатки з усіх вкладених тек (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5942"/>
+        <location filename="../mainwindow.cpp" line="5957"/>
         <source>show notes in note root folder (%1)</source>
         <translation>показати нотатки у кореневій теці (%1)</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="310"/>
         <location filename="../mainwindow.cpp" line="488"/>
-        <location filename="../mainwindow.cpp" line="5946"/>
+        <location filename="../mainwindow.cpp" line="5961"/>
         <source>Note folder</source>
         <translation>Тека для нотаток</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6778"/>
+        <location filename="../mainwindow.cpp" line="6793"/>
         <source>Copy to note folder</source>
         <translation>Копіювати до теки для нотаток</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6779"/>
+        <location filename="../mainwindow.cpp" line="6794"/>
         <source>Move to note folder</source>
         <translation>Перемістити до теки для нотаток</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6780"/>
+        <location filename="../mainwindow.cpp" line="6795"/>
         <source>Copy to this subfolder</source>
         <translation>Копіювати в цю підтеку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6781"/>
+        <location filename="../mainwindow.cpp" line="6796"/>
         <source>Move to this subfolder</source>
         <translation>Перемістити в цю підтеку</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6832"/>
+        <location filename="../mainwindow.cpp" line="6847"/>
         <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Перемістити %n вибрану нотатку до підтеки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1637,19 +1637,19 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6845"/>
+        <location filename="../mainwindow.cpp" line="6860"/>
         <source>Move</source>
         <translation>Перемістити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3878"/>
-        <location filename="../mainwindow.cpp" line="6845"/>
-        <location filename="../mainwindow.cpp" line="6905"/>
+        <location filename="../mainwindow.cpp" line="3885"/>
+        <location filename="../mainwindow.cpp" line="6860"/>
+        <location filename="../mainwindow.cpp" line="6920"/>
         <source>Cancel</source>
         <translation>Скасувати</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6882"/>
+        <location filename="../mainwindow.cpp" line="6897"/>
         <source>%n note(s) were moved to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n нотатку було перенесено до підтеки &quot;%2&quot;</numerusform>
@@ -1658,7 +1658,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6892"/>
+        <location filename="../mainwindow.cpp" line="6907"/>
         <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
         <translation>
             <numerusform>Копіювати %n вибрану нотатку до підтеки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
@@ -1667,18 +1667,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6837"/>
-        <location filename="../mainwindow.cpp" line="6897"/>
+        <location filename="../mainwindow.cpp" line="6852"/>
+        <location filename="../mainwindow.cpp" line="6912"/>
         <source>Tagging information of these notes will be lost at the destination.</source>
         <translation>Інформація про теги цих нотаток буде втрачено в місці призначення.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6905"/>
+        <location filename="../mainwindow.cpp" line="6920"/>
         <source>Copy</source>
         <translation>Копіювати</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="6937"/>
+        <location filename="../mainwindow.cpp" line="6952"/>
         <source>%n note(s) were copied to note subfolder &quot;%2&quot;</source>
         <translation>
             <numerusform>%n нотатку було скопійовано до підтеки &quot;%2&quot;</numerusform>
@@ -1687,62 +1687,62 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7431"/>
+        <location filename="../mainwindow.cpp" line="7446"/>
         <source>Move notes to subfolder...</source>
         <translation>Перемістити нотатки до підтеки...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7435"/>
+        <location filename="../mainwindow.cpp" line="7450"/>
         <source>Copy notes to subfolder...</source>
         <translation>Копіювати нотатки до підтеки...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7479"/>
+        <location filename="../mainwindow.cpp" line="7494"/>
         <source>Open note in external editor</source>
         <translation>Відкрити нотатку в зовнішньому редакторі</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7481"/>
+        <location filename="../mainwindow.cpp" line="7496"/>
         <source>Show note in file manager</source>
         <translation>Показати нотатку у &amp;файловому менеджері</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7651"/>
+        <location filename="../mainwindow.cpp" line="7666"/>
         <source>New subfolder</source>
         <translation>Нова підтека</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7654"/>
+        <location filename="../mainwindow.cpp" line="7669"/>
         <source>Show folder in file manager</source>
         <translation>Показати теку у файловому менеджері</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7685"/>
+        <location filename="../mainwindow.cpp" line="7700"/>
         <source>Create a new folder</source>
         <translation>Створити нову теку</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7685"/>
+        <location filename="../mainwindow.cpp" line="7700"/>
         <source>Folder name:</source>
         <translation>Ім&apos;я теки:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5888"/>
+        <location filename="../mainwindow.cpp" line="5903"/>
         <source>show all untagged notes (%1)</source>
         <translation>показати усі нотатки без тегів (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5891"/>
+        <location filename="../mainwindow.cpp" line="5906"/>
         <source>Untagged notes</source>
         <translation>Нотатки без тегів</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7228"/>
+        <location filename="../mainwindow.cpp" line="7243"/>
         <source>Export current note as HTML file</source>
         <translation>Експорт поточної нотатки у вигляді HTML-файлу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4056"/>
+        <location filename="../mainwindow.cpp" line="4063"/>
         <source>Page size</source>
         <translation>Розмір сторінки</translation>
     </message>
@@ -1752,52 +1752,52 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>панель інструментів виходу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1169"/>
+        <location filename="../mainwindow.cpp" line="1176"/>
         <source>Show menu bar item</source>
         <translation>Показати пункт меню</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4056"/>
+        <location filename="../mainwindow.cpp" line="4063"/>
         <source>Page size:</source>
         <translation>Розмір сторінки:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4137"/>
+        <location filename="../mainwindow.cpp" line="4144"/>
         <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
         <translation>QOwnNotes буде відслідковувати анонімні дані про використання, це допоможе вирішити які частини QOwnNotes потрібно поліпшити і знайти та виправити помилки. Ви можете вимкнути цей режим в налаштуваннях.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4141"/>
+        <location filename="../mainwindow.cpp" line="4148"/>
         <source>&amp;Ok</source>
         <translation>&amp;Ок</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7401"/>
+        <location filename="../mainwindow.cpp" line="7416"/>
         <source>&amp;Move notes to...</source>
         <translation>&amp;Перемістити нотатки до...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7402"/>
+        <location filename="../mainwindow.cpp" line="7417"/>
         <source>&amp;Copy notes to...</source>
         <translation>&amp;Копіювати нотатки до...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7443"/>
+        <location filename="../mainwindow.cpp" line="7458"/>
         <source>&amp;Tag selected notes with...</source>
         <translation>&amp;Позначити вибрані нотатки тегом...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7465"/>
+        <location filename="../mainwindow.cpp" line="7480"/>
         <source>&amp;Remove tag from selected notes...</source>
         <translation>&amp;Видалити тек з вибраних нотаток...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="7476"/>
+        <location filename="../mainwindow.cpp" line="7491"/>
         <source>&amp;Remove notes</source>
         <translation>&amp;Видалити нотатки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4933"/>
+        <location filename="../mainwindow.cpp" line="4940"/>
         <source>&amp;Link selected text</source>
         <translation>&amp;Посилання на виділений текст</translation>
     </message>
@@ -1807,28 +1807,28 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Ваші завдання завантажуються із сервера</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2150"/>
+        <location filename="../mainwindow.cpp" line="2157"/>
         <source>Current note was modified externally</source>
         <translation>Поточну нотатку було змінено ззовні</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2232"/>
-        <location filename="../mainwindow.cpp" line="4490"/>
+        <location filename="../mainwindow.cpp" line="2239"/>
+        <location filename="../mainwindow.cpp" line="4497"/>
         <source>Stored current note to disk</source>
         <translation>Поточну нотатку збережено на диск</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2254"/>
+        <location filename="../mainwindow.cpp" line="2261"/>
         <source>Note was modified externally: %1</source>
         <translation>Нотатку було змінено ззовні: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2275"/>
+        <location filename="../mainwindow.cpp" line="2282"/>
         <source>Notes directory was modified externally</source>
         <translation>Теку з нотатками було змінено ззовні</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="2341"/>
+        <location filename="../mainwindow.cpp" line="2348"/>
         <source>Stored %n note(s) to disk</source>
         <translation>
             <numerusform>Збережено %n нотатку на диск</numerusform>
@@ -1837,83 +1837,83 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4940"/>
+        <location filename="../mainwindow.cpp" line="4947"/>
         <source>Paste HTML or media</source>
         <translation>Вставити html або медіа</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5860"/>
+        <location filename="../mainwindow.cpp" line="5875"/>
         <source>show all notes (%1)</source>
         <translation>показати всі нотатки (%1)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5863"/>
-        <location filename="../mainwindow.cpp" line="5928"/>
+        <location filename="../mainwindow.cpp" line="5878"/>
+        <location filename="../mainwindow.cpp" line="5943"/>
         <source>All notes</source>
         <translation>Усі нотатки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6400"/>
+        <location filename="../mainwindow.cpp" line="6415"/>
         <source>&amp;Add tag</source>
         <translation>&amp;Додати тег</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6414"/>
+        <location filename="../mainwindow.cpp" line="6429"/>
         <source>&amp;Move tags to...</source>
         <translation>&amp;Перемістити теги до...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6449"/>
+        <location filename="../mainwindow.cpp" line="6464"/>
         <source>Tag could not be created!</source>
         <translation>Тег не може бути створений!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6632"/>
+        <location filename="../mainwindow.cpp" line="6647"/>
         <source>Move to the root</source>
         <translation>Перемістити в корінь</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6632"/>
+        <location filename="../mainwindow.cpp" line="6647"/>
         <source>Move to this tag</source>
         <translation>Перемістити до цього тегу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6682"/>
+        <location filename="../mainwindow.cpp" line="6697"/>
         <source>Tag this</source>
         <translation>Позначити тегом</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6712"/>
+        <location filename="../mainwindow.cpp" line="6727"/>
         <source>Cannot move tag &apos;%1&apos; to this tag</source>
         <translation>Неможливо перемістити тег %1 до цього тегу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6723"/>
+        <location filename="../mainwindow.cpp" line="6738"/>
         <source>Moved tag &apos;%1&apos; to new tag</source>
         <translation>Переміщено тег %1 до нового тегу</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6047"/>
+        <location filename="../mainwindow.cpp" line="6062"/>
         <source>show all notes tagged with &apos;%1&apos; (%2)</source>
         <translation>показати всі нотатки з тегами &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6283"/>
+        <location filename="../mainwindow.cpp" line="6298"/>
         <source>remove tag &apos;%1&apos; from note</source>
         <translation>видалити тег &apos;%1&apos; з нотатки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6408"/>
+        <location filename="../mainwindow.cpp" line="6423"/>
         <source>&amp;Edit tag</source>
         <translation>&amp;Редагувати тег</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="6411"/>
+        <location filename="../mainwindow.cpp" line="6426"/>
         <source>&amp;Remove tags</source>
         <translation>&amp;Видалити теги</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4161"/>
+        <location filename="../mainwindow.cpp" line="4168"/>
         <source>No selected todo lists!</source>
         <translation>Немає вибраних списків завдань!</translation>
     </message>
@@ -1993,57 +1993,57 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Показати панель %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="984"/>
+        <location filename="../mainwindow.cpp" line="991"/>
         <source>Show %1</source>
         <translation>Показати %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1755"/>
+        <location filename="../mainwindow.cpp" line="1762"/>
         <source>show notes in folder &apos;%1&apos; (%2)</source>
         <translation>показати нотатки у теці &apos;%1&apos; (%2)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1795"/>
+        <location filename="../mainwindow.cpp" line="1802"/>
         <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
         <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;остання зміна: %2</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1800"/>
+        <location filename="../mainwindow.cpp" line="1807"/>
         <source>&lt;br /&gt;path: %1</source>
         <translation>&lt;br /&gt;шлях: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1937"/>
+        <location filename="../mainwindow.cpp" line="1944"/>
         <source>Toolbar could not be loaded without name</source>
         <translation>Панель інструментів не можна завантажити без імені</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2176"/>
+        <location filename="../mainwindow.cpp" line="2183"/>
         <source>Overwriting external changes of: %1</source>
         <translation>Перезапис зовнішніх змін в: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2198"/>
+        <location filename="../mainwindow.cpp" line="2205"/>
         <source>Loading external changes from: %1</source>
         <translation>Завантаження зовнішніх змін з: %1</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2394"/>
+        <location filename="../mainwindow.cpp" line="2401"/>
         <source>Line numbers</source>
         <translation type="unfinished">Line numbers</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2404"/>
+        <location filename="../mainwindow.cpp" line="2411"/>
         <source>Click here to see what has changed and to be able to update to the latest version</source>
         <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="2793"/>
+        <location filename="../mainwindow.cpp" line="2800"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Будь ласка, виберіть теку, де ваші нотатки будуть зберігатись</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="3726"/>
+        <location filename="../mainwindow.cpp" line="3733"/>
         <source>%n note(s) were tagged with &quot;%2&quot;</source>
         <translation>
             <numerusform>%n нотатку було позначено тегом &quot;%2&quot;</numerusform>
@@ -2052,68 +2052,68 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5796"/>
+        <location filename="../mainwindow.cpp" line="5803"/>
         <source>Increased font size to %1 pt</source>
         <translation>Розмір шрифту збільшено до %1 пунктів</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5807"/>
+        <location filename="../mainwindow.cpp" line="5814"/>
         <source>Decreased font size to %1 pt</source>
         <translation>Розмір шрифту зменшено до %1 пунктів</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5817"/>
+        <location filename="../mainwindow.cpp" line="5824"/>
         <source>Reset font size to %1 pt</source>
         <translation>Розмір шрифту скинуто до %1 пунктів</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="4142"/>
-        <location filename="../mainwindow.cpp" line="4165"/>
+        <location filename="../mainwindow.cpp" line="4149"/>
+        <location filename="../mainwindow.cpp" line="4172"/>
         <source>Open &amp;settings</source>
         <translation>Відкрити &amp;налаштування</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1289"/>
+        <location filename="../mainwindow.cpp" line="1296"/>
         <source>leave</source>
         <translation>залишити</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="1292"/>
+        <location filename="../mainwindow.cpp" line="1299"/>
         <source>leave distraction free mode</source>
         <translation>залишити режим без відволікань</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5053"/>
+        <location filename="../mainwindow.cpp" line="5060"/>
         <source>Select image to insert</source>
         <translation>Вибрати зображення для вставки</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5149"/>
+        <location filename="../mainwindow.cpp" line="5156"/>
         <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
         <translation>Будь ласка, введіть ваш &lt;strong&gt;пароль&lt;/strong&gt; для шифрування нотатки.&lt;br /&gt;Майте на увазі, щоб прочитати вміст нотатки, ви повинні &lt;strong&gt;пам&apos;ятати&lt;/strong&gt; свій пароль.&lt;br /&gt; Ви можете це зробити &lt;strong&gt;тільки&lt;/strong&gt;&lt;strong&gt;в QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5204"/>
+        <location filename="../mainwindow.cpp" line="5211"/>
         <source>Decrypt note and store it as plain text</source>
         <translation>Розшифрувати нотатку і зберегти її як звичайний текст</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5205"/>
+        <location filename="../mainwindow.cpp" line="5212"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
         <translation>Вашу нотатку буде розшифровано і збережено як звичайний текст. Майте на увазі, що не зашифрована нотатка, можливо, буде синхронізуватися з вашим сервером, і конфіденційний текст може бути викрито!&lt;br /&gt;Ви хочете розшифрувати нотатку?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5209"/>
+        <location filename="../mainwindow.cpp" line="5216"/>
         <source>&amp;Decrypt</source>
         <translation>&amp;Розшифровувати</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5234"/>
+        <location filename="../mainwindow.cpp" line="5241"/>
         <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
         <translation>&lt;br /&gt;Ви зможете редагувати зашифровану нотатку.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5292"/>
+        <location filename="../mainwindow.cpp" line="5299"/>
         <source>Export current note as Markdown file</source>
         <translation>Експортувати поточну нотатку у вигляді Markdown-файлу</translation>
     </message>
@@ -2224,73 +2224,73 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 <context>
     <name>OwnCloudService</name>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="140"/>
+        <location filename="../services/owncloudservice.cpp" line="152"/>
         <source>Username / password error</source>
         <translation>Помилка в імені користувача / паролі</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="141"/>
+        <location filename="../services/owncloudservice.cpp" line="153"/>
         <source>Your calendar username or password is incorrect!</source>
         <translation>Ім&apos;я користувача або пароль до вашого календаря введено неправильно!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="814"/>
+        <location filename="../services/owncloudservice.cpp" line="826"/>
         <source>ownCloud server connection error</source>
         <translation>Помилка підключення до серверу ownCloud</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="818"/>
+        <location filename="../services/owncloudservice.cpp" line="830"/>
         <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
         <translation>Помилка ownCloud сервера: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Будь ласка, перевірте конфігурацію ownCloud.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="834"/>
+        <location filename="../services/owncloudservice.cpp" line="846"/>
         <source>You need to setup your ownCloud server!</source>
         <translation>Вам потрібно налаштувати ваш сервер ownCloud!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="840"/>
+        <location filename="../services/owncloudservice.cpp" line="852"/>
         <source>Open &amp;settings</source>
         <translation>Відкрити &amp;налаштування</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="840"/>
+        <location filename="../services/owncloudservice.cpp" line="852"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Скасувати</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="882"/>
+        <location filename="../services/owncloudservice.cpp" line="894"/>
         <source>Done with loading note versions</source>
         <translation>Завантаження версій нотатка завершено</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="938"/>
+        <location filename="../services/owncloudservice.cpp" line="950"/>
         <source>Done with loading trashed notes</source>
         <translation>Завантаження видалених нотаток завершено</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="920"/>
+        <location filename="../services/owncloudservice.cpp" line="932"/>
         <source>no other version</source>
         <translation>немає іншої версії</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="921"/>
+        <location filename="../services/owncloudservice.cpp" line="933"/>
         <source>There are no other versions on the server for this note.</source>
         <translation>На сервері для цієї нотатки немає інших версій.</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="999"/>
-        <location filename="../services/owncloudservice.cpp" line="1025"/>
+        <location filename="../services/owncloudservice.cpp" line="1011"/>
+        <location filename="../services/owncloudservice.cpp" line="1037"/>
         <source>Error while loading todo lists!</source>
         <translation>Помилка при завантаженні списків завдань!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1000"/>
+        <location filename="../services/owncloudservice.cpp" line="1012"/>
         <source>Your CalDAV server didn&apos;t reply anything!</source>
         <translation>Ваш CalDAV сервер нічого не відповів!</translation>
     </message>
     <message>
-        <location filename="../services/owncloudservice.cpp" line="1026"/>
+        <location filename="../services/owncloudservice.cpp" line="1038"/>
         <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
         <translation>Повідомлення про помилку з сервера CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
@@ -2694,12 +2694,12 @@ Are the folder and the file writeable?</source>
         <translation>Список завдань</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1546"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1556"/>
         <source>Default ownCloud calendar</source>
         <translation>Типовий ownCloud календар</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1693"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1709"/>
         <source>Select the calendars you want to use for the TODO list</source>
         <translation>Виберіть календарі, які ви хочете використовувати для списку завдань</translation>
     </message>
@@ -2709,62 +2709,62 @@ Are the folder and the file writeable?</source>
         <translation>Інтерфейс</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1563"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1546"/>
         <source>Other CalDAV server</source>
         <translation>Інший сервер CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2064"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2080"/>
         <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
         <translation>Тільки деякі кольори будуть адаптовані, ваша тема робочого стола контролюватиме все інше. Вам потрібно перезапустити програму, щоб ці зміни вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2067"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2083"/>
         <source>Optimize preview colors for dark mode desktop themes</source>
         <translation>Оптимізація кольорів перегляду для темного режиму тем робочого стола</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2074"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2090"/>
         <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
         <translation>Це включає темний режим, інтерфейс та іконки будуть змінені. Потрібно буде перезапустити програму щоб ці зміни вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2077"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2093"/>
         <source>Enable dark mode</source>
         <translation>Увімкнути темний режим</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2103"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2119"/>
         <source>You need to restart the application to let this setting take effect</source>
         <translation>Вам потрібно перезапустити програму, щоб ці налаштування вступили в силу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2122"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2138"/>
         <source>Item sizes in the main window</source>
         <translation>Розмір елементів в головному вікні</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3642"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3658"/>
         <source>Markdown highlighting</source>
         <translation>Підсвічування Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3648"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3664"/>
         <source>Enable markdown highlighting</source>
         <translation>Увімкнути підсвічування markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1826"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1842"/>
         <source>Interface language</source>
         <translation>Мова інтерфейсу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1846"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1862"/>
         <source>Automatic</source>
         <translation>Автоматично</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1868"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1884"/>
         <source>English</source>
         <translation>Англійська</translation>
     </message>
@@ -2774,89 +2774,89 @@ Are the folder and the file writeable?</source>
         <translation>Сполучення клавіш</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3165"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3334"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3181"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3350"/>
         <source>Default font:</source>
         <translation>Типовий шрифт:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3207"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3358"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3223"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3374"/>
         <source>Code font:</source>
         <translation>Шрифт коду:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2236"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2252"/>
         <source>Main window shortcuts</source>
         <translation>Сполучення клавіш для головного вікна</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2764"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2780"/>
         <source>Do this at your own risk!</source>
         <translation>Робите це на свій страх і ризик!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2767"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2783"/>
         <source>Ignore all external note folder changes</source>
         <translation>Ігнорувати усі зміни у зовнішніх теках з нотатками</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3127"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3143"/>
         <source>No two spaces to do a line break are added here if checked</source>
         <translation>Немає двох пробілів для розриву рядка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3130"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3146"/>
         <source>Use GitHub line breaks</source>
         <translation>Використовувати розрив рядка GitHub</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1857"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1873"/>
         <source>German</source>
         <translation>Німецька</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1890"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1906"/>
         <source>French</source>
         <translation>Французька</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1945"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1961"/>
         <source>Polish</source>
         <translation>Польська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1989"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2005"/>
         <source>Chinese</source>
         <translation>Китайська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1956"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1972"/>
         <source>Portuguese</source>
         <translation>Португальська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1934"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1950"/>
         <source>Dutch</source>
         <translation>Нідерландська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1912"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1928"/>
         <source>Hungarian</source>
         <translation>Угорська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1879"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1895"/>
         <source>Spanish</source>
         <translation>Іспанська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1832"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1848"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо ви хочете допомогти перекласти QOwnNotes або оновити чинний переклад, будь ласка, прочитайте: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;Як допомогти перекласти QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2048"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2064"/>
         <source>Dark mode</source>
         <translation>Темний режим</translation>
     </message>
@@ -2876,7 +2876,7 @@ Are the folder and the file writeable?</source>
         <translation>Вимкнути серцебиття</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1967"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1983"/>
         <source>Russian</source>
         <translation>Російська</translation>
     </message>
@@ -2886,22 +2886,22 @@ Are the folder and the file writeable?</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви можете отримати безкоштовно SSL сертифікат від &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let&apos;s encrypt&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2011"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2027"/>
         <source>If you change the language you have to restart the application for the changes to take action.</source>
         <translation>Якщо змінити мову, ви маєте перезавантажити програму, щоб зміни вступили в дію.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2524"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2540"/>
         <source>You need to reload the scripting engine if you modify a script file</source>
         <translation>Вам необхідно буде перезавантажити скриптовий рушій, якщо ви зміните файл скрипту</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2527"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2543"/>
         <source>Reload scripting engine</source>
         <translation>Перезавантажити скриптовий рушій</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2534"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2550"/>
         <source>Validate script</source>
         <translation>Перевірити скрипт</translation>
     </message>
@@ -2911,86 +2911,86 @@ Are the folder and the file writeable?</source>
         <translation>Загальні</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2624"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2640"/>
         <source>Notes</source>
         <translation>Нотатки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2751"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2767"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn&apos;t edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Якщо позначити цей пункт, ви завжди будете повідомлені про зовнішні зміни, навіть якщо поточну нотатку не було редаговано в останню хвилину. Рекомендується &lt;span style=&quot; font-style:italic;&quot;&gt;не позначати&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2727"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2743"/>
         <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
         <translation>Ви можете зіткнутися з неприємностями синхронізації зі старими версіями ownCloud sync, якщо значення буде менше 10 секунд. Просто зробіть тест, якщо ви будете отримувати конфлікти синхронізації, то встановіть більш високе значення.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1923"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1939"/>
         <source>Japanese</source>
         <translation>Японська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2731"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2747"/>
         <source>note save interval time [sec]</source>
         <translation>інтервал часу збереження нотатки [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2757"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2773"/>
         <source>Notify about all external modifications of the current note</source>
         <translation>Повідомляти про всі зовнішні зміни поточної нотатки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2997"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1461"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1470"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3013"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1477"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
         <source>Database</source>
         <translation>База даних</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3013"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3029"/>
         <source>Reinitialize Database</source>
         <translation>Реініціалізація бази даних</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2797"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2813"/>
         <source>Clear application data and exit</source>
         <translation>Очистити програмні дані і вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2803"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2819"/>
         <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
         <translation>Ця кнопка дозволяє очистити всі налаштування, видалити локальну базу даних списків завдань і вийти з QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2813"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1534"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2829"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1550"/>
         <source>Clear app data and exit</source>
         <translation>Очистити програмні дані і вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3023"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3039"/>
         <source>Update dialog</source>
         <translation>Діалог оновлення</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2869"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2885"/>
         <source>Default note file extension</source>
         <translation>Типові формати нотаток</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2954"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2970"/>
         <source>External editor</source>
         <translation>Зовнішній редактор</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2967"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2983"/>
         <source>path to external editor, leave empty for default</source>
         <translation>шлях до зовнішнього редактора, залишити пустим для типових налаштувань</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2974"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2990"/>
         <source>set external editor</source>
         <translation>встановити зовнішнім редактором</translation>
     </message>
@@ -3020,7 +3020,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Це невеличкі запити що періодично відправляються, поки працює QOwnNotes. Розробнику буде приємно знати, що хтось використовує QOwnNotes.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1901"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1917"/>
         <source>Italian</source>
         <translation>Італійська</translation>
     </message>
@@ -3030,27 +3030,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Скрипти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2303"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2319"/>
         <source>Your scripts</source>
         <translation>Ваші скрипти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2370"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2386"/>
         <source>&amp;Add script</source>
         <translation>&amp;Додати скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2394"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2410"/>
         <source>&amp;Remove script</source>
         <translation>&amp;Видалити скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2557"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2573"/>
         <source>Click here to select your QML script</source>
         <translation>Натисніть тут, щоб вибрати скрипт QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2476"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2492"/>
         <source>path to your QML file</source>
         <translation>шлях до файлу QML</translation>
     </message>
@@ -3116,7 +3116,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="698"/>
-        <location filename="../dialogs/settingsdialog.ui" line="2466"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2482"/>
         <source>Name:</source>
         <translation>Ім&apos;я:</translation>
     </message>
@@ -3137,7 +3137,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="803"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1617"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1633"/>
         <source>Username:</source>
         <translation>Ім&apos;я користувача:</translation>
     </message>
@@ -3148,7 +3148,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="838"/>
-        <location filename="../dialogs/settingsdialog.ui" line="1652"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1668"/>
         <source>Password:</source>
         <translation>Пароль:</translation>
     </message>
@@ -3178,247 +3178,262 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Який бекенд календаря ви хочете використовувати?</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1553"/>
+        <source>For most current ownCloud and Nextcloud installations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="1573"/>
+        <source>For older versions of ownCloud where the default setting doesn&apos;t work</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1576"/>
+        <source>Legacy ownCloud calendar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="1589"/>
         <source>CalDAV server settings</source>
         <translation>Параметри сервера CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1582"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1598"/>
         <source>Calendar base url:</source>
         <translation>URL-адреса календаря:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1604"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1620"/>
         <source>Please enter the CalDAV base url to your calendar.</source>
         <translation>Будь ласка, введіть CalDAV URL-адресу до вашого календаря.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1674"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1690"/>
         <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
         <translation>Будь ласка, введіть пароль для імені користувача CalDAV.&lt;br/&gt;В даний час пароль буде зберігатись в зашифрованому вигляді разом з іншими параметрами, але це не дуже безпечно.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1978"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1994"/>
         <source>Ukrainian</source>
         <translation>Українська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2084"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2100"/>
         <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
         <translation>Ви також можете вибрати інший набір кольорів в налаштуваннях редактора в темному режимі.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2658"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2674"/>
         <source>Maximum height:</source>
         <translation>Максимальна висота:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2665"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2681"/>
         <source>Maximum width:</source>
         <translation>Максимальна ширина:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2774"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2790"/>
         <source>Scale images down when inserted into notes</source>
         <translation>Масштабувати зображення при вставці до нотатки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2781"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2797"/>
         <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
         <translation>Позначте цей пункт, якщо ви хочете приймати всі зовнішні зміни при редагуванні поточної нотатки.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2787"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2803"/>
         <source>Accept all external modifications of the current note</source>
         <translation>Приймати всі зовнішні зміни поточної нотатки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3003"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3019"/>
         <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
         <translation>Майте на увазі, що це також призведе до видалення кешованих списків завдань, конфігурації тек для нотаток і скриптів!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3466"/>
         <source>Apply toolbar configuration</source>
         <translation>Застосувати налаштування панелі інструментів</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3480"/>
         <source>Reset toolbars</source>
         <translation>Скинути панелі інструментів</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3508"/>
         <source>Enable logging to file</source>
         <translation>Увімкнути журналювання до файлу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3499"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3515"/>
         <source>Clear log file</source>
         <translation>Очистити файл журналу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3510"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3526"/>
         <source>Fake old version number to trigger update</source>
         <translation>Підробити старий номер версії програми, щоб викликати оновлення</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3538"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3554"/>
         <source>Log file path:</source>
         <translation>Шлях до файлу журналу:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3600"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
         <source>Here you can set your own time format for inserting the current time into a note.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3603"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3619"/>
         <source>Insert current time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3609"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3625"/>
         <source>Time format:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3616"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3632"/>
         <source>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3623"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3639"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3658"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3674"/>
         <source>Editor options</source>
         <translation>Параметри редактора</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3664"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3680"/>
         <source>Enable automatic closing of brackets and markdown formatting characters</source>
         <translation>Увімкнути автоматичне закриття дужок і символи форматування markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3671"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3687"/>
         <source>You have to use the backspace key to remove the opening character</source>
         <translation>Ви повинні використовувати клавішу backspace для видалення символу відкриття</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3674"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3690"/>
         <source>Enable automatic removal of matching closing characters</source>
         <translation>Включити автоматичне видалення відповідних символів закриття</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1607"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1623"/>
         <source>Your CalDAV calendar base url</source>
         <translation>Базова URL-адреса календаря CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1639"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1655"/>
         <source>Please enter the username of your CalDAV server.</source>
         <translation>Будь ласка, введіть ім&apos;я користувача на сервері CalDAV.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1642"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1658"/>
         <source>Your CalDAV username</source>
         <translation>Ваше ім&apos;я користувача CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1680"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1696"/>
         <source>Your CalDAV password</source>
         <translation>Ваш пароль CalDAV</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1715"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1731"/>
         <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
         <translation>Це спричинить перезавантаження всіх елементів списку завдань з вашого сервера при наступному відкритті діалогового вікна списку завдань.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1718"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1734"/>
         <source>Empty calendar item cache</source>
         <translation>Очистити кеш елемента календаря</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1741"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1757"/>
         <source>Click here to reload the list of calendars from your calendar server.</source>
         <translation>Натисніть тут, щоб перезавантажити список календарів з вашого календаря сервера.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1747"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1763"/>
         <source>&amp;Reload calendar list</source>
         <translation>&amp;Перезавантажити список календаря</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2054"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2070"/>
         <source>You may need to restart the application to let these changes take effect</source>
         <translation>Можливо, буде потрібно перезапустити програму, щоб зміни вступили в силу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2057"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2073"/>
         <source>Enable dark mode tray icon</source>
         <translation>Увімкнути темний режим значка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2158"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2174"/>
         <source>Toolbar icon size:</source>
         <translation>Розмір значків на панелі інструментів:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2128"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2144"/>
         <source>List and tree item height:</source>
         <translation>Висота елемента списку і дерева:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2171"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2187"/>
         <source>Reset the icon size</source>
         <translation>Скинути розмір значків</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2185"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2201"/>
         <source>Reset the item height</source>
         <translation>Скинути висоту елемента</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3410"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3426"/>
         <source>View text right to left (RTL)</source>
         <translation>Перегляд тексту справа наліво (RTL)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2270"/>
         <source>Search for shortcut</source>
         <translation>Пошук сполучення клавіш</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="1758"/>
+        <location filename="../dialogs/settingsdialog.ui" line="1774"/>
         <source>Ignore calendars that don&apos;t support todo items</source>
         <translation>Ігнорувати календарі, які не підтримують елементи списків завдань</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2000"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2016"/>
         <source>Arabic</source>
         <translation>Арабська</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2097"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2113"/>
         <source>Icons</source>
         <translation>Значки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2106"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2122"/>
         <source>Use internal icon theme instead of system icon theme</source>
         <translation>Використовувати внутрішню тему значків замість системної теми значків</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2571"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2587"/>
         <source>Script path:</source>
         <translation>Шлях до скрипту:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2483"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2499"/>
         <source>script name</source>
         <translation>ім&apos;я скрипту</translation>
     </message>
@@ -3428,89 +3443,89 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2714"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2730"/>
         <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
         <translation>Дозволити імені файлу нотатки відрізнятись від заголовка.&lt;br&gt;Майте на увазі, що в нотатках ownCloud вони мають бути однакові!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2720"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2736"/>
         <source>Allow note file name to be different from headline</source>
         <translation>Дозволити імені файлу нотатки відрізнятись від заголовка</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2738"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2754"/>
         <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
         <translation>Позначте цей пункт, якщо ви хочете ігнорувати всі зовнішні зміни при редагуванні поточної нотатки.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2744"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2760"/>
         <source>Ignore all external modifications of the current note</source>
         <translation>Ігнорувати всі зовнішні зміни поточної нотатки</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2823"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2839"/>
         <source>App instance</source>
         <translation>Екземпляр програми</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2829"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2845"/>
         <source>Only allow one app instance at the same time</source>
         <translation>Дозволити лише один екземпляр програми одночасно</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2836"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2852"/>
         <source>You need to restart the application to let these changes take action.</source>
         <translation>Вам потрібно перезапустити програму, щоб зміни вступили в силу.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2875"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2891"/>
         <source>Add a custom file extension</source>
         <translation>Додати користувацьке розширення файлу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2889"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2905"/>
         <source>Remove a custom file extension</source>
         <translation>Видалити користувацьке розширення файлу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2928"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2944"/>
         <source>If you add custom extensions just type in the extension, like &quot;taskpaper&quot;.</source>
         <translation>При додаванні користувацьких розширень просто введіть розширення, як &quot;taskpaper&quot;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2932"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2948"/>
         <source>Text file (txt)</source>
         <translation>Текстовий файл (txt)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="2960"/>
+        <location filename="../dialogs/settingsdialog.ui" line="2976"/>
         <source>Path to external editor:</source>
         <translation>Шлях до зовнішнього редактора:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3029"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3045"/>
         <source>Don&apos;t show the update dialog automatically</source>
         <translation>Не показувати діалогове вікно оновлення автоматично</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3159"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3314"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3175"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3330"/>
         <source>Fonts</source>
         <translation>Шрифти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3182"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3224"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3382"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3396"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3198"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3240"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3398"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3412"/>
         <source>Set a new font</source>
         <translation>Вибрати новий шрифт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3193"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3238"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3320"/>
-        <location filename="../dialogs/settingsdialog.ui" line="3344"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3209"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3254"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3336"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3360"/>
         <source>Reset font</source>
         <translation>Скинути шрифт</translation>
     </message>
@@ -3520,17 +3535,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Налагодження</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3070"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3086"/>
         <source>Debug information</source>
         <translation>Відомості для налагодження</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3093"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3109"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви можете &lt;span style=&quot; font-weight:600;&quot;&gt;скопіювати і вставити&lt;/span&gt; цей текст (або частину тексту) в &lt;span style=&quot; font-weight:600;&quot;&gt;питання&lt;/span&gt; на &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;сторінці питань QOwnNotes&lt;/a&gt;, якщо ви маєте &lt;span style=&quot; font-weight:600;&quot;&gt;питання чи проблеми&lt;/span&gt; з QOwnNotes. Дані, які занадто чутливі, приховані в цій інформації.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3106"/>
+        <location filename="../dialogs/settingsdialog.ui" line="3122"/>
         <source>&amp;Save debug information</source>
         <translation>&amp;Зберегти налагоджувальну інформацію</translation>
     </message>
@@ -3560,22 +3575,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>SOCKS5 проксі</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="867"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="876"/>
         <source>Undefined key</source>
         <translation>Невизначена клавіша</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="872"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="881"/>
         <source>Assign a new key</source>
         <translation>Призначити нову клавішу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="873"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="882"/>
         <source>Reset to default key</source>
         <translation>Відновити параметри клавіш до типових</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1203"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1212"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -3584,7 +3599,7 @@ QOwnNotesAPI version: %2</source>
 Версія QOwnNotesAPI: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1214"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1223"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -3595,155 +3610,155 @@ Connection error message: </source>
 Повідомлення про помилку підключення: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1483"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1499"/>
         <source>Markdown files</source>
         <translation>Файли Markdown</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1514"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1530"/>
         <source>Disable usage tracking</source>
         <translation>Вимкнути відстеження використання</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1515"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1531"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation>Анонімне використання даних допомагає вирішити, які частини QOwnNotes потрібно поліпшити наступними, для пошуку ти виправлення помилок.&lt;br /&gt;Будь ласка, вимкніть його, тільки якщо ви дійсно не зможете жити з цим.&lt;br /&gt;&lt;br /&gt;Вимкнути відстеження використання?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1721"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1737"/>
         <source>new folder</source>
         <translation>нова тека</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1758"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1774"/>
         <source>Remove note folder</source>
         <translation>Видалити теку нотаток</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1759"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1775"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Видалити поточну теку нотаток &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1761"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2094"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1777"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2110"/>
         <source>&amp;Remove</source>
         <translation>&amp;Видалити</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1834"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1850"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation>Будь ласка, виберіть теку, де ваші нотатки будуть зберігатись</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1871"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1887"/>
         <source>Loading folders from server</source>
         <translation>Завантаження тек з сервера</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1885"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1901"/>
         <source>No more folders were found in the current folder</source>
         <translation>Більше не знайдено тек в поточній теці</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1959"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1975"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation>Завантаження тек з сервера до &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2043"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2059"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation type="unfinished">Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2045"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2061"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2056"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2072"/>
         <source>new script</source>
         <translation>новий скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2091"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2107"/>
         <source>Remove script</source>
         <translation>Видалити скрипт</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2092"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2108"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation>Видалити поточний скрипт &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2133"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2149"/>
         <source>Please select your QML file</source>
         <translation>Будь ласка, виберіть ваш файл QML</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2134"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2150"/>
         <source>QML Files (*.qml)</source>
         <translation>QML файли (*.qml)</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2195"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2211"/>
         <source>Your script seems to be valid</source>
         <translation>Ваш скрипт представляється правильним</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2196"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2212"/>
         <source>There were script errors:
 %1</source>
         <translation>Помилки скрипту:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2261"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2277"/>
         <source>File extension</source>
         <translation>Розширення файлу</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2262"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2278"/>
         <source>Enter your custom file extension:</source>
         <translation>Введіть ваше користувацьке розширення файлу:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2526"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2542"/>
         <source>Calendar cache emptied</source>
         <translation>Кеш календаря спорожнено</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2527"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2543"/>
         <source>Your calendar cache was emptied.</source>
         <translation>Кеш вашого календаря було спорожнено.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2604"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2620"/>
         <source>Reset toolbars and exit</source>
         <translation>Скидання панелей інструментів і вихід</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2605"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2621"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Ви дійсно хочете скинути всі панелі інструментів? В цьому процесі програму буде закрито, панелі інструментів будуть відновлені за замовчуванням, коли ви запустите її знову.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2609"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2625"/>
         <source>Reset and &amp;exit</source>
         <translation>Скинути і &amp;вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2771"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2787"/>
         <source>Log file cleared</source>
         <translation>Файл журналу очищений</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2772"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2788"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation>Файл журналу &lt;strong&gt;%1&lt;/strong&gt; був очищений.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1471"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1487"/>
         <source>The Database was reinitialized.</source>
         <translation>Базу даних було реініціалізовано.</translation>
     </message>
@@ -3788,12 +3803,12 @@ Connection error message: </source>
         <translation>Буде активовано, якщо ви запустите QOwnNotes з параметром &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1484"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1500"/>
         <source>Save debug information</source>
         <translation>Зберегти налагоджувальну інформацію</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1535"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1551"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -3802,16 +3817,16 @@ Your notes will stay intact!</source>
 Ваші нотатки залишаться недоторканими!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1538"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1554"/>
         <source>Clear and &amp;exit</source>
         <translation>Очистити і &amp;вийти</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1465"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1538"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1761"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2094"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2609"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1554"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1777"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2110"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2625"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Скасувати</translation>
     </message>
@@ -3821,17 +3836,17 @@ Your notes will stay intact!</source>
         <translation>Ви знайдете &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; у вашому релізі, для запуску QOwnNotes в портативному режимі.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1478"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation>Ви дійсно хочете очистити локальну базу даних? Це призведе до видалення конфігурацій тек нотаток і кешу елементів списку завдань!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1465"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
         <source>Clear &amp;database</source>
         <translation>Очистити &amp;базу даних</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1636"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1652"/>
         <source>Select editor application</source>
         <translation>Виберіть програму редактор</translation>
     </message>

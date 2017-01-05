@@ -529,6 +529,8 @@ void SettingsDialog::storeSettings() {
         todoCalendarBackend = OwnCloudService::CalendarPlus;
     } else if (ui->calDavCalendarRadioButton->isChecked()) {
         todoCalendarBackend = OwnCloudService::CalDAVCalendar;
+    } else if (ui->legacyOwnCloudCalendarRadioButton->isChecked()) {
+        todoCalendarBackend = OwnCloudService::LegacyOwnCloudCalendar;
     }
 
     settings.setValue("ownCloud/todoCalendarBackend", todoCalendarBackend);
@@ -716,16 +718,20 @@ void SettingsDialog::readSettings() {
 
     setFontLabel(ui->noteTextViewCodeFontLabel, noteTextViewCodeFont);
 
-    const QSignalBlocker blocker2(this->ui->defaultOwnCloudCalendarRadioButton);
+    const QSignalBlocker blocker2(ui->defaultOwnCloudCalendarRadioButton);
     Q_UNUSED(blocker2);
 
-    const QSignalBlocker blocker4(this->ui->calendarPlusRadioButton);
+    const QSignalBlocker blocker7(ui->legacyOwnCloudCalendarRadioButton);
+    Q_UNUSED(blocker7);
+
+    const QSignalBlocker blocker4(ui->calendarPlusRadioButton);
     Q_UNUSED(blocker4);
 
-    const QSignalBlocker blocker5(this->ui->calDavCalendarRadioButton);
+    const QSignalBlocker blocker5(ui->calDavCalendarRadioButton);
     Q_UNUSED(blocker5);
 
-    switch (settings.value("ownCloud/todoCalendarBackend").toInt()) {
+    switch (settings.value("ownCloud/todoCalendarBackend",
+                           OwnCloudService::DefaultOwnCloudCalendar).toInt()) {
         case OwnCloudService::CalendarPlus:
             ui->calendarPlusRadioButton->setChecked(true);
             break;
@@ -733,8 +739,11 @@ void SettingsDialog::readSettings() {
             ui->calDavCalendarRadioButton->setChecked(true);
             ui->calDavCalendarGroupBox->setVisible(true);
             break;
-        default:
+        case OwnCloudService::DefaultOwnCloudCalendar:
             ui->defaultOwnCloudCalendarRadioButton->setChecked(true);
+            break;
+        default:
+            ui->legacyOwnCloudCalendarRadioButton->setChecked(true);
             break;
     }
 
@@ -1450,6 +1459,13 @@ void SettingsDialog::reloadCalendarList() {
 }
 
 void SettingsDialog::on_defaultOwnCloudCalendarRadioButton_toggled(
+        bool checked) {
+    if (checked) {
+        on_reloadCalendarListButton_clicked();
+    }
+}
+
+void SettingsDialog::on_legacyOwnCloudCalendarRadioButton_toggled(
         bool checked) {
     if (checked) {
         on_reloadCalendarListButton_clicked();

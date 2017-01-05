@@ -82,11 +82,24 @@ void OwnCloudService::readSettings() {
     sharePath = "/ocs/v1.php/apps/files_sharing/api/v1/shares";
 
     int calendarBackend = settings.value(
-            "ownCloud/todoCalendarBackend").toInt();
-    // it might be possible that we need to change from "caldav" to "dav" for
-    // Nextcloud 11
-    QString calendarBackendString =
-            calendarBackend == CalendarPlus ? "calendarplus" : "caldav";
+            "ownCloud/todoCalendarBackend", DefaultOwnCloudCalendar).toInt();
+    QString calendarBackendString;
+
+    switch (calendarBackend) {
+        case CalendarPlus:
+            calendarBackendString = "calendarplus";
+            break;
+        case LegacyOwnCloudCalendar:
+            // for older versions of ownCloud
+            calendarBackendString = "caldav";
+            break;
+        default:
+            // Nextcloud 11 uses this string and has problems with the legacy
+            // "caldav" url
+            calendarBackendString = "dav";
+            break;
+    }
+
     QString calendarPath =
             "/remote.php/" + calendarBackendString + "/calendars/" + userName;
     todoCalendarServerUrl = serverUrl.isEmpty() ? "" : serverUrl + calendarPath;
@@ -96,8 +109,7 @@ void OwnCloudService::readSettings() {
     todoCalendarPassword = password;
 
     // if we are using a custom CalDAV server set the settings for it
-    if (settings.value("ownCloud/todoCalendarBackend").toInt() ==
-            OwnCloudService::CalDAVCalendar) {
+    if (calendarBackend == OwnCloudService::CalDAVCalendar) {
         todoCalendarServerUrl = settings.value(
                 "ownCloud/todoCalendarCalDAVServerUrl").toString().trimmed();
         todoCalendarServerUrlPath = QUrl(todoCalendarServerUrl).path();
