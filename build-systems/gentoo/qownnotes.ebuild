@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 2014-2017 Patrizio Bekerle
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 

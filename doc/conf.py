@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'QOwnNotes'
-copyright = u'2016, Patrizio Bekerle'
+copyright = u'2014-2017, Patrizio Bekerle'
 author = u'Patrizio Bekerle'
 
 # The version info for the project you're documenting, acts as replacement for

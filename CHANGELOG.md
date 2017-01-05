@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.01.2
+- years were bumped to 2017
+
 ## 17.01.1
 - you can now enter a custom time format when inserting the current time into
   a note in the *Editor settings*
