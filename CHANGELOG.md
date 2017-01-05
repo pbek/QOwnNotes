@@ -9,6 +9,8 @@
     - switch to the new setting in the *Todo setting* if you have troubles 
       with Nextcloud 11
     - ownCloud 9 seems to support the new CalDAV URLs as well 
+- added more Portuguese, Polish and Polish translation (thank you mlimacarlos, 
+  mlocati and lucjan)
 
 ## 17.01.1
 - you can now enter a custom time format when inserting the current time into
