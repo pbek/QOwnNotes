@@ -10,6 +10,8 @@
       panel will enabled  
 - image links like `[![name](image)](link)` and `[![](image)](link)` will now
   also be highlighted (for [Issue #463](https://github.com/pbek/QOwnNotes/issues/463))
+- added more Dutch, Hungarian, Italian, Spanish and Portuguese translation 
+  (thank you Leime, Fabijenna, mlocati, richarson and mlimacarlos)
 
 ## 17.01.2
 - years were bumped to 2017
