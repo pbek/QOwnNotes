@@ -6210,10 +6210,18 @@ void MainWindow::setupNoteSubFolders() {
  * Hides the note tag add button and shows the text edit
  */
 void MainWindow::on_newNoteTagButton_clicked() {
+    _noteTagDockWidget->setVisible(true);
     ui->newNoteTagLineEdit->setVisible(true);
     ui->newNoteTagLineEdit->setFocus();
     ui->newNoteTagLineEdit->selectAll();
     ui->newNoteTagButton->setVisible(false);
+
+    QSettings settings;
+    // enable the tagging dock widget the first time tagging was used
+    if (!settings.value("tagWasAddedToNote").toBool()) {
+        _taggingDockWidget->setVisible(true);
+        settings.setValue("tagWasAddedToNote", true);
+    }
 
     // add tag name auto-completion
     QStringList wordList = Tag::fetchAllNames();
@@ -8247,7 +8255,14 @@ void MainWindow::restoreCurrentWorkspace() {
 
     // create a default workspace if there is none yet
     if (workspaces.count() == 0) {
-        createNewWorkspace(tr("default", "default workspace"));
+        createNewWorkspace(tr("full", "full workspace"));
+
+        _taggingDockWidget->setVisible(false);
+        _noteFolderDockWidget->setVisible(false);
+        _noteNavigationDockWidget->setVisible(false);
+        _noteTagDockWidget->setVisible(false);
+        _notePreviewDockWidget->setVisible(false);
+        createNewWorkspace(tr("minimal", "minimal workspace"));
     }
 
     QString uuid = currentWorkspaceUuid();

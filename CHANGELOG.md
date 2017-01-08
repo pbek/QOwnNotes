@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 17.01.3
+- after installing QOwnNotes now only a minimal set of panels will be shown 
+  to reduce complexity in the beginning
+    - a second workspace with a full set of panels can be chosen in the 
+      workspace selector
+    - if a tag will be added to a note by the user the panel to add tags to a 
+      note will be shown automatically and on the first time also the tag list
+      panel will enabled  
+
 ## 17.01.2
 - years were bumped to 2017
 - since the support for legacy **CalDAV** URLs in **Nextcloud 11** is still 
