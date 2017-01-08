@@ -48,7 +48,8 @@ void EvernoteImportDialog::on_fileButton_clicked() {
             QFile file(fileName);
 
             if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-                qCritical() << file.errorString();
+                qCritical() << file.errorString() <<
+                                          " (path: " << fileName << ")";
                 return;
             }
 
