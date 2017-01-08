@@ -8,6 +8,8 @@
     - if a tag will be added to a note by the user the panel to add tags to a 
       note will be shown automatically and on the first time also the tag list
       panel will enabled  
+- image links like `[![name](image)](link)` and `[![](image)](link)` will now
+  also be highlighted (for [Issue #463](https://github.com/pbek/QOwnNotes/issues/463))
 
 ## 17.01.2
 - years were bumped to 2017
