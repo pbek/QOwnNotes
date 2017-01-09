@@ -150,7 +150,7 @@ bool mainStartupMisc() {
     DatabaseService::createConnection();
     DatabaseService::setupTables();
 
-    // try to re-create note folders if they are missing
+    // try to create note folders if they are missing
     NoteFolder::migrateToNoteFolders();
 
     return true;

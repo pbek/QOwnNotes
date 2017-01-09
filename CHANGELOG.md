@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.01.4
+- fixed two database errors when using QOwnNotes for the first time
+  (for [Issue #467](https://github.com/pbek/QOwnNotes/issues/467))
+
 ## 17.01.3
 - after installing QOwnNotes now only a minimal set of panels will be shown 
   to reduce complexity in the beginning
