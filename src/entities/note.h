@@ -156,7 +156,8 @@ public:
                                     bool ignoreNoteSubFolder = false,
                                     int noteSubFolderId = -1);
 
-    static QStringList buildQueryStringList(QString searchString);
+    static QStringList buildQueryStringList(
+            QString searchString, bool escapeForRegularExpression = false);
 
     QString fileBaseName(bool withFullName = false);
 

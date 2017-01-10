@@ -4,6 +4,8 @@
 - fixed two database errors when using QOwnNotes for the first time
   (for [Issue #467](https://github.com/pbek/QOwnNotes/issues/467))
 - fixed a highlighting issue when using a grave accent character in `<>` links
+- fixed an issue with the note search getting stuck when searching for `^ ` or
+  `  ` (just spaces) (for [Issue #469](https://github.com/pbek/QOwnNotes/issues/469))
 
 ## 17.01.3
 - after installing QOwnNotes now only a minimal set of panels will be shown 

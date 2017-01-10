@@ -3220,32 +3220,35 @@ void MainWindow::searchInNoteTextEdit(QString str) {
 
         // build the string list of the search string
         QString queryStr = str.replace("|", "\\|");
-        QStringList queryStrings = Note::buildQueryStringList(queryStr);
+        QStringList queryStrings = Note::buildQueryStringList(queryStr, true);
 
-        QRegExp regExp("(" + queryStrings.join("|") + ")", Qt::CaseInsensitive);
+        if (queryStrings.count() > 0) {
+            QRegExp regExp("(" + queryStrings.join("|") + ")",
+                           Qt::CaseInsensitive);
 
-        while (ui->noteTextEdit->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->noteTextEdit->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->noteTextEdit->textCursor();
-            extraSelections.append(extra);
-        }
+                extra.cursor = ui->noteTextEdit->textCursor();
+                extraSelections.append(extra);
+            }
 
-        while (ui->noteTextView->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->noteTextView->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->noteTextView->textCursor();
-            extraSelections2.append(extra);
-        }
+                extra.cursor = ui->noteTextView->textCursor();
+                extraSelections2.append(extra);
+            }
 
-        while (ui->encryptedNoteTextEdit->find(regExp)) {
-            QTextEdit::ExtraSelection extra;
-            extra.format.setBackground(color);
+            while (ui->encryptedNoteTextEdit->find(regExp)) {
+                QTextEdit::ExtraSelection extra;
+                extra.format.setBackground(color);
 
-            extra.cursor = ui->encryptedNoteTextEdit->textCursor();
-            extraSelections3.append(extra);
+                extra.cursor = ui->encryptedNoteTextEdit->textCursor();
+                extraSelections3.append(extra);
+            }
         }
     }
 
@@ -3255,7 +3258,7 @@ void MainWindow::searchInNoteTextEdit(QString str) {
 }
 
 /**
- * highlights all occurrences of tje search line text in the note text edit
+ * highlights all occurrences of the search line text in the note text edit
  */
 void MainWindow::searchForSearchLineTextInNoteTextEdit() {
     QString searchString = ui->searchLineEdit->text();

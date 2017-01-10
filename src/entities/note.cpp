@@ -586,7 +586,8 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 /**
  * Builds a string list of a search string
  */
-QStringList Note::buildQueryStringList(QString searchString) {
+QStringList Note::buildQueryStringList(QString searchString,
+                                       bool escapeForRegularExpression) {
     QStringList queryStrings;
 
     // check for strings in ""
@@ -594,7 +595,13 @@ QStringList Note::buildQueryStringList(QString searchString) {
     QRegularExpressionMatchIterator i = re.globalMatch(searchString);
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
-        queryStrings.append(match.captured(1));
+        QString text = match.captured(1);
+
+        if (escapeForRegularExpression) {
+            text = QRegularExpression::escape(text);
+        }
+
+        queryStrings.append(text);
         searchString.remove(match.captured(0));
     }
 
@@ -604,7 +611,15 @@ QStringList Note::buildQueryStringList(QString searchString) {
     searchString = searchString.simplified();
 
     // add the remaining strings
-    queryStrings.append(searchString.split(" "));
+    Q_FOREACH(QString text, searchString.split(" ")) {
+            if (escapeForRegularExpression) {
+                // escape the text so strings like `^ ` don't cause an
+                // infinite loop
+                text = QRegularExpression::escape(text);
+            }
+
+            queryStrings.append(text);
+        }
 
     // remove empty items, so the search will not run amok
     queryStrings.removeAll("");
