@@ -100,7 +100,7 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="607"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="608"/>
       <source>Export schema</source>
       <translation type="unfinished">Export schema</translation>
     </message>
@@ -121,13 +121,13 @@
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="434"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="435"/>
       <source>Copy</source>
       <translation type="unfinished">Copy</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="652"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="653"/>
       <source>Import schema</source>
       <translation type="unfinished">Import schema</translation>
     </message>
@@ -257,53 +257,54 @@
       <translation type="unfinished">Table</translation>
     </message>
     <message>
+      <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
+      <source>Masked syntax</source>
+      <comment>text that will highlighted in a way that it's barely visible</comment>
+      <translation type="unfinished">Masked syntax</translation>
+    </message>
+    <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Horizontal rule</source>
       <translation type="unfinished">Horizontal rule</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
-      <source>Masked syntax</source>
-      <translation type="unfinished">Masked syntax</translation>
-    </message>
-    <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>This item will be used to preset colors for the other items</source>
       <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="431"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="432"/>
       <source>Copy color schema</source>
       <translation type="unfinished">Copy color schema</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="432"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="433"/>
       <source>Color schema name</source>
       <translation type="unfinished">Color schema name</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="556"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="557"/>
       <source>Remove schema</source>
       <translation type="unfinished">Remove schema</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="557"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
       <source>Remove current schema? This cannot be undone!</source>
       <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="559"/>
       <source>Remove</source>
       <translation type="unfinished">Remove</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="559"/>
       <source>Cancel</source>
       <translation type="unfinished">Cancel</translation>
     </message>
     <message>
-      <location filename="../widgets/fontcolorwidget.cpp" line="606"/>
-      <location filename="../widgets/fontcolorwidget.cpp" line="651"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="607"/>
+      <location filename="../widgets/fontcolorwidget.cpp" line="652"/>
       <source>INI files</source>
       <translation type="unfinished">INI files</translation>
     </message>

@@ -10,6 +10,9 @@
   after it, but no closing `>`
   (for [Issue #461](https://github.com/pbek/QOwnNotes/issues/461) and
   [Issue #471](https://github.com/pbek/QOwnNotes/issues/471))
+- added more Italian, Polish, Russian, Dutch, Spanish, Chinese and French
+  translation (thank you mlocati, lucjan, frostyland, Leime, richarson, chonghua
+  and lepascalou)
 
 ## 17.01.3
 - after installing QOwnNotes now only a minimal set of panels will be shown 
