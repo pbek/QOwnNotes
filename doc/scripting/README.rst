@@ -539,6 +539,9 @@ noteToMarkdownHtmlHook
 You may want to take a look at the example `example.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/example.qml>`__
 or `preview-styling.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/preview-styling.qml>`__.
 
+Please refer to the `Supported HTML Subset <http://doc.qt.io/qt-5/richtext-html-subset.html>`__
+documentation for a list of all supported css styles.
+
 encryptionHook
 ~~~~~~~~~~~~~~
 
