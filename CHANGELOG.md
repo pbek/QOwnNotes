@@ -3,6 +3,7 @@
 ## 17.01.4
 - fixed two database errors when using QOwnNotes for the first time
   (for [Issue #467](https://github.com/pbek/QOwnNotes/issues/467))
+- fixed a highlighting issue when using a grave accent character in `<>` links
 
 ## 17.01.3
 - after installing QOwnNotes now only a minimal set of panels will be shown 
