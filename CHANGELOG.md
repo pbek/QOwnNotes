@@ -6,6 +6,10 @@
 - fixed a highlighting issue when using a grave accent character in `<>` links
 - fixed an issue with the note search getting stuck when searching for `^ ` or
   `  ` (just spaces) (for [Issue #469](https://github.com/pbek/QOwnNotes/issues/469))
+- fixed a crash under Windows when entering an opening `<` with a lot of text
+  after it, but no closing `>`
+  (for [Issue #461](https://github.com/pbek/QOwnNotes/issues/461) and
+  [Issue #471](https://github.com/pbek/QOwnNotes/issues/471))
 
 ## 17.01.3
 - after installing QOwnNotes now only a minimal set of panels will be shown 
