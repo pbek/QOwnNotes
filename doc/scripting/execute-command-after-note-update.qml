@@ -9,15 +9,14 @@ QtObject {
      * You cannot modify stored notes, that would be a mess since 
      * you are most likely editing them by hand at the same time
      * 
-     * @param fileName string the file path of the note
-     * @param noteText string the note text
+     * @param {NoteApi} note - the note object of the stored note
      */
-    function onNoteStored(fileName, noteText) {
+    function onNoteStored(note) {
         // execute an external program
         // try not to alter the note file or QOwnNotes will try to update 
         // the file every time you change the note
-        script.startDetachedProcess("/path/to/my/program", [fileName]);
+        script.startDetachedProcess("/path/to/my/program", [note.fileName]);
         
-        script.log("program was executed for file: " + fileName);
+        script.log("program was executed for file: " + note.fileName);
     }
 }

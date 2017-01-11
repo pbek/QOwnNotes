@@ -421,6 +421,23 @@ Usage in QML
 Hooks
 -----
 
+onNoteStored
+~~~~~~~~~~~~
+
+.. code:: javascript
+
+    /**
+     * This function is called when a note gets stored to disk
+     * You cannot modify stored notes, that would be a mess since
+     * you are most likely editing them by hand at the same time
+     *
+     * @param {NoteApi} note - the note object of the stored note
+     */
+    function onNoteStored(note);
+
+You may want to take a look at the example
+`on-note-opened.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml>`__.
+
 noteOpenedHook
 ~~~~~~~~~~~~~~
 
@@ -428,12 +445,10 @@ noteOpenedHook
 
     /**
      * This function is called after a note was opened
-     * 
+     *
      * @param {NoteApi} note - the note object that was opened
      */
-    function noteOpenedHook(note) {
-        script.log(note.fullNoteFilePath);
-    }
+    function noteOpenedHook(note);
 
 You may want to take a look at the example
 `on-note-opened.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/on-note-opened.qml>`__.
