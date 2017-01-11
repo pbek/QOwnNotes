@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "masterdialog.h"
+#include <entities/note.h>
 
 namespace Ui {
 class NoteDialog;
