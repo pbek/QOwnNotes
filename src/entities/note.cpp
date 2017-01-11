@@ -1041,7 +1041,8 @@ QUrl Note::fullNoteFileUrl() {
     windowsSlash = "/";
 #endif
 
-    return QUrl("file://" + windowsSlash + fullNoteFilePath());
+    return QUrl("file://" + windowsSlash + QUrl::toPercentEncoding(
+            fullNoteFilePath(), ":/"));
 }
 
 /**

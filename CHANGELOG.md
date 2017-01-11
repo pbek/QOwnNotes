@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.01.5
+- fixed a problem with opening notes with special characters in its file name in
+  an external editor if no editor was defined in the settings
+
 ## 17.01.4
 - fixed two database errors when using QOwnNotes for the first time
   (for [Issue #467](https://github.com/pbek/QOwnNotes/issues/467))
