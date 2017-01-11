@@ -675,6 +675,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Print_note_markdown"/>
     <addaction name="separator"/>
     <addaction name="action_Open_note_in_external_editor"/>
+    <addaction name="actionOpen_note_readonly_in_new_window"/>
     <addaction name="actionShow_note_in_file_manager"/>
     <addaction name="actionShare_note"/>
     <addaction name="separator"/>
@@ -1901,6 +1902,18 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Backspace</string>
    </property>
   </action>
+  <action name="actionOpen_note_readonly_in_new_window">
+   <property name="icon">
+    <iconset theme="window" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/window.svg</normaloff>:/icons/breeze-qownnotes/16x16/window.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Open note readonly in new window</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+O</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -1926,8 +1939,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>

@@ -94,5 +94,6 @@
         <file alias="16x16/insert-table.svg">icons/breeze-dark-qownnotes/16x16/insert-table.svg</file>
         <file alias="16x16/table.svg">icons/breeze-dark-qownnotes/16x16/table.svg</file>
         <file alias="16x16/format-text-blockquote.svg">icons/breeze-dark-qownnotes/16x16/format-text-blockquote.svg</file>
+        <file alias="16x16/window.svg">icons/breeze-dark-qownnotes/16x16/window.svg</file>
     </qresource>
 </RCC>

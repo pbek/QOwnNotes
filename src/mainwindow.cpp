@@ -66,6 +66,7 @@
 #include <libraries/qttoolbareditor/src/toolbar_editor.hpp>
 #include <dialogs/actiondialog.h>
 #include <dialogs/tabledialog.h>
+#include <dialogs/notedialog.h>
 #include <utils/schema.h>
 
 
@@ -7503,6 +7504,8 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     noteMenu.addSeparator();
     QAction *openInExternalEditorAction = noteMenu.addAction(
             tr("Open note in external editor"));
+    QAction *openNoteWindowAction = noteMenu.addAction(
+            tr("Open note readonly in new window"));
     QAction *showInFileManagerAction = noteMenu.addAction(
             tr("Show note in file manager"));
     noteMenu.addSeparator();
@@ -7532,8 +7535,11 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             // select all notes
             selectAllNotes();
         } else if (selectedItem == openInExternalEditorAction) {
-            // opens the current note in an external editor
+            // open the current note in an external editor
             on_action_Open_note_in_external_editor_triggered();
+        } else if (selectedItem == openNoteWindowAction) {
+            // open the current note in a dialog
+            on_actionOpen_note_readonly_in_new_window_triggered();
         } else if (selectedItem == showInFileManagerAction) {
             // show the current note in the file manager
             on_actionShow_note_in_file_manager_triggered();
@@ -8533,4 +8539,13 @@ void MainWindow::on_actionDelete_word_triggered() {
     }
 
     cursor.removeSelectedText();
+}
+
+/**
+ * Opens the current note in a dialog
+ */
+void MainWindow::on_actionOpen_note_readonly_in_new_window_triggered() {
+    NoteDialog* dialog = new NoteDialog(this);
+    dialog->setNote(currentNote);
+    dialog->show();
 }

@@ -91,7 +91,8 @@ SOURCES += main.cpp\
     dialogs/orphanedimagesdialog.cpp \
     dialogs/actiondialog.cpp \
     dialogs/tabledialog.cpp \
-    libraries/qtcsv/src/sources/reader.cpp
+    libraries/qtcsv/src/sources/reader.cpp \
+    dialogs/notedialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -157,7 +158,8 @@ HEADERS  += mainwindow.h \
     libraries/qtcsv/src/include/abstractdata.h \
     libraries/qtcsv/src/include/reader.h \
     libraries/qtcsv/src/sources/filechecker.h \
-    libraries/qtcsv/src/sources/symbols.h
+    libraries/qtcsv/src/sources/symbols.h \
+    dialogs/notedialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -177,7 +179,8 @@ FORMS    += mainwindow.ui \
     dialogs/evernoteimportdialog.ui \
     dialogs/orphanedimagesdialog.ui \
     dialogs/actiondialog.ui \
-    dialogs/tabledialog.ui
+    dialogs/tabledialog.ui \
+    dialogs/notedialog.ui
 
 RESOURCES += \
     images.qrc \

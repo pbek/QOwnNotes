@@ -430,6 +430,8 @@ private slots:
 
     void on_actionDelete_word_triggered();
 
+    void on_actionOpen_note_readonly_in_new_window_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
