@@ -9,6 +9,8 @@
       an other note
     - markdown highlighting will be used in that view and you also can search
       for text in it
+- added more Dutch, Chinese and German translation (thank you Leime, chonghua
+  and bigant)
 
 ## 17.01.4
 - fixed two database errors when using QOwnNotes for the first time
