@@ -3,6 +3,12 @@
 ## 17.01.5
 - fixed a problem with opening notes with special characters in its file name in
   an external editor if no editor was defined in the settings
+- you can now use the shortcut <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> 
+  to open the current note in a readonly view
+    - you can use that view to leave a note open to look at while writing on 
+      an other note
+    - markdown highlighting will be used in that view and you also can search
+      for text in it
 
 ## 17.01.4
 - fixed two database errors when using QOwnNotes for the first time

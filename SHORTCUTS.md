@@ -13,6 +13,7 @@ Important Shortcuts
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> shows the current note in the file manager
 - <kbd>Alt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - alternate shortcut is <kbd>Ctrl</kbd> + <kbd>PgUp</kbd>
@@ -102,6 +103,7 @@ Important Shortcuts
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> checks for updates
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>T</kbd> opens the todo list
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in an external editor
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>O</kbd> opens the current note in a view
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> opens the folder of the current note in Finder
 - <kbd>Opt</kbd> + <kbd>Up</kbd> jumps to the previous visible note
     - alternate shortcut is <kbd>⌘</kbd> + <kbd>PgUp</kbd>

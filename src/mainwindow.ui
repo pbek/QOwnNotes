@@ -675,8 +675,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Print_note_markdown"/>
     <addaction name="separator"/>
     <addaction name="action_Open_note_in_external_editor"/>
-    <addaction name="actionOpen_note_readonly_in_new_window"/>
     <addaction name="actionShow_note_in_file_manager"/>
+    <addaction name="actionView_note_in_new_window"/>
     <addaction name="actionShare_note"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
@@ -1902,16 +1902,16 @@ p, li { white-space: pre-wrap; }
     <string notr="true">Ctrl+Backspace</string>
    </property>
   </action>
-  <action name="actionOpen_note_readonly_in_new_window">
+  <action name="actionView_note_in_new_window">
    <property name="icon">
     <iconset theme="window" resource="breeze-qownnotes.qrc">
      <normaloff>:/icons/breeze-qownnotes/16x16/window.svg</normaloff>:/icons/breeze-qownnotes/16x16/window.svg</iconset>
    </property>
    <property name="text">
-    <string>Open note readonly in new window</string>
+    <string>Open note in a view</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Shift+O</string>
+    <string notr="true">Alt+Shift+O</string>
    </property>
   </action>
  </widget>

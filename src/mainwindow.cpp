@@ -7505,7 +7505,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     QAction *openInExternalEditorAction = noteMenu.addAction(
             tr("Open note in external editor"));
     QAction *openNoteWindowAction = noteMenu.addAction(
-            tr("Open note readonly in new window"));
+            tr("Open note in a view"));
     QAction *showInFileManagerAction = noteMenu.addAction(
             tr("Show note in file manager"));
     noteMenu.addSeparator();
@@ -7539,7 +7539,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             on_action_Open_note_in_external_editor_triggered();
         } else if (selectedItem == openNoteWindowAction) {
             // open the current note in a dialog
-            on_actionOpen_note_readonly_in_new_window_triggered();
+            on_actionView_note_in_new_window_triggered();
         } else if (selectedItem == showInFileManagerAction) {
             // show the current note in the file manager
             on_actionShow_note_in_file_manager_triggered();
@@ -8544,7 +8544,7 @@ void MainWindow::on_actionDelete_word_triggered() {
 /**
  * Opens the current note in a dialog
  */
-void MainWindow::on_actionOpen_note_readonly_in_new_window_triggered() {
+void MainWindow::on_actionView_note_in_new_window_triggered() {
     NoteDialog* dialog = new NoteDialog(this);
     dialog->setNote(currentNote);
     dialog->show();
