@@ -930,7 +930,7 @@
       <location filename="../mainwindow.ui" line="1911"/>
       <location filename="../mainwindow.cpp" line="7508"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Abrir uma nota no visualizador</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1493"/>
@@ -1457,13 +1457,13 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
       <location filename="../mainwindow.cpp" line="8267"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>total</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8274"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>minimo</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8354"/>
@@ -2127,7 +2127,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
   </context>
   <context>

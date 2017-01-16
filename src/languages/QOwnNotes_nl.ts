@@ -930,7 +930,7 @@
       <location filename="../mainwindow.ui" line="1911"/>
       <location filename="../mainwindow.cpp" line="7508"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Open notitie in een overzicht</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1493"/>
@@ -2128,7 +2128,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Notitie</translation>
     </message>
   </context>
   <context>

@@ -930,7 +930,7 @@
       <location filename="../mainwindow.ui" line="1911"/>
       <location filename="../mainwindow.cpp" line="7508"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Apri nota in una vista</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1493"/>
@@ -2128,7 +2128,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
   </context>
   <context>

@@ -6,6 +6,8 @@
 - under Windows some characters that are asking for troubles are now removed 
   from the title at the Evernote import
   (for [Issue #465](https://github.com/pbek/QOwnNotes/issues/465))
+- added more Dutch, Chinese, Portuguese, Italian and German translation (thank
+  you lenkadubois, chonghua, mlimacarlos and mlocati)
 
 ## 17.01.5
 - fixed a problem with opening notes with special characters in its file name in

@@ -4518,7 +4518,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>die Reintext-Notizen-Programm mit Markdown-Unterstützung und ownCloud-Integration</translation>
+      <translation>das Reintext-Notizen-Programm mit Markdown-Unterstützung und ownCloud-Integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
