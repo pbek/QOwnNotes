@@ -177,14 +177,20 @@ MainWindow::MainWindow(QWidget *parent) :
     // initialize the scripting engine
     initScriptingEngine();
 
+    // initialize the dock widgets
+    initDockWidgets();
+
     // restore toolbars
+    // initDockWidgets() has to be called first so panel checkboxes can be
+    // used in toolbars
     restoreToolbars();
+
+    // update the workspace menu and combobox entries again after
+    // restoreToolbars() to fill the workspace combo box again
+    updateWorkspaceLists();
 
     // check if we want to start the application hidden
     initShowHidden();
-
-    // initialize the dock widgets
-    initDockWidgets();
 
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.01.6
+- you can now use the panel toggle menu items in your toolbars
+  (for [Issue #465](https://github.com/pbek/QOwnNotes/issues/465))
+
 ## 17.01.5
 - fixed a problem with opening notes with special characters in its file name in
   an external editor if no editor was defined in the settings
