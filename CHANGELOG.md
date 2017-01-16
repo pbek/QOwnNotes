@@ -2,6 +2,9 @@
 
 ## 17.01.6
 - you can now use the panel toggle menu items in your toolbars
+  (for [Issue #481](https://github.com/pbek/QOwnNotes/issues/481))
+- under Windows some characters that are asking for troubles are now removed 
+  from the title at the Evernote import
   (for [Issue #465](https://github.com/pbek/QOwnNotes/issues/465))
 
 ## 17.01.5

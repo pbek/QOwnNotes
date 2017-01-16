@@ -326,6 +326,15 @@ void EvernoteImportDialog::importNotes(QString data) {
             content.replace(QRegularExpression("\n\n+"), "\n\n");
             content.replace(QRegularExpression("\n\n\\s+"), "\n\n");
 
+#ifdef Q_OS_WIN32
+            // removing or replacing some characters that are asking for
+            // troubles
+            title.replace("—", "-");
+            title.replace("|", "-");
+            title.remove("#");
+            title.remove("?");
+#endif
+
             QString noteText = Note::createNoteHeader(title) + content;
 
             Note note = Note();
