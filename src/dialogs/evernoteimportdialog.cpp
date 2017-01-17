@@ -331,8 +331,12 @@ void EvernoteImportDialog::importNotes(QString data) {
             // troubles
             title.replace("—", "-");
             title.replace("|", "-");
+            title.replace("/", "-");
+            title.replace("\\", "-");
             title.remove("#");
             title.remove("?");
+            title.remove("'");
+            title.remove("\"");
 #endif
 
             QString noteText = Note::createNoteHeader(title) + content;
