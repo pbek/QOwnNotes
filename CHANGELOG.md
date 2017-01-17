@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.01.7
+- fixed a problem with duplicate custom note file extensions in the general 
+  settings (for [Issue #483](https://github.com/pbek/QOwnNotes/issues/483))
+    - now the same file extension also can't be added twice
+
 ## 17.01.6
 - you can now use the panel toggle menu items in your toolbars
   (for [Issue #481](https://github.com/pbek/QOwnNotes/issues/481))

@@ -238,6 +238,8 @@ private:
 
     static void selectListWidgetValue(QListWidget *listWidget, QString value);
 
+    static bool listWidgetValueExists(QListWidget* listWidget, QString value);
+
     static QString getSelectedListWidgetValue(QListWidget *listWidget);
 
     void setupProxyPage();
@@ -263,7 +265,7 @@ private:
 
     void validateCurrentScript();
 
-    QListWidgetItem *addCustomeNoteFileExtension(
+    QListWidgetItem *addCustomNoteFileExtension(
             const QString &fileExtension);
 
     void loadShortcutSettings();

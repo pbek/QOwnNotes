@@ -553,6 +553,7 @@ void SettingsDialog::storeSettings() {
 
         customNoteFileExtensionList.append(item->whatsThis());
     }
+    customNoteFileExtensionList.removeDuplicates();
     settings.setValue("customNoteFileExtensionList",
                       customNoteFileExtensionList);
 
@@ -788,7 +789,7 @@ void SettingsDialog::readSettings() {
     QListIterator<QString> itr(Note::customNoteFileExtensionList());
     while (itr.hasNext()) {
         QString fileExtension = itr.next();
-        addCustomeNoteFileExtension(fileExtension);
+        addCustomNoteFileExtension(fileExtension);
     }
 
     selectListWidgetValue(ui->defaultNoteFileExtensionListWidget,
@@ -942,11 +943,10 @@ void SettingsDialog::storeShortcutSettings() {
 /**
  * Selects a value in a list widget, that is hidden in the whatsThis parameter
  */
-void SettingsDialog::selectListWidgetValue(
-        QListWidget* listWidget, QString value) {
+void SettingsDialog::selectListWidgetValue(QListWidget* listWidget,
+                                           QString value) {
     // get all items from the list widget
-    QList<QListWidgetItem *> items =
-            listWidget->findItems(
+    QList<QListWidgetItem *> items = listWidget->findItems(
                     QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
     // select the right item in the selector
     Q_FOREACH(QListWidgetItem *item, items) {
@@ -954,11 +954,29 @@ void SettingsDialog::selectListWidgetValue(
                 const QSignalBlocker blocker(listWidget);
                 Q_UNUSED(blocker);
 
-                item->whatsThis();
                 listWidget->setItemSelected(item, true);
                 break;
             }
         }
+}
+
+/**
+ * Checks if a value, that is hidden in the whatsThis parameter exists in a
+ * list widget
+ */
+bool SettingsDialog::listWidgetValueExists(QListWidget* listWidget,
+                                           QString value) {
+    // get all items from the list widget
+    QList<QListWidgetItem *> items = listWidget->findItems(
+                    QString("*"), Qt::MatchWrap | Qt::MatchWildcard);
+    // checks if the value exists
+    Q_FOREACH(QListWidgetItem *item, items) {
+            if (item->whatsThis() == value) {
+                return true;
+            }
+        }
+
+    return false;
 }
 
 /**
@@ -2285,15 +2303,23 @@ void SettingsDialog::on_addCustomNoteFileExtensionButton_clicked() {
     // make sure the file extension doesn't start with a point
     fileExtension = Utils::Misc::removeIfStartsWith(fileExtension, ".");
 
-    QListWidgetItem *item = addCustomeNoteFileExtension(fileExtension);
-    ui->defaultNoteFileExtensionListWidget->setCurrentItem(item);
+    QListWidgetItem *item = addCustomNoteFileExtension(fileExtension);
+
+    if (item != Q_NULLPTR) {
+        ui->defaultNoteFileExtensionListWidget->setCurrentItem(item);
+    }
 }
 
 /**
  * Adds a custom note file extension
  */
-QListWidgetItem *SettingsDialog::addCustomeNoteFileExtension(
+QListWidgetItem *SettingsDialog::addCustomNoteFileExtension(
         const QString &fileExtension) {
+    if (listWidgetValueExists(ui->defaultNoteFileExtensionListWidget,
+                              fileExtension)) {
+        return Q_NULLPTR;
+    }
+
     QListWidgetItem *item = new QListWidgetItem(fileExtension);
     item->setFlags(item->flags() | Qt::ItemIsEditable);
     item->setWhatsThis(fileExtension);

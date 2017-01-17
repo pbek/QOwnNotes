@@ -706,6 +706,7 @@ QStringList Note::customNoteFileExtensionList(QString prefix) {
     QSettings settings;
     QStringList list = settings.value(
             "customNoteFileExtensionList").toStringList();
+    list.removeDuplicates();
 
     if (!prefix.isEmpty()) {
         list.replaceInStrings(QRegularExpression("^"), prefix);
