@@ -6662,7 +6662,9 @@ void MainWindow::buildTagMoveMenuTree(QMenu *parentMenu,
     // add an action to move to this tag
     parentMenu->addSeparator();
     QAction *action = parentMenu->addAction(
-            parentTagId == 0 ? tr("Move to the root") : tr("Move to this tag"));
+            parentTagId == 0 ?
+                    tr("Move to the root", "to move a tag to the current tag in the tag context menu") :
+                    tr("Move to this tag"));
     action->setData(parentTagId);
 
     QObject::connect(
