@@ -7,6 +7,8 @@
 - under Windows some more characters that are asking for troubles are now 
   removed from the title at the Evernote import
   (for [Issue #465](https://github.com/pbek/QOwnNotes/issues/465))
+- added more German, Polish, Spanish and Chinese translation (thank you bigant,
+  lucjan, richarson and chonghua)
 
 ## 17.01.6
 - you can now use the panel toggle menu items in your toolbars
