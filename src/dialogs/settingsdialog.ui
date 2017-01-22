@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>3</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2640,7 +2640,7 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
-                  <item row="7" column="0" colspan="2">
+                  <item row="9" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -2724,7 +2724,7 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="5" column="0" colspan="2">
+                  <item row="6" column="0" colspan="2">
                    <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
                     <property name="toolTip">
                      <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
@@ -2784,7 +2784,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="6" column="0" colspan="2">
+                  <item row="8" column="0" colspan="2">
                    <widget class="QCheckBox" name="imageScaleDownCheckBox">
                     <property name="text">
                      <string>Scale images down when inserted into notes</string>
@@ -2801,6 +2801,20 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                     <property name="text">
                      <string>Accept all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                    <property name="toolTip">
+                     <string>You can use this for example under Windows if you have troubles with 
+      newlines in the ownCloud / Nextcloud notes app</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Use UNIX newline instead of native newline characters</string>
                     </property>
                    </widget>
                   </item>

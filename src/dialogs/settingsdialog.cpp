@@ -440,6 +440,8 @@ void SettingsDialog::storeSettings() {
                               ->isChecked());
     settings.setValue("allowDifferentNoteFileName",
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
+    settings.setValue("useUNIXNewline",
+                      ui->useUNIXNewlineCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
     settings.setValue("defaultNoteFileExtension",
@@ -625,6 +627,8 @@ void SettingsDialog::readSettings() {
             settings.value("ignoreAllExternalNoteFolderChanges").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
             settings.value("allowDifferentNoteFileName").toBool());
+    ui->useUNIXNewlineCheckBox->setChecked(
+            settings.value("useUNIXNewline").toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(

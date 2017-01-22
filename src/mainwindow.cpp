@@ -2241,9 +2241,12 @@ void MainWindow::notesWereModified(const QString &str) {
                     note.storeNewText(text);
 
                     // store note to disk again
-                    note.storeNoteTextFileToDisk();
+                    bool noteWasStored = note.storeNoteTextFileToDisk();
                     showStatusBarMessage(
-                            tr("Stored current note to disk"), 3000);
+                            noteWasStored ?
+                            tr("Stored current note to disk") :
+                            tr("Current note could not be stored to disk"),
+                            3000);
 
                     // rebuild and reload the notes directory list
                     buildNotesIndexAndLoadNoteDirectoryList();
@@ -4502,9 +4505,11 @@ void MainWindow::jumpToNoteOrCreateNew() {
             tag.linkToNote(note);
         }
 
-        note.storeNoteTextFileToDisk();
+        bool noteWasStored = note.storeNoteTextFileToDisk();
         showStatusBarMessage(
-                tr("Stored current note to disk"), 3000);
+                noteWasStored ?
+                tr("Stored current note to disk") :
+                tr("Current note could not be stored to disk"), 3000);
 
         {
             const QSignalBlocker blocker2(ui->noteTreeWidget);

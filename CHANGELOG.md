@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 17.01.8
+- improved log and status messages when a note could not be saved for example
+  when the file system doesn't allow certain characters in the filename
+  (for [Issue #486](https://github.com/pbek/QOwnNotes/issues/486))
+- you can now set that notes are stored with UNIX newline characters instead 
+  of the native newline characters in the *General settings*
+  (for [Issue #487](https://github.com/pbek/QOwnNotes/issues/487))
+    - you can use this for example under Windows if you have troubles with 
+      newlines in the ownCloud / Nextcloud notes app
+
 ## 17.01.7
 - fixed a problem with duplicate custom note file extensions in the general 
   settings (for [Issue #483](https://github.com/pbek/QOwnNotes/issues/483))

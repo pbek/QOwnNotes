@@ -834,11 +834,20 @@ bool Note::storeNoteTextFileToDisk() {
 
     QFile file(fullNoteFilePath());
     bool fileExists = this->fileExists();
+    QFile::OpenMode flags = QIODevice::WriteOnly;
+    QSettings settings;
+    bool useUNIXNewline = settings.value("useUNIXNewline").toBool();
+
+    if (!useUNIXNewline) {
+        flags |= QIODevice::Text;
+    }
 
     qDebug() << "storing note file: " << this->fileName;
 
-    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
-        qCritical() << file.errorString();
+    if (!file.open(flags)) {
+        qCritical() << QObject::tr("Could not store note file: %1 - Error "
+                                           "message: %2").arg(
+                file.fileName(), file.errorString());
         return false;
     }
 
@@ -1072,7 +1081,13 @@ int Note::storeDirtyNotesToDisk(Note &currentNote, bool *currentNoteChanged,
         for (int r = 0; query.next(); r++) {
             note = noteFromQuery(query);
             QString oldName = note.getName();
-            note.storeNoteTextFileToDisk();
+            bool noteWasStored = note.storeNoteTextFileToDisk();
+
+            // continue if note couldn't be stored
+            if (!noteWasStored) {
+                continue;
+            }
+
             QString newName = note.getName();
 
             // check if the file name has changed
