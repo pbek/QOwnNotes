@@ -9,6 +9,7 @@
   (for [Issue #487](https://github.com/pbek/QOwnNotes/issues/487))
     - you can use this for example under Windows if you have troubles with 
       newlines in the ownCloud / Nextcloud notes app
+- added more Russian and Chinese translation (thank you azar9610 and chonghua)
 
 ## 17.01.7
 - fixed a problem with duplicate custom note file extensions in the general 

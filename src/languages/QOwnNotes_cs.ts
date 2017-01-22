@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru" sourcelanguage="en">
+<TS version="2.1" language="cs" sourcelanguage="en">
   <context>
     <name>AboutDialog</name>
     <message>
       <location filename="../dialogs/aboutdialog.ui" line="14"/>
       <source>About QOwnNotes</source>
-      <translation>О QOwnNotes</translation>
+      <translation>O QOwnNotes</translation>
     </message>
   </context>
   <context>
@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation>Найти команду</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
   </context>
   <context>
@@ -23,47 +23,47 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation>Evernote импорт</translation>
+      <translation>Importovat z Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Select file</source>
-      <translation>Выберите файл</translation>
+      <translation>Vyberte soubor</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="61"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation>Пожалуйста, выберите файл Evernote enex, который вы хотите импортировать:</translation>
+      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="91"/>
       <source>Import images</source>
-      <translation>Импорт изображений</translation>
+      <translation>Importovat obrázky</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation>Evernote enex-файл</translation>
+      <translation type="unfinished">Evernote enex file</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation>%v из %m заметок импортировано</translation>
+      <translation type="unfinished">%v of %m note(s) imported</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="51"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation>Чтобы получить такой enex-файл, необходимо выбрать одну или несколько заметок в вашей версии настольного Evernote клиента и нажать кнопку «Экспортировать заметки...» в меню "Файл".</translation>
+      <translation type="unfinished">To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
       <source>Enex files</source>
-      <translation>Файлы Enex</translation>
+      <translation>Enex soubory</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Select Evernote enex file to import</source>
-      <translation>Выберите Evernote enex-файл для импорта</translation>
+      <translation type="unfinished">Select Evernote enex file to import</translation>
     </message>
   </context>
   <context>
@@ -71,242 +71,242 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Шрифт текста</translation>
+      <translation>Písmo textu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Размер:</translation>
+      <translation>Velikost:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation>Шрифт:</translation>
+      <translation>Rodina:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation>Цветовая схема</translation>
+      <translation>Barevné schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Удалить схему</translation>
+      <translation>Odstranit schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Удалить</translation>
+      <translation>Odstranit</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="608"/>
       <source>Export schema</source>
-      <translation>Экспорт схемы</translation>
+      <translation>Exportovat schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation>Экспорт</translation>
+      <translation>Exportovat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Если вы создали красивую цветовую схему, пожалуйста, экспортируйте ее и поделитесь со всеми!</translation>
+      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation>Копировать схему</translation>
+      <translation>Kopírovat schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="435"/>
       <source>Copy</source>
-      <translation>Копировать</translation>
+      <translation>Kopírovat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="653"/>
       <source>Import schema</source>
-      <translation>Импорт схемы</translation>
+      <translation>Importovat schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation>Импорт</translation>
+      <translation>Importovat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation>Поделиться схемой</translation>
+      <translation type="unfinished">Share schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation>Фон:</translation>
+      <translation>Pozadí:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Передний план:</translation>
+      <translation>Popředí:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation>Полужирный</translation>
+      <translation>Tučné</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation>Курсив</translation>
+      <translation>Kurzíva</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Адаптировать размер шрифта:</translation>
+      <translation>Přizpůsobit velikost písma:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation>Подчеркивание</translation>
+      <translation>Podtržení</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="182"/>
       <source>Text preset</source>
-      <translation>Заданный текст</translation>
+      <translation>Textové předvolby</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="183"/>
       <source>Emphasized text</source>
-      <translation>Выделенный текст</translation>
+      <translation type="unfinished">Emphasized text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="184"/>
       <source>Strong text</source>
-      <translation>Текст с тегом &lt;strong&gt;</translation>
+      <translation>Silný text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="201"/>
       <source>(HTML) Comment</source>
-      <translation>(HTML) Комментарий</translation>
+      <translation>(HTML) Komentář</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="191"/>
       <source>Header, level 1</source>
-      <translation>Заголовок, уровень 1</translation>
+      <translation>Záhlaví, úroveň 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="185"/>
       <source>Link</source>
-      <translation>Ссылка</translation>
+      <translation>Odkaz</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="186"/>
       <source>Image</source>
-      <translation>Изображение</translation>
+      <translation type="unfinished">Image</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="187"/>
       <source>Code (block)</source>
-      <translation>Код (блок)</translation>
+      <translation>Kód (blok)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="188"/>
       <source>Code (inline)</source>
-      <translation>Код (встроенный)</translation>
+      <translation>Kód (řádkový)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="190"/>
       <source>List item</source>
-      <translation>Элемент списка</translation>
+      <translation>Položka seznamu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="192"/>
       <source>Header, level 2</source>
-      <translation>Заголовок, уровень 2</translation>
+      <translation>Záhlaví, úroveň 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="193"/>
       <source>Header, level 3</source>
-      <translation>Заголовок, уровень 3</translation>
+      <translation>Záhlaví, úroveň 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="194"/>
       <source>Header, level 4</source>
-      <translation>Заголовок, уровень 4</translation>
+      <translation>Záhlaví, úroveň 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Header, level 5</source>
-      <translation>Заголовок, уровень 5</translation>
+      <translation>Záhlaví, úroveň 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Header, level 6</source>
-      <translation>Заголовок, уровень 6</translation>
+      <translation>Záhlaví, úroveň 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Block quote</source>
-      <translation>Блок цитаты</translation>
+      <translation>Bloková citace</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Table</source>
-      <translation>Таблица</translation>
+      <translation>Tabulka</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Отмеченный синтакс</translation>
+      <translation type="unfinished">Masked syntax</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Horizontal rule</source>
-      <translation>Горизонтальная линейка</translation>
+      <translation>Vodorovné pravítko</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation>Этот элемент будет использоваться для установки цветов для других элементов</translation>
+      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="432"/>
       <source>Copy color schema</source>
-      <translation>Копирование цветовой схемы</translation>
+      <translation>Kopírování barevné schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="433"/>
       <source>Color schema name</source>
-      <translation>Имя цветовой схемы</translation>
+      <translation>Název barevného schématu</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="557"/>
       <source>Remove schema</source>
-      <translation>Удаление схемы</translation>
+      <translation>Odstranit schéma</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="558"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Удалить текущую схему? Это не может быть отменено!</translation>
+      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="559"/>
       <source>Remove</source>
-      <translation>Удалить</translation>
+      <translation>Odstranit</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="559"/>
       <source>Cancel</source>
-      <translation>Отмена</translation>
+      <translation>Zrušit</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="607"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="652"/>
       <source>INI files</source>
-      <translation>INI-файлы</translation>
+      <translation>INI soubory</translation>
     </message>
   </context>
   <context>
@@ -314,37 +314,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation>Ссылка на URL-адрес или заметку</translation>
+      <translation type="unfinished">Link an url or note</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Введите URL-адрес</translation>
+      <translation>Zadejte adresu URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation>Введите целевой URL-адрес</translation>
+      <translation type="unfinished">Enter an URL to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши "возврат"</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Поиск целевой заметки для ссылки</translation>
+      <translation type="unfinished">Search for a note to link to</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Выберите локальный файл или введите URL-ссылку&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="181"/>
       <source>Select file to link to</source>
-      <translation>Выбор целевого файла для ссылки</translation>
+      <translation type="unfinished">Select file to link to</translation>
     </message>
   </context>
   <context>
@@ -352,58 +352,58 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="14"/>
       <source>Logs</source>
-      <translation>Журналы</translation>
+      <translation>Protokoly</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="109"/>
       <source>Fatal</source>
-      <translation>Сбой</translation>
+      <translation>Fatální</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="95"/>
       <source>Warning</source>
-      <translation>Предупреждение</translation>
+      <translation>Varování</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="102"/>
       <source>Critical</source>
-      <translation>Критический</translation>
+      <translation>Kritický</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="81"/>
       <source>Debug</source>
-      <translation>Отладка</translation>
+      <translation>Ladění</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="88"/>
       <source>Info</source>
-      <translation>Информация</translation>
+      <translation>Informace</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="116"/>
       <source>Status</source>
-      <translation>Статус</translation>
+      <translation>Stav</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="123"/>
       <source>Scripting</source>
-      <translation>Создание сценариев</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="130"/>
       <location filename="../widgets/logwidget.cpp" line="375"/>
       <source>Clear log</source>
-      <translation>Очистить журнал</translation>
+      <translation>Vymazat protokol</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Show options</source>
-      <translation>Показать опции</translation>
+      <translation>Zobrazit možnosti</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Hide options</source>
-      <translation>Скрыть опции</translation>
+      <translation>Skrýt možnosti</translation>
     </message>
   </context>
   <context>
@@ -411,693 +411,693 @@
     <message>
       <location filename="../mainwindow.ui" line="523"/>
       <source>add a tag to this note</source>
-      <translation>добавить тег к этой заметке</translation>
+      <translation>přidat štítek k této poznámce</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="526"/>
       <source>Add tag</source>
-      <translation>Добавить тег</translation>
+      <translation>Přidat štítek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="381"/>
       <location filename="../mainwindow.cpp" line="513"/>
       <source>Navigation</source>
-      <translation>Навигация</translation>
+      <translation>Navigace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="624"/>
       <source>&amp;Note</source>
-      <translation>&amp;Заметка</translation>
+      <translation type="unfinished">&amp;Note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="628"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Папки для заметок</translation>
+      <translation type="unfinished">Note &amp;folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="633"/>
       <source>Sort by</source>
-      <translation>Сортировать по</translation>
+      <translation>Seřadit podle</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="693"/>
       <source>&amp;Help</source>
-      <translation>&amp;Справка</translation>
+      <translation type="unfinished">&amp;Help</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="772"/>
       <source>Editor width in distraction free mode</source>
-      <translation>Ширина редактора в полноэкранном режиме</translation>
+      <translation type="unfinished">Editor width in distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="775"/>
       <source>Editor width</source>
-      <translation>Ширина окна редактора</translation>
+      <translation>Šířka editoru</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="835"/>
       <source>Custom actions</source>
-      <translation>Пользовательские команды</translation>
+      <translation>Vlastní akce</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="851"/>
       <source>main toolbar</source>
-      <translation>Главная панель инструментов</translation>
+      <translation>hlavní panel nástrojů</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="883"/>
       <source>&amp;Quit</source>
-      <translation>&amp;Выход</translation>
+      <translation type="unfinished">&amp;Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="898"/>
       <source>&amp;Setup note folders</source>
-      <translation>&amp;Настройка каталогов для заметок</translation>
+      <translation type="unfinished">&amp;Setup note folders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="907"/>
       <source>&amp;Find note</source>
-      <translation>&amp;Найти заметку</translation>
+      <translation type="unfinished">&amp;Find note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="919"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Удалить текущую заметку</translation>
+      <translation type="unfinished">&amp;Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="931"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation>O &amp;QOwnNotes...</translation>
+      <translation type="unfinished">About &amp;QOwnNotes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="943"/>
       <source>&amp;New note</source>
-      <translation>&amp;Новая заметка</translation>
+      <translation type="unfinished">&amp;New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="955"/>
       <source>Check for &amp;updates</source>
-      <translation>Проверить &amp;обновления</translation>
+      <translation type="unfinished">Check for &amp;updates</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="967"/>
       <source>Report &amp;issues or ideas</source>
-      <translation>Связаться с &amp;разработчиками</translation>
+      <translation type="unfinished">Report &amp;issues or ideas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="975"/>
       <source>Alphabetical</source>
-      <translation>По алфавиту</translation>
+      <translation>Abecední</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="978"/>
       <source>Sort alphabetical</source>
-      <translation>Сортировка по алфавиту</translation>
+      <translation>Abecední řazení</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="986"/>
       <source>By date</source>
-      <translation>По дате</translation>
+      <translation>Podle data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="989"/>
       <source>Sort by date</source>
-      <translation>Сортировка по дате</translation>
+      <translation>Seřadit podle data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="997"/>
       <source>Sh&amp;ow in system tray</source>
-      <translation>Показать в системном &amp;лотке</translation>
+      <translation type="unfinished">Sh&amp;ow in system tray</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1021"/>
       <source>Show note &amp;versions</source>
-      <translation>Показать &amp;версии заметки</translation>
+      <translation type="unfinished">Show note &amp;versions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1024"/>
       <source>Show note versions on server</source>
-      <translation>Показать версии заметки на сервере</translation>
+      <translation type="unfinished">Show note versions on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1033"/>
       <source>Show &amp;trash</source>
-      <translation>Показать &amp;корзину</translation>
+      <translation type="unfinished">Show &amp;trash</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1036"/>
       <source>Show trashed notes on server</source>
-      <translation>Показать заметки из корзины на сервере</translation>
+      <translation type="unfinished">Show trashed notes on server</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1041"/>
       <location filename="../mainwindow.cpp" line="7525"/>
       <source>Select &amp;all notes</source>
-      <translation>Выбрать &amp;все заметки</translation>
+      <translation type="unfinished">Select &amp;all notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1050"/>
       <location filename="../mainwindow.cpp" line="4955"/>
       <source>Insert &amp;link</source>
-      <translation>Вставить &amp;ссылку</translation>
+      <translation type="unfinished">Insert &amp;link</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1053"/>
       <source>Insert link to an url or a note</source>
-      <translation>Вставить ссылку на URL-адрес или заметку</translation>
+      <translation type="unfinished">Insert link to an url or a note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1065"/>
       <source>&amp;Find in current note</source>
-      <translation>&amp;Найти в текущей заметке</translation>
+      <translation type="unfinished">&amp;Find in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1068"/>
       <source>Find text in current note</source>
-      <translation>Найти текст в текущей заметке</translation>
+      <translation type="unfinished">Find text in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1073"/>
       <source>&amp;Duplicate text</source>
-      <translation>&amp;Дублировать текст</translation>
+      <translation type="unfinished">&amp;Duplicate text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1085"/>
       <source>&amp;Back in note history</source>
-      <translation>&amp;Предыдущая версия заметки</translation>
+      <translation type="unfinished">&amp;Back in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1006"/>
       <source>&amp;Settings</source>
-      <translation>&amp;Настройка</translation>
+      <translation type="unfinished">&amp;Settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Найти или создать подпапку для заметок</translation>
+      <translation type="unfinished">Find or create note sub folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="193"/>
       <source>Find or create tag</source>
-      <translation>Найти или создать тег</translation>
+      <translation>Najít nebo vytvořit štítek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation>Поиск существующих или создание новых заметок путем ввода текста и нажатия клавиши "возврат"</translation>
+      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="300"/>
       <source>Search or create note</source>
-      <translation>Найти или создать заметку</translation>
+      <translation type="unfinished">Search or create note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="537"/>
       <source>New tag</source>
-      <translation>Новый тег</translation>
+      <translation>Nový štítek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="640"/>
       <source>Export</source>
-      <translation>Экспорт</translation>
+      <translation>Exportovat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="653"/>
       <source>Import</source>
-      <translation>Импорт</translation>
+      <translation>Importovat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="722"/>
       <source>&amp;Edit</source>
-      <translation>&amp;Редактировать</translation>
+      <translation type="unfinished">&amp;Edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="762"/>
       <source>To&amp;do</source>
-      <translation>Список задач</translation>
+      <translation type="unfinished">To&amp;do</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="768"/>
       <source>&amp;Window</source>
-      <translation>&amp;Окно</translation>
+      <translation type="unfinished">&amp;Window</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="784"/>
       <location filename="../mainwindow.cpp" line="452"/>
       <source>Workspaces</source>
-      <translation>Рабочие области</translation>
+      <translation type="unfinished">Workspaces</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="789"/>
       <source>Panels</source>
-      <translation>Панели</translation>
+      <translation>Panely</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="794"/>
       <source>Toolbars</source>
-      <translation>Панели инструментов</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="831"/>
       <source>&amp;Scripting</source>
-      <translation>&amp;Создание сценариев</translation>
+      <translation type="unfinished">&amp;Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1097"/>
       <source>Forward in note history</source>
-      <translation>Следующая версия заметки</translation>
+      <translation type="unfinished">Forward in note history</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1109"/>
       <source>Show shortcuts</source>
-      <translation>Показать сочетания клавиш</translation>
+      <translation>Zobrazit zkratky</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1118"/>
       <source>&amp;Knowledge base</source>
-      <translation>&amp;База знаний</translation>
+      <translation type="unfinished">&amp;Knowledge base</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1127"/>
       <source>Insert current &amp;time</source>
-      <translation>Вставить &amp;текущее время</translation>
+      <translation type="unfinished">Insert current &amp;time</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1139"/>
       <source>Show &amp;Todo List</source>
-      <translation>Показать список &amp;задач</translation>
+      <translation type="unfinished">Show &amp;Todo List</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1151"/>
       <source>&amp;Export note as PDF (markdown)</source>
-      <translation>&amp;Экспорт заметки в PDF (markdown)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1160"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>&amp;Экспорт заметки в PDF (текст)</translation>
+      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1169"/>
       <source>&amp;Print note (text)</source>
-      <translation>&amp;Печать заметки (текст)</translation>
+      <translation type="unfinished">&amp;Print note (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1181"/>
       <source>&amp;Print note (markdown)</source>
-      <translation>&amp;Печать заметки (markdown)</translation>
+      <translation type="unfinished">&amp;Print note (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1193"/>
       <source>Insert &amp;image</source>
-      <translation>Вставка &amp;изображения</translation>
+      <translation type="unfinished">Insert &amp;image</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1196"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation>Вставка изображения (файл будет скопирован в каталог 'media' внутри текущего каталога с заметками)</translation>
+      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1208"/>
       <source>Show &amp;changelog</source>
-      <translation>История &amp;изменений</translation>
+      <translation type="unfinished">Show &amp;changelog</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1217"/>
       <source>&amp;Encrypt note</source>
-      <translation>&amp;Зашифровать заметку</translation>
+      <translation type="unfinished">&amp;Encrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1226"/>
       <source>Edit encrypted note</source>
-      <translation>Редактировать зашифрованную заметку</translation>
+      <translation type="unfinished">Edit encrypted note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1238"/>
       <source>Decrypt note</source>
-      <translation>Расшифровать заметку</translation>
+      <translation type="unfinished">Decrypt note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1247"/>
       <source>&amp;Open note in external editor</source>
-      <translation>&amp;Открыть заметку во внешнем редакторе</translation>
+      <translation type="unfinished">&amp;Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1259"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>&amp;Экспорт заметки в формат markdown</translation>
+      <translation type="unfinished">&amp;Export note as markdown file</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1268"/>
       <source>&amp;Get involved</source>
-      <translation>&amp;Принять участие</translation>
+      <translation type="unfinished">&amp;Get involved</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1277"/>
       <source>Insert &amp;code block</source>
-      <translation>Вставить блок &amp;кода</translation>
+      <translation type="unfinished">Insert &amp;code block</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1289"/>
       <source>Next note</source>
-      <translation>Следующая запись</translation>
+      <translation>Další Poznámka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1301"/>
       <source>Previous note</source>
-      <translation>Предыдущая заметка</translation>
+      <translation>Předchozí Poznámka</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1313"/>
       <source>&amp;Distraction free mode</source>
-      <translation>&amp;Полноэкранный режим</translation>
+      <translation type="unfinished">&amp;Distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1316"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation>Полноэкранный режим, вы можете отключить его с помощью кнопки в правом нижнем углу</translation>
+      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1327"/>
       <source>Show &amp;toolbar</source>
-      <translation>Отобразить панель &amp;инструментов</translation>
+      <translation type="unfinished">Show &amp;toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1335"/>
       <source>Narrow</source>
-      <translation>Узкий</translation>
+      <translation>Úzký</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1346"/>
       <source>Medium</source>
-      <translation>Средний</translation>
+      <translation>Střední</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1357"/>
       <source>Wide</source>
-      <translation>Широкий</translation>
+      <translation>Široký</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1368"/>
       <source>Full</source>
-      <translation>На весь экран</translation>
+      <translation>Plný</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1380"/>
       <source>Paste html or media</source>
-      <translation>Вставка страниц html или медиа-файлов</translation>
+      <translation type="unfinished">Paste html or media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1383"/>
       <location filename="../mainwindow.ui" line="1386"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation>Вставка изображений, заметок и страниц html из буфера обмена</translation>
+      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1398"/>
       <source>Show note in &amp;file manager</source>
-      <translation>Показать заметки в &amp;файл-менеджере</translation>
+      <translation type="unfinished">Show note in &amp;file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1410"/>
       <source>Format text &amp;bold</source>
-      <translation>Текст &amp;полужирный</translation>
+      <translation type="unfinished">Format text &amp;bold</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1422"/>
       <source>Format text &amp;italic</source>
-      <translation>Текст &amp;курсивом</translation>
+      <translation type="unfinished">Format text &amp;italic</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1434"/>
       <source>&amp;Increase note text size</source>
-      <translation>У&amp;величить размер текста</translation>
+      <translation type="unfinished">&amp;Increase note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1446"/>
       <source>&amp;Decrease note text size</source>
-      <translation>У&amp;меньшить размер текста</translation>
+      <translation type="unfinished">&amp;Decrease note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1458"/>
       <source>&amp;Reset note text size</source>
-      <translation>С&amp;бросить размер текста</translation>
+      <translation type="unfinished">&amp;Reset note text size</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1470"/>
       <source>&amp;Add tag to note</source>
-      <translation>&amp;Добавить тег к заметке</translation>
+      <translation type="unfinished">&amp;Add tag to note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1482"/>
       <source>&amp;Reload note folder</source>
-      <translation>&amp;Загрузить повторно папку заметок</translation>
+      <translation type="unfinished">&amp;Reload note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1554"/>
       <source>Show log</source>
-      <translation>Показать журнал</translation>
+      <translation type="unfinished">Show log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1792"/>
       <source>Unlock panels</source>
-      <translation>Разблокировать панель</translation>
+      <translation type="unfinished">Unlock panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1801"/>
       <location filename="../mainwindow.cpp" line="8366"/>
       <source>Remove current workspace</source>
-      <translation>Удалить текущую рабочую область</translation>
+      <translation type="unfinished">Remove current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1810"/>
       <source>Add new workspace</source>
-      <translation>Добавить новую рабочую область</translation>
+      <translation type="unfinished">Add new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1819"/>
       <source>Rename current workspace</source>
-      <translation>Переименование текущей рабочей области</translation>
+      <translation type="unfinished">Rename current workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1828"/>
       <source>Switch to previous workspace</source>
-      <translation>Перейти к предыдущей рабочей области</translation>
+      <translation type="unfinished">Switch to previous workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1836"/>
       <source>Show all panels</source>
-      <translation>Показать все панели</translation>
+      <translation type="unfinished">Show all panels</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1845"/>
       <source>Find action</source>
-      <translation>Найти команду</translation>
+      <translation type="unfinished">Find action</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1848"/>
       <location filename="../mainwindow.ui" line="1851"/>
       <source>Find an action from the menu</source>
-      <translation>Найти команду из меню</translation>
+      <translation type="unfinished">Find an action from the menu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
       <source>Insert table</source>
-      <translation>Вставка таблицы</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1875"/>
       <source>Insert block &amp;quote</source>
-      <translation>Вставить блок &amp;цитату</translation>
+      <translation type="unfinished">Insert block &amp;quote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1883"/>
       <location filename="../mainwindow.cpp" line="4959"/>
       <source>Search text on the web</source>
-      <translation>Поиск текста в сети</translation>
+      <translation type="unfinished">Search text on the web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1891"/>
       <source>Delete line</source>
-      <translation>Удалить строку</translation>
+      <translation type="unfinished">Delete line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Delete word</source>
-      <translation>Удалить слово</translation>
+      <translation type="unfinished">Delete word</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1911"/>
       <location filename="../mainwindow.cpp" line="7521"/>
       <source>Open note in a view</source>
-      <translation>Открыть заметку в виде</translation>
+      <translation type="unfinished">Open note in a view</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1493"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation>Использование &amp;вертикального режима просмотра</translation>
+      <translation type="unfinished">Use &amp;vertical preview layout</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1496"/>
       <location filename="../mainwindow.ui" line="1499"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation>Панель редактирования заметок будет выше панели предварительного просмотра</translation>
+      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1508"/>
       <source>Replace in current note</source>
-      <translation>Заменить в текущей заметке</translation>
+      <translation type="unfinished">Replace in current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1516"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>Автозаполнение, решить уравнение или открыть URL</translation>
+      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1519"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Решение простого уравнение типа '(2+3) * 6 =' в текущей строке</translation>
+      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1527"/>
       <source>Select note folder</source>
-      <translation>Выберите папку заметок</translation>
+      <translation type="unfinished">Select note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1542"/>
       <source>Reload scripting engine</source>
-      <translation>Перезагрузить скриптовый движок</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
       <source>Export note as HTML (markdown)</source>
-      <translation>Экспортировать заметку, как HTML (markdown)</translation>
+      <translation type="unfinished">Export note as HTML (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1575"/>
       <location filename="../mainwindow.ui" line="1578"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Откройте #qownnotes IRC-канал, вы должны оставаться в сети, чтобы получить ответ</translation>
+      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1715"/>
       <source>Show note list under tag pane</source>
-      <translation>Показать список заметок под областью тегов</translation>
+      <translation type="unfinished">Show note list under tag pane</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1777"/>
       <location filename="../mainwindow.ui" line="1780"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Откройте qownnotes Gitter-"комнату", вам нужен GitHub или Twitter аккаунт для входа, но вы можете получать сообщения в автономном режиме</translation>
+      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="697"/>
       <source>Open chat</source>
-      <translation>Открыть чат</translation>
+      <translation type="unfinished">Open chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
       <source>Insert headline from note filename</source>
-      <translation>Вставить заголовок из имени файла</translation>
+      <translation type="unfinished">Insert headline from note filename</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1601"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Использовать мягкий перенос в редакторе и режиме просмотра</translation>
+      <translation type="unfinished">Use softwrap in note editor and preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1609"/>
       <source>Show status bar</source>
-      <translation>Отобразить статус-бар</translation>
+      <translation type="unfinished">Show status bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1624"/>
       <source>Share note</source>
-      <translation>Расшарить заметку</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1642"/>
       <source>Toggle text case</source>
-      <translation>Переключение регистра текста</translation>
+      <translation type="unfinished">Toggle text case</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1654"/>
       <source>Markdown cheatsheet</source>
-      <translation>Шпаргалка по Markdown</translation>
+      <translation type="unfinished">Markdown cheatsheet</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1663"/>
       <source>Strike out text</source>
-      <translation>Перечеркнуть текст</translation>
+      <translation type="unfinished">Strike out text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1674"/>
       <source>Use one column mode</source>
-      <translation>Использовать режим в один столбец</translation>
+      <translation type="unfinished">Use one column mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1677"/>
       <location filename="../mainwindow.ui" line="1680"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation>Использовать минимальный режим в один столбец (как nvALT)</translation>
+      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1692"/>
       <source>Show menu bar</source>
-      <translation>Показать меню</translation>
+      <translation type="unfinished">Show menu bar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1704"/>
       <source>Split note at cursor position</source>
-      <translation>Разделить заметку в позиции курсора</translation>
+      <translation type="unfinished">Split note at cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1724"/>
       <source>Donate</source>
-      <translation>Пожертвования</translation>
+      <translation type="unfinished">Donate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1733"/>
       <source>Find notes in all subfolders</source>
-      <translation>Поиск заметок во всех вложенных папках</translation>
+      <translation type="unfinished">Find notes in all subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1741"/>
       <location filename="../mainwindow.ui" line="1744"/>
       <source>Start hidden</source>
-      <translation>Запускать в скрытом режиме</translation>
+      <translation type="unfinished">Start hidden</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1747"/>
       <source>Starts the application hidden if the system tray icon is shown</source>
-      <translation>Запускает приложение в скрытом режиме, если иконка отображается в системном трее</translation>
+      <translation type="unfinished">Starts the application hidden if the system tray icon is shown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1756"/>
       <source>Import notes from Evernote</source>
-      <translation>Импорт заметок из Evernote</translation>
+      <translation type="unfinished">Import notes from Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1765"/>
       <source>Delete orphaned image files</source>
-      <translation>Удалить несвязанные изображения</translation>
+      <translation type="unfinished">Delete orphaned image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2231"/>
       <source>Note was removed externally!</source>
-      <translation>Заметка удалена другой программой!</translation>
+      <translation type="unfinished">Note was removed externally!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2232"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>Текущая заметка удалена другой программой!
-Восстановить текущую заметку?</translation>
+      <translation type="unfinished">Current note was removed outside of this application!
+Restore current note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2234"/>
       <source>&amp;Restore</source>
-      <translation>&amp;Восстановить</translation>
+      <translation type="unfinished">&amp;Restore</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2234"/>
@@ -1113,50 +1113,50 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="5231"/>
       <location filename="../mainwindow.cpp" line="8368"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message numerus="yes">
       <source>stored %n note(s) to disk</source>
-      <translation>
-        <numerusform>на диск сохранена %n заметка</numerusform>
-        <numerusform>на диск сохранены %n заметки</numerusform>
-        <numerusform>на диск сохранено %n заметок</numerusform>
+      <translation type="unfinished">
+        <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
+        <numerusform>stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2437"/>
       <source>new version %1 available</source>
-      <translation>доступна новая версия: %1</translation>
+      <translation type="unfinished">new version %1 available</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2837"/>
       <source>No folder was selected</source>
-      <translation>Каталог не был выбран</translation>
+      <translation type="unfinished">No folder was selected</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2838"/>
       <source>You have to select your ownCloud notes folder to make this software work!</source>
-      <translation>Необходимо выбрать каталог для заметок ownCloud!</translation>
+      <translation type="unfinished">You have to select your ownCloud notes folder to make this software work!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2840"/>
       <source>&amp;Retry</source>
-      <translation>&amp;Повтор</translation>
+      <translation type="unfinished">&amp;Retry</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2840"/>
       <source>&amp;Exit</source>
-      <translation>&amp;Выход</translation>
+      <translation type="unfinished">&amp;Exit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2988"/>
       <source>Remove current note</source>
-      <translation>Удалить текущую заметку</translation>
+      <translation type="unfinished">Remove current note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2989"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Удалить текущую заметку: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2991"/>
@@ -1166,887 +1166,887 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="3762"/>
       <location filename="../mainwindow.cpp" line="8368"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Удалить</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3288"/>
       <source>Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</source>
-      <translation>Введите &lt;strong&gt;пароль&lt;/strong&gt; для зашифрованной заметки.</translation>
+      <translation type="unfinished">Please enter the &lt;strong&gt;password&lt;/strong&gt; of this encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3312"/>
       <source>Note can't be decrypted!</source>
-      <translation>Заметку невозможно расшифровать!</translation>
+      <translation type="unfinished">Note can't be decrypted!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3313"/>
       <source>It seems that your password is not valid!</source>
-      <translation>Пароль не подходит!</translation>
+      <translation type="unfinished">It seems that your password is not valid!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3446"/>
       <source>Remove selected notes</source>
-      <translation>Удалить выделенные заметки</translation>
+      <translation type="unfinished">Remove selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3447"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
-      <translation>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенную заметку?
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-Если на сервере ownCloud включена корзина, то заметку можно будет восстановить из неё.</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенные заметки?
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-Если на сервере ownCloud включена корзина, то заметки можно будет восстановить из неё.</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных заметок?
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected note(s)?
 
-Если на сервере ownCloud включена корзина, то заметки можно будет восстановить из неё.</numerusform>
+If the trash is enabled on your ownCloud server you should be able to restore them from there.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3529"/>
       <location filename="../mainwindow.cpp" line="7697"/>
       <source>Remove selected folders</source>
-      <translation>Удалить выбранные папки</translation>
+      <translation type="unfinished">Remove selected folders</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3530"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</source>
-      <translation>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt;выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Также будут удалены все файлы и папки в этих папках!</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt;выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Также будут удалены все файлы и папки в этих папках!</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt;выбранных папок? &lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt; Также будут удалены все файлы и папки в этих папках!</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected folder(s)?&lt;ul&gt;&lt;li&gt;%1&lt;/li&gt;&lt;/ul&gt;All files and folders in these folders will be removed as well!</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3542"/>
       <source>Removed note subfolder: %1</source>
-      <translation>Удалена подпапка заметки: %1</translation>
+      <translation type="unfinished">Removed note subfolder: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3561"/>
       <source>Remove selected tags</source>
-      <translation>Удалить выделенные теги</translation>
+      <translation type="unfinished">Remove selected tags</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3562"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
-      <translation>
-        <numerusform>Удалить выделенный тег? Заметки удалены не будут.</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных тега? Заметки удалены не будут.</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выделенных тегов? Заметки удалены не будут.</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
+        <numerusform>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3604"/>
       <location filename="../mainwindow.cpp" line="6883"/>
       <source>Move selected notes</source>
-      <translation>Переместить выделенные заметки</translation>
+      <translation type="unfinished">Move selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3605"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Переместить %n выделенную заметку на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Переместить %n выделенные заметки на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Переместить %n выделенных заметок на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3607"/>
       <source>&amp;Move</source>
-      <translation>&amp;Переместить</translation>
+      <translation type="unfinished">&amp;Move</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3678"/>
       <location filename="../mainwindow.cpp" line="6943"/>
       <source>Copy selected notes</source>
-      <translation>Копировать выделенные заметки</translation>
+      <translation type="unfinished">Copy selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3679"/>
       <source>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Копировать %n выделенную заметку на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Копировать %n выделенные заметки на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Копировать %n выделенных заметок на &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3681"/>
       <source>&amp;Copy</source>
-      <translation>&amp;Копировать</translation>
+      <translation type="unfinished">&amp;Copy</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3702"/>
       <location filename="../mainwindow.cpp" line="3790"/>
       <source>Done</source>
-      <translation>Готово</translation>
+      <translation type="unfinished">Done</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3703"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation>
-        <numerusform>%n заметка скопирована в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n заметки скопированы в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n заметок скопировано в &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3716"/>
       <source>Tag selected notes</source>
-      <translation>Пометить выбранные заметки</translation>
+      <translation type="unfinished">Tag selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3717"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Пометить выбранную заметку тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Пометить %n выбранные заметки тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Пометить %n выбранных заметок тегом &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3884"/>
       <source>Restart application</source>
-      <translation>Перезапустить приложение</translation>
+      <translation type="unfinished">Restart application</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3890"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation>Вам может потребоваться перезапустить приложение вручную, чтобы изменения вступили в силу.</translation>
+      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3895"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation>Вам может потребоваться перезапустить приложение, чтобы изменения вступили в силу.</translation>
+      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3897"/>
       <source>Restart</source>
-      <translation>Перезагрузка</translation>
+      <translation type="unfinished">Restart</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4118"/>
       <source>PDF files</source>
-      <translation>PDF-файлы</translation>
+      <translation type="unfinished">PDF files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4914"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation>Версии заметок в настоящее время загружены с сервера ownCloud</translation>
+      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4928"/>
       <source>Trashed notes are currently loaded from your ownCloud server</source>
-      <translation>Удаленные заметки в настоящее время загружены с сервера ownCloud</translation>
+      <translation type="unfinished">Trashed notes are currently loaded from your ownCloud server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5074"/>
       <source>Image files</source>
-      <translation>Файлы изображений</translation>
+      <translation type="unfinished">Image files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5313"/>
       <source>Markdown files</source>
-      <translation>Markdown файлы</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5369"/>
       <source>Bookmarked note position at slot %1</source>
-      <translation>Установлена закладка в ячейке %1</translation>
+      <translation type="unfinished">Bookmarked note position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5385"/>
       <source>Jumped to bookmark position at slot %1</source>
-      <translation>Переход к закладке в ячейке %1</translation>
+      <translation type="unfinished">Jumped to bookmark position at slot %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5587"/>
       <location filename="../mainwindow.cpp" line="5649"/>
       <source>Inserting image</source>
-      <translation>Вставка изображения</translation>
+      <translation type="unfinished">Inserting image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5592"/>
       <location filename="../mainwindow.cpp" line="5652"/>
       <source>Done inserting image</source>
-      <translation>Изображение вставлено</translation>
+      <translation type="unfinished">Done inserting image</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5603"/>
       <source>Copied %n note(s) to %1</source>
-      <translation>
-        <numerusform>Скопировано %n заметок(ка) в %1</numerusform>
-        <numerusform>Скопировано %n заметок(ка) в %1</numerusform>
-        <numerusform>Скопировано %n заметок(ка) в %1</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copied %n note(s) to %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5612"/>
       <source>Failed to copy %n note(s) (most likely already existing)</source>
-      <translation>
-        <numerusform>Не удалось скопировать %n заметок (скорее всего она уже существуют)</numerusform>
-        <numerusform>Не удалось скопировать %n заметок (скорее всего она уже существуют)</numerusform>
-        <numerusform>Не удалось скопировать %n заметок (скорее всего она уже существуют)</numerusform>
+      <translation type="unfinished">
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
+        <numerusform>Failed to copy %n note(s) (most likely already existing)</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5622"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation>
-        <numerusform>Пропущено копирование заметки (неизвестный формат или нечитаемая)</numerusform>
-        <numerusform>Пропущено копирование %n заметок (неизвестный формат или нечитаемая)</numerusform>
-        <numerusform>Пропущено копирование %n заметок (неизвестный формат или нечитаемая)</numerusform>
+      <translation type="unfinished">
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5636"/>
       <source>Saving temporary image</source>
-      <translation>Сохранение временного изображения</translation>
+      <translation type="unfinished">Saving temporary image</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5655"/>
       <source>Temporary file can't be opened</source>
-      <translation>Невозможно открыть временный файл</translation>
+      <translation type="unfinished">Temporary file can't be opened</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5688"/>
       <source>Downloading %1</source>
-      <translation>Загрузка %1</translation>
+      <translation type="unfinished">Downloading %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5718"/>
       <source>Done downloading images</source>
-      <translation>Загрузка изображений завершена</translation>
+      <translation type="unfinished">Done downloading images</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6447"/>
       <source>Assign color</source>
-      <translation>Назначить цвет</translation>
+      <translation type="unfinished">Assign color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6448"/>
       <source>Disable color</source>
-      <translation>Отменить цвет</translation>
+      <translation type="unfinished">Disable color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6671"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation>Перейти в корень</translation>
+      <translation>Přesunout do kořenové složky</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7071"/>
       <source>An url was opened at the current cursor position</source>
-      <translation>URL-адрес был открыт в текущей позиции курсора</translation>
+      <translation type="unfinished">An url was opened at the current cursor position</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7149"/>
       <source>No equation was found in front of the cursor</source>
-      <translation>Уравнение под курсором не обнаружено</translation>
+      <translation type="unfinished">No equation was found in front of the cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7166"/>
       <source>Result for equation: %1 = %2</source>
-      <translation>Результат уравнения: %1 = %2</translation>
+      <translation type="unfinished">Result for equation: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7240"/>
       <source>The scripting engine was reloaded</source>
-      <translation>Скриптовый движок был перезагружен</translation>
+      <translation type="unfinished">The scripting engine was reloaded</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7267"/>
       <source>HTML files</source>
-      <translation>HTML-файлы</translation>
+      <translation type="unfinished">HTML files</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8161"/>
       <source>Create new workspace</source>
-      <translation>Создать новую рабочую область</translation>
+      <translation type="unfinished">Create new workspace</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8161"/>
       <location filename="../mainwindow.cpp" line="8405"/>
       <source>Workspace name:</source>
-      <translation>Имя рабочей области:</translation>
+      <translation type="unfinished">Workspace name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8280"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation>на весь экран</translation>
+      <translation type="unfinished">full</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8287"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation>минимальный</translation>
+      <translation type="unfinished">minimal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8367"/>
       <source>Remove the current workspace?</source>
-      <translation>Удалить текущую рабочую область?</translation>
+      <translation type="unfinished">Remove the current workspace?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8405"/>
       <source>Rename workspace</source>
-      <translation>Переименовать рабочую область</translation>
+      <translation type="unfinished">Rename workspace</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8520"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation>
-        <numerusform>%n символов</numerusform>
-        <numerusform>%n символов</numerusform>
-        <numerusform>%n символов</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
+        <numerusform>%n chars</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="825"/>
       <location filename="../mainwindow.cpp" line="3719"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Тег</translation>
+      <translation type="unfinished">&amp;Tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3759"/>
       <source>Remove tag from selected notes</source>
-      <translation>Удалить тег из выбранных заметок</translation>
+      <translation type="unfinished">Remove tag from selected notes</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3760"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation>
-        <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; из выбранной заметки?</numerusform>
-        <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; из %n выбранной заметки?</numerusform>
-        <numerusform>Удалить тег &lt;strong&gt;%1&lt;/strong&gt; из %n выбранных заметок?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3791"/>
       <source>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</source>
-      <translation>
-        <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из заметки</numerusform>
-        <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из %n заметки</numerusform>
-        <numerusform>Тег &lt;strong&gt;%1&lt;/strong&gt; был удален из %n заметок</numerusform>
+      <translation type="unfinished">
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
+        <numerusform>Tag &lt;strong&gt;%1&lt;/strong&gt; was removed from %n note(s)</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3812"/>
       <source>Current notes folder: </source>
-      <translation>Текущий каталог с заметками:</translation>
+      <translation type="unfinished">Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3814"/>
       <source>Set the notes folder. Current notes folder: </source>
-      <translation>Выберите каталог с заметками. Текущий каталог:</translation>
+      <translation type="unfinished">Set the notes folder. Current notes folder: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4036"/>
       <source>Print note</source>
-      <translation>Печать заметки</translation>
+      <translation type="unfinished">Print note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4067"/>
       <source>Letter</source>
-      <translation>Письмо</translation>
+      <translation type="unfinished">Letter</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4093"/>
       <source>Portrait</source>
-      <translation>Портрет</translation>
+      <translation type="unfinished">Portrait</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4093"/>
       <source>Landscape</source>
-      <translation>Ландшафт</translation>
+      <translation type="unfinished">Landscape</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4098"/>
       <source>Orientation</source>
-      <translation>Ориентация</translation>
+      <translation type="unfinished">Orientation</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4098"/>
       <source>Orientation:</source>
-      <translation>Ориентация:</translation>
+      <translation type="unfinished">Orientation:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4119"/>
       <source>Export current note as PDF</source>
-      <translation>Экспорт текущей заметки в PDF</translation>
+      <translation type="unfinished">Export current note as PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4182"/>
       <source>You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</source>
-      <translation>Нет выбранных todo-листов!&lt;br /&gt;Выберите используемый &lt;strong&gt;Todo&lt;/strong&gt;в настройках!</translation>
+      <translation type="unfinished">You have not selected any todo lists.&lt;br /&gt;Please check your &lt;strong&gt;Todo&lt;/strong&gt; configuration in the settings!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4779"/>
       <source>Open QOwnNotes</source>
-      <translation>Открыть QOwnNotes</translation>
+      <translation type="unfinished">Open QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4788"/>
       <location filename="../mainwindow.cpp" line="7695"/>
       <source>New note</source>
-      <translation>Новая заметка</translation>
+      <translation type="unfinished">New note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4804"/>
       <source>Recent notes</source>
-      <translation>Недавние заметки</translation>
+      <translation type="unfinished">Recent notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4834"/>
       <source>Show todo lists</source>
-      <translation>Показать списки todo</translation>
+      <translation type="unfinished">Show todo lists</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4845"/>
       <source>Recent tasks</source>
-      <translation>Последние задачи</translation>
+      <translation type="unfinished">Recent tasks</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4877"/>
       <source>Quit</source>
-      <translation>Выход</translation>
+      <translation type="unfinished">Quit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5954"/>
       <source>show notes from all note subfolders (%1)</source>
-      <translation>показать заметки из всех подкаталогов (%1)</translation>
+      <translation type="unfinished">show notes from all note subfolders (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5972"/>
       <source>show notes in note root folder (%1)</source>
-      <translation>показать заметки в корневой папке (%1)</translation>
+      <translation type="unfinished">show notes in note root folder (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="310"/>
       <location filename="../mainwindow.cpp" line="495"/>
       <location filename="../mainwindow.cpp" line="5976"/>
       <source>Note folder</source>
-      <translation>Папка заметок</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6818"/>
       <source>Copy to note folder</source>
-      <translation>Копировать в каталог заметки</translation>
+      <translation type="unfinished">Copy to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6819"/>
       <source>Move to note folder</source>
-      <translation>Переместить в каталог заметки</translation>
+      <translation type="unfinished">Move to note folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6820"/>
       <source>Copy to this subfolder</source>
-      <translation>Копировать в этот подкаталог</translation>
+      <translation type="unfinished">Copy to this subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6821"/>
       <source>Move to this subfolder</source>
-      <translation>Переместить в этот подкаталог</translation>
+      <translation type="unfinished">Move to this subfolder</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6872"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Переместить %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Переместить %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Переместить %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6885"/>
       <source>Move</source>
-      <translation>Переместить</translation>
+      <translation type="unfinished">Move</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3898"/>
       <location filename="../mainwindow.cpp" line="6885"/>
       <location filename="../mainwindow.cpp" line="6945"/>
       <source>Cancel</source>
-      <translation>Отмена</translation>
+      <translation type="unfinished">Cancel</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6922"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation>
-        <numerusform>%n заметок(ки) были перемещены в подкаталог заметки «%2»</numerusform>
-        <numerusform>%n заметок(ки) были перемещены в подкаталог заметки «%2»</numerusform>
-        <numerusform>%n заметок(ки) были перемещены в подкаталог заметки «%2»</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6932"/>
       <source>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation>
-        <numerusform>Копировать %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Копировать %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Копировать %n выбранных заметок(ки) в подкаталог заметки &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Copy %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6877"/>
       <location filename="../mainwindow.cpp" line="6937"/>
       <source>Tagging information of these notes will be lost at the destination.</source>
-      <translation>Теги этих заметок будут потеряны в месте назначения.</translation>
+      <translation type="unfinished">Tagging information of these notes will be lost at the destination.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6945"/>
       <source>Copy</source>
-      <translation>Копировать</translation>
+      <translation type="unfinished">Copy</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="6977"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation>
-        <numerusform>%n заметок(ки) были скопированы в подкаталог заметки «%2»</numerusform>
-        <numerusform>%n заметок(ки) были скопированы в подкаталог заметки «%2»</numerusform>
-        <numerusform>%n заметок(ки) были скопированы в подкаталог заметки «%2»</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7471"/>
       <source>Move notes to subfolder...</source>
-      <translation>Переместить заметки в подпапку...</translation>
+      <translation type="unfinished">Move notes to subfolder...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7475"/>
       <source>Copy notes to subfolder...</source>
-      <translation>Скопировать заметки в подпапку...</translation>
+      <translation type="unfinished">Copy notes to subfolder...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7519"/>
       <source>Open note in external editor</source>
-      <translation>Открыть заметку во внешнем редакторе</translation>
+      <translation type="unfinished">Open note in external editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7523"/>
       <source>Show note in file manager</source>
-      <translation>Показать заметку в файловом менеджере</translation>
+      <translation type="unfinished">Show note in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7696"/>
       <source>New subfolder</source>
-      <translation>Новая подпапка</translation>
+      <translation type="unfinished">New subfolder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7699"/>
       <source>Show folder in file manager</source>
-      <translation>Показывать папку в файл-менеджере</translation>
+      <translation type="unfinished">Show folder in file manager</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7730"/>
       <source>Create a new folder</source>
-      <translation>Создать новую папку</translation>
+      <translation type="unfinished">Create a new folder</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7730"/>
       <source>Folder name:</source>
-      <translation>Имя папки:</translation>
+      <translation type="unfinished">Folder name:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5918"/>
       <source>show all untagged notes (%1)</source>
-      <translation>показать все непомеченные заметки (%1)</translation>
+      <translation type="unfinished">show all untagged notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5921"/>
       <source>Untagged notes</source>
-      <translation>Заметки без тега</translation>
+      <translation type="unfinished">Untagged notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7268"/>
       <source>Export current note as HTML file</source>
-      <translation>Экспорт текущей заметки в виде HTML-файла</translation>
+      <translation type="unfinished">Export current note as HTML file</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4076"/>
       <source>Page size</source>
-      <translation>Размер страницы</translation>
+      <translation type="unfinished">Page size</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="817"/>
       <source>quit toolbar</source>
-      <translation>Панель инструментов выхода</translation>
+      <translation type="unfinished">quit toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1183"/>
       <source>Show menu bar item</source>
-      <translation>Показать элемент меню</translation>
+      <translation type="unfinished">Show menu bar item</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4076"/>
       <source>Page size:</source>
-      <translation>Размер страницы:</translation>
+      <translation type="unfinished">Page size:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4157"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить части программы, которые нуждаются в улучшении и исправлении ошибок. Это поведение можно отключить в настройках.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4161"/>
       <source>&amp;Ok</source>
-      <translation>&amp;Да</translation>
+      <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7441"/>
       <source>&amp;Move notes to...</source>
-      <translation>&amp;Переместить заметки в...</translation>
+      <translation type="unfinished">&amp;Move notes to...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7442"/>
       <source>&amp;Copy notes to...</source>
-      <translation>&amp;Копировать заметки в...</translation>
+      <translation type="unfinished">&amp;Copy notes to...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7483"/>
       <source>&amp;Tag selected notes with...</source>
-      <translation>&amp;Пометить выбранные заметки тегом...</translation>
+      <translation type="unfinished">&amp;Tag selected notes with...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7505"/>
       <source>&amp;Remove tag from selected notes...</source>
-      <translation>&amp;Удалить тег из выделенных заметок...</translation>
+      <translation type="unfinished">&amp;Remove tag from selected notes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7516"/>
       <source>&amp;Remove notes</source>
-      <translation>&amp;Удалить заметки</translation>
+      <translation type="unfinished">&amp;Remove notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4955"/>
       <source>&amp;Link selected text</source>
-      <translation>Сделать выделенный текст &amp;ссылкой</translation>
+      <translation type="unfinished">&amp;Link selected text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="738"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation>Ваши задачи загружаются с сервера</translation>
+      <translation type="unfinished">Your tasks are being loaded from your server</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2164"/>
       <source>Current note was modified externally</source>
-      <translation>Текущая заметка была изменена извне</translation>
+      <translation type="unfinished">Current note was modified externally</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2247"/>
       <location filename="../mainwindow.cpp" line="4511"/>
       <source>Stored current note to disk</source>
-      <translation>Текущая заметка сохранена на диск</translation>
+      <translation type="unfinished">Stored current note to disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2271"/>
       <source>Note was modified externally: %1</source>
-      <translation>Заметка изменена внешней программой: %1</translation>
+      <translation type="unfinished">Note was modified externally: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2292"/>
       <source>Notes directory was modified externally</source>
-      <translation>Каталог заметок был изменен извне</translation>
+      <translation type="unfinished">Notes directory was modified externally</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2358"/>
       <source>Stored %n note(s) to disk</source>
-      <translation>
-        <numerusform>На диск сохранено %n заметок</numerusform>
-        <numerusform>На диск сохранено %n заметок</numerusform>
-        <numerusform>На диск сохранено %n заметок</numerusform>
+      <translation type="unfinished">
+        <numerusform>Stored %n note(s) to disk</numerusform>
+        <numerusform>Stored %n note(s) to disk</numerusform>
+        <numerusform>Stored %n note(s) to disk</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4962"/>
       <source>Paste HTML or media</source>
-      <translation>Вставить HTML или медиа</translation>
+      <translation type="unfinished">Paste HTML or media</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5890"/>
       <source>show all notes (%1)</source>
-      <translation>показать все заметки (%1)</translation>
+      <translation type="unfinished">show all notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5893"/>
       <location filename="../mainwindow.cpp" line="5958"/>
       <source>All notes</source>
-      <translation>Все заметки</translation>
+      <translation type="unfinished">All notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6438"/>
       <source>&amp;Add tag</source>
-      <translation>&amp;Добавить тег</translation>
+      <translation type="unfinished">&amp;Add tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6452"/>
       <source>&amp;Move tags to...</source>
-      <translation>&amp;Переместить теги...</translation>
+      <translation type="unfinished">&amp;Move tags to...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6487"/>
       <source>Tag could not be created!</source>
-      <translation>Тег не может быть создан!</translation>
+      <translation type="unfinished">Tag could not be created!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6672"/>
       <source>Move to this tag</source>
-      <translation>Перейти к этому тегу</translation>
+      <translation type="unfinished">Move to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6722"/>
       <source>Tag this</source>
-      <translation>Пометить тегом</translation>
+      <translation type="unfinished">Tag this</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6752"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation>Нельзя переместить тег '%1' в этот тег</translation>
+      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6763"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation>Тег '%1' перенесен в новый тег</translation>
+      <translation type="unfinished">Moved tag '%1' to new tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6077"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>показать все заметки с тегами '%1' (%2)</translation>
+      <translation type="unfinished">show all notes tagged with '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6321"/>
       <source>remove tag '%1' from note</source>
-      <translation>удаление тега '%1' из заметки</translation>
+      <translation type="unfinished">remove tag '%1' from note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6446"/>
       <source>&amp;Edit tag</source>
-      <translation>&amp;Изменить тег</translation>
+      <translation type="unfinished">&amp;Edit tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6449"/>
       <source>&amp;Remove tags</source>
-      <translation>&amp;Удалить теги</translation>
+      <translation type="unfinished">&amp;Remove tags</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4181"/>
       <source>No selected todo lists!</source>
-      <translation>Нет выбранных списков задач!</translation>
+      <translation type="unfinished">No selected todo lists!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="466"/>
       <source>Subfolders</source>
-      <translation>Вложенные папки</translation>
+      <translation type="unfinished">Subfolders</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="477"/>
       <source>Tags</source>
-      <translation>Теги</translation>
+      <translation>Štítky</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="486"/>
       <source>Note search</source>
-      <translation>Поиск заметок</translation>
+      <translation type="unfinished">Note search</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="504"/>
       <source>Note list</source>
-      <translation>Список заметок</translation>
+      <translation type="unfinished">Note list</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="527"/>
       <source>Note edit</source>
-      <translation>Редактирование заметки</translation>
+      <translation type="unfinished">Note edit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Note tags</source>
-      <translation>Теги заметки</translation>
+      <translation>Štítky poznámky</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="545"/>
       <source>Note preview</source>
-      <translation>Просмотр заметки</translation>
+      <translation type="unfinished">Note preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="552"/>
       <source>Log</source>
-      <translation>Журнал</translation>
+      <translation type="unfinished">Log</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="784"/>
       <source>formatting toolbar</source>
-      <translation>панель инструментов форматирования</translation>
+      <translation type="unfinished">formatting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="793"/>
       <source>inserting toolbar</source>
-      <translation>панель инструментов вставки</translation>
+      <translation type="unfinished">inserting toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="800"/>
       <source>encryption toolbar</source>
-      <translation>панель инструментов шифрования</translation>
+      <translation type="unfinished">encryption toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="807"/>
       <source>window toolbar</source>
-      <translation>панель инструментов окна</translation>
+      <translation type="unfinished">window toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="812"/>
       <source>custom action toolbar</source>
-      <translation>панель пользовательских команд</translation>
+      <translation type="unfinished">custom action toolbar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="832"/>
       <source>Workspace selector</source>
-      <translation>Выбор рабочей области</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="958"/>
       <source>Show %1 panel</source>
-      <translation>Показать панель %1</translation>
+      <translation type="unfinished">Show %1 panel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="998"/>
       <source>Show %1</source>
-      <translation>Показать %1</translation>
+      <translation type="unfinished">Show %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1769"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation>показать заметки в папке «%1» (%2)</translation>
+      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1809"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br/&gt; дата последнего изменения: %2</translation>
+      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1814"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation>&lt;br /&gt;путь: %1</translation>
+      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1951"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation>Панель инструментов не может быть загружен без имени</translation>
+      <translation type="unfinished">Toolbar could not be loaded without name</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2190"/>
       <source>Overwriting external changes of: %1</source>
-      <translation>Перезаписывание внешних изменений в: %1</translation>
+      <translation type="unfinished">Overwriting external changes of: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2212"/>
       <source>Loading external changes from: %1</source>
-      <translation>Загрузка внешних изменений из: %1</translation>
+      <translation type="unfinished">Loading external changes from: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2248"/>
@@ -2057,92 +2057,92 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2411"/>
       <source>Line numbers</source>
-      <translation>Номера строк</translation>
+      <translation type="unfinished">Line numbers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2421"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation>Нажмите здесь, чтобы увидеть, что изменилось и быть в состоянии обновить до последней версии</translation>
+      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2810"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Пожалуйста, выберите папку для хранения заметок</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3746"/>
       <source>%n note(s) were tagged with "%2"</source>
-      <translation>
-        <numerusform>%n заметок(ки) были помечены с «%2»</numerusform>
-        <numerusform>%n заметок(ки) были помечены с «%2»</numerusform>
-        <numerusform>%n заметок(ки) были помечены с «%2»</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
+        <numerusform>%n note(s) were tagged with "%2"</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5818"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Размер шрифта увеличен до %1 пунктов</translation>
+      <translation type="unfinished">Increased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5829"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Размер шрифта уменьшен до %1 пунктов</translation>
+      <translation type="unfinished">Decreased font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5839"/>
       <source>Reset font size to %1 pt</source>
-      <translation>Размер шрифта сброшен до %1 пунктов</translation>
+      <translation type="unfinished">Reset font size to %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4162"/>
       <location filename="../mainwindow.cpp" line="4185"/>
       <source>Open &amp;settings</source>
-      <translation>Открыть &amp;настройки</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1303"/>
       <source>leave</source>
-      <translation>покинуть</translation>
+      <translation type="unfinished">leave</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1306"/>
       <source>leave distraction free mode</source>
-      <translation>Отключить полноэкранный режим</translation>
+      <translation type="unfinished">leave distraction free mode</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5075"/>
       <source>Select image to insert</source>
-      <translation>Выберите изображение для вставки</translation>
+      <translation type="unfinished">Select image to insert</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5171"/>
       <source>Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</source>
-      <translation>Введите &lt;strong&gt;пароль&lt;/strong&gt; для шифрования заметки.&lt;br /&gt;Для чтения содержимого заметки нужно &lt;strong&gt;помнить&lt;/strong&gt; пароль&lt;br /&gt; . Чтение зашифрованных заметок возможно &lt;strong&gt;только&lt;/strong&gt; в программе &lt;strong&gt;QOwnNotes&lt;/strong&gt;!</translation>
+      <translation type="unfinished">Please enter your &lt;strong&gt;password&lt;/strong&gt; to encrypt the note.&lt;br /&gt;Keep in mind that you have to &lt;strong&gt;remember&lt;/strong&gt; your password to read the content of the note&lt;br /&gt; and that you can &lt;strong&gt;only&lt;/strong&gt; do that &lt;strong&gt;in QOwnNotes&lt;/strong&gt;!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5226"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Расшифровать заметку и сохранить в текстовом формате</translation>
+      <translation type="unfinished">Decrypt note and store it as plain text</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5227"/>
       <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-      <translation>Заметка будет расшифрована и сохранена в текстовом виде. Помните, что незашифрованная заметка может быть отправлена на сервер и важная информация может раскрыта!&lt;br /&gt;Расшифровать заметку?</translation>
+      <translation type="unfinished">Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5231"/>
       <source>&amp;Decrypt</source>
-      <translation>&amp;Расшифровать</translation>
+      <translation type="unfinished">&amp;Decrypt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5256"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt;br /&gt;Можно редактировать зашифрованную заметку.</translation>
+      <translation type="unfinished">&lt;br /&gt;You will be able to edit your encrypted note.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5314"/>
       <source>Export current note as Markdown file</source>
-      <translation>Экспортировать текущую заметку в формат Markdown</translation>
+      <translation type="unfinished">Export current note as Markdown file</translation>
     </message>
   </context>
   <context>
@@ -2150,7 +2150,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../widgets/navigationwidget.cpp" line="99"/>
       <source>headline %1</source>
-      <translation>заголовок %1</translation>
+      <translation type="unfinished">headline %1</translation>
     </message>
   </context>
   <context>
@@ -2158,7 +2158,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation>Заметка</translation>
+      <translation type="unfinished">Note</translation>
     </message>
   </context>
   <context>
@@ -2166,42 +2166,42 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externaly!</source>
-      <translation>Заметка изменена внешней программой!</translation>
+      <translation type="unfinished">Note was modified externaly!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
       <source>The current note was modified outside of this application!</source>
-      <translation>Текущая заметка изменена другой программой!</translation>
+      <translation type="unfinished">The current note was modified outside of this application!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation>Различия:</translation>
+      <translation type="unfinished">Differences:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>Всегда принимать внешние изменения в будущем</translation>
+      <translation type="unfinished">Always accept external changes in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation>Принять внешние изменения?</translation>
+      <translation type="unfinished">Accept external changes?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
       <source>Ignore all external modifications in the future</source>
-      <translation>Игнорировать все внешние изменения в будущем</translation>
+      <translation type="unfinished">Ignore all external modifications in the future</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="32"/>
       <source>Yes</source>
-      <translation>Да</translation>
+      <translation type="unfinished">Yes</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="37"/>
       <source>No</source>
-      <translation>Нет</translation>
+      <translation type="unfinished">No</translation>
     </message>
   </context>
   <context>
@@ -2209,51 +2209,51 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="14"/>
       <source>Orphaned images</source>
-      <translation>Несвязанные изображения</translation>
+      <translation type="unfinished">Orphaned images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="80"/>
       <source>Delete selected images</source>
-      <translation>Удалить выбранные изображения</translation>
+      <translation type="unfinished">Delete selected images</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="83"/>
       <source>Delete</source>
-      <translation>Удалить</translation>
+      <translation type="unfinished">Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.ui" line="132"/>
       <source>Images that are not used in notes:</source>
-      <translation>Изображения, которые не используются в заметках:</translation>
+      <translation type="unfinished">Images that are not used in notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="61"/>
       <source>Last modified at %1</source>
-      <translation>Последние изменения в %1</translation>
+      <translation type="unfinished">Last modified at %1</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="120"/>
       <source>Delete selected files</source>
-      <translation>Удалить выбранные файлы</translation>
+      <translation type="unfinished">Delete selected files</translation>
     </message>
     <message numerus="yes">
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="121"/>
       <source>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</source>
-      <translation>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
-        <numerusform>Удалить &lt;strong&gt;%n&lt;/strong&gt; выбранных файлов?</numerusform>
+      <translation type="unfinished">
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
+        <numerusform>Delete &lt;strong&gt;%n&lt;/strong&gt; selected files(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>&amp;Delete</source>
-      <translation>&amp;Удалить</translation>
+      <translation type="unfinished">&amp;Delete</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -2261,73 +2261,73 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="152"/>
       <source>Username / password error</source>
-      <translation>Ошибка авторизации</translation>
+      <translation type="unfinished">Username / password error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="153"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation>Ваше имя пользователя или пароль для календаря ошибочны!</translation>
+      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="826"/>
       <source>ownCloud server connection error</source>
-      <translation>Ошибка связи с сервером ownCloud</translation>
+      <translation type="unfinished">ownCloud server connection error</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="830"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation>Ошибка связи с сервером ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Пожалуйста, проверьте конфигурацию.</translation>
+      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="846"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>Вам нужно настроить ваш сервер ownCloud!</translation>
+      <translation type="unfinished">You need to setup your ownCloud server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="852"/>
       <source>Open &amp;settings</source>
-      <translation>Открыть &amp;настройки</translation>
+      <translation type="unfinished">Open &amp;settings</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="852"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="894"/>
       <source>Done with loading note versions</source>
-      <translation>Загрузка версий заметки завершена</translation>
+      <translation type="unfinished">Done with loading note versions</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="950"/>
       <source>Done with loading trashed notes</source>
-      <translation>Загрузка удаленных заметок завершена</translation>
+      <translation type="unfinished">Done with loading trashed notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="932"/>
       <source>no other version</source>
-      <translation>другая верия отсутствует</translation>
+      <translation type="unfinished">no other version</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="933"/>
       <source>There are no other versions on the server for this note.</source>
-      <translation>На сервере отсутствуют другие версии этой заметки.</translation>
+      <translation type="unfinished">There are no other versions on the server for this note.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1011"/>
       <location filename="../services/owncloudservice.cpp" line="1037"/>
       <source>Error while loading todo lists!</source>
-      <translation>Ошибка при загрузке списков todo!</translation>
+      <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1012"/>
       <source>Your CalDAV server didn't reply anything!</source>
-      <translation>Ваш сервер CalDAV не ответил ничего!</translation>
+      <translation type="unfinished">Your CalDAV server didn't reply anything!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1038"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
-      <translation>Сообщение об ошибке от сервера CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
+      <translation type="unfinished">Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
   </context>
   <context>
@@ -2335,27 +2335,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="14"/>
       <source>Please enter your password</source>
-      <translation>Введите пароль</translation>
+      <translation type="unfinished">Please enter your password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="24"/>
       <source>Enter your password:</source>
-      <translation>Введите пароль:</translation>
+      <translation type="unfinished">Enter your password:</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation>Пароль</translation>
+      <translation type="unfinished">Password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation>Введите пароль повторно</translation>
+      <translation type="unfinished">Re-enter password</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation>Пароли не совпадают!</translation>
+      <translation type="unfinished">Passwords don't match!</translation>
     </message>
   </context>
   <context>
@@ -2363,7 +2363,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="418"/>
       <source>default</source>
-      <translation>по умолчанию</translation>
+      <translation type="unfinished">default</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="847"/>
@@ -2373,27 +2373,27 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="1981"/>
       <source>Note filename changed</source>
-      <translation>Имя файла заметки изменено</translation>
+      <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="1982"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
-      <translation>
-        <numerusform>Было обнаружено изменение имени заметки. Вы хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; на &lt;strong&gt;%2&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметки?</numerusform>
-        <numerusform>Было обнаружено изменение имени заметки. Вы хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; на &lt;strong&gt;%2&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметки(ок)?</numerusform>
-        <numerusform>Было обнаружено изменение имени заметки. Вы хотите заменить все вхождения &lt;strong&gt;%1&lt;/strong&gt; на &lt;strong&gt;%2&lt;/strong&gt; в &lt;strong&gt;%n&lt;/strong&gt; файлах заметки(ок)?</numerusform>
+      <translation type="unfinished">
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
+        <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="37"/>
       <location filename="../helpers/toolbarcontainer.cpp" line="112"/>
       <source>Unknown action %1</source>
-      <translation>Неизвестное действие %1</translation>
+      <translation type="unfinished">Unknown action %1</translation>
     </message>
     <message>
       <location filename="../helpers/toolbarcontainer.cpp" line="94"/>
       <source>Workspace selector</source>
-      <translation>Выбор рабочей области</translation>
+      <translation type="unfinished">Workspace selector</translation>
     </message>
   </context>
   <context>
@@ -2401,77 +2401,77 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="62"/>
       <source>close search</source>
-      <translation>закрыть поиск</translation>
+      <translation type="unfinished">close search</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation>Найти:</translation>
+      <translation type="unfinished">Find:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
       <source>replace text</source>
-      <translation>заменить текст</translation>
+      <translation type="unfinished">replace text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation>найти в тексте</translation>
+      <translation type="unfinished">find in text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
       <source>search forward</source>
-      <translation>искать в следующих</translation>
+      <translation type="unfinished">search forward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="103"/>
       <source>search backward</source>
-      <translation>искать в предыдущих</translation>
+      <translation type="unfinished">search backward</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation>заменить на</translation>
+      <translation type="unfinished">replace with</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
       <source>Replace:</source>
-      <translation>Заменить:</translation>
+      <translation type="unfinished">Replace:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="156"/>
       <source>Plain text</source>
-      <translation>Обычный текст</translation>
+      <translation type="unfinished">Plain text</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="161"/>
       <source>Whole words</source>
-      <translation>Целые слова</translation>
+      <translation type="unfinished">Whole words</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="166"/>
       <source>Regular expression</source>
-      <translation>Регулярное выражение</translation>
+      <translation type="unfinished">Regular expression</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="187"/>
       <source>Replace</source>
-      <translation>Заменить</translation>
+      <translation type="unfinished">Replace</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Заменить все</translation>
+      <translation type="unfinished">Replace All</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation>Режим:</translation>
+      <translation type="unfinished">Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation>Совпадение с учетом регистра</translation>
+      <translation type="unfinished">Match case sensitive</translation>
     </message>
   </context>
   <context>
@@ -2479,29 +2479,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/databaseservice.cpp" line="76"/>
       <source>Cannot open memory database</source>
-      <translation>Невозможно открыть базу данных в оперативной памяти</translation>
+      <translation type="unfinished">Cannot open memory database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="77"/>
       <source>Unable to establish a memory database connection.</source>
-      <translation>Не удается установить соединение с базой данных в памяти.</translation>
+      <translation type="unfinished">Unable to establish a memory database connection.</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="93"/>
       <source>Cannot open disk database</source>
-      <translation>Невозможно открыть базу данных с диска</translation>
+      <translation type="unfinished">Cannot open disk database</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="94"/>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Unable to establish a database connection with file '%1'.
 Are the folder and the file writeable?</source>
-      <translation>Не удается установить подключение к базе данных в файле «%1». Папка и файл доступны для записи?</translation>
+      <translation type="unfinished">Unable to establish a database connection with file '%1'.
+Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../services/databaseservice.cpp" line="115"/>
       <source>Cannot open note folder database</source>
-      <translation>Не удается открыть базу данных папки заметок</translation>
+      <translation type="unfinished">Cannot open note folder database</translation>
     </message>
   </context>
   <context>
@@ -2509,7 +2510,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../services/scriptingservice.cpp" line="154"/>
       <source>file doesn't exist</source>
-      <translation>файл не существует</translation>
+      <translation type="unfinished">file doesn't exist</translation>
     </message>
   </context>
   <context>
@@ -2517,87 +2518,87 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="26"/>
       <source>Settings</source>
-      <translation>Настройки</translation>
+      <translation type="unfinished">Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Папки заметок</translation>
+      <translation type="unfinished">Note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="359"/>
       <source>Your note folders</source>
-      <translation>Ваши папки заметок</translation>
+      <translation type="unfinished">Your note folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="426"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Добавить папку</translation>
+      <translation type="unfinished">&amp;Add folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
       <source>&amp;Remove folder</source>
-      <translation>&amp;Удалить папку</translation>
+      <translation type="unfinished">&amp;Remove folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="661"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Это имя будет отображаться во всех меню.</translation>
+      <translation type="unfinished">This name will be viewed in all the menus.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="506"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Установите путь до папки на сервере ownCloud, где будут синхронизироваться заметки.</translation>
+      <translation type="unfinished">Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="674"/>
       <source>Use as active note folder</source>
-      <translation>Использовать, как активную папку заметок</translation>
+      <translation type="unfinished">Use as active note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="751"/>
       <source>Your ownCloud server</source>
-      <translation>Сервер OwnCloud</translation>
+      <translation type="unfinished">Your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="765"/>
       <source>ownCloud server url:</source>
-      <translation>Адрес сервера ownCloud:</translation>
+      <translation type="unfinished">ownCloud server url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="787"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите адрес своего сервера ownCloud, например: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the URL of your ownCloud server, for example: &lt;span style=" font-style:italic;"&gt;https://cloud.yourserver.com&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="825"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите имя пользователя на сервере ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the username on your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="860"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Введите пароль.&lt;br/&gt;Пароль хранится зашифрованным с остальными настройками, хотя это и не совсем безопасно.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="938"/>
       <source>connection to web server</source>
-      <translation>подключение к веб-серверу</translation>
+      <translation type="unfinished">connection to web server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="955"/>
       <source>ownCloud server detected</source>
-      <translation>обнаружен сервер ownCloud</translation>
+      <translation type="unfinished">ownCloud server detected</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="989"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation>подключение к QOwnNotesAPI</translation>
+      <translation type="unfinished">connection to QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="972"/>
       <source>username and password correct</source>
-      <translation>имя пользователя и пароль верны</translation>
+      <translation type="unfinished">username and password correct</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="928"/>
@@ -2608,677 +2609,677 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/settingsdialog.ui" line="1013"/>
       <location filename="../dialogs/settingsdialog.ui" line="1030"/>
       <source>unknown</source>
-      <translation>неизвестно</translation>
+      <translation type="unfinished">unknown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="888"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Нажните для проверки подключения к серверу ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1006"/>
       <source>versions app enabled on server</source>
-      <translation>приложение Versions доступно на сервере</translation>
+      <translation type="unfinished">versions app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1023"/>
       <source>trash app enabled on server</source>
-      <translation>приложение Deleted files доступно на сервере</translation>
+      <translation type="unfinished">trash app enabled on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1040"/>
       <source>notes path found on server</source>
-      <translation>путь к заметкам на сервере найден</translation>
+      <translation type="unfinished">notes path found on server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1096"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Открыть в браузере страницу &lt;span style=" font-weight:600;"&gt;Приложения&lt;/span&gt; на сервере ownCloud, чтобы установить или обновить QOwnNotesAPI и включить стандартные приложения &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; и &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Opens your ownCloud server &lt;span style=" font-weight:600;"&gt;App configuration&lt;/span&gt; page in your webbrowser to install or update QOwnNotesAPI and to enable the core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="643"/>
       <source>path</source>
-      <translation>путь</translation>
+      <translation type="unfinished">path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="482"/>
       <source>Click here to select your local note path</source>
-      <translation>Нажмите для выбора локального пути к заметке</translation>
+      <translation type="unfinished">Click here to select your local note path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="556"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Нажмите для выбора пути к заметке на сервере ownCloud</translation>
+      <translation type="unfinished">Click here to select your remote note path on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="609"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Нажмите, чтобы использовать выбранную папку с сервера ownCloud, как папку для ваших заметок</translation>
+      <translation type="unfinished">Click here to use the selected folder from your server as note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1051"/>
       <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Пожалуйста, установите последнюю версию &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (по крайней мере версию QOWNNOTESAPI_MIN_VERSION) на сервере ownCloud, если вы хотите иметь возможность доступа к удаленным заметкам и их истории.</translation>
+      <translation type="unfinished">Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1064"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходимо запустить 2 основных приложения на сервере ownCloud: &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; и &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; (они по умолчанию должны быть включены, проверьте).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=" font-weight:600;"&gt;Versions&lt;/span&gt; and &lt;span style=" font-weight:600;"&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1077"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Вам также необходим &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;клиент синхронизации ownCloud&lt;/span&gt;&lt;/a&gt; (или другой идентичный) для синхронизации заметок!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href="https://owncloud.org/"&gt;&lt;span style=" font-weight:600"&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1143"/>
       <source>Error Message</source>
-      <translation>Сообщение об ошибке</translation>
+      <translation type="unfinished">Error Message</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="144"/>
       <source>Network</source>
-      <translation>Сеть</translation>
+      <translation type="unfinished">Network</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1181"/>
       <source>Proxy Settings</source>
-      <translation>Параметры прокси</translation>
+      <translation type="unfinished">Proxy Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1187"/>
       <source>No Proxy</source>
-      <translation>Без прокси</translation>
+      <translation type="unfinished">No Proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1197"/>
       <source>Use system proxy</source>
-      <translation>Использовать системное прокси</translation>
+      <translation type="unfinished">Use system proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1204"/>
       <source>Specify proxy manually as</source>
-      <translation>Указать прокси вручную</translation>
+      <translation type="unfinished">Specify proxy manually as</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1229"/>
       <source>Host</source>
-      <translation>Хост</translation>
+      <translation type="unfinished">Host</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1280"/>
       <source>Proxy server requires authentication</source>
-      <translation>Прокси-сервер требует аутентификации</translation>
+      <translation type="unfinished">Proxy server requires authentication</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1331"/>
       <source>SSL Settings</source>
-      <translation>Настройки SSL</translation>
+      <translation type="unfinished">SSL Settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1337"/>
       <source>Ignore SSL errors</source>
-      <translation>Игнорировать ошибки SSL</translation>
+      <translation type="unfinished">Ignore SSL errors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Список задач</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1556"/>
       <source>Default ownCloud calendar</source>
-      <translation>Стандартный календарь ownCloud</translation>
+      <translation type="unfinished">Default ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1709"/>
       <source>Select the calendars you want to use for the TODO list</source>
-      <translation>Выберите календари для работы со списком задач</translation>
+      <translation type="unfinished">Select the calendars you want to use for the TODO list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
       <source>Interface</source>
-      <translation>Интерфейс</translation>
+      <translation type="unfinished">Interface</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1546"/>
       <source>Other CalDAV server</source>
-      <translation>Другой сервер CalDAV</translation>
+      <translation type="unfinished">Other CalDAV server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2080"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
-      <translation>Только некоторые цвета будут адаптированы, темы рабочего стола будет контролировать остальные. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
+      <translation type="unfinished">Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2083"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
-      <translation>Оптимизация цветов просмотра для "темной" темы рабочего стола</translation>
+      <translation type="unfinished">Optimize preview colors for dark mode desktop themes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2090"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>Это включает "темный режим", интерфейс и значки будут изменены. Необходимо перезапустить приложение, чтобы эти изменения вступили в действие.</translation>
+      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2093"/>
       <source>Enable dark mode</source>
-      <translation>Включить "темный режим"</translation>
+      <translation type="unfinished">Enable dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2119"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Необходимо перезапустить приложение, чтобы изменения вступили в силу</translation>
+      <translation type="unfinished">You need to restart the application to let this setting take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2138"/>
       <source>Item sizes in the main window</source>
-      <translation>Размеры элементов в главном окне</translation>
+      <translation type="unfinished">Item sizes in the main window</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3672"/>
       <source>Markdown highlighting</source>
-      <translation>Подсветка markdown</translation>
+      <translation type="unfinished">Markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3678"/>
       <source>Enable markdown highlighting</source>
-      <translation>Включить подсветку markdown</translation>
+      <translation type="unfinished">Enable markdown highlighting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1842"/>
       <source>Interface language</source>
-      <translation>Язык интерфейса</translation>
+      <translation type="unfinished">Interface language</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1862"/>
       <source>Automatic</source>
-      <translation>По умолчанию</translation>
+      <translation type="unfinished">Automatic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1884"/>
       <source>English</source>
-      <translation>English (Английский)</translation>
+      <translation type="unfinished">English</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="228"/>
       <source>Shortcuts</source>
-      <translation>Горячие клавиши</translation>
+      <translation type="unfinished">Shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3195"/>
       <location filename="../dialogs/settingsdialog.ui" line="3364"/>
       <source>Default font:</source>
-      <translation>Шрифт по умолчанию:</translation>
+      <translation type="unfinished">Default font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3237"/>
       <location filename="../dialogs/settingsdialog.ui" line="3388"/>
       <source>Code font:</source>
-      <translation>Шрифт кода:</translation>
+      <translation type="unfinished">Code font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2252"/>
       <source>Main window shortcuts</source>
-      <translation>Горячие клавиши для главного окна</translation>
+      <translation type="unfinished">Main window shortcuts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2780"/>
       <source>Do this at your own risk!</source>
-      <translation>Делайте это на свой страх и риск!</translation>
+      <translation type="unfinished">Do this at your own risk!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2783"/>
       <source>Ignore all external note folder changes</source>
-      <translation>Игнорировать все изменения внешних папок заметок</translation>
+      <translation type="unfinished">Ignore all external note folder changes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Отсутствуют два пробела для создания разрыва строки</translation>
+      <translation type="unfinished">No two spaces to do a line break are added here if checked</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3160"/>
       <source>Use GitHub line breaks</source>
-      <translation>Использовать GitHub разрывы строки</translation>
+      <translation type="unfinished">Use GitHub line breaks</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1873"/>
       <source>German</source>
-      <translation>Deutsch (Немецкий)</translation>
+      <translation type="unfinished">German</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1906"/>
       <source>French</source>
-      <translation>Français (Французский)</translation>
+      <translation type="unfinished">French</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1961"/>
       <source>Polish</source>
-      <translation>Polski (Польский)</translation>
+      <translation type="unfinished">Polish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2005"/>
       <source>Chinese</source>
-      <translation>漢語 (Китайский)</translation>
+      <translation type="unfinished">Chinese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1972"/>
       <source>Portuguese</source>
-      <translation>Português (Португальский)</translation>
+      <translation type="unfinished">Portuguese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1950"/>
       <source>Dutch</source>
-      <translation>Голландский</translation>
+      <translation type="unfinished">Dutch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1928"/>
       <source>Hungarian</source>
-      <translation>Венгерский</translation>
+      <translation type="unfinished">Hungarian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1895"/>
       <source>Spanish</source>
-      <translation>Испанский</translation>
+      <translation type="unfinished">Spanish</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1848"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если вы хотите помочь с переводом QOwnNotes, пожалуйста, прочтите: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Как помочь с переводом QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2064"/>
       <source>Dark mode</source>
-      <translation>Темный режим</translation>
+      <translation type="unfinished">Dark mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1391"/>
       <source>Disable tracking of usage data</source>
-      <translation>Запретить сбор данных об использовании</translation>
+      <translation type="unfinished">Disable tracking of usage data</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1435"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation>Использование отслеживания организовано на приватном сервере Piwik.</translation>
+      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1495"/>
       <source>Disable heartbeat</source>
-      <translation>Запретить контрольные пакеты</translation>
+      <translation type="unfinished">Disable heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1983"/>
       <source>Russian</source>
-      <translation>Русский</translation>
+      <translation type="unfinished">Russian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1344"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Вы можете воспользоваться возможностью получения бесплатного SSL-сертификата от проекта &lt;a href="https://letsencrypt.org/"&gt; Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2027"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Для замены языка интерфейса нужно перезагрузить программу.</translation>
+      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2540"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation>Требуется перезагрузить скриптовый движок, если файл сценария изменился</translation>
+      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2543"/>
       <source>Reload scripting engine</source>
-      <translation>Перезагрузить скриптовый движок</translation>
+      <translation type="unfinished">Reload scripting engine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2550"/>
       <source>Validate script</source>
-      <translation>Проверка сценария</translation>
+      <translation type="unfinished">Validate script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>General</source>
-      <translation>Общее</translation>
+      <translation type="unfinished">General</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2640"/>
       <source>Notes</source>
-      <translation>Заметки</translation>
+      <translation type="unfinished">Notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2767"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если выбрано, то уведомления об изменениях внешними программами будут появляться, даже если текущая заметка не будет отредактирована. Рекомендуемое значение: &lt;span style=" font-style:italic;"&gt;отключить&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2743"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation>В более старых версиях ownCloud sync могут появиться проблемы синхронизации, если установить значение меньше 10 секунд.
-Подберите значение интервала, при котором не будут возникать конфликты.</translation>
+      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1939"/>
       <source>Japanese</source>
-      <translation>Японский</translation>
+      <translation type="unfinished">Japanese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2747"/>
       <source>note save interval time [sec]</source>
-      <translation>период сохранения заметок (секунды)</translation>
+      <translation type="unfinished">note save interval time [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2773"/>
       <source>Notify about all external modifications of the current note</source>
-      <translation>Уведомлять обо всех внешних изменениях текущей заметки</translation>
+      <translation type="unfinished">Notify about all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3027"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1499"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1508"/>
       <source>Database</source>
-      <translation>База данных</translation>
+      <translation type="unfinished">Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3043"/>
       <source>Reinitialize Database</source>
-      <translation>Инициализация базы данных</translation>
+      <translation type="unfinished">Reinitialize Database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2827"/>
       <source>Clear application data and exit</source>
-      <translation>Удалить данные приложения и выйти</translation>
+      <translation type="unfinished">Clear application data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2833"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Нажатие этой кнопки приведёт к удалению всех настроек, локальной базы данных списка задач и выходу из QOwnNotes.</translation>
+      <translation type="unfinished">This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2843"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1572"/>
       <source>Clear app data and exit</source>
-      <translation>Удалить данные приложения и выйти</translation>
+      <translation type="unfinished">Clear app data and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3053"/>
       <source>Update dialog</source>
-      <translation>Диалог обновления</translation>
+      <translation type="unfinished">Update dialog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2899"/>
       <source>Default note file extension</source>
-      <translation>Расширение файлов заметок</translation>
+      <translation type="unfinished">Default note file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2984"/>
       <source>External editor</source>
-      <translation>Внешний редактор</translation>
+      <translation type="unfinished">External editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2997"/>
       <source>path to external editor, leave empty for default</source>
-      <translation>путь ко внешнему редактору, по умолчанию пусто</translation>
+      <translation type="unfinished">path to external editor, leave empty for default</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3004"/>
       <source>set external editor</source>
-      <translation>выбрать внешний редактор</translation>
+      <translation type="unfinished">set external editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1360"/>
       <source>App metrics</source>
-      <translation>Метрики приложения</translation>
+      <translation type="unfinished">App metrics</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1378"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить какие части программы нуждаются в улучшении и исправлении ошибок. Пожалуйста, отключайте только при необходимости.</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1410"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Данные содержать анонимную информацию об используемых частях приложения.</translation>
+      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1464"/>
       <source>App heartbeat</source>
-      <translation>Контрольный пакет</translation>
+      <translation type="unfinished">App heartbeat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1482"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Во время работы QOwnNotes периодически отправляется небольшой контрольный пакет. Разработчику приятно осознавать, что кто-то использует QOwnNotes.</translation>
+      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1917"/>
       <source>Italian</source>
-      <translation>Итальянский</translation>
+      <translation type="unfinished">Italian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="240"/>
       <source>Scripting</source>
-      <translation>Создание сценариев</translation>
+      <translation type="unfinished">Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2319"/>
       <source>Your scripts</source>
-      <translation>Ваши сценарии</translation>
+      <translation type="unfinished">Your scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2386"/>
       <source>&amp;Add script</source>
-      <translation>&amp;Добавить сценарий</translation>
+      <translation type="unfinished">&amp;Add script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2410"/>
       <source>&amp;Remove script</source>
-      <translation>&amp;Удалить сценарий</translation>
+      <translation type="unfinished">&amp;Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2573"/>
       <source>Click here to select your QML script</source>
-      <translation>Нажмите здесь, чтобы выбрать ваш QML-сценарий</translation>
+      <translation type="unfinished">Click here to select your QML script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2492"/>
       <source>path to your QML file</source>
-      <translation>путь к файлу QML</translation>
+      <translation type="unfinished">path to your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Поиск настройки</translation>
+      <translation type="unfinished">Find setting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation>Редактор</translation>
+      <translation type="unfinished">Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Редактор шрифтов &amp; цвета</translation>
+      <translation type="unfinished">Editor fonts &amp; colors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Preview fonts</source>
-      <translation>Предварительный просмотр шрифтов</translation>
+      <translation type="unfinished">Preview fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Toolbars</source>
-      <translation>Панели инструментов</translation>
+      <translation type="unfinished">Toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="263"/>
       <source>Portable mode</source>
-      <translation>Портативный режим</translation>
+      <translation type="unfinished">Portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Debug options</source>
-      <translation>Опции отладки</translation>
+      <translation type="unfinished">Debug options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="499"/>
       <source>Path where your notes are stored locally</source>
-      <translation>Путь, где ваши заметки хранятся локально</translation>
+      <translation type="unfinished">Path where your notes are stored locally</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="612"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;Использовать как путь к серверу ownCloud</translation>
+      <translation type="unfinished">&amp;Use as ownCloud path</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="651"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Пожалуйста, выберите вашу папку заметок на сервере ownCloud:</translation>
+      <translation type="unfinished">Please select your note folder on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="681"/>
       <source>ownCloud server:</source>
-      <translation>Сервер ownCloud:</translation>
+      <translation type="unfinished">ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="691"/>
       <source>Path on your ownCloud server:</source>
-      <translation>Путь до сервера ownCloud:</translation>
+      <translation type="unfinished">Path on your ownCloud server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="698"/>
       <location filename="../dialogs/settingsdialog.ui" line="2482"/>
       <source>Name:</source>
-      <translation>Имя:</translation>
+      <translation type="unfinished">Name:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="705"/>
       <source>Note folder path:</source>
-      <translation>Путь к папке с заметками:</translation>
+      <translation type="unfinished">Note folder path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="712"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Имейте в виду, что приложение notes ownCloud не поддерживает вложенные папки!</translation>
+      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
       <source>Use note sub-folders</source>
-      <translation>Использовать вложенные папки</translation>
+      <translation type="unfinished">Use note sub-folders</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="803"/>
       <location filename="../dialogs/settingsdialog.ui" line="1633"/>
       <source>Username:</source>
-      <translation>Имя пользователя:</translation>
+      <translation type="unfinished">Username:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="828"/>
       <source>Your ownCloud username</source>
-      <translation>Ваше имя пользователя ownCloud</translation>
+      <translation type="unfinished">Your ownCloud username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="838"/>
       <location filename="../dialogs/settingsdialog.ui" line="1668"/>
       <source>Password:</source>
-      <translation>Пароль:</translation>
+      <translation type="unfinished">Password:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="866"/>
       <source>Your ownCloud password</source>
-      <translation>Ваш пароль ownCloud</translation>
+      <translation type="unfinished">Your ownCloud password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="894"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation>&amp;Подключиться к серверу ownCloud</translation>
+      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="921"/>
       <source>Connection status</source>
-      <translation>Состояние подключения</translation>
+      <translation type="unfinished">Connection status</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1099"/>
       <source>Open your ownCloud server &amp;Apps page</source>
-      <translation>Открыть страницу &amp;Приложения на сервере ownCloud</translation>
+      <translation type="unfinished">Open your ownCloud server &amp;Apps page</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1540"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation>Какой бэкэнд календаря вы хотите использовать?</translation>
+      <translation type="unfinished">Which calendar backend do you want to use?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1553"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation>Для самых последних ownCloud и Nextcloud установок</translation>
+      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1573"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation>Для более старых версий ownCloud, где не работает по умолчанию</translation>
+      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1576"/>
       <source>Legacy ownCloud calendar</source>
-      <translation>Стандартный календарь ownCloud</translation>
+      <translation type="unfinished">Legacy ownCloud calendar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1589"/>
       <source>CalDAV server settings</source>
-      <translation>Настройки сервера CalDAV</translation>
+      <translation type="unfinished">CalDAV server settings</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1598"/>
       <source>Calendar base url:</source>
-      <translation>Базовый URL-адрес календаря:</translation>
+      <translation type="unfinished">Calendar base url:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1620"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation>Пожалуйста, введите базовый Url-адрес календаря CalDAV.</translation>
+      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1690"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation>Пожалуйста, введите пароль для вашего имени пользователя CalDAV. &lt;br/&gt; В настоящее время пароль будет храниться зашифрованы с другими параметрами, но не очень безопасно.</translation>
+      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1994"/>
       <source>Ukrainian</source>
-      <translation>Украинский</translation>
+      <translation type="unfinished">Ukrainian</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
-      <translation>Возможно, вам захочется выбрать другую цветовую палитру в настройках редактора в "темном режиме".</translation>
+      <translation type="unfinished">You might also want to choose an other editor color schema in the editor settings in dark mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2674"/>
       <source>Maximum height:</source>
-      <translation>Максимальная высота:</translation>
+      <translation type="unfinished">Maximum height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2681"/>
       <source>Maximum width:</source>
-      <translation>Максимальная ширина:</translation>
+      <translation type="unfinished">Maximum width:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2790"/>
       <source>Scale images down when inserted into notes</source>
-      <translation>Уменьшить изображение при вставке в заметку</translation>
+      <translation type="unfinished">Scale images down when inserted into notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2797"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation>Отметьте, если вы хотите принимать все внешние изменения при редактировании текущей заметки.</translation>
+      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2803"/>
       <source>Accept all external modifications of the current note</source>
-      <translation>Принимать все внешние изменения текущей заметки</translation>
+      <translation type="unfinished">Accept all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2810"/>
@@ -3295,268 +3296,268 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3033"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
-      <translation>Имейте в виду, что это также удалит кэшированные пункты todo и настроенные папки заметок и скриптов!</translation>
+      <translation type="unfinished">Be warned that this will also remove your cached todo items and configured note folders and scripts!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3480"/>
       <source>Apply toolbar configuration</source>
-      <translation>Применение конфигурации панели инструментов</translation>
+      <translation type="unfinished">Apply toolbar configuration</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3494"/>
       <source>Reset toolbars</source>
-      <translation>Сброс панели инструментов</translation>
+      <translation type="unfinished">Reset toolbars</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3522"/>
       <source>Enable logging to file</source>
-      <translation>Разрешить журналирование в файл</translation>
+      <translation type="unfinished">Enable logging to file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3529"/>
       <source>Clear log file</source>
-      <translation>Очистить файл журнала</translation>
+      <translation type="unfinished">Clear log file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3540"/>
       <source>Fake old version number to trigger update</source>
-      <translation>Назначить поддельный старый номер версии, чтобы запустить обновление</translation>
+      <translation type="unfinished">Fake old version number to trigger update</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3568"/>
       <source>Log file path:</source>
-      <translation>Путь к файлу журнала:</translation>
+      <translation type="unfinished">Log file path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3630"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation>Здесь вы можете установить свой собственный формат времени для вставки текущего времени в заметку.</translation>
+      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3633"/>
       <source>Insert current time</source>
-      <translation>Вставка текущего времени</translation>
+      <translation type="unfinished">Insert current time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3639"/>
       <source>Time format:</source>
-      <translation>Формат времени:</translation>
+      <translation type="unfinished">Time format:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3646"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation>Введите ваш пользовательский формат времени, типа "dd.MM.yyyy hh:mm"</translation>
+      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3653"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Вы можете взглянуть на все доступные &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt; &lt;span style="text-decoration: underline; color:#2980b9;"&gt; форматы времени&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3688"/>
       <source>Editor options</source>
-      <translation>Параметры редактора</translation>
+      <translation type="unfinished">Editor options</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3694"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation>Включить автоматическое закрытие скобок и символов форматирования markdown</translation>
+      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3701"/>
       <source>You have to use the backspace key to remove the opening character</source>
-      <translation>Вы должны использовать клавишу backspace для удаления символа открытия</translation>
+      <translation type="unfinished">You have to use the backspace key to remove the opening character</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3704"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation>Включить автоматическое удаление соответствующих символов закрытия</translation>
+      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1623"/>
       <source>Your CalDAV calendar base url</source>
-      <translation>Базовый URL-адрес календаря CalDAV</translation>
+      <translation type="unfinished">Your CalDAV calendar base url</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1655"/>
       <source>Please enter the username of your CalDAV server.</source>
-      <translation>Пожалуйста, введите имя пользователя на сервере CalDAV.</translation>
+      <translation type="unfinished">Please enter the username of your CalDAV server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1658"/>
       <source>Your CalDAV username</source>
-      <translation>Ваше имя пользователя CalDAV</translation>
+      <translation type="unfinished">Your CalDAV username</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1696"/>
       <source>Your CalDAV password</source>
-      <translation>Ваш пароль CalDAV</translation>
+      <translation type="unfinished">Your CalDAV password</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1731"/>
       <source>This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</source>
-      <translation>Это перезагрузит все элементы списка todo с вашего сервера, когда в следующий раз вы открываете диалоговое окно todo.</translation>
+      <translation type="unfinished">This causes all todo list items to be reloaded from your server the next time you open your todo dialog.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1734"/>
       <source>Empty calendar item cache</source>
-      <translation>Очистить кэш элемента календаря</translation>
+      <translation type="unfinished">Empty calendar item cache</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1757"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation>Нажмите здесь, чтобы перезагрузить список календарей из календаря сервера.</translation>
+      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1763"/>
       <source>&amp;Reload calendar list</source>
-      <translation>&amp;Перезагрузить список календаря</translation>
+      <translation type="unfinished">&amp;Reload calendar list</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2070"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation>Может потребоваться перезапустить приложение, чтобы изменения вступили в силу</translation>
+      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2073"/>
       <source>Enable dark mode tray icon</source>
-      <translation>Включить темный режим значка</translation>
+      <translation type="unfinished">Enable dark mode tray icon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2174"/>
       <source>Toolbar icon size:</source>
-      <translation>Размер значка панели инструментов:</translation>
+      <translation type="unfinished">Toolbar icon size:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2144"/>
       <source>List and tree item height:</source>
-      <translation>Высота элемента списка и дерева:</translation>
+      <translation type="unfinished">List and tree item height:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2187"/>
       <source>Reset the icon size</source>
-      <translation>Сбросить размер значка</translation>
+      <translation type="unfinished">Reset the icon size</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2201"/>
       <source>Reset the item height</source>
-      <translation>Сброс высоты элемента</translation>
+      <translation type="unfinished">Reset the item height</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3440"/>
       <source>View text right to left (RTL)</source>
-      <translation>Просмотр текста справа налево (RTL)</translation>
+      <translation type="unfinished">View text right to left (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2270"/>
       <source>Search for shortcut</source>
-      <translation>Поиск ярлыка</translation>
+      <translation type="unfinished">Search for shortcut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1774"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation>Игнорировать календари, которые не поддерживают элементы todo</translation>
+      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2016"/>
       <source>Arabic</source>
-      <translation>Арабский</translation>
+      <translation type="unfinished">Arabic</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2113"/>
       <source>Icons</source>
-      <translation>Значки</translation>
+      <translation type="unfinished">Icons</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2122"/>
       <source>Use internal icon theme instead of system icon theme</source>
-      <translation>Использовать внутренней тему значков вместо системной</translation>
+      <translation type="unfinished">Use internal icon theme instead of system icon theme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2587"/>
       <source>Script path:</source>
-      <translation>Путь к сценарию:</translation>
+      <translation type="unfinished">Script path:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2499"/>
       <source>script name</source>
-      <translation>имя сценария</translation>
+      <translation type="unfinished">script name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="667"/>
       <source>Note folder name</source>
-      <translation>Имя папки</translation>
+      <translation type="unfinished">Note folder name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2730"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
-      <translation>Разрешить имени файла заметки отличаться от заголовка. &lt;br&gt;Имейте в виду, что ownCloud требует совпадения!</translation>
+      <translation type="unfinished">Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2736"/>
       <source>Allow note file name to be different from headline</source>
-      <translation>Разрешить имени файла заметки отличаться от заголовка</translation>
+      <translation type="unfinished">Allow note file name to be different from headline</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2754"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation>Отметьте, если вы хотите игнорировать все внешние изменения при редактировании текущей заметки.</translation>
+      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2760"/>
       <source>Ignore all external modifications of the current note</source>
-      <translation>Игнорировать все внешние изменения текущей заметки</translation>
+      <translation type="unfinished">Ignore all external modifications of the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2853"/>
       <source>App instance</source>
-      <translation>Экземпляр приложения</translation>
+      <translation type="unfinished">App instance</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2859"/>
       <source>Only allow one app instance at the same time</source>
-      <translation>Разрешить только один экземпляр приложения одновременно</translation>
+      <translation type="unfinished">Only allow one app instance at the same time</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2866"/>
       <source>You need to restart the application to let these changes take action.</source>
-      <translation>Необходимо перезапустить приложение, чтобы изменения вступили в силу.</translation>
+      <translation type="unfinished">You need to restart the application to let these changes take action.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2905"/>
       <source>Add a custom file extension</source>
-      <translation>Добавьте пользовательское расширение файла</translation>
+      <translation type="unfinished">Add a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2919"/>
       <source>Remove a custom file extension</source>
-      <translation>Удалить пользовательское расширение файла</translation>
+      <translation type="unfinished">Remove a custom file extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2958"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation>При добавлении пользовательских расширений просто введите название, вроде «taskpaper».</translation>
+      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2962"/>
       <source>Text file (txt)</source>
-      <translation>Текстовый файл (txt)</translation>
+      <translation type="unfinished">Text file (txt)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2990"/>
       <source>Path to external editor:</source>
-      <translation>Путь ко внешнему редактору:</translation>
+      <translation type="unfinished">Path to external editor:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3059"/>
       <source>Don't show the update dialog automatically</source>
-      <translation>Не показывать диалоговое окно обновления автоматически</translation>
+      <translation type="unfinished">Don't show the update dialog automatically</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3189"/>
       <location filename="../dialogs/settingsdialog.ui" line="3344"/>
       <source>Fonts</source>
-      <translation>Шрифты</translation>
+      <translation type="unfinished">Fonts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3212"/>
@@ -3564,7 +3565,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="3412"/>
       <location filename="../dialogs/settingsdialog.ui" line="3426"/>
       <source>Set a new font</source>
-      <translation>Выбрать новый шрифт</translation>
+      <translation type="unfinished">Set a new font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3223"/>
@@ -3572,76 +3573,76 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="3350"/>
       <location filename="../dialogs/settingsdialog.ui" line="3374"/>
       <source>Reset font</source>
-      <translation>Сброс шрифта</translation>
+      <translation type="unfinished">Reset font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="276"/>
       <source>Debug</source>
-      <translation>Отладка</translation>
+      <translation type="unfinished">Debug</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3100"/>
       <source>Debug information</source>
-      <translation>Отладочная информация</translation>
+      <translation type="unfinished">Debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3123"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Можно &lt;span style=" font-weight:600;"&gt;скопировать и вставить&lt;/span&gt; этот текст (или его части) в &lt;span style=" font-weight:600;"&gt;сообщение о проблеме&lt;/span&gt; на &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;странице проблем QOwnNotes&lt;/a&gt;, если у вас есть &lt;span style=" font-weight:600;"&gt;вопросы или проблемы&lt;/span&gt; с QOwnNotes. Важные данные не выводятся в это информационное поле.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3136"/>
       <source>&amp;Save debug information</source>
-      <translation>&amp;Сохранить отладочную информацию</translation>
+      <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="284"/>
       <source>hostname of proxy server</source>
-      <translation>имя хоста прокси-сервера</translation>
+      <translation type="unfinished">hostname of proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="285"/>
       <source>username for proxy server</source>
-      <translation>имя пользователя для прокси-сервера</translation>
+      <translation type="unfinished">username for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="286"/>
       <source>password for proxy server</source>
-      <translation>пароль для прокси-сервера</translation>
+      <translation type="unfinished">password for proxy server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="288"/>
       <source>HTTP(S) proxy</source>
-      <translation>HTTP(S) прокси</translation>
+      <translation type="unfinished">HTTP(S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="289"/>
       <source>SOCKS5 proxy</source>
-      <translation>SOCKS5 прокси</translation>
+      <translation type="unfinished">SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="881"/>
       <source>Undefined key</source>
-      <translation>Не определенная клавиша</translation>
+      <translation type="unfinished">Undefined key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="886"/>
       <source>Assign a new key</source>
-      <translation>Назначить новую клавишу</translation>
+      <translation type="unfinished">Assign a new key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="887"/>
       <source>Reset to default key</source>
-      <translation>Восстановить клавишу по умолчанию</translation>
+      <translation type="unfinished">Reset to default key</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1234"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
-      <translation>Соединение установлено!
-Версия сервера: %1
-Версия QOwnNotesAPI: %2</translation>
+      <translation type="unfinished">The connection was made successfully!
+Server version: %1
+QOwnNotesAPI version: %2</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1245"/>
@@ -3649,221 +3650,222 @@ QOwnNotesAPI version: %2</source>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation>Ошибка при подключении к серверу ownCloud!
-Нужно установить и включить приложение QOwnNotesAPI!
+      <translation type="unfinished">There was an error connecting to the ownCloud Server!
+You also need to have the QOwnNotesAPI app installed and enabled!
 
-Сообщение об ошибке:</translation>
+Connection error message: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1521"/>
       <source>Markdown files</source>
-      <translation>Markdown файлы</translation>
+      <translation type="unfinished">Markdown files</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1552"/>
       <source>Disable usage tracking</source>
-      <translation>Отключить слежение</translation>
+      <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1553"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation>Анонимное отслеживание данных помогает решить, какие улучшить QOwnNotes и исправлять ошибки.&lt;br/&gt;Пожалуйста, отключите его, только если вы действительно не можете это терпеть. &lt;br/&gt;&lt;br/&gt;Отключить отслеживание?</translation>
+      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1759"/>
       <source>new folder</source>
-      <translation>новая папка</translation>
+      <translation type="unfinished">new folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1796"/>
       <source>Remove note folder</source>
-      <translation>Удалить папку заметок</translation>
+      <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1797"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Удалить текущую папку заметок: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1799"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2132"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Удалить</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1872"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Пожалуйста, выберите папку для хранения заметок</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1909"/>
       <source>Loading folders from server</source>
-      <translation>Загрузка папок с сервера</translation>
+      <translation type="unfinished">Loading folders from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
       <source>No more folders were found in the current folder</source>
-      <translation>Нет больше папок в текущей папке</translation>
+      <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1997"/>
       <source>Loading folders in '%1' from server</source>
-      <translation>Загрузка папок с сервера в '%1'</translation>
+      <translation type="unfinished">Loading folders in '%1' from server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2081"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation>Взгляните на &lt;a href="%1"&gt; сценарии документации&lt;/a&gt;, для быстрого старта.</translation>
+      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2083"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation>Если вам нужен доступ к определенным функциям в QOwnNotes, пожалуйста, откройте запрос на &lt;a href="%1"&gt; QOwnNotes странице запросов&lt;/a&gt;.</translation>
+      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2094"/>
       <source>new script</source>
-      <translation>новый сценарий</translation>
+      <translation type="unfinished">new script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2129"/>
       <source>Remove script</source>
-      <translation>Удалить сценарий</translation>
+      <translation type="unfinished">Remove script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2130"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation>Удалить текущий сценарий &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2171"/>
       <source>Please select your QML file</source>
-      <translation>Пожалуйста, выберите ваш файл QML</translation>
+      <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2172"/>
       <source>QML Files (*.qml)</source>
-      <translation>QML файлы (*.qml)</translation>
+      <translation type="unfinished">QML Files (*.qml)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2233"/>
       <source>Your script seems to be valid</source>
-      <translation>Ваш сценарий выглядит работоспособным</translation>
+      <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2234"/>
       <source>There were script errors:
 %1</source>
-      <translation>Ошибки сценария: %1</translation>
+      <translation type="unfinished">There were script errors:
+%1</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
       <source>File extension</source>
-      <translation>Расширение файла</translation>
+      <translation type="unfinished">File extension</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2300"/>
       <source>Enter your custom file extension:</source>
-      <translation>Введите ваше пользовательское расширение файла:</translation>
+      <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2572"/>
       <source>Calendar cache emptied</source>
-      <translation>Кэш календаря очищен</translation>
+      <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2573"/>
       <source>Your calendar cache was emptied.</source>
-      <translation>Кэш календаря был очищен.</translation>
+      <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2650"/>
       <source>Reset toolbars and exit</source>
-      <translation>Сброс панелей инструментов и выход</translation>
+      <translation type="unfinished">Reset toolbars and exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2651"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
-      <translation>Вы действительно хотите сбросить все панели инструментов? Приложение будет закрыто в процессе, при повторном запуске будут восстановлены панели инструментов по умолчанию.</translation>
+      <translation type="unfinished">Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2655"/>
       <source>Reset and &amp;exit</source>
-      <translation>Сброс и вы&amp;ход</translation>
+      <translation type="unfinished">Reset and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2817"/>
       <source>Log file cleared</source>
-      <translation>Файл журнала очищен</translation>
+      <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2818"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation>Файл журнала &lt;strong&gt;%1&lt;/strong&gt; был очищен.</translation>
+      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1509"/>
       <source>The Database was reinitialized.</source>
-      <translation>База данных переинициализирована.</translation>
+      <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="247"/>
       <source>enabled</source>
-      <translation>доступно</translation>
+      <translation type="unfinished">enabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="247"/>
       <source>disabled</source>
-      <translation>недоступно</translation>
+      <translation type="unfinished">disabled</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="250"/>
       <source>Portable mode is currently:</source>
-      <translation>Портативный режим:</translation>
+      <translation type="unfinished">Portable mode is currently:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="253"/>
       <source>In portable mode</source>
-      <translation>В портативном режиме</translation>
+      <translation type="unfinished">In portable mode</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="254"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
-      <translation>внутренняя база данных sqlite и параметры будут храниться в папке &lt;code&gt;Data&lt;/code&gt;</translation>
+      <translation type="unfinished">the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="257"/>
       <source>the settings will be stored in an ini file</source>
-      <translation>параметры будут сохранены в ini-файле</translation>
+      <translation type="unfinished">the settings will be stored in an ini file</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="258"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
-      <translation>папки заметок, пути до скриптов и до внешнего редактора будут автоматически сохранены по отношению к папке &lt;code&gt;Data&lt;/code&gt; таким образом, чтобы правильно загружаться независимо от места установки QOwnNotes</translation>
+      <translation type="unfinished">the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="266"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
-      <translation>будет активирована, если вы запустите QOwnNotes с параметром &lt;code&gt;--portable&lt;/code&gt;.</translation>
+      <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1522"/>
       <source>Save debug information</source>
-      <translation>Сохранить отладочную информацию</translation>
+      <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1573"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
-      <translation>Вы хотите удалить все настройки, локальную базу данных списка задач и выйти из QOwnNotes?
+      <translation type="unfinished">Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
-Заметки останутся в неизменном состоянии!</translation>
+Your notes will stay intact!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1576"/>
       <source>Clear and &amp;exit</source>
-      <translation>Очистить и &amp;выйти</translation>
+      <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1503"/>
@@ -3872,27 +3874,27 @@ Your notes will stay intact!</source>
       <location filename="../dialogs/settingsdialog.cpp" line="2132"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2655"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="271"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Вы найдете &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; в вашем релизе для запуска QOwnNotes в портативном режиме.</translation>
+      <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1500"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
-      <translation>Вы действительно хотите очистить локальную базу данных? Это также удалит ваши настроенные папки заметок и сохраненные элементы списков задач!</translation>
+      <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1503"/>
       <source>Clear &amp;database</source>
-      <translation>Очистить &amp;базу данных</translation>
+      <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1674"/>
       <source>Select editor application</source>
-      <translation>Выбор внешнего редактора</translation>
+      <translation type="unfinished">Select editor application</translation>
     </message>
   </context>
   <context>
@@ -3900,17 +3902,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation>Поделиться заметкой</translation>
+      <translation type="unfinished">Share note</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation>Поделиться заметкой на ownCloud</translation>
+      <translation type="unfinished">Share note on ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
       <source>The public url of your note</source>
-      <translation>Общедоступный URL-адрес заметки</translation>
+      <translation type="unfinished">The public url of your note</translation>
     </message>
   </context>
   <context>
@@ -3918,102 +3920,102 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation>Вставка таблицы</translation>
+      <translation type="unfinished">Insert table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
       <source>Create table</source>
-      <translation>Создание таблицы</translation>
+      <translation type="unfinished">Create table</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="30"/>
       <source>Column width:</source>
-      <translation>Ширина столбца:</translation>
+      <translation type="unfinished">Column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Вставка разделителя заголовка таблицы</translation>
+      <translation type="unfinished">Insert a table heading separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
       <source>Columns:</source>
-      <translation>Столбцы:</translation>
+      <translation type="unfinished">Columns:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="67"/>
       <source>Rows:</source>
-      <translation>Строки:</translation>
+      <translation type="unfinished">Rows:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>Количество пробелов в столбце</translation>
+      <translation type="unfinished">The amount of spaces in a column</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Выбор макета таблицы:</translation>
+      <translation type="unfinished">Select table layout:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
       <source>Separator column width:</source>
-      <translation>Ширина разделителя столбцов:</translation>
+      <translation type="unfinished">Separator column width:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Количество символов тире в разделителе</translation>
+      <translation type="unfinished">The amount of dash characters in the separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
       <source>Import CSV file</source>
-      <translation>Импорт CSV-файла</translation>
+      <translation type="unfinished">Import CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="173"/>
       <source>Separator:</source>
-      <translation>Разделитель:</translation>
+      <translation type="unfinished">Separator:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="180"/>
       <source>Select file</source>
-      <translation>Выберите файл</translation>
+      <translation type="unfinished">Select file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="191"/>
       <source>Please select the CSV file you want to import:</source>
-      <translation>Пожалуйста, выберите CSV-файл, который хотите импортировать:</translation>
+      <translation type="unfinished">Please select the CSV file you want to import:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="231"/>
       <source>CSV file</source>
-      <translation>CSV-файл</translation>
+      <translation type="unfinished">CSV file</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="238"/>
       <source>First line is the table heading</source>
-      <translation>Первая строка—заголовок таблицы</translation>
+      <translation type="unfinished">First line is the table heading</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="261"/>
       <source>Text-delimiter:</source>
-      <translation>Разделитель текста:</translation>
+      <translation type="unfinished">Text-delimiter:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="147"/>
       <source>CSV files</source>
-      <translation>CSV-файлы</translation>
+      <translation type="unfinished">CSV files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="148"/>
       <source>All files</source>
-      <translation>Все файлы</translation>
+      <translation type="unfinished">All files</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.cpp" line="154"/>
       <source>Select CSV file to import</source>
-      <translation>Выберите CSV-файл для импорта</translation>
+      <translation type="unfinished">Select CSV file to import</translation>
     </message>
   </context>
   <context>
@@ -4021,17 +4023,17 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="20"/>
       <source>Add a new tag</source>
-      <translation>Добавить новый тег</translation>
+      <translation>Přidat nový štítek</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="30"/>
       <source>Add new tag</source>
-      <translation>Добавить новый тег</translation>
+      <translation>Přidat nový štítek</translation>
     </message>
     <message>
       <location filename="../dialogs/tagadddialog.ui" line="47"/>
       <source>New tag</source>
-      <translation>Новый тег</translation>
+      <translation>Nový štítek</translation>
     </message>
   </context>
   <context>
@@ -4039,140 +4041,140 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="14"/>
       <source>Todo</source>
-      <translation>Список задач</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="88"/>
       <location filename="../dialogs/tododialog.ui" line="95"/>
       <source>Priority</source>
-      <translation>Приоритет</translation>
+      <translation type="unfinished">Priority</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="123"/>
       <source>Reminder</source>
-      <translation>Напоминание</translation>
+      <translation type="unfinished">Reminder</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="167"/>
       <source>Summary</source>
-      <translation>Резюме</translation>
+      <translation type="unfinished">Summary</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="201"/>
       <source>Save</source>
-      <translation>Сохранить</translation>
+      <translation type="unfinished">Save</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="99"/>
       <source>Save and insert into note</source>
-      <translation>Сохранить и вставить в заметку</translation>
+      <translation type="unfinished">Save and insert into note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="218"/>
       <source>Remove</source>
-      <translation>Удалить</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="232"/>
       <source>Note...</source>
-      <translation>Примечание...</translation>
+      <translation type="unfinished">Note...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
       <source>Show completed items</source>
-      <translation>Показать выполненные задачи</translation>
+      <translation type="unfinished">Show completed items</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="295"/>
       <source>Reload the todo list from server</source>
-      <translation>Перезагрузить список todo с сервера</translation>
+      <translation type="unfinished">Reload the todo list from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="329"/>
       <source>Search or create todo item</source>
-      <translation>Поиск или создание элемента todo</translation>
+      <translation type="unfinished">Search or create todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="312"/>
       <source>select your todo list</source>
-      <translation>выберите свой список задач</translation>
+      <translation type="unfinished">select your todo list</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="198"/>
       <source>Save the current todo item</source>
-      <translation>Сохранить текущий элемент списка задач</translation>
+      <translation type="unfinished">Save the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="103"/>
       <source>Save the current todo item and insert a link to it into the current note</source>
-      <translation>Сохранить текущий элемент списка задач и вставить ссылку на него в текущей заметки</translation>
+      <translation type="unfinished">Save the current todo item and insert a link to it into the current note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="112"/>
       <source>Import the current todo item as new note</source>
-      <translation>Импортировать текущий элемент списка задач, как новую заметку</translation>
+      <translation type="unfinished">Import the current todo item as new note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="108"/>
       <source>Import as note</source>
-      <translation>Импортировать как заметку</translation>
+      <translation type="unfinished">Import as note</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="215"/>
       <source>Remove the current todo item</source>
-      <translation>Удалить текущий элемент списка задач</translation>
+      <translation type="unfinished">Remove the current todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="298"/>
       <source>Reload...</source>
-      <translation>Перезагрузка...</translation>
+      <translation type="unfinished">Reload...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
       <source>Todo list items are being loaded from the server</source>
-      <translation>Список задач загружается с сервера</translation>
+      <translation type="unfinished">Todo list items are being loaded from the server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="123"/>
       <source>Reload from server</source>
-      <translation>Перезагрузка с сервера</translation>
+      <translation type="unfinished">Reload from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>
       <source>Reload tasks from server</source>
-      <translation>Перезагрузить задачи с сервера</translation>
+      <translation type="unfinished">Reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="132"/>
       <source>Clear cache and reload</source>
-      <translation>Очистить кэш и перезагрузить</translation>
+      <translation type="unfinished">Clear cache and reload</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="136"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation>Очистить кэш календаря и перезагрузить задачи с сервера</translation>
+      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="572"/>
       <source>Remove todo item</source>
-      <translation>Удалить задачу из списка</translation>
+      <translation type="unfinished">Remove todo item</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="573"/>
       <source>Remove the selected todo item?
 This cannot be undone!</source>
-      <translation>Удалить выделенную задачу из списка?
-Удалённые задачи восстановить нельзя!</translation>
+      <translation type="unfinished">Remove the selected todo item?
+This cannot be undone!</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="574"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Удалить</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="574"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -4180,140 +4182,140 @@ This cannot be undone!</source>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="23"/>
       <source>Select a menu</source>
-      <translation>Выберите меню</translation>
+      <translation type="unfinished">Select a menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the avaliable menus to get the corresponding actions</source>
-      <translation>Список доступных меню для соответствующих действий</translation>
+      <translation type="unfinished">Lists the avaliable menus to get the corresponding actions</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
       <source>Select toolbar</source>
-      <translation>Выберите панель инструментов</translation>
+      <translation type="unfinished">Select toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="36"/>
       <source>List the available toolbars. The selected one will be edited</source>
-      <translation>Список доступных панелей инструментов. Редактировать выбранный</translation>
+      <translation type="unfinished">List the available toolbars. The selected one will be edited</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation>Перечисляет действия в выбранной панели инструментов</translation>
+      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation>Добавить новую панель инструментов</translation>
+      <translation type="unfinished">Add new Toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
       <source>New</source>
-      <translation>Новые</translation>
+      <translation type="unfinished">New</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation>Удаление выбранной панели инструментов</translation>
+      <translation type="unfinished">Delete selected toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="168"/>
       <source>Remove</source>
-      <translation>Удалить</translation>
+      <translation type="unfinished">Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation>Перечисляет доступные действия для выбранного меню</translation>
+      <translation type="unfinished">Lists the available actions for the selected menu</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
       <source>Move Up</source>
-      <translation>Вверх</translation>
+      <translation type="unfinished">Move Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation>Перемещает элемент выбранной панели инструментов вверх</translation>
+      <translation type="unfinished">Moves the selected toolbar item up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
       <source>Move &amp;Up</source>
-      <translation>Переместить &amp;вверх</translation>
+      <translation type="unfinished">Move &amp;Up</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="121"/>
       <source>Move Down</source>
-      <translation>Переместить вниз</translation>
+      <translation type="unfinished">Move Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation>перемещает элемент выбранной панели инструментов вниз</translation>
+      <translation type="unfinished">moves the selected toolbar item down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
       <source>Move &amp;Down</source>
-      <translation>Переместить &amp;вниз</translation>
+      <translation type="unfinished">Move &amp;Down</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation>Вставка</translation>
+      <translation type="unfinished">Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation>Добавляет выбранный элемент к панели инструментов</translation>
+      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation>&amp;Вставка</translation>
+      <translation type="unfinished">&amp;Insert</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation>Удаляет выбранный элемент из панели инструментов</translation>
+      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
       <source>&amp;Remove</source>
-      <translation>&amp;Удалить</translation>
+      <translation type="unfinished">&amp;Remove</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="198"/>
       <source>Separator</source>
-      <translation>Разделитель</translation>
+      <translation type="unfinished">Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="201"/>
       <source>&amp;Separator</source>
-      <translation>&amp;Разделитель</translation>
+      <translation type="unfinished">&amp;Separator</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="189"/>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="213"/>
       <source>--(separator)--</source>
-      <translation>--(разделитель)--</translation>
+      <translation type="unfinished">--(separator)--</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="306"/>
       <source>Remove current toolbar</source>
-      <translation>Удалить текущую панель инструментов</translation>
+      <translation type="unfinished">Remove current toolbar</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
       <source>Remove the current toolbar?</source>
-      <translation>Удалить текущую панель инструментов?</translation>
+      <translation type="unfinished">Remove the current toolbar?</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -4321,32 +4323,32 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation>Корзина для заметок</translation>
+      <translation type="unfinished">Trashed notes</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
       <source>&amp;Restore selected note on server</source>
-      <translation>&amp;Восстановить текущую заметку на сервере</translation>
+      <translation type="unfinished">&amp;Restore selected note on server</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="25"/>
       <source>&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Медленнее, но с поддержкой версий&lt;/h3&gt;&lt;p&gt;Все версии заметки будут восстановлены на сервере ownCloud.&lt;/p&gt;&lt;p&gt;Нужно подождать окончания синхронизации в QOwnNotes.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Slower, but with note versions&lt;/h3&gt;&lt;p&gt;The note will be restored on your ownCloud server with all versions.&lt;/p&gt;&lt;p&gt;You will have to wait until it is synced to QOwnNotes by ownCloud sync.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation>&amp;Загрузить выделенную заметку</translation>
+      <translation type="unfinished">&amp;Download selected note</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation>&lt;h3&gt;Быстро, но без поддержки версий&lt;/h3&gt;&lt;p&gt;Заметка будет создана с текстом из предпросмотра.&lt;/p&gt;&lt;p&gt;Версии заметки на сервере ownCloud не будут восстановлены и заметка останется в корзине.&lt;/p&gt;&lt;p&gt;Разные версии этой заметки можно будет восстановить позже.&lt;/p&gt;</translation>
+      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -4354,103 +4356,103 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation>Доступно обновление</translation>
+      <translation type="unfinished">Update available</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation>Доступно обновление QOwnNotes!</translation>
+      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation>Загрузить новую версию?</translation>
+      <translation type="unfinished">Do you want to download the new version?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation>Программа будет загружена браузером, выбранным по умолчанию.</translation>
+      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Принять участие в развитии QOwnNotes&lt;/a&gt;</translation>
+      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="96"/>
       <source>%p% downloaded</source>
-      <translation>%p% загружен</translation>
+      <translation type="unfinished">%p% downloaded</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="34"/>
       <source>&amp;Update</source>
-      <translation>&amp;Обновление</translation>
+      <translation type="unfinished">&amp;Update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="47"/>
       <source>&amp;Download latest</source>
-      <translation>&amp;Загрузить</translation>
+      <translation type="unfinished">&amp;Download latest</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="45"/>
       <source>Just download</source>
-      <translation>Только скачивание</translation>
+      <translation type="unfinished">Just download</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="61"/>
       <source>&amp;Skip version</source>
-      <translation>&amp;Пропустить версию</translation>
+      <translation type="unfinished">&amp;Skip version</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="71"/>
       <location filename="../dialogs/updatedialog.cpp" line="317"/>
       <location filename="../dialogs/updatedialog.cpp" line="475"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="214"/>
       <source>Download error</source>
-      <translation>Ошибка скачивания</translation>
+      <translation type="unfinished">Download error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="215"/>
       <source>Error while downloading:
 %1</source>
-      <translation>Ошибка скачивания:
+      <translation type="unfinished">Error while downloading:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="217"/>
       <source>network error: %1</source>
-      <translation>ошибка сети: %1</translation>
+      <translation type="unfinished">network error: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="240"/>
       <location filename="../dialogs/updatedialog.cpp" line="261"/>
       <location filename="../dialogs/updatedialog.cpp" line="359"/>
       <source>File error</source>
-      <translation>Ошибка файла</translation>
+      <translation type="unfinished">File error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="241"/>
       <location filename="../dialogs/updatedialog.cpp" line="360"/>
       <source>Could not open temporary file:
 %1</source>
-      <translation>Не получилось открыть временный файл:
+      <translation type="unfinished">Could not open temporary file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="262"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation>Не вышло сохранить скачанный файл:
+      <translation type="unfinished">Could not store downloaded file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="316"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation>Вы хотите обновить и перезапустить QOwnNotes?</translation>
+      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="332"/>
@@ -4461,57 +4463,57 @@ This cannot be undone!</source>
       <location filename="../dialogs/updatedialog.cpp" line="456"/>
       <location filename="../dialogs/updatedialog.cpp" line="465"/>
       <source>Error</source>
-      <translation>Ошибка</translation>
+      <translation type="unfinished">Error</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="333"/>
       <source>Could not find updater file:
 %1</source>
-      <translation>Не вышло найти файл обновления:
+      <translation type="unfinished">Could not find updater file:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="420"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation>Скрипт обновления '%1' не существует!</translation>
+      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="429"/>
       <source>Updater unzip executable '%1' doesn't exist!</source>
-      <translation>Распакованный командный файл '%1' не существует!</translation>
+      <translation type="unfinished">Updater unzip executable '%1' doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="438"/>
       <location filename="../dialogs/updatedialog.cpp" line="447"/>
       <source>Could not copy updater script '%1' to '%2'!</source>
-      <translation>Не удалось скопировать скрипт обновления из '%1' в '%2'!</translation>
+      <translation type="unfinished">Could not copy updater script '%1' to '%2'!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="457"/>
       <source>Couldn't find updater script: %1</source>
-      <translation>Не получилось найти скрипт обновления: %1</translation>
+      <translation type="unfinished">Couldn't find updater script: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="466"/>
       <source>Couldn't find unzip executable: %1</source>
-      <translation>Не получилось найти распакованный командный файл: '%1'</translation>
+      <translation type="unfinished">Couldn't find unzip executable: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="315"/>
       <location filename="../dialogs/updatedialog.cpp" line="472"/>
       <source>Proceed with update</source>
-      <translation>Продолжить обновление</translation>
+      <translation type="unfinished">Proceed with update</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="473"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation>Загрузка завершена. Вы хотите обновить и перезапустить QOwnNotes?</translation>
+      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="317"/>
       <location filename="../dialogs/updatedialog.cpp" line="475"/>
       <source>&amp;Update and restart</source>
-      <translation>&amp;Обновить и перезапустить</translation>
+      <translation type="unfinished">&amp;Update and restart</translation>
     </message>
   </context>
   <context>
@@ -4519,12 +4521,12 @@ This cannot be undone!</source>
     <message>
       <location filename="../services/updateservice.cpp" line="193"/>
       <source>No updates</source>
-      <translation>Нет обновлений</translation>
+      <translation type="unfinished">No updates</translation>
     </message>
     <message>
       <location filename="../services/updateservice.cpp" line="194"/>
       <source>There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</source>
-      <translation>Нет доступных обновлений.&lt;br /&gt;Последняя доступная версия: &lt;strong&gt;%1&lt;/strong&gt;.</translation>
+      <translation type="unfinished">There are no updates available.&lt;br /&gt;&lt;strong&gt;%1&lt;/strong&gt; is the latest version.</translation>
     </message>
   </context>
   <context>
@@ -4532,27 +4534,27 @@ This cannot be undone!</source>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Версии заметки на вашем сервере ownCloud</translation>
+      <translation type="unfinished">Note versions on your ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>
       <source>Diff</source>
-      <translation>Отличия</translation>
+      <translation type="unfinished">Diff</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation>Текст заметки</translation>
+      <translation type="unfinished">Note text</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
       <source>&amp;Restore selected version</source>
-      <translation>&amp;Восстановить выбранную версию</translation>
+      <translation type="unfinished">&amp;Restore selected version</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="34"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
   </context>
   <context>
@@ -4561,97 +4563,97 @@ This cannot be undone!</source>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation>Добро пожаловать в QOwnNotes</translation>
+      <translation type="unfinished">Welcome to QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
       <source>the plain-text file notepad with markdown support and ownCloud integration</source>
-      <translation>Блокнот с простыми текстовыми заметками, поддержкой Markdown и интеграцией с ownCloud</translation>
+      <translation type="unfinished">the plain-text file notepad with markdown support and ownCloud integration</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="88"/>
       <source>&amp;Back</source>
-      <translation>&amp;Назад</translation>
+      <translation type="unfinished">&amp;Back</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="99"/>
       <source>&amp;Next</source>
-      <translation>&amp;Вперед</translation>
+      <translation type="unfinished">&amp;Next</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="116"/>
       <source>&amp;Finished</source>
-      <translation>&amp;Готово</translation>
+      <translation type="unfinished">&amp;Finished</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="139"/>
       <source>&amp;Cancel</source>
-      <translation>&amp;Отмена</translation>
+      <translation type="unfinished">&amp;Cancel</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <source>Note folder</source>
-      <translation>Папка заметок</translation>
+      <translation type="unfinished">Note folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>
       <source>Create note folder if not existing</source>
-      <translation>Создать папку заметок, если ее не существует</translation>
+      <translation type="unfinished">Create note folder if not existing</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation>Путь к папке с заметками</translation>
+      <translation type="unfinished">Note folder path</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
       <source>Select folder</source>
-      <translation>Выберите папку</translation>
+      <translation type="unfinished">Select folder</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="307"/>
       <source>Open ownCloud settings</source>
-      <translation>Откройте настройки ownCloud</translation>
+      <translation type="unfinished">Open ownCloud settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="349"/>
       <source>Open network settings</source>
-      <translation>Откройте настройки сети</translation>
+      <translation type="unfinished">Open network settings</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="194"/>
       <source>Please select where you want to store your notes:</source>
-      <translation>Пожалуйста выберите, где вы хотите хранить ваши заметки:</translation>
+      <translation type="unfinished">Please select where you want to store your notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation>Если вы хотите иметь возможность получить доступ к версиям и корзине заметок на вашем сервере ownCloud, можно настроить QOwnNotes прямо сейчас. Также можете сделать это в дальнейшем.</translation>
+      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>
       <source>In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</source>
-      <translation>В любом случае вам нужен клиент синхронизации ownCloud (или любой другой) для синхронизации заметок с вашим сервером ownCloud.</translation>
+      <translation type="unfinished">In any case you need the ownCloud sync client (or any other sync client) to sync your notes with your ownCloud server.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation>QOwnNotes собирает обезличенные данные об использовании, чтобы определить части программы, которые нуждаются в улучшении и исправлении ошибок. Это поведение можно отключить в настройках.</translation>
+      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="77"/>
       <source>Cannot create note path!</source>
-      <translation>Не удается создать путь к заметкам!</translation>
+      <translation type="unfinished">Cannot create note path!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="82"/>
       <source>This note path doesn't exist!</source>
-      <translation>Этот путь к заметкам не существует!</translation>
+      <translation type="unfinished">This note path doesn't exist!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="145"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation>Пожалуйста, выберите папку для хранения заметок</translation>
+      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
   </context>
 </TS>
