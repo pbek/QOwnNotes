@@ -3,6 +3,8 @@
 ## 17.01.9
 - when exporting a note as html the images are now base64 encoded and 
   included inside the html (for [Issue #491](https://github.com/pbek/QOwnNotes/issues/491))
+- added more Dutch, French, Italian and Polish translation (thank you Leime,
+  lepascalou, mlocati and lucjan)
 
 ## 17.01.8
 - improved log and status messages when a note could not be saved for example
