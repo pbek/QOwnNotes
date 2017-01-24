@@ -1514,10 +1514,21 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
         // encode the image base64
         if (base64Images) {
-            QMimeDatabase db;
-            QMimeType type = db.mimeTypeForFile(fileName);
+#ifdef Q_OS_WIN
+            QFile file(fileNameWindows);
+#else
             QFile file(fileName);
-            file.open(QIODevice::ReadOnly);
+#endif
+
+            if (!file.open(QIODevice::ReadOnly)) {
+                qWarning() << QObject::tr("Could not read image file: %1")
+                        .arg(fileName);
+
+                continue;
+            }
+
+            QMimeDatabase db;
+            QMimeType type = db.mimeTypeForFile(file.fileName());
             QByteArray ba = file.readAll();
 
             result.replace(
