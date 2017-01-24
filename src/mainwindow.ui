@@ -1148,7 +1148,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-pdf.svg</iconset>
    </property>
    <property name="text">
-    <string>&amp;Export note as PDF (markdown)</string>
+    <string>&amp;Export note as PDF</string>
    </property>
   </action>
   <action name="action_Export_note_as_PDF_text">
@@ -1560,7 +1560,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</normaloff>:/icons/breeze-qownnotes/16x16/text-xml.svg</iconset>
    </property>
    <property name="text">
-    <string>Export note as HTML (markdown)</string>
+    <string>Export note as HTML</string>
    </property>
   </action>
   <action name="actionOpen_IRC_Channel">
@@ -1939,8 +1939,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>

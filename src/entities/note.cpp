@@ -17,6 +17,7 @@
 #include "notesubfolder.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
+#include <QtCore/QMimeDatabase>
 
 
 Note::Note() {
@@ -1310,7 +1311,7 @@ bool Note::removeNoteFile() {
  * @return
  */
 QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
-                             bool forExport, bool decrypt) {
+                             bool forExport, bool decrypt, bool base64Images) {
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
 
@@ -1509,6 +1510,22 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                         QString("<img width=\"%1\" src=\"file://%2\"").arg(
                                 QString::number(maxImageWidth), fileName));
             }
+        }
+
+        // encode the image base64
+        if (base64Images) {
+            QMimeDatabase db;
+            QMimeType type = db.mimeTypeForFile(fileName);
+            QFile file(fileName);
+            file.open(QIODevice::ReadOnly);
+            QByteArray ba = file.readAll();
+
+            result.replace(
+                    QRegularExpression("<img(.+?)src=\"file:\\/\\/" +
+                                       QRegularExpression::escape(fileName) +
+                                       "\""),
+                    QString("<img\\1src=\"data:%1;base64,%2\"").arg(
+                            type.name(), QString(ba.toBase64())));
         }
     }
 

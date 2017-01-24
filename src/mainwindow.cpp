@@ -7289,7 +7289,8 @@ void MainWindow::on_actionExport_preview_HTML_triggered() {
             QTextStream out(&file);
             out.setCodec("UTF-8");
             out << currentNote.toMarkdownHtml(
-                    NoteFolder::currentLocalPath(), getMaxImageWidth(), true);
+                    NoteFolder::currentLocalPath(), getMaxImageWidth(), true,
+                    true, true);
             file.flush();
             file.close();
         }
