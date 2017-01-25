@@ -8,6 +8,8 @@
 - fixed a problem with <kbd>Ctrl<kbd> - clicking urls with a `)` in it
 - when opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session
+- added more Dutch, Portuguese and Italian translation (thank you Leime,
+  mlimacarlos and mlocati)
 
 ## 17.01.9
 - when exporting a note as html the images are now base64 encoded and included
