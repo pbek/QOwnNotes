@@ -2807,8 +2807,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   <item row="7" column="0" colspan="2">
                    <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
                     <property name="toolTip">
-                     <string>You can use this for example under Windows if you have troubles with 
-      newlines in the ownCloud / Nextcloud notes app</string>
+                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
                     </property>
                     <property name="layoutDirection">
                      <enum>Qt::LeftToRight</enum>
