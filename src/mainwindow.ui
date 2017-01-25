@@ -678,6 +678,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionShow_note_in_file_manager"/>
     <addaction name="actionView_note_in_new_window"/>
     <addaction name="actionShare_note"/>
+    <addaction name="actionSave_modified_notes"/>
     <addaction name="separator"/>
     <addaction name="actionSet_ownCloud_Folder"/>
     <addaction name="action_Reload_note_folder"/>
@@ -1912,6 +1913,18 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+O</string>
+   </property>
+  </action>
+  <action name="actionSave_modified_notes">
+   <property name="icon">
+    <iconset theme="document-save" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-save.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Save modified notes</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
  </widget>

@@ -432,6 +432,8 @@ private slots:
 
     void on_actionView_note_in_new_window_triggered();
 
+    void on_actionSave_modified_notes_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

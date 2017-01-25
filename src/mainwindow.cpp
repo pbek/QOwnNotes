@@ -8563,3 +8563,11 @@ void MainWindow::on_actionView_note_in_new_window_triggered() {
     dialog->setNote(currentNote);
     dialog->show();
 }
+
+/**
+ * Manually stores updated notes to disk
+ */
+void MainWindow::on_actionSave_modified_notes_triggered() {
+    // store updated notes to disk
+    storeUpdatedNotesToDisk();
+}
