@@ -5,7 +5,7 @@
   (for [Issue #494](https://github.com/pbek/QOwnNotes/issues/494))
 - you can now save modified notes also manually with the shortcut <kbd>Ctrl</kbd> +
   <kbd>S</kbd> (for [Issue #484](https://github.com/pbek/QOwnNotes/issues/484))
-- fixed a problem with <kbd>Ctrl<kbd> - clicking urls with a `)` in it
+- fixed a problem with <kbd>Ctrl</kbd> - clicking urls with a `)` in it
 - when opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session
 - added more Dutch, Portuguese and Italian translation (thank you Leime,
