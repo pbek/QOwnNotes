@@ -101,6 +101,28 @@ void NoteHistory::updateCursorPositionOfNote(Note note, int cursorPosition) {
     noteHistory->replace(position, item);
 }
 
+/**
+ * Gets the last cursor position of a note in the note history
+ *
+ * @param note
+ * @return
+ */
+int NoteHistory::getLastCursorPositionOfNote(Note note) {
+    if (isEmpty()) {
+        return 0;
+    }
+
+    for (int i = 0; i < noteHistory->count(); i++) {
+        NoteHistoryItem item = noteHistory->at(i);
+
+        if (item.getNote().getId() == note.getId()) {
+            return item.getCursorPosition();
+        }
+    }
+
+    return 0;
+}
+
 bool NoteHistory::back() {
     if ((currentIndex < 0) || (currentIndex > lastIndex()) || isEmpty()) {
         return false;

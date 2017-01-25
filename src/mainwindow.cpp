@@ -2879,15 +2879,10 @@ void MainWindow::setCurrentNote(Note note,
     enableShowTrashButton();
 
     // update cursor position of previous note
-    if (this->currentNote.exists()) {
+    if (currentNote.exists() && (currentNote.getId() != note.getId())) {
         QTextCursor c = ui->noteTextEdit->textCursor();
         this->noteHistory.updateCursorPositionOfNote(
                 this->currentNote, c.position());
-    }
-
-    // add new note to history
-    if (addNoteToHistory && note.exists()) {
-        this->noteHistory.add(note);
     }
 
     this->currentNote = note;
@@ -2938,6 +2933,18 @@ void MainWindow::setCurrentNote(Note note,
 //    setenv("QOWNNOTES_CURRENT_NOTE_PATH",
 //           currentNote.fullNoteFilePath().toLatin1().data(),
 //           1);
+
+    int cursorPosition = noteHistory.getLastCursorPositionOfNote(note);
+
+    // restore the last cursor position
+    if (cursorPosition > 0) {
+        setNoteTextEditCursorPosition(cursorPosition);
+    }
+
+    // add new note to history
+    if (addNoteToHistory && note.exists()) {
+        this->noteHistory.add(note, cursorPosition);
+    }
 
     noteEditCursorPositionChanged();
 }
@@ -4020,8 +4027,17 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
     qDebug() << item.getNote();
 
     setCurrentNote(item.getNote(), true, true, false);
+    setNoteTextEditCursorPosition(item.getCursorPosition());
+}
+
+/**
+ * Sets the cursor position of the note text edit
+ *
+ * @param cursorPosition
+ */
+void MainWindow::setNoteTextEditCursorPosition(int cursorPosition) {
     QTextCursor c = ui->noteTextEdit->textCursor();
-    c.setPosition(item.getCursorPosition());
+    c.setPosition(cursorPosition);
     ui->noteTextEdit->setTextCursor(c);
 }
 

@@ -751,4 +751,6 @@ private:
     void unsetCurrentNote();
 
     void setNoteTextEditReadOnly(bool readonly) const;
+
+    void setNoteTextEditCursorPosition(int cursorPosition);
 };

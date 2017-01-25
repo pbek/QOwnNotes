@@ -39,6 +39,7 @@ public:
     NoteHistoryItem getCurrentHistoryItem();
     void updateCursorPositionOfNote(Note note, int cursorPosition);
     void clear();
+    int getLastCursorPositionOfNote(Note note);
 };
 
 #endif // NOTEHISTORY_H
