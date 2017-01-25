@@ -91,7 +91,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>R</kbd> removes the current todo item
 
 
-## OSX
+## macOS
 
 ### Globally
 
@@ -145,7 +145,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>D</kbd> duplicates the current line or the selected text
     - <kbd>⌘</kbd> + <kbd>Opt</kbd> + <kbd>Down</kbd> does the same
 - <kbd>⌘</kbd> + <kbd>Backspace</kbd> deletes the current line
-- <kbd>Alt</kbd> + <kbd>Backspace</kbd> deletes the current word
+- <kbd>Opt</kbd> + <kbd>Backspace</kbd> deletes the current word
 - <kbd>⌘</kbd> + <kbd>L</kbd> opens a dialog to add a link to an other note or an URL (also works on selected text)
 - <kbd>⌘</kbd> + <kbd>T</kbd> inserts the current date in ISO 8601 format
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> inserts an image (the image will be copied to the `media` folder in the current notes folder)
@@ -169,7 +169,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>+</kbd> increases the note text font size by one point
 - <kbd>⌘</kbd> + <kbd>-</kbd> decreases the note text font size by one point
 - <kbd>⌘</kbd> + <kbd>/</kbd> resets the note text font size
-- <kbd>Ctrl</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
+- <kbd>⌘</kbd> + <kbd>Space</kbd> tries to solve simple equations like `(4+5)*3=` in the current line in front of the cursor, auto-completes text or opens urls
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>H</kbd> inserts a headline from the note filename at the top of the note
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>X</kbd> splits the current note into two notes at the current cursor position
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>W</kbd> searches for the selected text on the web
