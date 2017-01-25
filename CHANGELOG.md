@@ -5,6 +5,7 @@
   (for [Issue #494](https://github.com/pbek/QOwnNotes/issues/494))
 - you can now save modified notes also manually with the shortcut <kbd>Ctrl</kbd>
   + <kbd>S</kbd> (for [Issue #484](https://github.com/pbek/QOwnNotes/issues/484))
+- fixed a problem with <kbd>Ctrl<kbd> - clicking urls with a `)` in it
 
 ## 17.01.9
 - when exporting a note as html the images are now base64 encoded and included
