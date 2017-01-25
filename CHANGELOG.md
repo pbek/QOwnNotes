@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.01.10
+- fixed a crash that can happen with long notes with malformed urls
+  (for [Issue #494](https://github.com/pbek/QOwnNotes/issues/494))
+
 ## 17.01.9
 - when exporting a note as html the images are now base64 encoded and included
   inside the html (for [Issue #491](https://github.com/pbek/QOwnNotes/issues/491))

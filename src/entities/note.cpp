@@ -1364,8 +1364,12 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     }
 
     // try to replace file links like [my note](my-note.md) to note links
+    // we are using `{1,500}` instead of `+` because there were crashes with
+    // regular expressions running wild
     i = QRegularExpression(
-            "\\[(.+?)\\]\\((((?!\\w+:\\/\\/)[^<>])+)\\)").globalMatch(str);
+            "\\[(.+?)\\]\\((((?!\\w+:\\/\\/)[^<>]){1,500}?)\\)")
+            .globalMatch(str);
+
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         QString fileText = match.captured(1);
