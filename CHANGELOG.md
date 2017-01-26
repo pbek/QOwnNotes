@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.01.11
+- fixed a warning that might trigger when notes are moved to an other note subfolder
+  (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
+
 ## 17.01.10
 - fixed a crash that can happen with long notes with malformed urls
   (for [Issue #494](https://github.com/pbek/QOwnNotes/issues/494))

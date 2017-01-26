@@ -509,6 +509,7 @@ private:
     ActionDialog *_actionDialog;
     TodoDialog *_todoDialog;
     SettingsDialog *_settingsDialog;
+    bool _noteExternallyRemovedCheckEnabled;
 
     void createSystemTrayIcon();
 

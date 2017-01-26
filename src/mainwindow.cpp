@@ -104,6 +104,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _showNotesFromAllNoteSubFolders = false;
     _noteFolderDockWidgetWasVisible = true;
     _noteSubFolderDockWidgetVisible = true;
+    _noteExternallyRemovedCheckEnabled = true;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -2220,7 +2221,8 @@ void MainWindow::notesWereModified(const QString &str) {
                     // do nothing
                     break;
             }
-        } else if (currentNote.getNoteSubFolderId() == 0) {
+        } else if (_noteExternallyRemovedCheckEnabled &&
+                   (currentNote.getNoteSubFolderId() == 0)) {
             // only allow the check if current note was removed externally in
             // the root note folder, because it gets triggered every time
             // a note gets renamed in subfolders
@@ -6902,7 +6904,14 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
         Q_UNUSED(blocker);
 
+        // unset the current note
+  //      unsetCurrentNote();
+
         int noteSubFolderCount = 0;
+
+        // disable the externally removed check, because it might trigger
+        _noteExternallyRemovedCheckEnabled = false;
+
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
@@ -6937,6 +6946,8 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
         showStatusBarMessage(
                 tr("%n note(s) were moved to note subfolder \"%2\"", "",
                    noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
+
+        _noteExternallyRemovedCheckEnabled = true;
     }
 }
 
