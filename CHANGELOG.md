@@ -6,6 +6,7 @@
   (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
 - you now can disable the restoring of the cursor position in the *General settings*
   (for [Issue #500](https://github.com/pbek/QOwnNotes/issues/500))
+- added more French and Chinese translation (thank you lepascalou and chonghua)
  
 ## 17.01.10
 - fixed a crash that can happen with long notes with malformed urls
