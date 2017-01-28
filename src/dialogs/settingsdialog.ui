@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1592</width>
-    <height>975</height>
+    <height>1017</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2640,7 +2640,119 @@
                   <string>Notes</string>
                  </property>
                  <layout class="QGridLayout" name="gridLayout_5">
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Accept all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
                   <item row="9" column="0" colspan="2">
+                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
+                    <property name="text">
+                     <string>Scale images down when inserted into notes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="0" colspan="2">
+                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Notify about all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
+                    <property name="toolTip">
+                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external modifications of the current note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="0">
+                   <widget class="QSpinBox" name="noteSaveIntervalTime">
+                    <property name="toolTip">
+                     <string/>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="minimum">
+                     <number>1</number>
+                    </property>
+                    <property name="maximum">
+                     <number>999</number>
+                    </property>
+                    <property name="value">
+                     <number>10</number>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
+                    <property name="toolTip">
+                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Use UNIX newline instead of native newline characters</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="3" column="0" colspan="2">
+                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
+                    <property name="toolTip">
+                     <string>Do this at your own risk!</string>
+                    </property>
+                    <property name="text">
+                     <string>Ignore all external note folder changes</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="6" column="0" colspan="2">
+                   <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
+                    <property name="toolTip">
+                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
+                    </property>
+                    <property name="layoutDirection">
+                     <enum>Qt::LeftToRight</enum>
+                    </property>
+                    <property name="text">
+                     <string>Allow note file name to be different from headline</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="4" column="1">
+                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
+                    <property name="toolTip">
+                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
+Just test yourself if you get sync conflicts and set a higher value if so.</string>
+                    </property>
+                    <property name="text">
+                     <string>note save interval time [sec]</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="10" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -2705,141 +2817,17 @@
                     </layout>
                    </widget>
                   </item>
-                  <item row="4" column="0">
-                   <widget class="QSpinBox" name="noteSaveIntervalTime">
-                    <property name="toolTip">
-                     <string/>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="minimum">
-                     <number>1</number>
-                    </property>
-                    <property name="maximum">
-                     <number>999</number>
-                    </property>
-                    <property name="value">
-                     <number>10</number>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="6" column="0" colspan="2">
-                   <widget class="QCheckBox" name="allowDifferentNoteFileNameCheckBox">
-                    <property name="toolTip">
-                     <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Allow note file name to be different from headline</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="4" column="1">
-                   <widget class="QLabel" name="noteSaveIntervalTimeLabel">
-                    <property name="toolTip">
-                     <string>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</string>
-                    </property>
-                    <property name="text">
-                     <string>note save interval time [sec]</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="1" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="0" column="0" colspan="2">
-                   <widget class="QCheckBox" name="notifyAllExternalModificationsCheckBox">
-                    <property name="toolTip">
-                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Notify about all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="3" column="0" colspan="2">
-                   <widget class="QCheckBox" name="ignoreAllExternalNoteFolderChangesCheckBox">
-                    <property name="toolTip">
-                     <string>Do this at your own risk!</string>
-                    </property>
-                    <property name="text">
-                     <string>Ignore all external note folder changes</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item row="8" column="0" colspan="2">
-                   <widget class="QCheckBox" name="imageScaleDownCheckBox">
-                    <property name="text">
-                     <string>Scale images down when inserted into notes</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="2" column="0" colspan="2">
-                   <widget class="QCheckBox" name="acceptAllExternalModificationsCheckBox">
+                   <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
                     <property name="toolTip">
-                     <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
+                     <string>When opening notes the cursor position inside the note will now be restored
+  to the position when the note was last visited in the current session</string>
                     </property>
                     <property name="layoutDirection">
                      <enum>Qt::LeftToRight</enum>
                     </property>
                     <property name="text">
-                     <string>Accept all external modifications of the current note</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item row="7" column="0" colspan="2">
-                   <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
-                    <property name="toolTip">
-                     <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
-                    <property name="text">
-                     <string>Use UNIX newline instead of native newline characters</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="groupBox_9">
-                 <property name="title">
-                  <string>Clear application data and exit</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_7">
-                  <item>
-                   <widget class="QLabel" name="label_7">
-                    <property name="text">
-                     <string>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</string>
-                    </property>
-                    <property name="wordWrap">
-                     <bool>true</bool>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QPushButton" name="clearAppDataAndExitButton">
-                    <property name="text">
-                     <string>Clear app data and exit</string>
+                     <string>Restore cursor position when opening a note</string>
                     </property>
                    </widget>
                   </item>
@@ -2866,6 +2854,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                     <property name="wordWrap">
                      <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_10">
+                 <property name="title">
+                  <string>Update dialog</string>
+                 </property>
+                 <layout class="QGridLayout" name="gridLayout_14">
+                  <item row="0" column="0">
+                   <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
+                    <property name="text">
+                     <string>Don't show the update dialog automatically</string>
                     </property>
                    </widget>
                   </item>
@@ -3015,6 +3019,32 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 </widget>
                </item>
                <item>
+                <widget class="QGroupBox" name="groupBox_9">
+                 <property name="title">
+                  <string>Clear application data and exit</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="label_7">
+                    <property name="text">
+                     <string>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="clearAppDataAndExitButton">
+                    <property name="text">
+                     <string>Clear app data and exit</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
                 <widget class="QGroupBox" name="groupBox_3">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
@@ -3040,22 +3070,6 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QPushButton" name="reinitializeDatabaseButton">
                     <property name="text">
                      <string>Reinitialize Database</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QGroupBox" name="groupBox_10">
-                 <property name="title">
-                  <string>Update dialog</string>
-                 </property>
-                 <layout class="QGridLayout" name="gridLayout_14">
-                  <item row="0" column="0">
-                   <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
-                    <property name="text">
-                     <string>Don't show the update dialog automatically</string>
                     </property>
                    </widget>
                   </item>

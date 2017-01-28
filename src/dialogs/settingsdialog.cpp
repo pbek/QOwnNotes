@@ -442,6 +442,8 @@ void SettingsDialog::storeSettings() {
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
     settings.setValue("useUNIXNewline",
                       ui->useUNIXNewlineCheckBox->isChecked());
+    settings.setValue("restoreCursorPosition",
+                      ui->restoreCursorPositionCheckBox->isChecked());
     settings.setValue("noteSaveIntervalTime",
                       ui->noteSaveIntervalTime->value());
     settings.setValue("defaultNoteFileExtension",
@@ -629,6 +631,8 @@ void SettingsDialog::readSettings() {
             settings.value("allowDifferentNoteFileName").toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
             settings.value("useUNIXNewline").toBool());
+    ui->restoreCursorPositionCheckBox->setChecked(
+            settings.value("restoreCursorPosition", true).toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(
