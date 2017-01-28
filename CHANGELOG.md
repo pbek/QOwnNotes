@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 17.01.11
-- add Czech translation (a big thank you to jkalousek!)
+- added Czech translation (a big thank you to jkalousek!)
 - fixed a warning that might trigger when notes are moved to an other note subfolder
   (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
 - you now can disable the restoring of the cursor position in the *General settings*
