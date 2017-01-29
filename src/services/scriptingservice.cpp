@@ -674,7 +674,6 @@ void ScriptingService::log(QString text) {
     LogWidget::instance()->log(LogWidget::ScriptingLogType, text);
 }
 
-
 /**
  * QML wrapper to download an url and returning it as text
  *
@@ -685,38 +684,22 @@ QString ScriptingService::downloadUrlToString(QUrl url) {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    QEventLoop loop;
-    QTimer timer;
+    return Utils::Misc::downloadUrl(url);
+}
 
-    timer.setSingleShot(true);
-    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
+/**
+ * QML wrapper to download an url to the media folder and returning the media
+ * url or the markdown image text of the media
+ *
+ * @param url
+ * @param returnUrlOnly if true only the media url will be returned (default false)
+ * @return {QString} the media url
+ */
+QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
 
-    // 10 sec timeout for the request
-    timer.start(10000);
-
-    QNetworkRequest networkRequest = QNetworkRequest(url);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
-#endif
-
-    QNetworkReply *reply = manager->get(networkRequest);
-    loop.exec();
-
-    // if we didn't get a timeout let us return the content
-    if (timer.isActive()) {
-        // get the text from the network reply
-        QString data = reply->readAll();
-        if (data.size() > 0) {
-            return data;
-        }
-    }
-
-    // timer elapsed, no reply from network request or empty data
-    return "";
+    return Note::downloadUrlToMedia(url, returnUrlOnly);
 }
 
 /**

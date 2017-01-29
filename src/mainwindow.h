@@ -559,8 +559,6 @@ private:
 
     void handleTextNoteLinking();
 
-    bool downloadUrlToFile(QUrl url, QFile *file);
-
     void updateNoteTextFromDisk(Note note);
 
     void makeCurrentNoteFirstInNoteList();

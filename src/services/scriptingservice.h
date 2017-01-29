@@ -38,6 +38,8 @@ public:
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
+    Q_INVOKABLE QString downloadUrlToMedia(QUrl url,
+                                           bool returnUrlOnly = false);
     Q_INVOKABLE void registerCustomAction(QString identifier,
                                           QString menuText,
                                           QString buttonText = "",

@@ -1,7 +1,14 @@
 # QOwnNotes Changelog
 
 ## 17.01.12
-- added more fixes for a warning that might trigger when notes are moved to an 
+- there now is a new script function `script.downloadUrlToMedia("http://image.url");`
+  to allow you to download an url to the media folder and return the media url
+  or the markdown image text (for [Issue #499](https://github.com/pbek/QOwnNotes/issues/499))
+    - there is an example at
+      [paste-latex-image.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/paste-latex-image.qml)
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#downloading-an-url-to-the-media-folder)
+- added more fixes for a warning that might trigger when notes are moved to an
   other note subfolder in macOS
   (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
 

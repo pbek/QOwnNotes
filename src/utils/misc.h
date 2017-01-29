@@ -49,5 +49,7 @@ namespace Utils {
         QString replaceOwnCloudText(QString text, bool useShortText = false);
         void restartApplication();
         void needRestart();
+        bool downloadUrlToFile(QUrl url, QFile *file);
+        QByteArray downloadUrl(QUrl url);
     }
 }

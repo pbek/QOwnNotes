@@ -56,6 +56,7 @@ You may want to take a look at the example
      * @return the text that was returned by the process
     bool QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 
+
 Starting an external program and wait for the output
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -68,6 +69,7 @@ Usage in QML
 
 You may want to take a look at the example
 `encryption-keybase.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-keybase.qml>`__.
+
 
 Getting the path of the current note folder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -94,6 +96,7 @@ Usage in QML
 You may want to take a look at the example
 `absolute-media-links.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/absolute-media-links.qml>`__.
 
+
 Getting the current note
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -119,6 +122,7 @@ Usage in QML
 You may want to take a look at the example
 `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
+
 Logging to the log widget
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -140,6 +144,7 @@ Usage in QML
 .. code:: javascript
 
     script.log("my text");
+
 
 Downloading an url to a string
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -166,6 +171,36 @@ Usage in QML
 
 You may want to take a look at the example
 `insert-headline-with-link-from-github-url.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/insert-headline-with-link-from-github-url.qml>`__.
+
+
+Downloading an url to the media folder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * QML wrapper to download an url to the media folder and returning the media
+     * url or the markdown image text of the media
+     *
+     * @param url
+     * @param returnUrlOnly if true only the media url will be returned (default false)
+     * @return {QString} the media url
+     */
+    QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var html = script.downloadUrlToMedia("http://latex.codecogs.com/gif.latex?\frac{1}{1+sin(x)}");
+
+You may want to take a look at the example
+`paste-latex-image.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/paste-latex-image.qml>`__.
+
 
 Register a custom action
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -211,6 +246,7 @@ Usage in QML
 You may then want to use the identifier with function
 ``customActionInvoked`` in a script like
 `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
+
 
 Create a new note
 ~~~~~~~~~~~~~~~~~

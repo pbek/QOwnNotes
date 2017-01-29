@@ -4,6 +4,7 @@
 #include <QDateTime>
 #include <QSqlQuery>
 #include <QFile>
+#include <QUrl>
 #include "notesubfolder.h"
 
 #define NOTE_TEXT_ENCRYPTION_PRE_STRING "<!-- BEGIN ENCRYPTED TEXT --"
@@ -205,9 +206,12 @@ public:
 
     static QString createNoteHeader(QString name);
 
-    static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true);
+    static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
+                                          bool returnUrlOnly = true);
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
+
+    static QString downloadUrlToMedia(QUrl url, bool returnUrlOnly = false);
 
 protected:
     int id;

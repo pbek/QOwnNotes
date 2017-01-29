@@ -3976,54 +3976,6 @@ void MainWindow::handleTextNoteLinking() {
 }
 
 /**
- * Downloads an url and stores it to a file
- */
-bool MainWindow::downloadUrlToFile(QUrl url, QFile *file) {
-    if (!file->open(QIODevice::WriteOnly)) {
-        return false;
-    }
-
-    if (!file->isWritable()) {
-        return false;
-    }
-
-    QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-    QEventLoop loop;
-    QTimer timer;
-
-    timer.setSingleShot(true);
-    connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
-    connect(manager, SIGNAL(finished(QNetworkReply *)), &loop, SLOT(quit()));
-
-    // 10 sec timeout for the request
-    timer.start(10000);
-
-    QNetworkRequest networkRequest = QNetworkRequest(url);
-
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
-    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
-                                true);
-#endif
-
-    QNetworkReply *reply = manager->get(networkRequest);
-    loop.exec();
-
-    // if we didn't get a timeout let's write the file
-    if (timer.isActive()) {
-        // get the text from the network reply
-        QByteArray data = reply->readAll();
-        if (data.size() > 0) {
-            file->write(data);
-            return true;
-        }
-    }
-
-    // timer elapsed, no reply from network request or empty data
-    return false;
-}
-
-
-/**
  * @brief Sets the current note from a CurrentNoteHistoryItem
  * @param item
  */
@@ -5708,31 +5660,12 @@ void MainWindow::insertHtml(QString html) {
 
         showStatusBarMessage(tr("Downloading %1").arg(imageUrl.toString()));
 
-        // try to get the suffix from the url
-        QString suffix =
-                imageUrl.toString().split(".", QString::SkipEmptyParts).last();
-        if (suffix.isEmpty()) {
-            suffix = "image";
-        }
+        // download the image and get the media markdown code for it
+        QString markdownCode = Note::downloadUrlToMedia(imageUrl);
 
-        // remove strings like "?b=16068071000" from the suffix
-        suffix.remove(QRegularExpression("\\?.+$"));
-
-        QTemporaryFile *tempFile = new QTemporaryFile(
-                QDir::tempPath() + QDir::separator() + "media-XXXXXX." +
-                        suffix);
-
-        if (tempFile->open()) {
-            // download the image to the temporary file
-            if (downloadUrlToFile(imageUrl, tempFile)) {
-                // copy image to media folder and generate markdown code for
-                // the image
-                QString markdownCode = Note::getInsertMediaMarkdown(tempFile);
-                if (!markdownCode.isEmpty()) {
-                    // replace image tag with markdown code
-                    html.replace(imageTag, markdownCode);
-                }
-            }
+        if (!markdownCode.isEmpty()) {
+            // replace the image tag with markdown code
+            html.replace(imageTag, markdownCode);
         }
     }
 

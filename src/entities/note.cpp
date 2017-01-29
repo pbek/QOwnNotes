@@ -17,7 +17,8 @@
 #include "notesubfolder.h"
 #include <utils/misc.h>
 #include <services/scriptingservice.h>
-#include <QtCore/QMimeDatabase>
+#include <QMimeDatabase>
+#include <QTemporaryFile>
 
 
 Note::Note() {
@@ -2054,7 +2055,8 @@ QString Note::createNoteHeader(QString name) {
 /**
  * Returns the markdown of the inserted media file into a note
  */
-QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine) {
+QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
+                                     bool returnUrlOnly) {
     if (file->exists() && (file->size() > 0)) {
         QDir mediaDir(NoteFolder::currentMediaPath());
 
@@ -2077,13 +2079,55 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine) {
         QFile newFile(newFilePath);
         scaleDownImageFileIfNeeded(newFile);
 
+        QString mediaUrlString = "file://media/" + newFileName;
+
+        // check if we only want to return the media url string
+        if (returnUrlOnly) {
+            return mediaUrlString;
+        }
+
         // return the image link
         // we add a "\n" in the end so that hoedown recognizes multiple images
-        return "![" + fileInfo.baseName() + "](file://media/" +
-               newFileName + ")" + (addNewLine ? "\n" : "");
+        return "![" + fileInfo.baseName() + "](" + mediaUrlString + ")" +
+                (addNewLine ? "\n" : "");
     }
 
     return "";
+}
+
+/**
+ * Downloads an url to the media folder and returns the markdown code or the
+ * url for it
+ *
+ * @param url
+ * @param returnUrlOnly
+ * @return
+ */
+QString Note::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
+    // try to get the suffix from the url
+    QString suffix = url.toString().split(".", QString::SkipEmptyParts).last();
+
+    if (suffix.isEmpty()) {
+        suffix = "image";
+    }
+
+    // remove strings like "?b=16068071000" from the suffix
+    suffix.remove(QRegularExpression("\\?.+$"));
+
+    QString text;
+    QTemporaryFile *tempFile = new QTemporaryFile(
+            QDir::tempPath() + QDir::separator() + "media-XXXXXX." + suffix);
+
+    if (tempFile->open()) {
+        // download the image to the temporary file
+        if (Utils::Misc::downloadUrlToFile(url, tempFile)) {
+            // copy image to media folder and generate markdown code for
+            // the image
+            text = Note::getInsertMediaMarkdown(tempFile, true, returnUrlOnly);
+        }
+    }
+
+    return text;
 }
 
 /**

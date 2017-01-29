@@ -21,6 +21,10 @@
 #include <QTime>
 #include <QCoreApplication>
 #include <QApplication>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QTimer>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -552,4 +556,64 @@ void Utils::Misc::restartApplication() {
 
     startDetachedProcess(appPath, parameters);
     QApplication::quit();
+}
+
+/**
+ * Downloads an url and returns the data
+ *
+ * @param url
+ * @return {QByteArray} the content of the downloaded url
+ */
+QByteArray Utils::Misc::downloadUrl(QUrl url) {
+    QNetworkAccessManager *manager = new QNetworkAccessManager();
+    QEventLoop loop;
+    QTimer timer;
+
+    timer.setSingleShot(true);
+    QObject::connect(&timer, SIGNAL(timeout()), &loop, SLOT(quit()));
+    QObject::connect(manager, SIGNAL(finished(QNetworkReply *)),
+                     &loop, SLOT(quit()));
+
+    // 10 sec timeout for the request
+    timer.start(10000);
+
+    QNetworkRequest networkRequest = QNetworkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+    networkRequest.setAttribute(QNetworkRequest::FollowRedirectsAttribute,
+                                true);
+#endif
+
+    QByteArray data;
+    QNetworkReply *reply = manager->get(networkRequest);
+    loop.exec();
+
+    // if we didn't get a timeout let us return the content
+    if (timer.isActive()) {
+        // get the data from the network reply
+        data = reply->readAll();
+    }
+
+    return data;
+}
+
+/**
+ * Downloads an url and stores it to a file
+ */
+bool Utils::Misc::downloadUrlToFile(QUrl url, QFile *file) {
+    if (!file->open(QIODevice::WriteOnly)) {
+        return false;
+    }
+
+    if (!file->isWritable()) {
+        return false;
+    }
+
+    QByteArray data = downloadUrl(url);
+    if (data.size() > 0) {
+        file->write(data);
+        return true;
+    }
+
+    return false;
 }
