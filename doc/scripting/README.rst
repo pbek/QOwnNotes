@@ -185,8 +185,8 @@ Parameters
      * QML wrapper to download an url to the media folder and returning the media
      * url or the markdown image text of the media
      *
-     * @param url
-     * @param returnUrlOnly if true only the media url will be returned (default false)
+     * @param {QString} url
+     * @param {bool} returnUrlOnly if true only the media url will be returned (default false)
      * @return {QString} the media url
      */
     QString downloadUrlToMedia(QUrl url, bool returnUrlOnly);
