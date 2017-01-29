@@ -434,6 +434,8 @@ private slots:
 
     void on_actionSave_modified_notes_triggered();
 
+    void enableNoteExternallyRemovedCheck();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

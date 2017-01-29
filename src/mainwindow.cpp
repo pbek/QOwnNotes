@@ -6950,8 +6950,17 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                 tr("%n note(s) were moved to note subfolder \"%2\"", "",
                    noteSubFolderCount).arg(noteSubFolder.getName()), 5000);
 
-        _noteExternallyRemovedCheckEnabled = true;
+        // wait some time to enable the check again to prevent troubles on macOS
+        QTimer::singleShot(4000, this, SLOT(
+                enableNoteExternallyRemovedCheck()));
     }
+}
+
+/**
+ * Enables the note externally removed check
+ */
+void MainWindow::enableNoteExternallyRemovedCheck() {
+    _noteExternallyRemovedCheckEnabled = true;
 }
 
 /**

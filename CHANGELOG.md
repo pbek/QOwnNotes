@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.01.12
+- added more fixes for a warning that might trigger when notes are moved to an 
+  other note subfolder in macOS
+  (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
+
 ## 17.01.11
 - added Czech translation (a big thank you to jkalousek!)
 - fixed a warning that might trigger when notes are moved to an other note subfolder
