@@ -856,7 +856,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Exportar nota como HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
@@ -935,12 +935,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1924"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Guardar notas modificadas</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
       <source>Ctrl+S</source>
-      <translation type="unfinished">Ctrl+S</translation>
+      <translation>Ctrl + S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -1003,7 +1003,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1152"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>&amp;Exportar nota como PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1588"/>
@@ -2040,7 +2040,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../mainwindow.cpp" line="2250"/>
       <location filename="../mainwindow.cpp" line="4533"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>La nota actual no pudo ser almacenada en disco</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2413"/>
@@ -2354,12 +2354,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../entities/note.cpp" line="849"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>No se pudo almacenar el archivo de nota: %1 - Mensaje de error: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1528"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>No se pudo leer el archivo de imagen: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2014"/>
@@ -3273,19 +3273,18 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2717"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Usar salto de línea UNIX en lugar de los caracteres nativos de salto de línea</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2823"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
-  to the position when the note was last visited in the current session</translation>
+      <translation>Al abrir una nota, la posición del cursor dentro de la nota ahora se restablece a la posición en que estaba cuando la nota fue visitada por última vez en la sesión actual</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2830"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Restablecer la posición del cursor cuando se abre una nota</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3062"/>
@@ -3505,7 +3504,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2711"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>Puedes utilizar esto por ejemplo bajo Windows si tienes problemas con los saltos de línea en la aplicación de notas de ownCloud / Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2840"/>

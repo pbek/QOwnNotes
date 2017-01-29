@@ -856,7 +856,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Jegyzet exportálása HTML-ként</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
@@ -930,17 +930,17 @@
       <location filename="../mainwindow.ui" line="1912"/>
       <location filename="../mainwindow.cpp" line="7552"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Jegyzet nyitása egy nézetben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1924"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Módositott jegyzetek mentése</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
       <source>Ctrl+S</source>
-      <translation type="unfinished">Ctrl+S</translation>
+      <translation>Ctrl+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -1003,7 +1003,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1152"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>Jegyzet exportálása PDF-ként</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1588"/>
@@ -1474,13 +1474,13 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="8311"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>teljes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8318"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>minimális</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8398"/>
@@ -2040,7 +2040,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="2250"/>
       <location filename="../mainwindow.cpp" line="4533"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Az aktuális jegyzet nem menthető a lemezre</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2413"/>
@@ -2145,7 +2145,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Jegyzet</translation>
     </message>
   </context>
   <context>
@@ -2354,12 +2354,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../entities/note.cpp" line="849"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Fájl nem tárolható: %1 - Hibaüzenet: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1528"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>Nem sikerült beolvasni a kép fájlt: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2014"/>
@@ -3212,7 +3212,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1576"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>Örökölt ownCloud naptár</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1589"/>
@@ -3272,7 +3272,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2717"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Használ UNIX újsor natív újsor karaktereket</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2823"/>
@@ -3284,7 +3284,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2830"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Állítsa vissza a kurzor pozícióját, mikor egy jegyzetet megnyit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3062"/>
@@ -3324,7 +3324,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3643"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+      <translation>Itt állíthatja be a saját időformátumát az aktuális idő beszúrásához a jegyzetbe.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3646"/>
@@ -3504,7 +3504,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2711"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>Használhatja ezt például Windowsban, ha nehézégei vannak a sortöréssel az ownCloud / Nextcloud notes appban</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2840"/>

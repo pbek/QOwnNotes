@@ -935,12 +935,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1924"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Salva note modificate</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
       <source>Ctrl+S</source>
-      <translation type="unfinished">Ctrl+S</translation>
+      <translation>Ctrl+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>

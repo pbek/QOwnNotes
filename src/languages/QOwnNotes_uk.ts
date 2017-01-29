@@ -856,7 +856,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Експорт нотатки як HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
@@ -908,39 +908,39 @@
     <message>
       <location filename="../mainwindow.ui" line="1876"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Вставити блок &amp;цитату</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1884"/>
       <location filename="../mainwindow.cpp" line="4980"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Пошук тексту в інтернеті</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1892"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Видалити рядок</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1900"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Видалити слово</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1912"/>
       <location filename="../mainwindow.cpp" line="7552"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Відкрити нотатку в попередньому перегляді</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1924"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Зберегти змінені нотатки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
       <source>Ctrl+S</source>
-      <translation type="unfinished">Ctrl+S</translation>
+      <translation>Ctrl+S</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
@@ -1003,7 +1003,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1152"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>&amp;Експорт нотатки як PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1588"/>
@@ -1314,22 +1314,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3896"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Перезавантажити програму</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3902"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Можливо, вам доведеться перезапустити програму вручну, щоб зміни вступили в силу.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3907"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Можливо, буде потрібно перезапустити програму, щоб зміни вступили в силу.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3909"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Перезапустити</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4139"/>
@@ -1481,13 +1481,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8311"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>повний</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8318"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
-      <translation type="unfinished">minimal</translation>
+      <translation>мінімальний</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8398"/>
@@ -1503,10 +1503,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8551"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n символ</numerusform>
+        <numerusform>%n символи</numerusform>
+        <numerusform>%n символів</numerusform>
       </translation>
     </message>
     <message>
@@ -2055,17 +2055,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2250"/>
       <location filename="../mainwindow.cpp" line="4533"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Поточна нотатка не може бути збережена на диску</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2413"/>
       <source>Line numbers</source>
-      <translation type="unfinished">Line numbers</translation>
+      <translation>Номери рядків</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2423"/>
       <source>Click here to see what has changed and to be able to update to the latest version</source>
-      <translation type="unfinished">Click here to see what has changed and to be able to update to the latest version</translation>
+      <translation>Натисніть тут, щоб побачити, що змінилося і мати можливість оновлення до останньої версії</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2812"/>
@@ -2161,7 +2161,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Нотатка</translation>
     </message>
   </context>
   <context>
@@ -2371,12 +2371,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="849"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Не вдалося зберегти файл нотатки: %1 - Повідомлення про помилку: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1528"/>
       <source>Could not read image file: %1</source>
-      <translation type="unfinished">Could not read image file: %1</translation>
+      <translation>Не вдалося прочитати файл образу: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="2014"/>
@@ -3132,7 +3132,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="499"/>
       <source>Path where your notes are stored locally</source>
-      <translation type="unfinished">Path where your notes are stored locally</translation>
+      <translation>Шлях, де ваші нотатки зберігаються локально</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="612"/>
@@ -3168,12 +3168,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="712"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation type="unfinished">Be aware that the ownCloud notes app doesn't support sub-folders!</translation>
+      <translation>Майте на увазі, що додаток Нотатки в ownCloud не підтримує вкладені теки!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="715"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Використовувати вкладені теки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="803"/>
@@ -3220,17 +3220,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1553"/>
       <source>For most current ownCloud and Nextcloud installations</source>
-      <translation type="unfinished">For most current ownCloud and Nextcloud installations</translation>
+      <translation>Для найсучасніших установок ownCloud і Nextcloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1573"/>
       <source>For older versions of ownCloud where the default setting doesn't work</source>
-      <translation type="unfinished">For older versions of ownCloud where the default setting doesn't work</translation>
+      <translation>Для старіших версій ownCloud, де за замовчуванням не працює</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1576"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>Старша версія ownCloud календаря</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1589"/>
@@ -3290,19 +3290,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2717"/>
       <source>Use UNIX newline instead of native newline characters</source>
-      <translation type="unfinished">Use UNIX newline instead of native newline characters</translation>
+      <translation>Використовувати новий рядок UNIX замість рідного символу нового рядка</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2823"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
-  to the position when the note was last visited in the current session</translation>
+      <translation>Під час відкриття нотаток позиція курсора всередині нотатки буде відновлено
+  на позицію коли ця нотатка була востаннє переглянута в поточній сесії</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2830"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Відновити позицію курсора при відкритті нотатки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3062"/>
@@ -3342,27 +3342,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3643"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+      <translation>Тут ви можете встановити ваш власний формат часу для встановлення поточного часу в нотатку.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3646"/>
       <source>Insert current time</source>
-      <translation type="unfinished">Insert current time</translation>
+      <translation>Вставити поточний час</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3652"/>
       <source>Time format:</source>
-      <translation type="unfinished">Time format:</translation>
+      <translation>Формат часу:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3659"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
+      <translation>Введіть ваш формат часу, як "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3666"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Ви можете поглянути на всі доступні &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;формати часу&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3701"/>
@@ -3497,7 +3497,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="667"/>
       <source>Note folder name</source>
-      <translation type="unfinished">Note folder name</translation>
+      <translation>Ім'я теки з нотатками</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2734"/>
@@ -3522,7 +3522,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2711"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
-      <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
+      <translation>Наприклад, ви можете використовувати це під Windows, якщо у вас є проблеми з символом нового рядка в ownCloud / Nextcloud додатку нотатки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2840"/>
@@ -3730,12 +3730,12 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2085"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Погляньте на &lt;a href="%1"&gt;Документацію по скриптам&lt;/a&gt;, щоб почати швидко.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2087"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Якщо вам потрібен доступ до певних функцій в QOwnNotes, будь ласка, відкрийте питання на &lt;a href="%1"&gt; сторінці питань QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2098"/>
@@ -4143,7 +4143,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.ui" line="298"/>
       <source>Reload...</source>
-      <translation type="unfinished">Reload...</translation>
+      <translation>Перезавантаження...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="319"/>
@@ -4153,7 +4153,7 @@ Your notes will stay intact!</source>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="123"/>
       <source>Reload from server</source>
-      <translation type="unfinished">Reload from server</translation>
+      <translation>Перезавантажити з сервера</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>

@@ -11,6 +11,8 @@
 - added more fixes for a warning that might trigger when notes are moved to an
   other note subfolder in macOS
   (for [Issue #498](https://github.com/pbek/QOwnNotes/issues/498))
+- added more Hungarian, Ukrainian, Spanish and Italian translation (thank you
+  Fabijenna, Borisvit, richarson and mlocati)
 
 ## 17.01.11
 - added Czech translation (a big thank you to jkalousek!)
