@@ -10,6 +10,8 @@
   (for [Issue #501](https://github.com/pbek/QOwnNotes/issues/501))
 - fixed the base64 encoded images in the note HTML export for images with 
   spaces in the path
+- added more Portuguese, Ukrainian, Chinese, Czech and Polish translation (thank
+  you mlimacarlos, Borisvit, chonghua, jkalousek and lucjan)
 
 ## 17.01.12
 - there now is a new script function `script.downloadUrlToMedia("http://image.url");`
