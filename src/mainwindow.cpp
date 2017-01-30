@@ -5784,7 +5784,9 @@ void MainWindow::on_action_Reset_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Reset);
     ui->encryptedNoteTextEdit->setStyles();
-    showStatusBarMessage(tr("Reset font size to %1 pt").arg(fontSize), 3000);
+    showStatusBarMessage(tr("Reset font size to %1 pt", "Will be shown after "
+            "the font size is reset by 'Reset note text size'").arg(
+            fontSize), 3000);
 
     QTextCursor cursor(ui->noteTextEdit->document()->findBlockByNumber(3));
 
