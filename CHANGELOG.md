@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.01.13
+- fixed the image link that is inserted when using the *Insert image* menu entry
+
 ## 17.01.12
 - there now is a new script function `script.downloadUrlToMedia("http://image.url");`
   to allow you to download an url to the media folder and return the media url

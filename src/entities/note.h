@@ -207,7 +207,7 @@ public:
     static QString createNoteHeader(QString name);
 
     static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
-                                          bool returnUrlOnly = true);
+                                          bool returnUrlOnly = false);
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
 
