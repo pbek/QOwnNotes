@@ -24,6 +24,7 @@
 #include <QKeyEvent>
 #include <QDesktopServices>
 #include <utils/misc.h>
+#include <dialogs/filedialog.h>
 #include "fontcolorwidget.h"
 #include "ui_fontcolorwidget.h"
 #include "utils/schema.h"
@@ -600,20 +601,18 @@ void FontColorWidget::on_underlineCheckBox_toggled(bool checked) {
  * Exports the current color schema to a file
  */
 void FontColorWidget::on_exportSchemeButton_clicked() {
-    QFileDialog dialog;
+    FileDialog dialog("SchemaExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Export schema"));
     dialog.selectFile(ui->colorSchemeComboBox->currentText() + ".ini");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             if (QFileInfo(fileName).suffix().isEmpty()) {
                 fileName.append(".ini");
             }
@@ -645,10 +644,9 @@ void FontColorWidget::on_exportSchemeButton_clicked() {
  * Imports a schema from a file
  */
 void FontColorWidget::on_importSchemeButton_clicked() {
-    QFileDialog dialog;
+    FileDialog dialog("SchemaImport");
     dialog.setFileMode(QFileDialog::ExistingFiles);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("INI files") + " (*.ini)");
     dialog.setWindowTitle(tr("Import schema"));
     int ret = dialog.exec();

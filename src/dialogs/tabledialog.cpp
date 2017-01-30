@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <mainwindow.h>
 #include "libraries/qtcsv/src/include/reader.h"
+#include "filedialog.h"
 
 
 TableDialog::TableDialog(QWidget *parent) :
@@ -146,18 +147,17 @@ void TableDialog::on_fileButton_clicked() {
     ui->csvFileTextEdit->clear();
     QStringList filters = QStringList() << tr("CSV files") + " (*.csv)"
                                         << tr("All files") + " (*)";
-    QFileDialog dialog;
+    FileDialog dialog("CSVTableImport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilters(filters);
-    dialog.setDirectory(QDir::homePath());
     dialog.setWindowTitle(tr("Select CSV file to import"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
             ui->fileLineEdit->setText(fileName);
 
             QFile file(fileName);

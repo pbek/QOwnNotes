@@ -8,6 +8,7 @@
 #include <entities/note.h>
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"
+#include "filedialog.h"
 
 EvernoteImportDialog::EvernoteImportDialog(QWidget *parent) :
         MasterDialog(parent),
@@ -31,18 +32,17 @@ int EvernoteImportDialog::getImportCount() {
  * Imports the notes from a selected file
  */
 void EvernoteImportDialog::on_fileButton_clicked() {
-    QFileDialog dialog;
+    FileDialog dialog("EvernoteImport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("Enex files") + " (*.enex)");
     dialog.setWindowTitle(tr("Select Evernote enex file to import"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
             ui->fileLineEdit->setText(fileName);
 
             QFile file(fileName);

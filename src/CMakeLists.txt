@@ -110,6 +110,8 @@ set(SOURCE_FILES
     dialogs/notedialog.cpp
     dialogs/notedialog.h
     dialogs/notedialog.ui
+    dialogs/filedialog.cpp
+    dialogs/filedialog.h
     entities/calendaritem.cpp
     entities/calendaritem.h
     entities/note.cpp

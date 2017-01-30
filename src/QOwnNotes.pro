@@ -93,7 +93,8 @@ SOURCES += main.cpp\
     dialogs/actiondialog.cpp \
     dialogs/tabledialog.cpp \
     libraries/qtcsv/src/sources/reader.cpp \
-    dialogs/notedialog.cpp
+    dialogs/notedialog.cpp \
+    dialogs/filedialog.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -160,7 +161,8 @@ HEADERS  += mainwindow.h \
     libraries/qtcsv/src/include/reader.h \
     libraries/qtcsv/src/sources/filechecker.h \
     libraries/qtcsv/src/sources/symbols.h \
-    dialogs/notedialog.h
+    dialogs/notedialog.h \
+    dialogs/filedialog.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

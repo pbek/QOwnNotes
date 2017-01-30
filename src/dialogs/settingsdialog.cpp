@@ -16,6 +16,7 @@
 #include <QAction>
 #include <services/metricsservice.h>
 #include "helpers/clientproxy.h"
+#include "filedialog.h"
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
 #include <utils/gui.h>
@@ -1518,22 +1519,17 @@ void SettingsDialog::on_reinitializeDatabaseButton_clicked() {
  * @brief Stores the debug information to a markdown file
  */
 void SettingsDialog::on_saveDebugInfoButton_clicked() {
-    QFileDialog dialog;
+    FileDialog dialog("SaveDebugInfo");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Save debug information"));
     dialog.selectFile("QOwnNotes Debug Information.md");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.size() == 0) {
-            return;
-        }
-
-        QFile file(fileNames.at(0));
+        QString fileName = dialog.selectedFile();
+        QFile file(fileName);
 
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             qWarning() << file.errorString();

@@ -68,6 +68,7 @@
 #include <dialogs/tabledialog.h>
 #include <dialogs/notedialog.h>
 #include <utils/schema.h>
+#include <dialogs/filedialog.h>
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -4084,10 +4085,9 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     printer.setOrientation(orientations.at(orientationIndex));
 #endif
 
-    QFileDialog dialog;
+    FileDialog dialog("NotePDFExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("PDF files") + " (*.pdf)");
     dialog.setWindowTitle(tr("Export current note as PDF"));
     dialog.selectFile(currentNote.getName() + ".pdf");
@@ -4097,13 +4097,11 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
         return;
     }
 
-    QStringList fileNames = dialog.selectedFiles();
+    QString fileName = dialog.selectedFile();
 
-    if (fileNames.count() == 0) {
+    if (fileName.isEmpty()) {
         return;
     }
-
-    QString fileName = fileNames.at(0);
 
     if (QFileInfo(fileName).suffix().isEmpty()) {
         fileName.append(".pdf");
@@ -5040,19 +5038,17 @@ void MainWindow::on_action_Print_note_text_triggered() {
  * @brief Inserts a chosen image at the current cursor position in the note text edit
  */
 void MainWindow::on_actionInsert_image_triggered() {
-    QFileDialog dialog;
+    FileDialog dialog("InsertImage");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
     dialog.setWindowTitle(tr("Select image to insert"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             QFile file(fileName);
 
             // insert the image
@@ -5279,20 +5275,18 @@ void MainWindow::on_action_Open_note_in_external_editor_triggered() {
  * Exports the current note as markdown file
  */
 void MainWindow::on_action_Export_note_as_markdown_triggered() {
-    QFileDialog dialog;
+    FileDialog dialog("NoteMarkdownExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("Markdown files") + " (*.md)");
     dialog.setWindowTitle(tr("Export current note as Markdown file"));
     dialog.selectFile(currentNote.getName() + ".md");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             if (QFileInfo(fileName).suffix().isEmpty()) {
                 fileName.append(".md");
             }
@@ -7232,20 +7226,18 @@ void MainWindow::on_actionShow_log_triggered() {
  * Exports the note preview as HTML
  */
 void MainWindow::on_actionExport_preview_HTML_triggered() {
-    QFileDialog dialog;
+    FileDialog dialog("NoteHTMLExport");
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptSave);
-    dialog.setDirectory(QDir::homePath());
     dialog.setNameFilter(tr("HTML files") + " (*.html)");
     dialog.setWindowTitle(tr("Export current note as HTML file"));
     dialog.selectFile(currentNote.getName() + ".html");
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {
-        QStringList fileNames = dialog.selectedFiles();
-        if (fileNames.count() > 0) {
-            QString fileName = fileNames.at(0);
+        QString fileName = dialog.selectedFile();
 
+        if (!fileName.isEmpty()) {
             if (QFileInfo(fileName).suffix().isEmpty()) {
                 fileName.append(".html");
             }

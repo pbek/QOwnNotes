@@ -1,7 +1,13 @@
 # QOwnNotes Changelog
 
 ## 17.01.13
+- the directory of the previously selected file will now be remembered for a
+  lot of file dialogs (for [Issue #502](https://github.com/pbek/QOwnNotes/issues/502))
+    - the last directory of each dialog will be remembered separately
+    - if no directory was set the last directory path of any dialog will be used
+    - if there still is no readable path the home directory will be chosen
 - fixed the image link that is inserted when using the *Insert image* menu entry
+  (for [Issue #501](https://github.com/pbek/QOwnNotes/issues/501))
 
 ## 17.01.12
 - there now is a new script function `script.downloadUrlToMedia("http://image.url");`
