@@ -8,6 +8,8 @@
     - if there still is no readable path the home directory will be chosen
 - fixed the image link that is inserted when using the *Insert image* menu entry
   (for [Issue #501](https://github.com/pbek/QOwnNotes/issues/501))
+- fixed the base64 encoded images in the note HTML export for images with 
+  spaces in the path
 
 ## 17.01.12
 - there now is a new script function `script.downloadUrlToMedia("http://image.url");`

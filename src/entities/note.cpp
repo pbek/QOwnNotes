@@ -1480,23 +1480,14 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     }
 
     // check if width of embedded local images is too high
-    QRegularExpression re("<img src=\"file:\\/\\/([^\"]+)\"");
+    QRegularExpression re("<img src=\"(file:\\/\\/[^\"]+)\"");
     i = re.globalMatch(result);
+
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
-        QString fileName = match.captured(1);
-
-#ifdef Q_OS_WIN
-        // remove the leading slash under Windows to get a more correct filename
-        QString fileNameWindows = Utils::Misc::removeIfStartsWith(fileName, "/");
-
-        // fix for "\" in paths
-        fileNameWindows.replace("%5C", "/");
-
-        QImage image(fileNameWindows);
-#else
+        QString fileUrl = match.captured(1);
+        QString fileName = QUrl(fileUrl).toLocalFile();
         QImage image(fileName);
-#endif
 
         if (forExport) {
             result.replace(
@@ -1519,11 +1510,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
         // encode the image base64
         if (base64Images) {
-#ifdef Q_OS_WIN
-            QFile file(fileNameWindows);
-#else
             QFile file(fileName);
-#endif
 
             if (!file.open(QIODevice::ReadOnly)) {
                 qWarning() << QObject::tr("Could not read image file: %1")
@@ -1537,9 +1524,9 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             QByteArray ba = file.readAll();
 
             result.replace(
-                    QRegularExpression("<img(.+?)src=\"file:\\/\\/" +
-                                       QRegularExpression::escape(fileName) +
-                                       "\""),
+                    QRegularExpression(
+                            "<img(.+?)src=\"" + QRegularExpression::escape(
+                                    fileUrl) + "\""),
                     QString("<img\\1src=\"data:%1;base64,%2\"").arg(
                             type.name(), QString(ba.toBase64())));
         }
