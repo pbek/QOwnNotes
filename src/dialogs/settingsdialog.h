@@ -205,6 +205,8 @@ private slots:
 
     void on_legacyOwnCloudCalendarRadioButton_toggled(bool checked);
 
+    void on_ownCloudSupportCheckBox_toggled();
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -291,6 +293,8 @@ private:
     void removeLogFile() const;
 
     void replaceOwnCloudText() const;
+
+    bool connectionTestCanBeStarted() const;
 };
 
 #endif // SETTINGSDIALOG_H

@@ -1,5 +1,6 @@
 #include "services/databaseservice.h"
 #include "entities/calendaritem.h"
+#include "owncloudservice.h"
 #include <QMessageBox>
 #include <QSqlDatabase>
 #include <QSqlQuery>
@@ -457,6 +458,14 @@ bool DatabaseService::setupTables() {
         settings.remove("markdownHighlightingInterval");
 
         version = 18;
+    }
+
+    if (version < 19) {
+        // set the ownCloud support enabled setting
+        bool ownCloudEnabled = OwnCloudService::hasOwnCloudSettings(false);
+        settings.setValue("ownCloud/supportEnabled", ownCloudEnabled);
+
+        version = 19;
     }
 
     if (version != oldVersion) {

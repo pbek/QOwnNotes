@@ -58,7 +58,7 @@ public:
 
     void settingsGetFileList(SettingsDialog *dialog, QString path);
 
-    static bool hasOwnCloudSettings();
+    static bool hasOwnCloudSettings(bool withEnabledCheck = true);
 
     void shareNote(Note note, ShareDialog *shareDialog);
 
@@ -67,6 +67,10 @@ public:
     void removeNoteShare(Note note, ShareDialog *shareDialog);
 
     static OwnCloudService *instance();
+
+    static bool isOwnCloudSupportEnabled();
+
+    static bool isTodoSupportEnabled();
 
 private:
     QString serverUrl;

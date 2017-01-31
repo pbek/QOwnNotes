@@ -87,7 +87,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // initializes the main splitter
     initMainSplitter();
 
-    if (ui->serverUrlEdit->text() != "") {
+    if (connectionTestCanBeStarted()) {
         // start a connection test
         startConnectionTest();
     }
@@ -162,12 +162,30 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
 }
 
 /**
+ * Returns true if we can start a connection test
+ *
+ * @return
+ */
+bool SettingsDialog::connectionTestCanBeStarted() const {
+    return ui->ownCloudSupportCheckBox->isChecked() &&
+           !ui->serverUrlEdit->text().isEmpty();
+}
+
+/**
  * Replaces the "ownCloud" text by "ownCloud / NextCloud"
  */
 void SettingsDialog::replaceOwnCloudText() const {
     //
     // ownCloud settings
     //
+    ui->ownCloudSupportGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudSupportGroupBox->title()));
+    ui->ownCloudSupportCheckBox->setText(Utils::Misc::replaceOwnCloudText(
+            ui->ownCloudSupportCheckBox->text()));
+    ui->userNameEdit->setPlaceholderText(Utils::Misc::replaceOwnCloudText(
+            ui->userNameEdit->placeholderText()));
+    ui->passwordEdit->setPlaceholderText(Utils::Misc::replaceOwnCloudText(
+            ui->passwordEdit->placeholderText()));
     ui->ownCloudGroupBox->setTitle(Utils::Misc::replaceOwnCloudText(
             ui->ownCloudGroupBox->title()));
     ui->ownCloudServerUrlLabel->setText(Utils::Misc::replaceOwnCloudText(
@@ -422,6 +440,8 @@ void SettingsDialog::storeSettings() {
         ui->serverUrlEdit->setText(url);
     }
 
+    settings.setValue("ownCloud/supportEnabled",
+                      ui->ownCloudSupportCheckBox->isChecked());
     settings.setValue("ownCloud/serverUrl", url);
     settings.setValue("ownCloud/userName", ui->userNameEdit->text());
     settings.setValue("ownCloud/password",
@@ -606,6 +626,9 @@ void SettingsDialog::storeFontSettings() {
 
 void SettingsDialog::readSettings() {
     QSettings settings;
+    ui->ownCloudSupportCheckBox->setChecked(
+            OwnCloudService::isOwnCloudSupportEnabled());
+    on_ownCloudSupportCheckBox_toggled();
     ui->serverUrlEdit->setText(settings.value("ownCloud/serverUrl").toString());
     ui->userNameEdit->setText(settings.value("ownCloud/userName").toString());
     ui->passwordEdit->setText(CryptoService::instance()->decryptToString(
@@ -2467,7 +2490,9 @@ void SettingsDialog::on_settingsStackedWidget_currentChanged(int index) {
     if (index == DebugPage) {
         outputSettings();
     } else if (index == OwnCloudPage) {
-        on_connectButton_clicked();
+        if (connectionTestCanBeStarted()) {
+            on_connectButton_clicked();
+        }
     }
 
     // turn off the tasks page if no ownCloud settings are available
@@ -2824,4 +2849,9 @@ void SettingsDialog::on_clearLogFileButton_clicked() {
  */
 void SettingsDialog::needRestart() {
     Utils::Misc::needRestart();
+}
+
+void SettingsDialog::on_ownCloudSupportCheckBox_toggled() {
+    bool checked = ui->ownCloudSupportCheckBox->isChecked();
+    ui->ownCloudGroupBox->setEnabled(checked);
 }

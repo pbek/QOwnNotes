@@ -56,6 +56,35 @@ OwnCloudService::OwnCloudService(QObject *parent)
     shareDialog = Q_NULLPTR;
 }
 
+/**
+ * Returns true if ownCloud support was enabled in the settings
+ *
+ * @return
+ */
+bool OwnCloudService::isOwnCloudSupportEnabled() {
+    QSettings settings;
+    return settings.value("ownCloud/supportEnabled").toBool();
+}
+
+/**
+ * Returns true if todo support was enabled in the settings
+ *
+ * @return
+ */
+bool OwnCloudService::isTodoSupportEnabled() {
+    QSettings settings;
+    int calendarBackend = settings.value(
+            "ownCloud/todoCalendarBackend", DefaultOwnCloudCalendar).toInt();
+
+    if (calendarBackend == CalDAVCalendar) {
+        QString todoCalendarServerUrl = settings.value(
+                "ownCloud/todoCalendarCalDAVServerUrl").toString().trimmed();
+        return !todoCalendarServerUrl.isEmpty();
+    } else {
+        return isOwnCloudSupportEnabled();
+    }
+}
+
 void OwnCloudService::readSettings() {
     QSettings settings;
     serverUrl = settings.value("ownCloud/serverUrl").toString().trimmed();
@@ -472,6 +501,10 @@ void OwnCloudService::ignoreSslErrorsIfAllowed(QNetworkReply *reply) {
  * for the settings dialog
  */
 void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
+    if (!isTodoSupportEnabled()) {
+        return;
+    }
+
     if (todoCalendarServerUrl.isEmpty()) {
         return;
     }
@@ -806,7 +839,11 @@ void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
 /**
  * Checks if ownCloud settings are set
  */
-bool OwnCloudService::hasOwnCloudSettings() {
+bool OwnCloudService::hasOwnCloudSettings(bool withEnabledCheck) {
+    if (withEnabledCheck && !isOwnCloudSupportEnabled()) {
+        return false;
+    }
+
     QSettings settings;
     QString serverUrl =
             settings.value("ownCloud/serverUrl").toString().trimmed();
