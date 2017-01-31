@@ -1924,7 +1924,7 @@ p, li { white-space: pre-wrap; }
     <string>Save modified notes</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+S</string>
+    <string notr="true">Ctrl+S</string>
    </property>
   </action>
  </widget>

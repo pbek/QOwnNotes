@@ -938,11 +938,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1927"/>
-        <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.ui" line="1494"/>
         <source>Use &amp;vertical preview layout</source>
         <translation type="unfinished"></translation>
