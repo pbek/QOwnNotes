@@ -470,15 +470,15 @@ void FontColorWidget::on_copySchemeButton_clicked() {
  * Selects the last schema
  */
 void FontColorWidget::selectLastSchema() {
+    // reload the schema selector
+    initSchemaSelector();
+
 #ifdef Q_OS_MAC
     // under OS X we have to use a workaround to select the newly created schema
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_End,
                                      Qt::NoModifier);
     QApplication::postEvent(ui->colorSchemeComboBox, event);
 #else
-    // reload the schema selector
-    initSchemaSelector();
-
     // set the index to the (new) last item
     ui->colorSchemeComboBox->setCurrentIndex(
             ui->colorSchemeComboBox->count() - 1);
