@@ -3,9 +3,11 @@
 ## 17.01.14
 - you can now turn off the ownCloud / Nextcloud support in the settings to 
   prevent some checks
-    - the check if the todo lists will used were also improved
-- fixed a problem of showing a copied Editor color schema under macOS
+    - the check if the todo lists will used was also improved
+- fixed a problem with showing a copied Editor color schema under macOS
   (for [Issue #503](https://github.com/pbek/QOwnNotes/issues/503))
+- added more Portuguese, Dutch, Italian, Czech and Polish translation (thank
+  you mlimacarlos, Leime, mlocati, jkalousek and lucjan)
 
 ## 17.01.13
 - the directory of the previously selected file will now be remembered for a
