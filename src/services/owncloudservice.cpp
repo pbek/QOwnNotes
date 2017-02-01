@@ -163,11 +163,13 @@ void OwnCloudService::slotAuthenticationRequired(
     Q_UNUSED(authenticator);
     qWarning() << "Username and/or password incorrect";
 
+#ifndef INTEGRATION_TESTS
     if (settingsDialog != Q_NULLPTR) {
         settingsDialog->setOKLabelData(3, "incorrect", SettingsDialog::Failure);
         settingsDialog->setOKLabelData(4, "not connected",
                                        SettingsDialog::Failure);
     }
+#endif
 
     reply->abort();
 }
@@ -185,6 +187,7 @@ void OwnCloudService::slotCalendarAuthenticationRequired(
 }
 
 void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
+#ifndef INTEGRATION_TESTS
     qDebug() << "Reply from " << reply->url().path();
 //    qDebug() << reply->errorString();
 
@@ -358,6 +361,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             return;
         }
     }
+#endif
 }
 
 void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
@@ -377,6 +381,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     QString serverVersion = result.property(0).property("server_version")
             .toVariant().toString();
 
+#ifndef INTEGRATION_TESTS
     // reset to "unknown" in case we can't test if versions
     // and trash app are enabled
     settingsDialog->setOKLabelData(6, "unknown", SettingsDialog::Unknown);
@@ -438,6 +443,7 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     settingsDialog->connectTestCallback(
             appIsValid, appVersion, serverVersion, notesPathExistsText,
             reply->errorString());
+#endif
 }
 
 /**
@@ -888,11 +894,13 @@ void OwnCloudService::showOwnCloudMessage(
                 0, headline, message,
                 tr("Open &settings"), tr("&Cancel"),
                 QString::null, 0, 1) == 0) {
+#ifndef INTEGRATION_TESTS
             MainWindow *mainWindow = MainWindow::instance();
 
             if (mainWindow != NULL) {
                 mainWindow->openSettingsDialog(SettingsDialog::OwnCloudPage);
             }
+#endif
         }
     } else {
         QMessageBox::warning(0, headline, message);
@@ -926,9 +934,11 @@ OwnCloudService *OwnCloudService::instance() {
  * @param data
  */
 void OwnCloudService::handleVersionsLoading(QString data) {
+#ifndef INTEGRATION_TESTS
     mainWindow->enableShowVersionsButton();
     mainWindow->showStatusBarMessage(
             tr("Done with loading note versions"), 2000);
+#endif
 
     // check if we get any data at all
     if (data.isEmpty()) {
@@ -971,8 +981,10 @@ void OwnCloudService::handleVersionsLoading(QString data) {
         return;
     }
 
+#ifndef INTEGRATION_TESTS
     VersionDialog *dialog = new VersionDialog(versions, mainWindow);
     dialog->exec();
+#endif
 }
 
 /**
@@ -982,9 +994,11 @@ void OwnCloudService::handleVersionsLoading(QString data) {
  * @param data
  */
 void OwnCloudService::handleTrashedLoading(QString data) {
+#ifndef INTEGRATION_TESTS
     mainWindow->enableShowTrashButton();
     mainWindow->showStatusBarMessage(
             tr("Done with loading trashed notes"), 2000);
+#endif
 
     // check if we get any data at all
     if (data == "") {
@@ -1029,8 +1043,10 @@ void OwnCloudService::handleTrashedLoading(QString data) {
         return;
     }
 
+#ifndef INTEGRATION_TESTS
     TrashDialog *dialog = new TrashDialog(notes, mainWindow);
     dialog->exec();
+#endif
 }
 
 /**
@@ -1190,10 +1206,12 @@ void OwnCloudService::loadTodoItems(QString &data) {
     int responseNodesCount = responseNodes.length();
     int requestCount = 0;
 
+#ifndef INTEGRATION_TESTS
     // set the preliminary maximum of the progress bar
     if (todoDialog != Q_NULLPTR) {
         todoDialog->todoItemLoadingProgressBarSetMaximum(responseNodesCount);
     }
+#endif
 
     // loop all response blocks
     for (int i = 0; i < responseNodesCount; ++i) {
@@ -1281,6 +1299,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
         }
     }
 
+#ifndef INTEGRATION_TESTS
     if (todoDialog != Q_NULLPTR) {
         // set the real maximum of the progress bar
         todoDialog->todoItemLoadingProgressBarSetMaximum(requestCount);
@@ -1290,6 +1309,7 @@ void OwnCloudService::loadTodoItems(QString &data) {
             todoDialog->todoItemLoadingProgressBarHide();
         }
     }
+#endif
 
     // remove all not found items
     for (int i = 0; i < calendarItemUrlRemoveList.length(); ++i) {
@@ -1301,10 +1321,12 @@ void OwnCloudService::loadTodoItems(QString &data) {
         }
     }
 
+#ifndef INTEGRATION_TESTS
     if (todoDialog != Q_NULLPTR) {
         // reload the existing items
         todoDialog->reloadTodoListItems();
     }
+#endif
 }
 
 /**
@@ -1371,10 +1393,12 @@ void OwnCloudService::handleDeleteNoteShareReply(QString urlPart,
     note.setShareId(0);
     note.store();
 
+#ifndef INTEGRATION_TESTS
     // update the share dialog to show the share url
     if (shareDialog != Q_NULLPTR) {
         shareDialog->updateDialog();
     }
+#endif
 }
 
 /**
@@ -1507,10 +1531,12 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
 
             note.store();
 
+#ifndef INTEGRATION_TESTS
             // update the share dialog to show the share url
             if (updateShareDialog && (shareDialog != Q_NULLPTR)) {
                 shareDialog->updateDialog();
             }
+#endif
         }
     }
 }
@@ -1572,7 +1598,9 @@ void OwnCloudService::loadDirectory(QString &data) {
         }
     }
 
+#ifndef INTEGRATION_TESTS
     settingsDialog->setNoteFolderRemotePathList(pathList);
+#endif
 }
 
 /**
