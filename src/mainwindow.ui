@@ -634,6 +634,9 @@ p, li { white-space: pre-wrap; }
      </property>
      <addaction name="actionAlphabetical"/>
      <addaction name="actionBy_date"/>
+     <addaction name="separator"/>
+     <addaction name="actionAscending"/>
+     <addaction name="actionDescending"/>
     </widget>
     <widget class="QMenu" name="menuExport">
      <property name="title">
@@ -1925,6 +1928,22 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAscending">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ascending</string>
+   </property>
+  </action>
+  <action name="actionDescending">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Descending</string>
    </property>
   </action>
  </widget>

@@ -436,6 +436,10 @@ private slots:
 
     void enableNoteExternallyRemovedCheck();
 
+    void on_actionAscending_triggered();
+
+    void on_actionDescending_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -512,6 +516,7 @@ private:
     TodoDialog *_todoDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
+    Qt::SortOrder _noteSortOrder;
 
     void createSystemTrayIcon();
 
@@ -754,4 +759,6 @@ private:
     void setNoteTextEditReadOnly(bool readonly) const;
 
     void setNoteTextEditCursorPosition(int cursorPosition);
+
+    void updateNoteSortOrderSelectorVisibility();
 };

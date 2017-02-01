@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.02.0
+- you now can sort or notes also alphabetically descending
+  (for [Issue #504](https://github.com/pbek/QOwnNotes/issues/504))
+
 ## 17.01.14
 - you can now turn off the ownCloud / Nextcloud support in the settings to 
   prevent some checks

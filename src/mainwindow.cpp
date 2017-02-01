@@ -106,6 +106,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteFolderDockWidgetWasVisible = true;
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
+    _noteSortOrder = Qt::AscendingOrder;
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -121,7 +122,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QActionGroup *sorting = new QActionGroup(this);
     sorting->addAction(ui->actionAlphabetical);
     sorting->addAction(ui->actionBy_date);
-    sorting->setExclusive(true);
+
+    QActionGroup *sortingOrder = new QActionGroup(this);
+    sortingOrder->addAction(ui->actionAscending);
+    sortingOrder->addAction(ui->actionDescending);
+    sortingOrder->setExclusive(true);
 
     // we only want to see that menu entry if there are note subfolders
     ui->actionFind_notes_in_all_subfolders->setVisible(false);
@@ -197,6 +202,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // set sorting
     ui->actionBy_date->setChecked(!sortAlphabetically);
     ui->actionAlphabetical->setChecked(sortAlphabetically);
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility();
+
+    // set sort order
+    ui->actionAscending->setChecked(_noteSortOrder == Qt::AscendingOrder);
+    ui->actionDescending->setChecked(_noteSortOrder == Qt::DescendingOrder);
 
     // set the show in system tray checkbox
     ui->actionShow_system_tray->setChecked(showSystemTray);
@@ -1695,7 +1707,7 @@ void MainWindow::loadNoteDirectoryList() {
 
     // sort alphabetically again if necessary
     if (sortAlphabetically) {
-        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+        ui->noteTreeWidget->sortItems(0, _noteSortOrder);
     }
 
     // setup tagging
@@ -1870,6 +1882,8 @@ void MainWindow::readSettings() {
     QSettings settings;
     sortAlphabetically = settings.value(
             "SortingModeAlphabetically", false).toBool();
+    _noteSortOrder = static_cast<Qt::SortOrder>(settings.value(
+            "NoteSortOrder", Qt::AscendingOrder).toInt());
     showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     ui->menuBar->restoreGeometry(
@@ -3068,6 +3082,7 @@ void MainWindow::storeSettings() {
     }
 
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
+    settings.setValue("NoteSortOrder", _noteSortOrder);
     settings.setValue("ShowSystemTray", showSystemTray);
 }
 
@@ -4698,8 +4713,11 @@ void MainWindow::on_actionReport_problems_or_ideas_triggered() {
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
     if (checked) {
         sortAlphabetically = true;
-        ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+        ui->noteTreeWidget->sortItems(0, _noteSortOrder);
     }
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility();
 }
 
 void MainWindow::on_actionBy_date_triggered(bool checked) {
@@ -4707,6 +4725,9 @@ void MainWindow::on_actionBy_date_triggered(bool checked) {
         sortAlphabetically = false;
         loadNoteDirectoryList();
     }
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility();
 }
 
 void MainWindow::systemTrayIconClicked(
@@ -7565,7 +7586,7 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 
                 // sort notes if note name has changed
                 if (sortAlphabetically) {
-                    ui->noteTreeWidget->sortItems(0, Qt::AscendingOrder);
+                    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
                     ui->noteTreeWidget->scrollToItem(item);
                 }
             }
@@ -8536,4 +8557,32 @@ void MainWindow::on_actionView_note_in_new_window_triggered() {
 void MainWindow::on_actionSave_modified_notes_triggered() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
+}
+
+/**
+ * Sets ascending note sort order
+ */
+void MainWindow::on_actionAscending_triggered()
+{
+    _noteSortOrder = Qt::AscendingOrder;
+    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+}
+
+/**
+ * Sets descending note sort order
+ */
+void MainWindow::on_actionDescending_triggered()
+{
+    _noteSortOrder = Qt::DescendingOrder;
+    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+}
+
+/**
+ * Updates the visibility of the note sort order selector
+ */
+void MainWindow::updateNoteSortOrderSelectorVisibility()
+{
+    ui->actionAscending->setVisible(sortAlphabetically);
+    ui->actionDescending->setVisible(sortAlphabetically);
+//    ui->sortOrderSeparator->setVisible(sortAlphabetically);
 }
