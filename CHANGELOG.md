@@ -6,6 +6,8 @@
 - disabled the `Copy` button in the Note editor font schema settings 
   under macOS because of a Qt bug for Qt versions lower than 5.8
   (for [Issue #503](https://github.com/pbek/QOwnNotes/issues/503))
+- added more Spanish, Dutch, Italian, German and French translation (thank
+  you richarson, Leime, mlocati, bigant and lepascalou)
 
 ## 17.01.14
 - you can now turn off the ownCloud / Nextcloud support in the settings to 
