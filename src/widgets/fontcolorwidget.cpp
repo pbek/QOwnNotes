@@ -43,6 +43,17 @@ FontColorWidget::FontColorWidget(QWidget *parent) :
     // we currently are using the font selector from the settings dialog
     ui->fontGroupBox->setVisible(false);
 
+    // disable the button under macOS for Qt < 5.8 because of a Qt bug
+    // see: https://github.com/pbek/QOwnNotes/issues/503
+    // see: https://bugreports.qt.io/browse/QTBUG-56565
+#ifdef Q_OS_MAC
+    #if (QT_VERSION < QT_VERSION_CHECK(5, 8, 0))
+    ui->copySchemeButton->setEnabled(false);
+    ui->copySchemeButton->setToolTip("Disabled because of a Qt bug, see "
+                                "https://github.com/pbek/QOwnNotes/issues/503");
+    #endif
+#endif
+
     // initialize the font selectors
 //    initFontSelectors();
 
