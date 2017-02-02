@@ -14,6 +14,8 @@ before_build:
   - git submodule update --init
 
 build_script:
+  - dir C:\Qt\
+  - dir C:\Qt\5.8
   - cd src
   # we need to modify that to make it running on AppVeyor
   - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" QOwnNotes.pro
