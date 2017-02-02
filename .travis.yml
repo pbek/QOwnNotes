@@ -27,37 +27,41 @@ env:
     #- CONFIG=debug
 
 install:
-- |
-  if [[ "$TRAVIS_OS_NAME" == "linux" ]]
-  then
-    lsb_release -a
-    sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-    sudo apt-add-repository -y ppa:beineri/opt-qt562
-    sudo apt-get -qq update
-    sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56webkit qt56script
-    export CXX="g++-4.8"
-    export CC="gcc-4.8"x
-  fi
-# OS X Qt http://braumeister.org/search/qt5
-- |
-  if [[ "$TRAVIS_OS_NAME" == "osx" ]]
-  then
-    brew update > /dev/null
-    brew install qt5
-    export QTDIR="/usr/local/opt/qt5"
-  fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      lsb_release -a
+      sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
+      sudo apt-add-repository -y ppa:beineri/opt-qt562
+      sudo apt-get -qq update
+      sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56webkit qt56script
+      export CXX="g++-4.8"
+      export CC="gcc-4.8"x
+    fi
+  # OS X Qt http://braumeister.org/search/qt5
+  # we need to use macdeployqtfix after using macdeployqt to fix the library paths!
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      brew update > /dev/null
+      brew install qt5
+      export QTDIR="/usr/local/opt/qt5"
+    fi
 
 script:
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         QTDIR="/opt/qt56"
-      && PATH="$QTDIR/bin:$PATH"
-      && qt56-env.sh
-      ;
-    else
-         PATH="$QTDIR/bin:$PATH"
-      && LDFLAGS=-L$QTDIR/lib
-      && CPPFLAGS=-I$QTDIR/include
-      ;
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      QTDIR="/opt/qt56"
+      PATH="$QTDIR/bin:$PATH"
+      qt56-env.sh
+    fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      PATH="$QTDIR/bin:$PATH"
+      LDFLAGS=-L$QTDIR/lib
+      CPPFLAGS=-I$QTDIR/include
     fi
   - cd ./tests
   - qmake DEFINES+=INTEGRATION_TESTS && make -s -j 2
@@ -81,20 +85,23 @@ script:
 before_deploy:
   - export VERSION_NUMBER=`cat version.h | sed "s/[^0-9,.]//g"`
   # create debian package for linux and a disk image for OSX
-  - if [ "${TRAVIS_OS_NAME}" = "linux" ]; then
-         cd ../travis
-      && dpkg-deb -x QOwnNotes.deb build
-      && mv ../src/QOwnNotes build/opt/QOwnNotes/
-      && mv ../src/languages/*.qm build/opt/QOwnNotes/
-      && mv ../icons/* build/opt/QOwnNotes/
-      && sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
-      && dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
-      && cp QOwnNotes-$VERSION_NUMBER.deb QOwnNotesDev-$TRAVIS_COMMIT.deb
-      ;
-    else
-         ../travis/create-dmg.sh
-      && cp QOwnNotes-$VERSION_NUMBER.dmg QOwnNotesDev-$TRAVIS_COMMIT.dmg
-      ;
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]
+    then
+      cd ../travis
+      dpkg-deb -x QOwnNotes.deb build
+      mv ../src/QOwnNotes build/opt/QOwnNotes/
+      mv ../src/languages/*.qm build/opt/QOwnNotes/
+      mv ../icons/* build/opt/QOwnNotes/
+      sed -i 's/VERSION_NUMBER/'"$VERSION_NUMBER"'/g' build/DEBIAN/control
+      dpkg -b build QOwnNotes-$VERSION_NUMBER.deb
+      cp QOwnNotes-$VERSION_NUMBER.deb QOwnNotesDev-$TRAVIS_COMMIT.deb
+    fi
+  - |
+    if [[ "$TRAVIS_OS_NAME" == "osx" ]]
+    then
+      ../travis/create-dmg.sh
+      cp QOwnNotes-$VERSION_NUMBER.dmg QOwnNotesDev-$TRAVIS_COMMIT.dmg
     fi
   #
   # add a tag
