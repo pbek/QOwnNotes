@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.02.1
+- QOwnNotes for macOS is finally deployed with Qt 5.8, solving some pesky Qt bugs
+  (for [Issue #503](https://github.com/pbek/QOwnNotes/issues/503))
+
 ## 17.02.0
 - you now can sort or notes also alphabetically descending
   (for [Issue #504](https://github.com/pbek/QOwnNotes/issues/504))
