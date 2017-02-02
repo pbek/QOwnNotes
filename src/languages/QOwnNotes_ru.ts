@@ -856,7 +856,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1567"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Экспорт заметки как HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1796"/>
@@ -935,17 +935,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Сохранить изменённые заметки</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>По возрастанию</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>По убыванию</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
@@ -1008,7 +1008,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1155"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>Экспорт заметки как PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1591"/>
@@ -2073,7 +2073,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="2265"/>
       <location filename="../mainwindow.cpp" line="4498"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>Данная заметка не может быть сохранена на диск</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2428"/>
@@ -2384,7 +2384,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="850"/>
       <source>Could not store note file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
+      <translation>Невозможно сохранить заметку %1 - Error message: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1516"/>

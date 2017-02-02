@@ -940,12 +940,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Felemelkedik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Sűllyed</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
@@ -3166,12 +3166,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="744"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>ownCloud támogatás</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="750"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>ownCloud támogatás engedélyezése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="929"/>
@@ -3253,7 +3253,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1889"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Cseh</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2021"/>

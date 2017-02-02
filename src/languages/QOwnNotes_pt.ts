@@ -940,12 +940,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Ascendente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Decrescente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
@@ -3166,12 +3166,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="744"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>suporte ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="750"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Habilitar o suporte a ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="929"/>

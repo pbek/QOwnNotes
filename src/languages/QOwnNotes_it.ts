@@ -940,12 +940,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Ascendente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Discendente</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
