@@ -5,7 +5,7 @@
 #
 
 # we will get the $QTDIR from Travis CI
-#QTDIR="/usr/local/opt/qt55"
+#QTDIR="/usr/local/opt/qt5"
 APP=QOwnNotes
 # this directory name will also be shown in the title when the DMG is mounted
 TEMPDIR=$APP
@@ -49,6 +49,15 @@ if [ "$?" -ne "0" ]; then
     security delete-keychain osx-build.keychain 
     exit 1
 fi
+
+# trying to fix the macdeployqt problem with making the binary use the Qt
+# library files from /usr/local instead of the bundle
+# see: https://github.com/Homebrew/homebrew-core/issues/6161
+# example: https://github.com/iltommi/neutrino/blob/master/.travis.yml
+echo "Cloning macdeployqtfix"
+git clone https://github.com/iltommi/macdeployqtfix.git
+echo "Calling macdeployqtfix"
+python macdeployqtfix/macdeployqtfix.py $APP.app/Contents/MacOS/$APP /usr/local
 
 echo "Verifying code signed app"
 codesign --verify --verbose=4 ./$APP.app

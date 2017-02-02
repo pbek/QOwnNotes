@@ -45,9 +45,6 @@ install:
     brew update > /dev/null
     brew install qt5
     export QTDIR="/usr/local/opt/qt5"
-    ls /usr/local/Cellar
-    ls /usr/local/Cellar/qt5
-    ls /usr/local/opt/qt5
   fi
 
 script:
