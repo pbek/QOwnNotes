@@ -3,6 +3,8 @@
 ## 17.02.1
 - QOwnNotes for macOS is finally deployed with Qt 5.8, solving some pesky Qt bugs
   (for [Issue #503](https://github.com/pbek/QOwnNotes/issues/503))
+- fixed the preview of images if there are more than one in the same line
+  (for [Issue #509](https://github.com/pbek/QOwnNotes/issues/509))
 - added more Spanish, Hungarian, Italian, Russian, Polish and Portuguese
   translation (thank you richarson, rommel4444, mlocati, azar9610, lucjan and 
   mlimacarlos)

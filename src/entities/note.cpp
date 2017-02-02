@@ -1337,7 +1337,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     // parse for relative file urls and make them absolute
     // (for example to show images under the note path)
     str.replace(
-            QRegularExpression("([\\(<])file:\\/\\/([^\\/].+)([\\)>])"),
+            QRegularExpression("([\\(<])file:\\/\\/([^\\/].+?)([\\)>])"),
             "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
             + "/\\2\\3");
 
@@ -1539,6 +1539,9 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     if (!scriptResult.isEmpty()) {
         result = scriptResult;
     }
+
+    qDebug() << __func__ << " - 'result': " << result;
+
 
     return result;
 }
