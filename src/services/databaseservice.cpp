@@ -468,6 +468,16 @@ bool DatabaseService::setupTables() {
         version = 19;
     }
 
+    if (version < 20) {
+#ifdef Q_OS_MAC
+        // disable restoreCursorPosition for macOS by default, because there
+        // are users where it causes troubles
+        settings.setValue("restoreCursorPosition", false);
+#endif
+
+        version = 20;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

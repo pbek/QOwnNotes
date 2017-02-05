@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.02.2
+- the restoring of the cursor position in notes is now disabled by default 
+  for macOS because of troubles it causes for some users
+  (for [Issue #500](https://github.com/pbek/QOwnNotes/issues/500))
+
 ## 17.02.1
 - QOwnNotes for macOS is finally deployed with Qt 5.8, solving some pesky Qt bugs
   (for [Issue #503](https://github.com/pbek/QOwnNotes/issues/503))

@@ -655,8 +655,16 @@ void SettingsDialog::readSettings() {
             settings.value("allowDifferentNoteFileName").toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
             settings.value("useUNIXNewline").toBool());
+
+#ifdef Q_OS_MAC
+    bool restoreCursorPositionDefault = false;
+#else
+    bool restoreCursorPositionDefault = true;
+#endif
+
     ui->restoreCursorPositionCheckBox->setChecked(
-            settings.value("restoreCursorPosition", true).toBool());
+            settings.value("restoreCursorPosition",
+                           restoreCursorPositionDefault).toBool());
     ui->noteSaveIntervalTime->setValue(
             settings.value("noteSaveIntervalTime", 10).toInt());
     ui->noteTextViewRTLCheckBox->setChecked(

@@ -2953,8 +2953,15 @@ void MainWindow::setCurrentNote(Note note,
 
     int cursorPosition = noteHistory.getLastCursorPositionOfNote(note);
     QSettings settings;
-    bool restoreCursorPosition = settings.value("restoreCursorPosition",
-                                                true).toBool();
+
+#ifdef Q_OS_MAC
+    bool restoreCursorPositionDefault = false;
+#else
+    bool restoreCursorPositionDefault = true;
+#endif
+
+    bool restoreCursorPosition = settings.value(
+            "restoreCursorPosition", restoreCursorPositionDefault).toBool();
 
     // restore the last cursor position
     if (restoreCursorPosition && (cursorPosition > 0)) {
