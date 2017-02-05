@@ -8525,7 +8525,18 @@ void MainWindow::noteEditCursorPositionChanged() {
  * Deletes the current line in the active note text edit
  */
 void MainWindow::on_actionDelete_line_triggered() {
-    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+
+    // if the note text edit doesn't have the focus delegate the default
+    // shortcut to the widget with the focus
+    if (!textEdit->hasFocus()) {
+        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
+                                         Qt::AltModifier);
+        QApplication::postEvent(QApplication::focusWidget(), event);
+        return;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
     cursor.select(QTextCursor::BlockUnderCursor);
     QString selectedText = cursor.selectedText();
 
@@ -8540,7 +8551,18 @@ void MainWindow::on_actionDelete_line_triggered() {
  * Deletes the current word in the active note text edit
  */
 void MainWindow::on_actionDelete_word_triggered() {
-    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
+
+    // if the note text edit doesn't have the focus delegate the default
+    // shortcut to the widget with the focus
+    if (!textEdit->hasFocus()) {
+        QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Backspace,
+                                         Qt::ControlModifier);
+        QApplication::postEvent(QApplication::focusWidget(), event);
+        return;
+    }
+
+    QTextCursor cursor = textEdit->textCursor();
 
     if (cursor.selectedText().isEmpty()) {
         cursor.movePosition(QTextCursor::PreviousWord, QTextCursor::KeepAnchor);

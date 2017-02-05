@@ -4,6 +4,9 @@
 - the restoring of the cursor position in notes is now disabled by default 
   for macOS because of troubles it causes for some users
   (for [Issue #500](https://github.com/pbek/QOwnNotes/issues/500))
+- if the shortcuts for deleting the current line or word isn't used in the 
+  note text edit now the default shortcuts will be delegated to the widget 
+  with the focus (for [Issue #476](https://github.com/pbek/QOwnNotes/issues/476))
 
 ## 17.02.1
 - QOwnNotes for macOS is finally deployed with Qt 5.8, solving some pesky Qt bugs
