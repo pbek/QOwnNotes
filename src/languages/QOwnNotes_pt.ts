@@ -1208,8 +1208,8 @@ Restaurar a nota atual? </translation>
 
 If the trash is enabled on your ownCloud server you should be able to restore them from there.</source>
       <translation>
-        <numerusform>Remover &lt;striong&gt;%n&lt;/strong&gt; nota selecionada? 
-Se a lixeira não estiver habilitada não será possível restaurar a nota depois desse passo. </numerusform>
+        <numerusform>Remover &lt;strong&gt;%n&lt;/strong&gt; nota selecionada? 
+Se a lixeira não estiver habilitada não será possível restaurar a nota depois desse passo.</numerusform>
         <numerusform>Remover &lt;striong&gt;%n&lt;/strong&gt; notas selecionadas? 
 Se a lixeira não estiver habilitada não será possível restaurar as notas depois desse passo. </numerusform>
       </translation>

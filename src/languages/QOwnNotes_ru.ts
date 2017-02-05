@@ -930,7 +930,7 @@
       <location filename="../mainwindow.ui" line="1915"/>
       <location filename="../mainwindow.cpp" line="7509"/>
       <source>Open note in a view</source>
-      <translation>Открыть заметку в виде</translation>
+      <translation>Открыть заметку в отдельном окне</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1927"/>
@@ -3192,12 +3192,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="744"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>Поддержка ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="750"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Включить поддержку ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="929"/>
@@ -3325,13 +3325,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="2850"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
-      <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
-  to the position when the note was last visited in the current session</translation>
+      <translation>При открытии заметки позиция курсора будет соответствовать позиции, в которой его оставили при предыдущем открытии заметки в текущем сеансе</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2857"/>
       <source>Restore cursor position when opening a note</source>
-      <translation type="unfinished">Restore cursor position when opening a note</translation>
+      <translation>Восстановить позицию курсора при открытии заметки</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3089"/>
