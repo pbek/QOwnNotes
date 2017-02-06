@@ -55,6 +55,11 @@ public:
     Q_INVOKABLE void tagCurrentNote(QString tagName);
     Q_INVOKABLE void addStyleSheet(QString stylesheet);
     Q_INVOKABLE void reloadScriptingEngine();
+    Q_INVOKABLE NoteApi* fetchNoteByFileName(QString fileName,
+                                             int noteSubFolderId = -1);
+    Q_INVOKABLE bool noteExistsByFileName(QString fileName,
+                                          int ignoreNoteId = 0,
+                                          int noteSubFolderId = -1);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

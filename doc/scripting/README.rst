@@ -433,6 +433,7 @@ reference of what styles are available.
 
 If you want to inject styles into html preview to alter the way notes are previewed please look at `notetomarkdownhtmlhook <#notetomarkdownhtmlhook>`__.
 
+
 Reloading the scripting engine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -453,6 +454,66 @@ Usage in QML
 
     // reload the scripting engine
     script.reloadScriptingEngine();
+
+
+Fetching a note by its file name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Fetches a note by its file name
+     *
+     * @param fileName string the file name of the note (mandatory)
+     * @param noteSubFolderId integer id of the note subfolder
+     * @return NoteApi*
+     */
+    NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
+                                                   int noteSubFolderId);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // fetch note by file name
+    script.fetchNoteByFileName("my note.md");
+
+
+Checking if a note exists by its file name
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Checks if a note file exists by its file name
+     *
+     * @param fileName string the file name of the note (mandatory)
+     * @param ignoreNoteId integer id of a note to ignore in the check
+     * @param noteSubFolderId integer id of the note subfolder
+     * @return bool
+     */
+    bool ScriptingService::noteExistsByFileName(QString fileName,
+                                                int ignoreNoteId,
+                                                int noteSubFolderId);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // check if note exists, but ignore the id of "note"
+    script.noteExistsByFileName("my note.md", note.id);
+
+You may want to take a look at the example
+`use-tag-names-in-filename.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml>`__.
+
 
 Hooks
 -----
@@ -537,6 +598,8 @@ handleNoteTextFileNameHook
      * in the settings
      * 
      * It allows you to modify the name of the note file
+     * Keep in mind that you have to care about duplicate names yourself!
+     *
      * Return an empty string if the file name of the note should 
      * not be modified
      * 

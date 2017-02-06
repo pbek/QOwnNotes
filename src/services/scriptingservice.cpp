@@ -840,3 +840,36 @@ void ScriptingService::clearCustomStyleSheets() {
     QRegularExpression::MultilineOption);
     qApp->setStyleSheet(qApp->styleSheet().remove(regExp));
 }
+
+/**
+ * Fetches a note by its file name
+ *
+ * @param fileName string the file name of the note (mandatory)
+ * @param noteSubFolderId integer id of the note subfolder
+ * @return NoteApi*
+ */
+NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
+                                               int noteSubFolderId) {
+    return NoteApi::fromNote(Note::fetchByFileName(fileName, noteSubFolderId));
+}
+
+/**
+ * Checks if a note file exists by its file name
+ *
+ * @param fileName string the file name of the note (mandatory)
+ * @param ignoreNoteId integer id of a note to ignore in the check
+ * @param noteSubFolderId integer id of the note subfolder
+ * @return bool
+ */
+bool ScriptingService::noteExistsByFileName(QString fileName,
+                                            int ignoreNoteId,
+                                            int noteSubFolderId) {
+    Note note = Note::fetchByFileName(fileName, noteSubFolderId);
+
+    // check if the note id should be ignored
+    if ((ignoreNoteId > 0) && (note.getId() == ignoreNoteId)) {
+        return false;
+    }
+
+    return note.exists();
+}

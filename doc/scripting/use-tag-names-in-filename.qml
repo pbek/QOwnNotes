@@ -38,8 +38,12 @@ QtObject {
         if (tagNameList.length > 0) {
             fileName += " [" + tagNameList.join("] [") + "]";
         }
-        
+
         script.log("note file name: " + fileName);
+
+        var noteExists = script.noteExistsByFileName(fileName + ".md", note.id);
+        script.log("note " + (noteExists ? "exists" : "doesn't exist"));
+
         return fileName;
     }
 }

@@ -5,6 +5,16 @@
   closing bracket is typed at the position of a closing bracket if there is a
   matching opening bracket (for [Issue #514](https://github.com/pbek/QOwnNotes/issues/514))
     - this works for `)`, `]` and `}` 
+- you can now fetch a note by its file name in a script with the new scripting
+  method `script.fetchNoteByFileName(fileName)`
+  (for [Issue #510](https://github.com/pbek/QOwnNotes/issues/510))
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#fetching-a-note-by-its-file-name)
+- you can now check if a note exists by its file name in a script with the 
+  new scripting method `script.noteExistsByFileName(fileName)`
+  (for [Issue #510](https://github.com/pbek/QOwnNotes/issues/510))
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#checking-if-a-note-exists-by-its-file-name)
 
 ## 17.02.2
 - the restoring of the cursor position in notes is now disabled by default 
