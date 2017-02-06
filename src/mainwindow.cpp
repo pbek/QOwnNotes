@@ -5708,7 +5708,7 @@ void MainWindow::insertHtml(QString html) {
 }
 
 /**
- * Evaluates if file is a note file
+ * Evaluates if file is a media file
  */
 bool MainWindow::isValidMediaFile(QFile *file) {
     QStringList mediaExtensions = QStringList() << "jpg" << "png" << "gif";
@@ -5718,7 +5718,7 @@ bool MainWindow::isValidMediaFile(QFile *file) {
 }
 
 /**
- * Evaluates if file is a media file
+ * Evaluates if file is a note file
  */
 bool MainWindow::isValidNoteFile(QFile *file) {
     QStringList mediaExtensions = QStringList() << "txt" << "md";
