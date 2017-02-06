@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.02.3
+- the bracket closing feature now also just moves the cursor to the right if a
+  closing bracket is typed at the position of a closing bracket if there is a
+  matching opening bracket (for [Issue #514](https://github.com/pbek/QOwnNotes/issues/514))
+    - this works for `)`, `]` and `}` 
+
 ## 17.02.2
 - the restoring of the cursor position in notes is now disabled by default 
   for macOS because of troubles it causes for some users

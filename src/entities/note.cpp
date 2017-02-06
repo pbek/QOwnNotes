@@ -1540,8 +1540,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
         result = scriptResult;
     }
 
-    qDebug() << __func__ << " - 'result': " << result;
-
+//    qDebug() << __func__ << " - 'result': " << result;
 
     return result;
 }
