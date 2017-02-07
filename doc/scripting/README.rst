@@ -515,6 +515,34 @@ You may want to take a look at the example
 `use-tag-names-in-filename.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/use-tag-names-in-filename.qml>`__.
 
 
+Copying text into the clipboard
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Copies text into the clipboard as plain text or html mime data
+     *
+     * @param text string text to put into the clipboard
+     * @param asHtml bool if true the text will be set as html mime data
+     */
+    void ScriptingService::setClipboardText(QString text, bool asHtml);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // copy text to the clipboard
+    script.setClipboardText("text to copy");
+
+You may want to take a look at the example
+`selected-markdown-to-bbcode.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/selected-markdown-to-bbcode.qml>`__.
+
+
 Hooks
 -----
 

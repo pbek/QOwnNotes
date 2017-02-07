@@ -8090,9 +8090,21 @@ void MainWindow::writeToNoteTextEdit(QString text) {
     textEdit->insertPlainText(text);
 }
 
+/**
+ * Returns the text that is selected in the note text edit
+ *
+ * @return
+ */
 QString MainWindow::selectedNoteTextEditText() {
     QTextEdit *textEdit = activeNoteTextEdit();
-    return textEdit->textCursor().selectedText();
+    QString selectedText = textEdit->textCursor().selectedText();
+
+    // transform Unicode line endings
+    // this newline character seems to be used in multi-line selections
+    QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
+    selectedText.replace(newLine, "\n");
+
+    return selectedText;
 }
 
 /**
@@ -8476,6 +8488,7 @@ void MainWindow::on_actionInsert_block_quote_triggered() {
         // this only applies to the start of the selected block
         selectedText.replace(QRegularExpression("^"), "> ");
 
+        // transform Unicode line endings
         // this newline character seems to be used in multi-line selections
         QString newLine = QString::fromUtf8(QByteArray::fromHex("e280a9"));
         selectedText.replace(newLine, "\n> ");

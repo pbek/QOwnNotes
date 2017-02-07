@@ -60,6 +60,7 @@ public:
     Q_INVOKABLE bool noteExistsByFileName(QString fileName,
                                           int ignoreNoteId = 0,
                                           int noteSubFolderId = -1);
+    Q_INVOKABLE void setClipboardText(QString text, bool asHtml = false);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

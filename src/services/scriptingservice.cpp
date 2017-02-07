@@ -204,6 +204,9 @@ void ScriptingService::reloadEngine() {
  * called from a script
  */
 void ScriptingService::reloadScriptingEngine() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     QTimer::singleShot(500, this, SLOT(reloadEngine()));
 }
 
@@ -790,6 +793,9 @@ void ScriptingService::encryptionDisablePassword() {
  * Returns true if the current platform is Linux
  */
 bool ScriptingService::platformIsLinux() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
 #ifdef Q_OS_LINUX
     return true;
 #else
@@ -801,6 +807,9 @@ bool ScriptingService::platformIsLinux() {
  * Returns true if the current platform is Mac OS X
  */
 bool ScriptingService::platformIsOSX() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
 #ifdef Q_OS_MAC
     return true;
 #else
@@ -812,6 +821,9 @@ bool ScriptingService::platformIsOSX() {
  * Returns true if the current platform is Windows
  */
 bool ScriptingService::platformIsWindows() {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
 #ifdef Q_OS_WIN
     return true;
 #else
@@ -825,6 +837,9 @@ bool ScriptingService::platformIsWindows() {
  * @param stylesheet
  */
 void ScriptingService::addStyleSheet(QString stylesheet) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     qApp->setStyleSheet(qApp->styleSheet() + "\n/* BEGIN CUSTOM STYLESHEET */\n"
                         + stylesheet + "\n/* END CUSTOM STYLESHEET */");
 }
@@ -850,6 +865,9 @@ void ScriptingService::clearCustomStyleSheets() {
  */
 NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
                                                int noteSubFolderId) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     return NoteApi::fromNote(Note::fetchByFileName(fileName, noteSubFolderId));
 }
 
@@ -864,6 +882,9 @@ NoteApi* ScriptingService::fetchNoteByFileName(QString fileName,
 bool ScriptingService::noteExistsByFileName(QString fileName,
                                             int ignoreNoteId,
                                             int noteSubFolderId) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
     Note note = Note::fetchByFileName(fileName, noteSubFolderId);
 
     // check if the note id should be ignored
@@ -872,4 +893,25 @@ bool ScriptingService::noteExistsByFileName(QString fileName,
     }
 
     return note.exists();
+}
+
+/**
+ * Copies text into the clipboard as plain text or html mime data
+ *
+ * @param text string text to put into the clipboard
+ * @param asHtml bool if true the text will be set as html mime data
+ */
+void ScriptingService::setClipboardText(QString text, bool asHtml) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+    QClipboard *clipboard = QApplication::clipboard();
+
+    if (asHtml) {
+        QMimeData *mimeData = new QMimeData();
+        mimeData->setHtml(text);
+        clipboard->setMimeData(mimeData);
+    } else {
+        clipboard->setText(text);
+    }
 }

@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.02.4
+- you can now copy text to the clipboard in a script with the new scripting
+  method `script.setClipboardText()`
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#copying-text-into-the-clipboard)
+- the unicode line endings from the result of the scripting method
+  `script.noteTextEditSelectedText()` will now be converted to `\n` 
+
 ## 17.02.3
 - the bracket closing feature now also just moves the cursor to the right if a
   closing bracket is typed at the position of a closing bracket if there is a
