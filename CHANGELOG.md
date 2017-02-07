@@ -3,10 +3,18 @@
 ## 17.02.4
 - you can now copy text to the clipboard in a script with the new scripting
   method `script.setClipboardText()`
+    - there is an example at
+      [selected-markdown-to-bbcode.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/selected-markdown-to-bbcode.qml)
     - for more information please take a look at the
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#copying-text-into-the-clipboard)
 - the unicode line endings from the result of the scripting method
   `script.noteTextEditSelectedText()` will now be converted to `\n` 
+- you can now jump to a note with the new scripting method `script.setCurrentNote()`
+  if it is visible in the note list (for [Issue #510](https://github.com/pbek/QOwnNotes/issues/510))
+    - there is an example at
+      [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/journal-entry.qml)
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jump-to-a-note)
 
 ## 17.02.3
 - the bracket closing feature now also just moves the cursor to the right if a

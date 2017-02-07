@@ -61,6 +61,7 @@ public:
                                           int ignoreNoteId = 0,
                                           int noteSubFolderId = -1);
     Q_INVOKABLE void setClipboardText(QString text, bool asHtml = false);
+    Q_INVOKABLE void setCurrentNote(NoteApi *note);
 
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);

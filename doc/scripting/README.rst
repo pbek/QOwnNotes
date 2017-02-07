@@ -543,6 +543,33 @@ You may want to take a look at the example
 `selected-markdown-to-bbcode.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/selected-markdown-to-bbcode.qml>`__.
 
 
+Jump to a note
+~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Sets the current note if the note is visible in the note list
+     *
+     * @param note NoteApi note to jump to
+     */
+    void ScriptingService::setCurrentNote(NoteApi *note) {
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // jump to the note
+    script.setCurrentNote(note);
+
+You may want to take a look at the example
+`journal-entry.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/journal-entry.qml>`__.
+
+
 Hooks
 -----
 

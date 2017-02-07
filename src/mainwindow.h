@@ -109,6 +109,9 @@ protected:
 
     void resizeEvent(QResizeEvent* event);
 
+public slots:
+    void setCurrentNoteFromNoteId(int noteId);
+
 private slots:
 
     void on_noteTextEdit_textChanged();
@@ -316,8 +319,6 @@ private slots:
     void hideNoteFolderComboBoxIfNeeded();
 
     void generateSystemTrayContextMenu();
-
-    void setCurrentNoteFromNoteId(int noteId);
 
     void reloadTodoLists();
 

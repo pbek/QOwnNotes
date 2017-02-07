@@ -915,3 +915,22 @@ void ScriptingService::setClipboardText(QString text, bool asHtml) {
         clipboard->setText(text);
     }
 }
+
+/**
+ * Sets the current note if the note is visible in the note list
+ *
+ * @param note NoteApi note to jump to
+ */
+void ScriptingService::setCurrentNote(NoteApi *note) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        mainWindow->setCurrentNoteFromNoteId(note->getId());
+    }
+#else
+    Q_UNUSED(note);
+#endif
+}
