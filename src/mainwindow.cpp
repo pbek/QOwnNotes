@@ -5076,7 +5076,7 @@ void MainWindow::on_action_Print_note_text_triggered() {
  */
 void MainWindow::on_actionInsert_image_triggered() {
     FileDialog dialog("InsertImage");
-    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
     dialog.setNameFilter(tr("Image files") + " (*.jpg *.png *.gif)");
     dialog.setWindowTitle(tr("Select image to insert"));

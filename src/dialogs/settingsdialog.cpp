@@ -1687,7 +1687,12 @@ void SettingsDialog::on_noteTextViewCodeResetButton_clicked() {
  */
 void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
     QString path = ui->externalEditorPathLineEdit->text();
-    QString dirPath = path.isEmpty() ? QDir::homePath() : path;
+    QString dirPath = path;
+
+    // get the path of the directory if a editor path was set
+    if (!path.isEmpty()) {
+        dirPath = QFileInfo(path).dir().path();
+    }
 
     // in portable mode the data path will be opened if path was empty
     if (path.isEmpty() && Utils::Misc::isInPortableMode()) {
@@ -1697,10 +1702,18 @@ void SettingsDialog::on_setExternalEditorPathToolButton_clicked() {
     QStringList mimeTypeFilters;
     mimeTypeFilters << "application/x-executable" << "application/octet-stream";
 
-    QFileDialog dialog(this);
+    FileDialog dialog("ExternalEditor");
+
+    if (!dirPath.isEmpty()) {
+        dialog.setDirectory(dirPath);
+    }
+
+    if (!path.isEmpty()) {
+        dialog.selectFile(path);
+    }
+
     dialog.setFileMode(QFileDialog::ExistingFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setDirectory(dirPath);
     dialog.setMimeTypeFilters(mimeTypeFilters);
     dialog.setWindowTitle(tr("Select editor application"));
     int ret = dialog.exec();
@@ -2186,34 +2199,50 @@ void SettingsDialog::on_scriptRemoveButton_clicked() {
  */
 void SettingsDialog::on_scriptPathButton_clicked() {
     QString path = ui->scriptPathLineEdit->text();
-    QString dirPath = path.isEmpty() ? QDir::homePath() : path;
+    QString dirPath = path;
 
     // get the path of the script if a script was set
-//    if (!path.isEmpty()) {
-//        dirPath = QFileInfo(path).dir().path();
-//    }
+    if (!path.isEmpty()) {
+        dirPath = QFileInfo(path).dir().path();
+    }
 
     // in portable mode the data path will be opened if path was empty
     if (path.isEmpty() && Utils::Misc::isInPortableMode()) {
         dirPath = Utils::Misc::portableDataPath();
     }
 
-    path = QFileDialog::getOpenFileName(
-            this, tr("Please select your QML file"),
-            dirPath, tr("QML Files (*.qml)"));
+    FileDialog dialog("ScriptPath");
 
-    QFile file(path);
+    if (!dirPath.isEmpty()) {
+        dialog.setDirectory(dirPath);
+    }
 
-    if (file.exists() && (path != "")) {
-        ui->scriptPathLineEdit->setText(path);
-        _selectedScript.setScriptPath(path);
-        _selectedScript.store();
+    if (!path.isEmpty()) {
+        dialog.selectFile(path);
+    }
 
-        // validate the script
-        validateCurrentScript();
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setNameFilter(tr("QML files") + " (*.qml)");
+    dialog.setWindowTitle(tr("Please select your QML file"));
+    int ret = dialog.exec();
 
-        // reload the scripting engine
-        ScriptingService::instance()->reloadEngine();
+    if (ret == QDialog::Accepted) {
+        path = dialog.selectedFile();
+
+        QFile file(path);
+
+        if (file.exists() && (path != "")) {
+            ui->scriptPathLineEdit->setText(path);
+            _selectedScript.setScriptPath(path);
+            _selectedScript.store();
+
+            // validate the script
+            validateCurrentScript();
+
+            // reload the scripting engine
+            ScriptingService::instance()->reloadEngine();
+        }
     }
 }
 

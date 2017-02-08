@@ -4,6 +4,8 @@
 - you can now show a custom action in the note text edit context menu
     - for more information please take a look at the
       [custom action documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-custom-action)
+- the last directory path will now be selected if you select a script file in 
+  the *Scripting settings* or select an external editor in the *General settings*
 
 ## 17.02.4
 - you can now copy text to the clipboard in a script with the new scripting
