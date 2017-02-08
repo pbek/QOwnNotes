@@ -6,6 +6,8 @@
       [custom action documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-custom-action)
 - the last directory path will now be selected if you select a script file in 
   the *Scripting settings* or select an external editor in the *General settings*
+- the script name will now be set from the file name if no script name was set
+  yet in the *Scripting settings*
 
 ## 17.02.4
 - you can now copy text to the clipboard in a script with the new scripting

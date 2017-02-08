@@ -47,6 +47,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             ui->noteSaveIntervalTimeLabel->toolTip());
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
     ui->calDavCalendarGroupBox->setVisible(false);
+    _newScriptName = tr("New script");
 
     _noteNotificationButtonGroup = new QButtonGroup(this);
     _noteNotificationButtonGroup->addButton(
@@ -2135,7 +2136,7 @@ void SettingsDialog::setupScriptingPage() {
  */
 void SettingsDialog::on_scriptAddButton_clicked() {
     _selectedScript = Script();
-    _selectedScript.setName(tr("new script"));
+    _selectedScript.setName(_newScriptName);
     _selectedScript.setPriority(ui->scriptListWidget->count());
     _selectedScript.store();
 
@@ -2233,6 +2234,16 @@ void SettingsDialog::on_scriptPathButton_clicked() {
         QFile file(path);
 
         if (file.exists() && (path != "")) {
+            QString scriptName = _selectedScript.getName();
+
+            // set the script name from the file name if none was set yet
+            if (scriptName.isEmpty() || (scriptName == _newScriptName)) {
+                scriptName = QFileInfo(file).baseName();
+                ui->scriptNameLineEdit->setText(scriptName);
+                _selectedScript.setName(scriptName);
+                ui->scriptListWidget->currentItem()->setText(scriptName);
+            }
+
             ui->scriptPathLineEdit->setText(path);
             _selectedScript.setScriptPath(path);
             _selectedScript.store();

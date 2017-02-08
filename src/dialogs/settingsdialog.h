@@ -227,6 +227,7 @@ private:
     QSplitter *_mainSplitter;
     QButtonGroup *_noteNotificationButtonGroup;
     QCheckBox *_noteNotificationNoneCheckBox;
+    QString _newScriptName;
 
     void storeSettings();
 
