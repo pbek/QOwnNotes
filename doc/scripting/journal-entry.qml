@@ -19,6 +19,10 @@ QtObject {
      * @param identifier string the identifier defined in registerCustomAction
      */
     function customActionInvoked(identifier) {
+        if (identifier != "journalEntry") {
+            return;
+        }
+
         // get the date headline
         var m = new Date();
         var headline = m.getFullYear() + ("0" + (m.getMonth()+1)).slice(-2) + ("0" + m.getDate()).slice(-2);

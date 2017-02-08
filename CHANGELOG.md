@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.02.5
+- you can now show a custom action in the note text edit context menu
+    - for more information please take a look at the
+      [custom action documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-custom-action)
+
 ## 17.02.4
 - you can now copy text to the clipboard in a script with the new scripting
   method `script.setClipboardText()`

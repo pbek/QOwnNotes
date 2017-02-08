@@ -13,7 +13,7 @@ QtObject {
      * Initializes the custom action
      */
     function init() {
-        script.registerCustomAction("markdownToBBCode", "Markdown to BBCode", "BBCode", "edit-copy");
+        script.registerCustomAction("markdownToBBCode", "Markdown to BBCode", "BBCode", "edit-copy", true);
     }
 
     /**
@@ -23,6 +23,10 @@ QtObject {
      * @param identifier string the identifier defined in registerCustomAction
      */
     function customActionInvoked(identifier) {
+        if (identifier != "markdownToBBCode") {
+            return;
+        }
+
         // get the selected text from the note text edit
         var text = script.noteTextEditSelectedText();
         

@@ -40,10 +40,9 @@ public:
     Q_INVOKABLE QString downloadUrlToString(QUrl url);
     Q_INVOKABLE QString downloadUrlToMedia(QUrl url,
                                            bool returnUrlOnly = false);
-    Q_INVOKABLE void registerCustomAction(QString identifier,
-                                          QString menuText,
-                                          QString buttonText = "",
-                                          QString icon = "");
+    Q_INVOKABLE void registerCustomAction(
+            QString identifier, QString menuText, QString buttonText = "",
+            QString icon = "", bool useInNoteEditContextMenu = false);
     Q_INVOKABLE void createNote(QString text);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(QString text);

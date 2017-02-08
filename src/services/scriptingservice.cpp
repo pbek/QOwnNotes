@@ -715,11 +715,14 @@ QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
  * @param icon the icon file path or the name of a freedesktop theme icon
  *             you will find a list of icons here:
  *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+ * @param useInNoteEditContextMenu if true use the action in the note edit
+ *                                 context menu (default: false)
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText,
-                                            QString icon) {
+                                            QString icon,
+                                            bool useInNoteEditContextMenu) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
@@ -727,13 +730,15 @@ void ScriptingService::registerCustomAction(QString identifier,
         MetricsService::instance()->sendVisitIfEnabled(
                 "scripting/" + QString(__func__));
 
-        mainWindow->addCustomAction(identifier, menuText, buttonText, icon);
+        mainWindow->addCustomAction(identifier, menuText, buttonText, icon,
+                                    useInNoteEditContextMenu);
     }
 #else
     Q_UNUSED(identifier);
     Q_UNUSED(menuText);
     Q_UNUSED(buttonText);
     Q_UNUSED(icon);
+    Q_UNUSED(useInNoteEditContextMenu);
 #endif
 }
 

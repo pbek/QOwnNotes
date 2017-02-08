@@ -202,8 +202,8 @@ You may want to take a look at the example
 `paste-latex-image.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/paste-latex-image.qml>`__.
 
 
-Register a custom action
-~~~~~~~~~~~~~~~~~~~~~~~~
+Registering a custom action
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Parameters
 ^^^^^^^^^^
@@ -220,11 +220,14 @@ Parameters
      * @param icon the icon file path or the name of a freedesktop theme icon
      *             you will find a list of icons here:
      *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
+     * @param useInNoteEditContextMenu if true use the action in the note edit
+     *                                 context menu (default: false)
      */
     void ScriptingService::registerCustomAction(QString identifier,
                                                 QString menuText,
                                                 QString buttonText,
-                                                QString icon);
+                                                QString icon,
+                                                bool useInNoteEditContextMenu);
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -248,8 +251,8 @@ You may then want to use the identifier with function
 `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 
-Create a new note
-~~~~~~~~~~~~~~~~~
+Creating a new note
+~~~~~~~~~~~~~~~~~~~
 
 Parameters
 ^^^^^^^^^^

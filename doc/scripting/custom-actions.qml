@@ -20,7 +20,7 @@ QtObject {
         script.registerCustomAction("noButtonAction", "No button here");
 
         // create a menu entry to transform text with rot13
-        script.registerCustomAction("transformTextRot13", "Transform selected text with rot13", "rot13", "text-wrap");
+        script.registerCustomAction("transformTextRot13", "Transform selected text with rot13", "rot13", "text-wrap", true);
     }
 
     /**

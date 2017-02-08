@@ -4961,6 +4961,15 @@ void MainWindow::on_noteTextEdit_customContextMenuRequested(const QPoint &pos) {
     QAction *pasteMediaAction = menu->addAction(tr("Paste HTML or media"));
     pasteMediaAction->setShortcut(ui->actionPaste_image->shortcut());
 
+    // add the custom actions to the context menu
+    if (!_noteTextEditContextMenuActions.isEmpty()) {
+        menu->addSeparator();
+
+        Q_FOREACH(QAction *action, _noteTextEditContextMenuActions) {
+                menu->addAction(action);
+            }
+    }
+
     QAction *selectedItem = menu->exec(globalPos);
     if (selectedItem) {
         if (selectedItem == linkTextAction) {
@@ -7246,6 +7255,7 @@ void MainWindow::preReloadScriptingEngine() {
     ui->menuCustom_actions->hide();
     _customActionToolbar->clear();
     _customActionToolbar->hide();
+    _noteTextEditContextMenuActions.clear();
 }
 
 void MainWindow::on_actionShow_log_triggered() {
@@ -7992,7 +8002,8 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
  * Adds a custom action as menu item and button
  */
 void MainWindow::addCustomAction(QString identifier, QString menuText,
-                                 QString buttonText, QString icon) {
+                                 QString buttonText, QString icon,
+                                 bool useInNoteEditContextMenu) {
 //    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName("customAction_" + identifier);
@@ -8021,6 +8032,11 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
     QObject::connect(action, SIGNAL(triggered()),
                      _customActionSignalMapper, SLOT(map()));
     _customActionSignalMapper->setMapping(action, identifier);
+
+    // add the customa action to the note text edit context menu later
+    if (useInNoteEditContextMenu) {
+        _noteTextEditContextMenuActions.append(action);
+    }
 }
 
 /**

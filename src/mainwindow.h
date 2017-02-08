@@ -92,7 +92,8 @@ public:
     QAction *findAction(QString objectName);
 
     void addCustomAction(QString identifier, QString menuText,
-                         QString buttonText, QString icon);
+                         QString buttonText, QString icon,
+                         bool useInNoteEditContextMenu = false);
 
     void preReloadScriptingEngine();
 
@@ -518,6 +519,7 @@ private:
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     Qt::SortOrder _noteSortOrder;
+    QList<QAction *> _noteTextEditContextMenuActions;
 
     void createSystemTrayIcon();
 

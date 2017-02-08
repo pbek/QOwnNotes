@@ -11,7 +11,7 @@ QtObject {
      */
     function init() {
         // create a menu entry to paste Latex code as an image
-        script.registerCustomAction("pasteLatexImage", "Paste Latex image", "Latex", "insert-image");
+        script.registerCustomAction("pasteLatexImage", "Paste Latex image", "Latex", "insert-image", true);
     }
 
     /**
