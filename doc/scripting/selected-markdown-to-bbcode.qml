@@ -34,6 +34,13 @@ QtObject {
         // do some code list cleanup
         result = replaceAll(result, "[list=*]", "[list]");
         result = replaceAll(result, "[/*]", "");
+        
+        // convert inline code blocks to italic
+        result = result.replace(/^(.+?)\[code\](.+?)\[\/code\]/img, "$1[i]$2[/i]");
+
+        // convert headlines to bold
+        result = replaceAll(result, "[h]", "[b]");
+        result = replaceAll(result, "[/h]", "[/b]");
 
         // put the result into the clipboard
         script.setClipboardText(result);
