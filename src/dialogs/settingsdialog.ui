@@ -508,6 +508,9 @@
                      <property name="placeholderText">
                       <string notr="true">Notes</string>
                      </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
+                     </property>
                     </widget>
                    </item>
                    <item row="11" column="0">
@@ -665,6 +668,9 @@
                      </property>
                      <property name="placeholderText">
                       <string>Note folder name</string>
+                     </property>
+                     <property name="clearButtonEnabled">
+                      <bool>true</bool>
                      </property>
                     </widget>
                    </item>
@@ -1320,6 +1326,9 @@
                         <property name="text">
                          <string/>
                         </property>
+                        <property name="clearButtonEnabled">
+                         <bool>true</bool>
+                        </property>
                        </widget>
                       </item>
                       <item>
@@ -1329,6 +1338,9 @@
                         </property>
                         <property name="echoMode">
                          <enum>QLineEdit::Password</enum>
+                        </property>
+                        <property name="clearButtonEnabled">
+                         <bool>true</bool>
                         </property>
                        </widget>
                       </item>
@@ -2516,14 +2528,17 @@
                          <bool>true</bool>
                         </property>
                         <property name="placeholderText">
-                         <string>path to your QML file</string>
+                         <string>Path to your QML file</string>
                         </property>
                        </widget>
                       </item>
                       <item row="2" column="0" colspan="2">
                        <widget class="QLineEdit" name="scriptNameLineEdit">
                         <property name="placeholderText">
-                         <string>script name</string>
+                         <string>Script name</string>
+                        </property>
+                        <property name="clearButtonEnabled">
+                         <bool>true</bool>
                         </property>
                        </widget>
                       </item>
@@ -3025,6 +3040,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QLineEdit" name="externalEditorPathLineEdit">
                     <property name="placeholderText">
                      <string>path to external editor, leave empty for default</string>
+                    </property>
+                    <property name="clearButtonEnabled">
+                     <bool>true</bool>
                     </property>
                    </widget>
                   </item>
@@ -3684,6 +3702,9 @@ p, li { white-space: pre-wrap; }
                  <widget class="QLineEdit" name="timeFormatLineEdit">
                   <property name="placeholderText">
                    <string>Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
