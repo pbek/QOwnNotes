@@ -8,6 +8,7 @@
   the *Scripting settings* or select an external editor in the *General settings*
 - the script name will now be set from the file name if no script name was set
   yet in the *Scripting settings*
+- added more German translation
 
 ## 17.02.4
 - you can now copy text to the clipboard in a script with the new scripting
