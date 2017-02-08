@@ -543,8 +543,8 @@ You may want to take a look at the example
 `selected-markdown-to-bbcode.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/selected-markdown-to-bbcode.qml>`__.
 
 
-Jump to a note
-~~~~~~~~~~~~~~
+Jumping to a note
+~~~~~~~~~~~~~~~~~
 
 Parameters
 ^^^^^^^^^^

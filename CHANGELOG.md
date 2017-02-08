@@ -14,7 +14,7 @@
     - there is an example at
       [journal-entry.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/journal-entry.qml)
     - for more information please take a look at the
-      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jump-to-a-note)
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#jumping-to-a-note)
 
 ## 17.02.3
 - the bracket closing feature now also just moves the cursor to the right if a
