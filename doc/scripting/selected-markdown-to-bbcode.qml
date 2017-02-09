@@ -40,7 +40,10 @@ QtObject {
         result = replaceAll(result, "[/*]", "");
         
         // convert inline code blocks to italic
-        result = result.replace(/^(.+?)\[code\](.+?)\[\/code\]/img, "$1[i]$2[/i]");
+        // do this 10 times to take care of multiple code blocks in a line
+        for (var i = 0; i < 10; i++) {
+            result = result.replace(/^(.+?)\[code\](.+?)\[\/code\]/img, "$1[i]$2[/i]");
+        }
 
         // convert headlines to bold
         result = replaceAll(result, "[h]", "[b]");
