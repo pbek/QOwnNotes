@@ -1314,7 +1314,7 @@ bool Note::removeNoteFile() {
 QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                              bool forExport, bool decrypt, bool base64Images) {
     hoedown_renderer *renderer =
-            hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 16);
+            hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 32);
 
     // we want to show quotes in the html, so we don't translate them into
     // `<q>` tags
@@ -1322,7 +1322,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
     hoedown_extensions extensions =
             (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
                     HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
-    hoedown_document *document = hoedown_document_new(renderer, extensions, 16);
+    hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
 
     // get the decrypted note text (or the normal note text if there isn't any)
     QString str = decrypt ? getDecryptedNoteText() : noteText;

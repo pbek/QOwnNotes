@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.02.6
+- the maximum tag nesting level of the html preview was increased from 16 to 32
+  to allow more levels of list items than six
+  (for [Issue #473](https://github.com/pbek/QOwnNotes/issues/473))
+
 ## 17.02.5
 - you can now show a custom action in the note text edit context menu
     - for more information please take a look at the
