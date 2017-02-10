@@ -49,6 +49,10 @@ QtObject {
         result = replaceAll(result, "[h]", "[b]");
         result = replaceAll(result, "[/h]", "[/b]");
 
+        // convert `em` to `i`
+        result = replaceAll(result, "[em]", "[i]");
+        result = replaceAll(result, "[/em]", "[/i]");
+
         // put the result into the clipboard
         script.setClipboardText(result);
     }
