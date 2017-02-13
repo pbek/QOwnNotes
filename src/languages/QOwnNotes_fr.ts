@@ -940,12 +940,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1938"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Croissant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Décroissant</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1497"/>
@@ -3280,12 +3280,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Chemin d’accès vers votre fichier QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Nom du script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
@@ -3754,7 +3754,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Fichiers QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
@@ -3825,7 +3825,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="50"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Nouveau script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="267"/>

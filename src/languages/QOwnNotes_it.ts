@@ -3278,12 +3278,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Percorso del proprio file QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Nome dello script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
@@ -3753,7 +3753,7 @@ Messaggio di errore: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>File QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
@@ -3825,7 +3825,7 @@ Messaggio di errore: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="50"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Nuovo script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="267"/>

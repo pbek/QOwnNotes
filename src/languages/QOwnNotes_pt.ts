@@ -3278,12 +3278,12 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Caminho para o arquivo QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Nome do script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
@@ -3752,7 +3752,7 @@ Mensagem de erro: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Arquivos QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
@@ -3823,7 +3823,7 @@ Mensagem de erro: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="50"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Novo script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="267"/>
