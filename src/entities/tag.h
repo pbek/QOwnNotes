@@ -99,6 +99,8 @@ public:
 
     static Tag fetchOneOfNoteWithColor(Note note);
 
+    static void migrateDarkColors();
+
 protected:
     int id;
     QString name;

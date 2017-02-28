@@ -652,6 +652,37 @@ Tag Tag::activeTag() {
     return Tag::fetch(activeTagId());
 }
 
+/**
+ * Sets the non-darkMode colors as darkMode colors for all tags
+ */
+void Tag::migrateDarkColors() {
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+
+    // disable dark mode to get the light color
+    settings.setValue("darkMode", false);
+
+    // fetch all tags with non-dark mode colors
+    QList <Tag> tags = fetchAll();
+
+    // enable dark mode to later set the dark color
+    settings.setValue("darkMode", true);
+
+    Q_FOREACH(Tag tag, tags) {
+            // get the non-dark mode color (because the fetch was made while
+            // "darkMode" was off)
+            QColor color = tag.getColor();
+
+            // set the non-dark mode color as dark mode color (because now
+            // "darkMode" is enabled)
+            tag.setColor(color);
+            tag.store();
+        }
+
+    // set the dark mode to the old value
+    settings.setValue("darkMode", darkMode);
+}
+
 QDebug operator<<(QDebug dbg, const Tag &tag) {
     dbg.nospace() << "Tag: <id>" << tag.id << " <name>" << tag.name <<
             " <parentId>" << tag.parentId;

@@ -229,6 +229,12 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 9;
     }
 
+    if (version < 10) {
+        // set the non-darkMode colors as darkMode colors for all tags
+        Tag::migrateDarkColors();
+        version = 10;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");

@@ -5,6 +5,8 @@
     - this is handy because the colors you may have defined on an other, synced
       computer, that did not use dark mode may not look good on this computer
       in dark mode
+    - with this update the currently set non-dark mode colors will be used as
+      dark mode colors 
 
 ## 17.02.6
 - the maximum tag nesting level of the html preview was increased from 16 to 32
