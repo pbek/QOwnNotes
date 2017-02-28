@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.03.0
+- you can now assign different tag colors in dark mode
+    - this is handy because the colors you may have defined on an other, synced
+      computer, that did not use dark mode may not look good on this computer
+      in dark mode
+
 ## 17.02.6
 - the maximum tag nesting level of the html preview was increased from 16 to 32
   to allow more levels of list items than six

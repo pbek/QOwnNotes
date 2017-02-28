@@ -105,4 +105,6 @@ protected:
     int priority;
     int parentId;
     QColor _color;
+
+    QString colorFieldName();
 };

@@ -168,7 +168,7 @@ bool Tag::fillFromQuery(QSqlQuery query) {
     this->priority = query.value("priority").toInt();
     this->parentId = query.value("parent_id").toInt();
 
-    QString colorName = query.value("color").toString();
+    QString colorName = query.value(colorFieldName()).toString();
     this->_color = colorName.isEmpty() ? QColor() : QColor(colorName);
 
     return true;
@@ -462,17 +462,18 @@ int Tag::countLinkedNoteFileNames() {
 bool Tag::store() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
+    QString colorField = colorFieldName();
 
     if (this->id > 0) {
         query.prepare(
                 "UPDATE tag SET name = :name, priority = :priority, "
-                        "parent_id = :parentId, color = :color "
+                        "parent_id = :parentId, " + colorField + " = :color "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
-                "INSERT INTO tag (name, priority, parent_id, color) "
-                        "VALUES (:name, :priority, :parentId, :color)");
+                "INSERT INTO tag (name, priority, parent_id, " + colorField +
+                        ") VALUES (:name, :priority, :parentId, :color)");
     }
 
     query.bindValue(":name", this->name);
@@ -490,6 +491,17 @@ bool Tag::store() {
     }
 
     return true;
+}
+
+/**
+ * Returns the name of the color database field that should be used to load
+ * and store tag colors
+ *
+ * @return
+ */
+QString Tag::colorFieldName() {
+    QSettings settings;
+    return settings.value("darkMode").toBool() ? "dark_color" : "color";
 }
 
 /**
