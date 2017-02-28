@@ -3279,12 +3279,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Ruta al archivo QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2538"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Nombre del script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2688"/>
@@ -3750,7 +3750,7 @@ Mensaje de error de conexión: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2227"/>
       <source>QML files</source>
-      <translation type="unfinished">QML files</translation>
+      <translation>Archivos QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2228"/>
@@ -3822,7 +3822,7 @@ Mensaje de error de conexión: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="50"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Nuevo script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="267"/>

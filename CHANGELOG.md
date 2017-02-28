@@ -7,6 +7,8 @@
       in dark mode
     - with this update the currently set non-dark mode colors will be used as
       dark mode colors 
+- added more Dutch, Hungarian and Spanish translation (thank you Fabijenna and
+  richarson)
 
 ## 17.02.6
 - the maximum tag nesting level of the html preview was increased from 16 to 32
