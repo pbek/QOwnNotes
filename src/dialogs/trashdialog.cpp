@@ -77,7 +77,7 @@ TrashDialog::TrashDialog(QJSValue notes, MainWindow *mainWindow,
     while (notesIterator.hasNext()) {
         notesIterator.next();
 
-        QJSValue property = notesIterator.value().property("noteName");
+        QJSValue property = notesIterator.value().property("_noteName");
 
         if (property.isUndefined()) {
             continue;

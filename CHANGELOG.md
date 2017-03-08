@@ -7,6 +7,14 @@
 - the owncloud / Nextcloud application QOwnNotesAPI was updated to version 17.3.0
     - fixed the time-output of the trashed notes api
     - fixed some PHP warnings in the log
+- when restoring the position in a note not only the cursor position will now
+  be restored, but also the scroll bar position to make the position 
+  restoration feel more natural
+    - this is now implemented in the following scenarios
+        - switching between note folders
+        - selecting a previous selected note (if enabled in the settings)
+        - moving forward or back in the note history
+        - jumping to note bookmarks
 
 ## 17.03.0
 - you can now assign different tag colors in dark mode

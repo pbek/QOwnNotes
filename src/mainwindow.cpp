@@ -1505,12 +1505,9 @@ void MainWindow::loadNoteFolderListMenu() {
 void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
     int currentNoteFolderId = NoteFolder::currentNoteFolderId();
 
-    // store the current note name of the current note folder
-    _activeNoteFolderNoteNames[currentNoteFolderId] = currentNote.getName();
-
     // store the current position in the note of the current note folder
-    QTextCursor c = activeNoteTextEdit()->textCursor();
-    _activeNoteFolderNotePositions[currentNoteFolderId] = c.position();
+    _activeNoteFolderNotePositions[currentNoteFolderId] = NoteHistoryItem(
+            &currentNote, ui->noteTextEdit);
 
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
     if (!noteFolder.isFetched()) {
@@ -1569,15 +1566,14 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
         this->noteHistory.clear();
 
         // check if there is a note name set and jump to it
-        QString noteName = _activeNoteFolderNoteNames[noteFolderId];
+        QString noteName = _activeNoteFolderNotePositions[noteFolderId]
+                .getNoteName();
         if (!noteName.isEmpty()) {
             jumpToNoteName(noteName);
 
             // restore the current position in the note
-            QMarkdownTextEdit *textEdit = activeNoteTextEdit();
-            QTextCursor c = textEdit->textCursor();
-            c.setPosition(_activeNoteFolderNotePositions[noteFolderId]);
-            textEdit->setTextCursor(c);
+            _activeNoteFolderNotePositions[noteFolderId]
+                    .restoreTextEditPosition(ui->noteTextEdit);
         }
     }
 }
@@ -2897,9 +2893,8 @@ void MainWindow::setCurrentNote(Note note,
 
     // update cursor position of previous note
     if (currentNote.exists() && (currentNote.getId() != note.getId())) {
-        QTextCursor c = ui->noteTextEdit->textCursor();
         this->noteHistory.updateCursorPositionOfNote(
-                this->currentNote, c.position());
+                this->currentNote, ui->noteTextEdit);
     }
 
     this->currentNote = note;
@@ -2951,7 +2946,6 @@ void MainWindow::setCurrentNote(Note note,
 //           currentNote.fullNoteFilePath().toLatin1().data(),
 //           1);
 
-    int cursorPosition = noteHistory.getLastCursorPositionOfNote(note);
     QSettings settings;
 
 #ifdef Q_OS_MAC
@@ -2963,14 +2957,15 @@ void MainWindow::setCurrentNote(Note note,
     bool restoreCursorPosition = settings.value(
             "restoreCursorPosition", restoreCursorPositionDefault).toBool();
 
-    // restore the last cursor position
-    if (restoreCursorPosition && (cursorPosition > 0)) {
-        setNoteTextEditCursorPosition(cursorPosition);
+    // restore the last position in the note text edit
+    if (restoreCursorPosition) {
+        noteHistory.getLastItemOfNote(note).restoreTextEditPosition(
+                ui->noteTextEdit);
     }
 
     // add new note to history
     if (addNoteToHistory && note.exists()) {
-        this->noteHistory.add(note, cursorPosition);
+        this->noteHistory.add(note, ui->noteTextEdit);
     }
 
     noteEditCursorPositionChanged();
@@ -4007,18 +4002,7 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
     qDebug() << item.getNote();
 
     setCurrentNote(item.getNote(), true, true, false);
-    setNoteTextEditCursorPosition(item.getCursorPosition());
-}
-
-/**
- * Sets the cursor position of the note text edit
- *
- * @param cursorPosition
- */
-void MainWindow::setNoteTextEditCursorPosition(int cursorPosition) {
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    c.setPosition(cursorPosition);
-    ui->noteTextEdit->setTextCursor(c);
+    item.restoreTextEditPosition(ui->noteTextEdit);
 }
 
 /**
@@ -5367,8 +5351,7 @@ void MainWindow::storeNoteBookmark(int slot) {
         return;
     }
 
-    QTextCursor c = ui->noteTextEdit->textCursor();
-    NoteHistoryItem item = NoteHistoryItem(&currentNote, c.position());
+    NoteHistoryItem item = NoteHistoryItem(&currentNote, ui->noteTextEdit);
     noteBookmarks[slot] = item;
 
     showStatusBarMessage(

@@ -479,8 +479,7 @@ private:
     QToolBar *_windowToolbar;
     QToolBar *_quitToolbar;
     bool _noteViewIsRegenerated;
-    QHash<int, QString> _activeNoteFolderNoteNames;
-    QHash<int, int> _activeNoteFolderNotePositions;
+    QHash<int, NoteHistoryItem> _activeNoteFolderNotePositions;
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
     bool _isDefaultShortcutInitialized;
@@ -761,7 +760,6 @@ private:
 
     void setNoteTextEditReadOnly(bool readonly) const;
 
-    void setNoteTextEditCursorPosition(int cursorPosition);
-
     void updateNoteSortOrderSelectorVisibility();
+
 };

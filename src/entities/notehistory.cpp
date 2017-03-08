@@ -1,27 +1,62 @@
 #include "notehistory.h"
+#include <QScrollBar>
 #include <QDebug>
 
 /*
  * NoteHistoryItem implementation
  */
 
-NoteHistoryItem::NoteHistoryItem(Note *note, int cursorPosition) {
+NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
     if (note != NULL) {
-        this->noteName = note->getName();
+        _noteName = note->getName();
     }
-    this->cursorPosition = cursorPosition;
+
+    if (textEdit != NULL) {
+        _cursorPosition = textEdit->textCursor().position();
+        _relativeScrollBarPosition = getTextEditScrollBarRelativePosition(
+                textEdit);
+    }
+}
+
+/**
+ * Returns the relative note text edit scrollbar position (0..1)
+ */
+float NoteHistoryItem::getTextEditScrollBarRelativePosition(
+        QTextEdit *textEdit) {
+    QScrollBar *scrollBar = textEdit->verticalScrollBar();
+    int max = scrollBar->maximum();
+
+    return max > 0 ?
+           static_cast<float>(scrollBar->sliderPosition()) / max : 0;
 }
 
 QString NoteHistoryItem::getNoteName() const {
-    return noteName;
+    return _noteName;
 }
 
 Note NoteHistoryItem::getNote() {
-    return Note::fetchByName(noteName);
+    return Note::fetchByName(_noteName);
 }
 
 int NoteHistoryItem::getCursorPosition() const {
-    return cursorPosition;
+    return _cursorPosition;
+}
+
+/**
+ * Restores the position in a text edit
+ *
+ * @param textEdit
+ */
+void NoteHistoryItem::restoreTextEditPosition(QTextEdit *textEdit) {
+    // set the cursor position
+    QTextCursor c = textEdit->textCursor();
+    c.setPosition(_cursorPosition);
+    textEdit->setTextCursor(c);
+
+    // set the scroll bar position
+    QScrollBar *scrollBar = textEdit->verticalScrollBar();
+    scrollBar->setSliderPosition(static_cast<int>(
+                            scrollBar->maximum() *_relativeScrollBarPosition));
 }
 
 bool NoteHistoryItem::isNoteValid() {
@@ -30,17 +65,13 @@ bool NoteHistoryItem::isNoteValid() {
 }
 
 bool NoteHistoryItem::operator==(const NoteHistoryItem &item) const {
-    return this->noteName == item.getNoteName();
+    return this->_noteName == item.getNoteName();
 }
-
-void NoteHistoryItem::setCursorPosition(int value) {
-    cursorPosition = value;
-}
-
 
 QDebug operator<<(QDebug dbg, const NoteHistoryItem &item) {
-    dbg.nospace() << "NoteHistoryItem: <noteName>" << item.noteName <<
-    " <cursorPosition>" << item.cursorPosition;
+    dbg.nospace() << "NoteHistoryItem: <noteName>" << item._noteName <<
+    " <cursorPosition>" << item._cursorPosition <<
+    " <relativeScrollBarPosition>" << item._relativeScrollBarPosition;
     return dbg.space();
 }
 
@@ -54,12 +85,12 @@ NoteHistory::NoteHistory() {
     currentIndex = 0;
 }
 
-void NoteHistory::add(Note note, int cursorPosition) {
+void NoteHistory::add(Note note, QTextEdit *textEdit) {
     if (!note.exists()) {
         return;
     }
 
-    NoteHistoryItem item(&note, cursorPosition);
+    NoteHistoryItem item(&note, textEdit);
 
     if (noteHistory->contains(item)) {
         // decrease current index if we are going to remove an item before it
@@ -84,16 +115,16 @@ void NoteHistory::add(Note note, int cursorPosition) {
     qDebug() << " added to history: " << item;
 }
 
-void NoteHistory::updateCursorPositionOfNote(Note note, int cursorPosition) {
+void NoteHistory::updateCursorPositionOfNote(Note note, QTextEdit *textEdit) {
     if (isEmpty()) {
         return;
     }
 
-    NoteHistoryItem item(&note, cursorPosition);
+    NoteHistoryItem item(&note, textEdit);
 
     // create history entry if it does not exist (for renamed notes)
     if (!noteHistory->contains(item)) {
-        add(note, cursorPosition);
+        add(note, textEdit);
     }
 
     int position = noteHistory->indexOf(item);
@@ -102,25 +133,23 @@ void NoteHistory::updateCursorPositionOfNote(Note note, int cursorPosition) {
 }
 
 /**
- * Gets the last cursor position of a note in the note history
+ * Gets the last history item of a note in the note history
  *
  * @param note
  * @return
  */
-int NoteHistory::getLastCursorPositionOfNote(Note note) {
-    if (isEmpty()) {
-        return 0;
-    }
+NoteHistoryItem NoteHistory::getLastItemOfNote(Note note) {
+    if (!isEmpty()) {
+        for (int i = 0; i < noteHistory->count(); i++) {
+            NoteHistoryItem item = noteHistory->at(i);
 
-    for (int i = 0; i < noteHistory->count(); i++) {
-        NoteHistoryItem item = noteHistory->at(i);
-
-        if (item.getNote().getId() == note.getId()) {
-            return item.getCursorPosition();
+            if (item.getNote().getId() == note.getId()) {
+                return item;
+            }
         }
     }
 
-    return 0;
+    return NoteHistoryItem();
 }
 
 bool NoteHistory::back() {
