@@ -4228,6 +4228,8 @@ void MainWindow::on_noteTextEdit_textChanged() {
         this->currentNoteLastEdited = QDateTime::currentDateTime();
         _noteViewNeedsUpdate = true;
 
+        ScriptingService::instance()->onCurrentNoteChanged(&currentNote);
+
         updateEncryptNoteButtons();
 
         if (!sortAlphabetically) {

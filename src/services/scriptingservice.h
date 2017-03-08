@@ -82,7 +82,7 @@ public:
 
 private:
     QQmlEngine *_engine;
-    NoteApi *_currentNoteAPi;
+    NoteApi *_currentNoteApi;
     QHash<int, ScriptComponent> _scriptComponents;
     bool methodExistsForObject(QObject *object, QString method);
     QString callInsertMediaHookForObject(QObject *object,

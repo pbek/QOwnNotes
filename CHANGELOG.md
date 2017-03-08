@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.03.1
+- the current note in the scripting function `script.currentNote()` will now 
+  be update correctly when when text is written to it by the user 
+  (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+- the owncloud / Nextcloud application QOwnNotesAPI was updated to version 17.3.0
+    - fixed the time-output of the trashed notes api
+    - fixed some PHP warnings in the log
+
 ## 17.03.0
 - you can now assign different tag colors in dark mode
     - this is handy because the colors you may have defined on an other, synced

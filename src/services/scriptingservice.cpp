@@ -566,10 +566,11 @@ QString ScriptingService::currentNoteFolderPath() {
 }
 
 /**
+ * Updates the current note for the scripts
  */
 void ScriptingService::onCurrentNoteChanged(Note *note) {
-    _currentNoteAPi = new NoteApi();
-    _currentNoteAPi->fetch(note->getId());
+    _currentNoteApi = new NoteApi();
+    _currentNoteApi->fetch(note->getId());
 }
 
 /**
@@ -606,7 +607,7 @@ NoteApi* ScriptingService::currentNote() {
     MetricsService::instance()->sendVisitIfEnabled(
             "scripting/" + QString(__func__));
 
-    return _currentNoteAPi;
+    return _currentNoteApi;
 }
 
 /**
