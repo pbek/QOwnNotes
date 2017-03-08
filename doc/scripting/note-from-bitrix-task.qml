@@ -94,10 +94,10 @@ QtObject {
                 // tag the current note
                 script.tagCurrentNote("todo");
 
+                // workaround because the parsers don't seem to work every time
+                script.reloadScriptingEngine();
+
                 break;
         }
-
-        // workaround because the parsers don't seem to work every time
-        script.reloadScriptingEngine();
     }
 }
