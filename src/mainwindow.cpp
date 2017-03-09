@@ -3384,10 +3384,14 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
-    bool decrypt = ui->noteTextEdit->isHidden();
-    ui->noteTextView->setHtml(
-            note->toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                 getMaxImageWidth(), false, decrypt));
+    // update the preview text edit if the dock widget is visible
+    if (_notePreviewDockWidget->isVisible()) {
+        bool decrypt = ui->noteTextEdit->isHidden();
+
+        ui->noteTextView->setHtml(
+                note->toMarkdownHtml(NoteFolder::currentLocalPath(),
+                                     getMaxImageWidth(), false, decrypt));
+    }
 
     // update the slider when editing notes
     noteTextSliderValueChanged(

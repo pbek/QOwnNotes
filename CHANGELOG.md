@@ -6,6 +6,8 @@
   edit the previous position will now also be restored
 - the generated preview html will now be cached to increase performance when 
   editing large notes (for [Issue #537](https://github.com/pbek/QOwnNotes/issues/537))
+- the preview html will now only be generated if the preview panel is visible
+  to increase performance when editing large notes
 
 ## 17.03.1
 - the current note in the scripting function `script.currentNote()` will now 
