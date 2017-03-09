@@ -44,6 +44,13 @@ QtObject {
                     return;
                 }
 
+                // add the task id to the headline
+                var taskIdRegExp = /<div class="task-detail-subtitle-status.*?".*?>Aufgabe #(\d+)/im;
+                var taskIdMatch = taskIdRegExp.exec(html);
+                if (taskIdMatch !== null) {
+                    headline += " (#" + taskIdMatch[1] + ")";
+                }
+
                 var descriptionRegExp = /<div.*? id="task-detail-description".*?>(.+?)<\/div>/im;
                 var descriptionMatch = descriptionRegExp.exec(html);
                 var description = descriptionMatch !== null ? descriptionMatch[1] : "";
