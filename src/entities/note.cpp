@@ -1313,6 +1313,21 @@ bool Note::removeNoteFile() {
  */
 QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
                              bool forExport, bool decrypt, bool base64Images) {
+    // get the decrypted note text (or the normal note text if there isn't any)
+    QString str = decrypt ? getDecryptedNoteText() : noteText;
+
+    // create a hash of the note text and the parameters
+    QString toHash = str + QString::number(maxImageWidth) +
+            (forExport ? "1" : "0") + (decrypt ? "1" : "0") +
+            (base64Images ? "1" : "0");
+    QString hash = QString(QCryptographicHash::hash(
+            toHash.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+
+    // check if the hash changed, if not return the old note text html
+    if (hash == _noteTextHtmlConversionHash) {
+        return _noteTextHtml;
+    }
+
     hoedown_renderer *renderer =
             hoedown_html_renderer_new(HOEDOWN_HTML_USE_XHTML, 32);
 
@@ -1323,9 +1338,6 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             (hoedown_extensions) ((HOEDOWN_EXT_BLOCK | HOEDOWN_EXT_SPAN |
                     HOEDOWN_EXT_MATH_EXPLICIT) & ~HOEDOWN_EXT_QUOTE);
     hoedown_document *document = hoedown_document_new(renderer, extensions, 32);
-
-    // get the decrypted note text (or the normal note text if there isn't any)
-    QString str = decrypt ? getDecryptedNoteText() : noteText;
 
     QString windowsSlash = "";
 
@@ -1341,14 +1353,15 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
             "\\1file://" + windowsSlash + QRegularExpression::escape(notesPath)
             + "/\\2\\3");
 
+    QRegularExpressionMatchIterator i;
+
     // try to replace file links like <my-note.md> to note links
     // this is a "has not '\w+:\/\/' in it" regular expression
     // see: http://stackoverflow.com/questions/406230/regular-expression-to-match-line-that-doesnt-contain-a-word
     // TODO: maybe we could do that per QTextBlock to check if it's done in comment block?
     // Important: The `\n` is needed to not crash under Windows if there is just
     //            an opening `<` and a lot of other text after it
-    QRegularExpressionMatchIterator i =
-            QRegularExpression("<(((?!\\w+:\\/\\/)[^<>\n])+)>").globalMatch(str);
+    i = QRegularExpression("<(((?!\\w+:\\/\\/)[^<>\n])+)>").globalMatch(str);
 
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
@@ -1542,6 +1555,10 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
 
 //    qDebug() << __func__ << " - 'result': " << result;
 
+    // cache the html output and conversion hash
+    _noteTextHtmlConversionHash = hash;
+    _noteTextHtml = result;
+
     return result;
 }
 
@@ -1549,8 +1566,7 @@ QString Note::toMarkdownHtml(QString notesPath, int maxImageWidth,
  * Returns the CSS code for a QFont
  * Thank you to Phil Weinstein for the code
  */
-QString Note::encodeCssFont(const QFont& refFont)
-{
+QString Note::encodeCssFont(const QFont& refFont) {
 //-----------------------------------------------------------------------
 // This function assembles a CSS Font specification string from
 // a QFont. This supports most of the QFont attributes settable in

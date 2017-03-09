@@ -4,6 +4,8 @@
 - fixed a scrollbar position warning
 - when pressing <kbd>Tab</kbd> in the note list to switch to the note text 
   edit the previous position will now also be restored
+- the generated preview html will now be cached to increase performance when 
+  editing large notes (for [Issue #537](https://github.com/pbek/QOwnNotes/issues/537))
 
 ## 17.03.1
 - the current note in the scripting function `script.currentNote()` will now 

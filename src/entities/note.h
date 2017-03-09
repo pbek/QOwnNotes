@@ -234,6 +234,8 @@ protected:
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
     static QString cleanupFileName(QString name);
+    QString _noteTextHtml;
+    QString _noteTextHtmlConversionHash;
 
 signals:
 
