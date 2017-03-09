@@ -7,6 +7,10 @@
  */
 
 NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
+    _noteName = "";
+    _cursorPosition = 0;
+    _relativeScrollBarPosition = 0;
+
     if (note != NULL) {
         _noteName = note->getName();
     }

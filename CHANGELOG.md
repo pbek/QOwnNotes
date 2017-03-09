@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.03.2
+- fixed a scrollbar position warning at startup
+
 ## 17.03.1
 - the current note in the scripting function `script.currentNote()` will now 
   be update correctly when when text is written to it by the user 
