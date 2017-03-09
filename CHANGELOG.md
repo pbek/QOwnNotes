@@ -1,7 +1,9 @@
 # QOwnNotes Changelog
 
 ## 17.03.2
-- fixed a scrollbar position warning at startup
+- fixed a scrollbar position warning
+- when pressing <kbd>Tab</kbd> in the note list to switch to the note text 
+  edit the previous position will now also be restored
 
 ## 17.03.1
 - the current note in the scripting function `script.currentNote()` will now 

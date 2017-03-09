@@ -2997,19 +2997,28 @@ void MainWindow::updateWindowTitle() {
     setWindowTitle(currentNote.getName() + " - QOwnNotes " + QString(VERSION));
 }
 
+/**
+ * Focuses the note text edit and sets the cursor
+ */
 void MainWindow::focusNoteTextEdit() {
-    // move the cursor to the 4nd line
     QTextCursor tmpCursor = ui->noteTextEdit->textCursor();
-    tmpCursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
-    ui->noteTextEdit->setTextCursor(tmpCursor);
+
+    // move the cursor to the 4th line if the cursor was at the beginning
+    if (tmpCursor.position() == 0) {
+        tmpCursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        tmpCursor.movePosition(QTextCursor::Down, QTextCursor::MoveAnchor);
+        ui->noteTextEdit->setTextCursor(tmpCursor);
+    }
 
     // focus note text edit
     ui->noteTextEdit->setFocus();
 }
 
+/**
+ * Removes the current note
+ */
 void MainWindow::removeCurrentNote() {
     // store updated notes to disk
     storeUpdatedNotesToDisk();
@@ -3073,6 +3082,9 @@ void MainWindow::resetCurrentNote() {
     QApplication::postEvent(ui->noteTreeWidget, event);
 }
 
+/**
+ * Stores the settings
+ */
 void MainWindow::storeSettings() {
     QSettings settings;
 
