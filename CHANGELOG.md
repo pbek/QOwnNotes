@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 17.03.3
-- after starting QOwnNotes now the last note along with your cursor and 
-  scrollbar position will be restored
+- after starting QOwnNotes now the last note along with the previous cursor 
+  and scrollbar position will be restored
   (for [Issue #537](https://github.com/pbek/QOwnNotes/issues/537))
     - if that fails the first note in the note list will be opened
 
