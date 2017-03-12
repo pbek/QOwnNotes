@@ -442,6 +442,8 @@ private slots:
 
     void on_actionDescending_triggered();
 
+    bool restoreActiveNoteHistoryItem();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -647,7 +649,7 @@ private:
 
     QTreeWidgetItem *addTagToTagTreeWidget(QTreeWidgetItem *parent, Tag tag);
 
-    void jumpToNoteName(QString name);
+    bool jumpToNoteName(QString name);
 
     void initScriptingEngine();
 
@@ -761,5 +763,4 @@ private:
     void setNoteTextEditReadOnly(bool readonly) const;
 
     void updateNoteSortOrderSelectorVisibility();
-
 };

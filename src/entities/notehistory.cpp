@@ -22,6 +22,13 @@ NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
     }
 }
 
+NoteHistoryItem::NoteHistoryItem(QString noteName, int cursorPosition,
+                                 float relativeScrollBarPosition) {
+    _noteName = noteName;
+    _cursorPosition = cursorPosition;
+    _relativeScrollBarPosition = relativeScrollBarPosition;
+}
+
 /**
  * Returns the relative note text edit scrollbar position (0..1)
  */
@@ -44,6 +51,10 @@ Note NoteHistoryItem::getNote() {
 
 int NoteHistoryItem::getCursorPosition() const {
     return _cursorPosition;
+}
+
+float NoteHistoryItem::getRelativeScrollBarPosition() const {
+    return _relativeScrollBarPosition;
 }
 
 /**
@@ -77,6 +88,38 @@ QDebug operator<<(QDebug dbg, const NoteHistoryItem &item) {
     " <cursorPosition>" << item._cursorPosition <<
     " <relativeScrollBarPosition>" << item._relativeScrollBarPosition;
     return dbg.space();
+}
+
+/**
+ * Stream operator for storing the class to QSettings
+ *
+ * @param out
+ * @param item
+ * @return
+ */
+QDataStream &operator<<(QDataStream &out, const NoteHistoryItem &item) {
+    out << item.getNoteName() << item.getCursorPosition()
+        << item.getRelativeScrollBarPosition();
+
+    return out;
+}
+
+/**
+ * Stream operator for loading the class from QSettings
+ *
+ * @param in
+ * @param item
+ * @return
+ */
+QDataStream &operator>>(QDataStream &in, NoteHistoryItem &item) {
+    QString noteName;
+    int cursorPosition;
+    float relativeScrollBarPosition;
+
+    in >> noteName >> cursorPosition >> relativeScrollBarPosition;
+    item = NoteHistoryItem(noteName, cursorPosition, relativeScrollBarPosition);
+
+    return in;
 }
 
 

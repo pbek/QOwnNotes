@@ -265,8 +265,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
-    // jump to the first note
-    resetCurrentNote();
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -431,6 +429,37 @@ MainWindow::MainWindow(QWidget *parent) :
                      SIGNAL(cursorPositionChanged()),
                      this,
                      SLOT(noteEditCursorPositionChanged()));
+
+    // try to restore the last note before the app was quit
+    // if that fails jump to the first note
+    // we do that with a timer, because otherwise the scrollbar will not be
+    // restored correctly, because the maximum position of the scrollbar is 0
+    QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
+}
+
+/**
+ * Restores the active note history item
+ */
+bool MainWindow::restoreActiveNoteHistoryItem() {
+    QSettings settings;
+    QVariant var = settings.value("ActiveNoteHistoryItem");
+//    qDebug() << __func__ << " - 'var': " << var;
+
+    // check if the NoteHistoryItem could be de-serialized
+    if (var.isValid()) {
+        NoteHistoryItem noteHistoryItem = var.value<NoteHistoryItem>();
+//        qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
+
+        if (jumpToNoteName(noteHistoryItem.getNoteName())) {
+            noteHistoryItem.restoreTextEditPosition(ui->noteTextEdit);
+            return true;
+        }
+    }
+
+    // if restoring the last note failed jump to the first note
+    resetCurrentNote();
+
+    return false;
 }
 
 MainWindow::~MainWindow() {
@@ -2799,14 +2828,17 @@ void MainWindow::jumpToWelcomeNote() {
 /**
  * Jumps to a note in the note selector
  */
-void MainWindow::jumpToNoteName(QString name) {
+bool MainWindow::jumpToNoteName(QString name) {
     // search for the note
     QList<QTreeWidgetItem *> items = ui->noteTreeWidget->findItems(
             name, Qt::MatchExactly, 0);
+
     if (items.count() > 0) {
-        // set the welcome note as current note
         ui->noteTreeWidget->setCurrentItem(items.at(0));
+        return true;
     }
+
+    return false;
 }
 
 QString MainWindow::selectOwnCloudNotesFolder() {
@@ -3098,6 +3130,12 @@ void MainWindow::storeSettings() {
     settings.setValue("SortingModeAlphabetically", sortAlphabetically);
     settings.setValue("NoteSortOrder", _noteSortOrder);
     settings.setValue("ShowSystemTray", showSystemTray);
+
+    // store a NoteHistoryItem to open the note again after the app started
+    NoteHistoryItem noteHistoryItem(&currentNote, ui->noteTextEdit);
+    qDebug() << __func__ << " - 'noteHistoryItem': " << noteHistoryItem;
+    settings.setValue("ActiveNoteHistoryItem",
+                      QVariant::fromValue(noteHistoryItem));
 }
 
 
