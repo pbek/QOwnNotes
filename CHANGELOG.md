@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.03.4
+- fixed highlighting and opening of links with `/` at the end
+
 ## 17.03.3
 - after starting QOwnNotes now the last note along with the previous cursor 
   and scrollbar position will be restored
