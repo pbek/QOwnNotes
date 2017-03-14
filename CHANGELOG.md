@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.03.5
+- fixed more url highlighting and clicking issues
+
 ## 17.03.4
 - fixed highlighting and opening of links with `/` at the end
 
