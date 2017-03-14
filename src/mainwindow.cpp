@@ -8696,7 +8696,7 @@ void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
 
     QTextCursor c = ui->noteTextView->cursorForPosition(pos);
     QTextFormat format = c.charFormat();
-    QAction *copyImageAction = new QAction;
+    QAction *copyImageAction = new QAction(this);
 
     // check if clicked object was an image
     if (format.isImageFormat()) {
