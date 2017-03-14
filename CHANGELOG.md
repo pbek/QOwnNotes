@@ -2,6 +2,9 @@
 
 ## 17.03.5
 - fixed more url highlighting and clicking issues
+- you can now copy the file path of an image in the preview by right-clicking
+  on it and selecting `Copy image file path` from the context menu
+- added more German translation
 
 ## 17.03.4
 - fixed highlighting and opening of links with `/` at the end

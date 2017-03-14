@@ -8683,3 +8683,41 @@ void MainWindow::updateNoteSortOrderSelectorVisibility()
     ui->actionDescending->setVisible(sortAlphabetically);
 //    ui->sortOrderSeparator->setVisible(sortAlphabetically);
 }
+
+/**
+ * Shows a context menu for the note preview
+ *
+ * @param pos
+ */
+void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
+{
+    QPoint globalPos = ui->noteTextView->mapToGlobal(pos);
+    QMenu *menu = ui->noteTextView->createStandardContextMenu();
+
+    QTextCursor c = ui->noteTextView->cursorForPosition(pos);
+    QTextFormat format = c.charFormat();
+    QAction *copyImageAction = new QAction;
+
+    // check if clicked object was an image
+    if (format.isImageFormat()) {
+        menu->addSeparator();
+        copyImageAction = menu->addAction(tr("Copy image file path"));
+    }
+
+    QAction *selectedItem = menu->exec(globalPos);
+
+    if (selectedItem) {
+        // copy the image file path to the clipboard
+        if (selectedItem == copyImageAction) {
+            QString imagePath = format.toImageFormat().name();
+            QUrl imageUrl = QUrl(imagePath);
+
+            if (imageUrl.isLocalFile()) {
+                imagePath = imageUrl.toLocalFile();
+            }
+
+            QClipboard *clipboard = QApplication::clipboard();
+            clipboard->setText(imagePath);
+        }
+    }
+}

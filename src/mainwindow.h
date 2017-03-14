@@ -444,6 +444,8 @@ private slots:
 
     bool restoreActiveNoteHistoryItem();
 
+    void on_noteTextView_customContextMenuRequested(const QPoint &pos);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

@@ -576,6 +576,9 @@ p, li { white-space: pre-wrap; }
            <property name="enabled">
             <bool>true</bool>
            </property>
+           <property name="contextMenuPolicy">
+            <enum>Qt::CustomContextMenu</enum>
+           </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
@@ -1971,9 +1974,9 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>
