@@ -3126,6 +3126,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="509"/>
         <source>&quot;Notes&quot; path on your server</source>
+        <extracomment>&quot;Notes&quot; should not be translated</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>

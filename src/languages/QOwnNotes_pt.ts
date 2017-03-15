@@ -3125,6 +3125,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="509"/>
         <source>&quot;Notes&quot; path on your server</source>
+        <extracomment>&quot;Notes&quot; should not be translated</extracomment>
         <translation type="unfinished"></translation>
     </message>
     <message>

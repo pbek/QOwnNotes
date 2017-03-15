@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -506,7 +506,7 @@
                       <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
                      </property>
                      <property name="placeholderText">
-                      <string>&quot;Notes&quot; path on your server</string>
+                      <string extracomment="&quot;Notes&quot; should not be translated">&quot;Notes&quot; path on your server</string>
                      </property>
                      <property name="clearButtonEnabled">
                       <bool>true</bool>
