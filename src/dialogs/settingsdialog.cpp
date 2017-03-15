@@ -1806,6 +1806,7 @@ void SettingsDialog::on_noteFolderAddButton_clicked()
             Utils::Misc::defaultNotesPath());
     _selectedNoteFolder.setPriority(ui->noteFolderListWidget->count());
     _selectedNoteFolder.setOwnCloudServerId(1);
+    _selectedNoteFolder.suggestRemotePath();
     _selectedNoteFolder.store();
 
     if (_selectedNoteFolder.isFetched()) {

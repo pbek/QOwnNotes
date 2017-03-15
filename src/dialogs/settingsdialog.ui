@@ -506,7 +506,7 @@
                       <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
                      </property>
                      <property name="placeholderText">
-                      <string notr="true">Notes</string>
+                      <string>&quot;Notes&quot; path on your server</string>
                      </property>
                      <property name="clearButtonEnabled">
                       <bool>true</bool>
@@ -3824,8 +3824,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

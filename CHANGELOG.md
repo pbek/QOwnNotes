@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.03.6
+- when configuring a new note folder path in the settings the server-path 
+  will now be suggested
+  (for [QOwnNotesAPI Issue #11](https://github.com/pbek/qownnotesapi/issues/11))
+    - the placeholder text was updated to be more informative
+
 ## 17.03.5
 - fixed more url highlighting and clicking issues
 - you can now copy the file path of an image in the preview by right-clicking
