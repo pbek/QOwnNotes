@@ -5909,6 +5909,9 @@ void MainWindow::hideNoteFolderComboBoxIfNeeded() {
 void MainWindow::reloadTagTree() {
     qDebug() << __func__;
 
+    // remove all broken note tag links
+    Tag::removeBrokenLinks();
+
     ui->tagTreeWidget->clear();
 
     // add an item to view all notes

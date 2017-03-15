@@ -585,6 +585,57 @@ bool Tag::removeAllLinksToNote(Note note) {
 }
 
 /**
+ * Removes all broken note tag links
+ */
+void Tag::removeBrokenLinks() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT * FROM notetaglink");
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            QString noteFileName = query.value("note_file_name").toString();
+            QString noteSubFolderPath = query.value(
+                    "note_sub_folder_path").toString();
+
+            NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
+                    noteSubFolderPath, "/");
+            Note note = Note::fetchByName(noteFileName, noteSubFolder.getId());
+
+            // remove note tag link if note doesn't exist
+            if (!note.exists()) {
+                int id = query.value("id").toInt();
+                removeNoteLinkById(id);
+            }
+        }
+    }
+}
+
+/**
+ * Removes a note tag link by its id
+ *
+ * @param id
+ * @return
+ */
+bool Tag::removeNoteLinkById(int id) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    query.prepare("DELETE FROM noteTagLink WHERE id = :id");
+    query.bindValue(":id", id);
+
+    if (!query.exec()) {
+        // on error
+        qWarning() << __func__ << ": " << query.lastError();
+        return false;
+    }
+
+    return true;
+}
+
+
+/**
  * Renames the note file name of note links
  */
 bool Tag::renameNoteFileNamesOfLinks(QString oldFileName, QString newFileName) {

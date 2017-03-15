@@ -101,6 +101,8 @@ public:
 
     static void migrateDarkColors();
 
+    static void removeBrokenLinks();
+
 protected:
     int id;
     QString name;
@@ -109,4 +111,6 @@ protected:
     QColor _color;
 
     QString colorFieldName();
+
+    static bool removeNoteLinkById(int id);
 };
