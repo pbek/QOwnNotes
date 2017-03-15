@@ -7,6 +7,8 @@
     - the placeholder text was updated to be more informative
 - broken links between notes and tags are now automatically removed when the 
   tag tree is reloaded (for [Issue #548](https://github.com/pbek/QOwnNotes/issues/548))
+- added more German, Italian, Polish and Portuguese translation (thank you
+  mlocati, lucjan and mlimacarlos)
 
 ## 17.03.5
 - fixed more url highlighting and clicking issues
