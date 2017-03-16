@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.03.7
+- fixed loading of trashed notes in the trash dialog
+- improved error messages for the version and trash dialog
+
 ## 17.03.6
 - when configuring a new note folder path in the settings the server-path 
   will now be suggested

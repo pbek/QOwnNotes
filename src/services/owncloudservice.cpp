@@ -972,12 +972,13 @@ void OwnCloudService::handleVersionsLoading(QString data) {
     QJSValue versions = result.property(0).property("versions");
     QJSValueIterator versionsIterator(versions);
 
-    // check if we got no useful data, we also need to do this to prevent crashs
+    // check if we got no useful data, we also need to do this to prevent crashes
     if (fileName.isEmpty() || !versionsIterator.hasNext() ||
             versions.toString().isEmpty()) {
         QMessageBox::information(
-                0, tr("no other version"),
-                tr("There are no other versions on the server for this note."));
+                0, tr("No versions found"),
+                tr("There are no versions for this note or the note wasn't "
+                           "found on the server."));
         return;
     }
 
@@ -1038,8 +1039,9 @@ void OwnCloudService::handleTrashedLoading(QString data) {
 
     // check if we got no useful data
     if (notes.toString() == "") {
-        QMessageBox::information(0, "no other version",
-                                 "There are no trashed notes on the server.");
+        QMessageBox::information(0, tr("No trashed notes"),
+                                 tr("No trashed notes were found on the "
+                                            "server."));
         return;
     }
 
