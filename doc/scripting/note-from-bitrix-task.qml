@@ -54,6 +54,11 @@ QtObject {
                 var descriptionRegExp = /<div.*? id="task-detail-description".*?>(.+?)<\/div>/im;
                 var descriptionMatch = descriptionRegExp.exec(html);
                 var description = descriptionMatch !== null ? descriptionMatch[1] : "";
+
+                // replace links
+//                 description = description.replace(/<a href="(.+?)".*?>(.+?)<\/a>/gim, "[$2]($1)");
+                description = description.replace(/<a href="(.+?)".*?>(.+?)<\/a>/gim, "&lt;$1&gt;");
+
                 // transform html breaks to \n and remove all other tags
                 description = description.replace(/<br.*?>/gim, "\n").replace(/<.+?>/gim, "");
 
@@ -85,7 +90,7 @@ QtObject {
                     text += "\n\n" + description;
                 }
 
-                text = text.replace("&gt;", ">").replace("&lt;", "<");
+                text = text.replace(/&gt;/gim, ">").replace(/&lt;/gim, "<");
 
                 // add a date headline
                 var m = new Date();
