@@ -53,6 +53,10 @@ QtObject {
         result = replaceAll(result, "[em]", "[i]");
         result = replaceAll(result, "[/em]", "[/i]");
 
+        // link some users
+        result = replaceAll(result, "@Georg", "[USER=1]Georg[/USER]");
+        result = replaceAll(result, "@Sören", "[USER=2]Sören[/USER]");
+
         // put the result into the clipboard
         script.setClipboardText(result);
     }
