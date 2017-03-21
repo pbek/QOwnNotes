@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>0</number>
+            <number>4</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -1950,6 +1950,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Hrvatski</string>
+                        </property>
+                        <property name="statusTip">
+                         <string>Croatian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">hr</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Italiano</string>
                         </property>
                         <property name="statusTip">
@@ -2005,13 +2016,24 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Português do Brasil</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Brazilian Portuguese</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">pt_BR</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Português</string>
                         </property>
                         <property name="toolTip">
                          <string>Portuguese</string>
                         </property>
                         <property name="whatsThis">
-                         <string notr="true">pt</string>
+                         <string notr="true">pt_PT</string>
                         </property>
                        </item>
                        <item>

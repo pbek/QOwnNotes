@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.03.8
+- added **Portuguese translation** (`pt_PT`) by manuelarodsilva, thank you very much!
+    - the current Portuguese translation (`pt_BR`) got renamed to `Português do Brasil`
+    - the current setting will be migrated to `Português do Brasil` when you start the app
+- added **Croatian translation** by xpertmind, thank you very much!
+- added more Italian, German, Polish and Spanish translation (thank you mlocati,
+  xpertmind, lucjan and richarson)
+
 ## 17.03.7
 - fixed loading of trashed notes in the trash dialog
 - improved error messages for the version and trash dialog

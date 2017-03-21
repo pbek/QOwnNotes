@@ -489,6 +489,16 @@ bool DatabaseService::setupTables() {
         version = 20;
     }
 
+    if (version < 21) {
+        // migrate to the new Portuguese translation
+        QString locale = settings.value("interfaceLanguage").toString();
+        if (locale == "pt") {
+            settings.setValue("interfaceLanguage", "pt_BR");
+        }
+
+        version = 21;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

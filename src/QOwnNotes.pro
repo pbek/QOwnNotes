@@ -19,14 +19,16 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_pl.ts \
     languages/QOwnNotes_ru.ts \
     languages/QOwnNotes_es.ts \
-    languages/QOwnNotes_pt.ts \
+    languages/QOwnNotes_pt_BR.ts \
+    languages/QOwnNotes_pt_PT.ts \
     languages/QOwnNotes_nl.ts \
     languages/QOwnNotes_hu.ts \
     languages/QOwnNotes_ja.ts \
     languages/QOwnNotes_it.ts \
     languages/QOwnNotes_ar.ts \
     languages/QOwnNotes_uk.ts \
-    languages/QOwnNotes_cs.ts
+    languages/QOwnNotes_cs.ts \
+    languages/QOwnNotes_hr.ts
 
 CODECFORTR = UTF-8
 CONFIG += c++11
