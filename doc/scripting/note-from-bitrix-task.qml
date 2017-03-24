@@ -33,7 +33,7 @@ QtObject {
 
                 // https://regex101.com is your friend
 //                 var headlineRegExp = /<span class="pagetitle-inner".*?>(.+?)<\/span>/im;
-                var headlineRegExp = /<span id="pagetitle".*?>(.+?)<\/span>/im;
+                var headlineRegExp = /<span id="pagetitle".*?>(.+?)<\/?span/im;
                 var headlineMatch = headlineRegExp.exec(html);
                 var headline = headlineMatch !== null ? headlineMatch[1] : "";
                 // remove the "aufgabe" text and all "/"
@@ -67,7 +67,16 @@ QtObject {
                 var urlMatch = urlRegExp.exec(html);
                 var url = urlMatch !== null ? urlMatch[1] : "";
 
+                // fallback url parsing
+                if (url == "") {
+                    var urlRegExp = /<\/span><a href="(.+?)[\?#].*?" class="task-view-button edit.*?"/im;
+                    var urlMatch = urlRegExp.exec(html);
+                    var url = urlMatch !== null ? urlMatch[1] : "";
+                }
+
+//                script.log("headline");
 //                script.log(headline);
+//                script.log(url);
 //                script.log(descriptionMatch);
 //                script.log(description);
 //                script.log(url);
