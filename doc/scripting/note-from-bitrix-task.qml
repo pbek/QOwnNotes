@@ -72,6 +72,9 @@ QtObject {
                     var urlRegExp = /<\/span><a href="(.+?)[\?#].*?" class="task-view-button edit.*?"/im;
                     var urlMatch = urlRegExp.exec(html);
                     var url = urlMatch !== null ? urlMatch[1] : "";
+
+                    // we got the edit-url, but we want the view-url
+                    url = url.replace("task/edit", "task/view");
                 }
 
 //                script.log("headline");
