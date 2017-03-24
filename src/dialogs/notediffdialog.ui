@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Note was modified externaly!</string>
+   <string>Note was modified externally!</string>
   </property>
   <property name="windowIcon">
    <iconset theme="dialog-information" resource="../breeze-qownnotes.qrc">

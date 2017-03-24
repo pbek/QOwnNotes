@@ -2163,7 +2163,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <name>NoteDiffDialog</name>
     <message>
         <location filename="../dialogs/notediffdialog.ui" line="17"/>
-        <source>Note was modified externaly!</source>
+        <source>Note was modified externally!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
