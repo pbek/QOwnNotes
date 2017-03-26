@@ -1357,6 +1357,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Файли зображень</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="5273"/>
+        <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="5358"/>
         <source>Markdown files</source>
         <translation>Файли Markdown </translation>
@@ -2139,9 +2144,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>Розшифрувати нотатку і зберегти її як звичайний текст</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5273"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation>Вашу нотатку буде розшифровано і збережено як звичайний текст. Майте на увазі, що не зашифрована нотатка, можливо, буде синхронізуватися з вашим сервером, і конфіденційний текст може бути викрито!&lt;br /&gt;Ви хочете розшифрувати нотатку?</translation>
+        <translation type="vanished">Вашу нотатку буде розшифровано і збережено як звичайний текст. Майте на увазі, що не зашифрована нотатка, можливо, буде синхронізуватися з вашим сервером, і конфіденційний текст може бути викрито!&lt;br /&gt;Ви хочете розшифрувати нотатку?</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5277"/>

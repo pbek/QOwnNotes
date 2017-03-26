@@ -1344,6 +1344,11 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>画像ファイル</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="5273"/>
+        <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="5358"/>
         <source>Markdown files</source>
         <translation>Markdown ファイル</translation>
@@ -2102,9 +2107,8 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>ノートの暗号化を解除しプレーン テキストで保存します</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5273"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation>ノートの暗号化が解除され、再びプレーンテキストで保存されます。暗号化されていないノートはあなたのサーバーと同期され、テキストが露出する可能性があることに注意してください。&lt;br /&gt;ノートの暗号化を解除しますか？</translation>
+        <translation type="vanished">ノートの暗号化が解除され、再びプレーンテキストで保存されます。暗号化されていないノートはあなたのサーバーと同期され、テキストが露出する可能性があることに注意してください。&lt;br /&gt;ノートの暗号化を解除しますか？</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5277"/>

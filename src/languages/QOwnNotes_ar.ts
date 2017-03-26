@@ -1384,6 +1384,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>ملفات صور</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="5273"/>
+        <source>Your note will be decrypted and stored as plain text again. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="5358"/>
         <source>Markdown files</source>
         <translation>ملفات Markdown</translation>
@@ -2202,9 +2207,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>فك تشفير الملاحظة وخزنها كنص بسيط</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5273"/>
         <source>Your note will be decrypted and stored as plain text gain. Keep in mind that the unencrypted note will possibly be synced to your server and sensitive text may be exposed!&lt;br /&gt;Do you want to decrypt your note?</source>
-        <translation>سيتم فك تشفير ملاحظتك وإعادة تسجيلها كنص بسيط مجدداً. تذكّر أنّ ملاحظتك التي تم فكّ شفرتها قد يتم مزامنتها مع خادمك وقد يكشف نص حساس!&lt;br /&gt;هل تريد فك تشفير ملاحظتك؟</translation>
+        <translation type="vanished">سيتم فك تشفير ملاحظتك وإعادة تسجيلها كنص بسيط مجدداً. تذكّر أنّ ملاحظتك التي تم فكّ شفرتها قد يتم مزامنتها مع خادمك وقد يكشف نص حساس!&lt;br /&gt;هل تريد فك تشفير ملاحظتك؟</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="5277"/>

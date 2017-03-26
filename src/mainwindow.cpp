@@ -5270,10 +5270,10 @@ void MainWindow::on_actionDecrypt_note_triggered() {
 
     if (QMessageBox::warning(
             this, tr("Decrypt note and store it as plain text"),
-            tr("Your note will be decrypted and stored as plain text gain. Keep "
-                    "in mind that the unencrypted note will possibly be synced "
-                    "to your server and sensitive text may be exposed!<br />"
-                    "Do you want to decrypt your note?"),
+            tr("Your note will be decrypted and stored as plain text again. "
+                    "Keep in mind that the unencrypted note will possibly be "
+                    "synced to your server and sensitive text may be exposed!"
+                    "<br />Do you want to decrypt your note?"),
             tr("&Decrypt"), tr("&Cancel"), QString::null,
             0, 1) == 1) {
         return;
