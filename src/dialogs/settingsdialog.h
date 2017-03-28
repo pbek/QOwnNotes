@@ -207,6 +207,8 @@ private slots:
 
     void on_ownCloudSupportCheckBox_toggled();
 
+    void on_noteFolderGitCommitCheckBox_toggled(bool checked);
+
 private:
 
     Ui::SettingsDialog *ui;

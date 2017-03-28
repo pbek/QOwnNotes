@@ -337,7 +337,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>4</number>
+            <number>0</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -500,7 +500,7 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="9" column="0">
+                   <item row="10" column="0">
                     <widget class="QLineEdit" name="noteFolderRemotePathLineEdit">
                      <property name="toolTip">
                       <string>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</string>
@@ -513,7 +513,7 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="11" column="0">
+                   <item row="12" column="0">
                     <widget class="QFrame" name="noteFolderVerticalSpacerFrame">
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
@@ -553,7 +553,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="9" column="1">
+                   <item row="10" column="1">
                     <widget class="QPushButton" name="noteFolderRemotePathButton">
                      <property name="toolTip">
                       <string>Click here to select your remote note path on your ownCloud server</string>
@@ -567,7 +567,7 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="10" column="0" colspan="2">
+                   <item row="11" column="0" colspan="2">
                     <widget class="QFrame" name="noteFolderRemotePathTreeWidgetFrame">
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
@@ -681,17 +681,17 @@
                      </property>
                     </widget>
                    </item>
-                   <item row="6" column="0" colspan="2">
+                   <item row="7" column="0" colspan="2">
                     <widget class="QLabel" name="noteFolderOwnCloudServerLabel">
                      <property name="text">
                       <string>ownCloud server:</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="7" column="0" colspan="2">
+                   <item row="8" column="0" colspan="2">
                     <widget class="QComboBox" name="noteFolderOwnCloudServerComboBox"/>
                    </item>
-                   <item row="8" column="0" colspan="2">
+                   <item row="9" column="0" colspan="2">
                     <widget class="QLabel" name="noteFolderRemotePathLabel">
                      <property name="text">
                       <string>Path on your ownCloud server:</string>
@@ -719,6 +719,16 @@
                      </property>
                      <property name="text">
                       <string>Use note sub-folders</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0" colspan="2">
+                    <widget class="QCheckBox" name="noteFolderGitCommitCheckBox">
+                     <property name="toolTip">
+                      <string>You need to have git installed to make this work!</string>
+                     </property>
+                     <property name="text">
+                      <string>Use git to keep a local history of your notes</string>
                      </property>
                     </widget>
                    </item>
@@ -3846,8 +3856,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

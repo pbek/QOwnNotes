@@ -281,6 +281,8 @@ private slots:
 
     void noteViewUpdateTimerSlot();
 
+    void gitCommitCurrentNoteFolder();
+
     void noteTextSliderValueChanged(int value, bool force = false);
 
     void noteViewSliderValueChanged(int value, bool force = false);
@@ -469,6 +471,7 @@ private:
     QTimer *noteSaveTimer;
     QTimer *todoReminderTimer;
     QTimer *_noteViewUpdateTimer;
+    QTimer *_gitCommitTimer;
     QTimer *_todoListTimer;
     bool _noteViewNeedsUpdate;
     NoteHistory noteHistory;

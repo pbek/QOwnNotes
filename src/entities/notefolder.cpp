@@ -19,6 +19,7 @@ NoteFolder::NoteFolder() {
     priority = 0;
     activeTagId = 0;
     showSubfolders = false;
+    useGit = false;
 }
 
 int NoteFolder::getId() {
@@ -47,6 +48,10 @@ int NoteFolder::getPriority() {
 
 bool NoteFolder::isShowSubfolders() {
     return showSubfolders;
+}
+
+bool NoteFolder::isUseGit() {
+    return useGit;
 }
 
 int NoteFolder::getActiveTagId() {
@@ -79,6 +84,10 @@ void NoteFolder::setPriority(int value) {
 
 void NoteFolder::setShowSubfolders(bool value) {
     showSubfolders = value;
+}
+
+void NoteFolder::setUseGit(bool value) {
+    useGit = value;
 }
 
 void NoteFolder::setActiveTagId(int value) {
@@ -175,6 +184,7 @@ bool NoteFolder::fillFromQuery(QSqlQuery query) {
     this->remotePath = query.value("remote_path").toString();
     this->priority = query.value("priority").toInt();
     this->showSubfolders = query.value("show_subfolders").toBool();
+    this->useGit = query.value("use_git").toBool();
     this->activeTagId = query.value("active_tag_id").toInt();
     this->activeNoteSubFolderData =
             query.value("active_note_sub_folder_data").toString();
@@ -219,16 +229,17 @@ bool NoteFolder::store() {
                         "remote_path = :remotePath, priority = :priority, "
                         "active_tag_id = :activeTagId, show_subfolders = "
                         ":showSubfolders, active_note_sub_folder_data = "
-                        ":activeNoteSubFolderData WHERE id = :id");
+                        ":activeNoteSubFolderData, use_git = :useGit WHERE "
+                        "id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO noteFolder (name, local_path, owncloud_server_id, "
                         "remote_path, priority, active_tag_id, "
-                        "show_subfolders, active_note_sub_folder_data)"
+                        "show_subfolders, active_note_sub_folder_data, use_git)"
                         " VALUES (:name, :localPath, :ownCloudServerId, "
                         ":remotePath, :priority, :activeTagId, "
-                        ":showSubfolders, :activeNoteSubFolderData)");
+                        ":showSubfolders, :activeNoteSubFolderData, :useGit)");
     }
 
     query.bindValue(":name", this->name);
@@ -237,6 +248,7 @@ bool NoteFolder::store() {
     query.bindValue(":priority", this->priority);
     query.bindValue(":activeTagId", this->activeTagId);
     query.bindValue(":showSubfolders", this->showSubfolders);
+    query.bindValue(":useGit", this->useGit);
     query.bindValue(":activeNoteSubFolderData", this->activeNoteSubFolderData);
 
     // make the path relative to the portable data path if we are in

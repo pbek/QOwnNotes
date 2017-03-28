@@ -51,6 +51,8 @@ public:
     NoteSubFolder getActiveNoteSubFolder();
     void resetActiveNoteSubFolder();
     static QString currentMediaPath();
+    bool isUseGit();
+    void setUseGit(bool value);
 
 private:
     int id;
@@ -62,4 +64,5 @@ private:
     int activeTagId;
     QString activeNoteSubFolderData;
     bool showSubfolders;
+    bool useGit;
 };

@@ -499,6 +499,11 @@ bool DatabaseService::setupTables() {
         version = 21;
     }
 
+    if (version < 22) {
+        queryDisk.exec("ALTER TABLE noteFolder ADD use_git BOOLEAN DEFAULT 0");
+        version = 22;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

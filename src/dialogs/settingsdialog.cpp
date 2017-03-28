@@ -1145,6 +1145,9 @@ void SettingsDialog::outputSettings() {
                         "isShowSubfolders",
                         noteFolder.isShowSubfolders() ? "yes" : "no");
                 output += prepareDebugInformationLine(
+                        "isUseGit",
+                        noteFolder.isUseGit() ? "yes" : "no");
+                output += prepareDebugInformationLine(
                         "activeNoteSubFolder name",
                         noteFolder.getActiveNoteSubFolder().getName());
                 output += prepareDebugInformationLine(
@@ -1790,6 +1793,8 @@ void SettingsDialog::on_noteFolderListWidget_currentItemChanged(
                 _selectedNoteFolder.getRemotePath());
         ui->noteFolderShowSubfoldersCheckBox->setChecked(
                 _selectedNoteFolder.isShowSubfolders());
+        ui->noteFolderGitCommitCheckBox->setChecked(
+                _selectedNoteFolder.isUseGit());
 
         const QSignalBlocker blocker(ui->noteFolderActiveCheckBox);
         Q_UNUSED(blocker);
@@ -2903,4 +2908,13 @@ void SettingsDialog::needRestart() {
 void SettingsDialog::on_ownCloudSupportCheckBox_toggled() {
     bool checked = ui->ownCloudSupportCheckBox->isChecked();
     ui->ownCloudGroupBox->setEnabled(checked);
+}
+
+/**
+ * Toggles whether to use git to store a local history or not
+ * @param checked
+ */
+void SettingsDialog::on_noteFolderGitCommitCheckBox_toggled(bool checked) {
+    _selectedNoteFolder.setUseGit(checked);
+    _selectedNoteFolder.store();
 }

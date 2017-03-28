@@ -239,6 +239,16 @@ MainWindow::MainWindow(QWidget *parent) :
             SLOT(noteViewUpdateTimerSlot()));
     _noteViewUpdateTimer->start(2000);
 
+    // commit changes from the current note folder to git every 30 sec
+    gitCommitCurrentNoteFolder();
+    _gitCommitTimer = new QTimer(this);
+    QObject::connect(
+            _gitCommitTimer,
+            SIGNAL(timeout()),
+            this,
+            SLOT(gitCommitCurrentNoteFolder()));
+    _gitCommitTimer->start(30000);
+
     // check if we have a tasks reminder every minute
     this->todoReminderTimer = new QTimer(this);
     QObject::connect(
@@ -2364,6 +2374,27 @@ void MainWindow::noteViewUpdateTimerSlot() {
         }
         _noteViewNeedsUpdate = false;
     }
+}
+
+/**
+ * Commits changes from the current note folder to git
+ */
+void MainWindow::gitCommitCurrentNoteFolder() {
+    // check if git is enabled for the current note folder
+    if (!NoteFolder::currentNoteFolder().isUseGit()) {
+        return;
+    }
+
+    // TODO(pbek): find a solution for Windows
+#ifndef Q_OS_WIN
+    Utils::Misc::startDetachedProcess(
+            "/bin/bash",
+            QStringList() << "-c" <<
+                          "git config commit.gpgsign false; git init; "
+                                  "git add -A; "
+                                  "git commit -m \"QOwnNotes commit\"",
+            NoteFolder::currentLocalPath());
+#endif
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
