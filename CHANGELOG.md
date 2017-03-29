@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.03.9
+- added experimental git support to keep a local history of files in a note
+  folder under Linux
+
 ## 17.03.8
 - added **Portuguese translation** (`pt_PT`) by manuelarodsilva, thank you very much!
     - the current Portuguese translation (`pt_BR`) got renamed to `Português do Brasil`
