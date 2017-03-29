@@ -3,6 +3,10 @@
 ## 17.03.9
 - added experimental git support to keep a local history of files in a note
   folder under Linux
+    - you can enable this feature in the note folder settings
+    - all changes in your active note folder will be committed to git every 30 sec
+- added more Italian, Croatian, German, Polish, Spanish and Brazilian Portuguese
+  translation (thank you mlocati, xpertmind, lucjan, richarson and mlimacarlos)
 
 ## 17.03.8
 - added **Portuguese translation** (`pt_PT`) by manuelarodsilva, thank you very much!
