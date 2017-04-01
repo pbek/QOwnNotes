@@ -3185,12 +3185,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>Git muss installiert sein, damit das funktioniert!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="731"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Benutzen sie Git um lokale Versionierung der Notizen zu ermöglichen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="760"/>

@@ -3208,12 +3208,12 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>Aby ta funkcja działała musisz mieć zainstalowany git!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="731"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Używaj git do lokalnego przechowania historii twoich notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="760"/>

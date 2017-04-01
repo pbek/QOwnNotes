@@ -6,6 +6,8 @@
   a flickering of the scrollbars when no editing is done
 - fixed an url highlighting problem
   (for [Issue #556](https://github.com/pbek/QOwnNotes/issues/556))
+- added more Italian, German, Polish, French translation (thank you mlocati,
+  xpertmind, lucjan and lepascalou)
 
 ## 17.03.9
 - added experimental git support to keep a local history of files in a note
