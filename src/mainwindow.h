@@ -526,6 +526,7 @@ private:
     bool _noteExternallyRemovedCheckEnabled;
     Qt::SortOrder _noteSortOrder;
     QList<QAction *> _noteTextEditContextMenuActions;
+    QString _notePreviewHash;
 
     void createSystemTrayIcon();
 

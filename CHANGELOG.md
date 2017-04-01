@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.04.0
+- the note preview will now only be updated if the note text has changed
+  to improve performance (especially when viewing large notes) and prevent
+  a flickering of the scrollbars when no editing is done
+
 ## 17.03.9
 - added experimental git support to keep a local history of files in a note
   folder under Linux

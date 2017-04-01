@@ -3457,9 +3457,20 @@ void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
     if (_notePreviewDockWidget->isVisible()) {
         bool decrypt = ui->noteTextEdit->isHidden();
 
-        ui->noteTextView->setHtml(
-                note->toMarkdownHtml(NoteFolder::currentLocalPath(),
-                                     getMaxImageWidth(), false, decrypt));
+        QString html = note->toMarkdownHtml(NoteFolder::currentLocalPath(),
+                                            getMaxImageWidth(), false, decrypt);
+
+        // create a hash of the html (because
+        QString hash = QString(QCryptographicHash::hash(
+                html.toLocal8Bit(), QCryptographicHash::Sha1).toHex());
+
+        // update the note preview if the text has changed
+        // we use our hash because ui->noteTextView->toHtml() may return
+        // a different text than before
+        if (_notePreviewHash != hash) {
+            ui->noteTextView->setHtml(html);
+            _notePreviewHash = hash;
+        }
     }
 
     // update the slider when editing notes
