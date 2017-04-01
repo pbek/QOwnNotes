@@ -4,6 +4,8 @@
 - the note preview will now only be updated if the note text has changed
   to improve performance (especially when viewing large notes) and prevent
   a flickering of the scrollbars when no editing is done
+- fixed an url highlighting problem
+  (for [Issue #556](https://github.com/pbek/QOwnNotes/issues/556))
 
 ## 17.03.9
 - added experimental git support to keep a local history of files in a note
