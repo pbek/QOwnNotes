@@ -3183,12 +3183,12 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>¡Es necesario tener git instalado para que esto funcione!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="731"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Usar git para mantener un historial local de tus notas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="760"/>
