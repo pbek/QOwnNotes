@@ -54,8 +54,15 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
     process->start(command);
 
     if (!process->waitForFinished()) {
+        qWarning() << "Command `" + command + "` failed";
         return false;
     }
+
+//    QByteArray result = process->readAll();
+
+//    if (!result.isEmpty()) {
+//    qDebug() << "Result message by `" + command + "`: " + result;
+//    }
 
     QByteArray errorMessage = process->readAllStandardError();
 
@@ -75,5 +82,5 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
  */
 bool Utils::Git::executeGitCommand(QString arguments, QProcess *process) {
     QString gitPath = "git";
-    return executeCommand(gitPath + " " + arguments, process);
+    return executeCommand("\""+ gitPath + "\" " + arguments, process);
 }
