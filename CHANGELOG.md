@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.04.1
+- more git versioning implementation
+    - fixed committing if note path was not initialized by git yet
+    - added macOS support 
+ 
 ## 17.04.0
 - the note preview will now only be updated if the note text has changed
   to improve performance (especially when viewing large notes) and prevent

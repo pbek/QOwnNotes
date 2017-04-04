@@ -213,6 +213,8 @@ set(SOURCE_FILES
     widgets/logwidget.ui
     utils/misc.cpp
     utils/misc.h
+    utils/git.cpp
+    utils/git.h
     utils/gui.cpp
     utils/gui.h
     utils/schema.cpp

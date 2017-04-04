@@ -49,7 +49,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->calDavCalendarGroupBox->setVisible(false);
     _newScriptName = tr("New script");
 
-#ifndef Q_OS_LINUX
+#ifdef Q_OS_WIN
     ui->noteFolderGitCommitCheckBox->hide();
 #endif
 

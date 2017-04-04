@@ -448,6 +448,8 @@ private slots:
 
     void on_noteTextView_customContextMenuRequested(const QPoint &pos);
 
+    void on_actionShow_note_git_versions_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;

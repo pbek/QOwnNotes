@@ -753,6 +753,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="action_Remove_note"/>
     <addaction name="actionSplit_note_at_cursor_position"/>
     <addaction name="actionShow_versions"/>
+    <addaction name="actionShow_note_git_versions"/>
     <addaction name="actionDelete_orphaned_images"/>
     <addaction name="separator"/>
     <addaction name="action_Encrypt_note"/>
@@ -1947,6 +1948,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Descending</string>
+   </property>
+  </action>
+  <action name="actionShow_note_git_versions">
+   <property name="text">
+    <string>Show note git versions</string>
    </property>
   </action>
  </widget>

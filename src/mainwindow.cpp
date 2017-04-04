@@ -68,6 +68,7 @@
 #include <dialogs/tabledialog.h>
 #include <dialogs/notedialog.h>
 #include <utils/schema.h>
+#include <utils/git.h>
 #include <dialogs/filedialog.h>
 
 
@@ -133,6 +134,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
+
+    // don't show yet
+    ui->actionShow_note_git_versions->setVisible(false);
 
     // set the search frames for the note text edits
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
@@ -2374,27 +2378,6 @@ void MainWindow::noteViewUpdateTimerSlot() {
         }
         _noteViewNeedsUpdate = false;
     }
-}
-
-/**
- * Commits changes from the current note folder to git
- */
-void MainWindow::gitCommitCurrentNoteFolder() {
-    // check if git is enabled for the current note folder
-    if (!NoteFolder::currentNoteFolder().isUseGit()) {
-        return;
-    }
-
-    // TODO(pbek): find a solution for Windows
-#ifndef Q_OS_WIN
-    Utils::Misc::startDetachedProcess(
-            "/bin/bash",
-            QStringList() << "-c" <<
-                          "git config commit.gpgsign false; git init; "
-                                  "git add -A; "
-                                  "git commit -m \"QOwnNotes commit\"",
-            NoteFolder::currentLocalPath());
-#endif
 }
 
 void MainWindow::storeUpdatedNotesToDisk() {
@@ -4831,6 +4814,8 @@ void MainWindow::systemTrayIconClicked(
             showWindow();
         }
     }
+#else
+    Q_UNUSED(reason);
 #endif
 }
 
@@ -8765,4 +8750,28 @@ void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
             clipboard->setText(imagePath);
         }
     }
+}
+
+/**
+ * Commits changes from the current note folder to git
+ */
+void MainWindow::gitCommitCurrentNoteFolder() {
+    Utils::Git::gitCommitCurrentNoteFolder();
+}
+
+void MainWindow::on_actionShow_note_git_versions_triggered() {
+    QString relativeFilePath = currentNote.relativeNoteFilePath();
+    QString dirPath = NoteFolder::currentLocalPath();
+
+    qDebug() << __func__ << " - 'relativeFilePath': " << relativeFilePath;
+    qDebug() << __func__ << " - 'dirPath': " << dirPath;
+
+
+    QString result = Utils::Misc::startSynchronousProcess(
+            "/bin/bash",
+            QStringList() << "-c" << "cd \"" + dirPath + "\" && " +
+                                  "git log -p \"" + relativeFilePath + "\"");
+
+    qDebug() << __func__ << " - 'result': " << result;
+
 }
