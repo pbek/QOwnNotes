@@ -8,6 +8,7 @@
     - you can set the git commit interval time, default is 30 sec 
     - changes are now also committed when changing the note folder (for both 
       the old and new note folder) or quitting the application
+- added more Brazilian Portuguese translation (thank you mlimacarlos)
 
 ## 17.04.1
 - more git versioning implementation
