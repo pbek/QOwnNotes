@@ -613,6 +613,7 @@ void SettingsDialog::storeSettings() {
     settings.setValue("gitExecutablePath",
                       Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
                               ui->gitPathLineEdit->text()));
+    settings.setValue("gitCommitInterval", ui->gitCommitIntervalTime->value());
 }
 
 /**
@@ -865,6 +866,8 @@ void SettingsDialog::readSettings() {
     ui->gitPathLineEdit->setText(
             Utils::Misc::prependPortableDataPathIfNeeded(
                     settings.value("gitExecutablePath").toString(), true));
+    ui->gitCommitIntervalTime->setValue(
+            settings.value("gitCommitInterval", 30).toInt());
 }
 
 /**

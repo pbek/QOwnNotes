@@ -251,7 +251,7 @@ MainWindow::MainWindow(QWidget *parent) :
             SIGNAL(timeout()),
             this,
             SLOT(gitCommitCurrentNoteFolder()));
-    _gitCommitTimer->start(30000);
+    _gitCommitTimer->start(_gitCommitInterval * 1000);
 
     // check if we have a tasks reminder every minute
     this->todoReminderTimer = new QTimer(this);
@@ -2076,6 +2076,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
         this->noteSaveIntervalTime = 10;
         settings.setValue("noteSaveIntervalTime", this->noteSaveIntervalTime);
     }
+
+    // set the git commit interval time
+    _gitCommitInterval = settings.value("gitCommitInterval", 30).toInt();
 
     // set the note text edit font
     ui->noteTextEdit->setStyles();
@@ -3971,6 +3974,10 @@ void MainWindow::openSettingsDialog(int page) {
     // reset the note save timer
     this->noteSaveTimer->stop();
     this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
+
+    // reset the git commit timer
+    _gitCommitTimer->stop();
+    _gitCommitTimer->start(_gitCommitInterval * 1000);
 
     // set the current note folder again in case its path was changed
     NoteFolder noteFolder = NoteFolder::currentNoteFolder();

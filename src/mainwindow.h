@@ -529,6 +529,7 @@ private:
     Qt::SortOrder _noteSortOrder;
     QList<QAction *> _noteTextEditContextMenuActions;
     QString _notePreviewHash;
+    int _gitCommitInterval;
 
     void createSystemTrayIcon();
 

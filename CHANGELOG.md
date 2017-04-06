@@ -5,6 +5,7 @@
     - added Windows support
     - you can now select the path of your git executable in the new
       `Git versioning` settings
+    - you can set the git commit interval time, default is 30 sec 
     - changes are now also committed when changing the note folder (for both 
       the old and new note folder) or quitting the application
 
