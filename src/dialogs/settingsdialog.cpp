@@ -49,10 +49,6 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->calDavCalendarGroupBox->setVisible(false);
     _newScriptName = tr("New script");
 
-#ifdef Q_OS_WIN
-    ui->noteFolderGitCommitCheckBox->hide();
-#endif
-
     _noteNotificationButtonGroup = new QButtonGroup(this);
     _noteNotificationButtonGroup->addButton(
             ui->notifyAllExternalModificationsCheckBox);
