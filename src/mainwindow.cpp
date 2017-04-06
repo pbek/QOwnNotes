@@ -483,6 +483,9 @@ MainWindow::~MainWindow() {
 
     storeUpdatedNotesToDisk();
 
+    // commit the changes in the current note folder to git
+    gitCommitCurrentNoteFolder();
+
     qApp->setProperty("loggingEnabled", false);
 
     if (showSystemTray) {
@@ -1579,6 +1582,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
         // store everything before changing folder
         storeUpdatedNotesToDisk();
 
+        // commit the changes in the current note folder to git
+        gitCommitCurrentNoteFolder();
+
         noteFolder.setAsCurrent();
 
         // update the recent note folder list
@@ -1618,6 +1624,9 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
             _activeNoteFolderNotePositions[noteFolderId]
                     .restoreTextEditPosition(ui->noteTextEdit);
         }
+
+        // commit the changes in the selected note folder to git
+        gitCommitCurrentNoteFolder();
     }
 }
 
@@ -5904,6 +5913,7 @@ void MainWindow::on_action_Reset_note_text_size_triggered() {
 void MainWindow::on_noteFolderComboBox_currentIndexChanged(int index) {
     int noteFolderId = ui->noteFolderComboBox->itemData(index).toInt();
     NoteFolder noteFolder = NoteFolder::fetch(noteFolderId);
+
     if (noteFolder.isFetched()) {
         changeNoteFolder(noteFolderId);
     }
@@ -8756,7 +8766,7 @@ void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
  * Commits changes from the current note folder to git
  */
 void MainWindow::gitCommitCurrentNoteFolder() {
-    Utils::Git::gitCommitCurrentNoteFolder();
+    Utils::Git::commitCurrentNoteFolder();
 }
 
 void MainWindow::on_actionShow_note_git_versions_triggered() {

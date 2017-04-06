@@ -612,6 +612,11 @@ void SettingsDialog::storeSettings() {
                       ui->maximumImageHeightSpinBox->value());
     settings.setValue("imageScaleDownMaximumWidth",
                       ui->maximumImageWidthSpinBox->value());
+
+    // store git settings
+    settings.setValue("gitExecutablePath",
+                      Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(
+                              ui->gitPathLineEdit->text()));
 }
 
 /**
@@ -859,6 +864,11 @@ void SettingsDialog::readSettings() {
             "imageScaleDownMaximumWidth", 1024).toInt());
     ui->imageScaleDownCheckBox->setChecked(scaleImageDown);
     ui->imageScalingFrame->setVisible(scaleImageDown);
+
+    // load git settings
+    ui->gitPathLineEdit->setText(
+            Utils::Misc::prependPortableDataPathIfNeeded(
+                    settings.value("gitExecutablePath").toString(), true));
 }
 
 /**
@@ -2921,4 +2931,38 @@ void SettingsDialog::on_ownCloudSupportCheckBox_toggled() {
 void SettingsDialog::on_noteFolderGitCommitCheckBox_toggled(bool checked) {
     _selectedNoteFolder.setUseGit(checked);
     _selectedNoteFolder.store();
+}
+
+void SettingsDialog::on_setGitPathToolButton_clicked() {
+    QString path = ui->gitPathLineEdit->text();
+    if (path.isEmpty()) {
+#ifdef Q_OS_WIN
+        path = "git.exe";
+#else
+        path = "/usr/bin/git";
+#endif
+    }
+
+#ifdef Q_OS_WIN
+    QStringList filters = QStringList() << tr("Executable files") + " (*.exe)"
+                                        << tr("All files") + " (*)";
+#else
+    QStringList filters = QStringList() << tr("All files") + " (*)";
+#endif
+
+    FileDialog dialog("GitExecutable");
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setNameFilters(filters);
+    dialog.selectFile(path);
+    dialog.setWindowTitle(tr("Please select the path of your git executable"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        path = dialog.selectedFile();
+
+        if (!path.isEmpty()) {
+            ui->gitPathLineEdit->setText(path);
+        }
+    }
 }

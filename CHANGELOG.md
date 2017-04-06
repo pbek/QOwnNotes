@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.04.2
+- more git versioning implementation
+    - you can now select the path of your git executable in the new
+      `Git versioning` settings
+    - changes are now also committed when changing the note folder (for both 
+      the old and new note folder) or quitting the application
+
 ## 17.04.1
 - more git versioning implementation
     - fixed committing if note path was not initialized by git yet

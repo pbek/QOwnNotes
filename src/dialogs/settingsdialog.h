@@ -47,7 +47,8 @@ public:
         PreviewFontPage,
         ToolbarPage,
         DebugOptionPage,
-        EditorPage
+        EditorPage,
+        GitPage
     };
 
     explicit SettingsDialog(int page = 0,
@@ -208,6 +209,8 @@ private slots:
     void on_ownCloudSupportCheckBox_toggled();
 
     void on_noteFolderGitCommitCheckBox_toggled(bool checked);
+
+    void on_setGitPathToolButton_clicked();
 
 private:
 

@@ -15,6 +15,7 @@
 #include <QDebug>
 #include <QProcess>
 #include <entities/notefolder.h>
+#include <QtCore/QSettings>
 #include "git.h"
 
 
@@ -22,7 +23,7 @@
 /**
  * Commits changes from the current note folder to git
  */
-void Utils::Git::gitCommitCurrentNoteFolder() {
+void Utils::Git::commitCurrentNoteFolder() {
     // check if git is enabled for the current note folder
     if (!NoteFolder::currentNoteFolder().isUseGit()) {
         return;
@@ -54,20 +55,20 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
     process->start(command);
 
     if (!process->waitForFinished()) {
-        qWarning() << "Command `" + command + "` failed";
+        qWarning() << "Command '" + command + "' failed";
         return false;
     }
 
 //    QByteArray result = process->readAll();
 
 //    if (!result.isEmpty()) {
-//    qDebug() << "Result message by `" + command + "`: " + result;
+//    qDebug() << "Result message by '" + command + "': " + result;
 //    }
 
     QByteArray errorMessage = process->readAllStandardError();
 
     if (!errorMessage.isEmpty()) {
-        qWarning() << "Error message by `" + command + "`: " + errorMessage;
+        qWarning() << "Error message by '" + command + "': " + errorMessage;
     }
 
     return true;
@@ -81,6 +82,25 @@ bool Utils::Git::executeCommand(QString command, QProcess *process) {
  * @return
  */
 bool Utils::Git::executeGitCommand(QString arguments, QProcess *process) {
-    QString gitPath = "git";
-    return executeCommand("\""+ gitPath + "\" " + arguments, process);
+    return executeCommand("\""+ gitCommand() + "\" " + arguments, process);
+}
+
+/**
+ * Returns the git command
+ *
+ * @return
+ */
+QString Utils::Git::gitCommand() {
+    QSettings settings;
+    QString path = settings.value("gitExecutablePath").toString();
+
+    if (path.isEmpty()) {
+#ifdef Q_OS_WIN
+        path = "git.exe";
+#else
+        path = "git";
+#endif
+    }
+
+    return path;
 }

@@ -1951,6 +1951,10 @@ p, li { white-space: pre-wrap; }
    </property>
   </action>
   <action name="actionShow_note_git_versions">
+   <property name="icon">
+    <iconset theme="appointment-new" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</normaloff>:/icons/breeze-qownnotes/16x16/appointment-new.svg</iconset>
+   </property>
    <property name="text">
     <string>Show note git versions</string>
    </property>
