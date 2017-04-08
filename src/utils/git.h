@@ -23,5 +23,8 @@ namespace Utils {
         bool executeGitCommand(QString arguments,
                                QProcess *process = Q_NULLPTR);
         QString gitCommand();
+        void showLog(QString filePath);
+        bool hasLogCommand();
+        bool isCurrentNoteFolderUseGit();
     }
 }

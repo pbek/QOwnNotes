@@ -17,15 +17,24 @@
 #include <entities/notefolder.h>
 #include <QtCore/QSettings>
 #include "git.h"
+#include "misc.h"
 
 
+/**
+ * Checks if the current note folder uses git
+ *
+ * @return
+ */
+bool Utils::Git::isCurrentNoteFolderUseGit() {
+    return NoteFolder::currentNoteFolder().isUseGit();
+}
 
 /**
  * Commits changes from the current note folder to git
  */
 void Utils::Git::commitCurrentNoteFolder() {
     // check if git is enabled for the current note folder
-    if (!NoteFolder::currentNoteFolder().isUseGit()) {
+    if (!isCurrentNoteFolderUseGit()) {
         return;
     }
 
@@ -103,4 +112,52 @@ QString Utils::Git::gitCommand() {
     }
 
     return path;
+}
+
+/**
+ * Checks if a git log command is set
+ *
+ * @return
+ */
+bool Utils::Git::hasLogCommand() {
+    QSettings settings;
+    return !settings.value("gitLogCommand").toString().isEmpty();
+}
+
+/**
+ * Shows a git log
+ *
+ * @param filePath
+ */
+void Utils::Git::showLog(QString filePath) {
+    QSettings settings;
+    QString gitLogCommand = settings.value("gitLogCommand").toString();
+
+    if (gitLogCommand.isEmpty()) {
+        return;
+    }
+
+    // make sure the note path is added
+    if (gitLogCommand.contains("%notePath%")) {
+        gitLogCommand.replace("%notePath%", "\"" + filePath + "\"");
+    } else {
+        gitLogCommand += " \"" + filePath + "\"";
+    }
+
+    QStringList parameters = QStringList();
+
+    // we need a shell to be able to use the executable with the parameters
+    // together
+#ifdef Q_OS_WIN
+    QString command = "cmd.exe";
+    parameters << "/c";
+#else
+    QString command = "bash";
+    parameters << "-c";
+#endif
+
+    parameters << gitLogCommand;
+
+    Utils::Misc::startDetachedProcess(command, parameters,
+                                      NoteFolder::currentLocalPath());
 }

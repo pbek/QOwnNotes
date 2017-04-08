@@ -6,6 +6,13 @@
     - when selecting another workspace or switching to the previous workspace
     - when `Show all panels` is clicked in the `Windows` menu
     - when a panel is selected in the `Windows / Panels` menu
+- you can now enter a custom command to show the git log of a note in the
+  `Git versioning` settings
+    - you can optionally use `%notePath%` to enter the note path if you are 
+      using more complex parameters
+        - for example: `gitk %notePath%`
+    - you'll find a new menu item in the `Edit` menu and the note list 
+      context menu to show the note versions if you entered a git log command
 
 ## 17.04.2
 - more git versioning implementation

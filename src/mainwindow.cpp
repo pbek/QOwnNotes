@@ -135,9 +135,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
 
-    // don't show yet
-    ui->actionShow_note_git_versions->setVisible(false);
-
     // set the search frames for the note text edits
     ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
     ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
@@ -2146,6 +2143,9 @@ void MainWindow::readSettingsFromSettingsDialog() {
               findChildren<QOwnNotesMarkdownTextEdit*>()) {
             textEdit->updateSettings();
         }
+
+    // show or hide the note git version menu entry
+    ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
 }
 
 /**
@@ -7615,6 +7615,13 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             tr("Open note in a view"));
     QAction *showInFileManagerAction = noteMenu.addAction(
             tr("Show note in file manager"));
+
+    QAction *showNoteGitLogAction;
+    if (Utils::Git::isCurrentNoteFolderUseGit() &&
+            Utils::Git::hasLogCommand()) {
+        showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));
+    }
+
     noteMenu.addSeparator();
     QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
 
@@ -7650,6 +7657,9 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         } else if (selectedItem == showInFileManagerAction) {
             // show the current note in the file manager
             on_actionShow_note_in_file_manager_triggered();
+        } else if (selectedItem == showNoteGitLogAction) {
+            // show the git log of the current note
+            on_actionShow_note_git_versions_triggered();
         }
     }
 }
@@ -8787,17 +8797,18 @@ void MainWindow::gitCommitCurrentNoteFolder() {
 
 void MainWindow::on_actionShow_note_git_versions_triggered() {
     QString relativeFilePath = currentNote.relativeNoteFilePath();
-    QString dirPath = NoteFolder::currentLocalPath();
+//    QString dirPath = NoteFolder::currentLocalPath();
 
-    qDebug() << __func__ << " - 'relativeFilePath': " << relativeFilePath;
-    qDebug() << __func__ << " - 'dirPath': " << dirPath;
+//    qDebug() << __func__ << " - 'relativeFilePath': " << relativeFilePath;
+//    qDebug() << __func__ << " - 'dirPath': " << dirPath;
+//
+//
+//    QString result = Utils::Misc::startSynchronousProcess(
+//            "/bin/bash",
+//            QStringList() << "-c" << "cd \"" + dirPath + "\" && " +
+//                                  "git log -p \"" + relativeFilePath + "\"");
+//
+//    qDebug() << __func__ << " - 'result': " << result;
 
-
-    QString result = Utils::Misc::startSynchronousProcess(
-            "/bin/bash",
-            QStringList() << "-c" << "cd \"" + dirPath + "\" && " +
-                                  "git log -p \"" + relativeFilePath + "\"");
-
-    qDebug() << __func__ << " - 'result': " << result;
-
+    Utils::Git::showLog(relativeFilePath);
 }

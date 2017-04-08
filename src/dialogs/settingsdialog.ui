@@ -3830,7 +3830,7 @@ p, li { white-space: pre-wrap; }
            </widget>
            <widget class="QWidget" name="gitPage">
             <layout class="QGridLayout" name="gridLayout_48">
-             <item row="0" column="0">
+             <item row="0" column="1">
               <widget class="QGroupBox" name="groupBox_20">
                <property name="title">
                 <string>Git client</string>
@@ -3870,7 +3870,7 @@ p, li { white-space: pre-wrap; }
                </layout>
               </widget>
              </item>
-             <item row="2" column="0">
+             <item row="3" column="1">
               <spacer name="verticalSpacer_13">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -3883,7 +3883,7 @@ p, li { white-space: pre-wrap; }
                </property>
               </spacer>
              </item>
-             <item row="1" column="0">
+             <item row="1" column="1">
               <widget class="QGroupBox" name="groupBox_22">
                <property name="title">
                 <string>Commit interval</string>
@@ -3913,6 +3913,25 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </property>
                   <property name="text">
                    <string>git commit interval time [sec]</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QGroupBox" name="groupBox_23">
+               <property name="title">
+                <string>External git log command</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_50">
+                <item row="0" column="0">
+                 <widget class="QLineEdit" name="gitLogCommandLineEdit">
+                  <property name="placeholderText">
+                   <string extracomment="Please don't translate &quot;%notePath%&quot;">Enter a command to be used to show a git log (optionally use &quot;%notePath%&quot; for the path of the note)</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
