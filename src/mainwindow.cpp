@@ -1044,6 +1044,9 @@ void MainWindow::updatePanelMenu() {
     // toggle the panel if the checkbox was triggered
     QObject::connect(_panelSignalMapper, SIGNAL(mapped(QString)),
                      this, SLOT(togglePanelVisibility(QString)));
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
 }
 
 /**
@@ -8363,6 +8366,9 @@ void MainWindow::setCurrentWorkspace(QString uuid) {
         // the workspace was restored
         focusWidget->setFocus();
     }
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
 }
 
 /**
@@ -8551,6 +8557,9 @@ void MainWindow::on_actionShow_all_panels_triggered() {
 
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();
+
+    // update the preview in case it was disable previously
+    setNoteTextFromNote(&currentNote, true);
 }
 
 /**

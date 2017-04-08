@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.04.3
+- the preview will now be updated correctly if it was previously disabled
+  (for [Issue #559](https://github.com/pbek/QOwnNotes/issues/559))
+    - when selecting another workspace or switching to the previous workspace
+    - when `Show all panels` is clicked in the `Windows` menu
+    - when a panel is selected in the `Windows / Panels` menu
+
 ## 17.04.2
 - more git versioning implementation
     - added Windows support
