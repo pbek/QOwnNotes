@@ -13,6 +13,8 @@
         - for example: `gitk %notePath%`
     - you'll find a new menu item in the `Edit` menu and the note list 
       context menu to show the note versions if you entered a git log command
+- added more Italian, Brazilian Portuguese, Polish and Spanish translation 
+  (thank you mlocati, mlimacarlos, lucjan and richarson)
 
 ## 17.04.2
 - more git versioning implementation
