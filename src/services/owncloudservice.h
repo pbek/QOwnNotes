@@ -13,6 +13,11 @@
 
 #define QOWNNOTESAPI_MIN_VERSION "0.4.2"
 
+// we set a user agent to prevent troubles with some ownCloud / Nextcloud
+// server hosting providers
+// see: https://github.com/pbek/QOwnNotes/issues/541
+#define OWNCLOUD_SERVICE_USER_AGENT "Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9a3pre) Gecko/20070330"
+
 struct CalDAVCalendarData {
     QString url;
     QString displayName;

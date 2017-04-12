@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.04.4
+- a user agent was added to requests to your ownCloud / Nextcloud server to
+  prevent troubles with some server hosting providers
+  (for [Issue #541](https://github.com/pbek/QOwnNotes/issues/541))
+
 ## 17.04.3
 - the preview will now be updated correctly if it was previously disabled
   (for [Issue #559](https://github.com/pbek/QOwnNotes/issues/559))

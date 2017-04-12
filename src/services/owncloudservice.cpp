@@ -829,6 +829,10 @@ void OwnCloudService::addAuthHeader(QNetworkRequest *r) {
 
         // Nextcloud 11+ needs that
         r->setRawHeader("OCS-APIRequest", "true");
+
+        // we set a user agent to prevent troubles with some ownCloud /
+        // Nextcloud server hosting providers
+        r->setRawHeader("User-Agent", OWNCLOUD_SERVICE_USER_AGENT);
     }
 }
 
@@ -839,6 +843,10 @@ void OwnCloudService::addCalendarAuthHeader(QNetworkRequest *r) {
         QByteArray data = concatenated.toLocal8Bit().toBase64();
         QString headerData = "Basic " + data;
         r->setRawHeader("Authorization", headerData.toLocal8Bit());
+
+        // we set a user agent to prevent troubles with some ownCloud /
+        // Nextcloud server hosting providers
+        r->setRawHeader("User-Agent", OWNCLOUD_SERVICE_USER_AGENT);
     }
 }
 
