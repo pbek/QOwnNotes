@@ -534,6 +534,8 @@ void OwnCloudService::settingsGetCalendarList(SettingsDialog *dialog) {
 
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
     QBuffer *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
@@ -593,6 +595,8 @@ void OwnCloudService::todoGetTodoList(QString calendarName,
 
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
     QBuffer *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply = calendarNetworkManager->sendCustomRequest(
@@ -1635,6 +1639,8 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
 
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
     QBuffer *buffer = new QBuffer(dataToSend);
 
     QNetworkReply *reply =
@@ -1712,6 +1718,8 @@ void OwnCloudService::settingsGetFileList(
 
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
+    r.setHeader(QNetworkRequest::ContentTypeHeader,
+                "application/x-www-form-urlencoded");
     QBuffer *buffer = new QBuffer(dataToSend);
 
     // try to ensure the network is accessible
