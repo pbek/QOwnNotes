@@ -1,8 +1,8 @@
 # QOwnNotes Changelog
 
 ## 17.04.4
-- a user agent was added to requests to your ownCloud / Nextcloud server to
-  prevent troubles with some server hosting providers
+- a user agent and content type header was added to requests to your ownCloud / 
+  Nextcloud server to prevent troubles with some server hosting providers
   (for [Issue #541](https://github.com/pbek/QOwnNotes/issues/541))
 - added more information text to the git settings
 - added more Italian, Brazilian Portuguese, Polish, Portuguese, French and
