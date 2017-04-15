@@ -49,6 +49,15 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->calDavCalendarGroupBox->setVisible(false);
     _newScriptName = tr("New script");
 
+#ifdef Q_OS_WIN32
+    QString downloadText = tr("You can download your git client here: <a "
+            "href=\"%url\">Git for Windows</a>");
+    downloadText.replace("%url", "https://git-scm.com/download/win");
+    ui->gitDownloadLabel->setText(downloadText);
+#else
+    ui->gitDownloadLabel->hide();
+#endif
+
     _noteNotificationButtonGroup = new QButtonGroup(this);
     _noteNotificationButtonGroup->addButton(
             ui->notifyAllExternalModificationsCheckBox);
