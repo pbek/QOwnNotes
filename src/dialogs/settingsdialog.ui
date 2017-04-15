@@ -3830,47 +3830,7 @@ p, li { white-space: pre-wrap; }
            </widget>
            <widget class="QWidget" name="gitPage">
             <layout class="QGridLayout" name="gridLayout_48">
-             <item row="0" column="1">
-              <widget class="QGroupBox" name="groupBox_20">
-               <property name="title">
-                <string>Git client</string>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_8">
-                <item>
-                 <widget class="QLabel" name="label_23">
-                  <property name="text">
-                   <string>Path to git executable:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLineEdit" name="gitPathLineEdit">
-                  <property name="placeholderText">
-                   <string>Path to git client, leave empty for default</string>
-                  </property>
-                  <property name="clearButtonEnabled">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QToolButton" name="setGitPathToolButton">
-                  <property name="toolTip">
-                   <string>set external editor</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="icon">
-                   <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
-                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item row="3" column="1">
+             <item row="5" column="1">
               <spacer name="verticalSpacer_13">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -3883,7 +3843,7 @@ p, li { white-space: pre-wrap; }
                </property>
               </spacer>
              </item>
-             <item row="1" column="1">
+             <item row="3" column="1">
               <widget class="QGroupBox" name="groupBox_22">
                <property name="title">
                 <string>Commit interval</string>
@@ -3919,7 +3879,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                </layout>
               </widget>
              </item>
-             <item row="2" column="1">
+             <item row="4" column="1">
               <widget class="QGroupBox" name="groupBox_23">
                <property name="title">
                 <string>External git log command</string>
@@ -3928,10 +3888,87 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                 <item row="0" column="0">
                  <widget class="QLineEdit" name="gitLogCommandLineEdit">
                   <property name="placeholderText">
-                   <string extracomment="Please don't translate &quot;%notePath%&quot;">Enter a command to be used to show a git log (optionally use &quot;%notePath%&quot; for the path of the note)</string>
+                   <string extracomment="Please don't translate &quot;%notePath%&quot;">Enter a command to be used to show a git log</string>
                   </property>
                   <property name="clearButtonEnabled">
                    <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_25">
+                  <property name="text">
+                   <string extracomment="Please don't translate &quot;%notePath%&quot;">You optionally can use &quot;%notePath%&quot; for the path of the note.</string>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="1" rowspan="2">
+              <widget class="QGroupBox" name="groupBox_20">
+               <property name="title">
+                <string>Git client</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_51">
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="gitPathLineEdit">
+                  <property name="placeholderText">
+                   <string>Path to git client, leave empty for default</string>
+                  </property>
+                  <property name="clearButtonEnabled">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_23">
+                  <property name="text">
+                   <string>Path to git executable:</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::AutoText</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="2">
+                 <widget class="QToolButton" name="setGitPathToolButton">
+                  <property name="toolTip">
+                   <string>set external editor</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="document-open" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <widget class="QLabel" name="label_6">
+                  <property name="text">
+                   <string>Don't forget to enable git support for your note folders and to configure your name an email address for your git client. For example with these terminal commands:</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="2">
+                 <widget class="QLabel" name="label_24">
+                  <property name="text">
+                   <string notr="true">git config --global user.email &quot;your-email@domain.com&quot;
+git config --global user.name &quot;Your name&quot;</string>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="textInteractionFlags">
+                   <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
                   </property>
                  </widget>
                 </item>
