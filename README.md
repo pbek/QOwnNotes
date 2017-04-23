@@ -40,11 +40,13 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 - [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8)
 
 ## Screenshot
+
 ![Screenhot](screenshots/screenshot.png)
 
 You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **screenshots**.
 
 ## Features
+
 - multiple note folders can be used
 - older versions of your notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
 - trashed notes can be restored from your ownCloud / Nextcloud server (install [QOwnNotesAPI](https://github.com/pbek/qownnotesapi) on your server)
@@ -76,7 +78,10 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
 - Evernote import
 
 ## Building QOwnNotes
-To get the most current features you can build the application from the source code. Download the latest source here: [QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
+
+To get the most current features you can build the application from the source
+code. Download the latest source here:
+[QOwnNotes Source on GitHub as ZIP](https://github.com/pbek/QOwnNotes/archive/develop.zip)
 
 Alternatively you can also checkout the code directly from the git repository:
 
@@ -86,7 +91,8 @@ cd QOwnNotes
 git submodule update --init
 ```
 
-Then download [Qt Creator](http://www.qt.io/download-open-source), open the project file `src/QOwnNotes.pro` and click on *Build / Build Project QOwnNotes*.
+Then download [Qt Creator](http://www.qt.io/download-open-source), open the
+project file `src/QOwnNotes.pro` and click on *Build / Run*.
 
 Or you can build it directly in your terminal:
 
