@@ -29,18 +29,18 @@ QtObject {
 
         var fileName = headline + ".md";
         var note = script.fetchNoteByFileName(fileName);
-        
+
         // check if note was found
         if (note.id > 0) {
             // jump to the note if it was found
-            script.log("found meeting entry: " + headline);
+            script.log("found meeting note: " + headline);
             script.setCurrentNote(note);
         } else {
-            // create a new meeting entry note if it wasn't found
+            // create a new meeting note if it wasn't found
             // keep in mind that the note will not be created instantly on the disk
-            script.log("creating new meeting entry: " + headline);
+            script.log("creating new meeting note: " + headline);
             script.createNote(headline + "\n====================\n\n");
-            
+
             // tag the current note
             script.tagCurrentNote("meeting");
             script.tagCurrentNote("fuf");
