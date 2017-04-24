@@ -9,7 +9,7 @@ QtObject {
      * Initializes the custom action
      */
     function init() {
-        script.registerCustomAction("meetingEntry", "Create or open a meeting note", "Meeting", "document-new");
+        script.registerCustomAction("meetingNote", "Create or open a meeting note", "Meeting", "document-new");
     }
 
     /**
@@ -19,7 +19,7 @@ QtObject {
      * @param identifier string the identifier defined in registerCustomAction
      */
     function customActionInvoked(identifier) {
-        if (identifier != "meetingEntry") {
+        if (identifier != "meetingNote") {
             return;
         }
 
