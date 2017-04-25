@@ -191,8 +191,8 @@ notifications:
       - "[%{commit}] %{repository} (%{branch}): %{message} | Commit message: %{commit_message} | Changes: %{compare_url} | Build details: %{build_url}"
     on_success: always
     on_failure: always
-    use_notice: true
-    skip_join: true
+#    use_notice: true
+#    skip_join: true
   webhooks:
     urls:
       - https://webhooks.gitter.im/e/7c80d5baa6681f02dca5
