@@ -778,4 +778,6 @@ private:
     void updateNoteSortOrderSelectorVisibility();
 
     void storeTagTreeWidgetExpandState() const;
+
+    void startAppVersionTest() const;
 };

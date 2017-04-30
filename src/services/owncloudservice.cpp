@@ -188,15 +188,24 @@ void OwnCloudService::slotCalendarAuthenticationRequired(
 
 void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 #ifndef INTEGRATION_TESTS
-    qDebug() << "Reply from " << reply->url().path();
+    QUrl url = reply->url();
+    QString urlPath = url.path();
+
+    qDebug() << "Reply from " << urlPath;
 //    qDebug() << reply->errorString();
 
     // this should only be called from the settings dialog
-    if (reply->url().path().endsWith(appInfoPath)) {
-        qDebug() << "Reply from app info";
+    if (urlPath.endsWith(appInfoPath)) {
+        if (url.query().contains("version_test")) {
+            qDebug() << "Reply from app version test";
 
-        // check if everything is all right and call the callback method
-        checkAppInfo(reply);
+            checkAppVersion(reply);
+        } else {
+            qDebug() << "Reply from app info";
+
+            // check if everything is all right and call the callback method
+            checkAppInfo(reply);
+        }
 
         return;
     } else {
@@ -204,21 +213,21 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
         QString data = QString(arr);
 //        qDebug() << __func__ << " - 'data': " << data;
 
-        if (reply->url().path().endsWith(versionListPath)) {
+        if (urlPath.endsWith(versionListPath)) {
             qDebug() << "Reply from version list";
             // qDebug() << data;
 
             // handle the versions loading
             handleVersionsLoading(data);
             return;
-        } else if (reply->url().path().endsWith(trashListPath)) {
+        } else if (urlPath.endsWith(trashListPath)) {
             qDebug() << "Reply from trash list";
             // qDebug() << data;
 
             // handle the loading of trashed notes
             handleTrashedLoading(data);
             return;
-        } else if (reply->url().path().endsWith(capabilitiesPath)) {
+        } else if (urlPath.endsWith(capabilitiesPath)) {
             qDebug() << "Reply from capabilities page";
 
             if (data.startsWith("<?xml version=")) {
@@ -230,7 +239,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             }
 
             return;
-        } else if (reply->url().path().endsWith(ownCloudTestPath)) {
+        } else if (urlPath.endsWith(ownCloudTestPath)) {
             qDebug() << "Reply from ownCloud test page";
 
             if (data.startsWith("<?xml version=")) {
@@ -242,13 +251,13 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             }
 
             return;
-        } else if (reply->url().path().endsWith(restoreTrashedNotePath)) {
+        } else if (urlPath.endsWith(restoreTrashedNotePath)) {
             qDebug() << "Reply from ownCloud restore trashed note page";
             // qDebug() << data;
 
             return;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                reply->url().path().endsWith(todoCalendarServerUrlPath)) {
+                urlPath.endsWith(todoCalendarServerUrlPath)) {
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
             qInfo() << "Reply from ownCloud calendar page: " << data;
 #else
@@ -270,9 +279,9 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 
             return;
         } else if (!todoCalendarServerUrlPath.isEmpty() &&
-                reply->url().path().startsWith(todoCalendarServerUrlPath)) {
+                urlPath.startsWith(todoCalendarServerUrlPath)) {
             // check if we have a reply from a calendar item request
-            if (reply->url().path().endsWith(".ics")) {
+            if (urlPath.endsWith(".ics")) {
                 qDebug() << "Reply from ownCloud calendar item ics page";
                 // qDebug() << data;
 
@@ -300,7 +309,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // fetch the calendar item, that was already stored
                 // by loadTodoItems()
                 CalendarItem calItem = CalendarItem::fetchByUrlAndCalendar(
-                        reply->url().toString(), calendarName);
+                        url.toString(), calendarName);
                 if (calItem.isFetched()) {
                     // update the item with the ics data
                     bool wasUpdated = calItem.updateWithICSData(data);
@@ -327,8 +336,7 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
                 // load the task items
                 loadTodoItems(data);
             }
-        } else if (reply->url().path()
-            .startsWith(serverUrlPath + webdavPath)) {
+        } else if (urlPath.startsWith(serverUrlPath + webdavPath)) {
             // this should be the reply of a calendar item list request
             qDebug() << "Reply from ownCloud webdav";
 
@@ -336,19 +344,19 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             loadDirectory(data);
 
             return;
-        } else if (reply->url().path().endsWith(sharePath)) {
+        } else if (urlPath.endsWith(sharePath)) {
             qDebug() << "Reply from share api";
 
             // update the share status of the notes
             handleNoteShareReply(data);
             return;
-        } else if (reply->url().path().startsWith(sharePath)) {
+        } else if (urlPath.startsWith(sharePath)) {
             qDebug() << "Reply from delete share api";
 
             // update the share status of the notes
-            handleDeleteNoteShareReply(reply->url().path(), data);
+            handleDeleteNoteShareReply(urlPath, data);
             return;
-        } else if (reply->url().toString() == serverUrl) {
+        } else if (url.toString() == serverUrl) {
             qDebug() << "Reply from main server url";
 
             if (data != "") {
@@ -447,6 +455,49 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
 }
 
 /**
+ * Checks the api app version from the reply of startAppVersionTest()
+ * 
+ * @param reply 
+ */
+void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
+    QString data = QString(reply->readAll());
+    // qDebug() << data;
+
+    // we have to add [], so the string can be parsed as JSON
+    data = QString("[") + data + QString("]");
+
+    QJSEngine engine;
+    QJSValue result = engine.evaluate(data);
+
+    QString appVersion = result.property(0).property("app_version")
+            .toVariant().toString();
+
+    if (appVersion.isEmpty()) {
+        return;
+    }
+
+    VersionNumber serverAppVersion = VersionNumber(appVersion);
+    VersionNumber minAppVersion = VersionNumber(QOWNNOTESAPI_MIN_VERSION);
+
+#ifndef INTEGRATION_TESTS
+    // show a warning if app version is too low
+    if (serverAppVersion < minAppVersion) {
+        MainWindow *mainWindow = MainWindow::instance();
+
+        if (mainWindow == NULL) {
+            return;
+        }
+
+        QMessageBox::warning(
+                mainWindow, tr("API app version too low"),
+                tr("Please consider updating your QOwnNotesAPI app on your "
+                           "server, your app version %1 is too low and may "
+                           "cause troubles in QOwnNotes.").arg(appVersion));
+    }
+#endif
+}
+
+/**
  * @brief OwnCloudService::connectionTest
  */
 void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
@@ -488,6 +539,29 @@ void OwnCloudService::settingsConnectionTest(SettingsDialog *dialog) {
     url.setQuery(q);
     r.setUrl(url);
     reply = networkManager->get(r);
+    ignoreSslErrorsIfAllowed(reply);
+}
+
+/**
+ * Starts an api app version test
+ */
+void OwnCloudService::startAppVersionTest() {
+    // try to ensure the network is accessible
+    networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
+
+    QUrl url(serverUrl + appInfoPath);
+    QString serverNotesPath = NoteFolder::currentRemotePath();
+    QUrlQuery q;
+
+    q.addQueryItem("format", format);
+    q.addQueryItem("notes_path", serverNotesPath);
+    q.addQueryItem("version_test", "1");
+    url.setQuery(q);
+
+    QNetworkRequest r(url);
+    addAuthHeader(&r);
+
+    QNetworkReply *reply = networkManager->get(r);
     ignoreSslErrorsIfAllowed(reply);
 }
 

@@ -1,8 +1,11 @@
 # QOwnNotes Changelog
 
 ## 17.05.0
-- the expanded stated of the items in the tag tree widget is now restored 
+- the expanded state of the items in the tag tree widget is now restored 
   when the tree is reloaded
+- if the version of your QOwnNotesAPI app on your ownCloud / Nextcloud server
+  is too low a warning will now be shown when the app starts
+  (for [Issue #564](https://github.com/pbek/QOwnNotes/issues/564))
 
 ## 17.04.4
 - a user agent and content type header was added to requests to your ownCloud / 

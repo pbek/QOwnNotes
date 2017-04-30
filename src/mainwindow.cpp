@@ -446,6 +446,21 @@ MainWindow::MainWindow(QWidget *parent) :
     // we do that with a timer, because otherwise the scrollbar will not be
     // restored correctly, because the maximum position of the scrollbar is 0
     QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
+
+    // attempt to check the api app version
+    startAppVersionTest();
+}
+
+/**
+ * Attempts to check the api app version
+ */
+void MainWindow::startAppVersionTest() const {
+    if (!OwnCloudService::hasOwnCloudSettings()) {
+        return;
+    }
+
+    OwnCloudService *ownCloud = OwnCloudService::instance();
+    ownCloud->startAppVersionTest();
 }
 
 /**

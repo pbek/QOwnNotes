@@ -77,6 +77,8 @@ public:
 
     static bool isTodoSupportEnabled();
 
+    void startAppVersionTest();
+
 private:
     QString serverUrl;
     QString todoCalendarServerUrl;
@@ -143,6 +145,8 @@ private:
                                bool updateShareDialog = false);
 
     void handleDeleteNoteShareReply(QString urlPart, QString &data);
+
+    void checkAppVersion(QNetworkReply *reply);
 
 signals:
 
