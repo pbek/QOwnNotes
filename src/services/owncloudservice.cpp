@@ -476,10 +476,10 @@ void OwnCloudService::checkAppVersion(QNetworkReply *reply) {
         return;
     }
 
+#ifndef INTEGRATION_TESTS
     VersionNumber serverAppVersion = VersionNumber(appVersion);
     VersionNumber minAppVersion = VersionNumber(QOWNNOTESAPI_MIN_VERSION);
 
-#ifndef INTEGRATION_TESTS
     // show a warning if app version is too low
     if (serverAppVersion < minAppVersion) {
         MainWindow *mainWindow = MainWindow::instance();
