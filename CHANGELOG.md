@@ -6,6 +6,8 @@
 - if the version of your QOwnNotesAPI app on your ownCloud / Nextcloud server
   is too low a warning will now be shown when the app starts
   (for [Issue #564](https://github.com/pbek/QOwnNotes/issues/564))
+- added more Italian, Brazilian Portuguese, Polish, German and Spanish
+  translation (thank you mlocati, mlimacarlos, lucjan, bigant and richarson)
 
 ## 17.04.4
 - a user agent and content type header was added to requests to your ownCloud / 
