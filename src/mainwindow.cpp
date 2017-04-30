@@ -6015,9 +6015,6 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
-
-    // TODO: restore expand status
-    ui->tagTreeWidget->expandAll();
 }
 
 /**
@@ -6114,13 +6111,17 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
 void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeTagId = Tag::activeTagId();
+    QSettings settings;
+    QStringList expandedList = settings.value(
+            "MainWindow/tagTreeWidgetExpandState").toStringList();
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
+            int tagId = tag.getId();
             QTreeWidgetItem *item = addTagToTagTreeWidget(parent, tag);
 
             // set the active item
-            if (activeTagId == tag.getId()) {
+            if (activeTagId == tagId) {
                 const QSignalBlocker blocker(ui->tagTreeWidget);
                 Q_UNUSED(blocker);
 
@@ -6130,8 +6131,8 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
             // recursively populate the next level
             buildTagTreeForParentItem(item);
 
-            // TODO: set expanded state
-            item->setExpanded(true);
+            // set expanded state
+            item->setExpanded(expandedList.contains(QString::number(tagId)));
         }
 
     // update the UI
@@ -6275,8 +6276,6 @@ void MainWindow::setupTags() {
 #endif
 
     reloadTagTree();
-    // TODO: set status?
-    ui->tagTreeWidget->expandAll();
     reloadCurrentNoteTags();
 
     // filter the notes again
@@ -8801,6 +8800,9 @@ void MainWindow::gitCommitCurrentNoteFolder() {
     Utils::Git::commitCurrentNoteFolder();
 }
 
+/**
+ * Shows a git log of the current note
+ */
 void MainWindow::on_actionShow_note_git_versions_triggered() {
     QString relativeFilePath = currentNote.relativeNoteFilePath();
 //    QString dirPath = NoteFolder::currentLocalPath();
@@ -8819,11 +8821,17 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
     Utils::Git::showLog(relativeFilePath);
 }
 
+/**
+ * Stores the note tag tree expand state when an tree widget item was collapsed
+ */
 void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
     Q_UNUSED(item);
     storeTagTreeWidgetExpandState();
 }
 
+/**
+ * Stores the note tag tree expand state when an tree widget item was expanded
+ */
 void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
     Q_UNUSED(item);
     storeTagTreeWidgetExpandState();
@@ -8847,7 +8855,6 @@ void MainWindow::storeTagTreeWidgetExpandState() const {
             }
         }
 
-    qDebug() << __func__ << " - 'expandedList': " << expandedList;
     QSettings settings;
     settings.setValue("MainWindow/tagTreeWidgetExpandState", expandedList);
 }

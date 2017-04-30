@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.05.0
+- the expanded stated of the items in the tag tree widget is now restored 
+  when the tree is reloaded
+
 ## 17.04.4
 - a user agent and content type header was added to requests to your ownCloud / 
   Nextcloud server to prevent troubles with some server hosting providers
