@@ -6015,6 +6015,8 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->resizeColumnToContents(0);
     ui->tagTreeWidget->resizeColumnToContents(1);
+
+    // TODO: restore expand status
     ui->tagTreeWidget->expandAll();
 }
 
@@ -6127,6 +6129,9 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
 
             // recursively populate the next level
             buildTagTreeForParentItem(item);
+
+            // TODO: set expanded state
+            item->setExpanded(true);
         }
 
     // update the UI
@@ -6270,6 +6275,7 @@ void MainWindow::setupTags() {
 #endif
 
     reloadTagTree();
+    // TODO: set status?
     ui->tagTreeWidget->expandAll();
     reloadCurrentNoteTags();
 
@@ -8811,4 +8817,37 @@ void MainWindow::on_actionShow_note_git_versions_triggered() {
 //    qDebug() << __func__ << " - 'result': " << result;
 
     Utils::Git::showLog(relativeFilePath);
+}
+
+void MainWindow::on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item) {
+    Q_UNUSED(item);
+    storeTagTreeWidgetExpandState();
+}
+
+void MainWindow::on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item) {
+    Q_UNUSED(item);
+    storeTagTreeWidgetExpandState();
+}
+
+/**
+ * Stores the note tag tree expand state
+ */
+void MainWindow::storeTagTreeWidgetExpandState() const {
+    // get all items
+    QList<QTreeWidgetItem*> allItems = ui->tagTreeWidget->
+            findItems("", Qt::MatchContains | Qt::MatchRecursive);
+
+    QStringList expandedList;
+    Q_FOREACH(QTreeWidgetItem *item, allItems) {
+            if (Utils::Gui::isOneTreeWidgetItemChildVisible(item)) {
+                if (item->isExpanded()) {
+                    expandedList << item->data(0, Qt::UserRole).toString();
+                }
+
+            }
+        }
+
+    qDebug() << __func__ << " - 'expandedList': " << expandedList;
+    QSettings settings;
+    settings.setValue("MainWindow/tagTreeWidgetExpandState", expandedList);
 }

@@ -450,6 +450,10 @@ private slots:
 
     void on_actionShow_note_git_versions_triggered();
 
+    void on_tagTreeWidget_itemCollapsed(QTreeWidgetItem *item);
+
+    void on_tagTreeWidget_itemExpanded(QTreeWidgetItem *item);
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -772,4 +776,6 @@ private:
     void setNoteTextEditReadOnly(bool readonly) const;
 
     void updateNoteSortOrderSelectorVisibility();
+
+    void storeTagTreeWidgetExpandState() const;
 };
