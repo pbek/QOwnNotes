@@ -178,9 +178,9 @@ deploy:
         condition: ${TRAVIS_OS_NAME} = osx
 
 notifications:
-  recipients:
-    - developer@bekerle.com
   email:
+    recipients:
+      - developer@bekerle.com
     on_success: change
     on_failure: change
   irc:
