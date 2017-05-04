@@ -6128,7 +6128,8 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
     int activeTagId = Tag::activeTagId();
     QSettings settings;
     QStringList expandedList = settings.value(
-            "MainWindow/tagTreeWidgetExpandState").toStringList();
+            "MainWindow/tagTreeWidgetExpandState-" +
+            QString::number(NoteFolder::currentNoteFolderId())).toStringList();
 
     QList<Tag> tagList = Tag::fetchAllByParentId(parentId);
     Q_FOREACH(Tag tag, tagList) {
@@ -8871,5 +8872,8 @@ void MainWindow::storeTagTreeWidgetExpandState() const {
         }
 
     QSettings settings;
-    settings.setValue("MainWindow/tagTreeWidgetExpandState", expandedList);
+    settings.setValue(
+            "MainWindow/tagTreeWidgetExpandState-" +
+                    QString::number(NoteFolder::currentNoteFolderId()),
+            expandedList);
 }

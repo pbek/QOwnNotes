@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.05.1
+- the restoring of the expanded state of the items in the tag tree widget now
+  works across multiple note folders
+
 ## 17.05.0
 - the expanded state of the items in the tag tree widget is now restored 
   when the tree is reloaded
