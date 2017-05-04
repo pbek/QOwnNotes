@@ -6,6 +6,11 @@
 - QOwnNotes now also remembers when you select *All notes* in the note 
   subfolder tree widget when you restart the app
   (for [Issue #572](https://github.com/pbek/QOwnNotes/issues/572))
+- there now is a new scripting command to show an information message box
+  `script.informationMessageBox()`
+  (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-information-message-box)
 - added more Italian, French, Polish and Spanish translation (thank you mlocati,
   lepascalou, lucjan and richarson)
 

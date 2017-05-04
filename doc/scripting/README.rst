@@ -559,7 +559,7 @@ Parameters
      *
      * @param note NoteApi note to jump to
      */
-    void ScriptingService::setCurrentNote(NoteApi *note) {
+    void ScriptingService::setCurrentNote(NoteApi *note);
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -571,6 +571,32 @@ Usage in QML
 
 You may want to take a look at the example
 `journal-entry.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/journal-entry.qml>`__.
+
+
+Showing an information message box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Shows an information message box
+     *
+     * @param text
+     * @param title (optional)
+     */
+    void ScriptingService::informationMessageBox(QString text, QString title);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // show a message box
+    script.informationMessageBox("The text I want to show", "Some optional title);
 
 
 Hooks

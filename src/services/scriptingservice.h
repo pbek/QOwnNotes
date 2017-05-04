@@ -62,6 +62,8 @@ public:
     Q_INVOKABLE void setClipboardText(QString text, bool asHtml = false);
     Q_INVOKABLE void setCurrentNote(NoteApi *note);
 
+    Q_INVOKABLE void informationMessageBox(QString text, QString title = "");
+
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);

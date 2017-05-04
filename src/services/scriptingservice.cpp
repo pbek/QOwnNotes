@@ -19,6 +19,7 @@
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
+#include <QMessageBox>
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
@@ -938,5 +939,23 @@ void ScriptingService::setCurrentNote(NoteApi *note) {
     }
 #else
     Q_UNUSED(note);
+#endif
+}
+
+/**
+ * Shows an information message box
+ *
+ * @param text
+ * @param title (optional)
+ */
+void ScriptingService::informationMessageBox(QString text, QString title) {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        QMessageBox::information(mainWindow, title, text);
+    }
+#else
+    Q_UNUSED(text);
+    Q_UNUSED(title);
 #endif
 }
