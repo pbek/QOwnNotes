@@ -3,6 +3,9 @@
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now
   works across multiple note folders
+- QOwnNotes now also remembers when you select *All notes* in the note 
+  subfolder tree widget when you restart the app
+  (for [Issue #572](https://github.com/pbek/QOwnNotes/issues/572))
 
 ## 17.05.0
 - the expanded state of the items in the tag tree widget is now restored 

@@ -103,7 +103,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;
     _isDefaultShortcutInitialized = false;
-    _showNotesFromAllNoteSubFolders = false;
+    _showNotesFromAllNoteSubFolders = showNotesFromAllNoteSubFolders();
     _noteFolderDockWidgetWasVisible = true;
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
@@ -6087,6 +6087,12 @@ void MainWindow::reloadNoteSubFolderTree() {
 
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
+
+    // send an event to jump to "All notes" in the note subfolder tree widget
+    // if that item was last selected
+    if ((activeNoteSubFolderId == 0) && _showNotesFromAllNoteSubFolders) {
+        selectAllNotesInNoteSubFolderTreeWidget();
+    }
 }
 
 /**
@@ -7753,12 +7759,26 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     NoteSubFolder::setAsActive(_showNotesFromAllNoteSubFolders ?
                                0 : noteSubFolderId);
 
+    QSettings settings;
+    settings.setValue("MainWindow/showNotesFromAllNoteSubFolders",
+                      _showNotesFromAllNoteSubFolders);
+
     const QSignalBlocker blocker(ui->searchLineEdit);
     Q_UNUSED(blocker);
 
     ui->searchLineEdit->clear();
 
     filterNotes();
+}
+
+/**
+ * Returns true if notes from all note sub folders should be shown
+ * @return
+ */
+bool MainWindow::showNotesFromAllNoteSubFolders() {
+    QSettings settings;
+    return settings.value("MainWindow/showNotesFromAllNoteSubFolders",
+                          _showNotesFromAllNoteSubFolders).toBool();
 }
 
 /**
@@ -8173,12 +8193,19 @@ void MainWindow::on_actionDonate_triggered() {
  */
 void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
     // send an event to jump to "All notes" in the note subfolder tree widget
-    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
-                                     Qt::NoModifier);
-    QApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+    selectAllNotesInNoteSubFolderTreeWidget();
 
     // trigger a "Find note"
     on_action_Find_note_triggered();
+}
+
+/**
+ * Sends an event to jump to "All notes" in the note subfolder tree widget
+ */
+void MainWindow::selectAllNotesInNoteSubFolderTreeWidget() const {
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                     Qt::NoModifier);
+    QCoreApplication::postEvent(ui->noteSubFolderTreeWidget, event);
 }
 
 /**

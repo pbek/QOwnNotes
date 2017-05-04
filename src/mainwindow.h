@@ -780,4 +780,8 @@ private:
     void storeTagTreeWidgetExpandState() const;
 
     void startAppVersionTest() const;
+
+    bool showNotesFromAllNoteSubFolders();
+
+    void selectAllNotesInNoteSubFolderTreeWidget() const;
 };
