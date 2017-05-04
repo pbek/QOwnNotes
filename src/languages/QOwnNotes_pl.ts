@@ -2298,12 +2298,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../services/owncloudservice.cpp" line="492"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>Wersja aplikacji API jest zbyt niska</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="493"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Proszę rozważyć aktualizację aplikacji QOwnNotesAPI na serwerze, twoja wersja %1 jest zbyt niska i może powodować problemy z QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="955"/>

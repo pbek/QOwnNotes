@@ -2274,12 +2274,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../services/owncloudservice.cpp" line="492"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>Versione dell'app delle API troppo datata</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="493"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Considerare di aggiornare l'app QOwnNotesAPI sul proprio server: la versione %1 dell'app è troppo datata e potrebbe causare problemi in QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="955"/>

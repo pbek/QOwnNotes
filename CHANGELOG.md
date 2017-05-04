@@ -6,6 +6,8 @@
 - QOwnNotes now also remembers when you select *All notes* in the note 
   subfolder tree widget when you restart the app
   (for [Issue #572](https://github.com/pbek/QOwnNotes/issues/572))
+- added more Italian, French, Polish and Spanish translation (thank you mlocati,
+  lepascalou, lucjan and richarson)
 
 ## 17.05.0
 - the expanded state of the items in the tag tree widget is now restored 

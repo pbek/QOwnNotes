@@ -2274,12 +2274,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../services/owncloudservice.cpp" line="492"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>La versión de la API de la aplicación es demasiado baja</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="493"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Por favor considera actualizar tu aplicación de QOwnNotesAPI en el servidor, la versión %1 es demasiado baja y puede causar problemas en QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="955"/>

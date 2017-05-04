@@ -2275,12 +2275,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../services/owncloudservice.cpp" line="492"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>La version API de l'application est obsolète</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="493"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation type="unfinished">Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</translation>
+      <translation>Veuillez considérer la mise à jour de l'application QOwnNotesAPI sur votre serveur, la version %1 est trop ancienne et peut causer des problèmes dans QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="955"/>
@@ -3260,13 +3260,13 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
       <location filename="../dialogs/settingsdialog.ui" line="3891"/>
       <source>Enter a command to be used to show a git log</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log</translation>
+      <translation>Entrer une commande à utiliser pour afficher les versions git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3901"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>Il est possible d'utiliser "%notePath%" pour le chemin de la note.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3914"/>
@@ -3281,7 +3281,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3968"/>
       <source>Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</translation>
+      <translation>Ne pas oublier d'activer le support git pour votre répertoire de notes et de configurer votre nom et email pour le client git, par exemple avec ces commandes :</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3920"/>
@@ -3963,7 +3963,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="53"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Vous pouvez télécharger le client git ici : &lt;a href="%url"&gt;Git pour Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="276"/>
