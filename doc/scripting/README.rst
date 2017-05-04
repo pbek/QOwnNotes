@@ -596,7 +596,7 @@ Usage in QML
 .. code:: javascript
 
     // show a message box
-    script.informationMessageBox("The text I want to show", "Some optional title);
+    script.informationMessageBox("The text I want to show", "Some optional title");
 
 
 Hooks
