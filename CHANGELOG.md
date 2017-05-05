@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.05.2
+- the shortcut of custom actions will now be remembered after the app is 
+  restarted (for [Issue #576](https://github.com/pbek/QOwnNotes/issues/576))
+
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now
   works across multiple note folders

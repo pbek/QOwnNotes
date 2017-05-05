@@ -8149,6 +8149,14 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
     action->setObjectName("customAction_" + identifier);
     action->setData(identifier);
 
+    // restore the shortcut of the custom action
+    QSettings settings;
+    QKeySequence shortcut = QKeySequence(settings.value(
+            "Shortcuts/MainWindow-customAction_" + identifier).toString());
+    if (!shortcut.isEmpty()) {
+        action->setShortcut(shortcut);
+    }
+
     // try to add an icon
     if (!icon.isEmpty()) {
         QFile file(icon);
