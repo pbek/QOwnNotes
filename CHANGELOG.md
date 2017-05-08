@@ -8,7 +8,7 @@
     - for more information please take a look at
       [Showing an open file dialog](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-open-file-dialog)
 - there now are new scripting commands to register labels with
-  `script.registerLabel("my-label")` and write to it with
+  `script.registerLabel("my-label")` and write to them with
   `script.setLabelText("my-label", "my custom text")`
   (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
     - the labels will be visible in the new scripting dock widget
