@@ -64,6 +64,9 @@ public:
 
     Q_INVOKABLE void informationMessageBox(QString text, QString title = "");
 
+    Q_INVOKABLE QString getOpenFileName(QString caption = "", QString dir = "",
+                                        QString filter = "");
+
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);

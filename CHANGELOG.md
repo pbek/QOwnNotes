@@ -3,6 +3,10 @@
 ## 17.05.2
 - the shortcut of custom actions will now be remembered after the app is 
   restarted (for [Issue #576](https://github.com/pbek/QOwnNotes/issues/576))
+- there now is a new scripting command to show an open file dialog
+  `script.getOpenFileName()` (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-open-file-dialog)
 
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now
@@ -11,8 +15,7 @@
   subfolder tree widget when you restart the app
   (for [Issue #572](https://github.com/pbek/QOwnNotes/issues/572))
 - there now is a new scripting command to show an information message box
-  `script.informationMessageBox()`
-  (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+  `script.informationMessageBox()` (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
     - for more information please take a look at the
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-information-message-box)
 - added more Italian, French, Polish and Spanish translation (thank you mlocati,

@@ -599,6 +599,35 @@ Usage in QML
     script.informationMessageBox("The text I want to show", "Some optional title");
 
 
+Showing an open file dialog
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Shows an open file dialog
+     *
+     * @param caption (optional)
+     * @param dir (optional)
+     * @param filter (optional)
+     * @return QString
+     */
+    QString ScriptingService::getOpenFileName(QString caption, QString dir,
+                                              QString filter);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // show an open file dialog
+    var fileName = script.getOpenFileName("My title", "/home/images", "Images (*.png *.xpm *.jpg)");
+
+
 Hooks
 -----
 

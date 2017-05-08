@@ -959,3 +959,26 @@ void ScriptingService::informationMessageBox(QString text, QString title) {
     Q_UNUSED(title);
 #endif
 }
+
+/**
+ * Shows an open file dialog
+ *
+ * @param caption (optional)
+ * @param dir (optional)
+ * @param filter (optional)
+ * @return QString
+ */
+QString ScriptingService::getOpenFileName(QString caption, QString dir,
+                                          QString filter) {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+    if (mainWindow != Q_NULLPTR) {
+        return QFileDialog::getOpenFileName(mainWindow, caption, dir, filter);
+    }
+#else
+    Q_UNUSED(caption);
+    Q_UNUSED(dir);
+    Q_UNUSED(filter);
+    return "";
+#endif
+}
