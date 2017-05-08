@@ -46,6 +46,9 @@ QtObject {
         var params = [];
         var result = script.startSynchronousProcess("/usr/local/bin/md2jira.js", params, text);
 
+        // replace some names
+        result = String(result).replace(/\@Georg/ig, "[~g.franz]");
+
         // put the result into the clipboard
         script.setClipboardText(result);
     }
