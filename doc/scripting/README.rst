@@ -280,6 +280,9 @@ Usage in QML
 
 The labels will be visible in the scripting dock widget.
 
+You can use both plain text or html in the labels. The text will be
+selectable and links can be clicked.
+
 You may then want to take a look at the example script
 `scripting-label-demo.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scripting-label-demo.qml>`__.
 
@@ -306,6 +309,9 @@ Usage in QML
 .. code:: javascript
 
     script.setLabelText("counter-label", "counter text");
+
+You can use both plain text or html in the labels. The text will be
+selectable and links can be clicked.
 
 You may then want to take a look at the example script
 `scripting-label-demo.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scripting-label-demo.qml>`__.

@@ -12,6 +12,8 @@
   `script.setLabelText("my-label", "my custom text")`
   (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
     - the labels will be visible in the new scripting dock widget
+    - you can use both plain text or html in the labels
+    - the text will be selectable and links can be clicked
     - for more information please take a look at
       [Registering a label](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-label)
       and [Set the text of a registered label](http://docs.qownnotes.org/en/develop/scripting/README.html#set-the-text-of-a-registered-label)
