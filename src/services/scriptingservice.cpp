@@ -745,6 +745,50 @@ void ScriptingService::registerCustomAction(QString identifier,
 }
 
 /**
+ * Registers a label to write to
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label (optional)
+ */
+void ScriptingService::registerLabel(QString identifier, QString text) {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        MetricsService::instance()->sendVisitIfEnabled(
+                "scripting/" + QString(__func__));
+
+        mainWindow->addScriptingLabel(identifier, text);
+    }
+#else
+    Q_UNUSED(identifier);
+    Q_UNUSED(text);
+#endif
+}
+
+/**
+ * Sets the text of a registered label
+ *
+ * @param identifier the identifier of the label
+ * @param text the text shown in the label
+ */
+void ScriptingService::setLabelText(QString identifier, QString text) {
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        MetricsService::instance()->sendVisitIfEnabled(
+                "scripting/" + QString(__func__));
+
+        mainWindow->setScriptingLabelText(identifier, text);
+    }
+#else
+    Q_UNUSED(identifier);
+    Q_UNUSED(text);
+#endif
+}
+
+/**
  * Creates a new note
  *
  * @param text the note text
@@ -949,6 +993,9 @@ void ScriptingService::setCurrentNote(NoteApi *note) {
  * @param title (optional)
  */
 void ScriptingService::informationMessageBox(QString text, QString title) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {
@@ -970,6 +1017,9 @@ void ScriptingService::informationMessageBox(QString text, QString title) {
  */
 QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                           QString filter) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
     if (mainWindow != Q_NULLPTR) {

@@ -67,6 +67,10 @@ public:
     Q_INVOKABLE QString getOpenFileName(QString caption = "", QString dir = "",
                                         QString filter = "");
 
+    Q_INVOKABLE void registerLabel(QString identifier, QString text = "");
+
+    Q_INVOKABLE void setLabelText(QString identifier, QString text);
+
     QString callInsertingFromMimeDataHookForObject(QObject *object,
                                                    const QMimeData *mimeData);
     QString callInsertingFromMimeDataHook(const QMimeData *mimeData);

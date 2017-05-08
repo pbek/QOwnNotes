@@ -182,11 +182,13 @@ MainWindow::MainWindow(QWidget *parent) :
     // do a bit more styling
     initStyling();
 
-    // initialize the scripting engine
-    initScriptingEngine();
-
     // initialize the dock widgets
     initDockWidgets();
+
+    // initialize the scripting engine
+    // initDockWidgets() has to be called before that so the scripting dock
+    // widget is already in place
+    initScriptingEngine();
 
     // restore toolbars
     // initDockWidgets() has to be called first so panel checkboxes can be
@@ -627,6 +629,15 @@ void MainWindow::initDockWidgets() {
     _logDockTitleBarWidget = _logDockWidget->titleBarWidget();
     addDockWidget(Qt::RightDockWidgetArea, _logDockWidget, Qt::Vertical);
     _logDockWidget->hide();
+
+    _scriptingDockWidget = new QDockWidget(tr("Scripting"), this);
+    _scriptingDockWidget->setObjectName("scriptingDockWidget");
+    _scriptingDockWidget->setWidget(ui->scriptingScrollArea);
+    _scriptingDockTitleBarWidget = _scriptingDockWidget->titleBarWidget();
+    addDockWidget(Qt::RightDockWidgetArea, _scriptingDockWidget, Qt::Vertical);
+    _scriptingDockWidget->hide();
+    // we only needed that label to set a layout in QtCreator
+    delete ui->scriptingDemoLabel;
 
     QSettings settings;
 
@@ -7372,6 +7383,13 @@ void MainWindow::preReloadScriptingEngine() {
     _customActionToolbar->clear();
     _customActionToolbar->hide();
     _noteTextEditContextMenuActions.clear();
+
+    // hide the scripting dock widget and remove all registered labels
+    _scriptingDockWidget->hide();
+    Q_FOREACH(QLabel *label,
+              ui->scriptingScrollArea->findChildren<QLabel *>()) {
+            delete label;
+        }
 }
 
 void MainWindow::on_actionShow_log_triggered() {
@@ -8181,9 +8199,34 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
                      _customActionSignalMapper, SLOT(map()));
     _customActionSignalMapper->setMapping(action, identifier);
 
-    // add the customa action to the note text edit context menu later
+    // add the custom action to the note text edit context menu later
     if (useInNoteEditContextMenu) {
         _noteTextEditContextMenuActions.append(action);
+    }
+}
+
+/**
+ * Adds a label to the scripting dock widget
+ */
+void MainWindow::addScriptingLabel(QString identifier, QString text) {
+    _scriptingDockWidget->show();
+    QLabel *label = new QLabel(text);
+    label->setOpenExternalLinks(true);
+    label->setTextInteractionFlags(Qt::TextSelectableByMouse |
+                                           Qt::LinksAccessibleByMouse);
+    label->setWordWrap(true);
+    label->setObjectName("scriptingLabel-" + identifier);
+    ui->scriptingScrollAreaLayout->addWidget(label);
+}
+
+/**
+ * Sets the text of a label in the scripting dock widget
+ */
+void MainWindow::setScriptingLabelText(QString identifier, QString text) {
+    QLabel* label = ui->scriptingScrollArea->findChild<QLabel*>(
+            "scriptingLabel-" + identifier);
+    if (label != Q_NULLPTR) {
+        label->setText(text);
     }
 }
 
@@ -8323,6 +8366,7 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
         _notePreviewDockWidget->setTitleBarWidget(
                 _notePreviewDockTitleBarWidget);
         _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
+        _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
 
         Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
                 // reset the top margin of the enclosed widget

@@ -95,6 +95,10 @@ public:
                          QString buttonText, QString icon,
                          bool useInNoteEditContextMenu = false);
 
+    void addScriptingLabel(QString identifier, QString text = "");
+
+    void setScriptingLabelText(QString identifier, QString text);
+
     void preReloadScriptingEngine();
 
     void writeToNoteTextEdit(QString text);
@@ -513,6 +517,7 @@ private:
     QDockWidget *_noteTagDockWidget;
     QDockWidget *_notePreviewDockWidget;
     QDockWidget *_logDockWidget;
+    QDockWidget *_scriptingDockWidget;
     QWidget *_taggingDockTitleBarWidget;
     QWidget *_noteSubFolderDockTitleBarWidget;
     QWidget *_noteSearchDockTitleBarWidget;
@@ -523,6 +528,7 @@ private:
     QWidget *_noteTagDockTitleBarWidget;
     QWidget *_notePreviewDockTitleBarWidget;
     QWidget *_logDockTitleBarWidget;
+    QWidget *_scriptingDockTitleBarWidget;
     QComboBox *_workspaceComboBox;
     bool _noteFolderDockWidgetWasVisible;
     bool _noteSubFolderDockWidgetVisible;

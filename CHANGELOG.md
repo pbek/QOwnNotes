@@ -5,8 +5,16 @@
   restarted (for [Issue #576](https://github.com/pbek/QOwnNotes/issues/576))
 - there now is a new scripting command to show an open file dialog
   `script.getOpenFileName()` (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
-    - for more information please take a look at the
-      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-open-file-dialog)
+    - for more information please take a look at
+      [Showing an open file dialog](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-open-file-dialog)
+- there now are new scripting commands to register labels with
+  `script.registerLabel("my-label")` and write to it with
+  `script.setLabelText("my-label", "my custom text")`
+  (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+    - the labels will be visible in the new scripting dock widget
+    - for more information please take a look at
+      [Registering a label](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-label)
+      and [Set the text of a registered label](http://docs.qownnotes.org/en/develop/scripting/README.html#set-the-text-of-a-registered-label)
 
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now
@@ -16,8 +24,8 @@
   (for [Issue #572](https://github.com/pbek/QOwnNotes/issues/572))
 - there now is a new scripting command to show an information message box
   `script.informationMessageBox()` (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
-    - for more information please take a look at the
-      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-information-message-box)
+    - for more information please take a look at
+      [Showing an information message box](http://docs.qownnotes.org/en/develop/scripting/README.html#showing-an-information-message-box)
 - added more Italian, French, Polish and Spanish translation (thank you mlocati,
   lepascalou, lucjan and richarson)
 

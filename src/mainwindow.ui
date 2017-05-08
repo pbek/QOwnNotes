@@ -472,6 +472,53 @@ p, li { white-space: pre-wrap; }
           </widget>
          </item>
          <item>
+          <widget class="QScrollArea" name="scriptingScrollArea">
+           <property name="frameShape">
+            <enum>QFrame::NoFrame</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>524</width>
+              <height>291</height>
+             </rect>
+            </property>
+            <layout class="QVBoxLayout" name="scriptingScrollAreaLayout">
+             <property name="leftMargin">
+              <number>3</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>3</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="scriptingDemoLabel">
+               <property name="text">
+                <string notr="true">Scripting label</string>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+               <property name="textInteractionFlags">
+                <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+         <item>
           <widget class="QFrame" name="noteTextEditSearchFrame">
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
@@ -479,6 +526,7 @@ p, li { white-space: pre-wrap; }
            <property name="lineWidth">
             <number>0</number>
            </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6"/>
           </widget>
          </item>
          <item>
@@ -619,7 +667,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>1383</width>
-     <height>37</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuQOwnNotes">
@@ -1985,8 +2033,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="images.qrc"/>
-  <include location="breeze-qownnotes.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
+  <include location="breeze-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

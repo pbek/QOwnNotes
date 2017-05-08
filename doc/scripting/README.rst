@@ -251,6 +251,66 @@ You may then want to use the identifier with function
 `custom-actions.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/custom-actions.qml>`__.
 
 
+Registering a label
+~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Registers a label to write to
+     *
+     * @param identifier the identifier of the label
+     * @param text the text shown in the label (optional)
+     */
+    void ScriptingService::registerLabel(QString identifier, QString text);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.registerLabel("html-label", "<strong>Strong</strong> HTML text<br />with three lines<br />and a <a href='http://www.qownnotes.org'>link to a website</a>.");
+
+    script.registerLabel("long-label", "an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text, an other very long text that will wrap");
+
+    script.registerLabel("counter-label");
+
+The labels will be visible in the scripting dock widget.
+
+You may then want to take a look at the example script
+`scripting-label-demo.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scripting-label-demo.qml>`__.
+
+
+Set the text of a registered label
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Parameters
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Sets the text of a registered label
+     *
+     * @param identifier the identifier of the label
+     * @param text the text shown in the label
+     */
+    void ScriptingService::setLabelText(QString identifier, QString text);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    script.setLabelText("counter-label", "counter text");
+
+You may then want to take a look at the example script
+`scripting-label-demo.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scripting-label-demo.qml>`__.
+
+
 Creating a new note
 ~~~~~~~~~~~~~~~~~~~
 
