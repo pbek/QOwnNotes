@@ -625,7 +625,7 @@ Usage in QML
 .. code:: javascript
 
     // show an open file dialog
-    var fileName = script.getOpenFileName("My title", "/home/images", "Images (*.png *.xpm *.jpg)");
+    var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
 
 
 Hooks
