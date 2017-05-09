@@ -1,28 +1,29 @@
 import QtQml 2.0
 import com.qownnotes.noteapi 1.0
-import QtQuick 2.3
-import QtQuick.Dialogs 1.2
 
-/* This script will add custom action with a toolbar button that will show 
- * current note statistics in a pop-up window. */
+/*  This script shows current note statistics in a "label":
+    Char(+s) = characters including spaces
+    Char(−s) = characters excluding spaces
+    Words = character groups divided by spaces
+    Paras = paragraphs - character groups divided by line breaks 
+*/
 
-MessageDialog {
+QtObject {
     
-    function init() {
-        script.registerCustomAction("statNote", "Show note statistics", "Stats", "view-statistics.svg")
+    function init() {script.registerLabel("note stats")}
+    
+    function noteStats(note) {
+        script.setLabelText("note stats", 
+            "<table align=center width=90%>
+                <tr>
+                    <td align=center>Char(+s) <b>" + note.noteText.length + "</b></th>
+                    <td align=center>Char(−s) <b>" + note.noteText.match(/[^ ]/gi).length + "</b></th>
+                    <td align=center>Words <b>" + note.noteText.split(/\s+/).length + "</b></th>
+                    <td align=center>Paras <b>" + (note.noteText.match(/^.*?\S/gm) || "").length + "</b></th>
+                </tr>
+            </table>")
     }
     
-    function customActionInvoked(action) {
-        if (action == "statNote") {
-            
-            var note = script.currentNote()
-            
-            title = "Note statistics"
-            text = "Characters (inc. spaces): " + note.noteText.length + "\n" +
-                   "Characters (w/o spaces): " + note.noteText.match(/[^ ]/gi).length + "\n" + 
-                   "Words: " + note.noteText.split(/\s+/).length + "\n" + 
-                   "Paragraphs: " + (note.noteText.match(/^.*?\S/gm) || "").length
-            visible = true
-        }
-    }
+    function noteOpenedHook(note) {noteStats(note)}
+    function onNoteStored(note) {noteStats(note)}
 } 
