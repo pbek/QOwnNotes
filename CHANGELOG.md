@@ -2,7 +2,10 @@
 
 ## 17.05.3
 - removed a gray area under the note edit widget (glitch from version 17.05.2)
-- reduced the spacing between the labels in in the scripting widget 
+- you can now reduced the height of the scripting widget and the log widget 
+  down to 10 pixel
+- you can now reduced the height of the note tag widget until the buttons are
+  reached
 - added more Italian, Brazilian Portuguese, Polish, Spanish and German
   translation (thank you mlocati, mlimacarlos, lucjan and richarson)
 

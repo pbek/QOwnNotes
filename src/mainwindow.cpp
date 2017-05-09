@@ -712,7 +712,7 @@ void MainWindow::initTagButtonScrollArea() {
     _noteTagButtonScrollArea = new QScrollArea(this);
     _noteTagButtonScrollArea->setWidgetResizable(true);
     _noteTagButtonScrollArea->setSizePolicy(QSizePolicy::MinimumExpanding,
-                                      QSizePolicy::Minimum);
+                                      QSizePolicy::Ignored);
     _noteTagButtonScrollArea->setAlignment(Qt::AlignLeft);
     _noteTagButtonScrollArea->setWidget(ui->noteTagButtonFrame);
 

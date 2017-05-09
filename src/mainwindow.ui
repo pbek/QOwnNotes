@@ -608,6 +608,18 @@ p, li { white-space: pre-wrap; }
          </item>
          <item row="0" column="1">
           <widget class="QScrollArea" name="scriptingScrollArea">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Ignored">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>10</height>
+            </size>
+           </property>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
@@ -619,14 +631,11 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>314</width>
-              <height>466</height>
+              <width>300</width>
+              <height>26</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="scriptingScrollAreaLayout">
-             <property name="spacing">
-              <number>3</number>
-             </property>
              <property name="leftMargin">
               <number>3</number>
              </property>
