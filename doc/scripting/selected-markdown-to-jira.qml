@@ -7,13 +7,9 @@ import QtQml 2.0
  * Dependencies:
  * NodeJS
  * https://github.com/kylefarris/J2M
- * https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/md2jira/md2jira.js
  * 
  * first you have to install jira2md:
  * npm install jira2md
- * 
- * then you have to copy https://github.com/pbek/QOwnNotes/tree/develop/doc/scripting/md2jira/md2jira.js
- * to /usr/local/bin/md2jira,js
  */
 QtObject {
     /**
@@ -36,15 +32,14 @@ QtObject {
 
         // get the selected text from the note text edit
         var text = script.noteTextEditSelectedText();
-        
+
         // fix unordered lists
         text = text.replace(/^-/g, "*");
         text = text.replace(/\t-/g, "\t*");
-        
-        // you need pandoc and the Jira writer from https://github.com/2ion/pandoc-bbcode
-        // to convert Markdown to Jira
-        var params = [];
-        var result = script.startSynchronousProcess("/usr/local/bin/md2jira.js", params, text);
+
+        // you need NodeJs and jira2md (https://github.com/kylefarris/J2M) to convert Markdown to Jira
+        var params = ["-e", "console.log(require('jira2md').to_jira(require('fs').readFileSync('/dev/stdin').toString()))"];
+        var result = script.startSynchronousProcess("nodejs", params, text);
 
         // replace some names
         result = String(result).replace(/\@Georg/ig, "[~g.franz]");
