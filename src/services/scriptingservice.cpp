@@ -1029,6 +1029,7 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
     Q_UNUSED(caption);
     Q_UNUSED(dir);
     Q_UNUSED(filter);
-    return "";
 #endif
+
+    return "";
 }
