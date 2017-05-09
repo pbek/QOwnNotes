@@ -7,7 +7,8 @@
 QT       += core gui sql svg network xml xmlpatterns printsupport qml
 
 # quick is enabled for more scripting options
-QT       += quick
+# Windows and macOS seem to ignore that
+#QT       += quick
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
