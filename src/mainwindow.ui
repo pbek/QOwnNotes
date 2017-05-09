@@ -624,6 +624,9 @@ p, li { white-space: pre-wrap; }
              </rect>
             </property>
             <layout class="QVBoxLayout" name="scriptingScrollAreaLayout">
+             <property name="spacing">
+              <number>3</number>
+             </property>
              <property name="leftMargin">
               <number>3</number>
              </property>

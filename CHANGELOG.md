@@ -2,6 +2,7 @@
 
 ## 17.05.3
 - removed a gray area under the note edit widget (glitch from version 17.05.2)
+- reduced the spacing between the labels in in the scripting widget 
 
 ## 17.05.2
 - the shortcut of custom actions will now be remembered after the app is 
