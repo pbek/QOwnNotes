@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.05.3
+- removed a gray area under the note edit widget (glitch from version 17.05.2)
+
 ## 17.05.2
 - the shortcut of custom actions will now be remembered after the app is 
   restarted (for [Issue #576](https://github.com/pbek/QOwnNotes/issues/576))
