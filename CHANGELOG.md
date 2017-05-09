@@ -3,6 +3,8 @@
 ## 17.05.3
 - removed a gray area under the note edit widget (glitch from version 17.05.2)
 - reduced the spacing between the labels in in the scripting widget 
+- added more Italian, Brazilian Portuguese, Polish, Spanish and German
+  translation (thank you mlocati, mlimacarlos, lucjan and richarson)
 
 ## 17.05.2
 - the shortcut of custom actions will now be remembered after the app is 
