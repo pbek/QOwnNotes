@@ -40,7 +40,7 @@ QtObject {
                 headline = headline.replace("(aufgabe #", "(#").replace(/\s*\//igm, "");
 
                 if (headline == "") {
-                    script.log("No Bitrix task headline was found!");
+                    script.informationMessageBox("No Bitrix task headline was found!", "Bitrix task note");
                     return;
                 }
 
