@@ -34,8 +34,8 @@ QtObject {
         var text = script.noteTextEditSelectedText();
 
         // fix unordered lists
-        text = text.replace(/^-/g, "*");
-        text = text.replace(/\t-/g, "\t*");
+        text = text.replace(/^-/gm, "*");
+        text = text.replace(/\t-/gm, "\t*");
 
         // you need NodeJs and jira2md (https://github.com/kylefarris/J2M) to convert Markdown to Jira
         var params = ["-e", "console.log(require('jira2md').to_jira(require('fs').readFileSync('/dev/stdin').toString()))"];
