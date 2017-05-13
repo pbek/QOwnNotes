@@ -73,11 +73,10 @@ Tag Tag::fetch(int id) {
 Tag Tag::fetchByName(QString name) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-
     Tag tag;
 
-    query.prepare("SELECT * FROM tag WHERE LOWER(name) = :name");
-    query.bindValue(":name", name.toLower());
+    query.prepare("SELECT * FROM tag WHERE name = :name COLLATE NOCASE");
+    query.bindValue(":name", name);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -91,11 +90,10 @@ Tag Tag::fetchByName(QString name) {
 Tag Tag::fetchByName(QString name, int parentId) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
-
     Tag tag;
 
-    query.prepare("SELECT * FROM tag WHERE LOWER(name) = :name AND"
-                          "parent_id = :parent_id");
+    query.prepare("SELECT * FROM tag WHERE name = :name AND "
+                          "parent_id = :parent_id COLLATE NOCASE");
     query.bindValue(":name", name.toLower());
     query.bindValue(":parent_id", parentId);
 
@@ -525,8 +523,9 @@ bool Tag::linkToNote(Note note) {
                     note.getNoteSubFolder().relativePath());
 
     if (!query.exec()) {
-        // on error
-        qWarning() << __func__ << ": " << query.lastError();
+        // we should not show this warning, because we don't check if a
+        // link to a note already exists before we try to create an other link
+//        qWarning() << __func__ << ": " << query.lastError();
         return false;
     }
 

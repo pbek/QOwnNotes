@@ -235,6 +235,14 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 10;
     }
 
+    if (version < 11) {
+        // create a case insensitive index
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                               "tag (name COLLATE NOCASE, parent_id)");
+        version = 11;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");
