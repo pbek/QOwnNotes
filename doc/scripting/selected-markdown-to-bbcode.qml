@@ -13,7 +13,7 @@ QtObject {
      * Initializes the custom action
      */
     function init() {
-        script.registerCustomAction("markdownToBBCode", "Markdown to BBCode", "BBCode", "edit-copy", true);
+        script.registerCustomAction("markdownToBBCode", "Markdown to BBCode", "BBCode", "edit-copy", true, true);
     }
 
     /**

@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.05.4
+- scripting function `registerCustomAction` now got a new parameter to hide 
+  the button of the custom action in the toolbar
+    - for more information please take a look at the 
+      [registerCustomAction documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-custom-action)
+
 ## 17.05.3
 - removed a gray area under the note edit widget (glitch from version 17.05.2)
 - you can now reduced the height of the scripting widget and the log widget 
@@ -25,7 +31,7 @@
     - the text will be selectable and links can be clicked
     - for more information please take a look at
       [Registering a label](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-label)
-      and [Set the text of a registered label](http://docs.qownnotes.org/en/develop/scripting/README.html#set-the-text-of-a-registered-label)
+      and [Setting the text of a registered label](http://docs.qownnotes.org/en/develop/scripting/README.html#setting-the-text-of-a-registered-label)
 
 ## 17.05.1
 - the restoring of the expanded state of the items in the tag tree widget now

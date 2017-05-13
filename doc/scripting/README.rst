@@ -212,22 +212,25 @@ Parameters
 
     /**
      * Registers a custom action
-     * 
-     * @param identifier the identifier of the action 
+     *
+     * @param identifier the identifier of the action
      * @param menuText the text shown in the menu
-     * @param buttonText the text shown on the button
+     * @param buttonText the text shown in the button
      *                   (no button will be viewed if empty)
      * @param icon the icon file path or the name of a freedesktop theme icon
      *             you will find a list of icons here:
      *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
      * @param useInNoteEditContextMenu if true use the action in the note edit
      *                                 context menu (default: false)
+     * @param hideButtonInToolbar if true the button will not be shown in the
+     *                            custom action toolbar (default: false)
      */
     void ScriptingService::registerCustomAction(QString identifier,
                                                 QString menuText,
                                                 QString buttonText,
                                                 QString icon,
-                                                bool useInNoteEditContextMenu);
+                                                bool useInNoteEditContextMenu,
+                                                bool hideButtonInToolbar);
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -287,8 +290,8 @@ You may then want to take a look at the example script
 `scripting-label-demo.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/scripting-label-demo.qml>`__.
 
 
-Set the text of a registered label
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Setting the text of a registered label
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Parameters
 ^^^^^^^^^^

@@ -42,7 +42,8 @@ public:
                                            bool returnUrlOnly = false);
     Q_INVOKABLE void registerCustomAction(
             QString identifier, QString menuText, QString buttonText = "",
-            QString icon = "", bool useInNoteEditContextMenu = false);
+            QString icon = "", bool useInNoteEditContextMenu = false,
+            bool hideButtonInToolbar = false);
     Q_INVOKABLE void createNote(QString text);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(QString text);

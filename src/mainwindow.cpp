@@ -8161,7 +8161,8 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
  */
 void MainWindow::addCustomAction(QString identifier, QString menuText,
                                  QString buttonText, QString icon,
-                                 bool useInNoteEditContextMenu) {
+                                 bool useInNoteEditContextMenu,
+                                 bool hideButtonInToolbar) {
 //    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName("customAction_" + identifier);
@@ -8189,7 +8190,7 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
     }
 
     // add a button to the custom action toolbar
-    if (!buttonText.isEmpty() || !icon.isEmpty()) {
+    if (!hideButtonInToolbar && (!buttonText.isEmpty() || !icon.isEmpty())) {
         _customActionToolbar->show();
         _customActionToolbar->addAction(action);
     }

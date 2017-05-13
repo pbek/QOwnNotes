@@ -16,7 +16,7 @@ QtObject {
      * Initializes the custom action
      */
     function init() {
-        script.registerCustomAction("markdownToJira", "Markdown to Jira", "Jira", "edit-copy", true);
+        script.registerCustomAction("markdownToJira", "Markdown to Jira", "Jira", "edit-copy", true, true);
     }
 
     /**

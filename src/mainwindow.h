@@ -93,7 +93,8 @@ public:
 
     void addCustomAction(QString identifier, QString menuText,
                          QString buttonText, QString icon,
-                         bool useInNoteEditContextMenu = false);
+                         bool useInNoteEditContextMenu = false,
+                         bool hideButtonInToolbar = false);
 
     void addScriptingLabel(QString identifier, QString text = "");
 

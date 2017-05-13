@@ -719,12 +719,15 @@ QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
  *             https://specifications.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html
  * @param useInNoteEditContextMenu if true use the action in the note edit
  *                                 context menu (default: false)
+ * @param hideButtonInToolbar if true the button will not be shown in the
+ *                            custom action toolbar (default: false)
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText,
                                             QString icon,
-                                            bool useInNoteEditContextMenu) {
+                                            bool useInNoteEditContextMenu,
+                                            bool hideButtonInToolbar) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
@@ -733,7 +736,8 @@ void ScriptingService::registerCustomAction(QString identifier,
                 "scripting/" + QString(__func__));
 
         mainWindow->addCustomAction(identifier, menuText, buttonText, icon,
-                                    useInNoteEditContextMenu);
+                                    useInNoteEditContextMenu,
+                                    hideButtonInToolbar);
     }
 #else
     Q_UNUSED(identifier);
