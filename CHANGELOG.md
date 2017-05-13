@@ -8,6 +8,7 @@
 - fixed a problem with tag cases for cyrillic tags
   (for [Issue #579](https://github.com/pbek/QOwnNotes/issues/579))
 - fixed a warning when tagging a note with the same tag twice
+- added more Czech and French translation (thank you jkalousek and lepascalou)
 
 ## 17.05.3
 - removed a gray area under the note edit widget (glitch from version 17.05.2)

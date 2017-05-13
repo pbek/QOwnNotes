@@ -432,7 +432,7 @@
     <message>
       <location filename="../mainwindow.ui" line="679"/>
       <source>Note &amp;folders</source>
-      <translation type="unfinished">Note &amp;folders</translation>
+      <translation>&amp;Složky poznámek</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="684"/>
@@ -740,7 +740,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1315"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>&amp;Exportovat poznámku jako soubor markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1324"/>
@@ -750,7 +750,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1333"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Vložit blok &amp;kódu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1345"/>
@@ -765,7 +765,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1369"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>Mód &amp;Nerušit</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1372"/>
@@ -811,7 +811,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Zobrazit poznámku ve správci &amp;souborů</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1466"/>
@@ -908,7 +908,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1931"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Vložit blokovou &amp;citaci</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1939"/>
@@ -930,7 +930,7 @@
       <location filename="../mainwindow.ui" line="1967"/>
       <location filename="../mainwindow.cpp" line="7660"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Otevřít poznámku v novém okně</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1979"/>
@@ -972,7 +972,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1572"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Automaticky dokončit, vyřešit rovnici nebo otevřít adresu URL</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1575"/>
@@ -1019,7 +1019,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1643"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Vložit titulek z názvu poznámky</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1657"/>
@@ -1039,7 +1039,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1698"/>
       <source>Toggle text case</source>
-      <translation type="unfinished">Toggle text case</translation>
+      <translation>Přepnout velikost textu</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1710"/>
@@ -1070,7 +1070,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1760"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>Rozdělit poznámku na pozici kurzoru</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1780"/>
@@ -2144,7 +2144,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1392"/>
       <source>leave distraction free mode</source>
-      <translation type="unfinished">leave distraction free mode</translation>
+      <translation>opustit mód Nerušit</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5194"/>
@@ -2585,12 +2585,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="371"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Vaše složky poznámek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="438"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>Přidat složku</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="462"/>
@@ -2600,7 +2600,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="676"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation type="unfinished">This name will be viewed in all the menus.</translation>
+      <translation>Tento název bude zobrazen ve všech nabídkách.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="518"/>
@@ -2610,17 +2610,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="692"/>
       <source>Use as active note folder</source>
-      <translation type="unfinished">Use as active note folder</translation>
+      <translation>Použít jako aktivní složku pro poznámky</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="795"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>Váš ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="919"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>Adresa ownCloud serveru:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="941"/>
@@ -2640,22 +2640,22 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1092"/>
       <source>connection to web server</source>
-      <translation type="unfinished">connection to web server</translation>
+      <translation>připojení k webovému serveru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1109"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>detekován ownCloud server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1143"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>připojení k QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1126"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>správné uživatelské jméno a heslo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1082"/>
@@ -2676,17 +2676,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1160"/>
       <source>versions app enabled on server</source>
-      <translation type="unfinished">versions app enabled on server</translation>
+      <translation>aplikace "Versions" povolena na serveru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1177"/>
       <source>trash app enabled on server</source>
-      <translation type="unfinished">trash app enabled on server</translation>
+      <translation>aplikace "Deleted files" povolena na serveru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1194"/>
       <source>notes path found on server</source>
-      <translation type="unfinished">notes path found on server</translation>
+      <translation>aplikace "Notes" povolena na serveru</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="854"/>
@@ -2751,12 +2751,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1241"/>
       <source>Use system proxy</source>
-      <translation type="unfinished">Use system proxy</translation>
+      <translation>Použít proxy systému</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1248"/>
       <source>Specify proxy manually as</source>
-      <translation type="unfinished">Specify proxy manually as</translation>
+      <translation>Zadat proxy manuálně</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1273"/>
@@ -2766,7 +2766,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1324"/>
       <source>Proxy server requires authentication</source>
-      <translation type="unfinished">Proxy server requires authentication</translation>
+      <translation>Proxy setver vyžaduje ověření</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1381"/>
@@ -3211,7 +3211,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="709"/>
       <source>Path on your ownCloud server:</source>
-      <translation type="unfinished">Path on your ownCloud server:</translation>
+      <translation>Cesta na vašem ownCloud serveru:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="716"/>
@@ -3222,7 +3222,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="723"/>
       <source>Note folder path:</source>
-      <translation type="unfinished">Note folder path:</translation>
+      <translation>Cesta ke složce s poznámkami:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="730"/>
@@ -4792,7 +4792,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Cesta ke složce s poznámkami</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>

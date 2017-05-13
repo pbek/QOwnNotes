@@ -1997,7 +1997,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="633"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Écriture de scripts</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="867"/>
