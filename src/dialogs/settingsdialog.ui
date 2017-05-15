@@ -349,7 +349,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>15</number>
+            <number>6</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2487,7 +2487,7 @@
                         </property>
                        </spacer>
                       </item>
-                      <item row="0" column="2">
+                      <item row="0" column="3">
                        <widget class="QPushButton" name="scriptRemoveButton">
                         <property name="text">
                          <string>&amp;Remove script</string>
@@ -2495,6 +2495,17 @@
                         <property name="icon">
                          <iconset theme="edit-delete" resource="../breeze-qownnotes.qrc">
                           <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
+                        </property>
+                       </widget>
+                      </item>
+                      <item row="0" column="2">
+                       <widget class="QPushButton" name="scriptSearchButton">
+                        <property name="text">
+                         <string>Search script repository</string>
+                        </property>
+                        <property name="icon">
+                         <iconset theme="edit-find" resource="../breeze-qownnotes.qrc">
+                          <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
                         </property>
                        </widget>
                       </item>
@@ -4030,8 +4041,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

@@ -101,6 +101,9 @@ set(SOURCE_FILES
     dialogs/orphanedimagesdialog.cpp
     dialogs/orphanedimagesdialog.h
     dialogs/orphanedimagesdialog.ui
+    dialogs/scriptrepositorydialog.cpp
+    dialogs/scriptrepositorydialog.h
+    dialogs/scriptrepositorydialog.ui
     dialogs/actiondialog.cpp
     dialogs/actiondialog.h
     dialogs/actiondialog.ui

@@ -17,6 +17,7 @@
 #include <services/metricsservice.h>
 #include "helpers/clientproxy.h"
 #include "filedialog.h"
+#include "scriptrepositorydialog.h"
 #include <QtNetwork/qnetworkproxy.h>
 #include <services/cryptoservice.h>
 #include <utils/gui.h>
@@ -2976,4 +2977,10 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
             ui->gitPathLineEdit->setText(path);
         }
     }
+}
+
+void SettingsDialog::on_scriptSearchButton_clicked() {
+    ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this);
+    dialog->exec();
+    delete(dialog);
 }

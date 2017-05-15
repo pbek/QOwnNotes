@@ -212,6 +212,8 @@ private slots:
 
     void on_setGitPathToolButton_clicked();
 
+    void on_scriptSearchButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;
