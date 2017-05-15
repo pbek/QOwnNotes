@@ -745,6 +745,7 @@ void ScriptingService::registerCustomAction(QString identifier,
     Q_UNUSED(buttonText);
     Q_UNUSED(icon);
     Q_UNUSED(useInNoteEditContextMenu);
+    Q_UNUSED(hideButtonInToolbar);
 #endif
 }
 
