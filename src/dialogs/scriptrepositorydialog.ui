@@ -75,7 +75,7 @@
         <item row="3" column="1">
          <widget class="QLabel" name="versionLabel">
           <property name="text">
-           <string>Version</string>
+           <string notr="true">Version</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -139,7 +139,7 @@
         <item row="0" column="0" colspan="2">
          <widget class="QLabel" name="nameLabel">
           <property name="text">
-           <string>Name</string>
+           <string notr="true">Name</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -149,7 +149,7 @@
         <item row="5" column="0" colspan="2">
          <widget class="QLabel" name="descriptionLabel">
           <property name="text">
-           <string>Description</string>
+           <string notr="true">Description</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -212,7 +212,7 @@
         <item row="0" column="0">
          <widget class="QLineEdit" name="searchScriptEdit">
           <property name="placeholderText">
-           <string>Search script</string>
+           <string>Find script</string>
           </property>
           <property name="clearButtonEnabled">
            <bool>true</bool>

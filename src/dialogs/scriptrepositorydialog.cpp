@@ -18,11 +18,13 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent) :
                      this, SLOT(slotReplyFinished(QNetworkReply *)));
 
     _codeSearchUrl = "https://api.github.com/search/code";
+
     ui->downloadProgressBar->hide();
+    ui->searchScriptEdit->setFocus();
+    ui->scriptTreeWidget->setRootIsDecorated(false);
 }
 
-ScriptRepositoryDialog::~ScriptRepositoryDialog()
-{
+ScriptRepositoryDialog::~ScriptRepositoryDialog() {
     storeSettings();
     delete ui;
 }
@@ -30,8 +32,7 @@ ScriptRepositoryDialog::~ScriptRepositoryDialog()
 /**
  * Searches for script in the script repository
  */
-void ScriptRepositoryDialog::searchScript()
-{
+void ScriptRepositoryDialog::searchScript() {
     QString query = QUrl::toPercentEncoding(ui->searchScriptEdit->text());
     QUrl url(_codeSearchUrl +"?q=" + query +
                      "+in:file+language:json+repo:qownnotes/scripts");
@@ -45,7 +46,7 @@ void ScriptRepositoryDialog::searchScript()
     // try to ensure the network is accessible
     _networkManager->setNetworkAccessible(QNetworkAccessManager::Accessible);
 
-    QNetworkReply *reply = _networkManager->get(networkRequest);
+    _networkManager->get(networkRequest);
 
     ui->downloadProgressBar->show();
     ui->downloadProgressBar->reset();
@@ -58,6 +59,10 @@ void ScriptRepositoryDialog::on_searchScriptEdit_returnPressed() {
     searchScript();
 }
 
+/**
+ * Handles all the network replies
+ * @param reply
+ */
 void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
     QUrl url = reply->url();
     QString urlPath = url.path();
@@ -69,6 +74,11 @@ void ScriptRepositoryDialog::slotReplyFinished(QNetworkReply *reply) {
         qDebug() << "Reply from code search";
 
         parseCodeSearchReply(arr);
+    } else if (urlPath.startsWith("/qownnotes/scripts/master")) {
+        QByteArray arr = reply->readAll();
+        qDebug() << "Reply from info.qml request";
+
+        parseInfoQMLReply(arr);
     }
 }
 
@@ -83,6 +93,7 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) const {
     QJsonObject jsonObject = jsonResponse.object();
     QJsonArray items = jsonObject.value("items").toArray();
     ui->scriptTreeWidget->clear();
+    int itemCount = items.count();
 
     foreach(const QJsonValue &value, items) {
             QJsonObject obj = value.toObject();
@@ -97,13 +108,43 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) const {
             }
 
             QString identifier = match.captured(1);
+            qDebug() << "Found script: " + identifier;
 
-            QTreeWidgetItem *item = new QTreeWidgetItem();
-            item->setText(0, identifier);
-            ui->scriptTreeWidget->addTopLevelItem(item);
+            QUrl url("https://raw.githubusercontent"
+                             ".com/qownnotes/scripts/master/" + path);
+
+            QNetworkRequest networkRequest(url);
+
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 6, 0))
+            networkRequest.setAttribute(
+                    QNetworkRequest::FollowRedirectsAttribute, true);
+#endif
+
+            // try to ensure the network is accessible
+            _networkManager->setNetworkAccessible(
+                    QNetworkAccessManager::Accessible);
+
+            _networkManager->get(networkRequest);
         }
 
     ui->downloadProgressBar->hide();
+}
+
+/**
+ * Parses the reply from the info.qml request
+ *
+ * @param arr
+ */
+void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
+    QJsonObject jsonObject = jsonResponse.object();
+    QString name = jsonObject.value("name").toString();
+
+    QTreeWidgetItem *item = new QTreeWidgetItem();
+    item->setText(0, name);
+    item->setData(0, Qt::UserRole, QString(arr));
+    ui->scriptTreeWidget->addTopLevelItem(item);
+    ui->scriptTreeWidget->resizeColumnToContents(0);
 }
 
 /**
@@ -117,16 +158,38 @@ void ScriptRepositoryDialog::setupMainSplitter() {
 
     // restore splitter sizes
     QSettings settings;
-    QByteArray state =
-            settings.value("ScriptRepositoryDialog/mainSplitterState").toByteArray();
+    QByteArray state = settings.value(
+            "ScriptRepositoryDialog/mainSplitterState").toByteArray();
     _mainSplitter->restoreState(state);
 
     ui->gridLayout->layout()->addWidget(_mainSplitter);
 }
 
+/**
+ * Stores the settings
+ */
 void ScriptRepositoryDialog::storeSettings() {
     QSettings settings;
     settings.setValue("ScriptRepositoryDialog/geometry", saveGeometry());
     settings.setValue("ScriptRepositoryDialog/mainSplitterState",
                       _mainSplitter->saveState());
+}
+
+void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
+    Q_UNUSED(previous);
+
+    QString data = current->data(0, Qt::UserRole).toString();
+
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(data.toUtf8());
+    QJsonObject jsonObject = jsonResponse.object();
+    QString name = jsonObject.value("name").toString();
+    QString identifier = jsonObject.value("identifier").toString();
+    QString version = jsonObject.value("version").toString();
+    QString description = jsonObject.value("description").toString();
+    QString script = jsonObject.value("script").toString();
+
+    ui->nameLabel->setText("<b>" + name + "</b>");
+    ui->versionLabel->setText(version);
+    ui->descriptionLabel->setText(description);
 }

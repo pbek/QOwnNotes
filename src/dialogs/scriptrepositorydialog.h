@@ -4,6 +4,7 @@
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
 #include <QSplitter>
+#include <QTreeWidgetItem>
 
 namespace Ui {
 class ScriptRepositoryDialog;
@@ -22,6 +23,8 @@ private slots:
 
     void slotReplyFinished(QNetworkReply *);
 
+    void on_scriptTreeWidget_currentItemChanged(QTreeWidgetItem *current, QTreeWidgetItem *previous);
+
 private:
     Ui::ScriptRepositoryDialog *ui;
     QNetworkAccessManager *_networkManager;
@@ -35,4 +38,6 @@ private:
     void parseCodeSearchReply(const QByteArray &arr) const;
 
     void storeSettings();
+
+    void parseInfoQMLReply(const QByteArray &arr) const;
 };
