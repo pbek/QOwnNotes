@@ -5,6 +5,7 @@
 #include <QSqlRecord>
 #include <QSqlError>
 #include <QDir>
+#include <QJsonDocument>
 #include <utils/misc.h>
 
 
@@ -35,6 +36,10 @@ QString Script::getName() {
     return this->name;
 }
 
+QString Script::getIdentifier() {
+    return this->identifier;
+}
+
 int Script::getPriority() {
     return this->priority;
 }
@@ -49,6 +54,14 @@ bool Script::isEnabled() {
 
 void Script::setName(QString text) {
     this->name = text;
+}
+
+void Script::setIdentifier(QString identifier) {
+    this->identifier = identifier;
+}
+
+void Script::setInfoJson(QString infoJson) {
+    this->infoJson = infoJson;
 }
 
 void Script::setScriptPath(QString text) {
@@ -157,6 +170,8 @@ Script Script::scriptFromQuery(QSqlQuery query) {
 bool Script::fillFromQuery(QSqlQuery query) {
     this->id = query.value("id").toInt();
     this->name = query.value("name").toString();
+    this->identifier = query.value("identifier").toString();
+    this->infoJson = query.value("info_json").toString();
     this->priority = query.value("priority").toInt();
     this->enabled = query.value("enabled").toBool();
 
@@ -198,19 +213,23 @@ bool Script::store() {
     if (this->id > 0) {
         query.prepare(
                 "UPDATE script SET name = :name, script_path = :scriptPath, "
-                        "priority = :priority, enabled = :enabled "
+                        "priority = :priority, enabled = :enabled, "
+                        "identifier = :identifier, info_json = :info_json "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO script (name, script_path, "
-                        "priority, enabled) VALUES "
-                        "(:name, :scriptPath, :priority, :enabled)");
+                        "priority, enabled, identifier, info_json) VALUES "
+                        "(:name, :scriptPath, :priority, :enabled, "
+                        ":identifier, :info_json)");
     }
 
     query.bindValue(":name", this->name);
     query.bindValue(":priority", this->priority);
     query.bindValue(":enabled", this->enabled);
+    query.bindValue(":identifier", this->identifier);
+    query.bindValue(":info_json", this->infoJson);
 
     // make the path relative to the portable data path if we are in
     // portable mode
@@ -240,6 +259,45 @@ bool Script::exists() {
 
 bool Script::isFetched() {
     return (this->id > 0);
+}
+
+/**
+ * Returns the json object of the infoJson field
+ *
+ * @return
+ */
+QJsonObject Script::getInfoJsonObject() {
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(infoJson.toUtf8());
+    return jsonResponse.object();
+}
+
+/**
+ * Returns the path where the script repositories will be stored locally
+ *
+ * @return
+ */
+QString Script::globalScriptRepositoryPath() {
+    QString path = Utils::Misc::appDataPath() + "/scripts";
+    QDir dir;
+
+    // create path if it doesn't exist yet
+    dir.mkpath(path);
+    return path;
+}
+
+/**
+ * Returns the path where the qml (and possibly other files) of the script
+ * will be stored
+ *
+ * @return
+ */
+QString Script::scriptRepositoryPath() {
+    QString path = globalScriptRepositoryPath() + "/" + identifier;
+    QDir dir;
+
+    // create path if it doesn't exist yet
+    dir.mkpath(path);
+    return path;
 }
 
 QDebug operator<<(QDebug dbg, const Script &script) {

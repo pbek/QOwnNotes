@@ -512,6 +512,12 @@ bool DatabaseService::setupTables() {
         version = 22;
     }
 
+    if (version < 23) {
+        queryDisk.exec("ALTER TABLE script ADD identifier VARCHAR(255)");
+        queryDisk.exec("ALTER TABLE script ADD info_json TEXT");
+        version = 23;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

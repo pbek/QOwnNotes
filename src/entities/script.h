@@ -2,6 +2,7 @@
 
 #include <QSqlQuery>
 #include <QList>
+#include <QJsonObject>
 
 class Script
 {
@@ -31,10 +32,18 @@ public:
     bool getEnabled();
     bool isEnabled();
     static int countEnabled();
+    void setIdentifier(QString identifier);
+    void setInfoJson(QString infoJson);
+    QString getIdentifier();
+    QJsonObject getInfoJsonObject();
+    static QString globalScriptRepositoryPath();
+    QString scriptRepositoryPath();
 
 private:
     int id;
     QString name;
+    QString identifier;
+    QString infoJson;
     QString scriptPath;
     int priority;
     bool enabled;
