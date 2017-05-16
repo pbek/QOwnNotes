@@ -5,6 +5,9 @@
 #include <QtCore/QJsonObject>
 #include <QtCore/QJsonArray>
 #include <entities/script.h>
+#include <QtCore/QFile>
+#include <utils/misc.h>
+#include <QtWidgets/QMessageBox>
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
 
@@ -208,6 +211,7 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
     QString identifier = jsonObject.value("identifier").toString();
     QString version = jsonObject.value("version").toString();
     QString description = jsonObject.value("description").toString();
+    description = description.replace("\n", "<br>");
     QString script = jsonObject.value("script").toString();
 
     enableOverview(false);
@@ -217,6 +221,8 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
     ui->repositoryLinkLabel->setText(
             "<a href=\"https://github.com/qownnotes/scripts/tree/master/" +
                     identifier + "\">" + tr("Open repository") + "</a>");
+    ui->installButton->setDisabled(
+            Script::scriptFromRepositoryExists(identifier));
 }
 
 /**
@@ -249,30 +255,9 @@ QString ScriptRepositoryDialog::getCurrentInfoJsonString() {
 }
 
 /**
- * Installs a script
- *
- * @param identifier
- */
-void ScriptRepositoryDialog::installScript(QString identifier) {
-    qDebug() << __func__ << " - 'identifier': " << identifier;
-
-    if (identifier.isEmpty()) {
-        return;
-    }
-
-    Script *script = new Script();
-    script->setIdentifier(identifier);
-    // TODO(pbek): remove old script folder
-    // TODO(pbek): create new script folder
-    // TODO(pbek): download script
-    // TODO(pbek): create script in database
-}
-
-/**
  * Installs the currently selected script
  */
-void ScriptRepositoryDialog::on_installButton_clicked()
-{
+void ScriptRepositoryDialog::on_installButton_clicked() {
     QJsonObject jsonObject = getCurrentInfoJsonObject();
 
     if (jsonObject.isEmpty()) {
@@ -285,13 +270,48 @@ void ScriptRepositoryDialog::on_installButton_clicked()
         return;
     }
 
+    // check if script is already installed
+    if (Script::scriptFromRepositoryExists(identifier)) {
+        return;
+    }
+
+    ui->installButton->setEnabled(false);
+
     QString name = jsonObject.value("name").toString();
     QString scriptName = jsonObject.value("script").toString();
 
-    Script *script = new Script();
-    script->setIdentifier(identifier);
-    script->setName(name);
-    script->setScriptPath(scriptName);
-    script->setInfoJson(getCurrentInfoJsonString());
-    script->store();
+    // create the script in the database
+    Script script;
+    script.setIdentifier(identifier);
+    script.setName(name);
+    script.setInfoJson(getCurrentInfoJsonString());
+
+    // this also creates the path after removing it
+    QString scriptRepositoryPath = script.scriptRepositoryPath(true);
+
+    if (scriptRepositoryPath.isEmpty()) {
+        return;
+    }
+
+    QString scriptPath = scriptRepositoryPath + "/" + scriptName;
+    script.setScriptPath(scriptPath);
+    bool scriptWasDownloaded;
+
+    QUrl url = script.remoteScriptUrl();
+
+    // download the script
+    if (!url.isEmpty()) {
+        QFile *file = new QFile(scriptPath);
+        scriptWasDownloaded = Utils::Misc::downloadUrlToFile(url, file);
+        file->close();
+    }
+
+    ui->installButton->setEnabled(true);
+
+    if (scriptWasDownloaded) {
+        script.store();
+
+        QMessageBox::information(this, tr("Install successful"),
+                                 tr("The script was successfully installed!"));
+    }
 }

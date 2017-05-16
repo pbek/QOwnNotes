@@ -18,8 +18,6 @@ public:
     explicit ScriptRepositoryDialog(QWidget *parent = 0);
     ~ScriptRepositoryDialog();
 
-    void installScript(QString identifier);
-
 private slots:
     void on_searchScriptEdit_returnPressed();
 

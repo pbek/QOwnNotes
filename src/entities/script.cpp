@@ -141,14 +141,50 @@ int Script::countEnabled() {
     return 0;
 }
 
+/**
+ * Checks if a script identifier already exists
+ *
+ * @param identifier
+ * @return
+ */
+bool Script::scriptFromRepositoryExists(QString identifier) {
+    QSqlDatabase db = QSqlDatabase::database("disk");
+    QSqlQuery query(db);
+
+    query.prepare("SELECT COUNT(1) AS cnt FROM script WHERE identifier = "
+                          ":identifier");
+    query.bindValue(":identifier", identifier);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else if (query.first()) {
+        return query.value("cnt").toInt() > 0;
+    }
+
+    return false;
+}
+
 bool Script::scriptPathExists() {
     QFile file(scriptPath);
     return file.exists() && !scriptPath.isEmpty();
 }
 
+/**
+ * Removes a script from the database
+ * If the script was from the script repository also the local repository
+ * path will be removed
+ *
+ * @return
+ */
 bool Script::remove() {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
+    QString path;
+    bool isFromRepository = isScriptFromRepository();
+
+    if (isFromRepository) {
+        path = scriptRepositoryPath();
+    }
 
     query.prepare("DELETE FROM script WHERE id = :id");
     query.bindValue(":id", this->id);
@@ -157,6 +193,13 @@ bool Script::remove() {
         qWarning() << __func__ << ": " << query.lastError();
         return false;
     } else {
+        // if the script was from the script repository remove also the
+        // local path
+        if (isFromRepository && !path.isEmpty()) {
+            QDir dir(path);
+            dir.removeRecursively();
+        }
+
         return true;
     }
 }
@@ -291,14 +334,51 @@ QString Script::globalScriptRepositoryPath() {
  *
  * @return
  */
-QString Script::scriptRepositoryPath() {
+QString Script::scriptRepositoryPath(bool removeRecursively) {
+    if (identifier.isEmpty()) {
+        return "";
+    }
+
     QString path = globalScriptRepositoryPath() + "/" + identifier;
-    QDir dir;
+    QDir dir(path);
+
+    // remove the old files in the script path
+    if (removeRecursively) {
+        dir.removeRecursively();
+    }
 
     // create path if it doesn't exist yet
     dir.mkpath(path);
     return path;
 }
+
+/**
+ * Checks if the script is a script from the sript repository
+ *
+ * @return
+ */
+bool Script::isScriptFromRepository() {
+    return !identifier.isEmpty() || !infoJson.isEmpty();
+}
+
+/**
+ * Returns the url of the script in the remote script repository
+ *
+ * @return
+ */
+QUrl Script::remoteScriptUrl() {
+    QJsonObject jsonObject = getInfoJsonObject();
+    QString scriptName = jsonObject.value("script").toString();
+
+    if (scriptName.isEmpty()) {
+        return QUrl();
+    }
+
+    return QUrl("https://raw.githubusercontent.com/qownnotes/scripts/master/"
+           + identifier + "/" + scriptName);
+}
+
+
 
 QDebug operator<<(QDebug dbg, const Script &script) {
     dbg.nospace() << "Script: <id>" << script.id << " <name>" <<

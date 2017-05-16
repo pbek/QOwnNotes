@@ -2127,6 +2127,7 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
 void SettingsDialog::setupScriptingPage() {
     QList<Script> scripts = Script::fetchAll();
     int scriptsCount = scripts.count();
+    ui->scriptListWidget->clear();
 
     // populate the script list
     if (scriptsCount > 0) {
@@ -2308,6 +2309,11 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
         ui->scriptNameLineEdit->setText(_selectedScript.getName());
         ui->scriptPathLineEdit->setText(_selectedScript.getScriptPath());
         ui->scriptEditFrame->setEnabled(true);
+
+        bool isScriptFromRepository = _selectedScript.isScriptFromRepository();
+        ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
+        ui->scriptPathLineEdit->setReadOnly(isScriptFromRepository);
+        ui->scriptPathButton->setDisabled(isScriptFromRepository);
 
         // validate the script
         validateCurrentScript();
@@ -2983,4 +2989,5 @@ void SettingsDialog::on_scriptSearchButton_clicked() {
     ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this);
     dialog->exec();
     delete(dialog);
+    setupScriptingPage();
 }

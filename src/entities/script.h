@@ -3,6 +3,7 @@
 #include <QSqlQuery>
 #include <QList>
 #include <QJsonObject>
+#include <QtCore/QUrl>
 
 class Script
 {
@@ -37,7 +38,10 @@ public:
     QString getIdentifier();
     QJsonObject getInfoJsonObject();
     static QString globalScriptRepositoryPath();
-    QString scriptRepositoryPath();
+    QString scriptRepositoryPath(bool removeRecursively = false);
+    bool isScriptFromRepository();
+    QUrl remoteScriptUrl();
+    static bool scriptFromRepositoryExists(QString identifier);
 
 private:
     int id;

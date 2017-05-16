@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.05.5
+- you can now access the new [script repository](https://github.com/qownnotes/scripts)
+  from a new button *Search script repository* in the *scripting settings*
+    - in the new *script repository* dialog you can search for scripts from 
+      the repository and install them
+    - more features and scripts will be added in the coming releases
+
 ## 17.05.4
 - scripting function `registerCustomAction` now got a new parameter to hide 
   the button of the custom action in the toolbar
