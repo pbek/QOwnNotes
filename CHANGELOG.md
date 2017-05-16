@@ -6,6 +6,8 @@
     - in the new *script repository* dialog you can search for scripts from 
       the repository and install them
     - more features and scripts will be added in the coming releases
+- added more Chinese, Dutch and Hungarian translation (thank you chonghua and
+  Fabijenna)
 
 ## 17.05.4
 - scripting function `registerCustomAction` now got a new parameter to hide 
