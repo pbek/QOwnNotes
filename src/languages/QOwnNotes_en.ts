@@ -2584,17 +2584,17 @@ Are the folder and the file writeable?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="224"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="225"/>
         <source>Open repository</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="316"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="320"/>
         <source>Install successful</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/scriptrepositorydialog.cpp" line="317"/>
+        <location filename="../dialogs/scriptrepositorydialog.cpp" line="321"/>
         <source>The script was successfully installed!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2602,7 +2602,7 @@ Are the folder and the file writeable?</source>
 <context>
     <name>ScriptingService</name>
     <message>
-        <location filename="../services/scriptingservice.cpp" line="155"/>
+        <location filename="../services/scriptingservice.cpp" line="183"/>
         <source>file doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3985,74 +3985,74 @@ Connection error message: </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2389"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
         <source>Your script seems to be valid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2390"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2412"/>
         <source>There were script errors:
 %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2455"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2477"/>
         <source>File extension</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2456"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2478"/>
         <source>Enter your custom file extension:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2730"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2752"/>
         <source>Calendar cache emptied</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2731"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2753"/>
         <source>Your calendar cache was emptied.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2808"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2830"/>
         <source>Reset toolbars and exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2809"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2831"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2813"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2835"/>
         <source>Reset and &amp;exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2975"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2997"/>
         <source>Log file cleared</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2976"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2998"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3012"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3034"/>
         <source>Executable files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3013"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3015"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3035"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3037"/>
         <source>All files</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3023"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3045"/>
         <source>Please select the path of your git executable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4133,7 +4133,7 @@ Your notes will stay intact!</source>
         <location filename="../dialogs/settingsdialog.cpp" line="1637"/>
         <location filename="../dialogs/settingsdialog.cpp" line="1876"/>
         <location filename="../dialogs/settingsdialog.cpp" line="2242"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2813"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2835"/>
         <source>&amp;Cancel</source>
         <translation type="unfinished"></translation>
     </message>

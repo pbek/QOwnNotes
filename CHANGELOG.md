@@ -9,6 +9,8 @@
 - the authors of the scripts in the script repository are now shown in the
   *Script repository dialog* and the *Scripting settings* (if the information
   was available at the time of script installation)
+- added more Italian and Brazilian Portuguese translation (thank you mlocati and
+  mlimacarlos)
 
 ## 17.05.5
 - you can now access the new [script repository](https://github.com/qownnotes/scripts)
