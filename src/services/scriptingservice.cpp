@@ -20,7 +20,6 @@
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
-#include <QVariant>
 
 #endif
 
