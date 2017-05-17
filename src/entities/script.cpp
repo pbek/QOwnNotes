@@ -8,6 +8,7 @@
 #include <QJsonDocument>
 #include <utils/misc.h>
 #include <QtCore/QJsonArray>
+#include <services/metricsservice.h>
 
 
 Script::Script() {
@@ -199,6 +200,9 @@ bool Script::remove() {
         if (isFromRepository && !path.isEmpty()) {
             QDir dir(path);
             dir.removeRecursively();
+
+            MetricsService::instance()->sendVisitIfEnabled(
+                    "script-repository/remove/" + identifier);
         }
 
         return true;

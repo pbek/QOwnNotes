@@ -8,6 +8,7 @@
 #include <QtCore/QFile>
 #include <utils/misc.h>
 #include <QtWidgets/QMessageBox>
+#include <services/metricsservice.h>
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
 
@@ -312,6 +313,9 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
 
     if (scriptWasDownloaded) {
         script.store();
+
+        MetricsService::instance()->sendVisitIfEnabled(
+                "script-repository/install/" + identifier);
 
         QMessageBox::information(this, tr("Install successful"),
                                  tr("The script was successfully installed!"));
