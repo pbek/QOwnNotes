@@ -52,3 +52,16 @@ private:
     int priority;
     bool enabled;
 };
+
+class ScriptInfoJson {
+public:
+    explicit ScriptInfoJson(QJsonObject jsonObject);
+
+    QString name;
+    QString identifier;
+    QString version;
+    QString script;
+    QString description;
+    QStringList richAuthorList;
+    QString richAuthorText;
+};

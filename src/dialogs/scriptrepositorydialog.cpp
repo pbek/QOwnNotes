@@ -127,6 +127,11 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
             QString identifier = match.captured(1);
             qDebug() << "Found script: " + identifier;
 
+            // we are ignoring the example-script
+            if (identifier == "example-script") {
+                continue;
+            }
+
             QUrl url(_rawContentUrlPrefix + path);
             QNetworkRequest networkRequest(url);
 
@@ -207,22 +212,19 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
         return;
     }
 
-    QString name = jsonObject.value("name").toString();
-    QString identifier = jsonObject.value("identifier").toString();
-    QString version = jsonObject.value("version").toString();
-    QString description = jsonObject.value("description").toString();
-    description = description.replace("\n", "<br>");
-    QString script = jsonObject.value("script").toString();
-
     enableOverview(false);
-    ui->nameLabel->setText("<b>" + name + "</b>");
-    ui->versionLabel->setText(version);
-    ui->descriptionLabel->setText(description);
+
+    ScriptInfoJson infoJson(jsonObject);
+    ui->nameLabel->setText("<b>" + infoJson.name + "</b>");
+    ui->versionLabel->setText(infoJson.version);
+    ui->descriptionLabel->setText(infoJson.description);
+    ui->authorLabel->setText(infoJson.richAuthorText);
     ui->repositoryLinkLabel->setText(
             "<a href=\"https://github.com/qownnotes/scripts/tree/master/" +
-                    identifier + "\">" + tr("Open repository") + "</a>");
+                    infoJson.identifier + "\">" + tr("Open repository") +
+                    "</a>");
     ui->installButton->setDisabled(
-            Script::scriptFromRepositoryExists(identifier));
+            Script::scriptFromRepositoryExists(infoJson.identifier));
 }
 
 /**

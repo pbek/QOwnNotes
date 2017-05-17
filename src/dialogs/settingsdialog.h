@@ -138,7 +138,7 @@ private slots:
 
     void on_useOwnCloudPathButton_clicked();
 
-    void on_scriptAddButton_clicked();
+    void addLocalScript();
 
     void on_scriptRemoveButton_clicked();
 
@@ -212,7 +212,7 @@ private slots:
 
     void on_setGitPathToolButton_clicked();
 
-    void on_scriptSearchButton_clicked();
+    void searchScriptInRepository();
 
 private:
 
@@ -303,6 +303,8 @@ private:
     void replaceOwnCloudText() const;
 
     bool connectionTestCanBeStarted() const;
+
+    void reloadScriptList() const;
 };
 
 #endif // SETTINGSDIALOG_H

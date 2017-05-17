@@ -7,6 +7,7 @@
 #include <QDir>
 #include <QJsonDocument>
 #include <utils/misc.h>
+#include <QtCore/QJsonArray>
 
 
 Script::Script() {
@@ -386,4 +387,39 @@ QDebug operator<<(QDebug dbg, const Script &script) {
             " <enabled>" << script.enabled <<
             " <priority>" << script.priority;
     return dbg.space();
+}
+
+/**
+ * Aggregates the infoJson data from a QJsonObject
+ *
+ * @param jsonObject
+ */
+ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
+    if (jsonObject.isEmpty()) {
+        return;
+    }
+
+    name = jsonObject.value("name").toString();
+    identifier = jsonObject.value("identifier").toString();
+    version = jsonObject.value("version").toString();
+    description = jsonObject.value("description").toString();
+    description = description.replace("\n", "<br>");
+    script = jsonObject.value("script").toString();
+    QJsonArray authors = jsonObject.value("authors").toArray();
+
+    richAuthorList.clear();
+    foreach(const QJsonValue &value, authors) {
+            QString author = value.toString().trimmed();
+
+            // create links to GitHub
+            if (author.startsWith("@")) {
+                author = author.remove(0, 1);
+                author = "<a href='https://github.com/" + author + "'>" +
+                         author + "</a>";
+            }
+
+            richAuthorList << author;
+        }
+
+    richAuthorText = richAuthorList.join(", ");
 }

@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 17.05.6
+- the `Add script` button in the *Scripting settings* is now a button group
+  where you can add local scripts and scripts from the *script repository*
+- if the script in the *Scripting settings* was from the *script repository*
+  additional information from the repository will be shown
+- the *example script* will now be ignored in the *script repository*
+- the authors of the scripts in the script repository are now shown in the
+  *Script repository dialog* and the *Scripting settings* (if the information
+  was available at the time of script installation)
+
 ## 17.05.5
 - you can now access the new [script repository](https://github.com/qownnotes/scripts)
   from a new button *Search script repository* in the *scripting settings*

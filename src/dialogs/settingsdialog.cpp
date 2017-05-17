@@ -2125,6 +2125,49 @@ void SettingsDialog::setNoteFolderRemotePathTreeWidgetFrameVisibility(
  * Does the scripting page setup
  */
 void SettingsDialog::setupScriptingPage() {
+    // reload the script list
+    reloadScriptList();
+
+    QString issueUrl = "https://github.com/pbek/QOwnNotes/issues";
+    QString documentationUrl =
+            "https://docs.qownnotes.org/en/develop/scripting/README.html";
+    ui->scriptInfoLabel->setText(
+            tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
+                       "to get started fast.").arg(documentationUrl) + "<br>" +
+                    tr("If you need access to a certain functionality in "
+                               "QOwnNotes please open an issue on the "
+                               "<a href=\"%1\"> QOwnNotes issue page</a>.").arg(
+                            issueUrl));
+
+    /*
+     * Setup the "add script" button menu
+     */
+    QMenu *addScriptMenu = new QMenu();
+
+    QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
+    addAction->setIcon(QIcon::fromTheme(
+            "document-new",
+            QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+    addAction->setToolTip(tr("Add an existing, local script"));
+    connect(addAction, SIGNAL(triggered()), this, SLOT(addLocalScript()));
+
+    QAction *searchScriptAction = addScriptMenu->addAction(
+            tr("Search script repository"));
+    searchScriptAction->setIcon(QIcon::fromTheme(
+            "edit-find",
+            QIcon(":icons/breeze-qownnotes/16x16/edit-find.svg")));
+    searchScriptAction->setToolTip(tr("Find a script in the script "
+                                              "repository"));
+    connect(searchScriptAction, SIGNAL(triggered()),
+            this, SLOT(searchScriptInRepository()));
+
+    ui->scriptAddButton->setMenu(addScriptMenu);
+}
+
+/**
+ * Reloads the script list
+ */
+void SettingsDialog::reloadScriptList() const {
     QList<Script> scripts = Script::fetchAll();
     int scriptsCount = scripts.count();
     ui->scriptListWidget->clear();
@@ -2151,23 +2194,12 @@ void SettingsDialog::setupScriptingPage() {
 
     // disable the remove button if there is no item
     ui->scriptRemoveButton->setEnabled(scriptsCount > 0);
-
-    QString issueUrl = "https://github.com/pbek/QOwnNotes/issues";
-    QString documentationUrl =
-            "https://docs.qownnotes.org/en/develop/scripting/README.html";
-    ui->scriptInfoLabel->setText(
-            tr("Take a look at the <a href=\"%1\">Scripting documentation</a> "
-                       "to get started fast.").arg(documentationUrl) + "<br>" +
-                    tr("If you need access to a certain functionality in "
-                               "QOwnNotes please open an issue on the "
-                               "<a href=\"%1\"> QOwnNotes issue page</a>.").arg(
-                            issueUrl));
 }
 
 /**
  * Adds a new script
  */
-void SettingsDialog::on_scriptAddButton_clicked() {
+void SettingsDialog::addLocalScript() {
     _selectedScript = Script();
     _selectedScript.setName(_newScriptName);
     _selectedScript.setPriority(ui->scriptListWidget->count());
@@ -2314,6 +2346,21 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
         ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
+        ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
+
+        // add additional information if script was from the script repository
+        if (isScriptFromRepository) {
+            QJsonObject jsonObject = _selectedScript.getInfoJsonObject();
+            ScriptInfoJson infoJson(jsonObject);
+
+            ui->scriptVersionLabel->setText(infoJson.version);
+            ui->scriptDescriptionLabel->setText(infoJson.description);
+            ui->scriptAuthorsLabel->setText(infoJson.richAuthorText);
+            ui->scriptRepositoryLinkLabel->setText(
+                    "<a href=\"https://github.com/qownnotes/scripts/tree/"
+                            "master/" + infoJson.identifier + "\">" +
+                            tr("Open repository") + "</a>");
+        }
 
         // validate the script
         validateCurrentScript();
@@ -2985,9 +3032,14 @@ void SettingsDialog::on_setGitPathToolButton_clicked() {
     }
 }
 
-void SettingsDialog::on_scriptSearchButton_clicked() {
+/**
+ * Opens a dialog to search for scripts in the script repository
+ */
+void SettingsDialog::searchScriptInRepository() {
     ScriptRepositoryDialog *dialog = new ScriptRepositoryDialog(this);
     dialog->exec();
     delete(dialog);
-    setupScriptingPage();
+
+    // reload the script list
+    reloadScriptList();
 }
