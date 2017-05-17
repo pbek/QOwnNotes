@@ -2362,6 +2362,28 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
                             tr("Open repository") + "</a>");
         }
 
+        // get the registered stript variables
+        QHash<int, QMap<QString, QVariant>> scriptVariables =
+                ScriptingService::instance()->getScriptVariables();
+        QMap<QString, QVariant> variables =
+                scriptVariables[_selectedScript.getId()];
+
+        if (variables.count() > 0) {
+            QMap<QString, QVariant>::iterator i;
+
+            for (i = variables.begin(); i != variables.end(); ++i) {
+                QString identifier = i.key();
+                qDebug() << __func__ << " - 'identifier': " << identifier;
+
+                QMap<QString, QVariant> varMap = i.value().toMap();
+                QString name = varMap["name"].toString();
+                QString type = varMap["type"].toString();
+                QString defaultValue = varMap["default"].toString();
+
+                // TODO(pbek): populate the variable UI
+            }
+        }
+
         // validate the script
         validateCurrentScript();
     } else {

@@ -20,6 +20,8 @@
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
+#include <QVariant>
+
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
@@ -93,7 +95,14 @@ void ScriptingService::initComponent(Script script) {
     if (component->isReady() && !component->isError()) {
         scriptComponent.component = component;
         scriptComponent.object = object;
-        _scriptComponents[script.getId()] = scriptComponent;
+        int scriptId = script.getId();
+        _scriptComponents[scriptId] = scriptComponent;
+
+        // register the script variables
+        QMap<QString, QVariant> map = registerScriptVariables(object);
+        if (map.count() > 0) {
+            _scriptVariables[scriptId] = map;
+        }
 
         // call the init function if it exists
         if (methodExistsForObject(object, "init()")) {
@@ -109,6 +118,26 @@ void ScriptingService::initComponent(Script script) {
     } else {
         qWarning() << "script errors: " << component->errors();
     }
+}
+
+/**
+ * Registers the script variables
+ *
+ * @param object
+ */
+QMap<QString, QVariant> ScriptingService::registerScriptVariables(
+        QObject *object) {
+    QMap<QString, QVariant> map;
+
+    if (methodExistsForObject(object, "registerVariables()")) {
+        QVariant variables;
+        QMetaObject::invokeMethod(object, "registerVariables",
+                                  Q_RETURN_ARG(QVariant, variables));
+
+        map = variables.toMap();
+    }
+
+    return map;
 }
 
 /**
@@ -182,6 +211,7 @@ bool ScriptingService::validateScript(Script script,
 void ScriptingService::initComponents() {
     clearCustomStyleSheets();
     _scriptComponents.clear();
+    _scriptVariables.clear();
     QList<Script> scripts = Script::fetchAll();
 
     Q_FOREACH(Script script, scripts) {
@@ -196,6 +226,15 @@ void ScriptingService::initComponents() {
  */
 void ScriptingService::reloadEngine() {
     reloadScriptComponents();
+}
+
+/**
+ * Returns the registered script variables
+ *
+ * @return
+ */
+QHash<int, QMap<QString, QVariant>> ScriptingService::getScriptVariables() {
+    return _scriptVariables;
 }
 
 /**
