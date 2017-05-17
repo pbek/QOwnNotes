@@ -3,7 +3,8 @@
 #include <QSqlQuery>
 #include <QList>
 #include <QJsonObject>
-#include <QtCore/QUrl>
+#include <QUrl>
+#include <QStringList>
 
 class Script
 {

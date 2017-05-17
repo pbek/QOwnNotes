@@ -8,6 +8,9 @@
 #include <entities/notefolder.h>
 #include <entities/note.h>
 #include <QMimeData>
+#include <QVariant>
+#include <QHash>
+#include <QMap>
 #include <api/noteapi.h>
 
 
