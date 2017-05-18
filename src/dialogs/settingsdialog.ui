@@ -2463,23 +2463,10 @@
                       <property name="bottomMargin">
                        <number>0</number>
                       </property>
-                      <item row="0" column="0">
-                       <spacer name="horizontalSpacer_4">
-                        <property name="orientation">
-                         <enum>Qt::Horizontal</enum>
-                        </property>
-                        <property name="sizeHint" stdset="0">
-                         <size>
-                          <width>40</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                       </spacer>
-                      </item>
                       <item row="0" column="1">
                        <widget class="QPushButton" name="scriptAddButton">
                         <property name="text">
-                         <string>&amp;Add script</string>
+                         <string>&amp;Add script...</string>
                         </property>
                         <property name="icon">
                          <iconset theme="document-new" resource="../breeze-qownnotes.qrc">
@@ -2497,6 +2484,19 @@
                           <normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-delete.svg</iconset>
                         </property>
                        </widget>
+                      </item>
+                      <item row="0" column="0">
+                       <spacer name="horizontalSpacer_4">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                      </layout>
                     </widget>

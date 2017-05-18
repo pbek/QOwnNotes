@@ -43,12 +43,16 @@ public:
     bool isScriptFromRepository();
     QUrl remoteScriptUrl();
     static bool scriptFromRepositoryExists(QString identifier);
+    void setSettingsVariablesJson(QString json);
+    QJsonObject getSettingsVariablesJsonObject();
+    void setSettingsVariablesJson(QJsonObject jsonObject);
 
 private:
     int id;
     QString name;
     QString identifier;
     QString infoJson;
+    QString settingsVariablesJson;
     QString scriptPath;
     int priority;
     bool enabled;

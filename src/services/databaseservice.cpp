@@ -518,6 +518,11 @@ bool DatabaseService::setupTables() {
         version = 23;
     }
 
+    if (version < 24) {
+        queryDisk.exec("ALTER TABLE script ADD settings_variables_json TEXT");
+        version = 24;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }

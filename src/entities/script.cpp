@@ -66,6 +66,15 @@ void Script::setInfoJson(QString infoJson) {
     this->infoJson = infoJson;
 }
 
+void Script::setSettingsVariablesJson(QString json) {
+    this->settingsVariablesJson = json;
+}
+
+void Script::setSettingsVariablesJson(QJsonObject jsonObject) {
+    QJsonDocument document(jsonObject);
+    this->settingsVariablesJson = document.toJson();
+}
+
 void Script::setScriptPath(QString text) {
     this->scriptPath = text;
 }
@@ -220,6 +229,8 @@ bool Script::fillFromQuery(QSqlQuery query) {
     this->name = query.value("name").toString();
     this->identifier = query.value("identifier").toString();
     this->infoJson = query.value("info_json").toString();
+    this->settingsVariablesJson =
+            query.value("settings_variables_json").toString();
     this->priority = query.value("priority").toInt();
     this->enabled = query.value("enabled").toBool();
 
@@ -262,15 +273,17 @@ bool Script::store() {
         query.prepare(
                 "UPDATE script SET name = :name, script_path = :scriptPath, "
                         "priority = :priority, enabled = :enabled, "
-                        "identifier = :identifier, info_json = :info_json "
+                        "identifier = :identifier, info_json = :info_json, "
+                        "settings_variables_json = :settings_variables_json "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
         query.prepare(
                 "INSERT INTO script (name, script_path, "
-                        "priority, enabled, identifier, info_json) VALUES "
+                        "priority, enabled, identifier, info_json,"
+                        "settings_variables_json) VALUES "
                         "(:name, :scriptPath, :priority, :enabled, "
-                        ":identifier, :info_json)");
+                        ":identifier, :info_json, :settings_variables_json)");
     }
 
     query.bindValue(":name", this->name);
@@ -278,6 +291,7 @@ bool Script::store() {
     query.bindValue(":enabled", this->enabled);
     query.bindValue(":identifier", this->identifier);
     query.bindValue(":info_json", this->infoJson);
+    query.bindValue(":settings_variables_json", this->settingsVariablesJson);
 
     // make the path relative to the portable data path if we are in
     // portable mode
@@ -316,6 +330,16 @@ bool Script::isFetched() {
  */
 QJsonObject Script::getInfoJsonObject() {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(infoJson.toUtf8());
+    return jsonResponse.object();
+}
+
+/**
+ * Returns the json object of the settingsVariablesJson field
+ *
+ * @return
+ */
+QJsonObject Script::getSettingsVariablesJsonObject() {
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(settingsVariablesJson.toUtf8());
     return jsonResponse.object();
 }
 

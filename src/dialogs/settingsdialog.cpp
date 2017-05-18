@@ -2319,6 +2319,11 @@ void SettingsDialog::on_scriptPathButton_clicked() {
 
             // reload the scripting engine
             ScriptingService::instance()->reloadEngine();
+
+            // trigger the item change so that the page is reloaded for
+            // script variables
+            on_scriptListWidget_currentItemChanged(
+                    ui->scriptListWidget->currentItem(), Q_NULLPTR);
         }
     }
 }
@@ -2345,7 +2350,6 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
 
         bool isScriptFromRepository = _selectedScript.isScriptFromRepository();
         ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
-        ui->scriptPathLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
         ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
 
