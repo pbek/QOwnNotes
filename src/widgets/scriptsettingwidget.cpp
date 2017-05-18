@@ -1,7 +1,8 @@
 #include "scriptsettingwidget.h"
 #include "ui_scriptsettingwidget.h"
 #include <QDebug>
-#include <QtCore/QJsonDocument>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
                                          QMap<QString, QVariant> variableMap) :
