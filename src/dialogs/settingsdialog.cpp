@@ -33,6 +33,7 @@
 #include <libraries/qkeysequencewidget/qkeysequencewidget/src/qkeysequencewidget.h>
 #include <helpers/toolbarcontainer.h>
 #include <QProcess>
+#include <widgets/scriptsettingwidget.h>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
@@ -47,7 +48,7 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     ui->noteSaveIntervalTime->setToolTip(
             ui->noteSaveIntervalTimeLabel->toolTip());
     ui->removeCustomNoteFileExtensionButton->setDisabled(true);
-    ui->calDavCalendarGroupBox->setVisible(false);
+    ui->calDavCalendarGroupBox->hide();
     _newScriptName = tr("New script");
 
 #ifdef Q_OS_WIN32
@@ -2144,13 +2145,6 @@ void SettingsDialog::setupScriptingPage() {
      */
     QMenu *addScriptMenu = new QMenu();
 
-    QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
-    addAction->setIcon(QIcon::fromTheme(
-            "document-new",
-            QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
-    addAction->setToolTip(tr("Add an existing, local script"));
-    connect(addAction, SIGNAL(triggered()), this, SLOT(addLocalScript()));
-
     QAction *searchScriptAction = addScriptMenu->addAction(
             tr("Search script repository"));
     searchScriptAction->setIcon(QIcon::fromTheme(
@@ -2160,6 +2154,13 @@ void SettingsDialog::setupScriptingPage() {
                                               "repository"));
     connect(searchScriptAction, SIGNAL(triggered()),
             this, SLOT(searchScriptInRepository()));
+
+    QAction *addAction = addScriptMenu->addAction(tr("Add local script"));
+    addAction->setIcon(QIcon::fromTheme(
+            "document-new",
+            QIcon(":icons/breeze-qownnotes/16x16/document-new.svg")));
+    addAction->setToolTip(tr("Add an existing, local script"));
+    connect(addAction, SIGNAL(triggered()), this, SLOT(addLocalScript()));
 
     ui->scriptAddButton->setMenu(addScriptMenu);
 }
@@ -2362,26 +2363,39 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
                             tr("Open repository") + "</a>");
         }
 
-        // get the registered stript variables
-        QHash<int, QMap<QString, QVariant>> scriptVariables =
-                ScriptingService::instance()->getScriptVariables();
-        QMap<QString, QVariant> variables =
-                scriptVariables[_selectedScript.getId()];
+        // get the registered script settings variables
+        QList<QVariant> variables = ScriptingService::instance()
+                ->getSettingsVariables(_selectedScript.getId());
 
-        if (variables.count() > 0) {
-            QMap<QString, QVariant>::iterator i;
+        bool hasScriptSettings = variables.count() > 0;
 
-            for (i = variables.begin(); i != variables.end(); ++i) {
-                QString identifier = i.key();
-                qDebug() << __func__ << " - 'identifier': " << identifier;
+        // we have to make the toolbox visible before items are removed and
+        // added or else there will be drawing errors
+        ui->scriptSettingsToolBox->setVisible(hasScriptSettings);
 
-                QMap<QString, QVariant> varMap = i.value().toMap();
-                QString name = varMap["name"].toString();
-                QString type = varMap["type"].toString();
-                QString defaultValue = varMap["default"].toString();
+        if (hasScriptSettings) {
+            int itemCount = ui->scriptSettingsToolBox->count();
 
-                // TODO(pbek): populate the variable UI
+            // remove the current items
+            for (int j = 0; j < itemCount; j++) {
+                ui->scriptSettingsToolBox->removeItem(0);
             }
+
+            foreach (QVariant variable, variables) {
+                    QMap<QString, QVariant> varMap = variable.toMap();
+
+                    // populate the variable UI
+                    ScriptSettingWidget *scriptSettingWidget =
+                            new ScriptSettingWidget(this, _selectedScript,
+                                                    varMap);
+
+                    QString name = varMap["name"].toString();
+                    qDebug() << __func__ << " - 'name': " << name;
+
+                    ui->scriptSettingsToolBox->addItem(scriptSettingWidget, name);
+            }
+
+            ui->scriptSettingsToolBox->setCurrentIndex(0);
         }
 
         // validate the script

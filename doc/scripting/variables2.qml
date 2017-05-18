@@ -16,28 +16,28 @@ QtObject {
         var variables = [
             {
                 "identifier": "myString",
-                "name": "My string variable",
+                "name": "My apple string variable",
                 "description": "Please enter a valid string.",
                 "type": "string",
                 "default": "My default value",
             },
             {
                 "identifier": "myText",
-                "name": "My text variable",
+                "name": "My apple text variable",
                 "type": "text",
                 "default": "This can be a really long text\nwith multiple lines.",
             },
             {
                 "identifier": "myInt",
-                "name": "My integer variable",
+                "name": "My apple integer variable",
                 "type": "integer",
                 "default": 42,
             },
             {
-                "identifier": "myFile",
-                "name": "My file variable",
-                "type": "file",
-                "default": "pandoc",
+                "identifier": "myInt2",
+                "name": "My 2nd apple integer variable",
+                "type": "integer",
+                "default": 42,
             }
         ];
         

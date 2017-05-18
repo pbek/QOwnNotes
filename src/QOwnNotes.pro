@@ -102,7 +102,8 @@ SOURCES += main.cpp\
     libraries/qtcsv/src/sources/reader.cpp \
     dialogs/notedialog.cpp \
     dialogs/filedialog.cpp \
-    dialogs/scriptrepositorydialog.cpp
+    dialogs/scriptrepositorydialog.cpp \
+    widgets/scriptsettingwidget.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -172,7 +173,8 @@ HEADERS  += mainwindow.h \
     libraries/qtcsv/src/sources/symbols.h \
     dialogs/notedialog.h \
     dialogs/filedialog.h \
-    dialogs/scriptrepositorydialog.h
+    dialogs/scriptrepositorydialog.h \
+    widgets/scriptsettingwidget.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \
@@ -194,7 +196,8 @@ FORMS    += mainwindow.ui \
     dialogs/actiondialog.ui \
     dialogs/tabledialog.ui \
     dialogs/notedialog.ui \
-    dialogs/scriptrepositorydialog.ui
+    dialogs/scriptrepositorydialog.ui \
+    widgets/scriptsettingwidget.ui
 
 RESOURCES += \
     images.qrc \

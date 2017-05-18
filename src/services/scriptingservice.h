@@ -93,13 +93,13 @@ public:
 
     void callHandleNoteOpenedHook(Note *note);
 
-    QHash<int, QMap<QString, QVariant>> getScriptVariables();
+    QList<QVariant> getSettingsVariables(int scriptId);
 
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;
     QHash<int, ScriptComponent> _scriptComponents;
-    QHash<int, QMap<QString, QVariant>> _scriptVariables;
+    QHash<int, QList<QVariant>> _settingsVariables;
     bool methodExistsForObject(QObject *object, QString method);
     QString callInsertMediaHookForObject(QObject *object,
                                          QFile *file,
@@ -110,7 +110,7 @@ private:
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();
     void clearCustomStyleSheets();
-    QMap<QString, QVariant> registerScriptVariables(QObject *object);
+    QList<QVariant> registerSettingsVariables(QObject *object);
 
 signals:
     void noteStored(QVariant note);

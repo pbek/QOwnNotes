@@ -97,10 +97,10 @@ void ScriptingService::initComponent(Script script) {
         int scriptId = script.getId();
         _scriptComponents[scriptId] = scriptComponent;
 
-        // register the script variables
-        QMap<QString, QVariant> map = registerScriptVariables(object);
-        if (map.count() > 0) {
-            _scriptVariables[scriptId] = map;
+        // register the script settings variables
+        QList<QVariant> list = registerSettingsVariables(object);
+        if (list.count() > 0) {
+            _settingsVariables[scriptId] = list;
         }
 
         // call the init function if it exists
@@ -124,19 +124,18 @@ void ScriptingService::initComponent(Script script) {
  *
  * @param object
  */
-QMap<QString, QVariant> ScriptingService::registerScriptVariables(
-        QObject *object) {
-    QMap<QString, QVariant> map;
+QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object) {
+    QList<QVariant> list;
 
-    if (methodExistsForObject(object, "registerVariables()")) {
+    if (methodExistsForObject(object, "registerSettingsVariables()")) {
         QVariant variables;
-        QMetaObject::invokeMethod(object, "registerVariables",
+        QMetaObject::invokeMethod(object, "registerSettingsVariables",
                                   Q_RETURN_ARG(QVariant, variables));
 
-        map = variables.toMap();
+        list = variables.toList();
     }
 
-    return map;
+    return list;
 }
 
 /**
@@ -210,7 +209,7 @@ bool ScriptingService::validateScript(Script script,
 void ScriptingService::initComponents() {
     clearCustomStyleSheets();
     _scriptComponents.clear();
-    _scriptVariables.clear();
+    _settingsVariables.clear();
     QList<Script> scripts = Script::fetchAll();
 
     Q_FOREACH(Script script, scripts) {
@@ -232,8 +231,8 @@ void ScriptingService::reloadEngine() {
  *
  * @return
  */
-QHash<int, QMap<QString, QVariant>> ScriptingService::getScriptVariables() {
-    return _scriptVariables;
+QList<QVariant> ScriptingService::getSettingsVariables(int scriptId) {
+    return _settingsVariables[scriptId];
 }
 
 /**

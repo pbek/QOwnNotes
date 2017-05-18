@@ -214,6 +214,9 @@ set(SOURCE_FILES
     widgets/logwidget.cpp
     widgets/logwidget.h
     widgets/logwidget.ui
+    widgets/scriptsettingwidget.cpp
+    widgets/scriptsettingwidget.h
+    widgets/scriptsettingwidget.ui
     utils/misc.cpp
     utils/misc.h
     utils/git.cpp
