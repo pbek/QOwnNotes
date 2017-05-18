@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.05.7
+- tried to fix a design glitch with the `Add script` button menu on non-highdpi displays
+
 ## 17.05.6
 - the `Add script` button in the *Scripting settings* is now a button group
   where you can add local scripts and scripts from the *script repository*
