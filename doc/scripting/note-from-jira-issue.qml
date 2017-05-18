@@ -47,7 +47,7 @@ QtObject {
         }
 
         // add the issue id to the headline
-        var issueIdRegExp = /<a class="issue-link" data-issue-key="(.+?)" href="(.+?)" id="key-val"/im;
+        var issueIdRegExp = /<a class="issue-link" data-issue-key="([^"]+)" href="(http[^"]+\/browse\/[^"]+)" id="key-val"/im;
         var issueIdMatch = issueIdRegExp.exec(html);
         var url;
         if (issueIdMatch !== null) {
