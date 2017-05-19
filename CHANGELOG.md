@@ -21,6 +21,7 @@
   settings and to search for scripts in the script repository
 - you can now print your note preview or export it as pdf even if the preview
   is turned off (for [Issue #587](https://github.com/pbek/QOwnNotes/issues/587))
+- added more Italian and Spanish translation (thank you mlocati and richarson)
 
 ## 17.05.6
 - the `Add script` button in the *Scripting settings* is now a button group
