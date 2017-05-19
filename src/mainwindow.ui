@@ -902,6 +902,9 @@ p, li { white-space: pre-wrap; }
       <string>Custom actions</string>
      </property>
     </widget>
+    <addaction name="actionScript_repository"/>
+    <addaction name="actionScript_settings"/>
+    <addaction name="separator"/>
     <addaction name="actionReload_scripting_engine"/>
     <addaction name="menuCustom_actions"/>
    </widget>
@@ -2016,6 +2019,24 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Show note git versions</string>
+   </property>
+  </action>
+  <action name="actionScript_repository">
+   <property name="icon">
+    <iconset theme="document-open" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</normaloff>:/icons/breeze-qownnotes/16x16/document-open.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Find scripts in script repository</string>
+   </property>
+  </action>
+  <action name="actionScript_settings">
+   <property name="icon">
+    <iconset theme="configure" resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Script settings</string>
    </property>
   </action>
  </widget>

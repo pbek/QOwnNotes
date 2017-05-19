@@ -214,6 +214,8 @@ private slots:
 
     void searchScriptInRepository();
 
+    void on_scriptListWidget_itemChanged(QListWidgetItem *item);
+
 private:
 
     Ui::SettingsDialog *ui;

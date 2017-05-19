@@ -3969,12 +3969,17 @@ void MainWindow::updateCurrentFolderTooltip() {
 /**
  * Opens the settings dialog
  */
-void MainWindow::openSettingsDialog(int page) {
+void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
     if (_settingsDialog == Q_NULLPTR) {
         _settingsDialog = new SettingsDialog(page, this);
     } else {
         _settingsDialog->readSettings();
         _settingsDialog->setCurrentPage(page);
+    }
+
+    if (openScriptRepository) {
+        QTimer::singleShot(150, _settingsDialog,
+                           SLOT(searchScriptInRepository()));
     }
 
     // open the settings dialog
@@ -8963,4 +8968,18 @@ void MainWindow::storeTagTreeWidgetExpandState() const {
             "MainWindow/tagTreeWidgetExpandState-" +
                     QString::number(NoteFolder::currentNoteFolderId()),
             expandedList);
+}
+
+/**
+ * Opens the script repository
+ */
+void MainWindow::on_actionScript_repository_triggered() {
+    openSettingsDialog(SettingsDialog::ScriptingPage, true);
+}
+
+/**
+ * Opens the script settings
+ */
+void MainWindow::on_actionScript_settings_triggered() {
+    openSettingsDialog(SettingsDialog::ScriptingPage);
 }

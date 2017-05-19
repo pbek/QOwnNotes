@@ -3100,3 +3100,15 @@ void SettingsDialog::searchScriptInRepository() {
     // reload the scripting engine
     ScriptingService::instance()->reloadEngine();
 }
+
+/**
+ * Saves the enabled state of all items and reload the current script page to
+ * make the script settings available when a script was enabled or disabled
+ *
+ * @param item
+ */
+void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
+    storeScriptListEnabledState();
+
+    reloadCurrentScriptPage();
+}

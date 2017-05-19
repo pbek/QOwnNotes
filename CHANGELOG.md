@@ -17,6 +17,8 @@
   to state what the minimum version of QOwnNotes has to be for the script to run
     - for an example please take a look at
       [info.json](https://github.com/qownnotes/scripts/blob/master/example-script/info.json)
+- there now are two new menu entries in the main menu to open the script 
+  settings and to search for scripts in the script repository
 - you can now print your note preview or export it as pdf even if the preview
   is turned off (for [Issue #587](https://github.com/pbek/QOwnNotes/issues/587))
 
