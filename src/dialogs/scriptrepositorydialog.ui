@@ -111,7 +111,7 @@
            <item row="5" column="0">
             <widget class="QLabel" name="versionLabel_2">
              <property name="text">
-              <string notr="true">Authors:</string>
+              <string notr="true">Author(s):</string>
              </property>
              <property name="textFormat">
               <enum>Qt::PlainText</enum>
