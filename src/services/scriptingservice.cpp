@@ -98,7 +98,7 @@ void ScriptingService::initComponent(Script script) {
         _scriptComponents[scriptId] = scriptComponent;
 
         // register the script settings variables
-        QList<QVariant> list = registerSettingsVariables(object);
+        QList<QVariant> list = registerSettingsVariables(object, script);
         if (list.count() > 0) {
             _settingsVariables[scriptId] = list;
         }
@@ -107,8 +107,6 @@ void ScriptingService::initComponent(Script script) {
         if (methodExistsForObject(object, "init()")) {
             QMetaObject::invokeMethod(object, "init");
         }
-
-//        outputMethodsOfObject(object);
 
         if (methodExistsForObject(object, "onNoteStored(QVariant)")) {
             QObject::connect(this, SIGNAL(noteStored(QVariant)),
@@ -120,22 +118,62 @@ void ScriptingService::initComponent(Script script) {
 }
 
 /**
- * Registers the script variables
+ * Registers the script settings variables
  *
  * @param object
+ * @param script
  */
-QList<QVariant> ScriptingService::registerSettingsVariables(QObject *object) {
-    QList<QVariant> list;
+QList<QVariant>
+ScriptingService::registerSettingsVariables(QObject *object, Script script) {
+    QList<QVariant> list = object->property("settingsVariables").toList();
 
+    // registerSettingsVariables will override the settingsVariables property
     if (methodExistsForObject(object, "registerSettingsVariables()")) {
         QVariant variables;
         QMetaObject::invokeMethod(object, "registerSettingsVariables",
                                   Q_RETURN_ARG(QVariant, variables));
-
         list = variables.toList();
     }
 
+    if (list.count() > 0) {
+        QJsonObject jsonObject = script.getSettingsVariablesJsonObject();
+
+        // set the properties in the script
+        foreach (QVariant variable, list) {
+                QMap<QString, QVariant> variableMap = variable.toMap();
+                QString type = variableMap["type"].toString();
+                QString identifier = variableMap["identifier"].toString();
+
+                if (type == "integer") {
+                    int value = jsonObject.value(identifier).toInt();
+
+                    if (jsonObject.value(identifier).isUndefined()) {
+                        value = variableMap["default"].toInt();
+                    }
+
+                    object->setProperty(identifier.toUtf8(), value);
+                } else {
+                    QString value = jsonObject.value(identifier).toString();
+
+                    if (jsonObject.value(identifier).isUndefined()) {
+                        value = variableMap["default"].toString();
+                    }
+
+                    object->setProperty(identifier.toUtf8(), value);
+                }
+            }
+    }
+
     return list;
+}
+
+/**
+ * Returns a script settings variables
+ *
+ * @param index
+ */
+QVariant ScriptingService::getSettingsVariable(QString index) {
+    _settingsVariables;
 }
 
 /**

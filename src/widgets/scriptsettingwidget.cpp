@@ -3,6 +3,7 @@
 #include <QDebug>
 #include <QJsonObject>
 #include <QJsonDocument>
+#include <dialogs/filedialog.h>
 
 ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
                                          QMap<QString, QVariant> variableMap) :
@@ -121,6 +122,26 @@ void ScriptSettingWidget::on_filePathLineEdit_textChanged(const QString &arg1) {
     storeSettingsVariable(arg1);
 }
 
+/**
+ * Lets the user select a file
+ */
 void ScriptSettingWidget::on_filePathButton_clicked() {
+    QJsonObject jsonObject = _script.getSettingsVariablesJsonObject();
+    QString identifier = _variableMap["identifier"].toString();
+    QString description = _variableMap["description"].toString();
 
+    FileDialog dialog("ScriptSettingsFile-" + _script.getIdentifier() +
+                              "-" + identifier);
+    dialog.setFileMode(QFileDialog::AnyFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setWindowTitle(description);
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            ui->filePathLineEdit->setText(QDir::toNativeSeparators(fileName));
+        }
+    }
 }

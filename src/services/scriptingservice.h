@@ -110,7 +110,7 @@ private:
     void outputMethodsOfObject(QObject *object);
     void reloadScriptComponents();
     void clearCustomStyleSheets();
-    QList<QVariant> registerSettingsVariables(QObject *object);
+    QList<QVariant> registerSettingsVariables(QObject *object, Script script);
 
 signals:
     void noteStored(QVariant note);
@@ -120,4 +120,6 @@ public slots:
     void reloadEngine();
     void onCustomActionInvoked(QString identifier);
     void callCustomActionInvokedForObject(QObject *object, QString identifier);
+
+    QVariant getSettingsVariable(QString index);
 };

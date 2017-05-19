@@ -2352,6 +2352,7 @@ void SettingsDialog::on_scriptListWidget_currentItemChanged(
         ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
         ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
+        ui->scriptInfoLabel->setHidden(isScriptFromRepository);
 
         // add additional information if script was from the script repository
         if (isScriptFromRepository) {
@@ -2483,6 +2484,11 @@ void SettingsDialog::on_scriptValidationButton_clicked() {
 void SettingsDialog::on_scriptReloadEngineButton_clicked() {
     // store the enabled states and reload the scripting engine
     storeScriptListEnabledState();
+
+    // trigger the item change so that the page is reloaded for
+    // script variables
+    on_scriptListWidget_currentItemChanged(
+            ui->scriptListWidget->currentItem(), Q_NULLPTR);
 }
 
 /**

@@ -5,13 +5,26 @@ import QtQml 2.0
  * text to Jira code in the clipboard
  * 
  * Dependencies:
- * NodeJS
+ * Node.js
  * https://github.com/kylefarris/J2M
  * 
  * first you have to install jira2md:
  * npm install jira2md
  */
 QtObject {
+    property string nodejsExecutablePath;
+
+    // register your settings variables so the user can set them in the script settings
+    property variant settingsVariables: [
+        {
+            "identifier": "nodejsExecutablePath",
+            "name": "Node.js path",
+            "description": "Please select the path to your Node.js executable:",
+            "type": "file",
+            "default": "nodejs",
+        }
+    ];
+
     /**
      * Initializes the custom action
      */
@@ -39,7 +52,7 @@ QtObject {
 
         // you need NodeJs and jira2md (https://github.com/kylefarris/J2M) to convert Markdown to Jira
         var params = ["-e", "console.log(require('jira2md').to_jira(require('fs').readFileSync('/dev/stdin').toString()))"];
-        var result = script.startSynchronousProcess("nodejs", params, text);
+        var result = script.startSynchronousProcess(nodejsExecutablePath, params, text);
 
         // replace some names
         result = String(result).replace(/\@Georg/ig, "[~g.franz]");

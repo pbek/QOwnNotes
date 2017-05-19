@@ -339,7 +339,8 @@ QJsonObject Script::getInfoJsonObject() {
  * @return
  */
 QJsonObject Script::getSettingsVariablesJsonObject() {
-    QJsonDocument jsonResponse = QJsonDocument::fromJson(settingsVariablesJson.toUtf8());
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(
+            settingsVariablesJson.toUtf8());
     return jsonResponse.object();
 }
 
