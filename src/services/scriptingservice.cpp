@@ -16,6 +16,7 @@
 #include <QClipboard>
 #include <QMimeData>
 #include <QRegularExpression>
+#include <QVariant>
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -123,17 +124,18 @@ void ScriptingService::initComponent(Script script) {
  * @param object
  * @param script
  */
-QList<QVariant>
-ScriptingService::registerSettingsVariables(QObject *object, Script script) {
-    QList<QVariant> list = object->property("settingsVariables").toList();
-
+QList<QVariant> ScriptingService::registerSettingsVariables(
+        QObject *object, Script script) {
     // registerSettingsVariables will override the settingsVariables property
     if (methodExistsForObject(object, "registerSettingsVariables()")) {
         QVariant variables;
-        QMetaObject::invokeMethod(object, "registerSettingsVariables",
-                                  Q_RETURN_ARG(QVariant, variables));
-        list = variables.toList();
+        QMetaObject::invokeMethod(object, "registerSettingsVariables");
     }
+
+    // unfortunately there is no QVariantHash in Qt, we only can use
+    // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+    // least can be ordered arbitrarily)
+    QList<QVariant> list = object->property("settingsVariables").toList();
 
     if (list.count() > 0) {
         QJsonObject jsonObject = script.getSettingsVariablesJsonObject();
@@ -162,6 +164,8 @@ ScriptingService::registerSettingsVariables(QObject *object, Script script) {
                     object->setProperty(identifier.toUtf8(), value);
                 }
             }
+    } else {
+        Q_UNUSED(script);
     }
 
     return list;

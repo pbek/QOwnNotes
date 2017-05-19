@@ -1,7 +1,20 @@
 # QOwnNotes Changelog
 
 ## 17.05.7
-- tried to fix a design glitch with the `Add script` button menu on non-highdpi displays
+- tried to fix a design glitch with the `Add script` button menu in the 
+  script settings on non-highdpi displays
+- you can now **register settings variables** in **script**
+    - this allows you to let the user configure your script in the script 
+      settings
+    - currently there are settings types for `string`, `text`, `integer` and 
+      `file`
+    - take a look at the example at
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml)
+      to understand how this all will work
+- scripts in the script repository can now use the `minAppVersion` property 
+  to state what the minimum version of QOwnNotes has to be for the script to run
+    - for an example please take a look at
+      [info.json](https://github.com/qownnotes/scripts/blob/master/example-script/info.json)
 
 ## 17.05.6
 - the `Add script` button in the *Scripting settings* is now a button group

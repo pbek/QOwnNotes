@@ -671,7 +671,7 @@ Usage in QML
 Showing an open file dialog
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Parameters
+Properties
 ^^^^^^^^^^
 
 .. code:: cpp
@@ -695,6 +695,63 @@ Usage in QML
 
     // show an open file dialog
     var fileName = script.getOpenFileName("Please select an image", "/home/user/images", "Images (*.png *.xpm *.jpg)");
+
+
+Registering script settings variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You need to define properties in your script and register them in an further
+property named settingsVariables.
+
+The user can then set these properties in the script settings.
+
+.. code:: javascript
+
+    // you have to define your registered variables so you can access them later
+    property string myString;
+    property string myText;
+    property int myInt;
+    property string myFile;
+
+    // register your settings variables so the user can set them in the script settings
+    // use this property if you don't need
+    //
+    // unfortunately there is no QVariantHash in Qt, we only can use
+    // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
+    // least can be ordered arbitrarily)
+    property variant settingsVariables: [
+        {
+            "identifier": "myString",
+            "name": "I am a line edit",
+            "description": "Please enter a valid string:",
+            "type": "string",
+            "default": "My default value",
+        },
+        {
+            "identifier": "myText",
+            "name": "I am textbox",
+            "description": "Please enter your text:",
+            "type": "text",
+            "default": "This can be a really long text\nwith multiple lines.",
+        },
+        {
+            "identifier": "myInt",
+            "name": "I am a number selector",
+            "description": "Please enter a number:",
+            "type": "integer",
+            "default": 42,
+        },
+        {
+            "identifier": "myFile",
+            "name": "I am a file selector",
+            "description": "Please select the file:",
+            "type": "file",
+            "default": "pandoc",
+        }
+    ];
+
+You may want to take a look at the example
+`variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml>`__.
 
 
 Hooks

@@ -431,6 +431,7 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
     name = jsonObject.value("name").toString();
     identifier = jsonObject.value("identifier").toString();
     version = jsonObject.value("version").toString();
+    minAppVersion = jsonObject.value("minAppVersion").toString();
     description = jsonObject.value("description").toString();
     description = description.replace("\n", "<br>");
     script = jsonObject.value("script").toString();

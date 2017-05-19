@@ -4,12 +4,12 @@ import QtQml 2.0
  * This script creates a menu item and a button that converts the selected Markdown
  * text to Jira code in the clipboard
  * 
- * Dependencies:
- * Node.js
- * https://github.com/kylefarris/J2M
- * 
- * first you have to install jira2md:
- * npm install jira2md
+    * Dependencies:
+    * Node.js: https://nodejs.org/en/download/
+    * https://github.com/kylefarris/J2M
+    * 
+    * first you have to install jira2md:
+    * npm install jira2md
  */
 QtObject {
     property string nodejsExecutablePath;

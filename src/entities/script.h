@@ -65,6 +65,7 @@ public:
     QString name;
     QString identifier;
     QString version;
+    QString minAppVersion;
     QString script;
     QString description;
     QStringList richAuthorList;

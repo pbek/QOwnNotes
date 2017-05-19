@@ -305,6 +305,8 @@ private:
     bool connectionTestCanBeStarted() const;
 
     void reloadScriptList() const;
+
+    void reloadCurrentScriptPage();
 };
 
 #endif // SETTINGSDIALOG_H

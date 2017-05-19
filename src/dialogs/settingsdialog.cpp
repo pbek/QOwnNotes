@@ -2322,26 +2322,35 @@ void SettingsDialog::on_scriptPathButton_clicked() {
 
             // trigger the item change so that the page is reloaded for
             // script variables
-            on_scriptListWidget_currentItemChanged(
-                    ui->scriptListWidget->currentItem(), Q_NULLPTR);
+            reloadCurrentScriptPage();
         }
     }
 }
 
 /**
- * Loads the current script in the UI
+ * Loads the current script in the UI when the current item changed
  */
 void SettingsDialog::on_scriptListWidget_currentItemChanged(
         QListWidgetItem *current, QListWidgetItem *previous) {
+    Q_UNUSED(current);
     Q_UNUSED(previous);
 
-    if (current == Q_NULLPTR) {
+    reloadCurrentScriptPage();
+}
+
+/**
+ * Loads the current script in the UI
+ */
+void SettingsDialog::reloadCurrentScriptPage() {
+    QListWidgetItem *item = ui->scriptListWidget->currentItem();
+
+    if (item == Q_NULLPTR) {
         return;
     }
 
     ui->scriptValidationLabel->clear();
 
-    int scriptId = current->data(Qt::UserRole).toInt();
+    int scriptId = item->data(Qt::UserRole).toInt();
     _selectedScript = Script::fetch(scriptId);
     if (_selectedScript.isFetched()) {
         ui->scriptNameLineEdit->setText(_selectedScript.getName());
@@ -2487,8 +2496,7 @@ void SettingsDialog::on_scriptReloadEngineButton_clicked() {
 
     // trigger the item change so that the page is reloaded for
     // script variables
-    on_scriptListWidget_currentItemChanged(
-            ui->scriptListWidget->currentItem(), Q_NULLPTR);
+    reloadCurrentScriptPage();
 }
 
 /**

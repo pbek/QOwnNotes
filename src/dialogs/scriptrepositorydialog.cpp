@@ -218,6 +218,10 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
     ScriptInfoJson infoJson(jsonObject);
     ui->nameLabel->setText("<b>" + infoJson.name + "</b>");
     ui->versionLabel->setText(infoJson.version);
+    ui->minAppVersionLabel->setText(infoJson.minAppVersion);
+    ui->minAppVersionLabel->setHidden(infoJson.minAppVersion.isEmpty());
+    ui->minAppVersionHeadlineLabel->setVisible(
+            ui->minAppVersionLabel->isVisible());
     ui->descriptionLabel->setText(infoJson.description);
     ui->authorLabel->setText(infoJson.richAuthorText);
     ui->repositoryLinkLabel->setText(
