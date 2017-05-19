@@ -3,7 +3,7 @@ import com.qownnotes.noteapi 1.0
 
 /**
  * This script creates a menu item and a button that parses the text that was copied 
- * from a issue webpage of Jira and creates a new note with a headline,
+ * from an issue webpage of Jira and creates a new note with a headline,
  * the link to the issue and the description
  */
 QtObject {
