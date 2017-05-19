@@ -3472,13 +3472,14 @@ int MainWindow::getMaxImageWidth()
 /**
  * Sets the note text according to a note
  */
-void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly) {
+void MainWindow::setNoteTextFromNote(Note *note, bool updateNoteTextViewOnly,
+                                     bool ignorePreviewVisibility) {
     if (!updateNoteTextViewOnly) {
         ui->noteTextEdit->setText(note->getNoteText());
     }
 
     // update the preview text edit if the dock widget is visible
-    if (_notePreviewDockWidget->isVisible()) {
+    if (_notePreviewDockWidget->isVisible() || ignorePreviewVisibility) {
         bool decrypt = ui->noteTextEdit->isHidden();
 
         QString html = note->toMarkdownHtml(NoteFolder::currentLocalPath(),
@@ -5157,6 +5158,9 @@ void MainWindow::on_actionOpen_List_triggered() {
  * @brief Exports the current note as PDF (markdown)
  */
 void MainWindow::on_action_Export_note_as_PDF_markdown_triggered() {
+    // reload the preview in case it is turned off
+    setNoteTextFromNote(&currentNote, true, true);
+
     exportNoteAsPDF(ui->noteTextView);
 }
 
@@ -5172,6 +5176,9 @@ void MainWindow::on_action_Export_note_as_PDF_text_triggered() {
  * @brief Prints the current note (markdown)
  */
 void MainWindow::on_action_Print_note_markdown_triggered() {
+    // reload the preview in case it is turned off
+    setNoteTextFromNote(&currentNote, true, true);
+
     printNote(ui->noteTextView);
 }
 

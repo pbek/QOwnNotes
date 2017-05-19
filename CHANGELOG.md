@@ -15,6 +15,8 @@
   to state what the minimum version of QOwnNotes has to be for the script to run
     - for an example please take a look at
       [info.json](https://github.com/qownnotes/scripts/blob/master/example-script/info.json)
+- you can now print your note preview or export it as pdf even if the preview
+  is turned off (for [Issue #587](https://github.com/pbek/QOwnNotes/issues/587))
 
 ## 17.05.6
 - the `Add script` button in the *Scripting settings* is now a button group
