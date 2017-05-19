@@ -134,7 +134,7 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
                               "-" + identifier);
     dialog.setFileMode(QFileDialog::AnyFile);
     dialog.setAcceptMode(QFileDialog::AcceptOpen);
-    dialog.setWindowTitle(description);
+    dialog.setWindowTitle(tr("Please select a file"));
     int ret = dialog.exec();
 
     if (ret == QDialog::Accepted) {

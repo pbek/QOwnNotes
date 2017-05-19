@@ -11,6 +11,8 @@
     - take a look at the example at
       [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml)
       to understand how this all will work
+    - a lot of new useful scripts were added to the script repository, which 
+      now can be configured with the script settings variables  
 - scripts in the script repository can now use the `minAppVersion` property 
   to state what the minimum version of QOwnNotes has to be for the script to run
     - for an example please take a look at

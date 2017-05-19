@@ -9,6 +9,27 @@ import QtQml 2.0
  * https://github.com/2ion/pandoc-bbcode
  */
 QtObject {
+    property string panbbcodePath;
+    property string pandocPath;
+
+    // register your settings variables so the user can set them in the script settings
+    property variant settingsVariables: [
+        {
+            "identifier": "pandocPath",
+            "name": "Pandoc path",
+            "description": "Please select the path to your Pandoc executable:",
+            "type": "file",
+            "default": "pandoc",
+        },
+        {
+            "identifier": "panbbcodePath",
+            "name": "panbbcode path",
+            "description": "Please select the path to your <code>panbbcode.lua</code> executable:",
+            "type": "file",
+            "default": "/opt/scripts/panbbcode.lua",
+        },
+    ];
+
     /**
      * Initializes the custom action
      */
@@ -32,8 +53,8 @@ QtObject {
         
         // you need pandoc and the BBCode writer from https://github.com/2ion/pandoc-bbcode
         // to convert Markdown to BBCode
-        var params = ["-t", "/opt/scripts/panbbcode.lua", "-f", "markdown"];
-        var result = script.startSynchronousProcess("pandoc", params, text);
+        var params = ["-t", panbbcodePath, "-f", "markdown"];
+        var result = script.startSynchronousProcess(pandocPath, params, text);
 
         // do some code list cleanup
         result = replaceAll(result, "[list=*]", "[list]");

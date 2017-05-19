@@ -2361,7 +2361,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
         ui->scriptNameLineEdit->setReadOnly(isScriptFromRepository);
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
         ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
-        ui->scriptInfoLabel->setHidden(isScriptFromRepository);
+        ui->localScriptItemFrame->setHidden(isScriptFromRepository);
 
         // add additional information if script was from the script repository
         if (isScriptFromRepository) {
@@ -2385,7 +2385,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
 
         // we have to make the toolbox visible before items are removed and
         // added or else there will be drawing errors
-        ui->scriptSettingsToolBox->setVisible(hasScriptSettings);
+        ui->scriptSettingsFrame->setVisible(hasScriptSettings);
 
         if (hasScriptSettings) {
             int itemCount = ui->scriptSettingsToolBox->count();
@@ -3096,4 +3096,7 @@ void SettingsDialog::searchScriptInRepository() {
 
     // reload the script list
     reloadScriptList();
+
+    // reload the scripting engine
+    ScriptingService::instance()->reloadEngine();
 }
