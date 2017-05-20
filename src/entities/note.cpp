@@ -345,6 +345,41 @@ bool Note::fillFromQuery(QSqlQuery query) {
 }
 
 QList<Note> Note::fetchAll(int limit) {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? fetchAllSortingAlphabetically(limit) : fetchAllSortingLastChanged(limit);
+}
+
+QList<Note> Note::fetchAllSortingAlphabetically(int limit)
+{
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<Note> noteList;
+    QString sql = "SELECT * FROM note ORDER BY lower(name) ASC";
+
+    if (limit >= 0) {
+        sql += " LIMIT :limit";
+    }
+
+    query.prepare(sql);
+
+    if (limit >= 0) {
+        query.bindValue(":limit", limit);
+    }
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteList.append(note);
+        }
+    }
+
+    return noteList;
+}
+
+QList<Note> Note::fetchAllSortingLastChanged(int limit) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -372,6 +407,7 @@ QList<Note> Note::fetchAll(int limit) {
 
     return noteList;
 }
+
 
 QList<int> Note::fetchAllIds() {
     QSqlDatabase db = QSqlDatabase::database("memory");

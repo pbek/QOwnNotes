@@ -47,6 +47,10 @@ public:
 
     static QList<Note> fetchAll(int limit = -1);
 
+    static QList<Note> fetchAllSortingAlphabetically(int limit = -1);
+
+    static QList<Note> fetchAllSortingLastChanged(int limit = -1);
+
     static QList<Note> fetchAllNotTagged();
 
     static QStringList fetchAllNotTaggedNames();
