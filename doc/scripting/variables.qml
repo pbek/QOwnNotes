@@ -49,17 +49,10 @@ Script {
         }
     ];
     
-    property string scriptDirPath;
-
     
     function init() {
         script.registerCustomAction("variablesTest", "Variables test", "Var test", "edit-copy");
         doSomethingWithYourVariables();
-        
-        script.log("scriptDirPath");
-        script.log(scriptDirPath);
-        script.log(script.currentNote());
-//         script.log(id);
     }
     
     function doSomethingWithYourVariables() {

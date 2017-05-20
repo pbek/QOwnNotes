@@ -10,6 +10,7 @@ HEADERS  += \
     $$APP_SRC_DIR/services/databaseservice.h \
     $$APP_SRC_DIR/api/noteapi.h \
     $$APP_SRC_DIR/api/tagapi.h \
+    $$APP_SRC_DIR/api/scriptapi.h \
     $$APP_SRC_DIR/services/scriptingservice.h \
     $$APP_SRC_DIR/utils/misc.h \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.h \
@@ -37,6 +38,7 @@ SOURCES += \
     $$APP_SRC_DIR/services/databaseservice.cpp \
     $$APP_SRC_DIR/api/noteapi.cpp \
     $$APP_SRC_DIR/api/tagapi.cpp \
+    $$APP_SRC_DIR/api/scriptapi.cpp \
     $$APP_SRC_DIR/services/scriptingservice.cpp \
     $$APP_SRC_DIR/utils/misc.cpp \
     $$APP_SRC_DIR/libraries/piwiktracker/piwiktracker.cpp \

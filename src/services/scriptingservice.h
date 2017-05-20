@@ -121,5 +121,4 @@ public slots:
     void onCustomActionInvoked(QString identifier);
     void callCustomActionInvokedForObject(QObject *object, QString identifier);
 
-    QVariant getSettingsVariable(QString index);
 };

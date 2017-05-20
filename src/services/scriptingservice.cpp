@@ -184,15 +184,6 @@ QList<QVariant> ScriptingService::registerSettingsVariables(
 }
 
 /**
- * Returns a script settings variables
- *
- * @param index
- */
-QVariant ScriptingService::getSettingsVariable(QString index) {
-    _settingsVariables;
-}
-
-/**
  * Reloads all script components
  */
 void ScriptingService::reloadScriptComponents() {
