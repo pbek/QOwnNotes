@@ -806,7 +806,7 @@ Usage in QML
 
 .. code:: javascript
 
-// will return "c:\winnt\system32" on Windows
+    // will return "c:\winnt\system32" on Windows
     script.log(script.toNativeDirSeparators("c:/winnt/system32"));
 
 
