@@ -173,12 +173,36 @@ bool Tag::fillFromQuery(QSqlQuery query) {
 }
 
 QList<Tag> Tag::fetchAll() {
+    QSettings settings;
+    return settings.value("sortingTagsAlphabetically").toBool() ? fetchAllSortingAlphabetically() : fetchAllSortingLastChanged();
+}
+
+QList<Tag> Tag::fetchAllSortingAlphabetically() {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
     QList<Tag> tagList;
 
-    query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
+    query.prepare("SELECT * FROM tag ORDER BY lower(name) ASC");
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+QList<Tag> Tag::fetchAllSortingLastChanged() {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    QList<Tag> tagList;
+
+    query.prepare("SELECT * FROM tag ORDER BY priority ASC, lower(name) ASC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -192,12 +216,38 @@ QList<Tag> Tag::fetchAll() {
 }
 
 QList<Tag> Tag::fetchAllByParentId(int parentId) {
+    QSettings settings;
+    return settings.value("sortingTagsAlphabetically").toBool() ? fetchAllByParentIdSortingAlphabetically(parentId) : fetchAllByParentIdSortingLastChanged(parentId);
+}
+
+QList<Tag> Tag::fetchAllByParentIdSortingAlphabetically(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
 
     query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
-                          "priority ASC, name ASC");
+                          "lower(name) ASC");
+    query.bindValue(":parentId", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+QList<Tag> Tag::fetchAllByParentIdSortingLastChanged(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QList<Tag> tagList;
+
+    query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
+                          "priority ASC, lower(name) ASC");
     query.bindValue(":parentId", parentId);
 
     if (!query.exec()) {
@@ -248,6 +298,11 @@ bool Tag::hasChild(int tagId) {
  * Fetches all linked tags of a note
  */
 QList<Tag> Tag::fetchAllOfNote(Note note) {
+    QSettings settings;
+    return settings.value("sortingTagsAlphabetically").toBool() ? fetchAllOfNoteSortingAlphabetically(note) : fetchAllOfNoteSortingLastChanged(note);
+}
+
+QList<Tag> Tag::fetchAllOfNoteSortingAlphabetically(Note note) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
@@ -257,7 +312,34 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
                           "JOIN noteTagLink l ON t.id = l.tag_id "
                           "WHERE l.note_file_name = :fileName AND "
                           "l.note_sub_folder_path = :noteSubFolderPath "
-                          "ORDER BY t.priority ASC, t.name ASC");
+                          "ORDER BY lower(t.name) ASC");
+    query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+QList<Tag> Tag::fetchAllOfNoteSortingLastChanged(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+
+    QList<Tag> tagList;
+
+    query.prepare("SELECT t.* FROM tag t "
+                          "JOIN noteTagLink l ON t.id = l.tag_id "
+                          "WHERE l.note_file_name = :fileName AND "
+                          "l.note_sub_folder_path = :noteSubFolderPath "
+                          "ORDER BY t.priority ASC, lower(t.name) ASC");
     query.bindValue(":fileName", note.getName());
     query.bindValue(":noteSubFolderPath",
                     note.getNoteSubFolder().relativePath());
@@ -339,6 +421,11 @@ bool Tag::isLinkedToNote(Note note) {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
+    QSettings settings;
+    return settings.value("sortingTagsAlphabetically").toBool() ? fetchAllWithLinkToNoteNamesSortingAlphabetically(noteNameList) : fetchAllWithLinkToNoteNamesSortingLastChanged(noteNameList);
+}
+
+QList<Tag> Tag::fetchAllWithLinkToNoteNamesSortingAlphabetically(QStringList noteNameList) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -350,7 +437,37 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
                 "WHERE l.note_file_name IN ('%1') AND "
                     "l.note_sub_folder_path = :noteSubFolderPath "
                 "GROUP BY t.id "
-                "ORDER BY t.priority ASC, t.name ASC")
+                "ORDER BY lower(t.name) ASC")
+            .arg(noteIdListString);
+    query.prepare(sql);
+    query.bindValue(":noteSubFolderPath",
+                    NoteSubFolder::activeNoteSubFolder().relativePath());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Tag tag = tagFromQuery(query);
+            tagList.append(tag);
+        }
+    }
+
+    return tagList;
+}
+
+QList<Tag> Tag::fetchAllWithLinkToNoteNamesSortingLastChanged(QStringList noteNameList) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QList<Tag> tagList;
+    QString noteIdListString = noteNameList.join("','");
+
+    QString sql = QString(
+            "SELECT t.* FROM tag t "
+                "JOIN noteTagLink l ON t.id = l.tag_id "
+                "WHERE l.note_file_name IN ('%1') AND "
+                    "l.note_sub_folder_path = :noteSubFolderPath "
+                "GROUP BY t.id "
+                "ORDER BY t.priority ASC, lower(t.name) ASC")
             .arg(noteIdListString);
     query.prepare(sql);
     query.bindValue(":noteSubFolderPath",

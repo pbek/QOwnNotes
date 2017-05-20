@@ -34,6 +34,10 @@ public:
 
     static QList<Tag> fetchAll();
 
+    static QList<Tag> fetchAllSortingAlphabetically();
+
+    static QList<Tag> fetchAllSortingLastChanged();
+
     QString getName();
 
     int getPriority();
@@ -60,6 +64,10 @@ public:
 
     static QList<Tag> fetchAllOfNote(Note note);
 
+    static QList<Tag> fetchAllOfNoteSortingAlphabetically(Note note);
+
+    static QList<Tag> fetchAllOfNoteSortingLastChanged(Note note);
+
     bool removeLinkToNote(Note note);
 
     QStringList fetchAllLinkedNoteFileNames();
@@ -77,11 +85,19 @@ public:
 
     static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
 
+    static QList<Tag> fetchAllWithLinkToNoteNamesSortingAlphabetically(QStringList noteNameList);
+
+    static QList<Tag> fetchAllWithLinkToNoteNamesSortingLastChanged(QStringList noteNameList);
+
     int getParentId();
 
     void setParentId(int id);
 
     static QList<Tag> fetchAllByParentId(int parentId);
+
+    static QList<Tag> fetchAllByParentIdSortingAlphabetically(int parentId);
+
+    static QList<Tag> fetchAllByParentIdSortingLastChanged(int parentId);
 
     static int countAllParentId(int parentId);
 
