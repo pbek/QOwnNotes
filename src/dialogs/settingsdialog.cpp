@@ -626,6 +626,11 @@ void SettingsDialog::storeSettings() {
                               ui->gitPathLineEdit->text()));
     settings.setValue("gitCommitInterval", ui->gitCommitIntervalTime->value());
     settings.setValue("gitLogCommand", ui->gitLogCommandLineEdit->text());
+
+    // store sorting settings
+    settings.setValue("sortingNotesAlphabetically", ui->sortingNotesAlphabeticallyRadioButton->isChecked() ? true : false);
+    settings.setValue("sortingNoteSubfoldersAlphabetically", ui->sortingNoteSubfoldersAlphabeticallyRadioButton->isChecked() ? true : false);
+    settings.setValue("sortingTagsAlphabetically", ui->sortingTagsAlphabeticallyRadioButton->isChecked() ? true : false);
 }
 
 /**
@@ -882,6 +887,11 @@ void SettingsDialog::readSettings() {
             settings.value("gitCommitInterval", 30).toInt());
     ui->gitLogCommandLineEdit->setText(
             settings.value("gitLogCommand").toString());
+
+    // read sorting settings
+    settings.value("sortingNotesAlphabetically").toBool() ? ui->sortingNotesAlphabeticallyRadioButton->setChecked(true) : ui->sortingNotesLastChangedRadioButton->setChecked(true);
+    settings.value("sortingNoteSubfoldersAlphabetically").toBool() ? ui->sortingNoteSubfoldersAlphabeticallyRadioButton->setChecked(true) : ui->sortingNoteSubfoldersLastChangedRadioButton->setChecked(true);
+    settings.value("sortingTagsAlphabetically").toBool() ? ui->sortingTagsAlphabeticallyRadioButton->setChecked(true) : ui->sortingTagsLastChangedRadioButton->setChecked(true);
 }
 
 /**
