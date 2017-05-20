@@ -2296,6 +2296,84 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QGroupBox" name="sortingGroupBox">
+                    <property name="title">
+                     <string>Sorting</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_56">
+                     <item row="2" column="0">
+                      <widget class="QGroupBox" name="sortingTagsGroupBox">
+                       <property name="title">
+                        <string>Tags</string>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_8">
+                        <item>
+                         <widget class="QRadioButton" name="sortingTagsAlphabeticallyRadioButton">
+                          <property name="text">
+                           <string>Alphabetically</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="sortingTagsLastChangedRadioButton">
+                          <property name="text">
+                           <string>Last Changed</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QGroupBox" name="sortingNotesGroupBox">
+                       <property name="title">
+                        <string>Notes</string>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_10">
+                        <item>
+                         <widget class="QRadioButton" name="sortingNotesAlphabeticallyRadioButton">
+                          <property name="text">
+                           <string>Alphabetically</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="sortingNotesLastChangedRadioButton">
+                          <property name="text">
+                           <string>Last Changed</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QGroupBox" name="sortingNoteSubfoldersGroupBox">
+                       <property name="title">
+                        <string>Note Subfolders</string>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_11">
+                        <item>
+                         <widget class="QRadioButton" name="sortingNoteSubfoldersAlphabeticallyRadioButton">
+                          <property name="text">
+                           <string>Alphabetically</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QRadioButton" name="sortingNoteSubfoldersLastChangedRadioButton">
+                          <property name="text">
+                           <string>Last Changed</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
                    <spacer name="verticalSpacer_6">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
