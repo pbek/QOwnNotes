@@ -219,6 +219,41 @@ bool NoteSubFolder::fillFromQuery(QSqlQuery query) {
 }
 
 QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
+    QSettings settings;
+    return settings.value("sortingNoteSubfoldersAlphabetically").toBool() ? fetchAllSortingAlphabetically(limit) : fetchAllSortingLastChanged(limit);
+}
+
+QList<NoteSubFolder> NoteSubFolder::fetchAllSortingAlphabetically(int limit) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<NoteSubFolder> noteSubFolderList;
+    QString sql = "SELECT * FROM noteSubFolder "
+            "ORDER BY lower(name) ASC";
+
+    if (limit >= 0) {
+        sql += " LIMIT :limit";
+    }
+
+    query.prepare(sql);
+
+    if (limit >= 0) {
+        query.bindValue(":limit", limit);
+    }
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
+            noteSubFolderList.append(noteSubFolder);
+        }
+    }
+
+    return noteSubFolderList;
+}
+
+QList<NoteSubFolder> NoteSubFolder::fetchAllSortingLastChanged(int limit) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -270,6 +305,34 @@ QList<int> NoteSubFolder::fetchAllIds() {
 }
 
 QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId) {
+    QSettings settings;
+    return settings.value("sortingNoteSubfoldersAlphabetically").toBool() ? fetchAllByParentIdSortingAlphabetically(parentId) : fetchAllByParentIdSortingLastChanged(parentId);
+}
+
+QList<NoteSubFolder> NoteSubFolder::fetchAllByParentIdSortingAlphabetically(int parentId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<NoteSubFolder> noteSubFolderList;
+    QString sql = "SELECT * FROM noteSubFolder WHERE parent_id = "
+            ":parent_id ORDER BY lower(name) ASC";
+
+    query.prepare(sql);
+    query.bindValue(":parent_id", parentId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            NoteSubFolder noteSubFolder = noteSubFolderFromQuery(query);
+            noteSubFolderList.append(noteSubFolder);
+        }
+    }
+
+    return noteSubFolderList;
+}
+
+QList<NoteSubFolder> NoteSubFolder::fetchAllByParentIdSortingLastChanged(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
