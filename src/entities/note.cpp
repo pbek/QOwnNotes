@@ -408,7 +408,6 @@ QList<Note> Note::fetchAllSortingLastChanged(int limit) {
     return noteList;
 }
 
-
 QList<int> Note::fetchAllIds() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
