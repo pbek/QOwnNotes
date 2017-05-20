@@ -358,6 +358,15 @@ QJsonObject Script::getInfoJsonObject() {
 }
 
 /**
+ * Returns the ScriptInfoJson object of the infoJson field
+ *
+ * @return
+ */
+ScriptInfoJson Script::getScriptInfoJson() {
+    return ScriptInfoJson(getInfoJsonObject());
+}
+
+/**
  * Returns the json object of the settingsVariablesJson field
  *
  * @return
@@ -428,8 +437,45 @@ QUrl Script::remoteScriptUrl() {
         return QUrl();
     }
 
+    return remoteFileUrl(scriptName);
+}
+
+/**
+ * Returns the url of a file of the script in the remote script repository
+ *
+ * @return
+ */
+QUrl Script::remoteFileUrl(QString fileName) {
+    if (fileName.isEmpty()) {
+        return QUrl();
+    }
+
     return QUrl("https://raw.githubusercontent.com/qownnotes/scripts/master/"
-           + identifier + "/" + scriptName);
+           + identifier + "/" + fileName);
+}
+
+/**
+ * Returns a list of the remote script url and the resource file urls of the
+ * script
+ *
+ * @return
+ */
+QList<QUrl> Script::remoteFileUrls() {
+    QList<QUrl> urlList;
+    ScriptInfoJson infoJson = getScriptInfoJson();
+    QString scriptName = infoJson.script;
+
+    if (!scriptName.isEmpty()) {
+        urlList << remoteFileUrl(scriptName);
+    }
+
+    foreach( QString fileName, infoJson.resources ) {
+            if (!fileName.isEmpty()) {
+                urlList << remoteFileUrl(fileName);
+            }
+        }
+
+    return urlList;
 }
 
 
@@ -476,4 +522,15 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
         }
 
     richAuthorText = richAuthorList.join(", ");
+
+    // get the resources file names
+    QJsonArray resourcesArray = jsonObject.value("resources").toArray();
+    resources.clear();
+    foreach(const QJsonValue &value, resourcesArray) {
+            QString fileName = value.toString().trimmed();
+
+            if (!fileName.isEmpty()) {
+                resources << fileName;
+            }
+        }
 }

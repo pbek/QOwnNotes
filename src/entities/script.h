@@ -21,6 +21,21 @@
 #include <QStringList>
 #include <QtCore/QDir>
 
+class ScriptInfoJson {
+public:
+    explicit ScriptInfoJson(QJsonObject jsonObject);
+
+    QString name;
+    QString identifier;
+    QString version;
+    QString minAppVersion;
+    QString script;
+    QString description;
+    QStringList richAuthorList;
+    QStringList resources;
+    QString richAuthorText;
+};
+
 class Script
 {
 public:
@@ -57,11 +72,14 @@ public:
     QString scriptRepositoryPath(bool removeRecursively = false);
     bool isScriptFromRepository();
     QUrl remoteScriptUrl();
+    QUrl remoteFileUrl(QString fileName);
     static bool scriptFromRepositoryExists(QString identifier);
     void setSettingsVariablesJson(QString json);
     QJsonObject getSettingsVariablesJsonObject();
     void setSettingsVariablesJson(QJsonObject jsonObject);
     QString getScriptDirPath();
+    QList<QUrl> remoteFileUrls();
+    ScriptInfoJson getScriptInfoJson();
 
 private:
     int id;
@@ -72,18 +90,4 @@ private:
     QString scriptPath;
     int priority;
     bool enabled;
-};
-
-class ScriptInfoJson {
-public:
-    explicit ScriptInfoJson(QJsonObject jsonObject);
-
-    QString name;
-    QString identifier;
-    QString version;
-    QString minAppVersion;
-    QString script;
-    QString description;
-    QStringList richAuthorList;
-    QString richAuthorText;
 };

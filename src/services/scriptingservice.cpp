@@ -1120,3 +1120,38 @@ QString ScriptingService::getOpenFileName(QString caption, QString dir,
 
     return "";
 }
+
+/**
+ * Returns path with the '/' separators converted to separators that are
+ * appropriate for the underlying operating system.
+ *
+ * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
+ * "c:\winnt\system32".
+ *
+ * @param path
+ * @return
+ */
+QString ScriptingService::toNativeDirSeparators(QString path) {
+    return QDir::toNativeSeparators(path);
+}
+
+/**
+ * Returns path using '/' as file separator.
+ * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
+ * returns "c:/winnt/system32".
+ *
+ * @param path
+ * @return
+ */
+QString ScriptingService::fromNativeDirSeparators(QString path) {
+    return QDir::fromNativeSeparators(path);
+}
+
+/**
+ * Returns the native directory separator "/" or "\" on Windows
+ *
+ * @return
+ */
+QString ScriptingService::dirSeparator() {
+    return QDir::separator();
+}

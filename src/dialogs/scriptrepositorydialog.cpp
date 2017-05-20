@@ -302,22 +302,43 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
 
     QString scriptPath = scriptRepositoryPath + "/" + scriptName;
     script.setScriptPath(scriptPath);
-    bool scriptWasDownloaded;
+    bool filesWereDownloaded = false;
 
     QUrl url = script.remoteScriptUrl();
 
     // download the script
     if (!url.isEmpty()) {
         QFile *file = new QFile(scriptPath);
-        scriptWasDownloaded = Utils::Misc::downloadUrlToFile(url, file);
+        qDebug() << "Downloading: " << url;
+        filesWereDownloaded = Utils::Misc::downloadUrlToFile(url, file);
         file->close();
     }
 
     ui->installButton->setEnabled(true);
 
-    if (scriptWasDownloaded) {
-        script.store();
+    if (filesWereDownloaded) {
+        ScriptInfoJson infoJson = script.getScriptInfoJson();
+        foreach (QString resourceFileName, infoJson.resources) {
+                QUrl resourceUrl = script.remoteFileUrl(resourceFileName);
+                qDebug() << "Downloading: " << resourceUrl;
 
+                QFile *file = new QFile(scriptRepositoryPath + "/" +
+                                                resourceFileName);
+
+                if (!Utils::Misc::downloadUrlToFile(resourceUrl, file)) {
+                    filesWereDownloaded = false;
+                }
+
+                file->close();
+
+                if (!filesWereDownloaded) {
+                    break;
+                }
+            }
+    }
+
+    if (filesWereDownloaded) {
+        script.store();
         MetricsService::instance()->sendVisitIfEnabled(
                 "script-repository/install/" + identifier);
 

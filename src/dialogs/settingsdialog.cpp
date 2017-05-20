@@ -2365,8 +2365,7 @@ void SettingsDialog::reloadCurrentScriptPage() {
 
         // add additional information if script was from the script repository
         if (isScriptFromRepository) {
-            QJsonObject jsonObject = _selectedScript.getInfoJsonObject();
-            ScriptInfoJson infoJson(jsonObject);
+            ScriptInfoJson infoJson = _selectedScript.getScriptInfoJson();
 
             ui->scriptVersionLabel->setText(infoJson.version);
             ui->scriptDescriptionLabel->setText(infoJson.description);

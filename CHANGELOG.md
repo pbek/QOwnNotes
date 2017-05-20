@@ -3,8 +3,21 @@
 ## 17.05.8
 - instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 
   your scripts you now only need to import `QOwnNotesTypes`
+- there now are new scripting functions `fromNativeDirSeparators`,
+  `toNativeDirSeparators` and `dirSeparator` to work with native file paths
+    - for more information please take a look at the
+      [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html)
+- you can now use the property list `resources` in your `info.json` in the
+  *script repository* to specify further files that are present in your script's
+  directory and that should be downloaded to be used by your script
+    - you can use this for example for other scripts you want to run or for 
+      icons in custom actions
+    - for example code please take a look at
+      [selected-markdown-to-bbcode](https://github.com/qownnotes/scripts/tree/master/selected-markdown-to-bbcode)
+      
 - if you register a `property string scriptDirPath;` in your script the 
-  property will be filled with the path to the directory your script is located
+  property will be filled with the path to the directory where your script is 
+  located
 
 ## 17.05.7
 - tried to fix a design glitch with the `Add script` button menu in the 

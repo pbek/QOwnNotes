@@ -90,10 +90,11 @@ public:
                                         QString password, bool decrypt = false);
     QString callEncryptionHook(QString text, QString password,
                                bool decrypt = false);
-
     void callHandleNoteOpenedHook(Note *note);
-
     QList<QVariant> getSettingsVariables(int scriptId);
+    Q_INVOKABLE QString toNativeDirSeparators(QString path);
+    Q_INVOKABLE QString fromNativeDirSeparators(QString path);
+    Q_INVOKABLE QString dirSeparator();
 
 private:
     QQmlEngine *_engine;
@@ -120,5 +121,4 @@ public slots:
     void reloadEngine();
     void onCustomActionInvoked(QString identifier);
     void callCustomActionInvokedForObject(QObject *object, QString identifier);
-
 };

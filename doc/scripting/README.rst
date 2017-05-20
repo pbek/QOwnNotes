@@ -780,6 +780,90 @@ Example
     }
 
 
+Converting path separators to native ones
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns path with the '/' separators converted to separators that are
+     * appropriate for the underlying operating system.
+     *
+     * On Windows, toNativeDirSeparators("c:/winnt/system32") returns
+     * "c:\winnt\system32".
+     *
+     * @param path
+     * @return
+     */
+    QString ScriptingService::toNativeDirSeparators(QString path);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+// will return "c:\winnt\system32" on Windows
+    script.log(script.toNativeDirSeparators("c:/winnt/system32"));
+
+
+Converting path separators from native ones
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns path using '/' as file separator.
+     * On Windows, for instance, fromNativeDirSeparators("c:\\winnt\\system32")
+     * returns "c:/winnt/system32".
+     *
+     * @param path
+     * @return
+     */
+    QString ScriptingService::fromNativeDirSeparators(QString path);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // will return "c:/winnt/system32" on Windows
+    script.log(script.fromNativeDirSeparators("c:\\winnt\\system32"));
+
+
+Getting the native directory separator
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns the native directory separator "/" or "\" on Windows
+     *
+     * @return
+     */
+    QString ScriptingService::dirSeparator();
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // will return "\" on Windows
+    script.log(script.dirSeparator());
+
+
+
 Hooks
 -----
 
