@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.05.8
+- instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 
+  your scripts you now only need to import `QOwnNotesTypes`
+- if you register a `property string scriptDirPath;` in your script the 
+  property will be filled with the path to the directory your script is located
+
 ## 17.05.7
 - tried to fix a design glitch with the `Add script` button menu in the 
   script settings on non-highdpi displays

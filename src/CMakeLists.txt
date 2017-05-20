@@ -139,6 +139,8 @@ set(SOURCE_FILES
     api/noteapi.h
     api/tagapi.cpp
     api/tagapi.h
+    api/scriptapi.cpp
+    api/scriptapi.h
     libraries/diff_match_patch/diff_match_patch.cpp
     libraries/diff_match_patch/diff_match_patch.h
     libraries/hoedown/autolink.c

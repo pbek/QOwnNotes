@@ -10,7 +10,7 @@ QtObject {
      * It allows you to modify this html
      * This is for example called before by the note preview
      * 
-     * @param {NoteApi} note - the note object
+     * @param {Note} note - the note object
      * @param {string} html - the html that is about to being rendered
      * @return {string} the modfied html or an empty string if nothing should be modified
      */

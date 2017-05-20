@@ -17,6 +17,7 @@
 #include <QMimeData>
 #include <QRegularExpression>
 #include <QVariant>
+#include <api/scriptapi.h>
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
@@ -30,8 +31,14 @@ ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
 //    _engine->rootContext()->setContextProperty(
 //            "mainWindow", qApp->property("mainWindow").value<MainWindow *>());
 
+    // deprecated
     qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");
+    // deprecated
     qmlRegisterType<TagApi>("com.qownnotes.tagapi", 1, 0, "TagApi");
+
+    qmlRegisterType<NoteApi>("QOwnNotesTypes", 1, 0, "Note");
+    qmlRegisterType<TagApi>("QOwnNotesTypes", 1, 0, "Tag");
+    qmlRegisterType<ScriptApi>("QOwnNotesTypes", 1, 0, "Script");
 
     int scriptCount = Script::countAll();
     if (scriptCount > 0) {
@@ -97,6 +104,11 @@ void ScriptingService::initComponent(Script script) {
         scriptComponent.object = object;
         int scriptId = script.getId();
         _scriptComponents[scriptId] = scriptComponent;
+
+        // set the script directory path of the script
+        object->setProperty(
+                "scriptDirPath",
+                QDir::toNativeSeparators(script.getScriptDirPath()));
 
         // register the script settings variables
         QList<QVariant> list = registerSettingsVariables(object, script);

@@ -1,10 +1,11 @@
 import QtQml 2.0
+import QOwnNotesTypes 1.0
 
 /**
  * This is an example on how to register variables that can be set by the user in
  * the script settings.
  */
-QtObject {
+Script {
     // you have to define your registered variables so you can access them later
     property string myString;
     property string myText;
@@ -27,7 +28,7 @@ QtObject {
         },
         {
             "identifier": "myText",
-            "name": "I am textbox",
+            "name": "I am a textbox",
             "description": "Please enter your text:",
             "type": "text",
             "default": "This can be a really long text\nwith multiple lines.",
@@ -47,11 +48,18 @@ QtObject {
             "default": "pandoc",
         }
     ];
+    
+    property string scriptDirPath;
 
     
     function init() {
         script.registerCustomAction("variablesTest", "Variables test", "Var test", "edit-copy");
         doSomethingWithYourVariables();
+        
+        script.log("scriptDirPath");
+        script.log(scriptDirPath);
+        script.log(script.currentNote());
+//         script.log(id);
     }
     
     function doSomethingWithYourVariables() {

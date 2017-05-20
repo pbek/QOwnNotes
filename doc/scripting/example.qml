@@ -1,6 +1,5 @@
 import QtQml 2.0
-import com.qownnotes.noteapi 1.0
-import com.qownnotes.tagapi 1.0
+import QOwnNotesTypes 1.0
 
 /**
  * This script is a generic example of some functions that will be called by QOwnNotes
@@ -18,7 +17,7 @@ QtObject {
      * You cannot modify stored notes, that would be a mess since 
      * you are most likely editing them by hand at the same time
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      */
     function onNoteStored(note) {
         script.log("fileName was stored!");
@@ -40,7 +39,7 @@ QtObject {
      * Return an empty string if the file name of the note should 
      * not be modified
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      * @return {string} the file name of the note
      */
     function handleNoteTextFileNameHook(note) {
@@ -62,7 +61,7 @@ QtObject {
      * It allows you to modify this html
      * This is for example called before by the note preview
      * 
-     * @param {NoteApi} note - the note object
+     * @param {Note} note - the note object
      * @param {string} html - the html that is about to being rendered
      * @return {string} the modfied html or an empty string if nothing should be modified
      */

@@ -701,7 +701,7 @@ Registering script settings variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You need to define properties in your script and register them in an further
-property named settingsVariables.
+property named ``settingsVariables``.
 
 The user can then set these properties in the script settings.
 
@@ -752,6 +752,32 @@ The user can then set these properties in the script settings.
 
 You may want to take a look at the example
 `variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml>`__.
+
+
+Reading the path to the directory of your script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you need to get the path to the directory where your script is placed to
+for example load other files you have to register a
+``property string scriptDirPath;``. This property will be set with the path
+to the script's directory.
+
+Example
+^^^^^^^
+
+.. code:: javascript
+
+    import QtQml 2.0
+    import QOwnNotesTypes 1.0
+
+    Script {
+        // the path to the script's directory will be set here
+        property string scriptDirPath;
+
+        function init() {
+            script.log(scriptDirPath);
+        }
+    }
 
 
 Hooks

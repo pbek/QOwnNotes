@@ -9,7 +9,7 @@ QtObject {
      * You cannot modify stored notes, that would be a mess since 
      * you are most likely editing them by hand at the same time
      * 
-     * @param {NoteApi} note - the note object of the stored note
+     * @param {Note} note - the note object of the stored note
      */
     function onNoteStored(note) {
         // execute an external program

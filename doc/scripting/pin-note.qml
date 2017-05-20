@@ -1,5 +1,5 @@
 import QtQml 2.0
-import com.qownnotes.noteapi 1.0
+import QOwnNotesTypes 1.0
 
 /* This script is tested only on GNU/Linux, it's not tested on OSX and won't work on Windows.
  * If you know how to make it properly rename note files in Windows feel free to make a pull request.
