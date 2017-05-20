@@ -59,12 +59,30 @@ public:
 
     static QList<Note> search(QString text);
 
+    static QList<Note> searchSortingAlphabetically(QString text);
+
+    static QList<Note> searchSortingLastChanged(QString text);
+
     static QList<QString> searchAsNameList(QString text,
+                                           bool searchInNameOnly = false);
+
+    static QList<QString> searchAsNameListSortingAlphabetically(QString text,
+                                           bool searchInNameOnly = false);
+
+    static QList<QString> searchAsNameListSortingLastChanged(QString text,
                                            bool searchInNameOnly = false);
 
     static QStringList fetchNoteNames();
 
+    static QStringList fetchNoteNamesSortingAlphabetically();
+
+    static QStringList fetchNoteNamesSortingLastChanged();
+
     static QStringList fetchNoteFileNames();
+
+    static QStringList fetchNoteFileNamesSortingAlphabetically();
+
+    static QStringList fetchNoteFileNamesSortingLastChanged();
 
     static Note noteFromQuery(QSqlQuery query);
 
@@ -174,6 +192,10 @@ public:
     void setNoteSubFolderId(int id);
 
     static QList<Note> fetchAllByNoteSubFolderId(int noteSubFolderId);
+
+    static QList<Note> fetchAllByNoteSubFolderIdSortingAlphabetically(int noteSubFolderId);
+
+    static QList<Note> fetchAllByNoteSubFolderIdSortingLastChanged(int noteSubFolderId);
 
     static QList<int> noteIdListFromNoteList(QList<Note> noteList);
 

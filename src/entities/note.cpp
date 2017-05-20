@@ -430,6 +430,34 @@ QList<int> Note::fetchAllIds() {
 }
 
 QList<Note> Note::fetchAllByNoteSubFolderId(int noteSubFolderId) {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? fetchAllByNoteSubFolderIdSortingAlphabetically(noteSubFolderId) : fetchAllByNoteSubFolderIdSortingLastChanged(noteSubFolderId);
+}
+
+QList<Note> Note::fetchAllByNoteSubFolderIdSortingAlphabetically(int noteSubFolderId) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<Note> noteList;
+    QString sql = "SELECT * FROM note WHERE note_sub_folder_id = "
+            ":note_sub_folder_id ORDER BY lower(name) ASC";
+
+    query.prepare(sql);
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteList.append(note);
+        }
+    }
+
+    return noteList;
+}
+
+QList<Note> Note::fetchAllByNoteSubFolderIdSortingLastChanged(int noteSubFolderId) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -516,6 +544,33 @@ int Note::countAllNotTagged() {
 }
 
 QList<Note> Note::search(QString text) {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? searchSortingAlphabetically(text) : searchSortingLastChanged(text);
+}
+
+QList<Note> Note::searchSortingAlphabetically(QString text) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<Note> noteList;
+
+    query.prepare("SELECT * FROM note WHERE note_text LIKE :text "
+                          "ORDER BY lower(name) ASC");
+    query.bindValue(":text", "%" + text + "%");
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            Note note = noteFromQuery(query);
+            noteList.append(note);
+        }
+    }
+
+    return noteList;
+}
+
+QList<Note> Note::searchSortingLastChanged(QString text) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -538,6 +593,36 @@ QList<Note> Note::search(QString text) {
 }
 
 QList<QString> Note::searchAsNameList(QString text, bool searchInNameOnly) {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? searchAsNameListSortingAlphabetically(text) : searchAsNameListSortingLastChanged(text);
+}
+
+QList<QString> Note::searchAsNameListSortingAlphabetically(QString text, bool searchInNameOnly) {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QList<QString> nameList;
+    QString textSearchSql = !searchInNameOnly ? "OR note_text LIKE :text " : "";
+    int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+
+    query.prepare("SELECT name FROM note WHERE (name LIKE :text " +
+            textSearchSql + ") AND note_sub_folder_id = :note_sub_folder_id "
+            "ORDER BY lower(name) ASC");
+    query.bindValue(":text", "%" + text + "%");
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            nameList.append(query.value("name").toString());
+        }
+    }
+
+    return nameList;
+}
+
+QList<QString> Note::searchAsNameListSortingLastChanged(QString text, bool searchInNameOnly) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -668,6 +753,37 @@ QStringList Note::buildQueryStringList(QString searchString,
 }
 
 QStringList Note::fetchNoteNames() {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? fetchNoteNamesSortingAlphabetically() : fetchNoteNamesSortingLastChanged();
+}
+
+QStringList Note::fetchNoteNamesSortingAlphabetically() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QStringList list;
+    int noteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+
+    query.prepare("SELECT DISTINCT(name) FROM note WHERE "
+                          "note_sub_folder_id = :note_sub_folder_id "
+                          "ORDER BY lower(name) ASC");
+    query.bindValue(":note_sub_folder_id", noteSubFolderId);
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            QString name = query.value("name").toString();
+            if (!name.isEmpty()) {
+                list.append(name);
+            }
+        }
+    }
+
+    return list;
+}
+
+QStringList Note::fetchNoteNamesSortingLastChanged() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
@@ -694,6 +810,30 @@ QStringList Note::fetchNoteNames() {
 }
 
 QStringList Note::fetchNoteFileNames() {
+    QSettings settings;
+    return settings.value("sortingNotesAlphabetically").toBool() ? fetchNoteFileNamesSortingAlphabetically() : fetchNoteFileNamesSortingLastChanged();
+}
+
+QStringList Note::fetchNoteFileNamesSortingAlphabetically() {
+    QSqlDatabase db = QSqlDatabase::database("memory");
+    QSqlQuery query(db);
+
+    QStringList list;
+
+    query.prepare(
+            "SELECT file_name FROM note ORDER BY lower(name) ASC");
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            list.append(query.value("file_name").toString());
+        }
+    }
+
+    return list;
+}
+
+QStringList Note::fetchNoteFileNamesSortingLastChanged() {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
