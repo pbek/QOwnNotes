@@ -14,10 +14,12 @@
       icons in custom actions
     - for example code please take a look at
       [selected-markdown-to-bbcode](https://github.com/qownnotes/scripts/tree/master/selected-markdown-to-bbcode)
-      
 - if you register a `property string scriptDirPath;` in your script the 
   property will be filled with the path to the directory where your script is 
   located
+    - you can use this for example to access other files that are located in 
+      your script's directory
+- added more Italian and French translation (thank you mlocati and lepascalou)
 
 ## 17.05.7
 - tried to fix a design glitch with the `Add script` button menu in the 

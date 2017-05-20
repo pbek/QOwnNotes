@@ -956,12 +956,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2030"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Trouver des scripts dans le dépôt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Paramètres de scripts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
@@ -2552,67 +2552,67 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Dépôt de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Pour rechercher un script, entrer le texte et appuyer sur &lt;i&gt;Entrée&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="226"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Installer le script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="229"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Installer</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="195"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Version :</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="262"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Dépôt :</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="298"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Version minimale de l'application :</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="349"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nom</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="364"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Entrer votre texte de recherche</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="367"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Trouver un script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="229"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Ouvrir le dépôt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="324"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Installation réussie</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="325"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Le script a bien été installé !</translation>
     </message>
   </context>
   <context>
@@ -2620,12 +2620,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Formulaire</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="137"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Sélectionner un fichier</translation>
     </message>
   </context>
   <context>
@@ -3350,7 +3350,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2149"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Chercher dans le dépôt de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4077"/>
@@ -3503,32 +3503,32 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2574"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Description :</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2656"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Version :</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2617"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Dépôt :</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2469"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>&amp;Ajouter un script...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2594"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Auteur(s) :</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2754"/>
       <source>&lt;b&gt;Settings&lt;/b&gt;</source>
-      <translation type="unfinished">&lt;b&gt;Settings&lt;/b&gt;</translation>
+      <translation>&lt;b&gt;Paramètres&lt;/b&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2918"/>
@@ -3987,17 +3987,17 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2158"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Ajouter un script local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2162"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Ajouter un script local existant</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2153"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Trouver un script dans le dépôt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2240"/>
@@ -4022,7 +4022,7 @@ Le message d'erreur est : </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2377"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Ouvrir le dépôt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2439"/>

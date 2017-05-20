@@ -956,12 +956,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2030"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Trova script nell'archivio degli script</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Impostazioni script</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
@@ -2581,7 +2581,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="298"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Versione minima app:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="349"/>
