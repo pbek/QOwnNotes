@@ -360,12 +360,6 @@
          </item>
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
-           <property name="maximumSize">
-            <size>
-             <width>16777215</width>
-             <height>16777215</height>
-            </size>
-           </property>
            <property name="currentIndex">
             <number>15</number>
            </property>
@@ -2756,8 +2750,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>16</width>
-                              <height>16</height>
+                              <width>760</width>
+                              <height>192</height>
                              </rect>
                             </property>
                             <attribute name="label">
@@ -3415,7 +3409,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="plainText">
@@ -3614,7 +3608,7 @@ p, li { white-space: pre-wrap; }
                 <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;portable mode information will be loaded here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="openExternalLinks">
@@ -4430,8 +4424,8 @@ git config --global user.name &quot;Your name&quot;</string>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>287</x>
-     <y>1116</y>
+     <x>278</x>
+     <y>778</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -4446,8 +4440,8 @@ git config --global user.name &quot;Your name&quot;</string>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>355</x>
-     <y>1116</y>
+     <x>346</x>
+     <y>778</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>
