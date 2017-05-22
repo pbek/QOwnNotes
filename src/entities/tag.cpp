@@ -196,10 +196,10 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
+    
     query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
                           //"priority ASC, lower(name) ASC");
                             "priority ASC");
-
     query.bindValue(":parentId", parentId);
 
     if (!query.exec()) {
