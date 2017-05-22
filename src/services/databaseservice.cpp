@@ -546,6 +546,20 @@ bool DatabaseService::setupTables() {
         if (!settings.contains("notesPanelOrder")) {
             settings.value("notesPanelOrder", ORDER_DESCENDING);
         }
+
+        if (!settings.contains("noteSubfoldersPanelSort")) {
+            settings.value("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
+        }
+        if (!settings.contains("noteSubfoldersOrder")) {
+            settings.value("noteSubfoldersOrder", ORDER_ASCENDING);
+        }
+
+        if (!settings.contains("tagsPanelSort")) {
+            settings.value("tagsPanelSort", SORT_ALPHABETICAL);
+        }
+        if (!settings.contains("tagsPanelOrder")) {
+            settings.value("tagsPanelOrder", ORDER_ASCENDING);
+        }
         version = 25;
     }
 
