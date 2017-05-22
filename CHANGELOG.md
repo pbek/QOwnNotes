@@ -9,6 +9,8 @@
   entering of script settings more clear
 - fixed a problem with automatically setting the name of a local script in 
   the *Scripting settings*
+- added more German, Brazilian Portuguese and Spanish translation (thank you
+  bigant, mlimacarlos and richarson)
 
 ## 17.05.8
 - instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 
