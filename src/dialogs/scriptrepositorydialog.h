@@ -50,4 +50,6 @@ private:
     QJsonObject getCurrentInfoJsonObject();
 
     QString getCurrentInfoJsonString();
+
+    void reloadCurrentScriptInfo();
 };

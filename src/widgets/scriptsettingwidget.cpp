@@ -19,6 +19,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     QString description = variableMap["description"].toString();
     QString identifier = variableMap["identifier"].toString();
 
+    ui->nameLabel->setText("<b>" + name + "</b>");
     ui->descriptionLabel->setText(description);
     ui->descriptionLabel->setHidden(description.isEmpty());
 

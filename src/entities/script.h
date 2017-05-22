@@ -75,11 +75,13 @@ public:
     QUrl remoteFileUrl(QString fileName);
     static bool scriptFromRepositoryExists(QString identifier);
     void setSettingsVariablesJson(QString json);
+    QString getSettingsVariablesJson();
     QJsonObject getSettingsVariablesJsonObject();
     void setSettingsVariablesJson(QJsonObject jsonObject);
     QString getScriptDirPath();
     QList<QUrl> remoteFileUrls();
     ScriptInfoJson getScriptInfoJson();
+    static Script fetchByIdentifier(QString identifier);
 
 private:
     int id;

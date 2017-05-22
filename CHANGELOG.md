@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 17.05.9
+- added information about enabled scripts to the *Debug settings*
+- now information about the currently installed version of the script will be 
+  shown in the *Script repository* if the script is already installed
+- you can now also reinstall or update your scripts in the *Script repository*
+- the user interface of the *Scripting settings* was adapted to make the 
+  entering of script settings more clear
+- fixed a problem with automatically setting the name of a local script in 
+  the *Scripting settings*
+- added more German, Brazilian Portuguese and Spanish translation (thank you
+  bigant, mlimacarlos and richarson)
+
 ## 17.05.8
 - instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 
   your scripts you now only need to import `QOwnNotesTypes`
@@ -8,7 +20,7 @@
     - for more information please take a look at the
       [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html)
 - you can now use the property list `resources` in your `info.json` in the
-  *script repository* to specify further files that are present in your script's
+  *Script repository* to specify further files that are present in your script's
   directory and that should be downloaded to be used by your script
     - you can use this for example for other scripts you want to run or for 
       icons in custom actions
@@ -46,10 +58,10 @@
 
 ## 17.05.6
 - the `Add script` button in the *Scripting settings* is now a button group
-  where you can add local scripts and scripts from the *script repository*
-- if the script in the *Scripting settings* was from the *script repository*
+  where you can add local scripts and scripts from the *Script repository*
+- if the script in the *Scripting settings* was from the *Script repository*
   additional information from the repository will be shown
-- the *example script* will now be ignored in the *script repository*
+- the *example script* will now be ignored in the *Script repository*
 - the authors of the scripts in the script repository are now shown in the
   *Script repository dialog* and the *Scripting settings* (if the information
   was available at the time of script installation)
@@ -59,7 +71,7 @@
 ## 17.05.5
 - you can now access the new [script repository](https://github.com/qownnotes/scripts)
   from a new button *Search script repository* in the *scripting settings*
-    - in the new *script repository* dialog you can search for scripts from 
+    - in the new *Script repository* dialog you can search for scripts from 
       the repository and install them
     - more features and scripts will be added in the coming releases
 - added more Chinese, Dutch and Hungarian translation (thank you chonghua and

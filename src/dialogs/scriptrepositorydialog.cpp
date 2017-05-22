@@ -9,6 +9,7 @@
 #include <utils/misc.h>
 #include <QtWidgets/QMessageBox>
 #include <services/metricsservice.h>
+#include <libraries/versionnumber/versionnumber.h>
 #include "scriptrepositorydialog.h"
 #include "ui_scriptrepositorydialog.h"
 
@@ -207,6 +208,16 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
     Q_UNUSED(current);
     Q_UNUSED(previous);
 
+    reloadCurrentScriptInfo();
+}
+
+/**
+ * Shows the currently selected script
+ *
+ * @param current
+ * @param previous
+ */
+void ScriptRepositoryDialog::reloadCurrentScriptInfo() {
     QJsonObject jsonObject = getCurrentInfoJsonObject();
 
     if (jsonObject.isEmpty()) {
@@ -228,8 +239,31 @@ void ScriptRepositoryDialog::on_scriptTreeWidget_currentItemChanged(
             "<a href=\"https://github.com/qownnotes/scripts/tree/master/" +
                     infoJson.identifier + "\">" + tr("Open repository") +
                     "</a>");
-    ui->installButton->setDisabled(
-            Script::scriptFromRepositoryExists(infoJson.identifier));
+
+    Script script = Script::fetchByIdentifier(infoJson.identifier);
+    if (script.isFetched()) {
+        VersionNumber remoteVersion = VersionNumber(infoJson.version);
+
+        ScriptInfoJson scriptInfoJson = script.getScriptInfoJson();
+        VersionNumber localVersion = VersionNumber(scriptInfoJson.version);
+
+        if (localVersion < remoteVersion) {
+            ui->installButton->setText(tr("Update"));
+            ui->installButton->setToolTip(tr("Updates the script"));
+        } else {
+            ui->installButton->setText(tr("Reinstall"));
+            ui->installButton->setToolTip(tr("Reinstalls the script"));
+        }
+
+        ui->currentlyInstalledVersionLabel->setText(scriptInfoJson.version);
+        ui->currentlyInstalledVersionLabel->show();
+        ui->currentlyInstalledVersionTextLabel->show();
+    } else {
+        ui->installButton->setText(tr("Install"));
+        ui->installButton->setToolTip(tr("Installs the script"));
+        ui->currentlyInstalledVersionLabel->hide();
+        ui->currentlyInstalledVersionTextLabel->hide();
+    }
 }
 
 /**
@@ -277,19 +311,18 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         return;
     }
 
-    // check if script is already installed
-    if (Script::scriptFromRepositoryExists(identifier)) {
-        return;
-    }
-
     ui->installButton->setEnabled(false);
 
     QString name = jsonObject.value("name").toString();
     QString scriptName = jsonObject.value("script").toString();
 
-    // create the script in the database
-    Script script;
-    script.setIdentifier(identifier);
+    // create or update the script in the database
+    Script script = Script::fetchByIdentifier(identifier);
+
+    if (!script.isFetched()) {
+        script.setIdentifier(identifier);
+    }
+
     script.setName(name);
     script.setInfoJson(getCurrentInfoJsonString());
 
@@ -314,8 +347,7 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         file->close();
     }
 
-    ui->installButton->setEnabled(true);
-
+    // download resource files (if any)
     if (filesWereDownloaded) {
         ScriptInfoJson infoJson = script.getScriptInfoJson();
         foreach (QString resourceFileName, infoJson.resources) {
@@ -337,12 +369,18 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
             }
     }
 
+    ui->installButton->setEnabled(true);
+
     if (filesWereDownloaded) {
         script.store();
         MetricsService::instance()->sendVisitIfEnabled(
                 "script-repository/install/" + identifier);
+        reloadCurrentScriptInfo();
 
         QMessageBox::information(this, tr("Install successful"),
                                  tr("The script was successfully installed!"));
+    } else {
+        QMessageBox::warning(this, tr("Download failed"),
+                                 tr("The script could not be downloaded!"));
     }
 }
