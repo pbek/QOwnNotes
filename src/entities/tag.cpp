@@ -347,7 +347,6 @@ bool Tag::isLinkedToNote(Note note) {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
-    QSettings settings;
     QSqlQuery query(db);
     QList<Tag> tagList;
     QString noteIdListString = noteNameList.join("','");
