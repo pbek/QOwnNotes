@@ -48,6 +48,7 @@ public:
         ToolbarPage,
         DebugOptionPage,
         EditorPage,
+        PanelsPage,
         GitPage
     };
 
