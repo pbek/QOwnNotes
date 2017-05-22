@@ -523,6 +523,32 @@ bool DatabaseService::setupTables() {
         version = 24;
     }
 
+    if (version < 25) {
+        // migrate old sort and order settings + set defaults iff unset
+        // if settings.s;
+        if (settings.contains("SortingModeAlphabetically")) {
+            bool sort = settings.value("SortingModeAlphabetically").toBool(); // read old setting
+            settings.setValue("notesPanelSort",
+                              sort ? SORT_ALPHABETICAL : SORT_BY_LAST_CHANGE);
+            settings.remove("SortingModeAlphabetically");
+        }
+
+        if (settings.contains("NoteSortOrder")) {
+            int order = static_cast<Qt::SortOrder>(settings.value("NoteSortOrder").toInt());
+            settings.setValue("notesPanelOrder", order); // see defines in MainWindow.h
+            settings.remove("NoteSortOrder");
+        }
+
+        // set defaults for now settings iff not set already
+        if (!settings.contains("notesPanelSort")) {
+            settings.value("notesPanelSort", SORT_BY_LAST_CHANGE);
+        }
+        if (!settings.contains("notesPanelOrder")) {
+            settings.value("notesPanelOrder", ORDER_DESCENDING);
+        }
+        version = 25;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version", QString::number(version));
     }
