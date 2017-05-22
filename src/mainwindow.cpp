@@ -9037,6 +9037,8 @@ void MainWindow::updateNotesPanelSortOrder() {
     ui->actionAlphabetical->setChecked(sort == SORT_ALPHABETICAL);
     ui->actionBy_date->setChecked(sort == SORT_BY_LAST_CHANGE);
 
+    updateNoteSortOrderSelectorVisibility(sort == SORT_ALPHABETICAL);
+
     int order = settings.value("notesPanelOrder").toInt();
     ui->actionAscending->setChecked(order == ORDER_ASCENDING);
     ui->actionDescending->setChecked(order == ORDER_DESCENDING);
