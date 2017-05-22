@@ -183,20 +183,32 @@ int Script::countEnabled() {
  * @return
  */
 bool Script::scriptFromRepositoryExists(QString identifier) {
+    Script script = fetchByIdentifier(identifier);
+    return script.isFetched();
+}
+
+/**
+ * Fetches a script by its identifier
+ *
+ * @param identifier
+ * @return
+ */
+Script Script::fetchByIdentifier(QString identifier) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
-    query.prepare("SELECT COUNT(1) AS cnt FROM script WHERE identifier = "
-                          ":identifier");
+    Script script;
+
+    query.prepare("SELECT * FROM script WHERE identifier = :identifier");
     query.bindValue(":identifier", identifier);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        return query.value("cnt").toInt() > 0;
+        script.fillFromQuery(query);
     }
 
-    return false;
+    return script;
 }
 
 bool Script::scriptPathExists() {

@@ -81,6 +81,7 @@ public:
     QString getScriptDirPath();
     QList<QUrl> remoteFileUrls();
     ScriptInfoJson getScriptInfoJson();
+    static Script fetchByIdentifier(QString identifier);
 
 private:
     int id;

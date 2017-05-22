@@ -2,6 +2,9 @@
 
 ## 17.05.9
 - added information about enabled scripts to the *Debug settings*
+- now information about the currently installed version of the script will be 
+  shown in the *script repository* if the script is already installed
+- you can now also reinstall or update your scripts in the *script repository* 
 
 ## 17.05.8
 - instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 

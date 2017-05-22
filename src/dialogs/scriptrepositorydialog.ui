@@ -108,7 +108,37 @@
            <property name="bottomMargin">
             <number>0</number>
            </property>
+           <item row="0" column="0" colspan="3">
+            <widget class="QLabel" name="nameLabel">
+             <property name="text">
+              <string notr="true">&lt;b&gt;Name&lt;/b&gt;</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="currentlyInstalledVersionTextLabel">
+             <property name="text">
+              <string>Currently installed version:</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
            <item row="5" column="0">
+            <widget class="QLabel" name="minAppVersionHeadlineLabel">
+             <property name="text">
+              <string>Minimum app version:</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
             <widget class="QLabel" name="versionLabel_2">
              <property name="text">
               <string notr="true">Author(s):</string>
@@ -121,7 +151,7 @@
              </property>
             </widget>
            </item>
-           <item row="11" column="0" colspan="2">
+           <item row="12" column="0" colspan="3">
             <spacer name="verticalSpacer">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -134,46 +164,7 @@
              </property>
             </spacer>
            </item>
-           <item row="3" column="1">
-            <widget class="QLabel" name="versionLabel">
-             <property name="text">
-              <string notr="true">Version</string>
-             </property>
-             <property name="textFormat">
-              <enum>Qt::PlainText</enum>
-             </property>
-             <property name="textInteractionFlags">
-              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-             </property>
-            </widget>
-           </item>
-           <item row="9" column="1">
-            <spacer name="horizontalSpacer_2">
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>40</width>
-               <height>20</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="5" column="1">
-            <widget class="QLabel" name="authorLabel">
-             <property name="text">
-              <string notr="true">Authors</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-             <property name="openExternalLinks">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="10" column="0" colspan="2">
+           <item row="11" column="0" colspan="3">
             <widget class="QLabel" name="descriptionLabel">
              <property name="text">
               <string notr="true">Description</string>
@@ -189,6 +180,42 @@
              </property>
             </widget>
            </item>
+           <item row="10" column="2">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="textLabel2">
+             <property name="text">
+              <string>Repository:</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="authorLabel">
+             <property name="text">
+              <string notr="true">Authors</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
            <item row="3" column="0">
             <widget class="QLabel" name="textLabel">
              <property name="text">
@@ -199,7 +226,23 @@
              </property>
             </widget>
            </item>
-           <item row="13" column="0" colspan="2">
+           <item row="9" column="2">
+            <widget class="QLabel" name="repositoryLinkLabel">
+             <property name="toolTip">
+              <string notr="true"/>
+             </property>
+             <property name="text">
+              <string notr="true">URL</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="0" colspan="3">
             <widget class="QFrame" name="horizontalFrame">
              <property name="frameShape">
               <enum>QFrame::NoFrame</enum>
@@ -256,56 +299,36 @@
              </layout>
             </widget>
            </item>
-           <item row="8" column="0">
-            <widget class="QLabel" name="textLabel2">
+           <item row="3" column="2">
+            <widget class="QLabel" name="versionLabel">
              <property name="text">
-              <string>Repository:</string>
+              <string notr="true">Version</string>
              </property>
-             <property name="wordWrap">
-              <bool>true</bool>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
              </property>
             </widget>
            </item>
-           <item row="0" column="0" colspan="2">
-            <widget class="QLabel" name="nameLabel">
-             <property name="text">
-              <string notr="true">&lt;b&gt;Name&lt;/b&gt;</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="8" column="1">
-            <widget class="QLabel" name="repositoryLinkLabel">
-             <property name="toolTip">
-              <string notr="true"/>
-             </property>
-             <property name="text">
-              <string notr="true">URL</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-             <property name="openExternalLinks">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="0">
-            <widget class="QLabel" name="minAppVersionHeadlineLabel">
-             <property name="text">
-              <string>Minimum app version:</string>
-             </property>
-             <property name="wordWrap">
-              <bool>true</bool>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
+           <item row="5" column="2">
             <widget class="QLabel" name="minAppVersionLabel">
              <property name="text">
               <string notr="true">Version</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="currentlyInstalledVersionLabel">
+             <property name="text">
+              <string notr="true">Version</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
              </property>
             </widget>
            </item>
