@@ -180,7 +180,6 @@ QList<Tag> Tag::fetchAll() {
 
     //query.prepare("SELECT * FROM tag ORDER BY priority ASC, lower(name) ASC");
     query.prepare("SELECT * FROM tag ORDER BY priority ASC");
-
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -197,7 +196,6 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
-
     query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
                           //"priority ASC, lower(name) ASC");
                             "priority ASC");
@@ -263,7 +261,6 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
                           "l.note_sub_folder_path = :noteSubFolderPath "
                           //"ORDER BY t.priority ASC, lower(t.name) ASC");
                             "ORDER BY t.priority ASC");
-
     query.bindValue(":fileName", note.getName());
     query.bindValue(":noteSubFolderPath",
                     note.getNoteSubFolder().relativePath());

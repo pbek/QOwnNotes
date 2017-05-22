@@ -4412,7 +4412,6 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../libraries/qdarkstyle/style.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
