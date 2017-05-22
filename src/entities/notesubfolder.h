@@ -20,10 +20,6 @@ public:
 
     static QList<NoteSubFolder> fetchAll(int limit = -1);
 
-    static QList<NoteSubFolder> fetchAllSortingAlphabetically(int limit = -1);
-
-    static QList<NoteSubFolder> fetchAllSortingLastChanged(int limit = -1);
-
     static NoteSubFolder noteSubFolderFromQuery(QSqlQuery query);
 
     bool store();
@@ -57,10 +53,6 @@ public:
     NoteSubFolder getParent();
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId);
-
-    static QList<NoteSubFolder> fetchAllByParentIdSortingAlphabetically(int parentId);
-
-    static QList<NoteSubFolder> fetchAllByParentIdSortingLastChanged(int parentId);
 
     bool isActive();
 

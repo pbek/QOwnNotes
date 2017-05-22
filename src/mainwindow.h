@@ -42,6 +42,10 @@
 #include "services/updateservice.h"
 #include "libraries/qmarkdowntextedit/qmarkdowntextedit.h"
 
+#define SORT_ALPHABETICAL 0
+#define SORT_BY_LAST_CHANGE 1
+#define ORDER_ASCENDING 0 // Qt::AscendingOrder // = 0
+#define ORDER_DESCENDING 1 // Qt::DescendingOrder // = 1
 
 namespace Ui {
 class MainWindow;
@@ -121,6 +125,12 @@ public:
     QString selectedNoteTextEditText();
 
     void linkTagNameToCurrentNote(QString tagName);
+
+    Qt::SortOrder toQtOrder(int order);
+
+    void updatePanelsSortOrder();
+
+    void updateNotesPanelSortOrder();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -491,7 +501,6 @@ private:
     QSignalMapper *_panelSignalMapper;
     QSignalMapper *_toolbarSignalMapper;
     UpdateService *updateService;
-    bool sortAlphabetically;
     bool showSystemTray;
     QSystemTrayIcon *trayIcon;
     QDateTime currentNoteLastEdited;
@@ -555,7 +564,6 @@ private:
     TodoDialog *_todoDialog;
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
-    Qt::SortOrder _noteSortOrder;
     QList<QAction *> _noteTextEditContextMenuActions;
     QString _notePreviewHash;
     int _gitCommitInterval;
@@ -679,7 +687,7 @@ private:
 
     void initToolbars();
 
-    void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0);
+    void buildTagTreeForParentItem(QTreeWidgetItem *parent = 0, bool topLevel = false);
 
     void buildTagMoveMenuTree(QMenu *parentMenu,
                               int parentTagId = 0);
@@ -801,7 +809,7 @@ private:
 
     void setNoteTextEditReadOnly(bool readonly) const;
 
-    void updateNoteSortOrderSelectorVisibility();
+    void updateNoteSortOrderSelectorVisibility(bool visible);
 
     void storeTagTreeWidgetExpandState() const;
 

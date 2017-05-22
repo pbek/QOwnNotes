@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1592</width>
-    <height>1126</height>
+    <width>1142</width>
+    <height>940</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -18,8 +18,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>16777215</width>
-    <height>16777215</height>
+    <width>1142</width>
+    <height>940</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -30,6 +30,16 @@
     <normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</normaloff>:/icons/breeze-qownnotes/16x16/configure.svg</iconset>
   </property>
   <layout class="QGridLayout" name="gridLayout_2">
+   <item row="1" column="0">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
    <item row="0" column="0">
     <widget class="QFrame" name="mainFrame">
      <layout class="QHBoxLayout" name="horizontalLayout_6">
@@ -200,6 +210,18 @@
             </item>
             <item>
              <property name="text">
+              <string>Panels</string>
+             </property>
+             <property name="whatsThis">
+              <string notr="true">15</string>
+             </property>
+             <property name="icon">
+              <iconset resource="../libraries/qdarkstyle/style.qrc">
+               <normaloff>:/qss_icons/rc/checkbox_indeterminate.png</normaloff>:/qss_icons/rc/checkbox_indeterminate.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
               <string>Preview fonts</string>
              </property>
              <property name="whatsThis">
@@ -348,8 +370,14 @@
          </item>
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
            <property name="currentIndex">
-            <number>6</number>
+            <number>15</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2296,84 +2324,6 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QGroupBox" name="sortingGroupBox">
-                    <property name="title">
-                     <string>Sorting</string>
-                    </property>
-                    <layout class="QGridLayout" name="gridLayout_56">
-                     <item row="2" column="0">
-                      <widget class="QGroupBox" name="sortingTagsGroupBox">
-                       <property name="title">
-                        <string>Tags</string>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_8">
-                        <item>
-                         <widget class="QRadioButton" name="sortingTagsAlphabeticallyRadioButton">
-                          <property name="text">
-                           <string>Alphabetically</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QRadioButton" name="sortingTagsLastChangedRadioButton">
-                          <property name="text">
-                           <string>Last Changed</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="0" column="0">
-                      <widget class="QGroupBox" name="sortingNotesGroupBox">
-                       <property name="title">
-                        <string>Notes</string>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_10">
-                        <item>
-                         <widget class="QRadioButton" name="sortingNotesAlphabeticallyRadioButton">
-                          <property name="text">
-                           <string>Alphabetically</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QRadioButton" name="sortingNotesLastChangedRadioButton">
-                          <property name="text">
-                           <string>Last Changed</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                     <item row="1" column="0">
-                      <widget class="QGroupBox" name="sortingNoteSubfoldersGroupBox">
-                       <property name="title">
-                        <string>Note Subfolders</string>
-                       </property>
-                       <layout class="QHBoxLayout" name="horizontalLayout_11">
-                        <item>
-                         <widget class="QRadioButton" name="sortingNoteSubfoldersAlphabeticallyRadioButton">
-                          <property name="text">
-                           <string>Alphabetically</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QRadioButton" name="sortingNoteSubfoldersLastChangedRadioButton">
-                          <property name="text">
-                           <string>Last Changed</string>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </widget>
-                     </item>
-                    </layout>
-                   </widget>
-                  </item>
-                  <item>
                    <spacer name="verticalSpacer_6">
                     <property name="orientation">
                      <enum>Qt::Vertical</enum>
@@ -2816,8 +2766,8 @@
                              <rect>
                               <x>0</x>
                               <y>0</y>
-                              <width>760</width>
-                              <height>192</height>
+                              <width>16</width>
+                              <height>16</height>
                              </rect>
                             </property>
                             <attribute name="label">
@@ -3475,7 +3425,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="plainText">
@@ -3674,7 +3624,7 @@ p, li { white-space: pre-wrap; }
                 <string notr="true">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:'Sans Serif'; font-size:9pt;&quot;&gt;portable mode information will be loaded here&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="openExternalLinks">
@@ -4092,6 +4042,190 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QWidget" name="panelsPage">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>800</width>
+              <height>600</height>
+             </size>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_55">
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
+               <property name="title">
+                <string>Note Subfolders Panel</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QGroupBox" name="noteSubfoldersPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="noteSubfoldersPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QGroupBox" name="notesPanelGroupBox">
+               <property name="title">
+                <string>Notes Panel</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="notesPanelOrderGroupBox">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelOrderAscendingRadioButton">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QGroupBox" name="tagsPanelGroupBox">
+               <property name="title">
+                <string>Tags Panel</string>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QGroupBox" name="tagsPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_19">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="tagsPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_20">
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="tagsPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
            <widget class="QWidget" name="gitPage">
             <layout class="QGridLayout" name="gridLayout_48">
              <item row="5" column="1">
@@ -4262,16 +4396,6 @@ git config --global user.name &quot;Your name&quot;</string>
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -4294,6 +4418,7 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
+  <include location="../libraries/qdarkstyle/style.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
@@ -4305,8 +4430,8 @@ git config --global user.name &quot;Your name&quot;</string>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>278</x>
-     <y>778</y>
+     <x>287</x>
+     <y>1116</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -4321,8 +4446,8 @@ git config --global user.name &quot;Your name&quot;</string>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>346</x>
-     <y>778</y>
+     <x>355</x>
+     <y>1116</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

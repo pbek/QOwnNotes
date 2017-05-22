@@ -121,7 +121,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteFolderDockWidgetWasVisible = true;
     _noteSubFolderDockWidgetVisible = true;
     _noteExternallyRemovedCheckEnabled = true;
-    _noteSortOrder = Qt::AscendingOrder;
+
     this->setWindowTitle(
             "QOwnNotes - version " + QString(VERSION) +
                     " - build " + QString::number(BUILD));
@@ -215,17 +215,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // check if we want to start the application hidden
     initShowHidden();
-
-    // set sorting
-    ui->actionBy_date->setChecked(!sortAlphabetically);
-    ui->actionAlphabetical->setChecked(sortAlphabetically);
-
-    // update the visibility of the note sort order selector
-    updateNoteSortOrderSelectorVisibility();
-
-    // set sort order
-    ui->actionAscending->setChecked(_noteSortOrder == Qt::AscendingOrder);
-    ui->actionDescending->setChecked(_noteSortOrder == Qt::DescendingOrder);
 
     // set the show in system tray checkbox
     ui->actionShow_system_tray->setChecked(showSystemTray);
@@ -331,6 +320,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // load the note folder list in the menu
     this->loadNoteFolderListMenu();
 
+    // update panels sort and order
+    updatePanelsSortOrder();
+
     this->updateService = new UpdateService(this);
     this->updateService->checkForUpdates(this, UpdateService::AppStart);
 
@@ -419,6 +411,7 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2);
+
     QSettings settings;
     ui->actionUse_softwrap_in_note_editor->setChecked(
             settings.value("useSoftWrapInNoteEditor", true).toBool());
@@ -1794,8 +1787,9 @@ void MainWindow::loadNoteDirectoryList() {
             itemCount);
 
     // sort alphabetically again if necessary
-    if (sortAlphabetically) {
-        ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+    QSettings settings;
+    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+        ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
     }
 
     // setup tagging
@@ -1851,7 +1845,8 @@ bool MainWindow::addNoteToNoteTreeWidget(Note note) {
     // strange things happen if we insert with insertTopLevelItem
     ui->noteTreeWidget->addTopLevelItem(noteItem);
 
-//    if (sortAlphabetically) {
+//    QSettings settings;
+//    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
 //        ui->noteTreeWidget->addTopLevelItem(noteItem);
 //    } else {
 //        ui->noteTreeWidget->insertTopLevelItem(0, noteItem);
@@ -1968,10 +1963,6 @@ void MainWindow::readSettings() {
     NoteFolder::migrateToNoteFolders();
 
     QSettings settings;
-    sortAlphabetically = settings.value(
-            "SortingModeAlphabetically", false).toBool();
-    _noteSortOrder = static_cast<Qt::SortOrder>(settings.value(
-            "NoteSortOrder", Qt::AscendingOrder).toInt());
     showSystemTray = settings.value("ShowSystemTray", false).toBool();
     restoreGeometry(settings.value("MainWindow/geometry").toByteArray());
     ui->menuBar->restoreGeometry(
@@ -3196,8 +3187,6 @@ void MainWindow::storeSettings() {
                           ui->menuBar->saveGeometry());
     }
 
-    settings.setValue("SortingModeAlphabetically", sortAlphabetically);
-    settings.setValue("NoteSortOrder", _noteSortOrder);
     settings.setValue("ShowSystemTray", showSystemTray);
 
     // store a NoteHistoryItem to open the note again after the app started
@@ -4020,6 +4009,9 @@ void MainWindow::openSettingsDialog(int page, bool openScriptRepository) {
     // even if the dialog was canceled
     readSettingsFromSettingsDialog();
 
+    // update the panels sort and order
+    updatePanelsSortOrder();
+
     // reset the note save timer
     this->noteSaveTimer->stop();
     this->noteSaveTimer->start(this->noteSaveIntervalTime * 1000);
@@ -4360,7 +4352,8 @@ void MainWindow::on_noteTextEdit_textChanged() {
 
         updateEncryptNoteButtons();
 
-        if (!sortAlphabetically) {
+        QSettings settings;
+        if (settings.value("notesPanelSort").toInt() == SORT_BY_LAST_CHANGE) {
             makeCurrentNoteFirstInNoteList();
         }
 
@@ -4849,22 +4842,24 @@ void MainWindow::on_actionReport_problems_or_ideas_triggered() {
 
 void MainWindow::on_actionAlphabetical_triggered(bool checked) {
     if (checked) {
-        sortAlphabetically = true;
-        ui->noteTreeWidget->sortItems(0, _noteSortOrder);
-    }
-
-    // update the visibility of the note sort order selector
-    updateNoteSortOrderSelectorVisibility();
-}
-
-void MainWindow::on_actionBy_date_triggered(bool checked) {
-    if (checked) {
-        sortAlphabetically = false;
+        QSettings settings;
+        settings.setValue("notesPanelSort", SORT_ALPHABETICAL);
         loadNoteDirectoryList();
     }
 
     // update the visibility of the note sort order selector
-    updateNoteSortOrderSelectorVisibility();
+    updateNoteSortOrderSelectorVisibility(checked);
+}
+
+void MainWindow::on_actionBy_date_triggered(bool checked) {
+    if (checked) {
+        QSettings settings;
+        settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
+        loadNoteDirectoryList();
+    }
+
+    // update the visibility of the note sort order selector
+    updateNoteSortOrderSelectorVisibility(!checked);
 }
 
 void MainWindow::systemTrayIconClicked(
@@ -6037,7 +6032,16 @@ void MainWindow::reloadTagTree() {
 //    ui->tagTreeWidget->addTopLevelItem(emptyItem);
 
     // add all tags recursively as items
-    buildTagTreeForParentItem();
+    buildTagTreeForParentItem(allItem, true);
+
+    if (allItem->childCount() > 0) {
+        allItem->setExpanded(true);
+
+        QSettings settings;
+        if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+            allItem->sortChildren(0, toQtOrder(settings.value("tagsPanelOrder").toInt()));
+        }
+    }
 
     // add an item to view untagged notes if there are any
     linkCount = Note::countAllNotTagged();
@@ -6120,7 +6124,20 @@ void MainWindow::reloadNoteSubFolderTree() {
     }
 
     // add all note sub folders recursively as items
-    buildNoteSubFolderTreeForParentItem();
+    buildNoteSubFolderTreeForParentItem(item);
+
+    if (item->childCount() > 0) {
+        item->setExpanded(true);
+
+        QSettings settings;
+        int sort = settings.value("noteSubfoldersPanelSort").toInt();
+        if (sort == SORT_ALPHABETICAL) {
+            item->sortChildren(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
+        }
+    }
+
+    // sort tree if set
+
 
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
@@ -6166,8 +6183,8 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
 /**
  * Populates the tag tree recursively with its tags
  */
-void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent) {
-    int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
+void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLevel) {
+    int parentId = (parent == NULL || topLevel) ? 0 : parent->data(0, Qt::UserRole).toInt();
     int activeTagId = Tag::activeTagId();
     QSettings settings;
     QStringList expandedList = settings.value(
@@ -6206,9 +6223,9 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
         QTreeWidgetItem *parent, Tag tag) {
     int parentId = parent == NULL ? 0 : parent->data(0, Qt::UserRole).toInt();
 
-    if (parentId < 0) {
+    /*if (parentId < 0) {
         parentId = 0;
-    }
+    }*/
 
     int tagId = tag.getId();
 
@@ -7772,8 +7789,9 @@ void MainWindow::on_noteTreeWidget_itemChanged(QTreeWidgetItem *item,
 //                loadNoteDirectoryList();
 
                 // sort notes if note name has changed
-                if (sortAlphabetically) {
-                    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+                QSettings settings;
+                if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+                    ui->noteTreeWidget->sortItems(0, toQtOrder(settings.value("notesPanelOrder").toInt()));
                     ui->noteTreeWidget->scrollToItem(item);
                 }
             }
@@ -8854,8 +8872,9 @@ void MainWindow::on_actionSave_modified_notes_triggered() {
  */
 void MainWindow::on_actionAscending_triggered()
 {
-    _noteSortOrder = Qt::AscendingOrder;
-    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+    QSettings settings;
+    settings.setValue("notesPanelOrder", ORDER_ASCENDING);
+    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_ASCENDING));
 }
 
 /**
@@ -8863,18 +8882,19 @@ void MainWindow::on_actionAscending_triggered()
  */
 void MainWindow::on_actionDescending_triggered()
 {
-    _noteSortOrder = Qt::DescendingOrder;
-    ui->noteTreeWidget->sortItems(0, _noteSortOrder);
+    QSettings settings;
+    settings.setValue("notesPanelOrder", ORDER_DESCENDING);
+    ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_DESCENDING));
 }
 
 /**
  * Updates the visibility of the note sort order selector
  */
-void MainWindow::updateNoteSortOrderSelectorVisibility()
+void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible)
 {
-    ui->actionAscending->setVisible(sortAlphabetically);
-    ui->actionDescending->setVisible(sortAlphabetically);
-//    ui->sortOrderSeparator->setVisible(sortAlphabetically);
+    ui->actionAscending->setVisible(visible);
+    ui->actionDescending->setVisible(visible);
+//    ui->sortOrderSeparator->setVisible(visible);
 }
 
 /**
@@ -8997,3 +9017,31 @@ void MainWindow::on_actionScript_repository_triggered() {
 void MainWindow::on_actionScript_settings_triggered() {
     openSettingsDialog(SettingsDialog::ScriptingPage);
 }
+
+Qt::SortOrder MainWindow::toQtOrder(int order) {
+    if (order == ORDER_ASCENDING) {
+        return Qt::AscendingOrder;
+    } else {
+        return Qt::DescendingOrder;
+    }
+}
+
+void MainWindow::updatePanelsSortOrder() {
+    updateNotesPanelSortOrder();
+    reloadNoteSubFolderTree();
+    reloadTagTree();
+}
+
+void MainWindow::updateNotesPanelSortOrder() {
+    QSettings settings;
+    int sort = settings.value("notesPanelSort").toInt();
+    ui->actionAlphabetical->setChecked(sort == SORT_ALPHABETICAL);
+    ui->actionBy_date->setChecked(sort == SORT_BY_LAST_CHANGE);
+
+    int order = settings.value("notesPanelOrder").toInt();
+    ui->actionAscending->setChecked(order == ORDER_ASCENDING);
+    ui->actionDescending->setChecked(order == ORDER_DESCENDING);
+
+    loadNoteDirectoryList();
+}
+
