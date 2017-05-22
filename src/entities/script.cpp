@@ -378,6 +378,15 @@ QJsonObject Script::getSettingsVariablesJsonObject() {
 }
 
 /**
+ * Returns the json text of the settingsVariablesJson field
+ *
+ * @return
+ */
+QString Script::getSettingsVariablesJson() {
+    return settingsVariablesJson;
+}
+
+/**
  * Returns the path where the script repositories will be stored locally
  *
  * @return

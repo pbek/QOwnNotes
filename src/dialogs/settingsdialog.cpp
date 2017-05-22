@@ -1184,6 +1184,36 @@ void SettingsDialog::outputSettings() {
             }
     }
 
+    // add script information
+    output += "\n## Enabled scripts\n";
+
+    QList<Script> scripts = Script::fetchAll(true);
+    if (noteFolders.count() > 0) {
+        Q_FOREACH(Script script, scripts) {
+                output += "\n### Script `" + script.getName() +
+                        "`\n\n";
+                output += prepareDebugInformationLine(
+                        "id", QString::number(script.getId()));
+                output += prepareDebugInformationLine(
+                        "path", QDir::toNativeSeparators(
+                                script.getScriptPath()));
+                output += prepareDebugInformationLine(
+                        "variablesJson", script.getSettingsVariablesJson());
+                if (script.isScriptFromRepository()) {
+                    ScriptInfoJson infoJson = script.getScriptInfoJson();
+
+                    output += prepareDebugInformationLine(
+                            "identifier", script.getIdentifier());
+                    output += prepareDebugInformationLine(
+                            "version", infoJson.version);
+                    output += prepareDebugInformationLine(
+                            "minAppVersion", infoJson.minAppVersion);
+                }
+            }
+    } else {
+        output += "\nThere are no enabled scripts.\n";
+    }
+
     // add information about the settings
     output += "\n## Settings\n\n";
 
@@ -1272,7 +1302,12 @@ QString SettingsDialog::prepareDebugInformationLine(QString headline,
     // add two spaces if we don't want GitHub line breaks
     QString spaces = ui->gitHubLineBreaksCheckBox->isChecked() ? "" : "  ";
 
-    data = (data == "") ? "*empty*" : "`" + data + "`";
+    if (data.contains("\n")) {
+        data = "\n```\n" + data.trimmed() + "\n```";
+    } else {
+        data = (data.isEmpty()) ? "*empty*" : "`" + data + "`";
+    }
+
     return "**" + headline + "**: " + data + spaces + "\n";
 }
 

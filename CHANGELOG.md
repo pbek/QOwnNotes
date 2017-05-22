@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.05.9
+- added information about enabled scripts to the *Debug settings*
+
 ## 17.05.8
 - instead of importing `com.qownnotes.noteapi` and `com.qownnotes.tagapi` in 
   your scripts you now only need to import `QOwnNotesTypes`
