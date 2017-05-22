@@ -178,8 +178,15 @@ QList<Tag> Tag::fetchAll() {
 
     QList<Tag> tagList;
 
-    //query.prepare("SELECT * FROM tag ORDER BY priority ASC, lower(name) ASC");
-    query.prepare("SELECT * FROM tag ORDER BY priority ASC");
+    //query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, "
+                  "CASE "
+                      "WHEN l.created > t.created THEN l.created "
+                      "ELSE t.created "
+                  "END AS created, t.parent_id as parent_id, "
+                  "t.color as color, t.dark_color as dark_color "
+                  "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
+                  "ORDER BY created DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else {
@@ -197,9 +204,17 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
     QSqlQuery query(db);
     QList<Tag> tagList;
 
-    query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
-                          //"priority ASC, lower(name) ASC");
-                            "priority ASC");
+    //query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
+    //                      "priority ASC, name ASC");
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, "
+                  "CASE "
+                      "WHEN l.created > t.created THEN l.created "
+                      "ELSE t.created "
+                  "END AS created, t.parent_id as parent_id, "
+                  "t.color as color, t.dark_color as dark_color "
+                  "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
+                  "WHERE parent_id = :parentId  "
+                  "ORDER BY created DESC");
     query.bindValue(":parentId", parentId);
 
     if (!query.exec()) {
@@ -259,8 +274,7 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
                           "JOIN noteTagLink l ON t.id = l.tag_id "
                           "WHERE l.note_file_name = :fileName AND "
                           "l.note_sub_folder_path = :noteSubFolderPath "
-                          //"ORDER BY t.priority ASC, lower(t.name) ASC");
-                            "ORDER BY t.priority ASC");
+                          "ORDER BY t.priority ASC, t.name ASC");
     query.bindValue(":fileName", note.getName());
     query.bindValue(":noteSubFolderPath",
                     note.getNoteSubFolder().relativePath());
@@ -353,8 +367,7 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
                 "WHERE l.note_file_name IN ('%1') AND "
                     "l.note_sub_folder_path = :noteSubFolderPath "
                 "GROUP BY t.id "
-                //"ORDER BY t.priority ASC, lower(t.name) ASC")
-                "ORDER BY t.priority ASC")
+                "ORDER BY t.priority ASC, t.name ASC")
             .arg(noteIdListString);
     query.prepare(sql);
     query.bindValue(":noteSubFolderPath",
@@ -469,7 +482,8 @@ bool Tag::store() {
     if (this->id > 0) {
         query.prepare(
                 "UPDATE tag SET name = :name, priority = :priority, "
-                        "parent_id = :parentId, " + colorField + " = :color "
+                        "parent_id = :parentId, " + colorField + " = :color, "
+                        "created = datetime('now') "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
@@ -490,6 +504,22 @@ bool Tag::store() {
     } else if (this->id == 0) {
         // on insert
         this->id = query.lastInsertId().toInt();
+    }
+
+    // update the parent tag for correct sorting by last use
+    if (this->parentId > 0) {
+        QSqlQuery parentQuery(db);
+        parentQuery.prepare("SELECT * FROM tag WHERE id = :parentId");
+        parentQuery.bindValue(":parentId", this->parentId);
+
+        if (!parentQuery.exec()) {
+            qWarning() << __func__ << ": " << query.lastError();
+        } else {
+            if(parentQuery.next()) {
+                Tag parent = tagFromQuery(parentQuery);
+                parent.store();
+            }
+        }
     }
 
     return true;
