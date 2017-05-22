@@ -2341,7 +2341,11 @@ void SettingsDialog::on_scriptPathButton_clicked() {
             if (scriptName.isEmpty() || (scriptName == _newScriptName)) {
                 scriptName = QFileInfo(file).baseName();
                 ui->scriptNameLineEdit->setText(scriptName);
+                ui->scriptNameLabel->setText(scriptName);
                 _selectedScript.setName(scriptName);
+
+                const QSignalBlocker blocker(ui->scriptListWidget);
+                Q_UNUSED(blocker);
                 ui->scriptListWidget->currentItem()->setText(scriptName);
             }
 
@@ -2388,7 +2392,8 @@ void SettingsDialog::reloadCurrentScriptPage() {
     int scriptId = item->data(Qt::UserRole).toInt();
     _selectedScript = Script::fetch(scriptId);
     if (_selectedScript.isFetched()) {
-        ui->scriptNameLineEdit->setText(_selectedScript.getName());
+        ui->scriptNameLabel->setText(
+                "<b>" + _selectedScript.getName() + "</b>");
         ui->scriptPathLineEdit->setText(_selectedScript.getScriptPath());
         ui->scriptEditFrame->setEnabled(true);
 
@@ -2397,6 +2402,8 @@ void SettingsDialog::reloadCurrentScriptPage() {
         ui->scriptPathButton->setDisabled(isScriptFromRepository);
         ui->scriptRepositoryItemFrame->setVisible(isScriptFromRepository);
         ui->localScriptItemFrame->setHidden(isScriptFromRepository);
+        ui->scriptNameLineEdit->setHidden(isScriptFromRepository);
+        ui->scriptNameLineEditLabel->setHidden(isScriptFromRepository);
 
         // add additional information if script was from the script repository
         if (isScriptFromRepository) {
@@ -2409,6 +2416,8 @@ void SettingsDialog::reloadCurrentScriptPage() {
                     "<a href=\"https://github.com/qownnotes/scripts/tree/"
                             "master/" + infoJson.identifier + "\">" +
                             tr("Open repository") + "</a>");
+        } else {
+            ui->scriptNameLineEdit->setText(_selectedScript.getName());
         }
 
         // get the registered script settings variables
@@ -2422,13 +2431,6 @@ void SettingsDialog::reloadCurrentScriptPage() {
         ui->scriptSettingsFrame->setVisible(hasScriptSettings);
 
         if (hasScriptSettings) {
-            int itemCount = ui->scriptSettingsToolBox->count();
-
-            // remove the current items
-            for (int j = 0; j < itemCount; j++) {
-                ui->scriptSettingsToolBox->removeItem(0);
-            }
-
             foreach (QVariant variable, variables) {
                     QMap<QString, QVariant> varMap = variable.toMap();
 
@@ -2440,10 +2442,9 @@ void SettingsDialog::reloadCurrentScriptPage() {
                     QString name = varMap["name"].toString();
                     qDebug() << __func__ << " - 'name': " << name;
 
-                    ui->scriptSettingsToolBox->addItem(scriptSettingWidget, name);
+                    ui->scriptSettingsFrame->layout()->addWidget(
+                            scriptSettingWidget);
             }
-
-            ui->scriptSettingsToolBox->setCurrentIndex(0);
         }
 
         // validate the script
