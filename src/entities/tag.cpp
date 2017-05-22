@@ -254,7 +254,6 @@ bool Tag::hasChild(int tagId) {
  * Fetches all linked tags of a note
  */
 QList<Tag> Tag::fetchAllOfNote(Note note) {
-    QSettings settings;
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
@@ -349,19 +348,19 @@ bool Tag::isLinkedToNote(Note note) {
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
     QSettings settings;
-    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
     QString noteIdListString = noteNameList.join("','");
+
     QString sql = QString(
-                "SELECT t.* FROM tag t "
-                    "JOIN noteTagLink l ON t.id = l.tag_id "
-                    "WHERE l.note_file_name IN ('%1') AND "
-                        "l.note_sub_folder_path = :noteSubFolderPath "
-                    "GROUP BY t.id "
-                    //"ORDER BY t.priority ASC, lower(t.name) ASC")
-                    "ORDER BY t.priority ASC")
-                .arg(noteIdListString);
+            "SELECT t.* FROM tag t "
+                "JOIN noteTagLink l ON t.id = l.tag_id "
+                "WHERE l.note_file_name IN ('%1') AND "
+                    "l.note_sub_folder_path = :noteSubFolderPath "
+                "GROUP BY t.id "
+                //"ORDER BY t.priority ASC, lower(t.name) ASC")
+                "ORDER BY t.priority ASC")
+            .arg(noteIdListString);
 
     query.prepare(sql);
     query.bindValue(":noteSubFolderPath",

@@ -411,7 +411,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2);
-
     QSettings settings;
     ui->actionUse_softwrap_in_note_editor->setChecked(
             settings.value("useSoftWrapInNoteEditor", true).toBool());

@@ -221,11 +221,12 @@ bool NoteSubFolder::fillFromQuery(QSqlQuery query) {
 QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     QSettings settings;    
     QSqlDatabase db = QSqlDatabase::database("memory");
+    
     QSqlQuery query(db);
     QList<NoteSubFolder> noteSubFolderList;
 
     QString sql = "SELECT * FROM noteSubFolder "
-                "ORDER BY file_last_modified DESC";
+            "ORDER BY file_last_modified DESC";
 
     if (limit >= 0) {
         sql += " LIMIT :limit";
