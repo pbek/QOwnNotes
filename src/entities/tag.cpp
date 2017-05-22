@@ -173,7 +173,6 @@ bool Tag::fillFromQuery(QSqlQuery query) {
 }
 
 QList<Tag> Tag::fetchAll() {
-    QSettings settings;
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
@@ -195,7 +194,6 @@ QList<Tag> Tag::fetchAll() {
 }
 
 QList<Tag> Tag::fetchAllByParentId(int parentId) {
-    QSettings settings;
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
@@ -347,6 +345,7 @@ bool Tag::isLinkedToNote(Note note) {
  * Returns all tags that are linked to certain note names
  */
 QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QList<Tag> tagList;
     QString noteIdListString = noteNameList.join("','");
@@ -360,7 +359,6 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
                 //"ORDER BY t.priority ASC, lower(t.name) ASC")
                 "ORDER BY t.priority ASC")
             .arg(noteIdListString);
-
     query.prepare(sql);
     query.bindValue(":noteSubFolderPath",
                     NoteSubFolder::activeNoteSubFolder().relativePath());

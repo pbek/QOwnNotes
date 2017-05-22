@@ -221,7 +221,7 @@ bool NoteSubFolder::fillFromQuery(QSqlQuery query) {
 QList<NoteSubFolder> NoteSubFolder::fetchAll(int limit) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
-    
+
     QList<NoteSubFolder> noteSubFolderList;
     QString sql = "SELECT * FROM noteSubFolder "
             "ORDER BY file_last_modified DESC";
