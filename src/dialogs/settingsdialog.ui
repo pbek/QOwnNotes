@@ -206,8 +206,8 @@
               <string notr="true">15</string>
              </property>
              <property name="icon">
-              <iconset resource="../libraries/qdarkstyle/style.qrc">
-               <normaloff>:/qss_icons/rc/checkbox_indeterminate.png</normaloff>:/qss_icons/rc/checkbox_indeterminate.png</iconset>
+              <iconset theme="window-duplicate" resource="../breeze-qownnotes.qrc">
+               <normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</normaloff>:/icons/breeze-qownnotes/16x16/window-duplicate.svg</iconset>
              </property>
             </item>
             <item>
@@ -4175,7 +4175,7 @@ p, li { white-space: pre-wrap; }
                    <item>
                     <widget class="QRadioButton" name="tagsPanelSortByLastChangeRadioButton">
                      <property name="text">
-                      <string>By last change</string>
+                      <string>By last change / use</string>
                      </property>
                     </widget>
                    </item>
