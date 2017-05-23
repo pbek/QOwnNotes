@@ -48,8 +48,8 @@ public:
         ToolbarPage,
         DebugOptionPage,
         EditorPage,
-        PanelsPage,
-        GitPage
+        GitPage,
+        PanelsPage
     };
 
     explicit SettingsDialog(int page = 0,
