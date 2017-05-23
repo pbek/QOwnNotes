@@ -203,7 +203,7 @@
               <string>Panels</string>
              </property>
              <property name="whatsThis">
-              <string notr="true">15</string>
+              <string notr="true">16</string>
              </property>
              <property name="icon">
               <iconset theme="window-duplicate" resource="../breeze-qownnotes.qrc">
