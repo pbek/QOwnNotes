@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.05.10
+- fixed duplication of script settings variables in the in the *Scripting settings*
+
 ## 17.05.9
 - added information about enabled scripts to the *Debug settings*
 - now information about the currently installed version of the script will be 
