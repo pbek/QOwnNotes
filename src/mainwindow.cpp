@@ -7830,6 +7830,7 @@ void MainWindow::on_noteSubFolderTreeWidget_currentItemChanged(
     ui->searchLineEdit->clear();
 
     filterNotes();
+    reloadTagTree();
 }
 
 /**
