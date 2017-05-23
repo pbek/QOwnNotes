@@ -2,6 +2,8 @@
 
 ## 17.05.10
 - fixed duplication of script settings variables in the in the *Scripting settings*
+- moved the qml path settings above the script variable settings in the
+  *Scripting settings*
 
 ## 17.05.9
 - added information about enabled scripts to the *Debug settings*
