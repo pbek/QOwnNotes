@@ -2812,7 +2812,20 @@
                             </layout>
                            </widget>
                           </item>
-                          <item row="3" column="0">
+                          <item row="6" column="0">
+                           <spacer name="verticalSpacer">
+                            <property name="orientation">
+                             <enum>Qt::Vertical</enum>
+                            </property>
+                            <property name="sizeHint" stdset="0">
+                             <size>
+                              <width>20</width>
+                              <height>0</height>
+                             </size>
+                            </property>
+                           </spacer>
+                          </item>
+                          <item row="5" column="0">
                            <widget class="QFrame" name="scriptSettingsFrame">
                             <property name="frameShape">
                              <enum>QFrame::NoFrame</enum>
@@ -2832,19 +2845,6 @@
                              </property>
                             </layout>
                            </widget>
-                          </item>
-                          <item row="5" column="0">
-                           <spacer name="verticalSpacer">
-                            <property name="orientation">
-                             <enum>Qt::Vertical</enum>
-                            </property>
-                            <property name="sizeHint" stdset="0">
-                             <size>
-                              <width>20</width>
-                              <height>0</height>
-                             </size>
-                            </property>
-                           </spacer>
                           </item>
                          </layout>
                         </widget>
@@ -4411,8 +4411,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

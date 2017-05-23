@@ -1,7 +1,12 @@
 # QOwnNotes Changelog
 
 ## 17.05.10
-- fixed duplication of script settings variables in the in the *Scripting settings*
+- fixed duplication of script settings variables in the in the *Scripting
+  settings* (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+- moved the qml path settings above the script variable settings in the
+  *Scripting settings*
+- added more Italian, Brazilian Portuguese and Dutch translation (thank you
+  mlocati, mlimacarlos and dmattijssen)
 
 ## 17.05.9
 - added information about enabled scripts to the *Debug settings*

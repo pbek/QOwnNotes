@@ -956,12 +956,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2030"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Vind scripts in script archief</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2039"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Script instellingen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1563"/>
@@ -2551,104 +2551,104 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Script archief</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Voer je zoekopdracht in en druk op &lt;i&gt;terugkeren&lt;/i&gt; om te zoeken naar een script.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="124"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Huidige geïnstalleerde versie:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Installeer het script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="272"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="262"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Installeren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="222"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Versie:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="199"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Opslagplaats:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="134"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Minimum app versie:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="372"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Naam</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="387"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Voer hier je zoekopdracht in</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="390"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Vind script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="240"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Open archief</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="251"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Update</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Update het script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="254"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Herinstalleren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="255"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Herinstalleer het script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Installatie succesvol</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="381"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Het script is succesvol geïnstalleerd!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Download mislukt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="384"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Het script kon niet gedownload worden!</translation>
     </message>
   </context>
   <context>
@@ -2656,17 +2656,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Formulier</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="76"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>De naam van de instelling</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="138"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Selecteer een bestand</translation>
     </message>
   </context>
   <context>
@@ -3390,7 +3390,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2184"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Zoek script archief</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4076"/>
@@ -3513,7 +3513,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2868"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>De naam</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3057"/>
@@ -3548,27 +3548,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2596"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Beschrijving:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2678"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Versie:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2639"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Archief:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2466"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>&amp;Voeg script toe...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2616"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Auteur(s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2917"/>
@@ -4024,17 +4024,17 @@ Verbinding foutbericht: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2193"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Voeg lokaal script toe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2197"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Voeg een bestaand, lokaal script toe</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2188"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Vind een script in het script archief</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2275"/>
@@ -4059,7 +4059,7 @@ Verbinding foutbericht: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2418"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Open archief</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2474"/>

@@ -2561,7 +2561,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="124"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Versione attualmente installata:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
@@ -2613,22 +2613,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="251"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Aggiorna</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Aggiorna lo script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="254"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Reinstalla</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="255"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Reinstalla lo script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
@@ -2643,12 +2643,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Scaricamento non riuscito</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="384"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Non è stato possibile scaricare lo script!</translation>
     </message>
   </context>
   <context>
@@ -2656,17 +2656,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Modulo</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="76"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Il nome dell'impostazione</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="138"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Selezionare un file</translation>
     </message>
   </context>
   <context>
@@ -3513,7 +3513,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2868"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Il nome</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3057"/>
@@ -3563,12 +3563,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2466"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>&amp;Aggiungi script...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2616"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Autori:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2917"/>
