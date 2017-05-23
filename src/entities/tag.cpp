@@ -179,13 +179,29 @@ QList<Tag> Tag::fetchAll() {
     QList<Tag> tagList;
 
     //query.prepare("SELECT * FROM tag ORDER BY priority ASC, name ASC");
-    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, "
-                  "CASE "
-                      "WHEN l.created > t.created THEN l.created "
-                      "ELSE t.created "
-                  "END AS created, t.parent_id as parent_id, "
+    /*
+     * We want to select all relevant fields from the tag table. (AS renames the
+     * columns in the output table -- to be sure they have the same names as in the
+     * original query, e.g. t.id = id). Since we want them ordered by time of use,
+     * also consider the noteTagLink table and join it on the tag id. (Now we get rows
+     * | tag.id | tag.created | link.created | ... | for each tag (with
+     * link.created = NULL, if it is not yet linked to a note) and additional rows
+     * for each link of a tag after the first as an intermediate result.) Now the
+     * CASE ... END selects only the created column with the highest date. At this
+     * point there can still be multiple lines with the same tag.id, hence we GROUP BY
+     * that to get rid of them and are only interested in the latest / max() created
+     * time of every group, which can now be used to sort the result by.
+     *
+    */
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
+                      "CASE "
+                          "WHEN l.created > t.created THEN l.created "
+                          "ELSE t.created "
+                      "END "
+                  ") AS created, t.parent_id as parent_id, "
                   "t.color as color, t.dark_color as dark_color "
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
+                  "GROUP BY t.id "
                   "ORDER BY created DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -206,14 +222,19 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
 
     //query.prepare("SELECT * FROM tag WHERE parent_id = :parentId ORDER BY "
     //                      "priority ASC, name ASC");
-    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, "
-                  "CASE "
-                      "WHEN l.created > t.created THEN l.created "
-                      "ELSE t.created "
-                  "END AS created, t.parent_id as parent_id, "
+    /*
+     * See fetchAll(), except we are only interested in tags with a specific parent_id.
+    */
+    query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
+                      "CASE "
+                          "WHEN l.created > t.created THEN l.created "
+                          "ELSE t.created "
+                      "END "
+                  ") AS created, t.parent_id as parent_id, "
                   "t.color as color, t.dark_color as dark_color "
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
                   "WHERE parent_id = :parentId  "
+                  "GROUP BY t.id "
                   "ORDER BY created DESC");
     query.bindValue(":parentId", parentId);
 
