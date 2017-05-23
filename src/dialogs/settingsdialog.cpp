@@ -2425,12 +2425,17 @@ void SettingsDialog::reloadCurrentScriptPage() {
                 ->getSettingsVariables(_selectedScript.getId());
 
         bool hasScriptSettings = variables.count() > 0;
-
-        // we have to make the toolbox visible before items are removed and
-        // added or else there will be drawing errors
         ui->scriptSettingsFrame->setVisible(hasScriptSettings);
 
         if (hasScriptSettings) {
+            // remove the current ScriptSettingWidget widgets in the
+            // scriptSettingsFrame
+            QList<ScriptSettingWidget *> widgets = ui->scriptSettingsFrame
+                    ->findChildren<ScriptSettingWidget *>();
+            Q_FOREACH(ScriptSettingWidget *widget, widgets) {
+                    delete widget;
+                }
+
             foreach (QVariant variable, variables) {
                     QMap<QString, QVariant> varMap = variable.toMap();
 
@@ -2440,7 +2445,6 @@ void SettingsDialog::reloadCurrentScriptPage() {
                                                     varMap);
 
                     QString name = varMap["name"].toString();
-                    qDebug() << __func__ << " - 'name': " << name;
 
                     ui->scriptSettingsFrame->layout()->addWidget(
                             scriptSettingWidget);
