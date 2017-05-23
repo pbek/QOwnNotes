@@ -184,10 +184,10 @@ QList<Tag> Tag::fetchAll() {
      * columns in the output table -- to be sure they have the same names as in the
      * original query, e.g. t.id = id). Since we want them ordered by time of use,
      * also consider the noteTagLink table and join it on the tag id. (Now we get rows
-     * | tag.id | tag.created | link.created | ... | for each tag (with
+     * | tag.id | tag.updated | link.created | ... | for each tag (with
      * link.created = NULL, if it is not yet linked to a note) and additional rows
      * for each link of a tag after the first as an intermediate result.) Now the
-     * CASE ... END selects only the created column with the highest date. At this
+     * CASE ... END selects only the highest created / updated date. At this
      * point there can still be multiple lines with the same tag.id, hence we GROUP BY
      * that to get rid of them and are only interested in the latest / max() created
      * time of every group, which can now be used to sort the result by.
@@ -195,8 +195,8 @@ QList<Tag> Tag::fetchAll() {
     */
     query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
                       "CASE "
-                          "WHEN l.created > t.created THEN l.created "
-                          "ELSE t.created "
+                          "WHEN l.created > t.updated THEN l.created "
+                          "ELSE t.updated "
                       "END "
                   ") AS created, t.parent_id as parent_id, "
                   "t.color as color, t.dark_color as dark_color "
@@ -227,13 +227,13 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
     */
     query.prepare("SELECT t.id as id, t.name as name, t.priority as priority, max( "
                       "CASE "
-                          "WHEN l.created > t.created THEN l.created "
-                          "ELSE t.created "
+                          "WHEN l.created > t.updated THEN l.created "
+                          "ELSE t.updated "
                       "END "
                   ") AS created, t.parent_id as parent_id, "
                   "t.color as color, t.dark_color as dark_color "
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
-                  "WHERE parent_id = :parentId  "
+                  "WHERE parent_id = :parentId "
                   "GROUP BY t.id "
                   "ORDER BY created DESC");
     query.bindValue(":parentId", parentId);
@@ -504,7 +504,7 @@ bool Tag::store() {
         query.prepare(
                 "UPDATE tag SET name = :name, priority = :priority, "
                         "parent_id = :parentId, " + colorField + " = :color, "
-                        "created = datetime('now') "
+                        "updated = datetime('now') "
                         "WHERE id = :id");
         query.bindValue(":id", this->id);
     } else {
@@ -582,6 +582,22 @@ bool Tag::linkToNote(Note note) {
         // link to a note already exists before we try to create an other link
 //        qWarning() << __func__ << ": " << query.lastError();
         return false;
+    }
+
+    // update the parent tag for correct sorting by last use
+    if (this->parentId > 0) {
+        QSqlQuery parentQuery(db);
+        parentQuery.prepare("SELECT * FROM tag WHERE id = :parentId");
+        parentQuery.bindValue(":parentId", this->parentId);
+
+        if (!parentQuery.exec()) {
+            qWarning() << __func__ << ": " << query.lastError();
+        } else {
+            if(parentQuery.next()) {
+                Tag parent = tagFromQuery(parentQuery);
+                parent.store();
+            }
+        }
     }
 
     return true;

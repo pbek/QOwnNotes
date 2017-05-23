@@ -243,6 +243,40 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 11;
     }
 
+    if (version < 12) {
+        // create new tag table
+        queryDisk.exec("ALTER TABLE tag RENAME TO _tag");
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS tag ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255),"
+                               "priority INTEGER DEFAULT 0,"
+                               "created DATETIME DEFAULT current_timestamp,"
+                               "parent_id INTEGER DEFAULT 0,"
+                               "color VARCHAR(20),"
+                               "dark_color VARCHAR(20),"
+                               "updated DATETIME DEFAULT current_timestamp)");
+
+        // recreate the indexes
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                               "tag (name, parent_id)");
+        queryDisk.exec("DROP INDEX IF EXISTS idxTagParent");
+        queryDisk.exec("CREATE INDEX IF NOT EXISTS idxTagParent "
+                               "ON tag( parent_id )");
+
+        // convert old values to new table
+        queryDisk.exec("INSERT INTO tag ( "
+                           "id, name, priority, created, parent_id, "
+                           "color, dark_color, updated "
+                       ") SELECT "
+                           "id, name, priority, created, parent_id, "
+                           "color, dark_color, created "
+                       "FROM _tag ORDER BY id");
+
+        queryDisk.exec("DROP TABLE _tag");
+        version = 12;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");
