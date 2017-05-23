@@ -524,7 +524,7 @@ bool DatabaseService::setupTables() {
     }
 
     if (version < 25) {
-        // migrate old sort and order settings + set defaults iff unset
+        // migrate old sort and order settings + set defaults if unset
         // if settings.s;
         if (settings.contains("SortingModeAlphabetically")) {
             bool sort = settings.value("SortingModeAlphabetically").toBool(); // read old setting
@@ -539,7 +539,7 @@ bool DatabaseService::setupTables() {
             settings.remove("NoteSortOrder");
         }
 
-        // set defaults for now settings iff not set already
+        // set defaults for now settings if not set already
         if (!settings.contains("notesPanelSort")) {
             settings.value("notesPanelSort", SORT_BY_LAST_CHANGE);
         }
