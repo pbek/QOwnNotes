@@ -248,7 +248,7 @@ bool DatabaseService::setupNoteFolderTables() {
         queryDisk.exec("ALTER TABLE tag RENAME TO _tag");
         queryDisk.exec("CREATE TABLE IF NOT EXISTS tag ("
                                "id INTEGER PRIMARY KEY,"
-                               "name VARCHAR(255),"
+                               "name VARCHAR(255) COLLATE NOCASE,"
                                "priority INTEGER DEFAULT 0,"
                                "created DATETIME DEFAULT current_timestamp,"
                                "parent_id INTEGER DEFAULT 0,"

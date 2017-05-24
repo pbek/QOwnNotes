@@ -75,7 +75,7 @@ Tag Tag::fetchByName(QString name) {
     QSqlQuery query(db);
     Tag tag;
 
-    query.prepare("SELECT * FROM tag WHERE name = :name COLLATE NOCASE");
+    query.prepare("SELECT * FROM tag WHERE name = :name");
     query.bindValue(":name", name);
 
     if (!query.exec()) {
@@ -93,7 +93,7 @@ Tag Tag::fetchByName(QString name, int parentId) {
     Tag tag;
 
     query.prepare("SELECT * FROM tag WHERE name = :name AND "
-                          "parent_id = :parent_id COLLATE NOCASE");
+                          "parent_id = :parent_id");
     query.bindValue(":name", name.toLower());
     query.bindValue(":parent_id", parentId);
 
