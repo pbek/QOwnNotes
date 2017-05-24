@@ -201,7 +201,7 @@ QList<Tag> Tag::fetchAll() {
                   ") AS created, t.parent_id as parent_id, "
                   "t.color as color, t.dark_color as dark_color "
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
-                  "GROUP BY t.id "
+                  "GROUP BY t.name "
                   "ORDER BY created DESC");
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -234,7 +234,7 @@ QList<Tag> Tag::fetchAllByParentId(int parentId) {
                   "t.color as color, t.dark_color as dark_color "
                   "FROM tag t LEFT JOIN noteTagLink l ON t.id = l.tag_id "
                   "WHERE parent_id = :parentId "
-                  "GROUP BY t.id "
+                  "GROUP BY t.name "
                   "ORDER BY created DESC");
     query.bindValue(":parentId", parentId);
 
