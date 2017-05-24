@@ -244,7 +244,11 @@ bool DatabaseService::setupNoteFolderTables() {
     }
 
     if (version < 12) {
-        // create new tag table
+        // create new tag table, because
+        //     ALTER TABLE tag ADD updated DEFAULT CURRENT_TIMESTAMP
+        // is not supported by sqlite -- you cant add a column with
+        // a non-constant default value. And if collate ... is used
+        // on a column, it's also defaulted to indices on that column.
         queryDisk.exec("ALTER TABLE tag RENAME TO _tag");
         queryDisk.exec("CREATE TABLE IF NOT EXISTS tag ("
                                "id INTEGER PRIMARY KEY,"
@@ -256,7 +260,7 @@ bool DatabaseService::setupNoteFolderTables() {
                                "dark_color VARCHAR(20),"
                                "updated DATETIME DEFAULT current_timestamp)");
 
-        // recreate the indexes
+        // recreate the indices
         queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag");
         queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
                                "tag (name, parent_id)");
