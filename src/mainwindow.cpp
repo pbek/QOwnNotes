@@ -6146,9 +6146,6 @@ void MainWindow::reloadNoteSubFolderTree() {
         }
     }
 
-    // sort tree if set
-
-
     ui->noteSubFolderTreeWidget->resizeColumnToContents(0);
     ui->noteSubFolderTreeWidget->resizeColumnToContents(1);
 
@@ -6187,6 +6184,13 @@ void MainWindow::buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent) {
             // set the expanded state
             bool isExpanded = noteSubFolder.treeWidgetExpandState();
             item->setExpanded(isExpanded);
+
+            // sort alphabetically, if necassary
+            QSettings settings;
+            int sort = settings.value("noteSubfoldersPanelSort").toInt();
+            if (sort == SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
+            }
         }
 }
 
@@ -6219,6 +6223,11 @@ void MainWindow::buildTagTreeForParentItem(QTreeWidgetItem *parent, bool topLeve
 
             // set expanded state
             item->setExpanded(expandedList.contains(QString::number(tagId)));
+
+            QSettings settings;
+            if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value("tagsPanelOrder").toInt()));
+            }
         }
 
     // update the UI
