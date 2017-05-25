@@ -455,6 +455,10 @@ MainWindow::MainWindow(QWidget *parent) :
     // restored correctly, because the maximum position of the scrollbar is 0
     QTimer::singleShot(250, this, SLOT(restoreActiveNoteHistoryItem()));
 
+    // wait some time for the tagTree to get visible, if selected, and apply last
+    // selected tag search
+    QTimer::singleShot(250, this, SLOT(filterNotesByTag()));
+
     // attempt to check the api app version
     startAppVersionTest();
 }
@@ -1137,6 +1141,9 @@ void MainWindow::togglePanelVisibility(QString objectName) {
     }
 
     dockWidget->setVisible(newVisibility);
+
+    // filter notes again according to new widget state
+    filterNotes();
 }
 
 /**
@@ -3938,6 +3945,7 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
 
         reloadCurrentNoteTags();
         reloadTagTree();
+        filterNotesByTag();
 
         QMessageBox::information(
                 this, tr("Done"),
@@ -4408,10 +4416,9 @@ void MainWindow::filterNotes(bool searchForText) {
         filterNotesByNoteSubFolders();
     }
 
-    if (isTagsEnabled()) {
-        // filter the notes by tag
-        filterNotesByTag();
-    }
+    // moved condition whether to filter notes by tag at all into
+    // filterNotesByTag() -- it can now be used as a slot at startup
+    filterNotesByTag();
 
     if (searchForText) {
         // let's highlight the text from the search line edit
@@ -4473,6 +4480,10 @@ void MainWindow::filterNotesBySearchLineEditText() {
  * Does the note filtering by tags
  */
 void MainWindow::filterNotesByTag() {
+    if (!isTagsEnabled()) {
+        return; // do nothing
+    }
+
     int tagId = Tag::activeTagId();
     QStringList fileNameList;
 
@@ -6352,7 +6363,6 @@ void MainWindow::setupTags() {
 
     reloadTagTree();
     reloadCurrentNoteTags();
-
     // filter the notes again
     filterNotes(false);
 }
@@ -6438,6 +6448,7 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
         tag.linkToNote(currentNote);
         reloadCurrentNoteTags();
         reloadTagTree();
+        filterNotes();
 
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
@@ -6509,6 +6520,7 @@ void MainWindow::removeNoteTagClicked() {
         tag.removeLinkToNote(currentNote);
         reloadCurrentNoteTags();
         reloadTagTree();
+        filterNotesByTag();
 
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
@@ -8715,6 +8727,9 @@ void MainWindow::on_actionShow_all_panels_triggered() {
 
     // update the preview in case it was disable previously
     setNoteTextFromNote(&currentNote, true);
+
+    // filter notes according to selections
+    filterNotes();
 }
 
 /**

@@ -487,6 +487,8 @@ private slots:
 
     void on_actionScript_settings_triggered();
 
+    void filterNotesByTag();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -666,8 +668,6 @@ private:
     void setupTags();
 
     void reloadCurrentNoteTags();
-
-    void filterNotesByTag();
 
     void filterNotesBySearchLineEditText();
 
