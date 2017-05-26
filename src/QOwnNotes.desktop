@@ -7,5 +7,4 @@ Icon=QOwnNotes
 Type=Application
 Terminal=false
 StartupNotify=true
-Encoding=UTF-8
 Categories=Office;Utility;TextTools;TextEditor;
