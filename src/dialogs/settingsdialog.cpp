@@ -175,6 +175,8 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
     // connect the panel sort radio buttons
     connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->notesPanelOrderGroupBox, SLOT(setEnabled(bool)));
+    connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox, SIGNAL(toggled(bool)),
+            ui->noteSubfoldersPanelShowFullPathCheckBox, SLOT(setEnabled(bool)));
     connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
     connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
@@ -643,6 +645,10 @@ void SettingsDialog::storeSettings() {
                 settings.setValue("notesPanelOrder", ORDER_DESCENDING) :
                 settings.setValue("notesPanelOrder", ORDER_ASCENDING);
 
+    settings.setValue("noteSubfoldersPanelShowRootFolderName",
+                      ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
+    settings.setValue("noteSubfoldersPanelShowFullPath",
+                      ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
     ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked() ?
                 settings.setValue("noteSubfoldersPanelSort", SORT_ALPHABETICAL) :
                 settings.setValue("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
@@ -924,6 +930,17 @@ void SettingsDialog::readSettings() {
     settings.value("notesPanelOrder").toInt() == ORDER_DESCENDING ?
                 ui->notesPanelOrderDescendingRadioButton->setChecked(true) :
                 ui->notesPanelOrderAscendingRadioButton->setChecked(true);
+
+    if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
+        ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);
+        ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(true);
+    } else {
+        ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(false);
+        ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(false);
+    }
+
+    ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
+                settings.value("noteSubfoldersPanelShowFullPath").toBool());
 
     if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
         ui->noteSubfoldersPanelSortAlphabeticalRadioButton->setChecked(true);

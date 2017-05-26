@@ -6114,7 +6114,13 @@ void MainWindow::reloadNoteSubFolderTree() {
             .arg(QString::number(linkCount));
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
-    item->setText(0, tr("Note folder"));
+    QSettings settings;
+    if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
+        item->setText(0, NoteFolder::currentRootFolderName(
+                            settings.value("noteSubfoldersPanelShowFullPath").toBool()));
+    } else {
+        item->setText(0, tr("Note folder"));
+    }
     item->setData(0, Qt::UserRole, 0);
     item->setToolTip(0, toolTip);
     item->setIcon(0, QIcon::fromTheme(

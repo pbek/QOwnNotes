@@ -366,6 +366,16 @@ QString NoteFolder::currentLocalPath() {
 }
 
 /**
+ * @brief getCurrentRootFolderName
+ * @return Name of current root folder
+ */
+QString NoteFolder::currentRootFolderName(bool fullPath) {
+   QString path = currentLocalPath();
+   return fullPath ? path
+                   : path.remove(0, path.lastIndexOf(QDir::separator())+1);
+}
+
+/**
  * Fetches the current media path
  */
 QString NoteFolder::currentMediaPath() {
