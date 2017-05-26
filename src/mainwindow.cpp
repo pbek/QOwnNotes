@@ -6019,8 +6019,12 @@ void MainWindow::reloadTagTree() {
 
     ui->tagTreeWidget->clear();
 
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+
     // add an item to view all notes
-    int linkCount = Note::countAll();
+    int linkCount = _showNotesFromAllNoteSubFolders ? Note::countAll()
+                                                    : Note::countByNoteSubFolderId(
+                                                          activeNoteSubFolderId);
     QString toolTip = tr("show all notes (%1)").arg(QString::number(linkCount));
 
     QTreeWidgetItem *allItem = new QTreeWidgetItem();
@@ -6055,7 +6059,9 @@ void MainWindow::reloadTagTree() {
     }
 
     // add an item to view untagged notes if there are any
-    linkCount = Note::countAllNotTagged();
+    linkCount = _showNotesFromAllNoteSubFolders ? Note::countAllNotTagged()
+                                                : Note::countAllNotTagged(
+                                                      activeNoteSubFolderId);
 
     if (linkCount > 0) {
         toolTip = tr("show all untagged notes (%1)")
