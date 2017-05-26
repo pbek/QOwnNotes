@@ -310,6 +310,10 @@ private:
     void reloadScriptList() const;
 
     void reloadCurrentScriptPage();
+
+    void readPanelSettings();
+
+    void storePanelSettings();
 };
 
 #endif // SETTINGSDIALOG_H

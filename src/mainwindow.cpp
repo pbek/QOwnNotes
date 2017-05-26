@@ -2183,6 +2183,12 @@ void MainWindow::readSettingsFromSettingsDialog() {
 
     // show or hide the note git version menu entry
     ui->actionShow_note_git_versions->setVisible(Utils::Git::hasLogCommand());
+
+    // show or hide 'Find or create ...' search in Note Subfolders & Tags Panels
+    ui->noteSubFolderLineEdit->setHidden(
+                settings.value("noteSubfoldersPanelHideSearch").toBool());
+    ui->tagLineEdit->setHidden(
+                settings.value("tagsPanelHideSearch").toBool());
 }
 
 /**
