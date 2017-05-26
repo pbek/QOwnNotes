@@ -1938,7 +1938,7 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
                 NoteSubFolder::activeNoteSubFolderId() ==
                         currentNote.getNoteSubFolderId();
 
-        if (!isInActiveNoteSubFolder) {
+        if (!(isInActiveNoteSubFolder || _showNotesFromAllNoteSubFolders)) {
             item->setHidden(true);
         } else {
             ui->noteTreeWidget->setCurrentItem(item);
@@ -4505,7 +4505,8 @@ void MainWindow::filterNotesByTag() {
             }
 
             // fetch all linked note names
-            fileNameList = tag.fetchAllLinkedNoteFileNames();
+            fileNameList = tag.fetchAllLinkedNoteFileNames(
+                        _showNotesFromAllNoteSubFolders);
             break;
     }
 
@@ -6256,7 +6257,7 @@ QTreeWidgetItem *MainWindow::addTagToTagTreeWidget(
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
     QString name = tag.getName();
-    int linkCount = tag.countLinkedNoteFileNames();
+    int linkCount = tag.countLinkedNoteFileNames(_showNotesFromAllNoteSubFolders);
     QString toolTip = tr("show all notes tagged with '%1' (%2)")
                     .arg(name, QString::number(linkCount));
     item->setData(0, Qt::UserRole, tagId);

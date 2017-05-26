@@ -409,16 +409,22 @@ QList<Tag> Tag::fetchAllWithLinkToNoteNames(QStringList noteNameList) {
 /**
  * Fetches all linked note file names
  */
-QStringList Tag::fetchAllLinkedNoteFileNames() {
+QStringList Tag::fetchAllLinkedNoteFileNames(bool fromAllSubfolders) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     QStringList fileNameList;
 
-    query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
-                          "AND note_sub_folder_path = :noteSubFolderPath");
-    query.bindValue(":id", this->id);
-    query.bindValue(":noteSubFolderPath",
+    if (fromAllSubfolders) {
+         // 'All notes' selected in note subfolder panel
+        query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id");
+    } else {
+        query.prepare("SELECT note_file_name FROM noteTagLink WHERE tag_id = :id "
+                              "AND note_sub_folder_path = :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
                     NoteSubFolder::activeNoteSubFolder().relativePath());
+    }
+
+    query.bindValue(":id", this->id);
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
@@ -472,16 +478,21 @@ QStringList Tag::fetchAllNames() {
 /**
  * Count the linked note file names
  */
-int Tag::countLinkedNoteFileNames() {
+int Tag::countLinkedNoteFileNames(bool fromAllSubfolders) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
 
+    if (fromAllSubfolders) {
     query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
-                          "WHERE tag_id = :id AND "
-                          "note_sub_folder_path = :noteSubFolderPath");
+                          "WHERE tag_id = :id");
+    } else {
+        query.prepare("SELECT COUNT(note_file_name) AS cnt FROM noteTagLink "
+                              "WHERE tag_id = :id AND "
+                              "note_sub_folder_path = :noteSubFolderPath");
+        query.bindValue(":noteSubFolderPath",
+                        NoteSubFolder::activeNoteSubFolder().relativePath());
+    }
     query.bindValue(":id", this->id);
-    query.bindValue(":noteSubFolderPath",
-                    NoteSubFolder::activeNoteSubFolder().relativePath());
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
