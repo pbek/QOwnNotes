@@ -5,6 +5,7 @@
   in script variables in the *Scripting settings*
   (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
 - fixes in the `QOwnNotes.desktop` file were made by @chronitis (thanks a lot)
+- added more Hungarian translation (thank you vaganyik)
 
 ## 17.05.10
 - fixed duplication of script settings variables in the in the *Scripting
