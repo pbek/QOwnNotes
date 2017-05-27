@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.05.11
+- the full integer range of values can now be selected in the number selector
+  in script variables in the *Scripting settings*
+  (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
+- fixes in the `QOwnNotes.desktop` file were made by @chronitis (thanks a lot)
+- added more Hungarian translation (thank you vaganyik)
+
 ## 17.05.10
 - fixed duplication of script settings variables in the in the *Scripting
   settings* (for [Issue #536](https://github.com/pbek/QOwnNotes/issues/536))
