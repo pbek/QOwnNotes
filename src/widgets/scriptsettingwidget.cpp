@@ -1,4 +1,5 @@
 #include "scriptsettingwidget.h"
+#include <limits>
 #include "ui_scriptsettingwidget.h"
 #include <QDebug>
 #include <QJsonObject>
@@ -22,6 +23,8 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     ui->nameLabel->setText("<b>" + name + "</b>");
     ui->descriptionLabel->setText(description);
     ui->descriptionLabel->setHidden(description.isEmpty());
+    ui->integerSpinBox->setRange(std::numeric_limits<int>::min(),
+                                 std::numeric_limits<int>::max());
 
     // hide all widgets in the control frame
     ui->integerSpinBox->hide();
