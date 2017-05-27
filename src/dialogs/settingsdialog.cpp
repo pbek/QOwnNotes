@@ -658,6 +658,9 @@ void SettingsDialog::storePanelSettings() {
     settings.setValue("noteSubfoldersPanelHideSearch",
                       ui->noteSubfoldersPanelHideSearchCheckBox->isChecked());
 
+    settings.setValue("noteSubfoldersPanelDisplayAsFullTree",
+                      ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->isChecked());
+
     settings.setValue("noteSubfoldersPanelShowRootFolderName",
                       ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
 
@@ -964,6 +967,9 @@ void SettingsDialog::readPanelSettings() {
     // Note Subfoldes Panel Options
     ui->noteSubfoldersPanelHideSearchCheckBox->setChecked(
                 settings.value("noteSubfoldersPanelHideSearch").toBool());
+
+    ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
+                settings.value("noteSubfoldersPanelDisplayAsFullTree").toBool());
 
     if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);

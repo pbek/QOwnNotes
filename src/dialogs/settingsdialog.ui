@@ -4198,85 +4198,6 @@ git config --global user.name &quot;Your name&quot;</string>
              </size>
             </property>
             <layout class="QGridLayout" name="gridLayout_55">
-             <item row="2" column="0">
-              <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
-               <property name="title">
-                <string>Note Subfolders Panel</string>
-               </property>
-               <layout class="QGridLayout" name="gridLayout_56">
-                <item row="4" column="1">
-                 <widget class="QGroupBox" name="noteSubfoldersPanelOrderGroupBox">
-                  <property name="title">
-                   <string>Order</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_18">
-                   <item>
-                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderAscendingRadioButton">
-                     <property name="text">
-                      <string>Ascending</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderDescendingRadioButton">
-                     <property name="text">
-                      <string>Descending</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="noteSubfoldersPanelSortGroupBox">
-                  <property name="title">
-                   <string>Sort</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_17">
-                   <item>
-                    <widget class="QRadioButton" name="noteSubfoldersPanelSortAlphabeticalRadioButton">
-                     <property name="text">
-                      <string>Alphabetical</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="noteSubfoldersPanelSortByLastChangeRadioButton">
-                     <property name="text">
-                      <string>By last change</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowRootFolderNameCheckBox">
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
-                  <property name="text">
-                   <string>Show root folder name</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelShowFullPathCheckBox">
-                  <property name="text">
-                   <string>Show with full path</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
-                 <widget class="QCheckBox" name="noteSubfoldersPanelHideSearchCheckBox">
-                  <property name="text">
-                   <string>Hide 'Find or create note subfolder' search</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
              <item row="1" column="0">
               <widget class="QGroupBox" name="notesPanelGroupBox">
                <property name="title">
@@ -4390,10 +4311,96 @@ git config --global user.name &quot;Your name&quot;</string>
                   </layout>
                  </widget>
                 </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QCheckBox" name="tagsPanelHideSearchCheckBox">
                   <property name="text">
                    <string>Hide 'Find or create tag' search</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QGroupBox" name="noteSubfoldersPanelGroupBox">
+               <property name="title">
+                <string>Note Subfolders Panel</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_56">
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowFullPathCheckBox">
+                  <property name="text">
+                   <string>Show with full path</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <widget class="QGroupBox" name="noteSubfoldersPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowRootFolderNameCheckBox">
+                  <property name="layoutDirection">
+                   <enum>Qt::LeftToRight</enum>
+                  </property>
+                  <property name="text">
+                   <string>Show root folder name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QGroupBox" name="noteSubfoldersPanelOrderGroupBox">
+                  <property name="title">
+                   <string>Order</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_18">
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderAscendingRadioButton">
+                     <property name="text">
+                      <string>Ascending</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="noteSubfoldersPanelOrderDescendingRadioButton">
+                     <property name="text">
+                      <string>Descending</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelHideSearchCheckBox">
+                  <property name="text">
+                   <string>Hide 'Find or create note subfolder' search</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelDisplayAsFullTreeCheckBox">
+                  <property name="text">
+                   <string>Display note subfolders as full tree</string>
                   </property>
                  </widget>
                 </item>
