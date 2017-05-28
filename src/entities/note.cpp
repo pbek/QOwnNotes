@@ -435,8 +435,13 @@ QList<int> Note::noteIdListFromNoteList(QList<Note> noteList) {
 /**
  * Returns all notes that are not tagged
  */
-QList<Note> Note::fetchAllNotTagged() {
-    QList<Note> noteList = Note::fetchAll();
+QList<Note> Note::fetchAllNotTagged(int activeNoteSubFolderId) {
+    QList<Note> noteList;
+    if (activeNoteSubFolderId < 0) {
+        noteList = Note::fetchAll();
+    } else {
+        noteList = Note::fetchAllByNoteSubFolderId(activeNoteSubFolderId);
+    }
     QList<Note> untaggedNoteList;
 
     QListIterator<Note> itr(noteList);
@@ -475,8 +480,8 @@ QStringList Note::fetchAllNotTaggedNames() {
 /**
  * Counts all notes that are not tagged
  */
-int Note::countAllNotTagged() {
-    QList<Note> noteList = Note::fetchAllNotTagged();
+int Note::countAllNotTagged(int activeNoteSubFolderId) {
+    QList<Note> noteList = Note::fetchAllNotTagged(activeNoteSubFolderId);
     return noteList.count();
 }
 

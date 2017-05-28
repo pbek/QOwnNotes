@@ -47,11 +47,11 @@ public:
 
     static QList<Note> fetchAll(int limit = -1);
 
-    static QList<Note> fetchAllNotTagged();
+    static QList<Note> fetchAllNotTagged(int activeNoteSubFolderId);
 
     static QStringList fetchAllNotTaggedNames();
 
-    static int countAllNotTagged();
+    static int countAllNotTagged(int activeNoteSubFolderId=-1);
 
     static QList<Note> search(QString text);
 

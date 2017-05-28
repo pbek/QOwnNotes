@@ -243,6 +243,44 @@ bool DatabaseService::setupNoteFolderTables() {
         version = 11;
     }
 
+    if (version < 12) {
+        // create new tag table, because
+        //     ALTER TABLE tag ADD updated DEFAULT CURRENT_TIMESTAMP
+        // is not supported by sqlite -- you cant add a column with
+        // a non-constant default value. And if collate ... is used
+        // on a column, it's also defaulted to indices on that column.
+        queryDisk.exec("ALTER TABLE tag RENAME TO _tag");
+        queryDisk.exec("CREATE TABLE IF NOT EXISTS tag ("
+                               "id INTEGER PRIMARY KEY,"
+                               "name VARCHAR(255) COLLATE NOCASE,"
+                               "priority INTEGER DEFAULT 0,"
+                               "created DATETIME DEFAULT current_timestamp,"
+                               "parent_id INTEGER DEFAULT 0,"
+                               "color VARCHAR(20),"
+                               "dark_color VARCHAR(20),"
+                               "updated DATETIME DEFAULT current_timestamp)");
+
+        // recreate the indices
+        queryDisk.exec("DROP INDEX IF EXISTS idxUniqueTag");
+        queryDisk.exec("CREATE UNIQUE INDEX IF NOT EXISTS idxUniqueTag ON "
+                               "tag (name, parent_id)");
+        queryDisk.exec("DROP INDEX IF EXISTS idxTagParent");
+        queryDisk.exec("CREATE INDEX IF NOT EXISTS idxTagParent "
+                               "ON tag( parent_id )");
+
+        // convert old values to new table
+        queryDisk.exec("INSERT INTO tag ( "
+                           "id, name, priority, created, parent_id, "
+                           "color, dark_color, updated "
+                       ") SELECT "
+                           "id, name, priority, created, parent_id, "
+                           "color, dark_color, created "
+                       "FROM _tag ORDER BY id");
+
+        queryDisk.exec("DROP TABLE _tag");
+        version = 12;
+    }
+
     if (version != oldVersion) {
         setAppData("database_version",
                    QString::number(version), "note_folder");
@@ -521,6 +559,46 @@ bool DatabaseService::setupTables() {
     if (version < 24) {
         queryDisk.exec("ALTER TABLE script ADD settings_variables_json TEXT");
         version = 24;
+    }
+
+    if (version < 25) {
+        // migrate old sort and order settings + set defaults if unset
+        // if settings.s;
+        if (settings.contains("SortingModeAlphabetically")) {
+            bool sort = settings.value("SortingModeAlphabetically").toBool(); // read old setting
+            settings.setValue("notesPanelSort",
+                              sort ? SORT_ALPHABETICAL : SORT_BY_LAST_CHANGE);
+            settings.remove("SortingModeAlphabetically");
+        }
+
+        if (settings.contains("NoteSortOrder")) {
+            int order = static_cast<Qt::SortOrder>(settings.value("NoteSortOrder").toInt());
+            settings.setValue("notesPanelOrder", order); // see defines in MainWindow.h
+            settings.remove("NoteSortOrder");
+        }
+
+        // set defaults for now settings if not set already
+        if (!settings.contains("notesPanelSort")) {
+            settings.value("notesPanelSort", SORT_BY_LAST_CHANGE);
+        }
+        if (!settings.contains("notesPanelOrder")) {
+            settings.value("notesPanelOrder", ORDER_DESCENDING);
+        }
+
+        if (!settings.contains("noteSubfoldersPanelSort")) {
+            settings.value("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
+        }
+        if (!settings.contains("noteSubfoldersOrder")) {
+            settings.value("noteSubfoldersOrder", ORDER_ASCENDING);
+        }
+
+        if (!settings.contains("tagsPanelSort")) {
+            settings.value("tagsPanelSort", SORT_ALPHABETICAL);
+        }
+        if (!settings.contains("tagsPanelOrder")) {
+            settings.value("tagsPanelOrder", ORDER_ASCENDING);
+        }
+        version = 25;
     }
 
     if (version != oldVersion) {

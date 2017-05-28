@@ -62,7 +62,7 @@ public:
 
     bool removeLinkToNote(Note note);
 
-    QStringList fetchAllLinkedNoteFileNames();
+    QStringList fetchAllLinkedNoteFileNames(bool fromAllSubfolders);
 
     static QStringList fetchAllNames();
 
@@ -73,7 +73,7 @@ public:
     static bool renameNoteFileNamesOfLinks(
             QString oldFileName, QString newFileName);
 
-    int countLinkedNoteFileNames();
+    int countLinkedNoteFileNames(bool fromAllSubfolder);
 
     static QList<Tag> fetchAllWithLinkToNoteNames(QStringList noteNameList);
 

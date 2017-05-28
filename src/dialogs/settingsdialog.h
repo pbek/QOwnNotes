@@ -48,7 +48,8 @@ public:
         ToolbarPage,
         DebugOptionPage,
         EditorPage,
-        GitPage
+        GitPage,
+        PanelsPage
     };
 
     explicit SettingsDialog(int page = 0,
@@ -309,6 +310,10 @@ private:
     void reloadScriptList() const;
 
     void reloadCurrentScriptPage();
+
+    void readPanelSettings();
+
+    void storePanelSettings();
 };
 
 #endif // SETTINGSDIALOG_H

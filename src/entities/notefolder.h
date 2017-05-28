@@ -42,6 +42,7 @@ public:
     QString fixRemotePath();
     static QString currentRemotePath(bool addTrailingSlash = true);
     static QString currentLocalPath();
+    static QString currentRootFolderName(bool fullPath = false);
     void setActiveTagId(int value);
     int getActiveTagId();
     bool isShowSubfolders();

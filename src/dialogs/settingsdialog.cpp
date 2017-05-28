@@ -171,6 +171,16 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             this, SLOT(needRestart()));
     connect(ui->allowOnlyOneAppInstanceCheckBox, SIGNAL(toggled(bool)),
             this, SLOT(needRestart()));
+
+    // connect the panel sort radio buttons
+    connect(ui->notesPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+            ui->notesPanelOrderGroupBox, SLOT(setEnabled(bool)));
+    connect(ui->noteSubfoldersPanelShowRootFolderNameCheckBox, SIGNAL(toggled(bool)),
+            ui->noteSubfoldersPanelShowFullPathCheckBox, SLOT(setEnabled(bool)));
+    connect(ui->noteSubfoldersPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+            ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
+    connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
+            ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
 }
 
 /**
@@ -626,6 +636,55 @@ void SettingsDialog::storeSettings() {
                               ui->gitPathLineEdit->text()));
     settings.setValue("gitCommitInterval", ui->gitCommitIntervalTime->value());
     settings.setValue("gitLogCommand", ui->gitLogCommandLineEdit->text());
+
+    // store Panels settings
+    storePanelSettings();
+}
+
+/**
+ * @brief Stores the Panel settings
+ */
+void SettingsDialog::storePanelSettings() {
+    QSettings settings;
+    // Notes Panel Options
+    ui->notesPanelSortAlphabeticalRadioButton->isChecked() ?
+                settings.setValue("notesPanelSort", SORT_ALPHABETICAL) :
+                settings.setValue("notesPanelSort", SORT_BY_LAST_CHANGE);
+    ui->notesPanelOrderDescendingRadioButton->isChecked() ?
+                settings.setValue("notesPanelOrder", ORDER_DESCENDING) :
+                settings.setValue("notesPanelOrder", ORDER_ASCENDING);
+
+    // Note Subfolders Panel Options
+    settings.setValue("noteSubfoldersPanelHideSearch",
+                      ui->noteSubfoldersPanelHideSearchCheckBox->isChecked());
+
+    settings.setValue("noteSubfoldersPanelDisplayAsFullTree",
+                      ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->isChecked());
+
+    settings.setValue("noteSubfoldersPanelShowRootFolderName",
+                      ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
+
+    settings.setValue("noteSubfoldersPanelShowFullPath",
+                      ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
+
+    ui->noteSubfoldersPanelSortAlphabeticalRadioButton->isChecked() ?
+                settings.setValue("noteSubfoldersPanelSort", SORT_ALPHABETICAL) :
+                settings.setValue("noteSubfoldersPanelSort", SORT_BY_LAST_CHANGE);
+
+    ui->noteSubfoldersPanelOrderDescendingRadioButton->isChecked() ?
+                settings.setValue("noteSubfoldersPanelOrder", ORDER_DESCENDING) :
+                settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
+
+    // Tags Panel Options
+    settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox->isChecked());
+
+    ui->tagsPanelSortAlphabeticalRadioButton->isChecked() ?
+                settings.setValue("tagsPanelSort", SORT_ALPHABETICAL) :
+                settings.setValue("tagsPanelSort", SORT_BY_LAST_CHANGE);
+
+    ui->tagsPanelOrderDescendingRadioButton->isChecked() ?
+                settings.setValue("tagsPanelOrder", ORDER_DESCENDING) :
+                settings.setValue("tagsPanelOrder", ORDER_ASCENDING);
 }
 
 /**
@@ -882,6 +941,73 @@ void SettingsDialog::readSettings() {
             settings.value("gitCommitInterval", 30).toInt());
     ui->gitLogCommandLineEdit->setText(
             settings.value("gitLogCommand").toString());
+
+    // read panel settings
+    readPanelSettings();
+
+}
+
+/**
+ * @brief Read the Panel Settings
+ */
+void SettingsDialog::readPanelSettings() {
+    QSettings settings;
+    // Notes Panel Options
+    if (settings.value("notesPanelSort").toInt() == SORT_ALPHABETICAL) {
+        ui->notesPanelSortAlphabeticalRadioButton->setChecked(true);
+        ui->notesPanelOrderGroupBox->setEnabled(true);
+    } else {
+        ui->notesPanelSortByLastChangeRadioButton->setChecked(true);
+        ui->notesPanelOrderGroupBox->setEnabled(false);
+    }
+    settings.value("notesPanelOrder").toInt() == ORDER_DESCENDING ?
+                ui->notesPanelOrderDescendingRadioButton->setChecked(true) :
+                ui->notesPanelOrderAscendingRadioButton->setChecked(true);
+
+    // Note Subfoldes Panel Options
+    ui->noteSubfoldersPanelHideSearchCheckBox->setChecked(
+                settings.value("noteSubfoldersPanelHideSearch").toBool());
+
+    ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
+                settings.value("noteSubfoldersPanelDisplayAsFullTree").toBool());
+
+    if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
+        ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);
+        ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(true);
+    } else {
+        ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(false);
+        ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(false);
+    }
+
+    ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
+                settings.value("noteSubfoldersPanelShowFullPath").toBool());
+
+    if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
+        ui->noteSubfoldersPanelSortAlphabeticalRadioButton->setChecked(true);
+        ui->noteSubfoldersPanelOrderGroupBox->setEnabled(true);
+    } else {
+        ui->noteSubfoldersPanelSortByLastChangeRadioButton->setChecked(true);
+        ui->noteSubfoldersPanelOrderGroupBox->setEnabled(false);
+    }
+
+    settings.value("noteSubfoldersPanelOrder").toInt() == ORDER_DESCENDING ?
+                ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true) :
+                ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
+
+    // Tags Panel Options
+    ui->tagsPanelHideSearchCheckBox->setChecked(settings.value("tagsPanelHideSearch").toBool());
+
+    if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
+        ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);
+        ui->tagsPanelOrderGroupBox->setEnabled(true);
+    } else {
+        ui->tagsPanelSortByLastChangeRadioButton->setChecked(true);
+        ui->tagsPanelOrderGroupBox->setEnabled(false);
+    }
+
+    settings.value("tagsPanelOrder").toInt() == ORDER_DESCENDING ?
+                ui->tagsPanelOrderDescendingRadioButton->setChecked(true) :
+                ui->tagsPanelOrderAscendingRadioButton->setChecked(true);
 }
 
 /**
