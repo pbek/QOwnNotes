@@ -1,5 +1,19 @@
 # QOwnNotes Changelog
 
+## 17.05.12
+- a lot of work was done by @derboblan for the note list, tag tree and note
+  subfolder panel, a big thank you for that
+  (for [Issue #369](https://github.com/pbek/QOwnNotes/issues/369))
+	- there now is a new page *Panels* in the *Settings dialog*
+	- you can configure the sort order of the note list, tag tree and note
+	  subfolder panel
+	- sorting tags by last use is now possible
+	- counting used tags in sub folders was also fixed
+	- there are options to hide the search bar for tags and note subfolders
+	- for note subfolders there are options to show the root folder name, to
+	  display the note subfolders as tree with a root element and to show the
+	  full path in the tree
+
 ## 17.05.11
 - the full integer range of values can now be selected in the number selector
   in script variables in the *Scripting settings*
