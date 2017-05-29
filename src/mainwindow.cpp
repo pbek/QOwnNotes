@@ -6638,10 +6638,10 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     QMenu menu;
 
     QAction *addAction = menu.addAction(tr("&Add tag"));
-    QAction *editAction;
-    QAction *assignColorAction;
-    QAction *disableColorAction;
-    QAction *removeAction;
+    QAction *editAction = new QAction();
+    QAction *assignColorAction = new QAction();
+    QAction *disableColorAction = new QAction();
+    QAction *removeAction = new QAction();
 
     // allow these actions only if tags are selected
     if (hasSelected) {
@@ -7749,7 +7749,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     QAction *showInFileManagerAction = noteMenu.addAction(
             tr("Show note in file manager"));
 
-    QAction *showNoteGitLogAction;
+    QAction *showNoteGitLogAction = new QAction();
     if (Utils::Git::isCurrentNoteFolderUseGit() &&
             Utils::Git::hasLogCommand()) {
         showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));

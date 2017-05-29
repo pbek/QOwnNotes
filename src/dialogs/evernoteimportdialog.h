@@ -2,6 +2,7 @@
 
 #include <QDialog>
 #include <QXmlQuery>
+#include <entities/note.h>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -40,5 +41,5 @@ private:
 
     QString getMarkdownForImageFileData(ImageFileData &imageFileData);
 
-    void tagNote(QXmlQuery &query, const Note &note) const;
+    void tagNote(QXmlQuery &query, Note &note);
 };

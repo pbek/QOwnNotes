@@ -5,7 +5,6 @@
 #include <QTemporaryFile>
 #include <helpers/htmlentities.h>
 #include <utils/misc.h>
-#include <entities/note.h>
 #include <entities/tag.h>
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"
@@ -369,7 +368,7 @@ void EvernoteImportDialog::importNotes(QString data) {
  * @param query
  * @param note
  */
-void EvernoteImportDialog::tagNote(QXmlQuery &query, const Note &note) const {
+void EvernoteImportDialog::tagNote(QXmlQuery &query, Note &note) {
     query.setQuery("tag");
     QXmlResultItems result;
     query.evaluateTo(&result);
