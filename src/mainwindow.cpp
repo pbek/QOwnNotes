@@ -8127,6 +8127,48 @@ void MainWindow::on_actionToggle_text_case_triggered() {
 }
 
 /**
+ * Turns the selected case to sentence case
+ */
+void MainWindow::on_actionTo_sentence_case_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    if (selectedText.isEmpty()) {
+        return;
+    }
+
+    // insert the text in uppercase or lowercase
+    c.insertText(Utils::Misc::toSentenceCase(selectedText));
+
+    // select the text again to maybe do an other operation on it
+    c.movePosition(
+            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
+    textEdit->setTextCursor(c);
+}
+
+/**
+ * Turns the selected case to start case
+ */
+void MainWindow::on_actionTo_start_case_triggered() {
+    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+    QTextCursor c = textEdit->textCursor();
+    QString selectedText = c.selectedText();
+
+    if (selectedText.isEmpty()) {
+        return;
+    }
+
+    // insert the text in uppercase or lowercase
+    c.insertText(Utils::Misc::toStartCase(selectedText));
+
+    // select the text again to maybe do an other operation on it
+    c.movePosition(
+            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
+    textEdit->setTextCursor(c);
+}
+
+/**
  * Opens the Markdown Cheatsheet webpage
  */
 void MainWindow::on_actionMarkdown_cheatsheet_triggered() {

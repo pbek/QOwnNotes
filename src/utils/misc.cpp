@@ -210,6 +210,22 @@ QString Utils::Misc::shorten(
 }
 
 /**
+ * Converts text to sentence case
+ */
+QString Utils::Misc::toSentenceCase(
+        QString text) {
+    return text;
+}
+
+/**
+ * Converts text to start case
+ */
+QString Utils::Misc::toStartCase(
+        QString text) {
+    return text;
+}
+
+/**
  * Starts an executable detached with parameters
  *
  * @param executablePath the path of the executable

@@ -807,6 +807,8 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionFormat_text_italic"/>
     <addaction name="actionStrike_out_text"/>
     <addaction name="actionToggle_text_case"/>
+    <addaction name="actionTo_sentence_case"/>
+    <addaction name="actionTo_start_case"/>
     <addaction name="separator"/>
     <addaction name="actionPaste_image"/>
     <addaction name="separator"/>

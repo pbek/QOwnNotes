@@ -30,6 +30,8 @@ namespace Utils {
                                   QStringList parameters = QStringList(),
                                   QString workingDirectory = "");
         QString shorten(QString text, int length, QString sequence = "...");
+        QString toSentenceCase(QString text);
+        QString toStartCase(QString text);
         QString defaultNotesPath();
         QString dirSeparator();
         void waitMsecs(int msecs);
