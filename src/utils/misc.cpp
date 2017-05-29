@@ -214,23 +214,19 @@ QString Utils::Misc::shorten(
  */
 QString Utils::Misc::toSentenceCase(
         QString text) {
-    // Split the text into sentences
-    QStringList sentences = text.toLower().split(
-                QRegularExpression("(?<=[.?!])(?=\\s)"));
+    // A sentence is a string of characters immediately preceded by:
+    // (beginning of string followed by any amount of horizontal or vertical
+    //     whitespace) or
+    // (any of [.?!] followed by at least one horizontal or vertical
+    //     whitespace)
+    QRegularExpression sentenceSplitter("(^[\\s\\v]*|[.?!][\\s\\v]+)\\K");
 
-    // Split each sentence into three parts
-    // - Before first letter
-    // - First letter
-    // - After first letter
-    QRegularExpression sentenceSplitter("^(.*?)(\\p{L})(.*)$");
+    QStringList sentences = text.toLower().split(sentenceSplitter);
 
-    for (QString &sentence : sentences) {
-        QRegularExpressionMatch parts = sentenceSplitter.match(sentence);
-
-        if (parts.hasMatch()) {
-            sentence = parts.captured(1) +
-                    parts.captured(2).toUpper() +
-                    parts.captured(3);
+    for (QString & sentence : sentences) {
+        if (sentence.length() > 0) {
+            sentence = sentence.left(1).toUpper() +
+                    sentence.right(sentence.length() - 1);
         }
     }
 
@@ -246,7 +242,7 @@ QString Utils::Misc::toStartCase(
     // vertical whitespace
     QRegularExpression wordSplitter("(?<=[\\s\\v])");
 
-    QStringList words = text.split(wordSplitter);
+    QStringList words = text.toLower().split(wordSplitter);
 
     for (QString & word : words) {
         if (word.length() > 0) {
