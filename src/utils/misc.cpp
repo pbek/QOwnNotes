@@ -214,7 +214,25 @@ QString Utils::Misc::shorten(
  */
 QString Utils::Misc::toSentenceCase(
         QString text) {
-    return text;
+    // Split the text into sentences
+    QStringList sentences = text.toLower().split(
+                QRegularExpression("(?<=[.?!])(?=\\s)"));
+
+    // Split each sentence into three parts
+    // - Before first letter
+    // - First letter
+    // - After first letter
+    QRegularExpression sentenceSplitter("^(.*?)(\\p{L})(.*)$");
+
+    for (QString &sentence : sentences) {
+        QRegularExpressionMatch parts = sentenceSplitter.match(sentence);
+
+        if (parts.hasMatch()) {
+            sentence = parts.captured(1) + parts.captured(2).toUpper() + parts.captured(3);
+        }
+    }
+
+    return sentences.join("");
 }
 
 /**
