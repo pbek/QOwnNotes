@@ -3,6 +3,8 @@
 ## 17.05.13
 - the Evernote import now supports tagging
   (for [Issue #592](https://github.com/pbek/QOwnNotes/issues/592))
+- added more Italian, Brazilian Portuguese and Spanish translation (thank you
+  mlocati, mlimacarlos and richarson)
 
 ## 17.05.12
 - a lot of work was done by @derboblan for the note list, tag tree and note
