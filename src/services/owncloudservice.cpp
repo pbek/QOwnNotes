@@ -369,6 +369,8 @@ void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
             return;
         }
     }
+#else
+    Q_UNUSED(reply);
 #endif
 }
 
@@ -1624,6 +1626,8 @@ void OwnCloudService::updateNoteShareStatus(QXmlQuery &query,
             if (updateShareDialog && (shareDialog != Q_NULLPTR)) {
                 shareDialog->updateDialog();
             }
+#else
+            Q_UNUSED(updateShareDialog);
 #endif
         }
     }
