@@ -392,9 +392,9 @@ private slots:
 
     void on_actionToggle_text_case_triggered();
 
-    void on_actionTo_sentence_case_triggered();
+    void on_actionConvert_to_sentence_case_triggered();
 
-    void on_actionTo_start_case_triggered();
+    void on_actionConvert_to_start_case_triggered();
 
     void on_actionMarkdown_cheatsheet_triggered();
 

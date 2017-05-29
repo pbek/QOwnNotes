@@ -8127,9 +8127,9 @@ void MainWindow::on_actionToggle_text_case_triggered() {
 }
 
 /**
- * Turns the selected case to sentence case
+ * Converts the selected text to sentence case
  */
-void MainWindow::on_actionTo_sentence_case_triggered() {
+void MainWindow::on_actionConvert_to_sentence_case_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
@@ -8148,9 +8148,9 @@ void MainWindow::on_actionTo_sentence_case_triggered() {
 }
 
 /**
- * Turns the selected case to start case
+ * Converts the selected text to start case
  */
-void MainWindow::on_actionTo_start_case_triggered() {
+void MainWindow::on_actionConvert_to_start_case_triggered() {
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();
     QString selectedText = c.selectedText();
