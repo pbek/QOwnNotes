@@ -242,12 +242,16 @@ QString Utils::Misc::toSentenceCase(
  */
 QString Utils::Misc::toStartCase(
         QString text) {
-    // Split the text into words
-    QStringList words = text.toLower().split(
-                QRegularExpression("(?<=[^\\p{L}])"));
+    // A word is a string of characters immediately preceded by horizontal or
+    // vertical whitespace
+    QRegularExpression wordSplitter("(?<=[\\s\\v])");
 
-    for (QString &word : words) {
-        word = toSentenceCase(word);
+    QStringList words = text.split(wordSplitter);
+
+    for (QString & word : words) {
+        if (word.length() > 0) {
+            word = word.left(1).toUpper() + word.right(word.length() - 1);
+        }
     }
 
     return words.join("");
