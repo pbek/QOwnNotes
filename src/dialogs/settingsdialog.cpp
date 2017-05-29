@@ -3273,7 +3273,8 @@ void SettingsDialog::searchScriptInRepository() {
  * @param item
  */
 void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
-    storeScriptListEnabledState();
+    Q_UNUSED(item);
 
+    storeScriptListEnabledState();
     reloadCurrentScriptPage();
 }
