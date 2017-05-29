@@ -228,7 +228,9 @@ QString Utils::Misc::toSentenceCase(
         QRegularExpressionMatch parts = sentenceSplitter.match(sentence);
 
         if (parts.hasMatch()) {
-            sentence = parts.captured(1) + parts.captured(2).toUpper() + parts.captured(3);
+            sentence = parts.captured(1) +
+                    parts.captured(2).toUpper() +
+                    parts.captured(3);
         }
     }
 
@@ -240,7 +242,15 @@ QString Utils::Misc::toSentenceCase(
  */
 QString Utils::Misc::toStartCase(
         QString text) {
-    return text;
+    // Split the text into words
+    QStringList words = text.toLower().split(
+                QRegularExpression("(?<=[^\\p{L}])"));
+
+    for (QString &word : words) {
+        word = toSentenceCase(word);
+    }
+
+    return words.join("");
 }
 
 /**
