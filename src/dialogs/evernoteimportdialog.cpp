@@ -6,6 +6,7 @@
 #include <helpers/htmlentities.h>
 #include <utils/misc.h>
 #include <entities/note.h>
+#include <entities/tag.h>
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"
 #include "filedialog.h"
@@ -348,6 +349,9 @@ void EvernoteImportDialog::importNotes(QString data) {
             note.store();
             note.storeNoteTextFileToDisk();
 
+            // tag the note if tags are found
+            tagNote(query, note);
+
             _importCount++;
             ui->progressBar->setValue(ui->progressBar->value() + 1);
             QCoreApplication::processEvents();
@@ -355,6 +359,39 @@ void EvernoteImportDialog::importNotes(QString data) {
 
         if (result.hasError()) {
             qWarning() << "Error importing notes";
+        }
+    }
+}
+
+/**
+ * Tags the note if tags are found
+ *
+ * @param query
+ * @param note
+ */
+void EvernoteImportDialog::tagNote(QXmlQuery &query, const Note &note) const {
+    query.setQuery("tag");
+    QXmlResultItems result;
+    query.evaluateTo(&result);
+
+    while (!result.next().isNull()) {
+        query.setFocus(result.current());
+
+        QString tagName;
+        query.setQuery("text()");
+        query.evaluateTo(&tagName);
+        tagName = tagName.trimmed();
+
+        // create a new tag if it doesn't exist
+        Tag tag = Tag::fetchByName(tagName);
+        if (!tag.isFetched()) {
+            tag.setName(tagName);
+            tag.store();
+        }
+
+        // link the note to the tag
+        if (tag.isFetched()) {
+            tag.linkToNote(note);
         }
     }
 }

@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.05.13
+- the Evernote import now supports tagging
+  (for [Issue #592](https://github.com/pbek/QOwnNotes/issues/592))
+
 ## 17.05.12
 - a lot of work was done by @derboblan for the note list, tag tree and note
   subfolder panel, a big thank you for that

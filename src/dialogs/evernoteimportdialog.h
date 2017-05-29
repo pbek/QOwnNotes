@@ -39,4 +39,6 @@ private:
     QString importImages(QString content, QXmlQuery query);
 
     QString getMarkdownForImageFileData(ImageFileData &imageFileData);
+
+    void tagNote(QXmlQuery &query, const Note &note) const;
 };
