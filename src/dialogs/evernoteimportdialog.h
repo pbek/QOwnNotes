@@ -13,9 +13,10 @@ class EvernoteImportDialog : public MasterDialog
 {
     Q_OBJECT
 
-    struct ImageFileData {
+    struct MediaFileData {
         QString data;
         QString suffix;
+        QString fileName;
     };
 
 public:
@@ -39,7 +40,11 @@ private:
 
     QString importImages(QString content, QXmlQuery query);
 
-    QString getMarkdownForImageFileData(ImageFileData &imageFileData);
+    QString getMarkdownForMediaFileData(MediaFileData &mediaFileData);
+
+    QString getMarkdownForAttachmentFileData(MediaFileData &mediaFileData);
 
     void tagNote(QXmlQuery &query, Note &note);
+
+    QString importAttachments(QString content, QXmlQuery query);
 };

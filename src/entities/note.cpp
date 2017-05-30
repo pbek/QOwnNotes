@@ -2108,7 +2108,8 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
 /**
  * Returns the markdown of the inserted attachment file into a note
  */
-QString Note::getInsertAttachmentMarkdown(QFile *file, bool returnUrlOnly) {
+QString Note::getInsertAttachmentMarkdown(QFile *file, QString fileName,
+                                          bool returnUrlOnly) {
     if (file->exists() && (file->size() > 0)) {
         QDir dir(NoteFolder::currentAttachmentsPath());
 
@@ -2131,13 +2132,17 @@ QString Note::getInsertAttachmentMarkdown(QFile *file, bool returnUrlOnly) {
         QFile newFile(newFilePath);
         QString attachmentUrlString = "file://attachments/" + newFileName;
 
-        // check if we only want to return the attachments url string
+        // check if we only want to return the attachment url string
         if (returnUrlOnly) {
             return attachmentUrlString;
         }
 
+        if (fileName.isEmpty()) {
+            fileName = fileInfo.fileName();
+        }
+
         // return the attachment link
-        return "[" + fileInfo.fileName() + "](" + attachmentUrlString + ")";
+        return "[" + fileName + "](" + attachmentUrlString + ")";
     }
 
     return "";

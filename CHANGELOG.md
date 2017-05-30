@@ -14,6 +14,10 @@
       attachment if they are not an image or a note file
     - a space character will be added in front of the attachment link if 
       there was no space or new line in front of the current cursor position
+- the Evernote import now optionally supports importing file attachments
+  (for [Issue #552](https://github.com/pbek/QOwnNotes/issues/552))
+    - attachments in enex files that don't contain correct information about 
+      where they are placed inside the text are imported at the end of the text
 
 ## 17.05.13
 - the Evernote import now supports tagging

@@ -210,6 +210,7 @@ public:
                                           bool returnUrlOnly = false);
 
     static QString getInsertAttachmentMarkdown(QFile *file,
+                                               QString fileName = "",
                                                bool returnUrlOnly= false);
 
     static bool scaleDownImageFileIfNeeded(QFile &file);
