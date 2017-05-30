@@ -8115,52 +8115,8 @@ void MainWindow::on_actionToggle_text_case_triggered() {
         return;
     }
 
-    // insert the text in uppercase or lowercase
-    c.insertText(selectedText == selectedText.toLower() ?
-                 selectedText.toUpper() :
-                 selectedText.toLower());
-
-    // select the text again to maybe do an other operation on it
-    c.movePosition(
-            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
-    textEdit->setTextCursor(c);
-}
-
-/**
- * Converts the selected text to sentence case
- */
-void MainWindow::on_actionConvert_to_sentence_case_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    if (selectedText.isEmpty()) {
-        return;
-    }
-
-    // insert the text in uppercase or lowercase
-    c.insertText(Utils::Misc::toSentenceCase(selectedText));
-
-    // select the text again to maybe do an other operation on it
-    c.movePosition(
-            QTextCursor::Left, QTextCursor::KeepAnchor, selectedText.count());
-    textEdit->setTextCursor(c);
-}
-
-/**
- * Converts the selected text to start case
- */
-void MainWindow::on_actionConvert_to_start_case_triggered() {
-    QMarkdownTextEdit* textEdit = activeNoteTextEdit();
-    QTextCursor c = textEdit->textCursor();
-    QString selectedText = c.selectedText();
-
-    if (selectedText.isEmpty()) {
-        return;
-    }
-
-    // insert the text in uppercase or lowercase
-    c.insertText(Utils::Misc::toStartCase(selectedText));
+    // cycle text through lowercase, uppercase, start case, and sentence case
+    c.insertText(Utils::Misc::cycleTextCase(selectedText));
 
     // select the text again to maybe do an other operation on it
     c.movePosition(

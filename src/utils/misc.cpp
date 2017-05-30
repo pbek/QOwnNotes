@@ -210,6 +210,52 @@ QString Utils::Misc::shorten(
 }
 
 /**
+ * Cycles text through lowercase, uppercase, start case, and sentence case
+ */
+QString Utils::Misc::cycleTextCase(QString text) {
+    QString asLower = text.toLower();
+    QString asUpper = text.toUpper();
+
+    // OK no matter what
+    if (text == asLower) {
+        return asUpper;
+    }
+
+    QString asStart = toStartCase(text);
+    QString asSentence = toSentenceCase(text);
+
+    if (text == asUpper) {
+        if (asUpper == asStart) {
+            // text == asUpper == asStart == asSentence && text != asLower
+            if (asUpper == asSentence) {
+                return asLower;
+            }
+            // text == asUpper == asStart && text != asSentence
+            else {
+                return asSentence;
+            }
+        }
+        // text == asUpper && text != asStart
+        else {
+            return asStart;
+        }
+    }
+
+    if (text == asStart) {
+        // text == asStart == asSentence && asSentence != asLower
+        if (asStart == asSentence) {
+            return asLower;
+        }
+        // text == asStart && text != asSentence
+        else {
+            return asSentence;
+        }
+    }
+
+    return asLower;
+}
+
+/**
  * Converts text to sentence case
  */
 QString Utils::Misc::toSentenceCase(
