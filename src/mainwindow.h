@@ -489,6 +489,8 @@ private slots:
 
     void filterNotesByTag();
 
+    void on_actionInsert_attachment_triggered();
+
 private:
     Ui::MainWindow *ui;
     QString notesPath;
@@ -818,4 +820,6 @@ private:
     bool showNotesFromAllNoteSubFolders();
 
     void selectAllNotesInNoteSubFolderTreeWidget() const;
+
+    bool insertAttachment(QFile *file);
 };

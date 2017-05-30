@@ -209,6 +209,9 @@ public:
     static QString getInsertMediaMarkdown(QFile *file, bool addNewLine = true,
                                           bool returnUrlOnly = false);
 
+    static QString getInsertAttachmentMarkdown(QFile *file,
+                                               bool returnUrlOnly= false);
+
     static bool scaleDownImageFileIfNeeded(QFile &file);
 
     static QString downloadUrlToMedia(QUrl url, bool returnUrlOnly = false);

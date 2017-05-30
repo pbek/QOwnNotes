@@ -796,6 +796,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="separator"/>
     <addaction name="actionInsert_Link_to_note"/>
     <addaction name="actionInsert_image"/>
+    <addaction name="actionInsert_attachment"/>
     <addaction name="actionInsert_table"/>
     <addaction name="actionInsert_current_time"/>
     <addaction name="actionInsert_code_block"/>
@@ -2039,6 +2040,18 @@ p, li { white-space: pre-wrap; }
     <string>Script settings</string>
    </property>
   </action>
+  <action name="actionInsert_attachment">
+   <property name="icon">
+    <iconset resource="breeze-qownnotes.qrc">
+     <normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</normaloff>:/icons/breeze-qownnotes/16x16/mail-attachment.svg</iconset>
+   </property>
+   <property name="text">
+    <string>Insert attachment</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Ctrl+Shift+E</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -2065,8 +2078,8 @@ p, li { white-space: pre-wrap; }
  </customwidgets>
  <resources>
   <include location="images.qrc"/>
-  <include location="breeze-dark-qownnotes.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>
 </ui>

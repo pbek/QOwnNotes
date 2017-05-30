@@ -52,6 +52,7 @@ public:
     NoteSubFolder getActiveNoteSubFolder();
     void resetActiveNoteSubFolder();
     static QString currentMediaPath();
+    static QString currentAttachmentsPath();
     bool isUseGit();
     void setUseGit(bool value);
 

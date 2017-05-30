@@ -2083,7 +2083,7 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
 
         QString newFilePath = mediaDir.path() + QDir::separator() + newFileName;
 
-        // copy the file the the media folder
+        // copy the file to the media folder
         file->copy(newFilePath);
 
         QFile newFile(newFilePath);
@@ -2100,6 +2100,44 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         // we add a "\n" in the end so that hoedown recognizes multiple images
         return "![" + fileInfo.baseName() + "](" + mediaUrlString + ")" +
                 (addNewLine ? "\n" : "");
+    }
+
+    return "";
+}
+
+/**
+ * Returns the markdown of the inserted attachment file into a note
+ */
+QString Note::getInsertAttachmentMarkdown(QFile *file, bool returnUrlOnly) {
+    if (file->exists() && (file->size() > 0)) {
+        QDir dir(NoteFolder::currentAttachmentsPath());
+
+        // created the attachments folder if it doesn't exist
+        if (!dir.exists()) {
+            dir.mkpath(dir.path());
+        }
+
+        QFileInfo fileInfo(file->fileName());
+
+        // find a random name for the new file
+        QString newFileName =
+                QString::number(qrand()) + "." + fileInfo.suffix();
+
+        QString newFilePath = dir.path() + QDir::separator() + newFileName;
+
+        // copy the file to the attachments folder
+        file->copy(newFilePath);
+
+        QFile newFile(newFilePath);
+        QString attachmentUrlString = "file://attachments/" + newFileName;
+
+        // check if we only want to return the attachments url string
+        if (returnUrlOnly) {
+            return attachmentUrlString;
+        }
+
+        // return the attachment link
+        return "[" + fileInfo.fileName() + "](" + attachmentUrlString + ")";
     }
 
     return "";

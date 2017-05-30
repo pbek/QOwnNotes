@@ -2726,7 +2726,7 @@ bool MainWindow::buildNotesIndex(int noteSubFolderId, bool forceRebuild) {
 
         // ignore some folders
         QStringList ignoreFolderList;
-        ignoreFolderList << "." << ".." << "media";
+        ignoreFolderList << "." << ".." << "media" << "attachments";
 
         Q_FOREACH(QString folder, folders) {
                 if (ignoreFolderList.contains(folder)) {
@@ -5249,6 +5249,7 @@ void MainWindow::on_actionInsert_image_triggered() {
  */
 bool MainWindow::insertMedia(QFile *file) {
     QString text = Note::getInsertMediaMarkdown(file);
+
     if (!text.isEmpty()) {
         ScriptingService* scriptingService = ScriptingService::instance();
         // attempts to ask a script for an other markdown text
@@ -5266,6 +5267,42 @@ bool MainWindow::insertMedia(QFile *file) {
         }
 
         // insert the image link
+        c.insertText(text);
+
+        return true;
+    }
+
+    return false;
+}
+
+/**
+ * Inserts a file attachment into a note
+ */
+bool MainWindow::insertAttachment(QFile *file) {
+    QString text = Note::getInsertAttachmentMarkdown(file);
+
+    if (!text.isEmpty()) {
+        qDebug() << __func__ << " - 'text': " << text;
+
+        QMarkdownTextEdit* textEdit = activeNoteTextEdit();
+        QTextCursor c = textEdit->textCursor();
+
+        // if we try to insert the attachment in the first line of the note
+        // (aka. note name) move the cursor to the last line
+        if (currentNoteLineNumber() == 1) {
+            c.movePosition(QTextCursor::End, QTextCursor::MoveAnchor);
+            textEdit->setTextCursor(c);
+        }
+
+        // add a space if we are not at the start of a line or if there is no
+        // space in front of the current cursor position
+        c.movePosition(QTextCursor::Left, QTextCursor::KeepAnchor);
+        if (!c.atBlockStart() && c.selectedText() != " ") {
+            text = " " + text;
+        }
+
+        // insert the attachment link
+        c = textEdit->textCursor();
         c.insertText(text);
 
         return true;
@@ -5744,7 +5781,13 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
 
                         showStatusBarMessage(tr("Done inserting image"), 3000);
                     } else {
-                        skipCount++;
+                        showStatusBarMessage(tr("Inserting attachment"));
+
+                        // inserting the attachment
+                        insertAttachment(file);
+
+                        showStatusBarMessage(tr("Done inserting attachment"),
+                                             3000);
                     }
                 } else {
                     skipCount++;
@@ -9108,3 +9151,24 @@ void MainWindow::updateNotesPanelSortOrder() {
     loadNoteDirectoryList();
 }
 
+/**
+ * Inserts a file as attachment
+ */
+void MainWindow::on_actionInsert_attachment_triggered() {
+    FileDialog dialog("InsertAttachment");
+    dialog.setFileMode(QFileDialog::ExistingFile);
+    dialog.setAcceptMode(QFileDialog::AcceptOpen);
+    dialog.setWindowTitle(tr("Select file to insert"));
+    int ret = dialog.exec();
+
+    if (ret == QDialog::Accepted) {
+        QString fileName = dialog.selectedFile();
+
+        if (!fileName.isEmpty()) {
+            QFile file(fileName);
+
+            // insert the attachment
+            insertAttachment(&file);
+        }
+    }
+}

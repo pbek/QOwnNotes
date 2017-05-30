@@ -383,6 +383,13 @@ QString NoteFolder::currentMediaPath() {
 }
 
 /**
+ * Fetches the current attachments path
+ */
+QString NoteFolder::currentAttachmentsPath() {
+    return NoteFolder::currentLocalPath() + QDir::separator() + "attachments";
+}
+
+/**
  * Checks if the subfolders should be viewed for the current note folder
  */
 bool NoteFolder::isCurrentShowSubfolders() {

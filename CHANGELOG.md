@@ -1,9 +1,19 @@
 # QOwnNotes Changelog
 
 ## 17.05.14
-- when moving or copying notes to an other note subfolder tagging 
-  information will now be restored
-  (for [Issue #595](https://github.com/pbek/QOwnNotes/issues/595))
+- when moving or copying notes to an other note subfolder tagging information
+  will now be restored (for [Issue #595](https://github.com/pbek/QOwnNotes/issues/595))
+- you can now use the shortcut <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> to 
+  insert a file attachment into the current note
+  (for [Issue #419](https://github.com/pbek/QOwnNotes/issues/419))
+    - the file will be copied to an `attachments` folder in the current note 
+      folder (note subfolders don't have their own `attachments` folder) and 
+      a text link will be created in the note
+    - the new `attachments` folder will be ignored in the note subfolder tree
+    - you can also drag and drop files into the note, they will be inserted as
+      attachment if they are not an image or a note file
+    - a space character will be added in front of the attachment link if 
+      there was no space or new line in front of the current cursor position
 
 ## 17.05.13
 - the Evernote import now supports tagging
