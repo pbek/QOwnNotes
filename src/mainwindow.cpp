@@ -3792,7 +3792,7 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
                 }
 
                 // move note
-                bool result = note.move(destinationFolder);
+                bool result = note.moveToPath(destinationFolder);
                 if (result) {
                     qDebug() << "Note was moved:" << note.getName();
                 } else {
@@ -3855,7 +3855,7 @@ void MainWindow::copySelectedNotesToFolder(QString destinationFolder) {
                 }
 
                 // copy note
-                bool result = note.copy(destinationFolder);
+                bool result = note.copyToPath(destinationFolder);
                 if (result) {
                     copyCount++;
                     qDebug() << "Note was copied:" << note.getName();
@@ -7075,11 +7075,6 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                               "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
 
-    if (selectedNotesHaveTags()) {
-        text += " " + tr("Tagging information of these notes will be lost at "
-                                 "the destination.");
-    }
-
     if (QMessageBox::information(
             this,
             tr("Move selected notes"),
@@ -7104,16 +7099,27 @@ void MainWindow::moveSelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                     continue;
                 }
 
+                // fetch the tags to tag the note after moving it
+                QList<Tag> tags = Tag::fetchAllOfNote(note);
+
                 if (note.getId() == currentNote.getId()) {
                     // unset the current note
                     unsetCurrentNote();
                 }
 
                 // move note
-                bool result = note.move(noteSubFolder.fullPath());
+                bool result = note.moveToPath(noteSubFolder.fullPath());
                 if (result) {
                     noteSubFolderCount++;
                     qDebug() << "Note was moved:" << note.getName();
+
+                    // set the new sub-folder so the tags are stored correctly
+                    note.setNoteSubFolder(noteSubFolder);
+
+                    // tag the note again
+                    Q_FOREACH(Tag tag, tags) {
+                            tag.linkToNote(note);
+                        }
                 } else {
                     qWarning() << "Could not move note:" << note.getName();
                 }
@@ -7153,11 +7159,6 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                        "<strong>%2</strong>?", "",
                       selectedItemsCount).arg(noteSubFolder.getName());
 
-    if (selectedNotesHaveTags()) {
-        text += " " + tr("Tagging information of these notes will be lost at "
-                                 "the destination.");
-    }
-
     if (QMessageBox::information(
             this,
             tr("Copy selected notes"),
@@ -7175,11 +7176,22 @@ void MainWindow::copySelectedNotesToNoteSubFolder(NoteSubFolder noteSubFolder) {
                     continue;
                 }
 
+                // fetch the tags to tag the note after copying it
+                QList<Tag> tags = Tag::fetchAllOfNote(note);
+
                 // copy note
-                bool result = note.copy(noteSubFolder.fullPath());
+                bool result = note.copyToPath(noteSubFolder.fullPath());
                 if (result) {
                     noteSubFolderCount++;
                     qDebug() << "Note was copied:" << note.getName();
+
+                    // set the new sub-folder so the tags are stored correctly
+                    note.setNoteSubFolder(noteSubFolder);
+
+                    // tag the note again
+                    Q_FOREACH(Tag tag, tags) {
+                            tag.linkToNote(note);
+                        }
                 } else {
                     qWarning() << "Could not copy note:" << note.getName();
                 }

@@ -224,7 +224,7 @@ bool Note::remove(bool withFile) {
  * @param destinationPath
  * @return bool
  */
-bool Note::copy(QString destinationPath) {
+bool Note::copyToPath(QString destinationPath) {
     QDir d;
     if (this->fileExists() && (d.exists(destinationPath))) {
         QFile file(fullNoteFilePath());
@@ -256,8 +256,8 @@ bool Note::copy(QString destinationPath) {
  * @param destinationPath
  * @return bool
  */
-bool Note::move(QString destinationPath) {
-    bool result = this->copy(destinationPath);
+bool Note::moveToPath(QString destinationPath) {
+    bool result = copyToPath(destinationPath);
 
     if (result) {
         return remove(true);

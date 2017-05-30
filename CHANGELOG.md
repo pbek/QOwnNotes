@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.05.14
+- when moving or copying notes to an other note subfolder tagging 
+  information will now be restored
+  (for [Issue #595](https://github.com/pbek/QOwnNotes/issues/595))
+
 ## 17.05.13
 - the Evernote import now supports tagging
   (for [Issue #592](https://github.com/pbek/QOwnNotes/issues/592))

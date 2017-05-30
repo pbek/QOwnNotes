@@ -110,9 +110,9 @@ public:
 
     bool isFetched();
 
-    bool copy(QString destinationPath);
+    bool copyToPath(QString destinationPath);
 
-    bool move(QString destinationPath);
+    bool moveToPath(QString destinationPath);
 
     static QString generateTextForLink(QString text);
 
