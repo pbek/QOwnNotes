@@ -210,6 +210,96 @@ QString Utils::Misc::shorten(
 }
 
 /**
+ * Cycles text through lowercase, uppercase, start case, and sentence case
+ */
+QString Utils::Misc::cycleTextCase(QString text) {
+    QString asLower = text.toLower();
+    QString asUpper = text.toUpper();
+
+    // OK no matter what
+    if (text == asLower) {
+        return asUpper;
+    }
+
+    QString asStart = toStartCase(text);
+    QString asSentence = toSentenceCase(text);
+
+    if (text == asUpper) {
+        if (asUpper == asStart) {
+            // text == asUpper == asStart == asSentence && text != asLower
+            if (asUpper == asSentence) {
+                return asLower;
+            }
+            // text == asUpper == asStart && text != asSentence
+            else {
+                return asSentence;
+            }
+        }
+        // text == asUpper && text != asStart
+        else {
+            return asStart;
+        }
+    }
+
+    if (text == asStart) {
+        // text == asStart == asSentence && asSentence != asLower
+        if (asStart == asSentence) {
+            return asLower;
+        }
+        // text == asStart && text != asSentence
+        else {
+            return asSentence;
+        }
+    }
+
+    return asLower;
+}
+
+/**
+ * Converts text to sentence case
+ */
+QString Utils::Misc::toSentenceCase(
+        QString text) {
+    // A sentence is a string of characters immediately preceded by:
+    // (beginning of string followed by any amount of horizontal or vertical
+    //     whitespace) or
+    // (any of [.?!] followed by at least one horizontal or vertical
+    //     whitespace)
+    QRegularExpression sentenceSplitter("(^[\\s\\v]*|[.?!][\\s\\v]+)\\K");
+
+    QStringList sentences = text.toLower().split(sentenceSplitter);
+
+    for (QString & sentence : sentences) {
+        if (sentence.length() > 0) {
+            sentence = sentence.left(1).toUpper() +
+                    sentence.right(sentence.length() - 1);
+        }
+    }
+
+    return sentences.join("");
+}
+
+/**
+ * Converts text to start case
+ */
+QString Utils::Misc::toStartCase(
+        QString text) {
+    // A word is a string of characters immediately preceded by horizontal or
+    // vertical whitespace
+    QRegularExpression wordSplitter("(?<=[\\s\\v])");
+
+    QStringList words = text.toLower().split(wordSplitter);
+
+    for (QString & word : words) {
+        if (word.length() > 0) {
+            word = word.left(1).toUpper() + word.right(word.length() - 1);
+        }
+    }
+
+    return words.join("");
+}
+
+/**
  * Starts an executable detached with parameters
  *
  * @param executablePath the path of the executable

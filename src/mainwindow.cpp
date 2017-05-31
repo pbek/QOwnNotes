@@ -8115,10 +8115,8 @@ void MainWindow::on_actionToggle_text_case_triggered() {
         return;
     }
 
-    // insert the text in uppercase or lowercase
-    c.insertText(selectedText == selectedText.toLower() ?
-                 selectedText.toUpper() :
-                 selectedText.toLower());
+    // cycle text through lowercase, uppercase, start case, and sentence case
+    c.insertText(Utils::Misc::cycleTextCase(selectedText));
 
     // select the text again to maybe do an other operation on it
     c.movePosition(
