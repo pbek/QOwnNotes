@@ -718,7 +718,7 @@ bool Utils::Misc::downloadUrlToFile(QUrl url, QFile *file) {
 QString Utils::Misc::genericCSS() {
     QSettings settings;
     bool darkModeColors = settings.value("darkModeColors").toBool();
-    QString color = darkModeColors ? "#ffd694" : "#ffaa00";
+    QString color = darkModeColors ? "#ffd694" : "#fc7600";
     QString cssStyles = "a {color: " + color +  "}";
 
     color = darkModeColors ? "#5b5b5b" : "#e8e8e8";
