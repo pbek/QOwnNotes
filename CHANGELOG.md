@@ -10,6 +10,8 @@
   was now done to fix problems with operating systems that don't set default
   colors fitting to be used in dark mode
   (for [Issue #597](https://github.com/pbek/QOwnNotes/issues/597))
+- added more Italian, Brazilian Portuguese and French translation (thank you
+  mlocati, mlimacarlos and lepascalou)
     
 ## 17.05.14
 - when moving or copying notes to an other note subfolder tagging information
