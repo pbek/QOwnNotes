@@ -3195,8 +3195,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3342"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1727"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1731"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1740"/>
         <source>Database</source>
         <translation>Databáze</translation>
     </message>
@@ -3217,7 +3217,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3326"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1795"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1799"/>
         <source>Clear app data and exit</source>
         <translation type="unfinished">Clear app data and exit</translation>
     </message>
@@ -3447,6 +3447,11 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
         <translation type="unfinished">Connection status</translation>
     </message>
     <message>
+        <location filename="../dialogs/settingsdialog.ui" line="3955"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../dialogs/settingsdialog.ui" line="4198"/>
         <source>Tags panel</source>
         <translation type="unfinished">Tags panel</translation>
@@ -3533,7 +3538,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
         <translation type="unfinished">Notes panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
         <source>Search script repository</source>
         <translation type="unfinished">Search script repository</translation>
     </message>
@@ -3798,9 +3803,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
         <translation type="unfinished">Enter your custom time format, like &quot;dd.MM.yyyy hh:mm&quot;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="3955"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3990"/>
@@ -4045,47 +4049,47 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
         <translation type="unfinished">&amp;Save debug information</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="325"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="329"/>
         <source>hostname of proxy server</source>
         <translation>hostitel proxy serveru</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="326"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="330"/>
         <source>username for proxy server</source>
         <translation>uživatelské jméno proxy serveru</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="327"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="331"/>
         <source>password for proxy server</source>
         <translation>heslo proxy serveru</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="329"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="333"/>
         <source>HTTP(S) proxy</source>
         <translation>HTTP(S) proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="330"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="334"/>
         <source>SOCKS5 proxy</source>
         <translation>SOCKS5 proxy</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1071"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1075"/>
         <source>Undefined key</source>
         <translation>Nedefinovaná klávesa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1076"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1080"/>
         <source>Assign a new key</source>
         <translation>Přiřadit novou klávesu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1077"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1081"/>
         <source>Reset to default key</source>
         <translation>Obnovit výchozí klávesu</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1462"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1466"/>
         <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -4094,7 +4098,7 @@ Server version: %1
 QOwnNotesAPI version: %2</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1473"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1477"/>
         <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -4105,186 +4109,186 @@ You also need to have the QOwnNotesAPI app installed and enabled!
 Connection error message: </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1748"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1752"/>
         <source>Markdown files</source>
         <translation>Markdown Soubory</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1775"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1779"/>
         <source>Disable usage tracking</source>
         <translation type="unfinished">Disable usage tracking</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1776"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1780"/>
         <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
         <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can&apos;t live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1997"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2001"/>
         <source>new folder</source>
         <translation>nová složka</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2035"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2039"/>
         <source>Remove note folder</source>
         <translation type="unfinished">Remove note folder</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2036"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2040"/>
         <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2404"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2042"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2408"/>
         <source>&amp;Remove</source>
         <translation>&amp;Odstranit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2111"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2115"/>
         <source>Please select the folder where your notes will get stored to</source>
         <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2148"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2152"/>
         <source>Loading folders from server</source>
         <translation>Načítání složek ze serveru</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2162"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2166"/>
         <source>No more folders were found in the current folder</source>
         <translation type="unfinished">No more folders were found in the current folder</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2236"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2240"/>
         <source>Loading folders in &apos;%1&apos; from server</source>
         <translation type="unfinished">Loading folders in &apos;%1&apos; from server</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2297"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2301"/>
         <source>Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
         <translation type="unfinished">Take a look at the &lt;a href=&quot;%1&quot;&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2299"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2303"/>
         <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</source>
         <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href=&quot;%1&quot;&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2319"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
         <source>Add local script</source>
         <translation type="unfinished">Add local script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
         <source>Add an existing, local script</source>
         <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
         <source>Find a script in the script repository</source>
         <translation type="unfinished">Find a script in the script repository</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2401"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2405"/>
         <source>Remove script</source>
         <translation>Odstranit skript</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2402"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2406"/>
         <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
         <translation type="unfinished">Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2454"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2458"/>
         <source>QML files</source>
         <translation type="unfinished">QML files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2455"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2459"/>
         <source>Please select your QML file</source>
         <translation type="unfinished">Please select your QML file</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2544"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2548"/>
         <source>Open repository</source>
         <translation type="unfinished">Open repository</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2604"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2608"/>
         <source>Your script seems to be valid</source>
         <translation type="unfinished">Your script seems to be valid</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2605"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2609"/>
         <source>There were script errors:
 %1</source>
         <translation type="unfinished">There were script errors:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2674"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2678"/>
         <source>File extension</source>
         <translation>Přípona souboru</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2675"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2679"/>
         <source>Enter your custom file extension:</source>
         <translation type="unfinished">Enter your custom file extension:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2949"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2953"/>
         <source>Calendar cache emptied</source>
         <translation type="unfinished">Calendar cache emptied</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="2950"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2954"/>
         <source>Your calendar cache was emptied.</source>
         <translation type="unfinished">Your calendar cache was emptied.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3027"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3031"/>
         <source>Reset toolbars and exit</source>
         <translation>Obnovit panely nástrojů a ukončit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3028"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3032"/>
         <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
         <translation>Opravdu chcete obnovit všechny panely nástrojů? Aplikace bude během procesu uzavřena. Výchozí panely nástrojů budou obnoveny až ji spustíte znovu.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3032"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3036"/>
         <source>Reset and &amp;exit</source>
         <translation>Obnovit a &amp;ukončit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3194"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3198"/>
         <source>Log file cleared</source>
         <translation type="unfinished">Log file cleared</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3195"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3199"/>
         <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
         <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3231"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3235"/>
         <source>Executable files</source>
         <translation type="unfinished">Executable files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3232"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3234"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3236"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3238"/>
         <source>All files</source>
         <translation type="unfinished">All files</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3246"/>
         <source>Please select the path of your git executable</source>
         <translation type="unfinished">Please select the path of your git executable</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1737"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1741"/>
         <source>The Database was reinitialized.</source>
         <translation type="unfinished">The Database was reinitialized.</translation>
     </message>
@@ -4339,12 +4343,12 @@ Connection error message: </translation>
         <translation type="unfinished">It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1749"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1753"/>
         <source>Save debug information</source>
         <translation type="unfinished">Save debug information</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1796"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1800"/>
         <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -4353,16 +4357,16 @@ Your notes will stay intact!</source>
 Your notes will stay intact!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1799"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
         <source>Clear and &amp;exit</source>
         <translation type="unfinished">Clear and &amp;exit</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1731"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="1799"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2038"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="2404"/>
-        <location filename="../dialogs/settingsdialog.cpp" line="3032"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1735"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2042"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="2408"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="3036"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>
@@ -4372,17 +4376,17 @@ Your notes will stay intact!</translation>
         <translation type="unfinished">You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1728"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1732"/>
         <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
         <translation type="unfinished">Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1731"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1735"/>
         <source>Clear &amp;database</source>
         <translation type="unfinished">Clear &amp;database</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.cpp" line="1910"/>
+        <location filename="../dialogs/settingsdialog.cpp" line="1914"/>
         <source>Select editor application</source>
         <translation type="unfinished">Select editor application</translation>
     </message>
@@ -4874,134 +4878,134 @@ This cannot be undone!</translation>
         <translation>%p% staženo</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="34"/>
+        <location filename="../dialogs/updatedialog.cpp" line="40"/>
         <source>&amp;Update</source>
         <translation>&amp;Aktualizovat</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="47"/>
+        <location filename="../dialogs/updatedialog.cpp" line="53"/>
         <source>&amp;Download latest</source>
         <translation>&amp;Stáhnout nejnovější</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="45"/>
+        <location filename="../dialogs/updatedialog.cpp" line="51"/>
         <source>Just download</source>
         <translation>Pouze stáhnout</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="61"/>
+        <location filename="../dialogs/updatedialog.cpp" line="67"/>
         <source>&amp;Skip version</source>
         <translation>&amp;Přeskočit verzi</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="71"/>
-        <location filename="../dialogs/updatedialog.cpp" line="317"/>
-        <location filename="../dialogs/updatedialog.cpp" line="475"/>
+        <location filename="../dialogs/updatedialog.cpp" line="77"/>
+        <location filename="../dialogs/updatedialog.cpp" line="323"/>
+        <location filename="../dialogs/updatedialog.cpp" line="481"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Zrušit</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="214"/>
+        <location filename="../dialogs/updatedialog.cpp" line="220"/>
         <source>Download error</source>
         <translation>Chyba při stahování</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="215"/>
+        <location filename="../dialogs/updatedialog.cpp" line="221"/>
         <source>Error while downloading:
 %1</source>
         <translation>Při stahování došlo k chybě:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="217"/>
+        <location filename="../dialogs/updatedialog.cpp" line="223"/>
         <source>network error: %1</source>
         <translation>chyba sítě: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="240"/>
-        <location filename="../dialogs/updatedialog.cpp" line="261"/>
-        <location filename="../dialogs/updatedialog.cpp" line="359"/>
+        <location filename="../dialogs/updatedialog.cpp" line="246"/>
+        <location filename="../dialogs/updatedialog.cpp" line="267"/>
+        <location filename="../dialogs/updatedialog.cpp" line="365"/>
         <source>File error</source>
         <translation>Chyba souboru</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="241"/>
-        <location filename="../dialogs/updatedialog.cpp" line="360"/>
+        <location filename="../dialogs/updatedialog.cpp" line="247"/>
+        <location filename="../dialogs/updatedialog.cpp" line="366"/>
         <source>Could not open temporary file:
 %1</source>
         <translation>Nelze otevřít dočasný soubor:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="262"/>
+        <location filename="../dialogs/updatedialog.cpp" line="268"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation>Nelze uložit stažený soubor:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="316"/>
+        <location filename="../dialogs/updatedialog.cpp" line="322"/>
         <source>Do you want to update and restart QOwnNotes?</source>
         <translation>Chcete aktualizovat a restartovat QOwnNotes?</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="332"/>
-        <location filename="../dialogs/updatedialog.cpp" line="419"/>
-        <location filename="../dialogs/updatedialog.cpp" line="428"/>
-        <location filename="../dialogs/updatedialog.cpp" line="437"/>
-        <location filename="../dialogs/updatedialog.cpp" line="446"/>
-        <location filename="../dialogs/updatedialog.cpp" line="456"/>
-        <location filename="../dialogs/updatedialog.cpp" line="465"/>
+        <location filename="../dialogs/updatedialog.cpp" line="338"/>
+        <location filename="../dialogs/updatedialog.cpp" line="425"/>
+        <location filename="../dialogs/updatedialog.cpp" line="434"/>
+        <location filename="../dialogs/updatedialog.cpp" line="443"/>
+        <location filename="../dialogs/updatedialog.cpp" line="452"/>
+        <location filename="../dialogs/updatedialog.cpp" line="462"/>
+        <location filename="../dialogs/updatedialog.cpp" line="471"/>
         <source>Error</source>
         <translation>Chyba</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="333"/>
+        <location filename="../dialogs/updatedialog.cpp" line="339"/>
         <source>Could not find updater file:
 %1</source>
         <translation type="unfinished">Could not find updater file:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="420"/>
+        <location filename="../dialogs/updatedialog.cpp" line="426"/>
         <source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished">Updater script &apos;%1&apos; doesn&apos;t exist!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="429"/>
+        <location filename="../dialogs/updatedialog.cpp" line="435"/>
         <source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
         <translation type="unfinished">Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="438"/>
-        <location filename="../dialogs/updatedialog.cpp" line="447"/>
+        <location filename="../dialogs/updatedialog.cpp" line="444"/>
+        <location filename="../dialogs/updatedialog.cpp" line="453"/>
         <source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
         <translation type="unfinished">Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="457"/>
+        <location filename="../dialogs/updatedialog.cpp" line="463"/>
         <source>Couldn&apos;t find updater script: %1</source>
         <translation type="unfinished">Couldn&apos;t find updater script: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="466"/>
+        <location filename="../dialogs/updatedialog.cpp" line="472"/>
         <source>Couldn&apos;t find unzip executable: %1</source>
         <translation type="unfinished">Couldn&apos;t find unzip executable: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="315"/>
-        <location filename="../dialogs/updatedialog.cpp" line="472"/>
+        <location filename="../dialogs/updatedialog.cpp" line="321"/>
+        <location filename="../dialogs/updatedialog.cpp" line="478"/>
         <source>Proceed with update</source>
         <translation>Pokračovat v aktualizaci</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="473"/>
+        <location filename="../dialogs/updatedialog.cpp" line="479"/>
         <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
         <translation>Stahování je dokončeno. Chcete aktualizovat a restartovat QOwnNotes?</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="317"/>
-        <location filename="../dialogs/updatedialog.cpp" line="475"/>
+        <location filename="../dialogs/updatedialog.cpp" line="323"/>
+        <location filename="../dialogs/updatedialog.cpp" line="481"/>
         <source>&amp;Update and restart</source>
         <translation>&amp;Aktualizovat a restartovat</translation>
     </message>

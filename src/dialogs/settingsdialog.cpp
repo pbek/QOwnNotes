@@ -315,6 +315,10 @@ void SettingsDialog::initPortableModePage() {
 #endif
     }
 
+    // inject some generic CSS styles
+    ui->portableModeInfoTextBrowser->document()->setDefaultStyleSheet(
+            Utils::Misc::genericCSS());
+
     ui->portableModeInfoTextBrowser->setHtml(text);
 }
 

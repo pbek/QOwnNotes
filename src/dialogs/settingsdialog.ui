@@ -816,7 +816,7 @@
                 <item row="1" column="1">
                  <layout class="QVBoxLayout" name="verticalLayout">
                   <item>
-                   <widget class="QLabel" name="installInfoTextLabel1">
+                   <widget class="Label" name="installInfoTextLabel1">
                     <property name="text">
                      <string>Please install the latest version of &lt;a href=&quot;https://apps.owncloud.com/content/show.php?content=173817&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</string>
                     </property>
@@ -829,7 +829,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="installInfoTextLabel2">
+                   <widget class="Label" name="installInfoTextLabel2">
                     <property name="text">
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You also need to have the two ownCloud core apps &lt;span style=&quot; font-weight:600;&quot;&gt;Versions&lt;/span&gt; and &lt;span style=&quot; font-weight:600;&quot;&gt;Deleted files&lt;/span&gt; enabled on your ownCloud server (that should be the default).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
@@ -842,7 +842,7 @@
                    </widget>
                   </item>
                   <item>
-                   <widget class="QLabel" name="installInfoTextLabel3">
+                   <widget class="Label" name="installInfoTextLabel3">
                     <property name="text">
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You will still need the &lt;a href=&quot;https://owncloud.org/&quot;&gt;&lt;span style=&quot; font-weight:600&quot;&gt;ownCloud sync client&lt;/span&gt;&lt;/a&gt; (or an other desktop sync client) to sync your notes!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
@@ -1401,7 +1401,7 @@
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QLabel" name="letsEncryptInfoLabel">
+                 <widget class="Label" name="letsEncryptInfoLabel">
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href=&quot;https://letsencrypt.org/&quot;&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -1905,7 +1905,7 @@
                     </property>
                     <layout class="QGridLayout" name="gridLayout_10">
                      <item row="2" column="0">
-                      <widget class="QLabel" name="label_8">
+                      <widget class="Label" name="label_8">
                        <property name="text">
                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes&quot;&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                        </property>
@@ -2726,7 +2726,7 @@
                               <number>0</number>
                              </property>
                              <item row="6" column="0" colspan="4">
-                              <widget class="QLabel" name="scriptValidationLabel">
+                              <widget class="Label" name="scriptValidationLabel">
                                <property name="text">
                                 <string/>
                                </property>
@@ -2777,7 +2777,7 @@
                               </widget>
                              </item>
                              <item row="7" column="0" colspan="4">
-                              <widget class="QLabel" name="scriptInfoLabel">
+                              <widget class="Label" name="scriptInfoLabel">
                                <property name="wordWrap">
                                 <bool>true</bool>
                                </property>
@@ -3417,7 +3417,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="0" column="0">
-                 <widget class="QLabel" name="label">
+                 <widget class="Label" name="label">
                   <property name="text">
                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=&quot; font-weight:600;&quot;&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=&quot; font-weight:600;&quot;&gt;issue&lt;/span&gt; on the &lt;a href=&quot;https://github.com/pbek/QOwnNotes/issues&quot;&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=&quot; font-weight:600;&quot;&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
@@ -3950,9 +3950,9 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item row="1" column="0" colspan="2">
-                 <widget class="QLabel" name="label_14">
+                 <widget class="Label" name="label_14">
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;time formats&lt;/span&gt;&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href=&quot;http://docs.qownnotes.org/en/develop/time-formats.html&quot;&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                   <property name="openExternalLinks">
                    <bool>true</bool>
@@ -4453,6 +4453,11 @@ git config --global user.name &quot;Your name&quot;</string>
    <extends>QWidget</extends>
    <header location="global">libraries/qttoolbareditor/src/toolbar_editor.hpp</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/label.h</header>
   </customwidget>
  </customwidgets>
  <resources>

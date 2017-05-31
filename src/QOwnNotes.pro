@@ -104,7 +104,8 @@ SOURCES += main.cpp\
     dialogs/filedialog.cpp \
     dialogs/scriptrepositorydialog.cpp \
     widgets/scriptsettingwidget.cpp \
-    api/scriptapi.cpp
+    api/scriptapi.cpp \
+    widgets/label.cpp
 
 HEADERS  += mainwindow.h \
     build_number.h \
@@ -176,7 +177,8 @@ HEADERS  += mainwindow.h \
     dialogs/filedialog.h \
     dialogs/scriptrepositorydialog.h \
     widgets/scriptsettingwidget.h \
-    api/scriptapi.h
+    api/scriptapi.h \
+    widgets/label.h
 
 FORMS    += mainwindow.ui \
     dialogs/notediffdialog.ui \

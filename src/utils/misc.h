@@ -15,6 +15,10 @@
 #pragma once
 
 #include <QString>
+#include <QUrl>
+#include <QFile>
+#include <QByteArray>
+#include <QStringList>
 
 /*  Miscellaneous functions that can be useful */
 
@@ -54,5 +58,6 @@ namespace Utils {
         void needRestart();
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
+        QString genericCSS();
     }
 }

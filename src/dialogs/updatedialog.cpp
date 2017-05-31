@@ -22,6 +22,12 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     ui->setupUi(this);
     ui->downloadProgressBar->hide();
 
+    // inject some generic CSS styles
+    ui->changeLogEdit->document()->setDefaultStyleSheet(
+            Utils::Misc::genericCSS());
+//    ui->label_4->setText("<style>" + Utils::Misc::genericCSS() +
+//                                 "</style>" + ui->label_4->text());
+
     ui->changeLogEdit->setHtml(changesHtml);
     ui->versionLabel->setText("Version " + releaseVersionString + " - build " +
                               QString::number(releaseBuildNumber));

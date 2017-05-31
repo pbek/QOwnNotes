@@ -216,6 +216,8 @@ set(SOURCE_FILES
     widgets/logwidget.cpp
     widgets/logwidget.h
     widgets/logwidget.ui
+    widgets/label.cpp
+    widgets/label.h
     widgets/scriptsettingwidget.cpp
     widgets/scriptsettingwidget.h
     widgets/scriptsettingwidget.ui

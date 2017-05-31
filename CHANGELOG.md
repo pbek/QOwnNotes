@@ -6,6 +6,10 @@
   <kbd>⇧</kbd> + <kbd>U</kbd> (for [Issue #396](https://github.com/pbek/QOwnNotes/issues/396))
     - you now can also use *proper case* and *sentence case*
     - this was superbly done by @quailiff, a big thank you
+- more styling for links and `<kbd>` tags in various labels and text-browsers 
+  was now done to fix problems with operating systems that don't set default
+  colors fitting to be used in dark mode
+  (for [Issue #597](https://github.com/pbek/QOwnNotes/issues/597))
     
 ## 17.05.14
 - when moving or copying notes to an other note subfolder tagging information

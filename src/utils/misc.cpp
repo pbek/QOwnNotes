@@ -25,6 +25,7 @@
 #include <QNetworkRequest>
 #include <QNetworkReply>
 #include <QTimer>
+#include <QSettings>
 #include "misc.h"
 
 #ifdef Q_OS_WIN
@@ -706,4 +707,21 @@ bool Utils::Misc::downloadUrlToFile(QUrl url, QFile *file) {
     }
 
     return false;
+}
+
+/**
+ * Returns generic CSS styles for displaying HTML in QTextBrowser, QLabel or
+ * similar
+ *
+ * @return
+ */
+QString Utils::Misc::genericCSS() {
+    QSettings settings;
+    bool darkModeColors = settings.value("darkModeColors").toBool();
+    QString color = darkModeColors ? "#ffd694" : "#ffaa00";
+    QString cssStyles = "a {color: " + color +  "}";
+
+    color = darkModeColors ? "#5b5b5b" : "#e8e8e8";
+    cssStyles += "kbd {background-color: " + color +  "}";
+    return cssStyles;
 }
