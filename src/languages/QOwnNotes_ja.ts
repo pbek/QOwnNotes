@@ -864,13 +864,18 @@
         <translation type="unfinished">Export note as HTML</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1713"/>
+        <source>Cycle text case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="1863"/>
         <source>Unlock panels</source>
         <translation>パネルの固定解除</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1872"/>
-        <location filename="../mainwindow.cpp" line="8737"/>
+        <location filename="../mainwindow.cpp" line="8735"/>
         <source>Remove current workspace</source>
         <translation>現在のワークスペースを削除</translation>
     </message>
@@ -1057,9 +1062,8 @@
         <translation>ノートを共有</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1713"/>
         <source>Toggle text case</source>
-        <translation>大文字小文字の変換</translation>
+        <translation type="vanished">大文字小文字の変換</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1725"/>
@@ -1152,7 +1156,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3928"/>
         <location filename="../mainwindow.cpp" line="4312"/>
         <location filename="../mainwindow.cpp" line="5424"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Cancel</source>
         <translation>中止(&amp;C)</translation>
     </message>
@@ -1203,7 +1207,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3702"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3928"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Remove</source>
         <translation>削除(&amp;R)</translation>
     </message>
@@ -1500,40 +1504,40 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         <translation>HTML ファイル</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Create new workspace</source>
         <translation>新しいワークスペースの作成</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Workspace name:</source>
         <translation>ワークスペース名:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8651"/>
+        <location filename="../mainwindow.cpp" line="8649"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation type="unfinished">full</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8658"/>
+        <location filename="../mainwindow.cpp" line="8656"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation type="unfinished">minimal</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8738"/>
+        <location filename="../mainwindow.cpp" line="8736"/>
         <source>Remove the current workspace?</source>
         <translation>現在のワークスペースを削除しますか？</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Rename workspace</source>
         <translation>ワークスペース名の変更</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8896"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation type="unfinished">
@@ -1541,12 +1545,12 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9021"/>
+        <location filename="../mainwindow.cpp" line="9019"/>
         <source>Copy image file path</source>
         <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="9159"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>

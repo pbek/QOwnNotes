@@ -864,13 +864,18 @@
         <translation>Exportar nota como HTML</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1713"/>
+        <source>Cycle text case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="1863"/>
         <source>Unlock panels</source>
         <translation>Destravar Painéis</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1872"/>
-        <location filename="../mainwindow.cpp" line="8737"/>
+        <location filename="../mainwindow.cpp" line="8735"/>
         <source>Remove current workspace</source>
         <translation>Remover o espaço de trabalho atual</translation>
     </message>
@@ -1057,9 +1062,8 @@
         <translation>Compartilhar nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1713"/>
         <source>Toggle text case</source>
-        <translation>Trocar texto entre caixa alta/baixa</translation>
+        <translation type="vanished">Trocar texto entre caixa alta/baixa</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1725"/>
@@ -1152,7 +1156,7 @@ Restaurar a nota atual? </translation>
         <location filename="../mainwindow.cpp" line="3928"/>
         <location filename="../mainwindow.cpp" line="4312"/>
         <location filename="../mainwindow.cpp" line="5424"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Cancelar</translation>
     </message>
@@ -1204,7 +1208,7 @@ Restaurar a nota atual? </translation>
         <location filename="../mainwindow.cpp" line="3702"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3928"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Remove</source>
         <translation>&amp;Excluir</translation>
     </message>
@@ -1511,40 +1515,40 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         <translation>Arquivos HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Create new workspace</source>
         <translation>Criar novo espaço de trabalho</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Workspace name:</source>
         <translation>Nome do espaço de trabalho:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8651"/>
+        <location filename="../mainwindow.cpp" line="8649"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>total</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8658"/>
+        <location filename="../mainwindow.cpp" line="8656"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8738"/>
+        <location filename="../mainwindow.cpp" line="8736"/>
         <source>Remove the current workspace?</source>
         <translation>Remover o espaço de trabalho atual?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Rename workspace</source>
         <translation>Renomear o espaço de trabalho</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8896"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -1553,12 +1557,12 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9021"/>
+        <location filename="../mainwindow.cpp" line="9019"/>
         <source>Copy image file path</source>
         <translation>Caminho do arquivo de imagem para cópia</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="9159"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>

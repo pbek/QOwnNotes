@@ -864,13 +864,18 @@
         <translation>Esporta nota come HTML</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1713"/>
+        <source>Cycle text case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="1863"/>
         <source>Unlock panels</source>
         <translation>Sblocca pannelli</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1872"/>
-        <location filename="../mainwindow.cpp" line="8737"/>
+        <location filename="../mainwindow.cpp" line="8735"/>
         <source>Remove current workspace</source>
         <translation>Rimuovi area di lavoro attuale</translation>
     </message>
@@ -1057,9 +1062,8 @@
         <translation>Condividi nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1713"/>
         <source>Toggle text case</source>
-        <translation>Cambia maiuscolo/minuscolo</translation>
+        <translation type="vanished">Cambia maiuscolo/minuscolo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1725"/>
@@ -1151,7 +1155,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3928"/>
         <location filename="../mainwindow.cpp" line="4312"/>
         <location filename="../mainwindow.cpp" line="5424"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Annulla</translation>
     </message>
@@ -1203,7 +1207,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3702"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3928"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Remove</source>
         <translation>&amp;Elimina</translation>
     </message>
@@ -1512,40 +1516,40 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         <translation>File html</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Create new workspace</source>
         <translation>Crea nuova area di lavoro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Workspace name:</source>
         <translation>Nome area di lavoro:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8651"/>
+        <location filename="../mainwindow.cpp" line="8649"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>completo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8658"/>
+        <location filename="../mainwindow.cpp" line="8656"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimale</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8738"/>
+        <location filename="../mainwindow.cpp" line="8736"/>
         <source>Remove the current workspace?</source>
         <translation>Rimuovere l&apos;area di lavoro attuale?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Rename workspace</source>
         <translation>Rinomina area di lavoro</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8896"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -1554,12 +1558,12 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9021"/>
+        <location filename="../mainwindow.cpp" line="9019"/>
         <source>Copy image file path</source>
         <translation>Copia percorso del file dell&apos;immagine</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="9159"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>

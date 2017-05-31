@@ -864,13 +864,18 @@
         <translation>Eksportiraj bilješku kao HTML</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1713"/>
+        <source>Cycle text case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="1863"/>
         <source>Unlock panels</source>
         <translation>Otključaj kontrolnu ploču</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1872"/>
-        <location filename="../mainwindow.cpp" line="8737"/>
+        <location filename="../mainwindow.cpp" line="8735"/>
         <source>Remove current workspace</source>
         <translation>Ukloni izabrani radni prostor</translation>
     </message>
@@ -1057,9 +1062,8 @@
         <translation>Podijeli bilješku</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1713"/>
         <source>Toggle text case</source>
-        <translation>Promijeni verzal teksta</translation>
+        <translation type="vanished">Promijeni verzal teksta</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1725"/>
@@ -1151,7 +1155,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3928"/>
         <location filename="../mainwindow.cpp" line="4312"/>
         <location filename="../mainwindow.cpp" line="5424"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Cancel</source>
         <translation>&amp;Odustani</translation>
     </message>
@@ -1204,7 +1208,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3702"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3928"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Remove</source>
         <translation>&amp;Izbriši</translation>
     </message>
@@ -1519,40 +1523,40 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation>HTML datoteke</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Create new workspace</source>
         <translation>Stvori novu radnu površinu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Workspace name:</source>
         <translation>Naziv radne površine:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8651"/>
+        <location filename="../mainwindow.cpp" line="8649"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>potpuna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8658"/>
+        <location filename="../mainwindow.cpp" line="8656"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>minimalna</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8738"/>
+        <location filename="../mainwindow.cpp" line="8736"/>
         <source>Remove the current workspace?</source>
         <translation>Obrisati trenutnu radnu površinu?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Rename workspace</source>
         <translation>Preimenuj radnu površinu</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8896"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -1562,12 +1566,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9021"/>
+        <location filename="../mainwindow.cpp" line="9019"/>
         <source>Copy image file path</source>
         <translation>Kopiraj put do datoteke slike</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="9159"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>

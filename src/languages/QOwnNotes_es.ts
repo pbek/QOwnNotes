@@ -864,13 +864,18 @@
         <translation>Exportar nota como HTML</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="1713"/>
+        <source>Cycle text case</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="1863"/>
         <source>Unlock panels</source>
         <translation>Desbloquear paneles</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1872"/>
-        <location filename="../mainwindow.cpp" line="8737"/>
+        <location filename="../mainwindow.cpp" line="8735"/>
         <source>Remove current workspace</source>
         <translation>Eliminar espacio de trabajo actual</translation>
     </message>
@@ -1057,9 +1062,8 @@
         <translation>Compartir nota</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="1713"/>
         <source>Toggle text case</source>
-        <translation>Alternar mayúsculas y minúsculas</translation>
+        <translation type="vanished">Alternar mayúsculas y minúsculas</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="1725"/>
@@ -1151,7 +1155,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3928"/>
         <location filename="../mainwindow.cpp" line="4312"/>
         <location filename="../mainwindow.cpp" line="5424"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -1203,7 +1207,7 @@ Restore current note?</source>
         <location filename="../mainwindow.cpp" line="3702"/>
         <location filename="../mainwindow.cpp" line="3731"/>
         <location filename="../mainwindow.cpp" line="3928"/>
-        <location filename="../mainwindow.cpp" line="8739"/>
+        <location filename="../mainwindow.cpp" line="8737"/>
         <source>&amp;Remove</source>
         <translation>Elimina</translation>
     </message>
@@ -1512,40 +1516,40 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         <translation>Archivos HTML</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
         <source>Create new workspace</source>
         <translation>Crear nuevo espacio de trabajo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8529"/>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8527"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Workspace name:</source>
         <translation>Nombre del espacio de trabajo:</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8651"/>
+        <location filename="../mainwindow.cpp" line="8649"/>
         <source>full</source>
         <comment>full workspace</comment>
         <translation>completo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8658"/>
+        <location filename="../mainwindow.cpp" line="8656"/>
         <source>minimal</source>
         <comment>minimal workspace</comment>
         <translation>mínimo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8738"/>
+        <location filename="../mainwindow.cpp" line="8736"/>
         <source>Remove the current workspace?</source>
         <translation>¿Eliminar el espacio de trabajo actual?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="8776"/>
+        <location filename="../mainwindow.cpp" line="8774"/>
         <source>Rename workspace</source>
         <translation>Renombrar espacio de trabajo</translation>
     </message>
     <message numerus="yes">
-        <location filename="../mainwindow.cpp" line="8898"/>
+        <location filename="../mainwindow.cpp" line="8896"/>
         <source>%n chars</source>
         <comment>characters</comment>
         <translation>
@@ -1554,12 +1558,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
         </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9021"/>
+        <location filename="../mainwindow.cpp" line="9019"/>
         <source>Copy image file path</source>
         <translation>Copiar ruta a la imagen</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="9161"/>
+        <location filename="../mainwindow.cpp" line="9159"/>
         <source>Select file to insert</source>
         <translation type="unfinished"></translation>
     </message>

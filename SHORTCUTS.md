@@ -67,7 +67,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>Ctrl</kbd> + <kbd>I</kbd> formats the selected text italic 
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
+- <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item
@@ -159,7 +159,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>B</kbd> formats the selected text bold 
 - <kbd>⌘</kbd> + <kbd>I</kbd> formats the selected text italic 
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>S</kbd> strikes out the selected text
-- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> toggles the case of the selected text
+- <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>U</kbd> cycles through the cases of the selected text
 - <kbd>Tab</kbd> indents the selected text (also works on multiple lines)
     - <kbd>⇧</kbd> + <kbd>Tab</kbd> un-indents the selected text
 - <kbd>Tab</kbd> after an unordered list character indents the list item

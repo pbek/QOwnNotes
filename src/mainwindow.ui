@@ -1710,7 +1710,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</normaloff>:/icons/breeze-qownnotes/16x16/format-text-capitalize.svg</iconset>
    </property>
    <property name="text">
-    <string>Toggle text case</string>
+    <string>Cycle text case</string>
    </property>
    <property name="shortcut">
     <string notr="true">Ctrl+Shift+U</string>

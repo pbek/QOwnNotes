@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.06.0
+- you can now cycle through text cases of the selected text instead of just 
+  toggling uppercase and lowercase with the shortcut <kbd>Ctrl</kbd> +
+  <kbd>⇧</kbd> + <kbd>U</kbd> (for [Issue #396](https://github.com/pbek/QOwnNotes/issues/396))
+    - you now can also use *proper case* and *sentence case*
+    - this was superbly done by @quailiff, a big thank you
+    
 ## 17.05.14
 - when moving or copying notes to an other note subfolder tagging information
   will now be restored (for [Issue #595](https://github.com/pbek/QOwnNotes/issues/595))
