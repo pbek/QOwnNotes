@@ -4,6 +4,7 @@
 - the Evernote import now supports importing file attachments with the 
   correct placement in the note (for [Issue #552](https://github.com/pbek/QOwnNotes/issues/552))
     - the placement of imported images was also improved
+- added more Italian and German translation (thank you mlocati and bigant)
 
 ## 17.06.0
 - you can now cycle through text cases of the selected text instead of just 

@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Anhänge importieren</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
@@ -867,7 +867,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Groß-/ Kleinschreibung umschalten</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -977,7 +977,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2049"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Anhang einfügen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
@@ -1415,12 +1415,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="5784"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Anhang wird eingefügt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5789"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Anhang wurde eingefügt</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5799"/>
@@ -1563,7 +1563,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="9159"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Einzufügende Datei auswählen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
@@ -2582,7 +2582,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="124"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Aktuell installierte Version:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
@@ -2634,22 +2634,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="251"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Aktualisieren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Das Skript aktualisieren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="254"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Neu installieren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="255"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Das Skript neu installieren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
@@ -2664,12 +2664,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Download fehlgeschlagen</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="384"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Das Skript konnte nicht heruntergeladen werden!</translation>
     </message>
   </context>
   <context>
@@ -2677,12 +2677,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Formular</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="76"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Name der Einstellung</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="141"/>
@@ -3283,7 +3283,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Bereiche</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -3417,93 +3417,93 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3955"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alle verfügbaren Zeitformate anzeigen unter &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;Zeitformate&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4198"/>
       <source>Tags panel</source>
-      <translation type="unfinished">Tags panel</translation>
+      <translation>Schlagwort-Bereich</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4204"/>
       <location filename="../dialogs/settingsdialog.ui" line="4306"/>
       <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Order</source>
-      <translation type="unfinished">Order</translation>
+      <translation>Reihenfolge</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4210"/>
       <location filename="../dialogs/settingsdialog.ui" line="4312"/>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Aufsteigend</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4217"/>
       <location filename="../dialogs/settingsdialog.ui" line="4319"/>
       <location filename="../dialogs/settingsdialog.ui" line="4394"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Absteigend</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4227"/>
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <location filename="../dialogs/settingsdialog.ui" line="4352"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>Sortieren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>
       <location filename="../dialogs/settingsdialog.ui" line="4279"/>
       <location filename="../dialogs/settingsdialog.ui" line="4358"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Alphabetisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Nach letzter Änderung/ Nutzung</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Suche »Schlagwort finden oder erstellen« ausblenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4260"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Notiz-Unterordner-Bereich</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Mit vollständigem Pfad anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <location filename="../dialogs/settingsdialog.ui" line="4365"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Nach letzter Änderung</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4299"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Name des Root-Ordners anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4329"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Suche »Notiz-Unterordner finden oder erstellen« ausblenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4336"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Notiz-Unterordner als vollständigen Baum anzeigen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4346"/>
       <source>Notes panel</source>
-      <translation type="unfinished">Notes panel</translation>
+      <translation>Notiz-Bereich</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
@@ -3631,7 +3631,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2880"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Der Name</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3069"/>
