@@ -6,6 +6,7 @@
 #include <helpers/htmlentities.h>
 #include <utils/misc.h>
 #include <entities/tag.h>
+#include <QCryptographicHash>
 #include "evernoteimportdialog.h"
 #include "ui_evernoteimportdialog.h"
 #include "filedialog.h"
@@ -115,7 +116,6 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
 
     query.evaluateTo(&result);
     QRegularExpressionMatch match;
-    int missingImageCount = 0;
 
     while (!result.next().isNull()) {
         QString objectType;
@@ -161,15 +161,16 @@ QString EvernoteImportDialog::importImages(QString content, QXmlQuery query) {
             objectId = match.captured(1);
         }
 
-        // if no object id was found we will use a fallback id so we can
-        // import all missing images
-        if (objectId.isEmpty()) {
-            objectId = "obj" + QString::number(++missingImageCount);
-        }
-
         QString data;
         query.setQuery("data/text()");
         query.evaluateTo(&data);
+
+        // if there is no object id set we generate the hash ourselves
+        if (objectId.isEmpty()) {
+            objectId = QString(QCryptographicHash::hash(
+                    QByteArray::fromBase64(data.toLatin1()),
+                    QCryptographicHash::Md5).toHex());
+        }
 
         // store data in the QHash
         mediaFileDataHash[objectId].data = data;
@@ -258,7 +259,6 @@ QString EvernoteImportDialog::importAttachments(QString content,
 
     query.evaluateTo(&result);
     QRegularExpressionMatch match;
-    int missingAttachmentCount = 0;
 
     while (!result.next().isNull()) {
         QString objectType;
@@ -302,15 +302,16 @@ QString EvernoteImportDialog::importAttachments(QString content,
             objectId = match.captured(1);
         }
 
-        // if no object id was found we will use a fallback id so we can
-        // import all missing attachments
-        if (objectId.isEmpty()) {
-            objectId = "obj" + QString::number(++missingAttachmentCount);
-        }
-
         QString data;
         query.setQuery("data/text()");
         query.evaluateTo(&data);
+
+        // if there is no object id set we generate the hash ourselves
+        if (objectId.isEmpty()) {
+            objectId = QString(QCryptographicHash::hash(
+                    QByteArray::fromBase64(data.toLatin1()),
+                    QCryptographicHash::Md5).toHex());
+        }
 
         // find the filename
         QString fileName;

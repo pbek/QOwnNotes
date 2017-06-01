@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.06.1
+- the Evernote import now supports importing file attachments with the 
+  correct placement in the note (for [Issue #552](https://github.com/pbek/QOwnNotes/issues/552))
+    - the placement of imported images was also improved
+
 ## 17.06.0
 - you can now cycle through text cases of the selected text instead of just 
   toggling uppercase and lowercase with the shortcut <kbd>Ctrl</kbd> +
