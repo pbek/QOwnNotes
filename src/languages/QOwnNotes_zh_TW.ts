@@ -61,12 +61,12 @@
       <translation type="unfinished">Import attachments</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="38"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
       <translation type="unfinished">Enex files</translation>
     </message>
     <message>
-      <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
+      <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
       <translation type="unfinished">Select Evernote enex file to import</translation>
     </message>
@@ -2401,22 +2401,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">default</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="855"/>
+      <location filename="../entities/note.cpp" line="861"/>
       <source>Could not store note file: %1 - Error message: %2</source>
       <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1534"/>
+      <location filename="../entities/note.cpp" line="1540"/>
       <source>Could not read image file: %1</source>
       <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2025"/>
+      <location filename="../entities/note.cpp" line="2031"/>
       <source>Note filename changed</source>
       <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2026"/>
+      <location filename="../entities/note.cpp" line="2032"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -2562,13 +2562,13 @@ Are the folder and the file writeable?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
       <source>Installs the script</source>
       <translation type="unfinished">Installs the script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="272"/>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="262"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
       <source>Install</source>
       <translation type="unfinished">Install</translation>
     </message>
@@ -2588,62 +2588,82 @@ Are the folder and the file writeable?</translation>
       <translation type="unfinished">Minimum app version:</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.ui" line="372"/>
+      <location filename="../dialogs/scriptrepositorydialog.ui" line="398"/>
       <source>Name</source>
       <translation type="unfinished">Name</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.ui" line="387"/>
+      <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
       <translation type="unfinished">Enter your query text</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.ui" line="390"/>
+      <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
       <translation type="unfinished">Find script</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="240"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
+      <source>Authors</source>
+      <translation type="unfinished">Authors</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
+      <source>Author</source>
+      <translation type="unfinished">Author</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
+      <source>Supported platforms</source>
+      <translation type="unfinished">Supported platforms</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
+      <source>Supported platform</source>
+      <translation type="unfinished">Supported platform</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Open repository</source>
       <translation type="unfinished">Open repository</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="251"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Update</source>
       <translation type="unfinished">Update</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="264"/>
       <source>Updates the script</source>
       <translation type="unfinished">Updates the script</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="254"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="266"/>
       <source>Reinstall</source>
       <translation type="unfinished">Reinstall</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="255"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="267"/>
       <source>Reinstalls the script</source>
       <translation type="unfinished">Reinstalls the script</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="380"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="392"/>
       <source>Install successful</source>
       <translation type="unfinished">Install successful</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="381"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
       <source>The script was successfully installed!</source>
       <translation type="unfinished">The script was successfully installed!</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="383"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Download failed</source>
       <translation type="unfinished">Download failed</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="384"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
       <source>The script could not be downloaded!</source>
       <translation type="unfinished">The script could not be downloaded!</translation>
     </message>

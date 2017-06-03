@@ -15,6 +15,8 @@
     - this information will be viewed in the *Script repository* dialog
     - if the platform you are running QOwnNotes on is not supported by the script
       the item will be colored grey in the script list of the *Script repository*
+- added more Spanish and Brazilian Portuguese translation (thank you
+  richarson and mlimacarlos)
 
 ## 17.06.1
 - the Evernote import now supports importing file attachments with the 
