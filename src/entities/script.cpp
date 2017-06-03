@@ -23,6 +23,7 @@
 #include <utils/misc.h>
 #include <QtCore/QJsonArray>
 #include <services/metricsservice.h>
+#include <services/updateservice.h>
 
 
 Script::Script() {
@@ -527,7 +528,9 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
     description = description.replace("\n", "<br>");
     script = jsonObject.value("script").toString();
     QJsonArray authors = jsonObject.value("authors").toArray();
+    QJsonArray platforms = jsonObject.value("platforms").toArray();
 
+    // generate the author list
     richAuthorList.clear();
     foreach(const QJsonValue &value, authors) {
             QString author = value.toString().trimmed();
@@ -541,8 +544,34 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
 
             richAuthorList << author;
         }
-
     richAuthorText = richAuthorList.join(", ");
+
+    // generate the platform list
+    platformList.clear();
+    richPlatformList.clear();
+    foreach(const QJsonValue &value, platforms) {
+            QString platform = value.toString().trimmed();
+            platformList << platform;
+        }
+    if (platformList.count() == 0) {
+        platformList << "linux" << "macos" << "windows";
+    }
+    QHash<QString, QString> platformHash;
+    platformHash["linux"] = "Linux";
+    platformHash["macos"] = "macOS";
+    platformHash["windows"] = "Windows";
+    foreach(QString platform, platformList) {
+            if (platformHash.contains(platform)) {
+                richPlatformList << platformHash[platform];
+            }
+
+        }
+    QString currentPlatform = QString(PLATFORM);
+    if (currentPlatform == "macosx") {
+        currentPlatform = "macos";
+    }
+    platformSupported = platformList.contains(currentPlatform);
+    richPlatformText = richPlatformList.join(", ");
 
     // get the resources file names
     QJsonArray resourcesArray = jsonObject.value("resources").toArray();

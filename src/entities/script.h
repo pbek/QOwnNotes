@@ -32,8 +32,12 @@ public:
     QString script;
     QString description;
     QStringList richAuthorList;
+    QStringList platformList;
+    QStringList richPlatformList;
     QStringList resources;
     QString richAuthorText;
+    QString richPlatformText;
+    bool platformSupported;
 };
 
 class Script

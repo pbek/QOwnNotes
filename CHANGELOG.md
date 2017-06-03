@@ -2,11 +2,19 @@
 
 ## 17.06.2
 - there are now new properties for notes in the scripting engine `fileCreated`
-  and `fileLastModified` 
+  and `fileLastModified` (for [Issue #599](https://github.com/pbek/QOwnNotes/issues/599))
   - you can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
     to work with these date properties
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
+- when posting a script to the *Script repository* you can now define which 
+  platforms are supported by the script with the new `platforms` parameter
+  (for [Script repository issue #3](https://github.com/qownnotes/scripts/issues/3))
+    - for an example please take a look at
+      [info.json](https://github.com/qownnotes/scripts/blob/master/example-script/info.json)
+    - this information will be viewed in the *Script repository* dialog
+    - if the platform you are running QOwnNotes on is not supported by the script
+      the item will be colored grey in the script list of the *Script repository*
 
 ## 17.06.1
 - the Evernote import now supports importing file attachments with the 

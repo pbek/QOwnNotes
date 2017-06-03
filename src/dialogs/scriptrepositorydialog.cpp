@@ -160,11 +160,17 @@ void ScriptRepositoryDialog::parseCodeSearchReply(const QByteArray &arr) {
 void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(arr);
     QJsonObject jsonObject = jsonResponse.object();
-    QString name = jsonObject.value("name").toString();
+    ScriptInfoJson infoJson(jsonObject);
+    QString name = infoJson.name;
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
     item->setText(0, name);
     item->setData(0, Qt::UserRole, QString(arr));
+
+    if (!infoJson.platformSupported) {
+        item->setTextColor(0, QColor("#aaaaaa"));
+    }
+
     ui->scriptTreeWidget->addTopLevelItem(item);
     ui->scriptTreeWidget->resizeColumnToContents(0);
     ui->scriptTreeWidget->setCurrentItem(ui->scriptTreeWidget->topLevelItem(0));
@@ -235,6 +241,12 @@ void ScriptRepositoryDialog::reloadCurrentScriptInfo() {
             ui->minAppVersionLabel->isVisible());
     ui->descriptionLabel->setText(infoJson.description);
     ui->authorLabel->setText(infoJson.richAuthorText);
+    ui->authorHeadlineLabel->setText((infoJson.richAuthorList.count() > 1 ?
+                                        tr("Authors") : tr("Author")) + ":");
+    ui->platformLabel->setText(infoJson.richPlatformText);
+    ui->platformHeadlineLabel->setText((infoJson.platformList.count() > 1 ?
+                                        tr("Supported platforms") :
+                                        tr("Supported platform")) + ":");
     ui->repositoryLinkLabel->setText(
             "<a href=\"https://github.com/qownnotes/scripts/tree/master/" +
                     infoJson.identifier + "\">" + tr("Open repository") +
