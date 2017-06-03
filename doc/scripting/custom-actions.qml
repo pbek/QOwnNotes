@@ -37,7 +37,9 @@ QtObject {
             case "openWithKWrite":
                 var note = script.currentNote();
                 var fileName = note.fullNoteFilePath;
-                script.startDetachedProcess("kwrite", [fileName]);
+                script.log(note.fileCreated.toISOString());
+                script.log(note.fileLastModified.getFullYear());
+                //script.startDetachedProcess("kwrite", [fileName]);
                 break;
 
             // create a new note with a custom content

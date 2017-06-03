@@ -557,7 +557,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHook(
  * Calls the encryptionHook function for an object
  *
  * @param object
- * @param text the text to encrypt or descrypt
+ * @param text the text to encrypt or decrypt
  * @param password the password
  * @param decrypt if false encryption is demanded, if true decryption is
  * demanded

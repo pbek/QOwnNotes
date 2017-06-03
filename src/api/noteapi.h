@@ -16,7 +16,9 @@ class NoteApi : public QObject, public Note {
     Q_PROPERTY(int noteSubFolderId READ getNoteSubFolderId())
     Q_PROPERTY(QString noteText READ getNoteText() WRITE setNoteText())
     Q_PROPERTY(QString decryptedNoteText READ getDecryptedNoteText()
-    WRITE setDecryptedNoteText())
+                       WRITE setDecryptedNoteText())
+    Q_PROPERTY(QDateTime fileCreated READ getFileCreated())
+    Q_PROPERTY(QDateTime fileLastModified READ getFileLastModified())
     Q_PROPERTY(bool hasDirtyData READ getHasDirtyData())
     Q_PROPERTY(QQmlListProperty<TagApi> tags READ tags)
 

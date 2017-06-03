@@ -1013,10 +1013,10 @@ encryptionHook
     /**
      * This function is called when text has to be encrypted or decrypted
      * 
-     * @param text string the text to encrypt or descrypt
+     * @param text string the text to encrypt or decrypt
      * @param password string the password
      * @param decrypt bool if false encryption is demanded, if true decryption is demanded
-     * @return the exncrypted or decrypted text
+     * @return the encrypted decrypted text
      */
     function encryptionHook(text, password, decrypt);
 
@@ -1043,8 +1043,20 @@ Note
         Q_PROPERTY(QString decryptedNoteText)
         Q_PROPERTY(bool hasDirtyData)
         Q_PROPERTY(QQmlListProperty<TagApi> tags)
+        Q_PROPERTY(QDateTime fileCreated)
+        Q_PROPERTY(QDateTime fileLastModified)
         Q_INVOKABLE QStringList tagNames();
     };
+
+You can use the methods from `Date <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date>`__
+to work with ``fileCreated`` or ``fileLastModified``.
+
+For example:
+
+.. code:: javascript
+
+    script.log(note.fileCreated.toISOString());
+    script.log(note.fileLastModified.getFullYear());
 
 Tag
 ~~~

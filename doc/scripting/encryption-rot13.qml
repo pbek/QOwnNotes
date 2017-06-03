@@ -15,10 +15,10 @@ QtObject {
     /**
      * This function is called when text has to be encrypted or decrypted
      * 
-     * @param text string the text to encrypt or descrypt
+     * @param text string the text to encrypt or decrypt
      * @param password string the password
      * @param decrypt bool if false encryption is demanded, if true decryption is demanded
-     * @return the exncrypted or decrypted text
+     * @return the encrypted decrypted text
      */
     function encryptionHook(text, password, decrypt) {
         // do the rot13 transformation

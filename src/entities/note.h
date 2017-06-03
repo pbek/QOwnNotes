@@ -142,6 +142,8 @@ public:
 
     QDateTime getFileLastModified();
 
+    QDateTime getFileCreated();
+
     QDateTime getModified();
 
     static int countAll();

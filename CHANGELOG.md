@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.06.2
+- there are now new properties for notes in the scripting engine `fileCreated`
+  and `fileLastModified` 
+  - you can use the methods from [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+    to work with these date properties
+  - for more information please take a look at the
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
+
 ## 17.06.1
 - the Evernote import now supports importing file attachments with the 
   correct placement in the note (for [Issue #552](https://github.com/pbek/QOwnNotes/issues/552))
