@@ -1,7 +1,7 @@
 Welcome to QOwnNotes
 ====================
 
-Welcome to your installation of **QOwnnotes**!
+Welcome to your installation of **QOwnNotes**!
 
 ## TODO
 - Be sure to setup your *ownCloud/Nextcloud server* in the **settings dialog**.
