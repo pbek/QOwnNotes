@@ -2030,6 +2030,9 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>Find scripts in script repository</string>
    </property>
+   <property name="shortcut">
+    <string notr="true">Alt+Shift+I</string>
+   </property>
   </action>
   <action name="actionScript_settings">
    <property name="icon">

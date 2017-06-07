@@ -38,6 +38,7 @@ public:
     QString richAuthorText;
     QString richPlatformText;
     bool platformSupported;
+    bool appVersionSupported;
 };
 
 class Script

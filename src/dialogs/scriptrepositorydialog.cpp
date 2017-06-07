@@ -167,7 +167,7 @@ void ScriptRepositoryDialog::parseInfoQMLReply(const QByteArray &arr) const {
     item->setText(0, name);
     item->setData(0, Qt::UserRole, QString(arr));
 
-    if (!infoJson.platformSupported) {
+    if (!infoJson.platformSupported || !infoJson.appVersionSupported) {
         item->setTextColor(0, QColor("#aaaaaa"));
     }
 
@@ -323,10 +323,29 @@ void ScriptRepositoryDialog::on_installButton_clicked() {
         return;
     }
 
-    ui->installButton->setEnabled(false);
+    ScriptInfoJson infoJson(jsonObject);
+    QString name = infoJson.name;
+    QString scriptName = infoJson.script;
 
-    QString name = jsonObject.value("name").toString();
-    QString scriptName = jsonObject.value("script").toString();
+    // check if platform is supported
+    if (!infoJson.platformSupported && QMessageBox::information(
+            this, tr("Platform not supported!"),
+            tr("Your platform is not supported by this script!\n"
+                       "Do you want to install it anyway?"),
+            tr("Install"), tr("Cancel"), QString::null,
+            0, 1) != 0) {
+        return;
+    }
+
+    // check if app version is supported
+    if (!infoJson.appVersionSupported) {
+        QMessageBox::information(
+                this, tr("Update app"),
+                tr("Please don't forget to update your installation of "
+                           "QOwnNotes to make this script work!"));
+    }
+
+    ui->installButton->setEnabled(false);
 
     // create or update the script in the database
     Script script = Script::fetchByIdentifier(identifier);

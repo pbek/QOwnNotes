@@ -12,3 +12,4 @@ Welcome to your installation of **QOwnNotes**!
 - Visit <http://www.qownnotes.org> for new releases of **QOwnNotes**.
 - Use the <note://Markdown-Cheatsheet> to explore the **Markdown syntax**.
 - Test the **Markdown view** on **linked notes** like <note://Markdown-Showcase>.
+- Open the [Script repository](https://github.com/qownnotes/scripts) with `Alt + Shift + I` to add some additional functionality to QOwnNotes

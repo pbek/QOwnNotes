@@ -24,6 +24,8 @@
 #include <QtCore/QJsonArray>
 #include <services/metricsservice.h>
 #include <services/updateservice.h>
+#include <libraries/versionnumber/versionnumber.h>
+#include <version.h>
 
 
 Script::Script() {
@@ -583,4 +585,8 @@ ScriptInfoJson::ScriptInfoJson(QJsonObject jsonObject) {
                 resources << fileName;
             }
         }
+
+    // check if app version is supported
+    appVersionSupported = VersionNumber(VERSION) >=
+            VersionNumber(minAppVersion);
 }

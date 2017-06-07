@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 17.06.3
+- you can now open the *Script repository dialog* with the Shortcut
+  <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd>
+- if you now try to install a script in the *Script repository* that doesn't 
+  support your platform you will get a dialog to cancel the installation
+  (for [Script repository issue #3](https://github.com/qownnotes/scripts/issues/3))
+- if you now try to install a script in the *Script repository* that needs a 
+  newer version of QOwnNotes you will get a notification to update the application
+ 
 ## 17.06.2
 - there are now new properties for notes in the scripting engine `fileCreated`
   and `fileLastModified` (for [Issue #599](https://github.com/pbek/QOwnNotes/issues/599))

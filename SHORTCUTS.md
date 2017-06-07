@@ -32,6 +32,7 @@ Important Shortcuts
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>Ctrl</kbd> + <kbd>S</kbd> manually saves modified notes
+- <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opens the Script repository dialog
 
 ### In the note search bar
 
@@ -124,6 +125,7 @@ Important Shortcuts
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>M</kbd> hides or shows the main menu bar
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>A</kbd> lets you search for actions
 - <kbd>⌘</kbd> + <kbd>S</kbd> manually saves modified notes
+- <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd> opens the Script repository dialog
 
 ### In the note search bar
 
