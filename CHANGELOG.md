@@ -15,7 +15,7 @@
   - you can use `mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true)`
     to force a reload of the note list
   - for more information please take a look at the
-    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#MainWindow)
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#mainwindow)
 - added more Italian translation (thank you mlocati)
 
 ## 17.06.2
