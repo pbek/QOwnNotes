@@ -31,6 +31,7 @@ HEADERS  += \
     $$APP_SRC_DIR/libraries/hoedown/*.h \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.h \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.h \
+    $$APP_SRC_DIR/libraries/versionnumber/versionnumber.h \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.h
 
 SOURCES += \
@@ -59,6 +60,7 @@ SOURCES += \
     $$APP_SRC_DIR/libraries/hoedown/*.c \
     $$APP_SRC_DIR/libraries/simplecrypt/simplecrypt.cpp \
     $$APP_SRC_DIR/libraries/botan/botanwrapper.cpp \
+    $$APP_SRC_DIR/libraries/versionnumber/versionnumber.cpp \
     $$APP_SRC_DIR/libraries/qmarkdowntextedit/markdownhighlighter.cpp
 
 include($$APP_SRC_DIR/libraries/botan/botan.pri)

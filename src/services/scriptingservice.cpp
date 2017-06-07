@@ -22,14 +22,15 @@
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
-
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty("script", this);
+#ifndef INTEGRATION_TESTS
     _engine->rootContext()->setContextProperty(
             "mainWindow", qApp->property("mainWindow").value<MainWindow *>());
+#endif
 
     // deprecated
     qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");
