@@ -16,6 +16,7 @@
     to force a reload of the note list
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#MainWindow)
+- added more Italian translation (thank you mlocati)
 
 ## 17.06.2
 - there are now new properties for notes in the scripting engine `fileCreated`
