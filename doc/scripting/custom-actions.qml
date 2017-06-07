@@ -35,9 +35,9 @@ QtObject {
         switch (identifier) {
             // open the current note with KWrite
             case "openWithKWrite":
-                mainWindow.reloadTagTree();
-                mainWindow.reloadNoteSubFolderTree();
-                mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);
+                var note = script.currentNote();
+                var fileName = note.fullNoteFilePath;
+                script.startDetachedProcess("kwrite", [fileName]);
                 break;
 
             // create a new note with a custom content
