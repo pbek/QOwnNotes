@@ -87,6 +87,8 @@ public:
     QList<QUrl> remoteFileUrls();
     ScriptInfoJson getScriptInfoJson();
     static Script fetchByIdentifier(QString identifier);
+    bool refetch();
+    bool fillFromId(int id);
 
 private:
     int id;

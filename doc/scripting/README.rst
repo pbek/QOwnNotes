@@ -1068,3 +1068,22 @@ Tag
         Q_PROPERTY(QString name)
         Q_PROPERTY(int parentId)
     };
+
+MainWindow
+~~~~~~~~~~
+
+.. code:: cpp
+
+    class MainWindow {
+        Q_INVOKABLE void reloadTagTree();
+        Q_INVOKABLE void reloadNoteSubFolderTree();
+        Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
+                bool forceBuild = false, bool forceLoad = false);
+    };
+
+For example:
+
+.. code:: javascript
+
+    // force a reload of the note list
+    mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true);

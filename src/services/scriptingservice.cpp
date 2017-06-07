@@ -28,8 +28,8 @@
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
     _engine = new QQmlEngine(this);
     _engine->rootContext()->setContextProperty("script", this);
-//    _engine->rootContext()->setContextProperty(
-//            "mainWindow", qApp->property("mainWindow").value<MainWindow *>());
+    _engine->rootContext()->setContextProperty(
+            "mainWindow", qApp->property("mainWindow").value<MainWindow *>());
 
     // deprecated
     qmlRegisterType<NoteApi>("com.qownnotes.noteapi", 1, 0, "NoteApi");

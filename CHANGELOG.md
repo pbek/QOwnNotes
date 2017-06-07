@@ -8,7 +8,15 @@
   (for [Script repository issue #3](https://github.com/qownnotes/scripts/issues/3))
 - if you now try to install a script in the *Script repository* that needs a 
   newer version of QOwnNotes you will get a notification to update the application
- 
+- a problem with storing script settings if there is more than one setting was
+  fixed (for [Issue #605](https://github.com/pbek/QOwnNotes/issues/605))
+- the MainWindow is now exposed for scripting as variable `mainWindow`
+  (for [Issue #604](https://github.com/pbek/QOwnNotes/issues/604))
+  - you can use `mainWindow.buildNotesIndexAndLoadNoteDirectoryList(true, true)`
+    to force a reload of the note list
+  - for more information please take a look at the
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#MainWindow)
+
 ## 17.06.2
 - there are now new properties for notes in the scripting engine `fileCreated`
   and `fileLastModified` (for [Issue #599](https://github.com/pbek/QOwnNotes/issues/599))

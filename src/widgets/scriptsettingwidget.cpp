@@ -85,6 +85,10 @@ ScriptSettingWidget::~ScriptSettingWidget() {
  * @param value
  */
 void ScriptSettingWidget::storeSettingsVariable(QJsonValue value) {
+    // we need to fetch the data again so we are not overwriting data of other
+    // ScriptSettingWidget instances
+    _script.refetch();
+
     QString identifier = _variableMap["identifier"].toString();
     QJsonObject jsonObject = _script.getSettingsVariablesJsonObject();
     jsonObject.insert(identifier, value);

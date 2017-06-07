@@ -126,11 +126,12 @@ public:
 
     void linkTagNameToCurrentNote(QString tagName);
 
-    Qt::SortOrder toQtOrder(int order);
+    Q_INVOKABLE void reloadTagTree();
 
-    void updatePanelsSortOrder();
+    Q_INVOKABLE void reloadNoteSubFolderTree();
 
-    void updateNotesPanelSortOrder();
+    Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
+            bool forceBuild = false, bool forceLoad = false);
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -404,9 +405,6 @@ private slots:
 
     void on_actionSplit_note_at_cursor_position_triggered();
 
-    void buildNotesIndexAndLoadNoteDirectoryList(bool forceBuild = false,
-                                                 bool forceLoad = false);
-
     void onCustomActionInvoked(QString identifier);
 
     void on_actionDonate_triggered();
@@ -663,8 +661,6 @@ private:
 
     bool isInDistractionFreeMode();
 
-    void reloadTagTree();
-
     void removeSelectedTags();
 
     void setupTags();
@@ -721,8 +717,6 @@ private:
     QTreeWidgetItem *addNoteSubFolderToTreeWidget(
             QTreeWidgetItem *parentItem,
             NoteSubFolder noteSubFolder);
-
-    void reloadNoteSubFolderTree();
 
     void buildNoteSubFolderTreeForParentItem(QTreeWidgetItem *parent = 0);
 
@@ -822,4 +816,10 @@ private:
     void selectAllNotesInNoteSubFolderTreeWidget() const;
 
     bool insertAttachment(QFile *file);
+
+    Qt::SortOrder toQtOrder(int order);
+
+    void updatePanelsSortOrder();
+
+    void updateNotesPanelSortOrder();
 };

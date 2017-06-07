@@ -132,6 +132,12 @@ bool Script::create(QString name, QString scriptPath) {
 }
 
 Script Script::fetch(int id) {
+    Script script;
+    script.fillFromId(id);
+    return script;
+}
+
+bool Script::fillFromId(int id) {
     QSqlDatabase db = QSqlDatabase::database("disk");
     QSqlQuery query(db);
 
@@ -143,10 +149,11 @@ Script Script::fetch(int id) {
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();
     } else if (query.first()) {
-        script.fillFromQuery(query);
+        fillFromQuery(query);
+        return true;
     }
 
-    return script;
+    return false;
 }
 
 int Script::countAll() {
@@ -212,6 +219,15 @@ Script Script::fetchByIdentifier(QString identifier) {
     }
 
     return script;
+}
+
+/**
+ * Refetch the current object
+ *
+ * @return
+ */
+bool Script::refetch() {
+    return fillFromId(id);
 }
 
 bool Script::scriptPathExists() {
