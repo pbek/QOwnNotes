@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 17.06.4
+- if you now add a local script in the *Scripting settings* you immediately get
+  the dialog to select the script
+- there now is a new script variables datatype `boolean`
+    - to get information about how to use it please take a look at the example
+      [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml)
+    - there is a new script `Weather stats` in the *script repository* that 
+      is using this new setting
+
 ## 17.06.3
 - you can now open the *Script repository dialog* with the Shortcut
   <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>I</kbd>

@@ -31,6 +31,8 @@ private slots:
 
     void on_filePathButton_clicked();
 
+    void on_booleanCheckBox_toggled(bool checked);
+
 private:
     Ui::ScriptSettingWidget *ui;
     QMap<QString, QVariant> _variableMap;

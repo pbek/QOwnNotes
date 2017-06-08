@@ -35,10 +35,17 @@
       <item row="3" column="0" colspan="2">
        <widget class="QSpinBox" name="integerSpinBox"/>
       </item>
-      <item row="4" column="0" colspan="2">
+      <item row="5" column="0" colspan="2">
        <widget class="QPlainTextEdit" name="textEdit"/>
       </item>
-      <item row="5" column="0">
+      <item row="0" column="0">
+       <widget class="QLabel" name="nameLabel">
+        <property name="text">
+         <string>The setting name</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
        <widget class="QLineEdit" name="filePathLineEdit">
         <property name="clearButtonEnabled">
          <bool>true</bool>
@@ -52,7 +59,14 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
+      <item row="1" column="0">
+       <widget class="QLabel" name="descriptionLabel">
+        <property name="text">
+         <string notr="true">Description</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
        <widget class="QPushButton" name="filePathButton">
         <property name="text">
          <string notr="true"/>
@@ -63,17 +77,10 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="descriptionLabel">
+      <item row="4" column="0" colspan="2">
+       <widget class="QCheckBox" name="booleanCheckBox">
         <property name="text">
-         <string notr="true">Description</string>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="nameLabel">
-        <property name="text">
-         <string>The setting name</string>
+         <string>CheckBox</string>
         </property>
        </widget>
       </item>

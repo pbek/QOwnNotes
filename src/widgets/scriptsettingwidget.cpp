@@ -32,6 +32,7 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
     ui->textEdit->hide();
     ui->filePathButton->hide();
     ui->filePathLineEdit->hide();
+    ui->booleanCheckBox->hide();
 
     QJsonObject jsonObject = script.getSettingsVariablesJsonObject();
 
@@ -44,6 +45,18 @@ ScriptSettingWidget::ScriptSettingWidget(QWidget *parent, Script script,
 
         ui->integerSpinBox->setValue(value);
         ui->integerSpinBox->show();
+    } else if (type == "boolean") {
+        bool value = jsonObject.value(identifier).toBool();
+
+        if (jsonObject.value(identifier).isUndefined()) {
+            value = variableMap["default"].toBool();
+        }
+
+        ui->booleanCheckBox->setChecked(value);
+        ui->booleanCheckBox->setText(description.isEmpty() ?
+                                     name : description);
+        ui->booleanCheckBox->show();
+        ui->descriptionLabel->hide();
     } else if (type == "string") {
         QString value = jsonObject.value(identifier).toString();
 
@@ -152,4 +165,13 @@ void ScriptSettingWidget::on_filePathButton_clicked() {
             ui->filePathLineEdit->setText(QDir::toNativeSeparators(fileName));
         }
     }
+}
+
+/**
+ * Stores the settings variable from booleanCheckBox
+ *
+ * @param checked
+ */
+void ScriptSettingWidget::on_booleanCheckBox_toggled(bool checked) {
+    storeSettingsVariable(checked);
 }

@@ -2389,6 +2389,9 @@ void SettingsDialog::addLocalScript() {
         // focus the script name edit and select the text
         ui->scriptNameLineEdit->setFocus();
         ui->scriptNameLineEdit->selectAll();
+
+        // open the dialog to select the script
+        on_scriptPathButton_clicked();
     }
 }
 

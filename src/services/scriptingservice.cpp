@@ -167,6 +167,14 @@ QList<QVariant> ScriptingService::registerSettingsVariables(
                     }
 
                     object->setProperty(identifier.toUtf8(), value);
+                } else if (type == "boolean") {
+                    bool value = jsonObject.value(identifier).toBool();
+
+                    if (jsonObject.value(identifier).isUndefined()) {
+                        value = variableMap["default"].toBool();
+                    }
+
+                    object->setProperty(identifier.toUtf8(), value);
                 } else {
                     QString value = jsonObject.value(identifier).toString();
 

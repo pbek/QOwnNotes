@@ -8,12 +8,12 @@ import QOwnNotesTypes 1.0
 Script {
     // you have to define your registered variables so you can access them later
     property string myString;
+    property bool myBoolean;
     property string myText;
     property int myInt;
     property string myFile;
     
     // register your settings variables so the user can set them in the script settings
-    // use this property if you don't need 
     //
     // unfortunately there is no QVariantHash in Qt, we only can use
     // QVariantMap (that has no arbitrary ordering) or QVariantList (which at
@@ -25,6 +25,13 @@ Script {
             "description": "Please enter a valid string:",
             "type": "string",
             "default": "My default value",
+        },
+        {
+            "identifier": "myBoolean",
+            "name": "I am a checkbox",
+            "description": "Check this checkbox",
+            "type": "boolean",
+            "default": true,
         },
         {
             "identifier": "myText",
@@ -59,6 +66,7 @@ Script {
         // these variables will be set by QOwnNotes from the settings
         // if the user didn't set a variable your default value will be set
         script.log(myString);
+        script.log(myBoolean);
         script.log(myText);
         script.log(myInt);
         script.log(myFile);
