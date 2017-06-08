@@ -3,6 +3,9 @@ import QOwnNotesTypes 1.0
 
 /**
  * This script shows current weather statistics in a "scripting label"
+ * 
+ * The Yahoo weather api is used for fetching the weather data
+ * https://developer.yahoo.com/weather/
  */
 
 Script {
@@ -40,17 +43,23 @@ Script {
         var weatherInfo = JSON.parse(json);
         
         var temp = weatherInfo.query.results.channel.item.condition.temp
-        var unit = weatherInfo.query.results.channel.units.temperature;
+        var tempUnit = weatherInfo.query.results.channel.units.temperature;
         var conditionText = weatherInfo.query.results.channel.item.condition.text
+        var weatherCity = weatherInfo.query.results.channel.location.city
+        var windSpeed = weatherInfo.query.results.channel.wind.speed
+        var windUnit = weatherInfo.query.results.channel.units.speed;
         
         if (!useFahrenheit) {
-            unit = "°" + unit;
+            tempUnit = "°" + tempUnit;
         }
         
         script.setLabelText("weather stats", 
-            "<table align=center width=90%>
+            "<table align='center' width='90%'>
                 <tr>
-                    <td align=center>Weather in <b>" + city + "</b>: " + conditionText + " at <b>" + temp + " " + unit + "</b></tb>
+                    <td align='center'>
+                        Weather in <b>" + weatherCity + "</b>: " + conditionText + " at <b>" + temp + " " + tempUnit + "</b>
+                        (" + windSpeed + " " + windUnit + " wind)
+                    </tb>
                 </tr>
             </table>")
     }
