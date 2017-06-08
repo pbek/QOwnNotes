@@ -8,6 +8,7 @@
       [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml)
     - there is a new script `Weather stats` in the *script repository* that 
       is using this new setting
+- added more French translation (thank you lepascalou)
 
 ## 17.06.3
 - you can now open the *Script repository dialog* with the Shortcut
