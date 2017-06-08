@@ -6,7 +6,7 @@
 - there now is a new script variables datatype `boolean`
     - to get information about how to use it please take a look at the example
       [variables.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml)
-    - there is a new script `Weather stats` in the *script repository* that 
+    - there is a new script `Weather stats` in the *Script repository* that 
       is using this new setting
 - added more French translation (thank you lepascalou)
 
