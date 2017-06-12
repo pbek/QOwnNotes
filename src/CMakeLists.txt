@@ -18,6 +18,7 @@ find_package( Qt5Xml REQUIRED )
 find_package( Qt5XmlPatterns REQUIRED )
 find_package( Qt5PrintSupport REQUIRED )
 find_package( Qt5Qml REQUIRED )
+find_package( Qt5QuickWidgets REQUIRED )
 
 qt5_wrap_ui(dialogs/ui_settingsdialog.h settingsdialog.ui)
 qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
@@ -286,13 +287,13 @@ add_executable(QOwnNotes ${SOURCE_FILES} ${RESOURCE_ADDED} ${QON_QM_FILES})
 include_directories(${Qt5Widgets_INCLUDES} ${Qt5Sql_INCLUDES}
         ${Qt5Svg_INCLUDES} ${Qt5Network_INCLUDES}
         ${Qt5Xml_INCLUDES} ${Qt5XmlPatterns_INCLUDES}
-        ${Qt5PrintSupport_INCLUDES} ${Qt5Qml_INCLUDES})
+        ${Qt5PrintSupport_INCLUDES} ${Qt5Qml_INCLUDES} ${Qt5QuickWidgets_INCLUDES})
 
 # We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
 add_definitions(${Qt5Widgets_DEFINITIONS} ${Qt5Sql_DEFINITIONS}
         ${Qt5Svg_DEFINITIONS} ${Qt5Network_DEFINITIONS}
         ${Qt5Xml_DEFINITIONS} ${Qt5XmlPatterns_DEFINITIONS}
-        ${Qt5PrintSupport_DEFINITIONS} ${Qt5Qml_DEFINITIONS})
+        ${Qt5PrintSupport_DEFINITIONS} ${Qt5Qml_DEFINITIONS} ${Qt5QuickWidgets_DEFINITIONS})
 
 # Executables fail to build with Qt 5 in the default configuration
 # without -fPIE. We add that here.
@@ -309,6 +310,6 @@ set(CMAKE_CXX_FLAGS "-std=c++0x")
 target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES}
         ${Qt5Svg_LIBRARIES} ${Qt5Network_LIBRARIES}
         ${Qt5Xml_LIBRARIES} ${Qt5XmlPatterns_LIBRARIES}
-        ${Qt5PrintSupport_LIBRARIES} ${Qt5Qml_LIBRARIES})
+        ${Qt5PrintSupport_LIBRARIES} ${Qt5Qml_LIBRARIES} ${Qt5QuickWidgets_LIBRARIES})
 
 #qt5_use_modules(QOwnNotes Widgets Core Gui Sql Svg Network Script Xml PrintSupport)

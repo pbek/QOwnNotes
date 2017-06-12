@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql svg network xml xmlpatterns printsupport qml
+QT       += core gui sql svg network xml xmlpatterns printsupport qml quick quickwidgets
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that

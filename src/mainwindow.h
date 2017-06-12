@@ -37,6 +37,7 @@
 #include <dialogs/actiondialog.h>
 #include <dialogs/tododialog.h>
 #include <dialogs/settingsdialog.h>
+#include <QtQuickWidgets/QQuickWidget>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -132,6 +133,9 @@ public:
 
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
+
+    void addOrUpdateScriptDockWidget(QString identifier, QString name,
+                                     QQuickWidget *quickWidget);
 
 protected:
     void closeEvent(QCloseEvent *event);

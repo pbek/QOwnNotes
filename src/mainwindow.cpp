@@ -1083,6 +1083,39 @@ void MainWindow::updatePanelMenu() {
 }
 
 /**
+ * Adds or updates a dock widget from the scripting engine
+ *
+ * @param identifier
+ * @param name
+ * @param quickWidget
+ */
+void MainWindow::addOrUpdateScriptDockWidget(
+        QString identifier, QString name, QQuickWidget *quickWidget) {
+
+    QString objectName = identifier + "ScriptDockWidget";
+    QDockWidget *dockWidget = findChild<QDockWidget *>(objectName);
+
+    if (dockWidget == Q_NULLPTR) {
+        QDockWidget *dockWidget = new QDockWidget(name, this);
+        QWidget *titleBarWidget = dockWidget->titleBarWidget();
+        qDebug() << __func__ << " - 'titleBarWidget': " << titleBarWidget;
+
+
+        titleBarWidget = new QWidget(this);
+        titleBarWidget->setObjectName(objectName + "TitleBarWidget");
+        titleBarWidget->setWindowTitle(name);
+        dockWidget->setTitleBarWidget(titleBarWidget);
+        dockWidget->setWindowTitle(name);
+        dockWidget->setObjectName(objectName);
+        dockWidget->setWidget(quickWidget);
+        addDockWidget(Qt::RightDockWidgetArea, dockWidget, Qt::Vertical);
+        restoreDockWidget(dockWidget);
+    } else {
+        dockWidget->setWidget(quickWidget);
+    }
+}
+
+/**
  * Updates the toolbar menu entries
  */
 void MainWindow::updateToolbarMenu() {
@@ -8511,6 +8544,22 @@ void MainWindow::on_actionUnlock_panels_toggled(bool arg1) {
                 _notePreviewDockTitleBarWidget);
         _logDockWidget->setTitleBarWidget(_logDockTitleBarWidget);
         _scriptingDockWidget->setTitleBarWidget(_scriptingDockTitleBarWidget);
+
+        // TODO(pbek): handle script dock widget title bars
+        Q_FOREACH(QDockWidget *dockWidget, findChildren<QDockWidget*>(
+                QRegularExpression(".+ScriptDockWidget"))) {
+                qDebug() << __func__ << " - 'dockWidget': " << dockWidget;
+
+                QWidget *titleBarWidget = findChild<QWidget*>(
+                dockWidget->objectName() + "TitleBarWidget");
+
+                if (titleBarWidget != Q_NULLPTR) {
+                    qDebug() << __func__ << " - 'titleBarWidget': "
+                             << titleBarWidget;
+
+                    dockWidget->setTitleBarWidget(titleBarWidget);
+                }
+            }
 
         Q_FOREACH(QDockWidget *dockWidget, dockWidgets) {
                 // reset the top margin of the enclosed widget

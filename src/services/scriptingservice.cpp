@@ -22,6 +22,7 @@
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
+#include <QtQuickWidgets/QQuickWidget>
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
@@ -128,6 +129,27 @@ void ScriptingService::initComponent(Script script) {
         }
     } else {
         qWarning() << "script errors: " << component->errors();
+    }
+
+    // check if we have to create a script dock widget
+    QString dockWidgetId = object->property("dockWidgetId").toString();
+    if (!dockWidgetId.isEmpty()) {
+#ifndef INTEGRATION_TESTS
+        MainWindow *mainWindow = MainWindow::instance();
+        QQuickWidget *quickWidget = new QQuickWidget(_engine, mainWindow);
+        quickWidget->setSource(fileUrl);
+
+        QString dockWidgetTitle = object->property("dockWidgetTitle")
+                .toString();
+
+        if (dockWidgetTitle.isEmpty()) {
+            dockWidgetTitle = dockWidgetId;
+        }
+
+        // create or update the script dock widget
+        mainWindow->addOrUpdateScriptDockWidget(
+                dockWidgetId, dockWidgetTitle, quickWidget);
+#endif
     }
 }
 
