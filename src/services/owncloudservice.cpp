@@ -385,7 +385,9 @@ void OwnCloudService::checkAppInfo(QNetworkReply *reply) {
     QJSValue result = engine.evaluate(data);
 
     QString notesPathExistsText = "unknown";
+#ifndef INTEGRATION_TESTS
     bool appIsValid = result.property(0).property("versioning").toBool();
+#endif
     QString appVersion = result.property(0).property("app_version")
             .toVariant().toString();
     QString serverVersion = result.property(0).property("server_version")
