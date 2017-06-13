@@ -68,8 +68,8 @@
 *  Diff(Operation.EQUAL, " world.")}
 * which means: delete "Hello", add "Goodbye" and keep " world."
 */
-enum Operation {
-  DELETE, INSERT, EQUAL
+enum DiffOperation {
+    DIFF_OP_DELETE, DIFF_OP_INSERT, DIFF_OP_EQUAL
 };
 
 
@@ -78,7 +78,7 @@ enum Operation {
 */
 class Diff {
  public:
-  Operation operation;
+  DiffOperation operation;
   // One of: INSERT, DELETE or EQUAL.
   QString text;
   // The text associated with this diff operation.
@@ -88,14 +88,14 @@ class Diff {
    * @param operation One of INSERT, DELETE or EQUAL.
    * @param text The text being applied.
    */
-  Diff(Operation _operation, const QString &_text);
+  Diff(DiffOperation _operation, const QString &_text);
   Diff();
   inline bool isNull() const;
   QString toString() const;
   bool operator==(const Diff &d) const;
   bool operator!=(const Diff &d) const;
 
-  static QString strOperation(Operation op);
+  static QString strOperation(DiffOperation op);
 };
 
 
