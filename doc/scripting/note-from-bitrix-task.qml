@@ -29,7 +29,7 @@ QtObject {
                 // get the text that is currently in the clipboard
                 var html = script.clipboard(true);
 
-//                script.log(html);
+                script.log(html);
 
                 // https://regex101.com is your friend
 //                 var headlineRegExp = /<span class="pagetitle-inner".*?>(.+?)<\/span>/im;
@@ -63,7 +63,7 @@ QtObject {
                 description = description.replace(/<br.*?>/gim, "\n").replace(/<.+?>/gim, "");
 
 //                 var urlRegExp = /<form name="COMMENTS_.+?".*? action="(.+?)" method/im;
-                var urlRegExp = /<a href="(.+?)[\?#].*?" class="main-buttons-item-link"/im;
+                var urlRegExp = /<a href="(.+?\d+\/tasks\/task\/view\/d+\/)[\?#].*?" class="main-buttons-item-link"/im;
                 var urlMatch = urlRegExp.exec(html);
                 var url = urlMatch !== null ? urlMatch[1] : "";
 
