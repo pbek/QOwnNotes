@@ -12,6 +12,8 @@
     - if you want more control over your note file name you can achieve that 
       by writing a script, please take a look at
       [handleNoteTextFileNameHook](http://docs.qownnotes.org/en/develop/scripting/README.html#handlenotetextfilenamehook)
+- added more Polish, Spanish and German translation (thank you lucjan,
+  richarson and rakekniven)
 
 ## 17.06.4
 - if you now add a local script in the *Scripting settings* you immediately get

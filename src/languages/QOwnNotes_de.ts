@@ -503,7 +503,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1026"/>
       <source>Check for &amp;updates</source>
-      <translation>Nach &amp;Updates suchen</translation>
+      <translation>Nach &amp;Aktualisierungen suchen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1038"/>
@@ -2629,22 +2629,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autoren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Unterstützte Plattformen</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Unterstützte Plattform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
@@ -2763,12 +2763,12 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Your ownCloud server</source>
-      <translation>ownCloud Server</translation>
+      <translation>ownCloud-Server</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>ownCloud server url:</source>
-      <translation>ownCloud Server Adresse:</translation>
+      <translation>ownCloud-Server-URL:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="953"/>
@@ -2864,7 +2864,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="821"/>
       <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation>Bitte installieren Sie die neueste Version von &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (mindestens Version QOWNNOTESAPI_MIN_VERSION) auf Ihrem ownCloud Server, wenn QOwnNotes Zugriff auf Notiz Version und gelöschte Notizen haben soll.</translation>
+      <translation>Bitte installieren Sie die neueste Version von &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt; &lt;span style="font-weight:600;"&gt; QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (mindestens Version QOWNNOTESAPI_MIN_VERSION) auf Ihrem ownCloud Server, wenn QOwnNotes Zugriff auf Notizversionen und gelöschte Notizen haben soll.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="834"/>
@@ -2934,7 +2934,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1618"/>
       <source>Default ownCloud calendar</source>
-      <translation>Standard ownCloud Kalender</translation>
+      <translation>Standard ownCloud-Kalender</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
@@ -5009,7 +5009,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="14"/>
       <source>Note versions on your ownCloud server</source>
-      <translation>Notizversionen auf Ihrem ownCloud Server</translation>
+      <translation>Notizversionen auf Ihrem ownCloud-Server</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="65"/>

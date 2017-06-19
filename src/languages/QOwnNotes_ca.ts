@@ -107,12 +107,12 @@
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="619"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Exportar esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Exportar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
@@ -159,7 +159,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation type="unfinished">Bold</translation>
+      <translation>Negreta</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
@@ -204,7 +204,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>Enllaç</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
@@ -259,7 +259,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>Taula</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -324,7 +324,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Entrar URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
@@ -457,7 +457,7 @@
     <message>
       <location filename="../mainwindow.ui" line="843"/>
       <source>Editor width</source>
-      <translation type="unfinished">Editor width</translation>
+      <translation>Amplada de l’editor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="903"/>
@@ -624,7 +624,7 @@
     <message>
       <location filename="../mainwindow.ui" line="705"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Exportar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="718"/>
@@ -634,7 +634,7 @@
     <message>
       <location filename="../mainwindow.ui" line="788"/>
       <source>&amp;Edit</source>
-      <translation type="unfinished">&amp;Edit</translation>
+      <translation>&amp;Edita</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="830"/>
@@ -695,7 +695,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1231"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation type="unfinished">&amp;Export note as PDF (text)</translation>
+      <translation>Exportar com PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
@@ -745,7 +745,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1330"/>
       <source>&amp;Export note as markdown file</source>
-      <translation type="unfinished">&amp;Export note as markdown file</translation>
+      <translation>Exportar com arxiu Markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
@@ -785,22 +785,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1406"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Estreta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1417"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Mitjana</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Ampla</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1439"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Sencera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1451"/>
@@ -861,7 +861,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1634"/>
       <source>Export note as HTML</source>
-      <translation type="unfinished">Export note as HTML</translation>
+      <translation>Exportar com HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
@@ -1039,7 +1039,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
       <source>&amp;Export note as PDF</source>
-      <translation type="unfinished">&amp;Export note as PDF</translation>
+      <translation>Exportar com PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1658"/>
@@ -1316,14 +1316,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3868"/>
       <location filename="../mainwindow.cpp" line="3957"/>
       <source>Done</source>
-      <translation type="unfinished">Done</translation>
+      <translation>Fet</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3869"/>
       <source>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</source>
-      <translation type="unfinished">
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
-        <numerusform>%n note(s) were copied to &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+      <translation>
+        <numerusform>%n note(s) s'han copiat a &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
+        <numerusform>%n note(s) s'han copiat a &lt;strong&gt;%2&lt;/strong&gt;.</numerusform>
       </translation>
     </message>
     <message>
@@ -1362,7 +1362,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4246"/>
       <source>PDF files</source>
-      <translation type="unfinished">PDF files</translation>
+      <translation>Fitxers PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5057"/>
@@ -1527,7 +1527,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8649"/>
       <source>full</source>
       <comment>full workspace</comment>
-      <translation type="unfinished">full</translation>
+      <translation>sencer</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8656"/>
@@ -1624,12 +1624,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4227"/>
       <source>Orientation</source>
-      <translation type="unfinished">Orientation</translation>
+      <translation>Orientació</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4227"/>
       <source>Orientation:</source>
-      <translation type="unfinished">Orientation:</translation>
+      <translation>Orientació:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4247"/>
@@ -1644,7 +1644,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4922"/>
       <source>Open QOwnNotes</source>
-      <translation type="unfinished">Open QOwnNotes</translation>
+      <translation>Obre QOwnNotes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4931"/>
@@ -1670,7 +1670,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5020"/>
       <source>Quit</source>
-      <translation type="unfinished">Quit</translation>
+      <translation>&amp;Surt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6144"/>
@@ -1811,7 +1811,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7550"/>
       <source>Export current note as HTML file</source>
-      <translation type="unfinished">Export current note as HTML file</translation>
+      <translation>Exporta nota actual com a fitxer HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4205"/>
@@ -2235,12 +2235,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="32"/>
       <source>Yes</source>
-      <translation type="unfinished">Yes</translation>
+      <translation>Sí</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.cpp" line="37"/>
       <source>No</source>
-      <translation type="unfinished">No</translation>
+      <translation>No</translation>
     </message>
   </context>
   <context>
@@ -2634,7 +2634,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>

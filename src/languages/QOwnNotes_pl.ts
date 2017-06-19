@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Importuj załączniki</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
@@ -866,7 +866,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Przełącz wielkość znaków</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -966,17 +966,17 @@
     <message>
       <location filename="../mainwindow.ui" line="2031"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Wyszukaj skrypty w repozytorium skryptów</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2040"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Ustawienia skryptów</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2049"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Wstaw załącznik</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
@@ -1424,12 +1424,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="5784"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Wstawianie załącznika</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5789"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Wstawiono załącznik</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5799"/>
@@ -1576,7 +1576,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="9159"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Wybierz plik do wstawienia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
@@ -2595,124 +2595,124 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Repozytorium skryptów</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Do wyszukiwania dla skryptu wpisz tekst kwerendy i naciśnij klawisz &lt;i&gt;Return/Enter&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="124"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Aktualnie zainstalowana wersja:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Instaluje skrypt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="272"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Zainstaluj</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="222"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Wersja:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="199"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repozytorium:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="134"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Minimalna wersja aplikacji:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="398"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nazwa</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Wprowadź tekst kwerendy</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Znajdź skrypt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autorzy</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Obsługiwane platformy</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Obsługiwana platforma</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Otwarte repozytorium</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Aktualizuj</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="264"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Aktualizuje skrypt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="266"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Zainstaluj ponownie</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="267"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Instaluje ponownie skrypt</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="392"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Instalacja powiodła się</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>Skrypt został pomyślnie zainstalowany!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Pobieranie nie powiodło się</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Nie można pobrać skryptu!</translation>
     </message>
   </context>
   <context>
@@ -2720,17 +2720,17 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Formularz</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="76"/>
       <source>The setting name</source>
-      <translation type="unfinished">The setting name</translation>
+      <translation>Nazwa ustawienia</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="141"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Wybierz plik</translation>
     </message>
   </context>
   <context>
@@ -3326,7 +3326,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Panele</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -3460,52 +3460,52 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3955"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sprawdź dostępne &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;formaty daty i czasu&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4198"/>
       <source>Tags panel</source>
-      <translation type="unfinished">Tags panel</translation>
+      <translation>Panel znaczników</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4204"/>
       <location filename="../dialogs/settingsdialog.ui" line="4306"/>
       <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Order</source>
-      <translation type="unfinished">Order</translation>
+      <translation>Kolejność</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4210"/>
       <location filename="../dialogs/settingsdialog.ui" line="4312"/>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Rosnąco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4217"/>
       <location filename="../dialogs/settingsdialog.ui" line="4319"/>
       <location filename="../dialogs/settingsdialog.ui" line="4394"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Malejąco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4227"/>
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <location filename="../dialogs/settingsdialog.ui" line="4352"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>Sortowanie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>
       <location filename="../dialogs/settingsdialog.ui" line="4279"/>
       <location filename="../dialogs/settingsdialog.ui" line="4358"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Alfabetycznie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Według ostatniej zmiany/użycia</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
@@ -3515,23 +3515,23 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4260"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Panel podfolderów notatki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Pokaż z pełną ścieżką</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <location filename="../dialogs/settingsdialog.ui" line="4365"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Według ostatniej zmiany</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4299"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Pokaż nazwę folderu głównego</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4329"/>
@@ -3541,17 +3541,17 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4336"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Wyświetlaj podfoldery w formie pełnego drzewa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4346"/>
       <source>Notes panel</source>
-      <translation type="unfinished">Notes panel</translation>
+      <translation>Panelu notatek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2314"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Przeszukaj repozytorium skryptów</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4088"/>
@@ -3674,7 +3674,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2880"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Nazwa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3069"/>
@@ -3709,27 +3709,27 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2608"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Opis:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2690"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Wersja:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2651"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repozytorium:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2478"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>&amp;Dodaj skrypt…</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2628"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Autorzy:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2929"/>
@@ -4184,17 +4184,17 @@ Wiadomość błędu: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Dodaj skrypt lokalny</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Dodaj istniejący skrypt lokalny</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Wyszukaj skrypt w repozytorium skryptów</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2405"/>
@@ -4219,7 +4219,7 @@ Wiadomość błędu: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2548"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Otwarte repozytorium</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2608"/>

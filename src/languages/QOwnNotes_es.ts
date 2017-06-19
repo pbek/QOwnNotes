@@ -2627,22 +2627,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autores</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Plataformas soportadas</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Plataforma soportada</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
