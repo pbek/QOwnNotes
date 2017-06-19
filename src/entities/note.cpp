@@ -982,8 +982,11 @@ void Note::handleNoteTextFileName() {
 
         // update the first line of the note text
         // TODO(pbek): UI has to be updated too then!
-        noteTextLines[0] = name;
-        this->noteText = noteTextLines.join("\n");
+        // update: we now try not to change the first line of the note,
+        //         this doesn't seem to trouble ownCloud / Nextcloud notes
+        //         a lot, but it renames the notes to its own liking
+//        noteTextLines[0] = name;
+//        this->noteText = noteTextLines.join("\n");
 
         // store new name and filename
         this->name = name;

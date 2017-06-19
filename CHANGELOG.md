@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 17.06.5
+- the first line of the note is now not modified when the note file gets 
+  automatically renamed because of harmful or unwanted characters
+  (for [Issue #619](https://github.com/pbek/QOwnNotes/issues/619))
+    - this doesn't seem to trouble ownCloud / Nextcloud notes a lot, but it
+      renames the notes to its own liking
+    - so you could use `# ` at the beginning of your note and it will only be
+      removed in the note file name (unless you allow the note file name to 
+      be different from the headline in the *General settings*)
+    - if you want more control over your note file name you can achieve that 
+      by writing a script, please take a look at
+      [handleNoteTextFileNameHook](http://docs.qownnotes.org/en/develop/scripting/README.html#handlenotetextfilenamehook)
+
 ## 17.06.4
 - if you now add a local script in the *Scripting settings* you immediately get
   the dialog to select the script
