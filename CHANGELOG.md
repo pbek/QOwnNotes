@@ -16,6 +16,7 @@
 - there now is a software repository for **openSUSE Leap 42.3**
     - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
       for instructions
+- added more Japanese and German translation (thank you piyo and jmbm)
 
 ## 17.06.5
 - the first line of the note is now not modified when the note file gets 
