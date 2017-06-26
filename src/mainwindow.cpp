@@ -6681,14 +6681,14 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     QMenu menu;
 
     QAction *addAction = menu.addAction(tr("&Add tag"));
-    QAction *editAction = new QAction(this);
+    QAction *renameAction = new QAction(this);
     QAction *assignColorAction = new QAction(this);
     QAction *disableColorAction = new QAction(this);
     QAction *removeAction = new QAction(this);
 
     // allow these actions only if tags are selected
     if (hasSelected) {
-        editAction = menu.addAction(tr("&Edit tag"));
+        renameAction = menu.addAction(tr("Rename tag"));
         assignColorAction = menu.addAction(tr("Assign color"));
         disableColorAction = menu.addAction(tr("Disable color"));
         removeAction = menu.addAction(tr("&Remove tags"));
@@ -6764,7 +6764,7 @@ void MainWindow::on_tagTreeWidget_customContextMenuRequested(
     if (selectedItem == removeAction) {
         // remove selected tag
         removeSelectedTags();
-    } else if (selectedItem == editAction) {
+    } else if (selectedItem == renameAction) {
         ui->tagTreeWidget->editItem(item);
     }
 }
@@ -7715,6 +7715,20 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     QMenu *copyDestinationMenu = new QMenu();
     QMenu *tagRemoveMenu = new QMenu();
 
+    QAction *createNoteAction = noteMenu.addAction(tr("New note"));
+    connect(createNoteAction, SIGNAL(triggered()),
+            this, SLOT(on_action_New_note_triggered()));
+
+    QAction *renameAction = new QAction(this);
+    if (Note::allowDifferentFileName()) {
+        renameAction = noteMenu.addAction(tr("Rename note"));
+        renameAction->setToolTip(tr("Allows you to rename the filename of "
+                                              "the note"));
+    }
+
+    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
+    noteMenu.addSeparator();
+
     QList<NoteFolder> noteFolders = NoteFolder::fetchAll();
 
     // show copy and move menu entries only if there
@@ -7795,7 +7809,6 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             }
     }
 
-    QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
     QAction *openInExternalEditorAction = noteMenu.addAction(
             tr("Open note in external editor"));
@@ -7848,6 +7861,9 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         } else if (selectedItem == showNoteGitLogAction) {
             // show the git log of the current note
             on_actionShow_note_git_versions_triggered();
+        } else if (selectedItem == renameAction) {
+            QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+            ui->noteTreeWidget->editItem(item);
         }
     }
 }

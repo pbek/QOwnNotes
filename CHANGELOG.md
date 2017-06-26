@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 17.06.6
+- there now new context menu entries in the note list
+  (for [Issue #613](https://github.com/pbek/QOwnNotes/issues/613))
+    - a `New note` menu entry to create a new note
+    - a `Rename note` menu entry to rename the note if you allowed the note 
+      filename to be different than the headline in the *General settings*
+- the `Edit tag` context menu entry in the tag tree was renamed to `Rename tag`
+- there now is a software repository for **Debian Linux 9.0**
+    - please visit the [Debian installation page](http://www.qownnotes.org/installation#Debian)
+      for instructions
+- there now is a software repository for **Fedora 26**
+    - please visit the [Fedora installation page](http://www.qownnotes.org/installation#Fedora)
+      for instructions
+- there now is a software repository for **openSUSE Leap 42.3**
+    - please visit the [openSUSE installation page](http://www.qownnotes.org/installation#openSUSE)
+      for instructions
+
 ## 17.06.5
 - the first line of the note is now not modified when the note file gets 
   automatically renamed because of harmful or unwanted characters
