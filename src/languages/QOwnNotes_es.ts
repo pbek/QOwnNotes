@@ -556,7 +556,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1112"/>
-      <location filename="../mainwindow.cpp" line="7814"/>
+      <location filename="../mainwindow.cpp" line="7827"/>
       <source>Select &amp;all notes</source>
       <translation>Seleccionar todas las notas</translation>
     </message>
@@ -875,7 +875,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
-      <location filename="../mainwindow.cpp" line="8735"/>
+      <location filename="../mainwindow.cpp" line="8751"/>
       <source>Remove current workspace</source>
       <translation>Eliminar espacio de trabajo actual</translation>
     </message>
@@ -938,7 +938,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1982"/>
-      <location filename="../mainwindow.cpp" line="7803"/>
+      <location filename="../mainwindow.cpp" line="7816"/>
       <source>Open note in a view</source>
       <translation>Abrir nota en previsualización</translation>
     </message>
@@ -959,7 +959,7 @@
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2022"/>
-      <location filename="../mainwindow.cpp" line="7810"/>
+      <location filename="../mainwindow.cpp" line="7823"/>
       <source>Show note git versions</source>
       <translation>Mostrar versiones git de las notas</translation>
     </message>
@@ -969,12 +969,12 @@
       <translation>Buscar scripts en el repositorio de scripts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2040"/>
+      <location filename="../mainwindow.ui" line="2043"/>
       <source>Script settings</source>
       <translation>Configuración de scripts</translation>
     </message>
     <message>
-      <location filename="../mainwindow.ui" line="2049"/>
+      <location filename="../mainwindow.ui" line="2052"/>
       <source>Insert attachment</source>
       <translation>Insertar archivo adjunto</translation>
     </message>
@@ -1151,7 +1151,7 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="3928"/>
       <location filename="../mainwindow.cpp" line="4312"/>
       <location filename="../mainwindow.cpp" line="5424"/>
-      <location filename="../mainwindow.cpp" line="8737"/>
+      <location filename="../mainwindow.cpp" line="8753"/>
       <source>&amp;Cancel</source>
       <translation>Cancelar</translation>
     </message>
@@ -1203,7 +1203,7 @@ Restore current note?</source>
       <location filename="../mainwindow.cpp" line="3702"/>
       <location filename="../mainwindow.cpp" line="3731"/>
       <location filename="../mainwindow.cpp" line="3928"/>
-      <location filename="../mainwindow.cpp" line="8737"/>
+      <location filename="../mainwindow.cpp" line="8753"/>
       <source>&amp;Remove</source>
       <translation>Elimina</translation>
     </message>
@@ -1243,7 +1243,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3695"/>
-      <location filename="../mainwindow.cpp" line="8005"/>
+      <location filename="../mainwindow.cpp" line="8021"/>
       <source>Remove selected folders</source>
       <translation>Eliminar las carpetas seleccionadas</translation>
     </message>
@@ -1471,6 +1471,11 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <translation>Se restauró el tamaño de fuente a %1 pt</translation>
     </message>
     <message>
+      <location filename="../mainwindow.cpp" line="6691"/>
+      <source>Rename tag</source>
+      <translation type="unfinished">Rename tag</translation>
+    </message>
+    <message>
       <location filename="../mainwindow.cpp" line="6692"/>
       <source>Assign color</source>
       <translation>Asignar color</translation>
@@ -1512,40 +1517,50 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <translation>Archivos HTML</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8527"/>
+      <location filename="../mainwindow.cpp" line="7724"/>
+      <source>Rename note</source>
+      <translation type="unfinished">Rename note</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="7725"/>
+      <source>Allows you to rename the filename of the note</source>
+      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="8543"/>
       <source>Create new workspace</source>
       <translation>Crear nuevo espacio de trabajo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8527"/>
-      <location filename="../mainwindow.cpp" line="8774"/>
+      <location filename="../mainwindow.cpp" line="8543"/>
+      <location filename="../mainwindow.cpp" line="8790"/>
       <source>Workspace name:</source>
       <translation>Nombre del espacio de trabajo:</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8649"/>
+      <location filename="../mainwindow.cpp" line="8665"/>
       <source>full</source>
       <comment>full workspace</comment>
       <translation>completo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8656"/>
+      <location filename="../mainwindow.cpp" line="8672"/>
       <source>minimal</source>
       <comment>minimal workspace</comment>
       <translation>mínimo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8736"/>
+      <location filename="../mainwindow.cpp" line="8752"/>
       <source>Remove the current workspace?</source>
       <translation>¿Eliminar el espacio de trabajo actual?</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8774"/>
+      <location filename="../mainwindow.cpp" line="8790"/>
       <source>Rename workspace</source>
       <translation>Renombrar espacio de trabajo</translation>
     </message>
     <message numerus="yes">
-      <location filename="../mainwindow.cpp" line="8896"/>
+      <location filename="../mainwindow.cpp" line="8912"/>
       <source>%n chars</source>
       <comment>characters</comment>
       <translation>
@@ -1554,12 +1569,12 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9019"/>
+      <location filename="../mainwindow.cpp" line="9035"/>
       <source>Copy image file path</source>
       <translation>Copiar ruta a la imagen</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9159"/>
+      <location filename="../mainwindow.cpp" line="9175"/>
       <source>Select file to insert</source>
       <translation>Selecciona el archivo a insertar</translation>
     </message>
@@ -1647,7 +1662,8 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4931"/>
-      <location filename="../mainwindow.cpp" line="8003"/>
+      <location filename="../mainwindow.cpp" line="7718"/>
+      <location filename="../mainwindow.cpp" line="8019"/>
       <source>New note</source>
       <translation>Nueva nota</translation>
     </message>
@@ -1758,42 +1774,42 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7753"/>
+      <location filename="../mainwindow.cpp" line="7767"/>
       <source>Move notes to subfolder...</source>
       <translation>Mover notas a subcarpeta...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7757"/>
+      <location filename="../mainwindow.cpp" line="7771"/>
       <source>Copy notes to subfolder...</source>
       <translation>Copiar notas a subcarpeta...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7801"/>
+      <location filename="../mainwindow.cpp" line="7814"/>
       <source>Open note in external editor</source>
       <translation>Abrir nota en editor externo</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7805"/>
+      <location filename="../mainwindow.cpp" line="7818"/>
       <source>Show note in file manager</source>
       <translation>Mostrar nota en administrador de archivos</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8004"/>
+      <location filename="../mainwindow.cpp" line="8020"/>
       <source>New subfolder</source>
       <translation>Nueva subcarpeta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8007"/>
+      <location filename="../mainwindow.cpp" line="8023"/>
       <source>Show folder in file manager</source>
       <translation>Mostrar carpeta en gestor de archivos</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8038"/>
+      <location filename="../mainwindow.cpp" line="8054"/>
       <source>Create a new folder</source>
       <translation>Crear nueva carpeta</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="8038"/>
+      <location filename="../mainwindow.cpp" line="8054"/>
       <source>Folder name:</source>
       <translation>Nombre de la carpeta:</translation>
     </message>
@@ -1843,27 +1859,27 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <translation>Ok</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7723"/>
+      <location filename="../mainwindow.cpp" line="7737"/>
       <source>&amp;Move notes to...</source>
       <translation>Mover notas a...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7724"/>
+      <location filename="../mainwindow.cpp" line="7738"/>
       <source>&amp;Copy notes to...</source>
       <translation>Copiar notas a...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7765"/>
+      <location filename="../mainwindow.cpp" line="7779"/>
       <source>&amp;Tag selected notes with...</source>
       <translation>&amp;Etiquetar notas seleccionadas con...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7787"/>
+      <location filename="../mainwindow.cpp" line="7801"/>
       <source>&amp;Remove tag from selected notes...</source>
       <translation>&amp;Eliminar etiqueta de notas seleccionadas...</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="7798"/>
+      <location filename="../mainwindow.cpp" line="7729"/>
       <source>&amp;Remove notes</source>
       <translation>Eliminar notas</translation>
     </message>
@@ -1966,11 +1982,6 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <location filename="../mainwindow.cpp" line="6565"/>
       <source>remove tag '%1' from note</source>
       <translation>quitar la etiqueta «%1» de la nota</translation>
-    </message>
-    <message>
-      <location filename="../mainwindow.cpp" line="6691"/>
-      <source>&amp;Edit tag</source>
-      <translation>&amp;Editar la etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6694"/>
@@ -2306,83 +2317,83 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <translation>¡Su usuario o contraseña de calendario son incorrectos!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="494"/>
+      <location filename="../services/owncloudservice.cpp" line="496"/>
       <source>API app version too low</source>
       <translation>La versión de la API de la aplicación es demasiado baja</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="495"/>
+      <location filename="../services/owncloudservice.cpp" line="497"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
       <translation>Por favor considera actualizar tu aplicación de QOwnNotesAPI en el servidor, la versión %1 es demasiado baja y puede causar problemas en QOwnNotes.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="957"/>
+      <location filename="../services/owncloudservice.cpp" line="959"/>
       <source>ownCloud server connection error</source>
       <translation>Error de conexión con el servidor de ownCloud</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="961"/>
+      <location filename="../services/owncloudservice.cpp" line="963"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
       <translation>Error de conexión con el servidor de ownCloud: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Compruebe la configuración de ownCloud.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="977"/>
+      <location filename="../services/owncloudservice.cpp" line="979"/>
       <source>You need to setup your ownCloud server!</source>
       <translation>¡Tienes que configurar tu servidor ownCloud!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="983"/>
+      <location filename="../services/owncloudservice.cpp" line="985"/>
       <source>Open &amp;settings</source>
       <translation>Abrir &amp;configuración</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="983"/>
+      <location filename="../services/owncloudservice.cpp" line="985"/>
       <source>&amp;Cancel</source>
       <translation>&amp;Cancelar</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1028"/>
+      <location filename="../services/owncloudservice.cpp" line="1030"/>
       <source>Done with loading note versions</source>
       <translation>Terminó la carga de versiones de notas</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1067"/>
+      <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>No versions found</source>
       <translation>No se encontraron versiones</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1068"/>
+      <location filename="../services/owncloudservice.cpp" line="1070"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
       <translation>No hay versiones para esta nota o la nota no fue encontrada en el servidor.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1089"/>
+      <location filename="../services/owncloudservice.cpp" line="1091"/>
       <source>Done with loading trashed notes</source>
       <translation>Terminó la carga de notas eliminadas</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1130"/>
+      <location filename="../services/owncloudservice.cpp" line="1132"/>
       <source>No trashed notes</source>
       <translation>No hay notas eliminadas</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1131"/>
+      <location filename="../services/owncloudservice.cpp" line="1133"/>
       <source>No trashed notes were found on the server.</source>
       <translation>No se encontraron notas eliminadas en el servidor.</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1154"/>
-      <location filename="../services/owncloudservice.cpp" line="1180"/>
+      <location filename="../services/owncloudservice.cpp" line="1156"/>
+      <location filename="../services/owncloudservice.cpp" line="1182"/>
       <source>Error while loading todo lists!</source>
       <translation>Error al cargar las listas de tareas!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1155"/>
+      <location filename="../services/owncloudservice.cpp" line="1157"/>
       <source>Your CalDAV server didn't reply anything!</source>
       <translation>¡El servidor CalDAV no devolvió nada!</translation>
     </message>
     <message>
-      <location filename="../services/owncloudservice.cpp" line="1181"/>
+      <location filename="../services/owncloudservice.cpp" line="1183"/>
       <source>Error message from your CalDAV server: &lt;strong&gt;%1&lt;/strong&gt;</source>
       <translation>Mensaje de error del servidor CalDAV: &lt;strong&gt;%1&lt;/strong&gt;</translation>
     </message>
@@ -2428,17 +2439,17 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
       <translation>No se pudo almacenar el archivo de nota: %1 - Mensaje de error: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1540"/>
+      <location filename="../entities/note.cpp" line="1543"/>
       <source>Could not read image file: %1</source>
       <translation>No se pudo leer el archivo de imagen: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2031"/>
+      <location filename="../entities/note.cpp" line="2034"/>
       <source>Note filename changed</source>
       <translation>Nombre de archivo de la nota cambiado</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2032"/>
+      <location filename="../entities/note.cpp" line="2035"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation>
         <numerusform>Se detectó un cambio de nombre de la nota. ¿Te gustaría reemplazar todos los enlaces a &lt;strong&gt;%1&lt;/strong&gt; con &lt;strong&gt;%2&lt;/strong&gt; en &lt;strong&gt;%n&lt;/strong&gt; archivo de nota?</numerusform>
@@ -2591,6 +2602,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="272"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Install</source>
       <translation>Instalar</translation>
     </message>
@@ -2670,22 +2682,49 @@ Are the folder and the file writeable?</source>
       <translation>Reinstala el script</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="392"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
+      <source>Platform not supported!</source>
+      <translation type="unfinished">Platform not supported!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
+      <source>Your platform is not supported by this script!
+Do you want to install it anyway?</source>
+      <translation type="unfinished">Your platform is not supported by this script!
+Do you want to install it anyway?</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
+      <source>Cancel</source>
+      <translation type="unfinished">Cancel</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
+      <source>Update app</source>
+      <translation type="unfinished">Update app</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
+      <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
+      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
       <source>Install successful</source>
       <translation>Instalación exitosa</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="393"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
       <source>The script was successfully installed!</source>
       <translation>¡El script fue instalado con éxito!</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="395"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="414"/>
       <source>Download failed</source>
       <translation>Error al descargar</translation>
     </message>
     <message>
-      <location filename="../dialogs/scriptrepositorydialog.cpp" line="396"/>
+      <location filename="../dialogs/scriptrepositorydialog.cpp" line="415"/>
       <source>The script could not be downloaded!</source>
       <translation>¡No se pudo descargar el script!</translation>
     </message>
@@ -2698,12 +2737,12 @@ Are the folder and the file writeable?</source>
       <translation>Formulario</translation>
     </message>
     <message>
-      <location filename="../widgets/scriptsettingwidget.ui" line="76"/>
+      <location filename="../widgets/scriptsettingwidget.ui" line="44"/>
       <source>The setting name</source>
       <translation>El nombre de la configuración</translation>
     </message>
     <message>
-      <location filename="../widgets/scriptsettingwidget.cpp" line="141"/>
+      <location filename="../widgets/scriptsettingwidget.cpp" line="158"/>
       <source>Please select a file</source>
       <translation>Por favor, selecciona un archivo</translation>
     </message>
@@ -2711,7 +2750,7 @@ Are the folder and the file writeable?</source>
   <context>
     <name>ScriptingService</name>
     <message>
-      <location filename="../services/scriptingservice.cpp" line="227"/>
+      <location filename="../services/scriptingservice.cpp" line="236"/>
       <source>file doesn't exist</source>
       <translation>archivo no existe</translation>
     </message>
@@ -4118,7 +4157,7 @@ Mensaje de error de conexión: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2042"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2408"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
       <source>&amp;Remove</source>
       <translation>&amp;Eliminar</translation>
     </message>
@@ -4168,100 +4207,100 @@ Mensaje de error de conexión: </translation>
       <translation>Buscar un script en el repositorio de scripts</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2405"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2408"/>
       <source>Remove script</source>
       <translation>Eliminar script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2406"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2409"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>¿Quitar el script actual &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2458"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2461"/>
       <source>QML files</source>
       <translation>Archivos QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2459"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2462"/>
       <source>Please select your QML file</source>
       <translation>Por favor, seleccione su archivo QML</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2548"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2551"/>
       <source>Open repository</source>
       <translation>Abrir repositorio</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2608"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2611"/>
       <source>Your script seems to be valid</source>
       <translation>Su script parece ser válido</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2609"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2612"/>
       <source>There were script errors:
 %1</source>
       <translation>Hubo errores en el script:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2678"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2681"/>
       <source>File extension</source>
       <translation>Extensión de archivo</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2679"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2682"/>
       <source>Enter your custom file extension:</source>
       <translation>Escriba la extensión de archivo personalizado:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2953"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2956"/>
       <source>Calendar cache emptied</source>
       <translation>Se vació la caché de calendarios</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2954"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2957"/>
       <source>Your calendar cache was emptied.</source>
       <translation>La caché de calendarios fue vaciada.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3031"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3034"/>
       <source>Reset toolbars and exit</source>
       <translation>Restablecer las barras de herramientas y salir</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3032"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3035"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>¿Desea restablecer todas las barras de herramientas? La aplicación se cerrará en el proceso, las barras de herramientas por defecto serán restauradas cuando la inicies otra vez.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3036"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3039"/>
       <source>Reset and &amp;exit</source>
       <translation>R&amp;establecer y salir</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3198"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3201"/>
       <source>Log file cleared</source>
       <translation>Se vació el archivo de registro</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3199"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3202"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>Se vació el archivo de registro &lt;strong&gt;%1&lt;/strong&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3235"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3238"/>
       <source>Executable files</source>
       <translation>Archivos ejecutables</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3236"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3238"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3239"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3241"/>
       <source>All files</source>
       <translation>Todos los archivos</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3246"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3249"/>
       <source>Please select the path of your git executable</source>
       <translation>Por favor, selecciona la ruta al ejecutable git</translation>
     </message>
@@ -4341,8 +4380,8 @@ Your notes will stay intact!</source>
       <location filename="../dialogs/settingsdialog.cpp" line="1735"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2042"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2408"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3036"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3039"/>
       <source>&amp;Cancel</source>
       <translation>Cancelar</translation>
     </message>
