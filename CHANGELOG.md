@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 17.06.6
-- there now new context menu entries in the note list
+- there are now new context menu entries in the note list
   (for [Issue #613](https://github.com/pbek/QOwnNotes/issues/613))
     - a `New note` menu entry to create a new note
     - a `Rename note` menu entry to rename the note if you allowed the note 
