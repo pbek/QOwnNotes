@@ -5,6 +5,7 @@ build:
     - linuxdeployqt
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5Sql)
+    - pkgconfig(Qt5Sql-sqlite)
     - pkgconfig(Qt5Gui)
     - pkgconfig(Qt5Network)
     - pkgconfig(Qt5Widgets)
