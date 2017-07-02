@@ -3,9 +3,9 @@ app: QOwnNotes
 build:
   packages:
     - linuxdeployqt
+    - sqlite
     - pkgconfig(Qt5Svg)
     - pkgconfig(Qt5Sql)
-    - pkgconfig(Sqlite)
     - pkgconfig(Qt5Gui)
     - pkgconfig(Qt5Network)
     - pkgconfig(Qt5Widgets)
