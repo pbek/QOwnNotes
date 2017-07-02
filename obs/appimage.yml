@@ -11,6 +11,7 @@ build:
     - pkgconfig(Qt5Xml)
     - pkgconfig(Qt5XmlPatterns)
     - pkgconfig(Qt5PrintSupport)
+    - pkgconfig(Qt5Qml)
   git:
     - https://github.com/pbek/QOwnNotes.git
 
@@ -20,4 +21,4 @@ script:
   - qmake-qt5 QOwnNotes.pro PREFIX=/usr
   - make INSTALL_ROOT=$BUILD_APPDIR install
   - unset QTDIR; unset QT_PLUGIN_PATH ; unset LD_LIBRARY_PATH
-  - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -qmldir=$BUILD_SOURCE_DIR/ -bundle-non-qt-libs -verbose=2
+  - linuxdeployqt $BUILD_APPDIR/usr/share/applications/*.desktop -bundle-non-qt-libs -verbose=2
