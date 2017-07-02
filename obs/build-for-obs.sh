@@ -145,8 +145,8 @@ osc add $archiveFile
 #osc add debian.compat
 #osc add debian.qownnotes.install
 #osc add qownnotes.dsc
-osc add appimage.yml
-osc add _service
+#osc add appimage.yml
+#osc add _service
 
 echo "Committing changes..."
 
