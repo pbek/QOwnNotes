@@ -2098,8 +2098,8 @@ void MainWindow::readSettingsFromSettingsDialog() {
     // self-builds
     if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
         QString release = qApp->property("release").toString();
-        bool enabled =
-                release.contains("Travis") || release.contains("AppVeyor");
+        bool enabled = release.contains("Travis") ||
+                release.contains("AppVeyor") || release.contains("AppImage");
         settings.setValue("disableAutomaticUpdateDialog", !enabled);
     }
 

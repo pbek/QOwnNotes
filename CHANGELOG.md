@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 17.07.0
+- there now is a repository with QOwnNotes built as **AppImage** for 32 and 64 
+  bit systems (for [Issue #534](https://github.com/pbek/QOwnNotes/issues/534))
+    - please visit the [AppImage installation page](http://www.qownnotes.org/installation#AppImage)
+      for instructions
+    - if you run QOwnNotes from the AppImage the automatic updater will be 
+      enabled by default and you will be led the the AppImage download page if 
+      there is a new version of the application available
+
 ## 17.06.6
 - there are now new context menu entries in the note list
   (for [Issue #613](https://github.com/pbek/QOwnNotes/issues/613))

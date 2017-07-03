@@ -131,6 +131,11 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             if ((release == "Travis CI") || (release == "AppVeyor")) {
                 // download the new release
                 QDesktopServices::openUrl(QUrl(releaseUrl.toUtf8()));
+            } else if ((release == "AppImage")) {
+                // download the new release
+                QDesktopServices::openUrl(QUrl(
+                        "http://download.opensuse.org/repositories/home:/pbek:/"
+                                "QOwnNotes/AppImage/"));
             } else {
                 // open the installation page
                 QDesktopServices::openUrl(
