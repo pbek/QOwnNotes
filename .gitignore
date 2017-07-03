@@ -7,3 +7,4 @@ build-tests-*
 .idea
 cmake-build-*
 doc/build
+*.qmlc
