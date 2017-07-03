@@ -8,6 +8,7 @@
     - if you run QOwnNotes from the AppImage the automatic updater will be 
       enabled by default and you will be led the the AppImage download page if 
       there is a new version of the application available
+- fixed a problem in the desktop file for all openSUSE builds
 - added more Polish, Spanish, Croatian, Italian, Brazilian Portuguese, Hungarian
   and German translation (thank you lucjan, asoliverez, richarson, xpertmind,
   mlocati, mlimacarlos, vaganyik, jmbm and rakekniven)
