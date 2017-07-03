@@ -866,7 +866,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Promijeni verzal teksta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -971,7 +971,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2043"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Postavke skripta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2052"/>
@@ -1480,7 +1480,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6691"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Preimenuj oznaku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6692"/>
@@ -1526,7 +1526,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7724"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Preimenuj bilješku</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7725"/>
@@ -1584,7 +1584,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9175"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Odaberi datoteku za umetanje</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
@@ -2051,7 +2051,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="643"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Skriptiranje</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="877"/>
@@ -2231,7 +2231,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="17"/>
       <source>Note was modified externally!</source>
-      <translation type="unfinished">Note was modified externally!</translation>
+      <translation>Bilješka je promijenjena izvana!</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="41"/>
@@ -2336,7 +2336,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="496"/>
       <source>API app version too low</source>
-      <translation type="unfinished">API app version too low</translation>
+      <translation>API verzija aplikacije preniska</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="497"/>
@@ -2391,12 +2391,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1132"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>Nema obrisanih bilješki</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1133"/>
       <source>No trashed notes were found on the server.</source>
-      <translation type="unfinished">No trashed notes were found on the server.</translation>
+      <translation>Nema obrisanih bilješki na poslužitelju.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1156"/>
@@ -2622,27 +2622,27 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Instaliraj</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="222"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Verzija:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="199"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repozitorij:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="134"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Minimalna verzija aplikacije:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="398"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Ime</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
@@ -2657,32 +2657,32 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autori</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Autor</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Podržane platforme</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Podržana platforma</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Otvori repozitorij</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Ažuriranje</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="264"/>
@@ -2692,7 +2692,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="266"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Ponovo instaliraj</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="267"/>
@@ -3070,7 +3070,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="3494"/>
       <location filename="../dialogs/settingsdialog.ui" line="3663"/>
       <source>Default font:</source>
-      <translation type="unfinished">Default font:</translation>
+      <translation>Zadani font:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3536"/>
@@ -3086,7 +3086,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3007"/>
       <source>Do this at your own risk!</source>
-      <translation type="unfinished">Do this at your own risk!</translation>
+      <translation>Učini to na vlastiti rizik!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3010"/>
@@ -3141,7 +3141,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1968"/>
       <source>Spanish</source>
-      <translation type="unfinished">Spanish</translation>
+      <translation>Španjolski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
@@ -3171,7 +3171,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2078"/>
       <source>Russian</source>
-      <translation type="unfinished">Russian</translation>
+      <translation>Ruski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1406"/>
@@ -3201,12 +3201,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
       <source>General</source>
-      <translation type="unfinished">General</translation>
+      <translation>Opće</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2923"/>
       <source>Notes</source>
-      <translation type="unfinished">Notes</translation>
+      <translation>Bilješke</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2949"/>
@@ -3224,7 +3224,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2023"/>
       <source>Japanese</source>
-      <translation type="unfinished">Japanese</translation>
+      <translation>Japanski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3034"/>
@@ -3241,7 +3241,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.cpp" line="1731"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1740"/>
       <source>Database</source>
-      <translation type="unfinished">Database</translation>
+      <translation>Baza podataka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3358"/>
@@ -3251,7 +3251,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3310"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>Brisanje podataka aplikacije i izlaz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3316"/>
@@ -3262,12 +3262,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3326"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1799"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>Brisanje podataka aplikacije i izlaz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3149"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>Ažuriraj dijalog</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3185"/>
@@ -3277,7 +3277,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3270"/>
       <source>External editor</source>
-      <translation type="unfinished">External editor</translation>
+      <translation>Vanjski editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3283"/>
@@ -3348,17 +3348,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation type="unfinished">Editor</translation>
+      <translation>Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation type="unfinished">Editor fonts &amp; colors</translation>
+      <translation>Editor fontova i boja</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Ploče</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -3450,44 +3450,44 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="784"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>Podrška za ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Uključi ownCloud podršku</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="969"/>
       <location filename="../dialogs/settingsdialog.ui" line="1695"/>
       <source>Username:</source>
-      <translation type="unfinished">Username:</translation>
+      <translation>Korisničko ime:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="994"/>
       <source>Your ownCloud username</source>
-      <translation type="unfinished">Your ownCloud username</translation>
+      <translation>Korisničko ime na ownCloud poslužitelju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1004"/>
       <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Zaporka:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <source>Your ownCloud password</source>
-      <translation type="unfinished">Your ownCloud password</translation>
+      <translation>Zaporka na OwnCloud poslužitelju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1060"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
+      <translation>&amp;povezivanje s ownCloud poslužiteljom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1087"/>
       <source>Connection status</source>
-      <translation type="unfinished">Connection status</translation>
+      <translation>Stanje veze</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3955"/>
@@ -3504,40 +3504,40 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4306"/>
       <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Order</source>
-      <translation type="unfinished">Order</translation>
+      <translation>Redoslijed</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4210"/>
       <location filename="../dialogs/settingsdialog.ui" line="4312"/>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Uzlazno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4217"/>
       <location filename="../dialogs/settingsdialog.ui" line="4319"/>
       <location filename="../dialogs/settingsdialog.ui" line="4394"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Silazno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4227"/>
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <location filename="../dialogs/settingsdialog.ui" line="4352"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>Sortiranje</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>
       <location filename="../dialogs/settingsdialog.ui" line="4279"/>
       <location filename="../dialogs/settingsdialog.ui" line="4358"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Abecedno</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Po zadnjoj izmjeni / korištenju</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
@@ -3558,7 +3558,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <location filename="../dialogs/settingsdialog.ui" line="4365"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Po zadnjoj izmjeni</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4299"/>
@@ -3626,7 +3626,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4052"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>sekunda</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4072"/>
@@ -3711,12 +3711,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3069"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Maksimalna visina:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3076"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Maksimalna širina:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2942"/>
@@ -3833,22 +3833,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3932"/>
       <source>Insert current time</source>
-      <translation type="unfinished">Insert current time</translation>
+      <translation>Umetni trenutno &amp;vrijeme</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3938"/>
       <source>Time format:</source>
-      <translation type="unfinished">Time format:</translation>
+      <translation>Format vremena:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3945"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
-      <translation type="unfinished">Enter your custom time format, like "dd.MM.yyyy hh:mm"</translation>
+      <translation>Unesite prilagođeni format vremena, npr. "dd. MM.yyyy hh: mm"</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3990"/>
       <source>Editor options</source>
-      <translation type="unfinished">Editor options</translation>
+      <translation>Opcije editora</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3996"/>
@@ -3958,7 +3958,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2208"/>
       <source>Icons</source>
-      <translation type="unfinished">Icons</translation>
+      <translation>Ikone</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2217"/>
@@ -4049,7 +4049,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3488"/>
       <location filename="../dialogs/settingsdialog.ui" line="3643"/>
       <source>Fonts</source>
-      <translation type="unfinished">Fonts</translation>
+      <translation>Fontovi</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3511"/>
@@ -4057,7 +4057,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3711"/>
       <location filename="../dialogs/settingsdialog.ui" line="3725"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>Postavi novi font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3522"/>
@@ -4065,17 +4065,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3649"/>
       <location filename="../dialogs/settingsdialog.ui" line="3673"/>
       <source>Reset font</source>
-      <translation type="unfinished">Reset font</translation>
+      <translation>Ponovno postavi font</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="300"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Ispravljanje pogrešaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3399"/>
       <source>Debug information</source>
-      <translation type="unfinished">Debug information</translation>
+      <translation>Informacije za ispravljanje pogrešaka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3422"/>
@@ -4165,7 +4165,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2001"/>
       <source>new folder</source>
-      <translation type="unfinished">new folder</translation>
+      <translation>nova mapa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2039"/>
@@ -4181,12 +4181,12 @@ Connection error message: </translation>
       <location filename="../dialogs/settingsdialog.cpp" line="2042"/>
       <location filename="../dialogs/settingsdialog.cpp" line="2411"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>&amp;Izbriši</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2115"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Molim odaberi mapu gdje će bilješke biti spremljene</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2152"/>

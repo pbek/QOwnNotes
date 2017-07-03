@@ -1487,7 +1487,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="6691"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Zmień nazwę etykiety</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6692"/>
@@ -1533,12 +1533,12 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="7724"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Zmień nazwę notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7725"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Pozwala zmienić nazwę pliku notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8543"/>
@@ -2709,29 +2709,28 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Nie obsługiwana platforma!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Twoja platforma nie jest obsługiwany przez ten skrypt! Czy chcesz go, mimo wszystko, zainstalować?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Anuluj</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Aktualizuj aplikację</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Proszę nie zapomnij zaktualizować QOwnNotes aby ten skrypt zadziałał!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
@@ -3549,7 +3548,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Ukryj „Znajdź lub utworzyć tag”</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4260"/>
@@ -3575,7 +3574,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4329"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Ukryj „Znajdź lub utwórz podfolder notatek”</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4336"/>

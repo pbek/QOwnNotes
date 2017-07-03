@@ -8,6 +8,9 @@
     - if you run QOwnNotes from the AppImage the automatic updater will be 
       enabled by default and you will be led the the AppImage download page if 
       there is a new version of the application available
+- added more Polish, Spanish, Croatian, Italian, Brazilian Portuguese, Hungarian
+  and German translation (thank you lucjan, asoliverez, richarson, xpertmind,
+  mlocati, mlimacarlos, vaganyik, jmbm and rakekniven)
 
 ## 17.06.6
 - there are now new context menu entries in the note list

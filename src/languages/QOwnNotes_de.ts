@@ -443,7 +443,7 @@
     <message>
       <location filename="../mainwindow.ui" line="695"/>
       <source>Sort by</source>
-      <translation>Sortieren</translation>
+      <translation>Sortieren nach</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="759"/>
@@ -518,7 +518,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1049"/>
       <source>Sort alphabetical</source>
-      <translation>Sortieren nach Alphabet</translation>
+      <translation>Alphabetisch sortieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1057"/>
@@ -528,7 +528,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Sort by date</source>
-      <translation>Sortieren nach Datum</translation>
+      <translation>Nach Datum sortieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1068"/>
@@ -651,7 +651,7 @@
       <location filename="../mainwindow.ui" line="852"/>
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Workspaces</source>
-      <translation>Workspaces</translation>
+      <translation>Arbeitsbereiche</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="857"/>
@@ -1475,7 +1475,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="6691"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Tag umbenennen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6692"/>
@@ -1521,12 +1521,12 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="7724"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Notiz umbenennen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7725"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Ermöglicht das Umbenennen des Dateinamens der Notiz</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8543"/>
@@ -1650,7 +1650,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="4247"/>
       <source>Export current note as PDF</source>
-      <translation>aktuelle Notiz als PDF Datei exportieren</translation>
+      <translation>Aktuelle Notiz als PDF-Datei exportieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4308"/>
@@ -2686,29 +2686,29 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Plattform wird nicht unterstützt!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Ihre Plattform wird von diesem Skript nicht unterstützt!
+Möchten Sie es trotzdem installieren?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Abbrechen</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>App aktualisieren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Bitte vergessen Sie nicht Ihre Installation von QOwnNotes zu aktualisieren, damit dieses Skript funktioniert!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
