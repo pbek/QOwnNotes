@@ -311,7 +311,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="618"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="661"/>
       <source>INI files</source>
-      <translation>File ini</translation>
+      <translation>File INI</translation>
     </message>
   </context>
   <context>
@@ -344,7 +344,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;selezionare il file locale a cui puntare&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;seleziona il file locale a cui puntare&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="181"/>
@@ -362,7 +362,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Fatal</source>
-      <translation>Fatale</translation>
+      <translation>Grave</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
@@ -487,12 +487,12 @@
     <message>
       <location filename="../mainwindow.ui" line="990"/>
       <source>&amp;Remove current note</source>
-      <translation>&amp;Cancella la nota corrente</translation>
+      <translation>&amp;Rimuovi la nota attuale</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1002"/>
       <source>About &amp;QOwnNotes...</source>
-      <translation>Informazioni su QOwnNotes</translation>
+      <translation>Informazioni su &amp;QOwnNotes...</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1014"/>
@@ -1328,13 +1328,13 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="3882"/>
       <source>Tag selected notes</source>
-      <translation>Tagga le note selezionate</translation>
+      <translation>Applica tag alle note selezionate</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3883"/>
       <source>Tag %n selected note(s) with &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Taggare %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Applica tag a %n nota selezionata con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Taggare %n note selezionate con &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
@@ -1582,7 +1582,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
       <location filename="../mainwindow.ui" line="893"/>
       <location filename="../mainwindow.cpp" line="3885"/>
       <source>&amp;Tag</source>
-      <translation>&amp;Tagga</translation>
+      <translation>&amp;Tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3925"/>
@@ -1816,7 +1816,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6109"/>
       <source>show all untagged notes (%1)</source>
-      <translation>mostra tutte le note senza etichette (%1)</translation>
+      <translation>mostra tutte le note senza tag (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6112"/>
@@ -1871,7 +1871,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="7779"/>
       <source>&amp;Tag selected notes with...</source>
-      <translation>&amp;Tagga le note selezionate con...</translation>
+      <translation>Applica &amp;tag alle note selezionate con...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7801"/>
@@ -1961,7 +1961,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6967"/>
       <source>Tag this</source>
-      <translation>Tagga questa</translation>
+      <translation>Applica tag a questa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6997"/>
@@ -1976,7 +1976,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="6322"/>
       <source>show all notes tagged with '%1' (%2)</source>
-      <translation>visualizza tutte le note taggate con '%1' (%2)</translation>
+      <translation>mostra tutte le note con tag con '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6565"/>
