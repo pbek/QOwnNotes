@@ -4,6 +4,8 @@
 - **QOwnNotesAPI**, the ownCloud / Nextcloud API application for QOwnNotes
   is now available in the ownCloud Marketplace
     - you can find it at the [QOwnNotesAPI Marketplace page](https://marketplace.owncloud.com/apps/qownnotesapi)
+- there now is a new *Editor color schema* **Material Dark** by @UltimateRandom
+  (for [Issue #626](https://github.com/pbek/QOwnNotes/issues/626), a big thank you)
 
 ## 17.07.0
 - there now is a repository with QOwnNotes built as **AppImage** for 32 and 64 
