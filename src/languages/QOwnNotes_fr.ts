@@ -1474,7 +1474,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="6691"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Renommer le tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6692"/>
@@ -1520,12 +1520,12 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="7724"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Renommer la note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7725"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>Permet de renommer le nom de fichier de la note</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8543"/>
@@ -2685,29 +2685,28 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Plateforme non prise en charge !</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Votre plateforme n'est pas prise en charge par ce script ! Voulez-vous quand même l'installer ?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annuler</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Mettre à jour l'application</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>N'oubliez pas de mettre à jour votre version de QOwnNotes pour que le script fonctionne !</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
