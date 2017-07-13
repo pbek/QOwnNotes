@@ -2173,8 +2173,9 @@ QString Note::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
         suffix = "image";
     }
 
-    // remove strings like "?b=16068071000" from the suffix
-    suffix.remove(QRegularExpression("\\?.+$"));
+    // remove strings like "?b=16068071000" and non-characters from the suffix
+    suffix.remove(QRegularExpression("\\?.+$"))
+            .remove(QRegularExpression("[^a-zA-Z0-9]"));
 
     QString text;
     QTemporaryFile *tempFile = new QTemporaryFile(

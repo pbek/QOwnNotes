@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.07.2
+- more problematic characters will be removed from the suffix of downloaded 
+  media files to make sure the file can be stored locally
+  (for [Issue #627](https://github.com/pbek/QOwnNotes/issues/627))
+
 ## 17.07.1
 - **QOwnNotesAPI**, the ownCloud / Nextcloud API application for QOwnNotes
   is now available in the ownCloud Marketplace
