@@ -7723,11 +7723,9 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             this, SLOT(on_action_New_note_triggered()));
 
     QAction *renameAction = new QAction(this);
-    if (Note::allowDifferentFileName()) {
-        renameAction = noteMenu.addAction(tr("Rename note"));
-        renameAction->setToolTip(tr("Allows you to rename the filename of "
-                                              "the note"));
-    }
+    renameAction = noteMenu.addAction(tr("Rename note"));
+    renameAction->setToolTip(tr("Allows you to rename the filename of "
+                                          "the note"));
 
     QAction *removeAction = noteMenu.addAction(tr("&Remove notes"));
     noteMenu.addSeparator();
@@ -7865,8 +7863,21 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
             // show the git log of the current note
             on_actionShow_note_git_versions_triggered();
         } else if (selectedItem == renameAction) {
-            QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
-            ui->noteTreeWidget->editItem(item);
+            if (Note::allowDifferentFileName()) {
+                QTreeWidgetItem *item = ui->noteTreeWidget->currentItem();
+                ui->noteTreeWidget->editItem(item);
+            } else {
+                if (QMessageBox::warning(
+                        this, tr("Note renaming not enabled!"),
+                        tr("If you want to rename your note you have to enable "
+                                   "the option to allow the note filename to be "
+                                   "different from the headline."),
+                        tr("Open &settings"),
+                        tr("&Cancel"),
+                        QString::null, 0, 1) == 0) {
+                    openSettingsDialog(SettingsDialog::GeneralPage);
+                }
+            }
         }
     }
 }

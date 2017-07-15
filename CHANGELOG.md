@@ -7,7 +7,12 @@
 - dialog windows are now maximized if it looks like that they don't fit on
   the current screen the first time they were opened
   (for [Issue #631](https://github.com/pbek/QOwnNotes/issues/631))
-          
+- you now get a warning if you try to rename a note in the note list to enable
+  the option to allow the note filename to be different from the headline if 
+  you haven't allowed it yet (for [Issue #613](https://github.com/pbek/QOwnNotes/issues/613))
+    - there is a button to directly open the *General settings* in the 
+      warning dialog
+
 ## 17.07.2
 - more problematic characters will be removed from the filename-suffix of 
   downloaded media files to make sure the file can be stored locally
