@@ -681,8 +681,15 @@ QByteArray Utils::Misc::downloadUrl(QUrl url) {
 
     // if we didn't get a timeout let us return the content
     if (timer.isActive()) {
-        // get the data from the network reply
-        data = reply->readAll();
+        int statusCode = reply->attribute(
+                QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+        // only get the data if the status code was "success"
+        // see: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+        if (statusCode >= 200 && statusCode < 300) {
+            // get the data from the network reply
+            data = reply->readAll();
+        }
     }
 
     return data;

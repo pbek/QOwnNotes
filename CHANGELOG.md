@@ -12,6 +12,9 @@
   you haven't allowed it yet (for [Issue #613](https://github.com/pbek/QOwnNotes/issues/613))
     - there is a button to directly open the *General settings* in the 
       warning dialog
+- files are now only downloaded if the status code of the request was "success"
+  to prevent downloaded files with error pages
+  (for [Issue #627](https://github.com/pbek/QOwnNotes/issues/627))
 
 ## 17.07.2
 - more problematic characters will be removed from the filename-suffix of 
