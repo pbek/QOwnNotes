@@ -4296,6 +4296,9 @@ void MainWindow::showAppMetricsNotificationIfNeeded() {
  * Opens the task list dialog
  */
 void MainWindow::openTodoDialog(QString taskUid) {
+    // show main window to prevent crashes on Windows
+    show();
+
     QSettings settings;
     QStringList todoCalendarEnabledUrlList =
             settings.value("ownCloud/todoCalendarEnabledUrlList")
