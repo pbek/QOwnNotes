@@ -15,6 +15,8 @@
 - files are now only downloaded if the status code of the request was "success"
   to prevent downloaded files with error pages
   (for [Issue #627](https://github.com/pbek/QOwnNotes/issues/627))
+- when downloading files a proper filename suffix will be set by detecting the
+  mime type of the file (for [Issue #627](https://github.com/pbek/QOwnNotes/issues/627))
 
 ## 17.07.2
 - more problematic characters will be removed from the filename-suffix of 

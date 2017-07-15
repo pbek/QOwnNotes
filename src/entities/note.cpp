@@ -2085,10 +2085,21 @@ QString Note::getInsertMediaMarkdown(QFile *file, bool addNewLine,
         }
 
         QFileInfo fileInfo(file->fileName());
+        QString suffix = fileInfo.suffix();
+        QMimeDatabase db;
+        QMimeType type = db.mimeTypeForFile(file->fileName());
+
+        // try to detect the mime type of the file and use a proper file suffix
+        if (type.isValid()) {
+            QStringList suffixes = type.suffixes();
+            if (suffixes.count() > 0) {
+                suffix = suffixes[0];
+            }
+        }
 
         // find a random name for the new file
         QString newFileName =
-                QString::number(qrand()) + "." + fileInfo.suffix();
+                QString::number(qrand()) + "." + suffix;
 
         QString newFilePath = mediaDir.path() + QDir::separator() + newFileName;
 
