@@ -4,7 +4,10 @@
 - when opening the todo list dialog from the system tray the main window of 
   QOwnNotes will be brought to the foreground too to prevent crashes under
   Windows (for [Issue #630](https://github.com/pbek/QOwnNotes/issues/630))
-
+- dialog windows are now maximized if it looks like that they don't fit on
+  the current screen the first time they were opened
+  (for [Issue #631](https://github.com/pbek/QOwnNotes/issues/631))
+          
 ## 17.07.2
 - more problematic characters will be removed from the filename-suffix of 
   downloaded media files to make sure the file can be stored locally

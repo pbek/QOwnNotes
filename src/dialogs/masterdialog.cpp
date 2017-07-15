@@ -1,4 +1,6 @@
 #include <QSettings>
+#include <QApplication>
+#include <QDesktopWidget>
 #include "masterdialog.h"
 #include "services/metricsservice.h"
 
@@ -68,9 +70,18 @@ void MasterDialog::handleOpenDialog() {
     QByteArray geometryData =
             settings.value(getGeometrySettingKey()).toByteArray();
 
-    // just restore the geometry if there is some data
+    // restore the geometry if there is some data
     if (geometryData.length() > 0) {
         restoreGeometry(geometryData);
+    } else {
+        const QRect screenGeometry = QApplication::desktop()->screenGeometry();
+
+        // maximize the dialog window if it looks like that it doesn't fit on
+        // the current screen
+        if (((window()->width() + 150) > screenGeometry.width()) ||
+                ((window()->height() + 150) > screenGeometry.height())) {
+            setWindowState(windowState() ^ Qt::WindowMaximized);
+        }
     }
 
     // send metrics
