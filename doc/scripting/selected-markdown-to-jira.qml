@@ -55,7 +55,7 @@ QtObject {
         var result = script.startSynchronousProcess(nodejsExecutablePath, params, text);
 
         // replace some names
-        result = String(result).replace(/\@Georg/ig, "[~g.franz]");
+        result = String(result).replace(/\@Georg/ig, "[~g.franz]").replace(/\@Jacob/ig, "[~j.ester]").replace(/\@Gandalf/ig, "[~g.sievers]");
 
         // put the result into the clipboard
         script.setClipboardText(result);
