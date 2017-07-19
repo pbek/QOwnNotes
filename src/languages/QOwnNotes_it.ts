@@ -1530,7 +1530,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="7871"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Rinomina delle note non abilitata!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8557"/>
@@ -1802,7 +1802,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="7872"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Se vuoi rinominare la tua nota, è necessario abilitare l'opzione per consentire che il nome del file della nota sia diverso dalla testata.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8034"/>
@@ -3603,7 +3603,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4165"/>
       <source>Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</source>
-      <translation>Ricordarsi di abilitare il supporto a git per le proprie cartelle delle note e configurare il proprio nome e indirizzo email nel client git, ad esempio con questi comandi da terminale:</translation>
+      <translation>Ricordati di abilitare il supporto a git per le tue cartelle delle note e configura il tuo nome e indirizzo email nel client git, ad esempio con questi comandi da terminale:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4117"/>

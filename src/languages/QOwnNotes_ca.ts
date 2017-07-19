@@ -23,12 +23,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="14"/>
       <source>Evernote Import</source>
-      <translation type="unfinished">Evernote Import</translation>
+      <translation>Importa de l'Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="90"/>
       <source>Select file</source>
-      <translation type="unfinished">Select file</translation>
+      <translation>Seleccioneu el fitxer</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
@@ -38,17 +38,17 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
       <source>Import images</source>
-      <translation type="unfinished">Import images</translation>
+      <translation>Importa imatges</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="23"/>
       <source>Evernote enex file</source>
-      <translation type="unfinished">Evernote enex file</translation>
+      <translation>Arxiu enex d'Evernote</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="33"/>
       <source>%v of %m note(s) imported</source>
-      <translation type="unfinished">%v of %m note(s) imported</translation>
+      <translation>Importades %v de %m notes</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
@@ -58,12 +58,12 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Importa arxius adjunts</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
       <source>Enex files</source>
-      <translation type="unfinished">Enex files</translation>
+      <translation>Arxius enex</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
@@ -76,27 +76,27 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation type="unfinished">Text font</translation>
+      <translation>Font de text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation type="unfinished">Size:</translation>
+      <translation>Mida:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Família:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>Esquema de color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>Eliminar esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
@@ -122,7 +122,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>Copia esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
@@ -134,27 +134,27 @@
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="662"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>Importa esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Importar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>Compartir esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>Fons:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>Front:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -169,37 +169,37 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation type="unfinished">Adapt font size:</translation>
+      <translation>Adaptar tipus de lletra:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation type="unfinished">Underline</translation>
+      <translation>Subratllat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="194"/>
       <source>Text preset</source>
-      <translation type="unfinished">Text preset</translation>
+      <translation>Text preseleccionat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>Text destacat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Strong text</source>
-      <translation type="unfinished">Strong text</translation>
+      <translation>Text destacat</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>(HTML) Comment</source>
-      <translation type="unfinished">(HTML) Comment</translation>
+      <translation>Comentari (HTML)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>Capçalera, nivell 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
@@ -214,47 +214,47 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>Codi (bloc)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>Codi (en línia)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
       <source>List item</source>
-      <translation type="unfinished">List item</translation>
+      <translation>Element de llista</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>Capçalera, nivell 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>Capçalera, nivell 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 4</source>
-      <translation type="unfinished">Header, level 4</translation>
+      <translation>Capçalera, nivell 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 5</source>
-      <translation type="unfinished">Header, level 5</translation>
+      <translation>Capçalera, nivell 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 6</source>
-      <translation type="unfinished">Header, level 6</translation>
+      <translation>Capçalera, nivell 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
       <source>Block quote</source>
-      <translation type="unfinished">Block quote</translation>
+      <translation>Citació</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
@@ -265,7 +265,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation type="unfinished">Masked syntax</translation>
+      <translation>Sintaxi emmascarada</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
@@ -280,12 +280,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="444"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>Copia l'esquema de color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="445"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>Nom de l'esquema de color</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="569"/>
@@ -300,18 +300,18 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Elimina</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="618"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="661"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>Arxius INI</translation>
     </message>
   </context>
   <context>
@@ -329,17 +329,17 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Introduïu una URL per a enllaçar</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Cerqueu notes o creeu-ne de noves escrivint text i prement Retorn</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Cerqueu una nota per a enllaçar</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
@@ -357,37 +357,37 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="26"/>
       <source>Logs</source>
-      <translation type="unfinished">Logs</translation>
+      <translation>Logs</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="121"/>
       <source>Fatal</source>
-      <translation type="unfinished">Fatal</translation>
+      <translation>Fatal</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="107"/>
       <source>Warning</source>
-      <translation type="unfinished">Warning</translation>
+      <translation>Atenció</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="114"/>
       <source>Critical</source>
-      <translation type="unfinished">Critical</translation>
+      <translation>Crític</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="93"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Depurar</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="100"/>
       <source>Info</source>
-      <translation type="unfinished">Info</translation>
+      <translation>Informació</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Estat</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
@@ -442,7 +442,7 @@
     <message>
       <location filename="../mainwindow.ui" line="695"/>
       <source>Sort by</source>
-      <translation type="unfinished">Sort by</translation>
+      <translation>Ordena per</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="759"/>
@@ -512,7 +512,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1046"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Ordre alfabètic</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1049"/>
@@ -522,12 +522,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1057"/>
       <source>By date</source>
-      <translation type="unfinished">By date</translation>
+      <translation>Per data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Sort by date</source>
-      <translation type="unfinished">Sort by date</translation>
+      <translation>Ordena per data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1068"/>
@@ -564,7 +564,7 @@
       <location filename="../mainwindow.ui" line="1121"/>
       <location filename="../mainwindow.cpp" line="5101"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>Insereix un enllaç</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1124"/>
@@ -579,7 +579,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1139"/>
       <source>Find text in current note</source>
-      <translation type="unfinished">Find text in current note</translation>
+      <translation>Troba text a la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1144"/>
@@ -594,7 +594,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1077"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>Opcions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
@@ -619,7 +619,7 @@
     <message>
       <location filename="../mainwindow.ui" line="537"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Nova etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="705"/>
@@ -629,7 +629,7 @@
     <message>
       <location filename="../mainwindow.ui" line="718"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Importar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="788"/>
@@ -639,28 +639,28 @@
     <message>
       <location filename="../mainwindow.ui" line="830"/>
       <source>To&amp;do</source>
-      <translation type="unfinished">To&amp;do</translation>
+      <translation>Per fer</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="836"/>
       <source>&amp;Window</source>
-      <translation type="unfinished">&amp;Window</translation>
+      <translation>Finestra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="852"/>
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>Àrees de treball</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="857"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Panells</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="862"/>
       <source>Toolbars</source>
-      <translation type="unfinished">Toolbars</translation>
+      <translation>Barres d'eines</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="899"/>
@@ -675,7 +675,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1180"/>
       <source>Show shortcuts</source>
-      <translation type="unfinished">Show shortcuts</translation>
+      <translation>Mostra les dreceres</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1189"/>
@@ -700,17 +700,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
       <source>&amp;Print note (text)</source>
-      <translation type="unfinished">&amp;Print note (text)</translation>
+      <translation>Imprimeix nota (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1252"/>
       <source>&amp;Print note (markdown)</source>
-      <translation type="unfinished">&amp;Print note (markdown)</translation>
+      <translation>Imprimeix nota (markdown)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1264"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>Inserir &amp;imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1267"/>
@@ -720,27 +720,27 @@
     <message>
       <location filename="../mainwindow.ui" line="1279"/>
       <source>Show &amp;changelog</source>
-      <translation type="unfinished">Show &amp;changelog</translation>
+      <translation>Mostra el registre de &amp;canvis</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1288"/>
       <source>&amp;Encrypt note</source>
-      <translation type="unfinished">&amp;Encrypt note</translation>
+      <translation>&amp;Xifra la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1297"/>
       <source>Edit encrypted note</source>
-      <translation type="unfinished">Edit encrypted note</translation>
+      <translation>Edita la nota xifrada</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1309"/>
       <source>Decrypt note</source>
-      <translation type="unfinished">Decrypt note</translation>
+      <translation>Desxifra la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1318"/>
       <source>&amp;Open note in external editor</source>
-      <translation type="unfinished">&amp;Open note in external editor</translation>
+      <translation>&amp;Obre la nota en un editor extern</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1330"/>
@@ -750,12 +750,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
       <source>&amp;Get involved</source>
-      <translation type="unfinished">&amp;Get involved</translation>
+      <translation>Involucrar-se</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1348"/>
       <source>Insert &amp;code block</source>
-      <translation type="unfinished">Insert &amp;code block</translation>
+      <translation>Insereix un bloc de codi</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1360"/>
@@ -765,22 +765,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1372"/>
       <source>Previous note</source>
-      <translation type="unfinished">Previous note</translation>
+      <translation>Nota prèvia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1384"/>
       <source>&amp;Distraction free mode</source>
-      <translation type="unfinished">&amp;Distraction free mode</translation>
+      <translation>Mode lliure de distraccions</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1387"/>
       <source>Distraction free mode, you can leave it with a button on the bottom right</source>
-      <translation type="unfinished">Distraction free mode, you can leave it with a button on the bottom right</translation>
+      <translation>Mode lliure de distraccons, podeu deixar-lo amb un botó en la part inferior dreta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1398"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Mostra la barra d'eines</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1406"/>
@@ -805,7 +805,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1451"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Enganxa html o media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
@@ -816,37 +816,37 @@
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
       <source>Show note in &amp;file manager</source>
-      <translation type="unfinished">Show note in &amp;file manager</translation>
+      <translation>Mostra la nota en el gestor de fitxers</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1481"/>
       <source>Format text &amp;bold</source>
-      <translation type="unfinished">Format text &amp;bold</translation>
+      <translation>Formats el text en negreta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1493"/>
       <source>Format text &amp;italic</source>
-      <translation type="unfinished">Format text &amp;italic</translation>
+      <translation>Formata el text en cursiva</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1505"/>
       <source>&amp;Increase note text size</source>
-      <translation type="unfinished">&amp;Increase note text size</translation>
+      <translation>Augmenta el tamany del text de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1517"/>
       <source>&amp;Decrease note text size</source>
-      <translation type="unfinished">&amp;Decrease note text size</translation>
+      <translation>Disminueix el tamany del text de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1529"/>
       <source>&amp;Reset note text size</source>
-      <translation type="unfinished">&amp;Reset note text size</translation>
+      <translation>Reinicialitza el tamany del text de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1541"/>
       <source>&amp;Add tag to note</source>
-      <translation type="unfinished">&amp;Add tag to note</translation>
+      <translation>Afegeix etiqueta a la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1553"/>
@@ -897,7 +897,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
       <source>Show all panels</source>
-      <translation type="unfinished">Show all panels</translation>
+      <translation>Mostra tots els panells</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1916"/>
@@ -913,7 +913,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1934"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Insereix una taula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
@@ -929,7 +929,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1962"/>
       <source>Delete line</source>
-      <translation type="unfinished">Delete line</translation>
+      <translation>Esborra línia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1970"/>
@@ -945,7 +945,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1994"/>
       <source>Save modified notes</source>
-      <translation type="unfinished">Save modified notes</translation>
+      <translation>Desa les notes modificades</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2005"/>
@@ -961,7 +961,7 @@
       <location filename="../mainwindow.ui" line="2022"/>
       <location filename="../mainwindow.cpp" line="7824"/>
       <source>Show note git versions</source>
-      <translation type="unfinished">Show note git versions</translation>
+      <translation>Mostra les versions de la nota a git</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2031"/>
@@ -992,7 +992,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1579"/>
       <source>Replace in current note</source>
-      <translation type="unfinished">Replace in current note</translation>
+      <translation>Substitueix en la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
@@ -1007,7 +1007,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
       <source>Select note folder</source>
-      <translation type="unfinished">Select note folder</translation>
+      <translation>Selecciona la carpeta de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1613"/>
@@ -1059,12 +1059,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1695"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Comparteix nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1725"/>
       <source>Markdown cheatsheet</source>
-      <translation type="unfinished">Markdown cheatsheet</translation>
+      <translation>Apunts de markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1734"/>
@@ -1116,7 +1116,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1827"/>
       <source>Import notes from Evernote</source>
-      <translation type="unfinished">Import notes from Evernote</translation>
+      <translation>Importa notes de l'Evernote</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1836"/>
@@ -1227,7 +1227,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3612"/>
       <source>Remove selected notes</source>
-      <translation type="unfinished">Remove selected notes</translation>
+      <translation>Elimina les notes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3613"/>
@@ -1388,7 +1388,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5508"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Fitxers markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5562"/>
@@ -1672,12 +1672,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7721"/>
       <location filename="../mainwindow.cpp" line="8033"/>
       <source>New note</source>
-      <translation type="unfinished">New note</translation>
+      <translation>Nova nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4950"/>
       <source>Recent notes</source>
-      <translation type="unfinished">Recent notes</translation>
+      <translation>Notes recents</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4980"/>
@@ -1687,7 +1687,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4991"/>
       <source>Recent tasks</source>
-      <translation type="unfinished">Recent tasks</translation>
+      <translation>Tasques recents</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5023"/>
@@ -1709,7 +1709,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="579"/>
       <location filename="../mainwindow.cpp" line="6173"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Carpeta de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7066"/>
@@ -1793,12 +1793,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7815"/>
       <source>Open note in external editor</source>
-      <translation type="unfinished">Open note in external editor</translation>
+      <translation>&amp;Obre la nota en un editor extern</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7819"/>
       <source>Show note in file manager</source>
-      <translation type="unfinished">Show note in file manager</translation>
+      <translation>Mostra la nota en el gestor de fitxers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7872"/>
@@ -1873,12 +1873,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7738"/>
       <source>&amp;Move notes to...</source>
-      <translation type="unfinished">&amp;Move notes to...</translation>
+      <translation>Mou les notes a...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7739"/>
       <source>&amp;Copy notes to...</source>
-      <translation type="unfinished">&amp;Copy notes to...</translation>
+      <translation>Copia les notes a...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7780"/>
@@ -1893,7 +1893,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7730"/>
       <source>&amp;Remove notes</source>
-      <translation type="unfinished">&amp;Remove notes</translation>
+      <translation>Elimina notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5101"/>
@@ -1903,7 +1903,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="831"/>
       <source>Your tasks are being loaded from your server</source>
-      <translation type="unfinished">Your tasks are being loaded from your server</translation>
+      <translation>S'estan carregant les tasques des del servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2277"/>
@@ -2204,7 +2204,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5509"/>
       <source>Export current note as Markdown file</source>
-      <translation type="unfinished">Export current note as Markdown file</translation>
+      <translation>Exporta la nota actual com un fitxer markdown</translation>
     </message>
   </context>
   <context>
@@ -2220,7 +2220,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notedialog.ui" line="14"/>
       <source>Note</source>
-      <translation type="unfinished">Note</translation>
+      <translation>Nota</translation>
     </message>
   </context>
   <context>
@@ -2238,7 +2238,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="48"/>
       <source>Differences:</source>
-      <translation type="unfinished">Differences:</translation>
+      <translation>Diferències:</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
@@ -2248,7 +2248,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
       <source>Accept external changes?</source>
-      <translation type="unfinished">Accept external changes?</translation>
+      <translation>Acceptar els canvis externs?</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="69"/>
@@ -3035,12 +3035,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3974"/>
       <source>Markdown highlighting</source>
-      <translation type="unfinished">Markdown highlighting</translation>
+      <translation>Destacat markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3980"/>
       <source>Enable markdown highlighting</source>
-      <translation type="unfinished">Enable markdown highlighting</translation>
+      <translation>Habilita destacat markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1904"/>
@@ -3202,7 +3202,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2923"/>
       <source>Notes</source>
-      <translation type="unfinished">Notes</translation>
+      <translation>Notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2949"/>
@@ -4024,7 +4024,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3244"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
-      <translation type="unfinished">If you add custom extensions just type in the extension, like "taskpaper".</translation>
+      <translation>Si afegiu extensions d'usuari teclegeu-ne l'extensió, com "fitxa".</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3248"/>
@@ -4146,7 +4146,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1752"/>
       <source>Markdown files</source>
-      <translation type="unfinished">Markdown files</translation>
+      <translation>Fitxers markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1779"/>
@@ -4166,7 +4166,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2039"/>
       <source>Remove note folder</source>
-      <translation type="unfinished">Remove note folder</translation>
+      <translation>Elimina carpeta de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2040"/>
@@ -4431,12 +4431,12 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="20"/>
       <source>Share note</source>
-      <translation type="unfinished">Share note</translation>
+      <translation>Comparteix nota</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="30"/>
       <source>Share note on ownCloud</source>
-      <translation type="unfinished">Share note on ownCloud</translation>
+      <translation>Comparteix nota a ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/sharedialog.ui" line="37"/>
@@ -4606,7 +4606,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.ui" line="232"/>
       <source>Note...</source>
-      <translation type="unfinished">Note...</translation>
+      <translation>Nota...</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="288"/>
@@ -4646,7 +4646,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="108"/>
       <source>Import as note</source>
-      <translation type="unfinished">Import as note</translation>
+      <translation>Importa com una nota</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.ui" line="215"/>
@@ -4671,7 +4671,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="127"/>
       <source>Reload tasks from server</source>
-      <translation type="unfinished">Reload tasks from server</translation>
+      <translation>Recarrega les tasques des del servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="132"/>
@@ -4681,7 +4681,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="136"/>
       <source>Clear calendar cache and reload tasks from server</source>
-      <translation type="unfinished">Clear calendar cache and reload tasks from server</translation>
+      <translation>Neteja la caché del calendari i recarrega les tasques des del servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/tododialog.cpp" line="572"/>
@@ -4852,7 +4852,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.ui" line="14"/>
       <source>Trashed notes</source>
-      <translation type="unfinished">Trashed notes</translation>
+      <translation>Notes esborrades</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="24"/>
@@ -5073,7 +5073,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/versiondialog.ui" line="98"/>
       <source>Note text</source>
-      <translation type="unfinished">Note text</translation>
+      <translation>Text de la nota</translation>
     </message>
     <message>
       <location filename="../dialogs/versiondialog.cpp" line="25"/>
@@ -5092,7 +5092,7 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Benvinguts/des a QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
@@ -5122,7 +5122,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="168"/>
       <source>Note folder</source>
-      <translation type="unfinished">Note folder</translation>
+      <translation>Carpeta de les notes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="184"/>

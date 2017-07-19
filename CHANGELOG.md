@@ -7,6 +7,9 @@
 - under Windows the selection background color in the note text edit is now set 
   to a light blue if not in dark mode to prevent visibility problems when
   searching text (for [Issue #636](https://github.com/pbek/QOwnNotes/issues/636))
+- added more Polish, Spanish, Italian, Brazilian Portuguese, Hungarian and
+  German translation (thank you lucjan, polkillas, smart2128, mlimacarlos,
+  vaganyik and jmbm)
 
 ## 17.07.3
 - when opening the todo list dialog from the system tray the main window of 
