@@ -56,6 +56,19 @@ void QOwnNotesMarkdownTextEdit::setStyles() {
     setFormatStyle(MarkdownHighlighter::HighlighterState::InlineCodeBlock);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Link);
     setFormatStyle(MarkdownHighlighter::HighlighterState::Table);
+
+#ifdef Q_OS_WIN32
+    QSettings settings;
+
+    // set the selection background color to a light blue if not in dark mode
+    if (!settings.value("darkMode").toBool()) {
+        // light green (#9be29b) could be an other choice, but be aware that
+        // this color will be used for mouse and keyboard selections too
+        setStyleSheet(styleSheet() +
+                      "QWidget {selection-color: #ffffff;"
+                              "selection-background-color: #3399ff}");
+    }
+#endif
 }
 
 /**

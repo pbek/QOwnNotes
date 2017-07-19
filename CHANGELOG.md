@@ -1,5 +1,13 @@
 # QOwnNotes Changelog
 
+## 17.07.4
+- the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + F` 
+  to reset the pointing-hand-cursor that was set by pressing `Ctrl`
+  (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
+- under Windows the selection background color in the note text edit is now set 
+  to a light blue if not in dark mode to prevent visibility problems when
+  searching text (for [Issue #636](https://github.com/pbek/QOwnNotes/issues/636))
+
 ## 17.07.3
 - when opening the todo list dialog from the system tray the main window of 
   QOwnNotes will be brought to the foreground too to prevent crashes under
