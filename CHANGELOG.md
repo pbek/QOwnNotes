@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.07.5
+- fixed a problem with correctly storing the note text when special note text
+  changes were made between the note save intervals
+  (for [Issue #635](https://github.com/pbek/QOwnNotes/issues/635))
+
 ## 17.07.4
 - the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + F` 
   to reset the pointing-hand-cursor that was set by pressing `Ctrl`

@@ -4358,7 +4358,9 @@ void MainWindow::on_noteTextEdit_textChanged() {
     QString text = Utils::Misc::transformLineFeeds(
             ui->noteTextEdit->toPlainText());
 
-    if (text != noteTextFromDisk) {
+    // store the note to the database if the note text differs from the one
+    // on the disk or the note was already modified but not stored to disk
+    if ((text != noteTextFromDisk || currentNote.getHasDirtyData())) {
         this->currentNote.storeNewText(text);
         this->currentNote.refetch();
         this->currentNoteLastEdited = QDateTime::currentDateTime();
