@@ -1714,7 +1714,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="7066"/>
       <source>Copy to note folder</source>
-      <translation>Copie vers le dossier de notes</translation>
+      <translation>Copier vers le dossier de notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7067"/>

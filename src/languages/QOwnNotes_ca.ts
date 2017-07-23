@@ -15,7 +15,7 @@
       <location filename="../dialogs/actiondialog.ui" line="14"/>
       <location filename="../dialogs/actiondialog.ui" line="46"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>Troba l'acció</translation>
     </message>
   </context>
   <context>
@@ -33,7 +33,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="40"/>
       <source>Please select the Evernote enex file you want to import:</source>
-      <translation type="unfinished">Please select the Evernote enex file you want to import:</translation>
+      <translation>Si us plau seleccioneu el fitxer enex d'Evernote que voleu importar:</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="47"/>
@@ -68,7 +68,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="40"/>
       <source>Select Evernote enex file to import</source>
-      <translation type="unfinished">Select Evernote enex file to import</translation>
+      <translation>Seleccioneu el fitxer enex d'Evernote per a importar</translation>
     </message>
   </context>
   <context>
@@ -117,7 +117,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>Si heu creat un esquema de color ben maco exporteu-lo i compartiu-lo amb tothom!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
       <source>This item will be used to preset colors for the other items</source>
-      <translation type="unfinished">This item will be used to preset colors for the other items</translation>
+      <translation>Aquest element s'usarà per preseleccionar colors per la resta d'elements</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="444"/>
@@ -392,23 +392,23 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="142"/>
       <location filename="../widgets/logwidget.cpp" line="375"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Esborra el registre</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>Mostra les opcions</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>Amaga les opcions</translation>
     </message>
   </context>
   <context>
@@ -462,7 +462,7 @@
     <message>
       <location filename="../mainwindow.ui" line="903"/>
       <source>Custom actions</source>
-      <translation type="unfinished">Custom actions</translation>
+      <translation>Accions personalitzades</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="922"/>
@@ -507,7 +507,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1038"/>
       <source>Report &amp;issues or ideas</source>
-      <translation type="unfinished">Report &amp;issues or ideas</translation>
+      <translation>Informeu d'incidències o d'idees</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1046"/>
@@ -532,7 +532,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1068"/>
       <source>Sh&amp;ow in system tray</source>
-      <translation type="unfinished">Sh&amp;ow in system tray</translation>
+      <translation>Mostra a la safata del sistema</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1092"/>
@@ -552,13 +552,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1107"/>
       <source>Show trashed notes on server</source>
-      <translation type="unfinished">Show trashed notes on server</translation>
+      <translation>Mostra notes esborrades al servidor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1112"/>
       <location filename="../mainwindow.cpp" line="7828"/>
       <source>Select &amp;all notes</source>
-      <translation type="unfinished">Select &amp;all notes</translation>
+      <translation>Selecciona totes les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1121"/>
@@ -569,12 +569,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1124"/>
       <source>Insert link to an url or a note</source>
-      <translation type="unfinished">Insert link to an url or a note</translation>
+      <translation>Insereix un enllaç a una url o a una nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
       <source>&amp;Find in current note</source>
-      <translation type="unfinished">&amp;Find in current note</translation>
+      <translation>Trobar a la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1139"/>
@@ -584,12 +584,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1144"/>
       <source>&amp;Duplicate text</source>
-      <translation type="unfinished">&amp;Duplicate text</translation>
+      <translation>Duplica text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1156"/>
       <source>&amp;Back in note history</source>
-      <translation type="unfinished">&amp;Back in note history</translation>
+      <translation>Enrere en l'historial de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1077"/>
@@ -599,12 +599,12 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation type="unfinished">Find or create note sub folder</translation>
+      <translation>Troba o crea una nota a la subcarpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="193"/>
       <source>Find or create tag</source>
-      <translation type="unfinished">Find or create tag</translation>
+      <translation>Troba o crea una etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
@@ -614,7 +614,7 @@
     <message>
       <location filename="../mainwindow.ui" line="300"/>
       <source>Search or create note</source>
-      <translation type="unfinished">Search or create note</translation>
+      <translation>Troba o crea una nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="537"/>
@@ -665,12 +665,12 @@
     <message>
       <location filename="../mainwindow.ui" line="899"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1168"/>
       <source>Forward in note history</source>
-      <translation type="unfinished">Forward in note history</translation>
+      <translation>Endavant en l'historial de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1180"/>
@@ -685,12 +685,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1198"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>Insereix l'hora actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1210"/>
       <source>Show &amp;Todo List</source>
-      <translation type="unfinished">Show &amp;Todo List</translation>
+      <translation>Mostra la llista de Tasques</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1231"/>
@@ -811,7 +811,7 @@
       <location filename="../mainwindow.ui" line="1454"/>
       <location filename="../mainwindow.ui" line="1457"/>
       <source>Paste images, notes and html from the clipboard</source>
-      <translation type="unfinished">Paste images, notes and html from the clipboard</translation>
+      <translation>Copia imatges, notes i html del portaretalls</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1469"/>
@@ -851,12 +851,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1553"/>
       <source>&amp;Reload note folder</source>
-      <translation type="unfinished">&amp;Reload note folder</translation>
+      <translation>Recarrega la carpeta de les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1625"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>Mostra el log</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1634"/>
@@ -871,28 +871,28 @@
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
       <source>Unlock panels</source>
-      <translation type="unfinished">Unlock panels</translation>
+      <translation>Desbloqueja panells</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
       <location filename="../mainwindow.cpp" line="8765"/>
       <source>Remove current workspace</source>
-      <translation type="unfinished">Remove current workspace</translation>
+      <translation>Elmina l'espai de treball actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1881"/>
       <source>Add new workspace</source>
-      <translation type="unfinished">Add new workspace</translation>
+      <translation>Afegeix un nou espai de treball</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>Reanomena l'espai de treball actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>Canvia a l'espai de treball anterior</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -902,13 +902,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1916"/>
       <source>Find action</source>
-      <translation type="unfinished">Find action</translation>
+      <translation>Troba l'acció</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1919"/>
       <location filename="../mainwindow.ui" line="1922"/>
       <source>Find an action from the menu</source>
-      <translation type="unfinished">Find an action from the menu</translation>
+      <translation>Trobar una acció des del menú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1934"/>
@@ -918,13 +918,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
       <source>Insert block &amp;quote</source>
-      <translation type="unfinished">Insert block &amp;quote</translation>
+      <translation>Insereix un bloc de cita</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1954"/>
       <location filename="../mainwindow.cpp" line="5105"/>
       <source>Search text on the web</source>
-      <translation type="unfinished">Search text on the web</translation>
+      <translation>Cerca el text a la web</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1962"/>
@@ -934,13 +934,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1970"/>
       <source>Delete word</source>
-      <translation type="unfinished">Delete word</translation>
+      <translation>Suprimeix la paraula</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1982"/>
       <location filename="../mainwindow.cpp" line="7817"/>
       <source>Open note in a view</source>
-      <translation type="unfinished">Open note in a view</translation>
+      <translation>Obre la nota en una vista</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1994"/>
@@ -950,12 +950,12 @@
     <message>
       <location filename="../mainwindow.ui" line="2005"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Ascendent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2013"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Descendent</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2022"/>
@@ -966,28 +966,28 @@
     <message>
       <location filename="../mainwindow.ui" line="2031"/>
       <source>Find scripts in script repository</source>
-      <translation type="unfinished">Find scripts in script repository</translation>
+      <translation>Troba scripts en el repositori</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2043"/>
       <source>Script settings</source>
-      <translation type="unfinished">Script settings</translation>
+      <translation>Configuració dels scripts</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="2052"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Inserta un adjunt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
       <source>Use &amp;vertical preview layout</source>
-      <translation type="unfinished">Use &amp;vertical preview layout</translation>
+      <translation>Usa la disposició vertical prèvia</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1567"/>
       <location filename="../mainwindow.ui" line="1570"/>
       <source>The note edit panel will be above the preview panel</source>
-      <translation type="unfinished">The note edit panel will be above the preview panel</translation>
+      <translation>El panell d'edició de notes estarà sobre el panell de previsualització</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1579"/>
@@ -997,12 +997,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation type="unfinished">Autocomplete, solve equation or open URL</translation>
+      <translation>Autocompleta, resol equació o obre una url</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1590"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation type="unfinished">Solve a simple equation like '(2+3)*6=' in the current line</translation>
+      <translation>Resol una equació senzilla, com '(2+3)*6=', a la línia actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
@@ -1012,18 +1012,18 @@
     <message>
       <location filename="../mainwindow.ui" line="1613"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Recarrega el motor de scripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1646"/>
       <location filename="../mainwindow.ui" line="1649"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation type="unfinished">Open the #qownnotes IRC channel, you have to stay online to get a response</translation>
+      <translation>Obre el canal d'IRC de #qownnotes, has d'estar connectat per obtenir una resposta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1786"/>
       <source>Show note list under tag pane</source>
-      <translation type="unfinished">Show note list under tag pane</translation>
+      <translation>Mostra la llista de notes sota el panell d'etiquetes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1848"/>
@@ -1034,7 +1034,7 @@
     <message>
       <location filename="../mainwindow.ui" line="763"/>
       <source>Open chat</source>
-      <translation type="unfinished">Open chat</translation>
+      <translation>Obre el chat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
@@ -1044,17 +1044,17 @@
     <message>
       <location filename="../mainwindow.ui" line="1658"/>
       <source>Insert headline from note filename</source>
-      <translation type="unfinished">Insert headline from note filename</translation>
+      <translation>Crea una capcalera des d'un nom de fitxer</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1672"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation type="unfinished">Use softwrap in note editor and preview</translation>
+      <translation>Usa el trencament de linia automàtic en l'editor de notes i la previsualització</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1680"/>
       <source>Show status bar</source>
-      <translation type="unfinished">Show status bar</translation>
+      <translation>Mostra la barra d'estat</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1695"/>
@@ -1069,12 +1069,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1734"/>
       <source>Strike out text</source>
-      <translation type="unfinished">Strike out text</translation>
+      <translation>Destaca el text</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1745"/>
       <source>Use one column mode</source>
-      <translation type="unfinished">Use one column mode</translation>
+      <translation>Usa el mode d'una columna</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1748"/>
@@ -1126,7 +1126,7 @@
     <message>
       <location filename="../mainwindow.cpp" line="2345"/>
       <source>Note was removed externally!</source>
-      <translation type="unfinished">Note was removed externally!</translation>
+      <translation>La nota s'ha eliminat externament!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2346"/>
@@ -1138,7 +1138,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2348"/>
       <source>&amp;Restore</source>
-      <translation type="unfinished">&amp;Restore</translation>
+      <translation>Restaura</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2348"/>
@@ -1167,7 +1167,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="2551"/>
       <source>new version %1 available</source>
-      <translation type="unfinished">new version %1 available</translation>
+      <translation>nova versió %1 disponible</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2954"/>
@@ -1192,7 +1192,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3130"/>
       <source>Remove current note</source>
-      <translation type="unfinished">Remove current note</translation>
+      <translation>Elimina la nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3131"/>
@@ -1207,7 +1207,7 @@ Restore current note?</translation>
       <location filename="../mainwindow.cpp" line="3928"/>
       <location filename="../mainwindow.cpp" line="8767"/>
       <source>&amp;Remove</source>
-      <translation type="unfinished">&amp;Remove</translation>
+      <translation>Elimina</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3438"/>
@@ -1279,7 +1279,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3770"/>
       <location filename="../mainwindow.cpp" line="7126"/>
       <source>Move selected notes</source>
-      <translation type="unfinished">Move selected notes</translation>
+      <translation>Mou les notes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3771"/>
@@ -1292,7 +1292,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3773"/>
       <source>&amp;Move</source>
-      <translation type="unfinished">&amp;Move</translation>
+      <translation>Mou</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3844"/>
@@ -1343,7 +1343,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4063"/>
       <source>Restart application</source>
-      <translation type="unfinished">Restart application</translation>
+      <translation>Reinicia l'aplicació</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4069"/>
@@ -1358,7 +1358,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4076"/>
       <source>Restart</source>
-      <translation type="unfinished">Restart</translation>
+      <translation>Reinicia</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4246"/>
@@ -1378,7 +1378,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5234"/>
       <source>Image files</source>
-      <translation type="unfinished">Image files</translation>
+      <translation>Fitxers d'imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5423"/>
@@ -1404,30 +1404,30 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5780"/>
       <location filename="../mainwindow.cpp" line="5848"/>
       <source>Inserting image</source>
-      <translation type="unfinished">Inserting image</translation>
+      <translation>Insertant imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5785"/>
       <location filename="../mainwindow.cpp" line="5851"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Feta la inserció d'imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5787"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Insertant adjunt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5792"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Feta la inserció d'adjunt</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5802"/>
       <source>Copied %n note(s) to %1</source>
       <translation type="unfinished">
         <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copied %n note(s) to %1</numerusform>
+        <numerusform>Copia %n notes a %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1449,7 +1449,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5835"/>
       <source>Saving temporary image</source>
-      <translation type="unfinished">Saving temporary image</translation>
+      <translation>Desant imatge temporal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5854"/>
@@ -1459,7 +1459,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5887"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>Descarregant %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5898"/>
@@ -1480,7 +1480,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6695"/>
       <source>Assign color</source>
-      <translation type="unfinished">Assign color</translation>
+      <translation>Assigna color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6696"/>
@@ -1615,7 +1615,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3979"/>
       <source>Current notes folder: </source>
-      <translation type="unfinished">Current notes folder: </translation>
+      <translation>Carpeta actual de notes: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3981"/>
@@ -1630,17 +1630,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4196"/>
       <source>Letter</source>
-      <translation type="unfinished">Letter</translation>
+      <translation>Carta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4222"/>
       <source>Portrait</source>
-      <translation type="unfinished">Portrait</translation>
+      <translation>Vertical</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4222"/>
       <source>Landscape</source>
-      <translation type="unfinished">Landscape</translation>
+      <translation>Horitzontal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4227"/>
@@ -1714,22 +1714,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7066"/>
       <source>Copy to note folder</source>
-      <translation type="unfinished">Copy to note folder</translation>
+      <translation>Copia la nota a la carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7067"/>
       <source>Move to note folder</source>
-      <translation type="unfinished">Move to note folder</translation>
+      <translation>Mou la nota a la carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7068"/>
       <source>Copy to this subfolder</source>
-      <translation type="unfinished">Copy to this subfolder</translation>
+      <translation>Copia en aquesta carpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7069"/>
       <source>Move to this subfolder</source>
-      <translation type="unfinished">Move to this subfolder</translation>
+      <translation>Mou a aquesta carpeta</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7120"/>
@@ -1742,14 +1742,14 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7128"/>
       <source>Move</source>
-      <translation type="unfinished">Move</translation>
+      <translation>Mou</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4077"/>
       <location filename="../mainwindow.cpp" line="7128"/>
       <location filename="../mainwindow.cpp" line="7212"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7183"/>
@@ -1770,7 +1770,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7212"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Copia</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7255"/>
@@ -1808,22 +1808,22 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8034"/>
       <source>New subfolder</source>
-      <translation type="unfinished">New subfolder</translation>
+      <translation>Nova subcarpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8037"/>
       <source>Show folder in file manager</source>
-      <translation type="unfinished">Show folder in file manager</translation>
+      <translation>Mostra la nota en el gestor de fitxers</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8068"/>
       <source>Create a new folder</source>
-      <translation type="unfinished">Create a new folder</translation>
+      <translation>Crea una carpeta nova</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8068"/>
       <source>Folder name:</source>
-      <translation type="unfinished">Folder name:</translation>
+      <translation>Nom de la carpeta:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6112"/>
@@ -1833,7 +1833,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6115"/>
       <source>Untagged notes</source>
-      <translation type="unfinished">Untagged notes</translation>
+      <translation>Notes sense etiquetar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7553"/>
@@ -1843,7 +1843,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4205"/>
       <source>Page size</source>
-      <translation type="unfinished">Page size</translation>
+      <translation>Tamany de pàgina</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="910"/>
@@ -1858,7 +1858,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4205"/>
       <source>Page size:</source>
-      <translation type="unfinished">Page size:</translation>
+      <translation>Tamany de pàgina:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4283"/>
@@ -1868,7 +1868,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4287"/>
       <source>&amp;Ok</source>
-      <translation type="unfinished">&amp;Ok</translation>
+      <translation>D'acord</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7738"/>
@@ -1942,7 +1942,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6082"/>
       <source>show all notes (%1)</source>
-      <translation type="unfinished">show all notes (%1)</translation>
+      <translation>mostra totes les notes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6085"/>
@@ -2088,7 +2088,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1094"/>
       <source>Show %1</source>
-      <translation type="unfinished">Show %1</translation>
+      <translation>Mostra %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1872"/>
@@ -2169,7 +2169,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1402"/>
       <source>leave</source>
-      <translation type="unfinished">leave</translation>
+      <translation>deixa</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1405"/>
@@ -2314,7 +2314,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
   </context>
   <context>
@@ -2387,7 +2387,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1132"/>
       <source>No trashed notes</source>
-      <translation type="unfinished">No trashed notes</translation>
+      <translation>Cap nota a la paperera</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1133"/>
@@ -2491,7 +2491,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Cercar:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
@@ -2516,7 +2516,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="120"/>
       <source>replace with</source>
-      <translation type="unfinished">replace with</translation>
+      <translation>canvia per</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="127"/>
@@ -2551,7 +2551,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
       <source>Mode:</source>
-      <translation type="unfinished">Mode:</translation>
+      <translation>Mode:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
@@ -2623,12 +2623,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="222"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Versió:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="199"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repositori:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="134"/>
@@ -2638,7 +2638,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="398"/>
       <source>Name</source>
-      <translation type="unfinished">Name</translation>
+      <translation>Nom</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
@@ -2653,7 +2653,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Autors</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
@@ -2710,12 +2710,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>&amp;Cancel·la</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Actualitza aplicació</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
@@ -2725,7 +2725,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
       <source>Install successful</source>
-      <translation type="unfinished">Install successful</translation>
+      <translation>Instal·lació correcta</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
@@ -2865,7 +2865,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="1179"/>
       <location filename="../dialogs/settingsdialog.ui" line="1196"/>
       <source>unknown</source>
-      <translation type="unfinished">unknown</translation>
+      <translation>desconegut</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1054"/>
@@ -3344,7 +3344,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
       <source>Editor</source>
-      <translation type="unfinished">Editor</translation>
+      <translation>Editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
@@ -3457,7 +3457,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="969"/>
       <location filename="../dialogs/settingsdialog.ui" line="1695"/>
       <source>Username:</source>
-      <translation type="unfinished">Username:</translation>
+      <translation>Nom d'usuari:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="994"/>
@@ -3468,7 +3468,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="1004"/>
       <location filename="../dialogs/settingsdialog.ui" line="1730"/>
       <source>Password:</source>
-      <translation type="unfinished">Password:</translation>
+      <translation>Contrasenya:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
@@ -3483,7 +3483,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1087"/>
       <source>Connection status</source>
-      <translation type="unfinished">Connection status</translation>
+      <translation>Estat de la connexió</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3955"/>
@@ -3500,7 +3500,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4306"/>
       <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Order</source>
-      <translation type="unfinished">Order</translation>
+      <translation>Ordre</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4210"/>
@@ -3521,7 +3521,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <location filename="../dialogs/settingsdialog.ui" line="4352"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>Ordena</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>

@@ -11,6 +11,7 @@
   (for [Issue #612](https://github.com/pbek/QOwnNotes/issues/612))
 - replacing multiple line breaks when pasting html into a note with
   `Ctrl + Shift + V` (for [Issue #634](https://github.com/pbek/QOwnNotes/issues/634))
+- added more French and German translation (thank you Loelo and rakekniven)
 
 ## 17.07.5
 - fixed a problem with correctly storing the note text when special note text

@@ -325,7 +325,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation>Adresse eingeben</translation>
+      <translation>URL eingeben</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
@@ -438,7 +438,7 @@
     <message>
       <location filename="../mainwindow.ui" line="690"/>
       <source>Note &amp;folders</source>
-      <translation>Notiz Ordner</translation>
+      <translation>Notizordner</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="695"/>
@@ -478,7 +478,7 @@
     <message>
       <location filename="../mainwindow.ui" line="969"/>
       <source>&amp;Setup note folders</source>
-      <translation>Notiz Ordner &amp;Einstellungen</translation>
+      <translation>&amp;Einstellungen Notizordner</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="978"/>
@@ -1008,7 +1008,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1598"/>
       <source>Select note folder</source>
-      <translation>Notiz-Ordner auswählen</translation>
+      <translation>Notizordner auswählen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1613"/>
@@ -1616,7 +1616,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="3979"/>
       <source>Current notes folder: </source>
-      <translation>Aktueller Notiz Ordner:</translation>
+      <translation>Aktueller Notizordner: </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3981"/>
@@ -1710,17 +1710,17 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
       <location filename="../mainwindow.cpp" line="579"/>
       <location filename="../mainwindow.cpp" line="6173"/>
       <source>Note folder</source>
-      <translation>Notiz-Ordner</translation>
+      <translation>Notizordner</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7066"/>
       <source>Copy to note folder</source>
-      <translation>In Notiz-Ordner kopieren</translation>
+      <translation>In Notizordner kopieren</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7067"/>
       <source>Move to note folder</source>
-      <translation>In Notiz-Ordner verschieben</translation>
+      <translation>In Notizordner verschieben</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7068"/>
@@ -2587,7 +2587,7 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../services/databaseservice.cpp" line="116"/>
       <source>Cannot open note folder database</source>
-      <translation>Notiz Ordner Datenbank kann nicht geöffnet werden.</translation>
+      <translation>Notizordner-Datenbank kann nicht geöffnet werden</translation>
     </message>
   </context>
   <context>
@@ -2779,12 +2779,12 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="120"/>
       <source>Note folders</source>
-      <translation>Notiz Ordner</translation>
+      <translation>Notizordner</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="383"/>
       <source>Your note folders</source>
-      <translation>Deine Notiz Ordner</translation>
+      <translation>Deine Notizordner</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
@@ -2804,12 +2804,12 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="530"/>
       <source>Set the ownCloud path where the note folder path will be synced to on your ownCloud server.</source>
-      <translation>Legen Sie den ownCloud Pfad fest, wo der Notiz Ordnerpfad auf dem ownCloud Server hingesynct werden soll.</translation>
+      <translation>Legen Sie den ownCloud-Pfad fest, wohin der Notizordner-Pfad auf dem ownCloud-Server synchronisiert werden soll.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="704"/>
       <source>Use as active note folder</source>
-      <translation>Als aktiven Notiz Ordner verwenden</translation>
+      <translation>Als aktiven Notizordner verwenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
@@ -2900,17 +2900,17 @@ Möchten Sie es trotzdem installieren?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="506"/>
       <source>Click here to select your local note path</source>
-      <translation>Klicken Sie hier, um Ihre lokalen Notiz Ordner auszuwählen</translation>
+      <translation>Klicken Sie hier, um Ihre lokalen Notizordner auszuwählen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="583"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Klicken Sie hier, um Ihren Notiz Ordner auf dem ownCloud Server auszuwählen</translation>
+      <translation>Klicken Sie hier, um Ihren Notizordner auf dem ownCloud-Server auszuwählen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="636"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Klicken Sie hier, um den ausgewählten Server Ordner als Notiz Ordner zu verwenden</translation>
+      <translation>Klicken Sie hier, um den ausgewählten Server-Ordner als Notizordner zu verwenden</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="821"/>
@@ -3400,7 +3400,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="678"/>
       <source>Please select your note folder on your ownCloud server:</source>
-      <translation>Bitte wählen Sie Ihren Notiz-Ordner auf Ihrem ownCloud-Server:</translation>
+      <translation>Bitte wählen Sie Ihren Notizordner auf Ihrem ownCloud-Server:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="711"/>
@@ -3421,12 +3421,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="735"/>
       <source>Note folder path:</source>
-      <translation>Notiz-Ordnerpfad:</translation>
+      <translation>Notizordner-Pfad:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="742"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Die OwnCloud Notiz-App unterstützt keine Unterordner!</translation>
+      <translation>Die OwnCloud-Notiz-App unterstützt keine Unterordner!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="745"/>
@@ -4298,7 +4298,7 @@ Fehlermeldung: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3201"/>
       <source>Log file cleared</source>
-      <translation>Logdatei gelöscht</translation>
+      <translation>Protokoll-Datei gelöscht</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3202"/>
