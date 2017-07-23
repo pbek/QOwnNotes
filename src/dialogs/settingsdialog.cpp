@@ -973,9 +973,11 @@ void SettingsDialog::readPanelSettings() {
                 settings.value("noteSubfoldersPanelHideSearch").toBool());
 
     ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
-                settings.value("noteSubfoldersPanelDisplayAsFullTree").toBool());
+                settings.value("noteSubfoldersPanelDisplayAsFullTree", true)
+                        .toBool());
 
-    if (settings.value("noteSubfoldersPanelShowRootFolderName").toBool()) {
+    if (settings.value(
+            "noteSubfoldersPanelShowRootFolderName", true).toBool()) {
         ui->noteSubfoldersPanelShowRootFolderNameCheckBox->setChecked(true);
         ui->noteSubfoldersPanelShowFullPathCheckBox->setEnabled(true);
     } else {
@@ -986,7 +988,8 @@ void SettingsDialog::readPanelSettings() {
     ui->noteSubfoldersPanelShowFullPathCheckBox->setChecked(
                 settings.value("noteSubfoldersPanelShowFullPath").toBool());
 
-    if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
+    if (settings.value(
+            "noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
         ui->noteSubfoldersPanelSortAlphabeticalRadioButton->setChecked(true);
         ui->noteSubfoldersPanelOrderGroupBox->setEnabled(true);
     } else {
@@ -995,11 +998,12 @@ void SettingsDialog::readPanelSettings() {
     }
 
     settings.value("noteSubfoldersPanelOrder").toInt() == ORDER_DESCENDING ?
-                ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true) :
-                ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
+        ui->noteSubfoldersPanelOrderDescendingRadioButton->setChecked(true) :
+        ui->noteSubfoldersPanelOrderAscendingRadioButton->setChecked(true);
 
     // Tags Panel Options
-    ui->tagsPanelHideSearchCheckBox->setChecked(settings.value("tagsPanelHideSearch").toBool());
+    ui->tagsPanelHideSearchCheckBox->setChecked(settings.value(
+            "tagsPanelHideSearch").toBool());
 
     if (settings.value("tagsPanelSort").toInt() == SORT_ALPHABETICAL) {
         ui->tagsPanelSortAlphabeticalRadioButton->setChecked(true);

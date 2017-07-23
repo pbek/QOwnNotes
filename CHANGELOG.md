@@ -6,6 +6,9 @@
 - the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + R` 
   to reset the pointing-hand-cursor that was set by pressing `Ctrl`
   (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
+- *Show root folder name* and *Display note subfolders as full tree* in the
+  *Panels settings* are now set by default
+  (for [Issue #612](https://github.com/pbek/QOwnNotes/issues/612))
 
 ## 17.07.5
 - fixed a problem with correctly storing the note text when special note text
