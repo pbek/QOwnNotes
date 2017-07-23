@@ -3,6 +3,9 @@
 ## 17.07.6
 - fixed resizing of too large images under Windows in the preview and the 
   PDF export (for [Issue #639](https://github.com/pbek/QOwnNotes/issues/639))
+- the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + R` 
+  to reset the pointing-hand-cursor that was set by pressing `Ctrl`
+  (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 
 ## 17.07.5
 - fixed a problem with correctly storing the note text when special note text
