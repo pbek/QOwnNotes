@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.07.7
+- fixed more problems with resetting the mouse cursor after pressing 'Ctrl' 
+  for Windows (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
+
 ## 17.07.6
 - fixed resizing of too large images under Windows in the preview and the 
   PDF export (for [Issue #639](https://github.com/pbek/QOwnNotes/issues/639))
