@@ -51,6 +51,7 @@ namespace Ui {
 class MainWindow;
 }
 
+// forward declaration because of "xxx does not name a type"
 class TodoDialog;
 class SettingsDialog;
 
