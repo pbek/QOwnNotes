@@ -5,7 +5,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in more languages or help with the current 
       translation
-- fixed more problems with resetting the mouse cursor after pressing 'Ctrl' 
+- fixed more problems with resetting the mouse cursor after pressing `Ctrl` 
   for Windows (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 - fixed an issue with the highlighting of special cases of the references of 
   reference links (for [Issue #643](https://github.com/pbek/QOwnNotes/issues/643))
