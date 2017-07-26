@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 17.07.7
+- added **Catalan translation** (a big thank you to MGuerra!)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - fixed more problems with resetting the mouse cursor after pressing 'Ctrl' 
   for Windows (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 - fixed an issue with the highlighting of special cases of the references of 

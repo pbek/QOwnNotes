@@ -1929,6 +1929,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Catalan</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Catalan</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">ca</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Czech</string>
                         </property>
                         <property name="toolTip">
@@ -4461,8 +4472,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
