@@ -3,6 +3,8 @@
 ## 17.07.7
 - fixed more problems with resetting the mouse cursor after pressing 'Ctrl' 
   for Windows (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
+- fixed an issue with the highlighting of special cases of the references of 
+  reference links (for [Issue #643](https://github.com/pbek/QOwnNotes/issues/643))
 
 ## 17.07.6
 - fixed resizing of too large images under Windows in the preview and the 
