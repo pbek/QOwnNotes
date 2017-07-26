@@ -53,7 +53,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation>Um eine Enex-Datei zu generieren, wählen Sie eine oder mehrere Notizen in Ihrer Evernote-Anwendung aus und klicken Sie auf »Notizen exportieren...« im Menü »Datei«.</translation>
+      <translation>Um eine Enex-Datei zu generieren, wählen Sie eine oder mehrere Notizen in Ihrer Evernote-Anwendung aus und klicken Sie im Menü »Datei« auf »Notizen exportieren...«.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
@@ -118,7 +118,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation>Ein schönes, eigenes Farb-Schema exportieren und mit anderen teilen!</translation>
+      <translation>Haben Sie ein schönes, eigenes Farb-Schema erstellt? Dann exportieren und teilen Sie es mit anderen!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
@@ -872,7 +872,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
       <source>Unlock panels</source>
-      <translation>Paneele entsperren</translation>
+      <translation>Panels entsperren</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
@@ -2205,7 +2205,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="5509"/>
       <source>Export current note as Markdown file</source>
-      <translation>aktuelle Notiz als Markdown Datei exportieren</translation>
+      <translation>Aktuelle Notiz als Markdown-Datei exportieren</translation>
     </message>
   </context>
   <context>

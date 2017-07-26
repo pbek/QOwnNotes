@@ -7,6 +7,7 @@
   reference links (for [Issue #643](https://github.com/pbek/QOwnNotes/issues/643))
 - added paragraph recognition for the pasting of html-code
   (for [Issue #643](https://github.com/pbek/QOwnNotes/issues/643), thank you @vanleo2001)
+- added more Dutch and German translation (thank you Fabijenna and rakekniven)
 
 ## 17.07.6
 - fixed resizing of too large images under Windows in the preview and the 

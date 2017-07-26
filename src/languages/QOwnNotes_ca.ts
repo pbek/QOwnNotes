@@ -1080,38 +1080,38 @@
       <location filename="../mainwindow.ui" line="1748"/>
       <location filename="../mainwindow.ui" line="1751"/>
       <source>Use a one column minimal mode (like NVAlt)</source>
-      <translation type="unfinished">Use a one column minimal mode (like NVAlt)</translation>
+      <translation>Usa un mode d'una columna mínim (com NVAIt)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1763"/>
       <source>Show menu bar</source>
-      <translation type="unfinished">Show menu bar</translation>
+      <translation>Mostra la barra de menú</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1775"/>
       <source>Split note at cursor position</source>
-      <translation type="unfinished">Split note at cursor position</translation>
+      <translation>Divideix la nota a la posició del cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1795"/>
       <source>Donate</source>
-      <translation type="unfinished">Donate</translation>
+      <translation>Donar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1804"/>
       <source>Find notes in all subfolders</source>
-      <translation type="unfinished">Find notes in all subfolders</translation>
+      <translation>Troba notes a totes les subcarpetes</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1812"/>
       <location filename="../mainwindow.ui" line="1815"/>
       <source>Start hidden</source>
-      <translation type="unfinished">Start hidden</translation>
+      <translation>Inicia en mode ocult</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1818"/>
       <source>Starts the application hidden if the system tray icon is shown</source>
-      <translation type="unfinished">Starts the application hidden if the system tray icon is shown</translation>
+      <translation>Inicia l'aplicació en mode ocult si es mostra la icona al sistema</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1827"/>
@@ -1121,7 +1121,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1836"/>
       <source>Delete orphaned image files</source>
-      <translation type="unfinished">Delete orphaned image files</translation>
+      <translation>Esborra els fitxers d'imatge orfes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2345"/>
@@ -1132,8 +1132,8 @@
       <location filename="../mainwindow.cpp" line="2346"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation type="unfinished">Current note was removed outside of this application!
-Restore current note?</translation>
+      <translation>La nota actual s'ha esborrat a fora de l'aplicació!
+Voleu restaurar-la?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2348"/>
@@ -1197,7 +1197,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3131"/>
       <source>Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</source>
-      <translation type="unfinished">Remove current note: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
+      <translation>Esborrar la nota actual: &lt;strong&gt;%1&lt;/strong&gt;?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3133"/>
@@ -1217,12 +1217,12 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3462"/>
       <source>Note can't be decrypted!</source>
-      <translation type="unfinished">Note can't be decrypted!</translation>
+      <translation>No es pot desxifrar la nota!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3463"/>
       <source>It seems that your password is not valid!</source>
-      <translation type="unfinished">It seems that your password is not valid!</translation>
+      <translation>Sembla que el vostre password no es vàlid!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3612"/>
@@ -1247,7 +1247,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3695"/>
       <location filename="../mainwindow.cpp" line="8035"/>
       <source>Remove selected folders</source>
-      <translation type="unfinished">Remove selected folders</translation>
+      <translation>Suprimeix les carpetes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3696"/>
@@ -1260,12 +1260,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3708"/>
       <source>Removed note subfolder: %1</source>
-      <translation type="unfinished">Removed note subfolder: %1</translation>
+      <translation>Eliminada la subcarpeta de notes: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3727"/>
       <source>Remove selected tags</source>
-      <translation type="unfinished">Remove selected tags</translation>
+      <translation>Suprimeix les etiquetes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3728"/>
@@ -1284,9 +1284,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3771"/>
       <source>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</source>
-      <translation type="unfinished">
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
-        <numerusform>Move %n selected note(s) to &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+      <translation>
+        <numerusform>Moure %n notes seleccionades a &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
+        <numerusform>Moure %n notes seleccionades a &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
       </translation>
     </message>
     <message>
@@ -1298,7 +1298,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="3844"/>
       <location filename="../mainwindow.cpp" line="7210"/>
       <source>Copy selected notes</source>
-      <translation type="unfinished">Copy selected notes</translation>
+      <translation>Copia les notes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3845"/>
@@ -1311,7 +1311,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3847"/>
       <source>&amp;Copy</source>
-      <translation type="unfinished">&amp;Copy</translation>
+      <translation>Copia</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3868"/>
@@ -1330,7 +1330,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="3882"/>
       <source>Tag selected notes</source>
-      <translation type="unfinished">Tag selected notes</translation>
+      <translation>Etiqueta les notes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3883"/>
@@ -1348,12 +1348,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4069"/>
       <source>You may need to restart the application manually to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application manually to let the changes take effect.</translation>
+      <translation>Us caldrà reiniciar l'aplicació manualment per tal que els canvis tinguin efecte.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4074"/>
       <source>You may need to restart the application to let the changes take effect.</source>
-      <translation type="unfinished">You may need to restart the application to let the changes take effect.</translation>
+      <translation>Us caldrà reiniciar l'aplicació per tal que els canvis tinguin efecte.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4076"/>
@@ -1368,7 +1368,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5060"/>
       <source>Note versions are currently loaded from your ownCloud server</source>
-      <translation type="unfinished">Note versions are currently loaded from your ownCloud server</translation>
+      <translation>Les versions de les notes es carreguen des del vostre servidor d'ownCloud</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5074"/>
@@ -1464,18 +1464,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5898"/>
       <source>Done downloading images</source>
-      <translation type="unfinished">Done downloading images</translation>
+      <translation>Acabada la descàrrega d'imatges</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6019"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
-      <translation type="unfinished">Reset font size to %1 pt</translation>
+      <translation>Restaura el tamany de lletra a %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6694"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Canvia l'etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6695"/>
@@ -1485,18 +1485,18 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6696"/>
       <source>Disable color</source>
-      <translation type="unfinished">Disable color</translation>
+      <translation>Desactiva el color</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6919"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>Mou a l'arrel</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7349"/>
       <source>An url was opened at the current cursor position</source>
-      <translation type="unfinished">An url was opened at the current cursor position</translation>
+      <translation>S'ha obert una url a la posició actual del cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7427"/>
@@ -1516,12 +1516,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7552"/>
       <source>HTML files</source>
-      <translation type="unfinished">HTML files</translation>
+      <translation>Fitxers HTML</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7726"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Canvia el nom de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7727"/>
@@ -1570,31 +1570,31 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="8926"/>
       <source>%n chars</source>
       <comment>characters</comment>
-      <translation type="unfinished">
-        <numerusform>%n chars</numerusform>
-        <numerusform>%n chars</numerusform>
+      <translation>
+        <numerusform>%n caràcters</numerusform>
+        <numerusform>%n caràcters</numerusform>
       </translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9049"/>
       <source>Copy image file path</source>
-      <translation type="unfinished">Copy image file path</translation>
+      <translation>Copia el camí del fitxer d'imatge</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="9189"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Seleccioneu el fitxer a inserir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
       <location filename="../mainwindow.cpp" line="3885"/>
       <source>&amp;Tag</source>
-      <translation type="unfinished">&amp;Tag</translation>
+      <translation>Etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3925"/>
       <source>Remove tag from selected notes</source>
-      <translation type="unfinished">Remove tag from selected notes</translation>
+      <translation>Elimina l'etiqueta de les notes seleccionades</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3926"/>

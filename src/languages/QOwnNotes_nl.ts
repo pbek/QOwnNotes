@@ -58,7 +58,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
       <source>Import attachments</source>
-      <translation type="unfinished">Import attachments</translation>
+      <translation>Bijlagen importeren</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.cpp" line="39"/>
@@ -866,7 +866,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1713"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Toggle tekst case</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
@@ -976,7 +976,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2052"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Bijlage invoegen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
@@ -1414,12 +1414,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="5787"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Bijlage invoegen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5792"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Bijlage invoegen</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5802"/>
@@ -1520,7 +1520,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="7726"/>
       <source>Rename note</source>
-      <translation type="unfinished">Rename note</translation>
+      <translation>Opmerking de naam wijzigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7727"/>
@@ -1582,7 +1582,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="9189"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Selecteer afbeelding om in te voegen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
@@ -2651,22 +2651,22 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Authors</source>
-      <translation type="unfinished">Authors</translation>
+      <translation>Auteur(s)</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
       <source>Author</source>
-      <translation type="unfinished">Author</translation>
+      <translation>Auteur</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Ondersteunde platformen</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Ondersteund platform</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
@@ -2696,29 +2696,28 @@ Are the folder and the file writeable?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Het platform wordt niet ondersteund!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>Uw platform wordt niet ondersteund door dit script! Wilt u het toch installeren?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Annuleren</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="343"/>
       <source>Update app</source>
-      <translation type="unfinished">Update app</translation>
+      <translation>Update app</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>Vergeet niet uw installatie van QOwnNotes om dit script werken bijwerken!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
@@ -3351,7 +3350,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
       <source>Panels</source>
-      <translation type="unfinished">Panels</translation>
+      <translation>Panelen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
@@ -3497,61 +3496,61 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4306"/>
       <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Order</source>
-      <translation type="unfinished">Order</translation>
+      <translation>Bestelling</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4210"/>
       <location filename="../dialogs/settingsdialog.ui" line="4312"/>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Ascending</source>
-      <translation type="unfinished">Ascending</translation>
+      <translation>Oplopend</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4217"/>
       <location filename="../dialogs/settingsdialog.ui" line="4319"/>
       <location filename="../dialogs/settingsdialog.ui" line="4394"/>
       <source>Descending</source>
-      <translation type="unfinished">Descending</translation>
+      <translation>Aflopend</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4227"/>
       <location filename="../dialogs/settingsdialog.ui" line="4273"/>
       <location filename="../dialogs/settingsdialog.ui" line="4352"/>
       <source>Sort</source>
-      <translation type="unfinished">Sort</translation>
+      <translation>Sorteren</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4233"/>
       <location filename="../dialogs/settingsdialog.ui" line="4279"/>
       <location filename="../dialogs/settingsdialog.ui" line="4358"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Alfabetisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Door laatste wijziging / gebruik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4250"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Verberg 'Zoek of maak label' zoeken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4260"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Opmerking submappen paneel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4266"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Show met volledige pad</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <location filename="../dialogs/settingsdialog.ui" line="4365"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>Door laatste wijziging / gebruik</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4299"/>
