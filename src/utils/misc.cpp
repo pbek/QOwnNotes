@@ -547,6 +547,9 @@ QString Utils::Misc::htmlToMarkdown(QString text) {
     text.replace(QRegularExpression(
             "<a[^>]+href=\"(.+?)\".*?>(.+?)<\\/a>",
             QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
+    text.replace(QRegularExpression(
+            "<p.*?>(.+?)</p>",
+            QRegularExpression::CaseInsensitiveOption), "\n\n\\1\n\n");
 
     // replacing multiple line breaks
     text.replace(QRegularExpression("\n\n+"), "\n\n");
