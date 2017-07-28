@@ -812,13 +812,16 @@ QString ScriptingService::downloadUrlToMedia(QUrl url, bool returnUrlOnly) {
  *                                 context menu (default: false)
  * @param hideButtonInToolbar if true the button will not be shown in the
  *                            custom action toolbar (default: false)
+ * @param useInNoteListContextMenu if true use the action in the note list
+ *                                 context menu (default: false)
  */
 void ScriptingService::registerCustomAction(QString identifier,
                                             QString menuText,
                                             QString buttonText,
                                             QString icon,
                                             bool useInNoteEditContextMenu,
-                                            bool hideButtonInToolbar) {
+                                            bool hideButtonInToolbar,
+                                            bool useInNoteListContextMenu) {
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
 
@@ -828,7 +831,8 @@ void ScriptingService::registerCustomAction(QString identifier,
 
         mainWindow->addCustomAction(identifier, menuText, buttonText, icon,
                                     useInNoteEditContextMenu,
-                                    hideButtonInToolbar);
+                                    hideButtonInToolbar,
+                                    useInNoteListContextMenu);
     }
 #else
     Q_UNUSED(identifier);
@@ -837,6 +841,7 @@ void ScriptingService::registerCustomAction(QString identifier,
     Q_UNUSED(icon);
     Q_UNUSED(useInNoteEditContextMenu);
     Q_UNUSED(hideButtonInToolbar);
+    Q_UNUSED(useInNoteListContextMenu);
 #endif
 }
 
@@ -1163,4 +1168,29 @@ QString ScriptingService::fromNativeDirSeparators(QString path) {
  */
 QString ScriptingService::dirSeparator() {
     return QDir::separator();
+}
+
+/**
+ * Returns a list of the paths of all selected notes
+ *
+ * Unfortunately there is no easy way to use a QList<NoteApi*> in QML, so we
+ * only will transfer the note filenames
+ *
+ * @return {QStringList} list of selected note paths
+ */
+QStringList ScriptingService::selectedNotesPaths() {
+    QStringList selectedNotePaths;
+
+#ifndef INTEGRATION_TESTS
+    MainWindow *mainWindow = MainWindow::instance();
+
+    if (mainWindow != Q_NULLPTR) {
+        Q_FOREACH(Note note, mainWindow->selectedNotes()) {
+                selectedNotePaths << QDir::toNativeSeparators(
+                        note.fullNoteFilePath() );
+            }
+    }
+#endif
+
+    return selectedNotePaths;
 }

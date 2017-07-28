@@ -46,7 +46,8 @@ public:
     Q_INVOKABLE void registerCustomAction(
             QString identifier, QString menuText, QString buttonText = "",
             QString icon = "", bool useInNoteEditContextMenu = false,
-            bool hideButtonInToolbar = false);
+            bool hideButtonInToolbar = false,
+            bool useInNoteListContextMenu = false);
     Q_INVOKABLE void createNote(QString text);
     Q_INVOKABLE QString clipboard(bool asHtml = false);
     Q_INVOKABLE void noteTextEditWrite(QString text);
@@ -95,6 +96,7 @@ public:
     Q_INVOKABLE QString toNativeDirSeparators(QString path);
     Q_INVOKABLE QString fromNativeDirSeparators(QString path);
     Q_INVOKABLE QString dirSeparator();
+    Q_INVOKABLE QStringList selectedNotesPaths();
 
 private:
     QQmlEngine *_engine;

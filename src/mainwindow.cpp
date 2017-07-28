@@ -3805,6 +3805,26 @@ void MainWindow::moveSelectedNotesToFolder(QString destinationFolder) {
 }
 
 /**
+ * Returns a list of all selected notes
+ *
+ * @return
+ */
+QList<Note> MainWindow::selectedNotes() {
+    QList<Note> selectedNotes;
+
+    Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
+            int noteId = item->data(0, Qt::UserRole).toInt();
+            Note note = Note::fetch(noteId);
+
+            if (note.isFetched()) {
+                selectedNotes << note;
+            }
+        }
+
+    return selectedNotes;
+}
+
+/**
  * Un-sets the current note
  */
 void MainWindow::unsetCurrentNote() {
@@ -7826,6 +7846,15 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
         showNoteGitLogAction = noteMenu.addAction(tr("Show note git versions"));
     }
 
+    // add the custom actions to the context menu
+    if (!_noteListContextMenuActions.isEmpty()) {
+        noteMenu.addSeparator();
+
+        Q_FOREACH(QAction *action, _noteListContextMenuActions) {
+                noteMenu.addAction(action);
+            }
+    }
+
     noteMenu.addSeparator();
     QAction *selectAllAction = noteMenu.addAction(tr("Select &all notes"));
 
@@ -8337,7 +8366,8 @@ void MainWindow::on_actionSplit_note_at_cursor_position_triggered() {
 void MainWindow::addCustomAction(QString identifier, QString menuText,
                                  QString buttonText, QString icon,
                                  bool useInNoteEditContextMenu,
-                                 bool hideButtonInToolbar) {
+                                 bool hideButtonInToolbar,
+                                 bool useInNoteListContextMenu) {
 //    ui->menuCustom_actions->show();
     QAction *action = ui->menuCustom_actions->addAction(menuText);
     action->setObjectName("customAction_" + identifier);
@@ -8378,6 +8408,11 @@ void MainWindow::addCustomAction(QString identifier, QString menuText,
     // add the custom action to the note text edit context menu later
     if (useInNoteEditContextMenu) {
         _noteTextEditContextMenuActions.append(action);
+    }
+
+    // add the custom action to the note list context menu later
+    if (useInNoteListContextMenu) {
+        _noteListContextMenuActions.append(action);
     }
 }
 

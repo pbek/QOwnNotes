@@ -113,7 +113,8 @@ public:
     void addCustomAction(QString identifier, QString menuText,
                          QString buttonText, QString icon,
                          bool useInNoteEditContextMenu = false,
-                         bool hideButtonInToolbar = false);
+                         bool hideButtonInToolbar = false,
+                         bool useInNoteListContextMenu = false);
 
     void addScriptingLabel(QString identifier, QString text = "");
 
@@ -133,6 +134,8 @@ public:
 
     Q_INVOKABLE void buildNotesIndexAndLoadNoteDirectoryList(
             bool forceBuild = false, bool forceLoad = false);
+
+    QList<Note> selectedNotes();
 
 protected:
     void closeEvent(QCloseEvent *event);
@@ -568,6 +571,7 @@ private:
     SettingsDialog *_settingsDialog;
     bool _noteExternallyRemovedCheckEnabled;
     QList<QAction *> _noteTextEditContextMenuActions;
+    QList<QAction *> _noteListContextMenuActions;
     QString _notePreviewHash;
     int _gitCommitInterval;
 

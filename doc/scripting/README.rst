@@ -224,13 +224,16 @@ Parameters
      *                                 context menu (default: false)
      * @param hideButtonInToolbar if true the button will not be shown in the
      *                            custom action toolbar (default: false)
+     * @param useInNoteListContextMenu if true use the action in the note list
+     *                                 context menu (default: false)
      */
     void ScriptingService::registerCustomAction(QString identifier,
                                                 QString menuText,
                                                 QString buttonText,
                                                 QString icon,
                                                 bool useInNoteEditContextMenu,
-                                                bool hideButtonInToolbar);
+                                                bool hideButtonInToolbar,
+                                                bool useInNoteListContextMenu);
 
 Usage in QML
 ^^^^^^^^^^^^
@@ -861,6 +864,34 @@ Usage in QML
 
     // will return "\" on Windows
     script.log(script.dirSeparator());
+
+
+Getting a list of the paths of all selected notes
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Returns a list of the paths of all selected notes
+     *
+     * @return {QStringList} list of selected note paths
+     */
+    QStringList ScriptingService::selectedNotesPaths();
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // returns a list of the paths of all selected notes
+    script.log(script.selectedNotesPaths());
+
+You may want to take a look at the example
+`external-note-diff.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-diff.qml>`__.
 
 
 

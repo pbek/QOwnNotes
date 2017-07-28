@@ -1,5 +1,21 @@
 # QOwnNotes Changelog
 
+## 17.07.8
+- there now is a new scripting command to return a list of the paths of all 
+  selected notes `script.selectedNotesPaths()`
+  (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
+    - for more information please take a look at
+      [Getting a list of the paths of all selected notes](http://docs.qownnotes.org/en/develop/scripting/README.html#getting-a-list-of-the-paths-of-all-selected-notes)
+- scripting function `registerCustomAction` now has a new parameter to add 
+  a menu entry to the note list context menu
+    - for more information please take a look at the 
+      [registerCustomAction documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#registering-a-custom-action)
+- there is a new script *External note diff* in the script repository, that 
+  uses above new features and adds adds a menu entry to the context menu of the
+  note list to **diff selected notes** in an external diff program 
+    - the path of the diff program can be selected in the script settings of 
+      the script
+
 ## 17.07.7
 - added **Catalan translation** (a big thank you to MGuerra!)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
