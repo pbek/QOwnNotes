@@ -15,6 +15,8 @@
   note list to **diff selected notes** in an external diff program 
     - the path of the diff program can be selected in the script settings of 
       the script
+- added more Catalan, French, Italian, Brazilian Portuguese and German
+  translation (thank you MGuerra, bepolymathe, mlocati and mlimacarlos)
 
 ## 17.07.7
 - added **Catalan translation** (a big thank you to MGuerra!)
