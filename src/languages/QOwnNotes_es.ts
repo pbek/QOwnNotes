@@ -3485,7 +3485,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1935"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Catalán</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3966"/>

@@ -112,7 +112,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Exportera</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
@@ -564,12 +564,12 @@
       <location filename="../mainwindow.ui" line="1121"/>
       <location filename="../mainwindow.cpp" line="5103"/>
       <source>Insert &amp;link</source>
-      <translation type="unfinished">Insert &amp;link</translation>
+      <translation>Infoga &amp;länk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1124"/>
       <source>Insert link to an url or a note</source>
-      <translation type="unfinished">Insert link to an url or a note</translation>
+      <translation>Infoga länk till en url eller en anteckning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1136"/>
@@ -604,7 +604,7 @@
     <message>
       <location filename="../mainwindow.ui" line="193"/>
       <source>Find or create tag</source>
-      <translation type="unfinished">Find or create tag</translation>
+      <translation>Sök eller skapa etikett</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
@@ -685,7 +685,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1198"/>
       <source>Insert current &amp;time</source>
-      <translation type="unfinished">Insert current &amp;time</translation>
+      <translation>Infoga aktuell &amp;tid</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1210"/>
@@ -710,12 +710,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1264"/>
       <source>Insert &amp;image</source>
-      <translation type="unfinished">Insert &amp;image</translation>
+      <translation>Infoga &amp;bild</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1267"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>Infoga bild (bilden kommer att kopieras till mappen 'media' i den aktuella mappen för anteckningar)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1279"/>
@@ -913,7 +913,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1934"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Infoga tabell</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1946"/>
@@ -976,7 +976,7 @@
     <message>
       <location filename="../mainwindow.ui" line="2052"/>
       <source>Insert attachment</source>
-      <translation type="unfinished">Insert attachment</translation>
+      <translation>Infoga bilaga</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1564"/>
@@ -1404,23 +1404,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="5782"/>
       <location filename="../mainwindow.cpp" line="5850"/>
       <source>Inserting image</source>
-      <translation type="unfinished">Inserting image</translation>
+      <translation>Infogar bild</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5787"/>
       <location filename="../mainwindow.cpp" line="5853"/>
       <source>Done inserting image</source>
-      <translation type="unfinished">Done inserting image</translation>
+      <translation>Bild infogad</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5789"/>
       <source>Inserting attachment</source>
-      <translation type="unfinished">Inserting attachment</translation>
+      <translation>Infogar bilaga</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5794"/>
       <source>Done inserting attachment</source>
-      <translation type="unfinished">Done inserting attachment</translation>
+      <translation>Bilaga infogad</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5804"/>
@@ -1583,7 +1583,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="9191"/>
       <source>Select file to insert</source>
-      <translation type="unfinished">Select file to insert</translation>
+      <translation>Välj fil att infoga</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="893"/>
@@ -2058,7 +2058,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="886"/>
       <source>inserting toolbar</source>
-      <translation type="unfinished">inserting toolbar</translation>
+      <translation>infogar verktygsfält</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="893"/>
@@ -2179,7 +2179,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5237"/>
       <source>Select image to insert</source>
-      <translation type="unfinished">Select image to insert</translation>
+      <translation>Välj bild att infoga</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5369"/>
@@ -2491,7 +2491,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="52"/>
       <source>Find:</source>
-      <translation type="unfinished">Find:</translation>
+      <translation>Sök:</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="32"/>
@@ -2501,7 +2501,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="79"/>
       <source>find in text</source>
-      <translation type="unfinished">find in text</translation>
+      <translation>sök i texten</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="86"/>
@@ -2648,7 +2648,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Sök skript</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
@@ -3339,7 +3339,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>Sök inställningar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
@@ -3379,7 +3379,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
       <source>Debug options</source>
-      <translation type="unfinished">Debug options</translation>
+      <translation>Felsökningsalternativ</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="523"/>
@@ -3722,7 +3722,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2953"/>
       <source>Scale images down when inserted into notes</source>
-      <translation type="unfinished">Scale images down when inserted into notes</translation>
+      <translation>Förminska bilder när de infogas i anteckningar</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
@@ -3814,7 +3814,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>Rensa loggfil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>
@@ -3829,12 +3829,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3940"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
-      <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
+      <translation>Här kan du ställa dina egna tidsformat för att infoga aktuell tid i en anteckning.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3943"/>
       <source>Insert current time</source>
-      <translation type="unfinished">Insert current time</translation>
+      <translation>Infoga aktuell tid</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3949"/>
@@ -4071,12 +4071,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="300"/>
       <source>Debug</source>
-      <translation type="unfinished">Debug</translation>
+      <translation>Felsökning</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3410"/>
       <source>Debug information</source>
-      <translation type="unfinished">Debug information</translation>
+      <translation>Felsökningsinformation</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3433"/>
@@ -4086,7 +4086,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3446"/>
       <source>&amp;Save debug information</source>
-      <translation type="unfinished">&amp;Save debug information</translation>
+      <translation>&amp;Spara felsökningsinformationen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="329"/>
@@ -4304,12 +4304,12 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Loggfil rensad</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3206"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
-      <translation type="unfinished">The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</translation>
+      <translation>Loggfilen &lt;strong&gt;%1&lt;/strong&gt; har rensats.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
@@ -4385,7 +4385,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1757"/>
       <source>Save debug information</source>
-      <translation type="unfinished">Save debug information</translation>
+      <translation>Spara felsökningsinformationen</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1804"/>
@@ -4454,7 +4454,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="14"/>
       <source>Insert table</source>
-      <translation type="unfinished">Insert table</translation>
+      <translation>Infoga tabell</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="24"/>
@@ -4797,7 +4797,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="151"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Infoga</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
@@ -4807,7 +4807,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
       <source>&amp;Insert</source>
-      <translation type="unfinished">&amp;Insert</translation>
+      <translation>&amp;Infoga</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>

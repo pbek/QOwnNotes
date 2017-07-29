@@ -76,12 +76,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="38"/>
       <source>Text font</source>
-      <translation>Font de text</translation>
+      <translation>Tipus de lletra del text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="73"/>
       <source>Size:</source>
-      <translation>Mida:</translation>
+      <translation>Tamany:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
@@ -96,12 +96,12 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation>Eliminar esquema</translation>
+      <translation>Elimina esquema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation>Esborra</translation>
+      <translation>Elimina</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
@@ -154,7 +154,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation>Front:</translation>
+      <translation>Primer plà:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
@@ -169,7 +169,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Adaptar tipus de lletra:</translation>
+      <translation>Adaptar el tamany del tipus de lletra:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
@@ -179,7 +179,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="194"/>
       <source>Text preset</source>
-      <translation>Text preseleccionat</translation>
+      <translation>Text preestablert</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
@@ -189,7 +189,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
       <source>Strong text</source>
-      <translation>Text destacat</translation>
+      <translation>Text en negreta</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
@@ -1425,9 +1425,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5804"/>
       <source>Copied %n note(s) to %1</source>
-      <translation type="unfinished">
-        <numerusform>Copied %n note(s) to %1</numerusform>
-        <numerusform>Copia %n notes a %1</numerusform>
+      <translation>
+        <numerusform>Copiades %n nota(es) a %1</numerusform>
+        <numerusform>Copiades %n nota(es) a %1</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -1454,7 +1454,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5856"/>
       <source>Temporary file can't be opened</source>
-      <translation type="unfinished">Temporary file can't be opened</translation>
+      <translation>No es pot obrir el fitxer temporal</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
@@ -1501,12 +1501,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7429"/>
       <source>No equation was found in front of the cursor</source>
-      <translation type="unfinished">No equation was found in front of the cursor</translation>
+      <translation>No s'ha trobat cap equació davant del cursor</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7446"/>
       <source>Result for equation: %1 = %2</source>
-      <translation type="unfinished">Result for equation: %1 = %2</translation>
+      <translation>Resultat de l'equació: %1 = %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7520"/>
@@ -1599,8 +1599,8 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="3926"/>
       <source>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</source>
-      <translation type="unfinished">
-        <numerusform>Remove tag &lt;strong&gt;%1&lt;/strong&gt; from %n selected note(s)?</numerusform>
+      <translation>
+        <numerusform>Eliminar l'etiqueta &lt;strong&gt;%1&lt;/strong&gt; de les %n notes seleccionades?</numerusform>
         <numerusform>Eliminar l'etiqueta &lt;strong&gt;%1&lt;/strong&gt; de les %n notes seleccionades?</numerusform>
       </translation>
     </message>
@@ -1776,7 +1776,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../mainwindow.cpp" line="7257"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
       <translation type="unfinished">
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n nota(es) copiada(es) a la subcarpeta "%2"</numerusform>
         <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
       </translation>
     </message>
@@ -1898,7 +1898,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5103"/>
       <source>&amp;Link selected text</source>
-      <translation type="unfinished">&amp;Link selected text</translation>
+      <translation>Enllaça el text seleccionat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="831"/>
@@ -2003,7 +2003,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="4310"/>
       <source>No selected todo lists!</source>
-      <translation type="unfinished">No selected todo lists!</translation>
+      <translation>Cap llista de tasques seleccionada!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="550"/>
@@ -2018,7 +2018,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="570"/>
       <source>Note search</source>
-      <translation type="unfinished">Note search</translation>
+      <translation>Cerca a les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="588"/>
@@ -2033,12 +2033,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="620"/>
       <source>Note tags</source>
-      <translation type="unfinished">Note tags</translation>
+      <translation>Etiquetes de les notes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="629"/>
       <source>Note preview</source>
-      <translation type="unfinished">Note preview</translation>
+      <translation>Previsualització de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="636"/>
@@ -2152,7 +2152,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6000"/>
       <source>Increased font size to %1 pt</source>
-      <translation>Disminueix el tamany de la font a %1 pt</translation>
+      <translation>Tamany de tipus de lletra augmentat a %1 pt</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6011"/>
@@ -2322,7 +2322,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="183"/>
       <source>Username / password error</source>
-      <translation type="unfinished">Username / password error</translation>
+      <translation>Error de nom d'usuari i/o password</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="184"/>
@@ -2357,7 +2357,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="985"/>
       <source>Open &amp;settings</source>
-      <translation type="unfinished">Open &amp;settings</translation>
+      <translation>Obre els ajustaments</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="985"/>
@@ -2367,7 +2367,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1030"/>
       <source>Done with loading note versions</source>
-      <translation type="unfinished">Done with loading note versions</translation>
+      <translation>Finalitzada la càrrega de versions de notes</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
@@ -2426,17 +2426,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/passworddialog.ui" line="34"/>
       <source>Password</source>
-      <translation type="unfinished">Password</translation>
+      <translation>Contrasenya</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="44"/>
       <source>Re-enter password</source>
-      <translation type="unfinished">Re-enter password</translation>
+      <translation>Torneu a introduir la contrasenya</translation>
     </message>
     <message>
       <location filename="../dialogs/passworddialog.ui" line="54"/>
       <source>Passwords don't match!</source>
-      <translation type="unfinished">Passwords don't match!</translation>
+      <translation>Les contrasenyes no coincideixen!</translation>
     </message>
   </context>
   <context>
@@ -2444,7 +2444,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/notefolder.cpp" line="447"/>
       <source>default</source>
-      <translation type="unfinished">default</translation>
+      <translation>per defecte</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="861"/>
@@ -2459,7 +2459,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../entities/note.cpp" line="2038"/>
       <source>Note filename changed</source>
-      <translation type="unfinished">Note filename changed</translation>
+      <translation>El nom de fitxer de la nota ha canviat</translation>
     </message>
     <message numerus="yes">
       <location filename="../entities/note.cpp" line="2039"/>
@@ -2595,7 +2595,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="14"/>
       <source>Script repository</source>
-      <translation type="unfinished">Script repository</translation>
+      <translation>Repositori de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
@@ -2618,7 +2618,7 @@ Are the folder and the file writeable?</translation>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="274"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
       <source>Install</source>
-      <translation type="unfinished">Install</translation>
+      <translation>Instala</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="222"/>
@@ -2663,12 +2663,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="248"/>
       <source>Supported platforms</source>
-      <translation type="unfinished">Supported platforms</translation>
+      <translation>Plataformes suportades</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="249"/>
       <source>Supported platform</source>
-      <translation type="unfinished">Supported platform</translation>
+      <translation>Plataformes suportades</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
@@ -2678,17 +2678,17 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Actualitza</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="264"/>
       <source>Updates the script</source>
-      <translation type="unfinished">Updates the script</translation>
+      <translation>Actualitza l'script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="266"/>
       <source>Reinstall</source>
-      <translation type="unfinished">Reinstall</translation>
+      <translation>Reinstal·la</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="267"/>
@@ -2970,12 +2970,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1393"/>
       <source>SSL Settings</source>
-      <translation type="unfinished">SSL Settings</translation>
+      <translation>Configuració de SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1399"/>
       <source>Ignore SSL errors</source>
-      <translation type="unfinished">Ignore SSL errors</translation>
+      <translation>Ignora els errors de SSL</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
@@ -3000,7 +3000,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1608"/>
       <source>Other CalDAV server</source>
-      <translation type="unfinished">Other CalDAV server</translation>
+      <translation>Altre servidor CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2186"/>
@@ -3066,7 +3066,7 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="3505"/>
       <location filename="../dialogs/settingsdialog.ui" line="3674"/>
       <source>Default font:</source>
-      <translation>Font per defecte:</translation>
+      <translation>Tipus de lletra per defecte:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3547"/>
@@ -3152,12 +3152,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1453"/>
       <source>Disable tracking of usage data</source>
-      <translation type="unfinished">Disable tracking of usage data</translation>
+      <translation>Desactivar el seguiment de dades d'ús</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1497"/>
       <source>Usage tracking is done on a private Piwik server.</source>
-      <translation type="unfinished">Usage tracking is done on a private Piwik server.</translation>
+      <translation>El seguiment d'ús es fa un servidor Piwik privat.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1557"/>
@@ -3177,7 +3177,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2133"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation type="unfinished">If you change the language you have to restart the application for the changes to take action.</translation>
+      <translation>Si heu canviat l'idioma heu de reiniciar l'aplicació per activar els canvis.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2769"/>
@@ -3294,7 +3294,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1440"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. Please disable it only if you really can't live with it.</translation>
+      <translation>Les dades d'ús anònimes ajuden a decidir quines parts de QOwnNotes son les pròximes a millorar i com arreglar errors. Si us plau, deshabiliteu-les només si us fan la vida impossible.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1472"/>
@@ -3314,7 +3314,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2012"/>
       <source>Italian</source>
-      <translation type="unfinished">Italian</translation>
+      <translation>Italià</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
@@ -3349,7 +3349,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="190"/>
       <source>Editor fonts &amp; colors</source>
-      <translation>Fonts i colors de l'editor</translation>
+      <translation>Tipus de lletra i colors de l'editor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="203"/>
@@ -3359,7 +3359,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="215"/>
       <source>Preview fonts</source>
-      <translation type="unfinished">Preview fonts</translation>
+      <translation>Previsualitza el tipus de lletra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="227"/>
@@ -3446,7 +3446,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="784"/>
       <source>ownCloud support</source>
-      <translation type="unfinished">ownCloud support</translation>
+      <translation>suport per ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
@@ -3601,7 +3601,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4122"/>
       <source>Git client</source>
-      <translation type="unfinished">Git client</translation>
+      <translation>Client de Git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4138"/>
@@ -3687,17 +3687,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Czech</source>
-      <translation type="unfinished">Czech</translation>
+      <translation>Txec</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2067"/>
       <source>Brazilian Portuguese</source>
-      <translation type="unfinished">Brazilian Portuguese</translation>
+      <translation>Portuguès brasiler</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Ukrainian</source>
-      <translation type="unfinished">Ukrainian</translation>
+      <translation>Ucraïnès</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2206"/>
@@ -3707,17 +3707,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2891"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>El nom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3080"/>
       <source>Maximum height:</source>
-      <translation type="unfinished">Maximum height:</translation>
+      <translation>Alçada màxima:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3087"/>
       <source>Maximum width:</source>
-      <translation type="unfinished">Maximum width:</translation>
+      <translation>Amplada màxima:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2953"/>
@@ -3727,7 +3727,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>Croatian</source>
-      <translation type="unfinished">Croatian</translation>
+      <translation>Croat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2806"/>
@@ -3742,17 +3742,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2619"/>
       <source>Description:</source>
-      <translation type="unfinished">Description:</translation>
+      <translation>Descripció:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2701"/>
       <source>Version:</source>
-      <translation type="unfinished">Version:</translation>
+      <translation>Versió:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2662"/>
       <source>Repository:</source>
-      <translation type="unfinished">Repository:</translation>
+      <translation>Repositori:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
@@ -3762,7 +3762,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2639"/>
       <source>Author(s):</source>
-      <translation type="unfinished">Author(s):</translation>
+      <translation>Autor(s):</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2940"/>
@@ -3834,12 +3834,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3943"/>
       <source>Insert current time</source>
-      <translation type="unfinished">Insert current time</translation>
+      <translation>Insereix l'hora actual</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3949"/>
       <source>Time format:</source>
-      <translation type="unfinished">Time format:</translation>
+      <translation>Format d'hora:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3956"/>
@@ -3909,7 +3909,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2176"/>
       <source>You may need to restart the application to let these changes take effect</source>
-      <translation type="unfinished">You may need to restart the application to let these changes take effect</translation>
+      <translation>Us caldrà reiniciar l'aplicació per tal que els canvis tinguin efecte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2179"/>
@@ -4050,7 +4050,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3499"/>
       <location filename="../dialogs/settingsdialog.ui" line="3654"/>
       <source>Fonts</source>
-      <translation type="unfinished">Fonts</translation>
+      <translation>Tipus de lletra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3522"/>
@@ -4058,7 +4058,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3722"/>
       <location filename="../dialogs/settingsdialog.ui" line="3736"/>
       <source>Set a new font</source>
-      <translation type="unfinished">Set a new font</translation>
+      <translation>Estableix un nou tipus de lletra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3533"/>
@@ -4066,7 +4066,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3660"/>
       <location filename="../dialogs/settingsdialog.ui" line="3684"/>
       <source>Reset font</source>
-      <translation type="unfinished">Reset font</translation>
+      <translation>Reinicialitza els tipus de lletra</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="300"/>
@@ -4091,37 +4091,37 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="329"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>nom del servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="330"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>nom d'usuari del servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="331"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>contrasenya del servidor proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="333"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>Proxy HTTP(S)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="334"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>Proxy SOCKS5</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
       <source>Undefined key</source>
-      <translation type="unfinished">Undefined key</translation>
+      <translation>Clau indefinida</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1084"/>
       <source>Assign a new key</source>
-      <translation type="unfinished">Assign a new key</translation>
+      <translation>Assinga una nova clau</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1085"/>
@@ -4156,12 +4156,12 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1783"/>
       <source>Disable usage tracking</source>
-      <translation type="unfinished">Disable usage tracking</translation>
+      <translation>Desactiva el seguiment d'ús</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1784"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
-      <translation type="unfinished">Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</translation>
+      <translation>Les dades d'ús anònimes ajuden a decidir quines parts de QOwnNotes son les pròximes a millorar i com arreglar errors. &lt;br/&gt;Si us plau, deshabiliteu-les només si us fan la vida impossible.&lt;br /&gt;&lt;br /&gt;Deshabilitar realment el seguiment d'ús?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2005"/>
@@ -4192,7 +4192,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2156"/>
       <source>Loading folders from server</source>
-      <translation type="unfinished">Loading folders from server</translation>
+      <translation>Carregant les carpetes des del servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
@@ -4202,7 +4202,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2244"/>
       <source>Loading folders in '%1' from server</source>
-      <translation type="unfinished">Loading folders in '%1' from server</translation>
+      <translation>Carregant les carpetes a '%1' des del servidor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2305"/>
@@ -4269,7 +4269,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2685"/>
       <source>File extension</source>
-      <translation type="unfinished">File extension</translation>
+      <translation>Extensió del fitxer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2686"/>
@@ -4299,7 +4299,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3043"/>
       <source>Reset and &amp;exit</source>
-      <translation type="unfinished">Reset and &amp;exit</translation>
+      <translation>Reinicialitza i surt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
@@ -5172,7 +5172,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="356"/>
       <source>QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</source>
-      <translation type="unfinished">QOwnNotes will track anonymous usage data, that helps to decide what parts of QOwnNotes to improve next and to find and fix bugs. You can disable that behaviour in the settings.</translation>
+      <translation>QOwnNotes farà un seguiment anònim de les dades d'ús, que ajuda a decidir quines parts de QOwnNotes millorar i on es poden trobar errors. Podeu desactivar aquest comportament a la configuració.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="77"/>

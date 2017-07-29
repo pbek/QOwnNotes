@@ -8,9 +8,10 @@
   input dialog with a select box (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
       [Opening an input dialog with a select box](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-select-box)
-- when entering an url in the link-dialog (`Ctrl + L`) that is missing a `://`
-  then `http://` will automatically added in front of the url
+- when entering an url in the link-dialog with <kbd>Ctrl + L</kbd> that is 
+  missing a`://` then `http://` will automatically added in front of the url
   (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))
+- added more Catalan and Spanish translation (thank you MGuerra and richarson)
 
 ## 17.07.8
 - there now is a new scripting command `script.selectedNotesPaths()` to return a
@@ -35,7 +36,7 @@
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
       to make QOwnNotes available in more languages or help with the current 
       translation
-- fixed more problems with resetting the mouse cursor after pressing `Ctrl` 
+- fixed more problems with resetting the mouse cursor after pressing <kbd>Ctrl</kbd> 
   for Windows (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 - fixed an issue with the highlighting of special cases of the references of 
   reference links (for [Issue #643](https://github.com/pbek/QOwnNotes/issues/643))
@@ -46,8 +47,8 @@
 ## 17.07.6
 - fixed resizing of too large images under Windows in the preview and the 
   PDF export (for [Issue #639](https://github.com/pbek/QOwnNotes/issues/639))
-- the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + R` 
-  to reset the pointing-hand-cursor that was set by pressing `Ctrl`
+- the mouse-cursor will now be set to a beam-cursor when pressing <kbd>Ctrl + R</kbd> 
+  to reset the pointing-hand-cursor that was set by pressing <kbd>Ctrl</kbd>
   (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 - *Show root folder name* and *Display note subfolders as full tree* in the
   *Panels settings* are now set by default
@@ -62,8 +63,8 @@
   (for [Issue #635](https://github.com/pbek/QOwnNotes/issues/635))
 
 ## 17.07.4
-- the mouse-cursor will now be set to a beam-cursor when pressing `Ctrl + F` 
-  to reset the pointing-hand-cursor that was set by pressing `Ctrl`
+- the mouse-cursor will now be set to a beam-cursor when pressing <kbd>Ctrl + F</kbd> 
+  to reset the pointing-hand-cursor that was set by pressing <kbd>Ctrl</kbd>
   (for [Issue #637](https://github.com/pbek/QOwnNotes/issues/637))
 - under Windows the selection background color in the note text edit is now set 
   to a light blue if not in dark mode to prevent visibility problems when
