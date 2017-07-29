@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.07.9
+- fixed a possible crash when using scripts with custom actions in the note
+  list context menu when the script engine is reloaded and the context menu
+  is opened
+
 ## 17.07.8
 - there now is a new scripting command to return a list of the paths of all 
   selected notes `script.selectedNotesPaths()`

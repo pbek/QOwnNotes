@@ -7551,6 +7551,7 @@ void MainWindow::preReloadScriptingEngine() {
     _customActionToolbar->clear();
     _customActionToolbar->hide();
     _noteTextEditContextMenuActions.clear();
+    _noteListContextMenuActions.clear();
 
     // hide the scripting dock widget and remove all registered labels
     _scriptingDockWidget->hide();
