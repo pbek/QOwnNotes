@@ -134,8 +134,8 @@ void UpdateDialog::dialogButtonClicked(QAbstractButton *button) {
             } else if ((release == "AppImage")) {
                 // download the new release
                 QDesktopServices::openUrl(QUrl(
-                        "http://download.opensuse.org/repositories/home:/pbek:/"
-                                "QOwnNotes/AppImage/"));
+                        "https://download.opensuse.org/repositories/home:/"
+                                "pbek:/QOwnNotes/AppImage/"));
             } else {
                 // open the installation page
                 QDesktopServices::openUrl(
