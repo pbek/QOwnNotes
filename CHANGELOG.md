@@ -8,6 +8,9 @@
   input dialog with a select box (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
       [Opening an input dialog with a select box](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-select-box)
+- when entering an url in the link-dialog (`Ctrl + L`) that is missing a `://`
+  then `http://` will automatically added in front of the url
+  (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))
 
 ## 17.07.8
 - there now is a new scripting command `script.selectedNotesPaths()` to return a

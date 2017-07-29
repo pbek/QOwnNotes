@@ -64,7 +64,13 @@ QString LinkDialog::getSelectedNoteName() {
 }
 
 QString LinkDialog::getURL() {
-    return ui->urlEdit->text();
+    QString url = ui->urlEdit->text();
+
+    if (!url.contains("://")) {
+        url = "http://" + url;
+    }
+
+    return url;
 }
 
 //
