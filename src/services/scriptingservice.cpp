@@ -22,6 +22,8 @@
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
+#include <QInputDialog>
+
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
@@ -1180,6 +1182,8 @@ QString ScriptingService::dirSeparator() {
  */
 QStringList ScriptingService::selectedNotesPaths() {
     QStringList selectedNotePaths;
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
 
 #ifndef INTEGRATION_TESTS
     MainWindow *mainWindow = MainWindow::instance();
@@ -1193,4 +1197,32 @@ QStringList ScriptingService::selectedNotesPaths() {
 #endif
 
     return selectedNotePaths;
+}
+
+/**
+ * Opens an input dialog with a select box
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param items {QStringList} list of items to select
+ * @param current {int} index of the item that should be selected (default: 0)
+ * @param editable {bool} if true the text in the dialog can be edited (default: false)
+ * @return {QString} text of the selected item
+ */
+QString ScriptingService::inputDialogGetItem(
+        const QString &title, const QString &label, const QStringList &items,
+        int current, bool editable) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    return QInputDialog::getItem(
+            Q_NULLPTR, title, label, items, current, editable);
+#else
+    Q_UNUSED(title);
+    Q_UNUSED(label);
+    Q_UNUSED(items);
+    Q_UNUSED(current);
+    Q_UNUSED(editable);
+#endif
 }

@@ -98,6 +98,10 @@ public:
     Q_INVOKABLE QString dirSeparator();
     Q_INVOKABLE QStringList selectedNotesPaths();
 
+    Q_INVOKABLE QString inputDialogGetItem(
+            const QString &title, const QString &label,
+            const QStringList &items, int current = 0, bool editable = false);
+
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;

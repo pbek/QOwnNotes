@@ -894,6 +894,42 @@ You may want to take a look at the example
 `external-note-diff.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/external-note-diff.qml>`__.
 
 
+Opening an input dialog with a select box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Opens an input dialog with a select box
+     *
+     * @param title {QString} title of the dialog
+     * @param label {QString} label text of the dialog
+     * @param items {QStringList} list of items to select
+     * @param current {int} index of the item that should be selected (default: 0)
+     * @param editable {bool} if true the text in the dialog can be edited (default: false)
+     * @return {QString} text of the selected item
+     */
+    QString ScriptingService::inputDialogGetItem(
+            const QString &title, const QString &label, const QStringList &items,
+            int current, bool editable);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var result = script.inputDialogGetItem(
+        "combo box", "Please select an item", ["Item 1", "Item 2", "Item 3"]);
+    script.log(result);
+
+You may want to take a look at the example
+`input-dialogs.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/input-dialogs.qml>`__.
+
+
 
 Hooks
 -----

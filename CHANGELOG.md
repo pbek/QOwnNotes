@@ -3,11 +3,15 @@
 ## 17.07.9
 - fixed a possible crash when using scripts with custom actions in the note
   list context menu when the script engine is reloaded and the context menu
-  is opened
+  is opened (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
+- there now is a new scripting command `script.inputDialogGetItem` to open a
+  input dialog with a select box (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
+    - for more information please take a look at
+      [Opening an input dialog with a select box](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-select-box)
 
 ## 17.07.8
-- there now is a new scripting command to return a list of the paths of all 
-  selected notes `script.selectedNotesPaths()`
+- there now is a new scripting command `script.selectedNotesPaths()` to return a
+  list of the paths of all selected notes 
   (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
       [Getting a list of the paths of all selected notes](http://docs.qownnotes.org/en/develop/scripting/README.html#getting-a-list-of-the-paths-of-all-selected-notes)
