@@ -69,7 +69,7 @@ You can visit the [QOwnNotes project page](http://www.qownnotes.org) for more **
   QOwnNotes supports Freedesktop icon themes
 - QOwnNotes is available in many different languages like English, German, 
   French, Polish, Chinese, Russian, Portuguese, Hungarian, Dutch and Spanish
-    - [YOUR help](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
+    - [your kind help](http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes)
       is needed to maintain these translations or to translate QOwnNotes 
       in more languages
 - support for hierarchical note tagging and note subfolders
