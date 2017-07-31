@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.0
+- added a new editor color schema *Bepolymathe Light* (thank you @bepolymathe)
+  (for [Issue #648](https://github.com/pbek/QOwnNotes/issues/648))
+
 ## 17.07.9
 - fixed a possible crash when using scripts with custom actions in the note
   list context menu when the script engine is reloaded and the context menu
