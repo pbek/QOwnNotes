@@ -2342,17 +2342,17 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="959"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>ownCloud server anslutningsfel</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="963"/>
       <source>ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</source>
-      <translation type="unfinished">ownCloud server error: &lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;Please check your ownCloud configuration.</translation>
+      <translation>ownCloud serverfel: &lt;strong&gt;%1&lt;/strong&gt; &lt; br / &gt; Kontrollera din ownCloud konfiguration.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="979"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Du måste konfigurera din ownCloud server!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="985"/>
@@ -2839,7 +2839,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1104"/>
       <source>connection to web server</source>
-      <translation type="unfinished">connection to web server</translation>
+      <translation>anslutning till webbserver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1121"/>
@@ -2849,12 +2849,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1155"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>anslutning till QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1138"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>användarnamn och lösenord korrekt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1094"/>
@@ -2870,7 +2870,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1054"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click here to test the connection to your ownCloud server.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Klicka här för att testa anslutningen till servern för ownCloud.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1172"/>
@@ -3015,12 +3015,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2196"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation type="unfinished">This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</translation>
+      <translation>Detta aktiverar det mörka läget, gränssnittet och ikonerna kommer att ändras. Du måste starta om applikationen för att dessa ändring ska gälla.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2199"/>
       <source>Enable dark mode</source>
-      <translation type="unfinished">Enable dark mode</translation>
+      <translation>Aktivera mörkt läge</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2225"/>
@@ -3045,7 +3045,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1904"/>
       <source>Interface language</source>
-      <translation type="unfinished">Interface language</translation>
+      <translation>Användargränssnittets språk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1924"/>
@@ -3147,7 +3147,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2170"/>
       <source>Dark mode</source>
-      <translation type="unfinished">Dark mode</translation>
+      <translation>Mörkt läge</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1453"/>
@@ -3172,7 +3172,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1406"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;Du kanske vill överväga att skaffa ett gratis SSL-certifikat från &lt;a href="https://letsencrypt.org/"&gt; Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2133"/>
@@ -3451,7 +3451,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Aktivera stöd för ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="969"/>
@@ -4091,27 +4091,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="329"/>
       <source>hostname of proxy server</source>
-      <translation type="unfinished">hostname of proxy server</translation>
+      <translation>värdnamn för proxyserver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="330"/>
       <source>username for proxy server</source>
-      <translation type="unfinished">username for proxy server</translation>
+      <translation>användarnamn för proxyserver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="331"/>
       <source>password for proxy server</source>
-      <translation type="unfinished">password for proxy server</translation>
+      <translation>lösenord för proxyserver</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="333"/>
       <source>HTTP(S) proxy</source>
-      <translation type="unfinished">HTTP(S) proxy</translation>
+      <translation>HTTP (S) proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="334"/>
       <source>SOCKS5 proxy</source>
-      <translation type="unfinished">SOCKS5 proxy</translation>
+      <translation>SOCKS5 proxy</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
@@ -4143,10 +4143,7 @@ QOwnNotesAPI version: %2</translation>
 You also need to have the QOwnNotesAPI app installed and enabled!
 
 Connection error message: </source>
-      <translation type="unfinished">There was an error connecting to the ownCloud Server!
-You also need to have the QOwnNotesAPI app installed and enabled!
-
-Connection error message: </translation>
+      <translation>Det gick inte att ansluta till ownCloud-servern! Du behöver också ha appen QOwnNotesAPI installerad och aktiverad! Anslutningsfelmeddelande: </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1756"/>

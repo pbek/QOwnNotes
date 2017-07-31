@@ -487,7 +487,7 @@
     <message>
       <location filename="../mainwindow.ui" line="990"/>
       <source>&amp;Remove current note</source>
-      <translation>$Esborrar nota actual</translation>
+      <translation>Elimina nota actual</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1002"/>
@@ -522,7 +522,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1057"/>
       <source>By date</source>
-      <translation>Per data</translation>
+      <translation>Data</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
@@ -594,7 +594,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1077"/>
       <source>&amp;Settings</source>
-      <translation>Opcions</translation>
+      <translation>Configuració</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
@@ -639,7 +639,7 @@
     <message>
       <location filename="../mainwindow.ui" line="830"/>
       <source>To&amp;do</source>
-      <translation>Per fer</translation>
+      <translation>Tasques</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="836"/>
@@ -695,7 +695,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1231"/>
       <source>&amp;Export note as PDF (text)</source>
-      <translation>Exportar com a PDF (text)</translation>
+      <translation>Exporta com a PDF (text)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1240"/>
@@ -745,7 +745,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1330"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>Exportar com a arxiu Markdown</translation>
+      <translation>Exporta com un fitxer markdown</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1339"/>
@@ -1039,7 +1039,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1222"/>
       <source>&amp;Export note as PDF</source>
-      <translation>Exportar com PDF</translation>
+      <translation>Exporta com PDF</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1658"/>
@@ -1775,9 +1775,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7257"/>
       <source>%n note(s) were copied to note subfolder "%2"</source>
-      <translation type="unfinished">
+      <translation>
         <numerusform>%n nota(es) copiada(es) a la subcarpeta "%2"</numerusform>
-        <numerusform>%n note(s) were copied to note subfolder "%2"</numerusform>
+        <numerusform>%n nota(es) copiada(es) a la subcarpeta "%2"</numerusform>
       </translation>
     </message>
     <message>
@@ -1998,7 +1998,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6699"/>
       <source>&amp;Remove tags</source>
-      <translation type="unfinished">&amp;Remove tags</translation>
+      <translation>Elimina etiquetes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4310"/>
@@ -2103,7 +2103,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1917"/>
       <source>&lt;br /&gt;path: %1</source>
-      <translation type="unfinished">&lt;br /&gt;path: %1</translation>
+      <translation>&lt;br /&gt;camí: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2052"/>
@@ -2556,7 +2556,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="220"/>
       <source>Match case sensitive</source>
-      <translation type="unfinished">Match case sensitive</translation>
+      <translation>Fer coincidir maj./min.</translation>
     </message>
   </context>
   <context>
@@ -2784,17 +2784,17 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="383"/>
       <source>Your note folders</source>
-      <translation type="unfinished">Your note folders</translation>
+      <translation>Les vostres carpetes de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
       <source>&amp;Add folder</source>
-      <translation type="unfinished">&amp;Add folder</translation>
+      <translation>Afegeix carpeta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="474"/>
       <source>&amp;Remove folder</source>
-      <translation type="unfinished">&amp;Remove folder</translation>
+      <translation>Elimina carpeta</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="688"/>
@@ -2809,7 +2809,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="704"/>
       <source>Use as active note folder</source>
-      <translation type="unfinished">Use as active note folder</translation>
+      <translation>Usa com a carpeta de notes activa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
@@ -2844,17 +2844,17 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1121"/>
       <source>ownCloud server detected</source>
-      <translation type="unfinished">ownCloud server detected</translation>
+      <translation>detectar servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1155"/>
       <source>connection to QOwnNotesAPI</source>
-      <translation type="unfinished">connection to QOwnNotesAPI</translation>
+      <translation>connexió a QOwnNotesAPI</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1138"/>
       <source>username and password correct</source>
-      <translation type="unfinished">username and password correct</translation>
+      <translation>nom d'usuari i contrasenya correctes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1094"/>
@@ -2895,12 +2895,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="670"/>
       <source>path</source>
-      <translation type="unfinished">path</translation>
+      <translation>camí</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="506"/>
       <source>Click here to select your local note path</source>
-      <translation type="unfinished">Click here to select your local note path</translation>
+      <translation>Cliqueu aquí per seleccionar el camí local de les vostres notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="583"/>
@@ -3097,7 +3097,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3470"/>
       <source>Use GitHub line breaks</source>
-      <translation type="unfinished">Use GitHub line breaks</translation>
+      <translation>Utilitzar els salts de línia de GitHub</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1957"/>
@@ -3339,7 +3339,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation type="unfinished">Find setting</translation>
+      <translation>Cerca paràmetre</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
@@ -3395,7 +3395,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="639"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation type="unfinished">&amp;Use as ownCloud path</translation>
+      <translation>Usar com camí a ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="678"/>
@@ -3410,7 +3410,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="721"/>
       <source>Path on your ownCloud server:</source>
-      <translation type="unfinished">Path on your ownCloud server:</translation>
+      <translation>Camí al vostre servidor ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
@@ -3421,7 +3421,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="735"/>
       <source>Note folder path:</source>
-      <translation type="unfinished">Note folder path:</translation>
+      <translation>Camí de la carpeta de notes:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="742"/>
@@ -3431,7 +3431,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="745"/>
       <source>Use note sub-folders</source>
-      <translation type="unfinished">Use note sub-folders</translation>
+      <translation>Usa subcarpetes de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="752"/>
@@ -3553,7 +3553,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4277"/>
       <source>Show with full path</source>
-      <translation type="unfinished">Show with full path</translation>
+      <translation>Mostra el camí sencer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4297"/>
@@ -3606,7 +3606,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4138"/>
       <source>Path to git executable:</source>
-      <translation type="unfinished">Path to git executable:</translation>
+      <translation>Camí a l'executable git:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4176"/>
@@ -3732,7 +3732,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2806"/>
       <source>Path to your QML file</source>
-      <translation type="unfinished">Path to your QML file</translation>
+      <translation>Camí al vostre fitxer QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2597"/>
@@ -3824,7 +3824,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3878"/>
       <source>Log file path:</source>
-      <translation type="unfinished">Log file path:</translation>
+      <translation>Camí del fitxer de registre:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3940"/>
@@ -3864,7 +3864,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4017"/>
       <source>Enable automatic removal of matching closing characters</source>
-      <translation type="unfinished">Enable automatic removal of matching closing characters</translation>
+      <translation>Activa l'eliminació automàtica de delimitadors</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1685"/>
@@ -3969,7 +3969,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2755"/>
       <source>Script path:</source>
-      <translation type="unfinished">Script path:</translation>
+      <translation>Camí dels scripts:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="694"/>
@@ -4039,7 +4039,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3287"/>
       <source>Path to external editor:</source>
-      <translation type="unfinished">Path to external editor:</translation>
+      <translation>Camí de l'editor extern:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3166"/>
@@ -4081,7 +4081,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3433"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podeu &lt;span style=" font-weight:600;"&gt;copiar i enganxar&lt;/span&gt; aquest text (o parts d'ell) en una &lt;span style=" font-weight:600;"&gt;qüestió&lt;/span&gt; a la &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pàgina de qüestions de QOwnNotes&lt;/a&gt; si teniu &lt;span style=" font-weight:600;"&gt;preguntes o problemes&lt;/span&gt; amb QOwnNotes. les dades massa sensibles s'amaguen en aquesta informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3446"/>
@@ -4212,7 +4212,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2307"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
-      <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
+      <translation>Si necessiteu d'alguna funcionalitat en QOwnNotes obriu, si us plau, una qüestió a la &lt;a href="%1"&gt;pàgina de qüestions d'QOwnNotes&lt;/a&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
@@ -4413,7 +4413,7 @@ Your notes will stay intact!</translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="312"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
-      <translation>Trobareu un &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en el path de la vostra distribució per arrencar QOwnNotes en mode portàtil.</translation>
+      <translation>Trobareu un &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; en el camí de la vostra distribució per arrencar QOwnNotes en mode portàtil.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
@@ -5137,7 +5137,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="225"/>
       <source>Note folder path</source>
-      <translation type="unfinished">Note folder path</translation>
+      <translation>Camí de la carpeta de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="232"/>
@@ -5177,12 +5177,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="77"/>
       <source>Cannot create note path!</source>
-      <translation type="unfinished">Cannot create note path!</translation>
+      <translation>No es pot crear el camí per les notes!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="82"/>
       <source>This note path doesn't exist!</source>
-      <translation type="unfinished">This note path doesn't exist!</translation>
+      <translation>Aquest camí no existeix!</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="145"/>
