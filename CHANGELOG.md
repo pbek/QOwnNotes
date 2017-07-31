@@ -3,6 +3,9 @@
 ## 17.08.0
 - added a new editor color schema *Bepolymathe Light* (thank you @bepolymathe)
   (for [Issue #648](https://github.com/pbek/QOwnNotes/issues/648))
+- when pasting html from the clipboard as markdown null characters and Windows
+  line breaks will now be removed as well as all tags will be interpreted over
+  multiple lines (for [Issue #645](https://github.com/pbek/QOwnNotes/issues/645))
 
 ## 17.07.9
 - fixed a possible crash when using scripts with custom actions in the note

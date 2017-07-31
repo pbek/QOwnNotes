@@ -5884,8 +5884,6 @@ void MainWindow::handleInsertingFromMimeData(const QMimeData *mimeData) {
  * Images are also downloaded
  */
 void MainWindow::insertHtml(QString html) {
-    qDebug() << __func__ << " - 'html': " << html;
-
     // convert html tags to markdown
     html = Utils::Misc::htmlToMarkdown(html);
 
@@ -5921,11 +5919,6 @@ void MainWindow::insertHtml(QString html) {
 
     // remove all html tags
     html.remove(QRegularExpression("<.+?>"));
-
-    // remove the last character, that is broken
-    html = html.left(html.size() - 1);
-
-    qDebug() << __func__ << " - 'html': " << html;
 
     QMarkdownTextEdit* textEdit = activeNoteTextEdit();
     QTextCursor c = textEdit->textCursor();

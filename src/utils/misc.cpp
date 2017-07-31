@@ -491,67 +491,93 @@ QString Utils::Misc::makePathRelativeToPortableDataPathIfNeeded(QString path) {
  * @return markdown text
  */
 QString Utils::Misc::htmlToMarkdown(QString text) {
+    // replace Windows line breaks
+    text.replace(QRegularExpression("\r\n"), "\n");
+
+    // remove all null characters
+    // we can get those from Google Chrome via the clipboard
+    text.remove(QChar(0));
+
     // remove some blocks
     text.remove(QRegularExpression(
             "<head.*?>(.+?)<\\/head>",
-            QRegularExpression::CaseInsensitiveOption));
+            QRegularExpression::CaseInsensitiveOption |
+                    QRegularExpression::DotMatchesEverythingOption));
 
     text.remove(QRegularExpression(
             "<script.*?>(.+?)<\\/script>",
-            QRegularExpression::CaseInsensitiveOption));
+            QRegularExpression::CaseInsensitiveOption |
+                    QRegularExpression::DotMatchesEverythingOption));
 
     text.remove(QRegularExpression(
             "<style.*?>(.+?)<\\/style>",
-            QRegularExpression::CaseInsensitiveOption));
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption));
 
     // replace some html tags with markdown
     text.replace(QRegularExpression(
             "<strong.*?>(.+?)<\\/strong>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "**\\1**");
     text.replace(QRegularExpression(
             "<b.*?>(.+?)<\\/b>",
-            QRegularExpression::CaseInsensitiveOption), "**\\1**");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "**\\1**");
     text.replace(QRegularExpression(
             "<em.*?>(.+?)<\\/em>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "*\\1*");
     text.replace(QRegularExpression(
             "<i.*?>(.+?)<\\/i>",
-            QRegularExpression::CaseInsensitiveOption), "*\\1*");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "*\\1*");
     text.replace(QRegularExpression(
             "<pre.*?>(.+?)<\\/pre>",
-            QRegularExpression::CaseInsensitiveOption), "\n```\n\\1\n```\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption),
+                 "\n```\n\\1\n```\n");
     text.replace(QRegularExpression(
             "<code.*?>(.+?)<\\/code>",
-            QRegularExpression::CaseInsensitiveOption), "\n```\n\\1\n```\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption),
+                 "\n```\n\\1\n```\n");
     text.replace(QRegularExpression(
             "<h1.*?>(.+?)<\\/h1>",
-            QRegularExpression::CaseInsensitiveOption), "\n# \\1\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n# \\1\n");
     text.replace(QRegularExpression(
             "<h2.*?>(.+?)<\\/h2>",
-            QRegularExpression::CaseInsensitiveOption), "\n## \\1\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n## \\1\n");
     text.replace(QRegularExpression(
             "<h3.*?>(.+?)<\\/h3>",
-            QRegularExpression::CaseInsensitiveOption), "\n### \\1\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n### \\1\n");
     text.replace(QRegularExpression(
             "<h4.*?>(.+?)<\\/h4>",
-            QRegularExpression::CaseInsensitiveOption), "\n#### \\1\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n#### \\1\n");
     text.replace(QRegularExpression(
             "<h5.*?>(.+?)<\\/h5>",
-            QRegularExpression::CaseInsensitiveOption), "\n##### \\1\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n##### \\1\n");
     text.replace(QRegularExpression(
             "<li.*?>(.+?)<\\/li>",
-            QRegularExpression::CaseInsensitiveOption), "- \\1");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "- \\1");
     text.replace(QRegularExpression(
             "<br.*?>",
             QRegularExpression::CaseInsensitiveOption), "\n");
     text.replace(QRegularExpression(
             "<a[^>]+href=\"(.+?)\".*?>(.+?)<\\/a>",
-            QRegularExpression::CaseInsensitiveOption), "[\\2](\\1)");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "[\\2](\\1)");
     text.replace(QRegularExpression(
             "<p.*?>(.+?)</p>",
-            QRegularExpression::CaseInsensitiveOption), "\n\n\\1\n\n");
+            QRegularExpression::CaseInsensitiveOption |
+            QRegularExpression::DotMatchesEverythingOption), "\n\n\\1\n\n");
 
-    // replacing multiple line breaks
+    // replace multiple line breaks
     text.replace(QRegularExpression("\n\n+"), "\n\n");
 
     return text;
