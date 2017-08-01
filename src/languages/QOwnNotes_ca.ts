@@ -53,7 +53,7 @@
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="80"/>
       <source>To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</source>
-      <translation type="unfinished">To get such an enex file you need to select one or multiple notes in your Evernotes desktop client and click "Export notes..." in the File menu.</translation>
+      <translation>Per obtenir un fitxer enex us cal seleccionar una o diverses notes al programa d'escriptori Evernotes clicar "Exportació notes..." al menú Fitxer.</translation>
     </message>
     <message>
       <location filename="../dialogs/evernoteimportdialog.ui" line="101"/>
@@ -295,7 +295,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="570"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation>Eliminar l'esquema actual? Això no es pot desfer!</translation>
+      <translation>Eliminar aquest esquema? Això no es pot desfer!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
@@ -599,22 +599,22 @@
     <message>
       <location filename="../mainwindow.ui" line="119"/>
       <source>Find or create note sub folder</source>
-      <translation>Troba o crea una nota a la subcarpeta</translation>
+      <translation>Cerca o crea una nota a la subcarpeta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="193"/>
       <source>Find or create tag</source>
-      <translation>Troba o crea una etiqueta</translation>
+      <translation>Cerca o crea una etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="286"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Cerqueu notes o creeu-ne de noves escrivint text i prement Intro</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="300"/>
       <source>Search or create note</source>
-      <translation>Troba o crea una nota</translation>
+      <translation>Cerca o crea una nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="537"/>
@@ -715,7 +715,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1267"/>
       <source>Insert image (the image will be copied to the `media` folder in the current notes folder)</source>
-      <translation type="unfinished">Insert image (the image will be copied to the `media` folder in the current notes folder)</translation>
+      <translation>Insereix una imatge (la imatge es copiarà a la carpeta "media" dins la carpeta actual de notes)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1279"/>
@@ -871,7 +871,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1863"/>
       <source>Unlock panels</source>
-      <translation>Desbloqueja panells</translation>
+      <translation>Fixa/allibera panells</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1872"/>
@@ -1029,7 +1029,7 @@
       <location filename="../mainwindow.ui" line="1848"/>
       <location filename="../mainwindow.ui" line="1851"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation type="unfinished">Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</translation>
+      <translation>Versionat git</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="763"/>
@@ -1441,9 +1441,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="5823"/>
       <source>Skipped copying of %n note(s) (no markdown or text file or not readable)</source>
-      <translation type="unfinished">
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
-        <numerusform>Skipped copying of %n note(s) (no markdown or text file or not readable)</numerusform>
+      <translation>
+        <numerusform>Omesa la còpia de %n nota(es) (no hi ha cap fitxer markdown o de text o no és legible)</numerusform>
+        <numerusform>Omesa la còpia de %n nota(es) (no hi ha cap fitxer markdown o de text o no és legible)</numerusform>
       </translation>
     </message>
     <message>
@@ -1702,7 +1702,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6166"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>mostra les notes en la carpeta arrel (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="310"/>
@@ -1803,7 +1803,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7874"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Si voleu renombrar la nota heu d'habilitar el paràmetre per tal que el nom del fitxer pugui ser diferent de la capçalera de la nota.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8036"/>
@@ -1828,7 +1828,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6114"/>
       <source>show all untagged notes (%1)</source>
-      <translation type="unfinished">show all untagged notes (%1)</translation>
+      <translation>mostra totes les notes sense etiquetes (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6117"/>
@@ -1848,7 +1848,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="910"/>
       <source>quit toolbar</source>
-      <translation type="unfinished">quit toolbar</translation>
+      <translation>barra d'eines de sortida</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1282"/>
@@ -1908,7 +1908,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2277"/>
       <source>Current note was modified externally</source>
-      <translation type="unfinished">Current note was modified externally</translation>
+      <translation>La nota actual s'ha modificat externament</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2361"/>
@@ -1929,9 +1929,9 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="2472"/>
       <source>Stored %n note(s) to disk</source>
-      <translation type="unfinished">
-        <numerusform>Stored %n note(s) to disk</numerusform>
-        <numerusform>Stored %n note(s) to disk</numerusform>
+      <translation>
+        <numerusform>Desades %n nota(es) al disc</numerusform>
+        <numerusform>Desades %n nota(es) al disc</numerusform>
       </translation>
     </message>
     <message>
@@ -1958,12 +1958,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="6702"/>
       <source>&amp;Move tags to...</source>
-      <translation type="unfinished">&amp;Move tags to...</translation>
+      <translation>Mou les etiquetes a...</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6737"/>
       <source>Tag could not be created!</source>
-      <translation type="unfinished">Tag could not be created!</translation>
+      <translation>No es pot crear l'etiqueta!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6922"/>
@@ -1978,12 +1978,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7002"/>
       <source>Cannot move tag '%1' to this tag</source>
-      <translation type="unfinished">Cannot move tag '%1' to this tag</translation>
+      <translation>No es pot moure l'etiqueta '%1' a aquesta etiqueta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7013"/>
       <source>Moved tag '%1' to new tag</source>
-      <translation type="unfinished">Moved tag '%1' to new tag</translation>
+      <translation>Etiqueta '%1' moguda a una de nova</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6327"/>
@@ -2043,12 +2043,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="636"/>
       <source>Log</source>
-      <translation type="unfinished">Log</translation>
+      <translation>Registres</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="643"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting / Seqüències de comandes</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="877"/>
@@ -2073,7 +2073,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="905"/>
       <source>custom action toolbar</source>
-      <translation type="unfinished">custom action toolbar</translation>
+      <translation>barra d'eines pròpia de l'usuari</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="925"/>
@@ -2093,12 +2093,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="1872"/>
       <source>show notes in folder '%1' (%2)</source>
-      <translation type="unfinished">show notes in folder '%1' (%2)</translation>
+      <translation>mostra notes a la carpeta '%1' (%2)</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1912"/>
       <source>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</source>
-      <translation type="unfinished">&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;last modified: %2</translation>
+      <translation>&lt;strong&gt;%1&lt;/strong&gt;&lt;br /&gt;modificat per última vegada el: %2</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1917"/>
@@ -2108,23 +2108,23 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="2052"/>
       <source>Toolbar could not be loaded without name</source>
-      <translation type="unfinished">Toolbar could not be loaded without name</translation>
+      <translation>La barra d'eines no es pot carregar sense un nom</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2303"/>
       <source>Overwriting external changes of: %1</source>
-      <translation type="unfinished">Overwriting external changes of: %1</translation>
+      <translation>Sobreescrivint canvis externs de: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2325"/>
       <source>Loading external changes from: %1</source>
-      <translation type="unfinished">Loading external changes from: %1</translation>
+      <translation>Carregant canvis externs de: %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2362"/>
       <location filename="../mainwindow.cpp" line="4650"/>
       <source>Current note could not be stored to disk</source>
-      <translation type="unfinished">Current note could not be stored to disk</translation>
+      <translation>No es pot desar la nota actual al disk</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2525"/>
@@ -2309,7 +2309,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
       <source>&amp;Delete</source>
-      <translation type="unfinished">&amp;Delete</translation>
+      <translation>Esborra</translation>
     </message>
     <message>
       <location filename="../dialogs/orphanedimagesdialog.cpp" line="123"/>
@@ -2327,7 +2327,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="184"/>
       <source>Your calendar username or password is incorrect!</source>
-      <translation type="unfinished">Your calendar username or password is incorrect!</translation>
+      <translation>El vostre nom o contrasenya del calendari son incorrectes!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="496"/>
@@ -2342,7 +2342,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="959"/>
       <source>ownCloud server connection error</source>
-      <translation type="unfinished">ownCloud server connection error</translation>
+      <translation>error de connexió del servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="963"/>
@@ -2352,7 +2352,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="979"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation type="unfinished">You need to setup your ownCloud server!</translation>
+      <translation>Heu de configurar el vostre servidor d'ownCloud!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="985"/>
@@ -2372,7 +2372,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../services/owncloudservice.cpp" line="1069"/>
       <source>No versions found</source>
-      <translation type="unfinished">No versions found</translation>
+      <translation>No s'han trobat versions</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1070"/>
@@ -2398,7 +2398,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <location filename="../services/owncloudservice.cpp" line="1156"/>
       <location filename="../services/owncloudservice.cpp" line="1182"/>
       <source>Error while loading todo lists!</source>
-      <translation type="unfinished">Error while loading todo lists!</translation>
+      <translation>Error durant la càrrega de les llistes de tasques!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1157"/>
@@ -2600,18 +2600,18 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="55"/>
       <source>To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</source>
-      <translation type="unfinished">To search for a script please enter your query text and press &lt;i&gt;Return&lt;/i&gt;.</translation>
+      <translation>Per cercar un script entreu, si us plau, el vostre text de cerca i premeu &lt;i&gt;intro&lt;/i&gt;.</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="124"/>
       <source>Currently installed version:</source>
-      <translation type="unfinished">Currently installed version:</translation>
+      <translation>Versió instal·lada actual:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="269"/>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="275"/>
       <source>Installs the script</source>
-      <translation type="unfinished">Installs the script</translation>
+      <translation>Instal·la l'script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="272"/>
@@ -2633,7 +2633,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="134"/>
       <source>Minimum app version:</source>
-      <translation type="unfinished">Minimum app version:</translation>
+      <translation>Versió mínima de l'aplicació:</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="398"/>
@@ -2643,12 +2643,12 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="413"/>
       <source>Enter your query text</source>
-      <translation type="unfinished">Enter your query text</translation>
+      <translation>Entra el text de consulta</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.ui" line="416"/>
       <source>Find script</source>
-      <translation type="unfinished">Find script</translation>
+      <translation>Troba script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="245"/>
@@ -2673,7 +2673,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="252"/>
       <source>Open repository</source>
-      <translation type="unfinished">Open repository</translation>
+      <translation>Obre el repositori</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
@@ -2693,19 +2693,19 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="267"/>
       <source>Reinstalls the script</source>
-      <translation type="unfinished">Reinstalls the script</translation>
+      <translation>Reinstal·la l'script</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="332"/>
       <source>Platform not supported!</source>
-      <translation type="unfinished">Platform not supported!</translation>
+      <translation>Plataforma sense suport!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="333"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation type="unfinished">Your platform is not supported by this script!
-Do you want to install it anyway?</translation>
+      <translation>La vostra plataforma no està suportada per aquest sript!
+Tot i així, el voleu instal·lar?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="335"/>
@@ -2720,7 +2720,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="344"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation type="unfinished">Please don't forget to update your installation of QOwnNotes to make this script work!</translation>
+      <translation>No oblideu d'actualitzar la vostra instal·lació de QOwnNotes per tal que funcioni aquest script!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="411"/>
@@ -2730,17 +2730,17 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
       <source>The script was successfully installed!</source>
-      <translation type="unfinished">The script was successfully installed!</translation>
+      <translation>L'script s'ha instal·lat correctament!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="414"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>La descàrrega ha fallat</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="415"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>No es descarregarà l'script!</translation>
     </message>
   </context>
   <context>
@@ -2748,7 +2748,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
       <source>Form</source>
-      <translation type="unfinished">Form</translation>
+      <translation>Formulari</translation>
     </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="44"/>
@@ -2758,7 +2758,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../widgets/scriptsettingwidget.cpp" line="158"/>
       <source>Please select a file</source>
-      <translation type="unfinished">Please select a file</translation>
+      <translation>Seleccioneu un fitxer</translation>
     </message>
   </context>
   <context>
@@ -2766,7 +2766,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="236"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>el fitxer no existeix</translation>
     </message>
   </context>
   <context>
@@ -2814,12 +2814,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Your ownCloud server</source>
-      <translation type="unfinished">Your ownCloud server</translation>
+      <translation>El vostre servidor ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
       <source>ownCloud server url:</source>
-      <translation type="unfinished">ownCloud server url:</translation>
+      <translation>url del servidor ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="953"/>
@@ -2834,7 +2834,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1026"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please enter the password for your username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Entreu la contrasenya per al vostre nom d'usuari.&lt;br/&gt;La contrasenya s'emmagatzemarà xifrada amb la resta de paràmetres, però no és excessivament segur.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1104"/>
@@ -2915,7 +2915,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="821"/>
       <source>Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</source>
-      <translation type="unfinished">Please install the latest version of &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (at least version QOWNNOTESAPI_MIN_VERSION) on your ownCloud server if you want QOwnNotes to be able to access note versions and trashed notes.</translation>
+      <translation>Instaleu, si us plau, la última versió de la &lt;a href="https://apps.owncloud.com/content/show.php?content=173817"&gt;&lt;span style=" font-weight:600;"&gt;QOwnNotesAPI&lt;/span&gt;&lt;/a&gt; (com a mínim la versió QOWNNOTESAPI_MIN_VERSION) al vostre servidor ownCloud si voleu que el QOwnNotes pugui accedir a les versions de les notes i a les notes esborrades.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="834"/>
@@ -2955,7 +2955,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1260"/>
       <source>Specify proxy manually as</source>
-      <translation type="unfinished">Specify proxy manually as</translation>
+      <translation>Indiqueu manualment el proxy com</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1285"/>
@@ -2965,7 +2965,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1336"/>
       <source>Proxy server requires authentication</source>
-      <translation type="unfinished">Proxy server requires authentication</translation>
+      <translation>El servidor proxy requereix autenticació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1393"/>
@@ -2985,12 +2985,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1618"/>
       <source>Default ownCloud calendar</source>
-      <translation type="unfinished">Default ownCloud calendar</translation>
+      <translation>Calendari ownCloud per defecte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
       <source>Select the calendars you want to use for the TODO list</source>
-      <translation type="unfinished">Select the calendars you want to use for the TODO list</translation>
+      <translation>Seleccioneu els calendaris que voleu usar per la Llista de Tasques</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
@@ -3082,7 +3082,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3018"/>
       <source>Do this at your own risk!</source>
-      <translation type="unfinished">Do this at your own risk!</translation>
+      <translation>Feu això sota la vostra responsabilitat!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3021"/>
@@ -3142,7 +3142,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1910"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If you want to help to translate QOwnNotes or update an existing translation please read: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si voleu ajudar a traduïr QOwnNotes o actualitzar una traducció existent llegiu, si us plau, &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;Com puc ajudar a traduïr QOwnNotes&lt;/a&gt;? (en anglès)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2170"/>
@@ -3162,7 +3162,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1557"/>
       <source>Disable heartbeat</source>
-      <translation type="unfinished">Disable heartbeat</translation>
+      <translation>Desactiva els batecs</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2089"/>
@@ -3172,7 +3172,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1406"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to consider getting a free SSL certificate from &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potser us interessa fer-vos amb un certificat SSL gratuït de &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2133"/>
@@ -3182,17 +3182,17 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2769"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Heu de recarregar el motor de scripting si voleu modificar un fitxer de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2772"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Recarrega el motor de scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2762"/>
       <source>Validate script</source>
-      <translation type="unfinished">Validate script</translation>
+      <translation>Valida script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="264"/>
@@ -3214,8 +3214,8 @@ Do you want to install it anyway?</translation>
       <location filename="../dialogs/settingsdialog.ui" line="4079"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>Podeu trobar-vos amb problemes de sincronització amb versions velles d'ownCloud si baixeu massa per sota dels 10 segons.
+Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2034"/>
@@ -3225,7 +3225,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3045"/>
       <source>note save interval time [sec]</source>
-      <translation type="unfinished">note save interval time [sec]</translation>
+      <translation>interval de temps per guardar la nota [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2966"/>
@@ -3242,12 +3242,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3369"/>
       <source>Reinitialize Database</source>
-      <translation type="unfinished">Reinitialize Database</translation>
+      <translation>Reinicialitza la base de dades</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3321"/>
       <source>Clear application data and exit</source>
-      <translation type="unfinished">Clear application data and exit</translation>
+      <translation>Neteja les dades de l'aplicació i surt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3327"/>
@@ -3258,17 +3258,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3337"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
       <source>Clear app data and exit</source>
-      <translation type="unfinished">Clear app data and exit</translation>
+      <translation>Neteja les dades de l'aplicació i surt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3160"/>
       <source>Update dialog</source>
-      <translation type="unfinished">Update dialog</translation>
+      <translation>Diàleg d'actualització</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3196"/>
       <source>Default note file extension</source>
-      <translation type="unfinished">Default note file extension</translation>
+      <translation>Extensió per defecte dels fitxer de notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3281"/>
@@ -3284,12 +3284,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
       <location filename="../dialogs/settingsdialog.ui" line="3304"/>
       <location filename="../dialogs/settingsdialog.ui" line="4148"/>
       <source>set external editor</source>
-      <translation type="unfinished">set external editor</translation>
+      <translation>establir l'editor extern</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1422"/>
       <source>App metrics</source>
-      <translation type="unfinished">App metrics</translation>
+      <translation>Mètriques de l'aplicació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1440"/>
@@ -3299,17 +3299,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1472"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation type="unfinished">This data includes anonymous information about what features of the app are used.</translation>
+      <translation>Aquestes dades inclouen informació anònima sobre quines característiques de l'aplicació es fan servir.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1526"/>
       <source>App heartbeat</source>
-      <translation type="unfinished">App heartbeat</translation>
+      <translation>Batecs de l'aplicació</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1544"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation type="unfinished">A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</translation>
+      <translation>Un petit batec és enviat periòdicament mentre QOwnNotes s'està executant. Feu feliç un desenvolupador fent-li saber que algú està usant el QOwnNotes.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2012"/>
@@ -3319,22 +3319,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="252"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Scripting</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2425"/>
       <source>Your scripts</source>
-      <translation type="unfinished">Your scripts</translation>
+      <translation>Els vostres scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2500"/>
       <source>&amp;Remove script</source>
-      <translation type="unfinished">&amp;Remove script</translation>
+      <translation>Elimina script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2779"/>
       <source>Click here to select your QML script</source>
-      <translation type="unfinished">Click here to select your QML script</translation>
+      <translation>Cliqueu aquí per a seleccionar el vostre script QML</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
@@ -3374,7 +3374,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="287"/>
       <source>Git versioning</source>
-      <translation type="unfinished">Git versioning</translation>
+      <translation>Versionat git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="311"/>
@@ -3405,7 +3405,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="711"/>
       <source>ownCloud server:</source>
-      <translation type="unfinished">ownCloud server:</translation>
+      <translation>Servidor ownCloud:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="721"/>
@@ -3436,12 +3436,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="752"/>
       <source>You need to have git installed to make this work!</source>
-      <translation type="unfinished">You need to have git installed to make this work!</translation>
+      <translation>Heu de tenir instal·lat el git per tal que això funcioni!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="755"/>
       <source>Use git to keep a local history of your notes</source>
-      <translation type="unfinished">Use git to keep a local history of your notes</translation>
+      <translation>Useu el git per desar un historial local de les vostres notes</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="784"/>
@@ -3451,7 +3451,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="790"/>
       <source>Enable ownCloud support</source>
-      <translation type="unfinished">Enable ownCloud support</translation>
+      <translation>Habilita el suport per ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="969"/>
@@ -3462,7 +3462,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="994"/>
       <source>Your ownCloud username</source>
-      <translation type="unfinished">Your ownCloud username</translation>
+      <translation>El vostre nom d'usuari d'ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1004"/>
@@ -3473,12 +3473,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <source>Your ownCloud password</source>
-      <translation type="unfinished">Your ownCloud password</translation>
+      <translation>La vostra contraseña d'ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1060"/>
       <source>&amp;Connect to ownCloud server</source>
-      <translation type="unfinished">&amp;Connect to ownCloud server</translation>
+      <translation>Connecta al servidor d'ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1087"/>
@@ -3493,7 +3493,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3966"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potser voleu fer-li un cop d'ull a tots els &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;formats de temps&lt;/a&gt; disponibles.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4209"/>
@@ -3543,7 +3543,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4261"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>Amaga el cercador 'Cerca o crea una etiqueta'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4271"/>
@@ -3564,17 +3564,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4310"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Mostra el nom de la carpeta arrel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4340"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Amaga el cercador 'Cerca o crea una nota a la subcarpeta'</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4347"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Mostra les subcarpetes de notes com un arbre sencer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4357"/>
@@ -3584,19 +3584,19 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
       <source>Search script repository</source>
-      <translation type="unfinished">Search script repository</translation>
+      <translation>Cerca al repositori de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4099"/>
       <source>Enter a command to be used to show a git log</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">Enter a command to be used to show a git log</translation>
+      <translation>Entreu la comanda que usareu per mostrar el registre del git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4109"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
-      <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
+      <translation>Si voleu podeu usar "%notePath%" per indicar el camí de la nota.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4122"/>
@@ -3611,33 +3611,33 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4176"/>
       <source>Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</translation>
+      <translation>No oblideu habilitar el suport per git a la vostra carpeta de notes i de configurar el vostre nom i adreça de correu pel vostre client git; per exemple, amb aquestes comandes de terminal:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4128"/>
       <source>Path to git client, leave empty for default</source>
-      <translation type="unfinished">Path to git client, leave empty for default</translation>
+      <translation>Camí al client de git, deixeu-lo buit per defecte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4057"/>
       <source>Commit interval</source>
-      <translation type="unfinished">Commit interval</translation>
+      <translation>Interval per fer commit</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4063"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
-      <translation type="unfinished">sec</translation>
+      <translation>segons</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4083"/>
       <source>git commit interval time [sec]</source>
-      <translation type="unfinished">git commit interval time [sec]</translation>
+      <translation>interval de temps per fer commit al git [sec]</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4093"/>
       <source>External git log command</source>
-      <translation type="unfinished">External git log command</translation>
+      <translation>Comanda de registre de git (git log) externa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="869"/>
@@ -3647,7 +3647,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1602"/>
       <source>Which calendar backend do you want to use?</source>
-      <translation type="unfinished">Which calendar backend do you want to use?</translation>
+      <translation>Quin servei de calendaris voleu usar?</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1615"/>
@@ -3662,7 +3662,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1638"/>
       <source>Legacy ownCloud calendar</source>
-      <translation type="unfinished">Legacy ownCloud calendar</translation>
+      <translation>Calendari antic d'ownCloud</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1651"/>
@@ -3672,17 +3672,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1660"/>
       <source>Calendar base url:</source>
-      <translation type="unfinished">Calendar base url:</translation>
+      <translation>Url base del calendari:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1682"/>
       <source>Please enter the CalDAV base url to your calendar.</source>
-      <translation type="unfinished">Please enter the CalDAV base url to your calendar.</translation>
+      <translation>Entreu la url base del CalDAV al vostre calendari.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1752"/>
       <source>Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</source>
-      <translation type="unfinished">Please enter the password for your CalDAV username.&lt;br/&gt;Currently the password will be stored encrypted with the other settings, but is not very secure.</translation>
+      <translation>Entreu la contrasenya per al vostre nom d'usuari de CalDAV.&lt;br/&gt;La contrasenya s'emmagatzemarà xifrada amb la resta de paràmetres, però no és excessivament segur.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
@@ -3737,7 +3737,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2597"/>
       <source>Script name</source>
-      <translation type="unfinished">Script name</translation>
+      <translation>Nom de l'script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2619"/>
@@ -3757,7 +3757,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2489"/>
       <source>&amp;Add script...</source>
-      <translation type="unfinished">&amp;Add script...</translation>
+      <translation>Afegir script...</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2639"/>
@@ -3767,7 +3767,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2940"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to accept all external modifications while you are editing the current note.</translation>
+      <translation>Marqueu si voleu acceptar totes les modificacions externes mentre esteu editant la nota actual.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2946"/>
@@ -3799,7 +3799,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3790"/>
       <source>Apply toolbar configuration</source>
-      <translation type="unfinished">Apply toolbar configuration</translation>
+      <translation>Aplica la configuració a la barra d'eines</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3804"/>
@@ -3809,17 +3809,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3832"/>
       <source>Enable logging to file</source>
-      <translation type="unfinished">Enable logging to file</translation>
+      <translation>Habilita el bolcat del registre a un fitxer</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3839"/>
       <source>Clear log file</source>
-      <translation type="unfinished">Clear log file</translation>
+      <translation>Neteja el fitxer de registre</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3850"/>
       <source>Fake old version number to trigger update</source>
-      <translation type="unfinished">Fake old version number to trigger update</translation>
+      <translation>Número vell de versió per activar l'actualització</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3878"/>
@@ -3854,7 +3854,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4007"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
-      <translation type="unfinished">Enable automatic closing of brackets and markdown formatting characters</translation>
+      <translation>Activa el tancat automàtic de claus i caràcters de formatat Markdown</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4014"/>
@@ -3869,7 +3869,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1685"/>
       <source>Your CalDAV calendar base url</source>
-      <translation type="unfinished">Your CalDAV calendar base url</translation>
+      <translation>Url base del vostre calendari CalDAV</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1717"/>
@@ -3894,17 +3894,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1796"/>
       <source>Empty calendar item cache</source>
-      <translation type="unfinished">Empty calendar item cache</translation>
+      <translation>Buida els elements de calendari de la memòria cau</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1819"/>
       <source>Click here to reload the list of calendars from your calendar server.</source>
-      <translation type="unfinished">Click here to reload the list of calendars from your calendar server.</translation>
+      <translation>Cliqueu aquí per recarregar la llista de calendaris del vostre servidor de calendaris.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1825"/>
       <source>&amp;Reload calendar list</source>
-      <translation type="unfinished">&amp;Reload calendar list</translation>
+      <translation>Recarrega la llista del calendari</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2176"/>
@@ -3924,7 +3924,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2250"/>
       <source>List and tree item height:</source>
-      <translation type="unfinished">List and tree item height:</translation>
+      <translation>Alçada dels elements de llistes i arbres:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2293"/>
@@ -3939,17 +3939,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3750"/>
       <source>View text right to left (RTL)</source>
-      <translation type="unfinished">View text right to left (RTL)</translation>
+      <translation>Mostra el text de dreta a esquerra (RTL)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2376"/>
       <source>Search for shortcut</source>
-      <translation type="unfinished">Search for shortcut</translation>
+      <translation>Cerca una drecera</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1836"/>
       <source>Ignore calendars that don't support todo items</source>
-      <translation type="unfinished">Ignore calendars that don't support todo items</translation>
+      <translation>Ignora els calendaris que no suporten elements de tasques</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2122"/>
@@ -3989,7 +3989,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2973"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
-      <translation type="unfinished">Check this if you want to ignore all external modifications while you are editing the current note.</translation>
+      <translation>Marqueu si voleu ignorar totes les modificacions externes mentre esteu editant la nota actual.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2979"/>
@@ -4081,7 +4081,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3433"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podeu &lt;span style=" font-weight:600;"&gt;copiar i enganxar&lt;/span&gt; aquest text (o parts d'ell) en una &lt;span style=" font-weight:600;"&gt;qüestió&lt;/span&gt; a la &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pàgina de qüestions de QOwnNotes&lt;/a&gt; si teniu &lt;span style=" font-weight:600;"&gt;preguntes o problemes&lt;/span&gt; amb QOwnNotes. les dades massa sensibles s'amaguen en aquesta informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Podeu &lt;span style=" font-weight:600;"&gt;copiar i enganxar&lt;/span&gt; aquest text (o parts d'ell) en una &lt;span style=" font-weight:600;"&gt;qüestió&lt;/span&gt; a la &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;pàgina de qüestions de QOwnNotes&lt;/a&gt; si teniu &lt;span style=" font-weight:600;"&gt;preguntes o problemes&lt;/span&gt; amb QOwnNotes. Les dades massa sensibles s'amaguen en aquesta informació.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3446"/>
@@ -4217,22 +4217,22 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
       <source>Add local script</source>
-      <translation type="unfinished">Add local script</translation>
+      <translation>Afegir un script local</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2331"/>
       <source>Add an existing, local script</source>
-      <translation type="unfinished">Add an existing, local script</translation>
+      <translation>Afegir un script local existent</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2322"/>
       <source>Find a script in the script repository</source>
-      <translation type="unfinished">Find a script in the script repository</translation>
+      <translation>Trobar un script en el repositori de scripts</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2412"/>
       <source>Remove script</source>
-      <translation type="unfinished">Remove script</translation>
+      <translation>Elimina script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2413"/>
@@ -4279,12 +4279,12 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2960"/>
       <source>Calendar cache emptied</source>
-      <translation type="unfinished">Calendar cache emptied</translation>
+      <translation>Memòria cau del calendari buidada</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2961"/>
       <source>Your calendar cache was emptied.</source>
-      <translation type="unfinished">Your calendar cache was emptied.</translation>
+      <translation>S'ha buidat la memòria cau del calendari.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3038"/>
@@ -4304,7 +4304,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
       <source>Log file cleared</source>
-      <translation type="unfinished">Log file cleared</translation>
+      <translation>Fitxer de registre netejat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3206"/>
@@ -4325,7 +4325,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="3253"/>
       <source>Please select the path of your git executable</source>
-      <translation type="unfinished">Please select the path of your git executable</translation>
+      <translation>Seleccioneu, si us plau, el camí al vostre executable de git</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1745"/>
@@ -4335,12 +4335,12 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="52"/>
       <source>New script</source>
-      <translation type="unfinished">New script</translation>
+      <translation>Nou script</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="55"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Podeu descarregar el client git d'aqui: &lt;a href="%url"&gt;Git per Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="288"/>
@@ -4355,7 +4355,7 @@ Connection error message: </translation>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="291"/>
       <source>Portable mode is currently:</source>
-      <translation>El mode portàtil és actualment:</translation>
+      <translation>El mode portàtil éstà actualment:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="294"/>
@@ -4721,7 +4721,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="26"/>
       <source>Lists the avaliable menus to get the corresponding actions</source>
-      <translation type="unfinished">Lists the avaliable menus to get the corresponding actions</translation>
+      <translation>Llista els menús disponibles per veure les accions corresponents</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="33"/>
@@ -4736,12 +4736,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="43"/>
       <source>Lists the actions in the selected toolbar</source>
-      <translation type="unfinished">Lists the actions in the selected toolbar</translation>
+      <translation>Llista les accions de la barra d'eines seleccionada</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="52"/>
       <source>Add new Toolbar</source>
-      <translation type="unfinished">Add new Toolbar</translation>
+      <translation>Afegir una barra d'eines nova</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="55"/>
@@ -4751,7 +4751,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="66"/>
       <source>Delete selected toolbar</source>
-      <translation type="unfinished">Delete selected toolbar</translation>
+      <translation>Esborra la barra d'eines seleccionada</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="69"/>
@@ -4762,7 +4762,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="82"/>
       <source>Lists the available actions for the selected menu</source>
-      <translation type="unfinished">Lists the available actions for the selected menu</translation>
+      <translation>Llista les accions disponibles pel menú seleccionat</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="104"/>
@@ -4772,7 +4772,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="107"/>
       <source>Moves the selected toolbar item up</source>
-      <translation type="unfinished">Moves the selected toolbar item up</translation>
+      <translation>Mou amunt l'element seleccionat de la barra d'eines</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="110"/>
@@ -4787,7 +4787,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="124"/>
       <source>moves the selected toolbar item down</source>
-      <translation type="unfinished">moves the selected toolbar item down</translation>
+      <translation>mou avall l'element seleccionat de la barra d'eines</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="127"/>
@@ -4802,7 +4802,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="154"/>
       <source>Adds the selected menu action to the toolbar</source>
-      <translation type="unfinished">Adds the selected menu action to the toolbar</translation>
+      <translation>Afegeix l'element seleccionat a la barra d'eines</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="157"/>
@@ -4812,7 +4812,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="171"/>
       <source>Removes the selected item from the active toolbar</source>
-      <translation type="unfinished">Removes the selected item from the active toolbar</translation>
+      <translation>Elimina l'element seleccionat de la barra d'eines</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.ui" line="174"/>
@@ -4839,12 +4839,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="306"/>
       <source>Remove current toolbar</source>
-      <translation type="unfinished">Remove current toolbar</translation>
+      <translation>Eliminar la barra d'eines actual</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="307"/>
       <source>Remove the current toolbar?</source>
-      <translation type="unfinished">Remove the current toolbar?</translation>
+      <translation>Eliminar la barra d'eines actual?</translation>
     </message>
     <message>
       <location filename="../libraries/qttoolbareditor/src/toolbar_editor.cpp" line="308"/>
@@ -4872,12 +4872,12 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation type="unfinished">&amp;Download selected note</translation>
+      <translation>Descarrega la nota seleccionada</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
       <source>&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</source>
-      <translation type="unfinished">&lt;h3&gt;Faster, but without versions&lt;/h3&gt;&lt;p&gt;The note will be created with the text from the preview.&lt;/p&gt;&lt;p&gt;The note versions on your ownCloud server will not be restored and the note will remain in the trash.&lt;/p&gt;&lt;p&gt;You can always restore the note and its versions later.&lt;/p&gt;</translation>
+      <translation>&lt;h3&gt;Més ràpid, però sense verions&lt;/h3&gt;&lt;p&gt;La nota es crearà amb el text de la previsualització.&lt;/p&gt;&lt;p&gt;Les versions de les notes al vostre servidor OwnCloud no es restauraran, i les notes continuaran a la paperera.&lt;/p&gt;&lt;p&gt;Sempre podeu restablir les notes i les seves versions més endavant.&lt;/p&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="52"/>
@@ -4890,70 +4890,70 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation type="unfinished">Update available</translation>
+      <translation>Actualització disponible</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
+      <translation>Hi ha una nova actualització de QOwnNotes disponible!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation type="unfinished">Do you want to download the new version?</translation>
+      <translation>Voleu descarregar la nova versió?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
+      <translation>QOwnNotes es descarregarà al vostre navegador per defecte.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
-      <translation type="unfinished">&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Get involved with QOwnNotes&lt;/a&gt;</translation>
+      <translation>&lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes"&gt;Impliqueu-vos amb el QOwnNotes&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="96"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% descarregat</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="40"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>Actutalitza</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="53"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>Descarrega la última</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="51"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>Acabat de descarregar</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="67"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>Omet la versió</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="77"/>
       <location filename="../dialogs/updatedialog.cpp" line="328"/>
       <location filename="../dialogs/updatedialog.cpp" line="486"/>
       <source>&amp;Cancel</source>
-      <translation type="unfinished">&amp;Cancel</translation>
+      <translation>Cancel·la</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="225"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Error de descàrrega</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="226"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
+      <translation>Error durant la descàrrega:
 %1</translation>
     </message>
     <message>
@@ -4980,13 +4980,13 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="273"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>No es pot desar el fitxer descarregat:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="327"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>Voleu actualitzar i reiniciar QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="343"/>
@@ -5162,7 +5162,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="284"/>
       <source>If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</source>
-      <translation type="unfinished">If you want to be able to access your note versions and your trashed notes on your ownCloud server you can configure QOwnNotes for it now. You can also do so at later.</translation>
+      <translation>Si voleu tenir accés a les versions de les notes i a les notes esborrades al vostre servidor ownCloud podeu configurar ara el QOwnNotes. I també podeu fer-ho més endavant.</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="314"/>

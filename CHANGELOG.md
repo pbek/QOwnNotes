@@ -5,6 +5,7 @@
   (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))
 - fixed the colors in the editor color schema *Bépolymathe Light* 
   (for [Issue #648](https://github.com/pbek/QOwnNotes/issues/648))
+- added more Catalan translation (thank you MGuerra)
 
 ## 17.08.0
 - added a new editor color schema *Bepolymathe Light* (thank you @bepolymathe)

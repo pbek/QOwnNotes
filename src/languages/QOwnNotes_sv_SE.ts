@@ -300,7 +300,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
       <source>Remove</source>
-      <translation type="unfinished">Remove</translation>
+      <translation>Ta bort</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
@@ -487,7 +487,7 @@
     <message>
       <location filename="../mainwindow.ui" line="990"/>
       <source>&amp;Remove current note</source>
-      <translation type="unfinished">&amp;Remove current note</translation>
+      <translation>Ta bo&amp;rt aktuell anteckning</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1002"/>
@@ -650,7 +650,7 @@
       <location filename="../mainwindow.ui" line="852"/>
       <location filename="../mainwindow.cpp" line="536"/>
       <source>Workspaces</source>
-      <translation type="unfinished">Workspaces</translation>
+      <translation>Arbetsytor</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="857"/>
@@ -877,22 +877,22 @@
       <location filename="../mainwindow.ui" line="1872"/>
       <location filename="../mainwindow.cpp" line="8767"/>
       <source>Remove current workspace</source>
-      <translation type="unfinished">Remove current workspace</translation>
+      <translation>Ta bort aktuella arbetsytan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1881"/>
       <source>Add new workspace</source>
-      <translation type="unfinished">Add new workspace</translation>
+      <translation>Lägg till ny arbetsyta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1890"/>
       <source>Rename current workspace</source>
-      <translation type="unfinished">Rename current workspace</translation>
+      <translation>Byt namn på aktuella arbetsytan</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1899"/>
       <source>Switch to previous workspace</source>
-      <translation type="unfinished">Switch to previous workspace</translation>
+      <translation>Växla till föregående arbetsyta</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1907"/>
@@ -1192,7 +1192,7 @@ Restore current note?</translation>
     <message>
       <location filename="../mainwindow.cpp" line="3130"/>
       <source>Remove current note</source>
-      <translation type="unfinished">Remove current note</translation>
+      <translation>Ta bort aktuell anteckning</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="3131"/>
@@ -1459,12 +1459,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="5889"/>
       <source>Downloading %1</source>
-      <translation type="unfinished">Downloading %1</translation>
+      <translation>Laddar ned %1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5900"/>
       <source>Done downloading images</source>
-      <translation type="unfinished">Done downloading images</translation>
+      <translation>Nedladdning av bilder klar</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6021"/>
@@ -1536,13 +1536,13 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8559"/>
       <source>Create new workspace</source>
-      <translation type="unfinished">Create new workspace</translation>
+      <translation>Skapa ny arbetsyta</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8559"/>
       <location filename="../mainwindow.cpp" line="8806"/>
       <source>Workspace name:</source>
-      <translation type="unfinished">Workspace name:</translation>
+      <translation>Arbetsytans namn:</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8681"/>
@@ -1559,12 +1559,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8768"/>
       <source>Remove the current workspace?</source>
-      <translation type="unfinished">Remove the current workspace?</translation>
+      <translation>Ta bort den aktuella arbetsytan?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8806"/>
       <source>Rename workspace</source>
-      <translation type="unfinished">Rename workspace</translation>
+      <translation>Byt namn på arbetsytan</translation>
     </message>
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="8928"/>
@@ -2678,7 +2678,7 @@ Are the folder and the file writeable?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="263"/>
       <source>Update</source>
-      <translation type="unfinished">Update</translation>
+      <translation>Uppdatera</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="264"/>
@@ -2735,12 +2735,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="414"/>
       <source>Download failed</source>
-      <translation type="unfinished">Download failed</translation>
+      <translation>Fel vid nedladdning</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="415"/>
       <source>The script could not be downloaded!</source>
-      <translation type="unfinished">The script could not be downloaded!</translation>
+      <translation>Skriptet kan inte laddas ned!</translation>
     </message>
   </context>
   <context>
@@ -4337,7 +4337,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="55"/>
       <source>You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</source>
-      <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
+      <translation>Du kan hämta din git-klient här: &lt;a href="%url"&gt; Git för Windows&lt;/a&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="288"/>
@@ -4869,7 +4869,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="38"/>
       <source>&amp;Download selected note</source>
-      <translation type="unfinished">&amp;Download selected note</translation>
+      <translation>La&amp;dda ned vald anteckning</translation>
     </message>
     <message>
       <location filename="../dialogs/trashdialog.cpp" line="39"/>
@@ -4887,22 +4887,22 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="14"/>
       <source>Update available</source>
-      <translation type="unfinished">Update available</translation>
+      <translation>Uppdatering tillgänglig</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="26"/>
       <source>A new update of QOwnNotes is available!</source>
-      <translation type="unfinished">A new update of QOwnNotes is available!</translation>
+      <translation>Det finns en ny uppdatering av QOwnNotes!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="69"/>
       <source>Do you want to download the new version?</source>
-      <translation type="unfinished">Do you want to download the new version?</translation>
+      <translation>Vill du ladda ner den nya versionen?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="76"/>
       <source>QOwnNotes will be downloaded in your default browser.</source>
-      <translation type="unfinished">QOwnNotes will be downloaded in your default browser.</translation>
+      <translation>QOwnNotes laddas ned i din standardwebbläsare.</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
@@ -4912,27 +4912,27 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="96"/>
       <source>%p% downloaded</source>
-      <translation type="unfinished">%p% downloaded</translation>
+      <translation>%p% nedladdat</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="40"/>
       <source>&amp;Update</source>
-      <translation type="unfinished">&amp;Update</translation>
+      <translation>&amp;Uppdatera</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="53"/>
       <source>&amp;Download latest</source>
-      <translation type="unfinished">&amp;Download latest</translation>
+      <translation>La&amp;dda ned senaste</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="51"/>
       <source>Just download</source>
-      <translation type="unfinished">Just download</translation>
+      <translation>Ladda bara ner</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="67"/>
       <source>&amp;Skip version</source>
-      <translation type="unfinished">&amp;Skip version</translation>
+      <translation>&amp; Skippa versionen</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="77"/>
@@ -4944,14 +4944,13 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="225"/>
       <source>Download error</source>
-      <translation type="unfinished">Download error</translation>
+      <translation>Fel vid nedladdning</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="226"/>
       <source>Error while downloading:
 %1</source>
-      <translation type="unfinished">Error while downloading:
-%1</translation>
+      <translation>Fel vid nedladdning: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="228"/>
@@ -4977,13 +4976,13 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="273"/>
       <source>Could not store downloaded file:
 %1</source>
-      <translation type="unfinished">Could not store downloaded file:
+      <translation>Kunde inte lagra den nedladdade filen:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="327"/>
       <source>Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">Do you want to update and restart QOwnNotes?</translation>
+      <translation>Vill du uppdatera och starta om QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="343"/>
@@ -5000,13 +4999,13 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="344"/>
       <source>Could not find updater file:
 %1</source>
-      <translation type="unfinished">Could not find updater file:
+      <translation>Kunde inte hitta uppdateringsfil:
 %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="431"/>
       <source>Updater script '%1' doesn't exist!</source>
-      <translation type="unfinished">Updater script '%1' doesn't exist!</translation>
+      <translation>Uppdateringsskriptet '%1' finns inte!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="440"/>
@@ -5022,7 +5021,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="468"/>
       <source>Couldn't find updater script: %1</source>
-      <translation type="unfinished">Couldn't find updater script: %1</translation>
+      <translation>Kunde inte hitta uppdateringsskript: %1</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="477"/>
@@ -5033,18 +5032,18 @@ This cannot be undone!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="326"/>
       <location filename="../dialogs/updatedialog.cpp" line="483"/>
       <source>Proceed with update</source>
-      <translation type="unfinished">Proceed with update</translation>
+      <translation>Fortsätt med uppdateringen</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="484"/>
       <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
-      <translation type="unfinished">The download is now finished. Do you want to update and restart QOwnNotes?</translation>
+      <translation>Hämtningen är nu klar. Vill du uppdatera och starta om QOwnNotes?</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.cpp" line="328"/>
       <location filename="../dialogs/updatedialog.cpp" line="486"/>
       <source>&amp;Update and restart</source>
-      <translation type="unfinished">&amp;Update and restart</translation>
+      <translation>&amp;Uppdatera och starta om</translation>
     </message>
   </context>
   <context>
