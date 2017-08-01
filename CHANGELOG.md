@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.08.1
+- fixed linking of notes in the link dialog
+  (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))
+- fixed the colors in the editor color schema *Bépolymathe Light* 
+  (for [Issue #648](https://github.com/pbek/QOwnNotes/issues/648))
+
 ## 17.08.0
 - added a new editor color schema *Bepolymathe Light* (thank you @bepolymathe)
   (for [Issue #648](https://github.com/pbek/QOwnNotes/issues/648))
