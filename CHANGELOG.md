@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.08.2
+- the `Delete line` function now only deletes the text to the beginning of 
+  the line and not the whole line to mimic the behavior of other text editors
+  (for [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
+ 
 ## 17.08.1
 - fixed linking of notes in the link dialog
   (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))

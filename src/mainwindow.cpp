@@ -8985,7 +8985,8 @@ void MainWindow::on_actionDelete_line_triggered() {
     if (selectedText.isEmpty()) {
         cursor.deletePreviousChar();
     } else {
-        cursor.removeSelectedText();
+        // remove the text in the current line
+        cursor.insertText("\n");
     }
 }
 
