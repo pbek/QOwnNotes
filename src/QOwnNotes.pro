@@ -33,7 +33,8 @@ TRANSLATIONS = languages/QOwnNotes_en.ts \
     languages/QOwnNotes_uk.ts \
     languages/QOwnNotes_cs.ts \
     languages/QOwnNotes_hr.ts \
-    languages/QOwnNotes_ca.ts
+    languages/QOwnNotes_ca.ts \
+    languages/QOwnNotes_sv.ts
 
 CODECFORTR = UTF-8
 CONFIG += c++11

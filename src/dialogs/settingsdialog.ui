@@ -1929,7 +1929,7 @@
                        </item>
                        <item>
                         <property name="text">
-                         <string notr="true">Catalan</string>
+                         <string notr="true">Català</string>
                         </property>
                         <property name="toolTip">
                          <string>Catalan</string>
@@ -1940,7 +1940,7 @@
                        </item>
                        <item>
                         <property name="text">
-                         <string notr="true">Czech</string>
+                         <string notr="true">Čeština</string>
                         </property>
                         <property name="toolTip">
                          <string>Czech</string>
@@ -2090,6 +2090,17 @@
                         </property>
                         <property name="whatsThis">
                          <string notr="true">ru</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string notr="true">Svenska</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Swedish</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">sv</string>
                         </property>
                        </item>
                        <item>

@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 17.08.2
+- added **Swedish translation** (a big thank you to druus!)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - the `Delete line` function now only deletes the text to the beginning of 
   the line and not the whole line to mimic the behavior of other text editors
   (for [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
@@ -10,6 +14,7 @@
 - when `Show in system tray` will be checked in the *Window menu* then the 
   user will now receive a notification if `Allow only one app instance` isn't 
   enabled in the settings (for [Issue #660](https://github.com/pbek/QOwnNotes/issues/660))
+- added more Catalan translation (thank you MGuerra)
 
 ## 17.08.1
 - fixed linking of notes in the link dialog
