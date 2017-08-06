@@ -7,6 +7,9 @@
 - if <kbd>Tab</kbd> is pressed while adding a tag to the current note the tag 
   that starts with the currently entered text will now be added
   (for [Issue #658](https://github.com/pbek/QOwnNotes/issues/658))
+- when `Show in system tray` will be checked in the *Window menu* then the 
+  user will now receive a notification if `Allow only one app instance` isn't 
+  enabled in the settings (for [Issue #660](https://github.com/pbek/QOwnNotes/issues/660))
 
 ## 17.08.1
 - fixed linking of notes in the link dialog

@@ -3252,7 +3252,8 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 return false;
             }
         } else if ((obj == ui->newNoteTagLineEdit) ||
-                   (obj == ui->newNoteTagLineEdit->completer()->popup())) {
+                ((ui->newNoteTagLineEdit->completer() != Q_NULLPTR) &&
+                    (obj == ui->newNoteTagLineEdit->completer()->popup()))) {
             // if tab is pressed while adding a tag the tag that starts with
             // the current text will be added
             if (keyEvent->key() == Qt::Key_Tab) {
@@ -5073,6 +5074,21 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
 
     if (checked) {
         trayIcon->show();
+
+        QSettings settings;
+        if (!settings.value("allowOnlyOneAppInstance").toBool())  {
+            if (QMessageBox::information(
+                    this,
+                    "QOwnNotes",
+                    tr("You way want to enable that only one app instance is "
+                               "allowed at the same time in the settings to "
+                               "make full use of the this feature."),
+                    tr("&Ok"),
+                    tr("Open &settings"),
+                    QString::null, 0, 1) == 1) {
+                openSettingsDialog(SettingsDialog::GeneralPage);
+            }
+        }
     } else {
         trayIcon->hide();
 
