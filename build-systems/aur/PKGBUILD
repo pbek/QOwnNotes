@@ -21,7 +21,7 @@ prepare() {
 
 build() {
     cd "${pkgname}-${pkgver}"
-    qmake
+    qmake QMAKE_CFLAGS_RELEASE="${CFLAGS}" QMAKE_CXXFLAGS_RELEASE="${CXXFLAGS}" QMAKE_LFLAGS_RELEASE="${LDFLAGS}"
     make
 }
 
