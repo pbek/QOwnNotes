@@ -86,28 +86,28 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="80"/>
       <source>Family:</source>
-      <translation type="unfinished">Family:</translation>
+      <translation>Familj:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="103"/>
       <source>Color schema</source>
-      <translation type="unfinished">Color schema</translation>
+      <translation>Färgschema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="124"/>
       <source>Delete schema</source>
-      <translation type="unfinished">Delete schema</translation>
+      <translation>Ta bort schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="127"/>
       <source>Delete</source>
-      <translation type="unfinished">Delete</translation>
+      <translation>Ta bort</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="169"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="619"/>
       <source>Export schema</source>
-      <translation type="unfinished">Export schema</translation>
+      <translation>Exportera schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="172"/>
@@ -117,74 +117,74 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="271"/>
       <source>If you have created a nice color schema please export it and share it with everyone!</source>
-      <translation type="unfinished">If you have created a nice color schema please export it and share it with everyone!</translation>
+      <translation>Om du har skapat ett fint färgschema vänligen exportera det och dela det med alla!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="155"/>
       <source>Copy schema</source>
-      <translation type="unfinished">Copy schema</translation>
+      <translation>Kopiera schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="158"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="447"/>
       <source>Copy</source>
-      <translation type="unfinished">Copy</translation>
+      <translation>Kopiera</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="141"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="662"/>
       <source>Import schema</source>
-      <translation type="unfinished">Import schema</translation>
+      <translation>Importera schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="144"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Import</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="315"/>
       <source>Share schema</source>
-      <translation type="unfinished">Share schema</translation>
+      <translation>Dela schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="288"/>
       <source>Background:</source>
-      <translation type="unfinished">Background:</translation>
+      <translation>Bakgrund:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="281"/>
       <source>Foreground:</source>
-      <translation type="unfinished">Foreground:</translation>
+      <translation>Förgrund:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="264"/>
       <source>Bold</source>
-      <translation type="unfinished">Bold</translation>
+      <translation>Fetstil</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="244"/>
       <source>Italic</source>
-      <translation type="unfinished">Italic</translation>
+      <translation>Kursiv</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation type="unfinished">Adapt font size:</translation>
+      <translation>Anpassa teckenstorleken:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
       <source>Underline</source>
-      <translation type="unfinished">Underline</translation>
+      <translation>Understrykning</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="194"/>
       <source>Text preset</source>
-      <translation type="unfinished">Text preset</translation>
+      <translation>Textförinställning</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="195"/>
       <source>Emphasized text</source>
-      <translation type="unfinished">Emphasized text</translation>
+      <translation>Betonad text</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="196"/>
@@ -194,32 +194,32 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="213"/>
       <source>(HTML) Comment</source>
-      <translation type="unfinished">(HTML) Comment</translation>
+      <translation>(HTML) Kommentar</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="203"/>
       <source>Header, level 1</source>
-      <translation type="unfinished">Header, level 1</translation>
+      <translation>Rubrik, nivå 1</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="197"/>
       <source>Link</source>
-      <translation type="unfinished">Link</translation>
+      <translation>Länk</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="198"/>
       <source>Image</source>
-      <translation type="unfinished">Image</translation>
+      <translation>Bild</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="199"/>
       <source>Code (block)</source>
-      <translation type="unfinished">Code (block)</translation>
+      <translation>Kod (block)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="200"/>
       <source>Code (inline)</source>
-      <translation type="unfinished">Code (inline)</translation>
+      <translation>Kod (inline)</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="202"/>
@@ -229,27 +229,27 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="204"/>
       <source>Header, level 2</source>
-      <translation type="unfinished">Header, level 2</translation>
+      <translation>Rubrik, nivå 2</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="205"/>
       <source>Header, level 3</source>
-      <translation type="unfinished">Header, level 3</translation>
+      <translation>Rubrik, nivå 3</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="206"/>
       <source>Header, level 4</source>
-      <translation type="unfinished">Header, level 4</translation>
+      <translation>Rubrik, nivå 4</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="207"/>
       <source>Header, level 5</source>
-      <translation type="unfinished">Header, level 5</translation>
+      <translation>Rubrik, nivå 5</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="208"/>
       <source>Header, level 6</source>
-      <translation type="unfinished">Header, level 6</translation>
+      <translation>Rubrik, nivå 6</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="211"/>
@@ -259,7 +259,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="212"/>
       <source>Table</source>
-      <translation type="unfinished">Table</translation>
+      <translation>Tabell</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
@@ -270,7 +270,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
       <source>Horizontal rule</source>
-      <translation type="unfinished">Horizontal rule</translation>
+      <translation>Horisontell linje</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="225"/>
@@ -280,22 +280,22 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="444"/>
       <source>Copy color schema</source>
-      <translation type="unfinished">Copy color schema</translation>
+      <translation>Kopiera färgschema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="445"/>
       <source>Color schema name</source>
-      <translation type="unfinished">Color schema name</translation>
+      <translation>Namn på färgschema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="569"/>
       <source>Remove schema</source>
-      <translation type="unfinished">Remove schema</translation>
+      <translation>Ta bort schema</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="570"/>
       <source>Remove current schema? This cannot be undone!</source>
-      <translation type="unfinished">Remove current schema? This cannot be undone!</translation>
+      <translation>Ta bort det aktuella schemat? Detta kan inte ångras!</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
@@ -305,13 +305,13 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="571"/>
       <source>Cancel</source>
-      <translation type="unfinished">Cancel</translation>
+      <translation>Avbryt</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="618"/>
       <location filename="../widgets/fontcolorwidget.cpp" line="661"/>
       <source>INI files</source>
-      <translation type="unfinished">INI files</translation>
+      <translation>INI-filer</translation>
     </message>
   </context>
   <context>
@@ -319,37 +319,37 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="14"/>
       <source>Link an url or note</source>
-      <translation type="unfinished">Link an url or note</translation>
+      <translation>Länka en url eller anteckning</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="44"/>
       <source>Enter URL</source>
-      <translation type="unfinished">Enter URL</translation>
+      <translation>Ange URL</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="53"/>
       <source>Enter an URL to link to</source>
-      <translation type="unfinished">Enter an URL to link to</translation>
+      <translation>Ange en URL att länka till</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="76"/>
       <source>Search for notes or create new notes by entering text and pressing return</source>
-      <translation type="unfinished">Search for notes or create new notes by entering text and pressing return</translation>
+      <translation>Sök efter anteckningar eller skapa nya anteckningar genom att skriva text och trycka på RETUR</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation type="unfinished">Search for a note to link to</translation>
+      <translation>Sök efter en anteckning att länka till</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select local file to link to&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt; &lt;body&gt;&lt;p&gt;välj lokal fil att länka till&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.cpp" line="181"/>
       <source>Select file to link to</source>
-      <translation type="unfinished">Select file to link to</translation>
+      <translation>Välj fil att länka till</translation>
     </message>
   </context>
   <context>
@@ -387,7 +387,7 @@
     <message>
       <location filename="../widgets/logwidget.ui" line="128"/>
       <source>Status</source>
-      <translation type="unfinished">Status</translation>
+      <translation>Status</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.ui" line="135"/>
@@ -398,17 +398,17 @@
       <location filename="../widgets/logwidget.ui" line="142"/>
       <location filename="../widgets/logwidget.cpp" line="375"/>
       <source>Clear log</source>
-      <translation type="unfinished">Clear log</translation>
+      <translation>Rensa logg</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Show options</source>
-      <translation type="unfinished">Show options</translation>
+      <translation>Visa alternativ</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="373"/>
       <source>Hide options</source>
-      <translation type="unfinished">Hide options</translation>
+      <translation>Dölj alternativ</translation>
     </message>
   </context>
   <context>
@@ -427,7 +427,7 @@
       <location filename="../mainwindow.ui" line="381"/>
       <location filename="../mainwindow.cpp" line="597"/>
       <source>Navigation</source>
-      <translation type="unfinished">Navigation</translation>
+      <translation>Navigering</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="686"/>
@@ -512,22 +512,22 @@
     <message>
       <location filename="../mainwindow.ui" line="1046"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Alfabetisk</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1049"/>
       <source>Sort alphabetical</source>
-      <translation type="unfinished">Sort alphabetical</translation>
+      <translation>Sortera alfabetiskt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1057"/>
       <source>By date</source>
-      <translation type="unfinished">By date</translation>
+      <translation>Efter datum</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1060"/>
       <source>Sort by date</source>
-      <translation type="unfinished">Sort by date</translation>
+      <translation>Sortera efter datum</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1068"/>
@@ -594,7 +594,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1077"/>
       <source>&amp;Settings</source>
-      <translation type="unfinished">&amp;Settings</translation>
+      <translation>In&amp;ställningar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="119"/>
@@ -619,17 +619,17 @@
     <message>
       <location filename="../mainwindow.ui" line="537"/>
       <source>New tag</source>
-      <translation type="unfinished">New tag</translation>
+      <translation>Ny etikett</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="705"/>
       <source>Export</source>
-      <translation type="unfinished">Export</translation>
+      <translation>Exportera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="718"/>
       <source>Import</source>
-      <translation type="unfinished">Import</translation>
+      <translation>Importera</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="788"/>
@@ -780,32 +780,32 @@
     <message>
       <location filename="../mainwindow.ui" line="1398"/>
       <source>Show &amp;toolbar</source>
-      <translation type="unfinished">Show &amp;toolbar</translation>
+      <translation>Visa verk&amp;tygsfält</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1406"/>
       <source>Narrow</source>
-      <translation type="unfinished">Narrow</translation>
+      <translation>Smal</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1417"/>
       <source>Medium</source>
-      <translation type="unfinished">Medium</translation>
+      <translation>Medium</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1428"/>
       <source>Wide</source>
-      <translation type="unfinished">Wide</translation>
+      <translation>Bred</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1439"/>
       <source>Full</source>
-      <translation type="unfinished">Full</translation>
+      <translation>Full</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1451"/>
       <source>Paste html or media</source>
-      <translation type="unfinished">Paste html or media</translation>
+      <translation>Klistra in HTML- eller media</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1454"/>
@@ -856,7 +856,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1625"/>
       <source>Show log</source>
-      <translation type="unfinished">Show log</translation>
+      <translation>Visa logg</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1634"/>
@@ -5093,7 +5093,7 @@ This cannot be undone!</translation>
       <location filename="../dialogs/welcomedialog.ui" line="14"/>
       <location filename="../dialogs/welcomedialog.ui" line="56"/>
       <source>Welcome to QOwnNotes</source>
-      <translation type="unfinished">Welcome to QOwnNotes</translation>
+      <translation>Välkommen till QOwnNotes</translation>
     </message>
     <message>
       <location filename="../dialogs/welcomedialog.ui" line="24"/>
@@ -5183,7 +5183,7 @@ This cannot be undone!</translation>
     <message>
       <location filename="../dialogs/welcomedialog.cpp" line="145"/>
       <source>Please select the folder where your notes will get stored to</source>
-      <translation type="unfinished">Please select the folder where your notes will get stored to</translation>
+      <translation>Välj den mapp där dina anteckningar ska lagras</translation>
     </message>
   </context>
 </TS>
