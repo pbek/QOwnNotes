@@ -14,7 +14,7 @@
 - when `Show in system tray` will be checked in the *Window menu* then the 
   user will now receive a notification if `Allow only one app instance` isn't 
   enabled in the settings (for [Issue #660](https://github.com/pbek/QOwnNotes/issues/660))
-- added more Catalan translation (thank you MGuerra)
+- added more Catalan and German translation (thank you MGuerra)
 
 ## 17.08.1
 - fixed linking of notes in the link dialog
