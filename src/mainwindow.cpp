@@ -281,6 +281,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->installEventFilter(this);
     ui->encryptedNoteTextEdit->viewport()->installEventFilter(this);
     ui->tagTreeWidget->installEventFilter(this);
+    ui->newNoteTagLineEdit->installEventFilter(this);
 
     // init the saved searches completer
     initSavedSearchesCompleter();
@@ -3248,6 +3249,20 @@ bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
                 // set a variable to ignore that first "Return" in the
                 // return-handler
                 _searchLineEditFromCompleter = true;
+                return false;
+            }
+        } else if ((obj == ui->newNoteTagLineEdit) ||
+                   (obj == ui->newNoteTagLineEdit->completer()->popup())) {
+            // if tab is pressed while adding a tag the tag that starts with
+            // the current text will be added
+            if (keyEvent->key() == Qt::Key_Tab) {
+                // fetch the tag that is starting with the current text
+                Tag tag = Tag::fetchByName(ui->newNoteTagLineEdit->text(),
+                                           true);
+                if (tag.isFetched()) {
+                    linkTagNameToCurrentNote(tag.getName());
+                }
+
                 return false;
             }
         } else if (obj == ui->searchLineEdit) {
@@ -6504,6 +6519,7 @@ void MainWindow::on_newNoteTagButton_clicked() {
     QCompleter *completer = new QCompleter(wordList, this);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     ui->newNoteTagLineEdit->setCompleter(completer);
+    completer->popup()->installEventFilter(this);
 }
 
 /**

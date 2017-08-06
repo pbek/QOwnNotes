@@ -4,7 +4,10 @@
 - the `Delete line` function now only deletes the text to the beginning of 
   the line and not the whole line to mimic the behavior of other text editors
   (for [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
- 
+- if <kbd>Tab</kbd> is pressed while adding a tag to the current note the tag 
+  that starts with the currently entered text will now be added
+  (for [Issue #658](https://github.com/pbek/QOwnNotes/issues/658))
+
 ## 17.08.1
 - fixed linking of notes in the link dialog
   (for [Issue #646](https://github.com/pbek/QOwnNotes/issues/646))

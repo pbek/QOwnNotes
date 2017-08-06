@@ -52,7 +52,7 @@ public:
 
     static Tag activeTag();
 
-    static Tag fetchByName(QString name);
+    static Tag fetchByName(QString name, bool startsWith = false);
 
     static Tag fetchByName(QString name, int parentId);
 

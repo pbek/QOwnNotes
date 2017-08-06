@@ -70,12 +70,25 @@ Tag Tag::fetch(int id) {
     return tag;
 }
 
-Tag Tag::fetchByName(QString name) {
+/**
+ * Fetches a tag by name
+ *
+ * @param name
+ * @param startsWith if true the tag only has to start with name
+ * @return
+ */
+Tag Tag::fetchByName(QString name, bool startsWith) {
     QSqlDatabase db = QSqlDatabase::database("note_folder");
     QSqlQuery query(db);
     Tag tag;
+    QString sql = "SELECT * FROM tag WHERE name " +
+            QString(startsWith ? "LIKE" : "=") + " :name ORDER BY name";
+    query.prepare(sql);
 
-    query.prepare("SELECT * FROM tag WHERE name = :name");
+    if (startsWith) {
+        name += "%";
+    }
+
     query.bindValue(":name", name);
 
     if (!query.exec()) {
