@@ -1034,13 +1034,13 @@ handleNewNoteHeadlineHook
 
     /**
      * This function is called before a note note is created
-     * 
+     *
      * It allows you to modify the headline of the note before it is created
      * Note that you have to take care about a unique note name, otherwise
      * the new note will not be created, it will just be found in the note list
      *
      * You can use this method for creating note templates
-     * 
+     *
      * @param headline text that would be used to create the headline
      * @return {string} the headline of the note
      */
@@ -1056,13 +1056,15 @@ noteToMarkdownHtmlHook
 
     /**
      * This function is called when the markdown html of a note is generated
-     * 
+     *
      * It allows you to modify this html
      * This is for example called before by the note preview
-     * 
+     *
+     * The method can be used in multiple scripts to modify the html of the preview
+     *
      * @param {NoteApi} note - the note object
      * @param {string} html - the html that is about to being rendered
-     * @return {string} the modfied html or an empty string if nothing should be modified
+     * @return {string} the modified html or an empty string if nothing should be modified
      */
     function noteToMarkdownHtmlHook(note, html);
 

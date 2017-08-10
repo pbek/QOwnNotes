@@ -549,19 +549,21 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
 QString ScriptingService::callNoteToMarkdownHtmlHook(
         Note *note, QString html) {
     QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QString resultHtml = html;
 
     while (i.hasNext()) {
         i.next();
         ScriptComponent scriptComponent = i.value();
 
         QString text = callNoteToMarkdownHtmlHookForObject(
-                scriptComponent.object, note, html);
+                scriptComponent.object, note, resultHtml);
+
         if (!text.isEmpty()) {
-            return text;
+            resultHtml = text;
         }
     }
 
-    return "";
+    return html == resultHtml ? "" : resultHtml;
 }
 
 /**
