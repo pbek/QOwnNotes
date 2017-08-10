@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>16</number>
+            <number>6</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2464,12 +2464,21 @@
                     <number>9</number>
                    </property>
                    <item row="0" column="0">
-                    <widget class="QListWidget" name="scriptListWidget">
+                    <widget class="ScriptListWidget" name="scriptListWidget">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
                        <horstretch>2</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
+                     </property>
+                     <property name="dragEnabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="dragDropMode">
+                      <enum>QAbstractItemView::InternalMove</enum>
+                     </property>
+                     <property name="defaultDropAction">
+                      <enum>Qt::TargetMoveAction</enum>
                      </property>
                     </widget>
                    </item>
@@ -4480,6 +4489,11 @@ git config --global user.name &quot;Your name&quot;</string>
    <class>Label</class>
    <extends>QLabel</extends>
    <header location="global">widgets/label.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ScriptListWidget</class>
+   <extends>QListWidget</extends>
+   <header>widgets/scriptlistwidget.h</header>
   </customwidget>
  </customwidgets>
  <resources>

@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.08.3
+- you can now reorder your scripts in the *Script settings* via drag and drop
+  to adjust which scripts should be executed first
+  (for [Issue #663](https://github.com/pbek/QOwnNotes/issues/663))
+
 ## 17.08.2
 - added **Swedish translation** (a big thank you to druus!)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)

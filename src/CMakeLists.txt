@@ -210,6 +210,8 @@ set(SOURCE_FILES
     widgets/notepreviewwidget.h
     widgets/combobox.cpp
     widgets/combobox.h
+    widgets/scriptlistwidget.cpp
+    widgets/scriptlistwidget.h
     widgets/fontcolorwidget.ui
     widgets/fontcolorwidget.cpp
     widgets/fontcolorwidget.h
