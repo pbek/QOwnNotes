@@ -22,5 +22,5 @@ public:
     explicit ScriptListWidget(QWidget *parent = Q_NULLPTR);
 
 protected:
-    void dropEvent(QDropEvent *e) override;
+    void dropEvent(QDropEvent *e);
 };
