@@ -1366,7 +1366,7 @@ Se a lixeira não estiver habilitada não será possível restaurar as notas dep
     <message>
       <location filename="../mainwindow.cpp" line="5083"/>
       <source>You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>Se você habilitar isto, apenas uma instancia do aplicativo é permitida ao mesmo tempo nas configurações para fazer total uso desta funcionalidade.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5113"/>
@@ -3496,7 +3496,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Sueco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3977"/>

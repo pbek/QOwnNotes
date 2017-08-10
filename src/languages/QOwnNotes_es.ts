@@ -1367,7 +1367,7 @@ Si la papelera está habilitada en su servidor ownCloud debería poder restaurar
     <message>
       <location filename="../mainwindow.cpp" line="5083"/>
       <source>You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>Quizás quieras habilitar en los ajustes que sólo se pueda ejecutar una instancia de la aplicación a la vez para hacer uso completo de esta característica.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5113"/>
@@ -3497,7 +3497,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Sueco</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3977"/>

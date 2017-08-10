@@ -7,6 +7,8 @@
 - the scripting function `noteToMarkdownHtmlHook` can now be used in multiple
   scripts to modify the html of the preview
   (for [Issue #663](https://github.com/pbek/QOwnNotes/issues/663))
+- added more French, Italian, Brazilian Portuguese and Spanish translation
+  (thank you bepolymathe, mlocati, mlimacarlos and richarson)
 
 ## 17.08.2
 - added **Swedish translation** (a big thank you to druus!)

@@ -1367,7 +1367,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="5083"/>
       <source>You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>Si potrebbe voler abilitare nelle impostazioni che venga eseguita solo un'istanza dell'app per usare appieno questa funzione.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5113"/>
@@ -3497,7 +3497,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Svedese</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3977"/>

@@ -1368,7 +1368,7 @@ Si la corbeille est activée sur votre serveur ownCloud, vous devriez pouvoir re
     <message>
       <location filename="../mainwindow.cpp" line="5083"/>
       <source>You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>Vous pouvez vouloir activer que seule une instance d'application soit autorisée en même temps dans les paramètres afin d'utiliser pleinement cette fonctionnalité.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5113"/>
@@ -3498,7 +3498,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Suédois</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3977"/>
