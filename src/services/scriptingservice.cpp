@@ -105,8 +105,14 @@ void ScriptingService::initComponent(Script script) {
     if (component->isReady() && !component->isError()) {
         scriptComponent.component = component;
         scriptComponent.object = object;
+        scriptComponent.script = script;
+
         int scriptId = script.getId();
-        _scriptComponents[scriptId] = scriptComponent;
+        int priority = script.getPriority();
+        // generate a key from priority and scriptId
+        // this key will be used to check the hooks in the correct order
+        int key = (priority << 10) + scriptId;
+        _scriptComponents[key] = scriptComponent;
 
         // set the script directory path of the script
         object->setProperty(
@@ -206,7 +212,7 @@ void ScriptingService::reloadScriptComponents() {
     }
 #endif
 
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     // delete all objects and components
     while (i.hasNext()) {
@@ -350,7 +356,7 @@ QString ScriptingService::callInsertMediaHookForObject(
  */
 QString ScriptingService::callInsertMediaHook(QFile *file,
                                               QString markdownText) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -393,7 +399,7 @@ QString ScriptingService::callInsertingFromMimeDataHookForObject(
  */
 QString ScriptingService::callInsertingFromMimeDataHook(
         const QMimeData *mimeData) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -440,7 +446,7 @@ QString ScriptingService::callHandleNoteTextFileNameHookForObject(
  */
 QString ScriptingService::callHandleNoteTextFileNameHook(
         Note *note) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -481,7 +487,7 @@ QString ScriptingService::callHandleNewNoteHeadlineHookForObject(
  * Calls the handleNoteOpenedHook function for all script components
  */
 void ScriptingService::callHandleNoteOpenedHook(Note *note) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -503,7 +509,7 @@ void ScriptingService::callHandleNoteOpenedHook(Note *note) {
  * Calls the handleNewNoteHeadlineHook function for all script components
  */
 QString ScriptingService::callHandleNewNoteHeadlineHook(QString headline) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -548,7 +554,7 @@ QString ScriptingService::callNoteToMarkdownHtmlHookForObject(
  */
 QString ScriptingService::callNoteToMarkdownHtmlHook(
         Note *note, QString html) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
     QString resultHtml = html;
 
     while (i.hasNext()) {
@@ -604,7 +610,7 @@ QString ScriptingService::callEncryptionHookForObject(
  */
 QString ScriptingService::callEncryptionHook(QString text, QString password,
                                              bool decrypt) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();
@@ -673,7 +679,7 @@ void ScriptingService::onCurrentNoteChanged(Note *note) {
  * Calls the customActionInvoked function in all scripts
  */
 void ScriptingService::onCustomActionInvoked(QString identifier) {
-    QHashIterator<int, ScriptComponent> i(_scriptComponents);
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
 
     while (i.hasNext()) {
         i.next();

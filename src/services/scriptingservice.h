@@ -17,6 +17,7 @@
 struct ScriptComponent {
     QQmlComponent *component;
     QObject *object;
+    Script script;
 };
 
 class ScriptingService : public QObject
@@ -105,7 +106,7 @@ public:
 private:
     QQmlEngine *_engine;
     NoteApi *_currentNoteApi;
-    QHash<int, ScriptComponent> _scriptComponents;
+    QMap<int, ScriptComponent> _scriptComponents;
     QHash<int, QList<QVariant>> _settingsVariables;
     bool methodExistsForObject(QObject *object, QString method);
     QString callInsertMediaHookForObject(QObject *object,

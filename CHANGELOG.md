@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.4
+- the order of the scripts in the *Script settings* now really adjusts which
+  script is executed first (for [Issue #663](https://github.com/pbek/QOwnNotes/issues/663))
+
 ## 17.08.3
 - you can now reorder your scripts in the *Script settings* via drag and drop
   to adjust which scripts should be executed first
