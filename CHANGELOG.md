@@ -3,6 +3,11 @@
 ## 17.08.4
 - the order of the scripts in the *Script settings* now really adjusts which
   script is executed first (for [Issue #663](https://github.com/pbek/QOwnNotes/issues/663))
+- a warning with error code and error message will now be printed to the log 
+  panel if a network error occurs when talking to your ownCloud / Nextcloud 
+  server (for [Issue #664](https://github.com/pbek/QOwnNotes/issues/664))
+- attempted to fix the reminder date in todo list items for newer versions of
+  Nextcloud (for [Issue #664](https://github.com/pbek/QOwnNotes/issues/664))
 
 ## 17.08.3
 - you can now reorder your scripts in the *Script settings* via drag and drop

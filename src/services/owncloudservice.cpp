@@ -186,13 +186,25 @@ void OwnCloudService::slotCalendarAuthenticationRequired(
     reply->abort();
 }
 
+/**
+ * Handle all replies of the network requests
+ *
+ * @param reply
+ */
 void OwnCloudService::slotReplyFinished(QNetworkReply *reply) {
 #ifndef INTEGRATION_TESTS
     QUrl url = reply->url();
     QString urlPath = url.path();
 
     qDebug() << "Reply from " << urlPath;
-//    qDebug() << reply->errorString();
+
+    // output a warning if there is an error
+    if (reply->error() != QNetworkReply::NoError) {
+        // for error codes see
+        // http://doc.qt.io/qt-5/qnetworkreply.html#NetworkError-enum
+        qWarning() << "QNetworkReply error " + QString::number(reply->error()) +
+                " from url " + url.toString() + ": " << reply->errorString();
+    }
 
     // this should only be called from the settings dialog
     if (urlPath.endsWith(appInfoPath)) {

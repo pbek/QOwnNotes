@@ -603,7 +603,10 @@ QString CalendarItem::generateNewICSData() {
 
     // set the alarm if needed
     if (alarmDate.isValid()) {
-        addVALARMBlockToICS();
+        icsDataHash["DUE"] = alarmDate.toString(ICS_DATETIME_FORMAT);
+
+        // Nextcloud seems to have problem with the VALARM block
+//        addVALARMBlockToICS();
     }
 
     // check for new keys so that we can send them to the calendar server
@@ -764,7 +767,11 @@ bool CalendarItem::updateWithICSData(QString icsData) {
 
     QString alarmDateString =
             getICSDataAttributeInBlock("VALARM", "TRIGGER;VALUE=DATE-TIME");
-    alarmDate = QDateTime();
+
+    // Nextcloud seems to store the reminder date in the DUE field
+    alarmDate = icsDataHash.contains("DUE") ?
+                QDateTime::fromString(icsDataHash["DUE"], ICS_DATETIME_FORMAT)
+                                            : QDateTime();
 
     if (alarmDateString != "") {
         QDateTime dateTime =
