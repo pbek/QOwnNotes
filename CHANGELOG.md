@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.5
+- added a new editor color schema *Bepolymathe Colorize*
+  (for [Issue #675](https://github.com/pbek/QOwnNotes/issues/675), thank you @bepolymathe)
+
 ## 17.08.4
 - the order of the scripts in the *Script settings* now really adjusts which
   script is executed first (for [Issue #663](https://github.com/pbek/QOwnNotes/issues/663))
