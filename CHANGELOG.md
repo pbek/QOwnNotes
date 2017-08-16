@@ -2,7 +2,7 @@
 
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
-    - examples were prepared at [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#working-with-websockets)
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#working-with-websockets)
 
 ## 17.08.5
 - added a new editor color schema *Bepolymathe Colorize*
