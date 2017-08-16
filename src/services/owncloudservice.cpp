@@ -1729,6 +1729,8 @@ void OwnCloudService::postCalendarItemToServer(CalendarItem calendarItem,
     // build the request body
     QString body = calendarItem.getICSData();
 
+    qDebug() << __func__ << " - 'body': " << body;
+
     QByteArray *dataToSend = new QByteArray(body.toUtf8());
     r.setHeader(QNetworkRequest::ContentLengthHeader, dataToSend->size());
     r.setHeader(QNetworkRequest::ContentTypeHeader,
