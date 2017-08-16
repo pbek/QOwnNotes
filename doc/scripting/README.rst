@@ -773,6 +773,7 @@ In addition you can override the ``settingsVariables`` with a special function
 You may also want to take a look at the example
 `variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml>`__.
 
+
 Storing and loading persistent variables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -813,6 +814,10 @@ Usage in QML
 
     // load and log persistent variable
     script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
+
+Please make sure to use a meaningful prefix in your key like
+``PersistentVariablesTest/myVar`` because the variables are accessible from
+all scripts.
 
 You may also want to take a look at the example
 `persistent-variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/persistent-variables.qml>`__.
