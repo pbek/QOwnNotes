@@ -3,12 +3,13 @@ import QOwnNotesTypes 1.0
 import QtWebSockets 1.1
 
 /**
- * This is an example on how to use web sockets (this example still doesn't work)
+ * This is an example on how to use web sockets as a client
+ * when sending data to an echo server
+ * 
  * Under Ubuntu Linux I installed: qml-module-qtwebsockets
  * 
  * Also see: http://doc.qt.io/qt-5/qml-qtwebsockets-websocket.html
  */
-    
 WebSocket {
     id: socket
     url: "ws://echo.websocket.org"
