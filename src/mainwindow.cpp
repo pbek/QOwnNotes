@@ -8089,6 +8089,7 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
 
     QAction *newNoteAction = menu.addAction(tr("New note"));
     QAction *newAction = menu.addAction(tr("New subfolder"));
+    QAction *renameAction = menu.addAction(tr("Rename subfolder"));
     QAction *removeAction = menu.addAction(tr("Remove selected folders"));
     QAction *showInFileManagerAction = menu.addAction(
             tr("Show folder in file manager"));
@@ -8104,6 +8105,11 @@ void MainWindow::on_noteSubFolderTreeWidget_customContextMenuRequested(
         } else if (selectedItem == removeAction) {
             // remove folders
             removeSelectedNoteSubFolders();
+        } else if (selectedItem == renameAction) {
+            QTreeWidgetItem *item = ui->noteSubFolderTreeWidget->currentItem();
+
+            // rename folder
+            ui->noteSubFolderTreeWidget->editItem(item);
         } else if (selectedItem == showInFileManagerAction) {
             NoteSubFolder noteSubFolder =
                     NoteFolder::currentNoteFolder().getActiveNoteSubFolder();

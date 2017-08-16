@@ -3,6 +3,11 @@
 ## 17.08.5
 - added a new editor color schema *Bepolymathe Colorize*
   (for [Issue #675](https://github.com/pbek/QOwnNotes/issues/675), thank you @bepolymathe)
+- double clicking on items in the *note subfolder tree* and *tag tree* now 
+  causes the tree items to expand and collapse instead of editing them
+  (for [Issue #669](https://github.com/pbek/QOwnNotes/issues/669))
+    - there now is a new menu entry `Rename subfolder` in the note subfolder
+      tree to rename subfolders
 
 ## 17.08.4
 - the order of the scripts in the *Script settings* now really adjusts which
