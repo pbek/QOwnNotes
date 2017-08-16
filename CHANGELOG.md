@@ -13,6 +13,7 @@
   scripts (for [Issue #677](https://github.com/pbek/QOwnNotes/issues/677))
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#storing-and-loading-persistent-variables)
+- added more French and Swedish translation (thank you bepolymathe and druus)
 
 ## 17.08.4
 - the order of the scripts in the *Script settings* now really adjusts which
