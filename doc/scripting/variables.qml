@@ -90,7 +90,7 @@ Script {
      * Registers the settings variables again
      * 
      * Use this method if you want to use code to override your variables, like setting
-     * default values dependend on the operating system.
+     * default values depended on the operating system.
      */
     function registerSettingsVariables() {
         if (script.platformIsWindows()) {

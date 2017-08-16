@@ -753,7 +753,25 @@ The user can then set these properties in the script settings.
         }
     ];
 
-You may want to take a look at the example
+In addition you can override the ``settingsVariables`` with a special function
+``registerSettingsVariables()`` like this:
+
+.. code:: javascript
+
+    /**
+     * Registers the settings variables again
+     *
+     * Use this method if you want to use code to override your variables, like setting
+     * default values depended on the operating system.
+     */
+    function registerSettingsVariables() {
+        if (script.platformIsWindows()) {
+            // override the myFile default value
+            settingsVariables[3].default = "pandoc.exe"
+        }
+    }
+
+You may also want to take a look at the example
 `variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml>`__.
 
 
