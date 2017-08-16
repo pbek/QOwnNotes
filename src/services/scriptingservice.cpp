@@ -17,14 +17,13 @@
 #include <QMimeData>
 #include <QRegularExpression>
 #include <QVariant>
+#include <QSettings>
 #include <api/scriptapi.h>
 
 #ifndef INTEGRATION_TESTS
 #include <mainwindow.h>
 #include <QMessageBox>
 #include <QInputDialog>
-#include <QtCore/QSettings>
-
 #endif
 
 ScriptingService::ScriptingService(QObject *parent) : QObject(parent) {
