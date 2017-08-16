@@ -1000,17 +1000,15 @@ Working with websockets
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You can remote control QOwnNotes by using ``WebSocketServer``.
-
 Please take a look at the example
 `websocket-server.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/websocket-server.qml>`__.
 
 You can also listen to sockets with ``WebSocket``.
-
 Please take look at the example
 `websocket-client.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/websocket-client.qml>`__.
 
 Keep in mind that you need to have Qt's QML ``websocket`` library installed to use this.
-Under Ubuntu Linux you can install ``qml-module-qtwebsockets``.
+For example under Ubuntu Linux you can install ``qml-module-qtwebsockets``.
 
 
 Hooks
