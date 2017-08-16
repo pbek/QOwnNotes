@@ -23,6 +23,7 @@
 #include <mainwindow.h>
 #include <QMessageBox>
 #include <QInputDialog>
+#include <QtCore/QSettings>
 
 #endif
 
@@ -1233,4 +1234,35 @@ QString ScriptingService::inputDialogGetItem(
     Q_UNUSED(current);
     Q_UNUSED(editable);
 #endif
+}
+
+/**
+ * Stores a persistent variables
+ * These variables are accessible globally over all scripts
+ * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+ *
+ * @param key
+ * @param value
+ */
+void ScriptingService::setPersistentVariable(const QString &key,
+                                             const QVariant &value) {
+    QSettings settings;
+    settings.setValue(QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) + "/" + key,
+                      value);
+}
+
+/**
+ * Loads a persistent variables
+ * These variables are accessible globally over all scripts
+ *
+ * @param key
+ * @param defaultValue
+ * @return
+ */
+QVariant ScriptingService::getPersistentVariable(const QString &key,
+                                                 const QVariant &defaultValue) {
+    QSettings settings;
+    return settings.value(
+            QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) + "/" + key,
+            defaultValue);
 }

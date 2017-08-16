@@ -13,6 +13,7 @@
 #include <QMap>
 #include <api/noteapi.h>
 
+#define PERSISTENT_VARIABLE_SETTINGS_PREFIX "PersistentScripting"
 
 struct ScriptComponent {
     QQmlComponent *component;
@@ -102,6 +103,12 @@ public:
     Q_INVOKABLE QString inputDialogGetItem(
             const QString &title, const QString &label,
             const QStringList &items, int current = 0, bool editable = false);
+
+    Q_INVOKABLE void setPersistentVariable(const QString &key,
+                                           const QVariant &value);
+
+    Q_INVOKABLE QVariant getPersistentVariable(
+            const QString &key, const QVariant &defaultValue = QVariant());
 
 private:
     QQmlEngine *_engine;

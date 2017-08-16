@@ -690,7 +690,6 @@ Properties
     QString ScriptingService::getOpenFileName(QString caption, QString dir,
                                               QString filter);
 
-
 Usage in QML
 ^^^^^^^^^^^^
 
@@ -773,6 +772,50 @@ In addition you can override the ``settingsVariables`` with a special function
 
 You may also want to take a look at the example
 `variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/variables.qml>`__.
+
+Storing and loading persistent variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Stores a persistent variables
+     * These variables are accessible globally over all scripts
+     * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
+     *
+     * @param key
+     * @param value
+     */
+    void ScriptingService::setPersistentVariable(const QString &key,
+                                                 const QVariant &value);
+
+    /**
+     * Loads a persistent variables
+     * These variables are accessible globally over all scripts
+     *
+     * @param key
+     * @param defaultValue
+     * @return
+     */
+    QVariant ScriptingService::getPersistentVariable(const QString &key,
+                                                     const QVariant &defaultValue);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // store persistent variable
+    script.setPersistentVariable("PersistentVariablesTest/myVar", result);
+
+    // load and log persistent variable
+    script.log(script.getPersistentVariable("PersistentVariablesTest/myVar", "nothing here yet"));
+
+You may also want to take a look at the example
+`persistent-variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/persistent-variables.qml>`__.
 
 
 Reading the path to the directory of your script

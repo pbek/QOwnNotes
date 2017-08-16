@@ -8,6 +8,11 @@
   (for [Issue #669](https://github.com/pbek/QOwnNotes/issues/669))
     - there now is a new menu entry `Rename subfolder` in the note subfolder
       tree to rename subfolders
+- you can now use the new scripting functions `script.setPersistentVariable()`
+  and `script.getPersistentVariable()` to store and load persistent variables in 
+  scripts (for [Issue #677](https://github.com/pbek/QOwnNotes/issues/677))
+  - for more information please take a look at the
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#storing-and-loading-persistent-variables)
 
 ## 17.08.4
 - the order of the scripts in the *Script settings* now really adjusts which
