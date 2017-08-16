@@ -6,8 +6,8 @@ import QtWebSockets 1.1
  * This is an example on how to use web sockets as socket server
  * This can be for example used to remote control QOwnNotes
  * 
- * You can test the socket server by connecting to it with
- * https://www.websocket.org/echo.html using the url ws://127.0.0.1:35345
+ * You can test the socket server by connecting to it on
+ * https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345
  * 
  * Under Ubuntu Linux I installed: qml-module-qtwebsockets
  * 

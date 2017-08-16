@@ -1000,8 +1000,11 @@ Working with websockets
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 You can remote control QOwnNotes by using ``WebSocketServer``.
+
 Please take a look at the example
 `websocket-server.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/websocket-server.qml>`__.
+You can test the socket server by connecting to it on
+`Websocket test <https://www.websocket.org/echo.html?location=ws://127.0.0.1:35345>`__.
 
 You can also listen to sockets with ``WebSocket``.
 Please take look at the example
