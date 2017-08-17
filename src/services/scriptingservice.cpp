@@ -16,7 +16,6 @@
 #include <QClipboard>
 #include <QMimeData>
 #include <QRegularExpression>
-#include <QVariant>
 #include <QSettings>
 #include <api/scriptapi.h>
 
