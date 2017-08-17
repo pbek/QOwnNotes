@@ -5080,7 +5080,7 @@ void MainWindow::on_actionShow_system_tray_triggered(bool checked) {
             if (QMessageBox::information(
                     this,
                     "QOwnNotes",
-                    tr("You way want to enable that only one app instance is "
+                    tr("You may want to enable that only one app instance is "
                                "allowed at the same time in the settings to "
                                "make full use of the this feature."),
                     tr("&Ok"),

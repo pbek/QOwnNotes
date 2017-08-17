@@ -1365,11 +1365,6 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="5083"/>
-        <source>You way want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../mainwindow.cpp" line="5113"/>
         <source>Note versions are currently loaded from your ownCloud server</source>
         <translation type="unfinished"></translation>
@@ -2160,6 +2155,11 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="5083"/>
+        <source>You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="6044"/>
         <source>Increased font size to %1 pt</source>
         <translation type="unfinished"></translation>
@@ -2773,7 +2773,7 @@ Do you want to install it anyway?</source>
 <context>
     <name>ScriptingService</name>
     <message>
-        <location filename="../services/scriptingservice.cpp" line="244"/>
+        <location filename="../services/scriptingservice.cpp" line="243"/>
         <source>file doesn&apos;t exist</source>
         <translation type="unfinished"></translation>
     </message>
