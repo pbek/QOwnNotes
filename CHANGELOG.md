@@ -3,6 +3,8 @@
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#working-with-websockets)
+- you can now also search for a filename of a note in the note search line-edit, 
+  instead of just in the note-text (for [Issue #678](https://github.com/pbek/QOwnNotes/issues/678))
 
 ## 17.08.5
 - added a new editor color schema *Bepolymathe Colorize*

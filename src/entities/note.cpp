@@ -562,8 +562,9 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
     // build the string list of the search string
     QStringList queryStrings = buildQueryStringList(search);
 
+    // we want to search for the text in the note text and the filename
     for (int i = 0; i < queryStrings.count(); i++) {
-        sqlList.append("note_text LIKE ?");
+        sqlList.append("(note_text LIKE ? OR file_name LIKE ?)");
     }
 
     QString sql;
@@ -581,8 +582,12 @@ QList<int> Note::searchInNotes(QString search, bool ignoreNoteSubFolder,
 
     // add the values to the query
     for (int i = 0; i < queryStrings.count(); i++) {
-        int pos = ignoreNoteSubFolder ? i : i + 1;
+        int pos = i * 2;
+        pos = ignoreNoteSubFolder ? pos : pos + 1;
+
+        // bind the values for the note text and the filename
         query.bindValue(pos, "%" + queryStrings[i] + "%");
+        query.bindValue(pos + 1, "%" + queryStrings[i] + "%");
     }
 
     if (!query.exec()) {
