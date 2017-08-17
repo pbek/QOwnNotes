@@ -11,6 +11,7 @@
     - the menu entry `Find notes in all subfolders` was removed as a consequence
     - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
       for a list of all shortcuts
+- added more French and Italian translation (thank you bepolymathe and mlocati)
 
 ## 17.08.5
 - added a new editor color schema *Bepolymathe Colorize*
