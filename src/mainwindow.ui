@@ -1807,7 +1807,10 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-find.svg</iconset>
    </property>
    <property name="text">
-    <string>Find notes in all subfolders</string>
+    <string>Find notes in all tags / subfolders</string>
+   </property>
+   <property name="shortcut">
+    <string notr="true">Alt+F</string>
    </property>
   </action>
   <action name="actionStart_hidden">

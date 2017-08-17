@@ -7,6 +7,7 @@ Important Shortcuts
 
 - <kbd>Ctrl</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
+- <kbd>Alt</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
 - <kbd>Alt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> switches to the previous workspace
 - <kbd>Ctrl</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Alt</kbd> + <kbd>R</kbd> removes the current note
@@ -100,6 +101,7 @@ Important Shortcuts
 
 - <kbd>⌘</kbd> + <kbd>N</kbd> creates a new note with the current date and time in the name
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>F</kbd> lets you search for notes (in the name of the note and its content)
+- <kbd>Opt</kbd> + <kbd>F</kbd> lets you search for notes in all tags / subfolders
 - <kbd>Opt</kbd> + <kbd>⇧</kbd> + <kbd>P</kbd> switches to the previous workspace
 - <kbd>⌘</kbd> + <kbd>⇧</kbd> + <kbd>E</kbd> edits an encrypted note
 - <kbd>Opt</kbd> + <kbd>R</kbd> removes the current note

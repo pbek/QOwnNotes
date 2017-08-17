@@ -143,9 +143,6 @@ MainWindow::MainWindow(QWidget *parent) :
     sortingOrder->addAction(ui->actionDescending);
     sortingOrder->setExclusive(true);
 
-    // we only want to see that menu entry if there are note subfolders
-    ui->actionFind_notes_in_all_subfolders->setVisible(false);
-
     // hide the encrypted note text edit by default
     ui->encryptedNoteTextEdit->hide();
 
@@ -1606,10 +1603,6 @@ void MainWindow::changeNoteFolder(int noteFolderId, bool forceChange) {
 
     QString folderName = noteFolder.getLocalPath();
     QString oldPath = this->notesPath;
-
-    // we only want to see that menu entry if there are note subfolders
-    ui->actionFind_notes_in_all_subfolders->setVisible(
-            noteFolder.isShowSubfolders());
 
     // reload notes if notes folder was changed
     if (oldPath != folderName) {
@@ -6502,9 +6495,6 @@ void MainWindow::setupNoteSubFolders() {
     // handle the visibility of the note subfolder panel
     handleNoteSubFolderVisibility();
 
-    // we only want to see that menu entry if there are note subfolders
-    ui->actionFind_notes_in_all_subfolders->setVisible(showSubfolders);
-
     if (showSubfolders) {
         reloadNoteSubFolderTree();
     }
@@ -8482,12 +8472,15 @@ void MainWindow::on_actionDonate_triggered() {
 }
 
 /**
- * Jumps to "All notes" in the note subfolder tree widget and triggers
+ * Jumps to "All notes" in the note subfolder and tag tree widget and triggers
  * a "Find note"
  */
 void MainWindow::on_actionFind_notes_in_all_subfolders_triggered() {
     // send an event to jump to "All notes" in the note subfolder tree widget
     selectAllNotesInNoteSubFolderTreeWidget();
+
+    // send an event to jump to "All notes" in the tag tree widget
+    selectAllNotesInTagTreeWidget();
 
     // trigger a "Find note"
     on_action_Find_note_triggered();
@@ -8500,6 +8493,15 @@ void MainWindow::selectAllNotesInNoteSubFolderTreeWidget() const {
     QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
                                      Qt::NoModifier);
     QCoreApplication::postEvent(ui->noteSubFolderTreeWidget, event);
+}
+
+/**
+ * Sends an event to jump to "All notes" in the tag tree widget
+ */
+void MainWindow::selectAllNotesInTagTreeWidget() const {
+    QKeyEvent *event = new QKeyEvent(QEvent::KeyPress, Qt::Key_Home,
+                                     Qt::NoModifier);
+    QCoreApplication::postEvent(ui->tagTreeWidget, event);
 }
 
 /**

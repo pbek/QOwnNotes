@@ -5,6 +5,12 @@
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#working-with-websockets)
 - you can now also search for filenames of notes in the note search line-edit, 
   instead of just for note-text (for [Issue #678](https://github.com/pbek/QOwnNotes/issues/678))
+- you now can search for notes in all tags / subfolders with the new main menu 
+  entry `Find notes in all tags / subfolders` (shortcut <kbd>Alt + F</kbd>)
+  (for [Issue #671](https://github.com/pbek/QOwnNotes/issues/671))
+    - the menu entry `Find notes in all subfolders` was removed as a consequence
+    - please visit [QOwnNotes shortcuts](http://www.qownnotes.org/shortcuts/QOwnNotes)
+      for a list of all shortcuts
 
 ## 17.08.5
 - added a new editor color schema *Bepolymathe Colorize*

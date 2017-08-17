@@ -827,4 +827,6 @@ private:
     void updatePanelsSortOrder();
 
     void updateNotesPanelSortOrder();
+
+    void selectAllNotesInTagTreeWidget() const;
 };
