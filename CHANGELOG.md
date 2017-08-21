@@ -12,6 +12,10 @@
   for [Issue #683](https://github.com/pbek/QOwnNotes/issues/683))
     - if the note still cannot be stored to disk the 2nd time the error will be 
       logged to the log panel like it already was before
+- added a new editor color schema *Mountain* by @bepolymathe
+  (for [Issue #680](https://github.com/pbek/QOwnNotes/issues/680))
+- added a new editor color schema *Arc* by @johanson
+  (for [Issue #687](https://github.com/pbek/QOwnNotes/issues/687))
 
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
