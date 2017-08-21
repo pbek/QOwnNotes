@@ -16,6 +16,8 @@
   (for [Issue #680](https://github.com/pbek/QOwnNotes/issues/680))
 - added a new editor color schema *Arc* by @johanson
   (for [Issue #687](https://github.com/pbek/QOwnNotes/issues/687))
+- added more French, Italian, German, Chinese and Spanish translation
+  (thank you bepolymathe, mlocati, rakekniven, enyie and richarson)
 
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
