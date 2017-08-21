@@ -9026,8 +9026,11 @@ void MainWindow::on_actionDelete_line_triggered() {
         cursor.deletePreviousChar();
     } else {
         // remove the text in the current line
-        cursor.insertText("\n");
+        cursor.removeSelectedText();
     }
+
+    cursor.movePosition(QTextCursor::NextBlock);
+    textEdit->setTextCursor(cursor);
 }
 
 /**

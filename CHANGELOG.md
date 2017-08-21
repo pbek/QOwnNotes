@@ -18,6 +18,8 @@
   (for [Issue #687](https://github.com/pbek/QOwnNotes/issues/687))
 - added more French, Italian, German, Chinese and Spanish translation
   (thank you bepolymathe, mlocati, rakekniven, enyie and richarson)
+- the `Delete line` function now *pulls the text from the bottom up*
+  (for [Issue #432](https://github.com/pbek/QOwnNotes/issues/432))
 
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
