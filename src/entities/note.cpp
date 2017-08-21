@@ -42,8 +42,6 @@ QDateTime Note::getFileLastModified() {
 }
 
 QDateTime Note::getFileCreated() {
-    qDebug() << __func__ << " - 'fileCreated': " << fileCreated.toString();
-
     return this->fileCreated;
 }
 
