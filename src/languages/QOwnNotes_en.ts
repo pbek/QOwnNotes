@@ -2458,22 +2458,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="866"/>
+        <location filename="../entities/note.cpp" line="855"/>
         <source>Could not store note file: %1 - Error message: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="1552"/>
+        <location filename="../entities/note.cpp" line="917"/>
+        <source>Renamed note-file was removed: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="925"/>
+        <source>Could not remove renamed note-file: %1 - Error message: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../entities/note.cpp" line="1637"/>
         <source>Could not read image file: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../entities/note.cpp" line="2043"/>
+        <location filename="../entities/note.cpp" line="2128"/>
         <source>Note filename changed</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../entities/note.cpp" line="2044"/>
+        <location filename="../entities/note.cpp" line="2129"/>
         <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
         <translation type="unfinished">
             <numerusform></numerusform>

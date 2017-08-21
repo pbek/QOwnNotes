@@ -219,6 +219,12 @@ public:
 
     static QString downloadUrlToMedia(QUrl url, bool returnUrlOnly = false);
 
+    bool canWriteToNoteFile();
+
+    static QString generateNoteFileNameFromName(QString name);
+
+    void generateFileNameFromName();
+
 protected:
     int id;
     QString name;
@@ -236,10 +242,11 @@ protected:
     QString cryptoPassword;
     QString shareUrl;
     int shareId;
-    void handleNoteTextFileName();
+    bool handleNoteTextFileName();
     QRegularExpression getEncryptedNoteTextRegularExpression();
     QString getEncryptedNoteText();
     static QString cleanupFileName(QString name);
+    static QString extendedCleanupFileName(QString name);
     QString _noteTextHtml;
     QString _noteTextHtmlConversionHash;
 

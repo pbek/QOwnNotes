@@ -754,7 +754,7 @@ bool Note::store() {
             return false;
         }
 
-        fileName = name + "." + defaultNoteFileExtension();
+        generateFileNameFromName();
     }
 
     if (id > 0) {
@@ -829,6 +829,7 @@ bool Note::store() {
  */
 bool Note::storeNoteTextFileToDisk() {
     QString oldName = name;
+    QString oldNoteFilePath = fullNoteFilePath();
 
     if (allowDifferentFileName()) {
         // check if a QML function wants to set an other note file name and
@@ -839,19 +840,7 @@ bool Note::storeNoteTextFileToDisk() {
         handleNoteTextFileName();
     }
 
-    QString newName = name;
-
-    // assign the tags to the new name if the name has changed
-    if (oldName != newName) {
-        // TODO(pbek): we need to heed note subfolders here
-        Tag::renameNoteFileNamesOfLinks(oldName, newName);
-
-        // handle the replacing of all note urls if a note was renamed
-        Note::handleNoteRenaming(oldName, newName);
-    }
-
     QFile file(fullNoteFilePath());
-    bool fileExists = this->fileExists();
     QFile::OpenMode flags = QIODevice::WriteOnly;
     QSettings settings;
     bool useUNIXNewline = settings.value("useUNIXNewline").toBool();
@@ -867,6 +856,18 @@ bool Note::storeNoteTextFileToDisk() {
                                            "message: %2").arg(
                 file.fileName(), file.errorString());
         return false;
+    }
+
+    bool fileExists = this->fileExists();
+    QString newName = name;
+
+    // assign the tags to the new name if the name has changed
+    if (oldName != newName) {
+        // TODO(pbek): we need to heed note subfolders here
+        Tag::renameNoteFileNamesOfLinks(oldName, newName);
+
+        // handle the replacing of all note urls if a note was renamed
+        Note::handleNoteRenaming(oldName, newName);
     }
 
     // if we find a decrypted text to encrypt, then we attempt encrypt it
@@ -901,7 +902,33 @@ bool Note::storeNoteTextFileToDisk() {
         this->fileCreated = this->fileLastModified;
     }
 
-    return this->store();
+    bool noteStored = this->store();
+
+    // in the end we want to remove the old note file if note was stored and
+    // filename has changed
+    if (noteStored && (fullNoteFilePath() != oldNoteFilePath)) {
+        QFile oldFile(oldNoteFilePath);
+        QFileInfo fileInfo(oldFile);
+
+        // remove the old note file
+        if (oldFile.exists() && fileInfo.isFile() && fileInfo.isReadable() &&
+                oldFile.remove()) {
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 5, 0))
+            qInfo() << QObject::tr("Renamed note-file was removed: %1").arg(
+                    oldFile.fileName());
+#else
+            qDebug() << __func__ << " - 'renamed note-file was removed': " <<
+                     oldFile.fileName();
+#endif
+
+        } else {
+            qWarning() << QObject::tr("Could not remove renamed note-file: %1"
+                                              " - Error message: %2").arg(
+                    oldFile.fileName(), oldFile.errorString());
+        }
+    }
+
+    return noteStored;
 }
 
 /**
@@ -913,6 +940,21 @@ QString Note::cleanupFileName(QString name) {
 
     // remove multiple whitespaces from the name
     name.replace(QRegularExpression("\\s+"), " ");
+
+    return name;
+}
+
+/**
+ * Does the extended filename cleanup
+ * Will be triggered mainly on FAT and NTFS filesystems
+ *
+ * @param name
+ * @return
+ */
+QString Note::extendedCleanupFileName(QString name) {
+    // replace characters that cause problems on certain filesystems when
+    // present in filenames with underscores
+    name.replace(QRegularExpression("[\\/\\\\:<>\\\"\\|\\?\\*]"), "_");
 
     return name;
 }
@@ -930,15 +972,10 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
     if (!newName.isEmpty() && (newName != name)) {
         qDebug() << __func__ << " - 'newName': " << newName;
 
-        // remove old note file
-        removeNoteFile();
-
         // store new name and filename
         name = newName;
         fileName = newName + "." + fileNameSuffix();
-        store();
-
-        return true;
+        return store();
     }
 
     return false;
@@ -948,18 +985,24 @@ bool Note::modifyNoteTextFileNameFromQMLHook() {
  * Checks if the filename has to be changed
  * Generates a new name and filename and removes the old file
  * (the new file is not stored to a note text file!)
+ *
+ * @return (bool) true if filename was changed
  */
-void Note::handleNoteTextFileName() {
+bool Note::handleNoteTextFileName() {
     // split the text into a string list
     QStringList noteTextLines = this->noteText.split(
             QRegExp("(\\r\\n)|(\\n\\r)|\\r|\\n"));
 
     // do nothing if there is no text
-    if (noteTextLines.count() == 0) return;
+    if (noteTextLines.count() == 0) {
+        return false;
+    }
 
     QString name = noteTextLines[0];
     // do nothing if the first line is empty
-    if (name == "") return;
+    if (name == "") {
+        return false;
+    }
 
     // remove a leading "# " for markdown headlines
     name.remove(QRegularExpression("^#\\s"));
@@ -970,7 +1013,7 @@ void Note::handleNoteTextFileName() {
     // check if name has changed
     if (name != this->name) {
         qDebug() << __func__ << " - 'name' was changed: " << name;
-        QString fileName = name + "." + defaultNoteFileExtension();
+        QString fileName = generateNoteFileNameFromName(name);
 
         // check if note with this filename already exists
         Note note = Note::fetchByFileName(fileName);
@@ -981,10 +1024,6 @@ void Note::handleNoteTextFileName() {
                     .toString(Qt::ISODate).replace(":", "_");
         }
 
-        // remove old note file
-        // TODO(pbek): note doesn't seem to be removed very often
-        this->removeNoteFile();
-
         // update the first line of the note text
         // TODO(pbek): UI has to be updated too then!
         // update: we now try not to change the first line of the note,
@@ -993,14 +1032,60 @@ void Note::handleNoteTextFileName() {
 //        noteTextLines[0] = name;
 //        this->noteText = noteTextLines.join("\n");
 
-        // store new name and filename
+        // set the new name and filename
         this->name = name;
-        this->fileName = name + "." + defaultNoteFileExtension();
-        this->store();
+        generateFileNameFromName();
+
+        // let's check if we would be able to write to the file
+        if (!canWriteToNoteFile()) {
+            qDebug() << __func__ << " - cannot write to file " <<
+                     this->fileName << " - we will try an other filename";
+
+            // we try to replace some more characters (mostly for Windows
+            // filesystems)
+            name = extendedCleanupFileName(name);
+
+            this->name = name;
+            generateFileNameFromName();
+        }
+
+        return this->store();
     }
 
-    qDebug() << __func__ << " - 'name': " << name;
-    qDebug() << __func__ << " - 'this->id': " << this->id;
+    return false;
+}
+
+/**
+ * Generates a note filename from a name
+ *
+ * @param name
+ * @return
+ */
+QString Note::generateNoteFileNameFromName(QString name) {
+    return name + "." + defaultNoteFileExtension();
+}
+
+/**
+ * Generates filename of the note from it's name
+ */
+void Note::generateFileNameFromName() {
+    fileName = generateNoteFileNameFromName(name);
+}
+
+/**
+ * Checks if we can write to the note file
+ *
+ * @return
+ */
+bool Note::canWriteToNoteFile() {
+    QFile file(fullNoteFilePath());
+    bool canWrite = file.open(QIODevice::WriteOnly);
+
+    if (file.isOpen()) {
+        file.close();
+    }
+
+    return canWrite;
 }
 
 bool Note::updateNoteTextFromDisk() {

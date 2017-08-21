@@ -1,5 +1,18 @@
 # QOwnNotes Changelog
 
+## 17.08.7
+- old notes that were automatically renamed will now only be removed if the new
+  note was stored successfully (for [Issue #682](https://github.com/pbek/QOwnNotes/issues/682))
+- if a note gets renamed automatically because the note title changed it will
+  now be checked if the note can actually be stored to the note folder before
+  really storing it to be able to attempt to replace additional characters in
+  the filename before storing it again in case the note is stored on a
+  filesystem with harsher filename restrictions
+  (for [Issue #682](https://github.com/pbek/QOwnNotes/issues/682) and
+  for [Issue #683](https://github.com/pbek/QOwnNotes/issues/683))
+    - if the note still cannot be stored to disk the 2nd time the error will be 
+      logged to the log panel like it already was before
+
 ## 17.08.6
 - if you want to remote control QOwnNotes with sockets you can use `WebSocketServer` in a script
     - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#working-with-websockets)
