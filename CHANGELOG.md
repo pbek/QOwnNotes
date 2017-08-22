@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.08.8
+- fixed some highlighting-issues with HTML comments
+- added highlighting for Rmarkdown comments like `[Comment]: # (text)`
+  (for [Issue #690](https://github.com/pbek/QOwnNotes/issues/690))
+
 ## 17.08.7
 - old notes that were automatically renamed will now only be removed if the new
   note was stored successfully (for [Issue #682](https://github.com/pbek/QOwnNotes/issues/682))
@@ -9,7 +14,7 @@
   the filename before storing it again in case the note is stored on a
   filesystem with harsher filename restrictions
   (for [Issue #682](https://github.com/pbek/QOwnNotes/issues/682) and
-  for [Issue #683](https://github.com/pbek/QOwnNotes/issues/683))
+  [Issue #683](https://github.com/pbek/QOwnNotes/issues/683))
     - if the note still cannot be stored to disk the 2nd time the error will be 
       logged to the log panel like it already was before
 - added a new editor color schema *Mountain* by @bepolymathe
