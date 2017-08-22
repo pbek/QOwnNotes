@@ -2258,7 +2258,7 @@ void MainWindow::notesWereModified(const QString &str) {
 
             // fetch text of note from disk
             note.updateNoteTextFromDisk();
-            QString text2 = note.getNoteText();
+            QString text2 = Utils::Misc::transformLineFeeds(note.getNoteText());
 
             // skip dialog if texts are equal
             if (text1 == text2) {

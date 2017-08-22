@@ -4,6 +4,8 @@
 - fixed some highlighting-issues with HTML comments
 - added highlighting for Rmarkdown comments like `[Comment]: # (text)`
   (for [Issue #690](https://github.com/pbek/QOwnNotes/issues/690))
+- added a fix by @SmartBlug for the sporadic cursor-jumping to the top in the
+  note edit (for [Issue #689](https://github.com/pbek/QOwnNotes/issues/689))
 
 ## 17.08.7
 - old notes that were automatically renamed will now only be removed if the new
