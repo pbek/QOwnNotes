@@ -1567,12 +1567,12 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       </translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9121"/>
+      <location filename="../mainwindow.cpp" line="9124"/>
       <source>Copy image file path</source>
       <translation type="unfinished">Copy image file path</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="9261"/>
+      <location filename="../mainwindow.cpp" line="9264"/>
       <source>Select file to insert</source>
       <translation type="unfinished">Select file to insert</translation>
     </message>
@@ -2436,32 +2436,32 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation type="unfinished">default</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="855"/>
+      <location filename="../entities/note.cpp" line="853"/>
       <source>Could not store note file: %1 - Error message: %2</source>
       <translation type="unfinished">Could not store note file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="917"/>
+      <location filename="../entities/note.cpp" line="915"/>
       <source>Renamed note-file was removed: %1</source>
       <translation type="unfinished">Renamed note-file was removed: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="925"/>
+      <location filename="../entities/note.cpp" line="923"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
       <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="1637"/>
+      <location filename="../entities/note.cpp" line="1635"/>
       <source>Could not read image file: %1</source>
       <translation type="unfinished">Could not read image file: %1</translation>
     </message>
     <message>
-      <location filename="../entities/note.cpp" line="2128"/>
+      <location filename="../entities/note.cpp" line="2126"/>
       <source>Note filename changed</source>
       <translation type="unfinished">Note filename changed</translation>
     </message>
     <message numerus="yes">
-      <location filename="../entities/note.cpp" line="2129"/>
+      <location filename="../entities/note.cpp" line="2127"/>
       <source>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</source>
       <translation type="unfinished">
         <numerusform>A change of the note name was detected. Would you like to replace all occurrences of &lt;strong&gt;%1&lt;/strong&gt; links with &lt;strong&gt;%2&lt;/strong&gt; in &lt;strong&gt;%n&lt;/strong&gt; note file(s)?</numerusform>
@@ -2743,11 +2743,6 @@ Do you want to install it anyway?</translation>
   </context>
   <context>
     <name>ScriptSettingWidget</name>
-    <message>
-      <location filename="../widgets/scriptsettingwidget.ui" line="14"/>
-      <source>Form</source>
-      <translation type="unfinished">Form</translation>
-    </message>
     <message>
       <location filename="../widgets/scriptsettingwidget.ui" line="44"/>
       <source>The setting name</source>

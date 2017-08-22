@@ -6,6 +6,7 @@
   (for [Issue #690](https://github.com/pbek/QOwnNotes/issues/690))
 - added a fix by @SmartBlug for the sporadic cursor-jumping to the top in the
   note edit (for [Issue #689](https://github.com/pbek/QOwnNotes/issues/689))
+- added more Italian and Chinese translation (thank you mlocati, Libnux and enyie)
 
 ## 17.08.7
 - old notes that were automatically renamed will now only be removed if the new
