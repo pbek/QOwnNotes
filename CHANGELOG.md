@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.9
+- improved highlighting for Rmarkdown comments like `[Comment]: # (text)`
+  (for [Issue #690](https://github.com/pbek/QOwnNotes/issues/690))
+
 ## 17.08.8
 - fixed some highlighting-issues with HTML comments
 - added highlighting for Rmarkdown comments like `[Comment]: # (text)`
