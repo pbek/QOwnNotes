@@ -234,6 +234,11 @@ void SettingsDialog::replaceOwnCloudText() const {
             ui->noteFolderRemotePathListLabel->text()));
     ui->useOwnCloudPathButton->setText(Utils::Misc::replaceOwnCloudText(
             ui->useOwnCloudPathButton->text()));
+    ui->noteFolderRemotePathButton->setToolTip(Utils::Misc::replaceOwnCloudText(
+            ui->noteFolderRemotePathButton->toolTip()));
+    ui->noteFolderRemotePathLineEdit->setToolTip(
+            Utils::Misc::replaceOwnCloudText(
+                    ui->noteFolderRemotePathLineEdit->toolTip()));
 
     // task settings
     ui->defaultOwnCloudCalendarRadioButton->setText(
