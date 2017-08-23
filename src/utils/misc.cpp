@@ -652,7 +652,7 @@ QString Utils::Misc::transformLineFeeds(QString text) {
 }
 
 /**
- * Replaces the text "ownCloud" by "ownCloud / Nexcloud"
+ * Replaces the text "ownCloud" by "ownCloud / Nextcloud"
  *
  * @param text
  * @param useShortText

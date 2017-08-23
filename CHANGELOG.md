@@ -1,9 +1,14 @@
 # QOwnNotes Changelog
 
 ## 17.08.9
+- added **Indonesian translation** (a big thank you to zmni!)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - improved highlighting for Rmarkdown comments like `[Comment]: # (text)`
   (for [Issue #690](https://github.com/pbek/QOwnNotes/issues/690))
 - some text changes in the settings dialog were done
+- added more German translation (thank you rakekniven)
 
 ## 17.08.8
 - fixed some highlighting-issues with HTML comments

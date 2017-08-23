@@ -40,6 +40,7 @@ files:
         "pl_PL" : "pl",
         "ru_RU" : "ru",
         "uk_UA" : "uk",
-        "zh_CN" : "zh"
+        "zh_CN" : "zh",
+        "id_ID" : "id"
       }
     }

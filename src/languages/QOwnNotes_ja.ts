@@ -1449,11 +1449,6 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
       <translation>%1 をダウンロード中</translation>
     </message>
     <message>
-      <location filename="../mainwindow.cpp" line="5942"/>
-      <source>Done downloading images</source>
-      <translation>画像のダウンロードが完了しました</translation>
-    </message>
-    <message>
       <location filename="../mainwindow.cpp" line="6058"/>
       <source>Reset font size to %1 pt</source>
       <comment>Will be shown after the font size is reset by 'Reset note text size'</comment>
@@ -2137,6 +2132,11 @@ ownCloud サーバーのゴミ箱が有効な場合には、そこから復元�
       <location filename="../mainwindow.cpp" line="5076"/>
       <source>You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
       <translation type="unfinished">You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+    </message>
+    <message>
+      <location filename="../mainwindow.cpp" line="5942"/>
+      <source>Downloading images finished</source>
+      <translation type="unfinished">Downloading images finished</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6037"/>
@@ -2996,42 +2996,42 @@ Do you want to install it anyway?</translation>
       <translation>その他の CalDAV サーバー</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2197"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2208"/>
       <source>Only some colors will be adapted, your desktop theme will control the rest. You need to restart the application to let these changes take action.</source>
       <translation>いくつかの色のみが適合され、その他はデスクトップテーマで管理されます。変更は再起動後に有効になります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2200"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2211"/>
       <source>Optimize preview colors for dark mode desktop themes</source>
       <translation>プレビューの色をダーク モードのデスクトップ テーマに最適化する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2207"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2218"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
       <translation>ダーク モードを有効にし、インターフェイスとアイコンを変更します。変更は再起動後に有効になります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2210"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2221"/>
       <source>Enable dark mode</source>
       <translation>ダーク モードを有効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2236"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2247"/>
       <source>You need to restart the application to let this setting take effect</source>
       <translation>この設定を有効にするにはアプリの再起動が必要です</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2255"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2266"/>
       <source>Item sizes in the main window</source>
       <translation>メイン ウィンドウの項目の大きさ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4005"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4016"/>
       <source>Markdown highlighting</source>
       <translation>Markdown強調</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4011"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4022"/>
       <source>Enable markdown highlighting</source>
       <translation>Markdown 強調を有効にする</translation>
     </message>
@@ -3046,7 +3046,7 @@ Do you want to install it anyway?</translation>
       <translation>自動</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1968"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1979"/>
       <source>English</source>
       <translation>English</translation>
     </message>
@@ -3056,79 +3056,79 @@ Do you want to install it anyway?</translation>
       <translation>ショートカット</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3525"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3694"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3536"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3705"/>
       <source>Default font:</source>
       <translation>既定のフォント:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3567"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3718"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3578"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3729"/>
       <source>Code font:</source>
       <translation>コードのフォント:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2369"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2380"/>
       <source>Main window shortcuts</source>
       <translation>メイン ウィンドウ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3038"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3049"/>
       <source>Do this at your own risk!</source>
       <translation>自己責任で行ってください！</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3041"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3052"/>
       <source>Ignore all external note folder changes</source>
       <translation>外部でのノートフォルダーへの変更をすべて無視する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3487"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3498"/>
       <source>No two spaces to do a line break are added here if checked</source>
       <translation>有効な場合、行末に改行のための2つの空白文字を挿入しません</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3490"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3501"/>
       <source>Use GitHub line breaks</source>
       <translation>GitHubの改行方法を使用する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1957"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1968"/>
       <source>German</source>
       <translation>German</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1990"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2001"/>
       <source>French</source>
       <translation>French</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2056"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2067"/>
       <source>Polish</source>
       <translation>Polish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2122"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2133"/>
       <source>Chinese</source>
       <translation>Chinese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2078"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2089"/>
       <source>Portuguese</source>
       <translation>Portuguese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2045"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2056"/>
       <source>Dutch</source>
       <translation>Dutch</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2023"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2034"/>
       <source>Hungarian</source>
       <translation>Hungarian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1979"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1990"/>
       <source>Spanish</source>
       <translation>Spanish</translation>
     </message>
@@ -3138,7 +3138,7 @@ Do you want to install it anyway?</translation>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOwnNotes の翻訳の手助けをしたい、または既存の翻訳を更新したい場合はこちらを読んでください: &lt;a href="http://www.qownnotes.org/Knowledge-base/How-can-I-help-to-translate-QOwnNotes"&gt;How can I help to translate QOwnNotes?&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2181"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2192"/>
       <source>Dark mode</source>
       <translation>ダーク モード</translation>
     </message>
@@ -3158,7 +3158,7 @@ Do you want to install it anyway?</translation>
       <translation>起動中の定期的なハートビート送信を無効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2089"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2100"/>
       <source>Russian</source>
       <translation>Russian</translation>
     </message>
@@ -3168,22 +3168,22 @@ Do you want to install it anyway?</translation>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;無料のSSL証明書を &lt;a href="https://letsencrypt.org/"&gt;Let's encrypt&lt;/a&gt; から取得できます。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2144"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2155"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
       <translation>言語を変更した場合は変更を反映するためにアプリケーションを再起動する必要があります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2789"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2800"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
       <translation>スクリプトファイルを更新した場合、エンジンの再読み込みが必要です</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2792"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2803"/>
       <source>Reload scripting engine</source>
       <translation>スクリプト エンジンの再読み込み</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2782"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2793"/>
       <source>Validate script</source>
       <translation>スクリプトの検証</translation>
     </message>
@@ -3193,89 +3193,89 @@ Do you want to install it anyway?</translation>
       <translation>全般</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2954"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2965"/>
       <source>Notes</source>
       <translation>ノート</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2980"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2991"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;有効な場合、直前に現在のノートを編集していていなくても常に外部での変更を通知します。&lt;span style=" font-style:italic;"&gt;無効&lt;/span&gt;にすることを推奨します。&lt;br /&gt;&lt;br /&gt;[訳者注: 無効の場合は外部で変更された場合は自動でディスクから再読み込みします。]&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3061"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4099"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3072"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4110"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
       <translation>古いバージョンのownCloud syncでは10秒よりもずっと少ない場合に同期トラブルが起きるかもしれません。
 同期の衝突が起こらないかあなた自身でテストし、問題がある場合は大きな値を設定してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2034"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2045"/>
       <source>Japanese</source>
       <translation>日本語</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3065"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3076"/>
       <source>note save interval time [sec]</source>
       <translation>ノートを自動保存する間隔 [秒]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2986"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2997"/>
       <source>Notify about all external modifications of the current note</source>
       <translation>現在のノートの外部での変更をすべて通知する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3373"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1735"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1744"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3384"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1740"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1749"/>
       <source>Database</source>
       <translation>データベース</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3389"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3400"/>
       <source>Reinitialize Database</source>
       <translation>データベースの再初期化</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3341"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3352"/>
       <source>Clear application data and exit</source>
       <translation>アプリケーションのデータを初期化して終了</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3347"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3358"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
       <translation>このボタンはすべての設定を初期化し、ローカルのTodoデータベースを削除し、QOwnNotesを終了します。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3357"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1803"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3368"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1808"/>
       <source>Clear app data and exit</source>
       <translation>アプリのデータを初期化して終了</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3180"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3191"/>
       <source>Update dialog</source>
       <translation>更新ダイアログ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3216"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3227"/>
       <source>Default note file extension</source>
       <translation>ノートファイルの既定の拡張子</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3301"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3312"/>
       <source>External editor</source>
       <translation>外部エディター</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3314"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3325"/>
       <source>path to external editor, leave empty for default</source>
       <translation>外部エディターへのパス。空白時は既定のプログラムで開く。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3324"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4168"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3335"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4179"/>
       <source>set external editor</source>
       <translation>外部エディターの設定</translation>
     </message>
@@ -3305,7 +3305,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>QOwnNotesの起動中定期的にわずかなリクエストをサーバーに送信します。誰かがQOwnNotesを使用していることを知らせることで、制作者を幸せな気持ちにさせます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2012"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2023"/>
       <source>Italian</source>
       <translation>Italian</translation>
     </message>
@@ -3315,17 +3315,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>スクリプト</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2436"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2447"/>
       <source>Your scripts</source>
       <translation>あなたのスクリプト</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2520"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2531"/>
       <source>&amp;Remove script</source>
       <translation>スクリプトの削除(&amp;R)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2799"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2810"/>
       <source>Click here to select your QML script</source>
       <translation>ここをクリックして、あなたのQMLスクリプトへのパスを選択します</translation>
     </message>
@@ -3407,7 +3407,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="728"/>
-      <location filename="../dialogs/settingsdialog.ui" line="2610"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2621"/>
       <source>Name:</source>
       <translation>名前:</translation>
     </message>
@@ -3480,160 +3480,165 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1935"/>
+      <source>Indonesian</source>
+      <translation type="unfinished">Indonesian</translation>
+    </message>
+    <message>
+      <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Catalan</source>
       <translation type="unfinished">Catalan</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2100"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2111"/>
       <source>Swedish</source>
       <translation type="unfinished">Swedish</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3986"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3997"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4229"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4240"/>
       <source>Tags panel</source>
       <translation>タグ パネル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4235"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4337"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4409"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4246"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4348"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4420"/>
       <source>Order</source>
       <translation>順序</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4241"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4343"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4418"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4252"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4354"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4429"/>
       <source>Ascending</source>
       <translation>昇順</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4248"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4350"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4425"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4259"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4361"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4436"/>
       <source>Descending</source>
       <translation>降順</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4258"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4304"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4383"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4269"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4315"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4394"/>
       <source>Sort</source>
       <translation>並べ替え</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4264"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4310"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4389"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4275"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4321"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4400"/>
       <source>Alphabetical</source>
       <translation>アルファベット順</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4271"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4282"/>
       <source>By last change / use</source>
       <translation>最後の更新 / 使用日時順</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4281"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4292"/>
       <source>Hide 'Find or create tag' search</source>
       <translation>「タグの検索または作成」の検索欄を隠す</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4302"/>
       <source>Note subfolders panel</source>
       <translation>サブフォルダー パネル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4297"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4308"/>
       <source>Show with full path</source>
       <translation>完全なパスを表示</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4317"/>
-      <location filename="../dialogs/settingsdialog.ui" line="4396"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4328"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4407"/>
       <source>By last change</source>
       <translation>最後の更新日時順</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4330"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4341"/>
       <source>Show root folder name</source>
       <translation>ルートフォルダー名を表示する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4360"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4371"/>
       <source>Hide 'Find or create note subfolder' search</source>
       <translation>「サブフォルダーの検索または作成」の検索欄を隠す</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4367"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4378"/>
       <source>Display note subfolders as full tree</source>
       <translation>サブフォルダーを完全なツリーで表示する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4377"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4388"/>
       <source>Notes panel</source>
       <translation>ノート パネル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2318"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2323"/>
       <source>Search script repository</source>
       <translation>スクリプト リポジトリの検索</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4119"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4130"/>
       <source>Enter a command to be used to show a git log</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation type="unfinished">Enter a command to be used to show a git log</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4129"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4140"/>
       <source>You optionally can use "%notePath%" for the path of the note.</source>
       <extracomment>Please don't translate "%notePath%"</extracomment>
       <translation type="unfinished">You optionally can use "%notePath%" for the path of the note.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4142"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4153"/>
       <source>Git client</source>
       <translation type="unfinished">Git client</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4158"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4169"/>
       <source>Path to git executable:</source>
       <translation>Git 実行可能ファイルへのパス:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4196"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4207"/>
       <source>Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</source>
       <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4148"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4159"/>
       <source>Path to git client, leave empty for default</source>
       <translation type="unfinished">Path to git client, leave empty for default</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4077"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4088"/>
       <source>Commit interval</source>
       <translation>コミット間隔</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4083"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4094"/>
       <source>sec</source>
       <extracomment>seconds</extracomment>
       <translation>秒</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4103"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4114"/>
       <source>git commit interval time [sec]</source>
       <translation>Git のコミット間隔 [秒]</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4113"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4124"/>
       <source>External git log command</source>
       <translation type="unfinished">External git log command</translation>
     </message>
@@ -3683,184 +3688,184 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>CalDAV ユーザーのパスワードを入力してください。&lt;br/&gt;現在のところ、パスワードは暗号化され、他の設定と一緒に保存されますが、必ずしも安全ではありません。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="1946"/>
+      <location filename="../dialogs/settingsdialog.ui" line="1957"/>
       <source>Czech</source>
       <translation type="unfinished">Czech</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2067"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2078"/>
       <source>Brazilian Portuguese</source>
       <translation type="unfinished">Brazilian Portuguese</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2111"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2122"/>
       <source>Ukrainian</source>
       <translation>ウクライナ語</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2217"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2228"/>
       <source>You might also want to choose an other editor color schema in the editor settings in dark mode.</source>
       <translation>エディタの設定でダークモード用のエディタの配色パターンを選択できます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2911"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2922"/>
       <source>The name</source>
       <translation type="unfinished">The name</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3100"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3111"/>
       <source>Maximum height:</source>
       <translation>高さの最大値:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3107"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3118"/>
       <source>Maximum width:</source>
       <translation>幅の最大値:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2973"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2984"/>
       <source>Scale images down when inserted into notes</source>
       <translation>画像の挿入時に縮小する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2001"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2012"/>
       <source>Croatian</source>
       <translation type="unfinished">Croatian</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2826"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2837"/>
       <source>Path to your QML file</source>
       <translation>あなたのQMLファイルへのパス</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2617"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2628"/>
       <source>Script name</source>
       <translation>スクリプト名</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2639"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2650"/>
       <source>Description:</source>
       <translation>説明:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2721"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2732"/>
       <source>Version:</source>
       <translation>バージョン:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2682"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2693"/>
       <source>Repository:</source>
       <translation>リポジトリ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2509"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2520"/>
       <source>&amp;Add script...</source>
       <translation>スクリプトの追加(&amp;A)...</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2659"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2670"/>
       <source>Author(s):</source>
       <translation>著作権者:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2960"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2971"/>
       <source>Check this if you want to accept all external modifications while you are editing the current note.</source>
       <translation>有効な場合、編集中の現在のノートの外部での変更をすべて受け入れます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2966"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2977"/>
       <source>Accept all external modifications of the current note</source>
       <translation>現在のノートの外部での変更をすべて受け入れる</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3031"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3042"/>
       <source>Use UNIX newline instead of native newline characters</source>
       <translation>OS固有の改行でなく、UNIX形式の改行文字を使用する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3137"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3148"/>
       <source>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</source>
       <translation type="unfinished">When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3144"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3155"/>
       <source>Restore cursor position when opening a note</source>
       <translation type="unfinished">Restore cursor position when opening a note</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3379"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3390"/>
       <source>Be warned that this will also remove your cached todo items and configured note folders and scripts!</source>
       <translation>この操作により、キャッシュされたToDoリストおよび構成済みのメモフォルダーとスクリプトを削除されることを警告します！</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3810"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3821"/>
       <source>Apply toolbar configuration</source>
       <translation>ツールバーの構成を適用</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3824"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3835"/>
       <source>Reset toolbars</source>
       <translation>リセット</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3852"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3863"/>
       <source>Enable logging to file</source>
       <translation>ファイルへのログ書き出しを有効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3859"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3870"/>
       <source>Clear log file</source>
       <translation>ログファイルの初期化</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3870"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3881"/>
       <source>Fake old version number to trigger update</source>
       <translation>更新を起こすために旧バージョンに偽装する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3898"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3909"/>
       <source>Log file path:</source>
       <translation>ログファイルの場所:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3960"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3971"/>
       <source>Here you can set your own time format for inserting the current time into a note.</source>
       <translation type="unfinished">Here you can set your own time format for inserting the current time into a note.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3963"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3974"/>
       <source>Insert current time</source>
       <translation>現在の日時を挿入</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3969"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3980"/>
       <source>Time format:</source>
       <translation>日時の書式:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3976"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3987"/>
       <source>Enter your custom time format, like "dd.MM.yyyy hh:mm"</source>
       <translation>独自の日時書式を入力します。例: "dd.MM.yyyy hh:mm"</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4021"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4032"/>
       <source>Editor options</source>
       <translation>エディターのオプション</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4027"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4038"/>
       <source>Enable automatic closing of brackets and markdown formatting characters</source>
       <translation>括弧を自動的に閉じる機能と Markdown書式指定文字を有効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4034"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4045"/>
       <source>You have to use the backspace key to remove the opening character</source>
       <translation>バックスペースキーを使用して開始文字を削除する必要があります</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="4037"/>
+      <location filename="../dialogs/settingsdialog.ui" line="4048"/>
       <source>Enable automatic removal of matching closing characters</source>
       <translation>一致する終了文字の自動削除を有効にする</translation>
     </message>
@@ -3905,42 +3910,42 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>カレンダー一覧の更新(&amp;R)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2187"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2198"/>
       <source>You may need to restart the application to let these changes take effect</source>
       <translation>これらの変更を反映させるにはアプリの再起動が必要な場合があります</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2190"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2201"/>
       <source>Enable dark mode tray icon</source>
       <translation>ダーク モードのトレイアイコンを使用する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2291"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2302"/>
       <source>Toolbar icon size:</source>
       <translation>ツールバー アイコンの大きさ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2261"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2272"/>
       <source>List and tree item height:</source>
       <translation>一覧とツリー項目の高さ:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2304"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2315"/>
       <source>Reset the icon size</source>
       <translation>アイコンの大きさをリセットします</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2318"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2329"/>
       <source>Reset the item height</source>
       <translation>項目の高さをリセットします</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3770"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3781"/>
       <source>View text right to left (RTL)</source>
       <translation>テキストを右から左に表示する (RTL)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2387"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2398"/>
       <source>Search for shortcut</source>
       <translation>ショートカットの検索</translation>
     </message>
@@ -3950,22 +3955,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>Todo項目に対応していないカレンダーを無視する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2133"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2144"/>
       <source>Arabic</source>
       <translation>Arabic</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2230"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Icons</source>
       <translation>アイコン</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2239"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2250"/>
       <source>Use internal icon theme instead of system icon theme</source>
       <translation>システム アイコン テーマの代わりに内部アイコン テーマを使用する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2775"/>
+      <location filename="../dialogs/settingsdialog.ui" line="2786"/>
       <source>Script path:</source>
       <translation>スクリプトへのパス:</translation>
     </message>
@@ -3975,94 +3980,94 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>ノート フォルダー名</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3048"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3059"/>
       <source>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</source>
       <translation>見出しと異なるノートファイル名が使用できます。&lt;br&gt;ownCloudのノートは見出しとファイル名を同じにする必要があることに注意してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3054"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3065"/>
       <source>Allow note file name to be different from headline</source>
       <translation>見出しと異なるノートファイル名の使用を許可する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2993"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3004"/>
       <source>Check this if you want to ignore all external modifications while you are editing the current note.</source>
       <translation>有効な場合、編集中の現在のノートの外部での変更をすべて無視します。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="2999"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3010"/>
       <source>Ignore all external modifications of the current note</source>
       <translation>現在のノートの外部での変更をすべて無視する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3025"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3036"/>
       <source>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</source>
       <translation type="unfinished">You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3154"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3165"/>
       <source>App instance</source>
       <translation>アプリのインスタンス</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3160"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3171"/>
       <source>Only allow one app instance at the same time</source>
       <translation>同時に一つのインスタンスのみを許可する</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3167"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3178"/>
       <source>You need to restart the application to let these changes take action.</source>
       <translation>これらの変更を反映させるにはアプリの再起動が必要です。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3222"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3233"/>
       <source>Add a custom file extension</source>
       <translation>独自のファイル拡張子を追加します</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3236"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3247"/>
       <source>Remove a custom file extension</source>
       <translation>独自のファイル拡張子を削除します</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3275"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3286"/>
       <source>If you add custom extensions just type in the extension, like "taskpaper".</source>
       <translation>独自の拡張子を追加する場合は、"taskpaper" のように拡張子のみを入力してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3279"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3290"/>
       <source>Text file (txt)</source>
       <translation>テキスト ファイル (txt)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3307"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3318"/>
       <source>Path to external editor:</source>
       <translation>外部エディターのパス:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3186"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3197"/>
       <source>Don't show the update dialog automatically</source>
       <translation>更新ダイアログを自動で表示しない</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3519"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3674"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3530"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3685"/>
       <source>Fonts</source>
       <translation>フォント</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3542"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3584"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3742"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3756"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3553"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3595"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3753"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3767"/>
       <source>Set a new font</source>
       <translation>新しいフォントを選択</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3553"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3598"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3680"/>
-      <location filename="../dialogs/settingsdialog.ui" line="3704"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3564"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3609"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3691"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3715"/>
       <source>Reset font</source>
       <translation>フォントをリセットする</translation>
     </message>
@@ -4072,62 +4077,62 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <translation>デバッグ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3430"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3441"/>
       <source>Debug information</source>
       <translation>デバッグ情報</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3453"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3464"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You can &lt;span style=" font-weight:600;"&gt;copy and paste&lt;/span&gt; this text (or parts of this text) in an &lt;span style=" font-weight:600;"&gt;issue&lt;/span&gt; on the &lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues page&lt;/a&gt; if you have &lt;span style=" font-weight:600;"&gt;questions or troubles&lt;/span&gt; with QOwnNotes. Data that is too sensitive is hidden in this information.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
       <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QOwnNotesに関する&lt;span style="font-weight:600;"&gt;質問や不具合&lt;/span&gt;がある場合は、&lt;a href="https://github.com/pbek/QOwnNotes/issues"&gt;QOwnNotes issues ページ&lt;/a&gt;で&lt;span style="font-weight:600;"&gt;issue&lt;/span&gt;にこのテキストを&lt;span style="font-weight:600;"&gt;コピー＆ペースト&lt;/span&gt;できます。この情報では慎重な取り扱いが必要なデータは隠されています。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.ui" line="3466"/>
+      <location filename="../dialogs/settingsdialog.ui" line="3477"/>
       <source>&amp;Save debug information</source>
       <translation>デバッグ情報の保存(&amp;S)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="329"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="334"/>
       <source>hostname of proxy server</source>
       <translation>プロキシサーバーのホスト名</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="330"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="335"/>
       <source>username for proxy server</source>
       <translation>プロキシサーバーのユーザー名</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="331"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="336"/>
       <source>password for proxy server</source>
       <translation>プロキシサーバーのパスワード</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="333"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="338"/>
       <source>HTTP(S) proxy</source>
       <translation>HTTP(S) プロキシ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="334"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="339"/>
       <source>SOCKS5 proxy</source>
       <translation>SOCKS5 プロキシ</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1079"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1084"/>
       <source>Undefined key</source>
       <translation>未定義</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1084"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1089"/>
       <source>Assign a new key</source>
       <translation>新しいキーを割り当て</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1085"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1090"/>
       <source>Reset to default key</source>
       <translation>既定に戻す</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1470"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1475"/>
       <source>The connection was made successfully!
 Server version: %1
 QOwnNotesAPI version: %2</source>
@@ -4136,7 +4141,7 @@ QOwnNotesAPI version: %2</source>
 QOwnNotesAPIのバージョン: %2</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1481"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1486"/>
       <source>There was an error connecting to the ownCloud Server!
 You also need to have the QOwnNotesAPI app installed and enabled!
 
@@ -4147,186 +4152,186 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
 接続エラーメッセージ: </translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1756"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1761"/>
       <source>Markdown files</source>
       <translation>Markdown ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1783"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1788"/>
       <source>Disable usage tracking</source>
       <translation>使用状況データの収集を無効にする</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1784"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1789"/>
       <source>Anonymous usage data helps to decide what parts of QOwnNotes to improve next and to find and fix bugs.&lt;br /&gt;Please disable it only if you really can't live with it.&lt;br /&gt;&lt;br /&gt;Really disable usage tracking?</source>
       <translation>匿名の使用データはQOwnNotesが次に改善すべき部分を決めたり、バグの発見や修正に役立ちます。&lt;br /&gt;どうしても容認できない場合にのみ無効にしてください。&lt;br /&gt;&lt;br /&gt;使用状況データの収集を無効にしますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2005"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2010"/>
       <source>new folder</source>
       <translation>新しいフォルダー</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2043"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2048"/>
       <source>Remove note folder</source>
       <translation>ノート フォルダーの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2044"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2049"/>
       <source>Remove the current note folder &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>このノート フォルダー &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2046"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2415"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2051"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2420"/>
       <source>&amp;Remove</source>
       <translation>削除(&amp;R)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2119"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2124"/>
       <source>Please select the folder where your notes will get stored to</source>
       <translation>ノートを保存するフォルダーを選択してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2156"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2161"/>
       <source>Loading folders from server</source>
       <translation>サーバーからフォルダーを読み込み中</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2170"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2175"/>
       <source>No more folders were found in the current folder</source>
       <translation>このフォルダーにはフォルダーがありません</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2244"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2249"/>
       <source>Loading folders in '%1' from server</source>
       <translation>サーバーから '%1' のフォルダーを読み込み中</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2305"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2310"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
       <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2307"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2312"/>
       <source>If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</source>
       <translation type="unfinished">If you need access to a certain functionality in QOwnNotes please open an issue on the &lt;a href="%1"&gt; QOwnNotes issue page&lt;/a&gt;.</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2332"/>
       <source>Add local script</source>
       <translation>ローカル スクリプトを追加</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2331"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2336"/>
       <source>Add an existing, local script</source>
       <translation type="unfinished">Add an existing, local script</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2322"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2327"/>
       <source>Find a script in the script repository</source>
       <translation type="unfinished">Find a script in the script repository</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2412"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2417"/>
       <source>Remove script</source>
       <translation>スクリプトの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2413"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2418"/>
       <source>Remove the current script &lt;strong&gt;%1&lt;/strong&gt;?</source>
       <translation>現在のスクリプト &lt;strong&gt;%1&lt;/strong&gt; を削除しますか？</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2465"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2470"/>
       <source>QML files</source>
       <translation>QML ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2466"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2471"/>
       <source>Please select your QML file</source>
       <translation>あなたのQMLファイルを選択してください。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2555"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2560"/>
       <source>Open repository</source>
       <translation>リポジトリを開く</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2615"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2620"/>
       <source>Your script seems to be valid</source>
       <translation>あなたのスクリプトは有効のようです</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2616"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2621"/>
       <source>There were script errors:
 %1</source>
       <translation>スクリプト エラーがあります:
 %1</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2685"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2690"/>
       <source>File extension</source>
       <translation>ファイルの拡張子</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2686"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2691"/>
       <source>Enter your custom file extension:</source>
       <translation>独自のファイル拡張子を入力:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2960"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2965"/>
       <source>Calendar cache emptied</source>
       <translation>カレンダー キャッシュの削除</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="2961"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2966"/>
       <source>Your calendar cache was emptied.</source>
       <translation>カレンダーのキャッシュを空にしました。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3038"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3043"/>
       <source>Reset toolbars and exit</source>
       <translation>ツールバーをリセットして終了</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3039"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3044"/>
       <source>Do you really want to reset all toolbars? The application will be closed in the process, the default toolbars will be restored when you start it again.</source>
       <translation>すべてのツールバーをリセットしますか？アプリは終了されます。次に起動したときに既定のツールバーが復元されます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3043"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3048"/>
       <source>Reset and &amp;exit</source>
       <translation>リセットして終了(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3205"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3210"/>
       <source>Log file cleared</source>
       <translation>ログファイルの初期化</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3206"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3211"/>
       <source>The log file &lt;strong&gt;%1&lt;/strong&gt; was cleared.</source>
       <translation>ログファイル &lt;strong&gt;%1&lt;/strong&gt; を初期化しました。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3242"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3247"/>
       <source>Executable files</source>
       <translation>実行可能ファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3243"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3245"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3248"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3250"/>
       <source>All files</source>
       <translation>すべてのファイル</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="3253"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3258"/>
       <source>Please select the path of your git executable</source>
       <translation>Git の実行可能ファイルのパスを選択してください</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1745"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1750"/>
       <source>The Database was reinitialized.</source>
       <translation>データベースは再初期化されました。</translation>
     </message>
@@ -4341,52 +4346,52 @@ QOwnNotesAPI アプリをインストールして有効にする必要もあり�
       <translation type="unfinished">You can download your git client here: &lt;a href="%url"&gt;Git for Windows&lt;/a&gt;</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="288"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="293"/>
       <source>enabled</source>
       <translation>有効です</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="288"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="293"/>
       <source>disabled</source>
       <translation>無効です</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="291"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="296"/>
       <source>Portable mode is currently:</source>
       <translation>現在ポータブル モードは:</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="294"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="299"/>
       <source>In portable mode</source>
       <translation>ポータブル モードでは</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="295"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="300"/>
       <source>the internal sqlite database and the settings will be stored inside a &lt;code&gt;Data&lt;/code&gt; folder at the binary's location</source>
       <translation>内部SQLiteデータベースと設定はバイナリの場所にある &lt;code&gt;Data&lt;/code&gt; フォルダー内に保存されます</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="298"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="303"/>
       <source>the settings will be stored in an ini file</source>
       <translation>設定は ini ファイルに保存されます</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="299"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="304"/>
       <source>the note folders, script paths and path to an external editor will be automatically stored relative to the &lt;code&gt;Data&lt;/code&gt; folder so that the correct note folders, scripts and external editor will be loaded regardless where your QOwnNotes installation is currently located</source>
       <translation>ノートフォルダーやスクリプト、外部エディターへのパスは自動で &lt;code&gt;Data&lt;/code&gt; フォルダーからの相対パスで保存されます。したがって、QOwnNotesの現在のインストール場所にかかわらず、ノートフォルダーやスクリプト、外部エディターは正しく読み込まれます。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="307"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="312"/>
       <source>It will be activated if you run QOwnNotes with the parameter &lt;code&gt;--portable&lt;/code&gt;.</source>
       <translation>QOwnNotes を &lt;code&gt;--portable&lt;/code&gt; パラメーターをつけて起動したときに有効になります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1757"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1762"/>
       <source>Save debug information</source>
       <translation>デバッグ情報の保存</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1804"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1809"/>
       <source>Do you really want to clear all settings, remove the database and exit QOwnNotes?
 
 Your notes will stay intact!</source>
@@ -4395,36 +4400,36 @@ Your notes will stay intact!</source>
 あなたのノートはそのまま残ります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1807"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1812"/>
       <source>Clear and &amp;exit</source>
       <translation>初期化して終了(&amp;E)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1739"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="1807"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2046"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="2415"/>
-      <location filename="../dialogs/settingsdialog.cpp" line="3043"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1744"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1812"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2051"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="2420"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="3048"/>
       <source>&amp;Cancel</source>
       <translation>中止(&amp;C)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="312"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="317"/>
       <source>You will find a &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; in your release path to start QOwnNotes in portable mode.</source>
       <translation>QOwnNotesをポータブル モードで起動するための &lt;code&gt;QOwnNotesPortable.bat&lt;/code&gt; がアプリの場所にあります。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1736"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1741"/>
       <source>Do you really want to clear the local database? This will also remove your configured note folders and your cached todo items!</source>
       <translation>本当にローカル データベースを初期化しますか？ これはあなたのノート フォルダーの構成とキャッシュされたTodo項目も同時に削除します。</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1739"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1744"/>
       <source>Clear &amp;database</source>
       <translation>データベースの初期化(&amp;D)</translation>
     </message>
     <message>
-      <location filename="../dialogs/settingsdialog.cpp" line="1918"/>
+      <location filename="../dialogs/settingsdialog.cpp" line="1923"/>
       <source>Select editor application</source>
       <translation>編集アプリケーションの選択</translation>
     </message>

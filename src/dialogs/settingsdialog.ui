@@ -1929,6 +1929,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">Bahasa Indonesia</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Indonesian</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">id</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Català</string>
                         </property>
                         <property name="toolTip">
