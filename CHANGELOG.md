@@ -4,7 +4,7 @@
 - fixed a problem with the note history when notes with the same name were 
   present in different note subfolders
 - added a fix by @SmartBlug for the issue of jumping cursors for some users
-  (for [Issue #659](https://github.com/pbek/QOwnNotes/issues/659))
+  (for [Issue #689](https://github.com/pbek/QOwnNotes/issues/689))
 - added more French, Indonesian, German and Italian translation (thank you 
   bepolymathe, zmni, rakekniven and mlocati)
 
