@@ -3,6 +3,7 @@
 ## 17.08.10
 - fixed a problem with the note history when notes with the same name were 
   present in different note subfolders
+- added a fix by @SmartBlug for the issue of jumping cursors for some users
 
 ## 17.08.9
 - added **Indonesian translation** (a big thank you to zmni!)
