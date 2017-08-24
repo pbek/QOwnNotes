@@ -4,6 +4,8 @@
 - fixed a problem with the note history when notes with the same name were 
   present in different note subfolders
 - added a fix by @SmartBlug for the issue of jumping cursors for some users
+- added more French, Indonesian, German and Italian translation (thank you 
+  bepolymathe, zmni, rakekniven and mlocati)
 
 ## 17.08.9
 - added **Indonesian translation** (a big thank you to zmni!)
