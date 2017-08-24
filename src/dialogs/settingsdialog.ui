@@ -4204,7 +4204,7 @@ git config --global user.name &quot;Your name&quot;</string>
                 <item row="2" column="0" colspan="3">
                  <widget class="QLabel" name="label_6">
                   <property name="text">
-                   <string>Don't forget to enable git support for your note folders and to configure your name an email address for your git client, for example with these terminal commands:</string>
+                   <string>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</string>
                   </property>
                   <property name="wordWrap">
                    <bool>true</bool>
@@ -4508,8 +4508,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
