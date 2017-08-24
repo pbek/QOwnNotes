@@ -8,11 +8,13 @@
 
 NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
     _noteName = "";
+    _noteSubFolderPathData = "";
     _cursorPosition = 0;
     _relativeScrollBarPosition = 0;
 
     if (note != NULL) {
         _noteName = note->getName();
+        _noteSubFolderPathData = note->noteSubFolderPathData();
     }
 
     if (textEdit != NULL) {
@@ -22,9 +24,12 @@ NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
     }
 }
 
-NoteHistoryItem::NoteHistoryItem(QString noteName, int cursorPosition,
+NoteHistoryItem::NoteHistoryItem(QString noteName,
+                                 QString noteSubFolderPathData,
+                                 int cursorPosition,
                                  float relativeScrollBarPosition) {
     _noteName = noteName;
+    _noteSubFolderPathData = noteSubFolderPathData;
     _cursorPosition = cursorPosition;
     _relativeScrollBarPosition = relativeScrollBarPosition;
 }
@@ -45,8 +50,14 @@ QString NoteHistoryItem::getNoteName() const {
     return _noteName;
 }
 
+QString NoteHistoryItem::getNoteSubFolderPathData() const {
+    return _noteSubFolderPathData;
+}
+
 Note NoteHistoryItem::getNote() {
-    return Note::fetchByName(_noteName);
+    NoteSubFolder noteSubFolder = NoteSubFolder::fetchByPathData(
+            _noteSubFolderPathData);
+    return Note::fetchByName(_noteName, noteSubFolder.getId());
 }
 
 int NoteHistoryItem::getCursorPosition() const {
@@ -80,11 +91,13 @@ bool NoteHistoryItem::isNoteValid() {
 }
 
 bool NoteHistoryItem::operator==(const NoteHistoryItem &item) const {
-    return this->_noteName == item.getNoteName();
+    return _noteName == item.getNoteName() &&
+            _noteSubFolderPathData == item.getNoteSubFolderPathData();
 }
 
 QDebug operator<<(QDebug dbg, const NoteHistoryItem &item) {
     dbg.nospace() << "NoteHistoryItem: <noteName>" << item._noteName <<
+    " <noteSubFolderPathData>" << item._noteSubFolderPathData <<
     " <cursorPosition>" << item._cursorPosition <<
     " <relativeScrollBarPosition>" << item._relativeScrollBarPosition;
     return dbg.space();
@@ -98,8 +111,8 @@ QDebug operator<<(QDebug dbg, const NoteHistoryItem &item) {
  * @return
  */
 QDataStream &operator<<(QDataStream &out, const NoteHistoryItem &item) {
-    out << item.getNoteName() << item.getCursorPosition()
-        << item.getRelativeScrollBarPosition();
+    out << item.getNoteName() << item.getNoteSubFolderPathData()
+        << item.getCursorPosition() << item.getRelativeScrollBarPosition();
 
     return out;
 }
@@ -113,11 +126,14 @@ QDataStream &operator<<(QDataStream &out, const NoteHistoryItem &item) {
  */
 QDataStream &operator>>(QDataStream &in, NoteHistoryItem &item) {
     QString noteName;
+    QString noteSubFolderPathData;
     int cursorPosition;
     float relativeScrollBarPosition;
 
-    in >> noteName >> cursorPosition >> relativeScrollBarPosition;
-    item = NoteHistoryItem(noteName, cursorPosition, relativeScrollBarPosition);
+    in >> noteName >> noteSubFolderPathData >> cursorPosition >>
+       relativeScrollBarPosition;
+    item = NoteHistoryItem(noteName, noteSubFolderPathData, cursorPosition,
+            relativeScrollBarPosition);
 
     return in;
 }

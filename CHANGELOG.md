@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.10
+- fixed a problem with the note history when notes with the same name were 
+  present in different note subfolders
+
 ## 17.08.9
 - added **Indonesian translation** (a big thank you to zmni!)
     - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)

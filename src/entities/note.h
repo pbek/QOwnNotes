@@ -181,6 +181,10 @@ public:
 
     QString relativeNoteFilePath(QString separator = "");
 
+    QString relativeNoteSubFolderPath();
+
+    QString noteSubFolderPathData();
+
     bool isSameFile(Note note);
 
     QString getShareUrl();

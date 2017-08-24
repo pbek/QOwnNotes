@@ -1145,6 +1145,38 @@ QString Note::relativeNoteFilePath(QString separator) {
 }
 
 /**
+ * Returns the relative path of the note subfolder file
+ */
+QString Note::relativeNoteSubFolderPath() {
+    QString path = "";
+
+    if (noteSubFolderId > 0) {
+        NoteSubFolder noteSubFolder = getNoteSubFolder();
+        if (noteSubFolder.isFetched()) {
+            path = noteSubFolder.relativePath();
+        }
+    }
+
+    return path;
+}
+
+/**
+ * Returns the path-data of the note subfolder file
+ */
+QString Note::noteSubFolderPathData() {
+    QString path = "";
+
+    if (noteSubFolderId > 0) {
+        NoteSubFolder noteSubFolder = getNoteSubFolder();
+        if (noteSubFolder.isFetched()) {
+            path = noteSubFolder.pathData();
+        }
+    }
+
+    return path;
+}
+
+/**
  * Returns the full url of the note file
  */
 QUrl Note::fullNoteFileUrl() {
