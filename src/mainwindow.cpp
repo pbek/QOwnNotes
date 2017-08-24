@@ -8989,9 +8989,12 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
  * Updates the line number label
  */
 void MainWindow::noteEditCursorPositionChanged() {
-    QTextCursor cursor = activeNoteTextEdit()->textCursor();
+    QTextEdit *textEdit = activeNoteTextEdit();
+    QTextCursor cursor = textEdit->textCursor();
     QString selectedText = cursor.selectedText();
     QString text;
+
+    this->noteHistory.updateCursorPositionOfNote(currentNote, textEdit);
 
     if (!selectedText.isEmpty()) {
         text = tr("%n chars", "characters", selectedText.count()) + "  ";
