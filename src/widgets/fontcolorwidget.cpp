@@ -214,6 +214,8 @@ void FontColorWidget::initTextTreeWidgetItems() {
     addTextTreeWidgetItem(tr("Masked syntax", "text that will highlighted in "
                                   "a way that it's barely visible"),
                           MarkdownHighlighter::MaskedSyntax);
+    addTextTreeWidgetItem(tr("Current line background color"),
+                          MarkdownHighlighter::CurrentLineBackgroundColor);
 }
 
 void FontColorWidget::addTextTreeWidgetItem(QString text, int index) {
@@ -265,10 +267,22 @@ void FontColorWidget::updateSchemeEditFrame() {
     ui->backgroundColorButton->setStyleSheet(
             QString("* {background: %1; border: none;}").arg(color.name()));
 
-    ui->boldCheckBox->setVisible(index >= 0);
-    ui->italicCheckBox->setVisible(index >= 0);
-    ui->underlineCheckBox->setVisible(index >= 0);
-    ui->fontSizeAdaptionSpinBox->setVisible(index >= 0);
+    bool isCurrentLineBackgroundColorIndex =
+            index == MarkdownHighlighter::HighlighterState::
+                     CurrentLineBackgroundColor;
+
+    ui->boldCheckBox->setVisible(index >= 0 &&
+                                         !isCurrentLineBackgroundColorIndex);
+    ui->italicCheckBox->setVisible(index >= 0 &&
+                                   !isCurrentLineBackgroundColorIndex);
+    ui->underlineCheckBox->setVisible(index >= 0 &&
+                                      !isCurrentLineBackgroundColorIndex);
+    ui->fontSizeAdaptionSpinBox->setVisible(index >= 0 &&
+                                            !isCurrentLineBackgroundColorIndex);
+    ui->foregroundColorCheckBox->setVisible(!isCurrentLineBackgroundColorIndex);
+    ui->foregroundColorButton->setVisible(!isCurrentLineBackgroundColorIndex);
+    ui->label->setVisible(!isCurrentLineBackgroundColorIndex);
+    ui->fontSizeAdaptionSpinBox->setVisible(!isCurrentLineBackgroundColorIndex);
 
     if (index >= 0) {
         const QSignalBlocker blocker(ui->boldCheckBox);

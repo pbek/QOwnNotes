@@ -527,6 +527,8 @@ void SettingsDialog::storeSettings() {
                       ui->autoBracketClosingCheckBox->isChecked());
     settings.setValue("Editor/autoBracketRemoval",
                       ui->autoBracketRemovalCheckBox->isChecked());
+    settings.setValue("Editor/highlightCurrentLine",
+                      ui->highlightCurrentLineCheckBox->isChecked());
 
     if (!settings.value("appMetrics/disableTracking").toBool() &&
             ui->appMetricsCheckBox->isChecked()) {
@@ -765,6 +767,8 @@ void SettingsDialog::readSettings() {
             settings.value("Editor/autoBracketClosing", true).toBool());
     ui->autoBracketRemovalCheckBox->setChecked(
             settings.value("Editor/autoBracketRemoval", true).toBool());
+    ui->highlightCurrentLineCheckBox->setChecked(
+            settings.value("Editor/highlightCurrentLine", true).toBool());
     ui->markdownHighlightingCheckBox->setChecked(
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(

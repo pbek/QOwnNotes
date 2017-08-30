@@ -37,6 +37,9 @@ public:
 protected:
     void insertFromMimeData(const QMimeData * source);
 
+private slots:
+    void highlightCurrentLine();
+
 private:
     MainWindow *mainWindow;
 

@@ -4049,6 +4049,13 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
+                  <property name="text">
+                   <string>Highlight the current line</string>
+                  </property>
+                 </widget>
+                </item>
                </layout>
               </widget>
              </item>

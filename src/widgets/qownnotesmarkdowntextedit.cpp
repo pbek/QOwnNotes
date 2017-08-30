@@ -11,6 +11,10 @@ QOwnNotesMarkdownTextEdit::QOwnNotesMarkdownTextEdit(QWidget *parent)
         : QMarkdownTextEdit(parent) {
     setStyles();
     updateSettings();
+
+    connect(this, SIGNAL(cursorPositionChanged()),
+            this, SLOT(highlightCurrentLine()));
+    highlightCurrentLine();
 }
 
 /**
@@ -293,4 +297,35 @@ void QOwnNotesMarkdownTextEdit::updateSettings() {
             _highlighter->rehighlight();
         }
     }
+}
+
+/**
+ * Highlights the current line if enabled in the settings
+ */
+void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
+{
+    QSettings settings;
+    if (!settings.value("Editor/highlightCurrentLine", true).toBool()) {
+        return;
+    }
+
+    QList<QTextEdit::ExtraSelection> extraSelections;
+
+    if (!isReadOnly()) {
+        QTextEdit::ExtraSelection selection;
+
+        QColor lineColor = Utils::Schema::getBackgroundColor(
+                MarkdownHighlighter::HighlighterState::
+                CurrentLineBackgroundColor);
+
+        selection.format.setBackground(lineColor);
+        selection.format.setProperty(QTextFormat::FullWidthSelection, true);
+        selection.cursor = textCursor();
+        selection.cursor.clearSelection();
+        extraSelections.append(selection);
+    }
+
+    // be aware that extra selections, like for global searching, gets
+    // removed when the current line gets highlighted
+    setExtraSelections(extraSelections);
 }
