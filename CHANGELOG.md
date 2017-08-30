@@ -3,12 +3,15 @@
 ## 17.08.11
 - the shortcuts for restoring workspaces will now be correctly restored after restart
   (for [Issue #697](https://github.com/pbek/QOwnNotes/issues/697))
-- the **current line** will now by default **highlighted**
+- the **current line** will now **highlighted** in the editor
   (for [Issue #701](https://github.com/pbek/QOwnNotes/issues/701))
 	- you can turn that feature off in the *Editor settings*
 	- the background color can be selected as part of the theming in the
 	 *Editor fonts & colors settings*
 		- a sane default color was chosen for each of the current schemes
+- added more Russian, Spanish, Croatian, Indonesian, Brazilian Portuguese,
+  Swedish, Catalan and Chinese translation (thank you Maboroshy, richarson,
+  davidsraba2, zmni, mlimacarlos, druus, MGuerra and chonghua)
 
 ## 17.08.10
 - fixed a problem with the note history when notes with the same name were 
