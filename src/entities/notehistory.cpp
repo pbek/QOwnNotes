@@ -191,7 +191,6 @@ void NoteHistory::updateCursorPositionOfNote(Note note, QTextEdit *textEdit) {
     }
 
     int position = noteHistory->indexOf(item);
-    qDebug() << "updated item: " << item;
     noteHistory->replace(position, item);
 }
 
