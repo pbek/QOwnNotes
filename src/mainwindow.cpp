@@ -970,6 +970,7 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
         }
 
         QString name = settings.value("workspace-" + uuid + "/name").toString();
+        QString objectName = "restoreWorkspace-" + uuid;
 
         _workspaceComboBox->addItem(name, uuid);
 
@@ -981,7 +982,12 @@ void MainWindow::updateWorkspaceLists(bool rebuild) {
         _workspaceSignalMapper->setMapping(action, uuid);
 
         // set an object name for creating shortcuts
-        action->setObjectName("restoreWorkspace" + QString::number(i));
+        action->setObjectName(objectName);
+
+        // try to load a key sequence from the settings
+        QKeySequence shortcut = QKeySequence(settings.value(
+                "Shortcuts/MainWindow-" + objectName).toString());
+        action->setShortcut(shortcut);
 
 //        if (uuid == currentUuid) {
 //            QFont font = action->font();

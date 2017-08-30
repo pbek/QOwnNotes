@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.08.11
+- the shortcuts for restoring workspaces will now be correctly restored after restart
+  (for [Issue #697](https://github.com/pbek/QOwnNotes/issues/697))
+
 ## 17.08.10
 - fixed a problem with the note history when notes with the same name were 
   present in different note subfolders
