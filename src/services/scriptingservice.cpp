@@ -1231,6 +1231,7 @@ QString ScriptingService::inputDialogGetItem(
     Q_UNUSED(items);
     Q_UNUSED(current);
     Q_UNUSED(editable);
+    return "";
 #endif
 }
 
