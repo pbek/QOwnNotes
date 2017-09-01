@@ -1,5 +1,4 @@
 language: cpp
-dist: precise
 
 os:
   - linux
@@ -34,7 +33,7 @@ install:
     then
       lsb_release -a
       sudo apt-add-repository -y ppa:ubuntu-toolchain-r/test
-      sudo apt-add-repository -y ppa:beineri/opt-qt562
+      sudo apt-add-repository -y ppa:beineri/opt-qt562-trusty
       sudo apt-get -qq update
       sudo apt-get -qq install g++-4.8 libc6-i386 qt56tools qt56svg qt56webkit qt56script
       export CXX="g++-4.8"
