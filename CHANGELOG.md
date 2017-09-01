@@ -9,6 +9,9 @@
       (for [Issue #667](https://github.com/pbek/QOwnNotes/issues/667))
     - the cause a crash when reaching the invisible lines when highlighting of
       the current line is turned on (for [Issue #701](https://github.com/pbek/QOwnNotes/issues/701))
+- improved background color of current line highlighting for the schemas *Dark*,
+  *AnalyticalYellow*, *Bépolymathe Colorize* and *Mountain*
+  (for [Issue #701](https://github.com/pbek/QOwnNotes/issues/701))
 
 ## 17.08.11
 - the shortcuts for restoring workspaces will now be correctly restored after restart
