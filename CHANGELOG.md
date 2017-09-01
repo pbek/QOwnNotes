@@ -1,5 +1,15 @@
 # QOwnNotes Changelog
 
+## 17.09.0
+- margins for headlines in the note editor are now disabled, because Qt bugs 
+  are causing multiple problems with them
+    - they prevent "undo" in headlines
+      (for [Issue #520](https://github.com/pbek/QOwnNotes/issues/520))
+    - they generate invisible lines at the end of a note
+      (for [Issue #667](https://github.com/pbek/QOwnNotes/issues/667))
+    - the cause a crash when reaching the invisible lines when highlighting of
+      the current line is turned on (for [Issue #701](https://github.com/pbek/QOwnNotes/issues/701))
+
 ## 17.08.11
 - the shortcuts for restoring workspaces will now be correctly restored after restart
   (for [Issue #697](https://github.com/pbek/QOwnNotes/issues/697))

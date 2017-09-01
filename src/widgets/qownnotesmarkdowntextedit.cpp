@@ -311,7 +311,9 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
 
     QList<QTextEdit::ExtraSelection> extraSelections;
 
+    // check if current line is really visible!
     if (!isReadOnly()) {
+        ensureCursorVisible();
         QTextEdit::ExtraSelection selection;
 
         QColor lineColor = Utils::Schema::getBackgroundColor(
@@ -321,7 +323,8 @@ void QOwnNotesMarkdownTextEdit::highlightCurrentLine()
         selection.format.setBackground(lineColor);
         selection.format.setProperty(QTextFormat::FullWidthSelection, true);
         selection.cursor = textCursor();
-        selection.cursor.clearSelection();
+//        selection.cursor.clearSelection();
+//        selection.cursor.select(QTextCursor::BlockUnderCursor);
         extraSelections.append(selection);
     }
 
