@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Couleur de fond de la ligne actuelle</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
@@ -3528,7 +3528,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4055"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Surligner la ligne actuelle</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4214"/>

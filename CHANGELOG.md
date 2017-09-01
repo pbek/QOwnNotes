@@ -12,6 +12,8 @@
 - improved background color of current line highlighting for the schemas *Dark*,
   *AnalyticalYellow*, *Bépolymathe Colorize* and *Mountain*
   (for [Issue #701](https://github.com/pbek/QOwnNotes/issues/701))
+- added more Russian, Catalan, German, Italian and French translation (thank 
+  you Maboroshy, MGuerra, rakekniven, mlocati and bepolymathe)
 
 ## 17.08.11
 - the shortcuts for restoring workspaces will now be correctly restored after restart
