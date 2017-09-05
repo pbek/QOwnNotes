@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.09.1
+- the automatic closing of brackets now also works for `'`
+  (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
+
 ## 17.09.0
 - margins for headlines in the note editor are now disabled, because Qt bugs 
   are causing multiple problems with them
