@@ -8,6 +8,7 @@
 #include <widgets/logwidget.h>
 #include <services/databaseservice.h>
 #include <utils/misc.h>
+#include <QStyleFactory>
 #include "libraries/singleapplication/singleapplication.h"
 #include "version.h"
 #include "release.h"
@@ -91,6 +92,12 @@ bool mainStartupMisc() {
             "app/portable", "app", "portable",
             Utils::Misc::isInPortableMode() ? "yes" : "no");
 
+    if (qApp->property("snap").toBool()) {
+        metricsService->sendEventIfEnabled(
+                "app/styles", "app", "styles",
+                QStyleFactory::keys().join(" "));
+    }
+
     QString productType;
 
 #if (QT_VERSION >= QT_VERSION_CHECK(5, 4, 0))
@@ -165,12 +172,14 @@ int main(int argc, char *argv[]) {
 
     QString release = RELEASE;
     bool portable = false;
+    bool snap = false;
 
     for (int i = 0; i < argc; ++i) {
         QString arg(argv[i]);
         if (arg == "--snap") {
             // override the release string for snaps
             release = "Snapcraft";
+            snap = true;
         } else if (arg == "--portable") {
             portable = true;
         } else if (arg == "--after-update") {
@@ -277,6 +286,7 @@ int main(int argc, char *argv[]) {
         app.setProperty("release", release);
         app.setProperty("portable", portable);
         app.setProperty("singleApplication", true);
+        app.setProperty("snap", snap);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)

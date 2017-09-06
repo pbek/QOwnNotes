@@ -11,7 +11,7 @@ description: |
 
 apps:
   qownnotes:
-    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes --snap
+    command: desktop-launch ${SNAP}/usr/bin/QOwnNotes -style=Fusion --snap
     # see https://developer.ubuntu.com/en/snappy/guides/interfaces
     plugs:
       - x11

@@ -4,8 +4,12 @@
 - the `QMarkdownTextedit` that is used in all markdown text-edits is now based
   on`QPlainTextEdit` instead of `QTextEdit`, which should result in improved
   rendering speed in large notes
+    - this will improve the note text edit, log panel, version dialog, trash 
+      dialog, todo dialog, settings dialog, note dialog and note history dialog
 - the automatic closing of brackets now also works for `'`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
+- the snap-packaged version of QOwnNotes will now automatically use the `Fusion`
+  style which dramatically improves the user interface
 
 ## 17.09.0
 - margins for headlines in the note editor are now disabled, because Qt bugs 
