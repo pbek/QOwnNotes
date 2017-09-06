@@ -1,7 +1,7 @@
 # QOwnNotes Changelog
 
 ## 17.09.1
-- the `QMarkdownTextedit` that is used in all markdown text-edits is now based
+- the `QMarkdownTextedit`, which is used in all markdown text-edits is now based
   on`QPlainTextEdit` instead of `QTextEdit`, which should result in **improved
   rendering speed** for large notes
     - this will improve the note text edit, log panel, version dialog, trash 
@@ -11,7 +11,7 @@
     - the style will be previewed instantly if you select an other style
     - if you select `Automatic` you will be prompted to restart the application
 - the snap-packaged version of QOwnNotes will now automatically use the `Fusion`
-  interface style which dramatically improves the user interface
+  interface style, which dramatically improves the styling of the user interface
 - the automatic closing of brackets now also works for `'`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
 - added more Brazilian Portuguese, Catalan, German and Spanish translation 
