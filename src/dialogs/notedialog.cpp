@@ -12,7 +12,7 @@ NoteDialog::NoteDialog(QWidget *parent) :
 
 void NoteDialog::setNote(Note note) {
     setWindowTitle(note.getName());
-    ui->textEdit->setText(note.getNoteText());
+    ui->textEdit->setPlainText(note.getNoteText());
 }
 
 NoteDialog::~NoteDialog() {

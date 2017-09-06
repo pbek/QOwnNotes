@@ -29,7 +29,7 @@
  <customwidgets>
   <customwidget>
    <class>QOwnNotesMarkdownTextEdit</class>
-   <extends>QTextEdit</extends>
+   <extends>QPlainTextEdit</extends>
    <header location="global">widgets/qownnotesmarkdowntextedit.h</header>
   </customwidget>
  </customwidgets>

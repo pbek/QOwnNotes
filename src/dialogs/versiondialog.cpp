@@ -120,7 +120,7 @@ VersionDialog::~VersionDialog() {
 
 void VersionDialog::on_versionListWidget_currentRowChanged(int currentRow) {
     ui->diffBrowser->setHtml(diffList->value(currentRow));
-    ui->noteTextEdit->setText(dataList->value(currentRow));
+    ui->noteTextEdit->setPlainText(dataList->value(currentRow));
 }
 
 void VersionDialog::dialogButtonClicked(QAbstractButton *button) {

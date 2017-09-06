@@ -340,7 +340,7 @@ void TodoDialog::clearTodoList() {
 
 void TodoDialog::resetEditFrameControls() {
     ui->summaryEdit->setText("");
-    ui->descriptionEdit->setText("");
+    ui->descriptionEdit->setPlainText("");
     ui->prioritySlider->setValue(0);
     ui->reminderCheckBox->setChecked(false);
     ui->reminderDateTimeEdit->hide();
@@ -437,7 +437,7 @@ void TodoDialog::on_todoList_currentItemChanged(
     if (currentCalendarItem.isFetched()) {
         ui->summaryEdit->setText(currentCalendarItem.getSummary());
         ui->summaryEdit->setCursorPosition(0);
-        ui->descriptionEdit->setText(currentCalendarItem.getDescription());
+        ui->descriptionEdit->setPlainText(currentCalendarItem.getDescription());
 
         QDateTime alarmDate = currentCalendarItem.getAlarmDate();
         ui->reminderCheckBox->setChecked(alarmDate.isValid());

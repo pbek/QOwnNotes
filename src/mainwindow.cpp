@@ -797,12 +797,18 @@ MainWindow *MainWindow::instance() {
  */
 void MainWindow::initEditorSoftWrap() {
     QSettings settings;
-    QTextEdit::LineWrapMode mode =
-            settings.value("useSoftWrapInNoteEditor", true).toBool() ?
-            QTextEdit::WidgetWidth : QTextEdit::NoWrap;
+    bool useSoftWrapInNoteEditor =
+            settings.value("useSoftWrapInNoteEditor", true).toBool();
 
-    ui->noteTextEdit->setLineWrapMode(mode);
-    ui->encryptedNoteTextEdit->setLineWrapMode(mode);
+    QTextEdit::LineWrapMode mode =
+            useSoftWrapInNoteEditor ?
+            QTextEdit::WidgetWidth : QTextEdit::NoWrap;
+    QPlainTextEdit::LineWrapMode pMode =
+            useSoftWrapInNoteEditor ?
+            QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap;
+
+    ui->noteTextEdit->setLineWrapMode(pMode);
+    ui->encryptedNoteTextEdit->setLineWrapMode(pMode);
     ui->noteTextView->setLineWrapMode(mode);
 }
 
@@ -1252,8 +1258,8 @@ void MainWindow::initStyling() {
             MarkdownHighlighter::HighlighterState::NoState).name();
 
     // set the foreground and background color for the note text edits
-    appStyleSheet += QString("QTextEdit#noteTextEdit,"
-                                     "QTextEdit#encryptedNoteTextEdit"
+    appStyleSheet += QString("QPlainTextEdit#noteTextEdit,"
+                                     "QPlainTextEdit#encryptedNoteTextEdit"
                                               "{color: %1;"
                                               "background-color: %2;}")
             .arg(fgColorName, bgColorName);
@@ -4190,36 +4196,52 @@ void MainWindow::setCurrentNoteFromHistoryItem(NoteHistoryItem item) {
 }
 
 /**
+ * @brief Prepares the printer to print the content of a text edit widget
+ * @param textEdit
+ */
+bool MainWindow::preparePrintNotePrinter(QPrinter *printer) {
+    QPrintDialog dialog(printer, this);
+    dialog.setWindowTitle(tr("Print note"));
+    return dialog.exec() == QDialog::Accepted;
+}
+
+/**
+ * @brief Prints the content of a text edit widget
+ * @param textEdit
+ */
+void MainWindow::printNote(QPlainTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter();
+
+    if (preparePrintNotePrinter(printer)) {
+        textEdit->document()->print(printer);
+    }
+}
+
+/**
  * @brief Prints the content of a text edit widget
  * @param textEdit
  */
 void MainWindow::printNote(QTextEdit *textEdit) {
-    QPrinter printer;
+    QPrinter *printer = new QPrinter();
 
-    QPrintDialog dialog(&printer, this);
-    dialog.setWindowTitle(tr("Print note"));
-
-    if (dialog.exec() != QDialog::Accepted) {
-        return;
+    if (preparePrintNotePrinter(printer)) {
+        textEdit->document()->print(printer);
     }
-
-    textEdit->document()->print(&printer);
 }
 
 /**
- * @brief Exports the content of a text edit widget as PDF
- * @param textEdit
+ * @brief Prepares the printer dialog to exports the content of a text edit
+ *        widget as PDF
+ * @param printer
  */
-void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
-    QPrinter printer(QPrinter::HighResolution);
-
+bool MainWindow::prepareExportNoteAsPDFPrinter(QPrinter *printer) {
 #ifdef Q_OS_LINUX
     // under Linux we use the the QPageSetupDialog to change layout
     // settings of the PDF export
-    QPageSetupDialog pageSetupDialog(&printer, this);
+    QPageSetupDialog pageSetupDialog(printer, this);
 
     if (pageSetupDialog.exec() != QDialog::Accepted) {
-        return;
+        return false;
     }
 #else
     // under OS X and Windows the QPageSetupDialog dialog doesn't work,
@@ -4241,16 +4263,16 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
             pageSizeStrings, 4, false, &ok);
 
     if (!ok || pageSizeString.isEmpty()) {
-        return;
+        return false;
     }
 
     int pageSizeIndex = pageSizeStrings.indexOf(pageSizeString);
     if (pageSizeIndex == -1) {
-        return;
+        return false;
     }
 
     QPageSize pageSize(pageSizes.at(pageSizeIndex));
-    printer.setPageSize(pageSize);
+    printer->setPageSize(pageSize);
 
     // select the orientation
     QStringList orientationStrings;
@@ -4263,16 +4285,16 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
             orientationStrings, 0, false, &ok);
 
     if (!ok || orientationString.isEmpty()) {
-        return;
+        return false;
     }
 
     int orientationIndex =
             orientationStrings.indexOf(orientationString);
     if (orientationIndex == -1) {
-        return;
+        return false;
     }
 
-    printer.setOrientation(orientations.at(orientationIndex));
+    printer->setOrientation(orientations.at(orientationIndex));
 #endif
 
     FileDialog dialog("NotePDFExport");
@@ -4284,22 +4306,46 @@ void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
     int ret = dialog.exec();
 
     if (ret != QDialog::Accepted) {
-        return;
+        return false;
     }
 
     QString fileName = dialog.selectedFile();
 
     if (fileName.isEmpty()) {
-        return;
+        return false;
     }
 
     if (QFileInfo(fileName).suffix().isEmpty()) {
         fileName.append(".pdf");
     }
 
-    printer.setOutputFormat(QPrinter::PdfFormat);
-    printer.setOutputFileName(fileName);
-    textEdit->document()->print(&printer);
+    printer->setOutputFormat(QPrinter::PdfFormat);
+    printer->setOutputFileName(fileName);
+    return true;
+}
+
+/**
+ * @brief Exports the content of a plain text edit widget as PDF
+ * @param textEdit
+ */
+void MainWindow::exportNoteAsPDF(QPlainTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+
+    if (prepareExportNoteAsPDFPrinter(printer)) {
+        textEdit->document()->print(printer);
+    }
+}
+
+/**
+ * @brief Exports the content of a text edit widget as PDF
+ * @param textEdit
+ */
+void MainWindow::exportNoteAsPDF(QTextEdit *textEdit) {
+    QPrinter *printer = new QPrinter(QPrinter::HighResolution);
+
+    if (prepareExportNoteAsPDFPrinter(printer)) {
+        textEdit->document()->print(printer);
+    }
 }
 
 /**
@@ -8551,7 +8597,7 @@ void MainWindow::on_actionDelete_orphaned_images_triggered() {
  * @param text
  */
 void MainWindow::writeToNoteTextEdit(QString text) {
-    QTextEdit *textEdit = activeNoteTextEdit();
+    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
     textEdit->insertPlainText(text);
 }
 
@@ -8561,7 +8607,7 @@ void MainWindow::writeToNoteTextEdit(QString text) {
  * @return
  */
 QString MainWindow::selectedNoteTextEditText() {
-    QTextEdit *textEdit = activeNoteTextEdit();
+    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QString selectedText = textEdit->textCursor().selectedText();
 
     // transform Unicode line endings
@@ -8995,7 +9041,7 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
  * Updates the line number label
  */
 void MainWindow::noteEditCursorPositionChanged() {
-    QTextEdit *textEdit = activeNoteTextEdit();
+    QMarkdownTextEdit *textEdit = activeNoteTextEdit();
     QTextCursor cursor = textEdit->textCursor();
     QString selectedText = cursor.selectedText();
     QString text;

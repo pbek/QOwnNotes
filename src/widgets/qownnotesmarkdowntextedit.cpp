@@ -107,7 +107,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
                 }
                 break;
             default:
-                QTextEdit textEdit;
+                QPlainTextEdit textEdit;
                 int newFontSize = textEdit.font().pointSize();
                 if ( fontSize != newFontSize ) {
                     fontSize = newFontSize;
@@ -143,7 +143,7 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
                 }
                 break;
             default:
-                QTextEdit textEdit;
+                QPlainTextEdit textEdit;
                 int newFontSize = textEdit.font().pointSize();
                 if ( fontSize != newFontSize ) {
                     fontSize = newFontSize;

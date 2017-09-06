@@ -1,7 +1,7 @@
 #ifndef NOTEHISTORY_H
 #define NOTEHISTORY_H
 
-#include <QTextEdit>
+#include <QPlainTextEdit>
 #include <QDataStream>
 #include "note.h"
 
@@ -9,7 +9,7 @@
 class NoteHistoryItem
 {
 public:
-    explicit NoteHistoryItem(Note *note = NULL, QTextEdit *textEdit = NULL);
+    explicit NoteHistoryItem(Note *note = NULL, QPlainTextEdit *textEdit = NULL);
     explicit NoteHistoryItem(QString noteName, QString noteSubFolderPathData,
                              int cursorPosition,
                              float relativeScrollBarPosition);
@@ -21,14 +21,14 @@ public:
     Note getNote();
     bool isNoteValid();
     bool operator ==(const NoteHistoryItem &item) const;
-    void restoreTextEditPosition(QTextEdit *textEdit);
+    void restoreTextEditPosition(QPlainTextEdit *textEdit);
 
 private:
     QString _noteName;
     QString _noteSubFolderPathData;
     int _cursorPosition;
     float _relativeScrollBarPosition;
-    static float getTextEditScrollBarRelativePosition(QTextEdit *textEdit);
+    static float getTextEditScrollBarRelativePosition(QPlainTextEdit *textEdit);
 };
 
 // we want to store the class to the settings
@@ -46,13 +46,13 @@ private:
 
 public:
     explicit NoteHistory();
-    void add(Note note, QTextEdit *textEdit);
+    void add(Note note, QPlainTextEdit *textEdit);
     friend QDebug operator<<(QDebug dbg, const NoteHistory &history);
     bool back();
     bool forward();
     bool isEmpty();
     NoteHistoryItem getCurrentHistoryItem();
-    void updateCursorPositionOfNote(Note note, QTextEdit *textEdit);
+    void updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit);
     void clear();
 
     NoteHistoryItem getLastItemOfNote(Note note);

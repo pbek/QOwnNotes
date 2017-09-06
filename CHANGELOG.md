@@ -1,6 +1,9 @@
 # QOwnNotes Changelog
 
 ## 17.09.1
+- the `QMarkdownTextedit` that is used in all markdown text-edits is now based
+  on`QPlainTextEdit` instead of `QTextEdit`, which should result in improved
+  rendering speed in large notes
 - the automatic closing of brackets now also works for `'`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
 

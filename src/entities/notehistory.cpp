@@ -6,7 +6,7 @@
  * NoteHistoryItem implementation
  */
 
-NoteHistoryItem::NoteHistoryItem(Note *note, QTextEdit *textEdit) {
+NoteHistoryItem::NoteHistoryItem(Note *note, QPlainTextEdit *textEdit) {
     _noteName = "";
     _noteSubFolderPathData = "";
     _cursorPosition = 0;
@@ -38,7 +38,7 @@ NoteHistoryItem::NoteHistoryItem(QString noteName,
  * Returns the relative note text edit scrollbar position (0..1)
  */
 float NoteHistoryItem::getTextEditScrollBarRelativePosition(
-        QTextEdit *textEdit) {
+        QPlainTextEdit *textEdit) {
     QScrollBar *scrollBar = textEdit->verticalScrollBar();
     int max = scrollBar->maximum();
 
@@ -73,7 +73,7 @@ float NoteHistoryItem::getRelativeScrollBarPosition() const {
  *
  * @param textEdit
  */
-void NoteHistoryItem::restoreTextEditPosition(QTextEdit *textEdit) {
+void NoteHistoryItem::restoreTextEditPosition(QPlainTextEdit *textEdit) {
     // set the cursor position
     QTextCursor c = textEdit->textCursor();
     c.setPosition(_cursorPosition);
@@ -148,7 +148,7 @@ NoteHistory::NoteHistory() {
     currentIndex = 0;
 }
 
-void NoteHistory::add(Note note, QTextEdit *textEdit) {
+void NoteHistory::add(Note note, QPlainTextEdit *textEdit) {
     if (!note.exists()) {
         return;
     }
@@ -178,7 +178,7 @@ void NoteHistory::add(Note note, QTextEdit *textEdit) {
     qDebug() << " added to history: " << item;
 }
 
-void NoteHistory::updateCursorPositionOfNote(Note note, QTextEdit *textEdit) {
+void NoteHistory::updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit) {
     if (isEmpty()) {
         return;
     }

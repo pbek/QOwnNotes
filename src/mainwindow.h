@@ -37,6 +37,7 @@
 #include <dialogs/actiondialog.h>
 #include <dialogs/tododialog.h>
 #include <dialogs/settingsdialog.h>
+#include <QPrinter>
 #include "entities/notehistory.h"
 #include "dialogs/notediffdialog.h"
 #include "services/updateservice.h"
@@ -629,6 +630,14 @@ private:
     void readSettingsFromSettingsDialog();
 
     void setCurrentNoteFromHistoryItem(NoteHistoryItem item);
+
+    bool prepareExportNoteAsPDFPrinter(QPrinter *printer);
+
+    void exportNoteAsPDF(QPlainTextEdit *textEdit);
+
+    bool preparePrintNotePrinter(QPrinter *printer);
+
+    void printNote(QPlainTextEdit *textEdit);
 
     void exportNoteAsPDF(QTextEdit *textEdit);
 
