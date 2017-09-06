@@ -2236,6 +2236,18 @@
                    </widget>
                   </item>
                   <item>
+                   <widget class="QGroupBox" name="groupBox_24">
+                    <property name="title">
+                     <string>Interface style</string>
+                    </property>
+                    <layout class="QGridLayout" name="gridLayout_58">
+                     <item row="0" column="0">
+                      <widget class="QComboBox" name="interfaceStyleComboBox"/>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
                    <widget class="QGroupBox" name="groupBox_19">
                     <property name="title">
                      <string>Icons</string>
@@ -4508,8 +4520,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-qownnotes.qrc"/>
   <include location="../breeze-dark-qownnotes.qrc"/>
+  <include location="../breeze-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>

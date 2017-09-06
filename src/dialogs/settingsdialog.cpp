@@ -34,6 +34,7 @@
 #include <helpers/toolbarcontainer.h>
 #include <QProcess>
 #include <widgets/scriptsettingwidget.h>
+#include <QStyleFactory>
 
 SettingsDialog::SettingsDialog(int page, QWidget *parent) :
         MasterDialog(parent), ui(new Ui::SettingsDialog) {
@@ -650,6 +651,14 @@ void SettingsDialog::storeSettings() {
 
     // store Panels settings
     storePanelSettings();
+
+    // store the interface style settings
+    if (ui->interfaceStyleComboBox->currentIndex() > 0) {
+        settings.setValue("interfaceStyle",
+                          ui->interfaceStyleComboBox->currentText());
+    } else {
+        settings.remove("interfaceStyle");
+    }
 }
 
 /**
@@ -958,6 +967,33 @@ void SettingsDialog::readSettings() {
     // read panel settings
     readPanelSettings();
 
+    // load the settings for the interface style combo box
+    loadInterfaceStyleComboBox();
+}
+
+/**
+ * Loads the settings for the interface style combo box
+ */
+void SettingsDialog::loadInterfaceStyleComboBox() const {
+    const QSignalBlocker blocker(ui->interfaceStyleComboBox);
+    Q_UNUSED(blocker);
+
+    ui->interfaceStyleComboBox->clear();
+    ui->interfaceStyleComboBox->addItem(tr("Automatic (needs restart)"));
+
+    Q_FOREACH(QString style, QStyleFactory::keys()) {
+            ui->interfaceStyleComboBox->addItem(style);
+        }
+
+    QSettings settings;
+    QString interfaceStyle = settings.value("interfaceStyle").toString();
+
+    if (!interfaceStyle.isEmpty()) {
+        ui->interfaceStyleComboBox->setCurrentText(interfaceStyle);
+        QApplication::setStyle(interfaceStyle);
+    } else {
+        ui->interfaceStyleComboBox->setCurrentIndex(0);
+    }
 }
 
 /**
@@ -3297,4 +3333,14 @@ void SettingsDialog::on_scriptListWidget_itemChanged(QListWidgetItem *item) {
 
     storeScriptListEnabledState();
     reloadCurrentScriptPage();
+}
+
+void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(
+        const QString &arg1) {
+    QApplication::setStyle(arg1);
+
+    // if the interface style was set to automatic we need a restart
+    if (ui->interfaceStyleComboBox->currentIndex() == 0) {
+        needRestart();
+    }
 }

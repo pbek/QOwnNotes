@@ -63,6 +63,12 @@
  */
 bool mainStartupMisc() {
     QSettings settings;
+    QString interfaceStyle = settings.value("interfaceStyle").toString();
+
+    // restore the interface style
+    if (!interfaceStyle.isEmpty()) {
+        QApplication::setStyle(interfaceStyle);
+    }
 
     bool internalIconTheme = settings.value("internalIconTheme").toBool();
 

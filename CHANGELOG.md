@@ -8,6 +8,8 @@
       dialog, todo dialog, settings dialog, note dialog and note history dialog
 - the automatic closing of brackets now also works for `'`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
+- you can now choose different interface styles in the *Interface settings* 
+  to change the look of the application's interface and its controls
 - the snap-packaged version of QOwnNotes will now automatically use the `Fusion`
   style which dramatically improves the user interface
 

@@ -217,6 +217,8 @@ private slots:
 
     void on_scriptListWidget_itemChanged(QListWidgetItem *item);
 
+    void on_interfaceStyleComboBox_currentTextChanged(const QString &arg1);
+
 private:
 
     Ui::SettingsDialog *ui;
@@ -314,6 +316,8 @@ private:
     void readPanelSettings();
 
     void storePanelSettings();
+
+    void loadInterfaceStyleComboBox() const;
 };
 
 #endif // SETTINGSDIALOG_H
