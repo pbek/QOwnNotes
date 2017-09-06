@@ -11,7 +11,7 @@
     - the style will be previewed instantly if you select an other style
     - if you select `Automatic` you will be prompted to restart the application
 - the snap-packaged version of QOwnNotes will now automatically use the `Fusion`
-  style which dramatically improves the user interface
+  interface style which dramatically improves the user interface
 - the automatic closing of brackets now also works for `'`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
 - added more Brazilian Portuguese, Catalan, German and Spanish translation 
