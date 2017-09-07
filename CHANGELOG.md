@@ -7,6 +7,8 @@
   (for [Issue #698](https://github.com/pbek/QOwnNotes/issues/710))
 - the automatic closing of brackets now also works for `_` and `~`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708), thank you @sanderboom)
+- added more Brazilian Portuguese, Catalan, Italian, Japanese and Spanish
+  translation (thank you mlimacarlos, MGuerra, mlocati, piyo and richarson)
 
 ## 17.09.1
 - the `QMarkdownTextedit`, which is used in all markdown text-edits is now based
