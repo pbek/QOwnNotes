@@ -333,6 +333,7 @@ int main(int argc, char *argv[]) {
         QApplication app(argc, argv);
         app.setProperty("release", release);
         app.setProperty("portable", portable);
+        app.setProperty("snap", snap);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)

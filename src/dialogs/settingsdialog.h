@@ -219,6 +219,8 @@ private slots:
 
     void on_interfaceStyleComboBox_currentTextChanged(const QString &arg1);
 
+    void on_cursorWidthResetButton_clicked();
+
 private:
 
     Ui::SettingsDialog *ui;

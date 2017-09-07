@@ -2278,10 +2278,27 @@
                      <string>Item sizes in the main window</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_13">
+                     <item row="1" column="2">
+                      <widget class="QSpinBox" name="itemHeightSpinBox">
+                       <property name="suffix">
+                        <string notr="true">px</string>
+                       </property>
+                      </widget>
+                     </item>
                      <item row="1" column="1">
                       <widget class="QLabel" name="itemHeightLabel">
                        <property name="text">
                         <string>List and tree item height:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="toolbarIconSizeLabel">
+                       <property name="text">
+                        <string>Toolbar icon size:</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2301,20 +2318,17 @@
                        </property>
                       </spacer>
                      </item>
-                     <item row="1" column="2">
-                      <widget class="QSpinBox" name="itemHeightSpinBox">
-                       <property name="suffix">
-                        <string notr="true">px</string>
+                     <item row="1" column="3">
+                      <widget class="QToolButton" name="itemHeightResetButton">
+                       <property name="toolTip">
+                        <string>Reset the item height</string>
                        </property>
-                      </widget>
-                     </item>
-                     <item row="0" column="1">
-                      <widget class="QLabel" name="toolbarIconSizeLabel">
                        <property name="text">
-                        <string>Toolbar icon size:</string>
+                        <string notr="true">...</string>
                        </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       <property name="icon">
+                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                        </property>
                       </widget>
                      </item>
@@ -2335,10 +2349,30 @@
                        </property>
                       </widget>
                      </item>
-                     <item row="1" column="3">
-                      <widget class="QToolButton" name="itemHeightResetButton">
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="cursorWidthLabel">
+                       <property name="text">
+                        <string>Note-edit cursor width:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QSpinBox" name="cursorWidthSpinBox">
+                       <property name="suffix">
+                        <string notr="true">px</string>
+                       </property>
+                       <property name="minimum">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="3">
+                      <widget class="QToolButton" name="cursorWidthResetButton">
                        <property name="toolTip">
-                        <string>Reset the item height</string>
+                        <string>Reset the cursor width</string>
                        </property>
                        <property name="text">
                         <string notr="true">...</string>

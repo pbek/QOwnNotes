@@ -659,6 +659,9 @@ void SettingsDialog::storeSettings() {
     } else {
         settings.remove("interfaceStyle");
     }
+
+    // store the cursor width
+    settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 }
 
 /**
@@ -969,6 +972,10 @@ void SettingsDialog::readSettings() {
 
     // load the settings for the interface style combo box
     loadInterfaceStyleComboBox();
+
+    // set the cursor width spinbox value
+    ui->cursorWidthSpinBox->setValue(
+            settings.value("cursorWidth", 1).toInt());
 }
 
 /**
@@ -3343,4 +3350,11 @@ void SettingsDialog::on_interfaceStyleComboBox_currentTextChanged(
     if (ui->interfaceStyleComboBox->currentIndex() == 0) {
         needRestart();
     }
+}
+
+/**
+ * Reset the cursor width spin box value
+ */
+void SettingsDialog::on_cursorWidthResetButton_clicked() {
+    ui->cursorWidthSpinBox->setValue(1);
 }
