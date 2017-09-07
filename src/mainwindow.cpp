@@ -7402,6 +7402,9 @@ void MainWindow::onNavigationWidgetPositionClicked(int position) {
     c.movePosition(QTextCursor::EndOfLine, QTextCursor::KeepAnchor);
 
     textEdit->setTextCursor(c);
+
+    // update the preview-slider
+    noteTextSliderValueChanged(textEdit->verticalScrollBar()->value(), true);
 }
 
 /**

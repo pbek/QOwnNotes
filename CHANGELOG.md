@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.09.2
+- the scroll position of the note-preview is now also synced when clicking on
+  headlines in the navigation panel (for [Issue #710](https://github.com/pbek/QOwnNotes/issues/710))
+ 
 ## 17.09.1
 - the `QMarkdownTextedit`, which is used in all markdown text-edits is now based
   on`QPlainTextEdit` instead of `QTextEdit`, which should result in **improved
