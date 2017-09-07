@@ -5,6 +5,8 @@
   headlines in the navigation panel (for [Issue #710](https://github.com/pbek/QOwnNotes/issues/710))
 - you can now set the cursor-width of the note-edit in the *Interface settings*
   (for [Issue #698](https://github.com/pbek/QOwnNotes/issues/710))
+- the automatic closing of brackets now also works for `_` and `~`
+  (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708), thank you @sanderboom)
 
 ## 17.09.1
 - the `QMarkdownTextedit`, which is used in all markdown text-edits is now based
