@@ -3,12 +3,16 @@
 ## 17.09.3
 - moved the setting of the *width of the cursor in the note-edit* from the 
   *Interface settings* to the *Editor settings*
+- added improvements to not start new list items when not in a list
+  (for [Issue #712](https://github.com/pbek/QOwnNotes/issues/712), thank you @sanderboom)
+- added improvements for the auto-completion of `~` and `_`
+  (for [Issue #713](https://github.com/pbek/QOwnNotes/issues/713), thank you @sanderboom)
 
 ## 17.09.2
 - the scroll position of the note-preview is now also synced when clicking on
   headlines in the navigation panel (for [Issue #710](https://github.com/pbek/QOwnNotes/issues/710))
 - you can now set the width of the cursor in the note-edit in the *Interface settings*
-  (for [Issue #698](https://github.com/pbek/QOwnNotes/issues/710))
+  (for [Issue #710](https://github.com/pbek/QOwnNotes/issues/710))
 - the automatic closing of brackets now also works for `_` and `~`
   (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708), thank you @sanderboom)
 - added more Brazilian Portuguese, Catalan, Italian, Japanese and Spanish
