@@ -1549,7 +1549,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="8142"/>
       <source>Rename subfolder</source>
-      <translation>Переименовать вложенную папку</translation>
+      <translation>Переименовать подпапку</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8688"/>
@@ -3547,17 +3547,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Стиль интерфейса</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Ширина курсора в редакторе:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Сбросить ширину курсора</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>

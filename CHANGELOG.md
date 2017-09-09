@@ -1,12 +1,15 @@
 # QOwnNotes Changelog
 
 ## 17.09.3
-- moved the setting of the *width of the cursor in the note-edit* from the 
-  *Interface settings* to the *Editor settings*
 - added improvements to not start new list items when not in a list
   (for [Issue #712](https://github.com/pbek/QOwnNotes/issues/712), thank you @sanderboom)
 - added improvements for the auto-completion of `~` and `_`
   (for [Issue #713](https://github.com/pbek/QOwnNotes/issues/713), thank you @sanderboom)
+- moved the setting of the *width of the cursor in the note-edit* from the 
+  *Interface settings* to the *Editor settings*
+- added more Brazilian Portuguese, Russian, Italian, Chinese, German and Spanish
+  translation (thank you mlimacarlos, Maboroshy, mlocati, Libnux, rakekniven and 
+  richarson)
 
 ## 17.09.2
 - the scroll position of the note-preview is now also synced when clicking on
