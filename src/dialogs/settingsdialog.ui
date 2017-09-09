@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>6</number>
+            <number>14</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2278,13 +2278,6 @@
                      <string>Item sizes in the main window</string>
                     </property>
                     <layout class="QGridLayout" name="gridLayout_13">
-                     <item row="1" column="2">
-                      <widget class="QSpinBox" name="itemHeightSpinBox">
-                       <property name="suffix">
-                        <string notr="true">px</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item row="1" column="1">
                       <widget class="QLabel" name="itemHeightLabel">
                        <property name="text">
@@ -2318,6 +2311,20 @@
                        </property>
                       </spacer>
                      </item>
+                     <item row="0" column="3">
+                      <widget class="QToolButton" name="toolbarIconSizeResetButton">
+                       <property name="toolTip">
+                        <string>Reset the icon size</string>
+                       </property>
+                       <property name="text">
+                        <string notr="true">...</string>
+                       </property>
+                       <property name="icon">
+                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                       </property>
+                      </widget>
+                     </item>
                      <item row="1" column="3">
                       <widget class="QToolButton" name="itemHeightResetButton">
                        <property name="toolTip">
@@ -2335,51 +2342,10 @@
                      <item row="0" column="2">
                       <widget class="QSpinBox" name="toolbarIconSizeSpinBox"/>
                      </item>
-                     <item row="0" column="3">
-                      <widget class="QToolButton" name="toolbarIconSizeResetButton">
-                       <property name="toolTip">
-                        <string>Reset the icon size</string>
-                       </property>
-                       <property name="text">
-                        <string notr="true">...</string>
-                       </property>
-                       <property name="icon">
-                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="1">
-                      <widget class="QLabel" name="cursorWidthLabel">
-                       <property name="text">
-                        <string>Note-edit cursor width:</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="2">
-                      <widget class="QSpinBox" name="cursorWidthSpinBox">
+                     <item row="1" column="2">
+                      <widget class="QSpinBox" name="itemHeightSpinBox">
                        <property name="suffix">
                         <string notr="true">px</string>
-                       </property>
-                       <property name="minimum">
-                        <number>1</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item row="2" column="3">
-                      <widget class="QToolButton" name="cursorWidthResetButton">
-                       <property name="toolTip">
-                        <string>Reset the cursor width</string>
-                       </property>
-                       <property name="text">
-                        <string notr="true">...</string>
-                       </property>
-                       <property name="icon">
-                        <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
-                         <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
                        </property>
                       </widget>
                      </item>
@@ -4070,15 +4036,49 @@ p, li { white-space: pre-wrap; }
                <property name="title">
                 <string>Editor options</string>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_3">
-                <item>
-                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
-                  <property name="text">
-                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
+               <layout class="QGridLayout" name="gridLayout_59">
+                <item row="4" column="1">
+                 <widget class="QSpinBox" name="cursorWidthSpinBox">
+                  <property name="suffix">
+                   <string notr="true">px</string>
+                  </property>
+                  <property name="minimum">
+                   <number>1</number>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item row="4" column="0">
+                 <widget class="QLabel" name="cursorWidthLabel">
+                  <property name="text">
+                   <string>Note-edit cursor width:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="2">
+                 <widget class="QToolButton" name="cursorWidthResetButton">
+                  <property name="toolTip">
+                   <string>Reset the cursor width</string>
+                  </property>
+                  <property name="text">
+                   <string notr="true">...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset theme="edit-clear" resource="../breeze-qownnotes.qrc">
+                    <normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</normaloff>:/icons/breeze-qownnotes/16x16/edit-clear.svg</iconset>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" rowspan="2" colspan="4">
+                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
+                  <property name="text">
+                   <string>Highlight the current line</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="4">
                  <widget class="QCheckBox" name="autoBracketRemovalCheckBox">
                   <property name="toolTip">
                    <string>You have to use the backspace key to remove the opening character</string>
@@ -4088,12 +4088,25 @@ p, li { white-space: pre-wrap; }
                   </property>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QCheckBox" name="highlightCurrentLineCheckBox">
+                <item row="0" column="0" colspan="4">
+                 <widget class="QCheckBox" name="autoBracketClosingCheckBox">
                   <property name="text">
-                   <string>Highlight the current line</string>
+                   <string>Enable automatic closing of brackets and markdown formatting characters</string>
                   </property>
                  </widget>
+                </item>
+                <item row="4" column="3">
+                 <spacer name="horizontalSpacer_13">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </widget>
