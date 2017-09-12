@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.09.4
+- fixed a possible crash when selecting a lot of notes quickly in succession
+  (for [Issue #717](https://github.com/pbek/QOwnNotes/issues/717))
+- apostrophe bracket closing is temporary disabled because apostrophes are used
+  in different contexts (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
+
 ## 17.09.3
 - added improvements to not start new list items when not in a list
   (for [Issue #712](https://github.com/pbek/QOwnNotes/issues/712), thank you @sanderboom)
