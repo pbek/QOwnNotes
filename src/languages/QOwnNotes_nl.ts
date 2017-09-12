@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Huidige lijnkleur van achtergrond </translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
@@ -876,7 +876,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>Notities in alle submappen zoeken</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1855"/>
@@ -1474,7 +1474,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="6788"/>
       <source>Rename tag</source>
-      <translation type="unfinished">Rename tag</translation>
+      <translation>Naam tag</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6789"/>
@@ -1525,17 +1525,17 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="7825"/>
       <source>Allows you to rename the filename of the note</source>
-      <translation type="unfinished">Allows you to rename the filename of the note</translation>
+      <translation>U kunt de naam van de bestandsnaam voor de notitie wijzigen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7978"/>
       <source>Note renaming not enabled!</source>
-      <translation type="unfinished">Note renaming not enabled!</translation>
+      <translation>Opmerking hernoemen niet ingeschakeld!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8142"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Naam van de submap</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8688"/>
@@ -1807,7 +1807,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="7979"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Als u de naam wilt wijzigen van uw opmerking hebt om de mogelijkheid om de bestandsnaam van de opmerking te verschillen van de kop.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8141"/>
@@ -2157,12 +2157,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="5133"/>
       <source>You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</source>
-      <translation type="unfinished">You may want to enable that only one app instance is allowed at the same time in the settings to make full use of the this feature.</translation>
+      <translation>U kunt toestaan dat slechts één app exemplaar is toegestaan op hetzelfde moment in de instellingen te maken volledig gebruik van deze functie.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5999"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Afbeeldingen downloaden voltooid</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6094"/>
@@ -2470,12 +2470,12 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../entities/note.cpp" line="915"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Hernoemde Opmerking-bestand werd verwijderd: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="923"/>
       <source>Could not remove renamed note-file: %1 - Error message: %2</source>
-      <translation type="unfinished">Could not remove renamed note-file: %1 - Error message: %2</translation>
+      <translation>Kon notitiebestand niet opslaan: %1 - Foutmelding: %2</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="1667"/>
@@ -3506,52 +3506,52 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1935"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Indonesisch</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Catalaans</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2111"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Zweeds</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Interface-stijl</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Opmerking-edit cursor breedte:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Resetten van de cursor-breedte</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;You might want to take a look at all available &lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;time formats&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href="http://docs.qownnotes.org/en/develop/time-formats.html"&gt;&lt;span style=" text-decoration: underline; color:#2980b9;"&gt;Overzicht van alle mogelijke datum- en tijdnotaties.&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4094"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Markeer de huidige regel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4253"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation type="unfinished">Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</translation>
+      <translation>Vergeet niet de git ondersteuning voor uw notitie mappen in te schakelen en configureer uw naam en een e-mailadres voor uw git-client, bijvoorbeeld met deze terminal commando's:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <source>Tags panel</source>
-      <translation type="unfinished">Tags panel</translation>
+      <translation>Deelvenster Labels</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4292"/>
@@ -3617,22 +3617,22 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>De naam van de map van de hoofdmap van de Toon</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4417"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>Verberg 'Zoek of maak nota submap' zoeken</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4424"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Display Opmerking submappen als volledige boom</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4434"/>
       <source>Notes panel</source>
-      <translation type="unfinished">Notes panel</translation>
+      <translation>Deelvenster Notities</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2370"/>
@@ -4163,7 +4163,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="989"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>Automatische (moet opnieuw opstarten)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1131"/>

@@ -3528,12 +3528,12 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Largeur du curseur d'édition de note:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Réinitialiser la largeur du curseur</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>

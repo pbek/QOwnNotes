@@ -5,6 +5,8 @@
   (for [Issue #717](https://github.com/pbek/QOwnNotes/issues/717))
 - apostrophe bracket closing is temporary disabled because apostrophes are used
   in different contexts (for [Issue #708](https://github.com/pbek/QOwnNotes/issues/708))
+- added more French, Indonesian, Dutch and Hungarian translation (thank you 
+  bepolymathe, zmni and Fabijenna)
 
 ## 17.09.3
 - added improvements to not start new list items when not in a list

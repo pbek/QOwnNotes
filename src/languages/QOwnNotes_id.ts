@@ -1478,7 +1478,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
       <location filename="../mainwindow.cpp" line="7013"/>
       <source>Move to the root</source>
       <comment>to move a tag to the current tag in the tag context menu</comment>
-      <translation type="unfinished">Move to the root</translation>
+      <translation>Pindah ke root</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7446"/>
@@ -1691,7 +1691,7 @@ Jika keranjang sampah diaktifkan pada server ownCloud Anda, Anda bisa memulihkan
     <message>
       <location filename="../mainwindow.cpp" line="6260"/>
       <source>show notes in note root folder (%1)</source>
-      <translation type="unfinished">show notes in note root folder (%1)</translation>
+      <translation>tampilkan catatan di folder root catatan (%1)</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="316"/>
@@ -3205,15 +3205,15 @@ Apakah Anda tetap ingin memasangnya?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3037"/>
       <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-      <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=" font-style:italic;"&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+      <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Jika dicentang Anda akan selalu diberitahu tentang perubahan eksternal, walaupun catatan tidak disunting dalam beberapa menit terakhir. Direkomendasikan untuk &lt;span style=" font-style:italic;"&gt;tidak dicentang&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3118"/>
       <location filename="../dialogs/settingsdialog.ui" line="4156"/>
       <source>You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
 Just test yourself if you get sync conflicts and set a higher value if so.</source>
-      <translation type="unfinished">You might run into sync troubles with older versions of ownCloud sync when going far below 10 sec.
-Just test yourself if you get sync conflicts and set a higher value if so.</translation>
+      <translation>Anda mungkin akan mengalami masalah sinkronisasi dengan versi lama ownCloud sync jika durasi berada di bawah 10 detik.
+Silakan uji coba, dan tambah durasi jika Anda mendapati konflik sinkronisasi.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2045"/>
@@ -3501,7 +3501,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Gaya antarmuka</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
@@ -3511,7 +3511,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Setel ulang lebar kursor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>
@@ -3521,7 +3521,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4094"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Sorot baris saat ini</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4253"/>
@@ -3597,7 +3597,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
       <source>Show root folder name</source>
-      <translation type="unfinished">Show root folder name</translation>
+      <translation>Tampilkan nama folder root</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4417"/>
@@ -3735,7 +3735,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2968"/>
       <source>The name</source>
-      <translation type="unfinished">The name</translation>
+      <translation>Nama</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3157"/>
@@ -4144,7 +4144,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</tran
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="989"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>Otomatis (perlu memulai ulang)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1131"/>

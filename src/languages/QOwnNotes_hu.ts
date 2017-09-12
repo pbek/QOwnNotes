@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Aktuális sor háttérszínnel</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
@@ -871,12 +871,12 @@
     <message>
       <location filename="../mainwindow.ui" line="1702"/>
       <source>Cycle text case</source>
-      <translation type="unfinished">Cycle text case</translation>
+      <translation>Kisbetű-nagybetű váltása a szövegben</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>Jegyzetek keresése az összes almappában</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1855"/>
@@ -1535,7 +1535,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="8142"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Nevezze át az almappát</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8688"/>
@@ -3507,27 +3507,27 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1935"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>indonéz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>katalán</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2111"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>svéd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Illesztő stílus</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Jegyzet-szerkesztés kurzor szélessége:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
@@ -3587,7 +3587,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4367"/>
       <location filename="../dialogs/settingsdialog.ui" line="4446"/>
       <source>Alphabetical</source>
-      <translation type="unfinished">Alphabetical</translation>
+      <translation>Betűrendben</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4328"/>
@@ -3613,7 +3613,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
       <location filename="../dialogs/settingsdialog.ui" line="4374"/>
       <location filename="../dialogs/settingsdialog.ui" line="4453"/>
       <source>By last change</source>
-      <translation type="unfinished">By last change</translation>
+      <translation>A legutóbbi változások szerint </translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4387"/>
