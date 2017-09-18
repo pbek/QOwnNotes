@@ -39,6 +39,10 @@ To access your ownCloud notes from your **mobile device** you may want to get th
 - [MyOwnNotes for Android](https://f-droid.org/app/org.aykit.MyOwnNotes)
 - [CloudNotes for iOS](https://itunes.apple.com/app/cloudnotes-owncloud-notes/id813973264?mt=8)
 
+On Android you could also use any sync-tool like *Synchronize Ultimate* or 
+*FolderSync* to sync your note files and use software like *neutriNotes* to 
+edit your notes. 
+
 ## Screenshot
 
 ![Screenhot](screenshots/screenshot.png)
