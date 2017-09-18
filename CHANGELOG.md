@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.09.5
+- added support for entering a bracket-character that surrounds the currently 
+  selected text (for [Issue #719](https://github.com/pbek/QOwnNotes/issues/719), thank you @sanderboom)
+
 ## 17.09.4
 - fixed a possible crash when selecting a lot of notes quickly in succession 
   and improved speed of selecting notes in quick in succession
