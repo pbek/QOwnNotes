@@ -66,3 +66,49 @@ QStringList NoteApi::tagNames() const {
 
     return tagNameList;
 }
+
+/**
+ * Adds a tag to the note
+ *
+ * @param tagName
+ * @return true if the note was tagged
+ */
+bool NoteApi::addTag(QString tagName) {
+    if (tagName.isEmpty()) {
+        return false;
+    }
+
+    Note note = Note::fetch(id);
+    if (!note.exists()) {
+        return false;
+    }
+
+    // create a new tag if it doesn't exist
+    Tag tag = Tag::fetchByName(tagName);
+    if (!tag.isFetched()) {
+        tag.setName(tagName);
+        tag.store();
+    }
+
+    return tag.linkToNote(note);
+}
+
+/**
+ * Removes a tag from the note
+ *
+ * @param tagName
+ * @return true if the tag was removed from the note
+ */
+bool NoteApi::removeTag(QString tagName) {
+    Tag tag = Tag::fetchByName(tagName);
+    if (!tag.exists()) {
+        return false;
+    }
+
+    Note note = Note::fetch(id);
+    if (!note.exists()) {
+        return false;
+    }
+
+    return tag.removeLinkToNote(note);
+}

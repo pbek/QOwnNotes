@@ -1198,6 +1198,8 @@ Note
         Q_PROPERTY(QDateTime fileCreated)
         Q_PROPERTY(QDateTime fileLastModified)
         Q_INVOKABLE QStringList tagNames();
+        Q_INVOKABLE bool addTag(QString tagName);
+        Q_INVOKABLE bool removeTag(QString tagName);
     };
 
 You can use the methods from `Date <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date>`__

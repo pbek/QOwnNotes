@@ -4,6 +4,11 @@
 - added support for entering a bracket-character that surrounds the currently 
   selected text (for [Issue #719](https://github.com/pbek/QOwnNotes/issues/719), thank you @sanderboom)
 - added more Catalan and Hungarian translation (thank you MGuerra and Fabijenna)
+- added two new scripting-methods `addTag` and `removeTag` to `NoteApi` to 
+  add and remove tags from notes (for [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+    - custom tagging could now be implemented by parsing the note text for 
+      custom tag handlers and adding/removing tags from the note
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#note)
 
 ## 17.09.4
 - fixed a possible crash when selecting a lot of notes quickly in succession 

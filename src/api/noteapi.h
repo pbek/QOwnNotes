@@ -32,4 +32,6 @@ public:
 
     Q_INVOKABLE QQmlListProperty<TagApi> tags();
     Q_INVOKABLE QStringList tagNames() const;
+    Q_INVOKABLE bool addTag(QString tagName);
+    Q_INVOKABLE bool removeTag(QString tagName);
 };
