@@ -204,7 +204,7 @@ public:
     static Note updateOrCreateFromFile(QFile &file,
                                        NoteSubFolder noteSubFolder);
 
-    static QList<int> fetchAllIds();
+    static QList<int> fetchAllIds(int limit = -1, int offset = -1);
 
     static QList<int> findLinkedNotes(QString fileName);
 

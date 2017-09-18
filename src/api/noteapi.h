@@ -34,4 +34,6 @@ public:
     Q_INVOKABLE QStringList tagNames() const;
     Q_INVOKABLE bool addTag(QString tagName);
     Q_INVOKABLE bool removeTag(QString tagName);
+    Q_INVOKABLE QQmlListProperty<NoteApi> fetchAll(int limit = -1,
+                                                   int offset = -1);
 };

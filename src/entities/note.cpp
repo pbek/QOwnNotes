@@ -377,14 +377,30 @@ QList<Note> Note::fetchAll(int limit) {
     return noteList;
 }
 
-QList<int> Note::fetchAllIds() {
+QList<int> Note::fetchAllIds(int limit, int offset) {
     QSqlDatabase db = QSqlDatabase::database("memory");
     QSqlQuery query(db);
 
     QList<int> noteIdList;
-    QString sql = "SELECT * FROM note";
+    QString sql = "SELECT * FROM note ORDER BY id";
+
+    if (limit >= 0) {
+        sql += " LIMIT :limit";
+    }
+
+    if (offset >= 0) {
+        sql += " OFFSET :offset";
+    }
 
     query.prepare(sql);
+
+    if (limit >= 0) {
+        query.bindValue(":limit", limit);
+    }
+
+    if (offset >= 0) {
+        query.bindValue(":offset", offset);
+    }
 
     if (!query.exec()) {
         qWarning() << __func__ << ": " << query.lastError();

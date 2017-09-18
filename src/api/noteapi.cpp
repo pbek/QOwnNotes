@@ -112,3 +112,22 @@ bool NoteApi::removeTag(QString tagName) {
 
     return tag.removeLinkToNote(note);
 }
+
+/**
+ * Fetches all notes
+ *
+ * @param limit
+ * @param offset
+ * @return
+ */
+QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
+    QList<int> noteIds = Note::fetchAllIds(limit, offset);
+    QList<NoteApi *> notes;
+
+    Q_FOREACH(int noteId, noteIds) {
+            NoteApi *note = NoteApi::fetch(id);
+            notes.append(note);
+        }
+
+    return QQmlListProperty<NoteApi>(this, notes);
+}
