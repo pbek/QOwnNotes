@@ -3035,7 +3035,7 @@ Tot i així, el voleu instal·lar?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2218"/>
       <source>This enables the dark mode, interface and icons will be modified. You need to restart the application to let these changes take action.</source>
-      <translation>Això activa el mode fosc, i la interfície i les icones canviaran. Heu de rearrencar l'aplicació per tal que els canvis siguin efectius.</translation>
+      <translation>Això activa el mode fosc, i la interfície i les icones canviaran. Heu de reiniciar l'aplicació per tal que els canvis siguin efectius.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2221"/>
@@ -3045,7 +3045,7 @@ Tot i així, el voleu instal·lar?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2259"/>
       <source>You need to restart the application to let this setting take effect</source>
-      <translation>Heu de rearrencar l'aplicació per tal que aquest paràmetre s'apliqui</translation>
+      <translation>Heu de reiniciar l'aplicació per tal que aquest paràmetre s'apliqui</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2278"/>
@@ -3528,12 +3528,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2355"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Amplada del cursor d'edició de la nota:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Restablir l'amplada del cursor</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>
@@ -5101,7 +5101,7 @@ Això no es pot desfer!</translation>
       <location filename="../dialogs/updatedialog.cpp" line="328"/>
       <location filename="../dialogs/updatedialog.cpp" line="486"/>
       <source>&amp;Update and restart</source>
-      <translation>Actualitza i rearrenca</translation>
+      <translation>Actualitza i reinicia</translation>
     </message>
   </context>
   <context>

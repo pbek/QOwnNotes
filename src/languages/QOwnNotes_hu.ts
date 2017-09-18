@@ -3552,7 +3552,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4286"/>
       <source>Tags panel</source>
-      <translation type="unfinished">Tags panel</translation>
+      <translation>Címkék panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4292"/>
@@ -3592,12 +3592,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4328"/>
       <source>By last change / use</source>
-      <translation type="unfinished">By last change / use</translation>
+      <translation>Az utolsó módosítás használata</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4338"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation type="unfinished">Hide 'Find or create tag' search</translation>
+      <translation>"Talál vagy címke létrehozása" keresés elrejtése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4348"/>
@@ -4164,7 +4164,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="989"/>
       <source>Automatic (needs restart)</source>
-      <translation type="unfinished">Automatic (needs restart)</translation>
+      <translation>Automatikus (újraindítás szükséges)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="1131"/>

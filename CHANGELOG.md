@@ -3,6 +3,7 @@
 ## 17.09.5
 - added support for entering a bracket-character that surrounds the currently 
   selected text (for [Issue #719](https://github.com/pbek/QOwnNotes/issues/719), thank you @sanderboom)
+- added more Catalan and Hungarian translation (thank you MGuerra and Fabijenna)
 
 ## 17.09.4
 - fixed a possible crash when selecting a lot of notes quickly in succession 
