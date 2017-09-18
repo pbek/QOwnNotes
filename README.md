@@ -37,7 +37,7 @@ To get more features for your notes with ownCloud, like **versioning** and **tra
 
 To access your ownCloud notes from your **mobile device** you may want to get these:
 - [MyOwnNotes for Android](https://f-droid.org/app/org.aykit.MyOwnNotes)
-- [CloudNotes for iOS](https://itunes.apple.com/de/app/cloudnotes-owncloud-notes/id813973264?mt=8)
+- [CloudNotes for iOS](https://itunes.apple.com/app/cloudnotes-owncloud-notes/id813973264?mt=8)
 
 ## Screenshot
 
