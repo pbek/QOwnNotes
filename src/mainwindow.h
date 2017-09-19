@@ -838,4 +838,11 @@ private:
     void updateNotesPanelSortOrder();
 
     void selectAllNotesInTagTreeWidget() const;
+
+    void handleScriptingNoteTagging(Note note, QString tagName,
+                                    bool doRemove = false);
+
+    void handleScriptingRemoveNoteTag(Note note, QString tagName);
+
+    void handleScriptingNotesTagUpdating();
 };

@@ -6162,6 +6162,8 @@ void MainWindow::hideNoteFolderComboBoxIfNeeded() {
 void MainWindow::reloadTagTree() {
     qDebug() << __func__;
 
+    handleScriptingNotesTagUpdating();
+
     QSettings settings;
 
     // remove all broken note tag links
@@ -6626,7 +6628,78 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
 
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
+
+        // add the tag to the note text if defined via scripting engine
+        handleScriptingNoteTagging(currentNote, tagName);
     }
+}
+
+/**
+ * Adds or removes a tag from the note text if defined via scripting engine
+ *
+ * @param note
+ * @param tagName
+ * @param doRemove
+ */
+void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
+                                            bool doRemove) {
+    QString noteText = ScriptingService::instance()->callNoteTaggingHook(
+            currentNote, doRemove ? "remove" : "add", tagName).toString();
+
+    qDebug() << __func__ << " - 'noteText': " << noteText;
+
+    if (noteText.isEmpty()) {
+        return;
+    }
+
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    note.storeNewText(noteText);
+}
+
+void MainWindow::handleScriptingNotesTagUpdating() {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            QStringList tagNameList = ScriptingService::instance()
+                    ->callNoteTaggingHook(note, "list").toStringList();
+            QStringList tagNameList2 = Tag::fetchAllNamesOfNote(note);
+
+            QSet<QString> subtraction = tagNameList.toSet().subtract(
+                    tagNameList2.toSet());
+            QSet<QString> subtraction1 = tagNameList2.toSet().subtract(
+                    tagNameList.toSet());
+
+            // add missing tags to the tag database
+            Q_FOREACH(const QString &tagName, subtraction) {
+                    // create a new tag if it doesn't exist
+                    Tag tag = Tag::fetchByName(tagName);
+                    if (!tag.isFetched()) {
+                        tag.setName(tagName);
+                        tag.store();
+                    }
+
+                    tag.linkToNote(note);
+                    qDebug() << " difference1: "<<  tagName;
+                }
+
+            // remove tags that are not in the note text from the tag database
+            Q_FOREACH(const QString &tagName, subtraction1) {
+                    Tag tag = Tag::fetchByName(tagName);
+                    if (!tag.exists()) {
+                        continue;
+                    }
+
+                    tag.removeLinkToNote(note);
+                    qDebug() << " difference2: "<<  tagName;
+                }
+        }
 }
 
 /**
@@ -6692,6 +6765,10 @@ void MainWindow::removeNoteTagClicked() {
         Q_UNUSED(blocker);
 
         tag.removeLinkToNote(currentNote);
+
+        // remove the tag from the note text if defined via scripting engine
+        handleScriptingNoteTagging(currentNote, tag.getName(), true);
+
         reloadCurrentNoteTags();
         reloadTagTree();
         filterNotesByTag();

@@ -34,6 +34,9 @@ public:
     QQmlEngine* engine();
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
+    QVariant callNoteTaggingHook(Note note, QString action,
+                                 QString tagName = "");
+    bool noteTaggingHookExists();
     static bool validateScript(Script script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,
                                           QStringList parameters);

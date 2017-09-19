@@ -372,6 +372,65 @@ QString ScriptingService::callInsertMediaHook(QFile *file,
 }
 
 /**
+ * Calls the noteTaggingHook function for all script components
+ * This function is called when
+ *
+ * @param note
+ * @param action
+ * @return
+ */
+QVariant ScriptingService::callNoteTaggingHook(Note note, QString action,
+                                               QString tagName) {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+    NoteApi *noteApi = NoteApi::fromNote(note);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+        QVariant result;
+
+        if (methodExistsForObject(
+                scriptComponent.object,
+                "noteTaggingHook(QVariant,QVariant,QVariant)")) {
+            QMetaObject::invokeMethod(scriptComponent.object,
+                                      "noteTaggingHook",
+                                      Q_RETURN_ARG(QVariant, result),
+                                      Q_ARG(QVariant, QVariant::fromValue(
+                                              static_cast<QObject*>(noteApi))),
+                                      Q_ARG(QVariant, action),
+                                      Q_ARG(QVariant, tagName));
+
+            if (!result.isNull()) {
+                return result;
+            }
+        }
+    }
+
+    return QVariant();
+}
+
+/**
+ * Checks if a noteTaggingHook function exists in a script
+ * @return true if a function was found
+ */
+bool ScriptingService::noteTaggingHookExists() {
+    QMapIterator<int, ScriptComponent> i(_scriptComponents);
+
+    while (i.hasNext()) {
+        i.next();
+        ScriptComponent scriptComponent = i.value();
+
+        if (methodExistsForObject(
+                scriptComponent.object,
+                "noteTaggingHook(QVariant,QVariant,QVariant)")) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
  * Calls the insertingFromMimeDataHook function for an object
  */
 QString ScriptingService::callInsertingFromMimeDataHookForObject(

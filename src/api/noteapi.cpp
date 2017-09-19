@@ -115,6 +115,7 @@ bool NoteApi::removeTag(QString tagName) {
 
 /**
  * Fetches all notes
+ * Disclaimer: not tested, might not work yet
  *
  * @param limit
  * @param offset
