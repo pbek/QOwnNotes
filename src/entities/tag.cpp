@@ -326,6 +326,34 @@ QList<Tag> Tag::fetchAllOfNote(Note note) {
 }
 
 /**
+ * Fetches the names of all linked tags of a note
+ */
+QStringList Tag::fetchAllNamesOfNote(Note note) {
+    QSqlDatabase db = QSqlDatabase::database("note_folder");
+    QSqlQuery query(db);
+    QStringList tagNameList;
+
+    query.prepare("SELECT t.name FROM tag t "
+                          "JOIN noteTagLink l ON t.id = l.tag_id "
+                          "WHERE l.note_file_name = :fileName AND "
+                          "l.note_sub_folder_path = :noteSubFolderPath "
+                          "ORDER BY t.priority ASC, t.name ASC");
+    query.bindValue(":fileName", note.getName());
+    query.bindValue(":noteSubFolderPath",
+                    note.getNoteSubFolder().relativePath());
+
+    if (!query.exec()) {
+        qWarning() << __func__ << ": " << query.lastError();
+    } else {
+        for (int r = 0; query.next(); r++) {
+            tagNameList << query.value("name").toString();
+        }
+    }
+
+    return tagNameList;
+}
+
+/**
  * Fetches one Tag of a note that has a color
  */
 Tag Tag::fetchOneOfNoteWithColor(Note note) {

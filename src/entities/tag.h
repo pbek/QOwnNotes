@@ -103,6 +103,8 @@ public:
 
     static void removeBrokenLinks();
 
+    static QStringList fetchAllNamesOfNote(Note note);
+
 protected:
     int id;
     QString name;
