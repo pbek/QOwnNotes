@@ -1177,6 +1177,54 @@ You may want to take a look at the example
 `encryption-pgp.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-pgp.qml>`__ or
 `encryption-rot13.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/encryption-rot13.qml>`__.
 
+noteTaggingHook
+~~~~~~~~~~~~~~~
+
+You can implement your own note tagging mechanism for example with special
+text in your note like ``@tag1``, ``@tag2``, ``@tag3``.
+
+.. code:: javascript
+
+    /**
+     * Handles note tagging for a note
+     *
+     * This function is called when tags are added to, removed from or renamed in
+     * a note or the tags of a note should be listed
+     *
+     * @param note
+     * @param action can be "add", "remove", "rename" or "list"
+     * @param tagName tag name to be added, removed or renamed
+     * @param newTagName tag name to be renamed to if action = "rename"
+     * @return string or string-list (if action = "list")
+     */
+    function noteTaggingHook(note, action, tagName, newTagName);
+
+-  as soon as a script is activated that implements the new function
+  ``noteTaggingHook`` note tagging will be handled by that function
+
+-  following features should work via the QOwnNotes user interface
+
+  -  initially importing tags like ``@tag`` from your notes and
+     overwriting your current tag assignment
+
+     -  you will not loose your tags tree, just the former assignment to notes
+     -  you can still move tags into other tags
+     -  if more than one tag has the same name in your tag tree the
+        first hit will be assigned
+
+  -  adding a tag to a note will add the tag to the note text
+  -  removing a tag from a note will remove the tag from the note text
+  -  removing of tags in the tag list will remove those tags from your notes
+  -  renaming of tags in the tag list will rename those tags in your notes
+  -  bulk tagging of notes in the note list will add those tags to your notes
+  -  bulk removing of tags from notes in the note list will remove
+     those tags from your notes
+
+You may want to take a look at the example
+`note-tagging.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-tagging.qml>`__
+to implement your own tagging mechanism.
+
+
 Exposed classes
 ---------------
 

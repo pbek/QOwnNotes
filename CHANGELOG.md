@@ -8,9 +8,28 @@
   [Issue #472](https://github.com/pbek/QOwnNotes/issues/472),
   [Issue #530](https://github.com/pbek/QOwnNotes/issues/530) and
   [Issue #603](https://github.com/pbek/QOwnNotes/issues/603))
-    - your internal tag database and your notes might get modified 
-    - don't use this script on your production note folder, please make a 
-      copy of it and test it there!
+    - as soon as a script is activated that implements the new function
+      `noteTaggingHook` note tagging will be handled by that function
+    - please install the script [note-tagging.qml](https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/note-tagging.qml)
+      to test the basic functionality and report in [Issue #530](https://github.com/pbek/QOwnNotes/issues/530).
+        - your internal tag database and your notes might get modified 
+        - don't use this script on your production note folder, please make a 
+          copy of it and test it there!
+    - following features should already work via the QOwnNotes user interface
+        - initially importing tags like `@tag` from your notes and overwriting
+          your current tag assignment
+            - you will not loose your tags tree, just the former assignment to notes
+            - you can still move tags into other tags
+            - if more than one tag has the same name in your tag tree the 
+              first hit will be assigned
+        - adding a tag to a note will add the tag to the note text        
+        - removing a tag from a note will remove the tag from the note text
+        - removing of tags in the tag list will remove those tags from your notes
+        - renaming of tags in the tag list will rename those tags in your notes
+        - bulk tagging of notes in the note list will add those tags to your notes
+        - bulk removing of tags from notes in the note list will remove those 
+          tags from your notes
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#noteTaggingHook)
 
 ## 17.09.5
 - added support for entering a bracket-character that surrounds the currently 

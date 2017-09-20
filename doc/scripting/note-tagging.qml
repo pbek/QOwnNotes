@@ -10,7 +10,7 @@ Script {
      * Handles note tagging for a note
      *
      * This function is called when tags are added to, removed from or renamed in
-     * notes or the tags of a note should be listed
+     * a note or the tags of a note should be listed
      *
      * @param note
      * @param action can be "add", "remove", "rename" or "list"
