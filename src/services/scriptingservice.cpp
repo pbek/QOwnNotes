@@ -373,14 +373,18 @@ QString ScriptingService::callInsertMediaHook(QFile *file,
 
 /**
  * Calls the noteTaggingHook function for all script components
- * This function is called when
+ * This function is called when tags are added to, removed from or renamed in
+ * notes or the tags of a note should be listed
  *
  * @param note
- * @param action
- * @return
+ * @param action can be "add", "remove", "rename" or "list"
+ * @param tagName tag name to be added, removed or renamed
+ * @param newTagName tag name to be renamed to if action = "rename"
+ * @return QString or QStringList (if action = "list") inside a QVariant
  */
 QVariant ScriptingService::callNoteTaggingHook(Note note, QString action,
-                                               QString tagName) {
+                                               QString tagName,
+                                               QString newTagName) {
     QMapIterator<int, ScriptComponent> i(_scriptComponents);
     NoteApi *noteApi = NoteApi::fromNote(note);
 
@@ -391,14 +395,15 @@ QVariant ScriptingService::callNoteTaggingHook(Note note, QString action,
 
         if (methodExistsForObject(
                 scriptComponent.object,
-                "noteTaggingHook(QVariant,QVariant,QVariant)")) {
+                "noteTaggingHook(QVariant,QVariant,QVariant,QVariant)")) {
             QMetaObject::invokeMethod(scriptComponent.object,
                                       "noteTaggingHook",
                                       Q_RETURN_ARG(QVariant, result),
                                       Q_ARG(QVariant, QVariant::fromValue(
                                               static_cast<QObject*>(noteApi))),
                                       Q_ARG(QVariant, action),
-                                      Q_ARG(QVariant, tagName));
+                                      Q_ARG(QVariant, tagName),
+                                      Q_ARG(QVariant, newTagName));
 
             if (!result.isNull()) {
                 return result;
@@ -422,7 +427,7 @@ bool ScriptingService::noteTaggingHookExists() {
 
         if (methodExistsForObject(
                 scriptComponent.object,
-                "noteTaggingHook(QVariant,QVariant,QVariant)")) {
+                "noteTaggingHook(QVariant,QVariant,QVariant,QVariant)")) {
             return true;
         }
     }

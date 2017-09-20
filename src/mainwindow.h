@@ -845,4 +845,8 @@ private:
     void handleScriptingRemoveNoteTag(Note note, QString tagName);
 
     void handleScriptingNotesTagUpdating();
+
+    void handleScriptingNotesTagRenaming(QString oldTagName, QString newTagName);
+
+    void handleScriptingNotesTagRemoving(QString tagName);
 };

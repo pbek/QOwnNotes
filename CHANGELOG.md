@@ -1,5 +1,17 @@
 # QOwnNotes Changelog
 
+## 17.09.6
+- added the first alpha version of external note tagging support via the 
+  scripting engine (for [Issue #323](https://github.com/pbek/QOwnNotes/issues/323),
+  [Issue #338](https://github.com/pbek/QOwnNotes/issues/338),
+  [Issue #379](https://github.com/pbek/QOwnNotes/issues/379),
+  [Issue #472](https://github.com/pbek/QOwnNotes/issues/472),
+  [Issue #530](https://github.com/pbek/QOwnNotes/issues/530) and
+  [Issue #603](https://github.com/pbek/QOwnNotes/issues/603))
+    - your internal tag database and your notes might get modified 
+    - don't use this script on your production note folder, please make a 
+      copy of it and test it there!
+
 ## 17.09.5
 - added support for entering a bracket-character that surrounds the currently 
   selected text (for [Issue #719](https://github.com/pbek/QOwnNotes/issues/719), thank you @sanderboom)

@@ -35,7 +35,7 @@ public:
     void initComponents();
     QString callInsertMediaHook(QFile *file, QString markdownText);
     QVariant callNoteTaggingHook(Note note, QString action,
-                                 QString tagName = "");
+                                 QString tagName = "", QString newTagName = "");
     bool noteTaggingHookExists();
     static bool validateScript(Script script, QString &errorMessage);
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,

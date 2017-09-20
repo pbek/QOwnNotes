@@ -3767,6 +3767,9 @@ void MainWindow::removeSelectedTags() {
             Tag tag = Tag::fetch(tagId);
             tag.remove();
             qDebug() << "Removed tag " << tag.getName();
+
+            // take care that the tag is removed from all notes
+            handleScriptingNotesTagRemoving(tag.getName());
         }
 
         reloadCurrentNoteTags();
@@ -3989,6 +3992,9 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
 
                     // handle the coloring of the note in the note tree widget
                     handleNoteTreeTagColoringForNote(note);
+
+                    // take care that the tag is removed from the note
+                    handleScriptingNoteTagging(note, tag.getName(), true);
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
@@ -6162,6 +6168,7 @@ void MainWindow::hideNoteFolderComboBoxIfNeeded() {
 void MainWindow::reloadTagTree() {
     qDebug() << __func__;
 
+    // take care that the tags are synced from the notes to the internal db
     handleScriptingNotesTagUpdating();
 
     QSettings settings;
@@ -6643,12 +6650,11 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
  */
 void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
                                             bool doRemove) {
+    QString oldNoteText = note.getNoteText();
     QString noteText = ScriptingService::instance()->callNoteTaggingHook(
             currentNote, doRemove ? "remove" : "add", tagName).toString();
 
-    qDebug() << __func__ << " - 'noteText': " << noteText;
-
-    if (noteText.isEmpty()) {
+    if (noteText.isEmpty() || (oldNoteText == noteText)) {
         return;
     }
 
@@ -6658,6 +6664,9 @@ void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
     note.storeNewText(noteText);
 }
 
+/**
+ * Takes care that the tags are synced from the notes to the internal db
+ */
 void MainWindow::handleScriptingNotesTagUpdating() {
     if (!ScriptingService::instance()->noteTaggingHookExists()) {
         return;
@@ -6699,6 +6708,56 @@ void MainWindow::handleScriptingNotesTagUpdating() {
                     tag.removeLinkToNote(note);
                     qDebug() << " difference2: "<<  tagName;
                 }
+        }
+}
+
+/**
+ * Takes care that a tag is renamed in all notes
+ *
+ * @param oldTagName
+ * @param newTagName
+ */
+void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
+                                                 QString newTagName) {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            QString oldNoteText = note.getNoteText();
+            QString noteText = ScriptingService::instance()
+                    ->callNoteTaggingHook(note, "rename", oldTagName,
+                                          newTagName).toString();
+
+            if (noteText.isEmpty() || (oldNoteText == noteText)) {
+                continue;
+            }
+
+            note.storeNewText(noteText);
+        }
+}
+
+/**
+ * Takes care that a tag is removed from all notes
+ *
+ * @param tagName
+ */
+void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
+    if (!ScriptingService::instance()->noteTaggingHookExists()) {
+        return;
+    }
+
+    qDebug() << __func__;
+
+    QList<Note> notes = Note::fetchAll();
+    Q_FOREACH(Note note, notes) {
+            handleScriptingNoteTagging(note, tagName, true);
         }
 }
 
@@ -6804,6 +6863,7 @@ void MainWindow::on_tagTreeWidget_itemChanged(
 
     Tag tag = Tag::fetch(item->data(0, Qt::UserRole).toInt());
     if (tag.isFetched()) {
+        QString oldName = tag.getName();
         QString name = item->text(0);
 
         if (!name.isEmpty()) {
@@ -6812,6 +6872,9 @@ void MainWindow::on_tagTreeWidget_itemChanged(
 
             tag.setName(name);
             tag.store();
+
+            // take care that a tag is renamed in all notes
+            handleScriptingNotesTagRenaming(oldName, name);
         }
 
         // we also have to reload the tag tree if we don't change the tag
