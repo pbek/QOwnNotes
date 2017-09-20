@@ -29,7 +29,7 @@
         - bulk tagging of notes in the note list will add those tags to your notes
         - bulk removing of tags from notes in the note list will remove those 
           tags from your notes
-    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#noteTaggingHook)
+    - for more information please take a look at the [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#notetagginghook)
 
 ## 17.09.5
 - added support for entering a bracket-character that surrounds the currently 

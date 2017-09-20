@@ -1199,8 +1199,8 @@ text in your note like ``@tag1``, ``@tag2``, ``@tag3``.
      */
     function noteTaggingHook(note, action, tagName, newTagName);
 
--  as soon as a script is activated that implements the new function
-  ``noteTaggingHook`` note tagging will be handled by that function
+-  as soon as a script is activated that implements the new function ``noteTaggingHook``
+   note tagging will be handled by that function
 
 -  following features should work via the QOwnNotes user interface
 
