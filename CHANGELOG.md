@@ -3,6 +3,13 @@
 ## 17.09.7
 - underline bracket closing is temporary disabled because underlines are used
   in different contexts
+- improvements of the external note tagging support via the scripting engine
+  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+	- improved ui feedback when adding and removing tags in the current note
+	- tagging of multiple notes works now but is still a bit wacky because of
+	  race conditions with files that are getting changed all around (notes 
+	  and note database)
+		- the same goes for removing multiple notes
 
 ## 17.09.6
 - added the first alpha version of external note tagging support via the 

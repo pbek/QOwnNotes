@@ -58,7 +58,7 @@ Script {
 
             // returns a list of all tag names of the note
             case "list":
-                var re = new RegExp("\\B@(\\w+)", "gi"),
+                var re = new RegExp("\\B@([^\\s,]+)", "gi"),
                     result, tagNameList = [];
 
                 while ((result = re.exec(noteText)) !== null) {

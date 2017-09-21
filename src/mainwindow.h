@@ -840,7 +840,8 @@ private:
     void selectAllNotesInTagTreeWidget() const;
 
     void handleScriptingNoteTagging(Note note, QString tagName,
-                                    bool doRemove = false);
+                                    bool doRemove = false,
+                                    bool triggerPostMethods = true);
 
     void handleScriptingRemoveNoteTag(Note note, QString tagName);
 

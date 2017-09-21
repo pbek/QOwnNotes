@@ -3933,6 +3933,10 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                selectedItemsCount).arg(tag.getName()),
             tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
+
+        bool useScriptingEngine = ScriptingService::instance()
+                ->noteTaggingHookExists();
+
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
@@ -3941,11 +3945,21 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                     continue;
                 }
 
+                const QSignalBlocker blocker(noteDirectoryWatcher);
+                Q_UNUSED(blocker);
+
                 // tag note
                 bool result = tag.linkToNote(note);
                 if (result) {
                     tagCount++;
                     qDebug() << "Note was tagged:" << note.getName();
+
+                    if (useScriptingEngine) {
+                        // add the tag to the note text if defined via
+                        // scripting engine
+                        handleScriptingNoteTagging(note, tag.getName(),
+                                                   false, false);
+                    }
 
                     // handle the coloring of the note in the note tree widget
                     handleNoteTreeTagColoringForNote(note);
@@ -3953,6 +3967,13 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                     qWarning() << "Could not tag note:" << note.getName();
                 }
             }
+
+        if (useScriptingEngine) {
+            const QSignalBlocker blocker(this->noteDirectoryWatcher);
+            Q_UNUSED(blocker);
+
+            storeUpdatedNotesToDisk();
+        }
 
         reloadCurrentNoteTags();
         reloadTagTree();
@@ -3976,6 +3997,10 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                selectedItemsCount).arg(tag.getName()),
             tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
+
+        bool useScriptingEngine = ScriptingService::instance()
+                ->noteTaggingHookExists();
+
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
                 Note note = Note::fetch(noteId);
@@ -3983,6 +4008,9 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 if (!note.isFetched()) {
                     continue;
                 }
+
+                const QSignalBlocker blocker(noteDirectoryWatcher);
+                Q_UNUSED(blocker);
 
                 // tag note
                 bool result = tag.removeLinkToNote(note);
@@ -3993,13 +4021,23 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                     // handle the coloring of the note in the note tree widget
                     handleNoteTreeTagColoringForNote(note);
 
-                    // take care that the tag is removed from the note
-                    handleScriptingNoteTagging(note, tag.getName(), true);
+                    if (useScriptingEngine) {
+                        // take care that the tag is removed from the note
+                        handleScriptingNoteTagging(note, tag.getName(),
+                                                   true, false);
+                    }
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
                 }
             }
+
+        if (useScriptingEngine) {
+            const QSignalBlocker blocker(noteDirectoryWatcher);
+            Q_UNUSED(blocker);
+
+            storeUpdatedNotesToDisk();
+        }
 
         reloadCurrentNoteTags();
         reloadTagTree();
@@ -6629,15 +6667,16 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
         Q_UNUSED(blocker);
 
         tag.linkToNote(currentNote);
+
+        // add the tag to the note text if defined via scripting engine
+        handleScriptingNoteTagging(currentNote, tagName, false, false);
+
         reloadCurrentNoteTags();
         reloadTagTree();
         filterNotes();
 
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
-
-        // add the tag to the note text if defined via scripting engine
-        handleScriptingNoteTagging(currentNote, tagName);
     }
 }
 
@@ -6647,9 +6686,11 @@ void MainWindow::linkTagNameToCurrentNote(QString tagName) {
  * @param note
  * @param tagName
  * @param doRemove
+ * @param triggerPostMethods
  */
 void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
-                                            bool doRemove) {
+                                            bool doRemove,
+                                            bool triggerPostMethods) {
     QString oldNoteText = note.getNoteText();
     QString noteText = ScriptingService::instance()->callNoteTaggingHook(
             currentNote, doRemove ? "remove" : "add", tagName).toString();
@@ -6658,10 +6699,24 @@ void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
         return;
     }
 
-    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker);
-
     note.storeNewText(noteText);
+
+    // do some stuff to get the UI updated
+    if (triggerPostMethods) {
+        const QSignalBlocker blocker(this->noteDirectoryWatcher);
+        Q_UNUSED(blocker);
+
+        storeUpdatedNotesToDisk();
+        reloadTagTree();
+//        reloadCurrentNoteTags();
+    }
+
+    if (note.isSameFile(currentNote)) {
+//            updateNoteTextFromDisk(note);
+
+        currentNote.refetch();
+        setNoteTextFromNote(&currentNote);
+    }
 }
 
 /**
@@ -6741,6 +6796,9 @@ void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
 
             note.storeNewText(noteText);
         }
+
+    storeUpdatedNotesToDisk();
+    reloadTagTree();
 }
 
 /**
@@ -6755,10 +6813,16 @@ void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
 
     qDebug() << __func__;
 
+    const QSignalBlocker blocker(this->noteDirectoryWatcher);
+    Q_UNUSED(blocker);
+
     QList<Note> notes = Note::fetchAll();
     Q_FOREACH(Note note, notes) {
-            handleScriptingNoteTagging(note, tagName, true);
+            handleScriptingNoteTagging(note, tagName, true, false);
         }
+
+    storeUpdatedNotesToDisk();
+    reloadTagTree();
 }
 
 /**
