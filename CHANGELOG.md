@@ -10,6 +10,7 @@
 	  race conditions with files that are getting changed all around (notes 
 	  and note database)
 		- the same goes for removing multiple notes
+- added more Hungarian translation (thank you Fabijenna)
 
 ## 17.09.6
 - added the first alpha version of external note tagging support via the 

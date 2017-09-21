@@ -1807,7 +1807,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="7979"/>
       <source>If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</source>
-      <translation type="unfinished">If you want to rename your note you have to enable the option to allow the note filename to be different from the headline.</translation>
+      <translation>Ha újra akarja nevezni az opciót engedélyezze, hogy a jegyzet neve különbözzön a címtől</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8141"/>
@@ -2162,7 +2162,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="5999"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Letölti a kész képeket</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6094"/>
@@ -2470,7 +2470,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../entities/note.cpp" line="915"/>
       <source>Renamed note-file was removed: %1</source>
-      <translation type="unfinished">Renamed note-file was removed: %1</translation>
+      <translation>Átnevezett jegyzet fájl el lett távolítva: %1</translation>
     </message>
     <message>
       <location filename="../entities/note.cpp" line="923"/>
@@ -3532,7 +3532,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2375"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Állítsa vissza a kurzor szélességét</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4036"/>
@@ -3542,7 +3542,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4094"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Jelölje ki az aktuális sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4253"/>
@@ -3602,7 +3602,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4348"/>
       <source>Note subfolders panel</source>
-      <translation type="unfinished">Note subfolders panel</translation>
+      <translation>Jegyzet almappák panel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4354"/>
@@ -3623,12 +3623,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4417"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation type="unfinished">Hide 'Find or create note subfolder' search</translation>
+      <translation>"Találjon, vagy hozzon létre almappát jegyzet" keresés elrejtése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4424"/>
       <source>Display note subfolders as full tree</source>
-      <translation type="unfinished">Display note subfolders as full tree</translation>
+      <translation>Megmutatja a jegyzetalmappákat mint teljes fa</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4434"/>
