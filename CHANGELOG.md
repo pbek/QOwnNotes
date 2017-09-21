@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.09.7
+- underline bracket closing is temporary disabled because underlines are used
+  in different contexts
+
 ## 17.09.6
 - added the first alpha version of external note tagging support via the 
   scripting engine (for [Issue #323](https://github.com/pbek/QOwnNotes/issues/323),
