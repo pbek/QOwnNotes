@@ -12,6 +12,7 @@
   (for issue [Issue #724](https://github.com/pbek/QOwnNotes/issues/724))
 - when inserting a link into a note some more broken characters from the 
   webpage's html-title will be replaced
+- added more Hungarian and French translation (thank you Fabijenna and sagoum.kakoum)
 
 ## 17.09.7
 - underline bracket closing is temporary disabled because underlines are used
