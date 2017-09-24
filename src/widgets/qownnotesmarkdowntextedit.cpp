@@ -130,23 +130,23 @@ int QOwnNotesMarkdownTextEdit::modifyFontSize(FontModificationMode mode) {
 
         switch (mode) {
             case FontModificationMode::Increase:
-                fontSize++;
+                codeFontSize++;
                 doSetStyles = true;
                 break;
             case FontModificationMode::Decrease:
-                fontSize--;
+                codeFontSize--;
 
-                if (fontSize < 5) {
-                    fontSize = 5;
+                if (codeFontSize < 5) {
+                    codeFontSize = 5;
                 } else {
                     doSetStyles = true;
                 }
                 break;
             default:
                 QPlainTextEdit textEdit;
-                int newFontSize = textEdit.font().pointSize();
-                if ( fontSize != newFontSize ) {
-                    fontSize = newFontSize;
+                int newCodeFontSize = textEdit.font().pointSize();
+                if ( codeFontSize != newCodeFontSize ) {
+                    codeFontSize = newCodeFontSize;
                     doSetStyles = true;
                 }
         }
