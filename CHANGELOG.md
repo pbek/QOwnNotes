@@ -10,6 +10,8 @@
     - fixed a lot of occasions where not all notes were tagged in bulk operations
 - fixed increasing and decreasing of code font-size via keyboard shortcut 
   (for issue [Issue #724](https://github.com/pbek/QOwnNotes/issues/724))
+- when inserting a link into a note some more broken characters from the 
+  webpage's html-title will be replaced
 
 ## 17.09.7
 - underline bracket closing is temporary disabled because underlines are used
