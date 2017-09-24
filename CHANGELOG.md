@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.09.8
+- fixed the upstream RTL bug in the note text edit
+  (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
+
 ## 17.09.7
 - underline bracket closing is temporary disabled because underlines are used
   in different contexts
