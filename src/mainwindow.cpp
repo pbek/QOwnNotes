@@ -6764,6 +6764,9 @@ void MainWindow::handleScriptingNotesTagUpdating() {
 
     qDebug() << __func__;
 
+    // workaround when signal blocking doesn't work correctly
+    directoryWatcherWorkaround(true, true);
+
     QList<Note> notes = Note::fetchAll();
     Q_FOREACH(Note note, notes) {
             QStringList tagNameList = ScriptingService::instance()
@@ -6799,6 +6802,9 @@ void MainWindow::handleScriptingNotesTagUpdating() {
                     qDebug() << " difference2: "<<  tagName;
                 }
         }
+
+    // disable workaround
+    directoryWatcherWorkaround(false, true);
 }
 
 /**
@@ -6814,6 +6820,9 @@ void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
     }
 
     qDebug() << __func__;
+
+    // workaround when signal blocking doesn't work correctly
+    directoryWatcherWorkaround(true, true);
 
     const QSignalBlocker blocker(this->noteDirectoryWatcher);
     Q_UNUSED(blocker);
@@ -6833,7 +6842,15 @@ void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
         }
 
     storeUpdatedNotesToDisk();
+
+    // disable workaround
+    directoryWatcherWorkaround(false, true);
+
     reloadTagTree();
+
+    // refetch current note to make sure the note text with the tag was updated
+    currentNote.refetch();
+    setNoteTextFromNote(&currentNote);
 }
 
 /**
@@ -6857,10 +6874,11 @@ void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
         }
 
     storeUpdatedNotesToDisk();
-    reloadTagTree();
 
     // disable workaround
     directoryWatcherWorkaround(false, true);
+
+    reloadTagTree();
 }
 
 /**

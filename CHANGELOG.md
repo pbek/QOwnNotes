@@ -5,9 +5,11 @@
   (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
 - improvements of the external note tagging support via the scripting engine
   (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
-    - fixed the problem where notes were overwritten by other notes in bulk 
-      operations
-    - fixed a lot of occasions where not all notes were tagged in bulk operations
+    - fixed the problem where notes were overwritten by other notes in bulk operations
+    - fixed a lot of occasions where not all notes were handled in bulk operations
+    - fixed some random crashes with bulk operations and when the note tag tree reloads
+    - fixed some random crashes, updating of the current note and occasions 
+      where not all notes were handled when renaming tags
 - fixed increasing and decreasing of code font-size via keyboard shortcut 
   (for issue [Issue #724](https://github.com/pbek/QOwnNotes/issues/724))
 - when inserting a link into a note some more broken characters from the 
