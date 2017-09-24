@@ -3,6 +3,11 @@
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
   (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
+- improvements of the external note tagging support via the scripting engine
+  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+    - fixed the problem where notes were overwritten by other notes in bulk 
+      operations
+    - fixed a lot of occasions where not all notes were tagged in bulk operations
 
 ## 17.09.7
 - underline bracket closing is temporary disabled because underlines are used

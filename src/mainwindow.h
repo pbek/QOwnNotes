@@ -534,6 +534,7 @@ private:
     QHash<int, NoteHistoryItem> _activeNoteFolderNotePositions;
     bool _searchLineEditFromCompleter;
     bool _isNotesDirectoryWasModifiedDisabled;
+    bool _isNotesWereModifiedDisabled;
     bool _isDefaultShortcutInitialized;
     QList<QShortcut *> _menuShortcuts;
     bool _showNotesFromAllNoteSubFolders;
@@ -850,4 +851,7 @@ private:
     void handleScriptingNotesTagRenaming(QString oldTagName, QString newTagName);
 
     void handleScriptingNotesTagRemoving(QString tagName);
+
+    void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
+                                    bool alsoHandleNotesWereModified = false);
 };

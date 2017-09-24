@@ -116,6 +116,7 @@ MainWindow::MainWindow(QWidget *parent) :
     _noteViewIsRegenerated = false;
     _searchLineEditFromCompleter = false;
     _isNotesDirectoryWasModifiedDisabled = false;
+    _isNotesWereModifiedDisabled = false;
     _isDefaultShortcutInitialized = false;
     _showNotesFromAllNoteSubFolders = showNotesFromAllNoteSubFolders();
     _noteFolderDockWidgetWasVisible = true;
@@ -2262,6 +2263,11 @@ void MainWindow::updateNoteTextFromDisk(Note note) {
 }
 
 void MainWindow::notesWereModified(const QString &str) {
+    // workaround when signal block doesn't work correctly
+    if (_isNotesWereModifiedDisabled) {
+        return;
+    }
+
     qDebug() << "notesWereModified: " << str;
 
     QFileInfo fi(str);
@@ -3157,7 +3163,7 @@ void MainWindow::removeCurrentNote() {
             Q_UNUSED(blocker5);
 
             // we try to fix problems with note subfolders
-            _isNotesDirectoryWasModifiedDisabled = true;
+            directoryWatcherWorkaround(true);
 
             {
                 const QSignalBlocker blocker1(ui->noteTreeWidget);
@@ -3177,8 +3183,7 @@ void MainWindow::removeCurrentNote() {
             // we need to wait some time to turn the watcher on again because
             // something is happening after this method that reloads the
             // note folder
-            Utils::Misc::waitMsecs(200);
-            _isNotesDirectoryWasModifiedDisabled = false;
+            directoryWatcherWorkaround(false);
 
             break;
         }
@@ -3656,7 +3661,7 @@ void MainWindow::removeSelectedNotes() {
         Q_UNUSED(blocker4);
 
         // we try to fix problems with note subfolders
-        _isNotesDirectoryWasModifiedDisabled = true;
+        directoryWatcherWorkaround(true);
 
         {
             const QSignalBlocker blocker1(ui->noteTreeWidget);
@@ -3683,8 +3688,7 @@ void MainWindow::removeSelectedNotes() {
         // we try to fix problems with note subfolders
         // we need to wait some time to turn the watcher on again because
         // something is happening after this method that reloads the note folder
-        Utils::Misc::waitMsecs(200);
-        _isNotesDirectoryWasModifiedDisabled = false;
+        directoryWatcherWorkaround(false);
     }
 }
 
@@ -3933,9 +3937,11 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                selectedItemsCount).arg(tag.getName()),
             tr("&Tag"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
-
         bool useScriptingEngine = ScriptingService::instance()
                 ->noteTaggingHookExists();
+
+        // workaround when signal block doesn't work correctly
+        directoryWatcherWorkaround(true, true);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
@@ -3948,18 +3954,18 @@ void MainWindow::tagSelectedNotes(Tag tag) {
                 const QSignalBlocker blocker(noteDirectoryWatcher);
                 Q_UNUSED(blocker);
 
+                if (useScriptingEngine) {
+                    // add the tag to the note text if defined via
+                    // scripting engine
+                    handleScriptingNoteTagging(note, tag.getName(),
+                                               false, false);
+                }
+
                 // tag note
                 bool result = tag.linkToNote(note);
                 if (result) {
                     tagCount++;
                     qDebug() << "Note was tagged:" << note.getName();
-
-                    if (useScriptingEngine) {
-                        // add the tag to the note text if defined via
-                        // scripting engine
-                        handleScriptingNoteTagging(note, tag.getName(),
-                                                   false, false);
-                    }
 
                     // handle the coloring of the note in the note tree widget
                     handleNoteTreeTagColoringForNote(note);
@@ -3981,6 +3987,9 @@ void MainWindow::tagSelectedNotes(Tag tag) {
         showStatusBarMessage(
                 tr("%n note(s) were tagged with \"%2\"", "",
                    tagCount).arg(tag.getName()), 5000);
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
     }
 }
 
@@ -3997,9 +4006,11 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                selectedItemsCount).arg(tag.getName()),
             tr("&Remove"), tr("&Cancel"), QString::null, 0, 1) == 0) {
         int tagCount = 0;
-
         bool useScriptingEngine = ScriptingService::instance()
                 ->noteTaggingHookExists();
+
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
 
         Q_FOREACH(QTreeWidgetItem *item, ui->noteTreeWidget->selectedItems()) {
                 int noteId = item->data(0, Qt::UserRole).toInt();
@@ -4012,20 +4023,21 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 const QSignalBlocker blocker(noteDirectoryWatcher);
                 Q_UNUSED(blocker);
 
+                if (useScriptingEngine) {
+                    // take care that the tag is removed from the note
+                    handleScriptingNoteTagging(note, tag.getName(),
+                                               true, false);
+                }
+
                 // tag note
                 bool result = tag.removeLinkToNote(note);
+
                 if (result) {
                     tagCount++;
                     qDebug() << "Tag was removed from note:" << note.getName();
 
                     // handle the coloring of the note in the note tree widget
                     handleNoteTreeTagColoringForNote(note);
-
-                    if (useScriptingEngine) {
-                        // take care that the tag is removed from the note
-                        handleScriptingNoteTagging(note, tag.getName(),
-                                                   true, false);
-                    }
                 } else {
                     qWarning() << "Could not remove tag from note:"
                     << note.getName();
@@ -4047,6 +4059,29 @@ void MainWindow::removeTagFromSelectedNotes(Tag tag) {
                 this, tr("Done"),
                 tr("Tag <strong>%1</strong> was removed from %n note(s)", "",
                    tagCount).arg(tag.getName()));
+
+        // turn off the workaround again
+        directoryWatcherWorkaround(false, true);
+    }
+}
+
+/**
+ * Activates or deactivates a workaround for the ill behaving directory watcher
+ *
+ * @param isNotesDirectoryWasModifiedDisabled
+ * @param alsoHandleNotesWereModified
+ */
+void MainWindow::directoryWatcherWorkaround(
+        bool isNotesDirectoryWasModifiedDisabled,
+        bool alsoHandleNotesWereModified) {
+    if (!isNotesDirectoryWasModifiedDisabled) {
+        Utils::Misc::waitMsecs(200);
+    }
+
+    _isNotesDirectoryWasModifiedDisabled = isNotesDirectoryWasModifiedDisabled;
+
+    if (alsoHandleNotesWereModified) {
+        _isNotesWereModifiedDisabled = isNotesDirectoryWasModifiedDisabled;
     }
 }
 
@@ -4759,7 +4794,7 @@ void MainWindow::jumpToNoteOrCreateNew() {
         note.store();
 
         // workaround when signal block doesn't work correctly
-        _isNotesDirectoryWasModifiedDisabled = true;
+        directoryWatcherWorkaround(true);
 
         // we even need a 2nd workaround because something triggers that the
         // note folder was modified
@@ -4805,7 +4840,7 @@ void MainWindow::jumpToNoteOrCreateNew() {
         noteDirectoryWatcher.addPath(noteSubFolderPath);
 
         // turn on the method again
-        _isNotesDirectoryWasModifiedDisabled = false;
+        directoryWatcherWorkaround(false);
     }
 
     // jump to the found or created note
@@ -6693,7 +6728,7 @@ void MainWindow::handleScriptingNoteTagging(Note note, QString tagName,
                                             bool triggerPostMethods) {
     QString oldNoteText = note.getNoteText();
     QString noteText = ScriptingService::instance()->callNoteTaggingHook(
-            currentNote, doRemove ? "remove" : "add", tagName).toString();
+            note, doRemove ? "remove" : "add", tagName).toString();
 
     if (noteText.isEmpty() || (oldNoteText == noteText)) {
         return;
@@ -6813,8 +6848,8 @@ void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
 
     qDebug() << __func__;
 
-    const QSignalBlocker blocker(this->noteDirectoryWatcher);
-    Q_UNUSED(blocker);
+    // workaround when signal blocking doesn't work correctly
+    directoryWatcherWorkaround(true, true);
 
     QList<Note> notes = Note::fetchAll();
     Q_FOREACH(Note note, notes) {
@@ -6823,6 +6858,9 @@ void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
 
     storeUpdatedNotesToDisk();
     reloadTagTree();
+
+    // disable workaround
+    directoryWatcherWorkaround(false, true);
 }
 
 /**
@@ -6884,8 +6922,8 @@ void MainWindow::removeNoteTagClicked() {
             return;
         }
 
-        const QSignalBlocker blocker(noteDirectoryWatcher);
-        Q_UNUSED(blocker);
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
 
         tag.removeLinkToNote(currentNote);
 
@@ -6898,6 +6936,9 @@ void MainWindow::removeNoteTagClicked() {
 
         // handle the coloring of the note in the note tree widget
         handleNoteTreeTagColoringForNote(currentNote);
+
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
     }
 }
 
