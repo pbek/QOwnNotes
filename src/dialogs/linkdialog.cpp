@@ -172,6 +172,7 @@ QString LinkDialog::getTitleForUrl(QUrl url) {
                 .replace(">", ")")
                 .replace("&#8211;", "-")
                 .replace("&#124;", "-")
+                .replace("&#038;", "&")
                 .replace("&#39;", "'");
 
         // trim whitespaces and return title

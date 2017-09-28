@@ -7,6 +7,8 @@
 - improvements of the external note tagging support via the scripting engine
   (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
     - fixed crash when removing more than one tag that have notes linked to them
+- when inserting a link into a note some more broken characters from the 
+  webpage's html-title will be replaced
 
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
