@@ -4,7 +4,10 @@
 - the note text edit margins will now be updated when the font size increased
   or decreased in the *distraction free mode*
   (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
-   
+- improvements of the external note tagging support via the scripting engine
+  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+    - fixed crash when removing more than one tag that have notes linked to them
+
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
   (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))

@@ -3766,6 +3766,9 @@ void MainWindow::removeSelectedTags() {
         const QSignalBlocker blocker1(ui->tagTreeWidget);
         Q_UNUSED(blocker1);
 
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+
         Q_FOREACH(QTreeWidgetItem *item, ui->tagTreeWidget->selectedItems()) {
             int tagId = item->data(0, Qt::UserRole).toInt();
             Tag tag = Tag::fetch(tagId);
@@ -3773,8 +3776,15 @@ void MainWindow::removeSelectedTags() {
             qDebug() << "Removed tag " << tag.getName();
 
             // take care that the tag is removed from all notes
-            handleScriptingNotesTagRemoving(tag.getName());
+            handleScriptingNotesTagRemoving(tag.getName(), true);
         }
+
+        if (ScriptingService::instance()->noteTaggingHookExists()) {
+            storeUpdatedNotesToDisk();
+        }
+
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
 
         reloadCurrentNoteTags();
         reloadTagTree();
@@ -6870,27 +6880,32 @@ void MainWindow::handleScriptingNotesTagRenaming(QString oldTagName,
  *
  * @param tagName
  */
-void MainWindow::handleScriptingNotesTagRemoving(QString tagName) {
+void MainWindow::handleScriptingNotesTagRemoving(QString tagName,
+                                                 bool forBulkOperation) {
     if (!ScriptingService::instance()->noteTaggingHookExists()) {
         return;
     }
 
     qDebug() << __func__;
 
-    // workaround when signal blocking doesn't work correctly
-    directoryWatcherWorkaround(true, true);
+    if (!forBulkOperation) {
+        // workaround when signal blocking doesn't work correctly
+        directoryWatcherWorkaround(true, true);
+    }
 
     QList<Note> notes = Note::fetchAll();
     Q_FOREACH(Note note, notes) {
             handleScriptingNoteTagging(note, tagName, true, false);
         }
 
-    storeUpdatedNotesToDisk();
+    if (!forBulkOperation) {
+        storeUpdatedNotesToDisk();
 
-    // disable workaround
-    directoryWatcherWorkaround(false, true);
+        // disable workaround
+        directoryWatcherWorkaround(false, true);
 
-    reloadTagTree();
+        reloadTagTree();
+    }
 }
 
 /**

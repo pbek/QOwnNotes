@@ -850,7 +850,8 @@ private:
 
     void handleScriptingNotesTagRenaming(QString oldTagName, QString newTagName);
 
-    void handleScriptingNotesTagRemoving(QString tagName);
+    void handleScriptingNotesTagRemoving(QString tagName,
+                                         bool forBulkOperation = false);
 
     void directoryWatcherWorkaround(bool isNotesDirectoryWasModifiedDisabled,
                                     bool alsoHandleNotesWereModified = false);
