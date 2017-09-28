@@ -1245,7 +1245,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
 Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen löschen?
 
-Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
+Falls Sie die Papierkorb-App auf Ihrem ownCloud/Nextcloud-Server aktiviert haben, sollten Sie die Notiz wiederherstellen können.</numerusform>
       </translation>
     </message>
     <message>
@@ -1899,7 +1899,7 @@ Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie di
     <message>
       <location filename="../mainwindow.cpp" line="7828"/>
       <source>&amp;Remove notes</source>
-      <translation>&amp;Lösche Notizen</translation>
+      <translation>Notizen &amp;löschen</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5204"/>

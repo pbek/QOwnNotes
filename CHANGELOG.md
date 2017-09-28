@@ -9,6 +9,7 @@
     - fixed crash when removing more than one tag that have notes linked to them
 - when inserting a link into a note some more broken characters from the 
   webpage's html-title will be replaced
+- added more German translation (thank you rakekniven)
 
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
