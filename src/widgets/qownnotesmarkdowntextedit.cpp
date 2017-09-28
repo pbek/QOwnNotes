@@ -206,6 +206,10 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
     bool isInDistractionFreeMode =
             settings.value("DistractionFreeMode/isEnabled").toBool();
 
+    if (width == -1) {
+        width = this->width();
+    }
+
     if (isInDistractionFreeMode) {
         int margin = 0;
         int editorWidthMode =

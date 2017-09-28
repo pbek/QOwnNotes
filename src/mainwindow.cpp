@@ -1444,8 +1444,8 @@ void MainWindow::setDistractionFreeMode(bool enabled) {
                 settings.value("DistractionFreeMode/menuBarHeight").toInt());
     }
 
-    ui->noteTextEdit->setPaperMargins(this->width());
-    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 /**
@@ -5888,8 +5888,8 @@ void MainWindow::dfmEditorWidthActionTriggered(QAction *action) {
     settings.setValue("DistractionFreeMode/editorWidthMode",
                       action->whatsThis().toInt());
 
-    ui->noteTextEdit->setPaperMargins(this->width());
-    ui->encryptedNoteTextEdit->setPaperMargins(this->width());
+    ui->noteTextEdit->setPaperMargins();
+    ui->encryptedNoteTextEdit->setPaperMargins();
 }
 
 /**
@@ -6169,6 +6169,12 @@ void MainWindow::on_action_Increase_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Increase);
     ui->encryptedNoteTextEdit->setStyles();
+
+    if (isInDistractionFreeMode()) {
+        ui->noteTextEdit->setPaperMargins();
+        ui->encryptedNoteTextEdit->setPaperMargins();
+    }
+
     showStatusBarMessage(
             tr("Increased font size to %1 pt").arg(fontSize), 3000);
 }
@@ -6180,6 +6186,12 @@ void MainWindow::on_action_Decrease_note_text_size_triggered() {
     int fontSize = ui->noteTextEdit
             ->modifyFontSize(QOwnNotesMarkdownTextEdit::Decrease);
     ui->encryptedNoteTextEdit->setStyles();
+
+    if (isInDistractionFreeMode()) {
+        ui->noteTextEdit->setPaperMargins();
+        ui->encryptedNoteTextEdit->setPaperMargins();
+    }
+
     showStatusBarMessage(
             tr("Decreased font size to %1 pt").arg(fontSize), 3000);
 }

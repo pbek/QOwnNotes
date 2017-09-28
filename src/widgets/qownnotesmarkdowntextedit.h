@@ -29,7 +29,7 @@ public:
     void setStyles();
     void openUrl(QString urlString);
 //    void setViewportMargins(int left, int top, int right, int bottom);
-    void setPaperMargins(int width);
+    void setPaperMargins(int width = -1);
     void setMainWindow(MainWindow *mainWindow);
     int modifyFontSize(FontModificationMode mode);
     void updateSettings();

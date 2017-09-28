@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.09.9
+- the note text edit margins will now be updated when the font size increased
+  or decreased in the *distraction free mode*
+  (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
+   
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
   (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
