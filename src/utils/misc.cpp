@@ -764,3 +764,13 @@ QString Utils::Misc::genericCSS() {
     cssStyles += "kbd {background-color: " + color +  "}";
     return cssStyles;
 }
+
+QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
+{
+    map<QString,QString> searchEngines;
+    searchEngines.insert(pair <QString,QString> ("Google" , "https://www.google.com/search?q="));
+    searchEngines.insert(pair <QString,QString> ("Bing" , "https://www.bing.com/search?q="));
+    searchEngines.insert(pair <QString,QString> ("DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q="));
+
+    return searchEngines;
+}

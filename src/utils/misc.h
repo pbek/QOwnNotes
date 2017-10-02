@@ -19,6 +19,7 @@
 #include <QFile>
 #include <QByteArray>
 #include <QStringList>
+#include <QMap>
 
 /*  Miscellaneous functions that can be useful */
 
@@ -59,5 +60,6 @@ namespace Utils {
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
+        QMap<QString , QString> getSearchEnginesMap();
     }
 }

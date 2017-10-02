@@ -725,6 +725,7 @@ void SettingsDialog::storeFontSettings() {
                       noteTextViewCodeFont.toString());
 }
 
+
 void SettingsDialog::readSettings() {
     QSettings settings;
     ui->ownCloudSupportCheckBox->setChecked(
@@ -976,6 +977,21 @@ void SettingsDialog::readSettings() {
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
+
+    //Adding options to the search engine selection combo box
+    QMap<QString , QString> searchEngines = Utils::Misc::getSearchEnginesMap();
+
+    QMap<QString , QString>::iterator itr;
+
+    //Iterating over the map of search engines and adding all of them
+    for(itr = searchEngines.being() ; itr != searchEngines.end() ; itr++)
+        ui->searchEngineSelectionComboBox->insertItem(itr->first , itr->second);
+
+    QString currentOptionUrl = settings.value("searchEngineUrl").toString();
+    QString currentOptionName = searchEngines.find(currentOptionUrl)->second;
+
+    // set the search engine option
+    ui->searchEngineSelectionComboBox->setCurrentText(currentOptionName);
 }
 
 /**
@@ -3083,6 +3099,9 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     }
 
     settings.endArray();
+
+    //Saving the users chosen search engine.
+    settings.setValue("searchEngineUrl" , ui->searchEngineSelectionComboBox->currentData());
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {

@@ -9330,8 +9330,12 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
         return;
     }
 
-    QUrl url("https://duckduckgo.com/?t=qownnotes&q=" +
-                     QUrl::toPercentEncoding(selectedText));
+    QSettings settings;
+    QString searchEngineUrl = settings.value("searchEngineUrl").toString();
+    if(searchEngineUrl.isEmpty())
+        searchEngineUrl = "https://duckduckgo.com/?t=qownnotes&q=";
+
+    QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
 }
 
