@@ -191,7 +191,11 @@ void NoteHistory::updateCursorPositionOfNote(Note note, QPlainTextEdit *textEdit
     }
 
     int position = noteHistory->indexOf(item);
-    noteHistory->replace(position, item);
+
+    // check if we really found the item
+    if (position > -1) {
+        noteHistory->replace(position, item);
+    }
 }
 
 /**
