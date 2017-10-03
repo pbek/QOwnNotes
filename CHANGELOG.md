@@ -5,6 +5,8 @@
   folder (for issue [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))
 - tried to remedy some inconsistency in the margins of the *distraction free mode*
   (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
+- made more text selectable and changed the sort-order in the
+  *Script repository* widget
 
 ## 17.09.9
 - the note text edit margins will now be updated when the font size increased
