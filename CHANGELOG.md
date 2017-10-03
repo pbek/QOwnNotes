@@ -7,6 +7,9 @@
   (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
 - made more text selectable and changed the sort-order in the
   *Script repository* widget
+- added the experimental script `@tag tagging in note text` to make it easier
+  to play around with the external note tagging support via the scripting engine
+  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
 
 ## 17.09.9
 - the note text edit margins will now be updated when the font size increased
