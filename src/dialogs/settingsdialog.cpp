@@ -662,6 +662,9 @@ void SettingsDialog::storeSettings() {
 
     // store the cursor width
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
+
+    //Saving the users chosen search engine.
+    settings.setValue("searchEngineUrl" , ui->searchEngineSelectionComboBox->currentText());
 }
 
 /**
@@ -981,17 +984,19 @@ void SettingsDialog::readSettings() {
     //Adding options to the search engine selection combo box
     QMap<QString , QString> searchEngines = Utils::Misc::getSearchEnginesMap();
 
-    QMap<QString , QString>::iterator itr;
+    QMap<QString , QString>::const_iterator itr2;
+
+    QStringList list = QStringList();
+
+    ui->searchEngineSelectionComboBox->clear();
 
     //Iterating over the map of search engines and adding all of them
-    for(itr = searchEngines.being() ; itr != searchEngines.end() ; itr++)
-        ui->searchEngineSelectionComboBox->insertItem(itr->first , itr->second);
+    for(itr2 = searchEngines.begin() ; itr2 != searchEngines.end() ; itr2++)
+    {
+        list << itr2.key();
+    }
 
-    QString currentOptionUrl = settings.value("searchEngineUrl").toString();
-    QString currentOptionName = searchEngines.find(currentOptionUrl)->second;
-
-    // set the search engine option
-    ui->searchEngineSelectionComboBox->setCurrentText(currentOptionName);
+    ui->searchEngineSelectionComboBox->addItems(list);
 }
 
 /**
@@ -3100,8 +3105,7 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
 
     settings.endArray();
 
-    //Saving the users chosen search engine.
-    settings.setValue("searchEngineUrl" , ui->searchEngineSelectionComboBox->currentData());
+
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {

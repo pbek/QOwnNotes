@@ -9333,7 +9333,11 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
     QSettings settings;
     QString searchEngineUrl = settings.value("searchEngineUrl").toString();
     if(searchEngineUrl.isEmpty())
-        searchEngineUrl = "https://duckduckgo.com/?t=qownnotes&q=";
+        searchEngineUrl = "DuckDuckGo"; //Default value
+
+    searchEngineUrl = Utils::Misc::getSearchEnginesMap().find(searchEngineUrl).value();
+
+    qDebug() << "searching online , current searchEngine url value : " << settings.value("searchEngineUrl");
 
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);

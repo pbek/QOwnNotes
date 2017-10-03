@@ -767,10 +767,10 @@ QString Utils::Misc::genericCSS() {
 
 QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
 {
-    map<QString,QString> searchEngines;
-    searchEngines.insert(pair <QString,QString> ("Google" , "https://www.google.com/search?q="));
-    searchEngines.insert(pair <QString,QString> ("Bing" , "https://www.bing.com/search?q="));
-    searchEngines.insert(pair <QString,QString> ("DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q="));
+    QMap<QString,QString> searchEngines;
+    searchEngines.insert("Google" , "https://www.google.com/search?q=");
+    searchEngines.insert("Bing" , "https://www.bing.com/search?q=");
+    searchEngines.insert("DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q=");
 
     return searchEngines;
 }
