@@ -3,6 +3,8 @@
 ## 17.10.0
 - fixed a crash with empty note-subfolders and manual reloading of the note
   folder (for issue [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))
+- tried to remedy some inconsistency in the margins of the *distraction free mode*
+  (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
 
 ## 17.09.9
 - the note text edit margins will now be updated when the font size increased
