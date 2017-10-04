@@ -769,8 +769,7 @@ QString Utils::Misc::genericCSS() {
  * A dictonary of search engine name to url for aesthetic ui.
  * @return {QMap<QString,QString>} dictonary of name to query url.
  */
-QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
-{
+QMap<QString,QString> Utils::Misc::getSearchEnginesMap() {
     QMap<QString,QString> searchEngines;
     searchEngines.insert("Google", "https://www.google.com/search?q=");
     searchEngines.insert("Bing", "https://www.bing.com/search?q=");
@@ -783,7 +782,25 @@ QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
     return searchEngines;
 }
 
+<<<<<<< HEAD
 //Returns the default search engine
 QString Utils::Misc::getDefaultSearchEngine() {
     return "DuckDuckGo";
+=======
+/**
+ * Disables the automatic update dialog per default for repositories and
+ * self-builds if nothing is already set
+ */
+void Utils::Misc::presetDisableAutomaticUpdateDialog() {
+    QSettings settings;
+
+    // disable the automatic update dialog per default for repositories and
+    // self-builds
+    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
+        QString release = qApp->property("release").toString();
+        bool enabled = release.contains("Travis") ||
+                       release.contains("AppVeyor") || release.contains("AppImage");
+        settings.setValue("disableAutomaticUpdateDialog", !enabled);
+    }
+>>>>>>> ee7d15662bf1cc09c6b67aef21585c385184d3e7
 }

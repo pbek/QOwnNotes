@@ -116,6 +116,9 @@
              <property name="wordWrap">
               <bool>true</bool>
              </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+             </property>
             </widget>
            </item>
            <item row="4" column="0">
@@ -214,6 +217,9 @@
              <property name="openExternalLinks">
               <bool>true</bool>
              </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse</set>
+             </property>
             </widget>
            </item>
            <item row="3" column="0">
@@ -239,6 +245,9 @@
              </property>
              <property name="openExternalLinks">
               <bool>true</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse</set>
              </property>
             </widget>
            </item>
@@ -317,6 +326,9 @@
              <property name="text">
               <string notr="true">Version</string>
              </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
+             </property>
             </widget>
            </item>
            <item row="4" column="2">
@@ -355,6 +367,9 @@
              </property>
              <property name="openExternalLinks">
               <bool>true</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
              </property>
             </widget>
            </item>

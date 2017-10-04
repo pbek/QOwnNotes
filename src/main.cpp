@@ -126,6 +126,10 @@ bool mainStartupMisc() {
     platform = "windows";
 #endif
 
+    // disable the automatic update dialog per default for repositories and
+    // self-builds if nothing is already set
+    Utils::Misc::presetDisableAutomaticUpdateDialog();
+
     metricsService->sendEventIfEnabled(
             "app/platform", "app", "platform", platform);
 

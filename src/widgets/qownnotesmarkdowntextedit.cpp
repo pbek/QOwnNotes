@@ -217,8 +217,6 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
 
         if (editorWidthMode != Full) {
             QFontMetrics metrics(font());
-            // take the size of an "O" character
-            metrics.width('O');
 
             int characterAmount = 0;
             switch (editorWidthMode) {
@@ -234,10 +232,17 @@ void QOwnNotesMarkdownTextEdit::setPaperMargins(int width) {
                     break;
             }
 
-            // set the size of characterAmount times the "O" characters
-            int proposedEditorWidth = characterAmount * metrics.width('O');
+            // set the size of characterAmount times the size of "O" characters
+            int proposedEditorWidth = metrics.width(
+                            QString("O").repeated(characterAmount));
 
+            // apply a factor to correct the faulty calculated margin
+            // TODO(pbek): I don't know better way to get around this yet
+            proposedEditorWidth /= 1.332;
+
+            // calculate the margin to be applied
             margin = (width - proposedEditorWidth) / 2;
+
             if (margin < 0) {
                 margin = 0;
             }
