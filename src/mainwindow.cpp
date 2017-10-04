@@ -9337,8 +9337,6 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 
     searchEngineUrl = Utils::Misc::getSearchEnginesMap().find(searchEngineUrl).value();
 
-    qDebug() << "searching online , current searchEngine url value : " << settings.value("searchEngineUrl");
-
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
 }
