@@ -772,14 +772,14 @@ QString Utils::Misc::genericCSS() {
 QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
 {
     QMap<QString,QString> searchEngines;
-    searchEngines.insert("Google" , "https://www.google.com/search?q=");
-    searchEngines.insert("Bing" , "https://www.bing.com/search?q=");
-    searchEngines.insert("DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q=");
-    searchEngines.insert("Yahoo" , "https://search.yahoo.com/search?p=");
-    searchEngines.insert("DogPile" , "http://www.dogpile.com/search/web?q=");
-    searchEngines.insert("Google Scholar" , "https://scholar.google.co.il/scholar?q=");
-    searchEngines.insert("Yandex" , "https://www.yandex.com/search/?text=");
-    searchEngines.insert("Ask.com" , "https://www.ask.com/web?q=");
+    searchEngines.insert("Google", "https://www.google.com/search?q=");
+    searchEngines.insert("Bing", "https://www.bing.com/search?q=");
+    searchEngines.insert("DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=");
+    searchEngines.insert("Yahoo", "https://search.yahoo.com/search?p=");
+    searchEngines.insert("DogPile", "http://www.dogpile.com/search/web?q=");
+    searchEngines.insert("Google Scholar", "https://scholar.google.co.il/scholar?q=");
+    searchEngines.insert("Yandex", "https://www.yandex.com/search/?text=");
+    searchEngines.insert("Ask.com", "https://www.ask.com/web?q=");
     return searchEngines;
 }
 
