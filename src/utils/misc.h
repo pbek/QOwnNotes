@@ -61,10 +61,7 @@ namespace Utils {
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
         QMap<QString , QString> getSearchEnginesMap();
-<<<<<<< HEAD
         QString getDefaultSearchEngine();
-=======
         void presetDisableAutomaticUpdateDialog();
->>>>>>> ee7d15662bf1cc09c6b67aef21585c385184d3e7
     }
 }
