@@ -765,6 +765,10 @@ QString Utils::Misc::genericCSS() {
     return cssStyles;
 }
 
+/**
+ * A dictonary of search engine name to url for aesthetic ui.
+ * @return {QMap<QString,QString>} dictonary of name to query url.
+ */
 QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
 {
     QMap<QString,QString> searchEngines;
@@ -772,7 +776,7 @@ QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
     searchEngines.insert("Bing" , "https://www.bing.com/search?q=");
     searchEngines.insert("DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q=");
     searchEngines.insert("Yahoo" , "https://search.yahoo.com/search?p=");
-    searchEngines.insert("DogPile" , "http://www.dogpile.com/search/web?q=ron");
+    searchEngines.insert("DogPile" , "http://www.dogpile.com/search/web?q=");
     searchEngines.insert("Google Scholar" , "https://scholar.google.co.il/scholar?q=");
     searchEngines.insert("Yippy" , "https://yippy.com/search/?query=");
     searchEngines.insert("Yandex" , "https://www.yandex.com/search/?text=");

@@ -981,22 +981,24 @@ void SettingsDialog::readSettings() {
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
 
-    //Adding options to the search engine selection combo box
+    // set the search engine combobox listings from a dictionary
     QMap<QString , QString> searchEngines = Utils::Misc::getSearchEnginesMap();
 
-    QMap<QString , QString>::const_iterator itr2;
+    QMap<QString , QString>::const_iterator searchEngineIterator;
 
-    QStringList list = QStringList();
+    QStringList searchEnginesNames = QStringList();
 
     ui->searchEngineSelectionComboBox->clear();
 
-    //Iterating over the map of search engines and adding all of them
-    for(itr2 = searchEngines.begin() ; itr2 != searchEngines.end() ; itr2++)
+    //iterating over the dictionary keys and adding them to combobox
+    for(searchEngineIterator = searchEngines.begin() ;
+        searchEngineIterator != searchEngines.end() ;
+        searchEngineIterator++)
     {
-        list << itr2.key();
+        searchEnginesNames << searchEngineIterator.key();
     }
 
-    ui->searchEngineSelectionComboBox->addItems(list);
+    ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
 }
 
 /**
