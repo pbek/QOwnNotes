@@ -764,3 +764,20 @@ QString Utils::Misc::genericCSS() {
     cssStyles += "kbd {background-color: " + color +  "}";
     return cssStyles;
 }
+
+/**
+ * Disables the automatic update dialog per default for repositories and
+ * self-builds if nothing is already set
+ */
+void Utils::Misc::presetDisableAutomaticUpdateDialog() {
+    QSettings settings;
+
+    // disable the automatic update dialog per default for repositories and
+    // self-builds
+    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
+        QString release = qApp->property("release").toString();
+        bool enabled = release.contains("Travis") ||
+                       release.contains("AppVeyor") || release.contains("AppImage");
+        settings.setValue("disableAutomaticUpdateDialog", !enabled);
+    }
+}

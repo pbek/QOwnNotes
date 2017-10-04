@@ -1,5 +1,11 @@
 # QOwnNotes Changelog
 
+## 17.10.1
+- the automatic update dialog will now also be disable per default for 
+  repositories and self-builds if the settings dialog was opened in the 
+  welcome dialog at first application startup
+  (for issue [Issue #732](https://github.com/pbek/QOwnNotes/issues/732))
+
 ## 17.10.0
 - fixed a crash with empty note-subfolders and manual reloading of the note
   folder (for issue [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))

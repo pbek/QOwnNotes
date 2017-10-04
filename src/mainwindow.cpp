@@ -2101,15 +2101,6 @@ void MainWindow::restoreToolbars() {
 void MainWindow::readSettingsFromSettingsDialog() {
     QSettings settings;
 
-    // disable the automatic update dialog per default for repositories and
-    // self-builds
-    if (settings.value("disableAutomaticUpdateDialog").toString().isEmpty()) {
-        QString release = qApp->property("release").toString();
-        bool enabled = release.contains("Travis") ||
-                release.contains("AppVeyor") || release.contains("AppImage");
-        settings.setValue("disableAutomaticUpdateDialog", !enabled);
-    }
-
     this->notifyAllExternalModifications =
             settings.value("notifyAllExternalModifications").toBool();
     this->noteSaveIntervalTime =

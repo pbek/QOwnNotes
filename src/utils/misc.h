@@ -59,5 +59,6 @@ namespace Utils {
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
+        void presetDisableAutomaticUpdateDialog();
     }
 }
