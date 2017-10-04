@@ -1,5 +1,22 @@
 # QOwnNotes Changelog
 
+## 17.10.1
+- the automatic update dialog will now also be disable per default for 
+  repositories and self-builds if the settings dialog was opened in the 
+  welcome dialog at first application startup
+  (for issue [Issue #732](https://github.com/pbek/QOwnNotes/issues/732))
+
+## 17.10.0
+- fixed a crash with empty note-subfolders and manual reloading of the note
+  folder (for issue [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))
+- tried to remedy some inconsistency in the margins of the *distraction free mode*
+  (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
+- made more text selectable and changed the sort-order in the
+  *Script repository* widget
+- added the experimental script `@tag tagging in note text` to the script repository
+  to make it easier to play around with the external note tagging support via the
+  scripting engine (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+
 ## 17.09.9
 - the note text edit margins will now be updated when the font size increased
   or decreased in the *distraction free mode*

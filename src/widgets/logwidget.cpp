@@ -318,9 +318,10 @@ void LogWidget::logMessageOutput(
 
     LogWidget::instance()->log(logType, msg);
 
-    if (type == QtFatalMsg) {
-        abort();
-    }
+    // it's harder to debug a problem if we abort here
+//    if (type == QtFatalMsg) {
+//        abort();
+//    }
 }
 
 /**

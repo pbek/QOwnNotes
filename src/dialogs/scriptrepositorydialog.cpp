@@ -29,6 +29,7 @@ ScriptRepositoryDialog::ScriptRepositoryDialog(QWidget *parent) :
 
     ui->downloadProgressBar->hide();
     ui->searchScriptEdit->setFocus();
+    ui->scriptTreeWidget->sortByColumn(0, Qt::AscendingOrder);
     enableOverview(true);
     searchScript();
 }
