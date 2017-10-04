@@ -663,7 +663,7 @@ void SettingsDialog::storeSettings() {
     // store the cursor width
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 
-    //Saving the users chosen search engine.
+    // saving the users chosen search engine.
     settings.setValue("searchEngineUrl" , ui->searchEngineSelectionComboBox->currentText());
 }
 
@@ -989,19 +989,20 @@ void SettingsDialog::readSettings() {
 
     ui->searchEngineSelectionComboBox->clear();
 
-    //iterating over the dictionary keys and adding them to combobox
-    for(searchEngineIterator = searchEngines.begin() ;
-        searchEngineIterator != searchEngines.end() ;
-        searchEngineIterator++)
-    {
+    // iterating over the dictionary keys and adding them to combobox
+    for (searchEngineIterator = searchEngines.begin();
+        searchEngineIterator != searchEngines.end();
+        searchEngineIterator++) {
         searchEnginesNames << searchEngineIterator.key();
     }
 
     ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
 
     QString savedValue = settings.value("searchEngineUrl").toString();
-    if(savedValue.isEmpty())
+    if (savedValue.isEmpty())
+    {
         savedValue = Utils::Misc::getDefaultSearchEngine();
+    }
 
     ui->searchEngineSelectionComboBox->setCurrentText(savedValue);
 }
@@ -2314,8 +2315,7 @@ QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
 }
 
 void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous)
-{
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
     QString folderName =
@@ -2327,8 +2327,7 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
     ownCloud->settingsGetFileList(this, folderName);
 }
 
-void SettingsDialog::on_useOwnCloudPathButton_clicked()
-{
+void SettingsDialog::on_useOwnCloudPathButton_clicked() {
     QTreeWidgetItem *item = ui->noteFolderRemotePathTreeWidget->currentItem();
     if (item == NULL) {
         return;
@@ -3111,7 +3110,6 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     }
 
     settings.endArray();
-
 }
 
 void SettingsDialog::on_resetToolbarPushButton_clicked() {

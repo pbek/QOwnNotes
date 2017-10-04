@@ -9332,10 +9332,13 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 
     QSettings settings;
     QString searchEngineUrl = settings.value("searchEngineUrl").toString();
-    if(searchEngineUrl.isEmpty())
-        searchEngineUrl = "DuckDuckGo"; //Default value
+    if (searchEngineUrl.isEmpty())
+    {
+        searchEngineUrl = "DuckDuckGo";
+    }
 
-    searchEngineUrl = Utils::Misc::getSearchEnginesMap().find(searchEngineUrl).value();
+    searchEngineUrl = Utils::Misc::getSearchEnginesMap().find(
+                    searchEngineUrl).value();
 
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
@@ -9436,8 +9439,7 @@ void MainWindow::on_actionSave_modified_notes_triggered() {
 /**
  * Sets ascending note sort order
  */
-void MainWindow::on_actionAscending_triggered()
-{
+void MainWindow::on_actionAscending_triggered() {
     QSettings settings;
     settings.setValue("notesPanelOrder", ORDER_ASCENDING);
     ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_ASCENDING));
@@ -9446,8 +9448,7 @@ void MainWindow::on_actionAscending_triggered()
 /**
  * Sets descending note sort order
  */
-void MainWindow::on_actionDescending_triggered()
-{
+void MainWindow::on_actionDescending_triggered() {
     QSettings settings;
     settings.setValue("notesPanelOrder", ORDER_DESCENDING);
     ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_DESCENDING));
@@ -9456,8 +9457,7 @@ void MainWindow::on_actionDescending_triggered()
 /**
  * Updates the visibility of the note sort order selector
  */
-void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible)
-{
+void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
     ui->actionAscending->setVisible(visible);
     ui->actionDescending->setVisible(visible);
 //    ui->sortOrderSeparator->setVisible(visible);
@@ -9468,8 +9468,7 @@ void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible)
  *
  * @param pos
  */
-void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
-{
+void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
     QPoint globalPos = ui->noteTextView->mapToGlobal(pos);
     QMenu *menu = ui->noteTextView->createStandardContextMenu();
 
@@ -9559,7 +9558,6 @@ void MainWindow::storeTagTreeWidgetExpandState() const {
                 if (item->isExpanded()) {
                     expandedList << item->data(0, Qt::UserRole).toString();
                 }
-
             }
         }
 
