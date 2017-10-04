@@ -782,11 +782,11 @@ QMap<QString,QString> Utils::Misc::getSearchEnginesMap() {
     return searchEngines;
 }
 
-<<<<<<< HEAD
 //Returns the default search engine
 QString Utils::Misc::getDefaultSearchEngine() {
     return "DuckDuckGo";
-=======
+}
+
 /**
  * Disables the automatic update dialog per default for repositories and
  * self-builds if nothing is already set
@@ -802,5 +802,4 @@ void Utils::Misc::presetDisableAutomaticUpdateDialog() {
                        release.contains("AppVeyor") || release.contains("AppImage");
         settings.setValue("disableAutomaticUpdateDialog", !enabled);
     }
->>>>>>> ee7d15662bf1cc09c6b67aef21585c385184d3e7
 }
