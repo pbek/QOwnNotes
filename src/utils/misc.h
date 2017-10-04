@@ -61,5 +61,6 @@ namespace Utils {
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
         QMap<QString , QString> getSearchEnginesMap();
+        QString getDefaultSearchEngine();
     }
 }

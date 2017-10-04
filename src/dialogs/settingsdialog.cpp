@@ -728,7 +728,6 @@ void SettingsDialog::storeFontSettings() {
                       noteTextViewCodeFont.toString());
 }
 
-
 void SettingsDialog::readSettings() {
     QSettings settings;
     ui->ownCloudSupportCheckBox->setChecked(
@@ -999,6 +998,12 @@ void SettingsDialog::readSettings() {
     }
 
     ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
+
+    QString savedValue = settings.value("searchEngineUrl").toString();
+    if(savedValue.isEmpty())
+        savedValue = Utils::Misc::getDefaultSearchEngine();
+
+    ui->searchEngineSelectionComboBox->setCurrentText(savedValue);
 }
 
 /**
@@ -3106,7 +3111,6 @@ void SettingsDialog::on_applyToolbarButton_clicked() {
     }
 
     settings.endArray();
-
 
 }
 

@@ -778,10 +778,12 @@ QMap<QString,QString> Utils::Misc::getSearchEnginesMap()
     searchEngines.insert("Yahoo" , "https://search.yahoo.com/search?p=");
     searchEngines.insert("DogPile" , "http://www.dogpile.com/search/web?q=");
     searchEngines.insert("Google Scholar" , "https://scholar.google.co.il/scholar?q=");
-    searchEngines.insert("Yippy" , "https://yippy.com/search/?query=");
     searchEngines.insert("Yandex" , "https://www.yandex.com/search/?text=");
     searchEngines.insert("Ask.com" , "https://www.ask.com/web?q=");
-
-
     return searchEngines;
+}
+
+//Returns the default search engine
+QString Utils::Misc::getDefaultSearchEngine() {
+    return "DuckDuckGo";
 }
