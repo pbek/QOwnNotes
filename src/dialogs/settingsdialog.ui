@@ -2628,8 +2628,8 @@
                           <rect>
                            <x>0</x>
                            <y>0</y>
-                           <width>258</width>
-                           <height>374</height>
+                           <width>848</width>
+                           <height>952</height>
                           </rect>
                          </property>
                          <layout class="QGridLayout" name="gridLayout_55">
@@ -3230,19 +3230,15 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  <property name="title">
                   <string>Search Engine</string>
                  </property>
-                 <widget class="QComboBox" name="searchEngineSelectionComboBox">
-                  <property name="geometry">
-                   <rect>
-                    <x>10</x>
-                    <y>30</y>
-                    <width>301</width>
-                    <height>25</height>
-                   </rect>
-                  </property>
-                  <property name="editable">
-                   <bool>false</bool>
-                  </property>
-                 </widget>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QComboBox" name="searchEngineSelectionComboBox">
+                    <property name="editable">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
                 </widget>
                </item>
                <item>
