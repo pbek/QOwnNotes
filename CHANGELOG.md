@@ -5,6 +5,10 @@
   repositories and self-builds if the settings dialog was opened in the 
   welcome dialog at first application startup
   (for issue [Issue #732](https://github.com/pbek/QOwnNotes/issues/732))
+- there now is a `--clear-settings` parameter for the application that clears
+  the settings before running the application
+- there now is a `--help` parameter for the application that show the 
+  available command line arguments of QOwnNotes 
 
 ## 17.10.0
 - fixed a crash with empty note-subfolders and manual reloading of the note

@@ -61,7 +61,27 @@
  * Does the miscellaneous startup
  * If false is returned the app is supposed to quit
  */
-bool mainStartupMisc() {
+bool mainStartupMisc(const QStringList arguments) {
+    QCommandLineParser parser;
+    parser.setApplicationDescription("QOwnNotes " + QString(VERSION));
+    const QCommandLineOption helpOption = parser.addHelpOption();
+    const QCommandLineOption portableOption(
+            "portable", QCoreApplication::translate("main", "Runs the "
+                    "application in portable mode."));
+    parser.addOption(portableOption);
+    const QCommandLineOption clearSettingsOption(
+            "clear-settings", QCoreApplication::translate("main", "Clears the "
+                    "settings and runs the application."));
+    parser.addOption(clearSettingsOption);
+
+    // just parse the arguments, we want no error handling
+    parser.parse(arguments);
+
+    // show the help page if the help parameter was provided
+    if (parser.isSet(helpOption)) {
+        parser.showHelp();
+    }
+
     QSettings settings;
     QString interfaceStyle = settings.value("interfaceStyle").toString();
 
@@ -173,6 +193,21 @@ bool mainStartupMisc() {
     return true;
 }
 
+/**
+ * Shows the command line help
+ */
+//void showHelp() {
+//    qWarning() << "\nQOwnNotes " << VERSION << "\n";
+//    qWarning() << QObject::tr("Application Options") << ":";
+//    qWarning() << "  --portable          " <<
+//                  QObject::tr("Runs the application in portable mode");
+//    qWarning("  --clear-settings    " +
+//                     QObject::tr("Clears the settings and runs "
+//                                         "the application").toUtf8());
+//    qWarning()  <<  QCoreApplication::translate("main", "Copy all source "
+//            "files into <directory>.");
+//}
+
 int main(int argc, char *argv[]) {
     // register NoteHistoryItem so we can store it to the settings
     // we need to do that before we are accessing QSettings or the
@@ -182,16 +217,22 @@ int main(int argc, char *argv[]) {
 
     QString release = RELEASE;
     bool portable = false;
+    bool clearSettings = false;
     bool snap = false;
+    QStringList arguments;
 
     for (int i = 0; i < argc; ++i) {
         QString arg(argv[i]);
+        arguments << arg;
+
         if (arg == "--snap") {
             // override the release string for snaps
             release = "Snapcraft";
             snap = true;
         } else if (arg == "--portable") {
             portable = true;
+        } else if (arg == "--clear-settings") {
+            clearSettings = true;
         } else if (arg == "--after-update") {
             qWarning() << __func__ << " - 'arg': " << arg;
 #if not defined(Q_OS_WIN)
@@ -206,6 +247,9 @@ int main(int argc, char *argv[]) {
 #endif
         }
     }
+
+    qDebug() << __func__ << " - 'arguments': " << arguments;
+
 
     // TODO(pbek): remove
 //    portable = true;
@@ -260,6 +304,13 @@ int main(int argc, char *argv[]) {
         qDebug() << "settings fileName: " << settings.fileName();
     }
 
+    // clear the settings if a --clear-settings parameter was provided
+    if (clearSettings) {
+        QSettings settings;
+        settings.clear();
+        qWarning("Your settings are now cleared!");
+    }
+
     QSettings settings;
     QString locale = settings.value("interfaceLanguage").toString();
 
@@ -308,7 +359,7 @@ int main(int argc, char *argv[]) {
         LOAD_MAC_TRANSLATIONS(app)
 #endif
 
-        bool result = mainStartupMisc();
+        bool result = mainStartupMisc(arguments);
         if (!result) {
             return 0;
         }
@@ -349,7 +400,7 @@ int main(int argc, char *argv[]) {
         LOAD_MAC_TRANSLATIONS(app)
 #endif
 
-        bool result = mainStartupMisc();
+        bool result = mainStartupMisc(arguments);
         if (!result) {
             return 0;
         }
