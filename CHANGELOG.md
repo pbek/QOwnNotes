@@ -3,6 +3,9 @@
 ## 17.10.2
 - fixed that the automatic closing of brackets is only allowed if the cursor was
   at the end of a block (was removed by a pull request)
+- the `updater.bat` in Windows now kills the `QOwnNotes.exe` process when the
+  application is updated because it doesn't seem to end in portable mode
+  (for issue [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
 
 ## 17.10.1
 - the automatic update dialog will now also be disable per default for 

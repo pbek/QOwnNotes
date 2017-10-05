@@ -10,6 +10,13 @@ set portable=%4
 set unzipCommand=%unzipExecutable% -o %source% -d %destination%
 set qownnotesCommand=%destination%\QOwnNotes.exe --after-update %0 %portable%
 
+rem wait two seconds to kill QOwnNotes.exe
+timeout 2
+
+rem killing the QOwnNotes process because it doesn't seem to be killed in
+rem portable mode
+taskkill /IM QOwnNotes.exe
+
 echo %0 %*
 echo ======================================
 echo Updating QOwnNotes in folder:
