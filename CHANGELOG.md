@@ -6,6 +6,7 @@
 - the `updater.bat` in Windows now kills the `QOwnNotes.exe` process when the
   application is updated because it doesn't seem to end in portable mode
   (for issue [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
+- added more French and Spanish translation (thank you bepolymathe and richarson)
 
 ## 17.10.1
 - the automatic update dialog will now also be disable per default for 
