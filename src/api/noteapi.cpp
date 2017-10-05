@@ -126,7 +126,7 @@ QQmlListProperty<NoteApi> NoteApi::fetchAll(int limit, int offset) {
     QList<NoteApi *> notes;
 
     Q_FOREACH(int noteId, noteIds) {
-            NoteApi *note = NoteApi::fetch(id);
+            NoteApi *note = NoteApi::fetch(noteId);
             notes.append(note);
         }
 
