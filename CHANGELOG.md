@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.10.2
+- fixed that the automatic closing of brackets is only allowed if the cursor was
+  at the end of a block (was removed by a pull request)
+
 ## 17.10.1
 - the automatic update dialog will now also be disable per default for 
   repositories and self-builds if the settings dialog was opened in the 
