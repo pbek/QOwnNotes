@@ -664,7 +664,8 @@ void SettingsDialog::storeSettings() {
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 
     // saving the users chosen search engine.
-    settings.setValue("searchEngineUrl" , ui->searchEngineSelectionComboBox->currentIndex());
+    settings.setValue("searchEngineUrl",
+                    ui->searchEngineSelectionComboBox->currentIndex());
 }
 
 /**
@@ -983,7 +984,8 @@ void SettingsDialog::readSettings() {
     typedef Utils::Misc::SearchEngine SearchEngine;
 
     // set the search engine combobox listings from a dictionary
-    QVector<QPair<QString, QString>> searchEngines = Utils::Misc::getSearchEnginesVector();
+    QVector<QPair<QString, QString>> searchEngines =
+            Utils::Misc::getSearchEnginesVector();
 
     QVector<QPair<QString, QString>>::const_iterator searchEngineIterator;
 
@@ -1000,8 +1002,10 @@ void SettingsDialog::readSettings() {
 
     ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
 
-    int savedValueIndex = settings.value("searchEngineUrl").toInt();
-    QString savedValueName = (Utils::Misc::getSearchEnginesVector()[savedValueIndex]).first;
+    int savedValueIndex =
+            settings.value("searchEngineUrl").toInt();
+    QString savedValueName =
+            (Utils::Misc::getSearchEnginesVector()[savedValueIndex]).first;
 
     ui->searchEngineSelectionComboBox->setCurrentText(savedValueName);
 }

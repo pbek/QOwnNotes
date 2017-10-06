@@ -9323,7 +9323,8 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 
     QSettings settings;
     int selectedSearchEngineIndex = settings.value("searchEngineUrl").toInt();
-    QString searchEngineUrl = Utils::Misc::getSearchEnginesVector()[selectedSearchEngineIndex].second;
+    QString searchEngineUrl = Utils::Misc::getSearchEnginesVector()
+            [selectedSearchEngineIndex].second;
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
 }

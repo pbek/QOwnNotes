@@ -64,5 +64,5 @@ namespace Utils {
         QVector<QPair<QString, QString>> getSearchEnginesVector();
         QPair<QString, QString> getDefaultSearchEngine();
         void presetDisableAutomaticUpdateDialog();
-    }
-}
+    }  // namespace Misc
+}  // namespace Utils

@@ -786,7 +786,7 @@ QVector<QPair<QString, QString>> Utils::Misc::getSearchEnginesVector() {
     return searchEngines;
 }
 
-//Returns the default search engine
+// Returns the default search engine
 QPair<QString, QString> Utils::Misc::getDefaultSearchEngine() {
     return getSearchEnginesVector()[0];
 }
