@@ -981,9 +981,9 @@ void SettingsDialog::readSettings() {
             settings.value("cursorWidth", 1).toInt());
 
     // set the search engine combobox listings from a dictionary
-    QMap<QString , QString> searchEngines = Utils::Misc::getSearchEnginesMap();
+    QMap<QString, QString> searchEngines = Utils::Misc::getSearchEnginesMap();
 
-    QMap<QString , QString>::const_iterator searchEngineIterator;
+    QMap<QString, QString>::const_iterator searchEngineIterator;
 
     QStringList searchEnginesNames = QStringList();
 
@@ -999,8 +999,7 @@ void SettingsDialog::readSettings() {
     ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
 
     QString savedValue = settings.value("searchEngineUrl").toString();
-    if (savedValue.isEmpty())
-    {
+    if (savedValue.isEmpty()) {
         savedValue = Utils::Misc::getDefaultSearchEngine();
     }
 
