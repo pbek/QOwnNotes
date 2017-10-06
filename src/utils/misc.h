@@ -25,6 +25,7 @@
 
 namespace Utils {
     namespace Misc {
+        struct SearchEngine;
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
         QString removeIfStartsWith(QString text, QString removeString);
@@ -60,8 +61,8 @@ namespace Utils {
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
-        QMap<QString , QString> getSearchEnginesMap();
-        QString getDefaultSearchEngine();
+        QVector<QPair<QString, QString>> getSearchEnginesVector();
+        QPair<QString, QString> getDefaultSearchEngine();
         void presetDisableAutomaticUpdateDialog();
     }
 }

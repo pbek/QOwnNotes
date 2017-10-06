@@ -32,6 +32,10 @@
 #include <windows.h>
 #endif
 
+struct SearchEngine {
+    QString name;
+    QString searchUrl;
+};
 
 /**
  * Open the given path with an appropriate application
@@ -766,25 +770,25 @@ QString Utils::Misc::genericCSS() {
 }
 
 /**
- * A dictonary of search engine name to url for aesthetic ui.
- * @return {QMap<QString,QString>} dictonary of name to query url.
+ * A vector of pairs, the first item in the pair is the search
+ * engine name and the second item is the search url of the engine.
  */
-QMap<QString,QString> Utils::Misc::getSearchEnginesMap() {
-    QMap<QString,QString> searchEngines;
-    searchEngines.insert("Google", "https://www.google.com/search?q=");
-    searchEngines.insert("Bing", "https://www.bing.com/search?q=");
-    searchEngines.insert("DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=");
-    searchEngines.insert("Yahoo", "https://search.yahoo.com/search?p=");
-    searchEngines.insert("DogPile", "http://www.dogpile.com/search/web?q=");
-    searchEngines.insert("Google Scholar", "https://scholar.google.co.il/scholar?q=");
-    searchEngines.insert("Yandex", "https://www.yandex.com/search/?text=");
-    searchEngines.insert("Ask.com", "https://www.ask.com/web?q=");
+QVector<QPair<QString, QString>> Utils::Misc::getSearchEnginesVector() {
+    QVector<QPair<QString, QString>> searchEngines;
+    searchEngines.append(QPair<QString, QString>("Google", "https://www.google.com/search?q="));
+    searchEngines.append(QPair<QString, QString>("Bing", "https://www.bing.com/search?q="));
+    searchEngines.append(QPair<QString, QString>("DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q="));
+    searchEngines.append(QPair<QString, QString>("Yahoo", "https://search.yahoo.com/search?p="));
+    searchEngines.append(QPair<QString, QString>("DogPile", "https://www.google.com/search?q="));
+    searchEngines.append(QPair<QString, QString>("Google Scholar", "https://scholar.google.co.il/scholar?q="));
+    searchEngines.append(QPair<QString, QString>("Yandex", "https://www.yandex.com/search/?text="));
+    searchEngines.append(QPair<QString, QString>("Ask.com", "https://www.ask.com/web?q="));
     return searchEngines;
 }
 
 //Returns the default search engine
-QString Utils::Misc::getDefaultSearchEngine() {
-    return "DuckDuckGo";
+QPair<QString, QString> Utils::Misc::getDefaultSearchEngine() {
+    return getSearchEnginesVector()[0];
 }
 
 /**
