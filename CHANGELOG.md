@@ -8,6 +8,7 @@
   input dialog with a line edit (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
     - for more information please take a look at
       [Opening an input dialog with a line edit](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-line-edit)
+- added more French and German translation (thank you bepolymathe and rakekniven)
 
 ## 17.10.2
 - fixed that the automatic closing of brackets is only allowed if the cursor was
