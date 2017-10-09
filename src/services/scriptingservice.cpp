@@ -1300,6 +1300,30 @@ QString ScriptingService::inputDialogGetItem(
 }
 
 /**
+ * Opens an input dialog with a line edit
+ *
+ * @param title {QString} title of the dialog
+ * @param label {QString} label text of the dialog
+ * @param text {QString} text in the dialog
+ * @return
+ */
+QString ScriptingService::inputDialogGetText(
+        const QString &title, const QString &label, const QString &text) {
+    MetricsService::instance()->sendVisitIfEnabled(
+            "scripting/" + QString(__func__));
+
+#ifndef INTEGRATION_TESTS
+    return QInputDialog::getText(Q_NULLPTR, title, label,
+                                 QLineEdit::Normal, text);
+#else
+    Q_UNUSED(title);
+    Q_UNUSED(label);
+    Q_UNUSED(text);
+    return "";
+#endif
+}
+
+/**
  * Stores a persistent variables
  * These variables are accessible globally over all scripts
  * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"

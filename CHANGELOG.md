@@ -4,6 +4,10 @@
 - you now can enable in the *General settings* that the shortcut to create new 
   notes asks for a headline of the note instead of generating the headline 
   automatically (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+- there now is a new scripting command `script.inputDialogGetText` to open an
+  input dialog with a line edit (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+    - for more information please take a look at
+      [Opening an input dialog with a line edit](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-line-edit)
 
 ## 17.10.2
 - fixed that the automatic closing of brackets is only allowed if the cursor was
@@ -318,7 +322,7 @@
 - fixed a possible crash when using scripts with custom actions in the note
   list context menu when the script engine is reloaded and the context menu
   is opened (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
-- there now is a new scripting command `script.inputDialogGetItem` to open a
+- there now is a new scripting command `script.inputDialogGetItem` to open an
   input dialog with a select box (for [Issue #490](https://github.com/pbek/QOwnNotes/issues/490))
     - for more information please take a look at
       [Opening an input dialog with a select box](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-select-box)

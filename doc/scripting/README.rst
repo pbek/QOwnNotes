@@ -996,6 +996,36 @@ You may want to take a look at the example
 `input-dialogs.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/input-dialogs.qml>`__.
 
 
+Opening an input dialog with a line edit
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Opens an input dialog with a line edit
+     *
+     * @param title {QString} title of the dialog
+     * @param label {QString} label text of the dialog
+     * @param text {QString} text in the dialog
+     * @return
+     */
+    QString ScriptingService::inputDialogGetText(
+            const QString &title, const QString &label, const QString &text);
+
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    var result = script.inputDialogGetText(
+        "line edit", "Please enter a name", "current text");
+    script.log(result);
+
+
 Working with websockets
 ~~~~~~~~~~~~~~~~~~~~~~~
 

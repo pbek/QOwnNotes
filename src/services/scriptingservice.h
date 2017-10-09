@@ -107,6 +107,9 @@ public:
             const QString &title, const QString &label,
             const QStringList &items, int current = 0, bool editable = false);
 
+    Q_INVOKABLE QString inputDialogGetText(
+            const QString &title, const QString &label, const QString &text);
+
     Q_INVOKABLE void setPersistentVariable(const QString &key,
                                            const QVariant &value);
 
