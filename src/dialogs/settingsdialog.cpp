@@ -493,6 +493,8 @@ void SettingsDialog::storeSettings() {
                               ->isChecked());
     settings.setValue("allowDifferentNoteFileName",
                       ui->allowDifferentNoteFileNameCheckBox->isChecked());
+    settings.setValue("newNoteAskHeadline",
+                      ui->newNoteAskHeadlineCheckBox->isChecked());
     settings.setValue("useUNIXNewline",
                       ui->useUNIXNewlineCheckBox->isChecked());
     settings.setValue("restoreCursorPosition",
@@ -754,6 +756,8 @@ void SettingsDialog::readSettings() {
             settings.value("ignoreAllExternalNoteFolderChanges").toBool());
     ui->allowDifferentNoteFileNameCheckBox->setChecked(
             settings.value("allowDifferentNoteFileName").toBool());
+    ui->newNoteAskHeadlineCheckBox->setChecked(
+            settings.value("newNoteAskHeadline").toBool());
     ui->useUNIXNewlineCheckBox->setChecked(
             settings.value("useUNIXNewline").toBool());
 

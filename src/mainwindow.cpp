@@ -4861,10 +4861,32 @@ void MainWindow::on_actionAbout_QOwnNotes_triggered() {
     delete(dialog);
 }
 
-//
-// Triggered by the shortcut to create new note with date in the headline
-//
+/**
+ * Triggered by the shortcut to create a new note with date in the headline
+ */
 void MainWindow::on_action_New_note_triggered() {
+    QSettings settings;
+    bool newNoteAskHeadline = settings.value("newNoteAskHeadline").toBool();
+
+    // check if we want to ask for a headline
+    if (newNoteAskHeadline) {
+        bool ok;
+        QString headline = QInputDialog::getText(
+                this, tr("New note"), tr("Note headline"), QLineEdit::Normal,
+                "", &ok);
+
+        if (!ok) {
+            return;
+        }
+
+        if (!headline.isEmpty()) {
+            this->ui->searchLineEdit->setText(headline);
+
+            // create a new note or jump to the existing
+            jumpToNoteOrCreateNew();
+        }
+    }
+
     // create a new note
     createNewNote();
 }

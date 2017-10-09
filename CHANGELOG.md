@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.10.3
+- you now can enable in the *General settings* that the shortcut to create new 
+  notes asks for a headline of the note instead of generating the headline 
+  automatically (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+
 ## 17.10.2
 - fixed that the automatic closing of brackets is only allowed if the cursor was
   at the end of a block (was removed by a pull request)

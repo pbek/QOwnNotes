@@ -2982,15 +2982,12 @@
                     <property name="toolTip">
                      <string>Check this if you want to accept all external modifications while you are editing the current note.</string>
                     </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
                     <property name="text">
                      <string>Accept all external modifications of the current note</string>
                     </property>
                    </widget>
                   </item>
-                  <item row="9" column="0" colspan="2">
+                  <item row="10" column="0" colspan="2">
                    <widget class="QCheckBox" name="imageScaleDownCheckBox">
                     <property name="text">
                      <string>Scale images down when inserted into notes</string>
@@ -3002,9 +2999,6 @@
                     <property name="toolTip">
                      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If checked you will always be notified about external modifications, even if current note wasn't edited in the last minute. Recommended is &lt;span style=&quot; font-style:italic;&quot;&gt;unchecked&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                     </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
                     <property name="text">
                      <string>Notify about all external modifications of the current note</string>
                     </property>
@@ -3014,9 +3008,6 @@
                    <widget class="QCheckBox" name="ignoreAllExternalModificationsCheckBox">
                     <property name="toolTip">
                      <string>Check this if you want to ignore all external modifications while you are editing the current note.</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
                     </property>
                     <property name="text">
                      <string>Ignore all external modifications of the current note</string>
@@ -3042,13 +3033,10 @@
                     </property>
                    </widget>
                   </item>
-                  <item row="7" column="0" colspan="2">
+                  <item row="8" column="0" colspan="2">
                    <widget class="QCheckBox" name="useUNIXNewlineCheckBox">
                     <property name="toolTip">
                      <string>You can use this for example under Windows if you have troubles with newlines in the ownCloud / Nextcloud notes app</string>
-                    </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
                     </property>
                     <property name="text">
                      <string>Use UNIX newline instead of native newline characters</string>
@@ -3070,9 +3058,6 @@
                     <property name="toolTip">
                      <string>Allow the note file name to be different from the headline.&lt;br&gt;Be aware of that ownCloud notes needs them to be the same!</string>
                     </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
                     <property name="text">
                      <string>Allow note file name to be different from headline</string>
                     </property>
@@ -3089,7 +3074,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </property>
                    </widget>
                   </item>
-                  <item row="10" column="0" colspan="2">
+                  <item row="11" column="0" colspan="2">
                    <widget class="QFrame" name="imageScalingFrame">
                     <property name="frameShape">
                      <enum>QFrame::NoFrame</enum>
@@ -3154,17 +3139,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                     </layout>
                    </widget>
                   </item>
-                  <item row="8" column="0" colspan="2">
+                  <item row="9" column="0" colspan="2">
                    <widget class="QCheckBox" name="restoreCursorPositionCheckBox">
                     <property name="toolTip">
                      <string>When opening notes the cursor position inside the note will now be restored
   to the position when the note was last visited in the current session</string>
                     </property>
-                    <property name="layoutDirection">
-                     <enum>Qt::LeftToRight</enum>
-                    </property>
                     <property name="text">
                      <string>Restore cursor position when opening a note</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="7" column="0" colspan="2">
+                   <widget class="QCheckBox" name="newNoteAskHeadlineCheckBox">
+                    <property name="toolTip">
+                     <string>By default the headline will generated automatically</string>
+                    </property>
+                    <property name="text">
+                     <string>The shortcut to create a new note asks for a headline</string>
                     </property>
                    </widget>
                   </item>
@@ -4567,8 +4559,8 @@ git config --global user.name &quot;Your name&quot;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="../breeze-dark-qownnotes.qrc"/>
   <include location="../breeze-qownnotes.qrc"/>
+  <include location="../breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections>
   <connection>
