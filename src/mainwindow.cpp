@@ -4884,6 +4884,8 @@ void MainWindow::on_action_New_note_triggered() {
 
             // create a new note or jump to the existing
             jumpToNoteOrCreateNew();
+
+            return;
         }
     }
 
