@@ -3,6 +3,7 @@
 ## 17.10.4
 - fixed that a 2nd note is created if the non-automatic headlines for new notes
   are enabled (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+- added more Spanish translation (thank you richarson)
 
 ## 17.10.3
 - you now can enable in the *General settings* that the shortcut to create new 
