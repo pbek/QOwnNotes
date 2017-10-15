@@ -4973,8 +4973,14 @@ void MainWindow::openLocalUrl(QString urlString) {
     QString scheme = url.scheme();
 
     if (scheme == "note") {
+        // if the name of the linked note only consists of numbers we cannot use
+        // host() to get the filename, it would get converted to an ip-address
+        QRegularExpressionMatch match =
+                QRegularExpression("^\\w+:\\/\\/(\\d+)$").match(urlString);
+        QString fileName = match.hasMatch() ? match.captured(1) : url.host();
+
         // add a ".com" to the filename to simulate a valid domain
-        QString fileName = url.host() + ".com";;
+        fileName += ".com";
 
         // convert the ACE to IDN (internationalized domain names) to support
         // links to notes with unicode characters in their names

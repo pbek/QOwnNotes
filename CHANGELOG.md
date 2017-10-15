@@ -3,6 +3,9 @@
 ## 17.10.5
 - highlighting of ordered lists in the note edit panel now works above `9.`
   (for issue [Issue #746](https://github.com/pbek/QOwnNotes/issues/746))
+- fixed links to notes whose names only consist of numbers when `Ctrl`-clicking
+  them in the note text edit, in the preview there is currently no way to make
+  them work (for issue [Issue #748](https://github.com/pbek/QOwnNotes/issues/748))
 
 ## 17.10.4
 - fixed that a 2nd note is created if the non-automatic headlines for new notes
