@@ -1242,10 +1242,10 @@ If the trash is enabled on your ownCloud server you should be able to restore th
       <translation>
         <numerusform>&lt;strong&gt;Eine&lt;/strong&gt; ausgewählte Notiz löschen?
 
-Falls Sie die Trash App auf Ihrem ownCloud Server aktiviert haben sollten Sie die Notiz wiederherstellen können.</numerusform>
+Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten Sie die Notiz wiederherstellen können.</numerusform>
         <numerusform>&lt;strong&gt;%n&lt;/strong&gt; ausgewählte Notizen löschen?
 
-Falls Sie die Papierkorb-App auf Ihrem ownCloud/Nextcloud-Server aktiviert haben, sollten Sie die Notiz wiederherstellen können.</numerusform>
+Falls Sie die Papierkorb-App auf Ihrem ownCloud-Server aktiviert haben, sollten Sie die Notizen wiederherstellen können.</numerusform>
       </translation>
     </message>
     <message>
@@ -2159,7 +2159,7 @@ Falls Sie die Papierkorb-App auf Ihrem ownCloud/Nextcloud-Server aktiviert haben
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Notiz-Überschrift</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -3535,12 +3535,12 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Standardmäßig wird die Überschrift wird automatisch erzeugt</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Die Verknüpfung zum Erstellen einer neuen Notiz fragt nach einer Überschrift</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>

@@ -275,7 +275,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="217"/>
       <source>Current line background color</source>
-      <translation type="unfinished">Current line background color</translation>
+      <translation>Kolor tła bieżącego wiersza</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="227"/>
@@ -876,7 +876,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation type="unfinished">Find notes in all tags / subfolders</translation>
+      <translation>Szukaj we wszystkich etykietach i podfolderach</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1855"/>
@@ -1549,7 +1549,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="8445"/>
       <source>Rename subfolder</source>
-      <translation type="unfinished">Rename subfolder</translation>
+      <translation>Zmień nazwę podfolderu</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="8991"/>
@@ -2181,7 +2181,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Nagłówek notatki</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -2191,7 +2191,7 @@ Jeżeli funkcja kosza jest uruchomiona na serwerze ownCloud, możesz je przywró
     <message>
       <location filename="../mainwindow.cpp" line="6101"/>
       <source>Downloading images finished</source>
-      <translation type="unfinished">Downloading images finished</translation>
+      <translation>Pobieranie obrazów zakończone</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="6202"/>
@@ -3538,42 +3538,42 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1935"/>
       <source>Indonesian</source>
-      <translation type="unfinished">Indonesian</translation>
+      <translation>Indonezyjski</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1946"/>
       <source>Catalan</source>
-      <translation type="unfinished">Catalan</translation>
+      <translation>Kataloński</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2111"/>
       <source>Swedish</source>
-      <translation type="unfinished">Swedish</translation>
+      <translation>Szwedzki</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2241"/>
       <source>Interface style</source>
-      <translation type="unfinished">Interface style</translation>
+      <translation>Styl interfejsu</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Domyślnie nagłówek będzie generowany automatycznie</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Podczas tworzenia nowej notatki pytaj o nagłówek</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
       <source>Note-edit cursor width:</source>
-      <translation type="unfinished">Note-edit cursor width:</translation>
+      <translation>Szerokość kursora w edytorze notatek:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4055"/>
       <source>Reset the cursor width</source>
-      <translation type="unfinished">Reset the cursor width</translation>
+      <translation>Przywróć domyślną szerokość kursora</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3994"/>
@@ -3583,7 +3583,7 @@ Przetestuj, a jeżeli występują problemy, ustaw wyższą wartość.</translati
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4069"/>
       <source>Highlight the current line</source>
-      <translation type="unfinished">Highlight the current line</translation>
+      <translation>Podświetl bieżący wiersz</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4258"/>

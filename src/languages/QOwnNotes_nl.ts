@@ -2158,7 +2158,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Notitie kop</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -3532,12 +3532,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Standaard wordt de kop automatisch gegenereerd</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>De snelkoppeling naar een nieuwe notitie vraagt om een kop</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
@@ -5259,12 +5259,12 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../main.cpp" line="69"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>De toepassing wordt uitgevoerd in de draagbare modus.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="73"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Hiermee wist u de instellingen en de toepassing wordt uitgevoerd.</translation>
     </message>
   </context>
 </TS>

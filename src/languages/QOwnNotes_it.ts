@@ -2158,7 +2158,7 @@ Se il cestino è attivato sul server ownCloud si dovrebbe essere in grado di rip
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Titolo della nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -3533,12 +3533,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Come impostazione predefinita, il titolo verrà generato automaticamente</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>La scelta rapida per creare una nuova nota richiede un titolo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
@@ -5265,12 +5265,12 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../main.cpp" line="69"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Esegue l'applicazione in modalità portatile.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="73"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Azzera le impostazioni e avvia l'applicazione.</translation>
     </message>
   </context>
 </TS>

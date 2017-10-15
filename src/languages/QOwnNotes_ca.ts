@@ -2157,7 +2157,7 @@ Si la paperera està habilitada al vostre servidor ownCloud les podreu restaurar
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Títol de la nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -3534,12 +3534,12 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Per defecte el títol es generarà automàticament</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>La drecera per crear una nova nota demana un títol</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
@@ -5265,12 +5265,12 @@ Això no es pot desfer!</translation>
     <message>
       <location filename="../main.cpp" line="69"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Execució de l'aplicació en mode portable.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="73"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Neteja la configuració i executa l'aplicació.</translation>
     </message>
   </context>
 </TS>

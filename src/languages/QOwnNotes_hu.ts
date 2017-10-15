@@ -2158,7 +2158,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="4875"/>
       <source>Note headline</source>
-      <translation type="unfinished">Note headline</translation>
+      <translation>Jegyzet főcím</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5235"/>
@@ -3532,12 +3532,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3156"/>
       <source>By default the headline will generated automatically</source>
-      <translation type="unfinished">By default the headline will generated automatically</translation>
+      <translation>Alapértelmezés szerint a főcímet automatikusan generáljuk</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation type="unfinished">The shortcut to create a new note asks for a headline</translation>
+      <translation>Ez a rövidítés mely egy új jegyzetet hoz létre, főcímet kér</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4045"/>
@@ -5253,12 +5253,12 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../main.cpp" line="69"/>
       <source>Runs the application in portable mode.</source>
-      <translation type="unfinished">Runs the application in portable mode.</translation>
+      <translation>Hordozható üzemmódban fut az alkalmazás.</translation>
     </message>
     <message>
       <location filename="../main.cpp" line="73"/>
       <source>Clears the settings and runs the application.</source>
-      <translation type="unfinished">Clears the settings and runs the application.</translation>
+      <translation>Törli a beállításokat és futtatja az alkalmazást.</translation>
     </message>
   </context>
 </TS>
