@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.10.5
+- highlighting of ordered lists in the note edit panel now works above `9.`
+  (for issue [Issue #746](https://github.com/pbek/QOwnNotes/issues/746))
+
 ## 17.10.4
 - fixed that a 2nd note is created if the non-automatic headlines for new notes
   are enabled (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
