@@ -6,6 +6,7 @@
 - fixed links to notes whose names only consist of numbers when `Ctrl`-clicking
   them in the note text edit, in the preview there is currently no way to make
   them work (for issue [Issue #748](https://github.com/pbek/QOwnNotes/issues/748))
+- did some dialog-texting changes
 
 ## 17.10.4
 - fixed that a 2nd note is created if the non-automatic headlines for new notes

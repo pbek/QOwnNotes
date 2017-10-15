@@ -3632,11 +3632,12 @@ void MainWindow::removeSelectedNotes() {
     if (QMessageBox::information(
             this,
             tr("Remove selected notes"),
-            tr("Remove <strong>%n</strong> selected note(s)?\n\n"
-               "If the trash is enabled on your "
+            Utils::Misc::replaceOwnCloudText(
+                    tr("Remove <strong>%n</strong> selected note(s)?\n\n"
+                    "If the trash is enabled on your "
                     "ownCloud server you should be able to restore "
                     "them from there.",
-               "", selectedItemsCount),
+               "", selectedItemsCount)),
              tr("&Remove"), tr("&Cancel"), QString::null,
              0, 1) == 0) {
         const QSignalBlocker blocker(this->noteDirectoryWatcher);
