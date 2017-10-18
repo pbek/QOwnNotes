@@ -771,13 +771,13 @@ QString Utils::Misc::genericCSS() {
 //typedef Utils::Misc::SearchEngine SearchEngine;
 QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
     QHash<int, Utils::Misc::SearchEngine> searchEngines;
-    searchEngines.insert(0 , {"Google" , "https://www.google.com/search?q=" , 0});
-    searchEngines.insert(1 , {"Bing" , "https://www.bing.com/search?q=" , 1});
-    searchEngines.insert(2 , {"DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q=" , 2});
-    searchEngines.insert(3 , {"Yahoo" , "https://search.yahoo.com/search?p=" , 3});
-    searchEngines.insert(4 , {"Google Scholar" , "https://scholar.google.co.il/scholar?q=" , 4});
-    searchEngines.insert(5 , {"Yandex" , "https://www.yandex.com/search/?text=" , 5});
-    searchEngines.insert(6 , {"Ask.com" , "https://www.ask.com/web?q=" , 6});
+    searchEngines.insert(0, {"Google", "https://www.google.com/search?q=", 0});
+    searchEngines.insert(1, {"Bing", "https://www.bing.com/search?q=", 1});
+    searchEngines.insert(2, {"DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=", 2});
+    searchEngines.insert(3, {"Yahoo", "https://search.yahoo.com/search?p=", 3});
+    searchEngines.insert(4, {"Google Scholar", "https://scholar.google.co.il/scholar?q=", 4});
+    searchEngines.insert(5, {"Yandex", "https://www.yandex.com/search/?text=", 5});
+    searchEngines.insert(6, {"Ask.com", "https://www.ask.com/web?q=", 6});
     return searchEngines;
 }
 
