@@ -85,7 +85,6 @@
 #include <utils/git.h>
 #include <dialogs/filedialog.h>
 
-
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
@@ -9321,10 +9320,19 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
         return;
     }
 
+    // handling the case in which the saved engine id
+    // has been removed
+
     QSettings settings;
-    int selectedSearchEngineIndex = settings.value("searchEngineUrl").toInt();
-    QString searchEngineUrl = Utils::Misc::getSearchEnginesVector()
-            [selectedSearchEngineIndex].second;
+    typedef Utils::Misc::SearchEngine SearchEngine;
+    QVariant savedValue = settings.value("SearchEngineId",
+                            Utils::Misc::getDefaultSearchEngineId());
+    int selectedSearchEngineId = savedValue.toInt();
+    qDebug() << "Displaying search, current search engine id is : " << selectedSearchEngineId;
+    QHash<int, SearchEngine> SearchEngines = Utils::Misc::getSearchEnginesHashmap();
+    SearchEngine selectedEngine = SearchEngines.value(
+                selectedSearchEngineId);
+    QString searchEngineUrl = selectedEngine.searchUrl;
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
 }

@@ -32,11 +32,6 @@
 #include <windows.h>
 #endif
 
-struct SearchEngine {
-    QString name;
-    QString searchUrl;
-};
-
 /**
  * Open the given path with an appropriate application
  * (thank you to qBittorrent for the inspiration)
@@ -773,22 +768,21 @@ QString Utils::Misc::genericCSS() {
  * A vector of pairs, the first item in the pair is the search
  * engine name and the second item is the search url of the engine.
  */
-QVector<QPair<QString, QString>> Utils::Misc::getSearchEnginesVector() {
-    QVector<QPair<QString, QString>> searchEngines;
-    searchEngines.append(QPair<QString, QString>("Google", "https://www.google.com/search?q="));
-    searchEngines.append(QPair<QString, QString>("Bing", "https://www.bing.com/search?q="));
-    searchEngines.append(QPair<QString, QString>("DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q="));
-    searchEngines.append(QPair<QString, QString>("Yahoo", "https://search.yahoo.com/search?p="));
-    searchEngines.append(QPair<QString, QString>("DogPile", "https://www.google.com/search?q="));
-    searchEngines.append(QPair<QString, QString>("Google Scholar", "https://scholar.google.co.il/scholar?q="));
-    searchEngines.append(QPair<QString, QString>("Yandex", "https://www.yandex.com/search/?text="));
-    searchEngines.append(QPair<QString, QString>("Ask.com", "https://www.ask.com/web?q="));
+//typedef Utils::Misc::SearchEngine SearchEngine;
+QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
+    QHash<int, Utils::Misc::SearchEngine> searchEngines;
+    searchEngines.insert(0 , {"Google" , "https://www.google.com/search?q=" , 0});
+    searchEngines.insert(1 , {"Bing" , "https://www.bing.com/search?q=" , 1});
+    searchEngines.insert(2 , {"DuckDuckGo" , "https://duckduckgo.com/?t=qownnotes&q=" , 2});
+    searchEngines.insert(3 , {"Yahoo" , "https://search.yahoo.com/search?p=" , 3});
+    searchEngines.insert(4 , {"Google Scholar" , "https://scholar.google.co.il/scholar?q=" , 4});
+    searchEngines.insert(5 , {"Yandex" , "https://www.yandex.com/search/?text=" , 5});
+    searchEngines.insert(6 , {"Ask.com" , "https://www.ask.com/web?q=" , 6});
     return searchEngines;
 }
 
-// Returns the default search engine
-QPair<QString, QString> Utils::Misc::getDefaultSearchEngine() {
-    return getSearchEnginesVector()[0];
+int Utils::Misc::getDefaultSearchEngineId() {
+    return 0;
 }
 
 /**

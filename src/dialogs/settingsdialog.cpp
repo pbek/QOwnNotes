@@ -664,8 +664,11 @@ void SettingsDialog::storeSettings() {
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 
     // saving the users chosen search engine.
-    settings.setValue("searchEngineUrl",
-                    ui->searchEngineSelectionComboBox->currentIndex());
+    settings.setValue("SearchEngineId",
+                    ui->searchEngineSelectionComboBox->currentData().toInt());
+
+    qDebug() << "Search Engine Id is now : " << ui->searchEngineSelectionComboBox->currentData().toInt();
+    qDebug() << "Saved search engine id is : " << settings.value("SearchEngineId").toInt();
 }
 
 /**
@@ -981,33 +984,35 @@ void SettingsDialog::readSettings() {
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
 
+    // Not sure this is the best way to do this
+    // but it works
     typedef Utils::Misc::SearchEngine SearchEngine;
 
-    // set the search engine combobox listings from a dictionary
-    QVector<QPair<QString, QString>> searchEngines =
-            Utils::Misc::getSearchEnginesVector();
-
-    QVector<QPair<QString, QString>>::const_iterator searchEngineIterator;
-
-    QStringList searchEnginesNames = QStringList();
+    // Iterates over the search engines and adds them
+    // to the combobox
+    QHash<int, SearchEngine> searchEngines =
+            Utils::Misc::getSearchEnginesHashmap();
 
     ui->searchEngineSelectionComboBox->clear();
 
-    // iterating over the dictionary keys and adding them to combobox
+    QHash<int, SearchEngine>::const_iterator searchEngineIterator;
+
     for (searchEngineIterator = searchEngines.begin();
-        searchEngineIterator != searchEngines.end();
-        searchEngineIterator++) {
-        searchEnginesNames << searchEngineIterator->first;
+         searchEngineIterator != searchEngines.end();
+         searchEngineIterator++) {
+        SearchEngine current = searchEngineIterator.value();
+        ui->searchEngineSelectionComboBox->addItem(current.name + " : " + QVariant(current.id).toString() , QVariant(current.id).toString());
     }
 
-    ui->searchEngineSelectionComboBox->addItems(searchEnginesNames);
-
-    int savedValueIndex =
-            settings.value("searchEngineUrl").toInt();
-    QString savedValueName =
-            (Utils::Misc::getSearchEnginesVector()[savedValueIndex]).first;
-
-    ui->searchEngineSelectionComboBox->setCurrentText(savedValueName);
+    // Sets the current selected item to the search engine
+    // selected previously
+    // while also handling the case in which the saved key has
+    // been removed from the hash table
+    int savedEngineId = settings.value("SearchEngineId").toInt();
+    int savedEngineIndex = ui->searchEngineSelectionComboBox->findData(
+                QVariant(savedEngineId).toString());
+    savedEngineIndex = (savedEngineIndex == -1) ? 0 : savedEngineIndex;
+    ui->searchEngineSelectionComboBox->setCurrentIndex(savedEngineIndex);
 }
 
 /**
