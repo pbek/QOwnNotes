@@ -663,12 +663,8 @@ void SettingsDialog::storeSettings() {
     // store the cursor width
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
 
-    // saving the users chosen search engine.
     settings.setValue("SearchEngineId",
                     ui->searchEngineSelectionComboBox->currentData().toInt());
-
-    qDebug() << "Search Engine Id is now : " << ui->searchEngineSelectionComboBox->currentData().toInt();
-    qDebug() << "Saved search engine id is : " << settings.value("SearchEngineId").toInt();
 }
 
 /**
