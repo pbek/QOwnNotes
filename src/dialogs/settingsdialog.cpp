@@ -997,7 +997,8 @@ void SettingsDialog::readSettings() {
          searchEngineIterator != searchEngines.end();
          searchEngineIterator++) {
         SearchEngine current = searchEngineIterator.value();
-        ui->searchEngineSelectionComboBox->addItem(current.name + " : " + QVariant(current.id).toString() , QVariant(current.id).toString());
+        ui->searchEngineSelectionComboBox->addItem(current.name,
+                                    QVariant(current.id).toString());
     }
 
     // Sets the current selected item to the search engine
