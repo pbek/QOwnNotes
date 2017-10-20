@@ -9328,7 +9328,6 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
     QVariant savedValue = settings.value("SearchEngineId",
                             Utils::Misc::getDefaultSearchEngineId());
     int selectedSearchEngineId = savedValue.toInt();
-    qDebug() << "Displaying search, current search engine id is : " << selectedSearchEngineId;
     QHash<int, SearchEngine> SearchEngines = Utils::Misc::getSearchEnginesHashmap();
     SearchEngine selectedEngine = SearchEngines.value(
                 selectedSearchEngineId);

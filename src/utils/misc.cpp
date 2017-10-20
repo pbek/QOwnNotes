@@ -32,6 +32,8 @@
 #include <windows.h>
 #endif
 
+
+
 /**
  * Open the given path with an appropriate application
  * (thank you to qBittorrent for the inspiration)
@@ -770,14 +772,25 @@ QString Utils::Misc::genericCSS() {
  */
 //typedef Utils::Misc::SearchEngine SearchEngine;
 QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
+
+    enum SearchEngines {
+        Google = 0,
+        Bing = 1,
+        DuckDuckGo = 2,
+        Yahoo = 3,
+        GoogleScholar = 4,
+        Yandex = 5,
+        AskDotCom = 6
+    };
+
     QHash<int, Utils::Misc::SearchEngine> searchEngines;
-    searchEngines.insert(0, {"Google", "https://www.google.com/search?q=", 0});
-    searchEngines.insert(1, {"Bing", "https://www.bing.com/search?q=", 1});
-    searchEngines.insert(2, {"DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=", 2});
-    searchEngines.insert(3, {"Yahoo", "https://search.yahoo.com/search?p=", 3});
-    searchEngines.insert(4, {"Google Scholar", "https://scholar.google.co.il/scholar?q=", 4});
-    searchEngines.insert(5, {"Yandex", "https://www.yandex.com/search/?text=", 5});
-    searchEngines.insert(6, {"Ask.com", "https://www.ask.com/web?q=", 6});
+    searchEngines.insert(Google, {"Google", "https://www.google.com/search?q=", Google});
+    searchEngines.insert(Bing, {"Bing", "https://www.bing.com/search?q=", Bing});
+    searchEngines.insert(DuckDuckGo, {"DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=", DuckDuckGo});
+    searchEngines.insert(Yahoo, {"Yahoo", "https://search.yahoo.com/search?p=", Yahoo});
+    searchEngines.insert(GoogleScholar, {"Google Scholar", "https://scholar.google.co.il/scholar?q=", GoogleScholar});
+    searchEngines.insert(Yandex, {"Yandex", "https://www.yandex.com/search/?text=", Yandex});
+    searchEngines.insert(AskDotCom, {"Ask.com", "https://www.ask.com/web?q=", AskDotCom});
     return searchEngines;
 }
 

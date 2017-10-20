@@ -31,7 +31,7 @@ namespace Utils {
             int id;
         };
 
-        //enum SearchEngines;
+
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
         QString removeIfStartsWith(QString text, QString removeString);
