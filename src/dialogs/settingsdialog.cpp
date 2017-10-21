@@ -664,6 +664,9 @@ void SettingsDialog::storeSettings() {
 
     // store the cursor width
     settings.setValue("cursorWidth", ui->cursorWidthSpinBox->value());
+
+    settings.setValue("SearchEngineId",
+                    ui->searchEngineSelectionComboBox->currentData().toInt());
 }
 
 /**
@@ -980,6 +983,37 @@ void SettingsDialog::readSettings() {
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
+
+    // Not sure this is the best way to do this
+    // but it works
+    typedef Utils::Misc::SearchEngine SearchEngine;
+
+    // Iterates over the search engines and adds them
+    // to the combobox
+    QHash<int, SearchEngine> searchEngines =
+            Utils::Misc::getSearchEnginesHashmap();
+
+    ui->searchEngineSelectionComboBox->clear();
+
+    QHash<int, SearchEngine>::const_iterator searchEngineIterator;
+
+    for (searchEngineIterator = searchEngines.begin();
+         searchEngineIterator != searchEngines.end();
+         searchEngineIterator++) {
+        SearchEngine current = searchEngineIterator.value();
+        ui->searchEngineSelectionComboBox->addItem(current.name,
+                                    QVariant(current.id).toString());
+    }
+
+    // Sets the current selected item to the search engine
+    // selected previously
+    // while also handling the case in which the saved key has
+    // been removed from the hash table
+    int savedEngineId = settings.value("SearchEngineId").toInt();
+    int savedEngineIndex = ui->searchEngineSelectionComboBox->findData(
+                QVariant(savedEngineId).toString());
+    savedEngineIndex = (savedEngineIndex == -1) ? 0 : savedEngineIndex;
+    ui->searchEngineSelectionComboBox->setCurrentIndex(savedEngineIndex);
 }
 
 /**
@@ -2290,8 +2324,7 @@ QTreeWidgetItem *SettingsDialog::findNoteFolderRemotePathTreeWidgetItem(
 }
 
 void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
-        QTreeWidgetItem *current, QTreeWidgetItem *previous)
-{
+        QTreeWidgetItem *current, QTreeWidgetItem *previous) {
     Q_UNUSED(previous);
 
     QString folderName =
@@ -2303,8 +2336,7 @@ void SettingsDialog::on_noteFolderRemotePathTreeWidget_currentItemChanged(
     ownCloud->settingsGetFileList(this, folderName);
 }
 
-void SettingsDialog::on_useOwnCloudPathButton_clicked()
-{
+void SettingsDialog::on_useOwnCloudPathButton_clicked() {
     QTreeWidgetItem *item = ui->noteFolderRemotePathTreeWidget->currentItem();
     if (item == NULL) {
         return;

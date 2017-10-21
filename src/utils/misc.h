@@ -19,11 +19,19 @@
 #include <QFile>
 #include <QByteArray>
 #include <QStringList>
+#include <QMap>
 
 /*  Miscellaneous functions that can be useful */
 
 namespace Utils {
     namespace Misc {
+        struct SearchEngine {
+            QString name;
+            QString searchUrl;
+            int id;
+        };
+
+
         void openPath(const QString& absolutePath);
         void openFolderSelect(const QString& absolutePath);
         QString removeIfStartsWith(QString text, QString removeString);
@@ -59,6 +67,8 @@ namespace Utils {
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
+        QHash<int, SearchEngine> getSearchEnginesHashmap();
+        int getDefaultSearchEngineId();
         void presetDisableAutomaticUpdateDialog();
-    }
-}
+    }  // namespace Misc
+}  // namespace Utils

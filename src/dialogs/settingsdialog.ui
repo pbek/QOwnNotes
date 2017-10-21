@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>14</number>
+            <number>7</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -2961,7 +2961,7 @@
               <number>0</number>
              </property>
              <item>
-              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0">
+              <layout class="QVBoxLayout" name="verticalLayout_4" stretch="0,0,0,0,0">
                <property name="leftMargin">
                 <number>0</number>
                </property>
@@ -3199,6 +3199,28 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                    <widget class="QCheckBox" name="disableAutomaticUpdateDialogCheckBox">
                     <property name="text">
                      <string>Don't show the update dialog automatically</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="groupBox_25">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>75</height>
+                  </size>
+                 </property>
+                 <property name="title">
+                  <string>Search Engine</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <item>
+                   <widget class="QComboBox" name="searchEngineSelectionComboBox">
+                    <property name="editable">
+                     <bool>false</bool>
                     </property>
                    </widget>
                   </item>

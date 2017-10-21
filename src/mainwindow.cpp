@@ -85,7 +85,6 @@
 #include <utils/git.h>
 #include <dialogs/filedialog.h>
 
-
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
@@ -9352,8 +9351,19 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
         return;
     }
 
-    QUrl url("https://duckduckgo.com/?t=qownnotes&q=" +
-                     QUrl::toPercentEncoding(selectedText));
+    // handling the case in which the saved engine id
+    // has been removed
+
+    QSettings settings;
+    typedef Utils::Misc::SearchEngine SearchEngine;
+    QVariant savedValue = settings.value("SearchEngineId",
+                            Utils::Misc::getDefaultSearchEngineId());
+    int selectedSearchEngineId = savedValue.toInt();
+    QHash<int, SearchEngine> SearchEngines = Utils::Misc::getSearchEnginesHashmap();
+    SearchEngine selectedEngine = SearchEngines.value(
+                selectedSearchEngineId);
+    QString searchEngineUrl = selectedEngine.searchUrl;
+    QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
 }
 
@@ -9452,8 +9462,7 @@ void MainWindow::on_actionSave_modified_notes_triggered() {
 /**
  * Sets ascending note sort order
  */
-void MainWindow::on_actionAscending_triggered()
-{
+void MainWindow::on_actionAscending_triggered() {
     QSettings settings;
     settings.setValue("notesPanelOrder", ORDER_ASCENDING);
     ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_ASCENDING));
@@ -9462,8 +9471,7 @@ void MainWindow::on_actionAscending_triggered()
 /**
  * Sets descending note sort order
  */
-void MainWindow::on_actionDescending_triggered()
-{
+void MainWindow::on_actionDescending_triggered() {
     QSettings settings;
     settings.setValue("notesPanelOrder", ORDER_DESCENDING);
     ui->noteTreeWidget->sortItems(0, toQtOrder(ORDER_DESCENDING));
@@ -9472,8 +9480,7 @@ void MainWindow::on_actionDescending_triggered()
 /**
  * Updates the visibility of the note sort order selector
  */
-void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible)
-{
+void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible) {
     ui->actionAscending->setVisible(visible);
     ui->actionDescending->setVisible(visible);
 //    ui->sortOrderSeparator->setVisible(visible);
@@ -9484,8 +9491,7 @@ void MainWindow::updateNoteSortOrderSelectorVisibility(bool visible)
  *
  * @param pos
  */
-void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos)
-{
+void MainWindow::on_noteTextView_customContextMenuRequested(const QPoint &pos) {
     QPoint globalPos = ui->noteTextView->mapToGlobal(pos);
     QMenu *menu = ui->noteTextView->createStandardContextMenu();
 
@@ -9575,7 +9581,6 @@ void MainWindow::storeTagTreeWidgetExpandState() const {
                 if (item->isExpanded()) {
                     expandedList << item->data(0, Qt::UserRole).toString();
                 }
-
             }
         }
 

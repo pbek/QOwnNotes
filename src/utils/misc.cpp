@@ -33,6 +33,7 @@
 #endif
 
 
+
 /**
  * Open the given path with an appropriate application
  * (thank you to qBittorrent for the inspiration)
@@ -763,6 +764,38 @@ QString Utils::Misc::genericCSS() {
     color = darkModeColors ? "#5b5b5b" : "#e8e8e8";
     cssStyles += "kbd {background-color: " + color +  "}";
     return cssStyles;
+}
+
+/**
+ * A vector of pairs, the first item in the pair is the search
+ * engine name and the second item is the search url of the engine.
+ */
+//typedef Utils::Misc::SearchEngine SearchEngine;
+QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
+
+    enum SearchEngines {
+        Google = 0,
+        Bing = 1,
+        DuckDuckGo = 2,
+        Yahoo = 3,
+        GoogleScholar = 4,
+        Yandex = 5,
+        AskDotCom = 6
+    };
+
+    QHash<int, Utils::Misc::SearchEngine> searchEngines;
+    searchEngines.insert(Google, {"Google", "https://www.google.com/search?q=", Google});
+    searchEngines.insert(Bing, {"Bing", "https://www.bing.com/search?q=", Bing});
+    searchEngines.insert(DuckDuckGo, {"DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=", DuckDuckGo});
+    searchEngines.insert(Yahoo, {"Yahoo", "https://search.yahoo.com/search?p=", Yahoo});
+    searchEngines.insert(GoogleScholar, {"Google Scholar", "https://scholar.google.co.il/scholar?q=", GoogleScholar});
+    searchEngines.insert(Yandex, {"Yandex", "https://www.yandex.com/search/?text=", Yandex});
+    searchEngines.insert(AskDotCom, {"Ask.com", "https://www.ask.com/web?q=", AskDotCom});
+    return searchEngines;
+}
+
+int Utils::Misc::getDefaultSearchEngineId() {
+    return 0;
 }
 
 /**
