@@ -7,6 +7,7 @@
 - added an information text to the Windows update dialog to remind the user that
   QOwnNotes needs to run from a location where the user has write access to for 
   the automatic update to work (for issue [Issue #750](https://github.com/pbek/QOwnNotes/issues/750))
+- added more French and German translation (thank you bepolymathe)
 
 ## 17.10.5
 - highlighting of ordered lists in the note edit panel now works above `9.`
