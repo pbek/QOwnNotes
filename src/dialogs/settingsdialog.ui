@@ -3214,7 +3214,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                   </size>
                  </property>
                  <property name="title">
-                  <string>Search Engine</string>
+                  <string>Search engine</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_3">
                   <item>

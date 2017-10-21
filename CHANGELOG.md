@@ -1,5 +1,10 @@
 # QOwnNotes Changelog
 
+## 17.10.6
+- you can now select different search engines for searching text in notes in the
+  *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661), 
+   thank you @ron-popov)
+
 ## 17.10.5
 - highlighting of ordered lists in the note edit panel now works above `9.`
   (for issue [Issue #746](https://github.com/pbek/QOwnNotes/issues/746))

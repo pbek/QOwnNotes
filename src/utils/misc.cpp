@@ -34,6 +34,17 @@
 
 
 
+enum SearchEngines {
+    Google = 0,
+    Bing = 1,
+    DuckDuckGo = 2,
+    Yahoo = 3,
+    GoogleScholar = 4,
+    Yandex = 5,
+    AskDotCom = 6
+};
+
+
 /**
  * Open the given path with an appropriate application
  * (thank you to qBittorrent for the inspiration)
@@ -772,30 +783,33 @@ QString Utils::Misc::genericCSS() {
  */
 //typedef Utils::Misc::SearchEngine SearchEngine;
 QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
-
-    enum SearchEngines {
-        Google = 0,
-        Bing = 1,
-        DuckDuckGo = 2,
-        Yahoo = 3,
-        GoogleScholar = 4,
-        Yandex = 5,
-        AskDotCom = 6
-    };
-
     QHash<int, Utils::Misc::SearchEngine> searchEngines;
-    searchEngines.insert(Google, {"Google", "https://www.google.com/search?q=", Google});
-    searchEngines.insert(Bing, {"Bing", "https://www.bing.com/search?q=", Bing});
-    searchEngines.insert(DuckDuckGo, {"DuckDuckGo", "https://duckduckgo.com/?t=qownnotes&q=", DuckDuckGo});
-    searchEngines.insert(Yahoo, {"Yahoo", "https://search.yahoo.com/search?p=", Yahoo});
-    searchEngines.insert(GoogleScholar, {"Google Scholar", "https://scholar.google.co.il/scholar?q=", GoogleScholar});
-    searchEngines.insert(Yandex, {"Yandex", "https://www.yandex.com/search/?text=", Yandex});
-    searchEngines.insert(AskDotCom, {"Ask.com", "https://www.ask.com/web?q=", AskDotCom});
+    searchEngines.insert(SearchEngines::Google,
+                         {"Google", "https://www.google.com/search?q=",
+                          Google});
+    searchEngines.insert(SearchEngines::Bing,
+                         {"Bing", "https://www.bing.com/search?q=", Bing});
+    searchEngines.insert(SearchEngines::DuckDuckGo,
+                         {"DuckDuckGo",
+                          "https://duckduckgo.com/?t=qownnotes&q=",
+                          DuckDuckGo});
+    searchEngines.insert(SearchEngines::Yahoo,
+                         {"Yahoo", "https://search.yahoo.com/search?p=",
+                          Yahoo});
+    searchEngines.insert(SearchEngines::GoogleScholar,
+                         {"Google Scholar",
+                          "https://scholar.google.co.il/scholar?q=",
+                          GoogleScholar});
+    searchEngines.insert(SearchEngines::Yandex,
+                         {"Yandex", "https://www.yandex.com/search/?text=",
+                          Yandex});
+    searchEngines.insert(SearchEngines::AskDotCom,
+                         {"Ask.com", "https://www.ask.com/web?q=", AskDotCom});
     return searchEngines;
 }
 
 int Utils::Misc::getDefaultSearchEngineId() {
-    return 0;
+    return SearchEngines::DuckDuckGo;
 }
 
 /**

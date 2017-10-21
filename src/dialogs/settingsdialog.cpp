@@ -1009,7 +1009,8 @@ void SettingsDialog::readSettings() {
     // selected previously
     // while also handling the case in which the saved key has
     // been removed from the hash table
-    int savedEngineId = settings.value("SearchEngineId").toInt();
+    int savedEngineId = settings.value(
+            "SearchEngineId", Utils::Misc::getDefaultSearchEngineId()).toInt();
     int savedEngineIndex = ui->searchEngineSelectionComboBox->findData(
                 QVariant(savedEngineId).toString());
     savedEngineIndex = (savedEngineIndex == -1) ? 0 : savedEngineIndex;

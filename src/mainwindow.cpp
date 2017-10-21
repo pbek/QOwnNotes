@@ -9356,12 +9356,11 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
 
     QSettings settings;
     typedef Utils::Misc::SearchEngine SearchEngine;
-    QVariant savedValue = settings.value("SearchEngineId",
-                            Utils::Misc::getDefaultSearchEngineId());
-    int selectedSearchEngineId = savedValue.toInt();
-    QHash<int, SearchEngine> SearchEngines = Utils::Misc::getSearchEnginesHashmap();
-    SearchEngine selectedEngine = SearchEngines.value(
-                selectedSearchEngineId);
+    int selectedSearchEngineId = settings.value(
+            "SearchEngineId", Utils::Misc::getDefaultSearchEngineId()).toInt();
+    QHash<int, SearchEngine> SearchEngines =
+            Utils::Misc::getSearchEnginesHashmap();
+    SearchEngine selectedEngine = SearchEngines.value(selectedSearchEngineId);
     QString searchEngineUrl = selectedEngine.searchUrl;
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
     QDesktopServices::openUrl(url);
