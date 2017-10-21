@@ -5072,140 +5072,145 @@ This cannot be undone!</source>
     </message>
     <message>
         <location filename="../dialogs/updatedialog.ui" line="83"/>
+        <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/updatedialog.ui" line="93"/>
         <source>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;Get involved with QOwnNotes&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;http://www.qownnotes.org/Knowledge-base/How-can-I-get-involved-with-QOwnNotes&quot;&gt;ساهم في كيو-أون-نوتس&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.ui" line="96"/>
+        <location filename="../dialogs/updatedialog.ui" line="106"/>
         <source>%p% downloaded</source>
         <translation>%p% المحمّل</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="40"/>
+        <location filename="../dialogs/updatedialog.cpp" line="44"/>
         <source>&amp;Update</source>
         <translation>حدّث</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="53"/>
+        <location filename="../dialogs/updatedialog.cpp" line="60"/>
         <source>&amp;Download latest</source>
         <translation>حمّل الأخير</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="51"/>
+        <location filename="../dialogs/updatedialog.cpp" line="55"/>
         <source>Just download</source>
         <translation>حمّل فقط</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="67"/>
+        <location filename="../dialogs/updatedialog.cpp" line="74"/>
         <source>&amp;Skip version</source>
         <translation>تخطى الإصدار</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="77"/>
-        <location filename="../dialogs/updatedialog.cpp" line="328"/>
-        <location filename="../dialogs/updatedialog.cpp" line="486"/>
+        <location filename="../dialogs/updatedialog.cpp" line="84"/>
+        <location filename="../dialogs/updatedialog.cpp" line="335"/>
+        <location filename="../dialogs/updatedialog.cpp" line="493"/>
         <source>&amp;Cancel</source>
         <translation>ألغ</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="225"/>
+        <location filename="../dialogs/updatedialog.cpp" line="232"/>
         <source>Download error</source>
         <translation>خطأ في التحميل</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="226"/>
+        <location filename="../dialogs/updatedialog.cpp" line="233"/>
         <source>Error while downloading:
 %1</source>
         <translation>خطأ خلال التحميل: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="228"/>
+        <location filename="../dialogs/updatedialog.cpp" line="235"/>
         <source>network error: %1</source>
         <translation>خطأ في الشبكة: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="251"/>
-        <location filename="../dialogs/updatedialog.cpp" line="272"/>
-        <location filename="../dialogs/updatedialog.cpp" line="370"/>
+        <location filename="../dialogs/updatedialog.cpp" line="258"/>
+        <location filename="../dialogs/updatedialog.cpp" line="279"/>
+        <location filename="../dialogs/updatedialog.cpp" line="377"/>
         <source>File error</source>
         <translation>خطأ في الملف</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="252"/>
-        <location filename="../dialogs/updatedialog.cpp" line="371"/>
+        <location filename="../dialogs/updatedialog.cpp" line="259"/>
+        <location filename="../dialogs/updatedialog.cpp" line="378"/>
         <source>Could not open temporary file:
 %1</source>
         <translation>لا يمكن فتح الملف المؤقت: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="273"/>
+        <location filename="../dialogs/updatedialog.cpp" line="280"/>
         <source>Could not store downloaded file:
 %1</source>
         <translation>لا يمكن تخزين الملف المحمّل: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="327"/>
+        <location filename="../dialogs/updatedialog.cpp" line="334"/>
         <source>Do you want to update and restart QOwnNotes?</source>
         <translation>هل تريد التحديث وإعادة تشغيل كيو-أون-نوتس؟</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="343"/>
-        <location filename="../dialogs/updatedialog.cpp" line="430"/>
-        <location filename="../dialogs/updatedialog.cpp" line="439"/>
-        <location filename="../dialogs/updatedialog.cpp" line="448"/>
-        <location filename="../dialogs/updatedialog.cpp" line="457"/>
-        <location filename="../dialogs/updatedialog.cpp" line="467"/>
-        <location filename="../dialogs/updatedialog.cpp" line="476"/>
+        <location filename="../dialogs/updatedialog.cpp" line="350"/>
+        <location filename="../dialogs/updatedialog.cpp" line="437"/>
+        <location filename="../dialogs/updatedialog.cpp" line="446"/>
+        <location filename="../dialogs/updatedialog.cpp" line="455"/>
+        <location filename="../dialogs/updatedialog.cpp" line="464"/>
+        <location filename="../dialogs/updatedialog.cpp" line="474"/>
+        <location filename="../dialogs/updatedialog.cpp" line="483"/>
         <source>Error</source>
         <translation>خطأ</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="344"/>
+        <location filename="../dialogs/updatedialog.cpp" line="351"/>
         <source>Could not find updater file:
 %1</source>
         <translation>لم يتمكن من إيجاد الملف المحدث:
 %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="431"/>
+        <location filename="../dialogs/updatedialog.cpp" line="438"/>
         <source>Updater script &apos;%1&apos; doesn&apos;t exist!</source>
         <translation>برنامج التحديث &apos;%1&apos; غير موجود!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="440"/>
+        <location filename="../dialogs/updatedialog.cpp" line="447"/>
         <source>Updater unzip executable &apos;%1&apos; doesn&apos;t exist!</source>
         <translation>برنامج فكّ الضغط للمحدّث &apos;%1&apos; غير موجود!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="449"/>
-        <location filename="../dialogs/updatedialog.cpp" line="458"/>
+        <location filename="../dialogs/updatedialog.cpp" line="456"/>
+        <location filename="../dialogs/updatedialog.cpp" line="465"/>
         <source>Could not copy updater script &apos;%1&apos; to &apos;%2&apos;!</source>
         <translation>لم يتمكن من نسخ برنامج التحديث &apos;%1&apos; إلى &apos;%2&apos;!</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="468"/>
+        <location filename="../dialogs/updatedialog.cpp" line="475"/>
         <source>Couldn&apos;t find updater script: %1</source>
         <translation>لم يتمكن من إيجاد برنامج المحدّث: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="477"/>
+        <location filename="../dialogs/updatedialog.cpp" line="484"/>
         <source>Couldn&apos;t find unzip executable: %1</source>
         <translation>لم يتمكن من إيجاد برنامج فك الضغط: %1</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="326"/>
-        <location filename="../dialogs/updatedialog.cpp" line="483"/>
+        <location filename="../dialogs/updatedialog.cpp" line="333"/>
+        <location filename="../dialogs/updatedialog.cpp" line="490"/>
         <source>Proceed with update</source>
         <translation>المضي قدماً في التحديث</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="484"/>
+        <location filename="../dialogs/updatedialog.cpp" line="491"/>
         <source>The download is now finished. Do you want to update and restart QOwnNotes?</source>
         <translation>انتهى التحميل الآن، هل تريد تحديث وإعادة تشغيل كيو-أون-نوتس؟</translation>
     </message>
     <message>
-        <location filename="../dialogs/updatedialog.cpp" line="328"/>
-        <location filename="../dialogs/updatedialog.cpp" line="486"/>
+        <location filename="../dialogs/updatedialog.cpp" line="335"/>
+        <location filename="../dialogs/updatedialog.cpp" line="493"/>
         <source>&amp;Update and restart</source>
         <translation>حدّث وأعد التشغيل</translation>
     </message>

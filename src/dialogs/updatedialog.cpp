@@ -22,6 +22,10 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
     ui->setupUi(this);
     ui->downloadProgressBar->hide();
 
+#if !defined(Q_OS_WIN)
+    ui->permissionLabel->hide();
+#endif
+
     // inject some generic CSS styles
     ui->changeLogEdit->document()->setDefaultStyleSheet(
             Utils::Misc::genericCSS());
@@ -39,7 +43,7 @@ UpdateDialog::UpdateDialog(QWidget *parent, QString changesHtml,
 
     _updateButton = new QPushButton(tr("&Update"));
 
-    // automatic updates are only available for Windows
+    // automatic updates are only available for Windows and macOS
 #if defined(Q_OS_WIN) || defined(Q_OS_MAC)
     _updateButton->setProperty("ActionRole", Update);
     _updateButton->setDefault(true);
