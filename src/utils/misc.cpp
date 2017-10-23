@@ -41,7 +41,9 @@ enum SearchEngines {
     Yahoo = 3,
     GoogleScholar = 4,
     Yandex = 5,
-    AskDotCom = 6
+    AskDotCom = 6,
+    Qwant = 7,
+    Startpage = 8
 };
 
 
@@ -781,35 +783,63 @@ QString Utils::Misc::genericCSS() {
  * A vector of pairs, the first item in the pair is the search
  * engine name and the second item is the search url of the engine.
  */
-//typedef Utils::Misc::SearchEngine SearchEngine;
-QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashmap() {
+QHash<int, Utils::Misc::SearchEngine> Utils::Misc::getSearchEnginesHashMap() {
     QHash<int, Utils::Misc::SearchEngine> searchEngines;
     searchEngines.insert(SearchEngines::Google,
                          {"Google", "https://www.google.com/search?q=",
-                          Google});
+                          SearchEngines::Google});
     searchEngines.insert(SearchEngines::Bing,
-                         {"Bing", "https://www.bing.com/search?q=", Bing});
+                         {"Bing", "https://www.bing.com/search?q=",
+                          SearchEngines::Bing});
     searchEngines.insert(SearchEngines::DuckDuckGo,
                          {"DuckDuckGo",
                           "https://duckduckgo.com/?t=qownnotes&q=",
-                          DuckDuckGo});
+                          SearchEngines::DuckDuckGo});
     searchEngines.insert(SearchEngines::Yahoo,
                          {"Yahoo", "https://search.yahoo.com/search?p=",
-                          Yahoo});
+                          SearchEngines::Yahoo});
     searchEngines.insert(SearchEngines::GoogleScholar,
                          {"Google Scholar",
                           "https://scholar.google.co.il/scholar?q=",
-                          GoogleScholar});
+                          SearchEngines::GoogleScholar});
     searchEngines.insert(SearchEngines::Yandex,
                          {"Yandex", "https://www.yandex.com/search/?text=",
-                          Yandex});
+                          SearchEngines::Yandex});
     searchEngines.insert(SearchEngines::AskDotCom,
-                         {"Ask.com", "https://www.ask.com/web?q=", AskDotCom});
+                         {"Ask.com", "https://www.ask.com/web?q=",
+                          SearchEngines::AskDotCom});
+    searchEngines.insert(SearchEngines::Qwant,
+                         {"Qwant", "https://www.qwant.com/?q=",
+                          SearchEngines::Qwant});
+    searchEngines.insert(SearchEngines::Startpage,
+                         {"Startpage",
+                          "https://www.startpage.com/do/dsearch?query=",
+                          SearchEngines::Startpage});
     return searchEngines;
 }
 
+/**
+ * Returns the default search engine id
+ *
+ * @return
+ */
 int Utils::Misc::getDefaultSearchEngineId() {
     return SearchEngines::DuckDuckGo;
+}
+
+/**
+ * Returns a list of search engines in the order it should be displayed
+ *
+ * @return
+ */
+QList<int> Utils::Misc::getSearchEnginesIds() {
+    QList<int> list;
+    list << SearchEngines::DuckDuckGo << SearchEngines::Google
+         << SearchEngines::Bing << SearchEngines::Yahoo
+         << SearchEngines::GoogleScholar << SearchEngines::Yandex
+         << SearchEngines::AskDotCom << SearchEngines::Qwant
+         << SearchEngines::Startpage;
+    return list;
 }
 
 /**

@@ -182,6 +182,9 @@ SettingsDialog::SettingsDialog(int page, QWidget *parent) :
             ui->noteSubfoldersPanelOrderGroupBox, SLOT(setEnabled(bool)));
     connect(ui->tagsPanelSortAlphabeticalRadioButton, SIGNAL(toggled(bool)),
             ui->tagsPanelOrderGroupBox, SLOT(setEnabled(bool)));
+
+    // setup the search engine combo-box
+    initSearchEngineComboBox();
 }
 
 /**
@@ -983,27 +986,26 @@ void SettingsDialog::readSettings() {
     // set the cursor width spinbox value
     ui->cursorWidthSpinBox->setValue(
             settings.value("cursorWidth", 1).toInt());
+}
 
-    // Not sure this is the best way to do this
-    // but it works
-    typedef Utils::Misc::SearchEngine SearchEngine;
+/**
+ * Does the setup for the search engine combo-box
+ */
+void SettingsDialog::initSearchEngineComboBox() const {
+    QSettings settings;
 
     // Iterates over the search engines and adds them
     // to the combobox
-    QHash<int, SearchEngine> searchEngines =
-            Utils::Misc::getSearchEnginesHashmap();
+    QHash<int, Utils::Misc::SearchEngine> searchEngines =
+            Utils::Misc::getSearchEnginesHashMap();
 
     ui->searchEngineSelectionComboBox->clear();
 
-    QHash<int, SearchEngine>::const_iterator searchEngineIterator;
-
-    for (searchEngineIterator = searchEngines.begin();
-         searchEngineIterator != searchEngines.end();
-         searchEngineIterator++) {
-        SearchEngine current = searchEngineIterator.value();
-        ui->searchEngineSelectionComboBox->addItem(current.name,
-                                    QVariant(current.id).toString());
-    }
+    Q_FOREACH(int id, Utils::Misc::getSearchEnginesIds()) {
+            Utils::Misc::SearchEngine searchEngine = searchEngines[id];
+            ui->searchEngineSelectionComboBox->addItem(searchEngine.name,
+                                                       QString::number(id));
+        }
 
     // Sets the current selected item to the search engine
     // selected previously

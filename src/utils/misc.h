@@ -67,8 +67,9 @@ namespace Utils {
         bool downloadUrlToFile(QUrl url, QFile *file);
         QByteArray downloadUrl(QUrl url);
         QString genericCSS();
-        QHash<int, SearchEngine> getSearchEnginesHashmap();
+        QHash<int, SearchEngine> getSearchEnginesHashMap();
         int getDefaultSearchEngineId();
         void presetDisableAutomaticUpdateDialog();
+        QList<int> getSearchEnginesIds();
     }  // namespace Misc
 }  // namespace Utils

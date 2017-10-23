@@ -13,6 +13,7 @@
 #include <entities/script.h>
 #include <services/owncloudservice.h>
 #include <QCheckBox>
+#include <QtCore/QSettings>
 #include "masterdialog.h"
 
 namespace Ui {
@@ -320,6 +321,8 @@ private:
     void storePanelSettings();
 
     void loadInterfaceStyleComboBox() const;
+
+    void initSearchEngineComboBox() const;
 };
 
 #endif // SETTINGSDIALOG_H

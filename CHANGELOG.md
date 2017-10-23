@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.10.7
+- added new search engines *Qwant* and *Startpage* and reordered the list in 
+  the *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661)
+
 ## 17.10.6
 - you can now select different search engines for searching text in notes in the
   *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661), 

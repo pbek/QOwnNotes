@@ -9359,7 +9359,7 @@ void MainWindow::on_actionSearch_text_on_the_web_triggered() {
     int selectedSearchEngineId = settings.value(
             "SearchEngineId", Utils::Misc::getDefaultSearchEngineId()).toInt();
     QHash<int, SearchEngine> SearchEngines =
-            Utils::Misc::getSearchEnginesHashmap();
+            Utils::Misc::getSearchEnginesHashMap();
     SearchEngine selectedEngine = SearchEngines.value(selectedSearchEngineId);
     QString searchEngineUrl = selectedEngine.searchUrl;
     QUrl url(searchEngineUrl + QUrl::toPercentEncoding(selectedText));
