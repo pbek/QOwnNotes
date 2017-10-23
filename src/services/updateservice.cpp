@@ -183,6 +183,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
                     0, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
+            // try to prevent stealing of focus
+            _updateDialog->setAttribute(Qt::WA_ShowWithoutActivating);
             _updateDialog->show();
         }
     } else {
