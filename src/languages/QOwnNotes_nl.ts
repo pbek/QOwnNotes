@@ -265,7 +265,7 @@
       <location filename="../widgets/fontcolorwidget.cpp" line="214"/>
       <source>Masked syntax</source>
       <comment>text that will highlighted in a way that it's barely visible</comment>
-      <translation>Gemaskeerd syntaxis</translation>
+      <translation>Gemaskerde syntaxis</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="209"/>
@@ -285,17 +285,17 @@
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="458"/>
       <source>Copy color schema</source>
-      <translation>Kleur schema kopieëren</translation>
+      <translation>Kleurenschema kopieëren</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="459"/>
       <source>Color schema name</source>
-      <translation>Naam van kleur schema</translation>
+      <translation>Kleurenschema naam</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="583"/>
       <source>Remove schema</source>
-      <translation>Verwijderen van schema</translation>
+      <translation>Schema verwijderen</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.cpp" line="584"/>
@@ -344,7 +344,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Zoek een notitie om naar te koppelen</translation>
+      <translation>Zoek een notitie om te koppelen naar</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
@@ -403,7 +403,7 @@
       <location filename="../widgets/logwidget.ui" line="135"/>
       <location filename="../widgets/logwidget.cpp" line="376"/>
       <source>Clear log</source>
-      <translation>Logboek wissen</translation>
+      <translation>Logboek opschonen</translation>
     </message>
     <message>
       <location filename="../widgets/logwidget.cpp" line="374"/>
@@ -442,7 +442,7 @@
     <message>
       <location filename="../mainwindow.ui" line="679"/>
       <source>Note &amp;folders</source>
-      <translation>&amp;Notitiemappen</translation>
+      <translation>Notitie&amp;mappen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="684"/>
@@ -876,7 +876,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1793"/>
       <source>Find notes in all tags / subfolders</source>
-      <translation>Notities in alle submappen zoeken</translation>
+      <translation>Vind notities in alle labels / submappen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1855"/>
@@ -1007,7 +1007,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1576"/>
       <source>Autocomplete, solve equation or open URL</source>
-      <translation>AutoAanvullen, vergelijking oplossen of URL openen</translation>
+      <translation>Autocomplete, vergelijking oplossen of URL openen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1579"/>
@@ -1017,7 +1017,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
       <source>Select note folder</source>
-      <translation>Selecteer notitie map</translation>
+      <translation>Selecteer notitiemap</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1602"/>
@@ -1028,18 +1028,18 @@
       <location filename="../mainwindow.ui" line="1635"/>
       <location filename="../mainwindow.ui" line="1638"/>
       <source>Open the #qownnotes IRC channel, you have to stay online to get a response</source>
-      <translation>Open het #qownnotes IRC kanaal, je moet blijven online om een reactie te krijgen</translation>
+      <translation>Open het #qownnotes IRC kanaal, je moet online blijven om een reactie te krijgen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1775"/>
       <source>Show note list under tag pane</source>
-      <translation>Notitielijst onder label deelvenster weergeven</translation>
+      <translation>Toon notitie lijst onder labelvenster</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1840"/>
       <location filename="../mainwindow.ui" line="1843"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>De qownnotes Gitter kamer openen, moet je een GitHub of Twitter-account heben om in te loggen, maar je kan offline berichten ontvangen</translation>
+      <translation>Open de Qownnotes Gitter room, je hebt een GitHub of Twitter account nodig om in te loggen, maar je kunt offline berichten ontvangen</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="752"/>
@@ -1059,7 +1059,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1661"/>
       <source>Use softwrap in note editor and preview</source>
-      <translation>Gebruik softwrap in de notitie editor en voorvertoning</translation>
+      <translation>Gebruik softwrap in note editor en preview</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1669"/>
@@ -1740,7 +1740,7 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
       <location filename="../mainwindow.cpp" line="7525"/>
       <source>Move %n selected note(s) to note subfolder &lt;strong&gt;%2&lt;/strong&gt;?</source>
       <translation>
-        <numerusform>Verplaats de geselecteerde notitie naar &lt;strong&gt;%2&lt;/strong&gt; submap?</numerusform>
+        <numerusform>Verplaats de geselecteerde %n notities naar notitie subfolder &lt;strong&gt;%2&lt;/strong&gt;?</numerusform>
         <numerusform>Verplaats de geselecteerde %n notities naar &lt;strong&gt;%2&lt;/strong&gt; submap?</numerusform>
       </translation>
     </message>
@@ -1759,9 +1759,9 @@ Als de prullenbak is ingeschakeld op de server van uw ownCloud moet je in staat 
     <message numerus="yes">
       <location filename="../mainwindow.cpp" line="7588"/>
       <source>%n note(s) were moved to note subfolder "%2"</source>
-      <translation>
-        <numerusform>%n notitie werd verplaatst naar de "%2" submap</numerusform>
-        <numerusform>%n notities werden verplaatst naar de "%2" notitie submap</numerusform>
+      <translation type="unfinished">
+        <numerusform>%n notitie werd verplaatst naar subfolder "%2" </numerusform>
+        <numerusform>%n note(s) were moved to note subfolder "%2"</numerusform>
       </translation>
     </message>
     <message numerus="yes">
@@ -3542,7 +3542,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3217"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Zoekmachine</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
@@ -4539,7 +4539,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="37"/>
       <source>Insert a table heading separator</source>
-      <translation>Een tabel rubriek scheidingsteken invoegen</translation>
+      <translation>Plaats een tafelopscheider</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="47"/>
@@ -4554,12 +4554,12 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="87"/>
       <source>The amount of spaces in a column</source>
-      <translation>Het bedrag van de ruimten in een kolom</translation>
+      <translation>De hoeveelheid spaties in een kolom</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="119"/>
       <source>Select table layout:</source>
-      <translation>Selecteer tabelindeling:</translation>
+      <translation>Selecteer tabel layout:</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="126"/>
@@ -4569,7 +4569,7 @@ Je notities zullen intact blijven!</translation>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="133"/>
       <source>The amount of dash characters in the separator</source>
-      <translation>Het bedrag van de dash tekens in het scheidingsteken</translation>
+      <translation>Het aantal dash karakters in de separator</translation>
     </message>
     <message>
       <location filename="../dialogs/tabledialog.ui" line="150"/>
@@ -4981,7 +4981,7 @@ Dit kan niet ongedaan worden gemaakt!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>Houd in gedachten dat U QOwnNotes moet uitvoeren vanaf een locatie waar U schrijftoegang hebt zodat de automatische update werkt!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>

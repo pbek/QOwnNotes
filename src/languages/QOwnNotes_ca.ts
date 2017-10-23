@@ -3544,7 +3544,7 @@ Proveu si teniu conflictes de sincronització i poseu un valor més alt si cal.<
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3217"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Motor de cerca</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>

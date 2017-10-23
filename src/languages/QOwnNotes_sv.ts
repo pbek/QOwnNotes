@@ -670,7 +670,7 @@
     <message>
       <location filename="../mainwindow.ui" line="888"/>
       <source>&amp;Scripting</source>
-      <translation type="unfinished">&amp;Scripting</translation>
+      <translation>&amp;Skripting</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1157"/>
@@ -1022,7 +1022,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1602"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Ladda om skriptmotorn</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1635"/>
@@ -1511,7 +1511,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="7926"/>
       <source>The scripting engine was reloaded</source>
-      <translation type="unfinished">The scripting engine was reloaded</translation>
+      <translation>Skriptmotorn laddades om</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="7961"/>
@@ -2055,7 +2055,7 @@ If the trash is enabled on your ownCloud server you should be able to restore th
     <message>
       <location filename="../mainwindow.cpp" line="641"/>
       <source>Scripting</source>
-      <translation type="unfinished">Scripting</translation>
+      <translation>Skriptning</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="881"/>
@@ -2794,7 +2794,7 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../services/scriptingservice.cpp" line="243"/>
       <source>file doesn't exist</source>
-      <translation type="unfinished">file doesn't exist</translation>
+      <translation>filen finns inte</translation>
     </message>
   </context>
   <context>
@@ -3210,12 +3210,12 @@ Do you want to install it anyway?</translation>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2812"/>
       <source>You need to reload the scripting engine if you modify a script file</source>
-      <translation type="unfinished">You need to reload the scripting engine if you modify a script file</translation>
+      <translation>Du behöver ladda om skriptmotorn om du ändrar en skriptfil</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2815"/>
       <source>Reload scripting engine</source>
-      <translation type="unfinished">Reload scripting engine</translation>
+      <translation>Ladda om skriptmotorn</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2805"/>
@@ -4282,7 +4282,7 @@ Connection error message: </source>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2394"/>
       <source>Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</source>
-      <translation type="unfinished">Take a look at the &lt;a href="%1"&gt;Scripting documentation&lt;/a&gt; to get started fast.</translation>
+      <translation>Ta en titt på &lt;a href="%1"&gt;skriptdokumentationen&lt;/a&gt; för att snabbt komma igång.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.cpp" line="2396"/>

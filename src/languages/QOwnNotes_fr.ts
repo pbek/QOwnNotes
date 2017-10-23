@@ -4982,7 +4982,7 @@ Cela ne peut être annuler !</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>Pour que la mise à jour automatique fonctionne, gardez à l'esprit que Qownnotes nécessite d'être lancé depuis un emplacement pour lequel vous avez les droits d'accès en écriture !</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>

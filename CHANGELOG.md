@@ -5,6 +5,8 @@
   the *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661)
 - tried to prevent some occasions of focus stealing of the automatic update 
   dialog (for issue [Issue #751](https://github.com/pbek/QOwnNotes/issues/751)
+- added more Catalan, Swedish, Dutch, Hungarian and French translation (thank
+  you davidse, druus, Fabijenna and bepolymathe)
 
 ## 17.10.6
 - you can now select different search engines for searching text in notes in the

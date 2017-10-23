@@ -169,7 +169,7 @@
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="237"/>
       <source>Adapt font size:</source>
-      <translation>Alkalmazom a betűméretet:</translation>
+      <translation>Betűméret alkalmazása:</translation>
     </message>
     <message>
       <location filename="../widgets/fontcolorwidget.ui" line="208"/>
@@ -344,7 +344,7 @@
     <message>
       <location filename="../dialogs/linkdialog.ui" line="91"/>
       <source>Search for a note to link to</source>
-      <translation>Találj egy belinkelni való jegyzetet</translation>
+      <translation>Az ide csatolásra kerülő jegyzet keresése</translation>
     </message>
     <message>
       <location filename="../dialogs/linkdialog.ui" line="63"/>
@@ -512,7 +512,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1027"/>
       <source>Report &amp;issues or ideas</source>
-      <translation>Közölj &amp;kérdéseket vagy ötleteket</translation>
+      <translation>Közöljön &amp;kérdéseket vagy ötleteket</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1035"/>
@@ -750,7 +750,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1319"/>
       <source>&amp;Export note as markdown file</source>
-      <translation>Jegyzet exportálása &amp;Markdown fájlként</translation>
+      <translation>Jegyzet &amp;exportálása markdown fájlként</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1328"/>
@@ -836,7 +836,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1494"/>
       <source>&amp;Increase note text size</source>
-      <translation>Jegyzet &amp;szövegméret növelése</translation>
+      <translation>Jegyzet szövegméret &amp;növelése</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1506"/>
@@ -1012,7 +1012,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1579"/>
       <source>Solve a simple equation like '(2+3)*6=' in the current line</source>
-      <translation>Megoldok egy egyszerű egyenletet, mint '(2+3) * 6 = "az aktuális sorban</translation>
+      <translation>Egy egyszerű egyenlet megoldása, mint '(2+3) * 6=' az aktuális sorban</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1587"/>
@@ -1033,13 +1033,13 @@
     <message>
       <location filename="../mainwindow.ui" line="1775"/>
       <source>Show note list under tag pane</source>
-      <translation>Jegyzet listát megmutat a címke-térkép alatt</translation>
+      <translation>A jegyzet lista megjelenítése a címke-térkép alatt</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1840"/>
       <location filename="../mainwindow.ui" line="1843"/>
       <source>Open the qownnotes Gitter room, you need a GitHub or Twitter account to login, but you can get offline messages</source>
-      <translation>Nyissd meg a qownnotes gitter termet, szükséged van egy GitHub vagy Twitter fiókra a bejelentkezéshes, de offline üzeneteket kaphatsz</translation>
+      <translation>Megnyitja a qownnotes Gitter termet, szüksége van egy GitHub vagy Twitter fiókra a bejelentkezéshez, de kaphat offline üzeneteket</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="752"/>
@@ -1049,7 +1049,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1211"/>
       <source>&amp;Export note as PDF</source>
-      <translation>Jegyzet exportálása PDF-ként</translation>
+      <translation>Jegyzet &amp;exportálása PDF-ként</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1647"/>
@@ -1079,7 +1079,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1723"/>
       <source>Strike out text</source>
-      <translation>Tárgytalan szöveget áthúzom</translation>
+      <translation>Áthúzza a szöveget</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1734"/>
@@ -1116,7 +1116,7 @@
     <message>
       <location filename="../mainwindow.ui" line="1810"/>
       <source>Starts the application hidden if the system tray icon is shown</source>
-      <translation>Elindítja az alkalmazást, rejtve, ha a rendszertálcaikon jelenik meg</translation>
+      <translation>Rejtve indítja az alkalmazást ha a rendszertálcaikon látható</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="1819"/>
@@ -1131,13 +1131,13 @@
     <message>
       <location filename="../mainwindow.cpp" line="2352"/>
       <source>Note was removed externally!</source>
-      <translation>A jegyzetet az alkalmazáson kívül törölték!</translation>
+      <translation>A jegyzet az alkalmazáson kívül törölt!</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2353"/>
       <source>Current note was removed outside of this application!
 Restore current note?</source>
-      <translation>A jegyzetet az alkalmazáson kívül törölték! Visszaállítja az aktuális jegyzetet?</translation>
+      <translation>A jegyzet az alkalmazáson kívül törölt! Visszaállítja az aktuális jegyzetet?</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="2355"/>
@@ -1275,8 +1275,8 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="3749"/>
       <source>Remove &lt;strong&gt;%n&lt;/strong&gt; selected tag(s)? No notes will be removed in this process.</source>
       <translation>
-        <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
-        <numerusform>Távolítsa el a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kód(ok) at? Ebben a folyamatban a jegyzetek nem törlődnek.</numerusform>
+        <numerusform>Eltávolítja a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kódot? E folyamatban nem kerül törlésre.</numerusform>
+        <numerusform>Eltávolítja a &lt;strong&gt;%n&lt;/strong&gt; kiválasztott kódot? E folyamatban nem kerül törlésre.</numerusform>
       </translation>
     </message>
     <message>
@@ -2178,7 +2178,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="6227"/>
       <source>Decreased font size to %1 pt</source>
-      <translation>Csökkent betűméret: pt-%1</translation>
+      <translation>Csökkentett betűméret: pt-%1</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="4454"/>
@@ -2186,7 +2186,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../mainwindow.cpp" line="5247"/>
       <location filename="../mainwindow.cpp" line="8293"/>
       <source>Open &amp;settings</source>
-      <translation>Nyílt &amp; beállítások</translation>
+      <translation>Megnyitja a &amp;beállításokat</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="1412"/>
@@ -2201,7 +2201,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="5448"/>
       <source>Select image to insert</source>
-      <translation>Válassza ki a beszúrása kerülő képet</translation>
+      <translation>Kiválasztja a beszúrása kerülő képet</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5580"/>
@@ -2211,17 +2211,17 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../mainwindow.cpp" line="5635"/>
       <source>Decrypt note and store it as plain text</source>
-      <translation>Jelenítse meg a jegyzetet, és tárolja azt egyszerű szövegként</translation>
+      <translation>Megjeleníti a jegyzetet, és tárolja azt egyszerű szövegként</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5640"/>
       <source>&amp;Decrypt</source>
-      <translation>&amp;Megjelenít</translation>
+      <translation>&amp;Dekódol</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5665"/>
       <source>&lt;br /&gt;You will be able to edit your encrypted note.</source>
-      <translation>&lt; br /&gt;Tudja majd szerkeszteni a titkosított jegyzetet.</translation>
+      <translation>&lt; br /&gt;Tudni fogja szerkeszteni a titkosított jegyzetet.</translation>
     </message>
     <message>
       <location filename="../mainwindow.cpp" line="5722"/>
@@ -2265,7 +2265,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="76"/>
       <source>Always accept external changes in the future</source>
-      <translation>Mindig fogadja el a jövőben a külső változtatásokat</translation>
+      <translation>Mindig elfogadja a jövőben a külső változtatásokat</translation>
     </message>
     <message>
       <location filename="../dialogs/notediffdialog.ui" line="83"/>
@@ -2359,7 +2359,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../services/owncloudservice.cpp" line="509"/>
       <source>Please consider updating your QOwnNotesAPI app on your server, your app version %1 is too low and may cause troubles in QOwnNotes.</source>
-      <translation>Kérjük, vegye figyelembe, hogy frissítse a QOwnNotesAPI alkalmazását, az Ön változata %1 a túl alacsony, és okozhat gondot a QOwnNotes frissítése.</translation>
+      <translation>Kérjük frissítse a QOwnNotesAPI alkalmazását, az Ön %1 változata túl alacsony és gondot okozhat a QOwnNotes-ban.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="971"/>
@@ -2374,12 +2374,12 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../services/owncloudservice.cpp" line="991"/>
       <source>You need to setup your ownCloud server!</source>
-      <translation>A saját ownCloud szerveredet kell felépítened!</translation>
+      <translation>Telepítse az ownCloud szerverét!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="997"/>
       <source>Open &amp;settings</source>
-      <translation>Nyítja a &amp;beállításokat</translation>
+      <translation>Megnyitja a &amp;beállításokat</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="997"/>
@@ -2399,7 +2399,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../services/owncloudservice.cpp" line="1082"/>
       <source>There are no versions for this note or the note wasn't found on the server.</source>
-      <translation>Nincsenek változatai e jegyzetnek, vagy a jegyzet nem található a kiszolgálón.</translation>
+      <translation>A jegyzetek nincsenek változatai, vagy a jegyzet nem található a kiszolgálón.</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1103"/>
@@ -2420,7 +2420,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
       <location filename="../services/owncloudservice.cpp" line="1168"/>
       <location filename="../services/owncloudservice.cpp" line="1194"/>
       <source>Error while loading todo lists!</source>
-      <translation>Hiba a teendő lista betöltésekor!</translation>
+      <translation type="unfinished">Error while loading todo lists!</translation>
     </message>
     <message>
       <location filename="../services/owncloudservice.cpp" line="1169"/>
@@ -2578,7 +2578,7 @@ Ha a kuka a ownCloud kiszolgálón engedélyezve van, onnan vissza tudja őket �
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="197"/>
       <source>Replace All</source>
-      <translation>Az összes cseréje</translation>
+      <translation>Mindent helyettesít</translation>
     </message>
     <message>
       <location filename="../libraries/qmarkdowntextedit/qtexteditsearchwidget.ui" line="210"/>
@@ -2735,7 +2735,7 @@ Are the folder and the file writeable?</source>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="334"/>
       <source>Your platform is not supported by this script!
 Do you want to install it anyway?</source>
-      <translation>A platform nem támogatja ezt a scriptet! Mégis telepíti?</translation>
+      <translation>A platform nem támogatja ezt a parancsfájlt! Mégis telepíti?</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="336"/>
@@ -2750,7 +2750,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="345"/>
       <source>Please don't forget to update your installation of QOwnNotes to make this script work!</source>
-      <translation>Kérjük ne felejtsd el, a QOwnNotes telepítést frissíteni, hogy ez a szkript működjön!</translation>
+      <translation>Kérjük ne felejtse el a QOwnNotes telepítését frissíteni, hogy ez a szkript működjön!</translation>
     </message>
     <message>
       <location filename="../dialogs/scriptrepositorydialog.cpp" line="412"/>
@@ -2814,7 +2814,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="450"/>
       <source>&amp;Add folder</source>
-      <translation>&amp;Mappa hozzáadása</translation>
+      <translation>mappa &amp;hozzáadása</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="474"/>
@@ -2824,7 +2824,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="688"/>
       <source>This name will be viewed in all the menus.</source>
-      <translation>Ezt a címet fogja látni a menükben.</translation>
+      <translation>Ez a név tűnik fel az összes menüben.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="530"/>
@@ -2839,7 +2839,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="807"/>
       <source>Your ownCloud server</source>
-      <translation>OwnCloud szervere</translation>
+      <translation>OwnCloud kiszolgálója</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="931"/>
@@ -2869,7 +2869,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1121"/>
       <source>ownCloud server detected</source>
-      <translation>ownCloud kiszolgáló észlelése</translation>
+      <translation>ownCloud kiszolgáló észlelve</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1155"/>
@@ -2925,17 +2925,17 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="506"/>
       <source>Click here to select your local note path</source>
-      <translation>Kattintson ide, válassza ki a helyi jegyzet elérési útját</translation>
+      <translation>Kattintson ide a jegyzet helyi elérési útja kiválasztásához</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="583"/>
       <source>Click here to select your remote note path on your ownCloud server</source>
-      <translation>Kattintson ide, válassza ki a ownCloud kiszolgálón távoli jegyzet utat</translation>
+      <translation>Kattintson ide a jegyzet távoli elérési útja kiválasztásához</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="636"/>
       <source>Click here to use the selected folder from your server as note folder</source>
-      <translation>Ide kattintva a kijelöli a mappát a kiszolgáló jegyzet mappák közül</translation>
+      <translation>Kattintson ide a kiszolgálóján kijelölt mappa jegyzetmappaként való használatához</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="821"/>
@@ -3000,12 +3000,12 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1399"/>
       <source>Ignore SSL errors</source>
-      <translation>Az SSL-hibákat figyelmen kívül hagyom</translation>
+      <translation>Az SSL-hibák figyelmen kívül hagyása</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="156"/>
       <source>Todo</source>
-      <translation>Todo</translation>
+      <translation type="unfinished">Todo</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1618"/>
@@ -3015,7 +3015,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
       <source>Select the calendars you want to use for the TODO list</source>
-      <translation>Válassza ki a naptárat melyet a tennivalók listához használni szeretne</translation>
+      <translation>Kiválasztja a tennivalók listájához használt naptárakat</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="168"/>
@@ -3107,7 +3107,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3049"/>
       <source>Do this at your own risk!</source>
-      <translation>Ezt a saját felelősségedre!</translation>
+      <translation>Ezt a saját felelősségére tegye!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3052"/>
@@ -3117,7 +3117,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3517"/>
       <source>No two spaces to do a line break are added here if checked</source>
-      <translation>Ha bejelöli, két szóköz nélkül tör sort</translation>
+      <translation>Ha bejelöli, két szóköz hozzáadása nélkül tör sort</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3520"/>
@@ -3187,7 +3187,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1557"/>
       <source>Disable heartbeat</source>
-      <translation>Kikapcsolom a szívverés-t</translation>
+      <translation>Letiltja a szívverés-t</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2100"/>
@@ -3202,7 +3202,7 @@ Do you want to install it anyway?</source>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2155"/>
       <source>If you change the language you have to restart the application for the changes to take action.</source>
-      <translation>Ha módosítja a nyelvet, indítsa újra az alkalmazást a módosítások megtételére.</translation>
+      <translation>Ha módosítja a nyelvet, szükséges újraindítania az alkalmazást a módosítások életbeléptéhez.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2812"/>
@@ -3276,13 +3276,13 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3384"/>
       <source>This button allows you to clear all settings, remove the local todo database and exit QOwnNotes.</source>
-      <translation>Ez a gomb törli az összes beállítást, eltávolítja a helyi todo-adatbázist és elhagyja vele a QOwnNotes-t.</translation>
+      <translation>Ez a gomb törli az összes beállítást, eltávolítja a helyi tennivalók adatbázist és elhagyja vele a QOwnNotes-t.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3394"/>
       <location filename="../dialogs/settingsdialog.cpp" line="1894"/>
       <source>Clear app data and exit</source>
-      <translation>App adatokat töröl és kilép</translation>
+      <translation>Alkalmazási adatok törlése és kilépés</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3195"/>
@@ -3313,7 +3313,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1422"/>
       <source>App metrics</source>
-      <translation>App statisztika</translation>
+      <translation>Alkalmazás statisztika</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1440"/>
@@ -3323,7 +3323,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1472"/>
       <source>This data includes anonymous information about what features of the app are used.</source>
-      <translation>Ezek az adatok tartalmazzák a névtelen információt arról, hogy az alkalmazás melyik jellemzőit használják.</translation>
+      <translation>Ezek az adatok névtelen információt tárolnak arról, hogy az alkalmazás melyik jellemzőit használják.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1526"/>
@@ -3333,7 +3333,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1544"/>
       <source>A small heartbeat request is sent periodically while QOwnNotes is running. Make a developer happy by letting him know that someone is using QOwnNotes.</source>
-      <translation>Egy kis szívverés-kérelmet küldünk rendszeresen a QOwnNotes futtatása közben. Engedje meg egy fejlesztő boldogságát és tudassa vele hogy valaki használja a QOwnNotes-t.</translation>
+      <translation>Rendszeresen küldünk egy apró szívverés kérelmet a QOwnNotes futtatása közben. Tegyen egy fejlesztőt boldoggá és tudassa vele, hogy valaki használja a QOwnNotes-t.</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="2023"/>
@@ -3363,7 +3363,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="92"/>
       <source>Find setting</source>
-      <translation>Beállításokat megtalálom</translation>
+      <translation>Beállítások keresése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="179"/>
@@ -3419,7 +3419,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="639"/>
       <source>&amp;Use as ownCloud path</source>
-      <translation>&amp;ownCloud elérési útjaként használom</translation>
+      <translation>Használata mint &amp;ownCloud elérési út</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="678"/>
@@ -3450,7 +3450,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="742"/>
       <source>Be aware that the ownCloud notes app doesn't support sub-folders!</source>
-      <translation>Ne feledje, hogy a ownCloud jegyzet alkalmazás nem támogatja az almappákat!</translation>
+      <translation>Vegye figyelembe, hogy a ownCloud jegyzet alkalmazás nem támogat almappákat!</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="745"/>
@@ -3497,7 +3497,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1032"/>
       <source>Your ownCloud password</source>
-      <translation>Az ownCloud jelszavad</translation>
+      <translation>OwnCloud jelszava</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1060"/>
@@ -3537,12 +3537,12 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3159"/>
       <source>The shortcut to create a new note asks for a headline</source>
-      <translation>Ez a rövidítés mely egy új jegyzetet hoz létre, főcímet kér</translation>
+      <translation>A parancsikon egy új jegyzet létrehozására főcímet követel</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="3217"/>
       <source>Search engine</source>
-      <translation type="unfinished">Search engine</translation>
+      <translation>Kereső</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4067"/>
@@ -3552,7 +3552,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4077"/>
       <source>Reset the cursor width</source>
-      <translation>Állítsa vissza a kurzor szélességét</translation>
+      <translation>Kurzorszélesség visszaállítása</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4016"/>
@@ -3567,7 +3567,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4280"/>
       <source>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
-      <translation>Ne felejtstd el jegyzet mappákhoz a git támogatását engedélyezni és beállítani a következőket: név, e-mail cím, a git-ügyfél; például a terminál parancsokkal:</translation>
+      <translation>Ne felejtste el a jegyzet mappák git támogatása engedélyezése érdekében beállítani a nevét és az e-mail címét a git-ügyfelénél például ezekkel a terminál parancsokkal:</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4313"/>
@@ -3617,7 +3617,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4365"/>
       <source>Hide 'Find or create tag' search</source>
-      <translation>"Talál vagy címke létrehozása" keresés elrejtése</translation>
+      <translation>"Címke keresése vagy létrehozása" keresés elrejtése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4375"/>
@@ -3643,7 +3643,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4444"/>
       <source>Hide 'Find or create note subfolder' search</source>
-      <translation>"Találjon, vagy hozzon létre almappát jegyzet" keresés elrejtése</translation>
+      <translation>"Jegyzet almappa keresése vagy létrehozása" keresés elrejtése</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4451"/>
@@ -4977,7 +4977,7 @@ Nem lehet visszavonni!</translation>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="83"/>
       <source>Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</source>
-      <translation type="unfinished">Keep in mind that QOwnNotes needs to run from a location where you have write access to for the automatic update to work!</translation>
+      <translation>Ne feledje, hogy QOwnNotes-t egy olyan helyről szükséges futtatnia, ahol van írási joga, amivel a munka automatikus frissítése működik!</translation>
     </message>
     <message>
       <location filename="../dialogs/updatedialog.ui" line="93"/>
