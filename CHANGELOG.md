@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.10.8
+- restructured the main menu to make it less cluttered
+
 ## 17.10.7
 - added new search engines *Qwant* and *Startpage* and reordered the list in 
   the *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661)

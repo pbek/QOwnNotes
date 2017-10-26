@@ -958,11 +958,11 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuShow"/>
     <addaction name="menuToolbars"/>
     <addaction name="menuPanels"/>
-    <addaction name="menuWorkspace"/>
     <addaction name="menuWorkspaces"/>
     <addaction name="actionUnlock_panels"/>
     <addaction name="actionStart_hidden"/>
     <addaction name="separator"/>
+    <addaction name="menuWorkspace"/>
     <addaction name="separator"/>
     <addaction name="actionUse_softwrap_in_note_editor"/>
     <addaction name="separator"/>
