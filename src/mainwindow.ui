@@ -848,11 +848,6 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionDelete_orphaned_images"/>
      <addaction name="actionSplit_note_at_cursor_position"/>
     </widget>
-    <widget class="QMenu" name="menuType_Here">
-     <property name="title">
-      <string>Type Here</string>
-     </property>
-    </widget>
     <widget class="QMenu" name="menuEdit_2">
      <property name="title">
       <string>Edit</string>
@@ -902,7 +897,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="menuVersioning"/>
     <addaction name="menuEncryption"/>
     <addaction name="menuExtra"/>
-    <addaction name="menuType_Here"/>
    </widget>
    <widget class="QMenu" name="menuTodo">
     <property name="title">
