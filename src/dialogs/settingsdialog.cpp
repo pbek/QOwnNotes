@@ -519,6 +519,8 @@ void SettingsDialog::storeSettings() {
                       ui->toolbarIconSizeSpinBox->value());
     settings.setValue("allowOnlyOneAppInstance",
                       ui->allowOnlyOneAppInstanceCheckBox->isChecked());
+    settings.setValue("closeTodoListAfterSave",
+                      ui->closeTodoListAfterSaveCheckBox->isChecked());
     settings.setValue("interfaceLanguage",
                       getSelectedListWidgetValue(ui->languageListWidget));
     settings.setValue("markdownHighlightingEnabled",
@@ -795,6 +797,8 @@ void SettingsDialog::readSettings() {
             settings.value("markdownHighlightingEnabled", true).toBool());
     ui->allowOnlyOneAppInstanceCheckBox->setChecked(settings.value(
             "allowOnlyOneAppInstance").toBool());
+    ui->closeTodoListAfterSaveCheckBox->setChecked(settings.value(
+            "closeTodoListAfterSave").toBool());
     ui->toolbarIconSizeSpinBox->setValue(
                  settings.value("MainWindow/mainToolBar.iconSize").toInt());
 

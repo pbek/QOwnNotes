@@ -1768,7 +1768,7 @@
              <item>
               <widget class="QGroupBox" name="todoCalendarGroupBox">
                <property name="title">
-                <string>Select the calendars you want to use for the TODO list</string>
+                <string>Select the calendars you want to use for the Todo list</string>
                </property>
                <layout class="QGridLayout" name="gridLayout_7">
                 <item row="2" column="3">
@@ -1834,6 +1834,22 @@
                  <widget class="QCheckBox" name="ignoreNonTodoCalendarsCheckBox">
                   <property name="text">
                    <string>Ignore calendars that don't support todo items</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_26">
+               <property name="title">
+                <string>Todo list settings</string>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_60">
+                <item row="0" column="0">
+                 <widget class="QCheckBox" name="closeTodoListAfterSaveCheckBox">
+                  <property name="text">
+                   <string>Saving an item also closes the Todo list</string>
                   </property>
                  </widget>
                 </item>

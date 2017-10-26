@@ -506,6 +506,11 @@ void TodoDialog::on_saveButton_clicked() {
     ownCloud->postCalendarItemToServer(currentCalendarItem, this);
 
     qDebug() << currentCalendarItem;
+
+    QSettings settings;
+    if (settings.value("closeTodoListAfterSave").toBool()) {
+        close();
+    }
 }
 
 void TodoDialog::todoItemLoadingProgressBarIncrement() {

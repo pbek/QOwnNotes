@@ -2,6 +2,8 @@
 
 ## 17.10.8
 - restructured the main menu to make it less cluttered
+- there now is a new checkbox in the *Todo settings* to close the todo list 
+  after saving an item (for issue [Issue #753](https://github.com/pbek/QOwnNotes/issues/753)
 
 ## 17.10.7
 - added new search engines *Qwant* and *Startpage* and reordered the list in 

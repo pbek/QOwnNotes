@@ -937,7 +937,11 @@ p, li { white-space: pre-wrap; }
     </widget>
     <widget class="QMenu" name="menuShow">
      <property name="title">
-      <string>Show</string>
+      <string extracomment="To show or hide stuff">Show</string>
+     </property>
+     <property name="icon">
+      <iconset theme="application-menu" resource="breeze-qownnotes.qrc">
+       <normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</normaloff>:/icons/breeze-qownnotes/16x16/application-menu.svg</iconset>
      </property>
      <addaction name="actionShow_menu_bar"/>
      <addaction name="actionShow_toolbar"/>
