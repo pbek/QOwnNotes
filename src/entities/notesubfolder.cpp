@@ -292,6 +292,24 @@ QList<NoteSubFolder> NoteSubFolder::fetchAllByParentId(int parentId) {
     return noteSubFolderList;
 }
 
+/**
+ * Fetches a list of all ids recursively by a parent id
+ * The parent id is included in the list
+ *
+ * @param parentId
+ * @return
+ */
+QList<int> NoteSubFolder::fetchIdsRecursivelyByParentId(int parentId) {
+    QList<int> idList = QList<int>() << parentId;
+
+    Q_FOREACH(NoteSubFolder noteSubFolder, fetchAllByParentId(parentId)) {
+            int id = noteSubFolder.getId();
+            idList << fetchIdsRecursivelyByParentId(id);
+        }
+
+    return idList;
+}
+
 //
 // inserts or updates a noteSubFolder object in the database
 //
@@ -481,6 +499,14 @@ bool NoteSubFolder::treeWidgetExpandState() {
     QString path = relativePath();
 
     return pathList.contains(path);
+}
+
+/**
+ * Checks if noteSubfoldersPanelShowNotesRecursively is set
+ */
+bool NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively() {
+    QSettings settings;
+    return settings.value("noteSubfoldersPanelShowNotesRecursively").toBool();
 }
 
 /**

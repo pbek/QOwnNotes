@@ -692,10 +692,16 @@ void SettingsDialog::storePanelSettings() {
                       ui->noteSubfoldersPanelHideSearchCheckBox->isChecked());
 
     settings.setValue("noteSubfoldersPanelDisplayAsFullTree",
-                      ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->isChecked());
+                      ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox
+                              ->isChecked());
 
     settings.setValue("noteSubfoldersPanelShowRootFolderName",
-                      ui->noteSubfoldersPanelShowRootFolderNameCheckBox->isChecked());
+                      ui->noteSubfoldersPanelShowRootFolderNameCheckBox
+                              ->isChecked());
+
+    settings.setValue("noteSubfoldersPanelShowNotesRecursively",
+                      ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox
+                              ->isChecked());
 
     settings.setValue("noteSubfoldersPanelShowFullPath",
                       ui->noteSubfoldersPanelShowFullPathCheckBox->isChecked());
@@ -709,7 +715,8 @@ void SettingsDialog::storePanelSettings() {
                 settings.setValue("noteSubfoldersPanelOrder", ORDER_ASCENDING);
 
     // Tags Panel Options
-    settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox->isChecked());
+    settings.setValue("tagsPanelHideSearch", ui->tagsPanelHideSearchCheckBox
+            ->isChecked());
 
     ui->tagsPanelSortAlphabeticalRadioButton->isChecked() ?
                 settings.setValue("tagsPanelSort", SORT_ALPHABETICAL) :
@@ -1072,6 +1079,10 @@ void SettingsDialog::readPanelSettings() {
     ui->noteSubfoldersPanelDisplayAsFullTreeCheckBox->setChecked(
                 settings.value("noteSubfoldersPanelDisplayAsFullTree", true)
                         .toBool());
+
+    ui->noteSubfoldersPanelShowNotesRecursivelyCheckBox->setChecked(
+            settings.value("noteSubfoldersPanelShowNotesRecursively"
+            ).toBool());
 
     if (settings.value(
             "noteSubfoldersPanelShowRootFolderName", true).toBool()) {

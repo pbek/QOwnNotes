@@ -1940,15 +1940,21 @@ void MainWindow::makeCurrentNoteFirstInNoteList() {
                 ui->noteTreeWidget->indexOfTopLevelItem(item));
         ui->noteTreeWidget->insertTopLevelItem(0, item);
 
-        bool isInActiveNoteSubFolder =
-                NoteSubFolder::activeNoteSubFolderId() ==
-                        currentNote.getNoteSubFolderId();
-
-        if (!(isInActiveNoteSubFolder || _showNotesFromAllNoteSubFolders)) {
-            item->setHidden(true);
-        } else {
+        // set the item as current item if it is visible
+        if (!item->isHidden()) {
             ui->noteTreeWidget->setCurrentItem(item);
         }
+
+//        bool isInActiveNoteSubFolder =
+//                NoteSubFolder::activeNoteSubFolderId() ==
+//                currentNote.getNoteSubFolderId();
+
+        // has problems with NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()
+//        if (!(isInActiveNoteSubFolder || _showNotesFromAllNoteSubFolders)) {
+//            item->setHidden(true);
+//        } else {
+//            ui->noteTreeWidget->setCurrentItem(item);
+//        }
     }
 }
 
@@ -4711,11 +4717,28 @@ void MainWindow::filterNotesByTag() {
  * Does the note filtering by note sub folders
  */
 void MainWindow::filterNotesByNoteSubFolders() {
-    int subNoteFolderId = NoteSubFolder::activeNoteSubFolderId();
+    int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    QList<int> noteSubFolderIds;
+    QList<int> noteIdList;
 
-    // get all notes of a note sub folder
-    QList<Note> noteList = Note::fetchAllByNoteSubFolderId(subNoteFolderId);
-    QList<int> noteIdList = Note::noteIdListFromNoteList(noteList);
+    // check if the notes should be viewed recursively
+    if (NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively()) {
+        noteSubFolderIds = NoteSubFolder::fetchIdsRecursivelyByParentId(
+                activeNoteSubFolderId);
+    } else {
+        noteSubFolderIds << activeNoteSubFolderId;
+    }
+
+    qDebug() << __func__ << " - 'noteSubFolderIds': " << noteSubFolderIds;
+
+
+    // get the notes from the subfolders
+    Q_FOREACH(int noteSubFolderId, noteSubFolderIds) {
+            // get all notes of a note sub folder
+            QList<Note> noteList = Note::fetchAllByNoteSubFolderId(
+                    noteSubFolderId);
+            noteIdList << Note::noteIdListFromNoteList(noteList);
+        }
 
     // omit the already hidden notes
     QTreeWidgetItemIterator it(ui->noteTreeWidget,
@@ -6362,27 +6385,32 @@ void MainWindow::reloadTagTree() {
 void MainWindow::reloadNoteSubFolderTree() {
     ui->noteSubFolderTreeWidget->clear();
     int activeNoteSubFolderId = NoteSubFolder::activeNoteSubFolderId();
+    bool showAllNotesItem =
+            !NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively();
+    QTreeWidgetItem *allItem;
 
     // add the "all notes" item
-    int linkCount = Note::countAll();
-    QString toolTip = tr("show notes from all note subfolders (%1)")
-            .arg(QString::number(linkCount));
+    if (showAllNotesItem) {
+        int linkCount = Note::countAll();
+        QString toolTip = tr("show notes from all note subfolders (%1)")
+                .arg(QString::number(linkCount));
 
-    QTreeWidgetItem *allItem = new QTreeWidgetItem();
-    allItem->setText(0, tr("All notes"));
-    allItem->setData(0, Qt::UserRole, -1);
-    allItem->setToolTip(0, toolTip);
-    allItem->setIcon(0, QIcon::fromTheme(
-            "edit-copy",
-            QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
-    allItem->setTextColor(1, QColor(Qt::gray));
-    allItem->setText(1, QString::number(linkCount));
-    allItem->setToolTip(1, toolTip);
-    allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+        allItem = new QTreeWidgetItem();
+        allItem->setText(0, tr("All notes"));
+        allItem->setData(0, Qt::UserRole, -1);
+        allItem->setToolTip(0, toolTip);
+        allItem->setIcon(0, QIcon::fromTheme(
+                "edit-copy",
+                QIcon(":icons/breeze-qownnotes/16x16/edit-copy.svg")));
+        allItem->setTextColor(1, QColor(Qt::gray));
+        allItem->setText(1, QString::number(linkCount));
+        allItem->setToolTip(1, toolTip);
+        allItem->setFlags(allItem->flags() & ~Qt::ItemIsSelectable);
+    }
 
     // add the "note folder" item
-    linkCount = Note::countByNoteSubFolderId(0);
-    toolTip = tr("show notes in note root folder (%1)")
+    int linkCount = Note::countByNoteSubFolderId(0);
+    QString toolTip = tr("show notes in note root folder (%1)")
             .arg(QString::number(linkCount));
 
     QTreeWidgetItem *item = new QTreeWidgetItem();
@@ -6403,18 +6431,24 @@ void MainWindow::reloadNoteSubFolderTree() {
     item->setToolTip(1, toolTip);
 
     if (settings.value("noteSubfoldersPanelDisplayAsFullTree").toBool()) {
-        // add 'All Notes'
-        ui->noteSubFolderTreeWidget->addTopLevelItem(allItem);
+        if (showAllNotesItem) {
+            // add 'All Notes'
+            ui->noteSubFolderTreeWidget->addTopLevelItem(allItem);
+        }
+
         // add note root folder
         ui->noteSubFolderTreeWidget->addTopLevelItem(item);
+
         // add all note sub folders recursively as items
         buildNoteSubFolderTreeForParentItem(item);
 
         if (item->childCount() > 0) {
             item->setExpanded(true);
 
-            if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
-                item->sortChildren(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
+            if (settings.value("noteSubfoldersPanelSort").toInt() ==
+                SORT_ALPHABETICAL) {
+                item->sortChildren(0, toQtOrder(settings.value(
+                        "noteSubfoldersPanelOrder").toInt()));
             }
         }
     } else { // the less hierarchical view
@@ -6422,12 +6456,16 @@ void MainWindow::reloadNoteSubFolderTree() {
         ui->noteSubFolderTreeWidget->addTopLevelItem(item);
         // add subfolders recursively
         buildNoteSubFolderTreeForParentItem();
+
         // sort the widget
         if (settings.value("noteSubfoldersPanelSort").toInt() == SORT_ALPHABETICAL) {
             ui->noteSubFolderTreeWidget->sortItems(0, toQtOrder(settings.value("noteSubfoldersPanelOrder").toInt()));
         }
-        // finally add 'All Notes' to the top
-        ui->noteSubFolderTreeWidget->insertTopLevelItem(0, allItem);
+
+        if (showAllNotesItem) {
+            // finally add 'All Notes' to the top
+            ui->noteSubFolderTreeWidget->insertTopLevelItem(0, allItem);
+        }
     }
 
     // set the active item

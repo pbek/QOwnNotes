@@ -361,7 +361,7 @@
          <item>
           <widget class="QStackedWidget" name="settingsStackedWidget">
            <property name="currentIndex">
-            <number>7</number>
+            <number>16</number>
            </property>
            <widget class="QWidget" name="noteFoldersPage">
             <layout class="QGridLayout" name="gridLayout_19">
@@ -4423,9 +4423,6 @@ git config --global user.name &quot;Your name&quot;</string>
                 </item>
                 <item row="1" column="0">
                  <widget class="QCheckBox" name="noteSubfoldersPanelShowRootFolderNameCheckBox">
-                  <property name="layoutDirection">
-                   <enum>Qt::LeftToRight</enum>
-                  </property>
                   <property name="text">
                    <string>Show root folder name</string>
                   </property>
@@ -4476,31 +4473,8 @@ git config --global user.name &quot;Your name&quot;</string>
                <property name="title">
                 <string>Notes panel</string>
                </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_12">
-                <item>
-                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
-                  <property name="title">
-                   <string>Sort</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_16">
-                   <item>
-                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
-                     <property name="text">
-                      <string>Alphabetical</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
-                     <property name="text">
-                      <string>By last change</string>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
+               <layout class="QGridLayout" name="gridLayout_61">
+                <item row="1" column="2">
                  <widget class="QGroupBox" name="notesPanelOrderGroupBox">
                   <property name="enabled">
                    <bool>true</bool>
@@ -4527,6 +4501,36 @@ git config --global user.name &quot;Your name&quot;</string>
                     </widget>
                    </item>
                   </layout>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QGroupBox" name="notesPanelSortGroupBox">
+                  <property name="title">
+                   <string>Sort</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_16">
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortAlphabeticalRadioButton">
+                     <property name="text">
+                      <string>Alphabetical</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QRadioButton" name="notesPanelSortByLastChangeRadioButton">
+                     <property name="text">
+                      <string>By last change</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="0" column="1" colspan="2">
+                 <widget class="QCheckBox" name="noteSubfoldersPanelShowNotesRecursivelyCheckBox">
+                  <property name="text">
+                   <string>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</string>
+                  </property>
                  </widget>
                 </item>
                </layout>

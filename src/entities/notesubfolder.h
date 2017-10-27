@@ -54,6 +54,8 @@ public:
 
     static QList<NoteSubFolder> fetchAllByParentId(int parentId);
 
+    static QList<int> fetchIdsRecursivelyByParentId(int parentId);
+
     bool isActive();
 
     static int activeNoteSubFolderId();
@@ -86,6 +88,8 @@ public:
     static int countAllParentId(int parentId);
 
     static QList<int> fetchAllIds();
+
+    static bool isNoteSubfoldersPanelShowNotesRecursively();
 
 protected:
     int id;
