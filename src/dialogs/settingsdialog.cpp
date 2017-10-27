@@ -1336,7 +1336,7 @@ void SettingsDialog::outputSettings() {
     output += prepareDebugInformationLine("Application database path",
             QDir::toNativeSeparators(DatabaseService::getDiskDatabasePath()));
     output += prepareDebugInformationLine("Application arguments",
-            QApplication::arguments().join("`, `"));
+            qApp->property("arguments").toStringList().join("`, `"));
 
     QString debug = "0";
 #ifdef QT_DEBUG
