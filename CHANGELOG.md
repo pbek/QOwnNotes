@@ -6,9 +6,11 @@
 - there now is a new parameter `--session <name>` to start QOwnNotes in a
   different context for settings and internal files
 - there now is a new setting for note-subfolders to show all notes in a folder 
-  including their sub-folders in the *Panels settings* (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
+  including their subfolders in the *Panels settings* (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
     - if turned on the *All notes* item in the *Note subfolder* panel is 
       hidden because the root folder already shows all notes
+- added more Italian, Brazilian Portuguese, French and German translation (thank
+  you mlocati, mlimacarlos, bepolymathe and rakekniven)
 
 ## 17.10.8
 - restructured the main menu to make it less cluttered
