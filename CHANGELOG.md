@@ -6,41 +6,41 @@
 - there now is a new parameter `--session <name>` to start QOwnNotes in a
   different context for settings and internal files
 - there now is a new setting for note-subfolders to show all notes in a folder 
-  including their sub-folders in the *Panels settings* (for issue [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
+  including their sub-folders in the *Panels settings* (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
     - if turned on the *All notes* item in the *Note subfolder* panel is 
       hidden because the root folder already shows all notes
 
 ## 17.10.8
 - restructured the main menu to make it less cluttered
 - there now is a new checkbox in the *Todo settings* to close the todo list 
-  after saving an item (for issue [Issue #753](https://github.com/pbek/QOwnNotes/issues/753))
+  after saving an item (for [Issue #753](https://github.com/pbek/QOwnNotes/issues/753))
 - added more Catalan, Spanish, Italian, Brazilian Portuguese, Hungarian, Dutch
   and German translation (thank you MGuerra, richarson, mlocati, mlimacarlos,
   Fabijenna and rakekniven)
 
 ## 17.10.7
 - added new search engines *Qwant* and *Startpage* and reordered the list in 
-  the *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661))
+  the *General settings* (for [Issue #661](https://github.com/pbek/QOwnNotes/issues/661))
 - tried to prevent some occasions of focus stealing of the automatic update 
-  dialog (for issue [Issue #751](https://github.com/pbek/QOwnNotes/issues/751))
+  dialog (for [Issue #751](https://github.com/pbek/QOwnNotes/issues/751))
 - added more Catalan, Swedish, Dutch, Hungarian and French translation (thank
   you davidse, druus, Fabijenna and bepolymathe)
 
 ## 17.10.6
 - you can now select different search engines for searching text in notes in the
-  *General settings* (for issue [Issue #661](https://github.com/pbek/QOwnNotes/issues/661), 
+  *General settings* (for [Issue #661](https://github.com/pbek/QOwnNotes/issues/661), 
   thank you @ron-popov)
 - added an information text to the Windows update dialog to remind the user that
   QOwnNotes needs to run from a location where the user has write access to for 
-  the automatic update to work (for issue [Issue #750](https://github.com/pbek/QOwnNotes/issues/750))
+  the automatic update to work (for [Issue #750](https://github.com/pbek/QOwnNotes/issues/750))
 - added more French and German translation (thank you bepolymathe)
 
 ## 17.10.5
 - highlighting of ordered lists in the note edit panel now works above `9.`
-  (for issue [Issue #746](https://github.com/pbek/QOwnNotes/issues/746))
+  (for [Issue #746](https://github.com/pbek/QOwnNotes/issues/746))
 - fixed links to notes whose names only consist of numbers when `Ctrl`-clicking
   them in the note text edit, in the preview there is currently no way to make
-  them work (for issue [Issue #748](https://github.com/pbek/QOwnNotes/issues/748))
+  them work (for [Issue #748](https://github.com/pbek/QOwnNotes/issues/748))
 - did some dialog-text changes
 - added more Polish, Catalan, Italian, Brazilian Portuguese, Dutch, Hungarian
   and German translation (thank you lucjan, MGuerra, mlocati, mlimacarlos,
@@ -48,15 +48,15 @@
 
 ## 17.10.4
 - fixed that a 2nd note is created if the non-automatic headlines for new notes
-  are enabled (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+  are enabled (for [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
 - added more Spanish translation (thank you richarson)
 
 ## 17.10.3
 - you now can enable in the *General settings* that the shortcut to create new 
   notes asks for a headline of the note instead of generating the headline 
-  automatically (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+  automatically (for [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
 - there now is a new scripting command `script.inputDialogGetText` to open an
-  input dialog with a line edit (for issue [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
+  input dialog with a line edit (for [Issue #740](https://github.com/pbek/QOwnNotes/issues/740))
     - for more information please take a look at
       [Opening an input dialog with a line edit](http://docs.qownnotes.org/en/develop/scripting/README.html#opening-an-input-dialog-with-a-line-edit)
 - added more French and German translation (thank you bepolymathe and rakekniven)
@@ -66,14 +66,14 @@
   at the end of a block (was removed by a pull request)
 - the `updater.bat` in Windows now kills the `QOwnNotes.exe` process when the
   application is updated because it doesn't seem to end in portable mode
-  (for issue [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
+  (for [Issue #376](https://github.com/pbek/QOwnNotes/issues/376))
 - added more French and Spanish translation (thank you bepolymathe and richarson)
 
 ## 17.10.1
 - the automatic update dialog will now also be disable per default for 
   repositories and self-builds if the settings dialog was opened in the 
   welcome dialog at first application startup
-  (for issue [Issue #732](https://github.com/pbek/QOwnNotes/issues/732))
+  (for [Issue #732](https://github.com/pbek/QOwnNotes/issues/732))
 - there now is a `--clear-settings` parameter for the application that clears
   the settings before running the application
 - there now is a `--help` parameter for the application that show the 
@@ -81,21 +81,21 @@
 
 ## 17.10.0
 - fixed a crash with empty note-subfolders and manual reloading of the note
-  folder (for issue [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))
+  folder (for [Issue #731](https://github.com/pbek/QOwnNotes/issues/731))
 - tried to remedy some inconsistency in the margins of the *distraction free mode*
-  (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
+  (for [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
 - made more text selectable and changed the sort-order in the
   *Script repository* widget
 - added the experimental script `@tag tagging in note text` to the script repository
   to make it easier to play around with the external note tagging support via the
-  scripting engine (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+  scripting engine (for [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
 
 ## 17.09.9
 - the note text edit margins will now be updated when the font size increased
   or decreased in the *distraction free mode*
-  (for issue [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
+  (for [Issue #727](https://github.com/pbek/QOwnNotes/issues/727))
 - improvements of the external note tagging support via the scripting engine
-  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+  (for [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
     - fixed crash when removing more than one tag that have notes linked to them
 - when inserting a link into a note some more broken characters from the 
   webpage's html-title will be replaced
@@ -103,16 +103,16 @@
 
 ## 17.09.8
 - fixed the upstream RTL bug in the note text edit
-  (for issue [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
+  (for [Issue #714](https://github.com/pbek/QOwnNotes/issues/714))
 - improvements of the external note tagging support via the scripting engine
-  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+  (for [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
     - fixed the problem where notes were overwritten by other notes in bulk operations
     - fixed a lot of occasions where not all notes were handled in bulk operations
     - fixed some random crashes with bulk operations and when the note tag tree reloads
     - fixed some random crashes, updating of the current note and occasions 
       where not all notes were handled when renaming tags
 - fixed increasing and decreasing of code font-size via keyboard shortcut 
-  (for issue [Issue #724](https://github.com/pbek/QOwnNotes/issues/724))
+  (for [Issue #724](https://github.com/pbek/QOwnNotes/issues/724))
 - when inserting a link into a note some more broken characters from the 
   webpage's html-title will be replaced
 - added more Hungarian and French translation (thank you Fabijenna and sagoum.kakoum)
@@ -121,7 +121,7 @@
 - underline bracket closing is temporary disabled because underlines are used
   in different contexts
 - improvements of the external note tagging support via the scripting engine
-  (for issue [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
+  (for [Issue #530](https://github.com/pbek/QOwnNotes/issues/530))
 	- improved ui feedback when adding and removing tags in the current note
 	- tagging of multiple notes works now but is still a bit wacky because of
 	  race conditions with files that are getting changed all around (notes 
