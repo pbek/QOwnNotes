@@ -1,5 +1,8 @@
 # QOwnNotes Changelog
 
+## 17.10.9
+- fixed *New note* icon
+
 ## 17.10.8
 - restructured the main menu to make it less cluttered
 - there now is a new checkbox in the *Todo settings* to close the todo list 
