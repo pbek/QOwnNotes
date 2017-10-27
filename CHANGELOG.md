@@ -1,7 +1,10 @@
 # QOwnNotes Changelog
 
 ## 17.10.9
-- fixed *New note* icon
+- fixed the *New note* icon
+- fixed the *Application arguments* debug dump
+- there now is a new parameter `--session <name>` to start QOwnNotes in a
+  different context for settings and internal files
 
 ## 17.10.8
 - restructured the main menu to make it less cluttered

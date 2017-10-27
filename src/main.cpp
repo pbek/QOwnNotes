@@ -73,6 +73,11 @@ bool mainStartupMisc(const QStringList arguments) {
             "clear-settings", QCoreApplication::translate("main", "Clears the "
                     "settings and runs the application."));
     parser.addOption(clearSettingsOption);
+    const QCommandLineOption sessionOption(
+            "session", QCoreApplication::translate("main", "Runs the "
+                    "application in a different context for settings and "
+                    "internal files."), "name");
+    parser.addOption(sessionOption);
 
     // just parse the arguments, we want no error handling
     parser.parse(arguments);
@@ -220,6 +225,11 @@ int main(int argc, char *argv[]) {
     bool clearSettings = false;
     bool snap = false;
     QStringList arguments;
+    QString appNameAdd = "";
+
+#ifdef QT_DEBUG
+    appNameAdd = "Debug";
+#endif
 
     for (int i = 0; i < argc; ++i) {
         QString arg(argv[i]);
@@ -245,11 +255,15 @@ int main(int argc, char *argv[]) {
                 file.remove();
             }
 #endif
+        } else if (arg == "--session") {
+            // check if there is a 2nd parameter with the session name
+            if (argc > (i+1)) {
+                appNameAdd += "-" + QString(argv[i+1]).trimmed();
+            }
         }
     }
 
     qDebug() << __func__ << " - 'arguments': " << arguments;
-
 
     // TODO(pbek): remove
 //    portable = true;
@@ -262,12 +276,6 @@ int main(int argc, char *argv[]) {
     // fixing some troubles in Windows 8.1
 #ifdef Q_OS_WIN32
     QCoreApplication::addLibraryPath("./");
-#endif
-
-    QString appNameAdd = "";
-
-#ifdef QT_DEBUG
-    appNameAdd = "Debug";
 #endif
 
     QCoreApplication::setOrganizationDomain("PBE");
@@ -348,6 +356,7 @@ int main(int argc, char *argv[]) {
         app.setProperty("portable", portable);
         app.setProperty("singleApplication", true);
         app.setProperty("snap", snap);
+        app.setProperty("arguments", arguments);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
@@ -389,6 +398,7 @@ int main(int argc, char *argv[]) {
         app.setProperty("release", release);
         app.setProperty("portable", portable);
         app.setProperty("snap", snap);
+        app.setProperty("arguments", arguments);
 
 #ifndef QT_DEBUG
         LOAD_RELEASE_TRANSLATIONS(app)
