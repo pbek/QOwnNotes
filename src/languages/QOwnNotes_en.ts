@@ -5329,5 +5329,10 @@ This cannot be undone!</source>
         <source>Clears the settings and runs the application.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../main.cpp" line="77"/>
+        <source>Runs the application in a different context for settings and internal files.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
