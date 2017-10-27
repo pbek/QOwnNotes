@@ -9,6 +9,7 @@
   including their subfolders in the *Panels settings* (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
     - if turned on the *All notes* item in the *Note subfolder* panel is 
       hidden because the root folder already shows all notes
+- added a package for Ubuntu 18.04 (Bionic Beaver) to the Launchpad build process
 - added more Italian, Brazilian Portuguese, French and German translation (thank
   you mlocati, mlimacarlos, bepolymathe and rakekniven)
 
