@@ -183,8 +183,12 @@ void UpdateService::onResult(QNetworkReply *reply) {
                     0, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
-            // try to prevent stealing of focus
-            _updateDialog->setAttribute(Qt::WA_ShowWithoutActivating);
+
+            // try to prevent stealing of focus on periodic checks
+            if (this->updateMode == UpdateService::Periodic) {
+                _updateDialog->setAttribute(Qt::WA_ShowWithoutActivating);
+            }
+
             _updateDialog->show();
         }
     } else {

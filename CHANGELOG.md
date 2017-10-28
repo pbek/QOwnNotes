@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.10.10
+- prevention of focus-stealing of the update dialog is now only done on periodic
+  checks instead of also on manual checks (for [Issue #751](https://github.com/pbek/QOwnNotes/issues/751))
+
 ## 17.10.9
 - fixed the *New note* icon
 - fixed the *Application arguments* debug dump
