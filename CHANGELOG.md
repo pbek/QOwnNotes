@@ -6,6 +6,9 @@
 - the setting for note-subfolders to show all notes in a folder including their
   subfolders now also makes the note-search find items in all folders 
   (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
+- added more French, Spanish, Italian, Brazilian Portuguese, Hungarian, Dutch
+  and German translation (thank you bepolymathe, richarson, mlocati, DevilLorde,
+  Fabijenna and rakekniven)
 
 ## 17.10.9
 - fixed the *New note* icon

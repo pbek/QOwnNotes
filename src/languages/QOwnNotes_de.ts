@@ -3622,7 +3622,7 @@ Bitte testen Sie selbst und wenn es zu Synchronisationsproblemen kommt wählen S
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Alle Notizen eines Ordners, einschließlich dessen Unterordner, anzeigen. Dies funktioniert nur wenn Unterordner aktiviert sind</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4032"/>
@@ -5351,7 +5351,7 @@ Kann nicht rückgängig gemacht werden!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Die Anwendung wird in einem anderen Kontext für Einstellungen und interne Dateien ausgeführt.</translation>
     </message>
   </context>
 </TS>

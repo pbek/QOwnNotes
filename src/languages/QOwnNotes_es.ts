@@ -640,12 +640,12 @@
     <message>
       <location filename="../mainwindow.ui" line="730"/>
       <source>Print</source>
-      <translation type="unfinished">Print</translation>
+      <translation>Imprimir</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="741"/>
       <source>View note</source>
-      <translation type="unfinished">View note</translation>
+      <translation>Ver nota</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="806"/>
@@ -655,32 +655,32 @@
     <message>
       <location filename="../mainwindow.ui" line="810"/>
       <source>Insert</source>
-      <translation type="unfinished">Insert</translation>
+      <translation>Insertar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="827"/>
       <source>Format</source>
-      <translation type="unfinished">Format</translation>
+      <translation>Formato</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="840"/>
       <source>Extra</source>
-      <translation type="unfinished">Extra</translation>
+      <translation>Extra</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="853"/>
       <source>Edit</source>
-      <translation type="unfinished">Edit</translation>
+      <translation>Editar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="865"/>
       <source>Versioning</source>
-      <translation type="unfinished">Versioning</translation>
+      <translation>Versionado</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="876"/>
       <source>Encryption</source>
-      <translation type="unfinished">Encryption</translation>
+      <translation>Cifrado</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="903"/>
@@ -712,12 +712,12 @@
       <location filename="../mainwindow.ui" line="940"/>
       <source>Show</source>
       <extracomment>To show or hide stuff</extracomment>
-      <translation type="unfinished">Show</translation>
+      <translation>Mostrar</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="955"/>
       <source>Workspace</source>
-      <translation type="unfinished">Workspace</translation>
+      <translation>Espacio de trabajo</translation>
     </message>
     <message>
       <location filename="../mainwindow.ui" line="988"/>
@@ -3560,17 +3560,17 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1771"/>
       <source>Select the calendars you want to use for the Todo list</source>
-      <translation type="unfinished">Select the calendars you want to use for the Todo list</translation>
+      <translation>Selecciona los calendarios que deseas utilizar para la lista de tareas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1846"/>
       <source>Todo list settings</source>
-      <translation type="unfinished">Todo list settings</translation>
+      <translation>Configuración de la lista de tareas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1852"/>
       <source>Saving an item also closes the Todo list</source>
-      <translation type="unfinished">Saving an item also closes the Todo list</translation>
+      <translation>Guardar un elemento también cierra la lista de tareas</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="1951"/>
@@ -3620,7 +3620,7 @@ Se debe probar y si hay conflictos de sincronización establecer un valor más a
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Mostrar todas las notas en una carpeta incluyendo sus subcarpetas (solo funciona si se activan las subcarpetas)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4032"/>
@@ -5345,7 +5345,7 @@ This cannot be undone!</source>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Ejecuta la aplicación en un contexto diferente para la configuración y archivos internos.</translation>
     </message>
   </context>
 </TS>

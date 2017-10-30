@@ -3619,7 +3619,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Mostras todas as notas nas pastas, incluindo as suas sub-pastas (funciona apenas se as sub-pastas estão habilitadas)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4032"/>
@@ -5346,7 +5346,7 @@ Isso não poderá ser desfeito!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Executa a aplicação em um contexto diferente para configurações e arquivos internos.</translation>
     </message>
   </context>
 </TS>

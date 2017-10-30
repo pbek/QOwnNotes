@@ -3620,7 +3620,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Mostra tutte le note in una cartella, includendo le relative sotto-cartelle (funziona solo se le sotto-cartelle sono attive)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4032"/>
@@ -5352,7 +5352,7 @@ Non sarà possibile annullare l'operazione!</translation>
     <message>
       <location filename="../main.cpp" line="77"/>
       <source>Runs the application in a different context for settings and internal files.</source>
-      <translation type="unfinished">Runs the application in a different context for settings and internal files.</translation>
+      <translation>Esegue l'applicazione in un contesto differente per le impostazioni e i file interni.</translation>
     </message>
   </context>
 </TS>

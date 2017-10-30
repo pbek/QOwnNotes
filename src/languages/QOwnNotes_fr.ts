@@ -3621,7 +3621,7 @@ Vous pouvez tester vous-même. Si vous avez des conflits de synchronisation, vou
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4532"/>
       <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
-      <translation type="unfinished">Show all notes in a folder including their subfolders (only works if subfolders are turned on)</translation>
+      <translation>Afficher toutes les notes d'un dossier incluant les sous-dossiers (ne fonctionne que si les sous-dossiers sont activés)</translation>
     </message>
     <message>
       <location filename="../dialogs/settingsdialog.ui" line="4032"/>
