@@ -3,6 +3,9 @@
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic
   checks instead of also on manual checks (for [Issue #751](https://github.com/pbek/QOwnNotes/issues/751))
+- the setting for note-subfolders to show all notes in a folder including their
+  subfolders now also makes the note-search find items in all folders 
+  (for [Issue #757](https://github.com/pbek/QOwnNotes/issues/757))
 
 ## 17.10.9
 - fixed the *New note* icon

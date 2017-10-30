@@ -4642,7 +4642,8 @@ void MainWindow::filterNotesBySearchLineEditText() {
     // search notes when at least 2 characters were entered
     if (arg1.count() >= 2) {
         QList<int> noteIdList = Note::searchInNotes(
-                arg1, _showNotesFromAllNoteSubFolders);
+                arg1, _showNotesFromAllNoteSubFolders ||
+                    NoteSubFolder::isNoteSubfoldersPanelShowNotesRecursively());
 
         while (*it) {
             // hide all filtered notes
