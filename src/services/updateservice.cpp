@@ -88,18 +88,31 @@ void UpdateService::checkForUpdates(MainWindow *mainWindow,
 
 void UpdateService::onResult(QNetworkReply *reply) {
     // abort if reply was null
-    if (reply == NULL) {
+    if (reply == Q_NULLPTR) {
         return;
     }
 
     // abort if there was an error
     if (reply->error() != QNetworkReply::NoError) {
         qWarning() << __func__ << " - 'reply error': " << reply->error();
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("Network reply error: %1").arg(reply->error()));
+        }
+
         return;
     }
 
     QString allData = reply->readAll();
     if (allData.isEmpty()) {
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("No data was received by the network request!"));
+        }
+
         return;
     }
 
@@ -109,10 +122,22 @@ void UpdateService::onResult(QNetworkReply *reply) {
     QJSEngine engine;
     QJSValue result = engine.evaluate(data);
 
+    if (result.property("0").isNull()) {
+        qWarning() << __func__ << " - 'the data from the network request "
+                "could not be interpreted': " << allData;
+
+        if (this->updateMode == UpdateService::Manual) {
+            QMessageBox::warning(
+                    Q_NULLPTR, tr("Update-checker error"),
+                    tr("The data from the network request could not be "
+                               "interpreted!"));
+        }
+
+        return;
+    }
+
     // get the information if we should update our app
-    bool shouldUpdate =
-            (!result.property("0").isNull()) ?
-            result.property("0").property("should_update").toBool() : false;
+    bool shouldUpdate = result.property("0").property("should_update").toBool();
 
     // check if we should update our app
     if (shouldUpdate) {
@@ -180,7 +205,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
             // open the update dialog
             _updateDialog = new UpdateDialog(
-                    0, changesHtml, releaseUrl,
+                    Q_NULLPTR, changesHtml, releaseUrl,
                     releaseVersionString,
                     releaseBuildNumber);
 
@@ -196,7 +221,7 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::information(
-                    0, tr("No updates"),
+                    Q_NULLPTR, tr("No updates"),
                     tr("There are no updates available.<br /><strong>%1"
                                "</strong> is the latest version.")
                             .arg(QString(VERSION)));

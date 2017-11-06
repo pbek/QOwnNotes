@@ -1,5 +1,14 @@
 # QOwnNotes Changelog
 
+## 17.11.0
+- list symbols like `*` and `-` will now only be removed in an empty line when
+  pressing <kdb>Return</kbd> if there was a space-character after them
+  (for [#763](https://github.com/pbek/QOwnNotes/issues/763))
+- added another layer of error handling to the *Update checker* and more 
+  error messages in case something went wrong (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
+    - be sure to take a look at the warnings in the *Log panel* if you want 
+      more information
+
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic
   checks instead of also on manual checks (for [#751](https://github.com/pbek/QOwnNotes/issues/751))
