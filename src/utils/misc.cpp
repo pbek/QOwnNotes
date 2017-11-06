@@ -366,6 +366,7 @@ QByteArray Utils::Misc::startSynchronousProcess(
 #endif
 
     if (!process.waitForStarted()) {
+        qWarning() << __func__ << " - 'process.waitForStarted' returned false";
         return QByteArray();
     }
 
@@ -373,6 +374,7 @@ QByteArray Utils::Misc::startSynchronousProcess(
     process.closeWriteChannel();
 
     if (!process.waitForFinished()) {
+        qWarning() << __func__ << " - 'process.waitForFinished' returned false";
         return QByteArray();
     }
 

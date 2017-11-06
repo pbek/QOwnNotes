@@ -8,6 +8,7 @@
   error messages in case something went wrong (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
     - be sure to take a look at the warnings in the *Log panel* if you want 
       more information
+- added some warnings to the `startSynchronousProcess` scripting function
 
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic
