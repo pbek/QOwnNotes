@@ -54,7 +54,7 @@ You may want to take a look at the example
      * @param parameters a list of parameter strings
      * @param data the data that will be written to the process
      * @return the text that was returned by the process
-    bool QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
+    QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 
 
 Starting an external program and wait for the output
