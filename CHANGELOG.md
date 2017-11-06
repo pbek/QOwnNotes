@@ -15,6 +15,8 @@
   to load application settings variables in scripts
   - for more information please take a look at the
     [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#loading-application-settings-variables)
+- added more French, Catalan, Portuguese, Hungarian and Dutch translation
+  (thank you bepolymathe, MGuerra, manuelarodsilva and Fabijenna)
 
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic
