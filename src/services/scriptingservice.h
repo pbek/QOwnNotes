@@ -41,7 +41,8 @@ public:
     Q_INVOKABLE bool startDetachedProcess(QString executablePath,
                                           QStringList parameters);
     Q_INVOKABLE QByteArray startSynchronousProcess(
-            QString executablePath, QStringList parameters, QByteArray data);
+            QString executablePath, QStringList parameters,
+            QByteArray data = QByteArray());
     Q_INVOKABLE QString currentNoteFolderPath();
     Q_INVOKABLE NoteApi *currentNote();
     Q_INVOKABLE void log(QString text);
@@ -114,6 +115,9 @@ public:
                                            const QVariant &value);
 
     Q_INVOKABLE QVariant getPersistentVariable(
+            const QString &key, const QVariant &defaultValue = QVariant());
+
+    Q_INVOKABLE QVariant getApplicationSettingsVariable(
             const QString &key, const QVariant &defaultValue = QVariant());
 
 private:

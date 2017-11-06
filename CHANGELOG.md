@@ -8,8 +8,13 @@
   error messages in case something went wrong (for [#759](https://github.com/pbek/QOwnNotes/issues/759))
     - be sure to take a look at the warnings in the *Log panel* if you want 
       more information
-- added some warnings to the `startSynchronousProcess` scripting function
+- added some warnings to the `startSynchronousProcess` scripting function and
+  the 3rd parameter is now optional
 - added some more information to the *External git log command* settings
+- you can now use the new scripting function `script.getApplicationSettingsVariable()`
+  to load application settings variables in scripts
+  - for more information please take a look at the
+    [scripting documentation](http://docs.qownnotes.org/en/develop/scripting/README.html#loading-application-settings-variables)
 
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic

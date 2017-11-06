@@ -52,7 +52,7 @@ You may want to take a look at the example
      *
      * @param executablePath the path of the executable
      * @param parameters a list of parameter strings
-     * @param data the data that will be written to the process
+     * @param data the data that will be written to the process (optional)
      * @return the text that was returned by the process
     QByteArray startSynchronousProcess(QString executablePath, QStringList parameters, QByteArray data);
 
@@ -783,7 +783,7 @@ Properties
 .. code:: cpp
 
     /**
-     * Stores a persistent variables
+     * Stores a persistent variable
      * These variables are accessible globally over all scripts
      * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
      *
@@ -794,11 +794,11 @@ Properties
                                                  const QVariant &value);
 
     /**
-     * Loads a persistent variables
+     * Loads a persistent variable
      * These variables are accessible globally over all scripts
      *
      * @param key
-     * @param defaultValue
+     * @param defaultValue (optional)
      * @return
      */
     QVariant ScriptingService::getPersistentVariable(const QString &key,
@@ -821,6 +821,33 @@ all scripts.
 
 You may also want to take a look at the example
 `persistent-variables.qml <https://github.com/pbek/QOwnNotes/blob/develop/doc/scripting/persistent-variables.qml>`__.
+
+
+Loading application settings variables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Properties
+^^^^^^^^^^
+
+.. code:: cpp
+
+    /**
+     * Loads an application settings variable
+     *
+     * @param key
+     * @param defaultValue (optional)
+     * @return
+     */
+    QVariant ScriptingService::getApplicationSettingsVariable(const QString &key,
+                                                              const QVariant &defaultValue);
+
+Usage in QML
+^^^^^^^^^^^^
+
+.. code:: javascript
+
+    // load and log an application settings variable
+    script.log(script.getApplicationSettingsVariable("gitExecutablePath"));
 
 
 Reading the path to the directory of your script

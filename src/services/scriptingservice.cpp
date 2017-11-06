@@ -709,7 +709,7 @@ bool ScriptingService::startDetachedProcess(QString executablePath,
  *
  * @param executablePath the path of the executable
  * @param parameters a list of parameter strings
- * @param data the data that will be written to the process
+ * @param data the data that will be written to the process (optional)
  * @return the text that was returned by the process
  */
 QByteArray ScriptingService::startSynchronousProcess(
@@ -1324,7 +1324,7 @@ QString ScriptingService::inputDialogGetText(
 }
 
 /**
- * Stores a persistent variables
+ * Stores a persistent variable
  * These variables are accessible globally over all scripts
  * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
@@ -1339,11 +1339,11 @@ void ScriptingService::setPersistentVariable(const QString &key,
 }
 
 /**
- * Loads a persistent variables
+ * Loads a persistent variable
  * These variables are accessible globally over all scripts
  *
  * @param key
- * @param defaultValue
+ * @param defaultValue (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
@@ -1352,4 +1352,17 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
     return settings.value(
             QString(PERSISTENT_VARIABLE_SETTINGS_PREFIX) + "/" + key,
             defaultValue);
+}
+
+/**
+ * Loads an application settings variable
+ *
+ * @param key
+ * @param defaultValue (optional)
+ * @return
+ */
+QVariant ScriptingService::getApplicationSettingsVariable(
+        const QString &key, const QVariant &defaultValue) {
+    QSettings settings;
+    return settings.value(key, defaultValue);
 }
