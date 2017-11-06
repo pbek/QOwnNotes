@@ -1328,8 +1328,8 @@ QString ScriptingService::inputDialogGetText(
  * These variables are accessible globally over all scripts
  * Please use a meaningful prefix in your key like "PersistentVariablesTest/myVar"
  *
- * @param key
- * @param value
+ * @param key {QString}
+ * @param value {QVariant}
  */
 void ScriptingService::setPersistentVariable(const QString &key,
                                              const QVariant &value) {
@@ -1342,8 +1342,8 @@ void ScriptingService::setPersistentVariable(const QString &key,
  * Loads a persistent variable
  * These variables are accessible globally over all scripts
  *
- * @param key
- * @param defaultValue (optional)
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getPersistentVariable(const QString &key,
@@ -1357,8 +1357,8 @@ QVariant ScriptingService::getPersistentVariable(const QString &key,
 /**
  * Loads an application settings variable
  *
- * @param key
- * @param defaultValue (optional)
+ * @param key {QString}
+ * @param defaultValue {QVariant} return value if the setting doesn't exist (optional)
  * @return
  */
 QVariant ScriptingService::getApplicationSettingsVariable(
