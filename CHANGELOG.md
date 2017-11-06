@@ -9,6 +9,7 @@
     - be sure to take a look at the warnings in the *Log panel* if you want 
       more information
 - added some warnings to the `startSynchronousProcess` scripting function
+- added some more information to the *External git log command* settings
 
 ## 17.10.10
 - prevention of focus-stealing of the update dialog is now only done on periodic

@@ -3353,7 +3353,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3377"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4278"/>
         <source>set external editor</source>
         <translation>stel externe editor in</translation>
     </message>
@@ -3617,7 +3617,24 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Resetten van de cursor-breedte</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+        <source>External git log command to show the git versions of a note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
+        <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4239"/>
+        <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4542"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Toon alle notities in een map met inbegrip van de bijbehorende submappen (werkt alleen als submappen zijn ingeschakeld)</translation>
     </message>
@@ -3632,93 +3649,93 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Markeer de huidige regel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4306"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Vergeet niet de git ondersteuning voor uw notitie mappen in te schakelen en configureer uw naam en een e-mailadres voor uw git-client, bijvoorbeeld met deze terminal commando&apos;s:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4329"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4339"/>
         <source>Tags panel</source>
         <translation>Deelvenster Labels</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4335"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4434"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4483"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4444"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
         <source>Order</source>
         <translation>Bestelling</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4440"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4502"/>
         <source>Ascending</source>
         <translation>Oplopend</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4348"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4447"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4499"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
         <source>Descending</source>
         <translation>Aflopend</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4404"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4368"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4519"/>
         <source>Sort</source>
         <translation>Sorteren</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4364"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4410"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4420"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4525"/>
         <source>Alphabetical</source>
         <translation>Alfabetisch</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
         <source>By last change / use</source>
         <translation>Bij laatste wijziging / gebruik</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Verberg &apos;Zoek of maak label&apos; zoeken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4401"/>
         <source>Note subfolders panel</source>
         <translation>Notitie submappen paneel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4397"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
         <source>Show with full path</source>
         <translation>Toon met volledige pad</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4522"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
         <source>By last change</source>
         <translation>Bij laatste wijziging / gebruik</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4437"/>
         <source>Show root folder name</source>
         <translation>Toon hoofdmap naam</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Verberg &apos;Zoek of maak notitie submap&apos; zoeken</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
         <source>Display note subfolders as full tree</source>
         <translation>Toon notitie submappen als volledige boom</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4484"/>
         <source>Notes panel</source>
         <translation>Deelvenster Notities</translation>
     </message>
@@ -3728,10 +3745,9 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Zoek script archief</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <source>Enter a command to be used to show a git log</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-        <translation>Voer een te gebruiken opdracht in om een git log te laten zien</translation>
+        <translation type="vanished">Voer een te gebruiken opdracht in om een git log te laten zien</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4229"/>
@@ -3740,17 +3756,17 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>Je kunt als optie &quot;%notePath%&quot; voor het pad van de notitie gebruiken.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4242"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
         <source>Git client</source>
         <translation>Git-client</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
         <source>Path to git executable:</source>
         <translation>Pad naar git uitvoerbaar:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4248"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Pad naar git client, leeg voor de standaardwaarde</translation>
     </message>
@@ -3771,9 +3787,8 @@ Just test yourself if you get sync conflicts and set a higher value if so.</sour
         <translation>git commit interval tijd [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>External git log command</source>
-        <translation>Externe git log commando</translation>
+        <translation type="vanished">Externe git log commando</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="869"/>

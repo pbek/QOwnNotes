@@ -3332,7 +3332,7 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3377"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4278"/>
         <source>set external editor</source>
         <translation>Állítsa be a külső szerkesztőt</translation>
     </message>
@@ -3596,7 +3596,24 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
         <translation>Kurzorszélesség visszaállítása</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+        <source>External git log command to show the git versions of a note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
+        <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4239"/>
+        <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4542"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Megmutatja az összes jegyzetet egy mappában, beleértve az almappákat (csak akkor működik, ha almappák be vannak kapcsolva)</translation>
     </message>
@@ -3611,93 +3628,93 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
         <translation>Kijelöli az aktuális sort</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4306"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Ne felejtse engedélyezni a jegyzetmappák git támogatását és beállítani a nevét és az e-mail címét a git-ügyfelénél, pl. ezen terminálparancsokkal:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4329"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4339"/>
         <source>Tags panel</source>
         <translation>Címkék panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4335"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4434"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4483"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4444"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
         <source>Order</source>
         <translation>Rendezés</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4440"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4502"/>
         <source>Ascending</source>
         <translation>Növekvő</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4348"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4447"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4499"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
         <source>Descending</source>
         <translation>Csökkenő</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4404"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4368"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4519"/>
         <source>Sort</source>
         <translation>Rendezés típusa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4364"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4410"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4420"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4525"/>
         <source>Alphabetical</source>
         <translation>Betűrendben</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
         <source>By last change / use</source>
         <translation>Az utolsó módosítás használata</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>A &quot;Címke keresése vagy létrehozása&quot; keresés elrejtése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4401"/>
         <source>Note subfolders panel</source>
         <translation>Jegyzet almappák panel</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4397"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
         <source>Show with full path</source>
         <translation>Megjelenítés elérési úttal</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4522"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
         <source>By last change</source>
         <translation>A legutóbbi változások szerint </translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4437"/>
         <source>Show root folder name</source>
         <translation>Megmutatja a gyökér mappa nevet</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>&quot;Jegyzet almappa keresése vagy létrehozása&quot; keresés elrejtése</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
         <source>Display note subfolders as full tree</source>
         <translation>Megmutatja a jegyzetalmappákat mint teljes fa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4484"/>
         <source>Notes panel</source>
         <translation>Jegyzetek panel</translation>
     </message>
@@ -3707,10 +3724,9 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
         <translation>Keresés szkript adattárban</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <source>Enter a command to be used to show a git log</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-        <translation>Írjon be egy használandó parancsot a git napló megjelenítéséhez</translation>
+        <translation type="vanished">Írjon be egy használandó parancsot a git napló megjelenítéséhez</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4229"/>
@@ -3719,17 +3735,17 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
         <translation>Tetszés szerint a &quot;%notePath%&quot; segítségével is eléri a jegyzet hozzáférési útját.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4242"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
         <source>Git client</source>
         <translation>Git ügyfél</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
         <source>Path to git executable:</source>
         <translation>Git végrehajtható elérési útja:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4248"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Ösvény a git ügyfélhez, alapértelmezetten hagyja üresen</translation>
     </message>
@@ -3750,9 +3766,8 @@ Tesztelje, ha szinkronizációs konfliktus lép fel és állítson be ilyen eset
         <translation>git véglegesítési intervallum idő [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>External git log command</source>
-        <translation>Külső git log parancs</translation>
+        <translation type="vanished">Külső git log parancs</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="869"/>

@@ -3353,7 +3353,7 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="3377"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4278"/>
         <source>set external editor</source>
         <translation>Configurar editor externo</translation>
     </message>
@@ -3617,7 +3617,24 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
         <translation>Redefinir a largura do cursor</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
+        <source>External git log command to show the git versions of a note</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
+        <source>Enter a command to be used to show a git log (like for example &quot;gitk&quot;)</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4239"/>
+        <source>If you use this setting you will get a new menu entry to show the git versions if you right-click a note.</source>
+        <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../dialogs/settingsdialog.ui" line="4542"/>
         <source>Show all notes in a folder including their subfolders (only works if subfolders are turned on)</source>
         <translation>Mostras todas as notas nas pastas, incluindo as suas sub-pastas (funciona apenas se as sub-pastas estão habilitadas)</translation>
     </message>
@@ -3632,93 +3649,93 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
         <translation>Marcar a linha atual</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4296"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4306"/>
         <source>Don&apos;t forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</source>
         <translation>Não se esqueça de habilitar o git para o seu diretório de notas e configurar o nome e email no git client, por exemplo com esses comandos numa janela de terminal:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4329"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4339"/>
         <source>Tags panel</source>
         <translation>Painel de Tags</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4335"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4434"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4483"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4345"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4444"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4493"/>
         <source>Order</source>
         <translation>Ordem</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4341"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4440"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4492"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4351"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4450"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4502"/>
         <source>Ascending</source>
         <translation>Ascendente</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4348"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4447"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4499"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
         <source>Descending</source>
         <translation>Descendente</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4358"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4404"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4509"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4368"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4414"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4519"/>
         <source>Sort</source>
         <translation>Ordem</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4364"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4410"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4515"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4374"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4420"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4525"/>
         <source>Alphabetical</source>
         <translation>Em ordem alfabética</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4371"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
         <source>By last change / use</source>
         <translation>Pela última alteração / uso</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4381"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
         <source>Hide &apos;Find or create tag&apos; search</source>
         <translation>Esconder &apos;Pesquisar ou criar tag&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4391"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4401"/>
         <source>Note subfolders panel</source>
         <translation>Painel de subdiretórios</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4397"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4407"/>
         <source>Show with full path</source>
         <translation>Mostrar com o caminho completo</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4417"/>
-        <location filename="../dialogs/settingsdialog.ui" line="4522"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4532"/>
         <source>By last change</source>
         <translation>Pela última alteração</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4427"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4437"/>
         <source>Show root folder name</source>
         <translation>Mostrar o nome da pasta raiz</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4457"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4467"/>
         <source>Hide &apos;Find or create note subfolder&apos; search</source>
         <translation>Escoder &apos;Procurar ou criar uma subpasta&apos;</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4464"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
         <source>Display note subfolders as full tree</source>
         <translation>Mostrar os subdiretórios como uma árvore completa</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4474"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4484"/>
         <source>Notes panel</source>
         <translation>Painel de Notas</translation>
     </message>
@@ -3728,10 +3745,9 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
         <translation>Procurar um repositório de script</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4219"/>
         <source>Enter a command to be used to show a git log</source>
         <extracomment>Please don&apos;t translate &quot;%notePath%&quot;</extracomment>
-        <translation>Inserir um comando para ser usado para mostrar um git log</translation>
+        <translation type="vanished">Inserir um comando para ser usado para mostrar um git log</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="4229"/>
@@ -3740,17 +3756,17 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
         <translation>Opcionalmente, você pode usar &quot;%notePath%&quot; para o caminho da nota.</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4242"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4252"/>
         <source>Git client</source>
         <translation>Cliente de git</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4268"/>
         <source>Path to git executable:</source>
         <translation>Caminho para o executável do git:</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4248"/>
+        <location filename="../dialogs/settingsdialog.ui" line="4258"/>
         <source>Path to git client, leave empty for default</source>
         <translation>Caminho para o cliente git, deixe em branco para o padrão</translation>
     </message>
@@ -3771,9 +3787,8 @@ Teste por conta própria se você tiver problemas e coloque um valor mais alto s
         <translation>intervalo de auto-commit das notas [sec]</translation>
     </message>
     <message>
-        <location filename="../dialogs/settingsdialog.ui" line="4213"/>
         <source>External git log command</source>
-        <translation>Comando de log git externo</translation>
+        <translation type="vanished">Comando de log git externo</translation>
     </message>
     <message>
         <location filename="../dialogs/settingsdialog.ui" line="869"/>
