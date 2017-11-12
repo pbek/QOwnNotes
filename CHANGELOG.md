@@ -6,6 +6,9 @@
   (for [#768](https://github.com/pbek/QOwnNotes/issues/768))
     - there now also are new, darker colors for the *found* and *not found* 
       states when doing text searches in dark mode
+- fixed a lot of link colors in the user interface in dark mode for desktop 
+  environments that are forcing a to dark link color
+  (for [#597](https://github.com/pbek/QOwnNotes/issues/597))
 
 ## 17.11.0
 - list symbols like `*` and `-` will now only be removed in an empty line when

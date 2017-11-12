@@ -2680,7 +2680,7 @@
                               </widget>
                              </item>
                              <item row="1" column="1">
-                              <widget class="QLabel" name="scriptAuthorsLabel">
+                              <widget class="Label" name="scriptAuthorsLabel">
                                <property name="text">
                                 <string notr="true">Authors</string>
                                </property>
@@ -2739,7 +2739,7 @@
                               </widget>
                              </item>
                              <item row="5" column="0" colspan="2">
-                              <widget class="QLabel" name="scriptDescriptionLabel">
+                              <widget class="Label" name="scriptDescriptionLabel">
                                <property name="text">
                                 <string notr="true">Description</string>
                                </property>
@@ -2765,7 +2765,7 @@
                               </widget>
                              </item>
                              <item row="2" column="1">
-                              <widget class="QLabel" name="scriptRepositoryLinkLabel">
+                              <widget class="Label" name="scriptRepositoryLinkLabel">
                                <property name="toolTip">
                                 <string notr="true"/>
                                </property>
@@ -4287,7 +4287,7 @@ Just test yourself if you get sync conflicts and set a higher value if so.</stri
                  </widget>
                 </item>
                 <item row="3" column="0" colspan="2">
-                 <widget class="QLabel" name="label_24">
+                 <widget class="Label" name="label_24">
                   <property name="text">
                    <string notr="true">git config --global user.email &quot;your-email@domain.com&quot;
 git config --global user.name &quot;Your name&quot;</string>
@@ -4301,7 +4301,7 @@ git config --global user.name &quot;Your name&quot;</string>
                  </widget>
                 </item>
                 <item row="2" column="0" colspan="3">
-                 <widget class="QLabel" name="label_6">
+                 <widget class="Label" name="label_6">
                   <property name="text">
                    <string>Don't forget to enable git support for your note folders and to configure your name and email address for your git client, for example with these terminal commands:</string>
                   </property>
@@ -4311,7 +4311,7 @@ git config --global user.name &quot;Your name&quot;</string>
                  </widget>
                 </item>
                 <item row="1" column="0">
-                 <widget class="QLabel" name="gitDownloadLabel">
+                 <widget class="Label" name="gitDownloadLabel">
                   <property name="text">
                    <string notr="true">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Download text entered in source code...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>

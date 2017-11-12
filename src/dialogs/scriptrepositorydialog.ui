@@ -168,7 +168,7 @@
             </spacer>
            </item>
            <item row="11" column="0" colspan="3">
-            <widget class="QLabel" name="descriptionLabel">
+            <widget class="Label" name="descriptionLabel">
              <property name="text">
               <string notr="true">Description</string>
              </property>
@@ -207,7 +207,7 @@
             </widget>
            </item>
            <item row="6" column="2">
-            <widget class="QLabel" name="authorLabel">
+            <widget class="Label" name="authorLabel">
              <property name="text">
               <string notr="true">Authors</string>
              </property>
@@ -233,7 +233,7 @@
             </widget>
            </item>
            <item row="9" column="2">
-            <widget class="QLabel" name="repositoryLinkLabel">
+            <widget class="Label" name="repositoryLinkLabel">
              <property name="toolTip">
               <string notr="true"/>
              </property>
@@ -358,7 +358,7 @@
             </widget>
            </item>
            <item row="7" column="2">
-            <widget class="QLabel" name="platformLabel">
+            <widget class="Label" name="platformLabel">
              <property name="text">
               <string notr="true">Platforms</string>
              </property>
@@ -442,6 +442,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Label</class>
+   <extends>QLabel</extends>
+   <header location="global">widgets/label.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="../breeze-qownnotes.qrc"/>
  </resources>
