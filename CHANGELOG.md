@@ -13,6 +13,9 @@
   application-icon will also be set to the dark-mode icon
   (for [#770](https://github.com/pbek/QOwnNotes/issues/770))
     - the setting was renamed to `Enable dark mode application icon and tray icon`
+- added more German, Catalan, Portuguese, Indonesian, Chinese, Italian, Spanish,
+  Brazilian Portuguese, Hungarian and Dutch translation (thank you rakekniven,
+  MGuerra, another1, zmni, rosatravels, mlocati, richarson, mlimacarlos and Fabijenna)
 
 ## 17.11.0
 - list symbols like `*` and `-` will now only be removed in an empty line when
