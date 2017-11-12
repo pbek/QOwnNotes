@@ -2214,7 +2214,7 @@
                         <string>You may need to restart the application to let these changes take effect</string>
                        </property>
                        <property name="text">
-                        <string>Enable dark mode tray icon</string>
+                        <string>Enable dark mode application icon and tray icon</string>
                        </property>
                       </widget>
                      </item>

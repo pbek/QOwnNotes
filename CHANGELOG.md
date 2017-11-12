@@ -9,6 +9,10 @@
 - fixed a lot of link colors in the user interface in dark mode for desktop 
   environments that are forcing a to dark link color
   (for [#597](https://github.com/pbek/QOwnNotes/issues/597))
+- if the setting to use a dark-mode system-tray icon is activated the 
+  application-icon will also be set to the dark-mode icon
+  (for [#770](https://github.com/pbek/QOwnNotes/issues/770))
+    - the setting was renamed to `Enable dark mode application icon and tray icon`
 
 ## 17.11.0
 - list symbols like `*` and `-` will now only be removed in an empty line when

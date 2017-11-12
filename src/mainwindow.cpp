@@ -98,6 +98,7 @@ MainWindow::MainWindow(QWidget *parent) :
 #endif
 
     ui->setupUi(this);
+    setWindowIcon(getSystemTrayIcon());
 
     // initialize the workspace combo box
     initWorkspaceComboBox();
