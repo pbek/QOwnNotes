@@ -147,8 +147,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->encryptedNoteTextEdit->hide();
 
     // set the search frames for the note text edits
-    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
-    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame);
+    QSettings settings;
+    bool darkMode = settings.value("darkMode").toBool();
+    ui->noteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame, darkMode);
+    ui->encryptedNoteTextEdit->initSearchFrame(ui->noteTextEditSearchFrame,
+                                               darkMode);
 
     // set the main window for accessing it's public methods
     ui->noteTextEdit->setMainWindow(this);
@@ -409,7 +412,6 @@ MainWindow::MainWindow(QWidget *parent) :
     // setup the soft-wrap checkbox
     const QSignalBlocker blocker2(ui->actionUse_softwrap_in_note_editor);
     Q_UNUSED(blocker2);
-    QSettings settings;
     ui->actionUse_softwrap_in_note_editor->setChecked(
             settings.value("useSoftWrapInNoteEditor", true).toBool());
 

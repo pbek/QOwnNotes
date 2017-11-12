@@ -1,5 +1,12 @@
 # QOwnNotes Changelog
 
+## 17.11.1
+- in dark mode the background color of the search bar in the note text edit 
+  will now also be adapted (if the desktop environment didn't already do it)
+  (for [#768](https://github.com/pbek/QOwnNotes/issues/768))
+    - there now also are new, darker colors for the *found* and *not found* 
+      states when doing text searches in dark mode
+
 ## 17.11.0
 - list symbols like `*` and `-` will now only be removed in an empty line when
   pressing <kdb>Return</kbd> if there was a space-character after them
