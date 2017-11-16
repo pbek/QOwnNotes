@@ -4,13 +4,14 @@
 #
 #-------------------------------------------------
 
-QT       += core gui sql svg network xml xmlpatterns printsupport qml
+QT       += core gui widgets sql svg network xml xmlpatterns printsupport qml
 
 # quick is enabled for more scripting options
 # Windows and macOS seem to ignore that
 #QT       += quick
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+# Sonnet support if we can get it to run in the future
+#QT += SonnetCore SonnetUi
 
 TARGET = QOwnNotes
 TEMPLATE = app
