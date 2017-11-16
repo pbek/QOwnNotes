@@ -6199,7 +6199,13 @@ void MainWindow::on_actionFormat_text_bold_triggered() {
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor, 2);
         textEdit->setTextCursor(c);
     } else {
-        c.insertText("**" + selectedText + "**");
+       QRegularExpressionMatch match =
+                QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match
+                        (selectedText);
+        if (match.hasMatch()) {
+            c.insertText(match.captured(1) + "**" + match.captured(2) + "**" +
+                         match.captured(3));
+        }
     }
 }
 
@@ -6216,7 +6222,13 @@ void MainWindow::on_actionFormat_text_italic_triggered() {
         c.movePosition(QTextCursor::Left, QTextCursor::MoveAnchor);
         textEdit->setTextCursor(c);
     } else {
-        c.insertText("*" + selectedText + "*");
+        QRegularExpressionMatch match =
+                QRegularExpression(R"(^(\s*)(.+?)(\s*)$)").match
+                        (selectedText);
+        if (match.hasMatch()) {
+            c.insertText(match.captured(1) + "*" + match.captured(2) + "*" +
+                         match.captured(3));
+        }
     }
 }
 

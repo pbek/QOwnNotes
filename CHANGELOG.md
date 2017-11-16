@@ -1,7 +1,10 @@
 # QOwnNotes Changelog
 
 ## 17.11.2
-- made some text changes in the menus
+- when formatting bold or italic now leading and trailing spaces in the selected
+  text will be placed before and after the formatting markers to prevent 
+  malformed markdown code (for [#767](https://github.com/pbek/QOwnNotes/issues/767))
+- made some text changes in menus
 - added a warning in the update service
 
 ## 17.11.1
