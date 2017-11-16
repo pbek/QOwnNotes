@@ -2071,7 +2071,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icons/breeze-qownnotes/16x16/window.svg</normaloff>:/icons/breeze-qownnotes/16x16/window.svg</iconset>
    </property>
    <property name="text">
-    <string>Open note in a view</string>
+    <string>Open note in different window</string>
    </property>
    <property name="shortcut">
     <string notr="true">Alt+Shift+O</string>
@@ -2172,8 +2172,8 @@ p, li { white-space: pre-wrap; }
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="images.qrc"/>
   <include location="breeze-qownnotes.qrc"/>
+  <include location="images.qrc"/>
   <include location="breeze-dark-qownnotes.qrc"/>
  </resources>
  <connections/>

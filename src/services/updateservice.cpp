@@ -94,7 +94,8 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
     // abort if there was an error
     if (reply->error() != QNetworkReply::NoError) {
-        qWarning() << __func__ << " - 'reply error': " << reply->error();
+        qWarning() << __func__ << " - 'network reply error': "
+                   << reply->error();
 
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::warning(
@@ -107,6 +108,9 @@ void UpdateService::onResult(QNetworkReply *reply) {
 
     QString allData = reply->readAll();
     if (allData.isEmpty()) {
+        qWarning() << __func__ << " - 'no data was received by the network "
+                "request'";
+
         if (this->updateMode == UpdateService::Manual) {
             QMessageBox::warning(
                     Q_NULLPTR, tr("Update-checker error"),

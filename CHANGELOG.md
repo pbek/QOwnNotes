@@ -1,5 +1,9 @@
 # QOwnNotes Changelog
 
+## 17.11.2
+- made some text changes in the menus
+- added a warning in the update service
+
 ## 17.11.1
 - in dark mode the background color of the search bar in the note text edit 
   will now also be adapted (if the desktop environment didn't already do it)

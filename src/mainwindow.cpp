@@ -2940,7 +2940,7 @@ QString MainWindow::selectOwnCloudNotesFolder() {
     // Unexpected null receiver" here.
     QString dir = QFileDialog::getExistingDirectory(
             this,
-            tr("Please select the folder where your notes will get stored to"),
+            tr("Please select the folder where your notes will get stored"),
             path,
             QFileDialog::ShowDirsOnly);
 
@@ -8265,7 +8265,7 @@ void MainWindow::on_noteTreeWidget_customContextMenuRequested(
     QAction *openInExternalEditorAction = noteMenu.addAction(
             tr("Open note in external editor"));
     QAction *openNoteWindowAction = noteMenu.addAction(
-            tr("Open note in a view"));
+            tr("Open note in different window"));
     QAction *showInFileManagerAction = noteMenu.addAction(
             tr("Show note in file manager"));
 
