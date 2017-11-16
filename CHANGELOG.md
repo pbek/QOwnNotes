@@ -6,6 +6,9 @@
   malformed markdown code (for [#767](https://github.com/pbek/QOwnNotes/issues/767))
 - made some text changes in menus
 - added a warning in the update service
+- added more German, French, Italian, Spanish, Brazilian Portuguese, Hungarian
+  and Dutch translation (thank you rakekniven, bepolymathe, mlocati, richarson,
+  mlimacarlos and Fabijenna)
 
 ## 17.11.1
 - in dark mode the background color of the search bar in the note text edit 

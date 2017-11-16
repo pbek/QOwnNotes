@@ -18,6 +18,7 @@ find_package( Qt5Xml REQUIRED )
 find_package( Qt5XmlPatterns REQUIRED )
 find_package( Qt5PrintSupport REQUIRED )
 find_package( Qt5Qml REQUIRED )
+find_package(KF5Sonnet)
 
 qt5_wrap_ui(dialogs/ui_settingsdialog.h settingsdialog.ui)
 qt5_wrap_ui(dialogs/ui_tododialog.h tododialog.ui)
@@ -314,6 +315,7 @@ set(CMAKE_CXX_FLAGS "-std=c++0x")
 target_link_libraries(QOwnNotes ${Qt5Widgets_LIBRARIES} ${Qt5Sql_LIBRARIES}
         ${Qt5Svg_LIBRARIES} ${Qt5Network_LIBRARIES}
         ${Qt5Xml_LIBRARIES} ${Qt5XmlPatterns_LIBRARIES}
-        ${Qt5PrintSupport_LIBRARIES} ${Qt5Qml_LIBRARIES})
+        ${Qt5PrintSupport_LIBRARIES} ${Qt5Qml_LIBRARIES}
+        KF5::SonnetCore KF5::SonnetUi)
 
 #qt5_use_modules(QOwnNotes Widgets Core Gui Sql Svg Network Script Xml PrintSupport)
