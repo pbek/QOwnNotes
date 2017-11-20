@@ -1,6 +1,10 @@
 # QOwnNotes Changelog
 
 ## 17.11.3
+- added **Bengali translation** (a big thank you to mrrifat1!)
+    - join us at [QOwnNotes on Crowdin](https://crowdin.com/project/qownnotes/)
+      to make QOwnNotes available in more languages or help with the current 
+      translation
 - lists with `+` will now also continued when pressing <kbd>Return</kbd>
   (for [#782](https://github.com/pbek/QOwnNotes/issues/782), thank you @sanderboom)
 - the default foreground and background colors for the note text-edit, that was

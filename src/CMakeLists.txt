@@ -262,6 +262,7 @@ SET(QON_TS_FILES
     languages/QOwnNotes_ca.ts
     languages/QOwnNotes_sv.ts
     languages/QOwnNotes_id.ts
+    languages/QOwnNotes_bn.ts
 )
 
 qt5_add_translation(QON_QM_FILES ${QON_TS_FILES})

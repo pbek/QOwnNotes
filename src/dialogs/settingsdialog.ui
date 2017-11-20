@@ -1956,6 +1956,17 @@
                        </item>
                        <item>
                         <property name="text">
+                         <string notr="true">বাংলা ভাষা</string>
+                        </property>
+                        <property name="toolTip">
+                         <string>Bengali</string>
+                        </property>
+                        <property name="whatsThis">
+                         <string notr="true">bn</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
                          <string notr="true">Català</string>
                         </property>
                         <property name="toolTip">

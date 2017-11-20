@@ -41,6 +41,7 @@ files:
         "ru_RU" : "ru",
         "uk_UA" : "uk",
         "zh_CN" : "zh",
-        "id_ID" : "id"
+        "id_ID" : "id",
+        "bn_BD" : "bn"
       }
     }
