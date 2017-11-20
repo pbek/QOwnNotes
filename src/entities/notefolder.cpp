@@ -370,9 +370,10 @@ QString NoteFolder::currentLocalPath() {
  * @return Name of current root folder
  */
 QString NoteFolder::currentRootFolderName(bool fullPath) {
-   QString path = currentLocalPath();
-   return fullPath ? path
-                   : path.remove(0, path.lastIndexOf(QDir::separator())+1);
+    QString path = currentLocalPath();
+    return fullPath ? path
+                    : path.remove(0, path.lastIndexOf(
+                    Utils::Misc::dirSeparator())+1);
 }
 
 /**

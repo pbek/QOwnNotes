@@ -7,6 +7,8 @@
   set in the in the *Editor settings* now also work for other Markdown
   text-edits, like the *Debug panel*, the separate note-views and the
   *Debug settings* (for [#778](https://github.com/pbek/QOwnNotes/issues/778))
+- the disabling of the setting `Show with full` in the *Panel settings* now 
+  also works under *Windows* (for [#777](https://github.com/pbek/QOwnNotes/issues/777))
 
 ## 17.11.2
 - when formatting bold or italic now leading and trailing spaces in the selected
